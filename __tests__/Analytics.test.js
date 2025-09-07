@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -47,6 +48,8 @@ describe('Analytics', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
 
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -56,6 +59,7 @@ describe('Analytics.test', () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
 
 });
 
@@ -102,3 +106,5 @@ describe('Analytics', () => {
     // Add styling tests if needed
   });
 });
+=======
+>>>>>>> pr/11282

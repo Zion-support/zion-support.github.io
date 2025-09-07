@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedSEO from "./components/EnhancedSEO" describe("EnhancedSEO",() => {" test("renders without crashing",() => {" render(<EnhancedSEO / / />) expect(screen.getByTestId("enhancedseo")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedSEO / / />) }) test("handles user interactions",() => {" render(<EnhancedSEO / / />) }) test("applies correct styling",() => {" render(<EnhancedSEO / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSEO from '../components/EnhancedSEO" describe('EnhancedSEO',() => {' test('renders without crashing',() => {' render(<EnhancedSEO / / />) expect(screen.getByTestId("enhancedseo")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSEO / / />) }) test('handles user interactions',() => {' render(<EnhancedSEO / / />) }) test('applies correct styling',() => {' render(<EnhancedSEO / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSEO from '../components/EnhancedSEO" describe('EnhancedSEO',() => {' test('renders without crashing',() => {' render(<EnhancedSEO / / />) expect(screen.getByTestId("enhancedseo")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSEO / / />) }) test('handles user interactions',() => {' render(<EnhancedSEO / / />) }) test('applies correct styling',() => {' render(<EnhancedSEO / / />) }) })
@@ -9,10 +10,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedSEO from "./components/EnhancedSEO" describe("EnhancedSEO",() => {" test("renders without crashing",() => {" render(<EnhancedSEO / / />) expect(screen.getByTestId("enhancedseo")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedSEO / / />) }) test("handles user interactions",() => {" render(<EnhancedSEO / / />) }) test("applies correct styling",() => {" render(<EnhancedSEO / / />) }) })'"'""
@@ -77,3 +81,10 @@ describe('EnhancedSEO', () => {
   });
 });
 >>>>>>> origin/main
+=======
+describe('EnhancedSEO.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

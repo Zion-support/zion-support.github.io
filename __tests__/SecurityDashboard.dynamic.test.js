@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});
 
@@ -8,6 +9,8 @@ import '@testing-library/jest-dom'
 import SecurityDashboarddynamic from '../components/SecurityDashboard && SecurityDashboard.dynamic'
 describe('SecurityDashboarddynamic'
   test('renders without crashing'
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -16,6 +19,7 @@ describe('SecurityDashboard.dynamic.test', () => {
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 });'
 
 import React from 'react'
@@ -99,3 +103,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Security
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

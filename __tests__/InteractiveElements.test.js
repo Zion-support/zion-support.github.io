@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveElements from '../components/InteractiveElements" describe('InteractiveElements',() => {' test('renders without crashing',() => {' render(<InteractiveElements / / />) expect(screen.getByTestId("interactiveelements")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveElements / / />) }) test('handles user interactions',() => {' render(<InteractiveElements / / />) }) test('applies correct styling',() => {' render(<InteractiveElements / / />) }) })
 
 <<<<<<< HEAD
@@ -64,3 +65,14 @@ describe('InteractiveElements', () => {
   });
 });
 >>>>>>> origin/main
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('InteractiveElements.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

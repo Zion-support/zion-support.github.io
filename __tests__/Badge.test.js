@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Badge / / />) }) test('handles user interactions',() => {' render(<Badge / / />) }) test('applies correct styling',() => {' render(<Badge / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Badge / / />) }) test('handles user interactions',() => {' render(<Badge / / />) }) test('applies correct styling',() => {' render(<Badge / / />) }) })
@@ -9,11 +10,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Badge from '../components/Badge';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'""
@@ -36,6 +40,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 =======
   test('displays correct content', () => {
     render(<Badge />);
+=======
+describe('Badge', () => {
+  test('renders without crashing', () => {
+    render(<Badge />);
+    expect(screen.getByTestId('badge')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<Badge />);
+    // Add specific content tests here
+>>>>>>> pr/11282
   });
 
   test('handles user interactions', () => {
@@ -47,6 +62,7 @@ ursor/automate-test-improve-and-merge-code-646c;
     render(<Badge />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 
 import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Badge / / />) }) test('handles user interactions',() => {' render(<Badge / / />) }) test('applies correct styling',() => {' render(<Badge / / />) }) })
@@ -80,3 +96,6 @@ describe('Badge', () => {
   });
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

@@ -3,6 +3,7 @@
 const fs = require('fs');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const path = require(path');
 
 
@@ -47,6 +48,8 @@ main
 function findAndFixTestFiles(dir) {
   const files = fs.readdirSync(dir);
 =======
+=======
+>>>>>>> pr/11282
 const path = require('path');
 
 class TestFileFixer {
@@ -196,6 +199,7 @@ describe('${fileName}', () => {
     }
   }
 
+<<<<<<< HEAD
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -210,6 +214,77 @@ function walkDir(dir) {
       findAndFixTestFiles(filePath);
     } else if (file.endsWith(.test.tsx') || file.endsWith('.test.ts)) {
       fixTestFile(filePath);
+=======
+  async fixAllTestFiles() {
+    this.log('🔧 Starting test file fixes...');
+    
+    const testsDir = path.join(this.projectRoot, '__tests__');
+    if (!fs.existsSync(testsDir)) {
+      this.log('Tests directory not found', 'WARNING');
+      return { fixedFiles: 0, errors: 0 };
+    }
+
+    const testFiles = this.getAllTestFiles(testsDir);
+    let fixedCount = 0;
+    
+    for (const file of testFiles) {
+      if (this.fixTestFile(file)) {
+        fixedCount++;
+      }
+    }
+
+    this.log(`\n📊 Test File Fix Summary:`);
+    this.log(`Fixed files: ${fixedCount}`);
+    this.log(`Errors: ${this.errors.length}`);
+
+    if (this.errors.length > 0) {
+      this.log('\n❌ Files with errors:');
+      this.errors.forEach(({ file, error }) => {
+        this.log(`  - ${path.relative(this.projectRoot, file)}: ${error}`);
+      });
+    }
+
+    return {
+      fixedFiles: fixedCount,
+      errors: this.errors.length
+    };
+  }
+
+  getAllTestFiles(dir) {
+    const files = [];
+    
+    const readDir = (currentDir) => {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const itemPath = path.join(currentDir, item);
+        const stat = fs.statSync(itemPath);
+        
+        if (stat.isDirectory()) {
+          readDir(itemPath);
+        } else if (item.endsWith('.test.js') || item.endsWith('.test.ts') || item.endsWith('.test.tsx') || item.endsWith('.test.jsx')) {
+          files.push(itemPath);
+        }
+      }
+    };
+    
+    readDir(dir);
+    return files;
+  }
+
+  async run() {
+    try {
+      this.log('🚀 Starting test file fixes...');
+      
+      const results = await this.fixAllTestFiles();
+      
+      this.log('\n✅ Test file fixes completed!');
+      
+      return results;
+    } catch (error) {
+      this.log(`❌ Test file fixes failed: ${error.message}`, 'ERROR');
+      throw error;
+>>>>>>> pr/11282
     }
   }
 }
@@ -220,6 +295,7 @@ if (require.main === module) {
   fixer.run().catch(console.error);
 }
 
+<<<<<<< HEAD
     // Add styling tests here;
 });`;
 `;`
@@ -273,3 +349,6 @@ console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
 >>>>>>> origin/main
+=======
+module.exports = TestFileFixer;
+>>>>>>> pr/11282

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { "status": "vi.Mock<[number] MockApiResponse> "json": vi.Mock<[unknown] MockApiResponse> "setHeader": vi.Mock<[string",string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": "string",body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn()" res.end = vi.fn()" return res as MockApiRespons,"
 }" test("GET;"
   returns profile"",() => {" const req = mockReq( "GET")" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": "jane@example.com,","points": expect.any(Number)}),"
@@ -184,6 +185,11 @@ import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/m
 import { expect, test, vi } from 'vitest';
 import handler from '@/pages/api/users/me';
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 interface MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number], MockApiResponse>;
@@ -198,7 +204,11 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
     body,
     headers: {},
     query: {},
+<<<<<<< HEAD
     cookies: {}
+=======
+    cookies: {},
+>>>>>>> pr/11282
   } as NextApiRequest;
 }
 
@@ -219,7 +229,11 @@ test('GET returns profile', () => {
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
       email: 'jane@example.com',
+<<<<<<< HEAD
       points: expect.any(Number)
+=======
+      points: expect.any(Number),
+>>>>>>> pr/11282
     })
   );
 });
@@ -230,7 +244,11 @@ test('PUT updates profile', () => {
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
+<<<<<<< HEAD
       name: 'New Name'
+=======
+      name: 'New Name',
+>>>>>>> pr/11282
     })
   );
 });
@@ -241,4 +259,7 @@ test('DELETE soft deletes account', () => {
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith({ success: true });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

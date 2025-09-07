@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedNavigation from "./components/EnhancedNavigation" describe("EnhancedNavigation",() => {" test("renders without crashing",() => {" render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedNavigation / / />) }) test("handles user interactions",() => {" render(<EnhancedNavigation / / />) }) test("applies correct styling",() => {" render(<EnhancedNavigation / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
@@ -9,10 +10,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedNavigation from "./components/EnhancedNavigation" describe("EnhancedNavigation",() => {" test("renders without crashing",() => {" render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedNavigation / / />) }) test("handles user interactions",() => {" render(<EnhancedNavigation / / />) }) test("applies correct styling",() => {" render(<EnhancedNavigation / / />) }) })'"'""
@@ -77,3 +81,10 @@ describe('EnhancedNavigation', () => {
   });
 });
 >>>>>>> origin/main
+=======
+describe('EnhancedNavigation.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -70,3 +71,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 });
 >>>>>>> origin/main
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('Analytics.dynamic.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

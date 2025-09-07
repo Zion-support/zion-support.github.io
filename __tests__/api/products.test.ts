@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
@@ -393,11 +394,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { createRequest, createResponse } from 'node-mocks-http';
 import productHandler from '@/pages/api/products/index';
 import { PrismaClient } from '@prisma/client';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
     product: {
       findMany: jest.fn(),
+<<<<<<< HEAD
       aggregate: jest.fn()
     },
     productReview: {
@@ -405,18 +412,33 @@ jest.mock('@prisma/client', () => {
     },
     $queryRawUnsafe: jest.fn(),
     $disconnect: jest.fn()
+=======
+      aggregate: jest.fn(),
+    },
+    productReview: {
+      aggregate: jest.fn(),
+    },
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn(),
+>>>>>>> pr/11282
   };
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 });
 
 let prisma: PrismaClient;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> pr/11282
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> pr/11282
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching search query', async () => {
       const mockProducts = [
@@ -426,15 +448,24 @@ describe('/api/products API Endpoint', () => {
           description: 'AI-powered product',
           price: 100,
           currency: 'USD',
+<<<<<<< HEAD
           tags: ['ai', 'gpt']
         }
+=======
+          tags: ['ai', 'gpt'],
+        },
+>>>>>>> pr/11282
       ];
 
       (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts);
 
       req = createRequest({
         method: 'GET',
+<<<<<<< HEAD
         query: { search: 'gpt' }
+=======
+        query: { search: 'gpt' },
+>>>>>>> pr/11282
       });
       res = createResponse();
 
@@ -446,4 +477,7 @@ describe('/api/products API Endpoint', () => {
     });
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

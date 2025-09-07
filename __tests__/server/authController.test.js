@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('authController', () => {
@@ -214,6 +215,14 @@ import authController from '../../server/controllers/authController';
 
 vi.mock('@sendgrid/mail', () => ({
   send: vi.fn()
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+vi.mock('@sendgrid/mail', () => ({
+  send: vi.fn(),
+>>>>>>> pr/11282
 }));
 
 describe('authController.forgotPassword', () => {
@@ -224,7 +233,11 @@ describe('authController.forgotPassword', () => {
   it('should send password reset email', async () => {
     const { req, res } = createMocks({
       method: 'POST',
+<<<<<<< HEAD
       body: { email: 'test@example.com' }
+=======
+      body: { email: 'test@example.com' },
+>>>>>>> pr/11282
     });
 
     await authController.forgotPassword(req, res);
@@ -233,4 +246,7 @@ describe('authController.forgotPassword', () => {
     expect(res._getStatusCode()).toBe(200);
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

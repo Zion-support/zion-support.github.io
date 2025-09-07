@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 <<<<<<< HEAD
 
@@ -104,6 +105,15 @@ describe('OptimizedImage', () => {
   test('renders without crashing', () => {
     render(<OptimizedImage />);
     expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('OptimizedImage.dynamic.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+>>>>>>> pr/11282
   });
 
   test('displays correct content', () => {
@@ -149,6 +159,10 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Optimize
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> pr/11282

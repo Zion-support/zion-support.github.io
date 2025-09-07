@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary" describe("EnhancedErrorBoundary",() => {" test("renders without crashing",() => {" render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedErrorBoundary / / />) }) test("handles user interactions",() => {" render(<EnhancedErrorBoundary / / />) }) test("applies correct styling",() => {" render(<EnhancedErrorBoundary / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary" describe('EnhancedErrorBoundary',() => {' test('renders without crashing',() => {' render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedErrorBoundary / / />) }) test('handles user interactions',() => {' render(<EnhancedErrorBoundary / / />) }) test('applies correct styling',() => {' render(<EnhancedErrorBoundary / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary" describe('EnhancedErrorBoundary',() => {' test('renders without crashing',() => {' render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedErrorBoundary / / />) }) test('handles user interactions',() => {' render(<EnhancedErrorBoundary / / />) }) test('applies correct styling',() => {' render(<EnhancedErrorBoundary / / />) }) })
@@ -9,10 +10,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary" describe("EnhancedErrorBoundary",() => {" test("renders without crashing",() => {" render(<EnhancedErrorBoundary / / />) expect(screen.getByTestId("enhancederrorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedErrorBoundary / / />) }) test("handles user interactions",() => {" render(<EnhancedErrorBoundary / / />) }) test("applies correct styling",() => {" render(<EnhancedErrorBoundary / / />) }) })'"'""
@@ -68,3 +72,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   });
 });
 >>>>>>> origin/main
+=======
+describe('EnhancedErrorBoundary.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

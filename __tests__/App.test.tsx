@@ -9,6 +9,7 @@ describe('App', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
@@ -54,3 +55,6 @@ describe("App", () => {
   });
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

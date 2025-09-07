@@ -59,11 +59,15 @@ function App() {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr/11282
           <div className="bg-white p-6 rounded-lg shadow-lg">"
             <div className="text-4xl mb-4">🔗</div>"
             <h3 className="text-xl font-semibold mb-2">Blockchain</h3>"
             <p className="text-gray-600">"
               Secure, decentralized solutions powered by blockchain technology.
+<<<<<<< HEAD
 =======
         </section>
         
@@ -149,6 +153,8 @@ function App() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss your project and see how we can help transform your business with technology.
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">"
@@ -469,7 +475,10 @@ export default function App(): JSX.Element {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default App;
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

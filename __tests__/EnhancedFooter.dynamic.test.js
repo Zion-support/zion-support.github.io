@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('EnhancedFooterdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedFooterdynamic />);
     expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument();
 
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -12,6 +15,7 @@ import EnhancedFooter.dynamic from '../components/EnhancedFooter.dynamic';
 
 describe('EnhancedFooter.dynamic', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<EnhancedFooter />);
     expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument();
 >>>>>>> origin/main
@@ -59,6 +63,13 @@ describe('EnhancedFooterdynamic'
 
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic'; describe('EnhancedFooterdynamic',() => { test('renders without crashing',() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedFooterdynamic />)}); test('handles user interactions',() => { render(<EnhancedFooterdynamic />)}); test('applies correct styling',() => { render(<EnhancedFooterdynamic />)})});
 
+=======
+    render(<EnhancedFooter.dynamic />);
+    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument();
+
+  });
+
+>>>>>>> pr/11282
   test('displays correct content', () => {
     render(<EnhancedFooter.dynamic />);
     // Add specific content tests here
@@ -73,7 +84,11 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
     render(<EnhancedFooter.dynamic />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

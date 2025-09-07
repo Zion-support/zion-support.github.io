@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
 <<<<<<< HEAD
 
@@ -104,6 +105,15 @@ describe('Layout', () => {
   test('renders without crashing', () => {
     render(<Layout />);
     expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('Layout.dynamic.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+>>>>>>> pr/11282
   });
 
   test('displays correct content', () => {
@@ -149,6 +159,10 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdy
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> pr/11282

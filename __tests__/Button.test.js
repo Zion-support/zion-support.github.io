@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -47,6 +48,8 @@ describe('Button', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
 
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -55,6 +58,7 @@ describe('Button.test', () => {
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 
 });
 
@@ -103,3 +107,6 @@ describe('Button', () => {
     // Add styling tests if needed
   });
 });
+=======
+});
+>>>>>>> pr/11282

@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr/11282
 import { Link  } from 'react-router-dom';
 ;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -379,6 +382,7 @@ src={customLogo}
 
           Technology;
         </span>
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 
@@ -391,6 +395,8 @@ export function Logo() {
         </div>
         <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
       </div>
     </Link>
   );

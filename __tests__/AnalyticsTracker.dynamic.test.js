@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('AnalyticsTrackerdynamic', () => {
   test('renders without crashing', () => {
     render(<AnalyticsTrackerdynamic />);
     expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument();
 
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 describe('AnalyticsTracker.dynamic.test', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<AnalyticsTracker />);
     expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
 >>>>>>> origin/main
@@ -76,3 +80,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

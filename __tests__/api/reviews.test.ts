@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import type { NextApiRequest, NextApiResponse } from 'next
@@ -1243,6 +1244,11 @@ import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import reviewsHandler from '@/pages/api/reviews';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 jest.mock('@prisma/client');
 jest.mock('@/integrations/supabase/client');
@@ -1256,7 +1262,11 @@ describe('/api/reviews API Endpoint', () => {
     it('should return reviews with pagination', async () => {
       const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
         method: 'GET' as RequestMethod,
+<<<<<<< HEAD
         query: { page: '1', limit: '10' }
+=======
+        query: { page: '1', limit: '10' },
+>>>>>>> pr/11282
       });
 
       await reviewsHandler(req, res);
@@ -1272,8 +1282,13 @@ describe('/api/reviews API Endpoint', () => {
         body: {
           productId: '1',
           rating: 5,
+<<<<<<< HEAD
           comment: 'Great product!'
         }
+=======
+          comment: 'Great product!',
+        },
+>>>>>>> pr/11282
       });
 
       await reviewsHandler(req, res);
@@ -1282,4 +1297,7 @@ describe('/api/reviews API Endpoint', () => {
     });
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

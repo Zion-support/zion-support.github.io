@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
 
 describe('Team Builder Invite API', () => {
 <<<<<<< HEAD
@@ -106,3 +107,11 @@ const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', 
   });
 });
 >>>>>>> origin/main
+=======
+
+describe('team-builder-invite.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

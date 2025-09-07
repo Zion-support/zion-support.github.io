@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('ContactFormdynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormdynamic />);
     expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
 
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 describe('ContactForm.dynamic.test', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<ContactForm />);
     expect(screen.getByTestId('contactform')).toBeInTheDocument();
 >>>>>>> origin/main
@@ -76,3 +80,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

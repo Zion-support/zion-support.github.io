@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http'; // RequestMethod can be useful;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset'; // Adjust path as necessary;
@@ -128,48 +129,80 @@ import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset';
 import { describe, it, expect } from 'vitest';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 describe('/api/auth/reset token validation', () => {
   it('returns 400 if token is missing', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: {}
+=======
+      body: {},
+>>>>>>> pr/11282
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(400);
     expect(JSON.parse(res._getData())).toEqual({
+<<<<<<< HEAD
       error: 'Token is required'
+=======
+      error: 'Token is required',
+>>>>>>> pr/11282
     });
   });
 
   it('returns 400 if new password is missing', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: { token: 'valid-token' }
+=======
+      body: { token: 'valid-token' },
+>>>>>>> pr/11282
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(400);
     expect(JSON.parse(res._getData())).toEqual({
+<<<<<<< HEAD
       error: 'New password is required'
+=======
+      error: 'New password is required',
+>>>>>>> pr/11282
     });
   });
 
   it('returns 400 if token is invalid', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: { token: 'invalid', newPassword: 'newpass123' }
+=======
+      body: { token: 'invalid', newPassword: 'newpass123' },
+>>>>>>> pr/11282
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(400);
     expect(JSON.parse(res._getData())).toEqual({
+<<<<<<< HEAD
       error: 'Invalid or expired token'
     });
   });
 });
 >>>>>>> origin/main
+=======
+      error: 'Invalid or expired token',
+    });
+  });
+});
+>>>>>>> pr/11282

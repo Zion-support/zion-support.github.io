@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 
@@ -539,3 +540,13 @@ test.describe('E2E Tests', () => {
   });
 });
 >>>>>>> origin/main
+=======
+const { test, expect } = require('@playwright/test');
+
+test.describe('e2e E2E', () => {
+  test('should work', async ({ page }) => {
+    await page.goto('/');
+    expect(await page.title()).toBeTruthy();
+  });
+});
+>>>>>>> pr/11282

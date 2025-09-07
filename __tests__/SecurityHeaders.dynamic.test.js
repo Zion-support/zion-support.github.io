@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 
@@ -8,6 +9,8 @@ import '@testing-library/jest-dom'
 import SecurityHeadersdynamic from '../components/SecurityHeaders && SecurityHeaders.dynamic'
 describe('SecurityHeadersdynamic'
   test('renders without crashing'
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -33,6 +36,7 @@ describe('SecurityHeaders.dynamic', () => {
     render(<SecurityHeaders.dynamic />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });'
 
 import React from 'react'
@@ -116,3 +120,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Security
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

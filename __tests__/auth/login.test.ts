@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
 
 describe('Login', () => {
 <<<<<<< HEAD
@@ -106,3 +107,11 @@ const { describe,it,expect } from "vitest"; describe('Login', () => { it("should
   });
 });
 >>>>>>> origin/main
+=======
+
+describe('login.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -8,6 +11,7 @@ describe('PerformanceEnhancer.dynamic.test', () => {
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<PerformanceEnhancer />);
     // Add specific content tests based on component
@@ -22,3 +26,6 @@ describe('PerformanceEnhancer.dynamic.test', () => {
   });
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

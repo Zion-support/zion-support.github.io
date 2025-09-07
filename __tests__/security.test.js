@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Security"
   test('"HTTPS"
@@ -799,6 +800,12 @@ test.describe('Security Tests', () => {
   });
 
   test('security headers are present', async ({ page }) => {
+=======
+const { test, expect } = require('@playwright/test');
+
+test.describe('security E2E', () => {
+  test('should work', async ({ page }) => {
+>>>>>>> pr/11282
     await page.goto('/');
     const headers = await page.evaluate(() => {
       return document.querySelector('meta[http-equiv="Content-Security-Policy"]')?.getAttribute('content');
@@ -808,19 +815,34 @@ test.describe('Security Tests', () => {
 
   test('no sensitive data in console', async ({ page }) => {
     const consoleMessages = [];
+<<<<<<< HEAD
     page.on('console', msg => {
       consoleMessages.push(msg.text());
     });
     
     await page.goto('/');
     
+=======
+    page.on('console', (msg) => {
+      consoleMessages.push(msg.text());
+    });
+
+    await page.goto('/');
+
+>>>>>>> pr/11282
     const sensitivePatterns = [
       /password[:=]\s*['"][^'"]*['"]/i,
       /api[_-]?key[:=]\s*['"][^'"]*['"]/i,
       /secret[:=]\s*['"][^'"]*['"]/i,
+<<<<<<< HEAD
       /token[:=]\s*['"][^'"]*['"]/i
     ];
     
+=======
+      /token[:=]\s*['"][^'"]*['"]/i,
+    ];
+
+>>>>>>> pr/11282
     for (const message of consoleMessages) {
       for (const pattern of sensitivePatterns) {
         expect(message).not.toMatch(pattern);
@@ -828,4 +850,7 @@ test.describe('Security Tests', () => {
     }
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

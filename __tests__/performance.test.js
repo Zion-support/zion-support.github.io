@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr/11282
 });'
 });'
 });'
@@ -202,6 +205,7 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
   test(memory usage check, async ({ page }) => {
     await page.goto('/');
     const metrics = await page.evaluate(() => {
+<<<<<<< HEAD
       if (performance.memory) {
         return {
           usedJSHeapSize: performance.memory.usedJSHeapSize,
@@ -615,11 +619,14 @@ test.describe('Performance Tests', () => {
   test('bundle size is reasonable', async ({ page }) => {
     await page.goto('/');
     const metrics = await page.evaluate(() => {
+=======
+>>>>>>> pr/11282
       return {
         jsHeapSizeLimit: performance.memory?.jsHeapSizeLimit || 0,
         usedJSHeapSize: performance.memory?.usedJSHeapSize || 0,
       };
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Check performance score
@@ -798,3 +805,8 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
   });
 });
 >>>>>>> origin/main
+=======
+    expect(metrics.usedJSHeapSize).toBeLessThan(50000000);
+  });
+});
+>>>>>>> pr/11282

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Card from "./components/Card" describe("Card",() => {" test("renders without crashing",() => {" render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Card / / />) }) test("handles user interactions",() => {" render(<Card / / />) }) test("applies correct styling",() => {" render(<Card / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
@@ -9,11 +10,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Card from '../components/Card';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Card from "./components/Card" describe("Card",() => {" test("renders without crashing",() => {" render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Card / / />) }) test("handles user interactions",() => {" render(<Card / / />) }) test("applies correct styling",() => {" render(<Card / / />) }) })'"'""
@@ -36,6 +40,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 =======
   test('displays correct content', () => {
     render(<Card />);
+=======
+describe('Card', () => {
+  test('renders without crashing', () => {
+    render(<Card />);
+    expect(screen.getByTestId('card')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<Card />);
+    // Add specific content tests here
+>>>>>>> pr/11282
   });
 
   test('handles user interactions', () => {
@@ -47,6 +62,7 @@ ursor/automate-test-improve-and-merge-code-646c;
     render(<Card />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 
 import _React from 'react"  import '@testing-library/jest-dom import Card from '../components/Card" describe('Card',() => {' test('renders without crashing',() => {' render(<Card / / />) expect(screen.getByTestId("card")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Card / / />) }) test('handles user interactions',() => {' render(<Card / / />) }) test('applies correct styling',() => {' render(<Card / / />) }) })
@@ -80,3 +96,6 @@ describe('Card', () => {
   });
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

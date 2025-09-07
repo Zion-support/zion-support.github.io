@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -46,6 +47,8 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 import React from 'react';
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 

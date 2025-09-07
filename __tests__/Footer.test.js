@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import Footer from '../components/Footer" describe('Footer',() => {' test('renders without crashing',() => {' render(<Footer / / />) expect(screen.getByTestId("footer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Footer / / />) }) test('handles user interactions',() => {' render(<Footer / / />) }) test('applies correct styling',() => {' render(<Footer / / />) }) })
 
 <<<<<<< HEAD
@@ -40,6 +41,8 @@ import _React from 'react"  import '@testing-library/jest-dom import Footer from
 import _React from 'react"  import '@testing-library/jest-dom import Footer from '../components/Footer" describe('Footer',() => {' test('renders without crashing',() => {' render(<Footer / / />) expect(screen.getByTestId("footer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Footer / / />) }) test('handles user interactions',() => {' render(<Footer / / />) }) test('applies correct styling',() => {' render(<Footer / / />) }) })
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -50,6 +53,7 @@ describe('Footer', () => {
     render(<Footer />);
     expect(screen.getByTestId('footer')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<Footer />);
     // Add specific content tests based on component
@@ -64,3 +68,21 @@ describe('Footer', () => {
   });
 });
 >>>>>>> origin/main
+=======
+
+  test('displays correct content', () => {
+    render(<Footer />);
+    // Add specific content tests here
+  });
+
+  test('handles user interactions', () => {
+    render(<Footer />);
+    // Add interaction tests here
+  });
+
+  test('applies correct styling', () => {
+    render(<Footer />);
+    // Add styling tests here
+  });
+});
+>>>>>>> pr/11282

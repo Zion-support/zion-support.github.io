@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createMocks,RequestMethod } from 'node-mocks-http" import type { NextApiRequest,NextApiResponse } from 'next" import generateHandler from '@/pages/api/team-builder/generate" import { supabase } from '@/integrations/supabase/client' import { ProjectBrief,TeamRecommendation } from '@/types jest.mock('' '@/integrations/supabase/client',() => ({' "supabase": { functions: { invoke: jest.fn()}}})) describe('/api/team-builder/generate API Endpoint',() => {' const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock beforeEach(() => { mockSupabaseInvoke.mockReset()});
 
   it( 'should return 405 if method is not POST',async () => {' const { req,res } = createMocks<NextApiRequest NextApiResponse>({ "method": 'GET as RequestMethod,await generateHandler(req,res) expect(res._getStatusCode()).toBe(405) expect(res._getJSONData().error).toBe( Method GET Not Allowed')})' it( 'should return 400 if required fields are missing',async () => {' const { req,res } = createMocks<NextApiRequest NextApiResponse>({ "method": 'POST as RequestMethod,',"body": { projectName: Test' },await generateHandler(req,res) expect(res._getStatusCode()).toBe(400) expect(res._getJSONData().error).toBe( 'Missing required fields in project brief.')})' it( 'should return 500 if Supabase function call fails',async () => {' const "mockBrief": ProjectBrief = { projectName: 'Test Project,',"goals": Test Goals timeline: '3 months,',"budget": $10k techStack: ['_React]}' mockSupabaseInvoke.mockResolvedValueOnce({ "error": { message: 'Supabase error' },' "data": 'null'}) const { req,res } = createMocks<NextApiRequest NextApiResponse>({ "method": 'POST' as RequestMethod,' "body": 'mockBrief'}) await generateHandler(req,res) expect(res._getStatusCode()).toBe(500) expect(res._getJSONData().error).toContain( Supabase error')})' it( 'should return 500 if Supabase function returns no data and no error',async () => {' const "mockBrief": ProjectBrief = { projectName: 'Test Project,',"goals": Test Goals timeline: '3 months,',"budget": $10k techStack: ['_React]}' mockSupabaseInvoke.mockResolvedValueOnce({ "error": 'null',"data": 'null' }) const { req,res } = createMocks<NextApiRequest NextApiResponse>({ "method": 'POST' as RequestMethod,' "body": 'mockBrief'}) await generateHandler(req,res) expect(res._getStatusCode()).toBe(500) expect(res._getJSONData().error).toBe( Failed to generate team "recommendation": 'No data returned.)'});
@@ -266,22 +267,39 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import generateHandler from '@/pages/api/team-builder/generate';
 import { supabase } from '@/integrations/supabase/client';
 import { ProjectBrief, TeamRecommendation } from '@/types';
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> pr/11282
 
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {
     functions: {
+<<<<<<< HEAD
       invoke: jest.fn()
     }
   }
+=======
+      invoke: jest.fn(),
+    },
+  },
+>>>>>>> pr/11282
 }));
 
 describe('/api/team-builder/generate API Endpoint', () => {
   const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
+<<<<<<< HEAD
 
   it('should return 405 if method is not POST', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET' as RequestMethod
+=======
+  it('should return 405 if method is not POST', async () => {
+    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+      method: 'GET' as RequestMethod,
+>>>>>>> pr/11282
     });
 
     await generateHandler(req, res);
@@ -293,7 +311,11 @@ describe('/api/team-builder/generate API Endpoint', () => {
   it('should return 400 if required fields are missing', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: { projectName: 'Test' }
+=======
+      body: { projectName: 'Test' },
+>>>>>>> pr/11282
     });
 
     await generateHandler(req, res);
@@ -308,17 +330,29 @@ describe('/api/team-builder/generate API Endpoint', () => {
       goals: 'Test Goals',
       timeline: '3 months',
       budget: '$10k',
+<<<<<<< HEAD
       techStack: ['React']
+=======
+      techStack: ['React'],
+>>>>>>> pr/11282
     };
 
     mockSupabaseInvoke.mockResolvedValueOnce({
       error: { message: 'Supabase error' },
+<<<<<<< HEAD
       data: null
+=======
+      data: null,
+>>>>>>> pr/11282
     });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: mockBrief
+=======
+      body: mockBrief,
+>>>>>>> pr/11282
     });
 
     await generateHandler(req, res);
@@ -333,22 +367,38 @@ describe('/api/team-builder/generate API Endpoint', () => {
       goals: 'Test Goals',
       timeline: '3 months',
       budget: '$10k',
+<<<<<<< HEAD
       techStack: ['React']
+=======
+      techStack: ['React'],
+>>>>>>> pr/11282
     };
 
     const mockRecommendation: Partial<TeamRecommendation> = {
       recommendationSummary: '1 PM, 2 Devs',
+<<<<<<< HEAD
       roles: []
+=======
+      roles: [],
+>>>>>>> pr/11282
     };
 
     mockSupabaseInvoke.mockResolvedValueOnce({
       data: mockRecommendation,
+<<<<<<< HEAD
       error: null
+=======
+      error: null,
+>>>>>>> pr/11282
     });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
+<<<<<<< HEAD
       body: mockBrief
+=======
+      body: mockBrief,
+>>>>>>> pr/11282
     });
 
     await generateHandler(req, res);
@@ -357,4 +407,7 @@ describe('/api/team-builder/generate API Endpoint', () => {
     expect(res._getJSONData()).toEqual(mockRecommendation);
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282

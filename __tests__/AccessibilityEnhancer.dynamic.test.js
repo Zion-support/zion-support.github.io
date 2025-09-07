@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -6,6 +7,13 @@ import '@testing-library/jest-dom';
 import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
 >>>>>>> origin/main
 describe('AccessibilityEnhancerdynamic', () => {
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('AccessibilityEnhancer.dynamic.test', () => {
+>>>>>>> pr/11282
   test('renders without crashing', () => {
     render(<AccessibilityEnhancerdynamic />);
     expect(screen.getByTestId('accessibilityenhancer.dynamic')).toBeInTheDocument();
@@ -19,6 +27,7 @@ describe('AccessibilityEnhancerdynamic', () => {
   test('applies correct styling', () => {
     render(<AccessibilityEnhancerdynamic />);
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 });
@@ -50,3 +59,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 =======
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

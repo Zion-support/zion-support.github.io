@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr/11282
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -27,11 +30,14 @@ import React from './react';"
 
  */
 function ForgotPassword() {}
+<<<<<<< HEAD
 =======
 import React from 'react';
 
 function ForgotPassword() {
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
   return (
     <div>
       <h1>Forgot Password</h1>

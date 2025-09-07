@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Headerdynamic from '../components/Header.dynamic';
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -11,10 +12,16 @@ import Header from '../components/Header';
 
 describe('Header', () => {
 >>>>>>> origin/main
+=======
+import Header.dynamic from '../components/Header.dynamic';
+
+describe('Header.dynamic', () => {
+>>>>>>> pr/11282
   test('renders without crashing', () => {
     render(<Header.dynamic />);
     expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<Header />);
     // Add specific content tests based on component
@@ -52,6 +59,8 @@ describe('Headerdynamic'
 import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
 
 import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
+=======
+>>>>>>> pr/11282
 
   test('displays correct content', () => {
     render(<Header.dynamic />);
@@ -67,8 +76,12 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Headerdy
     render(<Header.dynamic />);
     // Add styling tests here
   });
+<<<<<<< HEAD
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

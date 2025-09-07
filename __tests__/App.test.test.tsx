@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 it('displays correct content', () => {
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -11,6 +14,7 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
+<<<<<<< HEAD
   it('displays correct content', () => {
 >>>>>>> origin/main
     render(<App />);
@@ -73,3 +77,6 @@ describe('App'
 =======
 });
 >>>>>>> origin/main
+=======
+});
+>>>>>>> pr/11282

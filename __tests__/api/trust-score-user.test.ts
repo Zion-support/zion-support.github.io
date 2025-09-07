@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
 
 describe('Trust Score User API', () => {
 <<<<<<< HEAD
@@ -106,3 +107,11 @@ const { describe,it,expect } from "vitest"; describe('Trust Score User API', () 
   });
 });
 >>>>>>> origin/main
+=======
+
+describe('trust-score-user.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

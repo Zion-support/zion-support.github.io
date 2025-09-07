@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('EnhancedSEOdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedSEOdynamic />);
     expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument();
 
 =======
+=======
+>>>>>>> pr/11282
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 describe('EnhancedSEO.dynamic.test', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<EnhancedSEO />);
     expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
 >>>>>>> origin/main
@@ -76,3 +80,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/main
+=======
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> pr/11282

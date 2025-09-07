@@ -1,12 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
 import '@testing-library/jest-dom';
 
 describe('AccessibilityEnhancer.test', () => {
@@ -14,6 +17,7 @@ describe('AccessibilityEnhancer.test', () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
 
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
@@ -55,3 +59,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 =======
 });
 >>>>>>> origin/main
+=======
+>>>>>>> pr/11282
