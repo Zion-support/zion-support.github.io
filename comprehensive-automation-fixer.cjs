@@ -1,10 +1,7 @@
 
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 class ComprehensiveAutomationFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -1234,3 +1231,5 @@ module.exports = ComprehensiveAutomationFixer;
       .replace(/['"]framer-motion;['"]/g, ")
       .replace(/['"]lucide-react;['"]/g, ")
 module.exports = ComprehensiveAutomationFixer;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,7 +1,43 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
 #!/usr/bin/env node;
+=======
+
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
+
+
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+#!/usr/bin/env node;
+<<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
 const branches = execSync('git branch -r', { "encoding"});
@@ -21,4 +57,23 @@ const mergedBranches = execSync('git branch -r --merged main', { "encoding"});
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
+<<<<<<< HEAD
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     console.error(' Comprehensive branch merger "failed")
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    console.error(' Comprehensive branch merger "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log('� Comprehensive Branch Merger')
+
+>>>>>>> origin/chore/fix-lint-and-merge

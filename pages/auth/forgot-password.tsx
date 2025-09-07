@@ -1,1 +1,4 @@
-
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const ForgotPassword: NextPage = $2;
+export default ForgotPassword,

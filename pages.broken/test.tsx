@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 
 ;
-
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;"";"
+ursor/automate-test-improve-and-merge-code-646c;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 =======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> origin/chore/fix-lint-and-merge

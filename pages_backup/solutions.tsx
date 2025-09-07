@@ -1,21 +1,3 @@
-import React from 'react';
-:pages/solutions.tsx
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Target, Brain, Rocket, Shield, Zap, Atom, Cpu;
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart;
-  Lightbulb, Search, Grid, List, TrendingUp;
-  User, ShoppingCart, Bell, HelpCircle, FileText;
-  Video, Headphones, Code, Database, Network, Server;
-  Monitor, Smartphone, Camera, Gamepad2, Palette;
-  Music, Film, BookOpenCheck, Building, MessageCircle;
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
- } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-const Solutions: NextPage;
 export default function Solutions() {
   const solutions = [
     {
@@ -329,8 +311,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
+<<<<<<< HEAD
 
 
+=======
+import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 import Layout from '../components/layout/Layout';
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu
   Lock, Cloud, Settings, Eye, Award, Clock, Heart
@@ -339,7 +325,6 @@ import Layout from '../components/layout/Layout';
   Video, Headphones, Code, Database, Network, Server
   Monitor, Smartphone, Camera, Gamepad2, Palette
   Music, Film, BookOpenCheck, Building, MessageCircle
-:pages/solutions.tsx
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react'
 
@@ -430,75 +415,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
       popular: false
       icon: <BookOpenCheck className="w-8 h-8" />
     }
-:pages/solutions.tsx
-  ]
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise'
-      description: 'Deep domain knowledge across sectors'
-      icon: <Briefcase className="w-6 h-6" />
-    }
-    {
-      title: 'Custom Development'
-      description: 'Tailored solutions for unique needs'
-      icon: <Code className="w-6 h-6" />
-    }
-    {
-      title: 'Integration Services'
-      description: 'Seamless system integration'
-      icon: <Network className="w-6 h-6" />
-    }
-    {
-      title: 'AI & Automation'
-      description: 'Intelligent automation solutions'
-      icon: <Brain className="w-6 h-6" />
-    }
-    {
-      title: 'Cloud & Security'
-      description: 'Secure cloud infrastructure'
-      icon: <Shield className="w-6 h-6" />
-    }
-    {
-      title: 'Analytics & Insights'
-      description: 'Data-driven decision making'
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-  ]
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation"
-      industry: "Healthcare"
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
-      results: [
-        "30% reduction in administrative overhead"
-        "Improved patient satisfaction scores"
-        "Enhanced data security and compliance"
-      ]
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
-    }
-    {
-      title: "E-commerce Platform Modernization"
-      industry: "Retail"
-      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales."
-      results: [
-        "45% increase in conversion rates"
-        "60% improvement in page load times"
-        "Enhanced mobile user experience"
-      ]
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
-    }
-    {
-      title: "Manufacturing IoT Integration"
-      industry: "Manufacturing"
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
-      results: [
-        "25% reduction in unplanned downtime"
-        "15% improvement in production efficiency"
-        "Predictive maintenance cost savings"
-      ]
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-    }
-  ]
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -534,6 +450,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
+    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -572,6 +489,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -585,8 +503,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
-:pages/solutions.tsx
-        {/* Hero Section */}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -607,13 +523,17 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-:pages/solutions.tsx
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+                <a 
+                  href="/contact" 
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
-                </a>
                 </Link>
                 <a
                   href="/contact"
@@ -771,8 +691,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-:pages/solutions.tsx
-                      {capability.icon}
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -808,13 +726,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-:pages/solutions.tsx
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    solution.popular
-                      ? 'border-orange-500 shadow-lg shadow-orange-500/25'
-                      : 'border-gray-700 hover:border-orange-500'
-                  }`}
-                >
                   {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -825,12 +736,22 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
                       {solution.icon}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
+                      {solution.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
                     <div className="text-3xl font-bold text-orange-400 mb-2">
-:pages/solutions.tsx
-                      {solution.price}
                       {solution.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -843,13 +764,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-:pages/solutions.tsx
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="/contact"
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -892,8 +806,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </motion.div>
         </div>
       </section>
-:pages/solutions.tsx
-        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -925,13 +837,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 Partner with us to build industry-specific solutions that drive your business forward
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-:pages/solutions.tsx
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Transformation
-                </a>
                 </Link>
                 <a
                   href="/contact"
@@ -943,7 +859,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 >
                   Schedule Consultation
 
-
                 </a>
 
               </div>
@@ -952,10 +867,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
     </UltraAdvancedFuturisticBackground>
   )
-:pages/solutions.tsx
-}
-export default Solutions;
-
 
 export default Solutions,;
 ;
@@ -985,10 +896,6 @@ export default Solutions,
           </div>;
         </section>;
       </div>;
-:pages/solutions.tsx
-    </UltraAdvancedFuturisticBackground>;
-  );
-},;
     </UltraAdvancedFuturisticBackground>);
 },
 export default Solutions,
@@ -1004,6 +911,13 @@ export default Solutions,
   Music, Film, BookOpenCheck, Building, MessageCircle;
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
  } from 'lucide-react';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default Solutions;
+=======
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+const Solutions: NextPage;
+export default Solutions;
+>>>>>>> origin/chore/fix-lint-and-merge

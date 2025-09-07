@@ -1,54 +1,189 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
+<<<<<<< HEAD
+
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+<<<<<<< HEAD
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+=======
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false,
+>>>>>>> origin/chore/fix-lint-and-merge
     "plugins": [
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"],
-      "@/app/*": ["./app/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/public/*": ["./public/*"]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
   },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
+    ]
+  },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+=======
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+<<<<<<< HEAD
+=======
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/**/*.ts",
+    "data/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "zion/**/*.ts",
+    "zion/**/*.tsx",
+    "protocol/**/*.ts",
+    "protocol/**/*.tsx",
+    "App.tsx",
+    "middleware.ts",
+    "jest.setup.ts",
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+    "vite.config.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
-    "dist"
+    "dist",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*",
+    "api-backup",
+    "contracts",
+    "hardhat"
   ]
 }
+>>>>>>> origin/chore/fix-lint-and-merge

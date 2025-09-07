@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom/vitest';const "@testing-library/jest-dom/vitest";''";
 import '@testing-library/jest-dom/vitest';'';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -44,3 +45,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+=======
+import '@testing-library/jest-dom/vitest';
+
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+>>>>>>> origin/chore/fix-lint-and-merge

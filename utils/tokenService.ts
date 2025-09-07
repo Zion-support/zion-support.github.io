@@ -1,64 +1,59 @@
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
 
-;
-ursor/automate-test-improve-and-merge-code-646c;
-import { addTransaction,getAllTransactions,getUserBalance;
- } from './tokenStore';
-import { addTransaction, getAllTransactions, getUserBalance  } from './tokenStore';
-export function issueTokens() {return addTransaction({addTransaction,getAllTransactions,getUserBalance;
-} from "./tokenStore";const actualAmount  = Math && Math.min(amount, currentBalance)addTransaction,getAllTransactions,getUserBalance;
-} from "./tokenStore";
-  const actualAmount  = Math && Math.min(amount, currentBalance)userId;
-    type: 'earn';
-    amount;
-    description: reason;
-  })}
-export function revokeTokens() {userId,type: 'earn',amount,description: reason;
-  })}export function revokeTokens() {const currentBalance = getUserBalance(userId)const actualAmount  = Math.min(amount, currentBalance)const actualAmount  = Math && Math.min(amount, currentBalance)const currentBalance = getUserBalance(userId)return addTransaction({userId,type: "earn",amount,description: reason;
-    description: reason;
-    description: reason;
-  })}export function revokeTokens() {const currentBalance = getUserBalance(userId)const actualAmount  = Math.min(amount, currentBalance)return addTransaction({userId,type: "spend",amount: actualAmount,description: reason;
-    description: reason;
-    description: reason;
-  })}
-import {
-  }
   addTransaction,
   getAllTransactions,
-  getUserBalance
-} from "./tokenStore";"
+  getUserBalance,;
+} from "./tokenStore";
 
   const actualAmount = Math && Math.min(amount, currentBalance);
-  
 
-    userId,
-"type": 'earn''
-    amount,
-"description": reason
-  });
-}
-export function revokeTokens() {
-    }
-    userId,
-    "type": 'earn','
-    amount,
-    "description": reason;
+    type: 'earn'
+    amount;
+    description: reason;
   });
 }
 
+<<<<<<< HEAD
 export function revokeTokens() {;
   }
   const currentBalance = getUserBalance(userId);
   
 
+=======
+    description: reason;
+
+  });
+}
+pr-12325
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+
+  const currentBalance = getUserBalance(userId);
+
+>>>>>>> origin/chore/fix-lint-and-merge
   return addTransaction({
-    }
     userId,
-    "type": "earn","
+    type: "earn",
     amount,
-    "description": reason
+    description: reason,
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+
+  const currentBalance = getUserBalance(userId);
+
+  return addTransaction({
+
+    type: "earn",
+
+    amount,
+    description: reason,)
+
   });
 }
 
+<<<<<<< HEAD
 export function revokeTokens() {
   }
   const actualAmount = Math.min(amount, currentBalance);
@@ -78,3 +73,15 @@ export function revokeTokens() {
     description: reason
   });
 }
+=======
+export function revokeTokens(userId: string, amount: number, reason: string) {};
+  const currentBalance = getUserBalance(userId);
+  const actualAmount = Math.min(amount, currentBalance);
+
+  return addTransaction({}
+    userId,"
+    type: "spend",
+    amount: actualAmount,
+    description: reason,
+  });
+>>>>>>> origin/chore/fix-lint-and-merge

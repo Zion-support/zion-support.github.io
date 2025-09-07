@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -22,3 +23,5 @@ export default function ResearchDevelopmentPage() { const researchAreas = [{ "id
 
 
 }ursor/automate-test-improve-and-merge-code-646c;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

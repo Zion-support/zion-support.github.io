@@ -10,13 +10,6 @@ on:
 concurrency:
   group: cloud-automation-${{ github.ref }}
   cancel-in-progress: true
-name: Zion Autonomous Cloud Automations
-
-on:
-  schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch: {}
-
 
 permissions:
   contents: write
@@ -76,5 +69,6 @@ jobs:
             git push origin HEAD:${GITHUB_REF#refs/heads/}
           else
             echo "No changes to commit."
+
           fi
           fi

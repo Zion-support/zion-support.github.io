@@ -1,149 +1,165 @@
+id: string;
+  createdAtIso: string;
+  client_id: string;
+  talent_slug: string;
+  startDateIso: string;
 
-
-
-
-// Marketplace types,
-export interface Offer {
-
-}
-
-export interface Offer {;
-
-}
-
-export interface Offer {;
-
-
-  }
-
-
-  "id": string;
-  "createdAtIso": string;
-  "client_id": string;
-  "talent_slug": string;
-  "startDateIso": string;
-
-  "scopeSummary": string;
-  "paymentTerms": PaymentTerms;
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
   agreementUrl?: string;
-  "status": "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
+  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
   changeRequestNote?: string;
   projectId?: string;
 }
 
 export interface PaymentTerms {
-  }
-  "type": "hourly" | "fixed" | "milestone";"
+  type: "hourly" | "fixed" | "milestone";
   amount?: number;
   currency?: string;
   milestones?: Array<{
-    }
-    "title": string;
-    "amount": number;
-    "dueDateIso": string;
-  }>;
-}
-export interface Project  {export interface PaymentTerms  {type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{title: string;
+    title: string;
     amount: number;
     dueDateIso: string;
   }>;
-}export interface Project  {scopeSummary: string;
-  paymentTerms: PaymentTerms;id: string;
-
-
-
-
-  "scopeSummary": string;
-  "paymentTerms": PaymentTerms;
-
-
-
-
-  "id": string;
-  "title": string;
-  "summary": string;
-  "client_id": string;
-  "talent_slug": string;
-  "startDateIso": string;
-  "status": "ACTIVE" | "COMPLETED" | "CANCELLED";"
-  "status": "ACTIVE" | "COMPLETED" | "CANCELLED";"
-
-
-
-
-  "timeline": any[];
-  "documents": ProjectDocument[];
-  "notes": ProjectNote[];
 }
 
+  id: string;
+  title: string;
+  summary: string;
+  client_id: string;
+  talent_slug: string;
+  startDateIso: string;
+
+  timeline: any[];
+
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
+}
 
 export interface ProjectNote {
-  }
-  "id": string;
-  "authorId": string;
-  "authorRole": string;
-  "content": string;
-  "createdAtIso": string;
+
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+
 }
 
+export type PaymentTermsType = "hourly" | "fixed" | "milestone";
+export type Milestone = {;
+  id: string;
+  title: string;
+  dueDateIso?: string;
+  amountUsd?: number;
+  status?: "planned" | "in-progress" | "done";
+};
+export type PaymentTerms =;
+  | { type: "hourly", hourlyRateUsd: number }
+  | { type: "fixed", fixedAmountUsd: number }
+  | { type: "milestone", milestones: Milestone[] };
+export type OfferStatus =;
+  | "SENT";
+  | "CONFIRMED";
+  | "CHANGES_REQUESTED";
+  | "DECLINED";
+export type Offer = {;
+  id: string;
+  createdAtIso: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+  agreementUrl?: string;
+  status: OfferStatus;
+  changeRequestNote?: string;
+  projectId?: string;
+};
+export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
+export type ProjectDocument = {;
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+};
+export type ProjectNote = {;
+  id: string;
+  authorId: string;
+  authorRole: "client" | "talent";
+  content: string;
+  createdAtIso: string;
+};
+export type Project = {;
+  id: string;
+  title: string;
+  summary: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;
+  status: ProjectStatus;
+  timeline: Milestone[];
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
+};
+export type MarketplaceDb = {;
+  offers: Offer[];
+  projects: Project[];
+};
 
+// Marketplace types;
+export interface Offer {
+  // TODO: Implement
+}
+export interface Offer {;
 
+  id: string;,
+  createdAtIso: string;
+  client_id: string;,
+  talent_slug: string;
+  startDateIso: string;,
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+  agreementUrl?: string;
 
+  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
+  changeRequestNote?: string;
+  projectId?: string;
 
-export type PaymentTermsType = $2;
-export type Milestone = $2;
-  title: string,
-  dueDateIso?: string,
-  amountUsd?: number,
-  status?: "planned" | "in-progress" | "done"
-},
+export interface PaymentTerms {
+  // TODO: Implement
+}"
+  type: "hourly" | "fixed" | "milestone";"
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;,
+  amount: number;
+    dueDateIso: string;
 
-export type PaymentTerms =
-  | { type: "hourly", hourlyRateUsd: number}
-  | { type: "fixed", fixedAmountUsd: number}
-  | { type: "milestone", milestones: Milestone[] },
+  }>;
 
-export type OfferStatus = $2;
-export type Offer = $2;
-  createdAtIso: string,
-  clientId: string,
-  talentSlug: string,
-  startDateIso: string,
-  scopeSummary: string,
-  paymentTerms: PaymentTerms,
-  agreementUrl?: string,
-  status: OfferStatus,
-  changeRequestNote?: string,
-  projectId?: string
-},
+  scopeSummary: string;,
 
-export type ProjectStatus = $2;
-export type ProjectDocument = $2;
-  name: string,
-  url?: string,
-  uploadedAtIso: string},
+  title: string;
+  summary: string;,
+  client_id: string;
 
-export type ProjectNote = $2;
-  authorId: string,
-  authorRole: "client" | "talent",
-  content: string,
-  createdAtIso: string},
+  talent_slug: string;,
+  startDateIso: string;"
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";","
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";"
+  timeline: any[];,
 
-export type Project = $2;
-  title: string,
-  summary: string,
-  clientId: string,
-  talentSlug: string,
-  startDateIso: string,
-  status: ProjectStatus,
-  timeline: Milestone[],
-  documents: ProjectDocument[],
-  notes: ProjectNote[]
-},
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
 
-export type MarketplaceDb = $2;
-  projects: Project[]
-},
+export interface ProjectNote {
+  // TODO: Implement
+  authorId: string;
+
+  authorRole: string;,
+  content: string;
+  createdAtIso: string;
+
+}

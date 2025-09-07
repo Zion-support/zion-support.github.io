@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // TypeScript file
 export const placeholder = 'placeholder';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+// TypeScript file
+export const placeholder = 'placeholder';
+=======
+<<<<<<< HEAD
+export const placeholder = 'placeholder';
+=======
+// TypeScript file
+export const placeholder = 'placeholder';
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

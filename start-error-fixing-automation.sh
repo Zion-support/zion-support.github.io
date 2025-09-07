@@ -10,7 +10,75 @@ pm2 delete all 2>/dev/null || true
 # Start the error fixing ecosystem
 echo "Starting PM2 error fixing ecosystem..."
 pm2 start ecosystem.error-fixing.config.cjs
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+# Error Fixing Automation Startup Script
+# This script starts the comprehensive error fixing automation system
+# Error Fixing Automation PM2 Management Script
+# This script manages the PM2 error fixing automation system
+set -e
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+echo "🚀 Starting Error Fixing Automation System..."
+# Ensure we're in the project root
+cd "$(dirname "$0")"
+# Create necessary directories
+mkdir -p automation/logs
+mkdir -p error-reports
+mkdir -p logs
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+    echo "📦 Installing dependencies..."
+    npm install
+fi
+# Install PM2 globally if not already installed
+if ! command -v pm2 &> /dev/null; then
+    echo "📦 Installing PM2..."
+    npm install -g pm2
+fi
+# Setup PM2 logrotate
+echo "📊 Setting up PM2 logrotate..."
+pm2 install pm2-logrotate || true
+pm2 set pm2-logrotate:max_size 10M
+pm2 set pm2-logrotate:retain 30
+pm2 set pm2-logrotate:compress true
+pm2 set pm2-logrotate:workerInterval 60
+pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
+# Stop any existing error fixing processes
+echo "🛑 Stopping existing error fixing processes..."
+pm2 stop ecosystem-error-fixing.config.cjs || true
+pm2 delete ecosystem-error-fixing.config.cjs || true
+# Start the error fixing automation
+echo "🚀 Starting Error Fixing Automation..."
+pm2 start ecosystem-error-fixing.config.cjs --update-env
+# Show status
+echo "PM2 Status:"
+pm2 status
+# Show logs
+echo "Recent logs:"
+pm2 logs --lines 20
+echo "Error fixing automation system started successfully!"
+echo "Monitor with: pm2 status"
+echo "View logs with: pm2 logs"
+echo "Stop with: pm2 stop all"
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 echo "📋 Available commands:"
 echo "  pm2 logs error-fixer-automation          # View main error fixer logs"
 echo "  pm2 logs typescript-error-fixer          # View TypeScript error fixer logs"
@@ -224,4 +292,12 @@ case "${1:-help}" in
         exit 1
         ;;
 esac
+<<<<<<< HEAD
+=======
 esac
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,7 +1,0 @@
-
-
-  const { role;
-  }
-  res.end()
-}
-

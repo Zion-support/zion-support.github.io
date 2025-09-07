@@ -60,7 +60,7 @@ export function middleware(request: NextRequest) {
   response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
   
   // Content Security Policy
-const csp = [;
+  const csp = [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' https://vercel.live",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -102,7 +102,7 @@ function updateNextConfigSecurity() {
   }
   
   // Add security configurations
-const securityConfig = `;
+  const securityConfig = `
 const nextConfig = {
   // Security configurations
   poweredByHeader: false,
@@ -110,7 +110,7 @@ const nextConfig = {
   
   // Headers for security
   async headers() {
-return [;
+    return [
       {
         source: '/(.*)',
         headers: [
@@ -161,13 +161,13 @@ module.exports = nextConfig;
 function createSecurityAudit() {
   console.log('🔍 Creating security audit script...');
   
-const auditScript = `#!/usr/bin/env node;
+  const auditScript = `#!/usr/bin/env node
 
 
 console.log('🔍 Security Audit Starting...\\n');
 
 // Security audit checks
-const securityChecks = [;
+const securityChecks = [
   {
     name: 'Dependency vulnerabilities',
     command: 'npm audit --audit-level=moderate',
@@ -246,13 +246,13 @@ runSecurityChecks();
 function createEnvSecurityChecker() {
   console.log('🔐 Creating environment security checker...');
   
-const envChecker = `#!/usr/bin/env node;
+  const envChecker = `#!/usr/bin/env node
 
 
 console.log('🔐 Environment Security Check Starting...\\n');
 
 // Check for sensitive files
-const sensitiveFiles = [;
+const sensitiveFiles = [
   '.env.local',
   '.env.production',
   '.env.development',
@@ -262,7 +262,7 @@ const sensitiveFiles = [;
 ];
 
 // Check for hardcoded secrets
-const secretPatterns = [;
+const secretPatterns = [
   /password\\s*=\\s*['"][^'"]+['"]/gi,
   /api[_-]?key\\s*=\\s*['"][^'"]+['"]/gi,
   /secret\\s*=\\s*['"][^'"]+['"]/gi,
@@ -274,7 +274,7 @@ const secretPatterns = [;
 function scanForSecrets() {
   console.log('🔍 Scanning for hardcoded secrets...');
   
-const filesToScan = [;
+  const filesToScan = [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     'lib/**/*.{js,jsx,ts,tsx}',
@@ -285,7 +285,7 @@ const filesToScan = [;
   
   filesToScan.forEach(pattern => {
     try {
-const files = execSync(\`find . -name "\${pattern}" -type f\`, { encoding: 'utf8' });
+      const files = execSync(\`find . -name "\${pattern}" -type f\`, { encoding: 'utf8' })
         .split('\\n')
         .filter(file => file.trim());
       
@@ -360,7 +360,7 @@ function checkGitignore() {
   }
   
   const gitignore = fs.readFileSync('.gitignore', 'utf8');
-const requiredIgnores = [;
+  const requiredIgnores = [
     '.env',
     '.env.local',
     '.env.production',
@@ -418,7 +418,7 @@ runAllChecks();
 function createSecurityHeadersTest() {
   console.log('🧪 Creating security headers test...');
   
-const headersTest = `#!/usr/bin/env node;
+  const headersTest = `#!/usr/bin/env node
 
 const https = require('https');
 const http = require('http');

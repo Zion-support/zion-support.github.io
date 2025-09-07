@@ -1,61 +1,99 @@
-import React from 'react
-import { Metadata } from next'
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Ai Content Optimizer - Zion Tech Group',
+  description: 'Advanced ai content optimizer solutions for modern businesses.',
+};
+    </div>
+  );
+}
+"
+
+=======
+import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ai Content Optimizer | Zion Tech Group,
-  description: Professional ai content optimizer services for your business needs.',
-  keywords: 'ai content optimizer, services, business, technology
-}
+  title: 'AI Content Optimizer | Zion Tech Group',
+  description: 'Revolutionary AI-powered content optimization platform that increases engagement by 400% and boosts SEO rankings automatically.',
+  keywords: 'AI content optimizer, SEO optimization, content optimization, engagement boost',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI Content Optimizer | Zion Tech Group',
+    description: 'Revolutionary AI-powered content optimization platform that increases engagement by 400%.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Content Optimizer | Zion Tech Group',
+    description: 'Revolutionary AI-powered content optimization platform that increases engagement by 400%.',
+  },
+};
 
-export default function ServicePage() {
+export default function AIContentOptimizerPage() {
   return (
-    <div className=min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16>
-        <div className=text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Ai Content Optimizer
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-            Professional ai content optimizer services for your business needs.
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Content Optimizer</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Revolutionary AI-powered content optimization platform that increases engagement by 400% and boosts SEO rankings automatically.
           </p>
         </div>
 
-        <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6>
-            <div className=text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4>Fast & Reliable</h3>
-            <p className=text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">AI Content Generation</h3>
+                  <p className="text-gray-600">Generate high-quality blog posts, articles, and social media content</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">SEO Optimization</h3>
+                  <p className="text-gray-600">Automatically optimize content for search engines</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">Engagement Analysis</h3>
+                  <p className="text-gray-600">Analyze and improve content engagement metrics</p>
+                </div>
+              </li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6>
-            <div className=text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4>Easy Integration</h3>
-            <p className=text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6>
-            <div className=text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4>Scalable Solutions</h3>
-            <p className=text-gray-300">
-              Grow with your business with our flexible and scalable platform.
-            </p>
-          </div>
-        </div>
 
-        <div className="text-center>
-          <h2 className=text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8>
-            Contact us today to learn how our ai content optimizer services can transform your business.
-          </p>
-          <button className=bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
-            Contact Sales
-          </button>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Benefits</h2>
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">400% Engagement Boost</h3>
+                <p className="text-gray-600">Dramatically increase content engagement rates</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">SEO Rankings</h3>
+                <p className="text-gray-600">Automatically boost your search engine rankings</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Savings</h3>
+                <p className="text-gray-600">Optimize content in minutes instead of hours</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
-
+}
+=======
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

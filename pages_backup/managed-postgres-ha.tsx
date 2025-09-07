@@ -1,12 +1,3 @@
-:pages/managed-postgres-ha.tsx
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Database, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function ManagedPostgresHAPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/managed-postgres-ha'))
-  if (!service) return null
 export default function ManagedPostgresHAPage() {
   if (!service) return null,
 
@@ -66,8 +57,6 @@ export default function ManagedPostgresHAPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => ("
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
-:pages/managed-postgres-ha.tsx
-                ))}
 
               </ul>
             </div>"
@@ -79,12 +68,6 @@ export default function ManagedPostgresHAPage() {
                 </div>"
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-:pages/managed-postgres-ha.tsx
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Assessment<ArrowRight /></a>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400 hover:text-white"><Phone /><a href={`tel:${service.contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{service.contactInfo.mobile}</a></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</a></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</a></div>
 
 "
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Assessment<ArrowRight /></Link>"
@@ -101,8 +84,6 @@ export default function ManagedPostgresHAPage() {
     </Layout>
 
 }
-:pages/managed-postgres-ha.tsx
-;
 
   } catch (error) {"
     console.error("Error:", error);"

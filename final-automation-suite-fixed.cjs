@@ -57,10 +57,17 @@ class FinalAutomationSuite {
 
   async createAdditionalScripts() {
     this.log("🔧 Creating additional automation scripts...");
+<<<<<<< HEAD
     const scripts = [{
         "name": "auto-deployment.cjs",
         "content": `#!/usr/bin/env node
 const { execSync } = require("child_process");
+=======
+    const scripts = [
+      {
+        name: "auto-deployment.cjs",
+        content: `#!/usr/bin/env node
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 class AutoDeployment {
   constructor() {
@@ -90,10 +97,15 @@ const deployment = new AutoDeployment();
 deployment.deploy();`
       },
       {
+<<<<<<< HEAD
         "name": "code-quality-checker.cjs",
         "content": `#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
+=======
+        name: "code-quality-checker.cjs",
+        content: `#!/usr/bin/env node
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 class CodeQualityChecker {
   constructor() {
@@ -178,9 +190,14 @@ const checker = new CodeQualityChecker();
 checker.checkCodeQuality();`
       },
       {
+<<<<<<< HEAD
         "name": "dependency-updater.cjs",
         "content": `#!/usr/bin/env node
 const { execSync } = require("child_process");
+=======
+        name: "dependency-updater.cjs",
+        content: `#!/usr/bin/env node
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 class DependencyUpdater {
   constructor() {
@@ -213,10 +230,15 @@ const updater = new DependencyUpdater();
 updater.updateDependencies();`
       },
       {
+<<<<<<< HEAD
         "name": "performance-monitor.cjs",
         "content": `#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
+=======
+        name: "performance-monitor.cjs",
+        content: `#!/usr/bin/env node
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 class PerformanceMonitor {
   constructor() {
@@ -259,11 +281,13 @@ class PerformanceMonitor {
     if (!fs.existsSync(dir)) {
       return size;
     }
+<<<<<<< HEAD
     
     const items = fs.readdirSync(dir);
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         size += this.getDirectorySize(fullPath);

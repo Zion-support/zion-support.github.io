@@ -1,22 +1,15 @@
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 
   const state = readState();
   const logs = providerId;
 }
 
-
-
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
 }
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
@@ -30,10 +23,6 @@ export default function handler() { return null; }
   const { providerId } = req.query as { providerId?: string };
   const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
   res.status(200).json({ logs })
-
-
-}
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 
@@ -51,17 +40,11 @@ export default /**;
   res.status (200).json ({ logs });
 }
 
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-ursor/fix-website-loading-errors-and-merge-6662
-
-
-
 
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -71,5 +54,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { providerId } = req.query as { providerId?: string },
   const state = null;
   res.status(200).json({ logs })
-origin/cursor/automate-test-improve-and-merge-code-2533
 }
