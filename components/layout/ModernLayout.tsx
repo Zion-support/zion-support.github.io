@@ -1,22 +1,14 @@
-type ModernLayoutProps = {
-  children: ReactNode
-
-type ModernLayoutProps = {;
-  children: ReactNode,;
-  title?: string;
+type ModernLayoutProps = {children: ReactNode;
+type ModernLayoutProps = {children: ReactNode,title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-const ModernLayout = ({
-const ModernLayout = ({;
-  children;
+const ModernLayout = ({const ModernLayout = ({children;
   title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
-}: ModernLayoutProps) =>: any {
-  return (
-    <>;
+}: ModernLayoutProps) =>: any {return (<>;
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
@@ -42,7 +34,4 @@ const ModernLayout = ({;
       <div className="min - h-screen bg - white text-gray-900">;
         {children}
       </div>;
-</>),
-}
-;
-export default ModernLayout;
+</>),}export default ModernLayout;

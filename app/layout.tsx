@@ -3,8 +3,6 @@ import { Inter } from 'next/font/google';
 import Link from "next/link";
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
@@ -53,9 +51,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
@@ -68,6 +66,7 @@ export const metadata: Metadata = {
   themeColor: '#000000',
 };
 
+<<<<<<< HEAD
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -165,17 +164,26 @@ function Footer() {
   );
 }
 
+=======
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
         <Footer />
+=======
+      <body>
+        <div className="min-h-screen bg-white">
+          {children}
+        </div>
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
       </body>
     </html>
   );

@@ -1,10 +1,11 @@
 
 
-
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+
+
 
 
   {
@@ -110,6 +111,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -118,6 +122,8 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+
+
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
@@ -331,8 +337,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
-
-
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -414,31 +418,39 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
   },
   {
-    id: "equipment-2", title: "Enterprise GPU Server Rack",
-    description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
-    price: 24999, currency: "$",
-    tags: ["Server", "Enterprise", "GPU Cluster"];
-    author: {
-      
-      name: "ServerPro Systems",
-      id: "serverpro"
-    },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
-    rating: 4.9, reviewCount: 18,
-    featured: true, location: "North America",
+    reviewCount: 18;
+    featured: true;
+
 
     reviewCount: 18;
     featured: true;
+
+
     availability: "2-4 Weeks"
   }
+
+    id: "ai-model-1";
+    title: "GPT-4 API Integration Package";
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
+    category: "AI Models & APIs";
+    price: 1999;
+    currency: "$";
+    tags: ["GPT-4", "API Integration", "NLP"],
+    author: {
+      name: "AI Solutions Inc.";
+      id: "ai-solutions";
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 
-
     'AI models',
+
+'AI models',
+
     'GPT integration',
     'Machine learning',
     'Computer vision',
@@ -455,6 +467,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+  ];
+  // Convert strings to SearchSuggestion objects
+    type: 'product', // Use a valid type from the updated SearchSuggestion interface
+
+
+
+
 
 
   ];
@@ -482,12 +501,16 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   ];
 
   
+
+
   }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+
+
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
 }
@@ -496,6 +519,17 @@ export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+
+
+
+  }));
+};
+
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
   ].sort();
   const locations = [
     ...new Set(
@@ -546,19 +580,33 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 
+
+
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
 };
 
+
+
+};
+
+
+
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+
+
+
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+
+
+
 
 
 
@@ -888,8 +936,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1008,10 +1055,22 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
 
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+
+
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};
+

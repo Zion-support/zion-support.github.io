@@ -12,20 +12,20 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    // Remove all merge conflict markers and keep the main branch version (after )
+    content = content.replace(/[\s\S]*?([\s\S]*?)
+    content = content.replace(/[\s\S]*?([\s\S]*?)
     
     // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)(?=\n|$)/g, '$1');
+    content = content.replace(/[\s\S]*?([\s\S]*?)(?=\n|$)/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
     
     // Clean up multiple consecutive newlines
     content = content.replace(/\n{3,}/g, '\n\n');
