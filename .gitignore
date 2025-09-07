@@ -4,11 +4,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Next.js
-.next/
-out/
-build/
+# Production builds
 dist/
+build/
+out/
 
 # Environment variables
 .env
@@ -17,13 +16,19 @@ dist/
 .env.test.local
 .env.production.local
 
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
 # Logs
 logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
 # Runtime data
 pids/
@@ -71,15 +76,10 @@ jspm_packages/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
-# Allow favicon files in public directory
-public/*
-!public/favicon.ico
-!public/favicon.svg
-!public/site.webmanifest
+public
 
 # Storybook build outputs
 .out
@@ -90,78 +90,99 @@ tmp/
 temp/
 
 # Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Automation logs
+# Automation logs and data (continuously changing)
 automation/logs/*.log
-automation/logs/*.backup
-automation/logs/*.pid
-logs/*.log
-logs/*.backup
-logs/*.pid
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
 
-# Large files
+# Test results
+test-results/
+coverage/
+
+# Generated reports
+automation-reports/
+health-check-report-*.json
+security-scan-report-*.json
+link-reports/
+maintenance-reports/
+deployment-reports/
+ai-optimization-reports/
+ai-analysis-reports/
+test-generation-reports/
+test-reports/
+security-reports/
+documentation-reports/
+orchestrator-reports/
+ci-cd-reports/
+dependency-backups/
+dependency-reports/
+ai-optimization-backups/
+
+# Additional sensitive directories and files
+logs/
+data/
+reports/
+security-reports/
+test-reports/
+temp_working/
+*.backup.*
 *.backup
-*.bak
+link-*.json
+link-*.md
+performance-report.json
+security-audit-report.json
+quality-report.json
+continuous-improvement-report.json
+console-error-fixer-report.json
+
+# PM2 automation files
+setup-pm2-cron.sh
+pm2-*.sh
+pm2-*.js
+ecosystem-pm2-*.config.cjs
+start-pm2-*.sh
+start-*-automation.sh
+monitor-*.sh
+manage-*.sh
+backups/sync-backups/
+tsconfig.tsbuildinfo
+
+# Ignore local backups
+backups/
+
+# PM2 automation reports
+health-check-report.json
+performance-metrics.json
+security-scan-report.json
+
+# Core files
+core
+
+# Additional ignores for better project management
+*.log
 *.tmp
 *.temp
-
-# Build artifacts
-*.tgz
-*.tar.gz
-*.zip
-*.rar
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Backup files
-*.backup
-*.bak
-*.old
-*.orig
-
-# Cache directories
-.cache/
-.parcel-cache/
-.next/
-out/
-build/
-dist/
-
-# Test coverage
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+.netlify
 coverage/
 .nyc_output/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
+dist/
+build/
+.cache/
+.parcel-cache/
 .DS_Store
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Large log files
-logs/enhanced-sync-manager.log
-logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log .next/
