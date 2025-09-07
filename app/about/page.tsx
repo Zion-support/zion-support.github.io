@@ -1,125 +1,94 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About | Zion Tech Group',
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise software',
+  keywords: 'about us, company, mission, AI solutions, micro SaaS, IT services, technology leadership',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'About | Zion Tech Group',
-    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About | Zion Tech Group',
+    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions.',
   },
 };
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            We are a forward-thinking technology company dedicated to delivering 
-            cutting-edge AI solutions, innovative micro SaaS platforms, and 
-            comprehensive IT services that drive real business transformation.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI solutions, micro SaaS development, and enterprise IT services.
           </p>
         </div>
 
-        {/* Mission Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Mission</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-slate-800 rounded-lg">
-              <Award className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Excellence</h3>
-              <p className="text-slate-300">
-                Delivering exceptional quality in every solution we create.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-slate-800 rounded-lg">
-              <Users className="h-12 w-12 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-              <p className="text-slate-300">
-                Pushing the boundaries of what's possible with technology.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-slate-800 rounded-lg">
-              <Target className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Results</h3>
-              <p className="text-slate-300">
-                Focused on delivering measurable business outcomes.
-              </p>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth. 
+              We believe in the transformative power of AI and technology to solve complex business challenges.
+            </p>
+            <p className="text-lg text-gray-600">
+              Our team of expert developers, data scientists, and technology consultants work together to deliver 
+              solutions that not only meet your current needs but scale with your future growth.
+            </p>
+          </div>
+          
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">Innovation</h3>
+                  <p className="text-gray-600">We stay at the forefront of technology trends and emerging solutions.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">Quality</h3>
+                  <p className="text-gray-600">We deliver enterprise-grade solutions with rigorous testing and quality assurance.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-3 mt-1">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900">Partnership</h3>
+                  <p className="text-gray-600">We work closely with our clients as strategic technology partners.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Values Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Values</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="flex items-start space-x-4">
-              <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Client-Centric Approach</h3>
-                <p className="text-slate-300">
-                  Every solution is tailored to meet specific client needs and business objectives.
-                </p>
-              </div>
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+              <p className="text-gray-600">We deliver solutions quickly without compromising on quality or security.</p>
             </div>
-            <div className="flex items-start space-x-4">
-              <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Global Perspective</h3>
-                <p className="text-slate-300">
-                  Leveraging international best practices and cutting-edge technologies.
-                </p>
-              </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
+              <p className="text-gray-600">Bank-grade security and 99.9% uptime guarantee for all our solutions.</p>
             </div>
-            <div className="flex items-start space-x-4">
-              <Star className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Continuous Learning</h3>
-                <p className="text-slate-300">
-                  Staying ahead of technology trends and industry developments.
-                </p>
-              </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">💡</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovative Solutions</h3>
+              <p className="text-gray-600">Cutting-edge AI and technology solutions tailored to your business needs.</p>
             </div>
-            <div className="flex items-start space-x-4">
-              <Target className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Quality Focus</h3>
-                <p className="text-slate-300">
-                  Maintaining the highest standards in all our deliverables.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-slate-800 rounded-lg p-12">
-          <h2 className="text-3xl font-bold mb-8">Ready to Work With Us?</h2>
-          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our innovative solutions can help transform your business 
-            and drive your digital transformation goals.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-            >
-              Get Started
-            </a>
-            <a 
-              href="/services" 
-              className="px-8 py-4 border border-slate-400 hover:border-white rounded-lg font-semibold transition-all duration-300"
-            >
-              View Services
-            </a>
           </div>
         </div>
       </div>

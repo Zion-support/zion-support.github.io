@@ -1,32 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
   trackingId: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
-  if (typeof window === 'undefined') {
-    return null;
-  }
+export default function Analytics({ trackingId }: AnalyticsProps) {
+  useEffect(() => {
+    // Load Google Analytics
+    if (typeof window !== 'undefined' && trackingId) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
 
-  return (
-    <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${trackingId}');
-          `,
-        }}
-      />
-    </>
-  );
-};
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
 
-export default Analytics;
+      // Track page views
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, [trackingId]);
+
+  return null;
+}

@@ -1,75 +1,75 @@
+'use client';
 
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AccessibilityContextType {
-
   highContrast: boolean;
-  largeText: boolean;
   reducedMotion: boolean;
-import React, { create_context, useContext, useState, ReactNode } from './react';
-;
-
-import React, { createContext, useContext, ReactNode } from "react";
-
-interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
-
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
 }
 
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+export function useAccessibility() {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  }
+  return context;
 }
 
-const AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
->(undefined);
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
+export default function AccessibilityProvider({ children }: AccessibilityProviderProps) {
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
 
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  useEffect(() => {
+    // Apply accessibility settings to document
+    document.documentElement.setAttribute('data-high-contrast', highContrast.toString());
+    document.documentElement.setAttribute('data-reduced-motion', reducedMotion.toString());
+    document.documentElement.setAttribute('data-font-size', fontSize);
+  }, [highContrast, reducedMotion, fontSize]);
+
+  const toggleHighContrast = () => {
+    setHighContrast(!highContrast);
   };
 
-  const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.focus();
-    }
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  };
+
+  const value = {
+    highContrast,
+    reducedMotion,
+    fontSize,
+    toggleHighContrast,
+    toggleReducedMotion,
+    setFontSize,
   };
 
   return (
-    <AccessibilityContext.Provider
-      value={{
-        announceToScreenReader,
-        setFocus,
-        highContrast,
-        largeText,
-        reducedMotion,
-        toggleHighContrast,
-        toggleLargeText,
-        toggleReducedMotion,
-      }}
-    >
+    <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
   );
-};
-
-    );
-  }
-  return context;
-};
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
-    );
-  }
-  return context;
-};
-
+}
