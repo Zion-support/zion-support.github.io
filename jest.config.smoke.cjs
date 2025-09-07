@@ -5,11 +5,10 @@ const createJestConfig = nextJest({
 });
 
 const config = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  testMatch: ['**/*.smoke.test.*'],
-  moduleNameMapping: {
+  testMatch: ['**/__tests__/basic.smoke.test.js'],
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
   transform: {
