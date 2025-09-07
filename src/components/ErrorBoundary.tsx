@@ -60,7 +60,4 @@ const DefaultErrorFallback: React.FC<{ error?: Error }> = ({ error }) => (
 );
 
 export default ErrorBoundary;
-          </div>
-        </div>
-      );
-    }
+// End of file

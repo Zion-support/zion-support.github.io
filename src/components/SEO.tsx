@@ -54,4 +54,3 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
-import React from 'react';
