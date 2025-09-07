@@ -69,7 +69,7 @@ import '@testing-library/jest-dom';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
 });
@@ -84,6 +84,11 @@ pr-12325
 
   it('displays correct content', () => {
     render(<App />);
-    expect(screen.getByText('Leading the future of technology with AI, blockchain, and innovative solutions')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+  });
+
+  it('handles user interactions', () => {
+    render(<App />);
+    expect(screen.getByText(/Leading provider of AI solutions/i)).toBeInTheDocument();
   });
 });

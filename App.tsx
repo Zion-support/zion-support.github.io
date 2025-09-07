@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 function App() {
@@ -247,3 +248,13 @@ export default function App(): JSX.Element {
   );
 }
 >>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
+=======
+import React from 'react';
+import HomePage from './pages/index';
+
+const App: React.FC = () => {
+  return <HomePage />;
+};
+
+export default App;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-ec2c
