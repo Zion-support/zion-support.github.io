@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-const SAMPLE_QUERIES = $2;
-const SKILLS = $2;
+const SAMPLE_QUERIES = { error: "Invalid request" };
+const SKILLS = { error: "Invalid request" };
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const q = ((req.query.q as string) || '').toLowerCase($2);
-  const suggestions = $2;
+  const q = ((req.query.q as string) || '').toLowerCase({ error: "Invalid request" });
+  const suggestions = { error: "Invalid request" };
   for (const s of SAMPLE_QUERIES) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }

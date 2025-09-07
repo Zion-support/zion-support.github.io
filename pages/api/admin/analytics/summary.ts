@@ -1,8 +1,9 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 interface AnalyticsEvent {
   name: string
@@ -55,3 +56,4 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
+}

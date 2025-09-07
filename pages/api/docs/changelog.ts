@@ -1,5 +1,3 @@
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -9,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json(content);
     } catch (e: any) {
     }
-    return,
+    return
   }
 
   if (req.method === 'POST') {
@@ -28,8 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json'),
-
+const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
@@ -39,10 +36,10 @@ export default /**
 function handler() {
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     try {
-      const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : { content: '' },
+      const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : { content: '' }
       res.status(200).json(content)
     } catch (e: any) {
       res.status(500).json({ error: e ?.message || 'Failed to read changelog' })
@@ -50,10 +47,10 @@ if ( {) {
     return
   }
 
-  if (req.method = $2;
-      const payload = $2;
-      fs.mkdirSync(path.dirname(filePath), { recursive: true}),
-      fs.writeFileSync(filePath, JSON.stringify(payload, null, 2)),
+  if (req.method = { error: "Invalid request" };
+      const payload = { error: "Invalid request" };
+      fs.mkdirSync(path.dirname(filePath), { recursive: true})
+      fs.writeFileSync(filePath, JSON.stringify(payload, null, 2))
       res.status(200).json({ ok: true})
     } catch (e: any) {
       res.status(500).json({ error: e ?.message || 'Failed to write changelog' })
@@ -63,4 +60,3 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-

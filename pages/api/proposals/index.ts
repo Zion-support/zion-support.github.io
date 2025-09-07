@@ -1,11 +1,9 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
 async function ensureStore() {
-  await fs.ensureFile($2);
+  await fs.ensureFile({ error: "Invalid request" });
   try {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {;
   await fs.ensureFile(FILE_PATH);
   try {
@@ -67,20 +65,20 @@ export default async function handler(
   }
 }
   if (req.method === 'GET') {
-    const data = await fs.readJson($2);
+    const data = await fs.readJson({ error: "Invalid request" });
     return res.status(200).json(data)
   }
-  if (req.method = $2;
-    const data = await fs.readJson($2);
-    const item = $2;
-      title: body.title,
-      targetInstitution: body.targetInstitution,
-      regionalScope: body.regionalScope,
-      type: body.type,
-      status: body.status || 'Draft',
-      createdAt: new Date().toISOString()},
-    data.items.unshift($2);
-    await fs.writeJson($2);
+  if (req.method = { error: "Invalid request" };
+    const data = await fs.readJson({ error: "Invalid request" });
+    const item = { error: "Invalid request" };
+      title: body.title
+      targetInstitution: body.targetInstitution
+      regionalScope: body.regionalScope
+      type: body.type
+      status: body.status || 'Draft'
+      createdAt: new Date().toISOString()}
+    data.items.unshift({ error: "Invalid request" });
+    await fs.writeJson({ error: "Invalid request" });
     return res.status(201).json(item)
   }
 }
@@ -98,4 +96,3 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

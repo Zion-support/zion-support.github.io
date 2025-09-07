@@ -1,4 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -21,7 +23,7 @@ function handler() {
   const state = read_state ()
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (200).json ({
       route: "/multiverse / hub"
@@ -59,16 +61,16 @@ export default async function handler(req, res) {
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
 
-      route: "/multiverse/hub",
-      instanceId: state.config.instanceId,
-
-      peers: state.config.peers,
-      scope: state.config.scope,
-      optIn: state.config.optIn,
-      paused: state.config.paused,
-
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+      peers: state.config.peers
+      scope: state.config.scope
+      optIn: state.config.optIn
+      paused: state.config.paused
       lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" })
 
+}
+}}}}}

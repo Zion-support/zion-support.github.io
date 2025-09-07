@@ -7,8 +7,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
-    id,
-    exportedAt: new Date().toISOString(),
+    id
+    exportedAt: new Date().toISOString()
     note: 'This is a stub export. Connect to persistence to return real deployment state.'
   };
   res.setHeader('Content-Type', 'application/json');

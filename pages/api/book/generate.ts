@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -12,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) {
     // Fallback: return structured placeholders
     const drafted = chapters.map((c) => ({
-      title: c.title,
+      title: c.title
       content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`
     }));
     res.status(200).json({ chapters: drafted });
@@ -26,11 +29,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const ch of chapters) {
     const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`;
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini'
       messages: [
-        { role: 'system', content: system },
+        { role: 'system', content: system }
         { role: 'user', content: prompt }
-      ],
+      ]
       temperature: 0.7
     });
     const text = completion.choices?.[0]?.message?.content || '';
@@ -38,4 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.status(200).json({ chapters: drafted })
+}
+
 }

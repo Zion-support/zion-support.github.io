@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,7 +32,7 @@ export default /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
 
   } catch (error) {
@@ -42,4 +40,3 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

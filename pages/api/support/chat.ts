@@ -1,5 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
@@ -7,21 +8,19 @@ import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string}> },
-  if (!messages || !Array.isArray(messages)) return res.status(400).json($2);
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),
-  const lastUser = $2;
-  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
-
-  const openai = new OpenAI($2);
+  if (req.method !== 'POST') return res.status(405).json({ error: "Invalid request" });
+  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string}> }
+  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: "Invalid request" });
+  const articles = readJson<HelpArticle[]>('help/articles.json', [])
+  const lastUser = { error: "Invalid request" };
+  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] }
+  const openai = new OpenAI({ error: "Invalid request" });
   // Build context with top matched articles as brief references
-  const matchedArticles = $2;
+  const matchedArticles = { error: "Invalid request" };
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
-    .join($2);
-  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
-
+    .join({ error: "Invalid request" });
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') }
   const sysMessage = {
     role: "system" as const
     content:
@@ -34,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [sysMessage, ...messages]
   }
   if ()) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (400).json ({ error: "messages required" });
 ;
@@ -103,3 +102,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
+}
+}}

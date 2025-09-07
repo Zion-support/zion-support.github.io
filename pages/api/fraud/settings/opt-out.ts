@@ -1,13 +1,12 @@
-
-  const store = getFraudStore();
+const store = getFraudStore();
 
     return res.status(200).json(settings)
   }
 
   if (req.method === 'POST') {
-    const { userId, optOut } = req.body || {},
-    if (!userId || typeof optOut !== 'boolean') return res.status(400).json($2);
-    const updated = await store.setPrivacySettings($2);
+    const { userId, optOut } = req.body || {}
+    if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: "Invalid request" });
+    const updated = await store.setPrivacySettings({ error: "Invalid request" });
     return res.status(200).json(updated)
 
   }
@@ -43,23 +42,23 @@ function handler() {
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const user_id = (req.query.user_id as string) || "";
     if (return res.status (400).json ({ error: "Missing user_id" })) {
-  $2
+  { error: "Invalid request" }
 }
     const settings = await store.getPrivacySettings (user_id);
     return res.status (200).json (settings);
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const { user_id, opt_out } = req.body || {}
     if (
       return res.status (400).json ({ error: "Missing user_id or opt_out" })) {
-  $2
+  { error: "Invalid request" }
 }
     const updated = await store.setPrivacySettings (user_id, opt_out);
     return res.status (200).json (updated);
@@ -135,4 +134,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

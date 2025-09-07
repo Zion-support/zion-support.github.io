@@ -1,5 +1,3 @@
-
-
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -9,7 +7,7 @@ export default /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
@@ -52,4 +50,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

@@ -1,3 +1,4 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -5,3 +6,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 
+}

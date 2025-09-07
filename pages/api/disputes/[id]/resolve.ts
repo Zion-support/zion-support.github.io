@@ -1,5 +1,3 @@
-
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -28,7 +26,7 @@ export default async function handler(
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const dispute = await getDisputeById(id);
-    if (!dispute) return res && res.status($1).json({ $2 });
+    if (!dispute) return res && res.status($1).json({ { error: "Invalid request" } });
     const { resolutionSummary, status } = req && req.body || {};
 
     const now = new Date().toISOString();
@@ -136,12 +134,11 @@ function handler() {
   const { id } = req.query;
   if (
     return res.status (400).json ({ error: "Invalid id" })) {
-  $2
+  { error: "Invalid request" }
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
-

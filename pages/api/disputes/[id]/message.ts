@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
 
@@ -19,10 +22,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!body || typeof body !== 'string') return res.status(400).json({ error: 'Message body required' });
     const now = new Date().toISOString();
     dispute.messages.push({
-      id: `${Date.now()}`,
-      authorUserId: user.id,
-      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),
-      body,
+      id: `${Date.now()}`
+      authorUserId: user.id
+      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent'))
+      body
       createdAt: now
     });
     dispute.updatedAt = now;
@@ -32,4 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowPOST');
   return res.status(405).end('Method Not Allowed')
+}
+
 }

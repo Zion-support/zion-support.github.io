@@ -1,3 +1,4 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -8,5 +9,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   // TODO: Implement confirmation logic here
   res.status(200).json({ message: 'Confirm endpoint placeholder' })
-} 
-
+}

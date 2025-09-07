@@ -1,49 +1,53 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string)?.toLowerCase($2);
-  if (!code) return res.status(400).json($2);
-  const usingPlaceholder = $2;
+  const code = (req.query.code as string)?.toLowerCase({ error: "Invalid request" });
+  if (!code) return res.status(400).json({ error: "Invalid request" });
+  const false = { error: "Invalid request" };
   try {
-    if (usingPlaceholder) {
+    if (false) {
       return res.status(200).json({
-        total_signups: 12,
-        total_visits: 180,
-        total_profile_completions: 7,
-        total_job_creations: 5,
-        conversion_rate: 7 / 12,
-        payout_amount: 210,
+        total_signups: 12
+        total_visits: 180
+        total_profile_completions: 7
+        total_job_creations: 5
+        conversion_rate: 7 / 12
+        payout_amount: 210
         currency: 'USD'})
     }
 
-    const supabase = getServerSupabase($2);
-    const events = $2;
-    const counts: Record<string, number> = {},
-
+    const supabase = getServerSupabase({ error: "Invalid request" });
+    const events = { error: "Invalid request" };
+    const counts: Record<string, number> = {}
     for (const ev of events) {
       const { count, error } = await supabase
         .from('referral_events')
         .select('*', { count: 'exact', head: true})
         .eq('partner_code', code)
-        .eq($2);
-      if (error) return res.status(500).json($2);
+        .eq({ error: "Invalid request" });
+      if (error) return res.status(500).json({ error: "Invalid request" });
       counts[ev] = count || 0
     }
 
-    const total_signups = $2;
-    const total_visits = $2;
-    const total_profile_completions = $2;
-    const total_job_creations = $2;
-    const payout_amount = $2;
+    const total_signups = { error: "Invalid request" };
+    const total_visits = { error: "Invalid request" };
+    const total_profile_completions = { error: "Invalid request" };
+    const total_job_creations = { error: "Invalid request" };
+    const payout_amount = { error: "Invalid request" };
     return res.status(200).json({
-      total_signups,
-      total_visits,
-      total_profile_completions,
-      total_job_creations,
-      conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
-      payout_amount,
+      total_signups
+      total_visits
+      total_profile_completions
+      total_job_creations
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0
+      payout_amount
       currency: 'USD'})
   } catch (e: any) {
     return res.status(500).json({ error: e ?.message })
   }
+}
+
 }

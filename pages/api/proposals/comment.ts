@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -35,23 +34,22 @@ export default async function handler(
     }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra',
+import fs from 'fs-extra'
 import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),
-
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json')
 async function ensure() {
-  await fs.ensureFile($2);
+  await fs.ensureFile({ error: "Invalid request" });
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2}) }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await ensure($2);
+  await ensure({ error: "Invalid request" });
   if (req.method === 'GET') {
-    const data = await fs.readJson($2);
+    const data = await fs.readJson({ error: "Invalid request" });
     return res.status(200).json(data)
   }
-  if (req.method = $2;
-    const data = await fs.readJson($2);
+  if (req.method = { error: "Invalid request" };
+    const data = await fs.readJson({ error: "Invalid request" });
     const comment = {
 
       text: body.text || ''
@@ -72,7 +70,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
 async function ensure() {;
   await fs.ensureFile(FILE_PATH);
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
@@ -106,14 +104,14 @@ function handler() {
   await ensure ();
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
@@ -132,3 +130,4 @@ if ( {) {
   res.status (405).json ({ error: "Method not allowed" });
 }
 
+}

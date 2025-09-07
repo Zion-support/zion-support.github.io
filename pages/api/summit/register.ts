@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -6,8 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { name, email, role, country, source } = req.body || {},
-
+    const { name, email, role, country, source } = req.body || {}
     if (!name || !email || !role || !country) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
@@ -16,14 +18,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('summit_registrations')
       .insert([
         {
-          name,
-          email,
-          role,
-          country,
-          source: source || 'zion-global-2025',
+          name
+          email
+          role
+          country
+          source: source || 'zion-global-2025'
           created_at: new Date().toISOString()}])
       .select('*')
-      .single($2);
+      .single({ error: "Invalid request" });
     if (error) {
       return res.status(500).json({ error: error.message })
     }
@@ -32,4 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e ?.message || 'Unknown error' })
   }
+}
+
 }

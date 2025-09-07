@@ -1,5 +1,4 @@
-
-import { randomUUID } from 'crypto',;
+import { randomUUID } from 'crypto';
 type Note = {
   id: string
   targetType: string
@@ -8,4 +7,3 @@ type Note = {
   authorId: string
   createdAt: number
 }
-

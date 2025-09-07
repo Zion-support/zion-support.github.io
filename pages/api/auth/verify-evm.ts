@@ -1,3 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
@@ -56,30 +59,30 @@ export default async /**
  */
 function handler() {
   if (return res.status (405).end ()) {
-  $2
+  { error: "Invalid request" }
 }
   const { message, signature, address, chain_id } = req.body || {}
   if (
     return res.status (400).json ({ error: "Missing fields" })) {
-  $2
+  { error: "Invalid request" }
 }
   try {
     const recovered = ethers.utils;
       .verify_message (message, signature);
       .toLowerCase ();
     if (.toLowerCase ()) {) {
-  $2
+  { error: "Invalid request" }
 }
       return res.status (401).json ({ error: "Invalid signature" });
     }
     const cookie_header = req.headers.cookie || "";
     const match = cookie_header.match (/siwe - nonce=([^]+)/);
     if (return res.status (400).json ({ error: "Missing nonce" })) {
-  $2
+  { error: "Invalid request" }
 }
     const nonce = match[1];
     if (.includes (`Nonce: ${nonce}`))) {
-  $2
+  { error: "Invalid request" }
 }
       return res.status (400).json ({ error: "Nonce mismatch" });
 ;
@@ -105,3 +108,5 @@ function handler() {
   }
 }
 
+}
+}

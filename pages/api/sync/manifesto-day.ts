@@ -1,15 +1,18 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
   readState
   writeState
-  upsertEvent,;
+  upsertEvent;
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
 
   readState
   writeState
-  upsertEvent,;
+  upsertEvent;
 
 } from "../../../utils/sync/storage";
 
@@ -82,7 +85,7 @@ export default async function handler(req, res) {
   }
   if (
     return res.status (400).json ({ error: "milestone_id, title required" })) {
-  $2
+  { error: "Invalid request" }
 }
   const version = nextVersionFor (state, milestone_id);
   const event = {
@@ -134,7 +137,7 @@ export default async function handler(req, res) {
   const sig = sign_payload (body);
   // Check condition
 if (headers["x - zion - signature"] = sig) {
-  $2
+  { error: "Invalid request" }
 }
   await Promise.all (
     state.config.peers;
@@ -156,3 +159,5 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}}

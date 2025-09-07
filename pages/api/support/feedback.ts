@@ -1,4 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,3 +12,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
 
+}
+}

@@ -1,9 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
-import { signPayload } from "../../../utils/sync/signature",;
-import axios from "axios",;
-import { v4 as uuidv4 } from "uuid",;
-import { nextVersionFor } from "../../../utils/sync/versioning",;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
@@ -14,14 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { subjectId, score, category, period, rank } = req.body as {
     subjectId: string, score: number, category: string, period?: string, rank?: number
-  },
-
+  }
   if (!subjectId || typeof score !== "number" || !category) {
     return res.status(400).json({ error: "subjectId, score, category required" })
   }
 
-  const entityKey = $2;
-  const version = nextVersionFor($2);
+  const entityKey = { error: "Invalid request" };
+  const version = nextVersionFor({ error: "Invalid request" });
   const event = {
 
   await Promise.all(
@@ -37,3 +39,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
 
+}
+}

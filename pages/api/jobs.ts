@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
@@ -16,13 +19,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'POST') {
     const {
-      title,
-      description,
-      category,
-      requiredSkills = [],
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
+      title
+      description
+      category
+      requiredSkills = []
+      budgetMinUsd
+      budgetMaxUsd
+      deliveryDeadlineIso
       clientEmail
     } = req.body || {};
 
@@ -34,17 +37,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const nowIso = new Date().toISOString();
 
     const job: Job = {
-      id: uuidv4(),
-      title: String(title),
-      description: String(description),
-      category: String(category || ''),
-      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
-      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,
-      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
-      clientEmail: String(clientEmail),
-      status: 'New',
-      createdAtIso: nowIso,
+      id: uuidv4()
+      title: String(title)
+      description: String(description)
+      category: String(category || '')
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : []
+      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined
+      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined
+      clientEmail: String(clientEmail)
+      status: 'New'
+      createdAtIso: nowIso
       updatedAtIso: nowIso
     };
 
@@ -66,4 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
+}
+
 }

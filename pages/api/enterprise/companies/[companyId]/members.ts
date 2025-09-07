@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -10,7 +8,7 @@ function handler() {
   const { company_id } = req.query;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (400).json ({ error: "company_id required" });
   }
@@ -91,14 +89,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const { name, email, role } = req.body || {}
     if (
       return res.status (400).json ({ error: "name and email required" })) {
-  $2
+  { error: "Invalid request" }
 }
     const r: EnterpriseRole = role || "viewer";
 
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -107,23 +105,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { companyId } = req.query,
+  const { companyId } = req.query
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
   }
-  const company = store.getCompanyById($2);
-  if (!company) return res.status(404).json($2);
+  const company = store.getCompanyById({ error: "Invalid request" });
+  if (!company) return res.status(404).json({ error: "Invalid request" });
   if (req.method === 'GET') {
     return res.status(200).json(company.members)
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const { member_id } = req.query;
     if (
       return res.status (400).json ({ error: "member_id required" })) {
-  $2
+  { error: "Invalid request" }
 }
     const ok = store.remove_member (company_id, member_id);
     return res;
@@ -132,15 +130,15 @@ if ( {) {
   }
 
   if (req.method === 'PATCH') {
-    const { memberId, role } = req.body || {},
-    if (!memberId || !role) return res.status(400).json($2);
-    const ok = store.updateMemberRole($2);
+    const { memberId, role } = req.body || {}
+    if (!memberId || !role) return res.status(400).json({ error: "Invalid request" });
+    const ok = store.updateMemberRole({ error: "Invalid request" });
     return res.status(ok ? 200 : 404).json(ok ? { success: true} : { error: 'member_not_found' })
   }
 
-  if (req.method = $2;
-    if (!memberId || typeof memberId !== 'string') return res.status(400).json($2);
-    const ok = store.removeMember($2);
+  if (req.method = { error: "Invalid request" };
+    if (!memberId || typeof memberId !== 'string') return res.status(400).json({ error: "Invalid request" });
+    const ok = store.removeMember({ error: "Invalid request" });
     return res.status(ok ? 200 : 404).json(ok ? { success: true} : { error: 'member_not_found' })
   }
 }
@@ -197,4 +195,3 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

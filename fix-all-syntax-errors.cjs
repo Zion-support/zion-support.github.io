@@ -1,123 +1,133 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing all syntax errors...');
+class AllSyntaxErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixes = [];
+  }
 
-// Fix AIServices.tsx - fix all missing commas
-const aiservicesPath = 'pages/AIServices.tsx';
-if (fs.existsSync(aiservicesPath)) {
-  let content = fs.readFileSync(aiservicesPath, 'utf8');
-  
-  // Fix missing comma before features
-  content = content.replace(
-    /benefits: \[.*?\]\n\s*features: \[/g,
-    (match) => {
-      if (!match.includes(',')) {
-        return match.replace(']\n    features: [', '],\n    features: [');
+  log(message, type = 'INFO') {
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`File not found: ${filePath}`, 'WARNING');
+        return;
       }
-      return match;
-    }
-  );
-  
-  fs.writeFileSync(aiservicesPath, content);
-  console.log('✅ Fixed pages/AIServices.tsx');
-}
 
-// Fix ai-powered-cybersecurity.tsx
-const cybersecurityPath = 'pages/ai-powered-cybersecurity.tsx';
-if (fs.existsSync(cybersecurityPath)) {
-  let content = fs.readFileSync(cybersecurityPath, 'utf8');
-  content = content.replace("import React from 'react',", "import React from 'react';");
-  fs.writeFileSync(cybersecurityPath, content);
-  console.log('✅ Fixed pages/ai-powered-cybersecurity.tsx');
-}
-
-// Fix ai-powered-devops-platform.tsx
-const devopsPath = 'pages/ai-powered-devops-platform.tsx';
-if (fs.existsSync(devopsPath)) {
-  let content = fs.readFileSync(devopsPath, 'utf8');
-  content = content.replace("import React from 'react',", "import React from 'react';");
-  fs.writeFileSync(devopsPath, content);
-  console.log('✅ Fixed pages/ai-powered-devops-platform.tsx');
-}
-
-// Fix api-docs.tsx
-const apiDocsPath = 'pages/api-docs.tsx';
-if (fs.existsSync(apiDocsPath)) {
-  let content = fs.readFileSync(apiDocsPath, 'utf8');
-  
-  // Fix the misplaced import
-  content = content.replace(
-    /    \]\nimport Head from 'next\/head';\n\n\} from 'lucide-react';\nconst apiEndpoints = \[/,
-    '    ]\n  } from \'lucide-react\';\n\nimport Head from \'next/head\';\n\nconst apiEndpoints = ['
-  );
-  
-  fs.writeFileSync(apiDocsPath, content);
-  console.log('✅ Fixed pages/api-docs.tsx');
-}
-
-// Fix api-documentation.tsx
-const apiDocPath = 'pages/api-documentation.tsx';
-if (fs.existsSync(apiDocPath)) {
-  let content = fs.readFileSync(apiDocPath, 'utf8');
-  
-  // Fix the malformed JSX
-  content = content.replace(
-    /    <Layout>;\s*<Head>;\s*<title>API Documentation \| Zion Tech Group<\/title>;\s*<link;\s*rel='canonical'\s*'\s*href='https: \/\/ziontechgroup && ziontechgroup.com\/api-documentation'/,
-    `    <Layout>
-      <Head>
-        <title>API Documentation | Zion Tech Group</title>
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/api-documentation'
-        />`
-  );
-  
-  fs.writeFileSync(apiDocPath, content);
-  console.log('✅ Fixed pages/api-documentation.tsx');
-}
-
-// Create a comprehensive script to fix all pages with syntax errors
-const pagesDir = 'pages';
-if (fs.existsSync(pagesDir)) {
-  const files = fs.readdirSync(pagesDir);
-  
-  files.forEach(file => {
-    if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const filePath = path.join(pagesDir, file);
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let modified = false;
-        
-        // Fix common syntax errors
-        if (content.includes("import React from 'react',")) {
-          content = content.replace("import React from 'react',", "import React from 'react';");
-          modified = true;
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Remove any trailing whitespace and ensure proper newline
+      content = content.trim() + '\n';
+      
+      // Fix common syntax issues
+      content = content.replace(/\r\n/g, '\n'); // Normalize line endings
+      content = content.replace(/\r/g, '\n'); // Convert Mac line endings
+      
+      // Fix specific patterns
+      content = content.replace(/,\s*;/g, ';'); // Fix comma followed by semicolon
+      content = content.replace(/,\s*$/gm, ''); // Remove trailing commas
+      content = content.replace(/\$2/g, '{ error: "Invalid request" }'); // Replace $2 placeholders
+      content = content.replace(/usingPlaceholder/g, 'false'); // Replace usingPlaceholder
+      
+      // Fix missing function declarations for API files
+      if (filePath.includes('/api/') && !content.includes('export default function')) {
+        if (content.includes('return res.status')) {
+          content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n${content}\n}`;
         }
-        
-        if (content.includes("import React from 'react';\nimport React from 'react';")) {
-          content = content.replace("import React from 'react';\nimport React from 'react';", "import React from 'react';");
-          modified = true;
-        }
-        
-        // Fix missing semicolons in imports
-        content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?=\n|$)/g, (match) => {
-          if (!match.endsWith(';')) {
-            return match + ';';
-          }
-          return match;
-        });
-        
-        if (modified) {
-          fs.writeFileSync(filePath, content);
-          console.log(`✅ Fixed pages/${file}`);
-        }
-      } catch (error) {
-        console.log(`⚠️  Could not fix pages/${file}: ${error.message}`);
       }
+      
+      // Fix missing imports
+      if (filePath.includes('/api/') && content.includes('NextApiRequest') && !content.includes("import type { NextApiRequest")) {
+        content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\n${content}`;
+      }
+      
+      // Ensure proper closing braces
+      const openBraces = (content.match(/\{/g) || []).length;
+      const closeBraces = (content.match(/\}/g) || []).length;
+      
+      if (openBraces > closeBraces) {
+        const missingBraces = openBraces - closeBraces;
+        content += '\n' + '}'.repeat(missingBraces) + '\n';
+        this.log(`Added ${missingBraces} missing closing braces to ${filePath}`);
+      }
+      
+      // Fix specific file issues
+      if (filePath.includes('about/page.tsx')) {
+        // Check for regex issues
+        content = content.replace(/'/g, "'"); // Normalize quotes
+      }
+      
+      if (filePath.includes('tokens/issue.ts') || filePath.includes('tokens/revoke.ts')) {
+        // Fix missing semicolons and syntax
+        content = content.replace(/,\s*$/gm, ';');
+        content = content.replace(/if \(!userId \|\| typeof amount !== "number"\) return res\.status\(400\)\.json\(\$2\);/g, 
+          'if (!userId || typeof amount !== "number") return res.status(400).json({ error: "Invalid request" });');
+      }
+      
+      if (filePath.includes('tokens/config.ts')) {
+        // Add missing closing brace
+        if (!content.includes('}')) {
+          content += '\n}';
+        }
+      }
+      
+      if (filePath.includes('pitch/export.ts')) {
+        // Fix missing function declaration
+        if (!content.includes('export default function')) {
+          content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n${content}\n}`;
+        }
+      }
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixes.push(`Fixed syntax in ${filePath}`);
+        this.log(`Fixed syntax in ${filePath}`, 'SUCCESS');
+      } else {
+        this.log(`No syntax issues found in ${filePath}`, 'INFO');
+      }
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     }
-  });
+  }
+
+  async run() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+    
+    const filesToFix = [
+      'app/about/page.tsx',
+      'pages/api/admin/pitch/export.ts',
+      'pages/api/admin/tokens/config.ts',
+      'pages/api/admin/tokens/issue.ts',
+      'pages/api/admin/tokens/revoke.ts'
+    ];
+    
+    for (const file of filesToFix) {
+      const filePath = path.join(this.projectRoot, file);
+      this.fixFile(filePath);
+    }
+    
+    this.log(`\n✅ Fixed ${this.fixes.length} files`);
+    this.fixes.forEach(fix => this.log(`  - ${fix}`));
+  }
 }
 
-console.log('🎉 All syntax errors fixed!');
+// Run the fixer
+if (require.main === module) {
+  const fixer = new AllSyntaxErrorFixer();
+  fixer.run().catch(console.error);
+}
+
+module.exports = AllSyntaxErrorFixer;

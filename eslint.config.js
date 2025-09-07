@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
@@ -69,13 +70,22 @@ export default [
       }
     },
     plugins: {
-      react,
-      'react-hooks': reactHooks
+      react: {
+        ...react,
+        settings: {
+          react: {
+            version: "detect"
+          }
+        }
+      },
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
@@ -139,13 +149,15 @@ export default [
     plugins: {
       '@typescript-eslint': tseslint,
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
     rules: {
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',

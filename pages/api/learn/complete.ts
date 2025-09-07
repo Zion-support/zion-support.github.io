@@ -1,8 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-
-import fs from 'fs',;
-import path from 'path',;
+import fs from 'fs';
+import path from 'path';
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -40,6 +39,7 @@ export default /**
 function handler() {
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
 
+}}}}

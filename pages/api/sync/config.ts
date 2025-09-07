@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState } from "../../../utils/sync/storage",;
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
 ;
 
   if (req.method === "GET") {
@@ -65,4 +65,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

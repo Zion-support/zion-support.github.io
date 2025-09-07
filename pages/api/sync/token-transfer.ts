@@ -1,9 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
-import { signPayload } from "../../../utils/sync/signature",;
-import axios from "axios",;
-import { v4 as uuidv4 } from "uuid",;
-import { nextVersionFor } from "../../../utils/sync/versioning",;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
@@ -29,12 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
-import { signPayload } from "../../../utils/sync/signature",;
-import axios from "axios",;
-import { v4 as uuidv4 } from "uuid",;
-import { nextVersionFor } from "../../../utils/sync/versioning",;
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
 
@@ -45,21 +48,20 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json($2);
-  const state = readState($2);
+  if (req.method !== "POST") return res.status(405).json({ error: "Invalid request" });
+  const state = readState({ error: "Invalid request" });
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
-    txId: string,
-    token: string,
-    amount: number,
-    fromSubnet: string,
-    toSubnet: string,
+    txId: string
+    token: string
+    amount: number
+    fromSubnet: string
+    toSubnet: string
     timestamp?: number
-  },
-
+  }
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -68,33 +70,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
   }
 
-  const version = nextVersionFor($2);
+  const version = nextVersionFor({ error: "Invalid request" });
   const event = {
-    eventId: uuidv4($2);
-    type: "token_transfer" as const,
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now()},
-
-  upsertEvent($2);
-  writeState($2);
-  const body = { ...event, propagate: false},
-  const headers: Record<string, string> = {},
-  const sig = signPayload($2);
-  if (sig) headers["x-zion-signature"] = sig,
-
+    eventId: uuidv4({ error: "Invalid request" });
+    type: "token_transfer" as const
+    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
+  upsertEvent({ error: "Invalid request" });
+  writeState({ error: "Invalid request" });
+  const body = { ...event, propagate: false}
+  const headers: Record<string, string> = {}
+  const sig = signPayload({ error: "Invalid request" });
+  if (sig) headers["x-zion-signature"] = sig
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString($2);
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString({ error: "Invalid request" });
         try {
           await axios.post(url, body, { headers, timeout: 5000})
         } catch {}
       })
-  ),
-
+  )
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
@@ -118,3 +117,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   )
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 
+}
+}

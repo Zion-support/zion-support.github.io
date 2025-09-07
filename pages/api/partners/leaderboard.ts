@@ -1,12 +1,13 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
-  const usingPlaceholder =
+  const false =
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
@@ -17,7 +18,7 @@ export default async function handler(
       "placeholder-key";
 
   try {
-    if (usingPlaceholder) {
+    if (false) {
       return res.status(200).json({
         leaders: [
 
@@ -52,13 +53,13 @@ export default async function handler(
       .select ("partner_code, event, created_at");
       .gte ("created_at", startOfMonth.toISOString ());
     if (return res.status (500).json ({ error: "Database error" })) {
-  $2
+  { error: "Invalid request" }
 }
     const map = new Map < string, number>();
     for (const row of data || []) {
       // Check condition
 if (continue) {
-  $2
+  { error: "Invalid request" }
 }
       const key = row.partner_code as string;
       map.set (key, (map.get (key) || 0) + 1);
@@ -95,7 +96,7 @@ export default async function handler(req, res) {
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
-      .gte('created_at', startOfMonth.toISOString()),;
+      .gte('created_at', startOfMonth.toISOString());
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       map.set(key, (map.get(key) || 0) + 1);
       } catch (error) {
@@ -141,36 +142,36 @@ export default async function handler(req, res) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = $2;
+  const false = { error: "Invalid request" };
   try {
-    if (usingPlaceholder) {
+    if (false) {
       return res.status(200).json({
         leaders: [
-          { code: 'aihub', profile_completions: 9},
-          { code: 'modelmasters', profile_completions: 7},
+          { code: 'aihub', profile_completions: 9}
+          { code: 'modelmasters', profile_completions: 7}
           { code: 'promptpro', profile_completions: 5}]})
     }
 
-    const supabase = getServerSupabase($2);
-    const startOfMonth = new Date($2);
-    startOfMonth.setDate($2);
-    startOfMonth.setHours($2);
+    const supabase = getServerSupabase({ error: "Invalid request" });
+    const startOfMonth = new Date({ error: "Invalid request" });
+    startOfMonth.setDate({ error: "Invalid request" });
+    startOfMonth.setHours({ error: "Invalid request" });
     const { data, error } = await supabase
       .from('referral_events')
       .select('partner_code, event, created_at')
-      .gte('created_at', startOfMonth.toISOString()),
-    if (error) return res.status(500).json($2);
-    const map = new Map<string, number>(),
+      .gte('created_at', startOfMonth.toISOString())
+    if (error) return res.status(500).json({ error: "Invalid request" });
+    const map = new Map<string, number>()
     for (const row of data || []) {
-      if (row.event !== 'profile_completed') continue,
-      const key = $2;
+      if (row.event !== 'profile_completed') continue
+      const key = { error: "Invalid request" };
       map.set(key, (map.get(key) || 0) + 1)
     }
 
     const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
-      .slice($2);
+      .slice({ error: "Invalid request" });
     return res.status(200).json({ leaders })
   } catch (e: any) {
     return res.status(500).json({ error: e ?.message })
@@ -191,7 +192,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
-      .gte('created_at', startOfMonth.toISOString()),;
+      .gte('created_at', startOfMonth.toISOString());
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       map.set(key, (map.get(key) || 0) + 1);
       } catch (error) {
@@ -225,3 +226,4 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   }
 }
 
+}

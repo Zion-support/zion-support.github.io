@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 const bwipjs = require('bwip-js');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,10 +13,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const png = await bwipjs.toBuffer({
-      bcid: 'ean13',
-      text: code.replace(/[^0-9]/g, ''),
-      scale: 3,
-      height: 10,
+      bcid: 'ean13'
+      text: code.replace(/[^0-9]/g, '')
+      scale: 3
+      height: 10
       includetext: false
     });
     res.setHeader('Content-Type', 'image/png');
@@ -21,4 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
+}
+
 }

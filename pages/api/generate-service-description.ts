@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
   title: string;
@@ -15,7 +18,7 @@ export type GenerateServiceDescriptionResponse = {
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -53,8 +56,8 @@ Requirements:
 
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
-      model: 'gpt-4o-mini',
-      input: prompt,
+      model: 'gpt-4o-mini'
+      input: prompt
       temperature: 0.7
     });
 
@@ -79,4 +82,6 @@ Requirements:
     console.error('OpenAI generation error:', error);
     return res.status(500).json({ error: 'Failed to generate description' })
   }
+}
+
 }

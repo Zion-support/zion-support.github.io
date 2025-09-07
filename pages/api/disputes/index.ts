@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
 import { parseUserFromRequest } from '../../../utils/auth';
 import { DisputeCase, DisputeReason } from '../../../types/disputes';
@@ -18,13 +21,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const now = new Date().toISOString();
     const {
-      projectId,
-      entityType,
-      entityId,
-      clientUserId,
-      talentUserId,
-      reason,
-      reasonDetails,
+      projectId
+      entityType
+      entityId
+      clientUserId
+      talentUserId
+      reason
+      reasonDetails
       description
     } = req.body || {};
 
@@ -34,19 +37,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const id = generateCaseId();
     const dispute: DisputeCase = {
-      id,
-      projectId: String(projectId),
-      entityType,
-      entityId,
-      clientUserId: String(clientUserId),
-      talentUserId: String(talentUserId),
-      createdAt: now,
-      updatedAt: now,
-      status: 'Open',
-      reason: reason as DisputeReason,
-      reasonDetails,
-      description,
-      attachments: [],
+      id
+      projectId: String(projectId)
+      entityType
+      entityId
+      clientUserId: String(clientUserId)
+      talentUserId: String(talentUserId)
+      createdAt: now
+      updatedAt: now
+      status: 'Open'
+      reason: reason as DisputeReason
+      reasonDetails
+      description
+      attachments: []
       messages: []};
 
     await createDispute(dispute);
@@ -55,4 +58,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowGET,POST');
   return res.status(405).end('Method Not Allowed')
+}
+
 }

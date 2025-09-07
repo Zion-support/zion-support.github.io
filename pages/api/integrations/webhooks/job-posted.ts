@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -17,11 +16,11 @@ export default async /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
   const { job } = req.body as { job?: Record < string, any> }
   if (return res.status (400).json ({ error: "Missing job payload" })) {
-  $2
+  { error: "Invalid request" }
 }
   const state = read_state ();
   const crms = state.connections.filter (
@@ -66,8 +65,7 @@ export default async function handler(req, res) {
   // record Zapier event
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-  }),
-
+  })
   res.status(200).json({ ok: true, results })
 }
 
@@ -146,4 +144,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
 const Epub = require('epub-gen');
@@ -22,9 +25,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || 'Zion',
+    title: project.meta.title
+    author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))
   };
 
@@ -56,4 +59,6 @@ function escapeHtml(s: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;')
+}
+
 }

@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const configPath = path.join(process.cwd(), 'datadaoconfig.json');
@@ -57,7 +60,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({
-      address: e.address,
+      address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
     }));
 
@@ -69,10 +72,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;
 
     const result = {
-      updatedAt: now,
-      tokenDistribution: distribution,
-      topHolders,
-      activeProposals,
+      updatedAt: now
+      tokenDistribution: distribution
+      topHolders
+      activeProposals
       governanceParticipationRate: participationRate
     };
 
@@ -81,4 +84,6 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' })
   }
+}
+
 }

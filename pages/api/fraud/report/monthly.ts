@@ -1,5 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -32,7 +33,7 @@ export default async /**
 function handler() {
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     res.status (405).json ({ error: "Method not allowed" });
     return;
@@ -55,3 +56,4 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+}

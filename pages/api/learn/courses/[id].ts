@@ -1,9 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const dataPath = path.join(process.cwd(), 'datalearncourses.json')
     res.status(200).json({ course })
 
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -20,7 +21,7 @@ function handler() {
     const { id } = req.query
     const course = courses.find ((c: any) => c.id === id)
     if (return res.status (404).json ({ error: 'Course not found' }), ) {
-  $2
+  { error: "Invalid request" }
 }
 
     res.status (200).json ({ course });
@@ -30,3 +31,4 @@ function handler() {
   }
 };
 
+}

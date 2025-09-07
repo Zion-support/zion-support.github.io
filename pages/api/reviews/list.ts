@@ -1,5 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-    }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+}
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
@@ -28,7 +30,7 @@
       return res.status(400).json({ error: "Invalid targetType" });
     }
 
-    const all = await readReviews(),
+    const all = await readReviews()
     // Include reviews where both sides have submitted and both are approved and not removed
 
 try {
@@ -54,7 +56,7 @@ const { targetType, targetId } = req.query as {
       return res.status(400).json({ error: 'Invalid targetType' })
     }
 
-    const all = await readReviews($2);
+    const all = await readReviews({ error: "Invalid request" });
     // Include reviews where both sides have submitted and both are approved and not removed
 
       .map((r) => {
@@ -103,3 +105,4 @@ const { targetType, targetId } = req.query as {
   }
 }
 
+}

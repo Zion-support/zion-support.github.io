@@ -1,14 +1,12 @@
-
-
-  if (req.method === "GET") {
+if (req.method === "GET") {
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState($2);
-  if (req.method = $2;
-    const scopedEvents = filterEventsByScope($2);
+  const state = readState({ error: "Invalid request" });
+  if (req.method = { error: "Invalid request" };
+    const scopedEvents = filterEventsByScope({ error: "Invalid request" });
     return res.status(200).json({
       status: "ok"
       instanceId: state.config.instanceId
@@ -58,16 +56,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const scoped_events = filterEventsByScope (state.events, scope)
     return res.status (200).json ({
 
-      status: "ok",
-      instanceId: state.config.instanceId,
-      config: state.config,
-      lastSyncedAt: state.lastSyncedAt,
+      status: "ok"
+      instanceId: state.config.instanceId
+      config: state.config
+      lastSyncedAt: state.lastSyncedAt
       counts: {
-        totalEvents: scopedEvents.length,
-
-        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
-        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
-        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
+        totalEvents: scopedEvents.length
+        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length
+        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
+        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 
         totalEvents: scopedEvents.length
@@ -76,4 +73,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
-

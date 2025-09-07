@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 ;
@@ -29,4 +27,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

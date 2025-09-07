@@ -1,4 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
@@ -6,7 +8,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
     responseLimit: false
-  },;
+  };
 };
 
 export default async function handler(
@@ -25,7 +27,7 @@ export default async function handler(
   }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { companyId, invoiceId } = req.query,
+  const { companyId, invoiceId } = req.query
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
@@ -50,3 +52,5 @@ export const config = {
   }
 }
 
+}
+}}

@@ -32,9 +32,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
-    id,
-    kind,
-    filename,
+    id
+    kind
+    filename
     uploadedAt
   };
   // Replace or add

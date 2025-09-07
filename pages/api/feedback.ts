@@ -1,3 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
@@ -13,8 +16,8 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
-          projectId: FIREBASE_PROJECT_ID,
-          clientEmail: FIREBASE_CLIENT_EMAIL,
+          projectId: FIREBASE_PROJECT_ID
+          clientEmail: FIREBASE_CLIENT_EMAIL
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")
         })
       })
@@ -35,22 +38,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
 
   const user = {
-    id: (req.headers["x-demo-user-id"] as string) || undefined,
-    role: (req.headers["x-demo-user-role"] as string) || undefined,
+    id: (req.headers["x-demo-user-id"] as string) || undefined
+    role: (req.headers["x-demo-user-role"] as string) || undefined
     talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined
   };
 
   const doc: FeedbackRecord = {
-    id: uuidv4(),
-    createdAtIso: new Date().toISOString(),
-    user,
-    rating: r,
-    comment: comment || undefined,
-    kind: k,
+    id: uuidv4()
+    createdAtIso: new Date().toISOString()
+    user
+    rating: r
+    comment: comment || undefined
+    kind: k
     context: context || undefined
   };
 
   const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { id: doc.id })
+}
+
 }

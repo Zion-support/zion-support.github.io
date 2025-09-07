@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
 function ensureAdmin(req: NextApiRequest): boolean {
@@ -35,4 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await store.updateEventStatus(fraudId, newStatus);
 
   res.status(200).json({ ok: true, status: newStatus })
+}
+
 }

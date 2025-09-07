@@ -1,4 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import {
   getZionDesignMap
   buildTokenSet
@@ -22,7 +24,7 @@ export default async function handler(req, res) {
       fetchLovableTokens()
     ]);
     const tokens = {
-      colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) },
+      colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) }
       typography: {
         fontSizes: {
           ...localTokens.typography.fontSizes
@@ -128,3 +130,4 @@ export default async function handler(req, res) {
   }
 }
 
+}

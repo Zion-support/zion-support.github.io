@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
@@ -75,4 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   save(db);
 
   res.status(200).json({ ok: true, profile, aml: amlResult })
+}
+
 }

@@ -1,4 +1,4 @@
-
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,14 +7,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ success: true })
 
-export default /**
- * handler - Function description
- */
-function handler() {
+export default function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+  { error: "Invalid request" }
 }
   clearUserCookie (res)
   res.status (200).json ({ success: true });
 }
 
+}

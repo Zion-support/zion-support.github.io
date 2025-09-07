@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 export const config = {
   api: {
@@ -18,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: true
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
@@ -35,4 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   }
+}
+
 }

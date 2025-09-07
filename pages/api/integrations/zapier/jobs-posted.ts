@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -50,7 +48,7 @@ export default /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -61,3 +59,4 @@ function handler() {
   res.status (200).json ({ events });
 }
 
+}

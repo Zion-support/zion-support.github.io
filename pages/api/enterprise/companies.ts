@@ -47,12 +47,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../utils/data/enterpriseStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method = $2;
+  if (req.method = { error: "Invalid request" };
     if (!slug || typeof slug !== 'string') {
       return res.status(400).json({ error: 'slug required' })
     }
-    const company = store.getCompanyBySlug($2);
-    if (!company) return res.status(404).json($2);
+    const company = store.getCompanyBySlug({ error: "Invalid request" });
+    if (!company) return res.status(404).json({ error: "Invalid request" });
     return res.status(200).json(company)
   }
 }
@@ -110,4 +110,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 }
-

@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
@@ -32,12 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const filePath = path.join(dir, safeName);
       await fsPromisesWrite(filePath, buffer);
       dispute.attachments.push({
-        id: `${Date.now()}-${safeName}`,
-        fileName: safeName,
-        fileSize: buffer.length,
-        mimeType: f.mimeType || 'application/octet-stream',
-        path: filePath,
-        uploadedAt: now,
+        id: `${Date.now()}-${safeName}`
+        fileName: safeName
+        fileSize: buffer.length
+        mimeType: f.mimeType || 'application/octet-stream'
+        path: filePath
+        uploadedAt: now
         uploadedByUserId: user.id
       });
     }
@@ -59,4 +62,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })
   })
+}
+
 }

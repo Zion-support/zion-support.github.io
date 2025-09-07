@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
@@ -12,15 +15,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {};
 
   const seed = [
-    'Problem & Opportunity',
-    'Solution & Product',
-    'Market Size (TAM/SAM/SOM)',
-    'Traction & Metrics',
-    'Business Model',
-    'Go-To-Market',
-    'Team',
-    'Roadmap',
-    'Token Strategy',
+    'Problem & Opportunity'
+    'Solution & Product'
+    'Market Size (TAM/SAM/SOM)'
+    'Traction & Metrics'
+    'Business Model'
+    'Go-To-Market'
+    'Team'
+    'Roadmap'
+    'Token Strategy'
     'Ask & Call to Action'
   ];
 
@@ -39,11 +42,11 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     let content = '';
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
+          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' }
           { role: 'user', content: prompt }
-        ],
+        ]
         temperature: 0.5
       });
       content = chat.choices?.[0]?.message?.content || ''
@@ -69,4 +72,6 @@ function extractSection(body: string, title: string): string {
     return snippet.trim()
   }
   return ''
+}
+
 }

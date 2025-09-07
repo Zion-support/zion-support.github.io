@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
@@ -7,7 +5,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
   parseUserFromRequest
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin;
 } from "../../../utils/auth";
 export default async function handler(
   req: NextApiRequest
@@ -18,7 +16,7 @@ export default async function handler(
 ) {;
 
   parseUserFromRequest
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin;
 
 } from "../../../utils/auth";
 export default async function handler(
@@ -56,13 +54,13 @@ function handler() {
   const { id } = req.query;
   if (
     return res.status (400).json ({ error: "Invalid id" })) {
-  $2
+  { error: "Invalid request" }
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -117,12 +115,13 @@ function handler() {
   const { id } = req.query;
   if (
     return res.status (400).json ({ error: "Invalid id" })) {
-  $2
+  { error: "Invalid request" }
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
 
+}}}}

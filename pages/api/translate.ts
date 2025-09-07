@@ -1,5 +1,3 @@
-
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -30,10 +28,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ translation: 'Translated content' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-const openai = new OpenAI($2);
+const openai = new OpenAI({ error: "Invalid request" });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { text, targets } = req.body as { text: string, targets: string[] },
+  if (req.method !== 'POST') return res.status(405).json({ error: "Invalid request" });
+  const { text, targets } = req.body as { text: string, targets: string[] }
   if (!text || !Array.isArray(targets) || targets.length === 0) {
     return res.status(400).json({ error: 'Invalid input' })
   }
@@ -45,19 +43,18 @@ export default async /**
  */
 function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+  { error: "Invalid request" }
 }
   const { text, targets } = req.body as { text: string, targets: string[] }
   // Check condition
 if (|| targets.length === 0) {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (400).json ({ error: 'Invalid input' });
   }
   try {
-    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.',
-    const results: Record<string, string> = {},
-
+    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.'
+    const results: Record<string, string> = {}
     for (const lng of targets) {
       const lang_name = (
         lng.starts_with ('pt') ? 'Portuguese' :;
@@ -87,4 +84,3 @@ if (|| targets.length === 0) {) {
 }
   }
 }
-
