@@ -1,8 +1,15 @@
 
 ;
 import React, { useMemo } from 'react',import { User  } from 'lucide-react';
-import { Conversation } from '@/types/messaging',import { ConversationItem } from './ConversationItem',import { FixedSizeList as List, ListChildComponentProps } from 'react-window',interface ConversationsListProps  {conversations: Conversation[],activeConversation: Conversation | null,setActiveConversation: (conversation: Conversation) => void,markAsRead: (conversationId: string) => Promise<void>;
-}export function ConversationsList() {const itemSize = 80,const listHeight = useMemo(() => {return Math.min(conversations.length * itemSize, 600)}, [conversations.length]),const Row = ({ index, style }: ListChildComponentProps) => {const conversation = conversations[index],if (!conversation) {return <div style={style} />;
+import { Conversation } from '@/types/messaging',import { ConversationItem } from './ConversationItem',import { FixedSizeList as List, ListChildComponentProps } from 'react-window',interface ConversationsListProps {
+  conversations: Conversation[],activeConversation: Conversation | null,setActiveConversation: (conversation: Conversation) => void,markAsRead: (conversationId: string) => Promise<void>;
+
+}
+
+export function ConversationsList() {const itemSize = 80,const listHeight = useMemo(() => ;
+  return Math.min(conversations.length * itemSize, 600)}, [conversations.length]),const Row = ({ index, style }: ListChildComponentProps) => ;
+  const conversation = conversations[index],if (!conversation) ;
+  return <div style={style} />;
     }return (<div style={style}>;
         <ConversationItem;
           conversation={conversation}
@@ -16,10 +23,12 @@ import { ConversationItem  } from './ConversationItem';
 import { FixedSizeList as List, ListChildComponentProps  } from 'react-window';
 import { Conversation   } from '@/types/messaging';
 import { ConversationItem   } from './ConversationItem';
+
 interface ConversationsListProps  {conversations: Conversation[];
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>;
+
 export function ConversationsList() {const itemSize  = null;return (<div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
         <h3 className='font-medium text-white'>Conversations</h3>;
@@ -34,8 +43,8 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           height={listHeight}
           itemCount={conversations && conversations.length}
           itemSize={itemSize}
-          width="100%";
-        >;
+          width="100%">
+
           {Row}
         </List>;
       )}
@@ -61,18 +70,31 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
         </List>;
       )}</div>;
   )}}
-          width="100%";
-        >;
+          width="100%">
+
           {Row}
         </List>;
       )}
     </div>;
-  )}interface ConversationsListProps  {conversations: Conversation[];
+  )}
+
+interface ConversationsListProps {
+  conversations: Conversation[];
   activeConversation: Conversation | null;
   onConversationSelect: (conversation: Conversation) => void;
   loading?: boolean;
-}export const ConversationsList: React.FC<ConversationsListProps> = ({conversations,activeConversation,onConversationSelect,loading = false}) => {const sortedConversations = useMemo(() => {return [...conversations].sort((a, b) => {const aTime = new Date(a.lastMessage?.timestamp || a.createdAt).getTime()const bTime = new Date(b.lastMessage?.timestamp || b.createdAt).getTime()return bTime - aTime;
-    })}, [conversations])const ConversationRow = ({ index, style }: ListChildComponentProps) => {const conversation = sortedConversations[index];
+
+}
+
+export const ConversationsList: React.FC<ConversationsListProps> = ({ conversations,activeConversation,onConversationSelect,loading = false   }) => {
+
+
+const sortedConversations = useMemo(() => ;
+  return [...conversations].sort((a, b) => {const aTime = new Date(a.lastMessage?.timestamp || a.createdAt).getTime(;
+  const bTime = new Date(b.lastMessage?.timestamp || b.createdAt).getTime(;
+  return bTime - aTime;
+    })}, [conversations])const ConversationRow = ({ index, style }: ListChildComponentProps) => ;
+  const conversation = sortedConversations[index];
     return (<div style={style}>;
         <ConversationItem;
           conversation={conversation}
@@ -86,7 +108,8 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
           <p className="mt-2 text-sm text-gray-500">Loading conversations...</p>;
         </div>;
       </div>;
-    )}if (conversations.length === 0) {return (<div className="flex items-center justify-center h-full">;
+    )}if (conversations.length = == 0) ;
+  return (<div className="flex items-center justify-center h-full">;
         <div className="text-center">;
           <User className="mx-auto h-12 w-12 text-gray-400" />;
           <h3 className="mt-2 text-sm font-medium text-gray-900">No conversations</h3>;
@@ -100,8 +123,8 @@ export function ConversationsList() {const itemSize  = null;return (<div classNa
         height={600}
         itemCount={sortedConversations.length}
         itemSize={80}
-        width="100%";
-      >;
+        width="100%">
+
         {ConversationRow}
       </List>;
     </div>;

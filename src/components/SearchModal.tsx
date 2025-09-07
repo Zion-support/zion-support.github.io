@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Filter, Clock, Star, MapPin, DollarSign  } from 'lucide-react';
+
 interface SearchResult  {id: string;
   type: 'service' | 'talent' | 'equipment' | 'page';
   title: string;
@@ -10,24 +11,47 @@ interface SearchResult  {id: string;
   rating?: number;
   price?: string;
   location?: string;
-}interface SearchModalProps  {isOpen: boolean;
+}
+
+interface SearchModalProps {
+  isOpen: boolean;
   onClose: () => void;
-}const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {const [query, setQuery] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [isLoading, setIsLoading] = useState(false)const [activeFilter, setActiveFilter] = useState('all')const [recentSearches, setRecentSearches] = useState<string[]>([])const searchInputRef  = useRef<HTMLInputElement>(null)const mockSearchResults: SearchResult[] = [;
+
+}
+
+const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose    }) => {
+
+
+const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([])const [isLoading, setIsLoading] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [recentSearches, setRecentSearches] = useState<string[]>([])const searchInputRef = useRef<HTMLInputElement>(null;
+  const mockSearchResults: SearchResult[] = [;
     {id: '1',type: 'service',title: 'AI-Powered IT Solutions',description: 'Comprehensive AI-driven IT infrastructure and consulting services',url: '/services/ai-it-solutions',category: 'IT Services',tags: ['AI', 'IT', 'Infrastructure', 'Consulting'],rating: 4.8,price: 'Starting at $5,000';
     },{id: '2',type: 'talent',title: 'Senior AI Engineer',description: 'Experienced AI engineer with 8+ years in machine learning and deep learning',url: '/talent/ai-engineer-001',category: 'Engineering',tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],rating: 4.9,location: 'San Francisco, CA';
     },{id: '3',type: 'equipment',title: 'High-Performance GPU Server',description: 'Enterprise-grade GPU server for AI/ML workloads',url: '/equipment/gpu-server-001',category: 'Hardware',tags: ['GPU', 'Server', 'AI', 'ML'],price: '$15,000';
     },{id: '4',type: 'page',title: 'Cybersecurity Services',description: 'Comprehensive cybersecurity solutions for enterprise protection',url: '/services/cybersecurity',category: 'Security',tags: ['Security', 'Cybersecurity', 'Enterprise', 'Protection'];
     }
-  ];useEffect(() => {if (isOpen && searchInputRef.current) {searchInputRef.current.focus()}
-  }, [isOpen])useEffect(() => {if (query.trim()) {performSearch()} else {setResults([])}
+  ];useEffect(() => {
+if (isOpen && searchInputRef.current) {searchInputRef.current.focus()}
+  }, [isOpen])useEffect(() => {
+if (query.trim()) {performSearch()} else {setResults([])}
   }, [query, activeFilter])const performSearch = async () => {setIsLoading(true)// Simulate API call;
-    setTimeout(() => {const filteredResults = mockSearchResults.filter(result => {const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||;
+    setTimeout(() => {const filteredResults = mockSearchResults.filter(result => ;
+  const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||;
                            result.description.toLowerCase().includes(query.toLowerCase()) ||;
-                           result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))const matchesFilter  = activeFilter === 'all' || result.type === activeFilter;return matchesQuery && matchesFilter;
-      })setResults(filteredResults)setIsLoading(false)}, 500)}const handleSearch = (searchQuery: string) => {setQuery(searchQuery)if (searchQuery.trim() && !recentSearches.includes(searchQuery)) {setRecentSearches(prev => [searchQuery, ...prev.slice(0, 4)])}
-  }const handleResultClick = (url: string) => {onClose()// Navigate to result URL;
+                           result.tags.some(tag = > tag.toLowerCase().includes(query.toLowerCase());
+  const matchesFilter  = activeFilter === 'all' || result.type === activeFilter;return matchesQuery && matchesFilter;
+      })setResults(filteredResults)setIsLoading(false)}, 500)}
+
+const handleSearch = (searchQuery: string) => {setQuery(searchQuery)if (searchQuery.trim() && !recentSearches.includes(searchQuery)) {setRecentSearches(prev => [searchQuery, ...prev.slice(0, 4)])}
+  }
+;
+  const handleResultClick = (url: string) => {onClose()// Navigate to result URL;
     window.location.href = url;
-  }const getTypeIcon = (type: string) => {switch (type) {case 'service':;
+  }
+
+const getTypeIcon = (type: string) => {switch (type) {case 'service':;
         return <Search className="w-4 h-4" />;
       case 'talent':;
         return <MapPin className="w-4 h-4" />;
@@ -38,7 +62,9 @@ interface SearchResult  {id: string;
       default:;
         return <Search className="w-4 h-4" />;
     }
-  }const getTypeColor = (type: string) => {switch (type) {case 'service':;
+  }
+
+const getTypeColor = (type: string) => {switch (type) {case 'service':;
         return 'bg-blue-100 text-blue-800';
       case 'talent':;
         return 'bg-green-100 text-green-800';
@@ -60,8 +86,8 @@ interface SearchResult  {id: string;
               </h3>;
               <button;
                 onClick={onClose}
-                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300";
-              >;
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+
                 <X className="w-6 h-6" />;
               </button>;
             </div>;
@@ -86,8 +112,8 @@ interface SearchResult  {id: string;
                   className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${activeFilter === filter;
                       ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
                       : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600';
-                  }`}
-                >;
+                  }`}>
+
                   {filter.charAt(0).toUpperCase() + filter.slice(1)}
                 </button>;
               ))}
@@ -101,10 +127,11 @@ interface SearchResult  {id: string;
                   {results.map((result) => (<div;
                       key={result.id}
                       onClick={() => handleResultClick(result.url)}
-                      className="p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors";
-                    >;
+                      className="p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors">
+
                       <div className="flex items-start space-x-3">;
-                        <div className={`p-2 rounded-lg ${getTypeColor(result.type)}`}>;
+                        <div className={`p-2 rounded-lg ${getTypeColor(result.type)}`}>
+
                           {getTypeIcon(result.type)}
                         </div>;
                         <div className="flex-1 min-w-0">;
@@ -112,7 +139,8 @@ interface SearchResult  {id: string;
                             <h4 className="text-sm font-medium text-gray-900 dark:text-white truncate">;
                               {result.title}
                             </h4>;
-                            <span className={`px-2 py-1 text-xs rounded-full ${getTypeColor(result.type)}`}>;
+                            <span className={`px-2 py-1 text-xs rounded-full ${getTypeColor(result.type)}`}>
+
                               {result.type}
                             </span>;
                           </div>;
@@ -146,7 +174,8 @@ interface SearchResult  {id: string;
                 </div>;
               ) : query.trim() ? (<div className="text-center py-8">;
                   <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />;
-                  <p className="text-gray-500 dark:text-gray-400">No results found for "{query}"</p>;
+                  <p className="text-gray-500 dark: text-gray-400">No results found for "{quer,
+}"</p>;
                 </div>;
               ) : recentSearches.length > 0 ? (<div>;
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2 flex items-center">;
@@ -157,9 +186,10 @@ interface SearchResult  {id: string;
                     {recentSearches.map((search, index) => (<button;
                         key={index}
                         onClick={() => handleSearch(search)}
-                        className="block w-full text-left px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md";
-                      >;
-                        {search}
+                        className="block w-full text-left px-3 py-2 text-sm text-gray-600 dark: text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md">
+
+                        {searc,
+}
                       </button>;
                     ))}
                   </div>;
@@ -170,4 +200,6 @@ interface SearchResult  {id: string;
         </div>;
       </div>;
     </div>;
-  )}export default SearchModal;
+  )}
+
+export default SearchModal;

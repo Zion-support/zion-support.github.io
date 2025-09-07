@@ -1,72 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
-export default function Pricing() {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: 'per month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Basic AI Integration',
-        'Cloud Infrastructure Setup',
-        'Monthly Support (8 hours)',
-        'Basic Security Features',
-        'Email Support',
-        'Standard SLA (99.5%)',
-      ],
-      popular: false,
-      cta: 'Get Started',
-      href: '/contact',
-    },
-    {
-      name: 'Professional',
-      price: '$7,999',
-      period: 'per month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Advanced AI Solutions',
-        'Custom Development',
-        'Monthly Support (20 hours)',
-        'Enhanced Security & Compliance',
-        'Priority Support',
-        'Premium SLA (99.9%)',
-        'Dedicated Account Manager',
-        'Custom Integrations',
-      ],
-      popular: true,
-      cta: 'Most Popular',
-      href: '/contact',
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Full AI Suite Implementation',
-        'Custom Enterprise Solutions',
-        'Unlimited Support',
-        'Enterprise Security & Compliance',
-        '24/7 Phone Support',
-        'Enterprise SLA (99.99%)',
-        'Dedicated Team',
-        'Custom Training & Documentation',
-        'Multi-region Deployment',
-        'Advanced Analytics & Reporting',
-      ],
-      popular: false,
-      cta: 'Contact Sales',
-      href: '/contact',
-    },
-  ];
 
+<<<<<<< HEAD
   const addOns = [
     {
       name: 'Additional Support Hours',
@@ -595,3 +539,5 @@ export default function Pricing() {const plans = [;
     </>;
   )}
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

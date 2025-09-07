@@ -1,17 +1,36 @@
 
 ;
 // These would be replaced with actual screenshots;
-const mockScreenshots = [;
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },{ id: 4, alt: "Messaging screen", src: "/placeholder.svg" },{ id: 5, alt: "Profile screen", src: "/placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef<HTMLDivElement>(null),const scroll = (direction: "left" | "right") => {if (scrollContainerRef.current) {if (scrollContainerRef.current) {const scrollAmount = 300;
+
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg",
+},{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg",
+},{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg",
+},{ id: 4, alt: "Messaging screen", src: "/placeholder.svg",
+},{ id: 5, alt: "Profile screen", src: "/placeholder.svg",
+}],export const AppScreenshots: React.FC = () => {const scrollContainerRef =;
+  useRef<HTMLDivElement>(null),const scroll = (direction: "left" | "right") => {if (scrollContainerRef.current) {if (scrollContainerRef.current) ;
+  const scrollAmount = 300;
       scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount;
-        behavior: "smooth"})}import React, { useRef } from 'react';
+        behavior: "smooth"},
+}import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 // These would be replaced with actual screenshots;
-const mockScreenshots = [;
-  { id: 1, alt: "Dashboard screen", src: "/placeholder && placeholder.svg" },{ id: 2, alt: "Talent matching screen", src: "/placeholder && placeholder.svg" },{ id: 3, alt: "Resume builder screen", src: "/placeholder && placeholder.svg" },{ id: 4, alt: "Messaging screen", src: "/placeholder && placeholder.svg" },{ id: 5, alt: "Profile screen", src: "/placeholder && placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef  = useRef<HTMLDivElement>(null)const scroll = (direction: "left" | "right",) => {if (scrollContainerRef && scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef && scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth"})}
+
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder && placeholder.svg",
+},{ id: 2, alt: "Talent matching screen", src: "/placeholder && placeholder.svg",
+},{ id: 3, alt: "Resume builder screen", src: "/placeholder && placeholder.svg",
+},{ id: 4, alt: "Messaging screen", src: "/placeholder && placeholder.svg",
+},{ id: 5, alt: "Profile screen", src: "/placeholder && placeholder.svg",
+}],export const AppScreenshots: React.FC = () => {const scrollContainerRef  =;
+  useRef<HTMLDivElement>(null)const scroll = (direction: "left" | "right",) => {if (scrollContainerRef && scrollContainerRef.current) ;
+  const scrollAmount = 300,scrollContainerRef && scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth"})}
   }
-    }},return (<section className="py-16 bg-zion-blue-dark">;
+    ,
+};
+  return (<section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>;
@@ -31,17 +50,18 @@ const mockScreenshots = [;
             variant="ghost";
             size="icon";
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
-            onClick={() => scroll("left")}aria-label="Scroll left";
-          >;
+            onClick={() => scroll("left")}aria-label="Scroll left">
+
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
-            aria-label="Scroll left";
-          >;
+            aria-label="Scroll left">
+
             <ChevronLeft className="h-6 w-6" />;
           </Button>;<div;
             ref = {scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" ,
+}>;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (<div;
                 key = {screenshot && screenshot.id}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;<img;
@@ -54,11 +74,12 @@ const mockScreenshots = [;
             ))}</div>;<div;
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" ,
+}
           >;
             {mockScreenshots.map((screenshot) => (<div;
-                key={screenshot.id}className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30";
-              >;
+                key={screenshot.id}className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">
+
                 <img;
                   src={screenshot.src}
                   alt={screenshot.alt}
@@ -72,17 +93,27 @@ const mockScreenshots = [;
             variant="ghost";
             size="icon";
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
-            onClick={() => scroll("right")}aria-label="Scroll right";
-          >;
+            onClick={() => scroll("right")}aria-label="Scroll right">
+
             <ChevronRight className="h-6 w-6" />;
           </Button>;
         </div>;
       </div>;
     </section>;
 },import React, { useRef } from "react",import { Button } from "@/components/ui/button",// These would be replaced with actual screenshots;
-const mockScreenshots = [;
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },{ id: 4, alt: "Messaging screen", src: "/placeholder.svg" },{ id: 5, alt: "Profile screen", src: "/placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef<HTMLDivElement>(null),const scroll = (direction: "left" | "right") => {if (scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth"})}
-  }return (<section className="py-16 bg-zion-blue-dark">;
+
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg",
+},{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg",
+},{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg",
+},{ id: 4, alt: "Messaging screen", src: "/placeholder.svg",
+},{ id: 5, alt: "Profile screen", src: "/placeholder.svg",
+}],export const AppScreenshots: React.FC = () => {const scrollContainerRef =;
+  useRef<HTMLDivElement>(null),const scroll = (direction: "left" | "right") => {if (scrollContainerRef.current) ;
+  const scrollAmount = 300,scrollContainerRef.current.scrollBy({left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth"},
+}
+  ;
+  return (<section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>;
@@ -97,8 +128,8 @@ const mockScreenshots = [;
           </div>;
           <Button;
             variant="ghost";
-            size="icon";aria-label="Scroll right";
-          >;
+            size="icon";aria-label="Scroll right">
+
             <ChevronRight className="h-6 w-6" />;
           </Button>;
         </div>;
@@ -108,12 +139,23 @@ const mockScreenshots = [;
 import React, { useRef } from './react';
 import { Button   } from '@/components / ui / button';
 // These would be replaced with actual screenshots;
-const mock_screenshots = [;
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },{ id: 4, alt: "Messaging screen", src: "/placeholder.svg" },{ id: 5, alt: "Profile screen", src: "/placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef < HTMLDivElement>(null)const scroll = (direction: "left" | "right", ) =>: any {// Check condition;
+
+const mock_screenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg",
+},{ id: 2, alt: "Talent matching screen", src: "/placeholder.svg",
+},{ id: 3, alt: "Resume builder screen", src: "/placeholder.svg",
+},{ id: 4, alt: "Messaging screen", src: "/placeholder.svg",
+},{ id: 5, alt: "Profile screen", src: "/placeholder.svg",
+}],export const AppScreenshots: React.FC = () => {const scrollContainerRef =;
+  useRef < HTMLDivElement>(null;
+  const scroll = (direction: "left" | "right", ) =>: any {// Check condition;
 if ( {) {$2;
 }
-      const scroll_amount = 300,scrollContainerRef.current.scroll_by ({left: direction === "left" ? -scroll_amount : scroll_amount,behavior: "smooth"})}
-  }
+
+const scroll_amount = 300,scrollContainerRef.current.scroll_by ({left: direction === "left" ? -scroll_amount : scroll_amount,behavior: "smooth"})}
+ ,
+}
+ ;
   return (<section className="py - 16 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -128,19 +170,20 @@ if ( {) {$2;
             size="icon";
             className="absolute left - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
             on_click = {(, ) => scroll ("left") }
-            aria - label="Scroll left";
-          >;
+            aria - label="Scroll left">
+
             <ChevronLeft className="h - 6 w - 6" />;
           </Button>;
           <div;
             ref = {scrollContainerRef }
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";
-            style={{ scrollbar_width: "none", msOverflowStyle: "none" }}
+            style={{ scrollbar_width: "none", msOverflowStyle: "none" ,
+}
           >;
             {mock_screenshots.map ((screenshot, ) => (<div;
                 key = {screenshot.id }
-                className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30";
-              >;
+                className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30">
+
                 <img;
                   src = {screenshot.src }
                   alt = {screenshot.alt }
@@ -154,8 +197,8 @@ if ( {) {$2;
             size="icon";
             className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
             on_click = {() => scroll ("right") }
-            aria - label="Scroll right";
-          >;
+            aria - label="Scroll right">
+
             <ChevronRight className="h - 6 w - 6" />;
           </Button>;
         </div>;

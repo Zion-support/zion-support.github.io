@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const CloudArchitectureChat: NextPage = () => {return (<div>;
+
+const CloudArchitectureChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const CloudArchitectureChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const CloudArchitectureChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default CloudArchitectureChat;const CloudArchitectureChat: NextPage = () => {return (<div>;
+
+export default CloudArchitectureChat;
+
+const CloudArchitectureChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default CloudArchitectureChat;const CloudArchitectureChat: NextPage = () 
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default CloudArchitectureChat;
 
-
-
-
-
 const CloudArchitectureChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const CloudArchitectureChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const CloudArchitectureChat: NextPage = () => {return (<div>;
+
+const CloudArchitectureChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > CloudArchitectureChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const CloudArchitectureChat: NextPage = () => {return (<div>;
         <h1 > CloudArchitectureChat</h1>;
         <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>)}export default CloudArchitectureChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default CloudArchitectureChat;<div>;
       <Head>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;CloudArchitectureChat blog post&quot; />;
@@ -92,7 +103,9 @@ const CloudArchitectureChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default CloudArchitectureChat;
-const CloudArchitectureChat: NextPage = () => {return (<div>;
+
+const CloudArchitectureChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const CloudArchitectureChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default CloudArchitectureChat;<title>CloudArchitectureChat - Zion Tech Solutions</title>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default CloudArchitectureChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default CloudArchitectureChat
 
 
 const CloudArchitectureChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const CloudArchitectureChat: NextPage = () => {
     </div>
   );
 }
+
 export default CloudArchitectureChat;
 
         <title>CloudArchitectureChat - Zion Tech Solutions</title>

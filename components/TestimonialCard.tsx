@@ -5,6 +5,7 @@ interface TestimonialCardProps {
   company: string;
   content: string;
   avatar?: string;
+
 }
 
 export default function TestimonialCard({ name, company, content, avatar }: TestimonialCardProps) {

@@ -1,6 +1,8 @@
 
 import { X  } from 'lucide-react';
-interface ActiveFiltersProps  {selectedSkills: string[];
+
+interface ActiveFiltersProps {
+  selectedSkills: string[];
   toggleSkill: (skill: string) => void;
   selectedAvailability: string[];
   toggleAvailability: (status: string) => void;
@@ -10,7 +12,9 @@ interface ActiveFiltersProps  {selectedSkills: string[];
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps  {selectedSkills: string[];
+  clearFilters: () => void;
+
+interface ActiveFiltersProps  {selectedSkills: string[];
   toggleSkill: (skill: string,) => void;
   selectedAvailability: string[];
   toggleAvailability: (status: string,) => void;
@@ -21,7 +25,10 @@ interface ActiveFiltersProps  {selectedSkills: string[];
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number],) => void;
   clearFilters: () => void;
-}const hasActiveFilters = null;
+
+}
+
+const hasActiveFilters = null;
     selectedSkills.length > 0 ||;
     selectedAvailability.length > 0 ||;
     selectedRegions.length > 0 ||;
@@ -42,7 +49,8 @@ interface ActiveFiltersProps  {selectedSkills: string[];
 import React from 'react';
 import { ClickableBadge  } from '@/components/ui/clickable-badge';
 import { Button  } from '@/components/ui/button';
-import React from "react",interface ActiveFiltersProps  {selectedSkills: string[];
+import React from "react",interface ActiveFiltersProps {
+  selectedSkills: string[];
   toggleSkill: (skill: string) => void;
   selectedAvailability: string[];
   toggleAvailability: (status: string) => void;
@@ -51,9 +59,12 @@ import React from "react",interface ActiveFiltersProps  {selectedSkills: string[
   priceRange: [number, number],setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;
+
 }
+
 export function ActiveFilters() {// Check if any filters are active;
-  const hasActiveFilters  = null;return (<div className="mb-6 flex flex-wrap gap-2 items-center">;
+
+const hasActiveFilters  = null;return (<div className="mb-6 flex flex-wrap gap-2 items-center">;
       <span className="text-zion-slate-light text-sm">Active filters:</span>;
       {selectedSkills.map(skill => (<ClickableBadge;
           key={skill}
@@ -104,8 +115,8 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button
         variant="ghost";
         size="sm";
         onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
-      >;
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent">
+
         Clear All;
       </Button>;
     </div>;
@@ -129,13 +140,15 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",import { Button
         variant="ghost";
         size="sm";
         onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
-      >;Clear All;
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent">
+Clear All;
       </Button>;
     </div>;
   )}import { ClickableBadge  } from '@/components / ui / clickable - badge';
 import { Button  } from '@/components / ui / button';
-interface ActiveFiltersProps  {selected_skills: string[];
+
+interface ActiveFiltersProps {
+  selected_skills: string[];
   toggle_skill: (skill: string) => void;
   selected_availability: string[];
   toggle_availability: (status: string) => void;
@@ -145,13 +158,18 @@ interface ActiveFiltersProps  {selected_skills: string[];
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
   setExperienceRange: (range: [number, number]) => void;
-  clear_filters: () => void;interface ActiveFiltersProps  {selected_skills: string[],toggle_skill: (skill: string, ) => void,selected_availability: string[],toggle_availability: (status: string, ) => void,selected_regions: string[],toggle_region: (region: string, ) => void,price_range: [number, number],setPriceRange: (range: [number, number], ) => void,experience_range: [number, number],setExperienceRange: (range: [number, number], ) => void,clear_filters: () => void;
+  clear_filters: () => void;
+
+interface ActiveFiltersProps  {selected_skills: string[],toggle_skill: (skill: string, ) => void,selected_availability: string[],toggle_availability: (status: string, ) => void,selected_regions: string[],toggle_region: (region: string, ) => void,price_range: [number, number],setPriceRange: (range: [number, number], ) => void,experience_range: [number, number],setExperienceRange: (range: [number, number], ) => void,clear_filters: () => void;
+
 }
+
 export /**;
  * ActiveFilters - Function description;
  */;
 function ActiveFilters() {// Check if any filters are active;
-  const hasActiveFilters =;
+
+const hasActiveFilters =;
     selected_skills.length > 0 ||;
     selected_availability.length > 0 ||;
     selected_regions.length > 0 ||;
@@ -207,5 +225,7 @@ if (return null) {$2;
         on_click={clear_filters}
         className='h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent'      >;
         Clear All;
-      </Button>;
-    </div>)})
+      </Button>
+    </div>
+  );
+})

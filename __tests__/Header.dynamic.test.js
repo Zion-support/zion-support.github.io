@@ -15,6 +15,7 @@ describe('Header';
   test('displays correct content';
   test('handles user interactions';
   test('applies correct styling';
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Header from "./components/Header.dynamic"; describe('Header', () => { test('renders without crashing', () => { render(<Header />)expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<Header />)})test('handles user interactions', () => { render(<Header />)})test("applies correct styling";
 ursor/automate-test-improve-and-merge-code-646c;
   test('displays correct content', () => {render(<Header />)// Add specific content tests based on component;

@@ -48,8 +48,13 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
           950: '#030712'
         }
+=======
+          950: '#030712',
+        },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -68,11 +73,21 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+<<<<<<< HEAD
+=======
+        'float': 'float 6s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
           '100%': { opacity: '1' }
+=======
+          '100%': { opacity: '1' },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
@@ -99,6 +114,18 @@ module.exports = {
           '50%': { transform: 'scale(1.05)', opacity: '0.8' },
           '70%': { transform: 'scale(0.9)', opacity: '1' },
           '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
         },
         'gradient-x': {
           '0%, 100%': {
@@ -150,7 +177,11 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+<<<<<<< HEAD
         '5xl': '2.5rem'
+=======
+        '5xl': '2.5rem',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       },
     },
   },

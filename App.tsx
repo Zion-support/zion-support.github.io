@@ -11,6 +11,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
+<<<<<<< HEAD
 export default function App() {
   const services = [
     {
@@ -159,5 +160,12 @@ export default function App() {
       <ChatAssistant />
       <ScrollToTop />
     </div>
+=======
+export default function App(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Hello App</h1>
+    </main>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   );
 }

@@ -10,10 +10,15 @@ import {Dialog;
 import { Card, CardContent } from "@/components/ui/card",import { Separator } from "@/components/ui/separator",import { QuoteStatusBadge  } from './QuoteStatusBadge';
 import type { QuoteRequest } from '@/types/quotes';
 import { format  } from 'date-fns';
-interface QuoteDetailsProps  {quote: QuoteRequest | null;
+
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
-}export const QuoteDetails = null;
+
+}
+
+export const QuoteDetails = null;
 }
 import { Dialog;
   DialogContent;
@@ -25,12 +30,14 @@ import { Button  } from '@/components/ui/button';
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent  } from '@/components/ui/card';
 import { Separator  } from '@/components/ui/separator';
 import { format } from 'date-fns';
+
 interface QuoteDetailsProps  {quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
 }import {Dialog;
   DialogContent,DialogHeader,DialogTitle,DialogDescription ;
  } from '@/components/ui/dialog';
+
 interface QuoteDetailsProps  {quote: QuoteRequest | null,isOpen: boolean,onClose: () => void;
 }return format(new Date(dateString), 'PPP')} catch (e) {return dateString;
     }
@@ -57,11 +64,13 @@ interface QuoteDetailsProps  {quote: QuoteRequest | null,isOpen: boolean,onClose
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <Calendar className="h-4 w-4 text-gray-500" />;
-                  <span>Start date: {formatDate(quote.start_date)}</span>;
+                  <span>Start date: {formatDate(quote.start_date,
+}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Clock className="h-4 w-4 text-gray-500" />;
-                  <span>Timeline: {quote.timeline}</span>;
+                  <span>Timeline: {quote.timelin,
+}</span>;
                 </div>;
               </div>;
             </CardContent>;
@@ -122,11 +131,13 @@ interface QuoteDetailsProps  {quote: QuoteRequest | null,isOpen: boolean,onClose
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <Calendar className="h-4 w-4 text-gray-500" />;
-                  <span>Start date: {formatDate(quote && quote.start_date)}</span>;
+                  <span>Start date: {formatDate(quote && quote.start_date,
+}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Clock className="h-4 w-4 text-gray-500" />;
-                  <span>Timeline: {quote && quote.timeline}</span>;
+                  <span>Timeline: {quote && quote.timelin,
+}</span>;
                 </div>;
               </div>;
             </CardContent>;
@@ -171,12 +182,17 @@ import { Separator   } from '@/components / ui / separator';
 import { QuoteStatusBadge   } from './QuoteStatusBadge';
 import type { QuoteRequest } from '@/types / quotes';
 import { format  } from './date - fns';
-interface QuoteDetailsProps  {quote: QuoteRequest | null,is_open: boolean,on_close: () => void;
+
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null,is_open: boolean,on_close: () => void;
+
 }
+
 export const QuoteDetails = ({ quote, is_open, on_close }: QuoteDetailsProps) =>: any {// Check condition;
 if (return null) {$2;
 }
-  const format_date = (date_string?: string) =>: any {// Check condition;
+
+const format_date = (date_string?: string) =>: any {// Check condition;
 if (return 'Not specified') {$2;
 }    try {return format (new Date (date_string), 'PPP')} catch (e) {return date_string;
     }
@@ -214,11 +230,13 @@ if (return 'Not specified') {$2;
               <div className="space - y-2">;
                 <div className="flex items - center gap - 2">;
                   <Calendar className="h - 4 w - 4 text - gray - 500" />;
-                  <span > Start date: {format_date (quote.start_date)}</span>;
+                  <span > Start date: {format_date (quote.start_date,
+}</span>;
                 </div>;
                 <div className="flex items - center gap - 2">;
                   <Clock className="h - 4 w - 4 text - gray - 500" />;
-                  <span > Timeline: {quote.timeline}</span>;
+                  <span > Timeline: {quote.timelin,
+}</span>;
                 </div>;
               </div>;
             </CardContent>;

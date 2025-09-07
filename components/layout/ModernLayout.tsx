@@ -1,9 +1,12 @@
 type ModernLayoutProps = {children: ReactNode;
+
 type ModernLayoutProps = {children: ReactNode,title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-const ModernLayout = ({const ModernLayout = ({children;
+
+const ModernLayout = (;
+  const ModernLayout = ({children;
   title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
@@ -18,13 +21,18 @@ const ModernLayout = ({const ModernLayout = ({children;
         <meta name="robots" content="index, follow" />;
         {canonical ? <link rel="canonical" href={canonical} /> : null}
         <meta property="og: type" content="website" />;
-        <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
+        <meta property="og: url" content={canonical || "https://ziontechgroup.com,
+} />;
+        <meta property="og: title" content={titl,
+} />;
+        <meta property="og: description" content={descriptio,
+} />;
         <meta property="og:site_name" content="Zion Tech Group" />;
         <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
+        <meta name="twitter: title" content={titl,
+} />;
+        <meta name="twitter: description" content={descriptio,
+} />;
         <link rel="icon" href="/favicon.ico" />;
         <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png" />;
         <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />;
@@ -34,4 +42,6 @@ const ModernLayout = ({const ModernLayout = ({children;
       <div className="min - h-screen bg - white text-gray-900">;
         {children}
       </div>;
-</>),}export default ModernLayout;
+</>),}
+
+export default ModernLayout;

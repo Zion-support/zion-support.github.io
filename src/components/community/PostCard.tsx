@@ -7,6 +7,7 @@ import { Button  } from '@/components/ui/button';
 import { cn  } from '@/lib/utils';
 import { ForumPost  } from '@/types/community';
 import { logInfo  } from '@/utils/productionLogger';
+
 interface PostCardProps  {post: ForumPost,compact?: boolean;
 }import React from 'react',import { formatDistanceToNow } from "date-fns",import Link from "next/link",import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle  } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { Button } from "@/components/ui/button",import { cn } from "@/lib/utils",import { ForumPost } from "@/types/community",import { logInfo } from '@/utils/productionLogger',interface PostCardProps  {post: ForumPost;
@@ -22,12 +23,24 @@ import { Button   } from '@/components / ui / button';
 import { cn   } from '@/lib / utils';
 import { ForumPost   } from '@/types / community';
 import { log_info  } from '@/utils / production_logger';
-interface PostCardProps  {post: ForumPost,compact?: boolean;
+
+interface PostCardProps {
+  post: ForumPost,compact?: boolean;
+
 }
-const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),return (export default PostCard;<Card data - testid="post - card" className={cn ("transition - shadow hover:shadow - md";
+
+const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any ;
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true,
+});
+  return (export default PostCard;<Card data - testid="post - card" className={cn ("transition - shadow hover:shadow - md";
+
 export const PostCard = React.memo (PostCardComponent)PostCard.display_name = 'PostCard';
+
 export default PostCard;
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export default PostCard;export default PostCard;}> <p>DEBUG: PostCard ID: {post?.id ";
+
+const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export default PostCard;
+
+export default PostCard;}> <p>DEBUG: PostCard ID: {post?.id ";
 }</p> <CardHeader className="flex flex-row items-start gap-4 space-y-0" > <Avatar className="h-10 w-10" > <AvatarImage src= {post.authorAvatar ;
 }alt= {post.authorName ;
 }/> <AvatarFallback> {post.authorName.charAt (0) ";
@@ -41,8 +54,14 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export 
 }</div> <div className="text-sm text-muted-foreground" > Posted by {post.authorName ;
 }{timeAgo ";
 }</div> <div className="flex flex-wrap gap-2 mt-2" > {post.tags?.map (tag => (<Badge key= {tag ";
-}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {tag ;const PostCardComponent = ({ post, compact = false }: PostCardProps) => {logInfo('PostCardComponent rendering with post:', {data: post ? post.id : 'NO POST'})const timeAgo = formatDistanceToNow(new Date(post.createdAt), {addSuffix: true})>;
-      <p>DEBUG: PostCard ID: {post?.id}</p>;
+}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {tag ;
+
+const PostCardComponent = ({ post, compact = false }: PostCardProps) => {logInfo('PostCardComponent rendering with post:', {data: post ? post.id : 'NO POST,
+};
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), {addSuffix: tru,
+})>;
+      <p>DEBUG: PostCard ID: {post?.i,
+}</p>;
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>;
         <Avatar className='h-10 w-10'>;
           <AvatarImage src={post.authorAvatar} alt={post.authorName} />;
@@ -52,9 +71,10 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export 
           <div className='flex items-center'>;
             <Link;
               href={`/community/post/${post.id}`}
-              className='font-semibold text-lg hover:text-zion-purple transition-colors';
-            >;
-              {post.title}
+              className='font-semibold text-lg hover: text-zion-purple transition-colors'>
+
+              {post.titl,
+}
             </Link>;
             {post.isAnswered && (<CheckCircle className='h-4 w-4 text-green-500 ml-2' />;
             )}
@@ -68,9 +88,10 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export 
             {post.tags?.map(tag => (<Badge;
                 key={tag}
                 variant='outline';
-                className='bg-zion-purple/10 hover:bg-zion-purple/20';
-              >;
-                {tag}
+                className='bg-zion-purple/10 hover: bg-zion-purple/20'>
+
+                {ta,
+}
               </Badge>;
             ))}
           </div>;
@@ -102,5 +123,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {export 
         )}
       </CardFooter>;
     </Card>;
-  )}export default PostCard;
+  )}
+
+export default PostCard;
 '";

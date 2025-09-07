@@ -8,6 +8,7 @@ interface PricingTierProps {
   isPopular?: boolean;
   buttonText?: string;
   buttonHref?: string;
+
 }
 
 export default function PricingTier({ 
@@ -19,6 +20,7 @@ export default function PricingTier({
   buttonText = "Get Started",
   buttonHref = "/contact"
 }: PricingTierProps) {
+ ;
   return (
     <div className={`bg-white p-8 rounded-lg shadow-md ${isPopular ? 'ring-2 ring-blue-500 relative' : ''}`}>
       {isPopular && (
@@ -50,11 +52,12 @@ export default function PricingTier({
         href={buttonHref}
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           isPopular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            ? 'bg-blue-600 text-white hover: bg-blue-700'
             : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
         }`}
       >
-        {buttonText}
+        {buttonTex,
+}
       </a>
     </div>
   );

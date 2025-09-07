@@ -10,9 +10,15 @@ import { Button  } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger  } from '@/components/ui/popover';
 import { Calendar  } from '@/components/ui/calendar';
 import { ContractFormValues  } from './ContractForm';
-interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;import { format } from "date-fns",import { UseFormReturn, ControllerRenderProps } from "react-hook-form",import {FormField,FormItem,FormLabel,FormControl,FormDescription,FormMessage;
-} from "@/components/ui/form",interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+
+interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+
+interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;import { format } from "date-fns",import { UseFormReturn, ControllerRenderProps } from "react-hook-form",import {FormField,FormItem,FormLabel,FormControl,FormDescription,FormMessage;
+} from "@/components/ui/form",interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+
 }
+
 export function ProjectDetailsFields() {return (<>;
       <FormField;
         control={form.control}
@@ -23,19 +29,28 @@ name='projectName';
             <FormLabel>Project Name</FormLabel>;
             <FormControl>;
               <Input placeholder='AI Website Development' {...field} />            </FormControl>        name="projectName";
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
-}export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {return (<>;
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+
+}
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {return (<>;
       <FormField;
         render={({field;
         }: {control={form.control}name="projectName";
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Button } from "@/components/ui/button",import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",import { Calendar } from "@/components/ui/calendar",import { ContractFormValues } from "./ContractForm",interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
   FormField,FormItem,FormLabel,FormControl,FormDescription,FormMessage;
-} from "@/components/ui/form",interface ProjectDetailsFieldsProps  {form: UseFormReturn<ContractFormValues>;
-}export function ProjectDetailsFields() {return (<>;
+} from "@/components/ui/form",interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>;
+
+}
+
+export function ProjectDetailsFields() {return (<>;
       <FormField;
         control={form.control}
         name="projectName";
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (<FormItem>;
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName">,
+}) => (<FormItem>;
             <FormLabel>Project Name</FormLabel>;
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
@@ -56,7 +71,8 @@ name='projectName';
             <FormMessage />;
           </FormItem>;
         name="projectName";
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (<FormItem>;
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName">,
+}) => (<FormItem>;
             <FormLabel>Project Name</FormLabel>;
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;</FormControl>;<FormMessage />;
@@ -143,14 +159,16 @@ placeholder='Describe the project scope, deliverables, and expectations...';
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (<FormField;
         control={form.control}
         name="scopeSummary";
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (<FormItem>;
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary">,
+}) => (<FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
         name="scopeSummary";
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (<FormItem>;
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary">,
+}) => (<FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
               <Textarea;
@@ -180,7 +198,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField;
           control={form.control}name="startDate";
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (<FormItem className="flex flex-col">;
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate">,
+}) => (<FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
             field: ControllerRenderProps<ContractFormValues, 'startDate'>;
           }) => (<FormItem className='flex flex-col'>;
@@ -190,8 +209,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
                   <FormControl>;
                     <Button;
                       variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-                    >;
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}>
+
                       {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -264,7 +283,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
           name="endDate";
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (<FormItem className="flex flex-col">;
           name="endDate";
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (<FormItem className="flex flex-col">;
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate">,
+}) => (<FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
             <FormItem className='flex flex-col'>;
               <FormLabel>End Date (Optional)</FormLabel>;
@@ -273,8 +293,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
                   <FormControl>;
                     <Button;
                       variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-                    >;
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}>
+
                       {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -308,7 +328,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
               <FormMessage />;
             </FormItem>;
           name="endDate";
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (<FormItem className="flex flex-col">;
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate">,
+}) => (<FormItem className="flex flex-col">;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
@@ -342,7 +363,8 @@ placeholder='Describe the project scope, deliverables, and expectations...';
                   <FormControl>;
                     <Button;
                       variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}>;
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}>
+
                       {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>;
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}

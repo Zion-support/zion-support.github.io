@@ -1,10 +1,12 @@
 
 ;
+
 interface ApplicationRowProps  {import { Button } from "@/components/ui/button",import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
 import { TableRow, TableCell } from "@/components/ui/table",import { JobApplication, ApplicationStatus } from "@/types/jobs",import { StatusBadge } from "./StatusBadge",import { ScoreBadge  } from './ScoreBadge';
 import { ApplicationActions  } from './ApplicationActions';
 import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
+
 interface ApplicationRowProps  {application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
@@ -17,6 +19,7 @@ import { JobApplication, ApplicationStatus  } from '@/types/jobs';
 import { StatusBadge  } from './StatusBadge';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
+
 interface ApplicationRowProps  {application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
@@ -24,26 +27,42 @@ interface ApplicationRowProps  {application: JobApplication;
   processing_id: string | null;
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false)import { formatDistanceToNow  } from 'date-fns';
-import { Calendar, User, FileText, BarChart   } from 'lucide-react';interface ApplicationRowProps  {application: JobApplication;
+import { Calendar, User, FileText, BarChart   } from 'lucide-react';
+
+interface ApplicationRowProps {
+  application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string,newStatus: ApplicationStatus;
   ) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
+
 interface ApplicationRowProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string,) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,onViewScore: (application: JobApplication,) => void;
-}export function ApplicationRow(): any ({application,processingId,onViewApplication,onStatusChange,onViewScore}: ApplicationRowProps) {const [avatarError, setAvatarError] = useState(false)const talentName  = application && application.talent_profile?.full_name || 'Unknown';const talentName = application.talent_profile?.full_name || 'Unknown';
+
+}
+
+export function ApplicationRow(): any ({application,processingId,onViewApplication,onStatusChange,onViewScore}: ApplicationRowProps) {const [avatarError, setAvatarError] = useState(false);
+  const talentName  = application && application.talent_profile?.full_name || 'Unknown';
+
+const talentName = application.talent_profile?.full_name || 'Unknown';
     applicationId: string;
     newStatus: ApplicationStatus;
   ) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
-interface ApplicationRowProps  {application: JobApplication;
+
+interface ApplicationRowProps {
+  application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string,) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>;
   onViewScore: (application: JobApplication,) => void;
+
 }
-export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false)const talentName  = null;return (const talentName = application.talent_profile?.full_name |'Unknown';
-  const talentName = application.talent_profile?.full_name || 'Unknown';
+
+export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false);
+  const talentName  = null;return (const talentName = application.talent_profile?.full_name |'Unknown';
+
+const talentName = application.talent_profile?.full_name || 'Unknown';
   return (<TableRow key={application.id}>;
       <TableCell>;
         <div className="flex items-center gap-3">;
@@ -70,7 +89,8 @@ export function ApplicationRow() {const [avatarError, setAvatarError] = useState
       <TableCell>;
         <div className="flex items-center gap-1">;
           <Calendar className="h-4 w-4 text-muted-foreground" />;
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
+          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true },
+}</span>;
         </div>;
       </TableCell>;
       <TableCell>;
@@ -81,8 +101,8 @@ export function ApplicationRow() {const [avatarError, setAvatarError] = useState
           variant="ghost";
           size="sm";
           onClick={() => onViewScore(application)}
-          className="flex items-center gap-1";
-        >;
+          className="flex items-center gap-1">
+
           <BarChart className="h-4 w-4 mr-1" />;
           <ScoreBadge application={application} />;
         </Button>;
@@ -98,8 +118,13 @@ export function ApplicationRow() {const [avatarError, setAvatarError] = useState
       </TableCell>;
       <TableCell className="text-right">;
         <ApplicationActions;
-import { formatDistanceToNow } from "date-fns",import { ScoreBadge } from "./ScoreBadge",import { ApplicationActions } from "./ApplicationActions",interface ApplicationRowProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,onViewScore: (application: JobApplication) => void;
-}export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false)const talentName = application.talent_profile?.full_name || "Unknown";
+import { formatDistanceToNow } from "date-fns",import { ScoreBadge } from "./ScoreBadge",import { ApplicationActions } from "./ApplicationActions",interface ApplicationRowProps {
+  application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,onViewScore: (application: JobApplication) => void;
+
+}
+
+export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Unknown";
   return (<TableRow key={application.id}>;
       <TableCell>;
         <div className="flex items-center gap-3">;
@@ -120,10 +145,17 @@ import { formatDistanceToNow } from "date-fns",import { ScoreBadge } from "./Sco
               {application && application.talent_profile?.professional_title || 'Talent'}
     application_id: string,new_status: ApplicationStatus) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
+
 interface ApplicationRowProps  {application: JobApplication,processing_id: string | null,onViewApplication: (application_id: string, ) => Promise < void>,onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,onViewScore: (application: JobApplication, ) => void;
 }
-interface ApplicationRowProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,onViewScore: (application: JobApplication) => void;
-}export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false)const talentName = application.talent_profile?.full_name || "Unknown";
+
+interface ApplicationRowProps {
+  application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,onViewScore: (application: JobApplication) => void;
+
+}
+
+export function ApplicationRow() {const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Unknown";
   return (<TableRow key={application.id}>;
       <TableCell>;
         <div className="flex items-center gap-3">;
@@ -148,7 +180,8 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
       </TableCell>;
       <TableCell>;<div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
-          <span>{formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}
+          <span>{formatDistanceToNow (new Date (application.created_at), {add_suffix: true},
+}
           </span>;
         </div>;
       </TableCell>;
@@ -181,8 +214,8 @@ interface ApplicationRowProps  {application: JobApplication,processingId: string
             <a;
               href={application.resume.file_url || '#'}
               target='_blank';
-              rel='noopener noreferrer';
-            >;
+              rel='noopener noreferrer'>
+
               <FileText className='h - 4 w - 4 mr - 1' /> View;
             </a>;
           </Button>) : (<span className='text - muted - foreground text - sm'>No resume</span>)}

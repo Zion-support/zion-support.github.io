@@ -2,6 +2,7 @@
 ;
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle  } from 'lucide-react';
+
 export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 md:px-6 border-t border-b border-border'>;
       <div className='container mx-auto max-w-6xl'>;
         <div className='text-center mb-8'>;
@@ -28,6 +29,7 @@ export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>;
             <CheckCircle className='h-5 w-5 text-primary' />;
             <span className='font-medium'>HIPAA Compliant</span>          </div>;
+
 export function EnterpriseTrustBadges() {return (<section className="py-10 px-4 md: px-6 border-t border-b border-border">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
@@ -54,7 +56,9 @@ export function EnterpriseTrustBadges() {return (<section className="py-10 px-4 
           </div>;
         </div>;
       </div>;
+
 export function EnterpriseTrustBadges() {return (</section>;
+
 export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 md:px-6 border-t border-b border-border'>;
       <div className='container mx-auto max-w-6xl'>;
         <div className='text-center mb-8'>;
@@ -83,7 +87,9 @@ export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 
             <span className='font-medium'>HIPAA Compliant</span>          </div>;
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
             <CheckCircle className="h-5 w-5 text-primary" />;
-            <span className="font-medium">HIPAA Compliant</span>;export function EnterpriseTrustBadges() {return (<section className="py-10 px-4 md: px-6 border-t border-b border-border">;
+            <span className="font-medium">HIPAA Compliant</span>;
+
+export function EnterpriseTrustBadges() {return (<section className="py-10 px-4 md: px-6 border-t border-b border-border">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
@@ -111,6 +117,7 @@ export function EnterpriseTrustBadges() {return (<section className='py-10 px-4 
     </section>;
   )}
   )}
+
 export /**;
  * EnterpriseTrustBadges - Function description;
  */;
@@ -143,6 +150,7 @@ function EnterpriseTrustBadges() {return (<section className='py - 10 px - 4 md:
           <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border - border">;
             <CheckCircle className="h - 5 w - 5 text - primary" />;
             <span className="font - medium">HIPAA Compliant</span>;
+
 export /**;
  * EnterpriseTrustBadges - Function description;
  */;

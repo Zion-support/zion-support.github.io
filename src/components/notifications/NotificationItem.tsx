@@ -13,6 +13,7 @@ import { Tooltip;
   TooltipTrigger  } from '@/components/ui/tooltip';
 import { useRouter   } from 'next/router';
 import { Notification, NotificationType  } from '@/context/notifications';
+
 export const getTypeIcon = null;
   TooltipContent;
   TooltipProvider;
@@ -36,6 +37,7 @@ import { formatDistanceToNow  } from 'date-fns';
   TooltipContent;
   TooltipProvider;
   TooltipTrigger} from '@/components/ui/tooltip';
+
 export const getTypeIcon = (type: NotificationType,) => {switch (type) {case 'message':;
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
@@ -70,6 +72,7 @@ import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/component
       return <span className="text-orange-500">📦</span>,default:;
   Tooltip,TooltipContent,TooltipProvider,TooltipTrigger;
 } from '@/components/ui/tooltip';
+
 export const getTypeIcon = (type: NotificationType) => {switch (type) {case 'message':;
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
@@ -84,20 +87,27 @@ export const getTypeIcon = (type: NotificationType) => {switch (type) {case 'mes
       return <span className="text-gray-500">📣</span>;
   }
 }
-interface NotificationItemProps  {notification: Notification;
+
+interface NotificationItemProps {
+  notification: Notification;
   onMarkAsRead: (id: string,) => Promise<void>;
   onDismiss: (id: string,) => Promise<void>;
+
 }
+
 export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
   onMarkAsRead;
   onDismiss},) => {const router = useRouter(), // Changed from useNavigate to useRouter;
-  const handleClick = () => {if (!notification.read) {onMarkAsRead(notification.id)}
+
+const handleClick = () => {if (!notification.read) {onMarkAsRead(notification.id)}
     // If there's an action URL, navigate to it;
     if (notification.action_url) {router.push(notification.action_url), // Changed to router.push;
-    }return (<div;
+    }return (
+    <div
       className = {cn('p-3 border-b border-zion-blue-light relative group';
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
-  },return (<div;
+  },return (
+    <div
       className={cn('p-3 border-b border-zion-blue-light relative group',!notification.read ? 'bg-zion-blue-dark/30' : '')}>;
       <div className="flex items-start gap-2">;
         <div className="text-xl">{getTypeIcon(notification.type)}</div>;
@@ -113,7 +123,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
           <div className="flex justify-between items-center mt-1">;
             <p className="text-xs text-zion-slate">;
               {notification.created_at;
-                ? formatDistanceToNow(new Date(notification.created_at), {addSuffix: true}): 'Just now'}
+                ? formatDistanceToNow(new Date(notification.created_at), {addSuffix: true}): 'Just now,
+}
             </p>;
             {notification.action_url && notification.action_text && (<Button;
                 variant="link";
@@ -136,8 +147,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 size="icon";
                 className="h-6 w-6";
                 onClick={(e) => {onClick={(e) => {e.stopPropagation(),onMarkAsRead(notification.id)}}
-                aria-label="Mark as read";
-              >;
+                aria-label="Mark as read">
+
                 <Check className="h-3.5 w-3.5 text-green-400" />;
               </Button>;
             </TooltipTrigger>;
@@ -147,7 +158,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
           </Tooltip>;
         </TooltipProvider>;
         <TooltipProvider>;
-  }const handleMarkAsRead = (e: React.MouseEvent) => {e.stopPropagation()onMarkAsRead(notification.id)}const handleDismiss = (e: React.MouseEvent) => {e.stopPropagation()onDismiss(notification.id)}return (<TooltipProvider>;
+  }
+
+const handleMarkAsRead = (e: React.MouseEvent) => {e.stopPropagation()onMarkAsRead(notification.id,
+}
+;
+  const handleDismiss = (e: React.MouseEvent) => {e.stopPropagation()onDismiss(notification.id);
+  return (<TooltipProvider>;
       <div;
         className={cn('flex items-start space-x-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-gray-50',!notification.read && 'bg-blue-50 border-l-4 border-blue-500';
         )}
@@ -173,7 +190,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 </Badge>;
               )}
               <span className="text-xs text-gray-500">;
-                {formatDistanceToNow(new Date(notification.createdAt), { addSuffix: true })}
+                {formatDistanceToNow(new Date(notification.createdAt), { addSuffix: true },
+}
               </span>;
             </div>;
           </div>;
@@ -190,8 +208,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                   variant="ghost";
                   size="sm";
                   onClick={handleMarkAsRead}
-                  className="h-8 w-8 p-0";
-                >;
+                  className="h-8 w-8 p-0">
+
                   <Check className="h-4 w-4" />;
                 </Button>;
               </TooltipTrigger>;
@@ -205,8 +223,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
                 variant="ghost";
                 size="sm";
                 onClick={handleDismiss}
-                className="h-8 w-8 p-0 text-gray-400 hover:text-red-500";
-              >;
+                className="h-8 w-8 p-0 text-gray-400 hover:text-red-500">
+
                 <Trash2 className="h-4 w-4" />;
               </Button>;
             </TooltipTrigger>;
@@ -214,20 +232,31 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
               <p>Dismiss</p>;
             </TooltipContent>;
           </Tooltip>;
-        </TooltipProvider>;
-    </div>)},;
+        </TooltipProvider>
+    </div>
+  );
+},;
       </div>;
     </div>;
   )</div>;
       </div>;
     </TooltipProvider>;
-  )})}interface NotificationItemProps  {notification: Notification;
+  )})}
+
+interface NotificationItemProps {
+  notification: Notification;
 onMarkAsRead: (id: string) => Promise<void>;
 onDismiss: (id: string) => Promise<void> ;
-}export const NotificationItem: React.FC<NotificationItemProps> = ({notification;
+
+}
+
+export const NotificationItem: React.FC<NotificationItemProps> = ({ notification;
 onMarkAsRead;
 onDismiss ;
-}) => {const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ';
+   }) => {
+
+
+const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ';
 }) : 'Just now' ;
 }</p> {notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={handleClick ;
 }> </Button>) ";

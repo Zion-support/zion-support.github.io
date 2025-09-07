@@ -25,6 +25,7 @@ import { Card;
 import { cn  } from '@/lib/utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
+
 interface WizardStep  {title: string;
   description: string;
   icon: React && React.ReactNode;
@@ -35,47 +36,68 @@ import { Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components / 
   Rocket,FileText,Users,Calendar,Eye,MessageSquare} from 'lucide-react';
 import { cn  } from '@/lib / utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+
 interface WizardStep  {title: string;
   description: string;
   icon: React.ReactNode;
   action: {text: string;
     url: string;}
   skipText?: string;
+
 interface OnboardingWizardProps  {url: string;
-  }skipText?: string;interface OnboardingWizardProps  {type: 'client' | 'talent';
+  }skipText?: string;
+
+interface OnboardingWizardProps  {type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string;
-export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip,className}: OnboardingWizardProps) {const [currentStep, setCurrentStep] = useState(0)const router = useRouter()// Changed from useNavigate to useRouter;
-  const { user } = useAuth()</div>;
+
+export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip,className}: OnboardingWizardProps) {const [currentStep, setCurrentStep] = useState(0);
+  const router = useRouter()// Changed from useNavigate to useRouter;
+
+const { user } = useAuth()</div>;
         </div>;<div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;import { useState, useEffect } from 'react',import { useRouter } from 'next/router',import { useAuth } from '@/hooks/useAuth',import { Button } from '@/components/ui/button',import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',import { cn } from '@/lib/utils',interface WizardStep  {title: string,description: string,icon: React.ReactNode,action: {text: string,url: string;
   },skipText?: string;
-}interface OnboardingWizardProps  {type: 'client' | 'talent',onComplete: () => void,onSkip: () => void,className?: string;
-}export function OnboardingWizard() {const [currentStep, setCurrentStep] = useState(0),const router = useRouter(), // Changed from useNavigate to useRouter;
-  const { user } = useAuth(),// Define steps based on user type;
-  const clientSteps: WizardStep[] = [;
+}
+
+interface OnboardingWizardProps {
+  type: 'client' | 'talent',onComplete: () => void,onSkip: () => void,className?: string;
+
+}
+
+export function OnboardingWizard() {const [currentStep, setCurrentStep] = useState(0),const router = useRouter(), // Changed from useNavigate to useRouter;
+
+const { user } = useAuth(),// Define steps based on user type;
+
+const clientSteps: WizardStep[] = [;
     {title: "Post your first job",description: "Describe the talent you need for your project",icon: <FileText className="h-6 w-6 text-zion-purple" />,action: {text: "Post a Job",url: "/post-job";
       },skipText: "I'll do this later";
     },{title: "View suggested matches",description: "Our AI system will find the best talent matches",icon: <Users className="h-6 w-6 text-zion-cyan" />,action: {text: "View Matches",url: "/talent";
       },skipText: "Skip for now";
-    },{title: "Contact talent",description: "Reach out to the talent that fits your needs",icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,action: {const talentSteps: WizardStep[] = [;
+    },{title: "Contact talent",description: "Reach out to the talent that fits your needs",icon: <MessageSquare className = "h-6 w-6 text-zion-purple" />,action: ;
+  const talentSteps: WizardStep[] = [;
     {title: "Complete your profile",description: "Add your skills, experience, and preferences",icon: <FileText className="h-6 w-6 text-zion-purple" />,action: {text: "Edit Profile",url: "/profile";
       },skipText: "I'll do this later";
     },{title: "Define skills & availability",description: "Let clients know when you're available and what you can do",icon: <Calendar className="h-6 w-6 text-zion-cyan" />,action: {text: "Set Availability",url: "/profile?tab=skills";
       },skipText: "Skip for now";
-    },{title: "Preview your profile",description: "See how clients will view your profile",icon: <Eye className="h-6 w-6 text-zion-purple" />,action: {text: "Preview Profile",url: `/talent/${user?.id}`;
+    },{title: "Preview your profile",description: "See how clients will view your profile",icon: <Eye className="h-6 w-6 text-zion-purple" />,action: {text: "Preview Profile",url: `/talent/${user?.i,
+}`;
       },skipText: "Skip for now";
     },{title: "Enable AI matchmaking",description: "Let our AI find the perfect opportunities for you",icon: <Rocket className="h-6 w-6 text-zion-cyan" />,action: {text: "Enable Matchmaking",url: "/talent-dashboard";
       }
     }
   ],const steps = type === 'client' ? clientSteps : talentSteps,// Navigate to the specified URL;
-  const handleAction = () => {const currentStepData = steps[currentStep],if (!currentStepData) return,if (currentStep < steps.length - 1) {router.push(currentStepData.action.url), // Changed to router.push;
+
+const handleAction = () => ;
+  const currentStepData = steps[currentStep],if (!currentStepData);
+  return,if (currentStep < steps.length - 1) {router.push(currentStepData.action.url), // Changed to router.push;
       setCurrentStep(currentStep + 1)} else {// Last step;
       router.push(currentStepData.action.url), // Changed to router.push;
       onComplete()}
   },// Skip the current step;
-  const handleSkip = () => {if (currentStep < steps.length - 1) {setCurrentStep(currentStep + 1)} else {// Last step;
+
+const handleSkip = () => {if (currentStep < steps.length - 1) {setCurrentStep(currentStep + 1)} else {// Last step;
       onSkip()}
   },return (<Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
@@ -107,7 +129,10 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
       </CardContent>;
       <CardFooter className="flex flex-col space-y-2">;
         <Button;
-                  "h-2 w-2 rounded-full mx-1"}export function OnboardingWizard() {const [currentStep, setCurrentStep] = useState(0)const router  = null;index === currentStep;
+                  "h-2 w-2 rounded-full mx-1"}
+
+export function OnboardingWizard() {const [currentStep, setCurrentStep] = useState(0);
+  const router  = null;index === currentStep;
                     ? "bg-zion-purple scale-125";
                     : index < currentStep;
                     ? "bg-zion-cyan";
@@ -153,18 +178,37 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
   on_complete: () => void;
   on_skip: () => void;
   class_name?: string;
+
 export /**;
  * OnboardingWizard - Function description;
  */;
 function OnboardingWizard() {const [current_step, setCurrentStep] = useState (0)const router = use_router ()// Changed from use_navigate to use_router;
-  const { user } = use_auth ()// Define steps based on user type;
-  const client_steps: WizardStep[] = [;
-    {title: 'Post your first job',description: 'Describe the talent you need for your project',icon: <FileText className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Post a Job',url: '/post - job'},skip_text: "I'll do this later"},{title: 'View suggested matches',description: 'Our AI system will find the best talent matches',icon: <Users className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'View Matches',url: '/talent'},skip_text: 'Skip for now'},{title: 'Contact talent',description: 'Reach out to the talent that fits your needs',icon: <MessageSquare className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Browse Talent',url: '/talent'}}];
-  const talent_steps: WizardStep[] = [;
-    {title: 'Complete your profile',description: 'Add your skills, experience, and preferences',icon: <FileText className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Edit Profile',url: '/profile'},skip_text: "I'll do this later"},{title: 'Define skills & availability',description: "Let clients know when you're available and what you can do",icon: <Calendar className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'Set Availability',url: '/profile?tab = skills'},skip_text: 'Skip for now'},{title: 'Preview your profile',description: 'See how clients will view your profile',icon: <Eye className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Preview Profile',url: `/talent/${user?.id}`},skip_text: 'Skip for now'},{title: 'Enable AI matchmaking',description: 'Let our AI find the perfect opportunities for you',icon: <Rocket className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'Enable Matchmaking',url: '/talent - dashboard'}}];
-  const steps = type === 'client' ? client_steps : talent_steps;
+
+const { user } = use_auth ()// Define steps based on user type;
+
+const client_steps: WizardStep[] = [;
+    {title: 'Post your first job',description: 'Describe the talent you need for your project',icon: <FileText className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Post a Job',url: '/post - job,
+},skip_text: "I'll do this later,
+},{title: 'View suggested matches',description: 'Our AI system will find the best talent matches',icon: <Users className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'View Matches',url: '/talent,
+},skip_text: 'Skip for now,
+},{title: 'Contact talent',description: 'Reach out to the talent that fits your needs',icon: <MessageSquare className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Browse Talent',url: '/talent',
+}];
+
+const talent_steps: WizardStep[] = [;
+    {title: 'Complete your profile',description: 'Add your skills, experience, and preferences',icon: <FileText className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Edit Profile',url: '/profile,
+},skip_text: "I'll do this later,
+},{title: 'Define skills & availability',description: "Let clients know when you're available and what you can do",icon: <Calendar className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'Set Availability',url: '/profile?tab = skills,
+},skip_text: 'Skip for now,
+},{title: 'Preview your profile',description: 'See how clients will view your profile',icon: <Eye className='h - 6 w - 6 text - zion - purple' />,action: {text: 'Preview Profile',url: `/talent/${user?.id},
+},skip_text: 'Skip for now,
+},{title: 'Enable AI matchmaking',description: 'Let our AI find the perfect opportunities for you',icon: <Rocket className='h - 6 w - 6 text - zion - cyan' />,action: {text: 'Enable Matchmaking',url: '/talent - dashboard',
+}];
+
+const steps = type === 'client' ? client_steps : talent_steps;
   // Navigate to the specified URL;
-  const handle_action = () =>: any {const currentStepData = steps[current_step];
+
+const handle_action = () =>: any ;
+  const currentStepData = steps[current_step];
     // Check condition;
 if (return) {$2;
 }
@@ -177,7 +221,8 @@ if ( {) {$2;
       on_complete ()}
   }
   // Skip the current step;
-  const handle_skip = () =>: any {// Check condition;
+
+const handle_skip = () =>: any {// Check condition;
 if ( {) {$2;
 }
       setCurrentStep (current_step + 1)} else {// Last step;

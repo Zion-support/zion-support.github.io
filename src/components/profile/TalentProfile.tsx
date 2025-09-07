@@ -13,26 +13,40 @@ import { ProfileRatings  } from './ProfileRatings';
 import { TalentProfile as TalentProfileType  } from '@/types/talent';
 import { useAuth  } from '@/hooks/useAuth';
 import { Availability  } from '@/types/profile';
+
 interface TalentProfileProps  {profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void;
+
 export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: TalentProfileProps) {const { isAuthenticated }  = useAuth()// Create proper availability object from talent profile;
-  const availability: Availability = {status:;
+
+const availability: Availability = {status:;
       profile && profile.availability_type === 'full_time';
         ? 'available';
         : profile && profile.availability_type === 'part_time';
           ? 'limited';
-          : 'unavailable',message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`}// Create proper skills array for ProfileSkills component;
-  const skillsArray =;
+          : 'unavailable',message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience,
+}// Create proper skills array for ProfileSkills component;
+
+const skillsArray =;
     profile && profile.skills?.map(skill => ({name: skill,level: 3, // Default level since we don't have this data;
     })) || [];// Create proper projects array for ProfileProjects component;
-  const projectsArray =;
-    profile && profile.key_projects?.map((proj, i) => ({id: `project-${i}`,title: proj && proj.title,description: proj && proj.description,date: new Date().toISOString(), // Default date since we don't have this data;
-    })) || [];interface TalentProfileProps  {profile: TalentProfileType;
+
+const projectsArray =;
+    profile && profile.key_projects?.map((proj, i) => ({id: `project-${,
+}`,title: proj && proj.title,description: proj && proj.description,date: new Date().toISOString(), // Default date since we don't have this data;
+    })) || [];
+
+interface TalentProfileProps {
+  profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void;
-}export function TalentProfile() {const { isAuthenticated } = useAuth()// Create proper availability object from talent profile;
-  const availability: Availability;return (<div className='container mx-auto px-4 py-8'>;
+
+}
+
+export function TalentProfile() {const { isAuthenticated } = useAuth()// Create proper availability object from talent profile;
+
+const availability: Availability;return (<div className='container mx-auto px-4 py-8'>;
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -56,42 +70,62 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
 import { TalentProfile as TalentProfileType  } from '@/types / talent';
 import { use_auth  } from '@/hooks / use_auth';
 import { Availability  } from '@/types / profile';
+
 interface TalentProfileProps  {profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void;
+
 export /**;
  * TalentProfile - Function description;
  */;
 function TalentProfile() {const { is_authenticated } = use_auth ()// Create proper availability object from talent profile;
-  const availability: Availability = {status:;
+
+const availability: Availability = {status:;
       profile.availability_type === 'full_time';
         ? 'available';
         : profile.availability_type === 'part_time';
           ? 'limited';
-          : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience`}
+          : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience,
+}
   // Create proper skills array for ProfileSkills component;
-  const skills_array =;
+
+const skills_array =;
     profile.skills?.map (skill => ({name: skill,level: 3, // Default level since we don't have this data;
     })) || [];
   // Create proper projects array for ProfileProjects component;
-  const projects_array =;
-    profile.key_projects?.map ((proj, i) => ({id: `project-${i}`,title: proj.title,description: proj.description,date: new Date ().toISOString (), // Default date since we don't have this data;
+
+const projects_array =;
+    profile.key_projects?.map ((proj, i) => ({id: `project-${,
+}`,title: proj.title,description: proj.description,date: new Date ().toISOString (), // Default date since we don't have this data;
     })) || [];
   return (<div className='container mx - auto px - 4 py - 8'>;status: profile.availability_type === 'full_time' ? 'available' :;
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',message: `${profile.professional_title} with ${profile.years_experienc,
+} years of experience`;
   },// Create proper skills array for ProfileSkills component;
-  const skillsArray = profile.skills?.map(skill => ({name: skill,level: 3 // Default level since we don't have this data;
+
+const skillsArray = profile.skills?.map(skill => ({name: skill,level: 3 // Default level since we don't have this data;
   })) || [],// Create proper projects array for ProfileProjects component;
-  const projectsArray = profile.key_projects?.map((proj, i) => ({id: `project-${i}`,title: proj.title,description: proj.description,date: new Date().toISOString() // Default date since we don't have this data;
+
+const projectsArray = profile.key_projects?.map((proj, i) => ({id: `project-${,
+}`,title: proj.title,description: proj.description,date: new Date().toISOString() // Default date since we don't have this data;
   })) || [],return (<div className="container mx-auto px-4 py-8">;
-import React from "react",import { useAuth } from "@/hooks/useAuth",import { Availability } from "@/types/profile",interface TalentProfileProps  {profile: TalentProfileType,onRequestHire: () => void,onMessageTalent?: () => void;
-}export function TalentProfile() {const { isAuthenticated } = useAuth(),// Create proper availability object from talent profile;
-  const availability: Availability = {status: profile.availability_type === 'full_time' ? 'available' :;
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+import React from "react",import { useAuth } from "@/hooks/useAuth",import { Availability } from "@/types/profile",interface TalentProfileProps {
+  profile: TalentProfileType,onRequestHire: () => void,onMessageTalent?: () => void;
+
+}
+
+export function TalentProfile() {const { isAuthenticated } = useAuth(),// Create proper availability object from talent profile;
+
+const availability: Availability = {status: profile.availability_type === 'full_time' ? 'available' :;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',message: `${profile.professional_title} with ${profile.years_experienc,
+} years of experience`;
   },// Create proper skills array for ProfileSkills component;
-  const skillsArray = profile.skills?.map(skill => ({name: skill,level: 3 // Default level since we don't have this data;
+
+const skillsArray = profile.skills?.map(skill => ({name: skill,level: 3 // Default level since we don't have this data;
   })) || [],// Create proper projects array for ProfileProjects component;
-  const projectsArray = profile.key_projects?.map((proj, i) => ({id: `project-${i}`,title: proj.title,description: proj.description;
+
+const projectsArray = profile.key_projects?.map((proj, i) => ({id: `project-${,
+}`,title: proj.title,description: proj.description;
     date: new Date().toISOString() // Default date since we don't have this data;
   })) || [];
   return (<div className="container mx-auto px-4 py-8">;{/* Profile Header */}
@@ -193,8 +227,14 @@ import React from "react",import { useAuth } from "@/hooks/useAuth",import { Ava
                       onClick={onMessageTalent}>;
                       <MessageSquare className='mr-2 h-5 w-5' />;
                       Message;
-                    </Button>;interface TalentProfileProps  {profile: TalentProfileType,onRequestHire: () => void,onMessageTalent?: () => void;
-}export function TalentProfile() {{/* Left Column - Skills & Info */}
+                    </Button>;
+
+interface TalentProfileProps {
+  profile: TalentProfileType,onRequestHire: () => void,onMessageTalent?: () => void;
+
+}
+
+export function TalentProfile() {{/* Left Column - Skills & Info */}
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -277,11 +317,15 @@ import React from "react",import { useAuth } from "@/hooks/useAuth",import { Ava
                       Message;
                     </Button>)}
                 </div>;
-              </div>;
-            </div>)}
+              </div>
+    </div>
+  );
+}
         </div>;
-      </div>;
-    </div>)}</div>;
+      </div>
+    </div>
+  );
+}</div>;
       </div>;
     </div>;
   )

@@ -5,8 +5,17 @@ import { Card,CardHeader,CardTitle,CardDescription} from '@/components/ui/card';
 import { AlertTriangle, AlertCircle, ShieldAlert  } from 'lucide-react';
 import { FraudStats  } from '@/types/fraud';
 import React from "react",import { Card, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
-interface FraudStatsCardsProps  {stats: FraudStats;
-}export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {return (return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+
+interface FraudStatsCardsProps {
+  stats: FraudStats;
+
+}
+
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats   ,
+}) => {
+
+
+return (return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
       <Card>;
         <CardHeader className="pb-2">;
           <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>;
@@ -53,8 +62,16 @@ interface FraudStatsCardsProps  {stats: FraudStats;
         </CardHeader>;
       </Card>;
     </div>;
-},import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { FraudStats } from "@/types/fraud",interface FraudStatsCardsProps  {stats: FraudStats;
-}export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+},import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { FraudStats } from "@/types/fraud",interface FraudStatsCardsProps {
+  stats: FraudStats;
+
+}
+
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats   ,
+}) => {
+
+
+return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
       <Card>;
         <CardHeader className="pb-2">;
           <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>;
@@ -69,8 +86,14 @@ interface FraudStatsCardsProps  {stats: FraudStats;
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats  } from '@/types/fraud';
-interface FraudStatsCardsProps  {stats: FraudStats;
-}export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+
+interface FraudStatsCardsProps {
+  stats: FraudStats;
+
+}
+
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats,
+},) => {return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
       <Card>;
         <CardHeader className="pb-2">;
           <CardTitle className="text-2xl font-bold">{stats && stats.total_flags}</CardTitle>;
@@ -112,7 +135,10 @@ interface FraudStatsCardsProps  {stats: FraudStats;
         </CardHeader>;
       </Card>;
     </div>;
-  )}export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {return (<div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
+  )}
+
+export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats,
+}, ) => {return (<div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
       <Card>;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - 2xl font - bold">{stats.total_flags}</CardTitle>;
@@ -157,6 +183,8 @@ interface FraudStatsCardsProps  {stats: FraudStats;
           <CardTitle className="text - 2xl font - bold">{stats.false_positives}</CardTitle>;
           <CardDescription > False Positives</CardDescription>;
         </CardHeader>;
-      </Card>;
-    </div>)}
+      </Card>
+    </div>
+  );
+}
 ";)

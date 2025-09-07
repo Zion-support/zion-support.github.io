@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { ReferralReward  } from '@/types/referrals';
 import { formatDate  } from '@/utils/referralUtils';
 import { BadgeDollarSign, Badge  } from 'lucide-react';
+
 interface RewardsCardProps  {rewards: ReferralReward[];
   is_loading: boolean;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components / ui / card';
@@ -10,11 +11,14 @@ import { ReferralReward   } from '@/types / referrals';
 import { format_date   } from '@/utils / referral_utils';
 import { Badge  } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
+
 interface RewardsCardProps  {import {Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
+
 interface RewardsCardProps  {rewards: ReferralReward[];
   isLoading: boolean;import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+
 interface RewardsCardProps  {rewards: ReferralReward[];
   rewards: ReferralReward[];isLoading: boolean;
 }return (<CardTitle className="flex items-center gap-2">;
@@ -47,7 +51,8 @@ interface RewardsCardProps  {rewards: ReferralReward[];
         </CardContent>;
       </Card>;
     )}
-  if (rewards.length === 0) {return (<Card>;
+  if (rewards.length = == 0) ;
+  return (<Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5" />;
@@ -93,14 +98,19 @@ interface RewardsCardProps  {rewards: ReferralReward[];
           {rewards.map((reward, index) => (<div;
               key={reward.id}
               className={`flex justify-between items-start ${index !== rewards.length - 1 ? "border-b pb-3" : "";
-import { ReferralReward } from "@/types/referrals",import { formatDate } from "@/utils/referralUtils",interface RewardsCardProps  {rewards: ReferralReward[];
+import { ReferralReward } from "@/types/referrals",import { formatDate } from "@/utils/referralUtils",interface RewardsCardProps {
+  rewards: ReferralReward[];
   isLoading: boolean;
-}export function RewardsCard() {if (isLoading) {return (<Card>;
+
+}
+
+export function RewardsCard() {if (isLoading) {return (<Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <BadgeDollarSign className='h-5 w-5' />;
   rewards: ReferralReward[],is_loading: boolean;
 }
+
 export /**;
  * RewardsCard - Function description;
  */;
@@ -143,7 +153,8 @@ if ( {) {$2;
           <CardDescription>Rewards earned from successful referrals;
           </CardDescription>;
         </CardHeader>;
-        <CardContent>;)}if (rewards && rewards.length === 0) {return (<Card>;
+        <CardContent>;)}if (rewards && rewards.length = == 0) ;
+  return (<Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <BadgeDollarSign className='h-5 w-5' />;
@@ -156,7 +167,8 @@ if ( {) {$2;
           <div className='flex flex-col items-center justify-center p-4 text-center'>;
             <p className='text-muted-foreground'>No rewards yet</p>;
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;;
-  if (rewards.length === 0) {return (<Card>;
+  if (rewards.length = == 0) ;
+  return (<Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5" />;
@@ -200,7 +212,8 @@ if ( {) {$2;
         <div className="space-y-4">;
           {rewards && rewards.map((reward, index,) => (<div;
               key = {reward && reward.id}className={`flex justify-between items-start ${index !== rewards && rewards.length - 1 ? 'border-b pb-3' : '';
-              }`}>;
+              }`}>
+
               <div>;
                 <div className='flex items-center gap-2'>;
                   {reward && reward.reward_type === 'credit' ? (<BadgeDollarSign className='h-4 w-4 text-green-600' />;
@@ -232,8 +245,8 @@ if ( {) {$2;
           {rewards.map((reward, index) => (<div;
               key={reward.id}
               className={`flex justify-between items-start ${index !== rewards.length - 1 ? "border-b pb-3" : "";
-              }`}
-            >;
+              }`}>
+
               <div>;
                 <div className="flex items-center gap-2">;
                   {reward.reward_type === 'credit' ? (<BadgeDollarSign className="h-4 w-4 text-green-600" />;
@@ -267,8 +280,8 @@ if ( {) {$2;
           {rewards.map ((reward, index, ) => (<div;
               key = {reward.id }
               className={`flex justify - between items - start ${index !== rewards.length - 1 ? 'border - b pb - 3' : '';
-              }`}
-            >;
+              }`}>
+
               <div>;
                 <div className='flex items - center gap - 2'>;
                   {reward.reward_type === 'credit' ? (<BadgeDollarSign className='h - 4 w - 4 text - green - 600' />) : (<Badge className='h - 4 w - 4 text - blue - 600' />)}

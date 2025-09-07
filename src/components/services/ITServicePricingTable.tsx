@@ -5,10 +5,15 @@ import { Input  } from '@/components/ui/input';
   Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig]  = useState<{import { useState, useMemo } from "react",import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",import { Input } from "@/components/ui/input",import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState("")const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
+
+export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('');
+  const [sortConfig, setSortConfig]  = useState<{import { useState, useMemo } from "react",import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",import { Input } from "@/components/ui/input",import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components/ui/table';
+
+export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
-  }>({key: 'country',direction: 'ascending'})const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
+  }>({key: 'country',direction: 'ascending,
+})const sortedData = useMemo(() => {let filteredData = [...onsiteServicePricing];
     // Filter by search query;
     if (searchQuery) {filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))const sortedData = null;
@@ -22,7 +27,9 @@ import { onsiteServicePricing;
   TableHeader;
   TableRow;
 } from '@/components/ui/table';
-export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('')const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
+
+export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState('');
+  const [sortConfig, setSortConfig] = useState<{key: keyof CountryPricing;
     direction: 'ascending' | 'descending';
   }>({key: 'country';
     direction: 'ascending';
@@ -31,7 +38,9 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
     if (searchQuery) {filteredData = filteredData.filter(item =>;
         item.country.toLowerCase().includes(searchQuery.toLowerCase()))}// Sort data;
     filteredData && filteredData.sort((a, b,) => {if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
-      }const handleSort = (key: keyof CountryPricing) => {setSortConfig({key,direction:;
+      }
+
+const handleSort = (key: keyof CountryPricing) => {setSortConfig({key,direction:;
         sortConfig.key === key && sortConfig.direction === "ascending";
           ? "descending";
           : "ascending"})},const handleSort = (key: keyof CountryPricing,) => {setSortConfig({key,direction:;
@@ -82,8 +91,8 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                 <Button;
                   variant="ghost";
                   onClick={() => handleSort("country")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light";
-                >;
+                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light">
+
                   <span>Country</span>;
                   <ArrowUpDown className="h-4 w-4" />;
                 </Button>;
@@ -103,8 +112,8 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
           <TableBody className='bg-zion-blue-dark'>;
             {sortedData.length > 0 ? (sortedData.map(item => (<TableRow;
                   key={item.country}
-                  className='border-b border-zion-blue-light hover:bg-zion-blue/50';
-                >;
+                  className='border-b border-zion-blue-light hover:bg-zion-blue/50'>
+
                   <TableCell className='flex items-center space-x-2'>;
                     <Globe className='h-4 w-4 text-zion-purple' />;
                     <span className='text-white'>{item.country}</span>;
@@ -115,8 +124,8 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
               ))) : (<TableRow>;
                 <TableCell;
                   colSpan={2}
-                  className='text-center py-10 text-zion-slate-light';
-                >;
+                  className='text-center py-10 text-zion-slate-light'>
+
                   No countries match your search;
                 </TableCell>;
               </TableRow>;

@@ -13,8 +13,14 @@ import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { Menu, X, Sparkles  } from 'lucide-react';
 import { Search as SearchIcon  } from 'lucide-react';
-export function Header() {const { user } = useAuth()const { isWhitelabel, primaryColor } = useWhitelabel()const navigate = useNavigate()const [query, setQuery] = useState('')const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const searchSuggestions  = generateSearchSuggestions()// If we have a white-label tenant and no specific customTheme is provided, // use the tenant&apos;s primary color'';
-  const effectiveTheme =;
+
+export function Header() {const { user } = useAuth()const { isWhitelabel, primaryColor } = useWhitelabel()const navigate = useNavigate()const [query, setQuery] =;
+  useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false;
+  const searchSuggestions  = generateSearchSuggestions()// If we have a white-label tenant and no specific customTheme is provided, // use the tenant&apos;s primary color'';
+
+const effectiveTheme =;
     customTheme ||;
     (isWhitelabel;
       ? {primaryColor, backgroundColor: '#000000', // Default dark background;
@@ -22,9 +28,15 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
         }
       : undefined)const headerStyle = effectiveTheme;
     ? {backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,borderColor: `${effectiveTheme.primaryColor}20` }
-    : {}// Handle scroll effect;
-  useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const handleSubmit = e => {e.preventDefault()if (query.trim()) {navigate(`/search?q=${encodeURIComponent(query)}`)setQuery('')}
-  }const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}return (<header;
+    : ,
+}// Handle scroll effect;
+  useEffect(() => {
+const handleScroll = () => {setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll;
+  return () => window.removeEventListener('scroll', handleScroll)}, [])const handleSubmit = e => {e.preventDefault()if (query.trim()) {navigate(`/search?q=${encodeURIComponent(query)}`)setQuery('')}
+  }
+;
+  const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen);
+  return (<header;
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled;
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20';
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20';
@@ -66,14 +78,14 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
                   <Button;
                     variant="ghost";
                     onClick={() => navigate('/login')}
-                    className="text-zion-purple hover: text-white hover:bg-zion-purple/20";
-                  >;
+                    className="text-zion-purple hover: text-white hover:bg-zion-purple/20">
+
                     Sign In;
                   </Button>;
                   <Button;
                     onClick={() => navigate('/register')}
-                    className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white";
-                  >;
+                    className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white">
+
                     Get Started;
                   </Button>;
                 </div>;
@@ -83,9 +95,10 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
           {/* Mobile menu button */}
           <button;
             onClick={toggleMobileMenu}
-            className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors";
-          >;
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors">
+
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} /,
+}
           </button>;
         </div>;
       </div>;

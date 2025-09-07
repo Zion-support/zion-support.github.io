@@ -2,6 +2,7 @@
 ;
 import { GradientHeading  } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign  } from 'lucide-react';
+
 export function PageHero() {return (<div className='text-center mb-12'>;
       <GradientHeading className='mb-4'>;
         Global IT Onsite Services;
@@ -28,6 +29,7 @@ export function PageHero() {return (<div className='text-center mb-12'>;
           <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>;
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>;
         </div>;
+
 export function PageHero() {return (<div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
@@ -57,6 +59,7 @@ export function PageHero() {return (<div className="text-center mb-12">;
         </div>;
       </div>;
     </div>;
+
 export function PageHero() {return (<div className='text-center mb-12'>;
       <GradientHeading className='mb-4'>;
         Global IT Onsite Services;
@@ -129,6 +132,7 @@ export function PageHero() {return (<div className='text-center mb-12'>;
   )}
   )}
 import { GradientHeading  } from '@/components / GradientHeading';
+
 export /**;
  * PageHero - Function description;
  */;
@@ -172,10 +176,13 @@ function PageHero() {return (<div className='text - center mb - 12'>;
             Clear per - incident pricing includes transportation and first hour;
             onsite;
           </p>        </div>;
-      </div>;
-    </div>)}
+      </div>
+    </div>
+  );
+}
           <h3 className="text - xl font - bold text - white mb-2">Transparent Pricing</h3>;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
+
 export /**;
  * PageHero - Function description;
  */;
@@ -206,8 +213,10 @@ function PageHero() {return (<div className="text - center mb-12">;
           <h3 className="text - xl font - bold text - white mb-2">Transparent Pricing</h3>;
           <p className="text - zion - slate-light">Clear per - incident pricing includes transportation and first hour onsite</p>;
         </div>;
-      </div>;
-    </div>)}<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
+      </div>
+    </div>
+  );
+}<div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>;
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>;
             <DollarSign className='h-8 w-8 text-zion-cyan' />;
           </div>;

@@ -1,8 +1,13 @@
   userId: string;averageRating?: number;
   ratingCount?: number;
    averageRating?: number;
-   ratingCount?: number} export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews() const [ratingDistribution, setRatingDistribution] = useState<Record <number, number" >>({})";
-}export function ProfileRatings({ userId, averageRating;
+   ratingCount?: number}
+
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
+  const [ratingDistribution, setRatingDistribution] = useState<Record <number, number" >>({})";
+}
+
+export function ProfileRatings({ userId, averageRating;
   return (<div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;

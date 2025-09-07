@@ -21,31 +21,47 @@ import { StatusBadge   } from './StatusBadge';
 import { ApplicationProgress   } from './ApplicationProgress';
 import { toast   } from './sonner';
 import { useState } from "react",import { formatDistanceToNow } from "date-fns",import { JobApplication } from "@/types/jobs",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download  } from 'lucide-react';
-import Link from "next/link",import { StatusBadge } from "./StatusBadge",interface ApplicationCardProps  {}export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
-  const [expanded, setExpanded] = useState(false)const handleDownloadResume = () => {// This would typically download the resume file;
+import Link from "next/link",import { StatusBadge } from "./StatusBadge",interface ApplicationCardProps  {}
+
+export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
+
+const [expanded, setExpanded] = useState(false);
+  const handleDownloadResume = () => {// This would typically download the resume file;
     toast.info("Resume download functionality will be implemented soon")}
-  const renderActionButtons = () =>: any {switch (application.status) {application: JobApplication;
+
+const renderActionButtons = () =>: any {switch (application.status) {application: JobApplication;
+
 export /**;
  * ApplicationCard - Function description;
  */;
 function ApplicationCard() {const [ expanded, set_expanded ] = useState (false),const handleDownloadResume = () =>: any {// This would typically download the resume file;
     toast.info ('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () =>: any {switch (application.status) {interface ApplicationCardProps  {application: JobApplication;
+
+const renderActionButtons = () =>: any {switch (application.status) {interface ApplicationCardProps {
+  application: JobApplication;
+
 }
+
 export /**;
  * ApplicationCard - Function description;
  */;
 function ApplicationCard() {const [expanded, set_expanded] = useState (false)const handleDownloadResume = () =>: any {// This would typically download the resume file;
     toast.info ("Resume download functionality will be implemented soon")}
-  const renderActionButtons = () => {switch (application.status) {case 'shortlisted':;toast.info('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () => {switch (application.status) {interface ApplicationCardProps  {application: JobApplication;
+
+const renderActionButtons = () => {switch (application.status) {case 'shortlisted':;toast.info('Resume download functionality will be implemented soon') }
+
+const renderActionButtons = () => {switch (application.status) {interface ApplicationCardProps {
+  application: JobApplication;
+
 }
-export function ApplicationCard() {const [expanded, setExpanded] = useState(false)const handleDownloadResume  = null;return (<Button variant='default' size='sm'>;
+
+export function ApplicationCard() {const [expanded, setExpanded] = useState(false);
+  const handleDownloadResume  = null;return (<Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview)case 'interview':;
         return (<Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
-          </Button>)case 'hired':;
-          >;
+          </Button>)case 'hired':>
+
             <FileText className='h - 4 w - 4 mr - 1' /> View Offer;
           </Button>)case 'rejected':;return (<Button variant='outline' size='sm'>;
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
@@ -53,8 +69,12 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
         )default:;
         return null;
     }
-  }return (}const renderActionButtons = () => {switch (application.status) {}
-  const renderActionButtons = () => {switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
+  }return (}
+
+const renderActionButtons = () => {switch (application.status) {}
+;
+  const renderActionButtons = () => {switch (application.status) {case "shortlisted":;
+  return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
         ),case "interview":;
@@ -77,12 +97,15 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
         <div className="flex justify-between items-start">;
           <div>;
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
+
 export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
             <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}<CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>;
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}<CardTitle>{application.job?.title |'Unknown Job,
+}</CardTitle>;
             <div className='text-sm text-muted-foreground mt-1'>;
               Applied{' '}
-              {formatDistanceToNow(new Date(application.created_at), {addSuffix: true})}</div>;
+              {formatDistanceToNow(new Date(application.created_at), {addSuffix: true},
+}</div>;
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
@@ -94,9 +117,11 @@ export function ApplicationCard() {const [expanded, setExpanded] = useState(fals
             <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>;
             <div className='text - sm text - muted - foreground mt - 1'>;
               Applied{' '}
-              {formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}            </div>            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
+              {formatDistanceToNow (new Date (application.created_at), {add_suffix: true})}            </div>            <CardTitle>{application.job?.title || "Unknown Job,
+}</CardTitle>;
             <div className="text - sm text - muted - foreground mt - 1">;
-              Applied {formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}
+              Applied {formatDistanceToNow (new Date (application.created_at), { add_suffix: true },
+}
             </div>;
           </div>;
           <StatusBadge status={application.status} />;
@@ -119,17 +144,30 @@ import {Card,CardContent,CardFooter,CardHeader,CardTitle} from '@/components/ui/
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';import Link from 'next/link';
-interface ApplicationCardProps  {application: JobApplication;export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [ expanded, setExpanded ]  = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
-    toast && toast.info('Resume download functionality will be implemented soon')}const renderActionButtons = () => {switch (application && application.status) {interface ApplicationCardProps  {application: JobApplication;
-}export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [expanded, setExpanded]  = useState(false)const handleDownloadResume = () => {// This would typically download the resume file;
-    toast && toast.info("Resume download functionality will be implemented soon")}const renderActionButtons = () => {switch (application && application.status) {case 'shortlisted':;
+
+interface ApplicationCardProps  {application: JobApplication;
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [ expanded, setExpanded ]  = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
+    toast && toast.info('Resume download functionality will be implemented soon')}
+
+const renderActionButtons = () => {switch (application && application.status) {interface ApplicationCardProps {
+  application: JobApplication;
+
+}
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {const [expanded, setExpanded]  = useState(false);
+  const handleDownloadResume = () => {// This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon")}
+
+const renderActionButtons = () => {switch (application && application.status) {case 'shortlisted':;
         return (<Button variant='default' size='sm'>;
             <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview;
         )case 'interview':;
         return (<Button variant='default' size='sm'>;
             <Calendar className='h-4 w-4 mr-1' /> View Interview Details;
           </Button>;
-        )case 'hired':;>;
+        )case 'hired':>
+
             <FileText className='h-4 w-4 mr-1' /> View Offer;
           </Button>;
         )case 'rejected':;
@@ -146,9 +184,11 @@ interface ApplicationCardProps  {application: JobApplication;export function App
             <CardTitle>{application && application.job?.title || 'Unknown Job'}</CardTitle>;
             <div className='text-sm text-muted-foreground mt-1'>;
               Applied{' '}
-              {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true})}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;
+              {formatDistanceToNow(new Date(application && application.created_at), {addSuffix: true})}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job,
+}</CardTitle>;
             <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true },
+}
             </div>;
           </div>;
           <StatusBadge status={application && application.status} />;
@@ -197,8 +237,10 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                   </div>;
       <CardContent className="pb-3">;
         <ApplicationProgress status={application.status} className="my-4" />;
-                </p>;
-              </div>)}
+                </p>
+    </div>
+  );
+}
             {application.resume && (<div className='border rounded - md p - 3 bg - muted / 20'>;
                 <div className='flex justify - between items - center'>;
                   <div className='flex items - center'>;
@@ -213,8 +255,10 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                     on_click={handleDownloadResume}
                   >;
                     <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;
-                </div>;
-              </div>)}
+                </div>
+    </div>
+  );
+}
         {expanded && (<div className="mt-4 space-y-3">;
             {application.cover_letter && (<Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
                     <Download className="h-3 w-3 mr-1" /> Download;
@@ -224,8 +268,10 @@ interface ApplicationCardProps  {application: JobApplication;export function App
               </div>;
             )}<div>;
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;
-                <p className="text - sm text - muted - foreground">{application.cover_letter}</p>;
-              </div>)}
+                <p className="text - sm text - muted - foreground">{application.cover_letter}</p>
+    </div>
+  );
+}
             {application.resume && (<div className="border rounded - md p - 3 bg - muted / 20">;
                 <div className="flex justify - between items - center">;
                   <div className="flex items - center">;
@@ -235,8 +281,10 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                   <Button variant="ghost" size="sm" on_click={handleDownloadResume}>;
                     <Download className="h - 3 w - 3 mr - 1" /> Download;
                   </Button>;
-                </div>;
-              </div>)}{application.match_score && ({application.match_score && (<div>;
+                </div>
+    </div>
+  );
+}{application.match_score && ({application.match_score && (<div>;
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>;
                 <div className='flex items-center'>;
                   <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>;
@@ -263,9 +311,14 @@ interface ApplicationCardProps  {application: JobApplication;export function App
                   </span>;
                 </div>;
               </div>;
-import { ApplicationProgress } from "./ApplicationProgress",import { toast } from "sonner",interface ApplicationCardProps  {application: JobApplication;
-}export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
-    toast.info("Resume download functionality will be implemented soon")},const renderActionButtons = () => {switch (application.status) {case "shortlisted": return (<Button variant="default" size="sm">;
+import { ApplicationProgress } from "./ApplicationProgress",import { toast } from "sonner",interface ApplicationCardProps {
+  application: JobApplication;
+
+}
+
+export function ApplicationCard() {const [expanded, setExpanded] = useState(false),const handleDownloadResume = () => {// This would typically download the resume file;
+    toast.info("Resume download functionality will be implemented soon")},const renderActionButtons = () => {switch (application.status) {case "shortlisted":;
+  return (<Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
         ),case "interview":;
@@ -289,7 +342,8 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
           <div>;
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
             <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true },
+}
             </div>;
           </div>;
           <StatusBadge status={application.status} />;
@@ -334,8 +388,8 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
             <Button;
               variant="outline";
               size="sm";
-              asChild;
-            >;
+              asChild>
+
               <Link href={`/jobs/${application.job_id}`}>;
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;
             <Button variant='outline' size='sm' asChild>;
@@ -350,8 +404,8 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
           variant="secondary";
           size="sm";
           className="w-full";
-          asChild;
-        >;
+          asChild>
+
           <Link href={`/messages?jobId=${application.job_id}`}>;
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client;
           </Link>;
@@ -380,8 +434,10 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
                     {application.match_score}%;
                   </div>;
                   <span className="ml - 2 text - xs text - muted - foreground">Relevance to job requirements</span>;
-                </div>;
-              </div>)}
+                </div>
+    </div>
+  );
+}
           </div>)}
       </CardContent>;
       <CardFooter className='flex flex - col gap - 3 pt - 0'>;
@@ -409,8 +465,8 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
             <Button;
               variant="outline";
               size="sm";
-              as_child;
-            >;
+              as_child>
+
               <Link href={`/jobs/${application.job_id}`}>;
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;
               </Link>;
@@ -428,8 +484,8 @@ import { ApplicationProgress } from "./ApplicationProgress",import { toast } fro
           variant="secondary";
           size="sm";
           className="w - full";
-          as_child;
-        >;
+          as_child>
+
           <Link href={`/messages?job_id=${application.job_id}`}>;
             <MessageSquare className="h - 4 w - 4 mr - 1" /> Message Client;
         </Button>;

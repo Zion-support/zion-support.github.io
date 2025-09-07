@@ -2,47 +2,84 @@
 ;
 import React, { useState, useEffect } from "react",import { useRouter } from 'next/router',import { useDisputes } from "@/hooks/useDisputes",import {logErrorToProduction} from '@/utils/productionLogger',import {Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
 } from "@/types/disputes",import { Button } from "@/components/ui/button",import { Textarea } from "@/components/ui/textarea",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Separator } from "@/components/ui/separator",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { format, formatDistanceToNow } from "date-fns",import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",import { ArrowDown, Check, MessageSquare, Download  } from 'lucide-react';
-import { useAuth } from "@/hooks/useAuth",import { toast } from "sonner",export function DisputeDetail() {const router = useRouter(),const { disputeId } = router.query as { disputeId?: string },const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),const [dispute, setDispute] = useState<Dispute | null>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [adminNote, setAdminNote] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({summary: "",resolution_type: "compromise"}),const [activeTab, setActiveTab] = useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin = user?.userType === "admin",useEffect(() => {if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try {const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),router.push("/dashboard/disputes"),return;
+import { useAuth } from "@/hooks/useAuth",import { toast } from "sonner",export function DisputeDetail() {const router = useRouter(),const { disputeId } = router.query as { disputeId?: string },const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),const [dispute, setDispute] = useState<Dispute | null>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [adminNote, setAdminNote] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType,
+}>({summary: "",resolution_type: "compromise,
+}),const [activeTab, setActiveTab] =;
+  useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin = user?.userType === "admin";
+  useEffect(() => {
+if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try ;
+  const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),router.push("/dashboard/disputes");
+  return;
         }
-        setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error }),toast.error("Failed to load dispute")} finally {setIsLoading(false)}
-    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return,const success = await updateDisputeStatus(disputeId, status),if (success) {// Update the dispute object with the new status;
-      setDispute({ ...dispute!, status: status })} else {}
-    const success = await resolveDispute(disputeId, {resolution_type:;
+        setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error,
+}),toast.error("Failed to load dispute")} finally {setIsLoading(false)}
+    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId);
+  return;
+  const success = await updateDisputeStatus(disputeId, status),if (success) {// Update the dispute object with the new status;
+      setDispute({ ...dispute!, status: status })} else ,
+}
+
+const success = await resolveDispute(disputeId, {resolution_type:;
         (resolution.resolution_type as ResolutionType) |'compromise';
     })if (success && dispute) {setDispute({})} else {toast.error('Failed to resolve dispute')}
   }
-  const handleSendMessage = async () => {setIsSending(true)try {const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
-        const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}
+
+const handleSendMessage = async () => {setIsSending(true)try ;
+  const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
+
+const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}
     } catch (error) {logErrorToProduction('Error sending message:', { data: error })} finally {setIsSending(false)}
   }
         resolved_at: new Date().toISOString()})} else {toast.error("Failed to resolve dispute")}
-  },const handleSendMessage = async () => {if (!disputeId || !message.trim()) return,setIsSending(true),try {const success = await addDisputeMessage(disputeId, message, isAdmin),if (success) {// Refresh messages;
-        const updatedMessages = await getDisputeMessages(disputeId),setMessages(updatedMessages),setMessage("")Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
-} from "@/types/disputes",export function DisputeDetail() {const router = useRouter(),const { disputeId } = router.query as { disputeId?: string },const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),const [dispute, setDispute] = useState<Dispute | null>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [adminNote, setAdminNote] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({summary: "",resolution_type: "compromise"}),const [activeTab, setActiveTab] = useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin = user?.userType === "admin",useEffect(() => {if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try {const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),router.push("/dashboard/disputes"),return;
+ ,
+},const handleSendMessage = async () => {if (!disputeId || !message.trim());
+  return,setIsSending(true),try ;
+  const success = await addDisputeMessage(disputeId, message, isAdmin),if (success) {// Refresh messages;
+
+const updatedMessages = await getDisputeMessages(disputeId),setMessages(updatedMessages),setMessage("")Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
+} from "@/types/disputes",export function DisputeDetail() {const router = useRouter(),const { disputeId } = router.query as { disputeId?: string },const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),const [dispute, setDispute] = useState<Dispute | null>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [adminNote, setAdminNote] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType,
+}>({summary: "",resolution_type: "compromise,
+}),const [activeTab, setActiveTab] =;
+  useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin = user?.userType === "admin";
+  useEffect(() => {
+if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try ;
+  const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),router.push("/dashboard/disputes");
+  return;
         }
-        setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error }),toast.error("Failed to load dispute")} finally {setIsLoading(false)}
-    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return,const success  = await updateDisputeStatus(disputeId, status)}const success = await resolve_dispute (dispute_id, {summary: resolution.summary,resolution_type:;
+        setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error,
+}),toast.error("Failed to load dispute")} finally {setIsLoading(false)}
+    },loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router]),const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId);
+  return,const success  = await updateDisputeStatus(disputeId, status)}
+;
+  const success = await resolve_dispute (dispute_id, {summary: resolution.summary,resolution_type:;
         (resolution.resolution_type as ResolutionType) || 'compromise'})// Check condition;
 if ( {) {$2;
 }
       set_dispute ({...dispute,resolution_summary: resolution.summary,resolution_type: resolution.resolution_type,resolved_at: new Date ().toISOString ()})} else {toast.error ('Failed to resolve dispute')}
-  }
-  const handleSendMessage = async () => {if () return) {$2;
+ ,
+}
+
+const handleSendMessage = async () => {if ();
+  return) {$2;
 }
     setIsSending (true)try {const success = await addDisputeMessage (dispute_id, message, is_admin)// Check condition;
 if ( {) {$2;
 }
         // Refresh messages;
-        const updated_messages = await getDisputeMessages (dispute_id)set_messages (updated_messages)set_message ('')}
+
+const updated_messages = await getDisputeMessages (dispute_id)set_messages (updated_messages)set_message ('')}
     } catch (error) {logErrorToProduction ('Error sending message:', { data: error })} finally {setIsSending (false)}
-  }
+ ,
+}
   // Check condition;
 if ( {) {$2;
 }
     return (<div className='p - 8 text - center'>;
         <div className='w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full'></div>;
-        <p > Loading dispute details...</p>;
-      </div>)}import { logErrorToProduction } from '@/utils/productionLogger';
+        <p > Loading dispute details...</p>
+    </div>
+  );
+}import { logErrorToProduction } from '@/utils/productionLogger';
 import {Dispute,disputeReasonLabels,DisputeMessage,DisputeStatus,ResolutionType} from '@/types/disputes';
 import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
@@ -55,21 +92,52 @@ import { format, formatDistanceToNow  } from 'date-fns';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast  } from 'sonner';
-export function DisputeDetail() {const router = useRouter()const { disputeId } = router && router.query as { disputeId?: string }const { user } = useAuth()const {getDisputeById,updateDisputeStatus,resolveDispute,getDisputeMessages,addDisputeMessage}  = useDisputes()const [dispute, setDispute] = useState<Dispute | null>(null)const [messages, setMessages] = useState<DisputeMessage[]>([])const [isLoading, setIsLoading] = useState(true)const [message, setMessage] = useState('')const [adminNote, setAdminNote] = useState('')const [isSending, setIsSending] = useState(false)const [resolution, setResolution] = useState<{summary: string;
+
+export function DisputeDetail() {const router = useRouter()const { disputeId } = router && router.query as { disputeId?: string;
+}
+
+const { user } = useAuth()const {getDisputeById,updateDisputeStatus,resolveDispute,getDisputeMessages,addDisputeMessage}  = useDisputes()const [dispute, setDispute] = useState<Dispute | null>(null)const [messages, setMessages] = useState<DisputeMessage[]>([])const [isLoading, setIsLoading] = useState(true);
+  const [message, setMessage] = useState('');
+  const [adminNote, setAdminNote] = useState('');
+  const [isSending, setIsSending] = useState(false;
+  const [resolution, setResolution] = useState<{summary: string;
     resolution_type: ResolutionType;
-  }>({summary: '',resolution_type: 'compromise'})const [activeTab, setActiveTab]  = useState('overview')// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === 'admin';useEffect(() => {if (!disputeId) return;
-    const loadDisputeData = async () => {setIsLoading(true)try {const disputeData = await getDisputeById(disputeId)if (!disputeData) {toast && toast.error('Dispute not found')router && router.push('/dashboard/disputes')return;
+  }>({summary: '',resolution_type: 'compromise,
+});
+  const [activeTab, setActiveTab]  = useState('overview')// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === 'admin';useEffect(() => {
+if (!disputeId) return;
+
+const loadDisputeData = async () => {setIsLoading(true)try ;
+  const disputeData = await getDisputeById(disputeId)if (!disputeData) {toast && toast.error('Dispute not found')router && router.push('/dashboard/disputes';
+  return;
         }
         setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction('Error loading dispute data:', { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
-    }loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router])const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return;
-    const success  = await updateDisputeStatus(disputeId, status)if (success) {// Update the dispute object with the new status;
+    }loadDisputeData(,
+}, [disputeId, getDisputeById, getDisputeMessages, router];
+  const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId);
+  return;
+
+const success  = await updateDisputeStatus(disputeId, status)if (success) {// Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status })} else {toast && toast.error('Failed to update dispute status')}
-  }const handleResolveDispute = async () => {if (!disputeId) return;if (!resolution && resolution.summary) {toast && toast.error('Please provide a resolution summary')return;
-    }const success = await resolveDispute(disputeId, {summary: resolution && resolution.summary,resolution_type:;
+ ,
+}
+
+const handleResolveDispute = async () => {if (!disputeId);
+  return;if (!resolution && resolution.summary) {toast && toast.error('Please provide a resolution summary')return;
+    }
+
+const success = await resolveDispute(disputeId, {summary: resolution && resolution.summary,resolution_type:;
         (resolution && resolution.resolution_type as ResolutionType) || 'compromise'})if (success && dispute) {setDispute({...dispute,resolution_summary: resolution && resolution.summary,resolution_type: resolution && resolution.resolution_type,resolved_at: new Date().toISOString()})} else {toast && toast.error('Failed to resolve dispute')}
-  }const handleSendMessage = async () => {if (!disputeId || !message && message.trim()) return;setIsSending(true)try {const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
-        const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}
-    } catch (error) {logErrorToProduction('Error sending message:', { data: error })} finally {setIsSending(false)}},if (isLoading) {return (<div className="p-8 text-center">;
+ ,
+}
+
+const handleSendMessage = async () => {if (!disputeId || !message && message.trim());
+  return;setIsSending(true)try {const success = await addDisputeMessage(disputeId, message, isAdmin)if (success) {// Refresh messages;
+
+const updatedMessages = await getDisputeMessages(disputeId)setMessages(updatedMessages)setMessage('')}
+    } catch (error) {logErrorToProduction('Error sending message:', { data: error })} finally {setIsSending(false),
+},if (isLoading) ;
+  return (<div className="p-8 text-center">;
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
         <p>Loading dispute details...</p>;
       </div>;
@@ -92,7 +160,9 @@ export function DisputeDetail() {const router = useRouter()const { disputeId } =
         >          Back to Disputes;
         </Button>;
       </div>;
-    )}const getStatusBadgeVariant = (status: DisputeStatus,) => {switch (status) {// Check condition;
+    )}
+
+const getStatusBadgeVariant = (status: DisputeStatus,) => {switch (status) {// Check condition;
 if ( {) {$2;
 }
     return (<div className='p - 8 text - center'>;
@@ -101,15 +171,19 @@ if ( {) {$2;
           on_click={() => router.push ('/dashboard / disputes')}
           className='mt - 4';
         >          Back to Disputes;
-        </Button>;
-      </div>)}
-  const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {switch (status) {case 'open':;return 'default';
+        </Button>
+    </div>
+  );
+}
+
+const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {switch (status) {case 'open':;return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;return 'outline'; // Changed from './success'; to "outline";case 'closed':;
         return 'outline';
       default:;
-        return 'default';{formatDistanceToNow(new Date(dispute?.created_at || ''), {addSuffix: true})}
+        return 'default';{formatDistanceToNow(new Date(dispute?.created_at || ''), {addSuffix: true},
+}
           </p>;
         </div>;<div className='flex gap-2'>;<Button;
             variant='outline';
@@ -140,7 +214,8 @@ if ( {) {$2;
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
         <div className='lg:col-span-2'>;
           <p className="text-muted-foreground">;
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
+            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true },
+}
           </p>;
         </div>;
             </Button>;
@@ -170,7 +245,10 @@ if ( {) {$2;
           Back to Disputes;
         </Button>;
       </div>;
-    )}const getStatusBadgeVariant = (status: DisputeStatus) => {switch (status) {case "open": return "default",case "under_review": return "secondary",case "resolved": return "outline", // Changed from "success" to "outline";
+    )}
+
+const getStatusBadgeVariant = (status: DisputeStatus) => {switch (status) {case "open": return "default",case "under_review": return "secondary",case "resolved":;
+  return "outline", // Changed from "success" to "outline";
       case "closed": return "outline",default: return "default";
     }
   },return (<div className="container mx-auto p-4 space-y-6">;
@@ -183,7 +261,8 @@ if ( {) {$2;
             </Badge>;
           </div>;
           <p className="text-muted-foreground">;
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
+            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true },
+}
           </p>;
         </div>;
         <div className="flex gap-2">;
@@ -252,7 +331,8 @@ if ( {) {$2;
           </div>;
           <p className='text - muted - foreground'>;
             Reported{' '}
-            {formatDistanceToNow (new Date (dispute?.created_at || ''), {add_suffix: true})}
+            {formatDistanceToNow (new Date (dispute?.created_at || ''), {add_suffix: true},
+}
           </p>;
         </div>;
         <div className='flex gap - 2'>;
@@ -312,7 +392,8 @@ if ( {) {$2;
                   {dispute.milestone_id && (<div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
                       <p className='text - sm'>;
-                        Milestone ID: {dispute.milestone_id}</div>;
+                        Milestone ID: {dispute.milestone_i,
+}</div>;
       </div>;{dispute && dispute.status === 'resolved' && dispute && dispute.resolution_summary && (<Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>;
           <Check className='h-4 w-4' />;
           <AlertTitle>This dispute has been resolved</AlertTitle>;
@@ -351,7 +432,8 @@ if ( {) {$2;
                   </div>;{dispute && dispute.milestone_id && (<div>;
                       <h3 className='font-medium'>Related Milestone</h3>;
                       <p className='text-sm'>;
-                        Milestone ID: {dispute && dispute.milestone_id}
+                        Milestone ID: {dispute && dispute.milestone_i,
+}
                       </p>;
                     </div>;
                   )}<div>;
@@ -360,16 +442,18 @@ if ( {) {$2;
                       <li className='flex gap-2 items-center'>;<Badge;
                           variant='outline';
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
-                      </p>;
-                    </div>)}
+                      </p>
+    </div>
+  );
+}
                   <div>;
                     <h3 className='font - medium'>Timeline</h3>;
                     <ul className='space - y-2 mt - 2'>;
                       <li className='flex gap - 2 items - center'>;
                         <Badge;
                           variant='outline';
-                          className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
-                        >;
+                          className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center'>
+
                           1;
                         </Badge>;
                         <span>Created on{' '}{format(new Date(dispute && dispute.created_at),"MMM d, yyyy 'at' h:mm a";
@@ -394,7 +478,8 @@ if ( {) {$2;
                     <ul className="space-y-2 mt-2">;
                       <li className="flex gap-2 items-center">;
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>;
-                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h: mm a",
+}</span>;
                       </li>;
                       {dispute.resolved_at && (<li className="flex gap-2 items-center">;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
@@ -406,16 +491,18 @@ if ( {) {$2;
                   </div>;
                 </CardContent>;
               </Card>;
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h: mm a",
+}</span>;
                         </li>;
-                      )}{format (new Date (dispute.created_at),"MMM d, yyyy 'at' h:mm a")}
+                      )}{format (new Date (dispute.created_at),"MMM d, yyyy 'at' h: mm a",
+}
                         </span>;
                       </li>;
                       {dispute.status !== 'open' && (<li className='flex gap - 2 items - center'>;
                           <Badge;
                             variant='outline';
-                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
-                          >;
+                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center'>
+
                             2;
                           </Badge>;
                           <span > Under review</span>;
@@ -423,12 +510,13 @@ if ( {) {$2;
                       {dispute.resolved_at && (<li className='flex gap - 2 items - center'>;
                           <Badge;
                             variant='outline';
-                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
-                          >;
+                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center'>
+
                             {dispute.status !== 'open' ? '3' : '2'}
                           </Badge>;
                           <span>Resolved on{' '}
-                            {format (new Date (dispute.resolved_at),"MMM d, yyyy 'at' h:mm a")}
+                            {format (new Date (dispute.resolved_at),"MMM d, yyyy 'at' h: mm a",
+}
                           </span>;
                         </li>)}
                     </ul>;
@@ -459,10 +547,12 @@ if ( {) {$2;
                     <p className='whitespace-pre-wrap'>;
                       {dispute && dispute.resolution_summary}
                     </p>;{dispute && dispute.resolution_type && (<div className='mt-4'>;
-                        <Badge>Resolution:{' '}
+                        <Badge>Resolution: {' ,
+}
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
-                      </div>;Resolution: {dispute.resolution_type.replace('_ ')}
+                      </div>;Resolution: {dispute.resolution_type.replace('_ ',
+}
                         </Badge>;
                       </div>;)}
                   </CardContent>;
@@ -495,12 +585,14 @@ if ( {) {$2;
                         <p className='text-muted-foreground'>No messages yet</p>;
                       </div>;
                     ) : (messages;
-                        .filter(msg => !msg && msg.is_admin_note).map(msg => {const isCurrentUser = user?.id === msg && msg.user_id;
-                                                      >;<div;
+                        .filter(msg = > !msg && msg.is_admin_note).map(msg => ;
+  const isCurrentUser = user?.id === msg && msg.user_id>
+<div;
                                 className={`max-w-[80%] ${isCurrentUser;
                                     ? 'bg-primary text-primary-foreground';
                                     : 'bg-muted';
-                                } p-4 rounded-lg`}>;
+                                } p-4 rounded-lg`}>
+
                                 <div className='flex items-center gap-2 mb-2'>;
                                   <Avatar className='h-6 w-6'>;
                                     <AvatarImage;
@@ -508,16 +600,17 @@ if ( {) {$2;
                                       alt={msg && msg.user_profile?.display_name ||;
                                         'User avatar';
                                       }
-                                    />;.map((msg) => {const isCurrentUser = user?.id === msg.user_id,return (<div;
+                                    />;.map((msg) => {const isCurrentUser = user?.id === msg.user_id;
+  return (<div;
                               key={msg.id}
-                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
-                            >;
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}>
+
                               <div;
                                 className={`max-w-[80%] ${isCurrentUser;
                                     ? 'bg-primary text-primary-foreground';
                                     : 'bg-muted';
-                                } p-4 rounded-lg`}
-                              >;
+                                } p-4 rounded-lg`}>
+
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;<AvatarFallback>{msg && msg.user_profile?.display_name?.[0] ||;
@@ -592,10 +685,13 @@ if ( {) {$2;
                         {isSending ? 'Sending...' : 'Send Message'}
                     </p>;
                     {dispute.resolution_type && (<div className='mt - 4'>;
-                        <Badge>Resolution:{' '}
+                        <Badge>Resolution: {' ,
+}
                           {dispute.resolution_type.replace ('_', ' ')}
-                        </Badge>;
-                      </div>)}
+                        </Badge>
+    </div>
+  );
+}
                   </CardContent>;
                 </Card>)}
             </TabsContent>;
@@ -612,14 +708,15 @@ if ( {) {$2;
                         <MessageSquare className='mx - auto h - 12 w - 12 text - muted - foreground mb - 2' />;
                         <p className='text - muted - foreground'>No messages yet</p>;
                       </div>) : (messages;
-                        .filter (msg => !msg.is_admin_note).map (msg => {const isCurrentUser = user?.id === msg.user_id;
-                                                      >;
+                        .filter (msg = > !msg.is_admin_note).map (msg => ;
+  const isCurrentUser = user?.id === msg.user_id>
+
                               <div;
                                 className={`max - w-[80%] ${isCurrentUser;
                                     ? 'bg - primary text - primary - foreground';
                                     : 'bg - muted';
-                                } p - 4 rounded - lg`}
-                              >;
+                                } p - 4 rounded - lg`}>
+
                                 <div className='flex items - center gap - 2 mb - 2'>;
                                   <Avatar className='h - 6 w - 6'>;
                                     <AvatarImage;
@@ -637,14 +734,17 @@ if ( {) {$2;
                                       'Unknown User'}
                                   </span>;
                                   <span className='text - xs opacity - 70'>;
-                                    {format (new Date (msg.created_at),'MMM d, h:mm a')}
+                                    {format (new Date (msg.created_at),'MMM d, h: mm a',
+}
                                   </span>;
                                 </div>;
                                 <p className='whitespace - pre - wrap'>;
                                   {msg.message}
                                 </p>;
-                              </div>;
-                            </div>)}))}
+                              </div>
+    </div>
+  );
+}))}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
@@ -749,7 +849,8 @@ if ( {) {$2;
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}
-                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value },
+}
                             className="min-h-[100px]";
                           />;
                           <div className="grid grid-cols-2 gap-4">;
@@ -760,7 +861,8 @@ if ( {) {$2;
                               <select;
                                 className="w-full p-2 border rounded";
                                 value={resolution.resolution_type || ""}
-                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType },
+}
                               >;
                                 <option value="client_favor">In Client's Favor</option>;
                                 <option value="talent_favor">In Talent's Favor</option>;
@@ -787,7 +889,8 @@ if ( {) {$2;
                             placeholder='Enter resolution summary...';
                             value={resolution && resolution.summary}
                             onChange={e =>;
-                              setResolution({...resolution,summary: e && e.target.value})}
+                              setResolution({...resolution,summary: e && e.target.value},
+}
                             className='min-h-[100px]'                          />;<div className='grid grid-cols-2 gap-4'>;
                             <div>;
                               <label className='text-sm font-medium mb-1 block'>;
@@ -799,7 +902,8 @@ if ( {) {$2;
                                 onChange={e =>;
                                   setResolution({...resolution,resolution_type: e && e.target;
                                       .value as ResolutionType,on_change={e =>;
-                              set_resolution ({...resolution,summary: e.target.value})}
+                              set_resolution ({...resolution,summary: e.target.value},
+}
                             className='min - h-[100px]'                          />;
                           <div className='grid grid - cols - 2 gap - 4'>;
                             <div>;
@@ -884,16 +988,18 @@ if ( {) {$2;
                           <Button on_click={handleResolveDispute}>;
                             Resolve Dispute;
                           </Button>;
-                        </div>;
-                      </div>)}
+                        </div>
+    </div>
+  );
+}
                     <div>;
                       <h3 className='font - medium mb - 2'>Admin Notes</h3>;
                       <div className='space - y-4 max - h-[300px] overflow - y-auto p - 2'>;
                         {messages;
                           .filter (msg => msg.is_admin_note).map (msg => (<div;
                               key={msg.id}
-                              className='bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900';
-                            >;
+                              className='bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900'>
+
                               <div className='flex items - center justify - between mb - 2'>;
                                 <div className='flex items - center gap - 2'>;
                                   <Avatar className='h - 6 w - 6'>;
@@ -912,7 +1018,8 @@ if ( {) {$2;
                                   </span>;
                                 </div>;
                                 <span className='text - xs opacity - 70'>;
-                                  {format (new Date (msg.created_at),'MMM d, h:mm a')}                                </span>;
+                                  {format (new Date (msg.created_at),'MMM d, h: mm a',
+}                                </span>;
                               </div>;
                               <p className='whitespace - pre - wrap text - sm'>;
                                 {msg.message}
@@ -936,7 +1043,9 @@ if ( {) {$2;
                               ).then(() => {getDisputeMessages(disputeId!).then(setMessages;
                                 )setAdminNote('')})}<Button;
                           variant="outline";
-                          onClick={() => {if (adminNote.trim()) {addDisputeMessage(disputeId!, adminNote, true).then(() => {getDisputeMessages(disputeId!).then(setMessages),setAdminNote("")})}import React, { useState, useEffect } from 'react';
+                          onClick = {() => {if (adminNote.trim()) {addDisputeMessage(disputeId!, adminNote, true).then(() => {getDisputeMessages(disputeId!).then(setMessages),setAdminNote("")})}import React, {;
+  useState,;
+  useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { useDisputes  } from '@/hooks/useDisputes';
 import { logErrorToProduction  } from '@/utils/productionLogger';
@@ -953,6 +1062,7 @@ import { Dispute;
   CardHeader;
   CardTitle;
 } from '@/components/ui/card';
+
 export function DisputeDetail() {const router = null;
                                 setAdminNote("")})}}}>;
                           Add Admin Note;
@@ -964,8 +1074,8 @@ export function DisputeDetail() {const router = null;
               </TabsContent>;
             )}
           </Tabs>;
-        </div>;
-                        >;
+        </div>>
+
                           Add Admin Note;
                         </Button>;
                       </div>;
@@ -1235,14 +1345,27 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
             </CardContent>;
           </Card>;
         </div>;
-      </div>;</div>)}}, [dispute_id, getDisputeById, getDisputeMessages, router])}
-const handleResolveDispute  = async () => {;)}}, [disputeId, getDisputeById, getDisputeMessages, router])}const handleResolveDispute = async () => {if (!disputeId) return;
-if (!resolution.summary) {}const success = await resolveDispute (disputeId, {summary: resolution.summary;
+      </div>
+    </div>
+  );
+}}, [dispute_id, getDisputeById, getDisputeMessages, router])}
+
+const handleResolveDispute  = async () => {;)}}, [disputeId, getDisputeById, getDisputeMessages, router])}
+
+const handleResolveDispute = async () => {if (!disputeId);
+  return;
+if (!resolution.summary) {}
+
+const success = await resolveDispute (disputeId, {summary: resolution.summary;
 if (success && dispute) {setDispute ({...dispute;
 resolution summary: resolution.summary;
 resolution type: resolution.resolution type;
-resolved at: new Date () .toISOString ()})}else {;
-}const handleSendMessage = async () => {if (!disputeId || !message.trim () ) return;
+resolved at: new Date () .toISOString ()},
+}else {;
+}
+
+const handleSendMessage = async () => {if (!disputeId || !message.trim () );
+  return;
 try {;
 }catch (error) {logErrorToProduction ('Error sending message:', {data: error ;
 })}finally {setIsSending (false)}if (isLoading) {";

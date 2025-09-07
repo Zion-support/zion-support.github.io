@@ -2,103 +2,114 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-/**
- * Comprehensive syntax error fixer
- */
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
+console.log('🔧 Fixing all remaining syntax errors...');
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      this.log(`Fixing: ${filePath}`);
-      
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Count opening and closing braces
-      const openBraces = (content.match(/\{/g) || []).length;
-      const closeBraces = (content.match(/\}/g) || []).length;
-      
-      if (openBraces > closeBraces) {
-        const missingBraces = openBraces - closeBraces;
-        content += '\n' + '}'.repeat(missingBraces);
-        modified = true;
-        this.log(`Added ${missingBraces} missing closing braces`);
-      }
-      
-      // Fix common patterns
-      content = content.replace(/(\s+return res\.status\([^)]+\);\s*)(\n\s*)(\w)/g, '$1\n  }\n\n  $3');
-      content = content.replace(/(\s+} catch \([^)]+\) \{\s*\n\s*return res\.status\([^)]+\);\s*\n\s*\}\s*)(\n\s*)(\w)/g, '$1\n}\n\n$3');
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async fixAllFiles() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
-    
-    // Find all TypeScript files in pages/api
-    const apiDir = path.join(this.projectRoot, 'pages', 'api');
-    const files = this.findTsFiles(apiDir);
-    
-    let fixedCount = 0;
-    
-    for (const file of files) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    this.log(`🎉 Comprehensive syntax error fixing completed!`, 'SUCCESS');
-    this.log(`📊 Summary: ${fixedCount}/${files.length} files fixed`);
-  }
-
-  findTsFiles(dir) {
-    const files = [];
-    
-    if (!fs.existsSync(dir)) return files;
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files.push(...this.findTsFiles(fullPath));
-      } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-        files.push(fullPath);
-      }
-    }
-    
-    return files;
+// Find all TypeScript/JavaScript files with syntax errors
+function findFilesWithErrors() {
+  try {
+    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .next | grep -v dist', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file && fs.existsSync(file));
+  } catch (error) {
+    console.error('Error finding files:', error.message);
+    return [];
   }
 }
 
-// Run the fixer
-if (require.main === module) {
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.fixAllFiles().catch(console.error);
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+
+    // Fix common syntax errors
+    content = content.replace(/}\s*const\s+/g, '}\n\nconst ');
+    content = content.replace(/;\s*const\s+/g, ';\n\nconst ');
+    content = content.replace(/}\s*export\s+/g, '}\n\nexport ');
+    content = content.replace(/;\s*export\s+/g, ';\n\nexport ');
+    content = content.replace(/}\s*interface\s+/g, '}\n\ninterface ');
+    content = content.replace(/;\s*interface\s+/g, ';\n\ninterface ');
+    content = content.replace(/}\s*type\s+/g, '}\n\ntype ');
+    content = content.replace(/;\s*type\s+/g, ';\n\ntype ');
+
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*const\s+/g, '$1 = $2;\n  const ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*const\s+/g, '$1 = $2;\n}\n\nconst ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*export\s+/g, '$1 = $2;\n}\n\nexport ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*interface\s+/g, '$1 = $2;\n}\n\ninterface ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*type\s+/g, '$1 = $2;\n}\n\ntype ');
+
+    // Fix malformed function parameters
+    content = content.replace(/\(\s*{\s*([^}]+)\s*}\s*\)\s*=>\s*{/g, '({ $1 }) => {\n');
+    content = content.replace(/\(\s*{\s*([^}]+)\s*}\s*\)\s*=>\s*{/g, '({ $1 }) => {\n');
+
+    // Fix malformed JSX
+    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
+    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
+    content = content.replace(/;\s*>\s*;/g, '>\n');
+    content = content.replace(/;\s*<\/div>\s*\)\s*}/g, '\n    </div>\n  );\n}');
+
+    // Fix interface definitions
+    content = content.replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}\s*const\s+/g, 'interface $1 {\n  $2\n}\n\nconst ');
+    content = content.replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}\s*export\s+/g, 'interface $1 {\n  $2\n}\n\nexport ');
+
+    // Fix array declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [\n  ');
+    content = content.replace(/;\s*\]\s*;/g, '\n];\n');
+
+    // Fix object declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*{\s*;\s*/g, 'const $1 = {\n  ');
+    content = content.replace(/;\s*}\s*;/g, '\n};\n');
+
+    // Fix useEffect and other hooks
+    content = content.replace(/useEffect\(\s*\(\s*\)\s*=>\s*{/g, 'useEffect(() => {\n');
+    content = content.replace(/useState\(\s*([^)]+)\s*\)\s*const\s+/g, 'useState($1);\n  const ');
+
+    // Fix missing semicolons in variable declarations
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*useEffect/g, '$1 = $2;\n  useEffect');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*useState/g, '$1 = $2;\n  useState');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*useRef/g, '$1 = $2;\n  useRef');
+
+    // Fix malformed function calls
+    content = content.replace(/\(\s*{\s*([^}]+)\s*}\s*\)\s*=>\s*{/g, '({ $1 }) => {\n');
+
+    // Fix missing semicolons in return statements
+    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
+
+    // Fix malformed JSX attributes
+    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
+    content = content.replace(/;\s*>\s*;/g, '>\n');
+
+    // Fix missing semicolons in function calls
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*return/g, '$1 = $2;\n  return');
+
+    // Fix malformed array elements
+    content = content.replace(/{\s*name:\s*'([^']+)',\s*href:\s*'([^']+)'\s*},/g, '  { name: \'$1\', href: \'$2\' },\n');
+
+    // Fix missing semicolons in object properties
+    content = content.replace(/(\w+):\s*([^,;]+)([^,;])\s*}/g, '$1: $2,\n}');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-module.exports = ComprehensiveSyntaxFixer;
+// Main execution
+const files = findFilesWithErrors();
+console.log(`🔍 Found ${files.length} files to check`);
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixSyntaxErrors(file)) {
+    console.log(`✅ Fixed: ${file}`);
+    fixedCount++;
+  }
+});
+
+console.log(`\n📊 Fixed ${fixedCount} files`);

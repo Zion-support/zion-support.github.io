@@ -30,7 +30,13 @@ import {Search;
   MapPin;} from 'lucide-react';import {Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
+<<<<<<< HEAD
   Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     }return this.props.children;
   }
 }
@@ -47,6 +53,7 @@ import { cuttingEdge2027Innovations   } from '../data/2027-cutting-edge-innovati
 import { practicalMicroSaas2027   } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')export default function ServicesShowcase2027() {const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')// Sort options;
   const sortOptions = [;
     { value: 'name', label: 'Sort by Name' }
@@ -61,6 +68,34 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
   const sortOptions = null;
                   setSelectedPriceRange('all')service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory =;
       selectedCategory === 'all' |service.category.includes(selectedCategory)const matchesPrice =;
+=======
+
+const [searchTerm, setSearchTerm]  = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')export default function ServicesShowcase2027() {const [searchTerm, setSearchTerm]  = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')// Sort options;
+
+const sortOptions = [
+  { value: 'name', label: 'Sort by Name',
+}
+    { value: 'price', label: 'Sort by Price',
+}
+    { value: 'roi', label: 'Sort by ROI',
+}
+  ];
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory;
+  const matchesPrice = selectedPriceRange === 'all' |;
+                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |;
+                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |;
+                        (selectedPriceRange = == 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000;
+  return matchesSearch && matchesCategory && matchesPrice;
+
+const [selectedCategory, setSelectedCategory] = useState<string>('all'),const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),const [sortBy, setSortBy] = useState<string>('name'),// Sort options;
+
+const sortOptions = null;
+                  setSelectedPriceRange('all')service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory =;
+      selectedCategory = == 'all' |service.category.includes(selectedCategory;
+  const matchesPrice =;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       selectedPriceRange === 'all' |;
       (selectedPriceRange === 'low' &&;
         parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |;
@@ -70,7 +105,12 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
       (selectedPriceRange === 'high' &&;
         parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000)return matchesSearch && matchesCategory && matchesPrice;
   })// Sort services;
+<<<<<<< HEAD
   const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {case 'name':;
+=======
+
+const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {case 'name':;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         return a.name.localeCompare(b.name)case 'price':;
         return (parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
           parseInt(b && b.price.replace(/[^0-9]/g, ''))return (parseInt(a.price.replace(/[^0-9]/g, '')) -;
@@ -86,8 +126,14 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         </title>;default:;
         return 0;
     }
+<<<<<<< HEAD
   })const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },{id: 'AI Consciousness Evolution',name: 'AI Consciousness',icon: '🧠',count: allServices.filter(s => s.category.includes('AI Consciousness')).length;
+=======
+  })const categories = [
+  { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length,
+},{id: 'AI Consciousness Evolution',name: 'AI Consciousness',icon: '🧠',count: allServices.filter(s => s.category.includes('AI Consciousness')).length;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     }
     {id: 'Quantum Consciousness';
       name: 'Quantum Consciousness';
@@ -135,8 +181,16 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
       name: 'Financial Automation';
       icon: '💰';
       count: allServices.filter(s =>;
+<<<<<<< HEAD
         s.category.includes('Financial Automation')).length,},];const priceRanges = [;
     { id: 'all', name: 'All Prices', count: allServices.length },{id: 'low',name: 'Under $1K/month',count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000;
+=======
+        s.category.includes('Financial Automation')).length,},];
+
+const priceRanges = [
+  { id: 'all', name: 'All Prices', count: allServices.length,
+},{id: 'low',name: 'Under $1K/month',count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       ).length;
     }
     {id: 'medium';
@@ -150,7 +204,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
       name: '$10K+/month';
       count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000;
       ).length,},];
+<<<<<<< HEAD
   const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}return (<UltraFuturisticMatrixBackground2027>;
+=======
+
+const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',;
+  return (<UltraFuturisticMatrixBackground2027>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <Head>;
 <title>2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &;
           Micro SAAS;
@@ -226,9 +286,17 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto text-center'>;
           <motion.div;
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+            initial={{ opacity: 0, y: 30 ,
+}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           >;
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -271,15 +339,25 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Link;
                 href='/contact';
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';
               >;
+=======
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <Rocket className='w-5 h-5' />;
                 <span>Get Started</span>;
               </Link>;
               <Link;
                 href='/pricing';
+<<<<<<< HEAD
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';
               >;
+=======
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <DollarSign className='w-5 h-5' />;
                 <span>View Pricing</span>;
               </Link>;
@@ -307,6 +385,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e && e.target.value)}
+<<<<<<< HEAD
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id}>                <select;
@@ -315,6 +394,18 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
                 >;
                   {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.id}>;
+=======
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
+
+                  {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.i,
+}>                <select;
+                  value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e && e.target.value)}
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400">
+
+                  {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i,
+}>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       {range && range.name} ({range && range.count})</option>;<section className='px-4 sm:px-6 lg:px-8 mb-16'>;
         <div className='max-w-7xl mx-auto'>;
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>;
@@ -341,9 +432,16 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
                   {categories.map(category => (<option key={category.id} value={category.id}>;
+=======
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
+
+                  {categories.map(category => (<option key={category.id} value={category.i,
+}>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       {category.icon} {category.name} ({category.count})</option>;
                   ))}
                 </select>;
@@ -356,9 +454,16 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
+<<<<<<< HEAD
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
                   {priceRanges.map(range => (<option key={range.id} value={range.id}>;
+=======
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
+
+                  {priceRanges.map(range => (<option key={range.id} value={range.i,
+}>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       {range.name} ({range.count})</option>;
                   ))}
               {/* Sort By */}
@@ -371,8 +476,8 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
-                >;
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'>
+
                   <option value='name'>Name</option>;
                   <option value='price'>Price</option>;
                   <option value='roi'>ROI</option>                </select>                <select;
@@ -397,8 +502,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
+<<<<<<< HEAD
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
+=======
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <option value='name'>Name</option>;
                   <option value='price'>Price</option>;
                   <option value='roi'>ROI</option>;
@@ -422,11 +532,23 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
             <AnimatePresence>;
               {sorted_services.map ((service, index) => (<motion.div;
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group';
                 >;
+=======
+                  initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 ,
+}
+                  animate={{ opacity: 1, coordinate_y: 0, scale: 1 ,
+}
+                  transition={{ duration: 0.5, delay: index * 0.1 ,
+}exit={{ opacity: 0, y: -30, scale: 0.9 ,
+}
+className='group'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>;
@@ -471,8 +593,13 @@ className='group';
                       <div className='space-y-2'>;
                         {service.features.slice(0, 3).map((feature, idx) => (<div;
                             key={idx}
+<<<<<<< HEAD
                             className='flex items-center space-x-2';
                           >;
+=======
+                            className='flex items-center space-x-2'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                             <CheckCircle className='w-4 h-4 text-green-400' />;
                             <span className='text-gray-300 text-sm'>;
                               {feature}
@@ -485,11 +612,21 @@ className='group';
                         )}{/* ROI */}</div>;
                     </div>;
                     <div className="mb-6 text-center">;
+<<<<<<< HEAD
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>;
                       <div className="text-gray-400 text-xs">Return on Investment</div>;
 <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
                         ROI: {service.roi}
+=======
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.ro,
+}</div>;
+                      <div className="text-gray-400 text-xs">Return on Investment</div>;
+<div className='mb-6 text-center'>;
+                      <div className='text-green-400 font-semibold text-lg'>;
+                        ROI: {service.ro,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       </div>;
                       <div className='text-gray-400 text-xs'>;
                         Return on Investment;
@@ -498,7 +635,8 @@ className='group';
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
-                        ROI: {service && service.roi}
+                        ROI: {service && service.ro,
+}
                       </div>;
                       <div className='text-gray-400 text-xs'>;
                         Return on Investment;
@@ -514,16 +652,26 @@ className='group';
                       <Link;
                         href='/contact';
                         href={service.link}
+<<<<<<< HEAD
                         className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm';
                       >;
+=======
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         Learn More;
                       </Link>;
                       <Link;
                         href="/contact";
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm";
 href='/contact';
+<<<<<<< HEAD
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm';
                       >;
+=======
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         Contact;
                     </div>;
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
@@ -548,9 +696,16 @@ href='/contact';
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (<motion&& motion.div;
               initial={{ opacity: 0 }}
+<<<<<<< HEAD
               animate={{ opacity: 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';
             >;
+=======
+              animate={{ opacity: 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all'),
+}
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <div className='text-6xl mb-4'>🔍</div>;
               <h3 className='text-2xl font-bold text-white mb-2'>;
                 No services found;
@@ -562,8 +717,13 @@ href='/contact';
                 onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
                 }}
+<<<<<<< HEAD
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
               >;
+=======
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Clear Filters;
               </button>;
             </motion.div>;
@@ -623,14 +783,24 @@ href='/contact';
             </div>;
               <Link;
                 href="/contact";
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25';
               >;
+=======
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Get Started Today;
               </Link>;
               <Link;
 href='/pricing';
+<<<<<<< HEAD
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300';
               >;
+=======
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 View Pricing Plans;
               </Link>;
             </div>;
@@ -672,8 +842,8 @@ href='/pricing';
                       <div className='space - y-2'>;
                         {service.features.slice (0, 3).map ((feature, idx) => (<div;
                             key={idx}
-                            className='flex items - center space - x-2';
-                          >;
+                            className='flex items - center space - x-2'>
+
                             <CheckCircle className='w - 4 h - 4 text - green - 400' />;
                             <span className='text - gray - 300 text - sm'>;
                               {feature}
@@ -684,14 +854,22 @@ href='/pricing';
                             <span className="text - gray-300 text-sm">{feature}</span>;
                           </div>))}
                         {service.features.length > 3 && (<div className="text - cyan-400 text-sm">;
+<<<<<<< HEAD
                             +{service.features.length - 3} more features;
                           </div>)}
+=======
+                            +{service.features.length - 3} more features
+    </div>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       </div>;
                     </div>;
                     {/* ROI */}
                     <div className='mb - 6 text - center'>;
                       <div className='text - green - 400 font - semibold text - lg'>;
-                        ROI: {service.roi}
+                        ROI: {service.ro,
+}
                       </div>;
                       <div className='text - gray - 400 text - xs'>;
                         Return on Investment;
@@ -711,15 +889,15 @@ href='/pricing';
                     <div className="flex space-x-3">;
                       <Link;
                         href={service.link}
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text-center text-sm";
-                      >;
+                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text-center text-sm">
+
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm";
-                      >;
+                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm">
+
                         Contact;
                       </Link>;
                     </div>;
@@ -737,9 +915,10 @@ href='/pricing';
           {/* No Results */}
           {sorted_services.length === 0 && (<motion.div;
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className='text - center py - 20';
-            >;
+              animate={{ opacity: 1 ,
+}
+              className='text - center py - 20'>
+
               <div className='text - 6xl mb - 4'>🔍</div>;
               <h3 className='text - 2xl font - bold text - white mb - 2'>;
                 No services found;
@@ -748,15 +927,27 @@ href='/pricing';
                 Try adjusting your search criteria or browse all services.;
               </p>              <button;
                 on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}
+<<<<<<< HEAD
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20";
             >;
+=======
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <div className="text-6xl mb-4">🔍</div>;
               <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;
               <p className="text - cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>;
                 on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}
+<<<<<<< HEAD
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all')}}
                 className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
               >;
+=======
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all'),
+}
+                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Clear Filters;
               </button>;
             </motion.div>)}
@@ -817,15 +1008,15 @@ href='/pricing';
             <div className="flex flex - col sm:flex - row gap-4 justify-center">;
               <Link;
                 href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25";
-              >;
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25">
+
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
-              >;
+                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300">
+
                 View Pricing Plans;
               </Link>;
             </div>;
@@ -849,22 +1040,22 @@ href='/pricing';
             <p className='mt - 2'>;
               <Link;
                 href='/privacy';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
+                className='hover:text - cyan - 400 transition - colors duration - 300'>
+
                 Privacy Policy;
               </Link>;
               {' • '}
               <Link;
                 href='/terms';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
+                className='hover:text - cyan - 400 transition - colors duration - 300'>
+
                 Terms of Service;
               </Link>;
               {' • '}
               <Link;
                 href='/contact';
-                className='hover:text - cyan - 400 transition - colors duration - 300';
-              >;
+                className='hover:text - cyan - 400 transition - colors duration - 300'>
+
                 Contact Us;
               </Link>            </p>              Z;
             </div>;
@@ -902,22 +1093,37 @@ href='/pricing';
             <p className='mt-2'>;
               <Link;
                 href='/privacy';
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300';
               >;
+=======
+                className='hover:text-cyan-400 transition-colors duration-300'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Privacy Policy;
               </Link>;
               {' • '}
               <Link;
                 href='/terms';
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300';
               >;
+=======
+                className='hover:text-cyan-400 transition-colors duration-300'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Terms of Service;
               </Link>;
               {' • '}
               <Link;
                 href='/contact';
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300';
               >;
+=======
+                className='hover:text-cyan-400 transition-colors duration-300'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Contact Us;
               </Link>;
             </p>;

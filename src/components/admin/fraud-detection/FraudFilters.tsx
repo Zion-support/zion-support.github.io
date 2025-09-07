@@ -1,9 +1,14 @@
 
 ;
-interface FraudFiltersProps  {searchQuery: string,setSearchQuery: (value: string) => void,statusFilter: string | null,setStatusFilter: (value: string | null) => void,severityFilter: string | null,setSeverityFilter: (value: string | null) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null) => void,resetFilters: () => void;
+
+interface FraudFiltersProps {
+  searchQuery: string,setSearchQuery: (value: string) => void,statusFilter: string | null,setStatusFilter: (value: string | null) => void,severityFilter: string | null,setSeverityFilter: (value: string | null) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null) => void,resetFilters: () => void;
+
 }
+
 export const FraudFilters: React.FC<FraudFiltersProps> = ({resetFilters: () => void;
 }
+
 export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
   setSearchQuery;
   statusFilter;
@@ -13,8 +18,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
   contentTypeFilter;
   setContentTypeFilter;
 import React from 'react';
-}interface FraudFiltersProps  {searchQuery: string,setSearchQuery: (value: string,) => void,statusFilter: string | null,setStatusFilter: (value: string | null,) => void,severityFilter: string | null,setSeverityFilter: (value: string | null,) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null,) => void,resetFilters: () => void;
-}export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
+}
+
+interface FraudFiltersProps {
+  searchQuery: string,setSearchQuery: (value: string,) => void,statusFilter: string | null,setStatusFilter: (value: string | null,) => void,severityFilter: string | null,setSeverityFilter: (value: string | null,) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null,) => void,resetFilters: () => void;
+
+}
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({ searchQuery;
   setSearchQuery;
   statusFilter;
   setStatusFilter;
@@ -22,7 +33,10 @@ import React from 'react';
   setSeverityFilter;
   contentTypeFilter;
   setContentTypeFilter;
-  resetFilters}) => {  return (<div className="flex flex-col md: flex-row gap-4 mb-6">;
+  resetFilters   }) => {
+
+
+  return (<div className="flex flex-col md: flex-row gap-4 mb-6">;
   searchQuery,setSearchQuery,statusFilter,setStatusFilter,severityFilter,setSeverityFilter,contentTypeFilter,setContentTypeFilter,resetFilters}) => {return (<div className="flex flex-col md:flex-row gap-4 mb-6">;
       <div className="relative flex-1">;
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
@@ -74,10 +88,15 @@ import React from 'react';
       </Button>;
     </div>;
   )onChange = {(e,) => setSearchQuery(e && e.target.value)}},import React from "react",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { Search, Filter  } from 'lucide-react';
+
 interface FraudFiltersProps  {searchQuery: string,setSearchQuery: (value: string) => void,statusFilter: string | null,setStatusFilter: (value: string | null) => void,severityFilter: string | null,setSeverityFilter: (value: string | null) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null) => void,resetFilters: () => void;}
 '"},;
-export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery,setSearchQuery,statusFilter,setStatusFilter,severityFilter,setSeverityFilter,contentTypeFilter,setContentTypeFilter;
-  resetFilters}) => {return (<div className="flex flex-col md:flex-row gap-4 mb-6">;
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({ searchQuery,setSearchQuery,statusFilter,setStatusFilter,severityFilter,setSeverityFilter,contentTypeFilter,setContentTypeFilter;
+  resetFilters   }) => {
+
+
+return (<div className="flex flex-col md:flex-row gap-4 mb-6">;
       <div className="relative flex-1">;
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
         <Input;
@@ -125,7 +144,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery,setSearch
     </div>;
   )}search_query: string,setSearchQuery: (value: string, ) => void,status_filter: string | null,setStatusFilter: (value: string | null, ) => void,severity_filter: string | null,setSeverityFilter: (value: string | null, ) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null, ) => void,reset_filters: () => void;
 }
-export const FraudFilters: React.FC < FraudFiltersProps> = ({search_query;
+
+export const FraudFilters: React.FC < FraudFiltersProps> = ({ search_query;
   setSearchQuery;
   status_filter;
   setStatusFilter;
@@ -133,7 +153,10 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({search_query;
   setSeverityFilter;
   contentTypeFilter;
   setContentTypeFilter;
-  reset_filters}) => {  return (<div className="flex flex - col md: flex - row gap - 4 mb - 6">;
+  reset_filters   }) => {
+
+
+  return (<div className="flex flex - col md: flex - row gap - 4 mb - 6">;
       <div className="relative flex - 1">;
         <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
         <Input;
@@ -181,14 +204,18 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({search_query;
       </Select>;
       <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
-      </Button>;
-    </div>)}
+      </Button>
+    </div>
+  );
+}
 '"}}
 '"},;
 }import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
 import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
-interface FraudFiltersProps  {searchQuery: string;
+
+interface FraudFiltersProps {
+  searchQuery: string;
   setSearchQuery: (value: string) => void;
   statusFilter: string | null;
   setStatusFilter: (value: string | null) => void;
@@ -197,5 +224,8 @@ interface FraudFiltersProps  {searchQuery: string;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
   resetFilters: () => void;
+
 }
-export const FraudFilters: React.FC<FraudFiltersProps> = ({)}'";
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({,
+}'";

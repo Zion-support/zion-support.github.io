@@ -6,6 +6,7 @@ import { LanguageSelector   } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent   } from '@/components/ui/hover-card';
 import { MiniCartPreview   } from '@/components/cart/MiniCartPreview';
 import { LoginModal  } from '@/components/auth/LoginModal';
+
 interface MainNavigationProps  {isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -17,6 +18,7 @@ import { use_auth  } from '@/hooks / use_auth';
 import { use_translation  } from 'react - i18next';
 import { use_favorites  } from '@/hooks / use_favorites';
 import { use_cart  } from '@/context / CartContext';
+
 export function MainNavigation({ isAdmin;
                       router.pathname.startsWith('/cart')import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -31,28 +33,38 @@ import { MiniCartPreview  } from '@/components / cart / MiniCartPreview';
 import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector  } from '@/components / header / LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components / ui / hover - card';
 import { LoginModal  } from '@/components / auth / LoginModal';
+
 interface MainNavigationProps  {is_admin?: boolean,unread_count?: number,class_name?: string;
 }
+
 interface MainNavigationProps  {is_admin?: boolean;
   unread_count?: number;
   class_name?: string;
+
 export /**;
  * MainNavigation - Function description;
  */;
 function MainNavigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false)// Add state;
-  const { user } = use_auth ()const is_authenticated = !!user;
-  const [login_open, setLoginOpen] = useState (false)const { count } = use_favorites ()const { items } = use_cart ()const cart_count = items.length;
-  const router = use_router ()// Changed from use_location;
-  const { t } = use_translation ()const handleCartClick = (e: React.MouseEvent, ) =>: any {// Check condition;
+
+const { user } = use_auth ()const is_authenticated = !!user;
+
+const [login_open, setLoginOpen] = useState (false)const { count } = use_favorites ()const { items } = use_cart ()const cart_count = items.length;
+
+const router = use_router ()// Changed from use_location;
+
+const { t } = use_translation ()const handleCartClick = (e: React.MouseEvent, ) =>: any {// Check condition;
 if ( {) {$2;
 }
       e.prevent_default ()setLoginOpen (true)return;}
     setIsMobileMenuOpen(false)}
-  const baseLinks = [;
-    {key: 'home';
+
+const baseLinks = [
+  {key: 'home';
       href: '/';
-      matches: (path: string) => path === '/'    }
-    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+      matches: (path: string) => path = == '/'    }
+    {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -63,9 +75,16 @@ import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
-interface MainNavigationProps  {isAdmin?: boolean,unreadCount?: number,className?: string;
-}const baseLinks = [;
-    {key: 'home',href: '/',href: '/analytics',matches: (path: string) => path && path.startsWith('/analytics')})}return (<nav;
+
+interface MainNavigationProps {
+  isAdmin?: boolean,unreadCount?: number,className?: string;
+
+}
+
+const baseLinks = [
+  {key: 'home',href: '/',href: '/analytics',matches: (path: string) => path && path.startsWith('/analytics',
+});
+  return (<nav;
         className={cn('navbar', className)}
         role='navigation';
         aria-label='Main navigation'>;<div;
@@ -131,7 +150,8 @@ interface MainNavigationProps  {isAdmin?: boolean,unreadCount?: number,className
                     <ShoppingCart className='w-4 h-4 mr-1' />;
                     {t('nav && nav.cart', 'Cart')}
                     {cartCount > 0 && (<span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
-                        {cartCount}key: 'marketplace',href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace')    },{}
+                        {cartCount}key: 'marketplace',href: '/marketplace',matches: (path: string) => path.starts_with ('/marketplace')   ,
+},{}
     links.push ({key: 'dashboard',name: t ('nav.dashboard'),href: '/dashboard',matches: (path: string) =>;
         path === '/dashboard' ||;
         path === '/client - dashboard' ||;
@@ -140,7 +160,8 @@ interface MainNavigationProps  {isAdmin?: boolean,unreadCount?: number,className
   // Check condition;
 if ( {) {$2;
 }
-    links.push ({key: 'analytics',name: t ('nav.analytics'),href: '/analytics',matches: (path: string) => path.starts_with ('/analytics')}) }
+    links.push ({key: 'analytics',name: t ('nav.analytics'),href: '/analytics',matches: (path: string) => path.starts_with ('/analytics')}),
+}
   return (<>;
       <button;
         className='navbar - toggler md:hidden ml - auto mr - 4 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary' // Added ml - auto and mr - 4 for positioning;
@@ -156,7 +177,8 @@ if ( {) {$2;
         aria - label='Main navigation'      >;
         <div;
           id='main - navbar - collapse';
-          className={cn ('navbar - collapse',{ open: isMobileMenuOpen },'w - full md:flex md:w - auto', // Handles visibility and desktop layout;
+          className={cn ('navbar - collapse',{ open: isMobileMenuOpen,
+},'w - full md:flex md:w - auto', // Handles visibility and desktop layout;
             !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile)}
         >;
           <ul className='navbar - nav flex flex - col md:flex - row md:items - center md:gap - 1'>;
@@ -168,7 +190,8 @@ if ( {) {$2;
                   aria - label={link.name}
                   on_click={() => setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',link.matches (router.pathname)? 'bg - zion - purple / 20 text - zion - cyan';
-                      : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',
+}                >;
                   {link.name}
                 </Link>;
               </li>))}
@@ -180,7 +203,8 @@ if ( {) {$2;
                   on_click={() => setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/wishlist';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
-                      : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',
+}                >;
                   <Heart className='w - 4 h - 4' />;
                   {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
                       {count}
@@ -195,7 +219,8 @@ if ( {) {$2;
                   on_click={() => setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/wallet';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
-                      : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',
+}                >;
                   <Wallet className='w - 4 h - 4' />;
                 </Link>;
               </li>)}
@@ -207,7 +232,8 @@ if ( {) {$2;
                   on_click={() => setIsMobileMenuOpen (false)}
                   className={cn ('nav - link','relative inline - flex h - 9 w - 9 items - center justify - center rounded - md transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',router.pathname === '/messages';
                       ? 'bg - zion - purple / 20 text - zion - cyan';
-                      : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan')}                >;
+                      : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan',
+}                >;
                   <MessageSquare className='w - 4 h - 4' />;
                   {unread_count > 0 && (<span className='absolute -top - 1 -right - 1 bg - red - 500 text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
                       {unread_count > 9 ? '9+' : unread_count}
@@ -223,7 +249,8 @@ if ( {) {$2;
                     aria - label={t ('nav.cart')}
                     on_click={handleCartClick}
                     className={cn ('nav - link','inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',                      router.pathname.starts_with ('/cart')? 'bg - zion - purple / 20 text - zion - cyan';
-                        : 'text - white hover:bg - zion - purple / 10 hover:text - zion - cyan') }
+                        : 'text - white hover: bg - zion - purple / 10 hover:text - zion - cyan'),
+}
                   >;
                     <ShoppingCart className='w - 4 h - 4 mr - 1' />;
                     {t ('nav.cart', 'Cart')}
@@ -231,28 +258,88 @@ if ( {) {$2;
                         {cart_count}
                       </span>;
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'   } from 'lucide-react';
+
 export default /**;
  * Page - Function description;
  */;
 function Page() { [])const base_links: NavigationLink[] = [{key: 'home',href: '/',name: 'Home',matches: (path: string) => path = == '/';
 },{key: 'services',href: '/services',name: 'Services',matches: (path: string) => path.starts_with ('/services'),children: [';
-        { key: 'cloud - devops', href: '/services / cloud - devops', name: 'Cloud & DevOps', matches: (p: string) => p.starts_with ('/services / cloud - devops') },{ key: 'digital - twin', href: '/services / digital - twin', name: 'Digital Twin', matches: (p: string) => p.starts_with ('/services / digital - twin') },{ key: 'data - analytics', href: '/services / data - analytics', name: 'Data Analytics', matches: (p: string) => p.starts_with ('/services / data - analytics') },{ key: 'it - infrastructure', href: '/services / it - infrastructure', name: 'IT Infrastructure', matches: (p: string) => p.starts_with ('/services / it - infrastructure') },{ key: 'ai - business - intelligence', href: '/services / ai - business - intelligence', name: 'AI Business Intelligence', matches: (p: string) => p.starts_with ('/services / ai - business - intelligence') },{ key: 'ai - sales - copilot', href: '/services / ai - sales - copilot', name: 'AI Sales Copilot', matches: (p: string) => p.starts_with ('/services / ai - sales - copilot') },{ key: 'cloud - finops - optimizer', href: '/services / cloud - finops - optimizer', name: 'Cloud FinOps Optimizer', matches: (p: string) => p.starts_with ('/services / cloud - finops - optimizer') },{ key: 'ai - compliance - assistant', href: '/services / ai - compliance - assistant', name: 'AI Compliance Assistant', matches: (p: string) => p.starts_with ('/services / ai - compliance - assistant') },{ key: 'ai - auto - email - responder', href: '/services / ai - auto - email - responder', name: 'AI Auto Email Responder', matches: (p: string) => p.starts_with ('/services / ai - auto - email - responder') },{ key: 'mobile - feedback - surveys', href: '/services / mobile - feedback - surveys', name: 'Feedback Surveys', matches: (p: string) => p.starts_with ('/services / mobile - feedback - surveys') },{ key: 'ai - compliance - copilot', href: '/services / ai - compliance - copilot', name: 'AI Compliance Copilot', matches: (p: string) => p.starts_with ('/services / ai - compliance - copilot') },{ key: 'llm - content - studio', href: '/services / llm - content - studio', name: 'LLM Content Studio', matches: (p: string) => p.starts_with ('/services / llm - content - studio') },{ key: 'finops - advisor', href: '/services / finops - advisor', name: 'FinOps Advisor', matches: (p: string) => p.starts_with ('/services / finops - advisor') },{ key: 'returns - management', href: '/services / returns - management', name: 'Returns Management', matches: (p: string) => p.starts_with ('/services / returns - management') },{ key: 'email - sequencer', href: '/services / email - sequencer', name: 'Email Sequencer', matches: (p: string) => p.starts_with ('/services / email - sequencer') },{ key: 'podcast - transcription', href: '/services / podcast - transcription', name: 'Podcast Transcription', matches: (p: string) => p.starts_with ('/services / podcast - transcription') },{ key: 'micro - crm', href: '/services / micro - crm', name: 'Micro CRM', matches: (p: string) => p.starts_with ('/services / micro - crm') },{ key: 'website - analytics', href: '/services / website - analytics', name: 'Website Analytics', matches: (p: string) => p.starts_with ('/services / website - analytics') },{ key: 'it - helpdesk', href: '/services / it - helpdesk', name: 'IT Helpdesk', matches: (p: string) => p.starts_with ('/services / it - helpdesk') },{ key: 'affiliate - tracking', href: '/services / affiliate - tracking', name: 'Affiliate Tracking', matches: (p: string) => p.starts_with ('/services / affiliate - tracking') },{ key: 'mobile - survey', href: '/services / mobile - survey', name: 'Mobile Survey', matches: (p: string) => p.starts_with ('/services / mobile - survey') }
+        { key: 'cloud - devops', href: '/services / cloud - devops', name: 'Cloud & DevOps', matches: (p: string) => p.starts_with ('/services / cloud - devops'),
+},{ key: 'digital - twin', href: '/services / digital - twin', name: 'Digital Twin', matches: (p: string) => p.starts_with ('/services / digital - twin'),
+},{ key: 'data - analytics', href: '/services / data - analytics', name: 'Data Analytics', matches: (p: string) => p.starts_with ('/services / data - analytics'),
+},{ key: 'it - infrastructure', href: '/services / it - infrastructure', name: 'IT Infrastructure', matches: (p: string) => p.starts_with ('/services / it - infrastructure'),
+},{ key: 'ai - business - intelligence', href: '/services / ai - business - intelligence', name: 'AI Business Intelligence', matches: (p: string) => p.starts_with ('/services / ai - business - intelligence'),
+},{ key: 'ai - sales - copilot', href: '/services / ai - sales - copilot', name: 'AI Sales Copilot', matches: (p: string) => p.starts_with ('/services / ai - sales - copilot'),
+},{ key: 'cloud - finops - optimizer', href: '/services / cloud - finops - optimizer', name: 'Cloud FinOps Optimizer', matches: (p: string) => p.starts_with ('/services / cloud - finops - optimizer'),
+},{ key: 'ai - compliance - assistant', href: '/services / ai - compliance - assistant', name: 'AI Compliance Assistant', matches: (p: string) => p.starts_with ('/services / ai - compliance - assistant'),
+},{ key: 'ai - auto - email - responder', href: '/services / ai - auto - email - responder', name: 'AI Auto Email Responder', matches: (p: string) => p.starts_with ('/services / ai - auto - email - responder'),
+},{ key: 'mobile - feedback - surveys', href: '/services / mobile - feedback - surveys', name: 'Feedback Surveys', matches: (p: string) => p.starts_with ('/services / mobile - feedback - surveys'),
+},{ key: 'ai - compliance - copilot', href: '/services / ai - compliance - copilot', name: 'AI Compliance Copilot', matches: (p: string) => p.starts_with ('/services / ai - compliance - copilot'),
+},{ key: 'llm - content - studio', href: '/services / llm - content - studio', name: 'LLM Content Studio', matches: (p: string) => p.starts_with ('/services / llm - content - studio'),
+},{ key: 'finops - advisor', href: '/services / finops - advisor', name: 'FinOps Advisor', matches: (p: string) => p.starts_with ('/services / finops - advisor'),
+},{ key: 'returns - management', href: '/services / returns - management', name: 'Returns Management', matches: (p: string) => p.starts_with ('/services / returns - management'),
+},{ key: 'email - sequencer', href: '/services / email - sequencer', name: 'Email Sequencer', matches: (p: string) => p.starts_with ('/services / email - sequencer'),
+},{ key: 'podcast - transcription', href: '/services / podcast - transcription', name: 'Podcast Transcription', matches: (p: string) => p.starts_with ('/services / podcast - transcription'),
+},{ key: 'micro - crm', href: '/services / micro - crm', name: 'Micro CRM', matches: (p: string) => p.starts_with ('/services / micro - crm'),
+},{ key: 'website - analytics', href: '/services / website - analytics', name: 'Website Analytics', matches: (p: string) => p.starts_with ('/services / website - analytics'),
+},{ key: 'it - helpdesk', href: '/services / it - helpdesk', name: 'IT Helpdesk', matches: (p: string) => p.starts_with ('/services / it - helpdesk'),
+},{ key: 'affiliate - tracking', href: '/services / affiliate - tracking', name: 'Affiliate Tracking', matches: (p: string) => p.starts_with ('/services / affiliate - tracking'),
+},{ key: 'mobile - survey', href: '/services / mobile - survey', name: 'Mobile Survey', matches: (p: string) => p.starts_with ('/services / mobile - survey'),
+}
       ];
-},{key: 'ai - services',href: '/ai - services',name: 'AI Services',matches: (path: string)  => path.starts_with ('/ai - services')},{key: 'it - services',href: '/it - services',name: 'IT Services',matches: (path: string)  => path.starts_with ('/it - services')},{key: 'micro - saas',href: '/micro - saas',name: 'Micro SAAS',matches: (path: string)  => path.starts_with ('/micro - saas')},{key: 'marketplace',href: '/marketplace',name: 'Marketplace',matches: (path: string)  => path.starts_with ('/marketplace')},{key: 'about',href: '/about',name: 'About',matches: (path: string)  => path.starts_with ('/about')},{matches: (path: string)  => path.starts_with ('/contact')}key: 'contact',href: '/contact',name: 'Contact',matches: (path: string) => path.starts_with ('/contact')}
+},{key: 'ai - services',href: '/ai - services',name: 'AI Services',matches: (path: string)  => path.starts_with ('/ai - services',
+},{key: 'it - services',href: '/it - services',name: 'IT Services',matches: (path: string)  => path.starts_with ('/it - services',
+},{key: 'micro - saas',href: '/micro - saas',name: 'Micro SAAS',matches: (path: string)  => path.starts_with ('/micro - saas',
+},{key: 'marketplace',href: '/marketplace',name: 'Marketplace',matches: (path: string)  => path.starts_with ('/marketplace',
+},{key: 'about',href: '/about',name: 'About',matches: (path: string)  => path.starts_with ('/about',
+},{matches: (path: string)  => path.starts_with ('/contact',
+}key: 'contact',href: '/contact',name: 'Contact',matches: (path: string) => path.starts_with ('/contact',
+}
   ];
               </div>;
             </motion.div>)}
-        </AnimatePresence>;
-      </div>)}
+        </AnimatePresence>
+    </div>
+  );
+}
   return ()<nav class_name = {`${class_name}`}>;{/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">;
         {baseLinks.map((link (<div key={link.key}>;
             {link.children ? (</span>;
+
 export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: 'home',href: '/',name: 'Home',matches: (path: string) => path = == '/';
 },{key: 'services',href: '/services',name: 'Services',matches: (path: string) => path && path.startsWith('/services'),children: [';
-        { key: 'cloud-devops', href: '/services/cloud-devops', name: 'Cloud & DevOps', matches: (p: string) => p && p.startsWith('/services/cloud-devops') },{ key: 'digital-twin', href: '/services/digital-twin', name: 'Digital Twin', matches: (p: string) => p && p.startsWith('/services/digital-twin') },{ key: 'data-analytics', href: '/services/data-analytics', name: 'Data Analytics', matches: (p: string) => p && p.startsWith('/services/data-analytics') },{ key: 'it-infrastructure', href: '/services/it-infrastructure', name: 'IT Infrastructure', matches: (p: string) => p && p.startsWith('/services/it-infrastructure') },{ key: 'ai-business-intelligence', href: '/services/ai-business-intelligence', name: 'AI Business Intelligence', matches: (p: string) => p && p.startsWith('/services/ai-business-intelligence') },{ key: 'ai-sales-copilot', href: '/services/ai-sales-copilot', name: 'AI Sales Copilot', matches: (p: string) => p && p.startsWith('/services/ai-sales-copilot') },{ key: 'cloud-finops-optimizer', href: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', matches: (p: string) => p && p.startsWith('/services/cloud-finops-optimizer') },{ key: 'ai-compliance-assistant', href: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant', matches: (p: string) => p && p.startsWith('/services/ai-compliance-assistant') },{ key: 'ai-auto-email-responder', href: '/services/ai-auto-email-responder', name: 'AI Auto Email Responder', matches: (p: string) => p && p.startsWith('/services/ai-auto-email-responder') },{ key: 'mobile-feedback-surveys', href: '/services/mobile-feedback-surveys', name: 'Feedback Surveys', matches: (p: string) => p && p.startsWith('/services/mobile-feedback-surveys') },{ key: 'ai-compliance-copilot', href: '/services/ai-compliance-copilot', name: 'AI Compliance Copilot', matches: (p: string) => p && p.startsWith('/services/ai-compliance-copilot') },{ key: 'llm-content-studio', href: '/services/llm-content-studio', name: 'LLM Content Studio', matches: (p: string) => p && p.startsWith('/services/llm-content-studio') },{ key: 'finops-advisor', href: '/services/finops-advisor', name: 'FinOps Advisor', matches: (p: string) => p && p.startsWith('/services/finops-advisor') },{ key: 'returns-management', href: '/services/returns-management', name: 'Returns Management', matches: (p: string) => p && p.startsWith('/services/returns-management') },{ key: 'email-sequencer', href: '/services/email-sequencer', name: 'Email Sequencer', matches: (p: string) => p && p.startsWith('/services/email-sequencer') },{ key: 'podcast-transcription', href: '/services/podcast-transcription', name: 'Podcast Transcription', matches: (p: string) => p && p.startsWith('/services/podcast-transcription') },{ key: 'micro-crm', href: '/services/micro-crm', name: 'Micro CRM', matches: (p: string) => p && p.startsWith('/services/micro-crm') },{ key: 'website-analytics', href: '/services/website-analytics', name: 'Website Analytics', matches: (p: string) => p && p.startsWith('/services/website-analytics') },{ key: 'it-helpdesk', href: '/services/it-helpdesk', name: 'IT Helpdesk', matches: (p: string) => p && p.startsWith('/services/it-helpdesk') },{ key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p && p.startsWith('/services/affiliate-tracking') },{ key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p && p.startsWith('/services/mobile-survey') }
+        { key: 'cloud-devops', href: '/services/cloud-devops', name: 'Cloud & DevOps', matches: (p: string) => p && p.startsWith('/services/cloud-devops'),
+},{ key: 'digital-twin', href: '/services/digital-twin', name: 'Digital Twin', matches: (p: string) => p && p.startsWith('/services/digital-twin'),
+},{ key: 'data-analytics', href: '/services/data-analytics', name: 'Data Analytics', matches: (p: string) => p && p.startsWith('/services/data-analytics'),
+},{ key: 'it-infrastructure', href: '/services/it-infrastructure', name: 'IT Infrastructure', matches: (p: string) => p && p.startsWith('/services/it-infrastructure'),
+},{ key: 'ai-business-intelligence', href: '/services/ai-business-intelligence', name: 'AI Business Intelligence', matches: (p: string) => p && p.startsWith('/services/ai-business-intelligence'),
+},{ key: 'ai-sales-copilot', href: '/services/ai-sales-copilot', name: 'AI Sales Copilot', matches: (p: string) => p && p.startsWith('/services/ai-sales-copilot'),
+},{ key: 'cloud-finops-optimizer', href: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', matches: (p: string) => p && p.startsWith('/services/cloud-finops-optimizer'),
+},{ key: 'ai-compliance-assistant', href: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant', matches: (p: string) => p && p.startsWith('/services/ai-compliance-assistant'),
+},{ key: 'ai-auto-email-responder', href: '/services/ai-auto-email-responder', name: 'AI Auto Email Responder', matches: (p: string) => p && p.startsWith('/services/ai-auto-email-responder'),
+},{ key: 'mobile-feedback-surveys', href: '/services/mobile-feedback-surveys', name: 'Feedback Surveys', matches: (p: string) => p && p.startsWith('/services/mobile-feedback-surveys'),
+},{ key: 'ai-compliance-copilot', href: '/services/ai-compliance-copilot', name: 'AI Compliance Copilot', matches: (p: string) => p && p.startsWith('/services/ai-compliance-copilot'),
+},{ key: 'llm-content-studio', href: '/services/llm-content-studio', name: 'LLM Content Studio', matches: (p: string) => p && p.startsWith('/services/llm-content-studio'),
+},{ key: 'finops-advisor', href: '/services/finops-advisor', name: 'FinOps Advisor', matches: (p: string) => p && p.startsWith('/services/finops-advisor'),
+},{ key: 'returns-management', href: '/services/returns-management', name: 'Returns Management', matches: (p: string) => p && p.startsWith('/services/returns-management'),
+},{ key: 'email-sequencer', href: '/services/email-sequencer', name: 'Email Sequencer', matches: (p: string) => p && p.startsWith('/services/email-sequencer'),
+},{ key: 'podcast-transcription', href: '/services/podcast-transcription', name: 'Podcast Transcription', matches: (p: string) => p && p.startsWith('/services/podcast-transcription'),
+},{ key: 'micro-crm', href: '/services/micro-crm', name: 'Micro CRM', matches: (p: string) => p && p.startsWith('/services/micro-crm'),
+},{ key: 'website-analytics', href: '/services/website-analytics', name: 'Website Analytics', matches: (p: string) => p && p.startsWith('/services/website-analytics'),
+},{ key: 'it-helpdesk', href: '/services/it-helpdesk', name: 'IT Helpdesk', matches: (p: string) => p && p.startsWith('/services/it-helpdesk'),
+},{ key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p && p.startsWith('/services/affiliate-tracking'),
+},{ key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p && p.startsWith('/services/mobile-survey'),
+}
       ];
-},{key: 'ai-services',href: '/ai-services',name: 'AI Services',matches: (path: string)  => path && path.startsWith('/ai-services')},{key: 'it-services',href: '/it-services',name: 'IT Services',matches: (path: string)  => path && path.startsWith('/it-services')},{key: 'micro-saas',href: '/micro-saas',name: 'Micro SAAS',matches: (path: string)  => path && path.startsWith('/micro-saas')},{key: 'marketplace',href: '/marketplace',name: 'Marketplace',matches: (path: string)  => path && path.startsWith('/marketplace')},{key: 'about',href: '/about',name: 'About',matches: (path: string)  => path && path.startsWith('/about')},{matches: (path: string)  => path && path.startsWith('/contact')}key: 'contact',href: '/contact',name: 'Contact',matches: (path: string) => path && path.startsWith('/contact')}];
+},{key: 'ai-services',href: '/ai-services',name: 'AI Services',matches: (path: string)  => path && path.startsWith('/ai-services',
+},{key: 'it-services',href: '/it-services',name: 'IT Services',matches: (path: string)  => path && path.startsWith('/it-services',
+},{key: 'micro-saas',href: '/micro-saas',name: 'Micro SAAS',matches: (path: string)  => path && path.startsWith('/micro-saas',
+},{key: 'marketplace',href: '/marketplace',name: 'Marketplace',matches: (path: string)  => path && path.startsWith('/marketplace',
+},{key: 'about',href: '/about',name: 'About',matches: (path: string)  => path && path.startsWith('/about',
+},{matches: (path: string)  => path && path.startsWith('/contact',
+}key: 'contact',href: '/contact',name: 'Contact',matches: (path: string) => path && path.startsWith('/contact',
+}];
               </div>;
             </motion && motion.div>;
           )}</AnimatePresence>;
@@ -297,7 +384,8 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
             animate = {{ opacity: 1,coordinate_x: 0;
 }}
             exit = {{ opacity: 0,coordinate_x: '100%';}}
-            transition={{ duration: 0.3 }}";
+            transition={{ duration: 0.3 ,
+}";
             className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";
 ";
             <div className="p - 6">";
@@ -311,7 +399,8 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
               </div>;
 ";
               <div className="space - y-2">;
-                {base_links.map (link: unknown <div key={link.key}>;
+                {base_links.map (link: unknown <div key={link.ke,
+}>;
                     {link.children ? (<div>;
                         <button;
                           on_click={() => setActiveDropdown (active_dropdown === link.key ? null : link.key)}`;
@@ -406,7 +495,8 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
 }}
             exit = {{ opacity: 0,x: '100%';
 }}
-            transition={{ duration: 0 && 0.3 }}";
+            transition={{ duration: 0 && 0.3 ,
+}";
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50";
 ";
             <div className="p-6">";
@@ -420,7 +510,8 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
               </div>;
 ";
               <div className="space-y-2">;
-                {baseLinks && baseLinks.map(link: unknown <div key={link && link.key}>;
+                {baseLinks && baseLinks.map(link: unknown <div key={link && link.ke,
+}>;
                     {link && link.children ? (<div>;
                         <button;
                           onClick={() => setActiveDropdown(activeDropdown === link && link.key ? null : link && link.key)}`;
@@ -443,8 +534,8 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: '
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)? 'bg-zion-cyan text-white'';
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;
 }`}
-                        onClick={: unknown setIsMobileMenuOpen(false)}<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
-                  >;
+                        onClick={: unknown setIsMobileMenuOpen(false)}<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">>
+
                     <ShoppingCart className="w-4 h-4 mr-1" />;
                     {t('nav.cartCart')}
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;

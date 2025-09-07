@@ -4,8 +4,10 @@ import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PortfolioProject  } from '@/types/resume';
+
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;onDelete: (projectId: string) => void; import Image from 'next/image';
+
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject,) => void;
   onDelete: (projectId: string,) => void;
@@ -15,15 +17,25 @@ import { Button   } from '@/components/ui/button';
 import { Badge   } from '@/components/ui/badge';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle   } from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText  } from 'lucide-react';
+
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
-}}interface ProjectCardProps  {project: PortfolioProject;
+}}
+
+interface ProjectCardProps {
+  project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;import Image from 'next/image';
+
 interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject,) => void,onDelete: (projectId: string,) => void;
-}export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false)const handleDelete = () => {if (project && project.id) {onDelete(project && project.id)}
-    setDeleteDialogOpen(false)}return (<Card className='h-full flex flex-col'>;
+
+}
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false);
+  const handleDelete = () => {if (project && project.id) {onDelete(project && project.id)}
+    setDeleteDialogOpen(false);
+  return (<Card className='h-full flex flex-col'>;
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (<Image;
             src={project && project.image_url}
             alt={project && project.title}
@@ -44,11 +56,16 @@ import { Badge  } from '@/components / ui / badge';
 import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle} from '@/components / ui / alert - dialog';
 import Image from 'next / image';
 import { PortfolioProject  } from '@/types / resume';
-interface ProjectCardProps  {project: PortfolioProject;
+
+interface ProjectCardProps {
+  project: PortfolioProject;
   on_edit: (project: PortfolioProject) => void;
   on_delete: (project_id: string) => void; import Image from 'next / image';
+
 interface ProjectCardProps  {project: PortfolioProject,on_edit: (project: PortfolioProject, ) => void,on_delete: (project_id: string, ) => void;
+
 }
+
 export /**;
  * ProjectCard - Function description;
  */;
@@ -69,8 +86,10 @@ if ( {) {$2;
             alt={project.title}
             className='object - cover';
             loading='lazy') : (<div className='w - full h - full flex items - center justify - center bg - muted'>;
-            <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
-          </div>)}
+            <FileText className='h - 12 w - 12 text - muted - foreground / 50' />
+    </div>
+  );
+}
       </div>;
       <CardContent className='flex - grow pt - 6'>;
         <div className='space - y-2'>;
@@ -78,9 +97,15 @@ if ( {) {$2;
               {project.description}{project.technologies && project.technologies.length > 0 && (<div className='flex flex-wrap gap-1 mt-2'>;
               {project.technologies.map((tech, index) => (<Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
-interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: PortfolioProject) => void,onDelete: (projectId: string) => void;
-}export function ProjectCard() {const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id)}
-    setDeleteDialogOpen(false)}return (<Card className="h-full flex flex-col">;
+
+interface ProjectCardProps {
+  project: PortfolioProject,onEdit: (project: PortfolioProject) => void,onDelete: (projectId: string) => void;
+
+}
+
+export function ProjectCard() {const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id)}
+    setDeleteDialogOpen(false);
+  return (<Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
@@ -147,8 +172,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
               href={project.github_url}target="_blank";
               rel="noopener noreferrer";
               aria-label="GitHub";
-              title="GitHub";
-            >;
+              title="GitHub">
+
               <Button variant="ghost" size="icon" aria-label="GitHub link">;
                 <Github className="h-4 w-4" />;
               </Button>;
@@ -170,8 +195,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
             variant='ghost';
             size='icon';
             onClick={() => onEdit(project)}
-            aria-label='Edit project';
-          >;
+            aria-label='Edit project'>
+
             <Edit className='h-4 w-4' />;
           <Button;
             variant='ghost';
@@ -195,8 +220,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
             <AlertDialogDescription>;
-            aria-label='Delete project';
-          >;
+            aria-label='Delete project'>
+
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
@@ -207,8 +232,10 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
           {project.technologies && project.technologies.length > 0 && (<div className='flex flex - wrap gap - 1 mt - 2'>;
               {project.technologies.map ((tech, index) => (<Badge key={index} variant='secondary' className='text - xs'>                  {tech}                <Badge key={index} variant="secondary" className="text - xs">;
           />) : (<div className="w - full h - full flex items - center justify - center bg - muted">;
-            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
-          </div>)}
+            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />
+    </div>
+  );
+}
       </div>;
       <CardContent className="flex - grow pt - 6">;
         <div className="space - y-2">;
@@ -233,8 +260,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
               target="_blank";
               rel="noopener noreferrer";
               aria - label="GitHub";
-              title="GitHub";
-            >;
+              title="GitHub">
+
               <Button variant='ghost' size='icon' aria - label='GitHub link'>;
                 <Github className='h - 4 w - 4' />;
               </Button>;
@@ -258,15 +285,15 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
             variant='ghost';
             size='icon';
             on_click={() => on_edit (project)}
-            aria - label='Edit project';
-          >;
+            aria - label='Edit project'>
+
             <Edit className='h - 4 w - 4' />;
           <Button;
             variant='ghost';
             size='icon';
             on_click={() => setDeleteDialogOpen (true)}
-            aria - label='Delete project';
-          >;
+            aria - label='Delete project'>
+
             <Trash2 className='h - 4 w - 4' />;
           </Button>;
         </div>;
@@ -294,8 +321,8 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
 <AlertDialogAction;
               onClick={handleDelete}
-              className='bg-destructive text-destructive-foreground';
-            >;
+              className='bg-destructive text-destructive-foreground'>
+
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;

@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const DevopsAutomationChat: NextPage = () => {return (<div>;
+
+const DevopsAutomationChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const DevopsAutomationChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const DevopsAutomationChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default DevopsAutomationChat;const DevopsAutomationChat: NextPage = () => {return (<div>;
+
+export default DevopsAutomationChat;
+
+const DevopsAutomationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default DevopsAutomationChat;const DevopsAutomationChat: NextPage = () =>
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default DevopsAutomationChat;
 
-
-
-
-
 const DevopsAutomationChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const DevopsAutomationChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const DevopsAutomationChat: NextPage = () => {return (<div>;
+
+const DevopsAutomationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > DevopsAutomationChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const DevopsAutomationChat: NextPage = () => {return (<div>;
         <h1 > DevopsAutomationChat</h1>;
         <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>)}export default DevopsAutomationChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default DevopsAutomationChat;<div>;
       <Head>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;DevopsAutomationChat blog post&quot; />;
@@ -92,7 +103,9 @@ const DevopsAutomationChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default DevopsAutomationChat;
-const DevopsAutomationChat: NextPage = () => {return (<div>;
+
+const DevopsAutomationChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const DevopsAutomationChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default DevopsAutomationChat;<title>DevopsAutomationChat - Zion Tech Solutions</title>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default DevopsAutomationChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default DevopsAutomationChat
 
 
 const DevopsAutomationChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const DevopsAutomationChat: NextPage = () => {
     </div>
   );
 }
+
 export default DevopsAutomationChat;
 
         <title>DevopsAutomationChat - Zion Tech Solutions</title>

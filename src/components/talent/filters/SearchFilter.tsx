@@ -3,6 +3,7 @@
 import { Input  } from '@/components/ui/input';
 import { SearchIcon  } from 'lucide-react';
 import { SearchFilterProps  } from '@/types/filters';
+
 export function SearchFilter() {return (<div className="mb-6">;
       <div className="relative">;
         <label htmlFor="talent-search" className="sr-only">;
@@ -72,5 +73,7 @@ import { SearchFilterProps  } from '@/types / filters';
         <p id='talent - search - help' className='sr - only'>          Type a name or skill to filter results        <p id="talent - search - help" className="sr - only">;
           Type a name or skill to filter results;
         </p>;
-      </div>;
-    </div>)})}
+      </div>
+    </div>
+  );
+})}

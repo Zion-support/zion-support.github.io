@@ -1,5 +1,6 @@
 
 ;
+
 const DialogOverlay = React.forwardRef<;
   React.ElementRef<typeof DialogPrimitive.Overlay>;
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>;
@@ -12,6 +13,7 @@ const DialogOverlay = React.forwardRef<;
     {...props}
   />;
 ))DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
+
 const DialogContent = React.forwardRef<;
   React.ElementRef<typeof DialogPrimitive.Content>,React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>;
 >(({ className, children, ...props }, ref) => (<DialogPortal>;
@@ -27,7 +29,9 @@ const DialogContent = React.forwardRef<;
   </DialogPortal>;
 ))const DialogHeader = ({className;
   ...props;
+
 const DialogTitle = React.forwardRef<;
   React.ElementRef<typeof DialogPrimitive.Title>,React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>;
 >(({ className, ...props }, ref) => (<DialogPrimitive.Title;
+
 export {Dialog,DialogPortal,DialogOverlay,DialogClose,DialogTrigger,DialogContent,DialogHeader,

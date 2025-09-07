@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
@@ -13,29 +14,11 @@ import {
   Globe,
   CheckCircle,
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
-const EnterpriseSolutions: NextPage = () => {
-  return (
-    <Layout
-      title="Enterprise Solutions - Zion Tech Group"
-      description="Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group."
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Enterprise
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              {' '}
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your enterprise with scalable, secure, and innovative
-            technology solutions. We help large organizations modernize their IT
-            infrastructure and drive digital transformation.
-          </p>
 
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
@@ -1096,3 +1079,5 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
     </Layout>;
   )}export default EnterpriseSolutions;
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

@@ -22,7 +22,9 @@
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
 } from "@/components/ui/sidebar";
-} from "@/components/ui/sidebar";export function AppSidebar() {return (<Sidebar>;
+} from "@/components/ui/sidebar";
+
+export function AppSidebar() {return (<Sidebar>;
       <SidebarContent>;
         <SidebarGroup title="Dashboard">;
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>;
@@ -92,6 +94,7 @@ import {Sidebar;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
  } from '@/components/ui/sidebar';
+
 export function AppSidebar() {return (<Sidebar>;
       <SidebarContent>;
         <SidebarGroup title='Dashboard'>;
@@ -158,6 +161,7 @@ export function AppSidebar() {return (<Sidebar>;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
 } from "@/components / ui / sidebar";
+
 export /**;
  * AppSidebar - Function description;
  */;

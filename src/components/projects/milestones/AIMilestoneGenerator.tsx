@@ -20,12 +20,16 @@ import { format, parseISO  } from 'date-fns';
   GeneratedMilestone;
   useMilestoneGenerator;
 } from '@/hooks/useMilestoneGenerator';
-interface AIMilestoneGeneratorProps  {scope: string;
+
+interface AIMilestoneGeneratorProps {
+  scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;if (!scope || !startDate || !projectType) {return;}
-    const input: MilestoneInput = {scope;
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void;if (!scope || !startDate || !projectType) {return;
+}
+
+const input: MilestoneInput = {scope;
       startDate;
       endDate;
       projectType;
@@ -35,12 +39,14 @@ import { Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/comp
 import { format, parseISO  } from 'date - fns';
   MilestoneInput,GeneratedMilestone,useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import { Badge  } from '@/components / ui / badge';
+
 interface AIMilestoneGeneratorProps  {scope: string;
   start_date: string;
   end_date: string | null;
   project_type: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+
 export /**;
  * AIMilestoneGenerator - Function description;
  */;
@@ -51,18 +57,35 @@ if ( {) {$2;
 }
       return;
     }
-    const input: MilestoneInput = {scope,start_date,end_date,project_type}
+
+const input: MilestoneInput = {scope,start_date,end_date,project_type}
     await generate_milestones (input)// Initially select all milestones;
-    const initial_selection: Record < number, boolean> = {}
+
+const initial_selection: Record < number, boolean> = {}
     generated_milestones.for_each ((_, index: number) => {initial_selection[index] = true;
     })setSelectedMilestones (initial_selection)}
-  const handleAddToProject = () => {const selectedMilestonesList = generatedMilestones.filter((_, index) => selectedMilestones[index];
-    )onAddMilestones(selectedMilestonesList)clearGeneratedMilestones()setSelectedMilestones({})}const toggleMilestoneSelection = (index: number, ) =>: any {setSelectedMilestones (prev => ({...prev,[index]: !prev[index]}))}
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {onAddMilestone(milestone)}
-  const formatDate = (dateString: string,) => {try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+
+const handleAddToProject = () => ;
+  const selectedMilestonesList = generatedMilestones.filter((_, index) => selectedMilestones[index];
+    )onAddMilestones(selectedMilestonesList)clearGeneratedMilestones()setSelectedMilestones({})}
+
+const toggleMilestoneSelection = (index: number, ) =>: any {setSelectedMilestones (prev => ({...prev,[index]: !prev[index]});
+}
+
+const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {onAddMilestone(milestone,
+}
+;
+  const formatDate = (dateString: string,) => {try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) ;
+  return dateString;
     }
-  }import React, { useState } from 'react',import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from 'date-fns',import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from '@/components/ui/badge',interface AIMilestoneGeneratorProps  {scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) {return;
-    }const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
+  }import React, { useState } from 'react',import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from 'date-fns',import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from '@/components/ui/badge',interface AIMilestoneGeneratorProps {
+  scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) ;
+  return;
+    
+}
+
+const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) ;
+  return dateString;
     }},return (<Button;
           disabled={isGenerating || !scope || !startDate || !projectType}        >;
           variant="outline";
@@ -114,8 +137,8 @@ if ( {) {$2;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (<AccordionItem;
                   value={`item-${index}`}
                   key={index}
-                  className='border p-2 rounded-md mb-2';
-                >;
+                  className='border p-2 rounded-md mb-2'>
+
                   <div className='flex items-center justify-between'>;
                     <div className='flex items-center flex-1'>                      <input;
                         type='checkbox';
@@ -169,8 +192,8 @@ if ( {) {$2;
               {generated_milestones.map ((milestone, index) => (<AccordionItem;
                   value={`item-${index}`}
                   key={index}
-                  className='border p - 2 rounded - md mb - 2';
-                >;
+                  className='border p - 2 rounded - md mb - 2'>
+
                   <div className='flex items - center justify - between'>;
                     <div className='flex items - center flex - 1'>                      <input;
                         type='checkbox';
@@ -183,8 +206,8 @@ if ( {) {$2;
                           <span className='font - medium'>{milestone.title}</span>;
                           <Badge;
                             variant='secondary';
-                            className='ml - 2 flex items - center';
-                          >;
+                            className='ml - 2 flex items - center'>
+
                             <Sparkles className='w - 3 h - 3 mr - 1' />;
                             AI Suggested;
                           </Badge>;
@@ -226,9 +249,10 @@ if ( {) {$2;
                       variant="ghost";
                       size="sm";
                       onClick={(e) => {e.stopPropagation(),onAddMilestone: (milestone: GeneratedMilestone) => void;
+
 export function AIMilestoneGenerator() {const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator()const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),const handleGenerateMilestones  = null;handleAddSingleMilestone(milestone)}}
-                      className="mr-2";
-                    >;
+                      className="mr-2">
+
                       <Plus className='h-4 w-4' />;
                     </Button>;
                   </div>;
@@ -237,17 +261,19 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text-sm'>{milestone.description}</p>;
                       <div className='flex items-center text-sm text-muted-foreground'>;
                         <Calendar className='w-4 h-4 mr-1' />;
-                        Due: {formatDate(milestone.dueDate)}
+                        Due: {formatDate(milestone.dueDate,
+}
                       </div>;
                       <div className='text-sm text-muted-foreground'>;
-                        Estimated effort: {milestone.estimatedHours} hours;
+                        Estimated effort: {milestone.estimatedHour,
+} hours;
                       </div>;
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
                       onClick={e => {e && e.stopPropagation()handleAddSingleMilestone(milestone)}}
-                      className='mr-2';
-                    >;
+                      className='mr-2'>
+
                       <Plus className='h-4 w-4' />;
                     </Button>;
                   </div>;
@@ -256,10 +282,12 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text-sm'>{milestone && milestone.description}</p>;
                       <div className='flex items-center text-sm text-muted-foreground'>;
                         <Calendar className='w-4 h-4 mr-1' />;
-                        Due: {formatDate(milestone && milestone.dueDate)}
+                        Due: {formatDate(milestone && milestone.dueDate,
+}
                       </div>;
                       <div className='text-sm text-muted-foreground'>;
-                        Estimated effort: {milestone && milestone.estimatedHours} hours;
+                        Estimated effort: {milestone && milestone.estimatedHour,
+} hours;
                       </div>;
                     </div>;
                   </AccordionContent>;
@@ -272,8 +300,8 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       variant='ghost';
                       size='sm';
                       on_click={e => {e.stop_propagation ()handleAddSingleMilestone (milestone) }}
-                      className='mr - 2';
-                    >;
+                      className='mr - 2'>
+
                       <Plus className='h - 4 w - 4' />;
                     </Button>;
                   </div>;
@@ -282,10 +310,12 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       <p className='text - sm'>{milestone.description}</p>;
                       <div className='flex items - center text - sm text - muted - foreground'>;
                         <Calendar className='w - 4 h - 4 mr - 1' />;
-                        Due: {format_date (milestone.due_date)}
+                        Due: {format_date (milestone.due_date,
+}
                       </div>;
                       <div className='text - sm text - muted - foreground'>;
-                        Estimated effort: {milestone.estimated_hours} hours;
+                        Estimated effort: {milestone.estimated_hour,
+} hours;
                       </div>;
                     </div>;
                   </AccordionContent>;

@@ -15,6 +15,7 @@ import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage  } from '@/utils/safeStorage';
 // Example listing type;
 import { Select,SelectTrigger,SelectContent,SelectItem} from '@/components/ui/select';
+
 interface Listing  {id: string;
   title: string;
   description: string;
@@ -27,12 +28,17 @@ interface Listing  {id: string;
   reviewCount?: number;
   price?: number | null;
   createdAt: string;
+
 interface CategoryListingPageProps  {title: string;
   description: string;
   listings: Listing[];
-  sortOptions?: { label: string; value: string }[];
-  filterOptions?: { label: string; value: string }[];
-export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState('')const [selectedSort, setSelectedSort] = useState(() =>;
+  sortOptions?: { label: string; value: string,
+}[];
+  filterOptions?: { label: string; value: string,
+}[];
+
+export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSort, setSelectedSort] = useState(() =>;
       safeStorage.getItem('category_selected_sort') |;
       sortOptions[0]?.value |;
       'newest';
@@ -40,16 +46,22 @@ export function CategoryListingPage() {const [searchQuery, setSearchQuery] = use
       safeStorage.getItem('category_selected_filter') |;
       filterOptions[0]?.value |;
       'all';
-  )const [isLoading, setIsLoading] = useState(false)useEffect(() => {safeStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort])useEffect(() => {safeStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter])useEffect(() => {let mounted = true;
-    setIsLoading(true)const timeout = setTimeout(() => {if (mounted) setIsLoading(false)}, 300)return () => {mounted = false;
+  )const [isLoading, setIsLoading] = useState(false)useEffect(() => {
+safeStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort])useEffect(() => {
+safeStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter])useEffect(() => {
+let mounted = true;
+    setIsLoading(true)const timeout = setTimeout(() => {if (mounted) setIsLoading(false)}, 300;
+  return () => {mounted = false;
       clearTimeout(timeout)}
   }, [searchQuery, selectedSort, selectedFilter])// Process listings based on filters and search;
-  const processedListings = initialListings;
+
+const processedListings = initialListings;
     .filter(listing => {// Apply search filter;
         (listing.tags &&;
           listing.tags.some(tag =>;
             tag.toLowerCase().includes(searchQuery.toLowerCase())))// Apply category filters;
-      if (selectedFilter === 'all') return matchesSearch;
+      if (selectedFilter = == 'all');
+  return matchesSearch;
       return matchesSearch;
     }).sort((a, b,) => {// Apply sorting;
       switch (selectedSort) {case 'newest':;
@@ -68,20 +80,35 @@ export function CategoryListingPage() {const [searchQuery, setSearchQuery] = use
             <GradientHeading>{title}</GradientHeading>;
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
 import { useState, useEffect } from "react",import { GradientHeading } from "@/components/GradientHeading",import { ListingScoreCard } from "@/components/ListingScoreCard",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",import { safeStorage } from "@/utils/safeStorage",// Example listing type;
+
 interface Listing  {id: string,title: string,description: string,category: string,subcategory?: string,image?: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,price?: number | null,createdAt: string;
-}interface CategoryListingPageProps  {title: string,description: string,listings: Listing[],sortOptions?: { label: string, value: string }[],filterOptions?: { label: string, value: string }[];
-}export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState(""),const [selectedSort, setSelectedSort] = useState(() => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest';
+}
+
+interface CategoryListingPageProps  {title: string,description: string,listings: Listing[],sortOptions?: { label: string, value: string,
+}[],filterOptions?: { label: string, value: string,
+}[];
+}
+
+export function CategoryListingPage() {const [searchQuery, setSearchQuery] = useState(""),const [selectedSort, setSelectedSort] = useState(() => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest';
   ),const [selectedFilter, setSelectedFilter] = useState(() => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all';
-  ),const [isLoading, setIsLoading] = useState(false),useEffect(() => {safeStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]),useEffect(() => {safeStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]),useEffect(() => {let mounted = true,setIsLoading(true),const timeout = setTimeout(() => {if (mounted) setIsLoading(false)}, 300),return () => {mounted = false,clearTimeout(timeout)}
+  ),const [isLoading, setIsLoading] = useState(false),useEffect(() => {
+safeStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]),useEffect(() => {
+safeStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]),useEffect(() => {
+let mounted = true,setIsLoading(true);
+  const timeout = setTimeout(() => {if (mounted) setIsLoading(false)}, 300);
+  return () => {mounted = false,clearTimeout(timeout)}
   }, [searchQuery, selectedSort, selectedFilter]),// Process listings based on filters and search;
-  const processedListings = initialListings;
+
+const processedListings = initialListings;
     .filter(listing => {// Apply search filter;
-      const matchesSearch =;
+
+const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         (listing.tags && listing.tags.some(tag =>;
           tag.toLowerCase().includes(searchQuery.toLowerCase()))),// Apply category filters;
-      if (selectedFilter === 'all') return matchesSearch,if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,return matchesSearch;
+      if (selectedFilter = == 'all') return matchesSearch,if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;
+  return matchesSearch;
     }).sort((a, b) => {// Apply sorting;
       switch (selectedSort) {case 'newest':;
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),case 'oldest':;
@@ -134,7 +161,8 @@ interface Listing  {id: string,title: string,description: string,category: strin
                   type="text";
                   placeholder="Search listings...";
                   value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value,
+}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
               </div>;
@@ -240,14 +268,18 @@ interface Listing  {id: string,title: string,description: string,category: strin
   title: string;
   description: string;
   listings: Listing[];
-  sortOptions?: { label: string, value: string }[],filterOptions?: { label: string, value: string }[];
-}export function CategoryListingPage({title;
+  sortOptions?: { label: string, value: string,
+}[],filterOptions?: { label: string, value: string,
+}[];
+}
+
+export function CategoryListingPage({title;
   description;
   listings: initialListings;
   sortOptions;
                     setSelectedFilter(filterOptions[0]?.value || 'all')}}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-                >;
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+
                   Clear all filters;
                 </Button>;
               </div>;
@@ -257,8 +289,8 @@ interface Listing  {id: string,title: string,description: string,category: strin
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
                 <Button;
                   variant="outline";onClick={() => {setSearchQuery('')setSelectedFilter(filterOptions[0]?.value || 'all')}}
-                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
-                >;
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'>
+
                   Clear all filters;
                 </Button>;
               </div>;
@@ -271,10 +303,24 @@ interface Listing  {id: string,title: string,description: string,category: strin
   image: string;
   tags: string[];
   createdAt: string;
-}interface CategoryListingPageProps  {category: string;
+}
+
+interface CategoryListingPageProps {
+  category: string;
   listings: Listing[];
   loading?: boolean;
-}export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({category,listings,loading = false}) => {const [searchTerm, setSearchTerm] = useState('')const [sortBy, setSortBy] = useState('newest')const [filterBy, setFilterBy] = useState('all')const [filteredListings, setFilteredListings]  = useState<Listing[]>([])useEffect(() => {let filtered  = listings;// Filter by search term;
+
+}
+
+export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({ category,listings,loading = false   }) => {
+
+
+const [searchTerm, setSearchTerm] =;
+  useState('');
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterBy, setFilterBy] = useState('all';
+  const [filteredListings, setFilteredListings]  = useState<Listing[]>([])useEffect(() => {
+let filtered  = listings;// Filter by search term;
     if (searchTerm) {filtered = filtered.filter(listing =>;
           listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
           listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -294,7 +340,8 @@ interface Listing  {id: string,title: string,description: string,category: strin
           return b.title.localeCompare(a.title)default:;
           return 0;
       }
-    })setFilteredListings(filtered)}, [listings, searchTerm, sortBy, filterBy])const categories  = Array.from(new Set(listings.map(listing => listing.category)))if (loading) {return (<div className="container mx-auto px-4 py-8">;
+    })setFilteredListings(filtered)}, [listings, searchTerm, sortBy, filterBy])const categories = Array.from(new Set(listings.map(listing => listing.category)))if (loading) ;
+  return (<div className="container mx-auto px-4 py-8">;
         <GradientHeading text={`${category} Listings`} />;
         <ListingGridSkeleton />;
       </div>;
@@ -376,9 +423,12 @@ interface Listing  {id: string,title: string,description: string,category: strin
       )}
     </div>;
   )}</>;
-  )//Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )//Apply category filters if (selectedFilter === 'all') return matchesSearch;';
-if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;';
-if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;
+  )//Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )//Apply category filters if (selectedFilter === 'all');
+  return matchesSearch;';
+if (selectedFilter = == 'high-rating');
+  return matchesSearch && (listing.rating || 0) >= 4;';
+if (selectedFilter = == 'best-match');
+  return matchesSearch && (listing.aiScore || 0) >= 85;
 switch (selectedSort) {';
   case 'newest': return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime ()';
 case 'oldest': return new Date (a.createdAt) .getTime () - new Date (b.createdAt) .getTime ()';

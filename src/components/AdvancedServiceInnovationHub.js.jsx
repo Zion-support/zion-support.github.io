@@ -5,16 +5,23 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';''';
 import { Button } from './ui/button'';''';
 import { Badge } from './ui/badge'';''';
 import { Input  } from './ui/input';
+
 const AdvancedServiceInnovationHub = () => {}
 '';
 '';
 '''';
-    const [selectedCategory, setSelectedCategory] = useState('all')';';
-    const [selectedImpact, setSelectedImpact] = useState('all')';';
-    const [selectedStatus, setSelectedStatus] = useState('all')';';
-    const [searchTerm, setSearchTerm] = useState('')';';
-    const [viewMode, setViewMode] = useState('trends')// Mock data - in real app this would come from API;
-    const innovationTrends = [];
+
+const [selectedCategory, setSelectedCategory] = useState('all')';';
+
+const [selectedImpact, setSelectedImpact] = useState('all')';';
+
+const [selectedStatus, setSelectedStatus] = useState('all')';';
+
+const [searchTerm, setSearchTerm] = useState('')';';
+
+const [viewMode, setViewMode] = useState('trends')// Mock data - in real app this would come from API;
+
+const innovationTrends = [];
         {}
 '';
 '';
@@ -107,9 +114,12 @@ const AdvancedServiceInnovationHub = () => {}
             status: 'Emerging';
         }
     ];
-    const filteredTrends = useMemo(() => {}
-        return innovationTrends.filter(trend => {}
-            const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+
+const filteredTrends = useMemo(() => {}
+       ;
+  return innovationTrends.filter(trend => {}
+;
+  const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])const getImpactColor = (impact) => {}
         switch (impact) {}
 '';
@@ -120,8 +130,10 @@ const AdvancedServiceInnovationHub = () => {}
             case 'Low': return 'bg-green-100 text-green-800''';
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const getStatusColor = (status) => {}
-        switch (status) {}
+
+const getStatusColor = (status) => {}
+        switch (status) ,
+}
 '';
 '';
 '''';
@@ -131,8 +143,10 @@ const AdvancedServiceInnovationHub = () => {}
             case 'Disruptive': return 'bg-purple-100 text-purple-800''';
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const getCategoryIcon = (category) => {}
-        switch(category) {}
+
+const getCategoryIcon = (category) => {}
+        switch(category) ,
+}
 '''';
 '''''';
             case 'quantum': return <Atom className='w-5 h-5'/>'';'''';
@@ -141,14 +155,22 @@ const AdvancedServiceInnovationHub = () => {}
             case 'green-tech': return <Leaf className='w-5 h-5'/>'';'''';
             case 'biotech-ai': return <Dna className='w-5 h-5'/>';''';
             default: return <Cpu className='w-5 h-5'/>}
-    }'';'';
-    const categories = ['''''';
-        { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/> }, '''''';
-        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/> },'''''';
-        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/> }, '''''';
-        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/> },'''''';
-        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/> }, '''''';
-        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/> }'''';
+   ,
+}'';'';
+
+const categories = ['''''';
+        { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/>,
+}, '''''';
+        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/>,
+},'''''';
+        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/>,
+}, '''''';
+        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/>,
+},'''''';
+        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/>,
+}, '''''';
+        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/>,
+}'''';
     ]';''';
     return (<div className='max-w-7xl mx-auto p-6'>;
       {/* Header */}
@@ -187,7 +209,8 @@ const AdvancedServiceInnovationHub = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
+}} transition={{ delay: 0.1 ,
+} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'''';
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>'''';
               <div>'''';
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>'''';
@@ -231,12 +254,14 @@ const AdvancedServiceInnovationHub = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.2 }} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>;
+}} transition={{ delay: 0.2 ,
+} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>;
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
   { opacity: 0, x: index % 2 === 0 ? -20 : 20;
 }} animate = {}
   { opacity: 1, x: 0';';
-}} transition={{ delay: 0.1 * index }}>'''';
+}} transition={{ delay: 0.1 * index ,
+}>'''';
                 <Card className='h-full hover:shadow-lg transition-shadow'>'''';
                   <CardHeader>'''';
                     <div className='flex items-start justify-between mb-4'>'''';
@@ -276,7 +301,8 @@ const AdvancedServiceInnovationHub = () => {}
                         <span className='text-sm text-zion-slate-light'>Adoption Rate:</span>'''';
                         <div className='flex items-center gap-2'>'''';
                           <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>'''';
-                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${trend.adoption}%` }}></div>'''';
+                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${trend.adoption}%` ,
+}></div>'''';
                           </div>'''';
                           <span className='text-sm font-medium'>{trend.adoption}%</span>;
                         </div>;
@@ -315,12 +341,14 @@ const AdvancedServiceInnovationHub = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.1 }} className='space-y-6'>;
+}} transition={{ delay: 0.1 ,
+} className='space-y-6'>;
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
   { opacity: 0, x: -20;
 }} animate = {}
   { opacity: 1, x: 0';';
-}} transition={{ delay: 0.1 * index }}>'''';
+}} transition={{ delay: 0.1 * index ,
+}>'''';
               <Card className='hover:shadow-lg transition-shadow'>'''';
                 <CardHeader>'''';
                   <div className='flex items-start justify-between'>'''';
@@ -339,10 +367,12 @@ const AdvancedServiceInnovationHub = () => {}
                       '''';
                       <div className='flex flex-wrap gap-2'>'''';
                         <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>;
-                          Timeline: {roadmap.timeline}'''';
+                          Timeline: {roadmap.timelin,
+}'''';
                         </Badge>'''';
                         <Badge className='bg-zion-cyan/10 text-zion-cyan'>;
-                          Investment: {roadmap.investment}'''';
+                          Investment: {roadmap.investmen,
+}'''';
                         </Badge>'''';
                         <Badge className='bg-zion-purple/10 text-zion-purple'>;
                           {roadmap.category.toUpperCase()}
@@ -402,7 +432,8 @@ const AdvancedServiceInnovationHub = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.1 }} className='space-y-6'>'''';
+}} transition={{ delay: 0.1 ,
+} className='space-y-6'>'''';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>;
             <Card>'''';
               <CardHeader>'''';
@@ -418,7 +449,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-cyan'>$150B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>;
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -426,7 +458,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-purple'>$300B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>;
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -434,7 +467,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-blue'>$200B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>;
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -442,7 +476,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>$100B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}></div>;
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' ,
+}></div>;
                   </div>;
                 </div>;
               </CardContent>;
@@ -461,7 +496,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-cyan'>15%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>;
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -469,7 +505,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-purple'>35%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>;
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -477,7 +514,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-blue'>40%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>;
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' ,
+}></div>;
                   </div>'''';
                   '''';
                   <div className='flex justify-between items-center'>'''';
@@ -485,7 +523,8 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>10%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}></div>;
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' ,
+}></div>;
                   </div>;
                 </div>;
               </CardContent>;
@@ -544,7 +583,8 @@ const AdvancedServiceInnovationHub = () => {}
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
-}} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
+}} transition={{ delay: 0.4 ,
+} className='mt-12 text-center'>'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>'''';
           <p className='text-xl mb-6 max-w-2xl mx-auto'>;
@@ -552,7 +592,8 @@ const AdvancedServiceInnovationHub = () => {}
             of emerging technologies and capitalize on future opportunities.'''';
           </p>'''';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'''';
-            <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+            <Button className='bg-white text-zion-purple hover: bg-zion-slate-light' onClick = ,
+}
 '';
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', _blank')';
 '''';
@@ -560,7 +601,8 @@ const AdvancedServiceInnovationHub = () => {}
               <Users className='w-5 h-5 mr-2'/>;
               Get Innovation Strategy'''';
             </Button>'''';
-            <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
+            <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = ,
+}
 '';
   () => window.open('tel: +13024640950', _blank')';
 '''';
@@ -570,7 +612,19 @@ const AdvancedServiceInnovationHub = () => {}
             </Button>;
           </div>;
         </div>;
-      </motion.div>;
-    </div>)}
+      </motion.div>
+    </div>
+  );
+}
+
 export default AdvancedServiceInnovationHub;
-export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }
+
+export { AdvancedServiceInnovationHub }

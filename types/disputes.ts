@@ -1,17 +1,22 @@
 
-export interface Dispute  {export type DisputeReason =;
+export interface Dispute {
+  export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
   | 'Other';
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeReason =;
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+
 export type DisputeAttachment = {id: string;
   orderId: string;
   userId: string;
@@ -22,7 +27,10 @@ export type DisputeAttachment = {id: string;
   updatedAt: Date;
   resolution?: string;
   resolvedAt?: Date;
-}export interface DisputeResolution  {disputeId: string;
+
+}
+
+export interface DisputeResolution  {disputeId: string;
   resolution: string;
   resolvedBy: string;
   resolvedAt: Date;

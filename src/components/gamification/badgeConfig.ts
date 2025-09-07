@@ -1,7 +1,9 @@
 
 ;
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign  } from 'lucide-react';
+
 export type BadgeKey = any;import { LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign} from 'lucide-react';
+
 export type BadgeKey =;
   | 'first_listing';
   | 'top_contributor';
@@ -9,28 +11,39 @@ export type BadgeKey =;
   | 'featured_creator';
   | 'first_action';
   LucideIcon,BadgeCheck,Award,Star,Trophy,BadgePlus,BadgeDollarSign} from 'lucide-react';
+
 export type BadgeKey =;
   | 'first_listing';
   | 'top_contributor';
   | 'profile_complete';
   | 'featured_creator';
   | 'first_action';
-  | 'monetized';export interface BadgeMeta  {key: BadgeKey;
+  | 'monetized';
+
+export interface BadgeMeta {
+  key: BadgeKey;
   name: string;
   description: string;
   icon: LucideIcon;
   color: string;
   bg: string;
+
 export const badge_list: BadgeMeta[] = [;
-  {badgeList && badgeList.find(b => b && b.key === key)export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList && badgeList.find((b) => b && b.key === key)key: 'first_listing',name: 'First Listing',description: 'Published your first product, service, or listing.',| 'monetized';export type BadgeKey =;
+  {badgeList && badgeList.find(b = > b && b.key === key)export;
+  const getBadgeMeta = (key: BadgeKey) =>;
+  badgeList && badgeList.find((b) => b && b.key === key)key: 'first_listing',name: 'First Listing',description: 'Published your first product, service, or listing.',| 'monetized';
+
+export type BadgeKey =;
   | "first_listing";
   | "top_contributor";
   | "profile_complete";
   | "featured_creator";
   | "first_action";
   | "monetized",export interface BadgeMeta  {key: BadgeKey,name: string,description: string,icon: LucideIcon,color: string,bg: string;
-}export const badgeList: BadgeMeta[] = [;
+
+}
+
+export const badgeList: BadgeMeta[] = [;
   {key: "first_listing",name: "First Listing",description: "Published your first product, service, or listing.",icon: BadgeCheck,color: '#8B5CF6', // Vivid Purple;
     bg: '#E5DEFF', // Soft Purple;
   },{key: 'top_contributor',name: 'Top Contributor',description: 'Recognized as a top contributor in the community.',icon: Award,color: '#F97316', // Bright Orange;
@@ -48,8 +61,12 @@ export const badge_list: BadgeMeta[] = [;
   | "profile_complete";
   | "featured_creator";
   | "first_action";
-  | "monetized",export interface BadgeMeta  {key: BadgeKey,name: string,description: string,icon: LucideIcon,color: string,bg: string;
-}export const badgeList: BadgeMeta[] = [;
+  | "monetized",export interface BadgeMeta {
+  key: BadgeKey,name: string,description: string,icon: LucideIcon,color: string,bg: string;
+
+}
+
+export const badgeList: BadgeMeta[] = [;
   {key: "first_listing",name: "First Listing",description: "Published your first product, service, or listing.",icon: BadgeCheck,color: "#8B5CF6",  // Vivid Purple;
     bg: "#E5DEFF",     // Soft Purple;
   },{key: "top_contributor",name: "Top Contributor",description: "Recognized as a top contributor in the community.",icon: Award,color: "#F97316",  // Bright Orange;
@@ -63,7 +80,10 @@ export const badge_list: BadgeMeta[] = [;
   },{key: "monetized",name: "Monetized",description: "Earned your first AI dollar in the marketplace.",icon: BadgeDollarSign,color: "#22C55E", // Soft Green;
     bg: "#F2FCE2",    // Soft Green;
   }];
+
 export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList.find((b) => b.key === key)export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find (boolean => b.key === key)export const getBadgeMeta = (key: BadgeKey) =>: any;
+  badgeList.find((b) => b.key = == key)export;
+  const getBadgeMeta = (key: BadgeKey) =>: any;
+  badge_list.find (boolean = > b.key === key)export;
+  const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key)badgeList.find(b => b.key === key)

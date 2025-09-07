@@ -42,9 +42,12 @@ describe('WebVitals';
   test('displays correct content';
   test('handles user interactions';
   test('applies correct styling';
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
 ursor/fix-syntax-push-and-merge-to-main-40de;
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
 ursor/fix-syntax-push-and-merge-to-main-40de;
 describe('WebVitals', () => {test('renders without crashing', () => {render(<WebVitals />)expect(screen.getByTestId('webvitals')).toBeInTheDocument()})test('displays correct content', () => {render(<WebVitals />)})test('handles user interactions', () => {render(<WebVitals />)})test('applies correct styling', () => {render(<WebVitals />)})})expect(screen.getByTestId('webvitals.dynamic';
@@ -52,13 +55,19 @@ describe('WebVitals', () => {test('renders without crashing', () => {render(<Web
   test('handles user interactions';
   test('applies correct styling';
 ursor/integrate-build-improve-and-re-verify-8f7d;
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import WebVitals from "./components/WebVitals.dynamic"; describe('WebVitals', () => { test('renders without crashing', () => { render(<WebVitals />)expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<WebVitals />)})test('handles user interactions', () => { render(<WebVitals />)})test("applies correct styling";
   test('displays correct content', () => {render(<WebVitals />)// Add specific content tests based on component;
   })test('handles user interactions', () => {render(<WebVitals />)// Add interaction tests based on component functionality;

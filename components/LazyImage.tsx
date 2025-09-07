@@ -9,7 +9,16 @@ interface LazyImageProps  {interface LazyImageProps  {src: string;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+<<<<<<< HEAD
   src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] = useState(false)const [isInView, setIsInView] = useState(priority)const [hasError, setHasError] = useState(false)const imgRef = useRef<HTMLDivElement>(null)return (<div;
+=======
+  src,alt,width,height,className = "",priority = false,placeholder = "empty",blurDataURL,sizes,quality = 75,fill = false,style,onLoad,onError,}: LazyImageProps) {const [isLoaded, setIsLoaded] =;
+  useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const [hasError, setHasError] = useState(false;
+  const imgRef = useRef<HTMLDivElement>(null;
+  return (<div;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         ref={imgRef}
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={style}>;
@@ -29,6 +38,7 @@ interface LazyImageProps  {interface LazyImageProps  {src: string;
   on_load?: () => void;
   on_error?: () => void;
 }
+<<<<<<< HEAD
 export default /**;
  * LazyImage - Function description;
  */;
@@ -36,6 +46,18 @@ function LazyImage() {const [is_loaded, setIsLoaded] = useState (false)const [is
 if (return) {$2;
 }
     const observer = new IntersectionObserver (([entry]) => {// Check condition;
+=======
+
+export default /**;
+ * LazyImage - Function description;
+ */;
+function LazyImage() {const [is_loaded, setIsLoaded] = useState (false)const [isInView, setIsInView] = useState (priority)const [has_error, setHasError] = useState (false)const img_ref = useRef < HTMLDivElement>(null;
+  useEffect (() => {// Check condition;
+if (return) {$2;
+}
+
+const observer = new IntersectionObserver (([entry]) => {// Check condition;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 if ( {) {$2;
 }
           setIsInView (true)observer.disconnect ()}
@@ -43,7 +65,13 @@ if ( {) {$2;
 if ( {) {$2;
 }
       observer.observe (img_ref.current)}
+<<<<<<< HEAD
     return () => observer.disconnect ()}, [priority])const handle_load = () =>: any {setIsLoaded (true)on_load?.()}const handle_error = () =>: any {setHasError (true)on_error?.()}// Check condition;
+=======
+    return () => observer.disconnect ()}, [priority])const handle_load = () =>: any {setIsLoaded (true)on_load?.()}
+;
+  const handle_error = () =>: any {setHasError (true)on_error?.()}// Check condition;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 if ( {) {$2;
 }
     return (<div;
@@ -54,12 +82,25 @@ if ( {) {$2;
         <div className="text-center">;
           <div className="text-4xl mb-2">📷</div>;
           <div className="text-sm">Image failed to load</div>;
+<<<<<<< HEAD
         </div>;
       </div>)}
   return (<div ref={img_ref} className={`relative ${class_name}`} style={style}>;
       {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100">;
           <LoadingSpinner size="sm" color="gray" />;
         </div>)}
+=======
+        </div>
+    </div>
+  );
+}
+  return (<div ref={img_ref} className={`relative ${class_name}`} style={style}>;
+      {!isInView && !priority && (<div className="absolute inset - 0 flex items - center justify - center bg-gray-100">;
+          <LoadingSpinner size="sm" color="gray" />
+    </div>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       {isInView && (<Image;
           src={src}
           alt={alt}

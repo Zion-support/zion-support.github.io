@@ -6,8 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 import React from './react';
 import { Card, CardContent   } from '@/components / ui / card';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
+
 type EmptyStateCardProps = {type EmptyStateCardProps = {type: 'active' | 'archived';
-},type EmptyStateCardProps = {type: 'active' | 'archived';export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {const isActive  = type === 'active';return (<Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">;
+},type EmptyStateCardProps = {type: 'active' | 'archived';
+
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type   ,
+}) => {
+
+
+const isActive  = type === 'active';return (<Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">;
       <CardContent>;
         <div className="mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">;
           {isActive ? (<MessageSquare className="h-8 w-8 text-white" />;
@@ -45,7 +52,11 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: 'active' | 'archiv
         </p>;
       </CardContent>;
     </Card>;
-  )export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {const is_active = type === 'active';
+  )export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type   ,
+}) => {
+
+
+const is_active = type === 'active';
   return (<Card className="bg - zion - blue - dark border border - zion - blue - light text - center py - 12">;
       <CardContent>;
         <div className="mx - auto w - 16 h - 16 bg - zion - blue - light opacity - 60 rounded - full flex items - center justify - center mb - 4">;
@@ -61,4 +72,6 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: 'active' | 'archiv
           }
         </p>;
       </CardContent>;
-    </Card>)}}type EmptyStateCardProps = any;
+    </Card>)}}
+
+type EmptyStateCardProps = any;

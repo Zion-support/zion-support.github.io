@@ -1,8 +1,11 @@
 // Security Configuration;
+
 export const security_config = {// Content Security Policy;
 // Security Configuration;
+
 export const security_config = {// Content Security Policy;
 // Security Configuration;
+
 export const securityConfig = {// Content Security Policy;
   csp: {directives: {defaultSrc: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],imgSrc: ["'self'", "data:", "https:"],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"],formAction: ["'self'"],upgradeInsecureRequests: [];
     }
@@ -17,7 +20,9 @@ export const securityConfig = {// Content Security Policy;
   rateLimit: {windowMs: 15 * 60 * 1000, // 15 minutes;
     max: 100, // limit each IP to 100 requests per windowMs;
   }
-}export default securityConfig;upgradeInsecureRequests: [];
+}
+
+export default securityConfig;upgradeInsecureRequests: [];
     }
   }
   // Security Headers;
@@ -37,8 +42,14 @@ export const securityConfig = {// Content Security Policy;
   rate_limit: {window_ms: 15 * 60 * 1000, // 15 minutes;
     max: 100 // limit each IP to 100 requests per window_ms;
   }
-}export default securityConfig;ursor/automate-test-improve-and-merge-code-646c;
+}
+
+export default securityConfig;ursor/automate-test-improve-and-merge-code-646c;
   }
-}export default securityConfig;
+}
+
+export default securityConfig;
   }
-}export default securityConfig;
+}
+
+export default securityConfig;

@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
+
+const QualityAssuranceTestingChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const QualityAssuranceTestingChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const QualityAssuranceTestingChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default QualityAssuranceTestingChat;const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
+
+export default QualityAssuranceTestingChat;
+
+const QualityAssuranceTestingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default QualityAssuranceTestingChat;const QualityAssuranceTestingChat: Ne
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default QualityAssuranceTestingChat;
 
-
-
-
-
 const QualityAssuranceTestingChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const QualityAssuranceTestingChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
+
+const QualityAssuranceTestingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
         <h1 > QualityAssuranceTestingChat</h1>;
         <p > Service details coming soon...</p>;
         <a href="/services">Back to Services</a>;
-      </main>;
-    </div>)}export default QualityAssuranceTestingChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default QualityAssuranceTestingChat;<div>;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;QualityAssuranceTestingChat service&quot; />;
@@ -92,7 +103,9 @@ const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default QualityAssuranceTestingChat;
-const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
+
+const QualityAssuranceTestingChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default QualityAssuranceTestingChat;<title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default QualityAssuranceTestingChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default QualityAssuranceTestingChat
 
 
 const QualityAssuranceTestingChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const QualityAssuranceTestingChat: NextPage = () => {
     </div>
   );
 }
+
 export default QualityAssuranceTestingChat;
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>

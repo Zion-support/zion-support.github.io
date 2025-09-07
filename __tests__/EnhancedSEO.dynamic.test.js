@@ -16,6 +16,7 @@ describe('EnhancedSEO';
   test('displays correct content';
   test('handles user interactions';
   test('applies correct styling';
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import EnhancedSEO from "./components/EnhancedSEO.dynamic"; describe('EnhancedSEO', () => { test('renders without crashing', () => { render(<EnhancedSEO />)expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<EnhancedSEO />)})test('handles user interactions', () => { render(<EnhancedSEO />)})test("applies correct styling";
 })})ursor/automate-test-improve-and-merge-code-646c;
 })})test('displays correct content', () => {render(<EnhancedSEO />)// Add specific content tests based on component;
@@ -41,6 +42,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
     render(<EnhancedSEOdynamic />);
   });
 });
+
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic"; describe("EnhancedSEOdynamic",() => { test("renders without crashing",() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedSEOdynamic />)}); test("handles user interactions",() => { render(<EnhancedSEOdynamic />)}); test("applies correct styling",() => { render(<EnhancedSEOdynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462

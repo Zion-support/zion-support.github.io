@@ -169,7 +169,10 @@ return (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
         <Button>Contact Us</Button>;
       </div>;
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
-export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Limits updated',description: 'The new usage limits have been saved successfully.'})}return (<div className='space-y-8'>;
+
+export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Limits updated',description: 'The new usage limits have been saved successfully.,
+});
+  return (<div className='space-y-8'>;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>;
         <p className='text-muted-foreground mb-6'>;
@@ -297,6 +300,8 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: 'Li
             </p>;
           </div>;
         </div>;<Button > Contact Us</Button>;
-      </div>;
-    </div>)}"}</div>;
+      </div>
+    </div>
+  );
+}"}</div>;
   ))}";

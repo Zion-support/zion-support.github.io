@@ -1,21 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
-export default function Privacy() {
-  return (
-    <>
-      <Head>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
 
+<<<<<<< HEAD
       <main className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
@@ -408,3 +401,5 @@ export default function Privacy() {return (<>;
     </>;
   )}
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

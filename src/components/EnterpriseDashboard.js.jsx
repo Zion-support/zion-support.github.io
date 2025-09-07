@@ -1,14 +1,23 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react''';
 import { motion, AnimatePresence } from 'framer-motion''';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2  } from 'lucide-react';
-export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
+
+export const EnterpriseDashboard = () => ;
+  const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true;
     })'';
-    const [activeTab, setActiveTab] = useState('overview')const [refreshInterval, setRefreshInterval] = useState(30000) // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false)'';
-    const [dateRange, setDateRange] = useState('24h')'';
-    const [searchQuery, setSearchQuery] = useState('')'';
-    const [filterStatus, setFilterStatus] = useState('all')// Mock data - in production, this would come from real-time APIs;
-    const [systemMetrics] = useState([];
+
+const [activeTab, setActiveTab] = useState('overview');
+  const [refreshInterval, setRefreshInterval] = useState(30000) // 30 seconds;
+
+const [isRefreshing, setIsRefreshing] = useState(false)'';
+
+const [dateRange, setDateRange] = useState('24h')'';
+
+const [searchQuery, setSearchQuery] = useState('')'';
+
+const [filterStatus, setFilterStatus] = useState('all')// Mock data - in production, this would come from real-time APIs;
+
+const [systemMetrics] = useState([];
         {}
 '';
 '';
@@ -18,7 +27,9 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             value: 45, '''';
             unit: '%','''';
             status: 'healthy', '''';
-            trend: 'stable', change: 2, threshold: { warning: 70, critical: 90 }, lastUpdated: new Date () }, {}
+            trend: 'stable', change: 2, threshold: { warning: 70, critical: 90,
+}, lastUpdated: new Date (),
+}, {}
 '';
 '';
 '''';
@@ -27,7 +38,9 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             value: 78,'''';
             unit: '%', '''';
             status: 'warning','''';
-            trend: 'up', change: 8, threshold: { warning: 75, critical: 90 }, lastUpdated: new Date () }, {}
+            trend: 'up', change: 8, threshold: { warning: 75, critical: 90,
+}, lastUpdated: new Date (),
+}, {}
 '';
 '';
 '''';
@@ -36,7 +49,9 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             value: 65,'''';
             unit: '%', '''';
             status: 'healthy','''';
-            trend: 'stable', change: 1, threshold: { warning: 80, critical: 95 }, lastUpdated: new Date () }, {}
+            trend: 'stable', change: 1, threshold: { warning: 80, critical: 95,
+}, lastUpdated: new Date (),
+}, {}
 '';
 '';
 '''';
@@ -45,7 +60,9 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             value: 32,'''';
             unit: 'Mbps', '''';
             status: 'healthy','''';
-            trend: 'down', change: -5, threshold: { warning: 100, critical: 150 }, lastUpdated: new Date () }
+            trend: 'down', change: -5, threshold: { warning: 100, critical: 150,
+}, lastUpdated: new Date (),
+}
     ])const [serviceStatuses] = useState ([];
         {}
 '';
@@ -133,10 +150,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             status: 'success';
         }
     ])// Refresh data;
-    const refreshData = useCallback(async () => {}
+
+const refreshData = useCallback(async () => {}
         setIsRefreshing(true)try {}
             // Simulate API call;
-            await new Promise(resolve => setTimeout(resolve, 1000))// Update timestamps (simplified for demo)const now = new Date()'';
+            await new Promise(resolve = > setTimeout(resolve, 1000))// Update timestamps (simplified for demo;
+  const now = new Date()'';
             // console.log('Data refreshed at: ', now.toLocaleTimeString())'';
             trackEvent('enterprise_dashboard', data_refreshed',manual', null, {}
                 tab: activeTab, dateRange;
@@ -153,9 +172,13 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
         finally {}
             setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent])// Auto-refresh effect;
-    useEffect(() => {}
-        const interval = setInterval(refreshData, refreshInterval)return () => clearInterval(interval)}, [refreshInterval, refreshData])// Filtered data;
-    const filtered = securityAlerts'';
+    useEffect(() => {
+}
+
+const interval = setInterval(refreshData, refreshInterval;
+  return () => clearInterval(interval)}, [refreshInterval, refreshData])// Filtered data;
+
+const filtered = securityAlerts'';
         if (filterStatus !== 'all') {}
             filtered = filtered.filter(alert => alert.status === filterStatus)}
         if(searchQuery) {}
@@ -168,7 +191,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
         return filtered}, [userActivities, searchQuery])// Get status color;
-    const getStatusColor = (status) => {}
+
+const getStatusColor = (status) => {}
         switch (status) {}
 '';
 '';
@@ -188,10 +212,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             case 'maintenance':'''';
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30''';
             default:'''';
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
-    }
+                return 'text-gray-600 bg-gray-100 dark: text-gray-400 dark:bg-gray-900/30'}
+   ,
+}
     // Get severity color;
-    const getSeverityColor = (severity) => {}
+
+const getSeverityColor = (severity) => {}
         switch (severity) {}
 '';
             case 'critical': '';
@@ -203,7 +229,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
             case 'low':'';
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:'';
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}'''';
+                return 'text-gray-600 bg-gray-100 dark: text-gray-400 dark:bg-gray-900/30,
+}'''';
     }';''';
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''';
       {/* Header */}'''';
@@ -238,15 +265,23 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
       <div className='border-b border-gray-200 dark: border-gray-700'>'''';
         <nav className='flex space-x-8 px-6'>'';
           {['';
-            { id: 'overview', label: 'Overview', icon: BarChart3 }, '';
-            { id: 'performance', label: 'Performance', icon: TrendingUp },'';
-            { id: 'security', label: 'Security', icon: Shield }, '';
-            { id: 'users', label: 'Users', icon: Users },'';
-            { id: 'services', label: 'Services', icon: Server }, '';
-            { id: 'analytics', label: 'Analytics', icon: PieChart }'';
-        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
+            { id: 'overview', label: 'Overview', icon: BarChart3,
+}, '';
+            { id: 'performance', label: 'Performance', icon: TrendingUp,
+},'';
+            { id: 'security', label: 'Security', icon: Shield,
+}, '';
+            { id: 'users', label: 'Users', icon: Users,
+},'';
+            { id: 'services', label: 'Services', icon: Server,
+}, '';
+            { id: 'analytics', label: 'Analytics', icon: PieChart,
+}'';
+        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id,
+} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`';
-                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'''';
+                : 'border-transparent text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'},
+}>'''';
               <Icon className='w-4 h-4'/>;
               {label}
             </button>) ) }
@@ -276,7 +311,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                       <h3 className='font-medium text-gray-900 dark:text-white'>;
                         {metric.name}`;
                       </h3>``;
-                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>;
+                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
+
                         {metric.status}
                       </span>;
                     </div>'''';
@@ -352,7 +388,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                           <span className='font-medium text-gray-900 dark:text-white'>;
                             {alert.title}`;
                           </span>``;
-                          <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severity)}`}>;
+                          <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severity)}`}>
+
                             {alert.severity}
                           </span>'''';
                         </div>'''';
@@ -362,7 +399,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                         <div className='flex items-center gap-4 text-xs text-gray-500'>;
                           <span>{alert.timestamp.toLocaleTimeString()}</span>`;
                           <span>{alert.source}</span>``;
-                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}>;
+                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}>
+
                             {alert.status}
                           </span>;
                         </div>;
@@ -446,10 +484,12 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
 }} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-start justify-between mb-4'>''`;
                       <div className='flex items-center gap-3'>``;
-                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>;
+                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>
+
                           {alert.severity.toUpperCase()}`;
                         </span>``;
-                        <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>;
+                        <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>
+
                           {alert.status}'''';
                         </span>'''';
                         <span className='px-3 py-1 text-sm rounded-full bg-gray-100 dark: bg-gray-600 text-gray-700 dark:text-gray-300'>'';
@@ -471,11 +511,13 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>'''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Source:</span>'''';
-                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.source}</span>;
+                        <span className='ml-2 text-gray-600 dark: text-gray-400'>{alert.sourc,
+}</span>;
                       </div>'''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Affected:</span>'''';
-                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.affected.length} items</span>;
+                        <span className='ml-2 text-gray-600 dark: text-gray-400'>{alert.affected.lengt,
+} items</span>;
                       </div>'''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Time:</span>'''';
@@ -532,7 +574,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                         </div>'''';
                       </div>''`;
                       <div className='text-right'>``;
-                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.status)}`}>;
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.status)}`}>
+
                           {activity.status}'''';
                         </span>'''';
                         <div className='text-sm text-gray-500 mt-1'>;
@@ -543,13 +586,16 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                     '''';
                     <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400'>'''';
                       <div>'''';
-                        <span className='font-medium'>IP:</span> {activity.ipAddress}
+                        <span className='font-medium'>IP: </span> {activity.ipAddres,
+}
                       </div>'''';
                       <div>'''''';
-                        <span className='font-medium'>Browser:</span> {activity.userAgent.split('/')[0]}
+                        <span className='font-medium'>Browser: </span> {activity.userAgent.split('/')[0,
+}
                       </div>'''';
                       <div>'''';
-                        <span className='font-medium'>Time: </span> {activity.timestamp.toLocaleString()}
+                        <span className='font-medium'>Time: </span> {activity.timestamp.toLocaleString(,
+}
                       </div>;
                     </div>;
                   </motion.div>) ) }
@@ -586,7 +632,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                       <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>;
                         {service.name}`;
                       </h4>``;
-                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>;
+                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>
+
                         {service.status}
                       </span>;
                     </div>'''';
@@ -618,8 +665,10 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
                         </div>'''';
                         <div className='text-xs text-yellow-700 dark:text-yellow-300'>;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-                        </div>;
-                      </div>) }
+                        </div>
+    </div>
+  );
+}
                   </motion.div>) ) }
               </div>;
             </motion.div>)}'''';
@@ -666,6 +715,8 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
               </div>;
             </motion.div>) }
         </AnimatePresence>;
-      </div>;
-    </div>)}''`;
+      </div>
+    </div>
+  );
+}''`;
 ''`''`;

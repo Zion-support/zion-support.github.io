@@ -1,25 +1,40 @@
 
-;
+
+
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
-interface SidebarProps  {spec: ApiDocsSpec;
+
+interface SidebarProps {
+  spec: ApiDocsSpec;
   activeEndpointId?: string;
   onSelectEndpoint: (endpointId: string) => void;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
-  onChangeVisibility: (v: Visibility | 'all') => void;
-}export default function Sidebar() {return (<button;
+
+  onChangeVisibility: (v: Visibility | 'all') => void
+
+}
+
+export default function Sidebar({
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
+}: SidebarProps) {
+  return (
+            <button
               key={v}
               onClick={() => onChangeVersion(v)}
-              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}<nav className="space-y-3">;
-        {spec.sections.map((section) => (<div key={section.id}>;
-            <div className="text-sm font-medium mb-1">{section.title}</div>;
-            <ul className="space-y-1">;
-              {section.endpoints;
-                .filter((e) => e.versions.includes(selectedVersion)).filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter).map((e) => (<li key={e.id}>;
-            >;
-              {v}
+              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+
+            >
+
+              {,
+}
             </button>;
           ))}
         </div>;
@@ -55,10 +70,12 @@ interface SidebarProps  {spec: ApiDocsSpec;
                     >;
 <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>;
                         {e.method}
-                      </span>;
-                      <span className='font-mono'>{e.path}</span>;
-                    </button>;
-                  </li>;
+
+                      </span>
+                      <span className='font-mono'>{e.path}</span>
+                    </button>
+                  </li>
+
                 ))}
             </ul>;
           </div>;
@@ -67,7 +84,9 @@ interface SidebarProps  {spec: ApiDocsSpec;
   selected_version: string;
   onChangeVersion: (v: string) => void;
   visibility_filter: Visibility | 'all';
-  onChangeVisibility: (v: Visibility | 'all') => void;export default /**;
+  onChangeVisibility: (v: Visibility | 'all') => void;
+
+export default /**;
  * Sidebar - Function description;
  */;
 function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflow - auto border - r border - high - contrast - secondary p - 3 space - y-4 bg - high - contrast - secondary'>;
@@ -78,8 +97,8 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
           {spec.versions.map (v => (<button;
               key={v}
               on_click={() => onChangeVersion (v)}
-              className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}
-            >;
+              className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>
+
               {v}
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
         <div className="text - xs text - high-contrast-muted">Version</div>;
@@ -138,5 +157,10 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 }
 }
 }
-    </aside>;
-  )}
+
+}
+    </aside>
+  );
+
+}
+

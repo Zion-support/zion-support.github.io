@@ -5,7 +5,12 @@ import { Button  } from '@/components/ui/button';
 import {}
   Tooltip, TooltipContent, TooltipProvider, '';
   TooltipTrigger} from '@/components/ui/tooltip';
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
+
+const EmptyState = ({ title, subtitle, cta, href, hasSession    }) => {
+
+
+}
+ ;
   return()<div className='text-center py-16'>'''';
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>'''';
         <MessageSquare className='h-10 w-10 text-zion-purple' />'''';
@@ -23,7 +28,19 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>;
-      </TooltipProvider>;
-    </div>)}
+      </TooltipProvider>
+    </div>
+  );
+}
+
 export default EmptyState;
-export { EmptyState }export { EmptyState }export { EmptyState }export { EmptyState }export { EmptyState }
+
+export { EmptyState }
+
+export { EmptyState }
+
+export { EmptyState }
+
+export { EmptyState }
+
+export { EmptyState }

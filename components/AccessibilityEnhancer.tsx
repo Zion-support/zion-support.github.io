@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
       }
       if (liveRegion && liveRegion.parentNode) {liveRegion && liveRegion.parentNode.removeChild(liveRegion)}
@@ -6,7 +9,12 @@
   }, [])return null;
     } else {root.class_list.remove ('reduced - motion')}
   }
+<<<<<<< HEAD
     const newValue = !isHighContrast;
+=======
+
+const newValue = !isHighContrast;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}
@@ -35,12 +43,21 @@
       {/* Skip to main content link */}
       <a;
         href="#main-content";
+<<<<<<< HEAD
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
       >;
+=======
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         Skip to main content;
       </a>;
       {/* Screen reader only content */}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default AccessibilityEnhancer;</div>;
         </div>;
       </div>;
@@ -61,6 +78,7 @@ export default AccessibilityEnhancer;</div>;
       <div id="main-content">{children}</div>;
     </>;
   )}
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
 
@@ -72,8 +90,63 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
+=======
 
+export default AccessibilityEnhancer;
+
+export default AccessibilityEnhancer;
+ursor/automate-test-improve-and-merge-code-646c;
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  screenReader: boolean;
+
+}
+
+export default function AccessibilityEnhancer() {const [settings, setSettings] = useState<AccessibilitySettings>({highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false;
+    screenReader: false;
+    screenReader: false;
+  })useEffect(() => {
+// Check for reduced motion preference;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,
+}))// Check for high contrast preference;
+
+const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches,
+}))// Detect screen reader usage;
+
+const screenReaderDetected =;
+      'speechSynthesis' in window ||;
+      'speechRecognition' in window ||;
+      navigator.userAgent.includes('NVDA') ||;
+      navigator.userAgent.includes('JAWS') ||;
+      navigator.userAgent.includes('VoiceOver')setSettings(prev => ({ ...prev, screenReader: screenReaderDetected,
+}))// Apply initial settings;
+    applyAccessibilitySettings({...settings,reducedMotion: mediaQuery.matches,highContrast: highContrastQuery.matches,screenReader: screenReaderDetected;
+      screenReader: screenReaderDetected;
+      screenReader: screenReaderDetected;
+    })}, [])const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => ;
+  const root  = document.documentElement;// Apply high contrast;
+    if (newSettings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Apply large text;
+    if (newSettings.largeText) {root.classList.add('large-text')} else {root.classList.remove('large-text')}// Apply reduced motion;
+    if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Apply focus visible;
+    if (newSettings.focusVisible) {root.classList.add('focus-visible')} else {root.classList.remove('focus-visible')}// Apply screen reader optimizations;
+    if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')} else {root.classList.remove('screen-reader-optimized')}
+  }
+
+const toggleSetting = (setting: keyof AccessibilitySettings) => ;
+  const newSettings = {...settings,[setting]: !settings[setting];
+      [setting]: !settings[setting];
+      [setting]: !settings[setting];
+    }setSettings(newSettings)applyAccessibilitySettings(newSettings)// Save to localStorage;
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;
   useEffect(() => {
+<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
@@ -213,6 +286,13 @@ interface AccessibilitySettings  {highContrast: boolean;
   useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
     }
   }, [])return (<div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">;
+=======
+const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try ;
+  const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
+    }
+  }, [];
+  return (<div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <h3 className="font-bold text-lg mb-3">Accessibility Settings</h3>;
       <div className="space-y-3">;
         <label className="flex items-center space-x-2">;
@@ -252,6 +332,7 @@ interface AccessibilitySettings  {highContrast: boolean;
           <span>Enhanced Focus</span>;
         </label>;
         <div className="text-sm text-gray-600">;
+<<<<<<< HEAD
           Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
         </div>;
       </div>;
@@ -297,6 +378,56 @@ interface AccessibilitySettings  {highContrast: boolean;
       </a>;
       {/* Screen reader only content */}
 }
+=======
+          Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected,
+}
+        </div>;
+      </div>;
+    </div>;
+  )}}
+      if (liveRegion && liveRegion.parentNode) {liveRegion && liveRegion.parentNode.removeChild(liveRegion)}
+    }
+  }, [])return null;
+    } else {root.class_list.remove ('reduced - motion')}
+  }
+
+const newValue = !isHighContrast;
+    setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
+  return (<>;
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">;
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">Accessibility Options</h3>;
+        <div className="space-y-2">;
+          <button;
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-1 text-xs rounded ${isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+            }`}
+            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}>;
+            {isHighContrast ? 'Disable' : 'Enable'} High Contrast;
+          </button>;
+          <div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>;
+          <div className="flex gap-1">;
+            {['small', 'normal', 'large', 'extra-large'].map((size) => (<button;
+                key={size}
+                onClick={() => changeFontSize(size)}
+                className={`px-2 py-1 text-xs rounded ${fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+                }`}
+                aria-label={`Set font size to ${size}`}
+              >;
+                {size && size.charAt(0).toUpperCase()}
+              </button>;
+            ))}
+      {/* Skip to main content link */}
+      <a;
+        href="#main-content";
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+
+        Skip to main content;
+      </a>;
+      {/* Screen reader only content */}
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default AccessibilityEnhancer;</div>;
         </div>;
       </div>;
@@ -317,5 +448,11 @@ export default AccessibilityEnhancer;</div>;
       <div id="main-content">{children}</div>;
     </>;
   )}
+<<<<<<< HEAD
 export default AccessibilityEnhancer;
+=======
+
+export default AccessibilityEnhancer;
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default AccessibilityEnhancer;ursor/automate-test-improve-and-merge-code-646c;

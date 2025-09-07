@@ -17,6 +17,7 @@ import { Bookmark;
   Clock;
   DollarSign;
  } from 'lucide-react';
+
 interface BrowseItem  {id: string;
   title: string;
   subtitle: string;
@@ -25,9 +26,13 @@ interface BrowseItem  {id: string;
   badges: string[];
   price?: string;
   image?: string;
-  match?: number;timePosted?: string;interface BrowseCardsProps  {items: BrowseItem[];
+  match?: number;timePosted?: string;
+
+interface BrowseCardsProps  {items: BrowseItem[];
   type: 'jobs' | 'talents';
-  onViewDetails: (id: string) => void;export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {const [savedItems, setSavedItems]  = useState<string[]>([])const toggleSaved = (id: string) => {setSavedItems(prev =>;
+  onViewDetails: (id: string) => void;
+
+export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {const [savedItems, setSavedItems]  = useState<string[]>([])const toggleSaved = (id: string) => {setSavedItems(prev =>;
       prev && prev.includes(id) ? prev && prev.filter(itemId => itemId !== id) : [...prev, id];
     )}return (<div className='space-y-4 pb-24'>;
       {items && items.map(item => (<Card key={item && item.id} className='overflow-hidden'>;
@@ -69,13 +74,21 @@ interface BrowseItem  {id: string;
                     </Avatar>;
                   ) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
-                    </div>;interface BrowseItem  {id: string,title: string,subtitle: string,description: string,location?: string;
+                    </div>;
+
+interface BrowseItem  {id: string,title: string,subtitle: string,description: string,location?: string;
   badges: string[],price?: string;
   image?: string;
   match?: number;
   timePosted?: string;
-}interface BrowseCardsProps  {items: BrowseItem[],type: "jobs" | "talents",onViewDetails: (id: string) => void;
-}export function BrowseCards() {const [ savedItems, setSavedItems ] = useState<string[]>([]),const toggleSaved = (id: string) => {setSavedItems(prev =>;
+}
+
+interface BrowseCardsProps {
+  items: BrowseItem[],type: "jobs" | "talents",onViewDetails: (id: string) => void;
+
+}
+
+export function BrowseCards() {const [ savedItems, setSavedItems ] = useState<string[]>([]),const toggleSaved = (id: string) => {setSavedItems(prev =>;
       prev.includes(id)? prev.filter(itemId => itemId !== id): [...prev, id];
     )}return (<div className="space-y-4 pb-24">;
       {items.map((item) => (<Card key={item.id} className="overflow-hidden">;
@@ -143,8 +156,8 @@ interface BrowseItem  {id: string;
               <div className="mt-3 flex flex-wrap gap-1">;
                 {item.badges.map((badge, index) => (<Badge;
                     key={index}variant="outline";
-                    className="text-xs font-normal";
-                  >;<AvatarFallback>{item.title.charAt(0).toUpperCase()}
+                    className="text-xs font-normal">
+<AvatarFallback>{item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>;
                     </Avatar>;
                   ) : (<div className='h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center'>;
@@ -170,8 +183,8 @@ interface BrowseItem  {id: string;
                 {item.badges.map((badge, index) => (<Badge;
                     key={index}
                     variant='outline';
-                    className='text-xs font-normal';
-                  >;
+                    className='text-xs font-normal'>
+
                     {badge}
                   </Badge>;
                 ))}
@@ -250,8 +263,8 @@ interface BrowseItem  {id: string;
                 View Details <ChevronRight className='h-4 w-4' />              </Button>;
                 View Details <ChevronRight className="h-4 w-4" />;
                 onClick={() => onViewDetails(item && item.id)}
-                className="gap-1";
-              >;
+                className="gap-1">
+
                 View Details <ChevronRight className="h-4 w-4" />;
               </Button>;
             </div>;
@@ -265,22 +278,25 @@ interface BrowseItem  {id: string;
               <Button;
                 size='sm';
                 onClick={() => onViewDetails(item.id)}
-                className='gap-1';
-              >;
+                className='gap-1'>
+
                 View Details <ChevronRight className='h-4 w-4' />;
               </Button>;
             </div>;
           </CardContent>;
         </Card>;
   time_posted?: string;
+
 interface BrowseCardsProps  {items: BrowseItem[];
   type: 'jobs' | 'talents';
   onViewDetails: (id: string) => void;
+
 export /**;
  * BrowseCards - Function description;
  */;
 function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]>([])const toggle_saved = (id: string) =>: any {setSavedItems (prev =>;
-      prev.includes (id) ? prev.filter (item_id => item_id !== id) : [...prev, id])}
+      prev.includes (id) ? prev.filter (item_id = > item_id !== id) : [...prev, id])}
+ ;
   return (<div className='space - y-4 pb - 24'>;
       {items.map (item => (<Card key={item.id} className='overflow - hidden'>;
           <CardContent className='p - 0'>;
@@ -297,8 +313,10 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                       <AvatarFallback>{item.title.char_at (0).toUpperCase ()}
                       </AvatarFallback>;
                     </Avatar>) : (<div className='h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center'>;
-                      <span className='text - primary font - semibold'>JOB</span>;
-                    </div>)}
+                      <span className='text - primary font - semibold'>JOB</span>
+    </div>
+  );
+}
                   <div>;
                     <h3 className='font - medium'>{item.title}</h3>;
                     <p className='text - sm text - muted - foreground'>;
@@ -319,8 +337,10 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                     className='text - xs font - normal'                  >                      <AvatarImage src={item.image} alt={item.title} />;
                       <AvatarFallback>{item.title.char_at (0).toUpperCase ()}</AvatarFallback>;
                     </Avatar>) : (<div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;
-                      <span className="text - primary font - semibold">JOB</span>;
-                    </div>)}
+                      <span className="text - primary font - semibold">JOB</span>
+    </div>
+  );
+}
                   <div>;
                     <h3 className="font - medium">{item.title}</h3>;
                     <p className="text - sm text - muted - foreground">{item.subtitle}</p>;
@@ -345,31 +365,45 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
               <div className='mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground'>;
                 {item.location && (<div className='flex items - center gap - 1'>;
                     <MapPin className='h - 3 w - 3' />;
-                    <span>{item.location}</span>;
-                  </div>)}
+                    <span>{item.location}</span>
+    </div>
+  );
+}
                 {item.price && (<div className='flex items - center gap - 1'>;
                     <DollarSign className='h - 3 w - 3' />;
-                    <span>{item.price}</span>;
-                  </div>)}
+                    <span>{item.price}</span>
+    </div>
+  );
+}
                 {item.time_posted && (<div className='flex items - center gap - 1'>;
                     <Clock className='h - 3 w - 3' />;
-                    <span>{item.time_posted}</span>;
-                  </div>)}
+                    <span>{item.time_posted}</span>
+    </div>
+  );
+}
                 {item.match && (<div className='ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5'>                    {item.match}% match                {item.location && (<div className="flex items - center gap - 1">;
                     <MapPin className="h - 3 w - 3" />;
-                    <span>{item.location}</span>;
-                  </div>)}
+                    <span>{item.location}</span>
+    </div>
+  );
+}
                 {item.price && (<div className="flex items - center gap - 1">;
                     <DollarSign className="h - 3 w - 3" />;
-                    <span>{item.price}</span>;
-                  </div>)}
+                    <span>{item.price}</span>
+    </div>
+  );
+}
                 {item.time_posted && (<div className="flex items - center gap - 1">;
                     <Clock className="h - 3 w - 3" />;
-                    <span>{item.time_posted}</span>;
-                  </div>)}
+                    <span>{item.time_posted}</span>
+    </div>
+  );
+}
                 {item.match && (<div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;
-                    {item.match}% match;
-                  </div>)}
+                    {item.match}% match
+    </div>
+  );
+}
               </div>;
             </div>;
             <div className='border - t border - border p - 3 flex justify - end'>;
@@ -380,8 +414,8 @@ function BrowseCards() {const [saved_items, setSavedItems] = useState < string[]
                 View Details <ChevronRight className='h - 4 w - 4' />              </Button>;
                 View Details <ChevronRight className="h - 4 w - 4" />;
                 on_click={() => onViewDetails (item.id)}
-                className="gap - 1";
-              >;
+                className="gap - 1">
+
                 View Details <ChevronRight className="h - 4 w - 4" />;
               </Button>;
             </div>;

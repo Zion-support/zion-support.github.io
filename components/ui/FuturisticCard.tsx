@@ -1,6 +1,10 @@
 import React from 'react';
+
 type Props = {import React from './react';
-type Props = {title: string,description: string;export default /**;
+
+type Props = {title: string,description: string;
+
+export default /**;
  * FuturisticCard - Function description;
  */;
 function FuturisticCard() {return (<div className="futuristic-card">;

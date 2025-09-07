@@ -2,8 +2,13 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+=======
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 };
 
 export default function AboutPage() {

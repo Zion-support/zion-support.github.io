@@ -11,9 +11,12 @@ Object && Object.defineProperty(window, 'matchMedia', {writable: true,value: jes
 // Mock window.matchMedia;
 Object.defineProperty(window, "matchMedia", {writable: true,value: jest.fn().mockImplementation((query) => ({matches: false,media: query,onchange: null,addListener: jest && jest.fn(), // deprecated;
     removeListener: jest && jest.fn(), // deprecated;
-    addEventListener: jest && jest.fn(),removeEventListener: jest && jest.fn(),dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
-global && global.IntersectionObserver = class IntersectionObserver {global.IntersectionObserver = class IntersectionObserver {dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
-    dispatchEvent: jest && jest.fn()}))})// Mock IntersectionObserver;
+    addEventListener: jest && jest.fn(),removeEventListener: jest && jest.fn(),dispatchEvent: jest && jest.fn()}),
+})// Mock IntersectionObserver;
+global && global.IntersectionObserver = class IntersectionObserver {global.IntersectionObserver = class IntersectionObserver {dispatchEvent: jest && jest.fn()}),
+})// Mock IntersectionObserver;
+    dispatchEvent: jest && jest.fn()}),
+})// Mock IntersectionObserver;
   constructor() {}
   disconnect() {}
   observe() {}
@@ -33,12 +36,20 @@ global && global.ResizeObserver = class ResizeObserver {global.ResizeObserver = 
 }
 // Mock console methods to reduce noise in tests;
 // Global test setup;
-global.ResizeObserver = jest.fn().mockImplementation(() => ({observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn() }))// Mock IntersectionObserver;
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn() }))// Mock console methods;
-global.console = {...console, warn: jest.fn(), error: jest.fn() }const originalError = console && console.error;
+global.ResizeObserver = jest.fn().mockImplementation(() => ({observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(),
+}))// Mock IntersectionObserver;
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(),
+}))// Mock console methods;
+global.console = {...console, warn: jest.fn(), error: jest.fn(),
+}
+;
+  const originalError = console && console.error;
+
 const originalWarn  = console && console.warn;beforeAll(() => {console.error = (...args: any[]) => {if (typeof args[0] === "string" &&;
       args[0].includes("Warning: ReactDOM.render is no longer supported")if (typeof args[0] === "string" &&;
-      args[0].includes("Warning: ReactDOM.render is no longer supported")if (true) {}beforeAll(() => {console.error = (...args: any[]) => {beforeAll(() => {console.error = (...args: any[]) => {) {return;
+      args[0].includes("Warning: ReactDOM.render is no longer supported")if (true) ,
+}beforeAll(() => {console.error = (...args: any[]) => {beforeAll(() => {console.error = (...args: any[]) => {) ;
+  return;
     }originalError && originalError.call(console, ...args)}console.warn = (...args: any[]) => {if (typeof args[0] === "string" &&;
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))console && console.warn = (...args: any[]) => {if (typeof args[0] === 'string' &&;
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))// Test setup file for Jest;
@@ -46,7 +57,8 @@ import '@testing - library / jest - dom';
 // Mock window.match_media;
 Object.define_property (window, 'match_media', {writable: true,value: jest.fn ().mock_implementation (query => ({matches: false,media: query,onchange: null,add_listener: jest.fn (), // deprecated;
     remove_listener: jest.fn (), // deprecated;
-    addEventListener: jest.fn (),removeEventListener: jest.fn (),dispatch_event: jest.fn ()}))})// Mock IntersectionObserver;
+    addEventListener: jest.fn (),removeEventListener: jest.fn (),dispatch_event: jest.fn ()}),
+})// Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {constructor () {}
   disconnect () {}
   observe () {}
@@ -59,7 +71,9 @@ global.ResizeObserver = class ResizeObserver {constructor () {}
   unobserve () {}
 }
 // Mock console methods to reduce noise in tests;
+
 const original_error = console.error;
+
 const original_warn = console.warn;
 before_all (() => {console.error = (...args: any[]) => {// Check condition;
 if () {) {$2;

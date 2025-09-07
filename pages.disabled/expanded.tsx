@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
@@ -11,18 +12,12 @@ import MainLayout from '../../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../../data/services';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
-const ExpandedServicesPage: NextPage = () => {
-  const micro = getServicesByCategory('micro-saas');
-  const it = getServicesByCategory('it-services');
-  const ai = getServicesByCategory('ai-services');
 
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
 
+<<<<<<< HEAD
   return (
     <MainLayout
       title="Expanded Services Catalog - Zion Tech Group"
@@ -601,3 +596,5 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
     </MainLayout>;
   )}export default ExpandedServicesPage;
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

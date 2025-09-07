@@ -2,28 +2,64 @@ import React from 'react';
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { X,Home,Users,Briefcase,Phone,Mail,MapPin,Clock,Star,CheckCircle,ArrowRight,Building2,Rocket,Factory,Cpu,Network,Target,Code,Brain,Workflow,MessageCircle,ArrowUp,Sparkles,Truck,BookOpen,BarChart3,Leaf,Satellite,HelpCircle,Building,DollarSign,ShoppingCart,Heart,Eye,Database,Cloud,Server,Shield,Zap,Lock,} from 'lucide-react';
-interface SidebarProps  {isOpen: boolean;
+
+interface SidebarProps {
+  isOpen: boolean;
   onClose: () => void;
-}const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const quickLinks = [;
-    { name: "Home", href: "/", icon: Home },{ name: "Services", href: "/services", icon: Briefcase },{ name: "Solutions", href: "/solutions", icon: Target },{ name: "About", href: "/about", icon: Users },{ name: "Contact", href: "/contact", icon: Phone },];const serviceLinks = [;
-    { name: "AI Services", href: "/ai-services", icon: Brain },{ name: "IT Services", href: "/it-services", icon: Server },{ name: "Micro SaaS", href: "/micro-saas", icon: Zap },{ name: "Security", href: "/security", icon: Shield },{ name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },{ name: "Database Solutions", href: "/database-solutions", icon: Database },];const solutionLinks = [;
-    {name: "Enterprise Solutions",href: "/enterprise-solutions",icon: Building2,},{ name: "Startup Solutions", href: "/startup-solutions", icon: Rocket },{name: "Digital Transformation",href: "/solutions/digital-transformation",icon: Workflow,},{name: "Cloud Migration",href: "/solutions/cloud-migration",icon: Cloud,},{name: "AI Implementation",href: "/solutions/ai-implementation",icon: Brain,},{ name: "Cybersecurity", href: "/solutions/cybersecurity", icon: Shield },];const companyLinks = [;
-    { name: "About Us", href: "/about", icon: Users },{ name: "Our Team", href: "/team", icon: Users },{ name: "Careers", href: "/careers", icon: Briefcase },{ name: "Partners", href: "/partners", icon: Handshake },{ name: "News", href: "/news", icon: Newspaper },{ name: "Contact", href: "/contact", icon: Phone },];return (<>;
+
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
+
+
+const quickLinks = [
+  { name: "Home", href: "/", icon: Home,
+},{ name: "Services", href: "/services", icon: Briefcase,
+},{ name: "Solutions", href: "/solutions", icon: Target,
+},{ name: "About", href: "/about", icon: Users,
+},{ name: "Contact", href: "/contact", icon: Phone,
+},];
+
+const serviceLinks = [
+  { name: "AI Services", href: "/ai-services", icon: Brain,
+},{ name: "IT Services", href: "/it-services", icon: Server,
+},{ name: "Micro SaaS", href: "/micro-saas", icon: Zap,
+},{ name: "Security", href: "/security", icon: Shield,
+},{ name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud,
+},{ name: "Database Solutions", href: "/database-solutions", icon: Database,
+},];
+
+const solutionLinks = [
+  {name: "Enterprise Solutions",href: "/enterprise-solutions",icon: Building2,},{ name: "Startup Solutions", href: "/startup-solutions", icon: Rocket,
+},{name: "Digital Transformation",href: "/solutions/digital-transformation",icon: Workflow,},{name: "Cloud Migration",href: "/solutions/cloud-migration",icon: Cloud,},{name: "AI Implementation",href: "/solutions/ai-implementation",icon: Brain,},{ name: "Cybersecurity", href: "/solutions/cybersecurity", icon: Shield,
+},];
+
+const companyLinks = [
+  { name: "About Us", href: "/about", icon: Users,
+},{ name: "Our Team", href: "/team", icon: Users,
+},{ name: "Careers", href: "/careers", icon: Briefcase,
+},{ name: "Partners", href: "/partners", icon: Handshake,
+},{ name: "News", href: "/news", icon: Newspaper,
+},{ name: "Contact", href: "/contact", icon: Phone,
+},];return (<>;
       {/* Overlay */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0 ,
+}
           className="fixed inset-0 bg-black bg-opacity-50 z-40";
           onClick={onClose}
         />;
       )}{/* Sidebar */}
       <motion.div;
         initial={{ x: "-100%" }}
-        animate={{ x: isOpen ? 0 : "-100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
-      >;
+        animate={{ x: isOpen ? 0 : "-100%" ,
+}
+        transition={{ type: "spring", damping: 25, stiffness: 200 ,
+}
+        className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto">
+
         <div className="p-6">;
           {/* Header */}
           <div className="flex items-center justify-between mb-8">;
@@ -37,8 +73,8 @@ interface SidebarProps  {isOpen: boolean;
             </div>;
             <button;
               onClick={onClose}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200";
-            >;
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+
               <X className="h-6 w-6 text-gray-600" />;
             </button>;
           </div>;
@@ -152,4 +188,6 @@ interface SidebarProps  {isOpen: boolean;
         </div>;
       </motion.div>;
     </>;
-  )}export default Sidebar;
+  )}
+
+export default Sidebar;

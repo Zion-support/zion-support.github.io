@@ -2,38 +2,60 @@ import React, { useState } from 'react''';
 import { Link } from 'react-router-dom''';
 import { motion } from 'framer-motion''';
 import { enhancedServices2025  } from '../data/enhanced-services-2025';
+
 const EnhancedServicesShowcase = () => {}
 '';
-  const [selectedCategory, setSelectedCategory] = useState('all')'';
-  const [searchTerm, setSearchTerm] = useState('')'';
-  const categories = ['';
-    { id: 'all', name: 'All Services', icon: '🌟' }, '';
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'';
-    { id: 'it-services', name: 'IT Services', icon: '🖥️' }, '';
-    { id: 'ai-services', name: 'AI Services', icon: '🤖' },'';
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
+
+const [selectedCategory, setSelectedCategory] = useState('all')'';
+
+const [searchTerm, setSearchTerm] = useState('')'';
+
+const categories = ['';
+    { id: 'all', name: 'All Services', icon: '🌟',
+}, '';
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻',
+},'';
+    { id: 'it-services', name: 'IT Services', icon: '🖥️',
+}, '';
+    { id: 'ai-services', name: 'AI Services', icon: '🤖',
+},'';
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀',
+}
   ];
-  const filteredServices = enhancedServices2025.filter(service => {}
-    const matchesSearch =;
+
+const filteredServices = enhancedServices2025.filter(service => {}
+;
+  const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const containerVariants = {}
-    hidden: { opacity: 0 }, visible: {}
-      opacity: 1, transition: {}
-        staggerChildren: 0.1, delayChildren: 0.2}}}
+    hidden: { opacity: 0,
+}, visible:  ,
+}
+      opacity: 1, transition:  ,
+}
+        staggerChildren: 0.1, delayChildren: 0.2},
+}
+;
   const itemVariants = {}
-    hidden: { opacity: 0, y: 20 }, visible: {}
-      opacity: 1, y: 0, transition: { duration: 0.5 }}}
+    hidden: { opacity: 0, y: 20,
+}, visible:  ,
+}
+      opacity: 1, y: 0, transition: { duration: 0.5 },
+}
+ ;
   return()<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>'''';
       {/* Hero Section */}'''';
       <section className='py-20 px-4 sm: px-6 lg:px-8'>'''';
         <div className='max-w-7xl mx-auto text-center'>'''';
           <motion.h1'''';
             className='text-4xl md:text-6xl font-bold mb-6''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 ,
+}
           >'''';
             Comprehensive'''';
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'';
@@ -43,18 +65,24 @@ const EnhancedServicesShowcase = () => {}
           </motion.h1>'''';
           <motion.p'''';
             className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.2 ,
+}
           >;
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, cutting-edge AI services, and emerging;
             technology solutions designed to transform your business.</motion.p>;
           {/* Contact Information */}'''';
           <motion.div'''';
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}'''';
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.4 ,
+}'''';
           >'''';
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>'''';
               <div className='text-center'>'''';
@@ -74,9 +102,12 @@ const EnhancedServicesShowcase = () => {}
           {/* Search and Filter */}'''';
           <motion.div'''';
             className='flex flex-col md:flex-row gap-4 justify-center items-center mb-12''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.6 ,
+}
           >'''';
             <input'''';
               type='text''''';
@@ -113,7 +144,8 @@ const EnhancedServicesShowcase = () => {}
             variants={containerVariants}'''';
             initial='hidden''''';
             whileInView='visible''';
-            viewport={{ once: true }}
+            viewport={{ once: true ,
+}
           >;
             {filteredServices.map((service, index) => (<motion.div;
                 key={service.id}'''';
@@ -122,9 +154,10 @@ const EnhancedServicesShowcase = () => {}
                 {/* Service Header */}'''';
                 <div className='text-center mb-6'>`;
                   <div``;
-                    className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >;
-                    {service.icon}'''';
+                    className={`text-6xl mb-4 group-hover: scale-110 transition-transform duration-300`}>
+
+                    {service.ico,
+}'''';
                   </div>'''';
                   <h3 className='text-xl font-semibold text-white mb-2'>;
                     {service.name}'''';
@@ -145,9 +178,12 @@ const EnhancedServicesShowcase = () => {}
                     Pricing'''';
                   </h4>'''';
                   <div className='space-y-1 text-xs text-gray-300'>;
-                    <div>Monthly: {service.pricing.monthly}</div>;
-                    <div>Yearly: {service.pricing.yearly}</div>;
-                    <div>Setup: {service.pricing.setup}</div>;
+                    <div>Monthly: {service.pricing.monthl,
+}</div>;
+                    <div>Yearly: {service.pricing.yearl,
+}</div>;
+                    <div>Setup: {service.pricing.setu,
+}</div>;
                   </div>;
                 </div>;
 '''';
@@ -190,11 +226,13 @@ const EnhancedServicesShowcase = () => {}
                   <div className='text-xs text-gray-300'>'''''';
                     <div className='mb-1'>'''''';
                       <span className='text-green-400 font-medium'>ROI: </span>{' '}
-                      {service.roi}
+                      {service.ro,
+}
                     </div>'''';
                     <div>'''''';
-                      <span className='text-blue-400 font-medium'>Setup:</span>{' '}
-                      {service.setupTime}
+                      <span className='text-blue-400 font-medium'>Setup: </span>{' '}
+                      {service.setupTim,
+}
                     </div>;
                   </div>;
                 </div>;
@@ -228,7 +266,8 @@ const EnhancedServicesShowcase = () => {}
             <motion.div'''';
               className='text-center py-12''';
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}'''';
+              animate={{ opacity: 1 ,
+}'''';
             >'''';
               <p className='text-gray-400 text-lg'>;
                 No services found matching your criteria.</p>;
@@ -251,17 +290,22 @@ const EnhancedServicesShowcase = () => {}
         <div className='max-w-4xl mx-auto text-center'>'''';
           <motion.h2'''';
             className='text-3xl md: text-4xl font-bold text-white mb-6''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 ,
+}
           >;
             Ready to Transform Your Business?;
           </motion.h2>'''';
           <motion.p'''';
             className='text-xl text-gray-300 mb-8''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.2 ,
+}
           >'';
             Let&apos;s discuss how our innovative services can help drive your'';
             success and competitive advantage;
@@ -269,9 +313,12 @@ const EnhancedServicesShowcase = () => {}
 '''';
           <motion.div'''';
             className='flex flex-col sm: flex-row gap-4 justify-center mb-8''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.4 ,
+}
           >'''';
             <Link'''';
               to='/contact''''';
@@ -287,9 +334,12 @@ const EnhancedServicesShowcase = () => {}
 '''';
           <motion.div'''';
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto''';
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}'''';
+            initial={{ opacity: 0, y: 20 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
+            transition={{ duration: 0.6, delay: 0.6 ,
+}'''';
           >'''';
             <h3 className='text-lg font-semibold text-white mb-4'>;
               Why Choose Zion Tech Group?'''';
@@ -317,13 +367,16 @@ const EnhancedServicesShowcase = () => {}
           <motion.div'''';
             className='mt-8 text-sm text-gray-400''';
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            whileInView={{ opacity: 1 ,
+}
+            transition={{ duration: 0.6, delay: 0.8 ,
+}
           >;
             <p>Email: kleber@ziontechgroup.com</p>;
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
             <p>'';
-              Website: {' '}'''';
+              Website: {' ,
+}'''';
               <a'''';
                 href='https://ziontechgroup.com''''';
                 className='text-blue-400 hover:text-blue-300 '>;
@@ -332,7 +385,19 @@ const EnhancedServicesShowcase = () => {}
             </p>;
           </motion.div>;
         </div>;
-      </section>;
-    </div>)}
+      </section>
+    </div>
+  );
+}
+
 export default EnhancedServicesShowcase;
-export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }
+
+export { EnhancedServicesShowcase }

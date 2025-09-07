@@ -16,12 +16,18 @@ import { Dialog;
  } from '@/components/ui/dialog';
 Dialog,DialogContent,DialogHeader,DialogTitle,import { ShieldAlert  } from 'lucide-react';
   DialogDescription} from "@/components/ui/dialog";
+
 interface RaiseDisputeButtonProps  {projectId: string;
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
-export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`)}}export function RaiseDisputeButton({projectId;
+
+export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter();
+  const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`);
+}
+
+export function RaiseDisputeButton({projectId;
   milestoneId;
   variant;return (<>;
       <Button;
@@ -74,8 +80,15 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
         </DialogContent>;
       </Dialog>;
     </>)}<DisputeForm;
-  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from "@/components/ui/dialog",interface RaiseDisputeButtonProps  {projectId: string,milestoneId?: string,variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",size?: "default" | "sm" | "lg" | "icon",className?: string;
-}export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeId}`)}return (<>;
+  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from "@/components/ui/dialog",interface RaiseDisputeButtonProps {
+  projectId: string,milestoneId?: string,variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",size?: "default" | "sm" | "lg" | "icon",className?: string;
+
+}
+
+export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter();
+  const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeI,
+}`);
+  return (<>;
       <Button;
         variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
       >;

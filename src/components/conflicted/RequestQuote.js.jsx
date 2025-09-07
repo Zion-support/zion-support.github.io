@@ -1,11 +1,44 @@
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')';''';import { useState } from 'react''';
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium,
+});
+  const [submissionStatus, setSubmissionStatus] = useState('idle');
+  const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications,
+}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications,
+}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics,
+}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation,
+}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting,
+}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design,
+}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions,
+}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines,
+}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup,
+}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization,
+}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance,
+}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs,
+}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications,
+}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications,
+}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions,
+}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects,
+}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs,
+}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required',
+}, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed,
+}, { value: '1-month', label: '1 Month', description: 'Standard project timeline,
+}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline,
+}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project,
+}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed,
+}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400,
+}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400,
+}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400,
+}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400,
+}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) }
+;
+  const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')';''';import { useState } from 'react''';
 import { motion  } from 'framer-motion';
 import {}
   Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code,'';
   Server, '';
   Wifi,'''';
   Briefcase} from 'lucide-react';
-  const [formData, setFormData] = useState({}
+
+const [formData, setFormData] = useState({}
 '';
 '';
 '''';
@@ -18,8 +51,11 @@ import {}
     budget: '', '''';
     timeline: '','''';
     description: '', '''';
-    urgency: 'medium'})';';
-  const [submissionStatus, setSubmissionStatus] = useState('idle')const projectTypes = [];
+    urgency: 'medium,
+})';';
+
+const [submissionStatus, setSubmissionStatus] = useState('idle');
+  const projectTypes = [];
     {}
 '';
 '';
@@ -27,21 +63,24 @@ import {}
       value: 'web-development', '''';
       label: 'Web Development','';
       icon: Globe, '''';
-      description: 'Custom websites and web applications'}, {}
+      description: 'Custom websites and web applications,
+}, {}
 '';
 '';
 '''';
       value: 'mobile-app', '''';
       label: 'Mobile App Development','';
       icon: Smartphone, '''';
-      description: 'iOS and Android applications'}, {}
+      description: 'iOS and Android applications,
+}, {}
 '';
 '';
 '''';
       value: 'ai-ml', '''';
       label: 'AI & Machine Learning','';
       icon: Brain, '''';
-      description: 'Intelligent automation and analytics'}, {}
+      description: 'Intelligent automation and analytics,
+}, {}
 '';
 '';
 '''';
@@ -55,123 +94,145 @@ import {}
       value: 'cybersecurity', '''';
       label: 'Cybersecurity','';
       icon: Shield, '''';
-      description: 'Security audits and implementation'}, {}
+      description: 'Security audits and implementation,
+}, {}
 '';
 '';
 '''';
       value: 'data-analytics', '''';
       label: 'Data Analytics','';
       icon: BarChart3, '''';
-      description: 'Business intelligence and reporting'}, {}
+      description: 'Business intelligence and reporting,
+}, {}
 '';
 '';
 '''';
       value: 'ui-ux-design', '''';
       label: 'UI/UX Design','';
       icon: Palette, '''';
-      description: 'User interface and experience design'}, {}
+      description: 'User interface and experience design,
+}, {}
 '';
 '';
 '''';
       value: 'software-development', '''';
       label: 'Custom Software','';
       icon: Code, '''';
-      description: 'Enterprise software solutions'}, {}
+      description: 'Enterprise software solutions,
+}, {}
 '';
 '';
 '''';
       value: 'devops', '''';
       label: 'DevOps & CI/CD','';
       icon: Server, '''';
-      description: 'Automation and deployment pipelines'}, {}
+      description: 'Automation and deployment pipelines,
+}, {}
 '';
 '';
 '''';
       value: 'network-infrastructure', '''';
       label: 'Network Infrastructure','';
       icon: Wifi, '''';
-      description: 'Network design and setup'}, {}
+      description: 'Network design and setup,
+}, {}
 '';
 '';
 '''';
       value: 'database-design', '''';
       label: 'Database Design','';
       icon: Database, '''';
-      description: 'Database architecture and optimization'}, {}
+      description: 'Database architecture and optimization,
+}, {}
 '';
       value: 'consulting', '';
       label: 'IT Consulting', icon: Briefcase, '';
-      description: 'Strategic technology guidance'}
+      description: 'Strategic technology guidance,
+}
   ];
-  const budgetRanges = [];
+
+const budgetRanges = [];
     {}
 '';
 '';
 '''';
       value: 'under-10k', '''';
       label: 'Under $10,000', '''';
-      description: 'Small projects and MVPs'}, {}
+      description: 'Small projects and MVPs,
+}, {}
 '';
 '';
 '''';
       value: '10k-25k', '''';
       label: '$10,000 - $25, 000','''';
-      description: 'Medium-sized applications'}, {}
+      description: 'Medium-sized applications,
+}, {}
 '';
 '';
 '''';
       value: '25k-50k','''';
       label: '$25, 000 - $50,000', '''';
-      description: 'Complex applications'}, {}
+      description: 'Complex applications,
+}, {}
 '';
 '';
 '''';
       value: '50k-100k', '''';
       label: '$50,000 - $100, 000','''';
-      description: 'Enterprise solutions'}, {}
+      description: 'Enterprise solutions,
+}, {}
 '';
 '';
 '''';
       value: '100k-plus','''';
       label: '$100, 000+','''';
-      description: 'Large-scale projects'}, {}
+      description: 'Large-scale projects,
+}, {}
 '';
       value: 'custom','';
       label: 'Custom Pricing', '';
       description: 'Let&apos;s discuss your needs'}'';
   ]'';
-  const timelineOptions = ['';
-    { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, {}
+
+const timelineOptions = ['';
+    { value: 'asap', label: 'ASAP', description: 'Immediate start required',
+}, {}
 '';
 '';
 '''';
       value: '1-2-weeks','''';
       label: '1-2 Weeks', '''';
-      description: 'Quick turnaround needed'}, {}
+      description: 'Quick turnaround needed,
+}, {}
 '';
 '';
 '''';
       value: '1-month', '''';
       label: '1 Month','''';
-      description: 'Standard project timeline'}, {}
+      description: 'Standard project timeline,
+}, {}
 '';
 '';
 '''';
       value: '2-3-months','''';
       label: '2-3 Months', '''';
-      description: 'Complex project timeline'}, {}
+      description: 'Complex project timeline,
+}, {}
 '';
 '';
 '''';
       value: '3-plus-months', '''';
       label: '3+ Months','''';
-      description: 'Long-term project'}, {}
+      description: 'Long-term project,
+}, {}
 '';
       value: 'flexible','';
       label: 'Flexible', '';
-      description: 'Timeline can be discussed'}
+      description: 'Timeline can be discussed,
+}
   ];
-  const urgencyLevels = [];
+
+const urgencyLevels = [];
     {}
 '';
 '';
@@ -179,31 +240,38 @@ import {}
       value: 'low', '''';
       label: 'Low','''';
       description: 'No immediate deadline', '''';
-      color: 'text-green-400'}, {}
+      color: 'text-green-400,
+}, {}
 '';
 '';
 '''';
       value: 'medium', '''';
       label: 'Medium','''';
       description: 'Standard project timeline', '''';
-      color: 'text-yellow-400'}, {}
+      color: 'text-yellow-400,
+}, {}
 '';
 '';
 '''';
       value: 'high', '''';
       label: 'High','''';
       description: 'Urgent delivery needed', '''';
-      color: 'text-orange-400'}, {}
+      color: 'text-orange-400,
+}, {}
 '';
       value: 'critical', '';
       label: 'Critical','';
       description: 'Emergency situation', '';
-      color: 'text-red-400'}
+      color: 'text-red-400,
+}
   ];
-  const handleInputChange = e => {}
-    const { name, value } = e.target;
-    setFormData(prev => ({}
+
+const handleInputChange = e => {}
+;
+  const { name, value } = e.target;
+    setFormData(prev = > ({}
       ...prev, [name]: value}))}
+;
   const handleSubmit = async e => {}
     e.preventDefault()'';
     setSubmissionStatus('submitting')// Simulate API call;
@@ -226,9 +294,11 @@ import {}
           budget: '', '''';
           timeline: '','''';
           description: '', '''';
-          urgency: 'medium'})';';
+          urgency: 'medium,
+})';';
         setSubmissionStatus('idle')}, 3000)}, 2000)}
-  const isFormValid =;
+
+const isFormValid =;
     formData.firstName &&;
     formData.lastName &&;
     formData.email &&;
@@ -239,9 +309,11 @@ import {}
       <section className='pt-32 pb-20 px-6'>'''';
         <div className='max-w-7xl mx-auto text-center'>;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 30 ,
+}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}'''';
+            transition={{ duration: 0.8 ,
+}'''';
           >'''';
             <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8'>'''';
               <Calculator className='w-10 h-10 text-white' />'''';
@@ -257,27 +329,36 @@ import {}
             {/* Benefits */}'''';
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}'''';
-                transition={{ duration: 0.6, delay: 0.1 }}'''';
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}'''';
+                transition={{ duration: 0.6, delay: 0.1 ,
+}'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <Clock className='w-5 h-5 text-cyan-400' />;
                 <span>24-Hour Response</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}'''';
-                transition={{ duration: 0.6, delay: 0.2 }}'''';
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}'''';
+                transition={{ duration: 0.6, delay: 0.2 ,
+}'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <CheckCircle className='w-5 h-5 text-green-400' />;
                 <span>Free Consultation</span>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}'''';
-                transition={{ duration: 0.6, delay: 0.3 }}'''';
+                initial={{ opacity: 0, y: 20 ,
+}
+                animate={{ opacity: 1, y: 0 ,
+}'''';
+                transition={{ duration: 0.6, delay: 0.3 ,
+}'''';
                 className='flex items-center justify-center space-x-3 text-white/80''''';
               >'''';
                 <Calculator className='w-5 h-5 text-purple-400' />;
@@ -295,10 +376,13 @@ import {}
             {/* Form */}'''';
             <div className='lg:col-span-2'>;
               <motion.div;
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -30 ,
+}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}'''';
-                transition={{ duration: 0.8 }}'''';
+                viewport={{ once: true ,
+}'''';
+                transition={{ duration: 0.8 ,
+}'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20''''';
               >'''';
                 <h2 className='text-3xl font-bold text-white mb-8'>;
@@ -483,7 +567,8 @@ import {}
                             className='sr-only''''';
                           />''`;
                           <div className='text-center w-full'>``;
-                            <div className={`font-medium ${level.color}`}>;
+                            <div className={`font-medium ${level.color}`}>
+
                               {level.label}'''';
                             </div>'''';
                             <div className='text-white/60 text-xs'>;
@@ -539,8 +624,10 @@ import {}
                   </button>;
                   {/* Status Messages */}'';
                   {submissionStatus === 'success' && (<motion.div;
-                      initial={{ opacity: 0, y: 10 }}'''';
-                      animate={{ opacity: 1, y: 0 }}'''';
+                      initial={{ opacity: 0, y: 10 ,
+}'''';
+                      animate={{ opacity: 1, y: 0 ,
+}'''';
                       className='flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg''''';
                     >'''';
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3' />'''';
@@ -551,8 +638,10 @@ import {}
                   )}
 '';
                   {submissionStatus === 'error' && (<motion.div;
-                      initial={{ opacity: 0, y: 10 }}'''';
-                      animate={{ opacity: 1, y: 0 }}'''';
+                      initial={{ opacity: 0, y: 10 ,
+}'''';
+                      animate={{ opacity: 1, y: 0 ,
+}'''';
                       className='flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg''''';
                     >'''';
                       <AlertCircle className='w-5 h-5 text-red-400 mr-3' />'''';
@@ -569,10 +658,13 @@ import {}
             <div className='space-y-8'>;
               {/* Contact Information */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 ,
+}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}'''';
-                transition={{ duration: 0.8 }}'''';
+                viewport={{ once: true ,
+}'''';
+                transition={{ duration: 0.8 ,
+}'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
               >'''';
                 <h3 className='text-xl font-bold text-white mb-4'>;
@@ -601,10 +693,13 @@ import {}
               </motion.div>;
               {/* Why Choose Us */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 ,
+}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}'''';
-                transition={{ duration: 0.8, delay: 0.2 }}'''';
+                viewport={{ once: true ,
+}'''';
+                transition={{ duration: 0.8, delay: 0.2 ,
+}'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
               >'''';
                 <h3 className='text-xl font-bold text-white mb-4'>;
@@ -657,10 +752,13 @@ import {}
               </motion.div>;
               {/* Process */}
               <motion.div;
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 30 ,
+}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}'''';
-                transition={{ duration: 0.8, delay: 0.4 }}'''';
+                viewport={{ once: true ,
+}'''';
+                transition={{ duration: 0.8, delay: 0.4 ,
+}'''';
                 className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''';
               >'''';
                 <h3 className='text-xl font-bold text-white mb-4'>;
@@ -722,5 +820,17 @@ import {}
             </div>;
           </div>;
         </div>;
-      </section>;
-    </div>)}export { RequestQuote }export { RequestQuote }export { RequestQuote }export { RequestQuote }export { RequestQuote }
+      </section>
+    </div>
+  );
+}
+
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }

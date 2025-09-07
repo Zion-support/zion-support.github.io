@@ -1,20 +1,35 @@
 
 import { useJobApplications } from "@/hooks/useJobApplications",import { useResume } from "@/hooks/useResume",import { useAuth } from "@/hooks/useAuth",import { Button } from "@/components/ui/button",import { Textarea } from "@/components/ui/textarea",import { Label } from "@/components/ui/label",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { Alert, AlertDescription } from "@/components/ui/alert",import { AlertCircle, FileText, Loader2  } from 'lucide-react';
-import { formatDistanceToNow } from "date-fns",import { Job } from "@/types/jobs",import { toast } from "sonner",interface ApplyToJobFormProps  {job: Job;
+import { formatDistanceToNow } from "date-fns",import { Job } from "@/types/jobs",import { toast } from "sonner",interface ApplyToJobFormProps {
+  job: Job;
   onSuccess?: () => void;
+
 }
-export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading } = useResume()const router = useRouter()const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`)const [selectedResumeId, setSelectedResumeId] = useState<string>("")const [resumeFile, setResumeFile] = useState<File | null>(null)const [isSubmitting, setIsSubmitting] = useState(false)const [error, setError] = useState<string | null>(null)const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()if (!user) {toast.error("You must be logged in to apply")router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)return;
+
+export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading,
+} = useResume()const router = useRouter()const [coverLetter, setCoverLetter] =;
+  useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("")const [resumeFile, setResumeFile] = useState<File | null>(null)const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null;
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()if (!user) {toast.error("You must be logged in to apply")router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`,
+}`;
+  return;
     }if (!coverLetter.trim()) {setError("Please provide a cover letter")return;
     }setIsSubmitting(true)setError(null)try {const success = await applyToJob(job.id;
         coverLetter;
         selectedResumeId || undefined;
         resumeFile || undefined;
-      )if (success) {toast.success("Your application has been submitted!")const { user } = useAuth(),const { applyToJob } = useJobApplications(),const { resumes, isLoading: isResumesLoading } = useResume(),const router = useRouter(),const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),const [selectedResumeId, setSelectedResumeId] = useState<string>(""),const [resumeFile, setResumeFile] = useState<File | null>(null),const [isSubmitting, setIsSubmitting] = useState(false),const [error, setError] = useState<string | null>(null),const handleSubmit = async (e: React.FormEvent) => {e.preventDefault(),if (!user) {toast.error("You must be logged in to apply"),router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),return;
+      )if (success) {toast.success("Your application has been submitted!")const { user } = useAuth(),const { applyToJob } = useJobApplications(),const { resumes, isLoading: isResumesLoading,
+} = useResume(),const router = useRouter(),const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),const [selectedResumeId, setSelectedResumeId] = useState<string>(""),const [resumeFile, setResumeFile] = useState<File | null>(null),const [isSubmitting, setIsSubmitting] = useState(false),const [error, setError] =;
+  useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault(),if (!user) {toast.error("You must be logged in to apply"),router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
+  return;
     }if (!coverLetter.trim()) {setError("Please provide a cover letter"),return;
     }setIsSubmitting(true),setError(null),try {const success = await applyToJob(job.id,coverLetter,selectedResumeId || undefined,resumeFile || undefined;
       ),if (success) {toast.success("Your application has been submitted!"),if (onSuccess) {onSuccess()}
       }
-    } catch (err: any) {setError(err.message |"Failed to submit application")toast.error("Failed to submit application")import { use_router  } from 'next / router';
+    } catch (err: any) {setError(err.message |"Failed to submit application")toast.error("Failed to submit application")import { use_router ,
+} from 'next / router';
 import { useJobApplications   } from '@/hooks / useJobApplications';
 import { use_resume   } from '@/hooks / use_resume';
 import { use_auth   } from '@/hooks / use_auth';
@@ -26,15 +41,23 @@ import { Alert, AlertDescription   } from '@/components / ui / alert';
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow   } from './date - fns';
 import { Job   } from '@/types / jobs';
 import { toast   } from './sonner';
-interface ApplyToJobFormProps  {job: Job,on_success?: () => void;
+
+interface ApplyToJobFormProps {
+  job: Job,on_success?: () => void;
+
 }
+
 export /**;
  * ApplyToJobForm - Function description;
  */;
-function ApplyToJobForm() {const { user } = use_auth ()const { applyToJob } = useJobApplications ()const { resumes, is_loading: isResumesLoading } = use_resume (),const router = use_router ()const [cover_letter, setCoverLetter] = useState (`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`)const [selectedResumeId, setSelectedResumeId] = useState < string>("")const [resume_file, setResumeFile] = useState < File | null>(null)const [is_submitting, setIsSubmitting] = useState (false)const [error, set_error] = useState < string | null>(null)const handle_submit = async (e: React.FormEvent) => {e.prevent_default ()// Check condition;
+function ApplyToJobForm() {const { user } = use_auth ()const { applyToJob } = useJobApplications ()const { resumes, is_loading: isResumesLoading,
+} = use_resume (),const router = use_router ()const [cover_letter, setCoverLetter] = useState (`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`)const [selectedResumeId, setSelectedResumeId] = useState < string>("")const [resume_file, setResumeFile] = useState < File | null>(null)const [is_submitting, setIsSubmitting] = useState (false)const [error, set_error] =;
+  useState < string | null>(null;
+  const handle_submit = async (e: React.FormEvent) => {e.prevent_default ()// Check condition;
 if ( {) {$2;
 }
-      toast.error ("You must be logged in to apply"),router.push (`/login?return_to=${encodeURIComponent (`/jobs/${job.id}`)}`)return;
+      toast.error ("You must be logged in to apply"),router.push (`/login?return_to = ${encodeURIComponent (`/jobs/${job.id}`)}`;
+  return;
     }
     if () {) {$2;
 }
@@ -64,10 +87,15 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { formatDistanceToNow  } from 'date-fns';
 import { Job  } from '@/types/jobs';
 import { toast  } from 'sonner';
-interface ApplyToJobFormProps  {job: Job;
+
+interface ApplyToJobFormProps {
+  job: Job;
   onSuccess?: () => void;
+
 }
-export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading } = useResume()const router  = null;return ({error && (<Alert variant="destructive">;
+
+export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading,
+} = useResume()const router  = null;return ({error && (<Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
@@ -77,8 +105,19 @@ export function ApplyToJobForm() {const { user } = useAuth()const { applyToJob }
 import React from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow  } from 'date-fns';
-interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
-}export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading } = useResume(),const router  = useRouter()const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`)const [selectedResumeId, setSelectedResumeId] = useState<string>("")const [resumeFile, setResumeFile] = useState<File | null>(null)const [isSubmitting, setIsSubmitting] = useState(false)const [error, setError]  = useState<string | null>(null)const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!user) {toast && toast.error("You must be logged in to apply"),router && router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job && job.id}`)}`)return;
+
+interface ApplyToJobFormProps {
+  job: Job,onSuccess?: () => void;
+
+}
+
+export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {const { user } = useAuth()const { applyToJob } = useJobApplications()const { resumes, isLoading: isResumesLoading,
+} = useResume(),const router = useRouter()const [coverLetter, setCoverLetter] =;
+  useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("")const [resumeFile, setResumeFile] = useState<File | null>(null)const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError]  = useState<string | null>(null;
+  const handleSubmit = async (e: React && React.FormEvent) => {e && e.preventDefault()if (!user) {toast && toast.error("You must be logged in to apply"),router && router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job && job.id}`)}`;
+  return;
     }if (!coverLetter && coverLetter.trim()) {setError("Please provide a cover letter")return;
     }setIsSubmitting(true)setError(null)try {const success = await applyToJob(job && job.id;
         coverLetter;
@@ -89,9 +128,11 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
     } catch (err: any) {setError(err && err.message || "Failed to submit application"),toast && toast.error("Failed to submit application")} finally {setIsSubmitting(false)}
   }return (<form onSubmit={handleSubmit} className="space-y-6">;
       <div>;
-        <h3 className="text-lg font-medium mb-1">Apply to: {job && job.title}</h3>;
+        <h3 className="text-lg font-medium mb-1">Apply to: {job && job.titl,
+}</h3>;
         <p className="text-sm text-muted-foreground mb-4">;
-          Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}
+          Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true },
+}
         </p>;
       </div>;{error && (<Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
@@ -122,18 +163,29 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
                 {resumes.map((resume) => {if (resume.id) {return (<SelectItem key={resume.id} value={resume.id}>;
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>;
-                    )import { useState } from "react",import { useRouter } from 'next/router',interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
-}export function ApplyToJobForm() {const { user } = useAuth(),const { applyToJob } = useJobApplications(),const { resumes, isLoading: isResumesLoading } = useResume(),const router = useRouter(),const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),const [selectedResumeId, setSelectedResumeId] = useState<string>(""),const [resumeFile, setResumeFile] = useState<File | null>(null),const [isSubmitting, setIsSubmitting] = useState(false),const [error, setError] = useState<string | null>(null),const handleSubmit = async (e: React.FormEvent) => {e.preventDefault(),if (!user) {toast.error("You must be logged in to apply"),router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),return;
+                    )import { useState } from "react",import { useRouter } from 'next/router',interface ApplyToJobFormProps {
+  job: Job,onSuccess?: () => void;
+
+}
+
+export function ApplyToJobForm() {const { user } = useAuth(),const { applyToJob } = useJobApplications(),const { resumes, isLoading: isResumesLoading,
+} = useResume(),const router = useRouter(),const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),const [selectedResumeId, setSelectedResumeId] = useState<string>(""),const [resumeFile, setResumeFile] = useState<File | null>(null),const [isSubmitting, setIsSubmitting] = useState(false),const [error, setError] =;
+  useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault(),if (!user) {toast.error("You must be logged in to apply"),router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
+  return;
     }if (!coverLetter.trim()) {setError("Please provide a cover letter"),return;
     }setIsSubmitting(true),setError(null),try {const success = await applyToJob(job.id,coverLetter,selectedResumeId || undefined,resumeFile || undefined;
       ),if (success) {toast.success("Your application has been submitted!"),if (onSuccess) {onSuccess()}
       }
     } catch (err: any) {setError(err.message || "Failed to submit application")toast.error("Failed to submit application")} finally {setIsSubmitting(false)}
-  }return (<form onSubmit={handleSubmit} className="space-y-6">;
+  }return (<form onSubmit={handleSubmi,
+} className="space-y-6">;
       <div>;
-        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>;
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.titl,
+}</h3>;
         <p className="text-sm text-muted-foreground mb-4">;
-          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true },
+}
         </p>;
       </div>;
       {error && (<Alert variant="destructive">;
@@ -165,9 +217,11 @@ interface ApplyToJobFormProps  {job: Job,onSuccess?: () => void;
               <SelectTrigger className="mt-1">;
     <form on_submit={handle_submit} className="space - y-6">;
       <div>;
-        <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
+        <h3 className="text - lg font - medium mb - 1">Apply to: {job.titl,
+}</h3>;
         <p className="text - sm text - muted - foreground mb - 4">;
-          Posted {formatDistanceToNow (new Date (job.created_at), { add_suffix: true })}
+          Posted {formatDistanceToNow (new Date (job.created_at), { add_suffix: true },
+}
         </p>;
       </div>;
       {error && (<Alert variant="destructive">;
@@ -274,8 +328,10 @@ if ( {) {$2;
                 on_click = {(, ) => router.push ("/dashboard / talent / portfolio") }
               >;
                 Create Resume;
-              </Button>;
-            </div>)}
+              </Button>
+    </div>
+  );
+}
         </div>;
         <div>;
           <Label html_for="cv_upload">Or Upload CV (PDF)</Label>;
@@ -318,7 +374,8 @@ handle_submit;
 }</AlertDescription> </Alert>) ";
 }<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {selectedResumeId;
 }onValueChange= {setSelectedResumeId ";
-}> <SelectTrigger className="mt - 1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)}return null;
+}> <SelectTrigger className = "mt - 1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>);
+  return null;
 })}</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application")}</Button> </div> </form>)}"}
 }</Button>;
@@ -329,6 +386,7 @@ handle_submit;
 }</AlertDescription> </Alert>) ";
 }<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {selectedResumeId ;
 }onValueChange= {setSelectedResumeId ";
-}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)}return null;
+}> <SelectTrigger className = "mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>);
+  return null;
 })}</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")}</Button> </div> </form>)}";

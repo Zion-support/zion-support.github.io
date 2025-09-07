@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp  } from 'lucide-react';
-const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<number | null>(null)const faqs = [;
-    {question: 'What services does Zion Tech offer?',answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.';
+
+const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  =;
+  useState<number | null>(null;
+  const faqs = [
+  {question: 'What services does Zion Tech offer?',answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.';
     },{question: 'How long does implementation take?',answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation.';
     },{question: 'Do you provide ongoing support?',answer: 'Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance.';
     },{question: 'What makes Zion Tech different?',answer: 'We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries.';
@@ -12,7 +15,10 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
     },{question: 'What is your pricing model?',answer: 'We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs.';
     },{question: 'Do you offer training for our team?',answer: 'Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support.';
     }
-  ];const toggleFaq = (index: number) => {setOpenIndex(openIndex === index ? null : index)}return (<section className="py-16 px-4 bg-gray-50">;
+  ];
+
+const toggleFaq = (index: number) => {setOpenIndex(openIndex === index ? null : index);
+  return (<section className="py-16 px-4 bg-gray-50">;
       <div className="container mx-auto max-w-4xl">;
         <div className="text-center mb-12">;
           <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>;
@@ -23,12 +29,12 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
         <div className="space-y-4">;
           {faqs.map((faq, index) => (<div;
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden";
-            >;
+              className="bg-white rounded-lg shadow-md overflow-hidden">
+
               <button;
                 onClick={() => toggleFaq(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors";
-              >;
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">;
                   {faq.question}
                 </h3>;
@@ -55,4 +61,6 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
         </div>;
       </div>;
     </section>;
-  )}export default FaqSection;
+  )}
+
+export default FaqSection;

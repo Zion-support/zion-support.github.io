@@ -26,10 +26,13 @@ import { Textarea  } from '@/components / ui / textarea';
   Popover;
   PopoverContent;PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
 import { GeneratedMilestone  } from '@/hooks / useMilestoneGenerator';
+
 const form_schema = z.object ({title: z.string ().min (1, 'Title is required')description: z.string ().optional (),due_date: z.date ().optional (),amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')})type MilestoneFormValues = z.infer < typeof form_schema>;PopoverTrigger } from '@/components/ui/popover';
 import { AIMilestoneGenerator   } from './AIMilestoneGenerator';
 import { GeneratedMilestone  } from '@/hooks/useMilestoneGenerator';
+
 const formSchema = null;
+
 type MilestoneFormValues = z.infer<typeof formSchema>;
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -46,22 +49,31 @@ import { Textarea  } from '@/components/ui/textarea';
   Popover;
   PopoverContent;
   PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
+
 const formSchema = z.object({title: z.string().min(1, 'Title is required')description: z.string().optional()due_date: z.date().optional()amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')})type MilestoneFormValues = z.infer<typeof formSchema>;
-interface AddMilestoneFormProps  {on_submit: (data: MilestoneFormValues, ) => void,is_submitting: boolean,on_cancel?: () => void;
+
+interface AddMilestoneFormProps {
+  on_submit: (data: MilestoneFormValues, ) => void,is_submitting: boolean,on_cancel?: () => void;
   project_scope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
   project_type?: string;
+
 }
+
 export /**;
  * AddMilestoneForm - Function description;
  */;
-function AddMilestoneForm() {const form = use_form < MilestoneFormValues>({resolver: zod_resolver (form_schema),default_values: {title: '',description: '',amount: 0}}),const handle_submit = (values: MilestoneFormValues) =>: any {on_submit (values)form.reset ()}
+function AddMilestoneForm() {const form = use_form < MilestoneFormValues>({resolver: zod_resolver (form_schema),default_values: {title: '',description: '',amount: 0,
+}),const handle_submit = (values: MilestoneFormValues) =>: any {on_submit (values)form.reset (,
+}
+;
   const handleAddMilestones = (milestones: GeneratedMilestone[], ) =>: any {// If there's only one milestone, submit it directly;
     // Check condition;
 if ( {) {$2;
 }
-      const milestone = milestones[0];
+
+const milestone = milestones[0];
       // Check condition;
 if ( {) {$2;
 }
@@ -72,8 +84,10 @@ if ( {) {$2;
     // If there are multiple milestones, submit them one by one;
     milestones.for_each (milestone => {on_submit ({title: milestone.title,description: milestone.description,due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
       })})}
-  const handleAddMilestone = (milestone: GeneratedMilestone, ) =>: any {on_submit ({title: milestone.title,description: milestone.description,due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+
+const handleAddMilestone = (milestone: GeneratedMilestone, ) =>: any {on_submit ({title: milestone.title,description: milestone.description,due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
     })}
+
 type MilestoneFormValues = z && z.infer<typeof formSchema>;
 import {Form;
   FormControl;
@@ -84,20 +98,30 @@ import {Form;
 import {Popover;
   PopoverContent;
   PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
-const formSchema = z && z.object({title: z && z.string().min(1, 'Title is required')description: z && z.string().optional(),due_date: z && z.date().optional(),amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')})type MilestoneFormValues = z && z.infer<typeof formSchema>;Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form',import { Input } from '@/components/ui/input',import { Textarea } from '@/components/ui/textarea',Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover',import { AIMilestoneGenerator } from './AIMilestoneGenerator',import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',const formSchema = z.object({title: z.string().min(1, 'Title is required'),description: z.string().optional(),due_date: z.date().optional(),amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),type MilestoneFormValues = z.infer<typeof formSchema>,interface AddMilestoneFormProps  {onSubmit: (data: MilestoneFormValues,) => void,isSubmitting: boolean,onCancel?: () => void;
+
+const formSchema = z && z.object({title: z && z.string().min(1, 'Title is required')description: z && z.string().optional(),due_date: z && z.date().optional(),amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')})type MilestoneFormValues = z && z.infer<typeof formSchema>;Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form',import { Input } from '@/components/ui/input',import { Textarea } from '@/components/ui/textarea',Popover,PopoverContent,PopoverTrigger} from '@/components/ui/popover',import { AIMilestoneGenerator } from './AIMilestoneGenerator',import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',const formSchema = z.object({title: z.string().min(1, 'Title is required'),description: z.string().optional(),due_date: z.date().optional(),amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),type MilestoneFormValues = z.infer<typeof formSchema>,interface AddMilestoneFormProps {
+  onSubmit: (data: MilestoneFormValues,) => void,isSubmitting: boolean,onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
-}export function AddMilestoneForm(): any ({onSubmit;
+
+}
+
+export function AddMilestoneForm(): any ({onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = '';
   projectType = 'Other';
-}: AddMilestoneFormProps) {const form = useForm<MilestoneFormValues>({resolver: zodResolver(formSchema),defaultValues: {title: '',description: '',amount: 0}}),const handleSubmit = (values: MilestoneFormValues) => {onSubmit(values)form && form.reset()}const handleAddMilestones = (milestones: GeneratedMilestone[],) => {// If there's only one milestone, submit it directly;
-    if (milestones && milestones.length === 1) {const milestone = milestones[0];
+}: AddMilestoneFormProps) {const form = useForm<MilestoneFormValues>({resolver: zodResolver(formSchema),defaultValues: {title: '',description: '',amount: 0,
+}),const handleSubmit = (values: MilestoneFormValues) => {onSubmit(values)form && form.reset(,
+}
+;
+  const handleAddMilestones = (milestones: GeneratedMilestone[],) => {// If there's only one milestone, submit it directly;
+    if (milestones && milestones.length = == 1) ;
+  const milestone = milestones[0];
       if (milestone) {onSubmit({title: milestone.title,description: milestone.description,due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),return;
       }
@@ -108,7 +132,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       })})},const handleAddMilestone = (milestone: GeneratedMilestone,) => {onSubmit({title: milestone && milestone.title,description: milestone && milestone.description,due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
     })}return (}}
-  const handleAddMilestone = (milestone: GeneratedMilestone,) => {onSubmit({title: milestone.title;
+
+const handleAddMilestone = (milestone: GeneratedMilestone,) => {onSubmit({title: milestone.title;
       description: milestone.description;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
@@ -125,7 +150,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;<FormField;
             control = {form && form.control}
             name="title";
-            render={({ field }: { field: any },) => (<FormItem>;
+            render={({ field }: { field: any,
+},) => (<FormItem>;
                 <FormLabel>Title</FormLabel>;
     <div className="space - y-6">;
       {/* AI Milestone Generator */}
@@ -142,7 +168,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
           <FormField;
             control = {form.control }
             name="title";
-            render={({ field }: { field: any }, ) => (<FormItem>;
+            render={({ field }: { field: any,
+}, ) => (<FormItem>;
                 <FormLabel > Title</FormLabel>;
                 <FormControl>;
                   <Input placeholder="Milestone title" {...field} />;
@@ -150,7 +177,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                 <FormMessage />;/>;<FormField;
             control = {form && form.control}
             name="description";
-            render={({ field }: { field: any }) => (<FormItem>;
+            render={({ field }: { field: any,
+}) => (<FormItem>;
                 <FormLabel>Description (optional)</FormLabel>;
                 <FormControl>;
                   <Textarea;
@@ -161,7 +189,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
           <FormField;
             control = {form.control }
             name="description";
-            render={({ field }: { field: any }, ) => (<FormItem>;
+            render={({ field }: { field: any,
+}, ) => (<FormItem>;
                 <FormLabel > Description (optional)</FormLabel>;
                 <FormControl>;
                   <Textarea;
@@ -173,21 +202,23 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                 <FormMessage />;/>;<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;<FormField;
               control = {form && form.control}
               name="due_date";
-              render={({ field }: { field: any },) => (<FormItem className="flex flex-col">;
+              render={({ field }: { field: any,
+},) => (<FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;control={form.control}
               name="due_date";
-              render={({ field }: { field: any }) => (<FormItem className="flex flex-col">;
+              render={({ field }: { field: any,
+}) => (<FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;
                         <Button;
                           variant="outline";
-                          className="w-full pl-3 text-left font-normal";
-                        >;
+                          className="w-full pl-3 text-left font-normal">
+
                           {field.value ? (format(field.value, "PPP")) : (<span className="text-muted-foreground">;
                               Pick a date;
                             </span>;
@@ -208,15 +239,16 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
             <FormField;
               control = {form.control }
               name="due_date";
-              render={({ field }: { field: any }, ) => (<FormItem className="flex flex - col">;
+              render={({ field }: { field: any,
+}, ) => (<FormItem className="flex flex - col">;
                   <FormLabel > Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger as_child>;
                       <FormControl>;
                         <Button;
                           variant="outline";
-                          className="w - full pl - 3 text - left font - normal";
-                        >;
+                          className="w - full pl - 3 text - left font - normal">
+
                           {field.value ? (format (field.value, "PPP")) : (<span className="text - muted - foreground">;
                               Pick a date;
                             </span>)}
@@ -237,14 +269,16 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
                   <FormMessage />;/>;<FormField;
               control = {form && form.control}
               name="amount";
-              render={({ field }: { field: any },) => (<FormItem>;
+              render={({ field }: { field: any,
+},) => (<FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
             />;
             <FormField;
               control={form.control}
               name="amount";
-              render={({ field }: { field: any }) => (<FormItem>;
+              render={({ field }: { field: any,
+}) => (<FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
                     <Input;
@@ -257,7 +291,8 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
             <FormField;
               control = {form.control }
               name="amount";
-              render={({ field }: { field: any }, ) => (<FormItem>;
+              render={({ field }: { field: any,
+}, ) => (<FormItem>;
                   <FormLabel > Amount ($)</FormLabel>;
                   <FormControl>;
                     <Input;
@@ -309,8 +344,10 @@ const formSchema = z && z.object({title: z && z.string().min(1, 'Title is requir
             </Button>;
           </div>;
         </form>;
-      </Form>;
-    </div>)}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {project_scope;
+      </Form>
+    </div>
+  );
+}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {project_scope;
 }start_date= {projectStartDate;
 }end_date= {projectEndDate;
 }project_type= {project_type;}onAddMilestones= {handleAddMilestones;

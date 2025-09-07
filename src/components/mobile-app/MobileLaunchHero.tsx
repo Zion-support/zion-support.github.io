@@ -3,9 +3,14 @@
 import { ArrowRight, Smartphone  } from 'lucide-react';
 import { Button } from "@/components/ui/button",import { AppStoreButtons  } from './AppStoreButtons';
 import { Card, CardContent  } from '@/components/ui/card';
-export const MobileLaunchHero: React.FC;export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
-  const appStoreUrl = "#", // Replace with actual App Store URL;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;
+
+export const MobileLaunchHero: React.FC;
+
+export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
+
+const appStoreUrl = "#", // Replace with actual App Store URL;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
@@ -43,8 +48,8 @@ return (<section className='relative bg-gradient-to-r from-zion-blue-dark via-zi
                 <Button;
                   variant='outline';
                   size='lg';
-                  className='flex gap-2 border-white text-white hover:bg-white/10';
-                >;
+                  className='flex gap-2 border-white text-white hover:bg-white/10'>
+
                   Open App;
                   <ArrowRight size={20} />;
                 </Button>;
@@ -57,9 +62,12 @@ return (<section className='relative bg-gradient-to-r from-zion-blue-dark via-zi
 import React from 'react';
 import Link from 'next/link';
 import { Button  } from '@/components/ui/button';
+
 export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
-  const appStoreUrl = "#", // Replace with actual App Store URL;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;
+
+const appStoreUrl = "#", // Replace with actual App Store URL;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
@@ -86,8 +94,8 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
                 </Button>;
               </Link>;
               <Link href="#features">;
-                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">;
-                >;
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">>
+
                   See Features;
                 </Button>;
               </Link>;
@@ -119,8 +127,10 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
     </section>;
   )}
 "  )}import React from "react",import Link from "next/link",import { AppStoreButtons } from "./AppStoreButtons",import { Card, CardContent } from "@/components/ui/card",export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
-  const appStoreUrl = "#", // Replace with actual App Store URL;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;
+
+const appStoreUrl = "#", // Replace with actual App Store URL;
+
+const googlePlayUrl = "#", // Replace with actual Google Play URL;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
@@ -170,9 +180,12 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
   )}}import Link from 'next / link';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
+
 export const MobileLaunchHero: React.FC = () => {// App store links - these would come from environment variables in production;
-  const appStoreUrl = '#'; // Replace with actual App Store URL;
-  const googlePlayUrl = '#'; // Replace with actual Google Play URL;
+
+const appStoreUrl = '#'; // Replace with actual App Store URL;
+
+const googlePlayUrl = '#'; // Replace with actual Google Play URL;
   return (<section className='relative bg - gradient - to - r from - zion - blue - dark via - zion - blue to - zion - purple / 40 py - 16 md:py - 24'>;
       <div className='container mx - auto px - 4 lg:px - 8'>;
         <div className='flex flex - col md:flex - row items - center gap - 8 md:gap - 16'>;

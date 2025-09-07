@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
+
 export const metadata = {
   title: 'Invoice Automation - Zion Tech Group',
   description: 'Professional invoice automation solutions for your business needs.',
@@ -19,6 +20,7 @@ export default function InvoiceAutomationPage() {
             and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className="max-w-6xl mx-auto">
           {/* Features Grid */}
@@ -78,9 +80,49 @@ export default function InvoiceAutomationPage() {
                 View All Services
               </Link>
             </div>
+=======
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           </div>
         </div>
       </div>
+
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

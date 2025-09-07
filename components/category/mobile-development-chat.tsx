@@ -3,11 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const MobileDevelopmentChat: NextPage = () => {return (<div>;
+
+const MobileDevelopmentChat: NextPage = () => ;
+  return (<div>;
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 const MobileDevelopmentChat: NextPage = () => {;
   return (
     <div>;
@@ -38,7 +41,11 @@ const MobileDevelopmentChat: NextPage = () => {;
       </main>;
     </div>;
   )}
-export default MobileDevelopmentChat;const MobileDevelopmentChat: NextPage = () => {return (<div>;
+
+export default MobileDevelopmentChat;
+
+const MobileDevelopmentChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
@@ -47,13 +54,11 @@ export default MobileDevelopmentChat;const MobileDevelopmentChat: NextPage = () 
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
+
 export default MobileDevelopmentChat;
 
-
-
-
-
 const MobileDevelopmentChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -67,7 +72,9 @@ const MobileDevelopmentChat: NextPage = () => {
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const MobileDevelopmentChat: NextPage = () => {return (<div>;
+
+const MobileDevelopmentChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > MobileDevelopmentChat - Zion Tech Solutions</title>;
         <meta;
@@ -79,8 +86,12 @@ const MobileDevelopmentChat: NextPage = () => {return (<div>;
         <h1 > MobileDevelopmentChat</h1>;
         <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>)}export default MobileDevelopmentChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default MobileDevelopmentChat;<div>;
       <Head>;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;MobileDevelopmentChat blog post&quot; />;
@@ -92,7 +103,9 @@ const MobileDevelopmentChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default MobileDevelopmentChat;
-const MobileDevelopmentChat: NextPage = () => {return (<div>;
+
+const MobileDevelopmentChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
         <meta;
@@ -107,11 +120,13 @@ const MobileDevelopmentChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default MobileDevelopmentChat;<title>MobileDevelopmentChat - Zion Tech Solutions</title>;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default MobileDevelopmentChat;
 ;
     <div>
@@ -134,6 +149,7 @@ export default MobileDevelopmentChat
 
 
 const MobileDevelopmentChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
@@ -151,6 +167,7 @@ const MobileDevelopmentChat: NextPage = () => {
     </div>
   );
 }
+
 export default MobileDevelopmentChat;
 
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>

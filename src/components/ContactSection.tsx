@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock  } from 'lucide-react';
-const ContactSection: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',subject: '',message: '';
-  })const [isSubmitting, setIsSubmitting] = useState(false)const [submitted, setSubmitted]  = useState(false)const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {const response = await fetch("/api/contact", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON.stringify(formData)})if (!response.ok) {const data = await response.json().catch(() => ({}))throw new Error(data.error || "Failed to send message")}setSubmitted(true)setFormData({ name: '', email: '', company: '', subject: '', message: '' })setTimeout(() => setSubmitted(false), 3000)} catch (error) {console.error('Error submitting form:', error)alert('Failed to send message. Please try again.')} finally {setIsSubmitting(false)}
-  }return (<section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">;
+
+const ContactSection: React.FC = () => ;
+  const [formData, setFormData] = useState({name: '',email: '',company: '',subject: '',message: '';
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted]  = useState(false);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => ;
+  const { name, value } = e.target;
+    setFormData(prev = > ({ ...prev, [name]: value });
+}
+
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {const response = await fetch("/api/contact", {method: "POST",headers: { "Content-Type": "application/json",
+},body: JSON.stringify(formData,
+})if (!response.ok) ;
+  const data = await response.json().catch(() => ({}))throw new Error(data.error || "Failed to send message")}setSubmitted(true)setFormData({ name: '', email: '', company: '', subject: '', message: '',
+})setTimeout(() => setSubmitted(false), 3000)} catch (error) {console.error('Error submitting form:', error)alert('Failed to send message. Please try again.')} finally {setIsSubmitting(false)}
+  ;
+  return (<section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>;
@@ -151,9 +165,10 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
               <button;
                 type="submit";
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed";
-              >;
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+
+                {isSubmitting ? 'Sending...' : 'Send Message,
+}
               </button>;
               {submitted && (<div className="text-center p-4 bg-green-600/20 border border-green-500 rounded-lg">;
                   <p className="text-green-300">Thank you! We&apos;ll be in touch soon.</p>;
@@ -164,4 +179,6 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
         </div>;
       </div>;
     </section>;
-  )}export default ContactSection;
+  )}
+
+export default ContactSection;

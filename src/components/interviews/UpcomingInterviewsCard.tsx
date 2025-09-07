@@ -2,7 +2,8 @@
 ;
         // Filter for confirmed interviews in the future;
 // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
+
+const upcoming = interviews;
           .filter(interview =>;
               interview.status === 'confirmed' &&;
               !isPast(parseISO(interview.scheduled_date))).sort((a, b) =>;
@@ -12,7 +13,8 @@
         }).sort((a, b) =>;
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()).slice(0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews(upcoming)} catch (error) {logErrorToProduction('Error loading upcoming interviews:', { data: error })} finally {setIsLoading(false)}
-    },loadInterviews()}, []),if (isLoading) {return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+   ,
+},loadInterviews()}, []),if (isLoading) {return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
@@ -31,18 +33,22 @@
 import React, { useEffect, useState } from "react",import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { useInterviews } from "@/hooks/useInterviews",import { Interview } from "@/types/interview",import { format, isPast, parseISO } from "date-fns",import Link from "next/link",import { Calendar, Clock, Video  } from 'lucide-react';
 import { Avatar  } from '@/components / ui / avatar';
 import { logErrorToProduction  } from '@/utils / production_logger';
+
 export /**;
  * UpcomingInterviewsCard - Function description;
  */;
-function UpcomingInterviewsCard() {const { fetch_interviews } = use_interviews ()const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([])const [is_loading, setIsLoading] = useState (true)useEffect ((, ) => {const load_interviews = async () => {      setIsLoading (true)try {const interviews = await fetch_interviews ()// Filter for confirmed interviews in the future;
-        const upcoming = interviews;
+function UpcomingInterviewsCard() {const { fetch_interviews } = use_interviews ()const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([])const [is_loading, setIsLoading] = useState (true)useEffect ((, ) => {const load_interviews = async () => {      setIsLoading (true)try ;
+  const interviews = await fetch_interviews ()// Filter for confirmed interviews in the future;
+
+const upcoming = interviews;
           .filter (interview =>;
               interview.status === 'confirmed' &&;
               !is_past (parseISO (interview.scheduled_date))).sort ((a, b) =>;
               parseISO (a.scheduled_date).get_time () -;
               parseISO (b.scheduled_date).get_time ()          ).slice (0, 3)// Take only the next 3 interviews;
         setUpcomingInterviews (upcoming)} catch (error) {logErrorToProduction ('Error loading upcoming interviews:', {data: error})} finally {setIsLoading (false)}
-    }import React, { useEffect, useState } from 'react';
+   ,
+}import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { useInterviews  } from '@/hooks/useInterviews';
@@ -51,14 +57,18 @@ import { format, isPast, parseISO  } from 'date-fns';
 import Link from 'next/link';
 import { Avatar  } from '@/components/ui/avatar';
 import { logErrorToProduction  } from '@/utils/productionLogger';
-export function UpcomingInterviewsCard() {const { fetchInterviews } = useInterviews()const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect((,) => {const loadInterviews = async () => {      setIsLoading(true)try {const interviews  = await fetchInterviews()// Filter for confirmed interviews in the future;
-        const upcoming = interviews;
+
+export function UpcomingInterviewsCard() {const { fetchInterviews } = useInterviews()const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect((,) => {const loadInterviews = async () => {      setIsLoading(true)try ;
+  const interviews  = await fetchInterviews()// Filter for confirmed interviews in the future;
+
+const upcoming = interviews;
           .filter(interview =>;
               interview && interview.status === 'confirmed' &&;
               !isPast(parseISO(interview && interview.scheduled_date))).sort((a, b) =>;
               parseISO(a && a.scheduled_date).getTime() -;
               parseISO(b && b.scheduled_date).getTime()          ).slice(0, 3)// Take only the next 3 interviews;setUpcomingInterviews(upcoming)} catch (error) {logErrorToProduction('Error loading upcoming interviews:', {data: error})} finally {setIsLoading(false)}
-    }loadInterviews()}, [])if (isLoading) {return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+    }loadInterviews(,
+}, [])if (isLoading) {return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
@@ -75,7 +85,8 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
     )}
-  if (upcomingInterviews.length === 0) {return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+  if (upcomingInterviews.length = == 0) ;
+  return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
@@ -106,7 +117,8 @@ if ( {) {$2;
           {upcomingInterviews.map(interview => {</div>;
         </CardContent>;
       </Card>;
-    )}if (upcomingInterviews && upcomingInterviews.length === 0) {return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+    )}if (upcomingInterviews && upcomingInterviews.length = == 0) ;
+  return (<Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
@@ -126,9 +138,11 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
     )}
-  return (const interviewDate = parseISO(interview.scheduled_date),const formattedDate = format(interviewDate, 'EEE, MMM d'),const formattedTime = format(interviewDate, 'h: mm a'),// Determine if interview is happening soon (within 30 minutes)const now = new Date(),const isStartingSoon =;
+  return (const interviewDate = parseISO(interview.scheduled_date),const formattedDate = format(interviewDate, 'EEE, MMM d'),const formattedTime = format(interviewDate, 'h: mm a'),// Determine if interview is happening soon (within 30 minutes)const now = new Date();
+  const isStartingSoon =;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
-              interviewDate.getTime() > now.getTime(),export function UpcomingInterviewsCard() {const { fetchInterviews } = useInterviews()const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),const [isLoading, setIsLoading] = useState(true)useEffect(() => {const loadInterviews  = null;return (<div key={interview.id} className="flex items-center gap-3">;
+              interviewDate.getTime() > now.getTime(),export function UpcomingInterviewsCard() {const { fetchInterviews } = useInterviews()const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),const [isLoading, setIsLoading] = useState(true)useEffect(() => {
+const loadInterviews  = null;return (<div key={interview.id} className="flex items-center gap-3">;
                 <Avatar className="h-10 w-10 bg-zion-purple/10">;
                   {interview.client_avatar || interview.talent_avatar ? (<img;
                       src={interview.client_avatar || interview.talent_avatar}
@@ -153,7 +167,8 @@ if ( {) {$2;
       </CardHeader>;
       <CardContent>;
         <div className='space-y-4'>;
-          {upcomingInterviews && upcomingInterviews.map(interview => {const interviewDate = parseISO(interview && interview.scheduled_date)const formattedDate = format(interviewDate, 'EEE, MMM d')const formattedTime  = format(interviewDate, 'h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date()const isStartingSoon =;
+          {upcomingInterviews && upcomingInterviews.map(interview = > {const interviewDate = parseISO(interview && interview.scheduled_date)const formattedDate = format(interviewDate, 'EEE, MMM d')const formattedTime  = format(interviewDate, 'h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date(;
+  const isStartingSoon =;
               interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
               interviewDate && interviewDate.getTime() > now && now.getTime()return (<div key={interview && interview.id} className='flex items-center gap-3'>;
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>;
@@ -254,7 +269,8 @@ if ( {) {$2;
       </CardHeader>;
       <CardContent>;
         <div className='space - y-4'>;
-          {upcoming_interviews.map (interview => {const interview_date = parseISO (interview.scheduled_date)const formatted_date = format (interview_date, 'EEE, MMM d')const formatted_time = format (interview_date, 'h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date ()const isStartingSoon =;
+          {upcoming_interviews.map (interview = > {const interview_date = parseISO (interview.scheduled_date)const formatted_date = format (interview_date, 'EEE, MMM d')const formatted_time = format (interview_date, 'h:mm a')// Determine if interview is happening soon (within 30 minutes)            const now = new Date (;
+  const isStartingSoon =;
               interview_date.get_time () - now.get_time () < 30 * 60 * 1000 &&;
               interview_date.get_time () > now.get_time ()return (<div key={interview.id} className='flex items - center gap - 3'>;
                 <Avatar className='h - 10 w - 10 bg - zion - purple / 10'>;
@@ -290,8 +306,10 @@ if ( {) {$2;
                     <Clock className='h - 3 w - 3 mr - 1' />;
                     {formatted_date} at {formatted_time}
                   </div>;
-                </div>;
-              </div>)})}
+                </div>
+    </div>
+  );
+})}
         </div>;
         <div className='mt - 4 pt - 3 border - t border - zion - blue - light / 40'>;
           <Button as_child size='sm' variant='outline' className='w - full'>;

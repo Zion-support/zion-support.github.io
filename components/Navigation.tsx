@@ -8,10 +8,30 @@ import { Menu,X;
 import { useState  } from 'react';
 import { Dialog  } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon  } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 const navigation = [;
   { name: 'Home', href: '/' },{ name: 'About', href: '/about' },{ name: 'Services', href: '/services' },{ name: 'Solutions', href: '/solutions' },{ name: 'Research', href: '/research' },{ name: 'Contact', href: '/contact' }
 ];
   ];return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;
+=======
+
+const navigation = [
+    { name: 'Home', href: '/',
+},
+  { name: 'About', href: '/about',
+},
+  { name: 'Services', href: '/services',
+},
+  { name: 'Solutions', href: '/solutions',
+},
+  { name: 'Research', href: '/research',
+},
+{ name: 'Contact', href: '/contact',
+}
+]
+];
+return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">;
 import { 
@@ -20,17 +40,24 @@ import {
 } from 'lucide-react';
 
 const Navigation = () => {
+ ;
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  ];
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+];
+
 
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+<<<<<<< HEAD
           {/* Logo */}
+=======
+          {/* Logo *,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-lg">Z</span>;
@@ -43,18 +70,36 @@ const Navigation = () => {
                 {item.dropdown ? (<div className="relative">;
                     <button;
                       onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
                       className="flex items-center text-gray-300 hover:text-white transition-colors";
                     >;
                       {item.name}
+=======
+                      className="flex items-center text-gray-300 hover: text-white transition-colors">
+
+                      {item.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       <ChevronDown className="ml-1 h-4 w-4" />;
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item.name && (<motion.div;
+<<<<<<< HEAD
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50";
                         >;
+=======
+                          initial={{ opacity: 0, y: -10 ,
+}
+                          animate={{ opacity: 1, y: 0 ,
+}
+                          exit={{ opacity: 0, y: -10 ,
+}
+                          className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                           {item.dropdown.map((dropdownItem) => (<Link;
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -70,9 +115,16 @@ const Navigation = () => {
                   </div>;
                 ) : (<Link;
                     href={item.href}
+<<<<<<< HEAD
                     className="text-gray-300 hover:text-white transition-colors";
                   >;
                     {item.name}
+=======
+                    className="text-gray-300 hover: text-white transition-colors">
+
+                    {item.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 )}
               </div>;
@@ -82,8 +134,13 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">;
             <Link;
               href="/contact";
+<<<<<<< HEAD
               className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors";
             >;
+=======
+              className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Get Started;
               <ArrowRight className="ml-2 h-4 w-4" />;
             </Link>;
@@ -92,28 +149,53 @@ const Navigation = () => {
           <div className="md:hidden">;
             <button;
               onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
               className="text-gray-300 hover:text-white transition-colors";
             >;
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+=======
+              className="text-gray-300 hover: text-white transition-colors">
+
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" /,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             </button>;
           </div>;
         </div>;
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isOpen && (<motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden border-t border-gray-800";
             >;
+=======
+              initial={{ opacity: 0, height: 0 ,
+}
+              animate={{ opacity: 1, height: 'auto' ,
+}
+              exit={{ opacity: 0, height: 0 ,
+}
+              className="md:hidden border-t border-gray-800">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <div className="py-4 space-y-2">;
                 {navigation.map((item) => (<div key={item.name}>;
                     {item.dropdown ? (<div>;
                         <button;
                           onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
                           className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover:text-white transition-colors";
                         >;
                           {item.name}
+=======
+                          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover: text-white transition-colors">
+
+                          {item.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                           <ChevronDown className="h-4 w-4" />;
                         </button>;
                         {activeDropdown === item.name && (<div className="pl-4 space-y-1">;
@@ -154,7 +236,13 @@ const Navigation = () => {
         </AnimatePresence>;
       </div>;
     </nav>;
+<<<<<<< HEAD
   )}export default Navigation;
+=======
+  )}
+
+export default Navigation;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 import { motion, AnimatePresence  } from 'framer-motion';
 origin/automation-improvements-final;
   Menu;
@@ -180,7 +268,17 @@ origin/automation-improvements-final;
   Search;
 } from "lucide-react";
 import SearchModal from './SearchModal';
+<<<<<<< HEAD
 export default function Navigation() {export default function Navigation() {export default function Navigation() {const [isMenuOpen, setIsMenuOpen] = useState(false)const [isServicesOpen, setIsServicesOpen] = useState(false)const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)const [isIndustriesOpen, setIsIndustriesOpen] = useState(false)const [isResourcesOpen, setIsResourcesOpen] = useState(false)const [isSearchOpen, setIsSearchOpen] = useState(false){name: "Blockchain";
+=======
+
+export default function Navigation() {export default function Navigation() {export default function Navigation() {const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false){name: "Blockchain";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       href: "/blockchain";
       description: "Smart Contracts, DeFi, NFTs";
       icon: Building;
@@ -209,14 +307,20 @@ export default function Navigation() {export default function Navigation() {expo
       href: "/events";
       description: "Webinars and conferences";
     }
+<<<<<<< HEAD
     { name: "News", href: "/news", description: "Industry news and updates" }
+=======
+    { name: "News", href: "/news", description: "Industry news and updates",
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   ];
   return (<>;
         </AnimatePresence>
       </div>
     </nav>
-  );
+  )
 };
+
 
 export default Navigation;
 import React, { useState } from "react";
@@ -253,31 +357,41 @@ import SearchModal from "./SearchModal";
 
 export default function Navigation() {
 export default function Navigation() {;
+
 export default function Navigation() {;
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+
+const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+
+const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+
+const [isSearchOpen, setIsSearchOpen] = useState(false);
     {
       name: "Blockchain"
       href: "/blockchain"
       description: "Smart Contracts, DeFi, NFTs"
       icon: Building
-    }
+   ,
+}
     {
       name: "IoT Solutions"
       href: "/iot"
       description: "Connected Devices, Edge Computing"
       icon: Globe
-    }
+   ,
+}
     {
       name: "Cybersecurity"
       href: "/cybersecurity"
       description: "Security Audits, Compliance"
       icon: Shield
-    }
+   ,
+}
   ];
     {
       name: "Startup Solutions"
@@ -295,8 +409,10 @@ export default function Navigation() {;
       name: "Events"
       href: "/events"
       description: "Webinars and conferences"
-    }
-    { name: "News", href: "/news", description: "Industry news and updates" }
+   ,
+}
+    { name: "News", href: "/news", description: "Industry news and updates",
+}
   ];
   return (
     <>;
@@ -335,38 +451,52 @@ export default function Navigation() {;
                 <button;
                   className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors";
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center text-gray-700 hover: text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseLeave={() => setIsServicesOpen(false,
+}
                 >;
                   Services;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isServicesOpen && (<motion&& motion.div;
+<<<<<<< HEAD
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
+=======
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
+                      exit={{ opacity: 0, y: 10 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isServicesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
+                      onMouseLeave={() => setIsServicesOpen(false,
+}
                     >;
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {services && services.map((service, index) => {const IconComponent = service && service.icon;
                         {services && services.map((service, index) => {;
-                          const IconComponent = service && service.icon;
+
+const IconComponent = service && service.icon;
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
               <Link;
                 href="/";
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
-              >;
+                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors">
+
                 Home;
               </Link>;
               {/* Services Dropdown */}
@@ -383,9 +513,12 @@ export default function Navigation() {;
                   {isServicesOpen && (<motion.div;
                   {isServicesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                      animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                      exit={{ opacity: 0, coordinate_y: 10 ,
+}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -406,35 +539,49 @@ export default function Navigation() {;
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center text-gray-700 hover: text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsSolutionsOpen(true)}
-                  onMouseLeave={() => setIsSolutionsOpen(false)}
+                  onMouseLeave={() => setIsSolutionsOpen(false,
+}
                 >;
                   Solutions;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isSolutionsOpen && (<motion&& motion.div;
+<<<<<<< HEAD
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
+=======
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
+                      exit={{ opacity: 0, y: 10 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isSolutionsOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
-                      onMouseLeave={() => setIsSolutionsOpen(false)}
+                      onMouseLeave={() => setIsSolutionsOpen(false,
+}
                     >;
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {solutions && solutions.map((solution, index) => {const IconComponent = solution && solution.icon;
                         {solutions && solutions.map((solution, index) => {;
-                          const IconComponent = solution && solution.icon;
+
+const IconComponent = solution && solution.icon;
                               href={service.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
-                            >;
+                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group">
+
                               <div className="flex items - center mb - 2">;
                                 <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
@@ -451,8 +598,8 @@ export default function Navigation() {;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
                         <Link;
                           href="/services";
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
-                        >;
+                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium">
+
                           View All Services;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </Link>;
@@ -474,9 +621,12 @@ export default function Navigation() {;
                   {isSolutionsOpen && (<motion.div;
                   {isSolutionsOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                      animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                      exit={{ opacity: 0, coordinate_y: 10 ,
+}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -497,27 +647,40 @@ export default function Navigation() {;
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center text-gray-700 hover: text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsIndustriesOpen(true)}
-                  onMouseLeave={() => setIsIndustriesOpen(false)}
+                  onMouseLeave={() => setIsIndustriesOpen(false,
+}
                 >;
                   Industries;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isIndustriesOpen && (<motion&& motion.div;
+<<<<<<< HEAD
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
+=======
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
+                      exit={{ opacity: 0, y: 10 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isIndustriesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
-                      onMouseLeave={() => setIsIndustriesOpen(false)}
+                      onMouseLeave={() => setIsIndustriesOpen(false,
+}
                     >;
                       <div className="px-6">;
                         {industries && industries.map((industry, index) => (<Link;
@@ -542,27 +705,40 @@ export default function Navigation() {;
                 <button;
                   className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors";
                 <button
-                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="flex items-center text-gray-700 hover: text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setIsResourcesOpen(true)}
-                  onMouseLeave={() => setIsResourcesOpen(false)}
+                  onMouseLeave={() => setIsResourcesOpen(false,
+}
                 >;
                   Resources;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
                 <AnimatePresence>;
                   {isResourcesOpen && (<motion&& motion.div;
+<<<<<<< HEAD
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
+=======
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
+                      exit={{ opacity: 0, y: 10 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4";
                   {isResourcesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 ,
+}
+                      animate={{ opacity: 1, y: 0 ,
+}
                       exit={{ opacity: 0, y: 10 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
-                      onMouseLeave={() => setIsResourcesOpen(false)}
+                      onMouseLeave={() => setIsResourcesOpen(false,
+}
                     >;
                       <div className="px-6">;
                         {resources && resources.map((resource, index) => (<Link;
@@ -595,14 +771,24 @@ export default function Navigation() {;
             <div className="hidden lg:flex items-center space-x-4">;
               <Link;
                 href=/contact";
+<<<<<<< HEAD
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors;
               >;
+=======
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Get Started;
               </Link>;
               <a;
                 href="tel:+13024640950";
+<<<<<<< HEAD
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors";
               >;
+=======
+                className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Call Now;
               </a>;
             </div>;
@@ -655,6 +841,7 @@ export default function Navigation() {;
             {/* Mobile Menu Button */}
             <button;
               className="lg:hidden p-2";
+<<<<<<< HEAD
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >;
               {isMenuOpen ? (<X className="w-6 h-6" />;
@@ -665,7 +852,20 @@ export default function Navigation() {;
             {isMenuOpen && (<motion&& motion.div;
             <button
               className="lg:hidden p-2"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >;
+              {isMenuOpen ? (<X className="w-6 h-6" />;
+              ) : (<Menu className="w-6 h-6" />;
+              )}
+          {/* Mobile Menu */}
+          <AnimatePresence>;
+            {isMenuOpen && (<motion&& motion.div;
+            <button
+              className="lg: hidden p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen,
+}
             >;
               {isMenuOpen ? (;
                 <X className="w-6 h-6" />;
@@ -676,9 +876,12 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (;
               <motion&& motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0, height: 0 ,
+}
+                animate={{ opacity: 1, height: "auto" ,
+}
+                exit={{ opacity: 0, height: 0 ,
+}
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <Link;
@@ -686,9 +889,10 @@ export default function Navigation() {;
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg";
                   <Link
                     href="/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                    className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-                  {/* Mobile Services */}
+                  {/* Mobile Services *,
+}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
                       Services;
@@ -702,8 +906,9 @@ export default function Navigation() {;
                         <Link
                           key={index}
                           href={service && service.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-1 text-sm text-gray-600 hover: text-blue-600"
+                          onClick={() => setIsMenuOpen(false,
+}
                         >;
                           {service && service.name}
                         </Link>;
@@ -722,8 +927,9 @@ export default function Navigation() {;
                         <Link
                           key={index}
                           href={solution && solution.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-1 text-sm text-gray-600 hover: text-blue-600"
+                          onClick={() => setIsMenuOpen(false,
+}
                         >;
                           {solution && solution.name}
                         </Link>;
@@ -742,8 +948,9 @@ export default function Navigation() {;
                         <Link
                           key={index}
                           href={industry && industry.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-1 text-sm text-gray-600 hover: text-blue-600"
+                          onClick={() => setIsMenuOpen(false,
+}
                         >;
                           {industry && industry.name}
                         </Link>;
@@ -762,8 +969,9 @@ export default function Navigation() {;
                         <Link
                           key={index}
                           href={resource && resource.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-1 text-sm text-gray-600 hover: text-blue-600"
+                          onClick={() => setIsMenuOpen(false,
+}
                         >;
                           {resource && resource.name}
                         </Link>;
@@ -777,12 +985,13 @@ export default function Navigation() {;
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center";
                   <Link
                     href="/pricing"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                    className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => setIsMenuOpen(false,
+}
                     >;
                       Get Started;
                     </Link>;
@@ -790,12 +999,13 @@ export default function Navigation() {;
                       href="tel:+13024640950";
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center";
                     <a
-                      href="tel:+13024640950"
+                      href="tel: +13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
-                              href={solution.href}
-                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
-                            >;
+                              href={solution.hre,
+}
+                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group">
+
                               <div className="flex items - center mb - 2">;
                                 <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;
                                 <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
@@ -812,8 +1022,8 @@ export default function Navigation() {;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
                         <Link;
                           href="/solutions";
-                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
-                        >;
+                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium">
+
                           View All Solutions;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </Link>;
@@ -835,9 +1045,12 @@ export default function Navigation() {;
                   {isIndustriesOpen && (<motion.div;
                   {isIndustriesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                      animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                      exit={{ opacity: 0, coordinate_y: 10 ,
+}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -848,8 +1061,8 @@ export default function Navigation() {;
                           <Link;
                             key={index}
                             href={industry.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
-                          >;
+                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group">
+
                             <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
                               {industry.name}
                             </div>;
@@ -875,9 +1088,12 @@ export default function Navigation() {;
                   {isResourcesOpen && (<motion.div;
                   {isResourcesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                      animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                      exit={{ opacity: 0, coordinate_y: 10 ,
+}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -888,8 +1104,8 @@ export default function Navigation() {;
                           <Link;
                             key={index}
                             href={resource.href}
-                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
-                          >;
+                            className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group">
+
                             <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
                               {resource.name}
                             </div>;
@@ -903,8 +1119,8 @@ export default function Navigation() {;
               </div>;
               <Link;
                 href="/pricing";
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
-              >;
+                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors">
+
                 Pricing;
               </Link>;
             </div>;
@@ -913,20 +1129,20 @@ export default function Navigation() {;
               <button;
                 on_click={() => setIsSearchOpen (true)}
                 className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors";
-                aria - label="Search";
-              >;
+                aria - label="Search">
+
                 <Search className="w - 5 h - 5" />;
               </button>;
               <Link;
                 href="/contact";
-                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
-              >;
+                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors">
+
                 Get Started;
               </Link>;
               <a;
                 href="tel:+13024640950";
-                className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
-              >;
+                className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors">
+
                 Call Now;
               </a>;
             </div>;
@@ -946,11 +1162,14 @@ export default function Navigation() {;
             {isMenuOpen && (<motion.div;
             {isMenuOpen && (
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="lg:hidden border - t border - gray - 200";
-              >;
+                initial={{ opacity: 0, height: 0 ,
+}
+                animate={{ opacity: 1, height: "auto" ,
+}
+                exit={{ opacity: 0, height: 0 ,
+}
+                className="lg:hidden border - t border - gray - 200">
+
                 <div className="py - 4 space - y-2">;
                   <Link;
                     href="/";
@@ -1078,7 +1297,17 @@ ursor/automate-test-improve-and-merge-code-646c;
   Menu,X;
   Menu,X;
   Menu,X;
+<<<<<<< HEAD
 } from 'lucide-react';const Navigation = () => {const [isOpen, setIsOpen] = useState(false)const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)];const [mobileMenuOpen, setMobileMenuOpen]  = useState(false)return (<header className="bg-white shadow-sm">;
+=======
+} from 'lucide-react';
+
+const Navigation = () => {const [isOpen, setIsOpen] =;
+  useState(false;
+  const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)];
+
+const [mobileMenuOpen, setMobileMenuOpen]  = useState(false)return (<header className="bg-white shadow-sm">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">;
         <div className="flex lg:flex-1">;
           <a href="/" className="-m-1.5 p-1.5">;
@@ -1102,9 +1331,16 @@ ursor/automate-test-improve-and-merge-code-646c;
           {navigation.map((item) => (<a;
               key={item.name}
               href={item.href}
+<<<<<<< HEAD
               className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600";
             >;
               {item.name}
+=======
+              className="text-sm font-semibold leading-6 text-gray-900 hover: text-blue-600">
+
+              {item.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             </a>;
           ))}
         </div>;
@@ -1114,7 +1350,12 @@ ursor/automate-test-improve-and-merge-code-646c;
           </a>;
         </div>;
       </nav>;
+<<<<<<< HEAD
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>;
+=======
+      <Dialog as="div" className="lg: hidden" open={mobileMenuOpen} onClose={setMobileMenuOpe,
+}>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <div className="fixed inset-0 z-10" />;
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">;
           <div className="flex items-center justify-between">;
@@ -1139,17 +1380,29 @@ ursor/automate-test-improve-and-merge-code-646c;
                 {navigation.map((item) => (<a;
                     key={item.name}
                     href={item.href}
+<<<<<<< HEAD
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50";
                   >;
                     {item.name}
+=======
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover: bg-gray-50">
+
+                    {item.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </a>;
                 ))}
               </div>;
               <div className="py-6">;
                 <a;
                   href="/contact";
+<<<<<<< HEAD
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50";
                 >;
+=======
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   Get Started;
                 </a>;
               </div>;
@@ -1163,7 +1416,15 @@ ursor/automate-test-improve-and-merge-code-646c;
           )}
         </AnimatePresence>;
       </div>;
+<<<<<<< HEAD
 const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  = useState(false)const toggleMenu = () => {setIsMenuOpen(!isMenuOpen)}return (<nav className="bg-white shadow-lg">;
+=======
+
+const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  =;
+  useState(false;
+  const toggleMenu = () => {setIsMenuOpen(!isMenuOpen);
+  return (<nav className="bg-white shadow-lg">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
         <div className="flex justify-between h-16">;
           <div className="flex items-center">;
@@ -1176,40 +1437,70 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  = useStat
           <div className="hidden md:flex items-center space-x-8">;
             <Link;
               href="/";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Home;
             </Link>;
             <Link;
               href="/about";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               About;
             </Link>;
             <Link;
               href="/services";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Services;
             </Link>;
             <Link;
               href="/contact";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Contact;
             </Link>;
           </div>;
           <div className="md:hidden flex items-center">;
             <button;
               onClick={toggleMenu}
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <svg;
                 className="h-6 w-6";
                 fill="none";
                 viewBox="0 0 24 24";
+<<<<<<< HEAD
                 stroke="currentColor";
               >;
+=======
+                stroke="currentColor">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 {isMenuOpen ? (<path;
                     strokeLinecap="round";
                     strokeLinejoin="round";
@@ -1232,32 +1523,58 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  = useStat
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">;
             <Link;
               href="/";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Home;
             </Link>;
             <Link;
               href="/about";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               About;
             </Link>;
             <Link;
               href="/services";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Services;
             </Link>;
             <Link;
               href="/contact";
+<<<<<<< HEAD
               className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
             >;
+=======
+              className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Contact;
             </Link>;
           </div>;
         </div>;
       )}</nav>;
+<<<<<<< HEAD
   )}export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+=======
+  )}
+
+export default Navigation;ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     </>);
 }
   Menu, 
@@ -1265,15 +1582,17 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen]  = useStat
 } from 'lucide-react';
 
 const Navigation = () => {
+ ;
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  ];
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+];
+
 
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -1293,15 +1612,18 @@ const Navigation = () => {
                       onClick={() => toggleDropdown(item.name)}
                       className="flex items-center text-gray-300 hover:text-white transition-colors"
                     >
-                      {item.name}
+                      {item.nam,
+}
                       <ChevronDown className="ml-1 h-4 w-4" />
                     </button>
                     
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, y: -10 ,
+}
+                          animate={{ opacity: 1, y: 0 ,
+}
                           exit={{ opacity: 0, y: -10 }}
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                         >
@@ -1353,12 +1675,15 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation *,
+}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              initial={{ opacity: 0, height: 0 ,
+}
+              animate={{ opacity: 1, height: 'auto' ,
+}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden border-t border-gray-800"
             >
@@ -1379,7 +1704,8 @@ const Navigation = () => {
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
-                                href={dropdownItem.href}
+                                href={dropdownItem.hre,
+}
                                 className="block px-4 py-2 text-gray-400 hover:text-white transition-colors"
                                 onClick={() => {
                                   setIsOpen(false);
@@ -1395,7 +1721,7 @@ const Navigation = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block px-4 py-2 text-gray-300 hover:text-white transition-colors"
+                        className="block px-4 py-2 text-gray-300 hover: text-white transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
@@ -1418,7 +1744,8 @@ const Navigation = () => {
         </AnimatePresence>
       </div>
     </nav>
-  );
+  ),
 };
+
 
 export default Navigation;

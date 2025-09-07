@@ -3,12 +3,30 @@ interface LoadingSkeletonProps  {className?: string;
   height?: string;
   width?: string;
   rounded?: boolean;
+<<<<<<< HEAD
 }const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({className = '',height = 'h-4',width = 'w-full',rounded = true;
 }) => {return (<div;
       className={`animate-pulse bg-slate-700 ${height} ${width} ${rounded ? 'rounded' : ''} ${className}`}
       aria-label="Loading content";
     />;
   )}export const ServiceCardSkeleton: React.FC = () => (<div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 animate-pulse">;
+=======
+
+}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className = '',height = 'h-4',width = 'w-full',rounded = true;
+   }) => {
+
+
+return (
+    <div
+      className={`animate-pulse bg-slate-700 ${height} ${width} ${rounded ? 'rounded' : ''} ${className}`}
+      aria-label="Loading content";
+    />;
+  )}
+
+export const ServiceCardSkeleton: React.FC = () => (<div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 animate-pulse">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     <LoadingSkeleton height="h-6" width="w-3/4" className="mb-4" />;
     <LoadingSkeleton height="h-4" className="mb-2" />;
     <LoadingSkeleton height="h-4" width="w-5/6" className="mb-4" />;

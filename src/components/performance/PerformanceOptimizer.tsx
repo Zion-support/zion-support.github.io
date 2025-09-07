@@ -1,19 +1,33 @@
 import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics  {loadTime: number;
+
+interface PerformanceMetrics {
+  loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number}export const PerformanceOptimizer: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null)";
-  const [isOptimized, setIsOptimized] = useState(false)useEffect(() => {const measurePerformance = () => {"";
+  networkLatency: number,
+}
+
+export const PerformanceOptimizer: React.FC = () => ;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null)";
+
+const [isOptimized, setIsOptimized] = useState(false)useEffect(() => {
+const measurePerformance = () => {"";
       if (typeof window !== 'undefined' && 'performance' in window) {"";
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"";
-        const paint = performance.getEntriesByType('paint')const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"";
+
+const paint = performance.getEntriesByType('paint';
+  const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+
+const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
         // Memory usage (if available)const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0;
         // Network latency estimation;
-        const networkLatency = navigation.responseEnd - navigation.requestStart;
+
+const networkLatency = navigation.responseEnd - navigation.requestStart;
         setMetrics({loadTime, renderTime,memoryUsage, networkLatency;
         })// Check if performance is optimized;
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
+
+const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance)}
     }// Measure performance after page load;
     if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)}// Measure performance after page load"";
@@ -22,10 +36,13 @@ interface PerformanceMetrics  {loadTime: number;
       window.removeEventListener('load', measurePerformance)}
   }, [])const optimizePerformance = () => {// Implement performance optimizations"";
     if (typeof window !== 'undefined') {// Preload critical resources;
-      const criticalResources = [;
-        '/fonts/inter.woff2', '/images/hero-bg.jpg';
-      ];
-      criticalResources.forEach(resource => {const link = document.createElement('link')link.rel = 'preload';
+
+const criticalResources = [
+  '/fonts/inter.woff2', '/images/hero-bg.jpg'
+];
+
+      criticalResources.forEach(resource = > ;
+  const link = document.createElement('link')link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         if (resource.endsWith('.woff2')) {link.crossOrigin = 'anonymous';
@@ -68,10 +85,12 @@ interface PerformanceMetrics  {loadTime: number;
       </div>;
       {!isOptimized && (<button;
           onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors";
-        >;
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors">
+
           Optimize Performance;
         </button>;
       )}
     </div>;
-  )}export default PerformanceOptimizer;
+  )}
+
+export default PerformanceOptimizer;

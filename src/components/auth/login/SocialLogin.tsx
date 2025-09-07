@@ -6,7 +6,9 @@ import { Button  } from '@/components/ui/button';
 import { Web3Login  } from './Web3Login';
 import { useState  } from 'react';
 import { openAuthPopup  } from '@/api/authSocial';
-export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false)const handleGoogle = () => {setIsLoading(true)window.location.href = "/auth/google";
+
+export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false);
+  const handleGoogle = () => {setIsLoading(true)window.location.href = "/auth/google";
   }return (<div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
@@ -34,7 +36,9 @@ return (<div className='mt-6'>;
           </span>;
         </div>;
       </div>;
-export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false)const handleGoogle = () => {setIsLoading(true)window && window.location.href = '/auth/google';
+
+export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false);
+  const handleGoogle = () => {setIsLoading(true)window && window.location.href = '/auth/google';
   }return (<div className='mt-6'>;
       <div className='relative'>;
         <div className='absolute inset-0 flex items-center'>;
@@ -44,6 +48,7 @@ export function SocialLogin() {const [isLoading, setIsLoading]  = useState(false
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>;
 import { Button  } from '@/components / ui / button';
 import { openAuthPopup  } from '@/api / auth_social';
+
 export /**;
  * SocialLogin - Function description;
  */;
@@ -75,8 +80,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               className="h-5 w-5";
               aria-hidden="true";
               fill="currentColor";
-              viewBox="0 0 24 24";
-            >;
+              viewBox="0 0 24 24">
+
               <path;
                 d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z";
                 fill="#EA4335";
@@ -207,8 +212,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               className='h - 5 w - 5';
               aria - hidden='true';
               fill='current_color';
-              view_box='0 0 24 24';
-            >;
+              view_box='0 0 24 24'>
+
               <path;
                 d='M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z';
                 fill='#EA4335';
@@ -246,6 +251,8 @@ ursor/automate-test-improve-and-merge-code-646c;
           <Twitter className='h - 5 w - 5' />;
         </Button>;
         <Web3Login />;
-      </div>;
-    </div>)}
+      </div>
+    </div>
+  );
+}
 }})

@@ -18,8 +18,12 @@ import { Badge  } from '@/components/ui/badge';
 import { ForumReply  } from '@/types/community';
 import { cn  } from '@/lib/utils';
 import { formatDistanceToNow } from "date-fns",import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",className?: string;
-}export const ReplyCard = ({className;
-}: ReplyCardProps) => {const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),return (<Card className={cn(className;
+}
+
+export const ReplyCard = ({className;
+}: ReplyCardProps) => {const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true,
+});
+  return (<Card className={cn(className;
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -101,14 +105,20 @@ import { Button   } from '@/components / ui / button';
 import { Badge   } from '@/components / ui / badge';
 import { ForumReply   } from '@/types / community';
 import { cn   } from '@/lib / utils';
-interface ReplyCardProps  {reply: ForumReply,onMarkAnswer?: () => void;
+
+interface ReplyCardProps {
+  reply: ForumReply,onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   class_name?: string;
+
 }
+
 export const ReplyCard = ({reply;
   onMarkAnswer,canMarkAnswer = false;
   class_name;
-}: ReplyCardProps, ) =>: any {const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),return (<Card className={cn ("transition - shadow";
+}: ReplyCardProps, ) =>: any {const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true,
+});
+  return (<Card className={cn ("transition - shadow";
       reply.is_answer && "border - green - 500 / 50 bg - green - 50 dark:bg - green - 950 / 20";
       class_name)}>;
       <CardHeader className="flex flex - row items - start gap - 4 space - y-0">;
@@ -153,5 +163,13 @@ export const ReplyCard = ({reply;
             Mark as Answer;
           </Button>)}
       </CardFooter>;
-    </Card>)}export default ReplyCard;interface ReplyCardProps  {)}export default ReplyCard;
+    </Card>)}
+
+export default ReplyCard;
+
+interface ReplyCardProps {
+  )
+}
+
+export default ReplyCard;
 ";

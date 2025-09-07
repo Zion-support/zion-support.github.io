@@ -11,9 +11,14 @@ import { useLanguage, SupportedLanguage  } from '@/context/LanguageContext';
 import { toast  } from '@/components/ui/use-toast';
 import { logErrorToProduction  } from '@/utils/productionLogger';
 import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { Card, CardContent } from "@/components/ui/card",import { useTranslation } from "react-i18next",import { useTranslationService } from "@/hooks/useTranslationService",import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",import { logErrorToProduction } from '@/utils/productionLogger';
-interface TranslatableJobFormProps  {onSubmit: (formData: any) => void;
+
+interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void;
   isSubmitting?: boolean;
-}export function TranslatableJobForm({ onSubmit, isSubmitting;
+
+}
+
+export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (<form onSubmit={handleSubmit} className="space-y-6">;
       <div>;
         <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>;
@@ -33,8 +38,8 @@ interface TranslatableJobFormProps  {onSubmit: (formData: any) => void;
               variant="outline";
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
-              className="flex items-center gap-1";
-            >;
+              className="flex items-center gap-1">
+
               {isTranslating ? (<Loader2 className="h-4 w-4 animate-spin" />;
               ) : (<Globe className="h-4 w-4" />;
               )}
@@ -73,8 +78,8 @@ interface TranslatableJobFormProps  {onSubmit: (formData: any) => void;
               variant="outline";
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
-              className="flex items-center gap-1";
-            >;
+              className="flex items-center gap-1">
+
               {isTranslating ? (<Loader2 className="h-4 w-4 animate-spin" />;
               ) : (<Globe className="h-4 w-4" />;
               )}
@@ -111,8 +116,8 @@ interface TranslatableJobFormProps  {onSubmit: (formData: any) => void;
               variant="outline";
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
-              className="flex items-center gap-1";
-            >;
+              className="flex items-center gap-1">
+
               {isTranslating ? (<Loader2 className="h-4 w-4 animate-spin" />;
               ) : (<Globe className="h-4 w-4" />;
               )}

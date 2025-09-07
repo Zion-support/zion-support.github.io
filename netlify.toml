@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
 
 command = "npm ci && npm run build"
 publish = ".next"
@@ -14,16 +15,21 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> main
   command = "npm install --legacy-peer-deps && npm run build"
   publish = ".next"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 command = "npm ci && npm run build"
 publish = ".next"
 
 [build.environment]
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
+<<<<<<< HEAD
 =======
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
@@ -32,6 +38,7 @@ package = "@netlify/plugin-nextjs"
 directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
@@ -43,6 +50,8 @@ status = 200
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
@@ -74,6 +83,7 @@ X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
@@ -91,6 +101,11 @@ ursor/automate-test-improve-and-merge-code-646c
 # Static redirects for exported site
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -128,11 +143,14 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+=======
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
-status = 301
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
+
+<<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
@@ -151,3 +169,5 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7

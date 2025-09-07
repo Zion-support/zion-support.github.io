@@ -1,36 +1,59 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion  } from 'framer-motion';
 import { Users, Eye, MousePointer, Clock  } from 'lucide-react';
+
 interface AnalyticsData  {pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-  deviceTypes: Array<{ device: string; percentage: number }>;
+  topPages: Array<{ page: string; views: number,
+}>;
+  trafficSources: Array<{ source: string; percentage: number,
+}>;
+  deviceTypes: Array<{ device: string; percentage: number,
+}>;
   realTimeUsers: number;
-}const EnhancedAnalytics: React.FC = () => {const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({pageViews: 0,uniqueVisitors: 0,bounceRate: 0,avgSessionDuration: 0,topPages: [],trafficSources: [],deviceTypes: [],realTimeUsers: 0,})const [isLoading, setIsLoading] = useState(true)const [selectedTimeRange, setSelectedTimeRange]  = useState('7d')const fetchAnalyticsData = useCallback(async () => {setIsLoading(true)try {// Simulate API call;
+}
+
+const EnhancedAnalytics: React.FC = () => {const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({pageViews: 0,uniqueVisitors: 0,bounceRate: 0,avgSessionDuration: 0,topPages: [],trafficSources: [],deviceTypes: [],realTimeUsers: 0,})const [isLoading, setIsLoading] =;
+  useState(true);
+  const [selectedTimeRange, setSelectedTimeRange]  = useState('7d';
+  const fetchAnalyticsData = useCallback(async () => {setIsLoading(true)try {// Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000))setAnalyticsData({pageViews: 12543,uniqueVisitors: 8932,bounceRate: 42.5,avgSessionDuration: 3.2,topPages: [;
-          { page: '/', views: 3421 },{ page: '/services', views: 2156 },{ page: '/about', views: 1892 },{ page: '/contact', views: 1234 },],trafficSources: [;
-          { source: 'Organic Search', percentage: 45 },{ source: 'Direct', percentage: 30 },{ source: 'Social Media', percentage: 15 },{ source: 'Referral', percentage: 10 },],deviceTypes: [;
-          { device: 'Desktop', percentage: 55 },{ device: 'Mobile', percentage: 35 },{ device: 'Tablet', percentage: 10 },],realTimeUsers: 23,})} catch (error) {console.error('Error fetching analytics data: ', error)} finally {setIsLoading(false)}
-  }, [selectedTimeRange])useEffect(() => {fetchAnalyticsData()}, [fetchAnalyticsData])const StatCard: React.FC<{title: string;
+          { page: '/', views: 3421,
+},{ page: '/services', views: 2156,
+},{ page: '/about', views: 1892,
+},{ page: '/contact', views: 1234,
+},],trafficSources: [;
+          { source: 'Organic Search', percentage: 45,
+},{ source: 'Direct', percentage: 30,
+},{ source: 'Social Media', percentage: 15,
+},{ source: 'Referral', percentage: 10,
+},],deviceTypes: [;
+          { device: 'Desktop', percentage: 55,
+},{ device: 'Mobile', percentage: 35,
+},{ device: 'Tablet', percentage: 10,
+},],realTimeUsers: 23,})} catch (error) {console.error('Error fetching analytics data: ', error)} finally {setIsLoading(false)}
+  }, [selectedTimeRange])useEffect(() => {
+fetchAnalyticsData()}, [fetchAnalyticsData])const StatCard: React.FC<{title: string;
     value: string | number;
     icon: React.ReactNode;
     change?: number;
     color?: string;
   }> = ({ title, value, icon, change, color = 'blue' }) => (<motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-xl shadow-lg p-6 border border-gray-100";
-    >;
+      initial={{ opacity: 0, y: 20 ,
+}
+      animate={{ opacity: 1, y: 0 ,
+}
+      className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+
       <div className="flex items-center justify-between">;
         <div>;
           <p className="text-sm font-medium text-gray-600">{title}</p>;
           <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>;
           {change !== undefined && (<p;
-              className={`text-sm mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}
-            >;
+              className={`text-sm mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+
               {change >= 0 ? '+' : ''}
               {change}% from last period;
             </p>;
@@ -50,8 +73,8 @@ interface AnalyticsData  {pageViews: number;
         <select;
           value={selectedTimeRange}
           onChange={e => setSelectedTimeRange(e.target.value)}
-          className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500";
-        >;
+          className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500">
+
           <option value="24h">Last 24 hours</option>;
           <option value="7d">Last 7 days</option>;
           <option value="30d">Last 30 days</option>;
@@ -90,10 +113,12 @@ interface AnalyticsData  {pageViews: number;
       </div>;
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">;
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl shadow-lg p-6";
-        >;
+          initial={{ opacity: 0, y: 20 ,
+}
+          animate={{ opacity: 1, y: 0 ,
+}
+          className="bg-white rounded-xl shadow-lg p-6">
+
           <h3 className="text-lg font-semibold text-gray-900 mb-4">;
             Top Pages;
           </h3>;
@@ -108,10 +133,12 @@ interface AnalyticsData  {pageViews: number;
           </div>;
         </motion.div>;
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl shadow-lg p-6";
-        >;
+          initial={{ opacity: 0, y: 20 ,
+}
+          animate={{ opacity: 1, y: 0 ,
+}
+          className="bg-white rounded-xl shadow-lg p-6">
+
           <h3 className="text-lg font-semibold text-gray-900 mb-4">;
             Traffic Sources;
           </h3>;
@@ -125,10 +152,12 @@ interface AnalyticsData  {pageViews: number;
         </motion.div>;
       </div>;
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-xl shadow-lg p-6";
-      >;
+        initial={{ opacity: 0, y: 20 ,
+}
+        animate={{ opacity: 1, y: 0 ,
+}
+        className="bg-white rounded-xl shadow-lg p-6">
+
         <h3 className="text-lg font-semibold text-gray-900 mb-4">;
           Device Types;
         </h3>;
@@ -143,4 +172,6 @@ interface AnalyticsData  {pageViews: number;
         </div>;
       </motion.div>;
     </div>;
-  )}export default EnhancedAnalytics;
+  )}
+
+export default EnhancedAnalytics;

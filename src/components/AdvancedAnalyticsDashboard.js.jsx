@@ -8,13 +8,17 @@ import {}
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card''';
 import { Button } from './ui/button''';
 import { Badge  } from './ui/badge';
+
 const AdvancedAnalyticsDashboard = () => {}
 '';
 '';
 '''';
-  const [timeRange, setTimeRange] = useState('30d')';';
-  const [selectedMetric, setSelectedMetric] = useState('overview')// Mock data - in real app this would come from API;
-  const metrics = [];
+
+const [timeRange, setTimeRange] = useState('30d')';';
+
+const [selectedMetric, setSelectedMetric] = useState('overview')// Mock data - in real app this would come from API;
+
+const metrics = [];
     {}
 '';
 '';
@@ -24,27 +28,32 @@ const AdvancedAnalyticsDashboard = () => {}
       change: 12.5, '''';
       changeType: 'increase','';
       icon: <DollarSign className='w-6 h-6' />, '''';
-      color: 'from-green-500 to-emerald-600'}, {}
+      color: 'from-green-500 to-emerald-600,
+}, {}
 '';
       title: 'Active Clients', '';
       value: '1,247', change: 8.2,'''';
       changeType: 'increase', '''';
       icon: <Users className='w-6 h-6' />,'';
-      color: 'from-blue-500 to-cyan-600'}, {}
+      color: 'from-blue-500 to-cyan-600,
+}, {}
 '';
       title: 'Service Performance','';
       value: '94.2%', change: 2.1,'''';
       changeType: 'increase', '''';
       icon: <Target className='w-6 h-6' />,'';
-      color: 'from-purple-500 to-pink-600'}, {}
+      color: 'from-purple-500 to-pink-600,
+}, {}
 '';
       title: 'Client Satisfaction','';
       value: '4.8/5', change: 0.3,'''';
       changeType: 'increase', '''';
       icon: <Star className='w-6 h-6' />,'';
-      color: 'from-yellow-500 to-orange-600'}
+      color: 'from-yellow-500 to-orange-600,
+}
   ];
-  const servicePerformance = [];
+
+const servicePerformance = [];
     {}
 '';
 '';
@@ -52,42 +61,54 @@ const AdvancedAnalyticsDashboard = () => {}
       name: 'AI CRM Platform', performance: 96, growth: 15.2, '';
       clients: 89,'';
       revenue: 450000, '''';
-      status: 'trending'}, {}
+      status: 'trending,
+}, {}
 '';
 '';
 '''';
       name: 'Quantum Computing', performance: 92, growth: 28.7, '';
       clients: 23,'';
       revenue: 1200000, '''';
-      status: 'trending'}, {}
+      status: 'trending,
+}, {}
 '';
 '';
 '''';
       name: 'Blockchain Solutions', performance: 88, growth: 12.4, '';
       clients: 156,'';
       revenue: 780000, '''';
-      status: 'stable'}, {}
+      status: 'stable,
+}, {}
 '';
 '';
 '''';
       name: 'Cybersecurity Suite', performance: 94, growth: 18.9, '';
       clients: 203,'';
       revenue: 920000, '''';
-      status: 'trending'}, {}
+      status: 'trending,
+}, {}
 '';
 '';
 '''';
       name: 'IoT Platform', performance: 85, growth: 8.7, clients: 67, revenue: 340000, '';
-      status: 'stable'}
+      status: 'stable,
+}
   ]'';
-  const categoryDistribution = ['';
-    { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' }, '';
-    { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'';
-    { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' }, '';
-    { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },'';
-    { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+
+const categoryDistribution = ['';
+    { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600',
+}, '';
+    { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600',
+},'';
+    { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600',
+}, '';
+    { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600',
+},'';
+    { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600',
+}
   ];
-  const getStatusIcon = status => {}
+
+const getStatusIcon = status => {}
     switch (status) {}
 '''';
       case 'trending': '''';
@@ -100,7 +121,8 @@ const AdvancedAnalyticsDashboard = () => {}
         return <Activity className='w-4 h-4 text-gray-500' />;
     }
   }
-  const getStatusColor = status => {}
+
+const getStatusColor = status => {}
     switch (status) {}
 '';
       case 'trending': '';
@@ -117,8 +139,10 @@ const AdvancedAnalyticsDashboard = () => {}
     <div className='max-w-7xl mx-auto p-6'>;
       {/* Header */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}'''';
-        animate={{ opacity: 1, y: 0 }}'''';
+        initial={{ opacity: 0, y: 20 ,
+}'''';
+        animate={{ opacity: 1, y: 0 ,
+}'''';
         className='mb-8''''';
       >'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'''';
@@ -148,22 +172,27 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Metrics Cards */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.1 }}'''';
+        initial={{ opacity: 0, y: 20 ,
+}
+        animate={{ opacity: 1, y: 0 ,
+}'''';
+        transition={{ delay: 0.1 ,
+}'''';
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>;
         {metrics.map((metric, index) => (<motion.div;
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index }}'''';
+            transition={{ delay: 0.1 * index ,
+}'''';
           >'''';
             <Card className='h-full hover:shadow-lg transition-shadow'>'''';
               <CardHeader className='pb-3'>'''';
                 <div className='flex items-center justify-between'>;
                   <div;
-                    className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}
-                  >;
+                    className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}>
+
                     {metric.icon}'''';
                   </div>'''';
                   <div className='flex items-center gap-1'>'''';
@@ -173,8 +202,8 @@ const AdvancedAnalyticsDashboard = () => {}
                       <ArrowDownRight className='w-4 h-4 text-red-500' />;
                     )}'`';
                     <span'`'`;
-                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
-                    >;
+                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}>
+
                       {metric.change}%;
                     </span>;
                   </div>;
@@ -192,9 +221,12 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Service Performance Table */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.2 }}'''';
+        initial={{ opacity: 0, y: 20 ,
+}
+        animate={{ opacity: 1, y: 0 ,
+}'''';
+        transition={{ delay: 0.2 ,
+}'''';
         className='mb-8 '>;
         <Card>'''';
           <CardHeader>'''';
@@ -231,9 +263,12 @@ const AdvancedAnalyticsDashboard = () => {}
                 <tbody>;
                   {servicePerformance.map((service, index) => (<motion.tr;
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}'''';
-                      transition={{ delay: 0.1 * index }}'''';
+                      initial={{ opacity: 0, x: -20 ,
+}
+                      animate={{ opacity: 1, x: 0 ,
+}'''';
+                      transition={{ delay: 0.1 * index ,
+}'''';
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''';
                     >'''';
                       <td className='py-3 px-4'>'''';
@@ -246,7 +281,8 @@ const AdvancedAnalyticsDashboard = () => {}
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2'>'''';
                             <div''`;
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'``;
-                              style={{ width: `${service.performance}%` }}
+                              style={{ width: `${service.performance}%` ,
+}
                             ></div>'''';
                           </div>'''';
                           <span className='text-sm font-medium'>;
@@ -288,9 +324,12 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* Charts and Insights */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.3 }}'''';
+        initial={{ opacity: 0, y: 20 ,
+}
+        animate={{ opacity: 1, y: 0 ,
+}'''';
+        transition={{ delay: 0.3 ,
+}'''';
         className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 '>;
         {/* Category Distribution */}
         <Card>'''';
@@ -304,9 +343,12 @@ const AdvancedAnalyticsDashboard = () => {}
             <div className='space-y-3'>;
               {categoryDistribution.map((category, index) => (<motion.div;
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}'''';
-                  transition={{ delay: 0.1 * index }}'''';
+                  initial={{ opacity: 0, x: -20 ,
+}
+                  animate={{ opacity: 1, x: 0 ,
+}'''';
+                  transition={{ delay: 0.1 * index ,
+}'''';
                   className='flex items-center justify-between''''';
                 >'''';
                   <div className='flex items-center gap-3'>`;
@@ -321,7 +363,8 @@ const AdvancedAnalyticsDashboard = () => {}
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>`;
                       <div``;
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;
-                        style={{ width: `${category.value}%` }}
+                        style={{ width: `${category.value}%` ,
+}
                       ></div>'''';
                     </div>'''';
                     <span className='text-sm font-medium text-zion-slate-light'>;
@@ -385,9 +428,12 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}'''';
-        transition={{ delay: 0.4 }}'''';
+        initial={{ opacity: 0, y: 20 ,
+}
+        animate={{ opacity: 1, y: 0 ,
+}'''';
+        transition={{ delay: 0.4 ,
+}'''';
         className='text-center''''';
       >'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
@@ -418,7 +464,19 @@ const AdvancedAnalyticsDashboard = () => {}
             </Button>;
           </div>;
         </div>;
-      </motion.div>;
-    </div>)}
+      </motion.div>
+    </div>
+  );
+}
+
 export default AdvancedAnalyticsDashboard;
-export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }
+
+export { AdvancedAnalyticsDashboard }

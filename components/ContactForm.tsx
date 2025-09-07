@@ -2,11 +2,18 @@
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react';
+<<<<<<< HEAD
 interface FormData  {name: string;
+=======
+
+interface FormData {
+  name: string;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   email: string;
   company: string;
   phone: string;service: string;
   message: string;
+<<<<<<< HEAD
 }const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({name: '',email: '',company: '',phone: '',service: '',message: '';
   })const [isSubmitting, setIsSubmitting] = useState(false)const [submitStatus, setSubmitStatus]  = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value } = e.target;
     setFormData(prev => ({...prev,[name]: value;
@@ -21,6 +28,35 @@ interface FormData  {name: string;
     }))}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {// Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000))setIsSubmitted(true)} catch (error) {console.error('Error submitting form: ', error)} finally {setIsSubmitting(false)}
   }return (<div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">;
+=======
+
+}
+
+const ContactForm: React.FC = () => ;
+  const [formData, setFormData] = useState<FormData>({name: '',email: '',company: '',phone: '',service: '',message: '';
+  })const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus]  = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => ;
+  const { name, value } = e.target;
+    setFormData(prev => ({...prev,[name]: value;
+    }))}
+
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)setSubmitStatus('idle')try {// Simulate form submission;
+      await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({name: '',email: '',company: '',phone: '',service: '',message: '';
+      })} catch {setSubmitStatus('error')message: '';
+  })const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleChange = (e: React.ChangeEvent<;
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+
+  ) => {const { name, value } = e.target;
+    setFormData(prev => ({...prev,[name]: value;
+    }))}
+
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)try {// Simulate API call;
+      await new Promise(resolve = > setTimeout(resolve, 2000))setIsSubmitted(true)} catch (error) {console.error('Error submitting form: ', error)} finally {setIsSubmitting(false)}
+  ;
+  return (<div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <h2 className="text-3xl font-bold text-gray-900mb-6text-center">Get In Touch</h2>;
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400text-green-700rounded">;
           Thank you for your message! We&apos;ll get back to you soon.;
@@ -46,9 +82,11 @@ interface FormData {
   phone: string;
   service: string;
   message: string;
+
 }
 
 const ContactForm: React.FC = () => {
+ ;
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -56,20 +94,24 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+ ,
+});
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+   ;
+  const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+};
 
-  const handleSubmit = async (e: React.FormEvent) => {
+
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -85,7 +127,8 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+     ,
+});
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -110,7 +153,7 @@ const ContactForm: React.FC = () => {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+        <div className="grid grid-cols-1md: grid-cols-2gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-700mb-2">
               Name *
@@ -120,7 +163,12 @@ const ContactForm: React.FC = () => {
               id="name"
               name="name"
               value={formData.name}
+<<<<<<< HEAD
               onChange={handleInputChange}
+=======
+              onChange={handleInputChang,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               required;
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             />;
@@ -177,8 +225,13 @@ const ContactForm: React.FC = () => {
             name="service";
             value={formData.service}
             onChange={handleInputChange}
+<<<<<<< HEAD
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
           >;
+=======
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             <option value="">Select a service</option>;
             <option value="web-development">Web Development</option>;
             <option value="mobile-development">Mobile Development</option>;
@@ -205,8 +258,13 @@ const ContactForm: React.FC = () => {
         <button;
           type="submit";
           disabled={isSubmitting}
+<<<<<<< HEAD
           className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200";
         >;
+=======
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           {isSubmitting ? (<div className="flexitems-centerjustify-center">;
               <LoadingSpinner />;
               <span className="ml-2">Sending...</span>;
@@ -216,7 +274,13 @@ const ContactForm: React.FC = () => {
         </button>;
       </form>;
     </div>;
+<<<<<<< HEAD
   )}export default ContactForm;
+=======
+  )}
+
+export default ContactForm;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       setSubmitStatus('success')} catch {setSubmitStatus('error')} finally {setIsSubmitting(false)}
   }
   return (<option value="consulting">Consulting</option>;
@@ -292,8 +356,13 @@ const ContactForm: React.FC = () => {
             <div>;
               <label;
                 htmlFor="name";
+<<<<<<< HEAD
                 className="block text-sm font-medium text-gray-700 mb-2";
               >;
+=======
+                className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Full Name *;
               </label>;
               <input;
@@ -310,8 +379,13 @@ const ContactForm: React.FC = () => {
             <div>;
               <label;
                 htmlFor="email";
+<<<<<<< HEAD
                 className="block text-sm font-medium text-gray-700 mb-2";
               >;
+=======
+                className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Email Address *;
               </label>;
               <input;
@@ -330,8 +404,13 @@ const ContactForm: React.FC = () => {
             <div>;
               <label;
                 htmlFor="company";
+<<<<<<< HEAD
                 className="block text-sm font-medium text-gray-700 mb-2";
               >;
+=======
+                className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Company;
               </label>;
               <input;
@@ -347,8 +426,13 @@ const ContactForm: React.FC = () => {
             <div>;
               <label;
                 htmlFor="service";
+<<<<<<< HEAD
                 className="block text-sm font-medium text-gray-700 mb-2";
               >;
+=======
+                className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Service Interest;
               </label>;
               <select;
@@ -356,8 +440,13 @@ const ContactForm: React.FC = () => {
                 name="service";
                 value={formData.service}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
               >;
+=======
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <option value="">Select a service</option>;
                 <option value="ai-solutions">AI Solutions</option>;
                 <option value="cloud-services">Cloud Services</option>;
@@ -370,8 +459,13 @@ const ContactForm: React.FC = () => {
           <div>;
             <label;
               htmlFor="message";
+<<<<<<< HEAD
               className="block text-sm font-medium text-gray-700 mb-2";
             >;
+=======
+              className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               Message *;
             </label>;
             <textarea;
@@ -388,8 +482,13 @@ const ContactForm: React.FC = () => {
           <button;
             type="submit";
             disabled={isSubmitting}
+<<<<<<< HEAD
             className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center space-x-2";
           >;
+=======
+            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center space-x-2">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             {isSubmitting ? (<>;
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>;
                 <span>Sending...</span>;
@@ -403,8 +502,15 @@ const ContactForm: React.FC = () => {
         </form>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}export default ContactForm;
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+=======
+  )}
+
+export default ContactForm;
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           >
             <option value="">Select a service</option>
             <option value="web-development">Web Development</option>
@@ -447,7 +553,8 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
     </div>
-  );
+  ),
 };
+
 
 export default ContactForm;

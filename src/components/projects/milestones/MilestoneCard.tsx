@@ -15,6 +15,7 @@ import { Check, ArrowDown, X  } from 'lucide-react';
 import { useDisputeCheck   } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge   } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton  } from '@/components/disputes/RaiseDisputeButton';
+
 interface MilestoneCardProps  {id: string;
   projectId: string;
   title: string;
@@ -25,7 +26,9 @@ interface MilestoneCardProps  {id: string;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>; import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-interface MilestoneCardProps  {id: string;
+
+interface MilestoneCardProps {
+  id: string;
   projectId: string;
   title: string;
   description?: string;
@@ -34,7 +37,9 @@ interface MilestoneCardProps  {id: string;
   dueDate?: string;
   onApprove?: (id: string,) => Promise<void>;
   onReject?: (id: string,) => Promise<void>;
+
 }
+
 export function MilestoneCard({id;
   projectId;
   title;
@@ -43,12 +48,20 @@ export function MilestoneCard({id;
   status;
   dueDate;
   onApprove;
-  onReject?: (id: string) => Promise<void>;export function MilestoneCard() {const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id)function getStatusBadgeColor() {switch (status) {case 'completed':;
+  onReject?: (id: string) => Promise<void>;
+
+export function MilestoneCard() {const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id)function getStatusBadgeColor() {switch (status) {case 'completed':;
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',interface MilestoneCardProps  {id: string,projectId: string,title: string,description?: string,amount: number,status: string,dueDate?: string,onApprove?: (id: string,) => Promise<void>,onReject?: (id: string,) => Promise<void>;
-}export function MilestoneCard(): any ({onApprove?: (id: string) => Promise<void>,onReject?: (id: string) => Promise<void>;
-}export function MilestoneCard() {const { isUnderDispute, disputeStatus }  = useDisputeCheck(projectId, id)return 'bg-green-500';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',interface MilestoneCardProps {
+  id: string,projectId: string,title: string,description?: string,amount: number,status: string,dueDate?: string,onApprove?: (id: string,) => Promise<void>,onReject?: (id: string,) => Promise<void>;
+
+}
+
+export function MilestoneCard(): any ({onApprove?: (id: string) => Promise<void>,onReject?: (id: string) => Promise<void>;
+}
+
+export function MilestoneCard() {const { isUnderDispute, disputeStatus }  = useDisputeCheck(projectId, id)return 'bg-green-500';
       case 'in_progress':;return 'bg-blue-500';return 'bg-blue-500',case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
@@ -59,6 +72,7 @@ import { format  } from 'date - fns';
 import { useDisputeCheck  } from '@/hooks / useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components / disputes / DisputeStatusBadge';
 import { RaiseDisputeButton  } from '@/components / disputes / RaiseDisputeButton';
+
 interface MilestoneCardProps  {id: string;
   project_id: string;
   title: string;
@@ -71,6 +85,7 @@ interface MilestoneCardProps  {id: string;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle   } from '@/components / ui / card';
 import { Badge   } from '@/components / ui / badge';
 import { Button   } from '@/components / ui / button';
+
 interface MilestoneCardProps  {id: string,project_id: string,import { Button } from "@/components/ui/button",import { format } from 'date-fns',interface MilestoneCardProps  {id: string,projectId: string,title: string,description?: string,amount: number,status: string,return (<Card>;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -102,14 +117,15 @@ interface MilestoneCardProps  {id: string,project_id: string,import { Button } f
           </div>;
           </div>;
           <div className="flex gap-2">;
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
+
               {status.replace('_ ')}
             </Badge>;
             {isUnderDispute && disputeStatus && (<div className='flex gap-2'>;
             <Badge;
               variant='outline';
-              className={`capitalize ${getStatusBadgeColor()} text-white`}
-            >;
+              className={`capitalize ${getStatusBadgeColor()} text-white`}>
+
               {status.replace('_', ' ')}
             </Badge>;
             {isUnderDispute && disputeStatus && (<DisputeStatusBadge status={disputeStatus} />;
@@ -130,11 +146,13 @@ interface MilestoneCardProps  {id: string,project_id: string,import { Button } f
       </CardContent>;
       <CardFooter className='pt-2 flex justify-between'>;
         <div>;
-          {status !== 'completed' && status !== 'rejected' && (className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+          {status !== 'completed' && status !== 'rejected' && (className={`capitalize ${getStatusBadgeColor()} text-white`}>
+
               {status && status.replace('_', ' ')}
             </Badge>;
           <div className="flex gap-2">;
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
+
               {status && status.replace('_ ')}
             </Badge>;<DisputeStatusBadge status={disputeStatus} />;
             )}
@@ -214,9 +232,10 @@ interface MilestoneCardProps  {id: string,project_id: string,import { Button } f
         <div className='flex justify - between items - start'>;
           <div>;
             <CardTitle className='text - xl'>{title}</CardTitle>;
-            {due_date && (<p className='text - sm text - muted - foreground'>                Due: {format (new Date (due_date), 'MMM d, yyyy')}
+            {due_date && (<p className = 'text - sm text - muted - foreground'>                Due: {format (new Date (due_date), 'MMM d, yyyy')}
               </p>)}
           </div>  }
+ ;
   return (<Card>;
       <CardHeader className="pb - 2">;
         <div className="flex justify - between items - start">;
@@ -229,12 +248,13 @@ interface MilestoneCardProps  {id: string,project_id: string,import { Button } f
           <div className='flex gap - 2'>;
             <Badge;
               variant='outline';
-              className={`capitalize ${getStatusBadgeColor ()} text - white`}
-            >;
+              className={`capitalize ${getStatusBadgeColor ()} text - white`}>
+
               {status.replace ('_', ' ')}
             </Badge>;
           <div className="flex gap - 2">;
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor ()} text - white`}>;
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor ()} text - white`}>
+
               {status.replace ('_ ')}
             </Badge>;
               <DisputeStatusBadge status={dispute_status} />)}

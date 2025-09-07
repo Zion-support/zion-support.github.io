@@ -8,19 +8,31 @@ import { HelpCategoryList  } from './HelpCategoryList';
 import { HelpArticleList  } from './HelpArticleList';
 import { HelpArticleView  } from './HelpArticleView';
 import { HELP_CATEGORIES  } from './help-content';
-export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState('')const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)import { Input  } from '@/components / ui / input';
+
+export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState('');
+  const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)import { Input ,
+} from '@/components / ui / input';
 import { Button  } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { HELP_CATEGORIES  } from './help - content';
+
 export default /**;
  * HelpCenter - Function description;
  */;
-function HelpCenter() {const [selected_category, setSelectedCategory] = useState < string | null>(null)const [selected_article, setSelectedArticle] = useState < string | null>(null)const [search_query, setSearchQuery] = useState ('')const handleCategorySelect = (category_id: string) =>: any {setSelectedCategory (category_id)setSelectedArticle (null)}
-  const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)}export default /**;
+function HelpCenter() {const [selected_category, setSelectedCategory] = useState < string | null>(null)const [selected_article, setSelectedArticle] = useState < string | null>(null)const [search_query, setSearchQuery] = useState ('')const handleCategorySelect = (category_id: string) =>: any {setSelectedCategory (category_id)setSelectedArticle (null,
+}
+;
+  const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId;
+}
+
+export default /**;
  * HelpCenter - Function description;
  */;
 function HelpCenter() {const [selected_category, setSelectedCategory] = useState < string | null>(null),const [selected_article, setSelectedArticle] = useState < string | null>(null),const [search_query, setSearchQuery] = useState (""),const handleCategorySelect = (category_id: string, ) =>: any {setSelectedCategory (category_id),setSelectedArticle (null)},const handleArticleSelect = (article_id: string, ) =>: any {setSelectedArticle (article_id)},const handleBackToCategories = () =>: any {setSelectedCategory (null)setSelectedArticle (null)}
-  const handleBackToArticles = () =>: any {setSelectedArticle (null)}return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+;
+  const handleBackToArticles = () =>: any {setSelectedArticle (null)}return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }
@@ -41,7 +53,22 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
             </TabsList>;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (<HelpCategoryList;
-                  categories={HELP_CATEGORIES}import React, { useState } from "react",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { HelpCategoryList } from "./HelpCategoryList",import { HelpArticleList } from "./HelpArticleList",import { HelpArticleView } from "./HelpArticleView",import { HELP_CATEGORIES } from "./help-content",export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery]  = useState('')const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)}const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null),const [selectedArticle, setSelectedArticle] = useState<string | null>(null),const [searchQuery, setSearchQuery]  = useState(""),const handleCategorySelect = (categoryId: string,) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string,) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null)setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState("")const handleCategorySelect  = null;return (<>;
+                  categories = {HELP_CATEGORIES}import React, { useState } from "react",import { Input } from "@/components/ui/input",import { Button } from "@/components/ui/button",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { HelpCategoryList } from "./HelpCategoryList",import { HelpArticleList } from "./HelpArticleList",import { HelpArticleView } from "./HelpArticleView",import { HELP_CATEGORIES } from "./help-content",export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery]  =;
+  useState('');
+  const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null,
+}
+
+const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId;
+}
+
+export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null),const [selectedArticle, setSelectedArticle] = useState<string | null>(null),const [searchQuery, setSearchQuery]  = useState(""),const handleCategorySelect = (categoryId: string,) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string,) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null)setSelectedArticle(null;
+}
+
+const handleBackToArticles = () => {setSelectedArticle(null;
+}
+
+export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState("";
+  const handleCategorySelect  = null;return (<>;
       <div className='container mx-auto px-4 py-8'>;
         <div className='max-w-4xl mx-auto'>;
           <h1 className='text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
@@ -49,7 +76,13 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
           </h1>;
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
-            team.;const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null),setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}return (<>;
+            team.;
+
+const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId,
+},const handleBackToCategories = () => {setSelectedCategory(null),setSelectedArticle(null)}
+;
+  const handleBackToArticles = () => {setSelectedArticle(null);
+  return (<>;
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;
           <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
@@ -100,8 +133,8 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   <Button;
                     variant='ghost';
                     onClick={handleBackToCategories}
-                    className='mb-4';
-                  >;
+                    className='mb-4'>
+
                     ← All Categories;
                   </Button>;
                   <HelpArticleList;
@@ -117,8 +150,8 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   <Button;
                     variant="ghost";
                     onClick={handleBackToCategories}
-                    className="mb-4";
-                  >;
+                    className="mb-4">
+
                     ← All Categories;
                   </Button>;
                   <HelpArticleList;
@@ -131,8 +164,8 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   <Button;
                     variant="ghost";
                     onClick={handleBackToArticles}
-                    className="mb-4";
-                  >;
+                    className="mb-4">
+
                     ← Back to Articles;
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
@@ -207,8 +240,8 @@ function HelpCenter() {const [selected_category, setSelectedCategory] = useState
                   <Button;
                     variant='ghost';
                     on_click={handleBackToCategories}
-                    className='mb - 4';
-                  >;
+                    className='mb - 4'>
+
                     ← All Categories;
                   </Button>;
                   <HelpArticleList;

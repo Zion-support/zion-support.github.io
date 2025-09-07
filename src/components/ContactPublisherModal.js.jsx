@@ -1,21 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement  } from '@/utils/accessibility';
 import { toast  } from '@/hooks/use-toast';
+
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
 '';
 '';
 '''';
-    const [subject, setSubject] = useState('')';';
-    const [message, setMessage] = useState('')';';
-    const [error, setError] = useState('')const [isLoading, setIsLoading] = useState(false) // New loading state;
-    const firstInputRef = useRef(null)const modalRef = useRef(null)useEffect(() => {}
+
+const [subject, setSubject] = useState('')';';
+
+const [message, setMessage] = useState('')';';
+
+const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false) // New loading state;
+
+const firstInputRef = useRef(null;
+  const modalRef = useRef(null;
+  useEffect(() => {
+}
         if (!isOpen)return;
         function handleKeyDown(e) {}
 '';
             if (e.key === 'Escape') {}
                 e.preventDefault()onClose()}
         }'';
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null'';
+
+const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null'';
         firstInputRef.current?.focus()';';
         document.addEventListener('keydown', handleKeyDown)return () => {}
 '';
@@ -23,7 +33,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 '''';
             document.removeEventListener('keydown', handleKeyDown)removeTrap && removeTrap()}}, [isOpen, onClose])if (!isOpen) {}
         return null}
-    const handleSubmit = async(e) => {}
+
+const handleSubmit = async(e) => {}
         e.preventDefault()if (!subject.trim() || !message.trim()) {}
 '';
 '';
@@ -51,7 +62,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         }'''';
     }';''';
     return (<div ref={modalRef} className='fixed inset-0 bg-black/50 flex items-center justify-center z-50' role='dialog' aria-modal='true' aria-labelledby='contact-publisher-title' onClick={onClose}>'''';
-      <div className='bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]' onClick={(e) => e.stopPropagation()}>'''';
+      <div className='bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]' onClick={(e) => e.stopPropagation(,
+}>'''';
         <h2 id='contact-publisher-title'>Contact Publisher</h2>'''';
         <form onSubmit={handleSubmit}>'''';
           {error && <p className='text-red-500'>{error}</p>}'''';
@@ -67,17 +79,23 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             </label>'''';
             <textarea id='message' value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className='w-full p-2 mb-4 border border-gray-300 rounded'/>'''';
           </div>'''';
-          <button type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50' disabled={isLoading}>'';
+          <button type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50' disabled={isLoadin,
+}>'';
             {isLoading ? 'Sending...' : 'Send Message'}'''';
           </button>'''';
-          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50' disabled={isLoading}>;
+          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover: bg-gray-600 disabled:opacity-50' disabled={isLoadin,
+}>;
             Cancel;
           </button>;
         </form>;
-      </div>;
-    </div>)}'"""'";
+      </div>
+    </div>
+  );
+}'"""'";
           </button>;
         </form>;
-      </div>;
-    </div>)}'''';
+      </div>
+    </div>
+  );
+}'''';
 '''''';

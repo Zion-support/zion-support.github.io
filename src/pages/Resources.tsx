@@ -40,19 +40,27 @@ import {
 
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'All Resources', icon: BookOpen, count: 150 },
-    { id: 'blog', name: 'Blog & Insights', icon: BookOpen, count: 45 },
-    { id: 'case-studies', name: 'Case Studies', icon: Target, count: 25 },
-    { id: 'white-papers', name: 'White Papers', icon: FileText, count: 20 },
-    { id: 'webinars', name: 'Webinars', icon: Users, count: 15 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 30 },
-    { id: 'faq', name: 'FAQ & Support', icon: HelpCircle, count: 15 }
+const [searchQuery, setSearchQuery] = useState('');
+
+const categories = [
+    { id: 'all', name: 'All Resources', icon: BookOpen, count: 150,
+},
+    { id: 'blog', name: 'Blog & Insights', icon: BookOpen, count: 45,
+},
+    { id: 'case-studies', name: 'Case Studies', icon: Target, count: 25,
+},
+    { id: 'white-papers', name: 'White Papers', icon: FileText, count: 20,
+},
+    { id: 'webinars', name: 'Webinars', icon: Users, count: 15,
+},
+    { id: 'documentation', name: 'Documentation', icon: Code, count: 30,
+},
+    { id: 'faq', name: 'FAQ & Support', icon: HelpCircle, count: 15,
+}
   ];
 
-  const featuredResources = [
+const featuredResources = [
     {
       id: 1,
       title: 'AI-Powered Business Transformation Guide 2024',
@@ -67,7 +75,8 @@ export default function Resources() {
       tags: ['AI', 'Business Transformation', 'ROI', 'Implementation'],
       image: '/images/ai-transformation-guide.jpg',
       href: '/resources/ai-business-transformation-guide-2024'
-    },
+   ,
+},
     {
       id: 2,
       title: 'Cybersecurity Best Practices for Enterprise',
@@ -82,7 +91,8 @@ export default function Resources() {
       tags: ['Cybersecurity', 'Enterprise', 'Compliance', 'Risk Management'],
       image: '/images/cybersecurity-best-practices.jpg',
       href: '/resources/cybersecurity-best-practices-enterprise'
-    },
+   ,
+},
     {
       id: 3,
       title: 'Cloud Migration Success Stories',
@@ -97,10 +107,11 @@ export default function Resources() {
       tags: ['Cloud Migration', 'Success Stories', 'AWS', 'Azure'],
       image: '/images/cloud-migration-stories.jpg',
       href: '/case-studies/cloud-migration-success-stories'
-    }
+   ,
+}
   ];
 
-  const blogPosts = [
+const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Healthcare: 2024 Trends',
@@ -111,7 +122,8 @@ export default function Resources() {
       readTime: '6 min read',
       tags: ['AI', 'Healthcare', 'Trends', '2024'],
       href: '/blog/future-ai-healthcare-2024-trends'
-    },
+   ,
+},
     {
       id: 2,
       title: 'Quantum Computing: Breaking Down the Hype',
@@ -122,7 +134,8 @@ export default function Resources() {
       readTime: '8 min read',
       tags: ['Quantum Computing', 'Technology', 'Innovation'],
       href: '/blog/quantum-computing-breaking-down-hype'
-    },
+   ,
+},
     {
       id: 3,
       title: 'Sustainable Technology: Green IT Solutions',
@@ -133,10 +146,11 @@ export default function Resources() {
       readTime: '5 min read',
       tags: ['Sustainability', 'Green IT', 'Environment', 'Technology'],
       href: '/blog/sustainable-technology-green-it-solutions'
-    }
+   ,
+}
   ];
 
-  const webinars = [
+const webinars = [
     {
       id: 1,
       title: 'AI Strategy Workshop: From Vision to Implementation',
@@ -148,7 +162,8 @@ export default function Resources() {
       speaker: 'Dr. Alex Johnson',
       registration: 'Open',
       href: '/webinars/ai-strategy-workshop'
-    },
+   ,
+},
     {
       id: 2,
       title: 'Cybersecurity Threat Landscape 2024',
@@ -160,10 +175,11 @@ export default function Resources() {
       speaker: 'Sarah Martinez',
       registration: 'Open',
       href: '/webinars/cybersecurity-threat-landscape-2024'
-    }
+   ,
+}
   ];
 
-  const documentation = [
+const documentation = [
     {
       id: 1,
       title: 'API Reference Guide',
@@ -172,7 +188,8 @@ export default function Resources() {
       version: 'v2.1',
       lastUpdated: '2024-01-15',
       href: '/docs/api-reference'
-    },
+   ,
+},
     {
       id: 2,
       title: 'Developer Getting Started Guide',
@@ -181,10 +198,11 @@ export default function Resources() {
       version: 'v1.0',
       lastUpdated: '2024-01-10',
       href: '/docs/developer-guide'
-    }
+   ,
+}
   ];
 
-  const filteredResources = () => {
+const filteredResources = () => {
     let resources = [...featuredResources, ...blogPosts, ...webinars, ...documentation];
     
     if (activeCategory !== 'all') {
@@ -199,29 +217,45 @@ export default function Resources() {
       );
     }
     
-    return resources;
-  };
+    return resources
+};
 
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : BookOpen;
-  };
 
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'Unknown';
-  };
+const getCategoryIcon = (categoryId: string) => {
+   ;
+  const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : BookOpen
+};
+
+
+const getCategoryName = (categoryId: string) => {
+   ;
+  const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'Unknown'
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+=======
+      <SEO 
+        title="Resources - Zion Tech Group"
+        description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, and documentation to help you stay informed and make better technology decisions."
+        canonical="https: //ziontechgroup.com/resources"
+      />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       
-      {/* Hero Section */}
+      {/* Hero Section *,
+}
       <section className="pt-24 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 ,
+}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Resources & Insights
@@ -240,7 +274,7 @@ export default function Resources() {
                   placeholder="Search resources, topics, or keywords..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
                 />
               </div>
             </div>
@@ -273,14 +307,17 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Featured Resources */}
+      {/* Featured Resources *,
+}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true ,
+}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Featured Resources</h2>
@@ -293,8 +330,10 @@ export default function Resources() {
             {featuredResources.map((resource, index) => (
               <motion.div
                 key={resource.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                whileInView={{ opacity: 1, y: 0 ,
+}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 rounded-2xl p-6 border border-cyan-400/50 shadow-lg shadow-cyan-400/20 hover:scale-105 transition-all duration-300"
@@ -310,7 +349,8 @@ export default function Resources() {
                   <span>•</span>
                   <span>{resource.date}</span>
                   <span>•</span>
-                  <span>{resource.readTime}</span>
+                  <span>{resource.readTim,
+}</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {resource.tags?.slice(0, 3).map((tag, idx) => (
@@ -320,8 +360,13 @@ export default function Resources() {
                   ))}
                 </div>
                 <Link
+<<<<<<< HEAD
                   href={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+=======
+                  to={resource.href}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 >
                   Read More
                   <ArrowRight className="w-4 h-4" />
@@ -332,14 +377,17 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* All Resources */}
+      {/* All Resources *,
+}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true ,
+}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">All Resources</h2>
@@ -352,10 +400,13 @@ export default function Resources() {
             {filteredResources().map((resource, index) => (
               <motion.div
                 key={resource.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 ,
+}
+                whileInView={{ opacity: 1, y: 0 ,
+}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
+                viewport={{ once: true ,
+}
                 className="bg-slate-900/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -387,14 +438,17 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section *,
+}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 ,
+}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true ,
+}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Stay Updated with Our Latest Insights</h2>

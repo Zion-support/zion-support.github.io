@@ -1,6 +1,7 @@
 
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
+
 const pathMap: Record<string, string> = {const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import Link from 'next / link';
@@ -9,10 +10,16 @@ import React from 'react';
 import { SEO  } from './SEO';
 // Map sitemap paths to their actual routes in the application;
 // Note: This path_map might need to be updated based on Next.js page structure;
+
 const path_map: Record < string, string> = {'/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
+
 const resolve_path = (path: string): string => path_map[path] ?? path,import React from 'react',import { completeSitemap, dynamicPaths } from '@/config/sitemap',import Link from 'next/link',import { SEO } from './SEO',// Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
-const pathMap: Record<string string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {return (<>;
+
+const pathMap: Record<string string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job,
+},const resolvePath = (path: string): string => pathMap[path] ?? path,export;
+  const SitemapPage: React.FC = () => ;
+  return (<>;
       <SEO;
         title="Sitemap | Zion AI Marketplace";
         description="Complete sitemap of the Zion AI Marketplace";
@@ -30,14 +37,21 @@ const pathMap: Record<string string> = {'/about': '/content/about/blog': '/blog/
                 .filter(route => !route.requiredAuth).map(route => (<li key={route.path}>;
                     <Link;
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
-                    >;
+                      className="flex items-center hover:text-zion-purple">
+
                       <ChevronRight className="h-4 w-4 mr-2" />;
-const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,export;
+  const SitemapPage: React.FC = () => {import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next && Next.js page structure;
-const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}const resolvePath = (path: string): string => pathMap[path] ?? path,export const SitemapPage: React.FC = () => {return (<>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+
+const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,export;
+  const SitemapPage: React.FC = () => ;
+  return (<>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
         canonical="https://app && app.ziontechgroup.com/content/sitemap-page";
       />;
       <div className="container mx-auto px-4 py-12">;
@@ -66,8 +80,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                 .filter (route => !route.required_auth).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
-                    >;
+                      className="flex items - center hover:text - zion - purple">
+
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;{route.label}
                     </Link>;
                   </li>))}</ul>;
@@ -82,8 +96,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredRoles?.includes('creator')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
-                    >;
+                      className="flex items-center hover:text-zion-purple">
+
                       <ChevronRight className="h-4 w-4 mr-2" />;
             </ul>;
           </div>;{/* Talent Routes */}
@@ -97,8 +111,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_roles?.includes ('creator')).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
-                    >;
+                      className="flex items - center hover:text - zion - purple">
+
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
                     </Link>;
@@ -114,8 +128,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredRoles?.includes('buyer')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
-                    >;
+                      className="flex items-center hover:text-zion-purple">
+
                       <ChevronRight className="h-4 w-4 mr-2" />;
             </ul>;
           </div>;{/* Client Routes */}
@@ -129,8 +143,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_roles?.includes ('buyer')).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
-                    >;
+                      className="flex items - center hover:text - zion - purple">
+
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
                     </Link>;
@@ -146,8 +160,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   (!route.requiredRoles |route.requiredRoles.length === 0)).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
-                    >;
+                      className="flex items-center hover:text-zion-purple">
+
                       <ChevronRight className="h-4 w-4 mr-2" />;
             </ul>;
           </div>;{/* Shared Routes */}
@@ -161,8 +175,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   (!route.required_roles || route.required_roles.length === 0)).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
-                    >;
+                      className="flex items - center hover:text - zion - purple">
+
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}</Link>;
                   </li>;
@@ -178,23 +192,32 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.requiredRoles?.includes('admin')).map(route => (<li key={route.path}>;
                     <Link;
                       href = {resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple";
-                    >;
+                      className="flex items-center hover:text-zion-purple">
+
                       <ChevronRight className="h-4 w-4 mr-2" />;
 }
     {title: 'Services';
-      links: [{ name: 'AI Services', url: '/services / ai' }
-        { name: 'IT Services', url: '/services / it' }
-        { name: 'Cloud Solutions', url: '/services / cloud' }
-        { name: 'Cybersecurity', url: '/services / cybersecurity' }
-        { name: 'Digital Transformation', url: '/services / digital - transformation' }
+      links: [{ name: 'AI Services', url: '/services / ai',
+}
+        { name: 'IT Services', url: '/services / it',
+}
+        { name: 'Cloud Solutions', url: '/services / cloud',
+}
+        { name: 'Cybersecurity', url: '/services / cybersecurity',
+}
+        { name: 'Digital Transformation', url: '/services / digital - transformation',
+}
       ];
 }
     {title: 'Solutions';
-      links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
-        { name: 'Healthcare', url: '/solutions / healthcare' }
-        { name: 'Financial Services', url: '/solutions / financial' }
-        { name: 'Manufacturing', url: '/solutions / manufacturing' }
+      links: [{ name: 'Enterprise', url: '/solutions / enterprise',
+}
+        { name: 'Healthcare', url: '/solutions / healthcare',
+}
+        { name: 'Financial Services', url: '/solutions / financial',
+}
+        { name: 'Manufacturing', url: '/solutions / manufacturing',
+}
       ];
 }</ul>;
           </div>;
@@ -208,8 +231,8 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
                   route.required_roles?.includes ('admin')).map (route => (<li key={route.path}>;
                     <Link;
                       href = {resolve_path (route.path) }
-                      className="flex items - center hover:text - zion - purple";
-                    >;
+                      className="flex items - center hover:text - zion - purple">
+
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}href = {resolvePath(route && route.path)}
                       className="flex items-center hover:text-zion-purple">;
@@ -237,18 +260,43 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
       </div>;
     </>)}
 '"},const sitemap_data = [{title: 'Main Pages',links: [;
-        { name: 'Home', url: '/' },{ name: 'About', url: '/about' },{ name: 'Services', url: '/services' },{ name: 'Contact', url: '/contact' },{ name: 'Blog', url: '/blog' },{ name: 'Careers', url: '/careers' }];
-},{title: 'Services',links: [{ name: 'AI Services', url: '/services / ai' },{ name: 'IT Services', url: '/services / it' },{ name: 'Cloud Solutions', url: '/services / cloud' },{ name: 'Cybersecurity', url: '/services / cybersecurity' },{ name: 'Digital Transformation', url: '/services / digital - transformation' }];
-},{title: 'Solutions',links: [{ name: 'Enterprise', url: '/solutions / enterprise' },{ name: 'Healthcare', url: '/solutions / healthcare' },{ name: 'Financial Services', url: '/solutions / financial' },{ name: 'Manufacturing', url: '/solutions / manufacturing' }];
+        { name: 'Home', url: '/',
+},{ name: 'About', url: '/about',
+},{ name: 'Services', url: '/services',
+},{ name: 'Contact', url: '/contact',
+},{ name: 'Blog', url: '/blog',
+},{ name: 'Careers', url: '/careers',
+}];
+},{title: 'Services',links: [{ name: 'AI Services', url: '/services / ai',
+},{ name: 'IT Services', url: '/services / it',
+},{ name: 'Cloud Solutions', url: '/services / cloud',
+},{ name: 'Cybersecurity', url: '/services / cybersecurity',
+},{ name: 'Digital Transformation', url: '/services / digital - transformation',
+}];
+},{title: 'Solutions',links: [{ name: 'Enterprise', url: '/solutions / enterprise',
+},{ name: 'Healthcare', url: '/solutions / healthcare',
+},{ name: 'Financial Services', url: '/solutions / financial',
+},{ name: 'Manufacturing', url: '/solutions / manufacturing',
+}];
 },{title: 'Resources';
-      links: [{ name: 'Case Studies', url: '/case - studies' }
-        { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' }
-        { name: 'Documentation', url: '/docs' }
+      links: [{ name: 'Case Studies', url: '/case - studies',
+}
+        { name: 'White Papers', url: '/white - papers',
+},        { name: 'Webinars', url: '/webinars',
+}
+        { name: 'Documentation', url: '/docs',
+}
         { name: 'API Reference', url: '/api' }
-      ]}{ name: 'Case Studies', url: '/case - studies' }, ';
-        { name: 'White Papers', url: '/white - papers' }, ';
-        { name: 'Webinars', url: '/webinars' }, ';
-        { name: 'Documentation', url: '/docs' }, '        { name: 'API Reference', url: '/api' }]}
+      ,
+}{ name: 'Case Studies', url: '/case - studies',
+}, ';
+        { name: 'White Papers', url: '/white - papers',
+}, ';
+        { name: 'Webinars', url: '/webinars',
+}, ';
+        { name: 'Documentation', url: '/docs',
+}, '        { name: 'API Reference', url: '/api' },
+}
   ];
   return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
       <SEO;
@@ -303,10 +351,13 @@ const pathMap: Record<string, string> = {'/about': '/content/about/blog': '/blog
             </a>{' '}for assistance.;
           </p>;
         </div>;
-      </div>;
-    </div>) }
+      </div>
+    </div>
+  );
+}
 '";}import { completeSitemap, dynamicPaths   } from '@/config/sitemap';
 import { SEO   } from './SEO';
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
+
 const pathMap: Record<string, string> = {

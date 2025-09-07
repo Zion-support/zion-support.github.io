@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle,X,ArrowRight,Star,Zap,Shield,Users,BarChart3;
  } from 'lucide-react';
-const plans = [;
+
+const plans = [
   {name: 'Starter',price: '$99',period: 'per month',description: 'Perfect for small businesses getting started',features: [;
       'Basic AI integration','Cloud hosting','Email support','Standard security','Basic analytics';
     ],limitations: [;
@@ -16,12 +17,14 @@ const plans = [;
     ],limitations: [],popular: false;
   }
 ];
-const addOns = [;
+
+const addOns = [
   {name: 'Additional Storage',price: '$10',period: 'per 100GB/month',description: 'Extra cloud storage for your data';
   },{name: 'Premium Support',price: '$50',period: 'per month',description: '24/7 priority support and faster response times';
   },{name: 'Custom Integrations',price: '$200',period: 'per integration',description: 'Custom API integrations with third-party services';
   }
 ];
+
 export default function Pricing() {return (<>;
       <Head>;
         <title>Pricing - Zion Tech Group</title>;
@@ -42,12 +45,14 @@ import React from 'react';
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
             {plans.map((plan, index) => (<motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20 ,
+}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1 ,
+}
                 className={`relative bg-white rounded-lg shadow-md p-8 ${plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : '';
-                }`}
-              >;
+                }`}>
+
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">;
                       <Star size={16} className="mr-1" />;
@@ -79,8 +84,8 @@ import React from 'react';
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg transition-colors ${plan.popular;
                       ? 'bg-blue-600 text-white hover:bg-blue-700';
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
-                  }`}
-                >;
+                  }`}>
+
                   Get Started;
                   <ArrowRight size={20} className="ml-2" />;
                 </Link>;
@@ -92,12 +97,14 @@ import React from 'react';
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
               {addOns.map((addOn, index) => (<motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 20 ,
+}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-md p-6";
-                >;
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.name}</h3>;
+                  className="bg-white rounded-lg shadow-md p-6">
+
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{addOn.nam,
+}</h3>;
                   <p className="text-gray-600 mb-4">{addOn.description}</p>;
                   <div className="text-2xl font-bold text-blue-600">;
                     {addOn.price}
@@ -156,15 +163,15 @@ import React from 'react';
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
                 href="/contact";
-                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center";
-              >;
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
+
                 Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Link>;
               <Link;
                 href="/contact";
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center";
-              >;
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center">
+
                 Contact Sales;
               </Link>;
             </div>;

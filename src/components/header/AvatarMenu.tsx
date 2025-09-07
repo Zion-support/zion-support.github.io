@@ -1,8 +1,12 @@
 
 import React from 'react';
-const AvatarMenu = () => {return (<div>{/* AvatarMenu component */}
+
+const AvatarMenu = () => ;
+  return (<div>{/* AvatarMenu component */}
     </div>;
-  )}export default AvatarMenu;import Link from 'next/link';
+  )}
+
+export default AvatarMenu;import Link from 'next/link';
 import { useAuth   } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { DropdownMenu;
@@ -13,12 +17,17 @@ import { DropdownMenu;
   DropdownMenuLabel  } from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package  } from 'lucide-react';
 import { LogOut } from 'lucide-react', // Assuming lucide-react is used;
-export const AvatarMenu: React.FC = () => {const { user, logout, avatarUrl }  = useAuth()if (!user) return null;const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase()return (<DropdownMenu>;
+
+export const AvatarMenu: React.FC = () => ;
+  const { user, logout, avatarUrl }  = useAuth()if (!user) return null;
+
+const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(;
+  return (<DropdownMenu>;
       <DropdownMenuTrigger asChild data-testid='avatar-menu-trigger'>;
         <button;
           className='flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
-          aria-label='Open user menu';
-        >;
+          aria-label='Open user menu'>
+
           <Avatar className='h-8 w-8'>;
             {avatarUrl ? (<AvatarImage;
                 src={avatarUrl}
@@ -32,8 +41,8 @@ export const AvatarMenu: React.FC = () => {const { user, logout, avatarUrl }  = 
       <DropdownMenuContent;
         className='w-56';
         align='end';
-        data-testid='avatar-menu-content';
-      >;
+        data-testid='avatar-menu-content'>
+
         <DropdownMenuLabel className='font-normal'>;
           <div className='flex flex-col space-y-1'>;
             <p className='text-sm font-medium leading-none'>;
@@ -61,12 +70,14 @@ export const AvatarMenu: React.FC = () => {const { user, logout, avatarUrl }  = 
         <DropdownMenuSeparator />;
         <DropdownMenuItem;
           onClick={logout}
-          className='flex items-center cursor-pointer';
-        >;
+          className='flex items-center cursor-pointer'>
+
           <LogOut className='mr-2 h-4 w-4' />;
           <span>Logout</span>;
         </DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
-  )}export default AvatarMenu;
+  )}
+
+export default AvatarMenu;
 ";

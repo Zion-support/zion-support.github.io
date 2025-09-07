@@ -1,10 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle  } from 'lucide-react';
-export function UserMenu() {const [isOpen, setIsOpen] = useState(false)const menuRef  = useRef(null)useEffect(() => {const handleClickOutside = (event) => {if (menuRef.current && !menuRef.current.contains(event.target)) {setIsOpen(false)}
-    }document.addEventListener('mousedown', handleClickOutside)return () => document.removeEventListener('mousedown', handleClickOutside)}, [])const handleLogout = () => {// Implement logout logic here;
-    console.log('Logging out...')setIsOpen(false)}const menuItems = [;
-    {name: 'Profile', href: '/profile',icon: User, description: 'Manage your account';
+
+export function UserMenu() {const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null;
+  useEffect(() => {
+const handleClickOutside = (event) => {if (menuRef.current && !menuRef.current.contains(event.target)) {setIsOpen(false)}
+    }document.addEventListener('mousedown', handleClickOutside;
+  return () => document.removeEventListener('mousedown', handleClickOutside)}, [];
+  const handleLogout = () => {// Implement logout logic here;
+    console.log('Logging out...')setIsOpen(false)}
+
+const menuItems = [
+  {name: 'Profile', href: '/profile',icon: User, description: 'Manage your account';
     },{name: 'Dashboard', href: '/dashboard',icon: Settings, description: 'View your projects';
     },{name: 'Messages', href: '/messages',icon: MessageSquare, description: 'Check your inbox';
     },{name: 'Notifications', href: '/notifications',icon: Bell, description: 'Manage alerts';
@@ -15,8 +23,8 @@ export function UserMenu() {const [isOpen, setIsOpen] = useState(false)const men
   ];return (<div className="relative" ref={menuRef}>;
       <button;
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors";
-      >;
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors">
+
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">;
           <span className="text-white font-semibold text-sm">;
             {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}
@@ -65,8 +73,8 @@ export function UserMenu() {const [isOpen, setIsOpen] = useState(false)const men
           <div className="p-4 border-t border-zion-purple/20">;
             <button;
               onClick={handleLogout}
-              className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors";
-            >;
+              className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors">
+
               <LogOut className="h-4 w-4 mr-3" />;
               <span>Sign Out</span>;
             </button>;

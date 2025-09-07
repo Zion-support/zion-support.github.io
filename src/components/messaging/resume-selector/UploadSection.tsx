@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Upload, FileText  } from 'lucide-react';
+
 interface UploadSectionProps  {customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
   return (<div className='space - y-3'>;
@@ -50,12 +51,18 @@ import React from 'react',import { Button } from "@/components/ui/button",interf
 }
       )}
     </div>;
-  )}}interface UploadSectionProps  {customFile: File | null;
+  )}}
+
+interface UploadSectionProps {
+  customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onRemoveFile: () => void;
   onProcessFile: () => void;
   isProcessing: boolean;
-}export function UploadSection() {return (<div className="space-y-4">;
+
+}
+
+export function UploadSection() {return (<div className="space-y-4">;
       <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">;
         <div className="text-center">;
           <Upload className="mx-auto h-12 w-12 text-gray-400" />;
@@ -101,8 +108,8 @@ import React from 'react',import { Button } from "@/components/ui/button",interf
       )}{customFile && (<Button;
           onClick={onProcessFile}
           disabled={isProcessing}
-          className="w-full";
-        >;
+          className="w-full">
+
           {isProcessing ? 'Processing...' : 'Process Resume'}
         </Button>;
       )}

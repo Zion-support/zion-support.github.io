@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone } from 'lucide-react';
+<<<<<<< HEAD
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
   const company = [;
@@ -17,6 +18,57 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
   ];const company = [;
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },{ name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },{ name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },{ name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },{ name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];const toggleDropdown = (dropdown: string) => {setActiveDropdown(activeDropdown === dropdown ? null : dropdown),}const closeAllDropdowns = () => {setActiveDropdown(null)setIsOpen(false)}
+=======
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions',
+}
+  ];
+
+const company = [
+  { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team',
+}
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements',
+}
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights',
+}
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends',
+}
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts',
+}
+  ];
+
+const toggleDropdown = (dropdown: string) => {setActiveDropdown(activeDropdown === dropdown ? null : dropdown;
+}
+
+const closeAllDropdowns = () => {const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] =;
+  useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)useEffect(() => {
+const handleScroll = () => {setIsScrolled(window && window.scrollY > 20)}window && window.addEventListener('scroll', handleScroll;
+  return () => window && window.removeEventListener('scroll', handleScroll)}, [];
+  const services = [
+  { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions',
+},{ name: 'AI Business Intelligence', href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights',
+},{ name: 'Quantum Cybersecurity', href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions',
+},{ name: 'Edge Computing', href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management',
+},{ name: 'Space Technology', href: 'https://ziontechgroup && ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech',
+},{ name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions',
+}
+  ];
+
+const company = [
+  { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team',
+},{ name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements',
+},{ name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights',
+},{ name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends',
+},{ name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts',
+}
+  ];
+
+const toggleDropdown = (dropdown: string) => {setActiveDropdown(activeDropdown === dropdown ? null : dropdown),}
+;
+  const closeAllDropdowns = () => {setActiveDropdown(null)setIsOpen(false)}
+ ;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (: 'bg-transparent';
     }`}>;
       <div className="max-w-7xl mx-auto px-6">;
@@ -29,6 +81,7 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
               <button;
                 onClick={() => toggleDropdown('services')}
               {activeDropdown === 'services' && (<motion.div;
+<<<<<<< HEAD
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -39,6 +92,21 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
                   exit={{ opacity: 0, y: 10 }}
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6";
                 >;
+=======
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
+
+                <span>Services</span>;
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
+              </button>;{activeDropdown === 'services' && (<motion&& motion.div;
+                  initial={{ opacity: 0, y: 10 ,
+}
+                  animate={{ opacity: 1, y: 0 ,
+}
+                  exit={{ opacity: 0, y: 10 ,
+}
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className="grid grid-cols-2 gap-4 px-6">;
                     {services.map((service) => (<Link;
                         key={service.name}
@@ -65,12 +133,18 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
             <div className="relative">;
               <button;
                 onClick={() => toggleDropdown('company')}
+<<<<<<< HEAD
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
+=======
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <span>Company</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
               </button>;
               {activeDropdown === 'company' && ({activeDropdown === 'services' && (<motion.div;
+<<<<<<< HEAD
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -79,6 +153,19 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
+=======
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
+
+                <span>Services</span>;
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
+              </button>;{activeDropdown === 'services' && (<motion&& motion.div;
+                  initial={{ opacity: 0, y: 10 ,
+}
+                  animate={{ opacity: 1, y: 0 ,
+}
+                  exit={{ opacity: 0, y: 10 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="grid grid-cols-2 gap-4 px-6">;
                     {services && services.map((service) => (<Link;
@@ -104,9 +191,12 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
             <div className="relative">;
               <button;
                 onClick={() => toggleDropdown('company')}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 10 ,
+}
+                  animate={{ opacity: 1, y: 0 ,
+}
+                  exit={{ opacity: 0, y: 10 ,
+}
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="space-y-2 px-6">;
                     {company && company.map((item) => (<Link;
@@ -129,14 +219,26 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
           {/* Mobile Menu Button */}
           <button;
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
-          >;
+            className="lg: hidden p-2 text-white hover:text-blue-300 transition-colors">
+
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
         {/* Mobile Menu */}
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+=======
+        {/* Mobile Menu *,
+}
+        {isOpen && (<motion&& motion.div;
+            initial={{ opacity: 0, height: 0 ,
+}
+            animate={{ opacity: 1, height: 'auto' ,
+}
+            exit={{ opacity: 0, height: 0 ,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;
             <div className="px-6 space-y-6">;
               {/* Mobile Services */}
@@ -176,14 +278,47 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
                 <Link;
                   href="/contact";
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors";
+<<<<<<< HEAD
                   onClick={closeAllDropdowns}>;const EnhancedNavigation: React.FC = () => {const [is_open, setIsOpen] = useState (false)const [is_scrolled, setIsScrolled] = useState (false)const [active_dropdown, setActiveDropdown]  = useState < string | null>(null)useEffect (() => {const handle_scroll = () =>: any {setIsScrolled (window.scroll_y > 20)}window.addEventListener ('scroll', handle_scroll)return () => window.removeEventListener ('scroll', handle_scroll)}, [])const services = [;
     { name: 'All Solutions', href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions' },{ name: 'AI Business Intelligence', href: 'https://ziontechgroup.com / ai - business - intelligence', icon: Brain, description: 'AI - powered analytics and insights' },{ name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com / quantum - cybersecurity', icon: Shield, description: 'Quantum - resistant security solutions' },{ name: 'Edge Computing', href: 'https://ziontechgroup.com / edge - computing - orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },{ name: 'Space Technology', href: 'https://ziontechgroup.com / space - technology', icon: Rocket, description: 'Space exploration and satellite tech' },{ name: 'Pricing', href: '/pricing - 2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];const company = [;
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },{ name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },{ name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },{ name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },{ name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dropdown === dropdown ? null : dropdown),}const closeAllDropdowns = () =>: any {setActiveDropdown (null)setIsOpen (false)}return (<nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
+=======
+                  onClick={closeAllDropdowns}>;
+
+const EnhancedNavigation: React.FC = () => {const [is_open, setIsOpen] = useState (false)const [is_scrolled, setIsScrolled] = useState (false)const [active_dropdown, setActiveDropdown]  =;
+  useState < string | null>(null;
+  useEffect (() => {const handle_scroll = () =>: any {setIsScrolled (window.scroll_y > 20)}window.addEventListener ('scroll', handle_scroll;
+  return () => window.removeEventListener ('scroll', handle_scroll)}, [];
+  const services = [
+  { name: 'All Solutions', href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions',
+},{ name: 'AI Business Intelligence', href: 'https://ziontechgroup.com / ai - business - intelligence', icon: Brain, description: 'AI - powered analytics and insights',
+},{ name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com / quantum - cybersecurity', icon: Shield, description: 'Quantum - resistant security solutions',
+},{ name: 'Edge Computing', href: 'https://ziontechgroup.com / edge - computing - orchestration', icon: Cpu, description: 'Edge orchestration and IoT management',
+},{ name: 'Space Technology', href: 'https://ziontechgroup.com / space - technology', icon: Rocket, description: 'Space exploration and satellite tech',
+},{ name: 'Pricing', href: '/pricing - 2025', icon: Award, description: 'Transparent pricing for all solutions',
+}
+  ];
+
+const company = [
+  { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team',
+},{ name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements',
+},{ name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights',
+},{ name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends',
+},{ name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts',
+}
+  ];
+
+const toggle_dropdown = (dropdown: string) =>: any {setActiveDropdown (active_dropdown === dropdown ? null : dropdown),}
+;
+  const closeAllDropdowns = () =>: any {setActiveDropdown (null)setIsOpen (false);
+  return (<nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         ? 'bg - slate - 900 / 95 backdrop - blur - xl border - b border - white / 10 shadow - 2xl';
         : 'bg - transparent';
-    }`}>;
+    }`}>
+
       <div className="max - w-7xl mx-auto px-6">;
         <div className="flex items - center justify-between h-20">;
           {/* Logo */}
@@ -201,17 +336,28 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
             <div className="relative">;
               <button;
                 on_click={() => toggle_dropdown ('services')}
-                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors";
-              >;
+                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors">
+
                 <span > Services</span>;
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'services' ? 'rotate - 180' : ''}`} />;
               </button>;
               {active_dropdown === 'services' && (<motion.div;
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 10 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: 10 }}
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
+=======
+                  initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                  animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                  exit={{ opacity: 0, coordinate_y: 10 ,
+}
+                  className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className="grid grid - cols - 2 gap-4 px-6">;
                     {services.map ((service) => (<Link;
                         key={service.name}
@@ -236,17 +382,28 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
             <div className="relative">;
               <button;
                 on_click={() => toggle_dropdown ('company')}
-                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors";
-              >;
+                className="flex items - center space - x-1 text - white hover:text - blue-300 transition-colors">
+
                 <span > Company</span>;
                 <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`} />;
               </button>;
               {active_dropdown === 'company' && (<motion.div;
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 10 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: 10 }}
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
+=======
+                  initial={{ opacity: 0, coordinate_y: 10 ,
+}
+                  animate={{ opacity: 1, coordinate_y: 0 ,
+}
+                  exit={{ opacity: 0, coordinate_y: 10 ,
+}
+                  className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className="space-y-2 px-6">;
                     {company.map ((item) => (<Link;
                         key={item.name}
@@ -268,26 +425,38 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
             {/* CTA Button */}
             <Link;
               href="/contact";
-              className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors";
-            >;
+              className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font-semibold transition-colors">
+
               Get Started;
             </Link>;
           </div>;
           {/* Mobile Menu Button */}
           <button;
             on_click={() => setIsOpen (!is_open)}
-            className="lg:hidden p - 2 text - white hover:text - blue-300 transition-colors";
-          >;
-            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            className="lg: hidden p - 2 text - white hover:text - blue-300 transition-colors">
+
+            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,
+}
           </button>;
         </div>;
         {/* Mobile Menu */}
         {is_open && (<motion.div;
+<<<<<<< HEAD
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6";
           >;
+=======
+            initial={{ opacity: 0, height: 0 ,
+}
+            animate={{ opacity: 1, height: 'auto' ,
+}
+            exit={{ opacity: 0, height: 0 ,
+}
+            className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             <div className="px-6 space-y-6">;
               {/* Mobile Services */}
               <div>;
@@ -336,10 +505,20 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
                 </Link>;
               </div>;
             </div>;
+
 export default EnhancedNavigation;
+
 export default EnhancedNavigation;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default EnhancedNavigation;import { motion  } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
   Cpu, Database, Users, Award, BookOpen, Phone;
   } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 const EnhancedNavigation: React.FC;

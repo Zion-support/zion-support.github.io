@@ -15,6 +15,7 @@
     </div>;
   )}}
 import React from 'react';
+
 export default function ProductsIndexPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Products</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
@@ -23,9 +24,6 @@ export default function ProductsIndexPage() {return (<div className='container m
   );
 
 }
-
-
-
 
 export default function ProductsIndexPage() {
   return (
@@ -38,6 +36,7 @@ export default function ProductsIndexPage() {
   )export default function ProductsIndexPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Products</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>;
+
 export default /**;
  * ProductsIndexPage - Function description;
  */;
@@ -51,8 +50,12 @@ function ProductsIndexPage() {return (<div className='container mx - auto px - 4
  */;
 function ProductsIndexPage() {return (<div className="container mx - auto px - 4 py - 10">;
       <h1 className="text - 2xl font - semibold">Products</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Browse Zion products.</p>;
-    </div>)})}export default function ProductsIndexPage() {return (<div className='container mx-auto px-4 py-10'>;
+      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Browse Zion products.</p>
+    </div>
+  );
+})}
+
+export default function ProductsIndexPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Products</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Browse Zion products.;
@@ -81,7 +84,6 @@ function ProductsIndexPage() {return (<div className="container mx - auto px - 4
   )
 }
 
-
 export default function ProductsIndexPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -90,7 +92,9 @@ export default function ProductsIndexPage() {
         Browse Zion products.
       </p>
     </div>;
-  );export default function ProductsIndexPage() {
+  );
+
+export default function ProductsIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Products</h1>

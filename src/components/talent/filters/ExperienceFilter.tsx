@@ -5,8 +5,11 @@ return (<div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
         <span > Years of Experience</span>;
 import { Slider  } from '@/components/ui/slider';
 import { ExperienceFilterProps  } from '@/types/filters';
+
 export function ExperienceFilter() {const handleChange = null;
+
 export function ExperienceFilter() {const handleChange = (values: number[]) => {setExperienceRange([values[0] |0, values[1] |15])}
+ ;
   return (<div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button;
         onClick={toggleSection}
@@ -24,6 +27,7 @@ export function ExperienceFilter() {const handleChange = (values: number[]) => {
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
 import { Slider   } from '@/components / ui / slider';
 import { ExperienceFilterProps   } from '@/types / filters';
+
 export /**;
  * ExperienceFilter - Function description;
  */;
@@ -40,8 +44,8 @@ import { Slider } from "@/components/ui/slider",import { ExperienceFilterProps }
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>;
   return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
-        onClick={toggleSection}className="flex w-full items-center justify-between text-white font-medium";
-      >;
+        onClick={toggleSection}className="flex w-full items-center justify-between text-white font-medium">
+
         <span>Years of Experience</span>;
         {expanded ? (<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
@@ -54,15 +58,18 @@ import { Slider } from "@/components/ui/slider",import { ExperienceFilterProps }
           </div>;
           <Slider;
             aria-label="Experience range";
+
 export function ExperienceFilter() {aria-label="Experience range";
-export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {export function ExperienceFilter() {const handleChange = (values: number[]) => {setExperienceRange([values[0] || 0, values[1] || 15])}return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
+
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {export function ExperienceFilter() {const handleChange = (values: number[]) => {setExperienceRange([values[0] || 0, values[1] || 15]);
+  return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
       <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
-      >;
+        className="flex w-full items-center justify-between text-white font-medium">
+
         <span>Years of Experience</span>;
         {expanded ? (<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
@@ -94,6 +101,8 @@ className='mt-6';
             onValueChange={handle_change}
             className='mt - 6'          />            className="mt - 6";
             className="mt - 6";
-          />;
-        </div>)}
+          />
+    </div>
+  );
+}
     </div>)}}}

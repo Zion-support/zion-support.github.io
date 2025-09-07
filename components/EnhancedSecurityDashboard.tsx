@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Shield,Zap,AlertTriangle,CheckCircle,Bug,Mail,Activity,Key,Database,Code,TrendingUp,TrendingDown,} from 'lucide-react';
+
 interface SecurityThreat  {id: string;
   type:;
     | 'malware';
@@ -16,7 +17,9 @@ interface SecurityThreat  {id: string;
   status: 'active' | 'blocked' | 'investigating' | 'resolved';
   description: string;
   impact: string;
-}interface SecurityMetric  {id: string;
+}
+
+interface SecurityMetric  {id: string;
   name: string;
   value: number;
   unit: string;
@@ -24,24 +27,41 @@ interface SecurityThreat  {id: string;
   changeType: 'increase' | 'decrease';
   status: 'secure' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
-}interface EnhancedSecurityDashboardProps  {title?: string;
+}
+
+interface EnhancedSecurityDashboardProps {
+  title?: string;
   subtitle?: string;
   showThreats?: boolean;
   autoRefresh?: boolean;
-}const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({title = 'Enhanced Security Dashboard',subtitle = 'Real-time threat monitoring and security analytics for comprehensive protection',showThreats = true,autoRefresh = true,}) => {const [threats, setThreats] = useState<SecurityThreat[]>([;
+
+}
+
+const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({title = 'Enhanced Security Dashboard',subtitle = 'Real-time threat monitoring and security analytics for comprehensive protection',showThreats = true,autoRefresh = true,}) => ;
+  const [threats, setThreats] = useState<SecurityThreat[]>([;
     {id: '1',type: 'ddos',severity: 'high',source: '192.168.1.100',target: 'Web Server',timestamp: '2024-01-15 14:30:00',status: 'blocked',description: 'Distributed Denial of Service attack detected',impact: 'High traffic volume from multiple sources',},{id: '2',type: 'phishing',severity: 'medium',source: 'suspicious-email@domain.com',target: 'User Accounts',timestamp: '2024-01-15 13:45:00',status: 'investigating',description: 'Phishing attempt targeting user credentials',impact: 'Potential credential compromise',},{id: '3',type: 'brute-force',severity: 'low',source: '203.45.67.89',target: 'SSH Service',timestamp: '2024-01-15 12:20:00',status: 'blocked',description: 'Multiple failed login attempts detected',impact: 'Account lockout protection activated',},])const [metrics, setMetrics] = useState<SecurityMetric[]>([;
-    {id: 'threats-blocked',name: 'Threats Blocked',value: 127,unit: '',change: -15.2,changeType: 'decrease',status: 'secure',icon: Shield,},{id: 'response-time',name: 'Response Time',value: 45,unit: 'ms',change: -8.5,changeType: 'decrease',status: 'secure',icon: Zap,},{id: 'vulnerabilities',name: 'Vulnerabilities',value: 3,unit: '',change: -25.0,changeType: 'decrease',status: 'warning',icon: AlertTriangle,},{id: 'security-score',name: 'Security Score',value: 94,unit: '/100',change: 2.1,changeType: 'increase',status: 'secure',icon: CheckCircle,},])const [selectedThreat, setSelectedThreat] = useState<string | null>(null)const [timeRange, setTimeRange]  = useState<'1h' | '6h' | '24h' | '7d'>('24h')useEffect(() => {if (!autoRefresh) return;const interval = setInterval(() => {// Simulate new threats;
-      if (Math.random() > 0.7) {const threatTypes = [;
-          'malware','phishing','ddos','brute-force',] as const;
-        const severityLevels = ['low', 'medium', 'high'] as const;
-        const targetSystems  = ['Web Server', 'Database', 'API Gateway'];const newThreat: SecurityThreat = {id: Date.now().toString(),type:;
+    {id: 'threats-blocked',name: 'Threats Blocked',value: 127,unit: '',change: -15.2,changeType: 'decrease',status: 'secure',icon: Shield,},{id: 'response-time',name: 'Response Time',value: 45,unit: 'ms',change: -8.5,changeType: 'decrease',status: 'secure',icon: Zap,},{id: 'vulnerabilities',name: 'Vulnerabilities',value: 3,unit: '',change: -25.0,changeType: 'decrease',status: 'warning',icon: AlertTriangle,},{id: 'security-score',name: 'Security Score',value: 94,unit: '/100',change: 2.1,changeType: 'increase',status: 'secure',icon: CheckCircle,},])const [selectedThreat, setSelectedThreat] = useState<string | null>(null)const [timeRange, setTimeRange]  = useState<'1h' | '6h' | '24h' | '7d'>('24h')useEffect(() => {
+if (!autoRefresh) return;
+
+const interval = setInterval(() => {// Simulate new threats;
+      if (Math.random() > 0.7) {const threatTypes = [
+  'malware','phishing','ddos','brute-force',] as const;
+
+const severityLevels = ['low', 'medium', 'high'] as const;
+
+const targetSystems  = ['Web Server', 'Database', 'API Gateway'];
+
+const newThreat: SecurityThreat = {id: Date.now().toString(),type:;
             threatTypes[Math.floor(Math.random() * threatTypes.length)] ||;
             'malware',severity:;
             severityLevels[Math.floor(Math.random() * severityLevels.length)] ||;
-            'medium',source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,target:;
+            'medium',source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255,
+}`,target:;
             targetSystems[Math.floor(Math.random() * targetSystems.length)] ||;
-            'Web Server',timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),status: 'active',description: 'New security threat detected',impact: 'Under investigation',}setThreats(prev => [newThreat, ...prev.slice(0, 9)])}
-    }, 10000)return () => clearInterval(interval)}, [autoRefresh])const getThreatTypeIcon = (type: string) => {switch (type) {case 'malware':;
+            'Web Server',timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),status: 'active',description: 'New security threat detected',impact: 'Under investigation',}setThreats(prev = > [newThreat, ...prev.slice(0, 9)])}
+    }, 10000;
+  return () => clearInterval(interval)}, [autoRefresh];
+  const getThreatTypeIcon = (type: string) => {switch (type) {case 'malware':;
         return <Bug className="w-5 h-5" />;
       case 'phishing':;
         return <Mail className="w-5 h-5" />;
@@ -56,7 +76,9 @@ interface SecurityThreat  {id: string;
       default:;
         return <AlertTriangle className="w-5 h-5" />;
     }
-  }const getSeverityColor = (severity: string) => {switch (severity) {case 'critical':;
+  }
+
+const getSeverityColor = (severity: string) => {switch (severity) {case 'critical':;
         return 'text-red-600 bg-red-100 border-red-200';
       case 'high':;
         return 'text-orange-600 bg-orange-100 border-orange-200';
@@ -67,7 +89,9 @@ interface SecurityThreat  {id: string;
       default:;
         return 'text-gray-600 bg-gray-100 border-gray-200';
     }
-  }const getStatusColor = (status: string) => {switch (status) {case 'active':;
+  }
+
+const getStatusColor = (status: string) => {switch (status) {case 'active':;
         return 'text-red-600 bg-red-100';
       case 'blocked':;
         return 'text-green-600 bg-green-100';
@@ -78,7 +102,9 @@ interface SecurityThreat  {id: string;
       default:;
         return 'text-gray-600 bg-gray-100';
     }
-  }const getMetricStatusColor = (status: string) => {switch (status) {case 'secure':;
+  }
+
+const getMetricStatusColor = (status: string) => {switch (status) {case 'secure':;
         return 'text-green-600 bg-green-100';
       case 'warning':;
         return 'text-yellow-600 bg-yellow-100';
@@ -87,16 +113,25 @@ interface SecurityThreat  {id: string;
       default:;
         return 'text-gray-600 bg-gray-100';
     }
-  }const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}const itemVariants = {hidden: { y: 20, opacity: 0 },visible: {y: 0,opacity: 1,transition: {duration: 0.5,ease: 'easeOut',},},}return (<section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">;
+  }
+
+const containerVariants = {hidden: { opacity: 0,
+},visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}
+;
+  const itemVariants = {hidden: { y: 20, opacity: 0,
+},visible: {y: 0,opacity: 1,transition: {duration: 0.5,ease: 'easeOut',},},;
+  return (<section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">;
       <div className="container mx-auto px-4">;
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 30 ,
+}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16";
-        >;
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">{title}</h2>;
+          className="text-center mb-16">
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{titl,
+}</h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">{subtitle}</p>;
         </motion.div>;
         {/* Security Metrics Overview */}
@@ -104,22 +139,25 @@ interface SecurityThreat  {id: string;
           variants={containerVariants}
           initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16";
-        >;
-          {metrics.map(metric => {const IconComponent  = metric.icon;return (<motion.div;
+          viewport={{ once: true ,
+}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+          {metrics.map(metric = > ;
+  const IconComponent  = metric.icon;return (<motion.div;
                 key={metric.id}
                 variants={itemVariants}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300";
-              >;
+                whileHover={{ scale: 1.02, y: -5 ,
+}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300">
+
                 <div className="flex items-center justify-between mb-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">;
                     <IconComponent className="w-6 h-6 text-blue-400" />;
                   </div>;
                   <div;
-                    className={`px-3 py-1 rounded-full text-xs font-medium border ${getMetricStatusColor(metric.status)}`}
-                  >;
+                    className={`px-3 py-1 rounded-full text-xs font-medium border ${getMetricStatusColor(metric.status)}`}>
+
                     {metric.status}
                   </div>;
                 </div>;
@@ -142,8 +180,8 @@ interface SecurityThreat  {id: string;
                     className={`text-sm font-medium ${metric.changeType === 'increase';
                         ? 'text-green-400';
                         : 'text-red-400';
-                    }`}
-                  >;
+                    }`}>
+
                     {Math.abs(metric.change).toFixed(1)}%;
                   </span>;
                   <span className="text-sm text-gray-500">vs last period</span>;
@@ -153,12 +191,15 @@ interface SecurityThreat  {id: string;
         </motion.div>;
         {/* Time Range Selector */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 ,
+}
+          whileInView={{ opacity: 1, y: 0 ,
+}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex justify-center mb-12";
-        >;
+          viewport={{ once: true ,
+}
+          className="flex justify-center mb-12">
+
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">;
             {(['1h', '6h', '24h', '7d'] as const).map(range => (<button;
                 key={range}
@@ -166,8 +207,8 @@ interface SecurityThreat  {id: string;
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${timeRange === range;
                     ? 'bg-blue-600 text-white shadow-lg';
                     : 'text-gray-300 hover:text-white hover:bg-gray-700/50';
-                }`}
-              >;
+                }`}>
+
                 {range}
               </button>;
             ))}
@@ -175,12 +216,15 @@ interface SecurityThreat  {id: string;
         </motion.div>;
         {/* Security Threats */}
         {showThreats && (<motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 ,
+}
+            whileInView={{ opacity: 1, y: 0 ,
+}
             transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mb-16";
-          >;
+            viewport={{ once: true ,
+}
+            className="mb-16">
+
             <div className="flex items-center justify-between mb-8">;
               <h3 className="text-2xl font-bold">Active Security Threats</h3>;
               <div className="flex items-center gap-4">;
@@ -193,9 +237,11 @@ interface SecurityThreat  {id: string;
             <div className="space-y-4">;
               {threats.map(threat => (<motion.div;
                   key={threat.id}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20 ,
+}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5 ,
+}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300 cursor-pointer";
                   onClick={() =>;
                     setSelectedThreat(selectedThreat === threat.id ? null : threat.id;
@@ -204,8 +250,8 @@ interface SecurityThreat  {id: string;
                   <div className="flex items-start justify-between">;
                     <div className="flex items-start gap-4">;
                       <div;
-                        className={`w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border ${getSeverityColor(threat.severity)}`}
-                      >;
+                        className={`w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border ${getSeverityColor(threat.severity)}`}>
+
                         {getThreatTypeIcon(threat.type)}
                       </div>;
                       <div className="flex-1">;
@@ -214,13 +260,13 @@ interface SecurityThreat  {id: string;
                             {threat.type.replace('-', ' ')} Attack;
                           </h4>;
                           <div;
-                            className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}
-                          >;
+                            className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
+
                             {threat.severity}
                           </div>;
                           <div;
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(threat.status)}`}
-                          >;
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(threat.status)}`}>
+
                             {threat.status}
                           </div>;
                         </div>;
@@ -259,12 +305,15 @@ interface SecurityThreat  {id: string;
                   {/* Expanded Threat Details */}
                   <AnimatePresence>;
                     {selectedThreat === threat.id && (<motion.div;
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
+                        initial={{ opacity: 0, height: 0 ,
+}
+                        animate={{ opacity: 1, height: 'auto' ,
+}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-6 pt-6 border-t border-gray-700/50";
-                      >;
+                        transition={{ duration: 0.3 ,
+}
+                        className="mt-6 pt-6 border-t border-gray-700/50">
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
                             <h5 className="font-semibold text-gray-200 mb-3">;
@@ -320,12 +369,15 @@ interface SecurityThreat  {id: string;
           </motion.div>;
         )}{/* Security Summary */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 ,
+}
+          whileInView={{ opacity: 1, y: 0 ,
+}
           transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center";
-        >;
+          viewport={{ once: true ,
+}
+          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center">
+
           <h3 className="text-2xl font-bold mb-6">Security Status Overview</h3>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
             <div>;
@@ -350,4 +402,6 @@ interface SecurityThreat  {id: string;
         </motion.div>;
       </div>;
     </section>;
-  )}export default EnhancedSecurityDashboard;
+  )}
+
+export default EnhancedSecurityDashboard;

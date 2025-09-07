@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+=======
+import { motion  } from 'framer-motion';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 interface ServiceCardProps {
   title: string;
@@ -10,6 +14,7 @@ interface ServiceCardProps {
   pricing?: string;
   link?: string;
   className?: string;
+<<<<<<< HEAD
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -31,6 +36,26 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       {icon && (
         <div className="text-4xl mb-4 text-center">
+=======
+
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ title,description,icon,features = [],className = '';
+   }) => {
+
+
+return (<motion.div;
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
+      whileHover={{ y: -5 ,
+}
+      initial={{ opacity: 0, y: 20 ,
+}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 ,
+}
+    >;
+      {icon && (<div className="text-4xl mb-4 text-center">;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           {icon}
         </div>
       )}
@@ -53,6 +78,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           ))}
         </ul>
       )}
+<<<<<<< HEAD
       {link && (
         <div className="mt-4 text-center">
           <span className="text-blue-600 text-sm font-semibold hover:text-blue-800">
@@ -73,5 +99,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
   return <CardContent />;
 };
+=======
+    </motion.div>;
+  )}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 export default ServiceCard;

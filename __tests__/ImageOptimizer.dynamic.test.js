@@ -15,6 +15,7 @@ describe('ImageOptimizer';
   test('displays correct content';
   test('handles user interactions';
   test('applies correct styling';
+
 const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ImageOptimizer from "./components/ImageOptimizer.dynamic"; describe('ImageOptimizer', () => { test('renders without crashing', () => { render(<ImageOptimizer />)expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<ImageOptimizer />)})test('handles user interactions', () => { render(<ImageOptimizer />)})test("applies correct styling";
 ursor/automate-test-improve-and-merge-code-646c;
   test('displays correct content', () => {render(<ImageOptimizer />)// Add specific content tests based on component;

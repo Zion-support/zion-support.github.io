@@ -2,9 +2,11 @@
 '';
 '';
 '''';
-    const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com';
+
+const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com';
     // Default structured data for organization;
-    const defaultStructuredData = {}
+
+const defaultStructuredData = {}
   '@context': 'https://schema.org', '''';
         '@type': 'Organization','''';
         'name': 'Zion Tech Group', '''';
@@ -46,7 +48,8 @@
         }
     }
     // Merge with provided structured data;
-    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+
+const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
     return (<Helmet>;
       {/* Basic Meta Tags */}'''';
       <title>{title}</title>'''';
@@ -60,28 +63,40 @@
       {canonical && <link rel='canonical' href={canonical}/>}
       '''';
       {/* Robot Instructions */}'''''';
-      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet: -1, max-image-preview: large, max-video-preview: -1`}/>;
+      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet: -1, max-image-preview: large, max-video-preview: -1,
+}/>;
       '''';
       {/* Open Graph Tags */}'''';
-      <meta property='og:title' content={title}/>'''';
-      <meta property='og:description' content={description}/>'''';
-      <meta property='og:type' content={ogType}/>'''';
-      <meta property='og:url' content={currentUrl}/>'''';
-      <meta property='og:image' content={ogImage}/>'''';
+      <meta property='og: title' content={titl,
+}/>'''';
+      <meta property='og: description' content={descriptio,
+}/>'''';
+      <meta property='og: type' content={ogTyp,
+}/>'''';
+      <meta property='og: url' content={currentUr,
+}/>'''';
+      <meta property='og: image' content={ogImag,
+}/>'''';
       <meta property='og:image:width' content='1200'/>'''';
       <meta property='og:image:height' content='630'/>'''';
-      <meta property='og:image:alt' content={title}/>'''';
+      <meta property='og: image:alt' content={titl,
+}/>'''';
       <meta property='og:site_name' content='Zion Tech Group'/>'''';
       <meta property='og:locale' content='en_US'/>;
       '''';
       {/* Twitter Card Tags */}'''';
-      <meta name='twitter:card' content={twitterCard}/>'''';
+      <meta name='twitter: card' content={twitterCar,
+}/>'''';
       <meta name='twitter:site' content='@ziontechgroup'/>'''';
       <meta name='twitter:creator' content='@ziontechgroup'/>'''';
-      <meta name='twitter:title' content={title}/>'''';
-      <meta name='twitter:description' content={description}/>'''';
-      <meta name='twitter:image' content={ogImage}/>'''';
-      <meta name='twitter:image:alt' content={title}/>;
+      <meta name='twitter: title' content={titl,
+}/>'''';
+      <meta name='twitter: description' content={descriptio,
+}/>'''';
+      <meta name='twitter: image' content={ogImag,
+}/>'''';
+      <meta name='twitter: image:alt' content={titl,
+}/>;
       '''';
       {/* Additional Meta Tags for Better SEO */}'''';
       <meta name='theme-color' content='#1a1a2e'/>'''';
@@ -109,4 +124,14 @@
       <meta httpEquiv='X-Frame-Options' content='DENY'/>'''';
       <meta httpEquiv='X-XSS-Protection' content='1 mode=block'/>'''';
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin"/>'";
-    </Helmet>)}export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }export { EnhancedSEO }
+    </Helmet>)}
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }
+
+export { EnhancedSEO }

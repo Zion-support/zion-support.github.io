@@ -1,9 +1,15 @@
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown  } from 'lucide-react';
-interface Benefit  {title: string;
+
+interface Benefit {
+  title: string;
   description: string;
   icon: React.ReactNode;
-}const BenefitsSection: React.FC = () => {const benefits: Benefit[] = [;
+
+}
+
+const BenefitsSection: React.FC = () => ;
+  const benefits: Benefit[] = [;
     {icon: <CheckCircle className="w-8 h-8 text-green-500" />,title: 'Proven Results',description: 'We deliver measurable results with a 98% client satisfaction rate and proven ROI.';
     },{icon: <Shield className="w-8 h-8 text-blue-500" />,title: 'Enterprise Security',description: 'Bank-level security with SOC 2 compliance and advanced threat protection.';
     },{icon: <Bot className="w-8 h-8 text-purple-500" />,title: 'AI-Powered Solutions',description: 'Our advanced AI algorithms provide cutting-edge solutions tailored to your specific needs.';
@@ -25,8 +31,8 @@ interface Benefit  {title: string;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {benefits.map((benefit, index) => (<div;
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2";
-            >;
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+
               <div className="text-blue-600 mb-4 flex justify-center">;
                 {benefit.icon}
               </div>;
@@ -57,4 +63,6 @@ interface Benefit  {title: string;
         </div>;
       </div>;
     </section>;
-  )}export default BenefitsSection;
+  )}
+
+export default BenefitsSection;

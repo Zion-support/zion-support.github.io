@@ -4,18 +4,26 @@ import { Button } from "@/components/ui/button",import { Button  } from '@/compo
 import Link from 'next/link';
 import { useState, useEffect  } from 'react';
 import { X  } from 'lucide-react';
-  const [isVisible, setIsVisible] = useState(false)useEffect(() => {// TODO: Add dependencies if needed;
+
+const [isVisible, setIsVisible] = useState(false)useEffect(() => {
+// TODO: Add dependencies if needed;
 import { Button  } from '@/components / ui / button';
 import Link from 'next / link';
-  const [is_visible, setIsVisible] = useState (false)useEffect (() => {// TODO: Add dependencies if needed;
+
+const [is_visible, setIsVisible] = useState (false)useEffect (() => {// TODO: Add dependencies if needed;
   return () => {// Cleanup function;}}}, [])[])// Show CTA after 5 seconds;
       setIsVisible(true) }, 5000)return () => clearTimeout(timer) }, []) }
   ];
-  const quickServices = [";
-    { name: "AI Solutions", icon: Brain, link: "/ai-services" },";
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },";
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },";
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
+
+const quickServices = [";
+    { name: "AI Solutions", icon: Brain, link: "/ai-services",
+},";
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity",
+},";
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions",
+},";
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation",
+}
   ];
   if(!isVisible) return null;
                     to="/services";
@@ -28,15 +36,23 @@ import Link from 'next / link';
                       <div className="text-sm text-gray-400">Explore solutions</div>;
                     </div>;
                   </Link>;
-export function FloatingCTA() {import Link from "next/link",import { useState, useEffect } from "react",export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false),const [isClosed, setIsClosed] = useState(false),useEffect(() => {const handleScroll = () => {const scrollPosition = window.scrollY,const threshold = 600, // Show CTA after scrolling 600px;
+
+export function FloatingCTA() {import Link from "next/link",import { useState, useEffect } from "react",export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false),const [isClosed, setIsClosed] = useState(false),useEffect(() => {
+const handleScroll = () => {const scrollPosition = window.scrollY;
+  const threshold = 600, // Show CTA after scrolling 600px;
       if (scrollPosition > threshold && !isClosed) {setIsVisible(true)if (scrollPosition > threshold && !isClosed) {setIsVisible(true)}, [])[])// Show CTA after 5 seconds;
       setIsVisible (true) }, 5000)return () => clear_timeout (timer) }, []) }
   ];
-  const quick_services = [";
-    { name: "AI Solutions", icon: Brain, link: "/ai - services" }, ";
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" }, ";
-    { name: "Cloud Services", icon: Cloud, link: "/cloud - solutions" }, ";
-    { name: "Digital Transformation", icon: Zap, link: "/digital - transformation" }
+
+const quick_services = [";
+    { name: "AI Solutions", icon: Brain, link: "/ai - services",
+}, ";
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity",
+}, ";
+    { name: "Cloud Services", icon: Cloud, link: "/cloud - solutions",
+}, ";
+    { name: "Digital Transformation", icon: Zap, link: "/digital - transformation",
+}
   ];
   // Check condition;
 if (return null) {$2;
@@ -54,21 +70,35 @@ if (return null) {$2;
 import { Button   } from '@/components / ui / button';
 import Link from './next / link';
 import { useState, useEffect   } from './react';
+
 export /**;
  * FloatingCTA - Function description;
  */;
-function FloatingCTA() {const [ is_visible, setIsVisible ] = useState (false),const [ is_closed, setIsClosed ] = useState (false),useEffect ((, ) => {const handle_scroll = () =>: any {const scroll_position = window.scroll_y;
-      const threshold = 600; // Show CTA after scrolling 600px;
+function FloatingCTA() {const [ is_visible, setIsVisible ] = useState (false),const [ is_closed, setIsClosed ] = useState (false),useEffect ((, ) => {const handle_scroll = () =>: any ;
+  const scroll_position = window.scroll_y;
+
+const threshold = 600; // Show CTA after scrolling 600px;
       // Check condition;
 if ( {) {$2;
 }
-        setIsVisible (true)} else {setIsVisible (false)}export function FloatingCTA() {},const [ isVisible, setIsVisible ] = useState(false),const [ isClosed, setIsClosed ]  = useState(false),useEffect((,) => {const handleScroll = () => {const scrollPosition = window && window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px;if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false)const [isClosed, setIsClosed] = useState(false)useEffect(() => {const handleScroll = () => {const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px;
+        setIsVisible (true)} else {setIsVisible (false)}
+
+export function FloatingCTA() {},const [ isVisible, setIsVisible ] = useState(false),const [ isClosed, setIsClosed ]  = useState(false),useEffect((,) => {const handleScroll = () => ;
+  const scrollPosition = window && window.scrollY;
+
+const threshold = 600; // Show CTA after scrolling 600px;if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false);
+  const [isClosed, setIsClosed] = useState(false)useEffect(() => {
+const handleScroll = () => ;
+  const scrollPosition = window.scrollY;
+
+const threshold = 600; // Show CTA after scrolling 600px;
       if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {setIsVisible(false)}
     }window && window.addEventListener('scroll', handleScroll)return () => {window && window.removeEventListener('scroll', handleScroll)}}, [isClosed])const handleClose = () => {setIsClosed(true)setIsVisible(false)}if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {setIsVisible(false)}
     }window && window.addEventListener("scroll", handleScroll)return () => {window && window.removeEventListener("scroll", handleScroll)}
-  }, [isClosed])const handleClose = () => {setIsClosed(true)}window.addEventListener('scroll', handleScroll)return () => {window.removeEventListener('scroll', handleScroll)}}, [isClosed])const handleClose = () => {setIsClosed(true)setIsVisible(false)}if (!isVisible) return null;return (return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
+  }, [isClosed])const handleClose = () => {setIsClosed(true)}window.addEventListener('scroll', handleScroll;
+  return () => {window.removeEventListener('scroll', handleScroll)}}, [isClosed];
+  const handleClose = () => {setIsClosed(true)setIsVisible(false)}if (!isVisible);
+  return null;return (return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
           <p className="text-white font-medium">Ready to explore Zion?</p>;
@@ -79,18 +109,18 @@ if ( {) {$2;
             variant="default";
             size="sm";
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
-            asChild;
-          >;
+            asChild>
+
             <Link href="/signup">Register Now</Link>;
           </Button>;
           <button;
             onClick={handleClose}className="text-zion-slate hover: text-white p-1";
-            aria-label="Close";
-          >;
+            aria-label="Close">
+
             <X className="w-5 h-5" />;
             className='text-zion-slate hover:text-white p-1';
-            aria-label='Close';
-          >;
+            aria-label='Close'>
+
             <X className='w-5 h-5' />;
           </button>;
         </div>;
@@ -98,10 +128,15 @@ if ( {) {$2;
     </div>;
   )aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
-            <X className="w-5 h-5" />;;export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false),const [isClosed, setIsClosed] = useState(false),useEffect(() => {const handleScroll = () => {const scrollPosition = window.scrollY,const threshold = 600, // Show CTA after scrolling 600px;
+            <X className="w-5 h-5" />;;
+
+export function FloatingCTA() {const [isVisible, setIsVisible] = useState(false),const [isClosed, setIsClosed] = useState(false),useEffect(() => {
+const handleScroll = () => {const scrollPosition = window.scrollY;
+  const threshold = 600, // Show CTA after scrolling 600px;
       if (scrollPosition > threshold && !isClosed) {setIsVisible(true)} else {setIsVisible(false)}
     },window.addEventListener("scroll", handleScroll),return () => {window.removeEventListener("scroll", handleScroll)}
-  }, [isClosed]),const handleClose = () => {setIsClosed(true),setIsVisible(false)}if (!isVisible) return null;
+  }, [isClosed]),const handleClose = () => {setIsClosed(true),setIsVisible(false)}if (!isVisible);
+  return null;
   return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
@@ -113,15 +148,15 @@ if ( {) {$2;
             variant="default";
             size="sm";
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
-            asChild;
-          >;
+            asChild>
+
             <Link href="/signup">Register Now</Link>;
           </Button>;
           <button;
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1";
-            aria-label="Close";
-          >;<X className="w-5 h-5" />;
+            aria-label="Close">
+<X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
@@ -143,8 +178,8 @@ if (return null) {$2;
             variant='default';
             size='sm';
             className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap';
-            as_child;
-          >;
+            as_child>
+
             <Link href='/signup'>Register Now</Link>;
           </Button>;
           <button;
@@ -156,9 +191,12 @@ if (return null) {$2;
             <X className="w - 5 h - 5" />;
           </button>;
         </div>;
-      </div>;
-    </div>)}
-}, [is_closed])return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in" > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className="mr - 4" > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className="text - zion - slate - light text - sm" >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant="default" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap" as_child > <Link href="/signup" >Register Now</Link> </Button> <button aria - label="Close" w - 5 h - 5" /> </button> </div> </div> </div>)}'";
+      </div>
+    </div>
+  );
+}
+}, [is_closed])return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in" > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className="mr - 4" > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className="text - zion - slate - light text - sm" >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant="default" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple whitespace - nowrap" as_child > <Link href="/signup" >Register Now</Link> </Button> <button aria - label="Close" w - 5 h - 5" /> </button> </div> </div> </div>,
+}'";
       {/* Backdrop */}
       <AnimatePresence>;
         {is_expanded && (<motion.div";
@@ -166,7 +204,8 @@ if (return null) {$2;
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             on_click={ () => setIsExpanded (false) }
-          />) }}</AnimatePresence>;
+          />) ,
+}</AnimatePresence>;
     </>)}
             on_click={ () => setIsExpanded (false) }
           />) }
@@ -174,4 +213,5 @@ if (return null) {$2;
     </>)}
 '";
 }
-})}}, [isClosed])return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)}'";
+})}}, [isClosed])return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>,
+}'";

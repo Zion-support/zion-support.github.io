@@ -1,12 +1,16 @@
 'use client';import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props  {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
-}interface State  {hasError: boolean;
+}
+
+interface State  {hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {super(props)this.state = {hasError: false,error: null,errorInfo: null,}}static getDerivedStateFromError(error: Error): State {return {hasError: true,error,errorInfo: null,}}override componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error,errorInfo,})// Log error to console in development;
+}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {super(props)this.state = {hasError: false,error: null,errorInfo: null,}}static getDerivedStateFromError(error: Error): State ;
+  return {hasError: true,error,errorInfo: null,}}override componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error,errorInfo,})// Log error to console in development;
     if (process.env.NODE_ENV === 'development') {console.error('Error caught by boundary: ', error, errorInfo)}// Send error to monitoring service;
     this.logErrorToService(error, errorInfo)// Call custom error handler;
     this.props.onError?.(error, errorInfo)}private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {// In a real application, you would send this to your error monitoring service;
@@ -27,8 +31,8 @@ interface Props  {children: ReactNode;
                   className="h-8 w-8 text-red-500";
                   fill="none";
                   stroke="currentColor";
-                  viewBox="0 0 24 24";
-                >;
+                  viewBox="0 0 24 24">
+
                   <path;
                     strokeLinecap="round";
                     strokeLinejoin="round";
@@ -48,7 +52,8 @@ interface Props  {children: ReactNode;
             </div>;
             {this.props.showDetails && this.state.error && (<div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">;
                 <h4 className="text-sm font-medium text-red-800 mb-2">;
-                  Error Details:{' '}
+                  Error Details: {' ,
+}
                 </h4>;
                 <p className="text-sm text-red-700 font-mono">;
                   {this.state.error.message}
@@ -66,14 +71,14 @@ interface Props  {children: ReactNode;
             )}<div className="flex space-x-3">;
               <button;
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2";
-              >;
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+
                 Try Again;
               </button>;
               <button;
                 onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2";
-              >;
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+
                 Reload Page;
               </button>;
             </div>;
@@ -82,8 +87,8 @@ interface Props  {children: ReactNode;
                 If this problem persists, please{' '}
                 <a;
                   href="/contact";
-                  className="text-blue-600 hover: text-blue-500";
-                >;
+                  className="text-blue-600 hover: text-blue-500">
+
                   contact support;
                 </a>;
               </p>;
@@ -92,4 +97,6 @@ interface Props  {children: ReactNode;
         </div>;
       )}return this.props.children;
   }
-}export default EnhancedErrorBoundary;
+}
+
+export default EnhancedErrorBoundary;

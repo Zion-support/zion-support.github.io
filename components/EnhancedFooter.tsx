@@ -1,18 +1,31 @@
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     }return this.props.children;
   }
 }
 import Link from 'next/link';
 import {Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import { Facebook,Twitter,Linkedin,Instagram,Mail,Phone,MapPin,ArrowUp,Globe,Shield,FileText,HelpCircle,} from 'lucide-react';
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     }return this.props.children;
   }
 }
   Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
+<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullYear(),const footerSections = [;
     {title: 'Services',links: [;
         { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },{ name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },{ name: 'Edge Computing', href: '/edge-computing-orchestration' },{ name: 'Space Technology', href: '/space-technology' },{name: 'View All Services',href: '/comprehensive-2025-services-showcase',},],},    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }import React from 'react',import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
@@ -38,6 +51,134 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
     }
     {const socialLinks = [;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },{name: 'LinkedIn',href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',href: 'https://twitter && twitter.com/ziontechgroup',icon: Twitter,},{ name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },return (<footer className='bg-slate-950 border-t border-white/10'>;
+=======
+
+const EnhancedFooter: React.FC = () => {const currentYear  = new Date().getFullYear();
+  const footerSections = [
+  {title: 'Services',links: [;
+          { name: 'AI Business Intelligence', href: '/ai-business-intelligence',
+},
+  { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity',
+},
+  { name: 'Edge Computing', href: '/edge-computing-orchestration',
+},
+  { name: 'Space Technology', href: '/space-technology',
+},
+{name: 'View All Services',href: '/comprehensive-2025-services-showcase',},],},    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase',
+}import React from 'react',import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
+
+const EnhancedFooter: React.FC;
+
+const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear(;
+  const footerSections = [
+  {title: 'Services';
+      links: [;
+          { name: 'AI Business Intelligence', href: '/ai-business-intelligence',
+},
+  { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity',
+},
+  { name: 'Edge Computing', href: '/edge-computing-orchestration',
+},
+  { name: 'Space Technology', href: '/space-technology',
+},
+{name: 'View All Services',href: '/comprehensive-2025-services-showcase',},],},{title: 'Company',links: [;
+          { name: 'About Us', href: '/about',
+},
+  { name: 'Our Work', href: '/portfolio',
+},
+  { name: 'Blog & Insights', href: '/blog',
+},
+  { name: 'Careers', href: '/careers',
+},
+  { name: 'Contact', href: '/contact',
+},
+],},{title: 'Resources',links: [;
+          { name: 'Documentation', href: '/docs',
+},
+  { name: 'API Reference', href: '/api',
+},
+  { name: 'Support Center', href: '/support',
+},
+  { name: 'Privacy Policy', href: '/privacy',
+},
+  { name: 'Terms of Service', href: '/terms',
+},
+],const footerLinks = {services: [;
+        { name: 'AI Services', href: '/services/ai-services',
+},
+  { name: 'IT Services', href: '/services/it-services',
+},
+  { name: 'Micro SaaS', href: '/services/micro-saas',
+},
+  { name: 'Web Development', href: '/services/web-development',
+},
+  { name: 'Cloud Services', href: '/services/cloud-services',
+},
+  { name: 'AI Development', href: '/services/ai-development',
+},
+],solutions: [;
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation',
+},
+  { name: 'Customer Support', href: '/solutions/customer-support',
+},
+  { name: 'Email Automation', href: '/solutions/email-automation',
+},
+  { name: 'Event Management', href: '/solutions/event-management',
+},
+  { name: 'Project Management', href: '/solutions/project-management',
+},
+  { name: 'Workflow Automation', href: '/solutions/workflow-automation',
+},
+],company: [;
+        { name: 'About Us', href: '/about',
+},
+  { name: 'Careers', href: '/careers',
+},
+  { name: 'Partners', href: '/partners',
+},
+  { name: 'Contact', href: '/contact',
+},
+  { name: 'Blog', href: '/blog',
+},
+],resources: [;
+        { name: 'Help Center', href: '/help',
+},
+  { name: 'Pricing Guide', href: '/pricing-guide',
+},
+  { name: 'Search', href: '/search',
+},
+  { name: 'Sitemap', href: '/sitemap',
+},
+],legal: [;
+        { name: 'Privacy Policy', href: '/privacy',
+},
+  { name: 'Terms of Service', href: '/terms',
+},
+  { name: 'Cookie Policy', href: '/cookies',
+},
+],}
+
+const socialLinks = [
+  {name: 'Facebook',icon: Facebook,href: 'https://facebook.com/ziontechgroup',},{name: 'Twitter',icon: Twitter,href: 'https://twitter.com/ziontechgroup',},{name: 'LinkedIn',icon: Linkedin,href: 'https://linkedin.com/company/ziontechgroup',},{name: 'Instagram',icon: Instagram,href: 'https://instagram.com/ziontechgroup',},];
+
+const socialLinks = [
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github,
+},{name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',href: 'https://twitter.com/ziontechgroup',icon: Twitter,},];
+
+const socialLinks = [
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github,
+}
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github,
+},{name: 'LinkedIn';
+      href: 'https://linkedin.com/company/ziontechgroup';
+      icon: Linkedin;
+    }
+    {const socialLinks = [
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github,
+},{name: 'LinkedIn',href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Linkedin,},{name: 'Twitter',href: 'https://twitter && twitter.com/ziontechgroup',icon: Twitter,},{ name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github,
+};
+  return (<footer className='bg-slate-950 border-t border-white/10'>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className='max-w-7xl mx-auto px-6 py-16'>;
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
@@ -57,8 +198,13 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
                 <a;
                   href='tel:+13024640950';
   Brain,Mail,Phone,MapPin,Globe,Github,href={link.href}
+<<<<<<< HEAD
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;className='hover:text-white transition-colors';
+=======
+                      className="text - white / 70 hover: text - white transition - colors duration - 200">
+className='hover:text-white transition-colors';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;
@@ -85,8 +231,13 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
                 <Phone className="w-4 h-4" />;
                 <a;
                   href="tel: +13024640950";
+<<<<<<< HEAD
                   className="hover:text-white transition-colors";
                 >;
+=======
+                  className="hover:text-white transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   +1 (302) 464-0950;
                 </a>;
               </div>;
@@ -103,18 +254,29 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
                 {section.links.map(link => (<li key={link.name}>;
                     <Link;
                       href={link.href}
+<<<<<<< HEAD
                       className='text-white/70 hover:text-white transition-colors duration-200';
                     >;
+=======
+                      className='text-white/70 hover: text-white transition-colors duration-200'>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       {link.name}
-                ))}
+                ),
+}
               </ul>;
             </div>;
           ))}<div className="flex items-center space-x-3 text-gray-400">;
                 <Mail className="w-4 h-4" />;
                 <a;
                   href="mailto: kleber@ziontechgroup.com";
+<<<<<<< HEAD
                   className="hover:text-white transition-colors";
                 >;
+=======
+                  className="hover:text-white transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   kleber@ziontechgroup.com;
                 </a>;
               </div>;
@@ -134,9 +296,16 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {footerLinks.services.map(link => (<li key={link.name}>;
                   <Link;
                     href={link.href}
+<<<<<<< HEAD
                     className="text-gray-400 hover: text-white transition-colors text-sm";
                   >;
                     {link.name}
+=======
+                    className="text-gray-400 hover: text-white transition-colors text-sm">
+
+                    {link.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 </li>;
               ))}
@@ -152,9 +321,16 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {footerLinks.solutions.map(link => (<li key={link.name}>;
                   <Link;
                     href={link.href}
+<<<<<<< HEAD
                     className="text-gray-400 hover: text-white transition-colors text-sm";
                   >;
                     {link.name}
+=======
+                    className="text-gray-400 hover: text-white transition-colors text-sm">
+
+                    {link.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 </li>;
               ))}
@@ -170,9 +346,16 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {footerLinks.company.map(link => (<li key={link.name}>;
                   <Link;
                     href={link.href}
+<<<<<<< HEAD
                     className="text-gray-400 hover: text-white transition-colors text-sm";
                   >;
                     {link.name}
+=======
+                    className="text-gray-400 hover: text-white transition-colors text-sm">
+
+                    {link.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 </li>;
               ))}
@@ -188,9 +371,16 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {footerLinks.resources.map(link => (<li key={link.name}>;
                   <Link;
                     href={link.href}
+<<<<<<< HEAD
                     className="text-gray-400 hover: text-white transition-colors text-sm";
                   >;
                     {link.name}
+=======
+                    className="text-gray-400 hover: text-white transition-colors text-sm">
+
+                    {link.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 </li>;
               ))}
@@ -200,9 +390,16 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {footerLinks.legal.map(link => (<li key={link.name}>;
                   <Link;
                     href={link.href}
+<<<<<<< HEAD
                     className="text-gray-400 hover: text-white transition-colors text-sm";
                   >;
                     {link.name}
+=======
+                    className="text-gray-400 hover: text-white transition-colors text-sm">
+
+                    {link.nam,
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </Link>;
                 </li>;
               ))}
@@ -225,8 +422,13 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               />;
               <button;
                 type="submit";
+<<<<<<< HEAD
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
               >;
+=======
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Subscribe;
               </button>;
             </form>;
@@ -240,7 +442,13 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}<div className="text-white/60 text-sm">;
+<<<<<<< HEAD
             </div>;{/* Social Links */}}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;
+=======
+            </div>;{/* Social Links */}}
+
+export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10'>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
             <div className='text-white/60 text-sm'>;
@@ -277,8 +485,15 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
         </div>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" })</Link>;
+=======
+
+const scrollToTop = () => {";
+    window && window.scrollTo({ top: 0, behavior: "smooth",
+})</Link>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   </li>))}
               </ul>;
             </div>))}
@@ -320,14 +535,26 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </footer>)}export default EnhancedFooter)})}export default EnhancedFooter;
 import React from './react';
   FileText,HelpCircle} from './lucide-react';
+=======
+    </footer>)}
+
+export default EnhancedFooter)})}
+
+export default EnhancedFooter;
+import React from './react';
+  FileText,HelpCircle} from './lucide-react';
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default /**;
  * EnhancedFooter - Function description;
  */;
 function EnhancedFooter() {const scrollToTop = () =>: any {";
     window.scroll_to ({ top: 0, behavior: "smooth" })}
+<<<<<<< HEAD
   const current_year = new Date ().getFullYear ()}
       { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
       { name: "Customer Support", href: "/solutions/customer-support" },";
@@ -363,6 +590,83 @@ function EnhancedFooter() {const scrollToTop = () =>: any {";
       { name: "Terms of Service", href: "/terms" }, ";
       { name: "Cookie Policy", href: "/cookies" }]}
   const social_links  = [];return (<footer className="bg - gray - 900 text - white">";
+=======
+
+const current_year = new Date ().getFullYear (,
+}
+      { name: "AI Content Creation", href: "/solutions/ai-content-creation",
+},";
+      { name: "Customer Support", href: "/solutions/customer-support",
+},";
+      { name: "Email Automation", href: "/solutions/email-automation",
+},";
+      { name: "Event Management", href: "/solutions/event-management",
+},";
+      { name: "Project Management", href: "/solutions/project-management",
+},";
+      { name: "About Us", href: "/about",
+},";
+      { name: "Careers", href: "/careers",
+},";
+      { name: "Partners", href: "/partners",
+},";
+      { name: "Contact", href: "/contact",
+},";
+      { name: "Privacy Policy", href: "/privacy",
+},";
+      { name: "Terms of Service", href: "/terms",
+},";
+      { name: "Cookie Policy", href: "/cookies" },
+}
+
+const socialLinks = [];
+
+const footer_links = {}, ";
+      { name: "IT Services", href: "/services / it - services",
+}, ";
+      { name: "Micro SaaS", href: "/services / micro - saas",
+}, ";
+      { name: "Web Development", href: "/services / web - development",
+}, ";
+      { name: "Cloud Services", href: "/services / cloud - services",
+}, ";
+      { name: "AI Development", href: "/services / ai - development",
+}],solutions: [",{ name: "AI Content Creation", href: "/solutions / ai - content - creation",
+}, ";
+      { name: "Customer Support", href: "/solutions / customer - support",
+}, ";
+      { name: "Email Automation", href: "/solutions / email - automation",
+}, ";
+      { name: "Event Management", href: "/solutions / event - management",
+}, ";
+      { name: "Project Management", href: "/solutions / project - management",
+}, ";
+      { name: "Workflow Automation", href: "/solutions / workflow - automation",
+}],company: [",{ name: "About Us", href: "/about",
+}, ";
+      { name: "Careers", href: "/careers",
+}, ";
+      { name: "Partners", href: "/partners",
+}, ";
+      { name: "Contact", href: "/contact",
+}, ";
+      { name: "Blog", href: "/blog",
+}],resources: [",{ name: "Help Center", href: "/help",
+}, ";
+      { name: "Pricing Guide", href: "/pricing - guide",
+}, ";
+      { name: "Search", href: "/search",
+}, ";
+      { name: "Sitemap", href: "/sitemap",
+}],legal: [",{ name: "Privacy Policy", href: "/privacy",
+}, ";
+      { name: "Terms of Service", href: "/terms",
+}, ";
+      { name: "Cookie Policy", href: "/cookies" },
+}
+
+const social_links  = [];return (<footer className="bg - gray - 900 text - white">";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,{/* comment */}";
           <div className="lg: col - span - 2">";
@@ -526,15 +830,26 @@ company updates.;
         aria - label="Scroll to top">";
         <ArrowUp className="w - 5 h - 5"  />;
       </button>,</footer>,)}"';
+<<<<<<< HEAD
   )}export default EnhancedFooter;  )}</button>;
+=======
+  )}
+
+export default EnhancedFooter;  )}</button>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     </footer>;
   )}"';
       {/* Scroll to Top Button */}
       <button;
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";
+<<<<<<< HEAD
         aria-label="Scroll to top";
       >;
+=======
+        aria-label="Scroll to top">
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <ArrowUp className="w-5 h-5" />;
       </button>;
     </footer>;

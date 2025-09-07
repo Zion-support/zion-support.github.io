@@ -1,19 +1,39 @@
 
 }
-  const handleViewOffer = (project_id: string, ) =>: any {router.push (`/project/${project_id}`)}import { useEffect, useState } from "react",import { useRouter } from 'next/router',import { useEffect, useState  } from 'react';
+
+const handleViewOffer = (project_id: string, ) =>: any {router.push (`/project/${project_id}`)}import { useEffect,;
+  useState } from "react",import { useRouter } from 'next/router',import {;
+  useEffect, useState  } from 'react';
 import { useRouter   } from 'next/router';
 import { Bell, Calendar, X  } from 'lucide-react';
-import { Button } from "@/components/ui/button",import { Card, CardContent } from "@/components/ui/card",import { useProjects } from "@/hooks/useProjects",import { Project } from "@/types/projects",export function ProjectOfferBanner() {const router = useRouter(),const { projects, isLoading } = useProjects(),const [pendingOffers, setPendingOffers] = useState<Project[]>([]),const [dismissed, setDismissed] = useState<Set<string>>(new Set()),useEffect(() => {const router = null;
+import { Button } from "@/components/ui/button",import { Card, CardContent } from "@/components/ui/card",import { useProjects } from "@/hooks/useProjects",import { Project } from "@/types/projects",export function ProjectOfferBanner() {const router = useRouter(),const { projects, isLoading } = useProjects(),const [pendingOffers, setPendingOffers] = useState<Project[]>([]),const [dismissed, setDismissed] =;
+  useState<Set<string>>(new Set());
+  useEffect(() => ;
+  const router = null;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {import { useRouter  } from 'next/router';
 import { Bell, Calendar, X } from 'lucide-react'import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
 import { useProjects  } from '@/hooks/useProjects';
 import { Project  } from '@/types/projects';
-export function ProjectOfferBanner() {const router = useRouter()const { projects, isLoading } = useProjects()const [pendingOffers, setPendingOffers] = useState<Project[]>([])const [dismissed, setDismissed] = useState<Set<string>>(new Set())useEffect((,) => {if (projects && !isLoading) {const offers = projects.filter(p => p.status === 'offer_sent'),setPendingOffers(offers)export function ProjectOfferBanner() {const router = useRouter(),const { projects, isLoading } = useProjects(),const [pendingOffers, setPendingOffers] = useState<Project[]>([]),const [dismissed, setDismissed] = useState<Set<string>>(new Set()),useEffect(() => {if (projects && !isLoading) {const offers = projects.filter(p => p.status === 'offer_sent'),setPendingOffers(offers)}}, [projects, isLoading]),const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation(),setDismissed(prev => {const updated = new Set(prev),updated.add(projectId),return updated;
-    })}const handleViewOffer = (projectId: string) => {router.push(`/project/${projectId}`)}if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {return null;}, [projects, isLoading])const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation()setDismissed(prev => {const updated = new Set(prev)updated.add(projectId)return updated;
+
+export function ProjectOfferBanner() {const router = useRouter()const { projects, isLoading } = useProjects()const [pendingOffers, setPendingOffers] = useState<Project[]>([])const [dismissed, setDismissed] = useState<Set<string>>(new Set())useEffect((,) => {if (projects && !isLoading) {const offers = projects.filter(p => p.status === 'offer_sent'),setPendingOffers(offers)export function ProjectOfferBanner() {const router = useRouter(),const { projects, isLoading } = useProjects(),const [pendingOffers, setPendingOffers] = useState<Project[]>([]),const [dismissed, setDismissed] =;
+  useState<Set<string>>(new Set());
+  useEffect(() => {
+if (projects && !isLoading) {const offers = projects.filter(p => p.status === 'offer_sent'),setPendingOffers(offers)}}, [projects, isLoading]),const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation(),setDismissed(prev => ;
+  const updated = new Set(prev),updated.add(projectId);
+  return updated;
     })}
-  const handleViewOffer = (projectId: string,) => {router.push(`/project/${projectId}`)}
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {return null;
+
+const handleViewOffer = (projectId: string) => {router.push(`/project/${projectId}`,
+}if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) ;
+  return null;}, [projects, isLoading])const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation()setDismissed(prev => ;
+  const updated = new Set(prev)updated.add(projectId;
+  return updated;
+    })}
+
+const handleViewOffer = (projectId: string,) => {router.push(`/project/${projectId}`)}
+  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) ;
+  return null;
   }return (<div className="mb-6 space-y-3">;
       {pendingOffers;
         .filter(offer => !dismissed.has(offer.id)).map(offer => (<Card;
@@ -39,9 +59,17 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 <Button;
                   size="sm";
 import React from 'react';
-export function ProjectOfferBanner() {const router = useRouter()const { projects, isLoading } = useProjects()const [pendingOffers, setPendingOffers] = useState<Project[]>([])const [dismissed, setDismissed]  = useState<Set<string>>(new Set())useEffect((,) => {if (projects && !isLoading) {const offers = projects && projects.filter(p => p && p.status === 'offer_sent')setPendingOffers(offers)}
-  }, [projects, isLoading])const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {e && e.stopPropagation()setDismissed(prev => {const updated = new Set(prev)updated && updated.add(projectId),return updated;
-    })}const handleViewOffer = (projectId: string,) => {router && router.push(`/project/${projectId}`)}if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id))) {return null;
+
+export function ProjectOfferBanner() {const router = useRouter()const { projects, isLoading } = useProjects()const [pendingOffers, setPendingOffers] = useState<Project[]>([])const [dismissed, setDismissed]  =;
+  useState<Set<string>>(new Set();
+  useEffect((,) => {if (projects && !isLoading) {const offers = projects && projects.filter(p => p && p.status === 'offer_sent')setPendingOffers(offers)}
+  }, [projects, isLoading])const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {e && e.stopPropagation()setDismissed(prev => ;
+  const updated = new Set(prev)updated && updated.add(projectId);
+  return updated;
+    })}
+
+const handleViewOffer = (projectId: string,) => {router && router.push(`/project/${projectId}`)}if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id))) ;
+  return null;
   }return (<div className="mb-6 space-y-3">;
       {pendingOffers;
         .filter(offer => !dismissed && dismissed.has(offer && offer.id)).map(offer => (<Card;
@@ -111,13 +139,22 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
               </div>;
             </CardContent>;
           </Card>))}
-    </div>)}, [projects, is_loading])const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {e.stop_propagation ()set_dismissed (prev => {const updated = new Set (prev)updated.add (project_id)return updated;
+    </div>)}, [projects, is_loading])const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {e.stop_propagation ()set_dismissed (prev => ;
+  const updated = new Set (prev)updated.add (project_id;
+  return updated;
 })}
+
 const handleViewOffer = (project_id: string) =>: any {router.push (`/project/$ {</div>;
-  )}, [projects, isLoading])const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {e && e.stopPropagation ()setDismissed (prev => {const updated = new Set (prev)updated && updated.add (projectId)</div>;
-  )}, [projects, isLoading])const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation ()setDismissed (prev => {const updated = new Set (prev)updated.add (projectId)return updated;
-})}const handleViewOffer  = (projectId: string) => {router && router.push (`/project/$ {projectId ;
-}`)}if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every (p => dismissed && dismissed.has (p && p.id) ) ) {return null;
+  )}, [projects, isLoading])const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {e && e.stopPropagation ()setDismissed (prev => ;
+  const updated = new Set (prev)updated && updated.add (projectId)</div>;
+  )}, [projects, isLoading])const handleDismiss = (projectId: string, e: React.MouseEvent) => {e.stopPropagation ()setDismissed (prev => ;
+  const updated = new Set (prev)updated.add (projectId;
+  return updated;
+})}
+
+const handleViewOffer  = (projectId: string) => {router && router.push (`/project/$ {projectId ;
+}`)}if (isLoading || pendingOffers && pendingOffers.length = == 0 || pendingOffers && pendingOffers.every (p => dismissed && dismissed.has (p && p.id) ) ) ;
+  return null;
 }return (<div className="mb-6 space-y-3" > {pendingOffers offer && offer.id ";
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )}</div>)}'"}project_id;
 }`)}
@@ -127,6 +164,7 @@ if () ) {) {$2;
 }return (<div className="mb - 6 space - y-3" > {pending_offers offer.id ";
 }> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) )}</div>)}'"}</div>;
   )}router.push (`/project/$ {projectId ;
-}`)}if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismissed.has (p.id) ) ) {return null;
+}`)}if (isLoading || pendingOffers.length = == 0 || pendingOffers.every (p => dismissed.has (p.id) ) ) ;
+  return null;
 }return (<div className="mb-6 space-y-3" > {pendingOffers offer.id ";
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )}</div>)}'";

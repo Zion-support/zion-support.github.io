@@ -26,11 +26,16 @@ import { Input  } from '@/components/ui/input';
 import { Save, ChevronDown, Plus, Loader2  } from 'lucide-react';
 import { Resume   } from '@/types/resume';
 import { useResume  } from '@/hooks/useResume';
+
 interface ResumeVersionSelectorProps  {currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
-  const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoading(true)const resumeId = await createResume({ title: newResumeTitle.trim() })if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
+
+const handleCreateNewVersion = async () => {if (newResumeTitle.trim()) {setIsLoading(true;
+  const resumeId = await createResume({ title: newResumeTitle.trim() })if (resumeId) {await fetchResume(resumeId)onResumeChange(resumeId)setSaveDialogOpen(false)setNewResumeTitle('')}
       setIsLoading(false)}
-  }
+ ,
+}
+ ;
   return (<div className='flex items-center gap-2'>;
       <span className='text-sm text-muted-foreground'>Resume:</span>;
       <DropdownMenu>;
@@ -44,16 +49,16 @@ interface ResumeVersionSelectorProps  {currentResume: Resume;
           {existingResumes.map(resume => (<DropdownMenuItem;
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-              className='cursor-pointer';
-            >;
+              className='cursor-pointer'>
+
               {resume.basic_info.title}
             </DropdownMenuItem>;
           ))}
           <DropdownMenuSeparator />;
 <DropdownMenuItem;
             onClick={() => setSaveDialogOpen(true)}
-            className='cursor-pointer';
-          >;
+            className='cursor-pointer'>
+
             <Plus className='h-4 w-4 mr-2' />;
             Save as new version;
           </DropdownMenuItem>;
@@ -78,8 +83,8 @@ interface ResumeVersionSelectorProps  {currentResume: Resume;
             <Button;
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
-              className='gap-2';
-            >;
+              className='gap-2'>
+
               {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
               <Save className='h-4 w-4' />;
               Save;

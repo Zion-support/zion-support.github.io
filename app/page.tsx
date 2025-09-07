@@ -1,5 +1,41 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
+=======
+import React from "react";
+import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
+  description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services. 500+ services including AI automation, blockchain solutions, and cloud infrastructure.',
+  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing, automation, machine learning, software development',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
+    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
+    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 interface CardProps {
   title: string;
@@ -48,8 +84,15 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
         {/* Animated background elements */}
+=======
+
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
+        {/* Animated background elements */}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute -bottom-8 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -90,6 +133,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">
             Our Core Services
+
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From AI-powered automation to complete IT infrastructure.
@@ -182,12 +226,20 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
             Why Choose Zion Tech Group?
+<<<<<<< HEAD
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
             We combine technical expertise with business acumen to deliver
             solutions that drive real results.
           </p>
+=======
+
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            From AI-powered automation to complete IT infrastructure.
+          </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
           <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -242,6 +294,67 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}
+
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">⚡</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+              Fast Delivery
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Rapid development and deployment with agile methodologies
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🔒</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+              Secure & Reliable
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Enterprise-grade security and 99.9% uptime guarantee
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🎯</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
+              Custom Solutions
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Tailored solutions that fit your specific business needs
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">📞</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+              24/7 Support
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Round-the-clock technical support and maintenance
+            </p>
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
+        {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="absolute -top-4 -left-4 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -275,6 +388,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     </div>
   );
 }

@@ -1,15 +1,21 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props  {children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}interface State  {hasError: boolean;
+}
+
+interface State  {hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }}componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error,errorInfo,})// Log error to console in development;
+}class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false ,
+}static getDerivedStateFromError(error: Error): State ;
+  return { hasError: true, error }}componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({error,errorInfo,})// Log error to console in development;
     if (process.env.NODE_ENV === 'development') {console.error('ErrorBoundary caught an error: ', error, errorInfo)}// Call custom error handler if provided;
     this.props.onError?.(error, errorInfo)// Send error to monitoring service in production;
     if (process.env.NODE_ENV === 'production') {this.logErrorToService(error, errorInfo)}
-  }private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {// Send to error monitoring service (Sentry, LogRocket, etc.)fetch('/api/analytics/error', {method: 'POST',headers: {'Content-Type': 'application/json',},body: JSON.stringify({error: {message: error.message,stack: error.stack,name: error.name,},errorInfo: {componentStack: errorInfo.componentStack,},url: window.location.href,timestamp: Date.now(),userAgent: navigator.userAgent,}),}).catch(console.error)}private handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined })}render() {if (this.state.hasError) {// Custom fallback UI;
+  }private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {// Send to error monitoring service (Sentry, LogRocket, etc.)fetch('/api/analytics/error', {method: 'POST',headers: {'Content-Type': 'application/json',},body: JSON.stringify({error: {message: error.message,stack: error.stack,name: error.name,},errorInfo: {componentStack: errorInfo.componentStack,},url: window.location.href,timestamp: Date.now(),userAgent: navigator.userAgent,}),}).catch(console.error)}private handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined },
+}render() {if (this.state.hasError) {// Custom fallback UI;
       if (this.props.fallback) {return this.props.fallback;
       }// Default error UI;
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50">;
@@ -20,8 +26,8 @@ interface Props  {children: ReactNode;
                 fill="none";
                 stroke="currentColor";
                 viewBox="0 0 24 24";
-                aria-hidden="true";
-              >;
+                aria-hidden="true">
+
                 <path;
                   strokeLinecap="round";
                   strokeLinejoin="round";
@@ -40,14 +46,14 @@ interface Props  {children: ReactNode;
             <div className="flex flex-col sm: flex-row gap-3">;
               <button;
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors";
-              >;
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+
                 Try Again;
               </button>;
               <button;
                 onClick={() => window.location.reload()}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors";
-              >;
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+
                 Refresh Page;
               </button>;
             </div>;
@@ -67,4 +73,6 @@ interface Props  {children: ReactNode;
         </div>;
       )}return this.props.children;
   }
-}export default ErrorBoundary;
+}
+
+export default ErrorBoundary;
