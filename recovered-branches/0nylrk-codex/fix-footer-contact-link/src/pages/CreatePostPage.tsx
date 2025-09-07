@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
+import { useState, useEffect } from "react";""
+import { Link, useNavigate, useSearchParams } from "react-router-dom";""
+import { AppLayout } from "@/layout/AppLayout";""
+import { SEO } from "@/components/SEO";""
+import { Button } from "@/components/ui/button";""
+import PostForm from "@/components/community/PostForm";""
+import { useToast } from "@/hooks/use-toast";""
+import { ForumCategory } from "@/types/community";"
 interface PostFormValues {
-  title: string;
+  // TODO: Implement
+}
+  title: string;,
   content: string;
-  categoryId: ForumCategory;
+  categoryId: ForumCategory;,
   tags: string;
 }
 
@@ -18,229 +20,122 @@ export default function CreatePostPage() {;
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
 
-  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
-
+  // Get category from URL query params if available;"
+  const initialCategory = searchParams.get("category") as ForumCategory | null;"
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help",
-  };
-
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
-      // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
-
-      // Parse tags into an array
-      const tagsArray = values.tags.split(",").map((tag) => tag.trim());
-
-      toast({
-        title: "Post created",
-        description: "Your post has been published successfully",
-      });
-
-      // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`);
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem creating your post",
-        variant: "destructive",
-      });
-    }
-  }
-    }
-
-  },
-
-
-  return (
+</PostFormValues>
     <AppLayout>
-      <SEO
-        title="Create New Post | Community Forum | Zion AI Marketplace"
-        description="Create a new discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, create post, new thread"
+</AppLayout>
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace"""
+        description="Create a new discussion post in the Zion AI Marketplace community forum."""
+        keywords="community, forum, discussion, create post, new thread""
       />
-
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link
-            to="/community"
-            className="text-sm text-muted-foreground hover:text-foreground"
+</SEO>
+"
+      <div className="container py-8">"
+</div>"
+        <div className="flex items-center gap-3 mb-6">"
+</div>
+          <Link;"
+            to="/community"""
+            className="text-sm text-muted-foreground hover:text-foreground""
           >
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium">Create Post</span>
+</Link>
+          </Link>"
+          <span className="text-muted-foreground">/</span>""
+          <span className="text-sm font-medium">Create Post</span>"
         </div>
-
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
-
+"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>"
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+</PostForm>
       </div>
     </AppLayout>
-  );
-}
-;
-export default function CreatePostPage() {;
-  const navigate = useNavigate(),;
-  const { toast } = useToast(),;
-  const [searchParams] = useSearchParams(),;
-  // Get category from URL query params if available;
-  const initialCategory = searchParams.get("category") as ForumCategory | null,;
   const initialValues: Partial<PostFormValues> = {;
-    categoryId: initialCategory || "project-help";
-  },;
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
-      // Parse tags into an array;
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),;
-      toast({;
-        title: "Post created",;
-        description: "Your post has been published successfully";
-      }),;
-      // Redirect to the forum category;
-      navigate(`/community/category/${values.categoryId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem creating your post";
-        variant: "destructive";
-      });
-    }
-  };
-  return (;
+</PostFormValues>
     <AppLayout>;
-      <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace";
-        description="Create a new discussion post in the Zion AI Marketplace community forum.";
-        keywords="community, forum, discussion, create post, new thread";
-
+</AppLayout>
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace";""
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";""
+        keywords="community, forum, discussion, create post, new thread";"
       />;
-
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium">Create Post</span>;
-        </div>;
-
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-
+</SEO>
+"
+      <div className="container py-8">;"
+</div>"
+        <div className="flex items-center gap-3 mb-6">;"
+</div>"
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;"
+</Link>
+          </Link>;"
+          <span className="text-muted-foreground">/</span>;""
+          <span className="text-sm font-medium">Create Post</span>;"
+        </div>;"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;"
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+</PostForm>
       </div>;
     </AppLayout>;
-  );
-}
-
-import { useState, useEffect } from './react';
-import { Link, use_navigate, useSearchParams } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { Button } from '@/components / ui / button';
-import PostForm from "@/components / community / PostForm";
-import { use_toast } from '@/hooks / use - toast';
-import { ForumCategory } from '@/types / community';
-interface PostFormValues {
-  title: string,
-  content: string,
-  category_id: ForumCategory,
-  tags: string;
-}
-export default /**
- * CreatePostPage - Function description
- */
-function CreatePostPage() {
-  const navigate = use_navigate ();
-  const { toast } = use_toast ();
-  const [search_params] = useSearchParams ();
-;
-  // Get category from URL query params if available;
-  const initial_category = search_params.get ("category") as ForumCategory | null;
-;
-  const initial_values: Partial < PostFormValues> = {
-    category_id: initial_category || "project - help";
+  const initial_values: Partial < PostFormValues> = {,"
+  category_id: initial_category || "project - help";"
   }
 ;
   const handle_submit = async (values: PostFormValues) => {
     try {
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
-      // Parse tags into an array;
-      const tags_array = values.tags.split (", ").map (tag => tag.trim ());
+  // TODO: Implement
+}
+      // Here we would normally save to the database;"
+      // For now, we'll just simulate a successful post creation;'
+      // Parse tags into an array;'
+      const tags_array = values.tags.split (", ").map (tag => tag.trim ());"
 ;
-      toast ({
-        title: "Post created",
-        description: "Your post has been published successfully";
+      toast ({"
+        title: "Post created",""
+        description: "Your post has been published successfully";")
       });
 ;
       // Redirect to the forum category;
       navigate (`/community / category/${values.category_id}`);
     } catch (error) {
-      toast ({
-        title: "Error",
-        description: "There was a problem creating your post",
-        variant: "destructive";
+      toast ({"
+        title: "Error",""
+        description: "There was a problem creating your post",""
+        variant: "destructive";")
       });
     }
   }
 ;
   return (
     <AppLayout>;
-      <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace";
-        description="Create a new discussion post in the Zion AI Marketplace community forum.";
-        keywords="community, forum, discussion, create post, new thread";
+</AppLayout>
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace";""
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";""
+        keywords="community, forum, discussion, create post, new thread";"
       />;
-      <div className="container py - 8">;
-        <div className="flex items - center gap - 3 mb - 6">;
-          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
-            Forum;
-          </Link>;
-          <span className="text - muted - foreground">/</span>;
-          <span className="text - sm font - medium">Create Post</span>;
-        </div>;
-        <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>;
+</SEO>"
+      <div className="container py - 8">;"
+</div>"
+        <div className="flex items - center gap - 3 mb - 6">;"
+</div>"
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;"
+</Link>
+          </Link>;"
+          <span className="text - muted - foreground">/</span>;""
+          <span className="text - sm font - medium">Create Post</span>;"
+        </div>;"
+        <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>;"
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
-      </div>;
-    </AppLayout>);
-}
-
-        ;
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-        ;
+</PostForm>
+      </div>;)
+    </AppLayout>);"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;"
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+</PostForm>
       </div>;
-    </AppLayout>;
-  ),; interface PostFormValues {
-  title: string;
-content: string;
-categoryId: ForumCategory;
-tags: string 
-}export default function CreatePostPage () {
-  const navigate = useNavigate ();
-const {
-  toast 
-}= useToast ();
-const [searchParams] = useSearchParams ();
-//Get category from URL query params if available try {
-  //Here we would normally save to the database //For now, we'll just simulate a successful post creation //Parse tags into an array //Redirect to the forum category navigate (`/community/category/$ {
-  values.categoryId 
-}`) 
-}catch (error) {
-  toast ({
-  
-}
-;
-
-};
-return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Create Post</span> </div> <h1 className="text-3xl font-bold mb-8" >Create New Post</h1> <PostForm initialValues= {
-  initialValues 
-}onSubmit= {
-  handleSubmit 
-}/> </div> </AppLayout>) 
-}
-;
+    </AppLayout>;"
+return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread" /> <div className="container py-8" > <div className="flex items-center gap-3 mb-6" > <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground" > Forum </Link> <span className="text-muted-foreground" >/</span> <span className="text-sm font-medium" >Create Post</span> </div> <h1 className="text-3xl font-bold mb-8" >Create New Post</h1> <PostForm initialValues= {"
+</AppLayout>)
+}/> </div> </AppLayout>) "

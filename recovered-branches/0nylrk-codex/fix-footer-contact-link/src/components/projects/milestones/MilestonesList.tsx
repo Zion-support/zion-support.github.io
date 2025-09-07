@@ -1,129 +1,97 @@
 
 
 
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus  } from '@/components/icons';
-import { EmptyState } from '@/components/ui/empty-state';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { MilestoneCard  } from './MilestoneCard';''
+import { AddMilestoneForm  } from './AddMilestoneForm';''
+import { Button  } from '@/components/ui/button';''
+import { Card, CardContent  } from '@/components/ui/card';''
+// lucide-react doesn't export PlusIcon, use our icon wrapper;''
+import { Plus  } from '@/components/icons';''
+import { EmptyState } from '@/components/ui/empty-state';'
 interface MilestonesListProps {
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
-import {useAuth} from '@/hooks/useAuth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components/icons';
-import {EmptyState} from '@/components/ui/empty-state';
+  // TODO: Implement
+}'
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';''
+import {useAuth} from '@/hooks/useAuth';''
+import {MilestoneCard} from './MilestoneCard';''
+import {AddMilestoneForm} from './AddMilestoneForm';''
+import {Button} from '@/components/ui/button';''
+import {Card, CardContent} from '@/components/ui/card';''
+// lucide-react doesn't export PlusIcon, use our icon wrapper;''
+import {Plus} from '@/components/icons';''
+import {EmptyState} from '@/components/ui/empty-state';'
 interface MilestonesListProps {
+  // TODO: Implement
+}
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean,
-  isClient: boolean,
+</string>
   onCreateMilestone: (data: any) => Promise<Milestone | null>,
+</Milestone>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+</boolean>
   onDeleteMilestone: (id: string) => Promise<boolean>,
+</boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
-  isSubmitting: boolean,
+</any>
   onApprove?: (id: string) => Promise<void>,
+</void>
   onReject?: (id: string) => Promise<void>
-}
-
+</void>
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
-  milestones;
-  activities;
-  isLoading;
-  isClient;
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-  onUploadDeliverable;
-  isSubmitting;
-
-import React, { useState } from 'react',;
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MilestoneCard } from './MilestoneCard',;
-import { AddMilestoneForm } from './AddMilestoneForm',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from '@/components/icons',;
-import { EmptyState } from '@/components/ui/empty-state',;
-interface MilestonesListProps {;
-  milestones: Milestone[],;
+</MilestonesListProps>
   activities: Record<string MilestoneActivity[]>,;
-  isLoading: boolean,;
-  isClient: boolean,;
+</string>)
   onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+</Milestone>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+</boolean>
   onDeleteMilestone: (id: string) => Promise<boolean>,;
+</boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  isSubmitting: boolean,;
+</any>
   onApprove?: (id: string) => Promise<void>,;
+</void>
   onReject?: (id: string) => Promise<void>;
-}
-
-
-  milestones: Milestone[]
+</void>
   activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean
-  isClient: boolean
+</string>
   onCreateMilestone: (data: any) => Promise<Milestone | null>
+</Milestone>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+</boolean>
   onDeleteMilestone: (id: string) => Promise<boolean>
+</boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>
-  isSubmitting: boolean
+</any>
   onApprove?: (id: string) => Promise<void>
+</void>
 
   onReject?: (id: string) => Promise<void>
-}
+</void>
 export const MilestonesList: React.FC<MilestonesListProps> = ({
-
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
-import {useAuth} from '@/hooks/useAuth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components/icons';
-import {EmptyState} from '@/components/ui/empty-state';
-interface MilestonesListProps {;
-  milestones: Milestone[],;
+</MilestonesListProps>
   activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean,;
-  isClient: boolean,;
+</string>)
   onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+</Milestone>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+</boolean>
   onDeleteMilestone: (id: string) => Promise<boolean>,;
+</boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  isSubmitting: boolean,;
+</any>
   onApprove?: (id: string) => Promise<void>,;
+</void>
   onReject?: (id: string) => Promise<void>;
-}
-
+</void>
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
-
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
-import {use_auth} from '@/hooks / use_auth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent} from '@/components / ui / card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components / icons';
-import {EmptyState} from '@/components / ui / empty - state';
-interface MilestonesListProps {
-  milestones: Milestone[],
+</MilestonesListProps>
   activities: Record < string, MilestoneActivity[]>;
   is_loading: boolean,
-  is_client: boolean,
+  is_client: boolean,)
   onCreateMilestone: (data: any) => Promise < Milestone | null>,
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
   onDeleteMilestone: (id: string) => Promise < boolean>,
@@ -154,7 +122,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   isSubmitting,
 
   onApprove,
-  onReject
+  onReject;)
 }) => {
   const [showAddForm, setShowAddForm] = useState(false),
   
@@ -180,126 +148,57 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   if (isLoading) {;
     return (
     return (;
-    return (
-      <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
+    return ('
+      <div className="space-y-4">;"
+</div>
           <Card key={i}>;
-            <CardContent className="p-6">;
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
+</Card>"
+            <CardContent className="p-6">;"
+</CardContent>"
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;""
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;""
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;"
             </CardContent>;
           </Card>;
-        ))}
       </div>;
-    );
-  }
-
-
-  
-
-
-    );
-  }
-  if (milestones.length === 0 && !showAddForm) {
-    return (
-      <EmptyState
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet"
-        description={isClient ?
-          "Break down the project into manageable milestones to track progress and payments." :
-          "No milestones have been created for this project yet."}
-        action={isClient ?
-          {
-            text: "Create First Milestone"
-            onClick: () => setShowAddForm(true)
-          } : undefined
-
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text: "Create First Milestone",;
-            onClick: () => setShowAddForm(true);
-          } : undefined;
-
-        }
-      />;
-    );
-  }
-        }
-      />
-    )
-  }
-
-
-
-  return (
-  return (
-    ),;
-  }
-  ;
-  if (milestones.length === 0 && !showAddForm) {;
-    return (;
-      <EmptyState;
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text:"Create First Milestone",;
-            onClick:() => setShowAddForm(true);
-          } undefined;
-        }
-      />;
-    ),;
-  }
-;
-  return (;
-  return (
-    <div className="space-y-6">;
-      {isClient && !showAddForm && (;
-        <div className="flex justify-end">;
+      <EmptyState;"
+        icon={<span className="text-3xl">📊</span>}"
+</EmptyState>
+      <EmptyState;"
+        icon={<span className="text-3xl">📊</span>}"
+</EmptyState>
+      <EmptyState;"
+        icon={<span className="text-3xl">📊</span>}"
+</EmptyState>"
+    <div className="space-y-6">;"
+</div>"
+        <div className="flex justify-end">;"
+</div>)
           <Button onClick={() => setShowAddForm(true)}>;
-            <Plus className="h-4 w-4 mr-2" />;
-            Add Milestone;
+</Button>"
+            <Plus className="h-4 w-4 mr-2" />;"
+</Plus>
           </Button>;
         </div>;
-      )}
-
-
-      {showAddForm && (;
         <Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
-            <AddMilestoneForm
-
-            <AddMilestoneForm 
-
+</Card>"
+          <CardContent className="pt-6">;"
+</CardContent>"
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;"
+            <AddMilestoneForm;
+            <AddMilestoneForm;
             <AddMilestoneForm ;
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
-            />;
+</AddMilestoneForm>
           </CardContent>;
-        </Card>;
-      )}
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone) => (;
-          <MilestoneCard
+        </Card>;"
+      <div className="space-y-4">"
+</div>"
+      <div className="space-y-4">;"
+</div>
+          <MilestoneCard;
             key={milestone && milestone.id}
             id={milestone && milestone.id}
             projectId={milestone && milestone.project_id}
@@ -311,35 +210,25 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
             onApprove={onApprove}
             onReject={onReject}
           />;
-        ))}
-}
-
+</MilestoneCard>
       </div>;
-    </div>;
-  );
-
-
-
-
-      ;
-      <div className="space-y-4">;
-        {milestones.map((milestone) => (;
+    </div>;"
+      <div className="space-y-4">;"
+</div>
           <MilestoneCard;
             key={milestone.id}            id={milestone.id}
             projectId={milestone.projectid}
-            <AddMilestoneForm
-            <AddMilestoneForm 
+            <AddMilestoneForm;
+            <AddMilestoneForm;
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
-            />
+</MilestoneCard>
           </CardContent>
-        </Card>
-      )}
-      
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-          <MilestoneCard
+        </Card>"
+      <div className="space-y-4">"
+</div>
+          <MilestoneCard;
             key={milestone.id}
             id={milestone.id}
             projectId={milestone.project_id}
@@ -351,81 +240,47 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
       </div>;
-    </div>;
-  );
-
-
-
-
-};
-  is_submitting;
-  on_approve,
-  on_reject;
-}) => {
-  const [showAddForm, setShowAddForm] = useState (false);
-;
-  const handle_submit = async (data: any) => {
-    await onCreateMilestone (data),
-    setShowAddForm (false);
-  }
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="space - y-4">;
-        {[1, 2, 3].map ((i) => (
+</MilestoneCard>
+    </div>;"
+      <div className="space - y-4">;"
+</div>
           <Card key={i}>;
-            <CardContent className="p - 6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
+</Card>"
+            <CardContent className="p - 6">;"
+</CardContent>"
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;""
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;""
+              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;"
             </CardContent>;
           </Card>))}
       </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <EmptyState;
-        icon={<span className="text - 3xl">📊</span>}
-        title="No Milestones Yet";
-        description={is_client ?;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={is_client ?;
-          {
-            text: "Create First Milestone",
-            on_click: () => setShowAddForm (true);
-          } : undefined;
-        }
-      />);
-  }
-  return (
-    <div className="space - y-6">;
-      {is_client && !showAddForm && (
-        <div className="flex justify - end">;
+      <EmptyState;"
+        icon={<span className="text - 3xl">📊</span>}"
+</EmptyState>"
+    <div className="space - y-6">;"
+</div>"
+        <div className="flex justify - end">;"
+</div>
           <Button on_click={() => setShowAddForm (true)}>;
-            <Plus className="h - 4 w - 4 mr - 2" />;
-            Add Milestone;
+</Button>"
+            <Plus className="h - 4 w - 4 mr - 2" />;"
+</Plus>
           </Button>;
         </div>)}
-      {showAddForm && (
         <Card>;
-          <CardContent className="pt - 6">;
-            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
+</Card>"
+          <CardContent className="pt - 6">;"
+</CardContent>"
+            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;"
             <AddMilestoneForm;
               on_submit={handle_submit}
               is_submitting={is_submitting}
               on_cancel={() => setShowAddForm (false)}
-            />;
+</AddMilestoneForm>
           </CardContent>;
-        </Card>)}
-      <div className="space - y-4">;
-        {milestones.map ((milestone) => (
+        </Card>)}"
+      <div className="space - y-4">;"
+</div>
           <MilestoneCard;
             key={milestone.id}
             id={milestone.id}
@@ -438,61 +293,50 @@ if ( {) {
             on_approve={on_approve}
             on_reject={on_reject}
           />))}
+</MilestoneCard>
       </div>;
     </div>);
-}
-;
-  ),;
 },; <Card key= {
-  i 
-}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) 
+  i;"
+}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) )"
 }</div>) 
-}
-}/>) 
 }<Button onClick= {
   () => setShowAddForm (true) 
-}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) 
+</Button>"
+}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>)"
+</Plus>
 }<AddMilestoneForm onSubmit= {
-  handleSubmit 
+  handleSubmit;
 }isSubmitting= {
-  isSubmitting 
+  isSubmitting;
 }onCancel= {
   () => setShowAddForm (false) 
+</AddMilestoneForm>
 }/> </CardContent> </Card>) 
 }<MilestoneCard key= {
-  milestone.id 
+  milestone.id;
 }id= {
-  milestone.id 
+  milestone.id;
 }projectId= {
-  milestone.project id 
+  milestone.project id;
 }title= {
-  milestone.title 
+  milestone.title;
 }description= {
-  milestone.description 
+  milestone.description;
 }amount= {
   parseFloat (milestone.amount.toString () ) 
 }status= {
-  milestone.status 
+  milestone.status;
 }dueDate= {
-  milestone.due date 
+  milestone.due date;
 }onApprove= {
-  onApprove 
+  onApprove;
 }onReject= {
-  onReject 
+  onReject;
 }/>) ) 
+</MilestoneCard>
 }</div> </div>) 
-};
-            dueDate={milestone.due_date}
-            onApprove={onApprove}
-            onReject={onReject}
-          />
-        ))}
       </div>
     </div>
-  )
-}
-
       </div>;
-    </div>;
-  );
-};
+    </div>;"

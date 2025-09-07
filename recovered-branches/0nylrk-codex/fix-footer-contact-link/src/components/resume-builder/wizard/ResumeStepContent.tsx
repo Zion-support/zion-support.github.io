@@ -1,9 +1,10 @@
 interface ResumeStepContentProps {
-
-  activeTab: string
-  resume: Resume
-  onNextStep: () => void
-  onPrevStep: () => void
+  // TODO: Implement
+}
+  activeTab: string;,
+  resume: Resume;
+  onNextStep: () => void;,
+  onPrevStep: () => void;
 }
 
 
@@ -13,111 +14,84 @@ interface ResumeStepContentProps {
 }: ResumeStepContentProps) => {
   return (
     <>
-      <TabsContent value="basic-info">
-        <BasicInfoForm
+      <TabsContent value="basic-info">"
+</TabsContent>
+        <BasicInfoForm;
           resumeId={resume?.id!}
-
-import {TabsContent} from "@/components/ui/tabs";
-import {Resume} from "@/types/resume";
-import {BasicInfoForm} from '../forms/basic-info';
-import {WorkExperienceForm} from '../forms/WorkExperienceForm';
-import {EducationForm} from '../forms/EducationForm';
-import {SkillsForm} from '../forms/SkillsForm';
-import {CertificationsForm} from '../forms/CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
+"
+import {TabsContent} from "@/components/ui/tabs";""
+import {Resume} from "@/types/resume";""
+import {BasicInfoForm} from '../forms/basic-info';''
+import {WorkExperienceForm} from '../forms/WorkExperienceForm';''
+import {EducationForm} from '../forms/EducationForm';''
+import {SkillsForm} from '../forms/SkillsForm';''
+import {CertificationsForm} from '../forms/CertificationsForm';''
+import {PreviewResume} from '../PreviewResume';'
 interface ResumeStepContentProps {
-
-  activeTab: string
-  resume: Resume
-  onNextStep: () => void
-  onPrevStep: () => void
+  // TODO: Implement
 }
-export const ResumeStepContent = ({
-  activeTab;
-  resume
-  onNextStep
-  onPrevStep
-
-export const ResumeStepContent = ({ ;
-  activeTab;
-export const ResumeStepContent = ({ 
-  activeTab,
-  resume, 
-  onNextStep, 
-  onPrevStep 
-}: ResumeStepContentProps) => {
-  return (
-    <>
-      <TabsContent value="basic-info">
-        <BasicInfoForm
+  activeTab: string;,
+  resume: Resume;)
+  onNextStep: () => void;
+</BasicInfoForm>
+    <>'
+      <TabsContent value="basic-info">"
+</TabsContent>
+        <BasicInfoForm;
           resumeId={resume?.id!}
           initialData={resume?.basic_info}
           onSave={(data) => {
-            // Here you would typically save the data to your backend
-            // // // console.log("Saving basic info:", data)
-          }}
-          onComplete={onNextStep}
-        />
-      </TabsContent>
-      <TabsContent value="work-experience">
-        <WorkExperienceForm
-        <WorkExperienceForm 
-import { TabsContent } from "@/components/ui/tabs",;
-import { Resume } from "@/types/resume",;
-import { BasicInfoForm } from '../forms/basic-info',;
-import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
-import { EducationForm } from '../forms/EducationForm',;
-import { SkillsForm } from '../forms/SkillsForm',;
-import { CertificationsForm } from '../forms/CertificationsForm',;
-import { PreviewResume } from '../PreviewResume',;
+</BasicInfoForm>
+      </TabsContent>"
+      <TabsContent value="work-experience">"
+</TabsContent>
+        <WorkExperienceForm;
+        <WorkExperienceForm;"
+import { TabsContent } from "@/components/ui/tabs",;""
+import { Resume } from "@/types/resume",;""
+import { BasicInfoForm } from '../forms/basic-info',;''
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',;''
+import { EducationForm } from '../forms/EducationForm',;''
+import { SkillsForm } from '../forms/SkillsForm',;''
+import { CertificationsForm } from '../forms/CertificationsForm',;''
+import { PreviewResume } from '../PreviewResume',;'
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
   onNextStep: () => void,;
-  onPrevStep: () => void;
-}
-
-export const ResumeStepContent = ({ ;
-  activeTab;
-  resume, ;
-  onNextStep, ;
-  onPrevStep ;
-}: ResumeStepContentProps) => {;
-  return (
-    <>;
-      <TabsContent value="basic-info">;
-        <BasicInfoForm
+</WorkExperienceForm>
+    <>;'
+      <TabsContent value="basic-info">;"
+</TabsContent>
+        <BasicInfoForm;
           resumeId={resume?.id!} 
 
           initialData={resume?.basic_info}
           onSave={(data) => {;
-            // Here you would typically save the data to your backend;
-            console && console.log("Saving basic info:", data);
-          }}
-        <WorkExperienceForm
+</BasicInfoForm>
+        <WorkExperienceForm;
 ;
 export const ResumeStepContent = ({;
   activeTab,;
   resume,;
   onNextStep;
-  onPrevStep;
+  onPrevStep;)
 }: ResumeStepContentProps) => {;
-  return (;
-    <>;
-      <TabsContent value="basic-info">;
+</WorkExperienceForm>
+    <>;"
+      <TabsContent value="basic-info">;"
+</TabsContent>
         <BasicInfoForm;
           resumeId={resume?.id!} ;
           initialData={resume?.basic_info}
           onSave={(data) => {;
-            // Here you would typically save the data to your backend;
-
-        <WorkExperienceForm
-
-        <WorkExperienceForm 
-
-        <WorkExperienceForm
-      ;
-      <TabsContent value="work-experience">;
+</BasicInfoForm>
+        <WorkExperienceForm;
+        <WorkExperienceForm;
+        <WorkExperienceForm;
+      ;"
+      <TabsContent value="work-experience">;"
+</WorkExperienceForm>
         <WorkExperienceForm ;
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
@@ -125,23 +99,25 @@ export const ResumeStepContent = ({;
           onBack={onPrevStep}
 
         />;
+</WorkExperienceForm>
       </TabsContent>;
-
-        <EducationForm 
-
-        <EducationForm
-      ;
-      <TabsContent value="education">;
+        <EducationForm;
+        <EducationForm;
+      ;"
+      <TabsContent value="education">;"
+</EducationForm>
         <EducationForm ;
           resumeId={resume?.id!}
           educationEntries={resume?.education || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
         />;
+</EducationForm>
       </TabsContent>;
-        <SkillsForm
-      ;
-      <TabsContent value="skills">;
+        <SkillsForm;
+      ;"
+      <TabsContent value="skills">;"
+</SkillsForm>
         <SkillsForm;
           resumeId={resume?.id!}
           skills={resume?.skills || []}
@@ -149,24 +125,26 @@ export const ResumeStepContent = ({;
           onBack={onPrevStep}
 
         />;
+</SkillsForm>
       </TabsContent>;
-
-        <CertificationsForm 
-
-        <CertificationsForm
-      ;
-      <TabsContent value="certifications">;
+        <CertificationsForm;
+        <CertificationsForm;
+      ;"
+      <TabsContent value="certifications">;"
+</CertificationsForm>
         <CertificationsForm ;
           resumeId={resume?.id!}
           certifications={resume?.certifications || []}
           onComplete={onNextStep}
-          onBack={onPrevStep}
-            // // // console.log("Saving basic info:", data);
+          onBack={onPrevStep}"
+            // // // console.log("Saving basic info:", data);"
           }}
           onComplete={onNextStep} ;
         />;
-      </TabsContent>;
-      <TabsContent value="work-experience">;
+</CertificationsForm>
+      </TabsContent>;"
+      <TabsContent value="work-experience">;"
+</TabsContent>
         <WorkExperienceForm;
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
@@ -174,83 +152,92 @@ export const ResumeStepContent = ({;
           onBack={onPrevStep}
 
         />;
-      </TabsContent>;
-
-      <TabsContent value="education">;
-
-        <EducationForm
+</WorkExperienceForm>
+      </TabsContent>;"
+      <TabsContent value="education">;"
+</TabsContent>
+        <EducationForm;
         />
-      </TabsContent>
-      <TabsContent value="education">
-        <EducationForm
-        <EducationForm 
+</EducationForm>
+      </TabsContent>"
+      <TabsContent value="education">"
+</TabsContent>
+        <EducationForm;
+        <EducationForm;
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 
         />;
-      </TabsContent>;
-
-      <TabsContent value="skills">;
-
-        <SkillsForm
+</EducationForm>
+      </TabsContent>;"
+      <TabsContent value="skills">;"
+</TabsContent>
+        <SkillsForm;
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 
         />;
-      </TabsContent>;
-
-      <TabsContent value="certifications">;
-
-        <CertificationsForm
+</SkillsForm>
+      </TabsContent>;"
+      <TabsContent value="certifications">;"
+</TabsContent>
+        <CertificationsForm;
         />
-      </TabsContent>
-      <TabsContent value="certifications">
-        <CertificationsForm
-        <CertificationsForm 
+</CertificationsForm>
+      </TabsContent>"
+      <TabsContent value="certifications">"
+</TabsContent>
+        <CertificationsForm;
+        <CertificationsForm;
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 
         />;
-      </TabsContent>;
-
-      <TabsContent value="preview">;
-        <PreviewResume
+</CertificationsForm>
+      </TabsContent>;"
+      <TabsContent value="preview">;"
+</TabsContent>
+        <PreviewResume;
           resume={resume as Resume} 
         />
+</PreviewResume>
       </TabsContent>
     </>
   )
 
         />;
-      </TabsContent>;
-      ;
-      <TabsContent value="preview">;
+      </TabsContent>;"
+      <TabsContent value="preview">;"
+</TabsContent>
         <PreviewResume ;
           resume={resume as Resume} ;
           onBack={onPrevStep}
         />;
+</PreviewResume>
       </TabsContent>;
     </>;
   );
 
 
 
-};
-import { TabsContent } from '@/components / ui / tabs';
-import { Resume } from '@/types / resume';
-import {BasicInfoForm} from '../forms / basic - info';
-import {WorkExperienceForm} from '../forms / WorkExperienceForm';
-import {EducationForm} from '../forms / EducationForm';
-import {SkillsForm} from '../forms / SkillsForm';
-import {CertificationsForm} from '../forms / CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
+};"
+import { TabsContent } from '@/components / ui / tabs';''
+import { Resume } from '@/types / resume';''
+import {BasicInfoForm} from '../forms / basic - info';''
+import {WorkExperienceForm} from '../forms / WorkExperienceForm';''
+import {EducationForm} from '../forms / EducationForm';''
+import {SkillsForm} from '../forms / SkillsForm';''
+import {CertificationsForm} from '../forms / CertificationsForm';''
+import {PreviewResume} from '../PreviewResume';'
 interface ResumeStepContentProps {
+  // TODO: Implement
+}
   active_tab: string,
   resume: Resume,
   onNextStep: () => void,
@@ -260,128 +247,112 @@ export const ResumeStepContent = ({
   active_tab;
   resume,
   onNextStep,
-  onPrevStep;
+  onPrevStep;)
 }: ResumeStepContentProps) =>: any {
+  // TODO: Implement
+}
   return (
-    <>;
-      <TabsContent value="basic - info">;
+    <>;'
+      <TabsContent value="basic - info">;"
+</TabsContent>
         <BasicInfoForm;
           resume_id={resume?.id!}
-          initial_data={resume?.basic_info}
+          initial_data={resume?.basic_info})
           on_save={(data) => {
-            // Here you would typically save the data to your backend;
-            console.log ("Saving basic info:", data);
-          }}
-          on_complete={onNextStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="work - experience">;
+</BasicInfoForm>
+      </TabsContent>;"
+      <TabsContent value="work - experience">;"
+</TabsContent>
         <WorkExperienceForm;
           resume_id={resume?.id!}
           work_experiences={resume?.work_experience || []}
           on_complete={onNextStep}
           on_back={onPrevStep}
         />;
-      </TabsContent>;
-      <TabsContent value="education">;
+</WorkExperienceForm>
+      </TabsContent>;"
+      <TabsContent value="education">;"
+</TabsContent>
         <EducationForm;
           resume_id={resume?.id!}
           education_entries={resume?.education || []}
           on_complete={onNextStep}
           on_back={onPrevStep}
         />;
-      </TabsContent>;
-      <TabsContent value="skills">;
+</EducationForm>
+      </TabsContent>;"
+      <TabsContent value="skills">;"
+</TabsContent>
         <SkillsForm;
           resume_id={resume?.id!}
           skills={resume?.skills || []}
           on_complete={onNextStep}
           on_back={onPrevStep}
         />;
-      </TabsContent>;
-      <TabsContent value="certifications">;
+</SkillsForm>
+      </TabsContent>;"
+      <TabsContent value="certifications">;"
+</TabsContent>
         <CertificationsForm;
           resume_id={resume?.id!}
           certifications={resume?.certifications || []}
           on_complete={onNextStep}
           on_back={onPrevStep}
         />;
-      </TabsContent>;
-      <TabsContent value="preview">;
+</CertificationsForm>
+      </TabsContent>;"
+      <TabsContent value="preview">;"
+</TabsContent>
         <PreviewResume;
           resume={resume as Resume}
           on_back={onPrevStep}
         />;
+</PreviewResume>
       </TabsContent>;
     </>);
 }
 ;
   ),;
 },; interface ResumeStepContentProps {
-  activeTab: string;
-resume: Resume;
-onNextStep: () => void;
-onPrevStep: () => void 
+  // TODO: Implement
+}
+  activeTab: string;,
+  resume: Resume;
+onNextStep: () => void;,
+  onPrevStep: () => void;
 }export const ResumeStepContent = ({
   activeTab;
 resume;
 onNextStep;
-onPrevStep 
-}: ResumeStepContentProps) => {
-  return (<> <TabsContent value="basic-info" > <BasicInfoForm resumeId= {
-  resume?.id! 
-}initialData= {
-  resume?.basic info 
-}onSave= {
-  (data) => {
-  //Here you would typically save the data to your backend 
-}
-}onComplete= {
-  onNextStep 
-}work-experience"> <WorkExperienceForm resumeId= {
+onPrevStep;)
+}: ResumeStepContentProps) => {"
+  return (<> <TabsContent value="basic-info" > <BasicInfoForm resumeId= {"
+</TabsContent>"
+}work-experience"> <WorkExperienceForm resumeId= {"
   resume?.id! 
 }workExperiences= {
   resume?.work experience || [] 
 }onComplete= {
-  onNextStep 
+  onNextStep;
 }onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" education"> <EducationForm resumeId= {
-  resume?.id! 
-}educationEntries= {
-  resume?.education || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" skills"> <SkillsForm resumeId= {
-  resume?.id! 
-}skills= {
-  resume?.skills || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" certifications"> <CertificationsForm resumeId= {
-  resume?.id! 
-}certifications= {
-  resume?.certifications || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" preview" > <PreviewResume resume= {
-  resume as Resume 
-}onBack= {
-  onPrevStep 
+  onPrevStep;"
+}/> </TabsContent> <TabsContent value=" education"> <EducationForm resumeId= {"
+</WorkExperienceForm>"
+}/> </TabsContent> <TabsContent value=" skills"> <SkillsForm resumeId= {"
+</TabsContent>"
+}/> </TabsContent> <TabsContent value=" certifications"> <CertificationsForm resumeId= {"
+</TabsContent>"
+}/> </TabsContent> <TabsContent value=" preview" > <PreviewResume resume= {"
+</TabsContent>)
 }/> </TabsContent> </>) 
 };
 }
 
-        <PreviewResume 
+        <PreviewResume;
           resume={resume as Resume} 
           onBack={onPrevStep}
         />;
+</PreviewResume>
       </TabsContent>;
     </>;
   );
@@ -389,3 +360,4 @@ onPrevStep
 
 
 };
+"

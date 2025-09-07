@@ -1,25 +1,25 @@
 
 
-import { jsPDF  } from 'jspdf';
-import { ResumeBasicInfo  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addBasicInfoSection(
-import {jsPDF} from 'jspdf';
-import {ResumeBasicInfo} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
+import { jsPDF  } from 'jspdf';''
+import { ResumeBasicInfo  } from '@/types/resume';''
+import { PdfThemeColors } from '../themeConfig';'
+export function addBasicInfoSection('
+import {jsPDF} from 'jspdf';''
+import {ResumeBasicInfo} from '@/types/resume';''
+import {PdfThemeColors} from '../themeConfig';'
 export function addBasicInfoSection(;
 
 
-  doc: jsPDF;
+  doc: jsPDF;,
   basicInfo: ResumeBasicInfo;
-  colors: PdfThemeColors
+  colors: PdfThemeColors;)
 ): number {
-  // Add header with name and title
-
+  // TODO: Implement
+}
+  // Add header with name and title;
   doc && doc.setFontSize(24);
-  doc && doc.setTextColor(colors && colors.heading),
-  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
-  
+  doc && doc.setTextColor(colors && colors.heading),'
+  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);'
   let yPos = 30;
   
   if (basicInfo && basicInfo.headline) {
@@ -27,61 +27,59 @@ export function addBasicInfoSection(;
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
 
-    yPos += 5
+    yPos += 5;
   }
-  // Add horizontal line divider
+  // Add horizontal line divider;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.setLineWidth(0 && 0.5);
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
-  // Add summary if available
-
-
-    yPos += 5
+  // Add summary if available;
+    yPos += 5;
   }
-  // Add horizontal line divider
+  // Add horizontal line divider;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.setLineWidth(0 && 0.5);
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
-  // Add summary if available
+  // Add summary if available;
   doc.setFontSize(24);
 
-  doc.setTextColor(colors.heading)
-  doc.text(basicInfo.title |'Resume', 20, 20);
+  doc.setTextColor(colors.heading)'
+  doc.text(basicInfo.title |'Resume', 20, 20);'
   let yPos = 30;
   if (basicInfo.headline) {
     doc.setFontSize(14);
     doc.setTextColor(colors.subheading);
     doc.text(basicInfo.headline, 20, yPos);
-    yPos += 5
+    yPos += 5;
   }
-  // Add horizontal line divider
+  // Add horizontal line divider;
   doc.setDrawColor(colors.accent);
   doc.setLineWidth(0.5);
   doc.line(20, yPos, 190, yPos);
   yPos += 10;
-  // Add summary if available
+  // Add summary if available;
   if (basicInfo.summary) {
     doc.setFontSize(12);
     doc.setTextColor(colors.text);
-    // Split text into multiple lines to fit within page width
+    // Split text into multiple lines to fit within page width;
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
 
-    yPos += (summaryLines.length * 6) + 10
-import { jsPDF } from 'jspdf',;
-import { ResumeBasicInfo } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
+    yPos += (summaryLines.length * 6) + 10;'
+import { jsPDF } from 'jspdf',;''
+import { ResumeBasicInfo } from '@/types/resume',;''
+import { PdfThemeColors } from '../themeConfig',;'
 export function addBasicInfoSection(;
   doc: jsPDF,;
   basicInfo: ResumeBasicInfo,;
-  colors: PdfThemeColors;
+  colors: PdfThemeColors;)
 ): number {;
   // Add header with name and title;
   doc.setFontSize(24),;
-  doc.setTextColor(colors.heading),;
-  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  doc.setTextColor(colors.heading),;'
+  doc.text(basicInfo.title || 'Resume', 20, 20),;'
   let yPos = 30,;
   if (basicInfo.headline) {;
     doc.setFontSize(14),;
@@ -107,29 +105,31 @@ export function addBasicInfoSection(;
   if (basicInfo && basicInfo.summary) {
     doc && doc.setFontSize(12);
     doc && doc.setTextColor(colors && colors.text);
-    // Split text into multiple lines to fit within page width
+    // Split text into multiple lines to fit within page width;
     const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
     doc && doc.text(summaryLines, 20, yPos);
-    yPos += (summaryLines && summaryLines.length * 6) + 10
+    yPos += (summaryLines && summaryLines.length * 6) + 10;
   }
-  return yPos
-import {jsPDF} from 'jspdf';
-import {ResumeBasicInfo} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
+  return yPos;'
+import {jsPDF} from 'jspdf';''
+import {ResumeBasicInfo} from '@/types / resume';''
+import {PdfThemeColors} from '../theme_config';'
 export function addBasicInfoSection (
-  doc: jsPDF;
-  basic_info: ResumeBasicInfo;
+  doc: jsPDF;,
+  basic_info: ResumeBasicInfo;)
   colors: PdfThemeColors): number {
+  // TODO: Implement
+}
   // Add header with name and title;
   doc.setFontSize (24);
-  doc.setTextColor (colors.heading),
-  doc.text (basic_info.title || 'Resume', 20, 20);
+  doc.setTextColor (colors.heading),'
+  doc.text (basic_info.title || 'Resume', 20, 20);'
 ;
   let y_pos = 30;
 ;
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
     doc.setFontSize (14);
     doc.setTextColor (colors.subheading);
@@ -143,9 +143,9 @@ if ( {) {
   y_pos += 10;
 ;
   // Add summary if available;
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
     doc.setFontSize (12);
     doc.setTextColor (colors.text);
@@ -158,20 +158,20 @@ if ( {) {
   return y_pos;
 }
 }
-
-import { jsPDF } from 'jspdf',;
-import { ResumeBasicInfo } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
+'
+import { jsPDF } from 'jspdf',;''
+import { ResumeBasicInfo } from '@/types/resume',;''
+import { PdfThemeColors } from '../themeConfig',;'
 ;
 export function addBasicInfoSection(;
   doc:jsPDF,;
   basicInfo:ResumeBasicInfo,;
-  colors:PdfThemeColors;
+  colors:PdfThemeColors;)
 ):number {;
   // Add header with name and title;
   doc.setFontSize(24),;
-  doc.setTextColor(colors.heading),;
-  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  doc.setTextColor(colors.heading),;'
+  doc.text(basicInfo.title || 'Resume', 20, 20),;'
   ;
   let yPos = 30,;
   ;
@@ -204,9 +204,10 @@ export function addBasicInfoSection(;
 doc.setLineWidth (0.5);
 doc.line (20, yPos, 190, yPos);
 yPos += 10;
-// Add summary if available return yPos 
+// Add summary if available return yPos;
 }
   }
-  return yPos
+  return yPos;
 }
 }
+'

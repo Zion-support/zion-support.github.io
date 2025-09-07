@@ -5,9 +5,8 @@
  * Runs every 2 hours to monitor and optimize performance;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-
+const { execSync } = require('child_process');''
+const fs = require('fs');'
 const log = (message) => {}
   const timestamp = new Date().toISOString();
   
@@ -16,9 +15,9 @@ const log = (message) => {}
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
-    const output = execSync(command, { })
-      encoding: 'utf8', 
-      stdio: 'pipe',
+    const output = execSync(command, { })'
+      encoding: 'utf8',''
+      stdio: 'pipe','
       cwd: process.cwd();
     }
 });
@@ -30,11 +29,10 @@ const runCommand = (command, description) => {}
   };
 };
 
-const checkBuildPerformance = () => {}
-  log('Checking build performance');
-  
-  const startTime = Date.now();
-  const buildResult = runCommand('npm run build', 'Building project for performance check');
+const checkBuildPerformance = () => {}'
+  log('Checking build performance');'
+  const startTime = Date.now();'
+  const buildResult = runCommand('npm run build', 'Building project for performance check');'
   const endTime = Date.now();
   
   const buildTime = endTime - startTime;
@@ -42,18 +40,17 @@ const checkBuildPerformance = () => {}
   
   return { }
     success: buildResult.success, 
-    buildTime: buildTime,
-    performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR'
+    buildTime: buildTime,'
+    performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR''
   };
 };
 
-const checkMemoryUsage = () => {}
-  log('Checking memory usage');
-  
-  try {}
-    const memInfo = execSync('free -m', { encoding: 'utf8' }
-});
-    const lines = memInfo.split('\n');
+const checkMemoryUsage = () => {}'
+  log('Checking memory usage');'
+  try {}'
+    const memInfo = execSync('free -m', { encoding: 'utf8' }')
+});'
+    const lines = memInfo.split('\n');'
     const memLine = lines[1].split(/\s+/);
     
     const totalMem = parseInt(memLine[1]);
@@ -66,8 +63,8 @@ const checkMemoryUsage = () => {}
       success: true,
       total: totalMem,
       used: usedMem,
-      usagePercent: memUsagePercent,
-      status: memUsagePercent < 80 ? 'GOOD' : memUsagePercent < 90 ? 'WARNING' : 'CRITICAL'
+      usagePercent: memUsagePercent,'
+      status: memUsagePercent < 80 ? 'GOOD' : memUsagePercent < 90 ? 'WARNING' : 'CRITICAL''
     };
   } catch (error) {}
     log(`Memory check failed: ${error.message}`);
@@ -80,32 +77,31 @@ const generatePerformanceReport = (results) => {}
     timestamp: new Date().toISOString(),
     build: results.build,
     memory: results.memory,
-    overall: {}
-      status: 'GOOD',
+    overall: {}'
+      status: 'GOOD','
       issues: 0;
     };
   };
   
-  // Calculate overall status;
-  if (results.build && results.build.performance === 'POOR') {}
-    report.overall.status = 'WARNING';
+  // Calculate overall status;'
+  if (results.build && results.build.performance === 'POOR') {}''
+    report.overall.status = 'WARNING';'
+    report.overall.issues++;
+  };'
+  if (results.memory && results.memory.status === 'CRITICAL') {}''
+    report.overall.status = 'CRITICAL';'
     report.overall.issues++;
   };
-  if (results.memory && results.memory.status === 'CRITICAL') {}
-    report.overall.status = 'CRITICAL';
-    report.overall.issues++;
-  };
-  // Save report;
-  const reportPath = 'logs/pm2/performance-report.json';
+  // Save report;'
+  const reportPath = 'logs/pm2/performance-report.json';'
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Performance report saved to ${reportPath}`);
   
   return report;
 };
 
-const main = async () => {}
-  log('Starting Performance Monitor Process');
-  
+const main = async () => {}'
+  log('Starting Performance Monitor Process');'
   // Run performance checks;
   const buildResults = checkBuildPerformance();
   const memoryResults = checkMemoryUsage();
@@ -118,26 +114,26 @@ const main = async () => {}
   
   const report = generatePerformanceReport(results);
   
-  // Handle performance issues;
-  if (report.overall.status === 'CRITICAL') {}
-    log('Critical performance issues detected');
-  } else if (report.overall.status === 'WARNING') {}
-    log('Performance warnings detected, monitoring closely');
-  } else {}
-    log('Performance monitoring passed: All metrics look good');
-  };
-  log('Performance Monitor Process completed');
+  // Handle performance issues;'
+  if (report.overall.status === 'CRITICAL') {}''
+    log('Critical performance issues detected');''
+  } else if (report.overall.status === 'WARNING') {}''
+    log('Performance warnings detected, monitoring closely');'
+  } else {}'
+    log('Performance monitoring passed: All metrics look good');'
+  };'
+  log('Performance Monitor Process completed');'
 };
 
-// Handle process termination;
-process.on('SIGINT', () => {}
-  log('Performance Monitor Process interrupted');
+// Handle process termination;'
+process.on('SIGINT', () => {}''
+  log('Performance Monitor Process interrupted');'
   process.exit(0);
 }
 });
-
-process.on('SIGTERM', () => {}
-  log('Performance Monitor Process terminated');
+'
+process.on('SIGTERM', () => {}''
+  log('Performance Monitor Process terminated');'
   process.exit(0);
 }
 });
@@ -149,3 +145,4 @@ main().catch(error => {})
 }
 });
 });
+'

@@ -1,12 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 fixer.run().catch(console.error);
 
     }
   }
 }
 
-// Main execution
+// Main execution;
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
   fixer.run().catch(console.error);

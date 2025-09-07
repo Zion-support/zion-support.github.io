@@ -1,6 +1,4 @@
-import crypto from "crypto";
-
-
+import crypto from "crypto";"
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;
@@ -10,6 +8,8 @@ export const merkle = {
 }
 
 export class MerkleTree {
+  // TODO: Implement
+}
   private root: MerkleNode | null = null;
   private leaves: MerkleNode[] = [];
 
@@ -18,15 +18,17 @@ export class MerkleTree {
   }
 
   private buildTree(data: any[]): void {
+  // TODO: Implement
+}
     if (data.length === 0) return;
 
-    // Create leaf nodes
-    this.leaves = data.map((item) => ({
+    // Create leaf nodes;
+    this.leaves = data.map((item) => ({)
       hash: this.hashData(JSON.stringify(item)),
       data: item,
     }));
 
-    // Build tree bottom-up
+    // Build tree bottom-up;
     let currentLevel = [...this.leaves];
 
     while (currentLevel.length > 1) {
@@ -34,11 +36,10 @@ export class MerkleTree {
 
       for (let i = 0; i < currentLevel.length; i += 2) {
         const left = currentLevel[i];
-        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number
-
+        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number;
         const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
-          hash: this.hashData(combinedHash),
+        const parent: MerkleNode = {,
+  hash: this.hashData(combinedHash),
           left,
           right,
         };
@@ -53,10 +54,14 @@ export class MerkleTree {
   }
 
   private hashData(data: string): string {
-    return crypto.createHash("sha256").update(data).digest("hex");
+  // TODO: Implement
+}"
+    return crypto.createHash("sha256").update(data).digest("hex");"
   }
 
   getRootHash(): string | null {
+  // TODO: Implement
+}
     return this.root?.hash || null;
   }
 
@@ -72,23 +77,25 @@ export class MerkleTree {
       const currentIndex = level.indexOf(current);
 
       if (currentIndex % 2 === 0) {
-        // Left node, add right sibling
+        // Left node, add right sibling;
         if (currentIndex + 1 < level.length) {
           proof.push(level[currentIndex + 1].hash);
         }
       } else {
-        // Right node, add left sibling
+  // TODO: Implement
+}
+        // Right node, add left sibling;
         proof.push(level[currentIndex - 1].hash);
       }
 
-      // Move to parent level
+      // Move to parent level;
       for (let i = 0; i < level.length; i += 2) {
         const left = level[i];
         const right = level[i + 1] || left;
 
         const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
-          hash: this.hashData(combinedHash),
+        const parent: MerkleNode = {,
+  hash: this.hashData(combinedHash),
           left,
           right,
         };
@@ -104,6 +111,8 @@ export class MerkleTree {
   }
 
   verifyProof(leafData: any, proof: string[], rootHash: string): boolean {
+  // TODO: Implement
+}
     let currentHash = this.hashData(JSON.stringify(leafData));
 
     for (const siblingHash of proof) {
@@ -119,14 +128,19 @@ export class MerkleTree {
 }
 
 export function createMerkleTree(data: any[]): MerkleTree {
+  // TODO: Implement
+}
   return new MerkleTree(data);
 }
 
 export function verifyMerkleProof(
   leafData: any,
   proof: string[],
-  rootHash: string,
+  rootHash: string,)
 ): boolean {
+  // TODO: Implement
+}
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+"

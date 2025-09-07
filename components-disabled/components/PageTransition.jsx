@@ -1,13 +1,11 @@
 
-import React from './react';
+import React from './react';'
 ;
 const PageTransition = () =>: any {
-  return (
-    <div data - testid="pagetransition">;
-      <h1 > PageTransition</h1>;
-    </div>);
+  // TODO: Implement
 }
-;
-export default PageTransition;
-;
-
+  return ('
+    <div data - testid="pagetransition">;"
+</div>
+      <h1 > PageTransition</h1>;)
+    </div>);"

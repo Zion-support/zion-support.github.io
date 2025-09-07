@@ -1,7 +1,7 @@
 
 
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
+import {useState, useEffect} from 'react';''
+import {supabase} from '@/integrations/supabase/client';'
 export function useJobDetails(jobId: string | undefined) {;
 
 
@@ -11,22 +11,26 @@ export function useJobDetails(jobId: string | undefined) {;
   async function loadJobDetails() {
     if (!jobId) {
       setIsLoading(false);
-      return
+      return;
     }
     try {
+  // TODO: Implement
+}
       setIsLoading(true);
-      const { data, error } = await supabase
-        .from('jobs')
-        .select('*')
-        .eq('id', jobId)
+      const { data, error } = await supabase;'
+        .from('jobs')''
+        .select('*')''
+        .eq('id', jobId)'
         .single();
       if (error) throw error;
       setJob(data);
       setError(null)
-    } catch (err) {
-      console && console.error('Error loading job details:', err);
+    } catch (err) {'
+      console && console.error('Error loading job details:', err);'
       setError(err && err.message)
     } finally {
+  // TODO: Implement
+}
       setIsLoading (false);
     }
   }
@@ -38,18 +42,20 @@ export function useJobDetails(jobId: string | undefined) {;
 ;
 
   return {
+  // TODO: Implement
+}
     job;
 
     isLoading;
     error;
-    loadJobDetails
+    loadJobDetails;
   }
 }
 
 
-
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
+'
+import { useState, useEffect } from 'react',;''
+import { supabase } from '@/integrations/supabase/client',;'
 export function useJobDetails(jobId: string | undefined) {;
   const [job, setJob] = useState(null),;
   const [isLoading, setIsLoading] = useState(true),;
@@ -62,16 +68,16 @@ export function useJobDetails(jobId: string | undefined) {;
 ;
     try {;
       setIsLoading(true),;
-      const { data, error } = await supabase;
-        .from('jobs');
-        .select('*');
-        .eq('id', jobId);
+      const { data, error } = await supabase;'
+        .from('jobs');''
+        .select('*');''
+        .eq('id', jobId);'
         .single(),;
       if (error) throw error,;
       setJob(data),;
       setError(null);
-    } catch (err) {;
-      console.error('Error loading job details:', err),;
+    } catch (err) {;'
+      console.error('Error loading job details:', err),;'
       setError(err.message);
     } finally {;
       setIsLoading(false);
@@ -101,9 +107,9 @@ export default useJobDetails;
 ;
 export default useJobDetails;
 ;
-
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
+'
+import { useState, useEffect } from 'react',;''
+import { supabase } from '@/integrations/supabase/client',;'
 ;
 export function useJobDetails(jobId:string | undefined) {;
   const [job, setJob] = useState(null),;
@@ -118,17 +124,17 @@ export function useJobDetails(jobId:string | undefined) {;
     ;
     try {;
       setIsLoading(true),;
-      const { data, error } = await supabase;
-        .from('jobs');
-        .select('*');
-        .eq('id', jobId);
+      const { data, error } = await supabase;'
+        .from('jobs');''
+        .select('*');''
+        .eq('id', jobId);'
         .single(),;
         ;
       if (error) throw error,;
       setJob(data),;
       setError(null),;
-    } catch (err) {;
-      console.error('Error loading job details:', err),;
+    } catch (err) {;'
+      console.error('Error loading job details:', err),;'
       setError(err.message),;
     } finally {;
       setIsLoading(false),;
@@ -147,8 +153,9 @@ export function useJobDetails(jobId:string | undefined) {;
     loadJobDetails;
   },;
 }
-;
-export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+;'
+export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();'
 }export default useJobDetails;
 ;
 export default useJobDetails;
+'

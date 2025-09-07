@@ -1,81 +1,52 @@
 
 
-import React from './react';
-import { SeverityIndicator  } from '@/components / ui / severity - indicator';
+import React from './react';''
+import { SeverityIndicator  } from '@/components / ui / severity - indicator';'
 interface SeverityDisplayProps {
+  // TODO: Implement
+}
   severity: string;
 }
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
-
+)
 }) => {
   return (
-
+)
 }) => {
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
-  severity,;
-}) => {;
-  return (
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
+</SeverityDisplayProps>
+    <SeverityIndicator;'
+      severity={severity as "safe" | "suspicious" | "dangerous"}"
       show_icon={true}
-      show_text={true}
+      show_text={true})
     />);
-}
-;
-
-
-
-interface SeverityDisplayProps {
-  severity: string
-}
-
-
-};
+</SeverityIndicator>
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
-    <SeverityIndicator
-      severity={severity as "safe" | "suspicious" | "dangerous"}
+</SeverityDisplayProps>
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"}"
       showIcon={true}
       showText={true}
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
-import React from "react",;
-import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"}""
+import React from "react",;""
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;"
 interface SeverityDisplayProps {;
   severity: string;
 }
 ;
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
-  return (;
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+</SeverityIndicator>
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;"
       showIcon={true}
       showText={true}
     />;
-  );
-    />
-  );
-};
-  ),;
-},; interface SeverityDisplayProps {
-  severity: string 
-}severity 
-}) => {
-
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
+</SeverityIndicator>
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"}"
       show_icon={true}
       show_text={true}
     />);
-}
-;
-
-interface SeverityDisplayProps {
-  severity: string
-}
-
-
-};
-};
+</SeverityIndicator>"

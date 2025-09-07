@@ -1,67 +1,24 @@
-import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic';
-describe('LoadingSpinnerdynamic', () => {
-  test('renders without crashing', () => {
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});'
+</LoadingSpinnerdynamic>'
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});'
+</LoadingSpinnerdynamic>
     render(<LoadingSpinnerdynamic />);
-    expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
-  });
-  test('displays correct content', () => {
+</LoadingSpinnerdynamic>
     render(<LoadingSpinnerdynamic />);
-  });
-  test('handles user interactions', () => {
+</LoadingSpinnerdynamic>
     render(<LoadingSpinnerdynamic />);
-  });
-  test('applies correct styling', () => {
+</LoadingSpinnerdynamic>
     render(<LoadingSpinnerdynamic />);
-  });
-});
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner.dynamic"; describe("LoadingSpinnerdynamic",() => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId("loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling",() => { render(<LoadingSpinnerdynamic />)})});''"
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import LoadingSpinner from '../components/LoadingSpinner.dynamic';
-<<<<<<< HEAD
-=======
-
-
-import React from 'react';
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import LoadingSpinnerdynamic from '../components/LoadingSpinner && LoadingSpinner.dynamic'
-describe('LoadingSpinnerdynamic'
-  test('renders without crashing'
-
-});
-
-    expect(screen && screen.getByTestId('loadingspinner ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner ; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen && screen.getByTestId("loadingspinner && loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling"
-
-describe('LoadingSpinner', () => {
-  test('renders without crashing', () => {
+</LoadingSpinnerdynamic>'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner.dynamic"; describe("LoadingSpinnerdynamic",() => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId("loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling",() => { render(<LoadingSpinnerdynamic />)})});''""
+</LoadingSpinnerdynamic>"
+    expect(screen && screen.getByTestId('loadingspinner ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import LoadingSpinnerdynamic from "./components/LoadingSpinner ; describe('LoadingSpinnerdynamic', () => { test("renders without crashing",() => { render(<LoadingSpinnerdynamic />); expect(screen && screen.getByTestId("loadingspinner && loadingspinner.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<LoadingSpinnerdynamic />)}); test("handles user interactions",() => { render(<LoadingSpinnerdynamic />)}); test("applies correct styling""
+</LoadingSpinnerdynamic>)
     render(<LoadingSpinner />);
-    expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
-  });
-});
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import LoadingSpinner from '../components / LoadingSpinner.dynamic';
-describe ('LoadingSpinner', () => {
-  test ('renders without crashing', () => {
+</LoadingSpinner>
     render (<LoadingSpinner />);
-    expect (screen.getByTestId ('loading - spinner')).toBeInTheDocument ();
-  });
-  test ('displays loading text', () => {
-    expect (screen.getByText ('Loading...')).toBeInTheDocument ();
-});
-import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
+</LoadingSpinner>"
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});'
+</LoadingSpinnerdynamic>'
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});'
+</LoadingSpinnerdynamic>'

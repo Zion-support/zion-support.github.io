@@ -1,11 +1,8 @@
-import React from 'react';
-
+import React from 'react';'
 const SupplyChain = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>SupplyChain</h1>
       <p>This component is under development.</p>
-    </div>
-  );
-};
-
+    </div>)'

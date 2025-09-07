@@ -1,12 +1,12 @@
 
-import React, { useState } from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useNavigate } from "react-router-dom",;
-import { toast } from "sonner",;
+import React, { useState } from "react",;""
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;""
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;""
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;""
+import { cn } from "@/lib/utils",;""
+import { useNavigate } from "react-router-dom",;""
+import { toast } from "sonner",;"
 ;
 interface Message {;
   id:string,;
@@ -14,12 +14,12 @@ interface Message {;
   timestamp:string,;
   isMe:boolean,;
   sender?:string,;
-  avatar?:string,;
-  status?:'sent' | 'delivered' | 'read';}
+  avatar?:string,;"
+  status?:'sent' | 'delivered' | 'read';}'
 ;
 interface MobileChatViewProps {;
-  contact:{;
-    id:string,;
+  contact: {;,
+  id:string,;
     name:string,;
     avatar?:string,;
     status?:string;
@@ -29,177 +29,133 @@ interface MobileChatViewProps {;
   onSendMessage:(content:string) => void;
 }
 ;
-export function MobileChatView({ contact, messages, onBack, onSendMessage } MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState(""),;
+export function MobileChatView({ contact, messages, onBack, onSendMessage } MobileChatViewProps) {;'
+  const [newMessage, setNewMessage] = useState(""),;"
   const navigate = useNavigate(),;
   ;
-  const handleSend = () => {;
-    if (newMessage.trim() !== "") {;
-      onSendMessage(newMessage),;
-      setNewMessage(""),;    }
+  const handleSend = () => {;"
+    if (newMessage.trim() !== "") {;"
+      onSendMessage(newMessage),;"
+      setNewMessage(""),;    }"
   },;
   ;
   const handleKeyDown = (e:React.KeyboardEvent<HTMLInputElement>) => {;
-    if (e.key === 'Enter' && !e.shiftKey) {;
-      e.preventDefault(),;
-      handleSend();
-    }
-  },;
-  ;
-  const startVideoCall = () => {;
-    const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description:`Connecting with ${contact.name}...`;
-    }),;
-    ;
-    // Navigate to video call page;
-    navigate(`/call/${roomId}`),;
-  },;
-  ;
-  const startAudioCall = () => {;
-    const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description:`Connecting with ${contact.name}...`;
-    }),;
-    ;
-    // Navigate to video call page with audio-only flag;
-    navigate(`/call/${roomId}?audioOnly=true`),;
-  },;
-  ;
-  return (;
-    <div className="flex flex-col h-full pb-safe">;
-      <header className="sticky top-0 z-10 bg-background border-b border-border">;
-        <div className="flex items-center h-14 px-4">;
-          <Button variant="ghost" size="icon" onClick={onBack}>;
-            <ChevronLeft className="h-5 w-5" />;
-          </Button>;
-          ;
-          <div className="flex items-center flex-1 gap-3 mx-2">;
+</HTMLInputElement>"
+    <div className="flex flex-col h-full pb-safe">;"
+</div>"
+      <header className="sticky top-0 z-10 bg-background border-b border-border">;"
+</header>"
+        <div className="flex items-center h-14 px-4">;"
+</div>"
+          <Button variant="ghost" size="icon" onClick={onBack}>;"
+</Button>"
+            <ChevronLeft className="h-5 w-5" />;"
+</ChevronLeft>
+          </Button>;"
+          <div className="flex items-center flex-1 gap-3 mx-2">;"
+</div>
             <Avatar>;
+</Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />;
+</AvatarImage>
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>;
             </Avatar>;
             <div>;
-              <h3 className="font-medium">{contact.name}</h3>;
-              <p className="text-xs text-muted-foreground">;
-                {contact.status || "Online"}
+</div>"
+              <h3 className="font-medium">{contact.name}</h3>;""
+              <p className="text-xs text-muted-foreground">;"
+</p>
               </p>;
             </div>;
-          </div>;
-          ;
-          <div className="flex">;
-            <Button variant="ghost" size="icon" onClick={startAudioCall}>;
-              <Phone className="h-5 w-5" />;
-            </Button>;
-            ;
-            <Button variant="ghost" size="icon" onClick={startVideoCall}>;
-              <Video className="h-5 w-5" />;
-            </Button>;
-            ;
-            <Button variant="ghost" size="icon">;
-              <MoreVertical className="h-5 w-5" />;
+          </div>;"
+          <div className="flex">;"
+</div>"
+            <Button variant="ghost" size="icon" onClick={startAudioCall}>;"
+</Button>"
+              <Phone className="h-5 w-5" />;"
+</Phone>
+            </Button>;"
+            <Button variant="ghost" size="icon" onClick={startVideoCall}>;"
+</Button>"
+              <Video className="h-5 w-5" />;"
+</Video>
+            </Button>;"
+            <Button variant="ghost" size="icon">;"
+</Button>"
+              <MoreVertical className="h-5 w-5" />;"
+</MoreVertical>
             </Button>;
           </div>;
         </div>;
-      </header>;
-      ;
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">;
-        {messages.map((message) => (;
+      </header>;"
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
+</div>
           <div ;
             key={message.id} ;
-            className={cn(;
-              "flex",;
-              message.isMe ? "justify-end" :"justify-start";
+            className={cn(;"
+              "flex",;""
+              message.isMe ? "justify-end" :"justify-start";")
             )}
           >;
+</div>
             <div ;
-              className={cn(;
-                "max-w-[80%] rounded-2xl px-4 py-2",;
-                message.isMe ;
-                  ? "bg-primary text-primary-foreground rounded-tr-none" ;
-                  :"bg-muted rounded-tl-none";
+              className={cn(;"
+                "max-w-[80%] rounded-2xl px-4 py-2",;"
+                message.isMe ;"
+                  ? "bg-primary text-primary-foreground rounded-tr-none" ;""
+                  :"bg-muted rounded-tl-none";")
               )}
             >;
+</div>
               <p>{message.content}</p>;
-              <div className={cn(;
-                "text-xs mt-1 flex justify-end",;
-                message.isMe ? "text-primary-foreground/80" :"text-muted-foreground";
+              <div className={cn(;"
+                "text-xs mt-1 flex justify-end",;""
+                message.isMe ? "text-primary-foreground/80" :"text-muted-foreground";")
               )}>;                {message.timestamp}
-                {message.isMe && message.status && (;
-                  <span className="ml-1">;
+</div>"
+                  <span className="ml-1">;"
+</span>
                   </span>;
-                )}
               </div>;
             </div>;
           </div>;
-        ))}
-      </div>;
-      ;
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
-        <div className="flex items-center gap-2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h-5 w-5" />;
+      </div>;"
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">;"
+</div>"
+        <div className="flex items-center gap-2">;"
+</div>"
+          <Button variant="ghost" size="icon">;"
+</Button>"
+            <PaperclipIcon className="h-5 w-5" />;"
+</PaperclipIcon>
           </Button>;
-          ;
           <Input;
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message...";
-            className="flex-1";
-          />;
-          ;
-          <Button ;
-            size="icon" ;
+</Input>
+          <Button ;"
+            size="icon" ;"
             onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" :""}
+            disabled={!newMessage.trim()}"
+            className={!newMessage.trim() ? "opacity-50" :""}"
           >;
-            <Send className="h-5 w-5" />;
+</Button>"
+            <Send className="h-5 w-5" />;"
+</Send>
           </Button>;
         </div>;
       </div>;
     </div>;
-  ),;}
- interface Message {
-  id: string;
-content: string;
-timestamp: string;
-isMe: boolean;
-sender?: string;
-avatar?: string;
-status?: 'sent' | 'delivered' | 'read' 
-}interface MobileChatViewProps {
-  contact: {
-  id: string;
-name: string;
-avatar?: string;
-status?: string 
-};
-messages: Message[];
-onBack: () => void;
-onSendMessage: (content: string) => void 
-}export function MobileChatView ({
-  contact, messages, onBack, onSendMessage 
-}: MobileChatViewProps) {
-  const handleSend = () => {
-  if (newMessage.trim () !== "") {
-  onSendMessage (newMessage);
-setNewMessage ("") contact.avatar 
-}alt= {
-  contact.name 
 }/> <AvatarFallback> {
-  contact.name.charAt (0) .toUpperCase () 
-}</AvatarFallback> </Avatar> <div> </p> </div> </div> </Button> <Button variant=" ghost"size=" icon"> <MoreVertical className="h-5 w-5"/> </Button> </div> </div> </header> <div className="flex-1 overflow-y-auto p-4 space-y-4"> {
+</AvatarFallback>"
+}</AvatarFallback> </Avatar> <div> </p> </div> </div> </Button> <Button variant=" ghost"size=" icon"> <MoreVertical className="h-5 w-5"/> </Button> </div> </div> </header> <div className="flex-1 overflow-y-auto p-4 space-y-4"> {"
   messages.map ( (message) => (<div key= {
-  message.id 
+  message.id;)
 }) 
 }> {
-  message.timestamp 
-}{
-  message.isMe && message.status && (<span className="ml-1"> {
-  message.status === 'read' ? '' : '' 
+</div>"
+  message.isMe && message.status && (<span className="ml-1"> {"
+</span>)
 }</span>) 
-}</div> </div> </div>) ) 
-}</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/> </Button> <Input > <Send className=" h-5 w-5" /> </Button> </div> </div> </div>) 
-}
+}</div> </div> </div>) ) "
+}</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/> </Button> <Input > <Send className=" h-5 w-5" /> </Button> </div> </div> </div>)""

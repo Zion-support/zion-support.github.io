@@ -1,43 +1,31 @@
-import React, { useEffect, useRef } from 'react',;
-interface UltraFuturisticBackground2036Props {;
-  variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',;
-  intensity?: 'low' | 'medium' | 'high';
+import React, { useEffect, useRef } from 'react',;'
+interface UltraFuturisticBackground2036Props {;'
+  variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',;''
+  intensity?: 'low' | 'medium' | 'high';'
 }
 ;
-export default function UltraFuturisticBackground2036({;
-  variant = 'default',;
-  intensity = 'medium';
+export default function UltraFuturisticBackground2036({;'
+  variant = 'default',;''
+  intensity = 'medium';')
 }: UltraFuturisticBackground2036Props) {;
   const canvasRef = useRef<HTMLCanvasElement>(null),;
+</HTMLCanvasElement>
   const animationRef = useRef<number | undefined>(undefined),;
-  useEffect(() => {;
-    if (typeof window === 'undefined') return,;
-    const canvas = canvasRef.current,;
-    if (!canvas) return,;
-    const ctx = canvas.getContext('2d'),;
-    if (!ctx) return,;
-    const resizeCanvas = () => {;
-      canvas.width = window.innerWidth,;
-      canvas.height = window.innerHeight;
-    },;
-    let animationFrameId: number,;
-    let particles: Particle[] = [],;
-    const connections: Connection[] = [],;
-    // Particle system;
-    const particles: Array<{;
-      x: number,;
+</number>
+    const particles: Array<{;,
+  x: number,;
       y: number,;
       vx: number,;
       vy: number,;
       size: number,;
-      color: string,;
-      type: 'quantum' | 'neon' | 'energy' | 'data';
+      color: string,;'
+      type: 'quantum' | 'neon' | 'energy' | 'data';'
     }> = [],;
-    const colors = {;
-      quantum: ['#00ffff#0080ff#8000ff#ff0080'],;
-      neon: ['#00ff00#ff00ff#ffff00#00ffff'],;
-      energy: ['#ff6600#ff0066#6600ff#00ff66'],;
-      data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
+    const colors = {;'
+      quantum: ['#00ffff#0080ff#8000ff#ff0080'],;''
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'],;''
+      energy: ['#ff6600#ff0066#6600ff#00ff66'],;''
+      data: ['#00ccff#cc00ff#ffcc00#00ffcc'];'
     },;
     const intensityMultiplier = {;
       low: 0.5,;
@@ -55,15 +43,15 @@ export default function UltraFuturisticBackground2036({;
     const multiplier = intensityMultiplier[intensity],;
     // Initialize particles;
     for (let i = 0, i < config.particleCount * multiplier, i++) {;
-      particles.push({;
+      particles.push({;)
         x: Math.random() * canvas.width,;
         y: Math.random() * canvas.height,;
         vx: (Math.random() - 0.5) * config.speed * multiplier,;
         vy: (Math.random() - 0.5) * config.speed * multiplier,;
         size: Math.random() * config.size * multiplier,;
         opacity: Math.random() * 0.8 + 0.2,;
-        color: colors[variant][Math.floor(Math.random() * colors[variant].length)],;
-        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;
+        color: colors[variant][Math.floor(Math.random() * colors[variant].length)],;'
+        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;'
       });
     }
 ;
@@ -75,13 +63,13 @@ export default function UltraFuturisticBackground2036({;
         canvas.height / 2,;
         0,;
         canvas.width / 2,;
-        canvas.height / 2,;
+        canvas.height / 2,;)
         Math.max(canvas.width, canvas.height) / 2;
-      ),;
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),;
-      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'),;
-      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)'),;
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)'),;
+      ),;'
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),;''
+      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'),;''
+      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)'),;''
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)'),;'
       ctx.fillStyle = gradient,;
       ctx.fillRect(0, 0, canvas.width, canvas.height),;
       // Update and draw particles;
@@ -99,11 +87,11 @@ export default function UltraFuturisticBackground2036({;
         // Create glow effect;
         const glowGradient = ctx.createRadialGradient(;
           particle.x, particle.y, 0,;
-          particle.x, particle.y, particle.size * 3;
-        ),;
-        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`),;
-        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0')}`),;
-        glowGradient.addColorStop(1, 'transparent'),;
+          particle.x, particle.y, particle.size * 3;)
+        ),;'
+        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`),;''
+        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0')}`),;''
+        glowGradient.addColorStop(1, 'transparent'),;'
         ctx.fillStyle = glowGradient,;
         ctx.beginPath(),;
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2),;
@@ -116,7 +104,7 @@ export default function UltraFuturisticBackground2036({;
         ctx.restore(),;
         // Draw connections between nearby particles;
         particles.slice(index + 1).forEach(otherParticle => {;
-          const distance = Math.sqrt(;
+          const distance = Math.sqrt(;)
             Math.pow(particle.x - otherParticle.x, 2) +;
             Math.pow(particle.y - otherParticle.y, 2);
           ),;
@@ -131,18 +119,18 @@ export default function UltraFuturisticBackground2036({;
           }
         });
       }),;
-      // Add floating geometric shapes;
-      if (variant === 'quantum' || variant === 'ai') {;
+      // Add floating geometric shapes;'
+      if (variant === 'quantum' || variant === 'ai') {;'
         drawQuantumShapes(ctx, canvas, multiplier);
       }
 ;
-      // Add data streams for AI variant;
-      if (variant === 'ai') {;
+      // Add data streams for AI variant;'
+      if (variant === 'ai') {;'
         drawDataStreams(ctx, canvas, multiplier);
       }
 ;
-      // Add space elements for space variant;
-      if (variant === 'space') {;
+      // Add space elements for space variant;'
+      if (variant === 'space') {;'
         drawSpaceElements(ctx, canvas, multiplier);
       }
 ;
@@ -216,11 +204,11 @@ export default function UltraFuturisticBackground2036({;
       // Draw nebula;
       const nebulaGradient = ctx.createRadialGradient(;
         canvas.width * 0.7, canvas.height * 0.3, 0,;
-        canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier;
-      ),;
-      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'),;
-      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'),;
-      nebulaGradient.addColorStop(1, 'transparent'),;
+        canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier;)
+      ),;'
+      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'),;''
+      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'),;''
+      nebulaGradient.addColorStop(1, 'transparent'),;'
       ctx.fillStyle = nebulaGradient,;
       ctx.beginPath(),;
       ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2),;
@@ -230,35 +218,32 @@ export default function UltraFuturisticBackground2036({;
     return () => {;
       if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
+      }'
+      window.removeEventListener('resize', resizeCanvas);'
     }
   }, [variant, intensity]),
 
-  return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ display: 'block' }}
+  return ('
+    <div className="fixed inset-0 -z-10 overflow-hidden">"
+</div>
+      <canvas;
+        ref={canvasRef}"
+        className="w-full h-full"""
+        style={{ display: 'block' }}'
       />;
-      {/* Additional overlay effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Grid overlay for cyber variant */}
-        {variant === 'cyber' && (
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        )}
-;
-        {/* Quantum field lines */}
-        {variant === 'quantum' && (
-          <div className="absolute inset-0">
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"
+</canvas>'
+      <div className="absolute inset-0 pointer-events-none">"
+</div>)"
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />"
+</div>"
+          <div className="absolute inset-0">"
+</div>
+              <motion.div;
+                key={i}"
+                className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent""
                 style={{
-                  left: `${(i + 1) * 12.5}%`,
-                  transform: 'translateX(-50%)'
+                  left: `${(i + 1) * 12.5}%`,"
+                  transform: 'translateX(-50%)''
                 }}
                 animate={{;
                   opacity: [0.3, 0.8, 0.3]}}
@@ -267,17 +252,13 @@ export default function UltraFuturisticBackground2036({;
                   repeat: Infinity,;
                   delay: i * 0.5}}
               />;
-            ))}
-          </div>;
-        )}
-;
-        {/* AI neural network overlay */}
-        {variant === 'ai' && (
-          <div className="absolute inset-0">
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent"
+</motion>
+          </div>;'
+          <div className="absolute inset-0">"
+</div>
+              <motion.div;
+                key={i}"
+                className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent""
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
                 animate={{;
@@ -287,11 +268,7 @@ export default function UltraFuturisticBackground2036({;
                   repeat: Infinity,;
                   delay: i * 0.8}}
               />;
-            ))}
+</motion>
           </div>;
-        )}
       </div>;
-    </div>;
-  );
-};
-export default UltraFuturisticBackground2036;
+    </div>;"

@@ -1,11 +1,9 @@
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-
-
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+  FormMessage;
 import {;
   FormField,;
   FormItem,;
@@ -24,302 +22,255 @@ import {;
   FormDescription,
   FormMessage,;
 
-} from "@/components/ui/form";
-
-import { Textarea } from "@/components/ui/textarea";
-
-import { JobSchemaType } from "./validation";
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";""
+import { JobSchemaType } from "./validation";"
 interface DescriptionFieldsProps {;
-
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { JobSchemaType } from "./validation";
-interface DescriptionFieldsProps {;
-} from "@/components/ui/form";
-
-import { Textarea } from "@/components/ui/textarea";
-import { JobSchemaType } from './validation';
+"
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";""
+import { JobSchemaType } from "./validation";"
+interface DescriptionFieldsProps {;"
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";""
+import { JobSchemaType } from './validation';'
 interface DescriptionFieldsProps {
-} from "@/components/ui/form";
-
-import { Textarea } from "@/components/ui/textarea";
+  // TODO: Implement
+}'
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";"
   control: Control<JobSchemaType>;
-  handleEditorChange: (content: string) => void;
-  editorContent: string
-}
-
-
-export function DescriptionFields(): any ({;
-  control,;
-  handleEditorChange,;
-  editorContent,;
-}: DescriptionFieldsProps) {;
-
-  return (
+</JobSchemaType>
     <>;
-      <FormField
-
-        control={control}
-        name="description"
-
-        control={control}
-        name="description"
+      <FormField;
+        control={control}"
+        name="description""
+        control={control}"
+        name="description""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
-              <Textarea
-
-
-import React from 'react',
-import { Control } from 'react-hook-form',
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { JobSchemaType } from './validation',
+</FormControl>
+              <Textarea;"
+import React from 'react',''
+import { Control } from 'react-hook-form',''
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",""
+import { Textarea } from "@/components/ui/textarea",""
+import { JobSchemaType } from './validation','
 interface DescriptionFieldsProps {
-  control: Control<JobSchemaType>,
-  handleEditorChange: (content: string) => void,
-  editorContent: string
-import React from 'react',;
-import { Control } from 'react-hook-form',;
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import { JobSchemaType } from './validation',;
-interface DescriptionFieldsProps {;
-  control: Control<JobSchemaType>,;
-  handleEditorChange: (content: string) => void,;
-  editorContent: string;
+  // TODO: Implement
 }
-;
-export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
-  return (;
+  control: Control<JobSchemaType>,
+</Textarea>
+  control: Control<JobSchemaType>,;
+</JobSchemaType>
     <>;
       <FormField;
 
 
 
 
-        control={control}
-        name="description"
+        control={control}'
+        name="description"")
         render={({ field }) => (
+</FormField>
           <FormItem>
+</FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
+</FormControl>
 
 
-              <Textarea
-              <Textarea 
-
-                value={editorContent}
+              <Textarea;
+              <Textarea;
+                value={editorContent})
                 onChange={(e) => {;
-                  handleEditorChange(e && e.target.value);
-                  field && field.onChange(e && e.target.value);
-                }}
-                className="min-h-[200px]";
-                }}
-                className="min-h-[200px]";
-
-                value={editorContent}
-                onChange={(e) => {;
-                }}
-                className="min-h-[200px]";
-import React from './react';
-import { Control  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components / ui / form';
-import { Textarea  } from '@/components / ui / textarea';
-import { JobSchemaType  } from './validation';
-interface DescriptionFieldsProps {
-  control: Control < JobSchemaType>;
-  handleEditorChange: (content: string) => void;
+</Textarea>
+  control: Control < JobSchemaType>;,
+  handleEditorChange: (content: string) => void;,
   editor_content: string;
 }
 export /**
- * DescriptionFields - Function description
+ * DescriptionFields - Function description;
  */
 function DescriptionFields() {
   return (
     <>;
       <FormField;
-        control={control}
-        name="description";
+        control={control}"
+        name="description";")
         render={({ field }) => (
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel > Job Description</FormLabel>;
             <FormControl>;
+</FormControl>
               <Textarea;
-                value={editor_content}
+                value={editor_content})
                 on_change={(e) => {
-                  handleEditorChange (e.target.value);
-                  field.on_change (e.target.value);
-                }}
-                className="min - h-[200px]";
+</Textarea>
               <Textarea ;
                 value={editorContent}
                 onChange={(e) => {;
-                  handleEditorChange(e.target.value),;
-                  field.onChange(e.target.value),;
-                }}
-                className="min-h-[200px]";
-                placeholder="Enter a detailed description of the job role";
-              />;
+</Textarea>
             </FormControl>;
             <FormDescription>;
-              Detailed description of the job role.;
+</FormDescription>
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
-      <FormField
-        control={control}
-        name="responsibilities"
+</FormMessage>
+      <FormField;
+        control={control}"
+        name="responsibilities""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>)
             <FormLabel>Responsibilities (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the main responsibilities of this job"
-                className="resize-none min-h-[100px]"
-              <Textarea;
-                placeholder="List the main responsibilities of this job";
-                className="resize-none min-h-[100px]";
+</FormControl>
+              <Textarea;"
+                placeholder="List the main responsibilities of this job"""
+                className="resize-none min-h-[100px]""
+              <Textarea;"
+                placeholder="List the main responsibilities of this job";""
+                className="resize-none min-h-[100px]";"
                 {...field}
               />;
+</Textarea>
             </FormControl>;
             <FormDescription>;
-              List the main responsibilities of this job.;
+</FormDescription>
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
-      <FormField
-        control={control}
-        name="qualifications"
+</FormMessage>
+      <FormField;
+        control={control}"
+        name="qualifications""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>)
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the required qualifications for this job"
-                className="resize-none min-h-[100px]"
-              <Textarea;
-                placeholder="List the required qualifications for this job";
-                className="resize-none min-h-[100px]";
+</FormControl>
+              <Textarea;"
+                placeholder="List the required qualifications for this job"""
+                className="resize-none min-h-[100px]""
+              <Textarea;"
+                placeholder="List the required qualifications for this job";""
+                className="resize-none min-h-[100px]";"
                 {...field}
               />;
+</Textarea>
             </FormControl>;
             <FormDescription>;
-              List the required qualifications for this job.;
+</FormDescription>
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
-      <FormField
-        control={control}
-        name="benefits"
+</FormMessage>
+      <FormField;
+        control={control}"
+        name="benefits""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>)
             <FormLabel>Benefits (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="List the benefits offered for this job"
-                className="resize-none min-h-[100px]"
-              <Textarea;
-                placeholder="List the benefits offered for this job";
-                className="resize-none min-h-[100px]";
+</FormControl>
+              <Textarea;"
+                placeholder="List the benefits offered for this job"""
+                className="resize-none min-h-[100px]""
+              <Textarea;"
+                placeholder="List the benefits offered for this job";""
+                className="resize-none min-h-[100px]";"
                 {...field}
               />;
+</Textarea>
             </FormControl>;
             <FormDescription>;
-              List the benefits offered for this job.;
+</FormDescription>
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
-      <FormField
-        control={control}
-        name="application_instructions"
+</FormMessage>
+      <FormField;
+        control={control}"
+        name="application_instructions""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>)
             <FormLabel>Application Instructions (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea
-                placeholder="Provide instructions on how to apply for this job"
-                className="resize-none min-h-[100px]"
-
+</FormControl>
+              <Textarea;"
+                placeholder="Provide instructions on how to apply for this job"""
+                className="resize-none min-h-[100px]""
           </FormItem>)}
-      />;
+</Textarea>
       <FormField;
-        control={control}
-        name="application_instructions";
+        control={control}"
+        name="application_instructions";"
         render={({ field }) => (
+</FormField>
           <FormItem>;
+</FormItem>)
             <FormLabel > Application Instructions (Optional)</FormLabel>;
             <FormControl>;
-              <Textarea;
-                placeholder="Provide instructions on how to apply for this job";
-                className="resize - none min - h-[100px]";
-
+</FormControl>
+              <Textarea;"
+                placeholder="Provide instructions on how to apply for this job";""
+                className="resize - none min - h-[100px]";"
                 {...field}
               />;
+</Textarea>
             </FormControl>;
             <FormDescription>;
-              Provide instructions on how to apply for this job.;
+</FormDescription>
             </FormDescription>;
             <FormMessage />;
-
-                {...field}
-              />
+</FormMessage>
             </FormControl>
             <FormDescription>
-              Provide instructions on how to apply for this job.
+</FormDescription>
             </FormDescription>
             <FormMessage />
+</FormMessage>
           </FormItem>
-        )}
-
-      />;
     </>;
 
 
   );
           </FormItem>)}
-      />;
     </>);
 }
   );
           </FormItem>)}
-      />;
     </>);
 }
   ),;}
  interface DescriptionFieldsProps {
+  // TODO: Implement
+}
   control: Control<JobSchemaType>;
-handleEditorChange: (content: string) => void;
-editorContent: string 
-}control, handleEditorChange, editorContent 
-}: DescriptionFieldsProps) {
+</JobSchemaType>
   return (<> <FormField control= {
-  control 
+  control;)
 }/> </FormControl> <FormDescription> Detailed description of the job role. </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
 }/> <FormField <FormItem> <FormLabel>Responsibilities (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the main responsibilities of this job. </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
 }/> <FormField <FormItem> <FormLabel>Qualifications (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the required qualifications for this job. </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
 }/> <FormField <FormItem> <FormLabel>Benefits (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the benefits offered for this job. </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
 }/> <FormField <FormItem> <FormLabel>Application Instructions (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Provide instructions on how to apply for this job. </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
 }/> </>) 
 }
         )}
@@ -329,3 +280,4 @@ editorContent: string
     </>;
   );
 }
+"

@@ -1,7 +1,9 @@
 export interface ListingCategory {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   name: string;
-  description: string;
+  description: string;,
   icon: string;
 }
 
@@ -10,56 +12,61 @@ export interface ListingCategory {
   icon: string;
 
 export interface ProductListing {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
-  description: string;
-
+  description: string;,
   category: string,
   subcategory?: string, // Adding optional subcategory field;
 
 export interface ListingCategory {
+  // TODO: Implement
+}
 export interface ListingCategory {;
-  id: string;
+  id: string;,
   name: string;
 
 }
 export interface ProductListing {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
-  description: string;
+  description: string;,
   category: string;
-  subcategory?: string; // Adding optional subcategory field
-  price: number | null;
+  subcategory?: string; // Adding optional subcategory field;
+  price: number | null;,
   currency: string;
-  tags: string[];
+  tags: string[];,
   author: {
-    name: string;
-    id: string;
+    name: string;,
+  id: string;
     avatarUrl?: string;
-    email?: string; // Added optional email property
+    email?: string; // Added optional email property;
   };
-  images: string[];
+  images: string[];,
   createdAt: string;
   rating?: number;
   reviewCount?: number;
   featured?: boolean;
-  aiScore?: number; // Added aiScore as optional property
-  location?: string; // Adding location property to fix TypeScript errors
-  availability?: string; // Adding availability property to fix TypeScript errors
+  aiScore?: number; // Added aiScore as optional property;
+  location?: string; // Adding location property to fix TypeScript errors;
+  availability?: string; // Adding availability property to fix TypeScript errors;
 }
 
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
 
-  images: string[];
+  images: string[];,
   created_at: string;
   rating?: number;
 
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
-  images: string[];
+  images: string[];,
   created_at: string;
   rating?: number;
   review_count?: number;
@@ -70,7 +77,9 @@ export interface ProductListing {
 
 }
 export interface ListingItem {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
   category: string;
   image?: string;
@@ -81,4 +90,4 @@ export interface ListingItem {
 export interface ListingCategory {;
 
 
-export type ListingView = "grid" | "list";
+export type ListingView = "grid" | "list";""

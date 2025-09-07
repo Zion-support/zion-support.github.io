@@ -1,15 +1,15 @@
 
 ;
 #!/usr/bin/env node,;
-const fs = require('fs'),;
-const path = require('path'),;
-const { execSync } = require('child_process'),;
+const fs = require('fs'),;''
+const path = require('path'),;''
+const { execSync } = require('child_process'),;'
 ,;
 class SEOAccessibility {,;
   constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),;
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),;
+    this.projectRoot = process.cwd(),;'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),;''
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),;'
     this.startTime = Date.now(),;
   };
 ,;
@@ -19,23 +19,23 @@ class SEOAccessibility {,;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage),;
-    } catch (error) {,;
-      console.error('Error writing to log:file:', error.message),;
+    } catch (error) {,;'
+      console.error('Error writing to log:file:', error.message),;'
     };
   };
 ,;
   async checkSEO() {,;
-    try {,;
-      this.log(' Checking SEO...'),;
+    try {,;'
+      this.log(' Checking SEO...'),;'
 ,;
-      const seoIssues = [],;
-      const pagesDir = path.join(this.projectRoot, 'pages'),;
+      const seoIssues = [],;'
+      const pagesDir = path.join(this.projectRoot, 'pages'),;'
 ,;
       if (fs.existsSync(pagesDir)) {,;
         const pageFiles = this.getPageFiles(pagesDir),;
 ,;
-        pageFiles.forEach(file => {,;
-          const content = fs.readFileSync(file, 'utf8'),;
+        pageFiles.forEach(file => {,;)'
+          const content = fs.readFileSync(file, 'utf8'),;'
           const seoChecks = this.analyzeSEO(file, content),;
           seoIssues.push(...seoChecks),;
         }),;
@@ -48,39 +48,39 @@ class SEOAccessibility {,;
 ,;
     const scanDirectory = (currentDir) => {,;
       const items = fs.readdirSync(currentDir),;
-      items.forEach(item => {,;
+      items.forEach(item => {,;)
         const fullPath = path.join(currentDir, item),;
         const stat = fs.statSync(fullPath),;
 ,;
         if (stat.isDirectory()) {,;
-          scanDirectory(fullPath),;
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,;
+          scanDirectory(fullPath),;'
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,;'
           files.push(fullPath),;
         };
       }),;
     };
-;#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+;#!/usr/bin/env node;'
+const fs = require('fs');''
+const path = require('path');''
+const { execSync } = require('child_process');'
 ;
 class SEOAccessibility {;
   constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');
+    this.projectRoot = process.cwd();'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');''
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');'
     this.startTime = Date.now();
 };
-;
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+;'
+const fs = require('fs'),''
+const path = require('path'),''
+const { execSync } = require('child_process'),'
 ,
 class SEOAccessibility {,
   constructor() {,
-    this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),
+    this.projectRoot = process.cwd(),'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),''
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),'
     this.startTime = Date.now()
   };
 ,
@@ -90,23 +90,23 @@ class SEOAccessibility {,
 ,
     try {,
       fs.appendFileSync(this.logFile, logMessage)
-    } catch (error) {,
-      console.error('Error writing to log file:', error.message)
+    } catch (error) {,'
+      console.error('Error writing to log file:', error.message)'
     };
   };
 ,
   async checkSEO() {,
-    try {,
-      this.log(' Checking SEO...'),
+    try {,'
+      this.log(' Checking SEO...'),'
 ,
-      const seoIssues = [],
-      const pagesDir = path.join(this.projectRoot, 'pages'),
+      const seoIssues = [],'
+      const pagesDir = path.join(this.projectRoot, 'pages'),'
 ,
       if (fs.existsSync(pagesDir)) {,
         const pageFiles = this.getPageFiles(pagesDir),
 ,
-        pageFiles.forEach(file => {,
-          const content = fs.readFileSync(file, 'utf8'),
+        pageFiles.forEach(file => {,)'
+          const content = fs.readFileSync(file, 'utf8'),'
           const seoChecks = this.analyzeSEO(file, content),
           seoIssues.push(...seoChecks)
         })
@@ -119,14 +119,15 @@ class SEOAccessibility {,
 ,
     const scanDirectory = (currentDir) => {,
       const items = fs.readdirSync(currentDir),
-      items.forEach(item => {,
+      items.forEach(item => {,)
         const fullPath = path.join(currentDir, item),
         const stat = fs.statSync(fullPath),
 ,
         if (stat.isDirectory()) {,
-          scanDirectory(fullPath)
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,
+          scanDirectory(fullPath)'
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,'
           files.push(fullPath)
         };
       })
     };
+'

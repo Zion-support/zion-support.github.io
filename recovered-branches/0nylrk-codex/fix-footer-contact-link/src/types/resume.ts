@@ -1,4 +1,6 @@
 export interface ResumeBasicInfo {
+  // TODO: Implement
+}
   id?: string;
   title: string;
   headline?: string;
@@ -7,17 +9,22 @@ export interface ResumeBasicInfo {
 
 }
 export interface WorkExperience {
+  // TODO: Implement
+}
 export interface ResumeBasicInfo {
+  // TODO: Implement
+}
 export interface ResumeBasicInfo {;
   id?: string;
   title: string;
 
 }
 export interface WorkExperience {
-
+  // TODO: Implement
+}
 export interface WorkExperience {;
   id?: string;
-  company_name: string;
+  company_name: string;,
   role_title: string;
   start_date: Date | string;
   end_date?: Date | string;
@@ -32,8 +39,10 @@ export interface WorkExperience {;
 
 }
 export interface Education {
+  // TODO: Implement
+}
   id?: string;
-  institution: string;
+  institution: string;,
   degree: string;
   field_of_study?: string;
   start_date: Date | string;
@@ -49,6 +58,8 @@ export interface Education {
 
 }
 export interface Skill {
+  // TODO: Implement
+}
   id?: string;
   name: string;
   proficiency?: number;
@@ -61,12 +72,14 @@ export interface Skill {
 
 }
 export interface Certification {
+  // TODO: Implement
+}
   id?: string;
   name: string;
   proficiency?: number;
 }
   id?: string;
-  name: string;
+  name: string;,
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
@@ -79,6 +92,8 @@ export interface Certification {
 
 }
 export interface PortfolioProject {
+  // TODO: Implement
+}
   id?: string;
   title: string;
   description?: string;
@@ -94,11 +109,13 @@ export interface PortfolioProject {
 
 }
 export interface Resume {
+  // TODO: Implement
+}
   id?: string;
   user_id?: string;
-  basic_info: ResumeBasicInfo;
+  basic_info: ResumeBasicInfo;,
   work_experience: WorkExperience[];
-  education: Education[];
+  education: Education[];,
   skills: Skill[];
   certifications: Certification[];
   portfolio_projects?: PortfolioProject[];
@@ -106,7 +123,7 @@ export interface Resume {
 }
   portfolio_projects?: PortfolioProject[]
 
-  is_active: boolean
+  is_active: boolean;
 }
 export interface ResumeBasicInfo {;
   id?: string,;

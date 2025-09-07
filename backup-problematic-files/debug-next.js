@@ -1,43 +1,43 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs');''
+const path = require('path');'
+;'
+console.log(' Debugging Next.js project structure...');'
+;'
+// Check if we're in a valid Next.js project;''
+console.log(' Current directory:', process.cwd());''
+console.log(' Package.json exists:', fs.existsSync('package.json'));''
+console.log(' Next.config.js exists:', fs.existsSync('next.config.js'));''
+console.log(' Pages directory exists:', fs.existsSync('pages'));''
+console.log(' Components directory exists:', fs.existsSync('components'));'
 ;
-console.log(' Debugging Next.js project structure...');
-;
-// Check if we're in a valid Next.js project;
-console.log(' Current directory:', process.cwd());
-console.log(' Package.json exists:', fs.existsSync('package.json'));
-console.log(' Next.config.js exists:', fs.existsSync('next.config.js'));
-console.log(' Pages directory exists:', fs.existsSync('pages'));
-console.log(' Components directory exists:', fs.existsSync('components'));
-;
-// Check package.json;
-if (fs.existsSync('package.json')) {;
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+// Check package.json;'
+if (fs.existsSync('package.json')) {;''
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
 }
 ;
-// Check pages directory structure;
-if (fs.existsSync('pages')) {;
-  const pages = fs.readdirSync('pages');
-  console.log(' Pages found:', pages.length);
-  console.log(' Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
+// Check pages directory structure;'
+if (fs.existsSync('pages')) {;''
+  const pages = fs.readdirSync('pages');''
+  console.log(' Pages found:', pages.length);''
+  console.log(' Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));'
 }
 ;
 // Check for any problematic files;
-const problematicFiles = [];
-const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
+const problematicFiles = [];'
+const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);'
 ;
 for (const file of allFiles) {;
-  try {;
-    const content = fs.readFileSync(file, 'utf8');
+  try {;'
+    const content = fs.readFileSync(file, 'utf8');'
       problematicFiles.push(file);    }
-  } catch (error) {;
-    // Skip files that can't be read;
+  } catch (error) {;'
+    // Skip files that can't be read;'
   }
 }
-;
-console.log('  Files with merge conflicts:', problematicFiles.length);
-if (problematicFiles.length > 0) {;
-  console.log('Files:', problematicFiles.slice(0, 10));
+;'
+console.log('  Files with merge conflicts:', problematicFiles.length);'
+if (problematicFiles.length > 0) {;'
+  console.log('Files:', problematicFiles.slice(0, 10));'
 }
 ;
 // Function to get all files recursively;
@@ -47,46 +47,51 @@ function getAllFiles(dir, extensions) {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+      const stat = fs.statSync(fullPath);'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;'
         files = files.concat(getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);if (problematicFiles.length > 0) {
-  console.log ('Files:', problematicFiles.slice (0, 10) ) 
+        files.push(fullPath);if (problematicFiles.length > 0) {'
+  console.log ('Files:', problematicFiles.slice (0, 10) )'
 }//Function to get all files recursively function getAllFiles (dir, extensions) {
   let files = [];
 try {
+  // TODO: Implement
+}
   const items = fs.readdirSync (dir);
 for (const item of items) {
   const fullPath = path.join (dir, item);
-const stat = fs.statSync (fullPath);
-if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
+const stat = fs.statSync (fullPath);'
+if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {'
   files = files.concat (getAllFiles (fullPath, extensions) ) 
 }else if (extensions.some (ext => item.endsWith (ext) ) ) {
   files.push (fullPath) 
 }
 
-// Function to get all files recursively
+// Function to get all files recursively;
 function getAllFiles(dir, extensions) {
   let files = [],
   try {
+  // TODO: Implement
+}
     const items = fs.readdirSync(dir),
     for (const item of items) {
       const fullPath = path.join(dir, item),
-      const stat = fs.statSync(fullPath),
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      const stat = fs.statSync(fullPath),'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         files = files.concat(getAllFiles(fullPath, extensions))
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)
       }
     }
-  } catch (error) {;
-    // Skip directories that can't be read;
+  } catch (error) {;'
+    // Skip directories that can't be read;'
   }
-  return files
+  return files;
 }
-;
-console.log(' Debug completed');}
-}catch (error) {
-  // Skip directories that can't be read 
+;'
+console.log(' Debug completed');}'
+}catch (error) {'
+  // Skip directories that can't be read;'
 }return files;
+'

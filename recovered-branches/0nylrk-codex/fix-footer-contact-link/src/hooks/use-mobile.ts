@@ -1,47 +1,45 @@
 
 
 
-import {useState, useEffect} from 'react';
-
-
+import {useState, useEffect} from 'react';'
 export function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 768 : false,
+  const [isMobile, setIsMobile] = useState('
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,")
   );
   useEffect(() => {
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+"
+    if (typeof window !== "undefined") {""
+      window.addEventListener("resize", handleResize);""
+      return () => window.removeEventListener("resize", handleResize);"
     }
     return undefined;
   }, []);
 
   return isMobile;
-}
-      window.addEventListener ('resize', handle_resize);
-      return () => window.removeEventListener ('resize', handle_resize);
+}"
+      window.addEventListener ('resize', handle_resize);''
+      return () => window.removeEventListener ('resize', handle_resize);'
     }
     return undefined;
   }, []);
 
-
-import { useState, useEffect } from 'react',;
+'
+import { useState, useEffect } from 'react',;'
 export function useIsMobile() {;
-  const [isMobile, setIsMobile] = useState(;
-    typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+  const [isMobile, setIsMobile] = useState(;'
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false;')
   ),;
   useEffect(() => {;
     const handleResize = () => {;
       setIsMobile(window.innerWidth < 768);
-    },;
-    if (typeof window !== 'undefined') {;
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+    },;'
+    if (typeof window !== 'undefined') {;''
+      window.addEventListener('resize', handleResize);''
+      return () => window.removeEventListener('resize', handleResize);'
     }
     return undefined;
   }, []);
@@ -54,30 +52,30 @@ export function useIsMobile() {;
   return is_mobile;
 }
 }
-
-import { useState, useEffect } from 'react',;
+'
+import { useState, useEffect } from 'react',;'
 ;
 export function useIsMobile() {;
-  const [isMobile, setIsMobile] = useState(;
-    typeof window !== 'undefined' ? window.innerWidth < 768 :false;
+  const [isMobile, setIsMobile] = useState(;'
+    typeof window !== 'undefined' ? window.innerWidth < 768 :false;')
   ),;
 ;
   useEffect(() => {;
     const handleResize = () => {;
       setIsMobile(window.innerWidth < 768),;
     },;
-;
-    if (typeof window !== 'undefined') {;
-      window.addEventListener('resize', handleResize),;
-      return () => window.removeEventListener('resize', handleResize),;
+;'
+    if (typeof window !== 'undefined') {;''
+      window.addEventListener('resize', handleResize),;''
+      return () => window.removeEventListener('resize', handleResize),;'
     }
     return undefined,;
   }, []),;
 ;
   return isMobile,;}
- export function useIsMobile () {
-  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
-return isMobile 
+ export function useIsMobile () {'
+  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);'
+return isMobile;
 }
 }
 ;
@@ -85,3 +83,4 @@ return isMobile
 ;
 }
 ;
+'

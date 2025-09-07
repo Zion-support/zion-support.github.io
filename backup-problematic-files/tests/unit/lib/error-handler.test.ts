@@ -1,6 +1,6 @@
-// Error-handler.test utility
+// Error-handler.test utility;
 export const Error-handler.test = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 

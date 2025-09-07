@@ -1,91 +1,83 @@
 
 
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate  } from 'react-router-dom';
-
-
-import React, { useState, useEffect, useCallback } from 'react';
-import {useNavigate} from 'react-router-dom';
-import {toast} from "sonner";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {useJobForm} from './useJobForm';
-import {BasicInfoFields} from './BasicInfoFields';
-import {DateFields} from './DateFields';
-import {DescriptionFields} from './DescriptionFields';
-import {useJobs} from "@/hooks/useJobs";
-import {JobSchemaType} from './validation';
-import React, { useState, useEffect, useCallback } from 'react',
-import { useNavigate } from 'react-router-dom',
-
-
-
-
-
-
-import { toast } from "sonner",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-
-
-import { Form } from "@/components/ui/form",
-import { useJobForm } from './useJobForm',
-import { BasicInfoFields } from './BasicInfoFields',
-import { DateFields } from './DateFields',
-import { DescriptionFields } from './DescriptionFields',
-import { useJobs } from "@/hooks/useJobs",
-import { JobSchemaType } from './validation',
-
-
+import React, { useState, useEffect, useCallback } from 'react';''
+import { useNavigate  } from 'react-router-dom';''
+import React, { useState, useEffect, useCallback } from 'react';''
+import {useNavigate} from 'react-router-dom';''
+import {toast} from "sonner";""
+import {Input} from "@/components/ui/input";""
+import {Label} from "@/components/ui/label";""
+import {Button} from "@/components/ui/button";""
+import {Form} from "@/components/ui/form";""
+import {useJobForm} from './useJobForm';''
+import {BasicInfoFields} from './BasicInfoFields';''
+import {DateFields} from './DateFields';''
+import {DescriptionFields} from './DescriptionFields';''
+import {useJobs} from "@/hooks/useJobs";""
+import {JobSchemaType} from './validation';''
+import React, { useState, useEffect, useCallback } from 'react',''
+import { useNavigate } from 'react-router-dom',''
+import { toast } from "sonner",""
+import { Input } from "@/components/ui/input",""
+import { Label } from "@/components/ui/label",""
+import { Button } from "@/components/ui/button",""
+import { Form } from "@/components/ui/form",""
+import { useJobForm } from './useJobForm',''
+import { BasicInfoFields } from './BasicInfoFields',''
+import { DateFields } from './DateFields',''
+import { DescriptionFields } from './DescriptionFields',''
+import { useJobs } from "@/hooks/useJobs",""
+import { JobSchemaType } from './validation','
 interface JobPostingFormProps {
+  // TODO: Implement
+}
 interface JobPostingFormProps {
+  // TODO: Implement
+}
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
 
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
-import React, { useState, useEffect, useCallback } from 'react';
-import {use_navigate} from 'react-router-dom';
-import { toast } from './sonner';
-import { Input } from '@/components / ui / input';
-import { Label } from '@/components / ui / label';
-import { Button } from '@/components / ui / button';
-import { Form } from '@/components / ui / form';
-import {useJobForm} from './useJobForm';
-import {BasicInfoFields} from './BasicInfoFields';
-import {DateFields} from './DateFields';
-import {DescriptionFields} from './DescriptionFields';
-import { use_jobs } from '@/hooks / use_jobs';
-import {JobSchemaType} from './validation';
-
-
+:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;'
+import React, { useState, useEffect, useCallback } from 'react';''
+import {use_navigate} from 'react-router-dom';''
+import { toast } from './sonner';''
+import { Input } from '@/components / ui / input';''
+import { Label } from '@/components / ui / label';''
+import { Button } from '@/components / ui / button';''
+import { Form } from '@/components / ui / form';''
+import {useJobForm} from './useJobForm';''
+import {BasicInfoFields} from './BasicInfoFields';''
+import {DateFields} from './DateFields';''
+import {DescriptionFields} from './DescriptionFields';''
+import { use_jobs } from '@/hooks / use_jobs';''
+import {JobSchemaType} from './validation';'
 export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps) {;
 
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
-
+  const [isFormLoading, setIsFormLoading] = useState(false);'
+  const [editorContent, setEditorContent] = useState("");"
 interface JobPostingFormProps {
+  // TODO: Implement
+}
   job_id?: string;
   on_success?: () => void;
 }
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 export /**
- * JobPostingForm - Function description
+ * JobPostingForm - Function description;
  */
 function JobPostingForm() {
   const navigate = use_navigate ();
   const { create_job, update_job, getJobById } = use_jobs ();
-  const [isFormLoading, setIsFormLoading] = useState (false);
-  const [editor_content, setEditorContent] = useState ("");
+  const [isFormLoading, setIsFormLoading] = useState (false);"
+  const [editor_content, setEditorContent] = useState ("");"
 ;
 
 
   const {
-
+  // TODO: Implement
+}
   const {;
     form;
     is_loading;
@@ -100,6 +92,8 @@ function JobPostingForm() {
 
 
   const {
+  // TODO: Implement
+}
     form,
     isLoading,
     startDate,
@@ -108,8 +102,7 @@ function JobPostingForm() {
     setEndDate,
     isRemote,
     setIsRemote,
-    submitJob
-
+    submitJob;
   } = useJobForm({ jobId, onSuccess }),
 
   const { handleSubmit, setValue, formState } = form,
@@ -122,39 +115,42 @@ function JobPostingForm() {
       getJobById(jobId)
         .then((job) => {
           if (job) {
-            // Set form values
-            Object.entries(job).forEach(([key, value]) => {
-              if (key === 'published_date' && value) {
-                setStartDate(new Date(value as string)),
-                setValue('published_date', value as string)
-              } else if (key === 'expiry_date' && value) {
-                setEndDate(new Date(value as string)),
-                setValue('expiry_date', value as string)
-              } else if (key === 'is_remote') {
-                setIsRemote(value as boolean)
-              } else if (key === 'description') {
-                setEditorContent(value as string),
-                setValue('description', value as string)
+            // Set form values;
+            Object.entries(job).forEach(([key, value]) => {"
+              if (key === 'published_date' && value) {'
+                setStartDate(new Date(value as string)),'
+                setValue('published_date', value as string)''
+              } else if (key === 'expiry_date' && value) {'
+                setEndDate(new Date(value as string)),'
+                setValue('expiry_date', value as string)''
+              } else if (key === 'is_remote') {'
+                setIsRemote(value as boolean)'
+              } else if (key === 'description') {'
+                setEditorContent(value as string),'
+                setValue('description', value as string)'
               } else {
+  // TODO: Implement
+}
                 try {
-                  // @ts-ignore - We know these fields exist in our form
+  // TODO: Implement
+}
+                  // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any)
-                } catch (e) {
-                  // Skip fields that don't exist in our form
-
-import React, { useState, useEffect, useCallback } from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { toast } from "sonner",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { useJobForm } from './useJobForm',;
-import { BasicInfoFields } from './BasicInfoFields',;
-import { DateFields } from './DateFields',;
-import { DescriptionFields } from './DescriptionFields',;
-import { useJobs } from "@/hooks/useJobs",;
-import { JobSchemaType } from './validation',;
+                } catch (e) {'
+                  // Skip fields that don't exist in our form;''
+import React, { useState, useEffect, useCallback } from 'react',;''
+import { useNavigate } from 'react-router-dom',;''
+import { toast } from "sonner",;""
+import { Input } from "@/components/ui/input",;""
+import { Label } from "@/components/ui/label",;""
+import { Button } from "@/components/ui/button",;""
+import { Form } from "@/components/ui/form",;""
+import { useJobForm } from './useJobForm',;''
+import { BasicInfoFields } from './BasicInfoFields',;''
+import { DateFields } from './DateFields',;''
+import { DescriptionFields } from './DescriptionFields',;''
+import { useJobs } from "@/hooks/useJobs",;""
+import { JobSchemaType } from './validation',;'
 interface JobPostingFormProps {;
   jobId?: string,;
   onSuccess?: () => void;
@@ -163,8 +159,8 @@ interface JobPostingFormProps {;
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const navigate = useNavigate(),;
   const { createJob, updateJob, getJobById } = useJobs(),;
-  const [isFormLoading, setIsFormLoading] = useState(false),;
-  const [editorContent, setEditorContent] = useState(""),;
+  const [isFormLoading, setIsFormLoading] = useState(false),;'
+  const [editorContent, setEditorContent] = useState(""),;"
   const {;
     form,;
     isLoading,;
@@ -181,20 +177,20 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 
   useEffect(() => {;
     if (jobId) {;
-      setIsFormLoading(true);
-import React, { useState, useEffect, useCallback } from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { toast } from "sonner",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { useJobForm } from './useJobForm',;
-import { BasicInfoFields } from './BasicInfoFields',;
-import { DateFields } from './DateFields',;
-import { DescriptionFields } from './DescriptionFields',;
-import { useJobs } from "@/hooks/useJobs",;
-import { JobSchemaType } from './validation',;
+      setIsFormLoading(true);"
+import React, { useState, useEffect, useCallback } from 'react',;''
+import { useNavigate } from 'react-router-dom',;''
+import { toast } from "sonner",;""
+import { Input } from "@/components/ui/input",;""
+import { Label } from "@/components/ui/label",;""
+import { Button } from "@/components/ui/button",;""
+import { Form } from "@/components/ui/form",;""
+import { useJobForm } from './useJobForm',;''
+import { BasicInfoFields } from './BasicInfoFields',;''
+import { DateFields } from './DateFields',;''
+import { DescriptionFields } from './DescriptionFields',;''
+import { useJobs } from "@/hooks/useJobs",;""
+import { JobSchemaType } from './validation',;'
 ;
 interface JobPostingFormProps {;
   jobId?:string,;
@@ -204,8 +200,8 @@ interface JobPostingFormProps {;
 export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
   const navigate = useNavigate(),;
   const { createJob, updateJob, getJobById } = useJobs(),;
-  const [isFormLoading, setIsFormLoading] = useState(false),;
-  const [editorContent, setEditorContent] = useState(""),;
+  const [isFormLoading, setIsFormLoading] = useState(false),;'
+  const [editorContent, setEditorContent] = useState(""),;"
   ;
   const {;
     form,;
@@ -233,25 +229,25 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
         .then((job) => {;
           if (job) {;
             // Set form values;
-            Object && Object.entries(job).forEach(([key, value]) => {;
-              if (key === 'published_date' && value) {;
-                setStartDate(new Date(value as string));
-                setValue('published_date', value as string);
-              } else if (key === 'expiry_date' && value) {;
+            Object && Object.entries(job).forEach(([key, value]) => {;"
+              if (key === 'published_date' && value) {;'
+                setStartDate(new Date(value as string));'
+                setValue('published_date', value as string);''
+              } else if (key === 'expiry_date' && value) {;'
                 setEndDate(new Date(value as string));
-            Object.entries(job).forEach(([key, value]) => {;
-              if (key === 'published_date' && value) {;
-                setStartDate(new Date(value as string)),;
-                setValue('published_date', value as string);
-              } else if (key === 'expiry_date' && value) {;
-                setEndDate(new Date(value as string)),;
-                setValue('expiry_date', value as string);
-              } else if (key === 'is_remote') {;
-                setIsRemote(value as boolean);
-              } else if (key === 'description') {;
+            Object.entries(job).forEach(([key, value]) => {;'
+              if (key === 'published_date' && value) {;'
+                setStartDate(new Date(value as string)),;'
+                setValue('published_date', value as string);''
+              } else if (key === 'expiry_date' && value) {;'
+                setEndDate(new Date(value as string)),;'
+                setValue('expiry_date', value as string);''
+              } else if (key === 'is_remote') {;'
+                setIsRemote(value as boolean);'
+              } else if (key === 'description') {;'
                 setEditorContent(value as string);
-                setEditorContent(value as string),;
-                setValue('description', value as string);
+                setEditorContent(value as string),;'
+                setValue('description', value as string);'
               } else {;
                 try {;
                   // @ts-ignore - We know these fields exist in our form;
@@ -265,58 +261,62 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
   const { is_submitting } = form_state;
 ;
   useEffect (() => {
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       setIsFormLoading (true);
       getJobById (job_id);
         .then ((job) => {
-          // Check condition
+          // Check condition;
 if ( {) {
-  $2
+  $2;
 }
             // Set form values;
             Object.entries (job).for_each (([key, value]) => {
-              // Check condition
+              // Check condition;
 if ( {) {
-  $2
+  $2;
 }
-                setStartDate (new Date (value as string));
-                set_value ('published_date', value as string);
-              } else // Check condition
+                setStartDate (new Date (value as string));'
+                set_value ('published_date', value as string);'
+              } else // Check condition;
 if ( {) {
-  $2
+  $2;
 }
-                setEndDate (new Date (value as string));
-                set_value ('expiry_date', value as string);
-              } else // Check condition
+                setEndDate (new Date (value as string));'
+                set_value ('expiry_date', value as string);'
+              } else // Check condition;
 if ( {) {
-  $2
+  $2;
 }
                 setIsRemote (value as boolean);
-              } else // Check condition
+              } else // Check condition;
 if ( {) {
-  $2
+  $2;
 }
-                setEditorContent (value as string);
-                set_value ('description', value as string);
+                setEditorContent (value as string);'
+                set_value ('description', value as string);'
               } else {
+  // TODO: Implement
+}
                 try {
+  // TODO: Implement
+}
                   // @ts - ignore - We know these fields exist in our form;
                   set_value (key, value as any);
                 } catch (e) {
-
-                  // Skip fields that don't exist in our form;
+'
+                  // Skip fields that don't exist in our form;'
                 }
               }
             });
           }
 
         })
-        .catch((error) => {
-          console.error("Failed to load job:", error),
-          toast.error("Failed to load job")
+        .catch((error) => {'
+          console.error("Failed to load job:", error),""
+          toast.error("Failed to load job")"
         })
         .finally(() => {
           setIsFormLoading(false)
@@ -327,9 +327,8 @@ if ( {) {
 
 
   const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value)
-    setValue('description', value)
-
+    setEditorContent(value)"
+    setValue('description', value)'
   }, [setValue]),
 
   const onSubmit = async (values: JobSchemaType) => {
@@ -337,23 +336,25 @@ if ( {) {
 
 
     try {
+  // TODO: Implement
+}
       const jobData = await submitJob(values)
       if (jobId) {
-        await updateJob(jobId, jobData),
-        toast.success("Job updated successfully!")
+        await updateJob(jobId, jobData),'
+        toast.success("Job updated successfully!")"
       } else {
-
-        await createJob(jobData),
-        toast.success("Job posted successfully!"),
-        form.reset(),
-        setEditorContent("")
-
+  // TODO: Implement
+}
+        await createJob(jobData),"
+        toast.success("Job posted successfully!"),"
+        form.reset(),"
+        setEditorContent("")"
         });
 
 
   const handleEditorChange = useCallback((value: string) => {;
-    setEditorContent(value),;
-    setValue('description', value);
+    setEditorContent(value),;"
+    setValue('description', value);'
   }, [setValue]);
 
   const onSubmit = async (values: JobSchemaType) => {;
@@ -364,28 +365,28 @@ if ( {) {
 
       if (jobId) {;
 
-        await updateJob(jobId, jobData);
-        toast && toast.success("Job updated successfully!");
-        await updateJob(jobId, jobData);
-        toast && toast.success("Job updated successfully!");
+        await updateJob(jobId, jobData);'
+        toast && toast.success("Job updated successfully!");"
+        await updateJob(jobId, jobData);"
+        toast && toast.success("Job updated successfully!");"
       } else {;
-        await createJob(jobData);
-        toast && toast.success("Job posted successfully!");
-        form && form.reset();
-        setEditorContent("");
+        await createJob(jobData);"
+        toast && toast.success("Job posted successfully!");"
+        form && form.reset();"
+        setEditorContent("");"
       }
       if (onSuccess) {;
         onSuccess();
       }
-    } catch (error: any) {;
-      console && console.error("Error creating/updating job:", error);
-      toast && toast.error(error && error.message || "Failed to post job");
+    } catch (error: any) {;"
+      console && console.error("Error creating/updating job:", error);""
+      toast && toast.error(error && error.message || "Failed to post job");"
     } finally {;
       setIsFormLoading(false);
         });
-        .catch((error) => {;
-          console.error("Failed to load job:", error),;
-          toast.error("Failed to load job");
+        .catch((error) => {;"
+          console.error("Failed to load job:", error),;""
+          toast.error("Failed to load job");"
         });
         .finally(() => {;
           setIsFormLoading(false);
@@ -393,78 +394,87 @@ if ( {) {
     }
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
   const handleEditorChange = useCallback((value: string) => {;
-    setEditorContent(value),;
-    setValue('description', value);
+    setEditorContent(value),;"
+    setValue('description', value);'
   }, [setValue]),;
   const onSubmit = async (values: JobSchemaType) => {;
     setIsFormLoading(true),;
     try {;
       const jobData = await submitJob(values),;
       if (jobId) {;
-        await updateJob(jobId, jobData),;
-        toast.success("Job updated successfully!");
+        await updateJob(jobId, jobData),;'
+        toast.success("Job updated successfully!");"
       } else {;
-        await createJob(jobData),;
-        toast.success("Job posted successfully!"),;
-        form.reset(),;
-        setEditorContent("");
+        await createJob(jobData),;"
+        toast.success("Job posted successfully!"),;"
+        form.reset(),;"
+        setEditorContent("");"
       }
 
 
       if (onSuccess) {;
         onSuccess();
       }
-    } catch (error: any) {
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message |"Failed to post job")
+    } catch (error: any) {"
+      console.error("Error creating/updating job:", error);""
+      toast.error(error.message |"Failed to post job")"
     } finally {
+  // TODO: Implement
+}
       setIsFormLoading(false)
     }
   }
-  if (isLoading |isFormLoading) {
-      console.error("Error creating/updating job:", error),
-      toast.error(error.message || "Failed to post job")
+  if (isLoading |isFormLoading) {"
+      console.error("Error creating/updating job:", error),""
+      toast.error(error.message || "Failed to post job")"
     } finally {
+  // TODO: Implement
+}
       setIsFormLoading(false)
     }
   },
-
-    return <div className="flex items-center justify-center p-8">Loading...</div>
-  }
-  return (
+"
+    return <div className="flex items-center justify-center p-8">Loading...</div>"
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+</Form>"
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">"
+</form>
         <div>
-          <h3 className="text-lg font-medium">Post a Job</h3>
-          <p className="text-sm text-muted-foreground">
-            Fill in the details below to create a job posting.
+</div>"
+          <h3 className="text-lg font-medium">Post a Job</h3>""
+          <p className="text-sm text-muted-foreground">"
+</p>
           </p>
         </div>
         <BasicInfoFields control={form.control} />
+</BasicInfoFields>
 
 
-        <DateFields 
+        <DateFields;
           startDate={startDate} 
 
 
-        <DateFields
+        <DateFields;
           startDate={startDate}
-        <DateFields 
+        <DateFields;
           startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />
+</DateFields>
         <div>
-          <Label htmlFor="isRemote">
-            <Input
-              type="checkbox"
-              id="isRemote"
-              checked={isRemote}
-              className="mr-2"
-    } catch (error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");
+</div>"
+          <Label htmlFor="isRemote">"
+</Label>
+            <Input;"
+              type="checkbox"""
+              id="isRemote""
+              checked={isRemote}"
+              className="mr-2""
+    } catch (error: any) {;"
+      console.error("Error creating/updating job:", error);""
+      toast.error(error.message || "Failed to post job");"
     } finally {;
       setIsFormLoading(false);
 
@@ -473,14 +483,10 @@ if ( {) {
   if (isLoading |isFormLoading) {
 
 
-  if (isLoading || isFormLoading) {;
-    return <div className="flex items-center justify-center p-8">Loading...</div>;
-
-  }
-  return (
-
-
-        <DateFields 
+  if (isLoading || isFormLoading) {;"
+    return <div className="flex items-center justify-center p-8">Loading...</div>;"
+</Input>
+        <DateFields;
           startDate={startDate} 
 
 
@@ -488,192 +494,134 @@ if ( {) {
           endDate={endDate}
           setEndDate={setEndDate}
         />
+</DateFields>
         <div>
-          <Label htmlFor="isRemote">
-            <Input
-              type="checkbox"
-              id="isRemote"
-              checked={isRemote}
-              className="mr-2"
-    } catch (error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");
+</div>"
+          <Label htmlFor="isRemote">"
+</Label>
+            <Input;"
+              type="checkbox"""
+              id="isRemote""
+              checked={isRemote}"
+              className="mr-2""
+    } catch (error: any) {;"
+      console.error("Error creating/updating job:", error);""
+      toast.error(error.message || "Failed to post job");"
     } finally {;
       setIsFormLoading(false);
     }
   };
-  if (isLoading || isFormLoading) {;
-    return <div className="flex items-center justify-center p-8">Loading...</div>;
-  }
-;
-  return (;
-
+  if (isLoading || isFormLoading) {;"
+    return <div className="flex items-center justify-center p-8">Loading...</div>;"
+</Input>
     <Form {...form}>;
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
+</Form>"
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;"
+</form>
         <div>;
-          <h3 className="text-lg font-medium">Post a Job</h3>;
-          <p className="text-sm text-muted-foreground">;
-            Fill in the details below to create a job posting.;
+</div>"
+          <h3 className="text-lg font-medium">Post a Job</h3>;""
+          <p className="text-sm text-muted-foreground">;"
+</p>
           </p>;
         </div>;
-
         <BasicInfoFields control={form && form.control} />;
+</BasicInfoFields>
 
-        <DateFields
+        <DateFields;
           startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />;
+</DateFields>
 
         <div>;
-          <Label htmlFor="isRemote">;
-            <Input
-              type="checkbox"
-              id="isRemote"
+</div>"
+          <Label htmlFor="isRemote">;"
+</Label>
+            <Input;"
+              type="checkbox"""
+              id="isRemote""
               checked={isRemote}
 
 
-
-              className="mr-2"
-
-
+"
+              className="mr-2""
         <div>;
-          <Label htmlFor="isRemote">;
-            <Input;
-              type="checkbox";
-              id="isRemote";
-              checked={isRemote}
-              className="mr-2"
+</Input>"
+          <Label htmlFor="isRemote">;"
+</Label>
+            <Input;"
+              type="checkbox";""
+              id="isRemote";"
+              checked={isRemote}"
+              className="mr-2""
               onChange={(e) => setIsRemote(e.target.checked)}
-            />
-            Remote
+</Input>
           </Label>
         </div>
-        <DescriptionFields
+        <DescriptionFields;
           control={form.control}
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
-        <Button type="submit" disabled={isSubmitting |isFormLoading}>
-          {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-
-
-
-              className="mr-2"
-
-
-        <DescriptionFields 
+</DescriptionFields>"
+        <Button type="submit" disabled={isSubmitting |isFormLoading}>"
+</Button>
+        <DescriptionFields;
           control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-
-
+</DescriptionFields>"
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>"
+</Button>
         </Button>
       </form>
-    </Form>
-  )
-
-              onChange={(e) => setIsRemote(e && e.target.checked)}
-        .catch ((error) => {
-          console.error ("Failed to load job:", error);
-          toast.error ("Failed to load job");
-        });
-        .finally (() => {
-          setIsFormLoading (false);
-        });
-    }
-  }, [job_id, getJobById, set_value, setStartDate, setEndDate, setIsRemote]);
-;
-  const handleEditorChange = useCallback ((value: string) => {
-    setEditorContent (value),
-    set_value ('description', value);
-  }, [set_value]);
-;
-  const on_submit = async (values: JobSchemaType) => {
-    setIsFormLoading (true);
-;
-    try {
-      const job_data = await submit_job (values),
-      // Check condition
-if ( {) {
-  $2
-}
-        await update_job (job_id, job_data);
-        toast.success ("Job updated successfully!");
-      } else {
-        await create_job (job_data);
-        toast.success ("Job posted successfully!");
-        form.reset ();
-        setEditorContent ("");
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-      }
-    } catch (error: any) {
-      console.error ("Error creating / updating job:", error);
-      toast.error (error.message || "Failed to post job");
-    } finally {
-      setIsFormLoading (false);
-    }
-  }
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div className="flex items - center justify - center p - 8">Loading...</div>;
-  }
-  return (
+    </Form>"
+    return <div className="flex items - center justify - center p - 8">Loading...</div>;"
     <Form {...form}>;
-      <form on_submit={handle_submit (on_submit)} className="space - y-6">;
+</Form>"
+      <form on_submit={handle_submit (on_submit)} className="space - y-6">;"
+</form>
         <div>;
-          <h3 className="text - lg font - medium">Post a Job</h3>;
-          <p className="text - sm text - muted - foreground">;
-            Fill in the details below to create a job posting.;
+</div>"
+          <h3 className="text - lg font - medium">Post a Job</h3>;""
+          <p className="text - sm text - muted - foreground">;"
+</p>
           </p>;
         </div>;
         <BasicInfoFields control={form.control} />;
+</BasicInfoFields>
         <DateFields;
           start_date={start_date}
           setStartDate={setStartDate}
           end_date={end_date}
           setEndDate={setEndDate}
         />;
+</DateFields>
         <div>;
-          <Label html_for="is_remote">;
-            <Input;
-              type="checkbox";
-              id="is_remote";
-              checked={is_remote}
-              className="mr - 2";
+</div>"
+          <Label html_for="is_remote">;"
+</Label>
+            <Input;"
+              type="checkbox";""
+              id="is_remote";"
+              checked={is_remote}"
+              className="mr - 2";"
               on_change={(e) => setIsRemote (e.target.checked)}
-
-            />;
-            Remote;
+</Input>
           </Label>;
         </div>;
-
         <DescriptionFields;
           control={form.control}
           handleEditorChange={handleEditorChange}
           editor_content={editor_content}
         />;
-        <Button type="submit" disabled={is_submitting || isFormLoading}>;
-          {is_submitting || isFormLoading ? "Submitting..." : job_id ? "Update Job" : "Post Job"}
+</DescriptionFields>"
+        <Button type="submit" disabled={is_submitting || isFormLoading}>;"
+</Button>
         </Button>;
       </form>;
-    </Form>);
-
-}
-}
-
-;
-;
-}
+    </Form>);"

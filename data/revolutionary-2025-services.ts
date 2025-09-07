@@ -1,15 +1,15 @@
-  id: string;
+  id: string;,
   name: string;
-  tagline: string;
+  tagline: string;,
   price: string;
-  description: string;
+  description: string;,
   features: string[];
-  link: string;
+  link: string;,
   category: string;
-  realImplementation: boolean;
+  realImplementation: boolean;,
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string;,
+  email: string;
 export interface Revolutionary2025Service {;
     address: string;
   };
@@ -22,13 +22,13 @@ export interface Revolutionary2025Service {;
   link: string,;
   category: string,;
   realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
+  contactInfo: {;,
+  mobile: string,;
     email: string,;
     address: string;
   }
 }
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ];
@@ -39,51 +39,51 @@ export interface Revolutionary2025Service {;
   realImplementation: boolean,
   contactInfo: {
 export const revolutionary2025Services: Revolutionary2025Service[] = [
-  {
-    id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",
-    tagline: "Next-generation AI capabilities", price: "$199/month",
-    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
-    id: 'revolutionary-ai-platform'
-    name: 'Revolutionary AI Platform'
-    tagline: 'Next-generation AI capabilities'
-    price: '$199/month'
-    description:
-      "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."
-    features: [
-      "Advanced AI models";
-      "Revolutionary algorithms";
-      "Breakthrough capabilities";
-      "Future-ready architecture";
-      "Cutting-edge features"
-    ];
-    link: "/services/revolutionary-ai-platform", category: "Revolutionary 2025 Services",
+  {"
+    id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",""
+    tagline: "Next-generation AI capabilities", price: "$199/month",""
+    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",""
+    id: 'revolutionary-ai-platform'','
+  name: 'Revolutionary AI Platform'''
+    tagline: 'Next-generation AI capabilities'','
+  price: '$199/month'''
+    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."",
+  features: ["
+      "Advanced AI models";""
+      "Revolutionary algorithms";""
+      "Breakthrough capabilities";""
+      "Future-ready architecture";""
+      "Cutting-edge features""]
+    ];"
+    link: "/services/revolutionary-ai-platform", category: "Revolutionary 2025 Services","
     realImplementation: true,
-    contactInfo: {
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    contactInfo: {,"
+  address: "364 E Main St STE 1008 Middletown DE 19709""
+    }
+  }
+];"
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
+    }
+  }
+];"
+      email: "kleber@ziontechgroup.com";","
+  address: "364 E Main St STE 1008 Middletown DE 19709";"
     }
   }
 ];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+;"
+      mobile: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      mobile: '+1 302 464 0950',''
+      email: 'kleber@ziontechgroup.com',''
+      address: '364 E Main St STE 1008 Middletown DE 19709','
     },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+  },;'
+];      mobile: "+1 302 464 0950";","
+  email: "kleber@ziontechgroup.com";""
+      address: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ];
+"

@@ -2,100 +2,77 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 
   return (
-    <div className="mb-6">
-      <div className="relative">
-        <label htmlFor="talent-search" className="sr-only">
-          Search talents
+    <div className="mb-6">"
+</div>"
+      <div className="relative">"
+</div>"
+        <label htmlFor="talent-search" className="sr-only">"
+</label>
         </label>
-
-        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
-
-        <Input
-          id='talent-search'
-          type='text'
-          placeholder='Search talents...'
+"
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />"
+</SearchIcon>
+        <Input;"
+          id='talent-search'''
+          type='text'''
+          placeholder='Search talents...''
           value={searchTerm}
 
 
 
-          Type a name or skill to filter results
-        </p>
-      </div>
-    </div>
-
-          onChange={e => setSearchTerm(e && e.target.value)}
-          aria-describedby='talent-search-help';
-          className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light';
-
-};
-;
-
-import { Input } from "@/components/ui/input",;
-import { SearchIcon } from 'lucide-react';
-import { SearchFilterProps } from "@/types/filters";
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {;
-  return (;
-    <div className="mb-6">;
-      <div className="relative">;
-        <label htmlFor="talent-search" className="sr-only">;
-          Search talents;
-        </label>;
-        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />;
-        <Input;
-          id="talent-search";
-          type="text";
-          placeholder="Search talents...";
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          aria-describedby="talent-search-help";
-          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
-
-        />;
-        <p id="talent-search-help" className="sr-only">;
           Type a name or skill to filter results;
+        </p>
+</Input>
+      </div>
+    </div>'
+    <div className="mb-6">;"
+</div>"
+      <div className="relative">;"
+</div>"
+        <label htmlFor="talent-search" className="sr-only">;"
+</label>
+        </label>;"
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />;"
+</SearchIcon>
+        <Input;"
+          id="talent-search";""
+          type="text";""
+          placeholder="Search talents...";"
+          value={searchTerm})
+          onChange={(e) => setSearchTerm(e.target.value)}
+</Input>"
+        <p id="talent-search-help" className="sr-only">;"
+</p>
         </p>;
       </div>;
-    </div>;
-  );
-}
-
-  );
-}
-
-import { Input } from '@/components/ui/ input';
-import { SearchIcon } from 'lucide-react';
-import { SearchFilterProps } from '@/types/ filters';
-  return (
-    <div className='mb - 6'>;
-      <div className='relative'>;
-        <label html_for='talent - search' className='sr - only'>;
-          Search talents;
+    </div>;"
+    <div className='mb - 6'>;'
+</div>'
+      <div className='relative'>;'
+</div>'
+        <label html_for='talent - search' className='sr - only'>;'
+</label>
         </label>;
-        <SearchIcon;
-          className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light';
-          aria - hidden='true'        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" aria - hidden="true" />;
-        <Input;
-          id="talent - search";
-          type="text";
-          placeholder="Search talents...";
+        <SearchIcon;'
+          className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light';''
+          aria - hidden='true'        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" aria - hidden="true" />;"
+</SearchIcon>
+        <Input;"
+          id="talent - search";""
+          type="text";""
+          placeholder="Search talents...";"
           value = {search_term, }
           on_change = {(e, ) => setSearchTerm (e.target.value), }
-          aria - describedby="talent - search - help";
-          className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
-        />;
-        <Input;
-          id='talent - search';
-          type='text';
-          placeholder='Search talents...';
+</Input>
+        <Input;"
+          id='talent - search';''
+          type='text';''
+          placeholder='Search talents...';'
           value={search_term}
           on_change={e => setSearchTerm (e.target.value)}
-          aria - describedby='talent - search - help';
-          className='pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light';
-        />;
-        <p id='talent - search - help' className='sr - only'>          Type a name or skill to filter results        <p id="talent - search - help" className="sr - only">;
-          Type a name or skill to filter results;
+</Input>'
+        <p id='talent - search - help' className='sr - only'>          Type a name or skill to filter results        <p id="talent - search - help" className="sr - only">;"
+</p>
         </p>;
       </div>;
-    </div>);
-}
-;
+    </div>);"

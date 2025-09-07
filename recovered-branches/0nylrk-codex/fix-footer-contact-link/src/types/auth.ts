@@ -1,4 +1,6 @@
 export interface UserDetails {
+  // TODO: Implement
+}
   id?: string;
   name?: string;
   email?: string;
@@ -19,6 +21,8 @@ export interface UserDetails {
   company_id?: string;
 
 export interface UserDetails {
+  // TODO: Implement
+}
 export interface UserDetails {;
   id?: string;
   name?: string;
@@ -33,7 +37,7 @@ export interface UserDetails {;
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
 
   permissions?: string[];
@@ -45,9 +49,9 @@ export interface UserDetails {;
 }
   id?: string;
   display_name?: string;
-  email: string;
+  email: string;,
   user_type: string;
-  profile_complete: boolean;
+  profile_complete: boolean;,
   created_at: string;
   updated_at: string;
   avatar_url?: string;
@@ -65,16 +69,17 @@ export interface UserDetails {;
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
 export interface UserProfile {
-
+  // TODO: Implement
+}
 export interface UserProfile {;
   id?: string;
   displayName?: string;
-  email: string;
+  email: string;,
   userType: string;
-  profileComplete: boolean;
+  profileComplete: boolean;,
   createdAt: string;
   updatedAt: string;
   avatar_url?: string;
@@ -85,106 +90,79 @@ export interface UserProfile {;
 
   permissions?: string[]
 
-  companyId?: string
+  companyId?: string;
 }
-// Update AuthContextType definition to match implementation
+// Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
-  user: UserDetails | null;
+  user: UserDetails | null;,
   isLoading: boolean;
 
-  isAuthenticated: boolean
+  isAuthenticated: boolean;,
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>
+</void>
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+</UserDetails>
   loginWithGoogle: () => Promise<void>;
+</void>
   loginWithFacebook: () => Promise<void>;
+</void>
   loginWithTwitter: () => Promise<void>;
+</void>
   loginWithWeb3: () => Promise<void>
+</void>
   signIn?: (email: string, password: string) => Promise<{ error: any }>;
   signOut?: () => Promise<void>;
+</void>
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-}
-export interface UserDetails {;
-  id?: string,;
-  name?: string,;
-  email?: string,;
-  userType?: string,;
-  displayName?: string,;
-  avatarUrl?: string,;
-  headline?: string,;
-  profileComplete?: boolean,;
-  role?: string,;
-  permissions?: string[],;
-  companyId?: string,;
-  bio?: string,;
-  createdAt?: string,;
-  updatedAt?: string;
-}
-;
-export interface UserProfile {;
-  id?: string,;
-  displayName?: string,;
-  email: string,;
-  userType: string,;
-  profileComplete: boolean,;
-  createdAt: string,;
-  updatedAt: string,;
-  avatar_url?: string,;
-  bio?: string,;
-  avatarUrl?: string,;
-  headline?: string,;
-  role?: string,;
-  permissions?: string[],;
-  companyId?: string;
-}
-;
-// Update AuthContextType definition to match implementation;
-export interface AuthContextType {;
-  user: UserDetails | null,;
-  isLoading: boolean,;
-  isAuthenticated: boolean,;
+</UserDetails>
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>,;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>,;
   logout: () => Promise<void>,;
+</void>
   resetPassword: (email: string) => Promise<{ error?: any }>,;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>,;
+</UserDetails>
   loginWithGoogle: () => Promise<void>,;
+</void>
   loginWithFacebook: () => Promise<void>,;
+</void>
   loginWithTwitter: () => Promise<void>,;
+</void>
   loginWithWeb3: () => Promise<void>,;
+</void>
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
+</void>
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
-// Update AuthContextType definition to match implementation;
-export interface AuthContextType {
-  user: UserDetails | null;
-  isLoading: boolean;
-  isAuthenticated: boolean;
-  login: (
-    email: string,
-    password: string,
+</UserDetails>
   ) => Promise<{ data?: any; error?: any }>;
-  signup: (
-    email: string,
+  signup: (,
+  email: string,
     password: string,
-    userData?: any,
+    userData?: any,)
   ) => Promise<{ error?: any }>;
   logout: () => Promise<void>;
+</void>
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+</UserDetails>
   loginWithGoogle: () => Promise<void>;
+</void>
   loginWithFacebook: () => Promise<void>;
+</void>
   loginWithTwitter: () => Promise<void>;
+</void>
   loginWithWeb3: () => Promise<void>;
+</void>
   signIn?: (email: string, password: string) => Promise<{ error: any }>;
   signOut?: () => Promise<void>;
-  signUp?: (
-    email: string,
-    password: string,
+</void>
     userData?: Partial<UserDetails>,
+</UserDetails>
   ) => Promise<{ error: any }>;
 }
 
@@ -238,18 +216,20 @@ export interface AuthContextType {;
   login:(email:string, password:string) => Promise<{ data?:any, error?:any }>,;
   signup:(email:string, password:string, userData?:any) => Promise<{ error?:any }>,;
   logout:() => Promise<void>,;
+</void>
   resetPassword:(email:string) => Promise<{ error?:any }>,;
   updateProfile:(data:Partial<UserDetails>) => Promise<{ error?:any }>,;
+</UserDetails>
   loginWithGoogle:() => Promise<void>,;
+</void>
   loginWithFacebook:() => Promise<void>,;
+</void>
   loginWithTwitter:() => Promise<void>,;
+</void>
   loginWithWeb3:() => Promise<void>,;
+</void>
   signIn?:(email:string, password:string) => Promise<{ error:any }>,;
   signOut?:() => Promise<void>,;
+</void>
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
-} 
-}
-}
-;
-}
-;
+</UserDetails>

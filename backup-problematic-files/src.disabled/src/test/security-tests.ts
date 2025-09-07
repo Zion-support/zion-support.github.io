@@ -1,18 +1,20 @@
-// Security test configuration
+// Security test configuration;
 export const securityTests = {
-  // Check for common security vulnerabilities
+  // Check for common security vulnerabilities;
   checkVulnerabilities: async () => {
     const vulnerabilities = [];
-    // Check for XSS vulnerabilities
+    // Check for XSS vulnerabilities;
     const xssPatterns = [
       /innerHTMLs*=/,
       /dangerouslySetInnerHTML/,
       /evals*(/,
-      /Functions*(/,
+      /Functions*(/,]
     ];
-    // Check for CSRF vulnerabilities
+    // Check for CSRF vulnerabilities;
     const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
     return {
+  // TODO: Implement
+})
       xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
       csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
     };
@@ -25,10 +27,12 @@ export const securityTests = {
       /innerHTMLs*=/,
       /dangerouslySetInnerHTML/,
       /evals*(/,
-      /Functions*(/,
+      /Functions*(/,]
     ];
     const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
     return {
+  // TODO: Implement
+})
       xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
       csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
     };
@@ -41,10 +45,12 @@ export const securityTests = {
       /innerHTMLs*=/,
       /dangerouslySetInnerHTML/,
       /evals*(/,
-      /Functions*(/,
+      /Functions*(/,]
     ];
     const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
     return {
+  // TODO: Implement
+})
       xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
       csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
     };
@@ -57,10 +63,12 @@ export const securityTests = {
       /innerHTMLs*=/,
       /dangerouslySetInnerHTML/,
       /evals*(/,
-      /Functions*(/,
+      /Functions*(/,]
     ];
     const csrfPatterns = [/fetchs*(/, /axioss*./, /XMLHttpRequest/];
     return {
+  // TODO: Implement
+})
       xss: vulnerabilities.filter((v) => xssPatterns.some((p) => p.test(v))),
       csrf: vulnerabilities.filter((v) => csrfPatterns.some((p) => p.test(v))),
     };

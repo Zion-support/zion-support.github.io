@@ -1,52 +1,40 @@
 
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from "lucide-react",;
-import { NavigationButtonsProps } from "./types",;
+import { Button } from "@/components/ui/button",;""
+import { Loader2 } from "lucide-react",;""
+import { NavigationButtonsProps } from "./types",;"
 ;
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
-  isNextDisabled = false,;
-  backLabel = "Back",;
-  nextLabel = "Next",;
+  isNextDisabled = false,;"
+  backLabel = "Back",;""
+  nextLabel = "Next",;")
   isLoading = false} NavigationButtonsProps) => {;
-  return (;
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant="outline" onClick={onBack}>;          {backLabel}
+  return (;"
+    <div className="flex justify-between">;"
+</div>"
+        <Button variant="outline" onClick={onBack}>;          {backLabel}"
+</Button>
         </Button>;
-      )}
-      {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
+</Button>"
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+</Loader2>
         </Button>;
-      )}
-    </div>;
-  ),;
-},; export const NavigationButtons = ({
+    </div>;"
+  return (<div className="flex justify-between" > {"
+</div>"
+  onBack && (<Button variant="outline" onClick= {"
   onBack;
-onNext;
-isNextDisabled = false;
-backLabel = "Back";
-nextLabel = "Next";
-isLoading = false 
-}: NavigationButtonsProps) => {
-  return (<div className="flex justify-between" > {
-  onBack && (<Button variant="outline" onClick= {
-  onBack 
 }> {
-  backLabel 
+</Button>)
 }</Button>) 
-}{
   onNext && (<Button onClick= {
-  onNext 
+  onNext;
 }disabled= {
-  isNextDisabled || isLoading 
+  isNextDisabled || isLoading;
 }> {
-  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
-}{
-  nextLabel 
-}
-}</div>) 
-};
+</Button>"
+  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+</Loader2>)
+}</div>) "

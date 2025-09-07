@@ -2,24 +2,23 @@
 
 
 
-// Security middleware
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-
+// Security middleware;
+import { NextResponse } from 'next/server';''
+import { getSecurityHeaders } from '../utils/security-headers';'
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
-  // Add security headers
+  // Add security headers;
   const headers = getSecurityHeaders();
   headers.forEach(({ key, value }) => {
     response.headers.set(key, value);
   });
   
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
+  // Add HSTS header for HTTPS;'
+  if (request.nextUrl.protocol === 'https:') {'
+    response.headers.set('
+      'Strict-Transport-Security',''
+      'max-age=31536000; includeSubDomains; preload'')
     );
   }
   
@@ -33,15 +32,14 @@ export function securityMiddleware(request) {;
   const response = NextResponse.next();
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
-  // Add security headers
+  // Add security headers;
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
     response && response.headers.set(key, value);
   });
-  // Add HSTS header for HTTPS
-  return response;// Security headers middleware
-// Security headers middleware
-
+  // Add HSTS header for HTTPS;
+  return response;// Security headers middleware;
+// Security headers middleware;
 export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
@@ -52,19 +50,18 @@ export function securityHeaders(req, res, next) {
 
 
 
-  return response;// Security headers middleware
+  return response;// Security headers middleware;)
 export function securityHeaders(req, res, next) {
-  Object.entries({
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-
-  return response;// Security headers middleware
+  Object.entries({'
+    'X-Content-Type-Options': 'nosniff',''
+    'X-Frame-Options': 'DENY',''
+    'X-XSS-Protection': '1; mode=block',''
+    'Referrer-Policy': 'strict-origin-when-cross-origin',')'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()','
+  return response;// Security headers middleware;
 export function securityHeaders(req, res, next) {
-  Object.entries({
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  Object.entries({'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'')
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
@@ -72,22 +69,22 @@ export function securityHeaders(req, res, next) {
 }
 
 }
-    response.headers.set (
-      'Strict - Transport - Security',
-      'max - age = 31536000; includeSubDomains; preload');
+    response.headers.set ('
+      'Strict - Transport - Security',')'
+      'max - age = 31536000; includeSubDomains; preload');'
   }
   return response;// Security headers middleware;
 export /**
- * security_headers - Function description
+ * security_headers - Function description;
  */
 function security_headers() {
-  Object.entries ({
-    'X - Content - Type - Options': 'nosniff',
-    'X - Frame - Options': 'DENY',
-    'X - XSS - Protection': '1; mode = block',
-    'Referrer - Policy': 'strict - origin - when - cross - origin',
-    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
+  Object.entries ({'
+    'X - Content - Type - Options': 'nosniff',''
+    'X - Frame - Options': 'DENY',''
+    'X - XSS - Protection': '1; mode = block',''
+    'Referrer - Policy': 'strict - origin - when - cross - origin',')'
+    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',''
+    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';'
   }).for_each (([key, value]) => {
     res.set_header (key, value);
   });
@@ -102,19 +99,20 @@ function security_headers() {
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
-  // Add security headers
+  // Add security headers;
   const headers = getSecurityHeaders();
   headers.forEach(({ key, value }) => {
     response.headers.set(key, value);
   });
   
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
+  // Add HSTS header for HTTPS;'
+  if (request.nextUrl.protocol === 'https:') {'
+    response.headers.set('
+      'Strict-Transport-Security',''
+      'max-age=31536000; includeSubDomains; preload'')
     );
   }
   
   return response;
 }
+'

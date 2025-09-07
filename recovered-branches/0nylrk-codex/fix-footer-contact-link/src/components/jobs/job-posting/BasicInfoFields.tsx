@@ -14,67 +14,70 @@ import {;
   FormMessage,;
 
 
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-
+import React, { useState } from "react";""
+import { Control } from "react-hook-form";"
 import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
+  // TODO: Implement
+}
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormMessage;
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,;
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-
+  FormMessage,;"
+import React, { useState } from "react";""
+import { Control } from "react-hook-form";"
 import {
-FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-
-import React, { useState } from './react';
-import { Control  } from './react - hook - form';
+  // TODO: Implement
+}
+FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormMessage;"
+} from "@/components/ui/form";""
+import { Input } from "@/components/ui/input";""
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";""
+import { Card, CardContent } from "@/components/ui/card";""
+import React, { useState } from './react';''
+import { Control  } from './react - hook - form';'
 import {
+  // TODO: Implement
+}
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
-import { Card, CardContent  } from '@/components / ui / card';
-
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-import React, { useState } from "react",
-import { Control } from "react-hook-form",
-import { 
+  FormMessage,'
+} from '@/components / ui / form';''
+import { Input  } from '@/components / ui / input';''
+import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';''
+import { Card, CardContent  } from '@/components / ui / card';''
+} from "@/components/ui/form";""
+import { Input } from "@/components/ui/input";""
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";""
+import { Card, CardContent } from "@/components/ui/card";""
+import React, { useState } from "react",""
+import { Control } from "react-hook-form","
+import {
+  // TODO: Implement
+}
   FormField,
   FormItem, 
   FormLabel, 
   FormControl, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-
-
+  FormMessage;"
+} from "@/components/ui/form",""
+import { Input } from "@/components/ui/input",""
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",""
+import { Card, CardContent } from "@/components/ui/card","
 interface BasicInfoFieldsProps {
+  // TODO: Implement
+}
   control: Control < any>;
 }
 
@@ -83,579 +86,476 @@ interface BasicInfoFieldsProps {
 
 
 
-  return (
-    <div className="space-y-4">
-      <FormField
-        control={control}
-        name="title"
+  return ("
+    <div className="space-y-4">"
+</div>
+      <FormField;
+        control={control}"
+        name="title"")
         render={({ field }) => (
+</FormField>
           <FormItem>
+</FormItem>
             <FormLabel>Job Title</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Senior React Developer" {...field} />
+</FormControl>"
+              <Input placeholder="e.g. Senior React Developer" {...field} />"
+</Input>
             </FormControl>
             <FormMessage />
+</FormMessage>
           </FormItem>
-import React, { useState } from "react",;
-import { Control } from "react-hook-form",;
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
-import { Card, CardContent } from "@/components/ui/card",;
-
-import React, { useState } from "react",;
-import { Control } from "react-hook-form",;
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
-import { Card, CardContent } from "@/components/ui/card",;
-
-interface BasicInfoFieldsProps {;
   control: Control<any>;
-}
-
+</any>
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
-  control,;
-}) => {;
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-
-  const handleSuggestionApplied = (min: number, max: number) => {;
-    (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
-  };
-
-  const handleSuggestionApplied = (min: number, max: number) => {;
-    (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
-  };
-  return (
-    <div className="space-y-4">;
-      <FormField
-        control={control}
-        name="title"
-
+</BasicInfoFieldsProps>)"
+  const [minBudget, setMinBudget] = useState<string>("");"
+</string>"
+  const [maxBudget, setMaxBudget] = useState<string>("");"
+</string>"
+    <div className="space-y-4">;"
+</div>
+      <FormField;
+        control={control}"
+        name="title""
         )}
 
       />;
+</FormField>
 
 
-      <FormField
-        control={control}
-        name="title";
+      <FormField;
+        control={control}"
+        name="title";"
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel>Job Title</FormLabel>;
             <FormControl>;
-              <Input placeholder="e.g. Senior React Developer" {...field} />;
+</FormControl>"
+              <Input placeholder="e.g. Senior React Developer" {...field} />;"
+</Input>
             </FormControl>;
             <FormMessage />;
+</FormMessage>
           </FormItem>;
-        )}
-        control={control}
-        name="category"
-        render={({ field }) => (;
           <FormItem>;
+</FormItem>
             <FormLabel>Job Category</FormLabel>;
             <FormControl>;
-              <select
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+</FormControl>
+              <select;"
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm""
                 {...field}>;
+</select>
 export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
-  control,
-}) => {
-  const [min_budget, setMinBudget] = useState < string>("");
-  const [max_budget, setMaxBudget] = useState < string>("");
+  control,)
+}) => {"
+  const [min_budget, setMinBudget] = useState < string>("");""
+  const [max_budget, setMaxBudget] = useState < string>("");"
 ;
   const handleSuggestionApplied = (min: number, max: number) =>: any {
+  // TODO: Implement
+}
     (setMinBudget (min.to_string ()), setMaxBudget (max.to_string ()));
   }
 ;
-  return (
-    <div className="space - y-4">;
+  return ("
+    <div className="space - y-4">;"
+</div>
       <FormField;
-        control={control}
-        name="title";
+        control={control}"
+        name="title";")
         render={({ field }) => (
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel > Job Title</FormLabel>;
             <FormControl>;
-              <Input placeholder="e.g. Senior React Developer" {...field} />;
+</FormControl>"
+              <Input placeholder="e.g. Senior React Developer" {...field} />;"
+</Input>
             </FormControl>;
             <FormMessage />;
+</FormMessage>)
           </FormItem>)}
-      />;
       <FormField;
-        control={control}
-        name="company";
+        control={control}"
+        name="company";"
         render={({ field }) => (
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel > Company</FormLabel>;
             <FormControl>;
-              <Input placeholder="e.g. Acme Corporation" {...field} />;
+</FormControl>"
+              <Input placeholder="e.g. Acme Corporation" {...field} />;"
+</Input>
             </FormControl>;
             <FormMessage />;
+</FormMessage>)
           </FormItem>)}
-      />;
       <FormField;
-        control={control}
-        name="category";
+        control={control}"
+        name="category";"
         render={({ field }) => (
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel > Job Category</FormLabel>;
             <FormControl>;
-              <select;
-                className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
+</FormControl>
+              <select;"
+                className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";"
                 {...field}
               >;
+</select>
           </FormItem>;
-        )}
-      />;
-
-
-      />;
-
-      />;
       <FormField;
 
-        control={control}
-        name="category"
+        control={control}"
+        name="category""
       ;
       <FormField;
-        control={control}
-        name="category";
+        control={control}"
+        name="category";")
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel>Job Category</FormLabel>;
             <FormControl>;
-              <select;
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
+</FormControl>
+              <select;"
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";"
                 {...field}
               >;
-                <option value="">Select a category</option>;
-                <option value="development">Development</option>;
-                <option value="design">Design</option>;
-                <option value="marketing">Marketing</option>;
-                <option value="content">Content</option>;
-                <option value="data">Data</option>;
-                <option value="business">Business</option>;
-                <option value="other">Other</option>;
+</select>"
+                <option value="">Select a category</option>;""
+                <option value="development">Development</option>;""
+                <option value="design">Design</option>;""
+                <option value="marketing">Marketing</option>;""
+                <option value="content">Content</option>;""
+                <option value="data">Data</option>;""
+                <option value="business">Business</option>;""
+                <option value="other">Other</option>;"
               </select>;
             </FormControl>;
             <FormMessage />;
-
-      />;
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-        <FormField
-          control={control}
-          name="budgetMin"
+</FormMessage>"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>
+        <FormField;
+          control={control}"
+          name="budgetMin"")
           render={({ field: { onChange, ...rest } }) => (;
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel>Budget (Min)</FormLabel>;
               <FormControl>;
-                <Input
-                  type="number"
+</FormControl>
+                <Input;"
+                  type="number""
                   value={minBudget |rest.value}
                   onChange={(e) => {
-                    setMinBudget(e.target.value);
-                  value={minBudget || rest.value}
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-
-                  placeholder="e && e.g. 30"
-                  value={minBudget || rest && rest.value}
-                  onChange={(e) => {;
-                    setMinBudget(e && e.target.value);
-
-
-                  value={minBudget || rest.value}
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-
-                  value={minBudget || rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-
-                    onChange(e);
-                    onChange(e);
-                    onChange(e);
-          </FormItem>)}
-      />;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+</Input>
+          </FormItem>)}"
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>
         <FormField;
-          control={control}
-          name="budget_min";
+          control={control}"
+          name="budget_min";"
           render={({ field: { on_change, ...rest } }) => (
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel > Budget (Min)</FormLabel>;
               <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 30";
+</FormControl>
+                <Input;"
+                  type="number";""
+                  placeholder="e.g. 30";"
                   value={min_budget || rest.value}
                   on_change={(e) => {
-                    setMinBudget (e.target.value);
-                    on_change (e);
-          </FormItem>;
-        )}
-      />;
-;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+</Input>
+          </FormItem>;"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>
         <FormField;
-          control={control}
-          name="budgetMin";
+          control={control}"
+          name="budgetMin";"
           render={({ field:{ onChange, ...rest } }) => (;
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel>Budget (Min)</FormLabel>;
               <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 30";
+</FormControl>
+                <Input;"
+                  type="number";""
+                  placeholder="e.g. 30";"
                   value={minBudget || rest.value}
                   onChange={e => {;
-                    setMinBudget(e.target.value),;
-                    onChange(e),;
-                  }}
-                  {...rest}
-                />;
+</Input>
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-
-        <FormField
-          control={control}
-          name="budgetMax"
+</FormMessage>
+        <FormField;
+          control={control}"
+          name="budgetMax""
           render={({ field: { onChange, ...rest } }) => (;
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
-                <Input
-                  type="number"
-
-
+</FormControl>
+                <Input;"
+                  type="number""
                   value={maxBudget || rest.value}
                   onChange={e => {;
-
-                  value={maxBudget |rest.value}
-                  onChange={(e) => {
-                  value={maxBudget || rest.value}
-                  onChange={e => {;
-                  value={maxBudget || rest.value}
-                  onChange={(e) => {
-                  onChange={e => {;
-
-
-                    setMaxBudget(e.target.value);
-                    setMaxBudget(e.target.value);
-                    setMaxBudget(e.target.value);
-                  placeholder="e && e.g. 60"
-                  value={maxBudget || rest && rest.value}
-                  onChange={(e) => {;
-                    setMaxBudget(e && e.target.value);
-                    onChange(e);
-                    onChange(e);
-                    onChange(e);
+</Input>
             </FormItem>)}
-        />;
         <FormField;
-          control={control}
-          name="budget_max";
+          control={control}"
+          name="budget_max";"
           render={({ field: { on_change, ...rest } }) => (
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel > Budget (Max)</FormLabel>;
               <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 60";
+</FormControl>
+                <Input;"
+                  type="number";""
+                  placeholder="e.g. 60";"
                   value={max_budget || rest.value}
                   on_change={(e) => {
-                    setMaxBudget (e.target.value);
-                    on_change (e);
-                  }}
-                  {...rest}
-                />;
+</Input>
               </FormControl>;
               <FormMessage />;
+</FormMessage>
 
 
 
       
 
             </FormItem>;
-          )}
-        />;
-;
         <FormField;
-          control={control}
-          name="budgetMax";
+          control={control}"
+          name="budgetMax";"
           render={({ field:{ onChange, ...rest } }) => (;
+</FormField>
             <FormItem>;
+</FormItem>)
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 60";
+</FormControl>
+                <Input;"
+                  type="number";""
+                  placeholder="e.g. 60";"
                   value={maxBudget || rest.value}
                   onChange={e => {;
-                    setMaxBudget(e.target.value),;
-                    onChange(e),;
-                  }}
-                  {...rest}
-        )}
-      />
-      <FormField
-        control={control}
-        name="company"
+</Input>
+      <FormField;
+        control={control}"
+        name="company""
         render={({ field }) => (
+</FormField>
           <FormItem>
+</FormItem>
             <FormLabel>Company</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Acme Corporation" {...field} />
+</FormControl>"
+              <Input placeholder="e.g. Acme Corporation" {...field} />"
+</Input>
             </FormControl>
             <FormMessage />
+</FormMessage>
           </FormItem>
-        )}
-      />
-      <FormField
-      />;
       <FormField;
-        control={control}
-        name="category"
+      />;
+</FormField>
+      <FormField;
+        control={control}"
+        name="category"")
         render={({ field }) => (
+</FormField>
           <FormItem>
+</FormItem>
             <FormLabel>Job Category</FormLabel>
             <FormControl>
-              <select
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+</FormControl>
+              <select;"
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm""
                 {...field}
               >
-                <option value="">Select a category</option>
-                <option value="development">Development</option>
-                <option value="design">Design</option>
-                <option value="marketing">Marketing</option>
-                <option value="content">Content</option>
-                <option value="data">Data</option>
-                <option value="business">Business</option>
-                <option value="other">Other</option>
+</select>"
+                <option value="">Select a category</option>""
+                <option value="development">Development</option>""
+                <option value="design">Design</option>""
+                <option value="marketing">Marketing</option>""
+                <option value="content">Content</option>""
+                <option value="data">Data</option>""
+                <option value="business">Business</option>""
+                <option value="other">Other</option>"
               </select>
             </FormControl>
             <FormMessage />
-          </FormItem>
-        )}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={control}
-          name="budgetMin"
+</FormMessage>
+          </FormItem>"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+</div>
+        <FormField;
+          control={control}"
+          name="budgetMin"")
           render={({ field: { onChange, ...rest } }) => (
+</FormField>
             <FormItem>
+</FormItem>)
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
-                <Input
-                  type="number"
-                  placeholder="e.g. 30"
+</FormControl>
+                <Input;"
+                  type="number"""
+                  placeholder="e.g. 30""
                   value={minBudget |rest.value}
                   onChange={(e) => {
-                    setMinBudget(e.target.value);
-                  value={minBudget || rest.value}
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-                  value={minBudget || rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-                    onChange(e);
-                  }}
-                  {...rest}
-                />
+</Input>
               </FormControl>
               <FormMessage />
+</FormMessage>
             </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="budgetMax"
+        <FormField;
+          control={control}"
+          name="budgetMax""
           render={({ field: { onChange, ...rest } }) => (
+</FormField>
             <FormItem>
+</FormItem>)
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
-                <Input
-                  type="number"
-                  placeholder="e.g. 60"
+</FormControl>
+                <Input;"
+                  type="number"""
+                  placeholder="e.g. 60""
                   value={maxBudget |rest.value}
                   onChange={(e) => {
-                  value={maxBudget || rest.value}
-                  onChange={e => {;
-                  value={maxBudget || rest.value}
-                  onChange={(e) => {
-                  onChange={e => {;
-                    setMaxBudget(e.target.value);
-                    onChange(e);
-                  }}
-                  {...rest}
-                />
+</Input>
               </FormControl>
               <FormMessage />
+</FormMessage>
             </FormItem>
-          )}
-        />
       </div>
-                />;
               </FormControl>;
               <FormMessage />;
+</FormMessage>
       
 
 <Card>
-                  }}
-                  {...rest}
+</Card>
       <Card>
-        <CardContent className="pt-4">
-          <ClientBudgetRecommender
-            jobTitle={control._formValues.title |""}
-            category={control._formValues.category |""}
-            experienceLevel={control._formValues.experienceLevel |""}
+</Card>"
+        <CardContent className="pt-4">"
+</CardContent>
+          <ClientBudgetRecommender;"
+            jobTitle={control._formValues.title |""}""
+            category={control._formValues.category |""}""
+            experienceLevel={control._formValues.experienceLevel |""}"
                 />;
+</ClientBudgetRecommender>
               </FormControl>;
               <FormMessage />;
+</FormMessage>
       
       <Card>
-        <CardContent className="pt-4">
-          <ClientBudgetRecommender
-            jobTitle={control._formValues.title || ""}
-            category={control._formValues.category || ""}
-            experienceLevel={control._formValues.experienceLevel || ""}
-
+</Card>"
+        <CardContent className="pt-4">"
+</CardContent>
+          <ClientBudgetRecommender;"
+            jobTitle={control._formValues.title || ""}""
+            category={control._formValues.category || ""}""
+            experienceLevel={control._formValues.experienceLevel || ""}"
             onSuggestionApplied={handleSuggestionApplied}
           />
+</ClientBudgetRecommender>
         </CardContent>
       </Card>
-            onSuggestionApplied={handleSuggestionApplied}
-          />;
         </CardContent>;
       </Card>;
-
-      <FormField
-        control={control}
-        name="location"
+      <FormField;
+        control={control}"
+        name="location""
 ;
       <FormField;
-        control={control}
-        name="location";
-      <FormField
-        control={control}
-        name="location"
+        control={control}"
+        name="location";"
+      <FormField;
+        control={control}"
+        name="location""
         render={({ field }) => (;
+</FormField>
           <FormItem>;
+</FormItem>
             <FormLabel>Location</FormLabel>;
             <FormControl>;
-              <Input
-                placeholder="e && e.g. Remote, San Francisco, etc."
+</FormControl>
+              <Input;"
+                placeholder="e && e.g. Remote, San Francisco, etc.""
                 {...field}
               />;
+</Input>
             </FormControl>;
             <FormMessage />;
-
+</FormMessage>
+)
           </FormItem>)}
-      />;
     </div>);
-}
-;
-      <FormField
-        control={control}
-        name="location"
+      <FormField;
+        control={control}"
+        name="location""
         render={({ field }) => (
+</FormField>
           <FormItem>
+</FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+</FormControl>"
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />"
+</Input>
             </FormControl>
             <FormMessage />
+</FormMessage>
           </FormItem>
-        )}
-      />
     </div>
-);
-
-      />;
-    </div>;
-  );
-};
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;
+    </div>;"
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;"
+</Input>
             </FormControl>;
             <FormMessage />;
+</FormMessage>
           </FormItem>;
-        )}
-      />;
     </div>;
-  ),;
-},; import {
-  FormField;
-FormItem;
-FormLabel;
-FormControl;
-FormMessage interface BasicInfoFieldsProps {
   control: Control<any> 
+</any>
 }export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control 
-}) => {
-  const handleSuggestionApplied = (min: number, max: number) => {
-  setMinBudget (min.toString () );
-setMaxBudget (max.toString () ) 
-};
-return (<div className="space-y-4" > <FormField control= {
-  control 
-}name="title" render= {
-  ({
-  field 
-}) => (<FormItem> <FormLabel>Job Title</FormLabel> <FormControl> <Input placeholder="e.g. Senior React Developer" {
-  ...field 
-}/> 
+</BasicInfoFieldsProps>"
+return (<div className="space-y-4" > <FormField control= {"
+</div>)"
+}) => (<FormItem> <FormLabel>Job Title</FormLabel> <FormControl> <Input placeholder="e.g. Senior React Developer" {"
+</FormItem>)
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Job Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" development">Development</option> <option value=" design">Design</option> <option value=" marketing">Marketing</option> <option value=" content">Content</option> <option value=" data">Data</option> <option value=" business">Business</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Budget (Min) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+</FormField>"
+}/> <FormField <FormItem> <FormLabel>Job Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" development">Development</option> <option value=" design">Design</option> <option value=" marketing">Marketing</option> <option value=" content">Content</option> <option value=" data">Data</option> <option value=" business">Business</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>)"
+</FormField>"
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Budget (Min) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>)"
+</div>
 }/> <FormField <FormItem> <FormLabel>Budget (Max) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>) 
+</FormField>"
+}/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>)"
 }/> </div>) 
-};
-/>
     </div>
-
-  );
-}
-
-  );
-
-};
-
-      />
     </div>
-  );
-}
-
-);
-      />;
-    </div>;
-  );
-
-
-};
-};
-};
+    </div>;"

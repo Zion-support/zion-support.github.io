@@ -1,5 +1,7 @@
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -10,17 +12,12 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React,{ useState } from \"react\"; import { useWallet } from \'@/hooks/useWallet\'; export default function Page() {; from \'@/components/ui/card\';\"; import { Button } from \'@/components/ui/button\';\"; import { Gift,ArrowRight,ExternalLink } from \'lucide-react\';\"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from \'@/components/ui/dialog\'; </Card>)} \";
-const React,{ useState } from "react"; import { useWallet } from "@/hooks/useWallet"; export default function Page() {; from "@/components/ui/card";"; import { Button } from "@/components/ui/button";"; import { Gift,ArrowRight,ExternalLink } from "lucide-react";"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from "@/components/ui/dialog"; </Card>)} ";'"'"
-import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
+      return <div>Something went wrong.</div>;'
+import React,{ useState } from \"react\"; import { useWallet } from \'@/hooks/useWallet\'; export default function Page() {; from \'@/components/ui/card\';\"; import { Button } from \'@/components/ui/button\';\"; import { Gift,ArrowRight,ExternalLink } from \'lucide-react\';\"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from \'@/components/ui/dialog\'; </Card>)} \";""
+const React,{ useState } from "react"; import { useWallet } from "@/hooks/useWallet"; export default function Page() {; from "@/components/ui/card";"; import { Button } from "@/components/ui/button";"; import { Gift,ArrowRight,ExternalLink } from "lucide-react";"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from "@/components/ui/dialog"; </Card>)} ";'"'"""
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";""

@@ -1,117 +1,41 @@
 
 
 
-import { createContext, useContext, useEffect, useState } from "react"
-
-type Theme = "dark" | "light" | "system"
-
-
-
+import { createContext, useContext, useEffect, useState } from "react"""
+type Theme = "dark" | "light" | "system""
 type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
+  children: React.ReactNode;
+  defaultTheme?: Theme;
 }
 
 
 ;
 type ThemeProviderState = {;
-  theme: Theme;
-
+  theme: Theme;,
   setTheme: (theme: Theme) => void;
 }
-const initialState: ThemeProviderState = {
-
-  theme: "system",
-
+const initialState: ThemeProviderState = {,"
+  theme: "system","
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-export function ThemeProvider({
-
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-
-  children,
-  defaultTheme = "system"}: ThemeProviderProps) {
-
-  children
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+</ThemeProviderState>
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(&quot;theme&quot;) as Theme) |defaultTheme
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-
-  children,
-  defaultTheme = "system"}: ThemeProviderProps) {
+</Theme>
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-  )
-  useEffect(() => {
-    const root = window.document.documentElement
-
-    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
-    if (theme === &quot;system&quot;) {
-      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
-        .matches
-        ? &quot;dark&quot;
-        : &quot;light&quot;
-    root.classList.remove("light", "dark")
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
-
-
-      root.classList.add(systemTheme)
-      return
-    }
-    root.classList.add(theme)
-  }, [theme])
-  const value = {
-    theme
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(&quot;theme&quot;, theme)
-      setTheme(theme)
-    }}
-
-
-;
-
-
-  return (;
-  return (;
-import { create_context, useContext, useEffect, useState } from &quot;react & quot;
-;
-type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
-;
-type ThemeProviderProps = {
-  children: React.ReactNode;
-  default_theme?: Theme;
-}
-type ThemeProviderState = {
-  theme: Theme;
-  set_theme: (theme: Theme) => void;
-}
-const initial_state: ThemeProviderState = {
-  theme: &quot;system & quot;,
-  set_theme: () => null}
+</Theme>)
 const ThemeProviderContext = create_context < ThemeProviderState>(initial_state);
 export /**
- * ThemeProvider - Function description
+ * ThemeProvider - Function description;
  */
 function ThemeProvider() {
-  const [theme, set_theme] = useState < Theme>(
+  const [theme, set_theme] = useState < Theme>()
     () => (local_storage.get_item (&quot;theme & quot) as Theme) || default_theme);
   useEffect (() => {
     const root = window.document.document_element;
     root.class_list.remove (&quot;light & quot;, &quot;dark & quot);
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       const system_theme = window.match_media (&quot;(prefers - color - scheme: dark)&quot);
         .matches;
@@ -139,25 +63,25 @@ type ThemeProviderProps = {
   default_theme?: Theme;
 }
 type ThemeProviderState = {
-  theme: Theme;
+  theme: Theme;,)
   set_theme: (theme: Theme) => void;
 }
-const initial_state: ThemeProviderState = {
+const initial_state: ThemeProviderState = {,
   theme: &quot;system & quot;,
   set_theme: () => null}
 const ThemeProviderContext = create_context < ThemeProviderState>(initial_state);
 export /**
- * ThemeProvider - Function description
+ * ThemeProvider - Function description;
  */
 function ThemeProvider() {
-  const [theme, set_theme] = useState < Theme>(
+  const [theme, set_theme] = useState < Theme>()
     () => (local_storage.get_item (&quot;theme & quot) as Theme) || default_theme);
   useEffect (() => {
     const root = window.document.document_element;
     root.class_list.remove (&quot;light & quot;, &quot;dark & quot);
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       const system_theme = window.match_media (&quot;(prefers - color - scheme: dark)&quot);
         .matches;
@@ -176,10 +100,10 @@ if ( {) {
       set_theme (theme);
     }}
   return (
-
-import { createContext, useContext, useEffect, useState } from "react";
-;
-type Theme = "dark" | "light" | "system";
+"
+import { createContext, useContext, useEffect, useState } from "react";"
+;"
+type Theme = "dark" | "light" | "system";"
 ;
 type ThemeProviderProps = {;
   children:React.ReactNode;
@@ -187,59 +111,31 @@ type ThemeProviderProps = {;
 }
 ;
 type ThemeProviderState = {;
-  theme:Theme;
+  theme: Theme;,)
   setTheme:(theme:Theme) => void;
 }
 ;
-const initialState:ThemeProviderState = {;
-  theme:"system",;
+const initialState: ThemeProviderState = {;,"
+  theme:"system",;"
   setTheme:() => null}
 ;
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
-;
-export function ThemeProvider({;
-  children,;
-  defaultTheme = "system"} ThemeProviderProps) {;
+</ThemeProviderState>
   const [theme, setTheme] = useState<Theme>(;
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme;
-  );
-;
-  useEffect(() => {;
-    const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-;
-    if (theme === "system") {;
-      const systemTheme = window.matchMedia("(prefers-color-scheme:dark)");
-        .matches;
-        ? "dark";
-        :"light";
-;
-      root.classList.add(systemTheme);
-      return;
-    }
-;
-    root.classList.add(theme);
-  }, [theme]);
-;
-  const value = {;
-    theme,;
-    setTheme:(theme:Theme) => {;
-      localStorage.setItem("theme", theme);
-      setTheme(theme);
-    }}
-;
-  return (;
+</Theme>
     <ThemeProviderContext.Provider value={value}>;
-      {children}
+</ThemeProviderContext>)
     </ThemeProviderContext.Provider>);
 }
 
 export const use_theme = () =>: any {
+  // TODO: Implement
+}
   const context = useContext (ThemeProviderContext);
-  // Check condition
-if (
+  // Check condition;
+if ()
     throw new Error (&quot) {
-  $2
+  $2;
 }use_theme must be used within a ThemeProvider & quot);
   return context;
 
@@ -252,9 +148,10 @@ export const useTheme = () => {
   if (context === undefined)
 
 
-  return context
+  return context;
 }
 ;
-  return context
+  return context;
 }
 ;
+"

@@ -1,6 +1,6 @@
-// Analytics utility
+// Analytics utility;
 export const Analytics = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 

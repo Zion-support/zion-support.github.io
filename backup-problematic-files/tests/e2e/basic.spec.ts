@@ -1,18 +1,19 @@
-// Basic.spec utility
+// Basic.spec utility;
 export const Basic.spec = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 
 interface Basic.specProps {
-  // Add props here as needed
+  // TODO: Implement
+}
+  // Add props here as needed;
 }
 
 export default function Basic.spec({ }: Basic.specProps) {
   return (
     <div>
+</div>
       <h1>Basic.spec</h1>
       <p>This component is currently under development.</p>
-    </div>
-  );
-}
+    </div>)

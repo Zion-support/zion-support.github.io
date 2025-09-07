@@ -6,10 +6,9 @@ import {;
   CardTitle,;
   CardDescription,;
 
-} from "@/components/ui/card";
-
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
-import { FraudStats } from "@/types/fraud";
+} from "@/components/ui/card";""
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";""
+import { FraudStats } from "@/types/fraud";"
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
@@ -17,18 +16,24 @@ interface FraudStatsCardsProps {;
 
 
 interface FraudStatsCardsProps {
-  stats: FraudStats
+  // TODO: Implement
+}
+  stats: FraudStats;
 }
 
-
-import React from "react";
+"
+import React from "react";"
 import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-import React from "react";
+  // TODO: Implement
+}
+  Card;
+  CardHeader;
+  CardTitle;
+  CardDescription;"
+import React from "react";"
 import {
+  // TODO: Implement
+}
   Card,
   CardHeader,
   CardTitle,
@@ -40,28 +45,32 @@ import {;
   CardHeader,;
   CardTitle,;
   CardDescription,;
-
-} from "@/components/ui/card";
-
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
-import { FraudStats } from "@/types/fraud";
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
-import { FraudStats } from "@/types/fraud",
-
+"
+} from "@/components/ui/card";""
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";""
+import { FraudStats } from "@/types/fraud";""
+import React from "react",""
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",""
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",""
+import { FraudStats } from "@/types/fraud","
 interface FraudStatsCardsProps {
-  stats: FraudStats
+  // TODO: Implement
+}
+  stats: FraudStats;
 }
 
 
       <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">"
+</CardHeader>
           <div>
-            <CardTitle className="text-2xl font-bold">{stats.pending_flags}</CardTitle>
+</div>"
+            <CardTitle className="text-2xl font-bold">{stats.pending_flags}</CardTitle>"
             <CardDescription>Pending Review</CardDescription>
-          </div>
-          {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
+          </div>"
+          {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}"
+</ShieldAlert>
         </CardHeader>
       </Card>
 
@@ -69,56 +78,54 @@ interface FraudStatsCardsProps {
 
 
       <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">"
+</CardHeader>
           <div>
-            <CardTitle className="text-2xl font-bold">
-import React from './react';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from '@/components / ui / card';
-import { AlertTriangle, AlertCircle, ShieldAlert  } from './lucide-react';
-import { FraudStats  } from '@/types / fraud';
-interface FraudStatsCardsProps {
-  stats: FraudStats;
-}
+</div>"
+            <CardTitle className="text-2xl font-bold">"
+</CardTitle>
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => {
-  return (
-    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
+  return ("
+    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;"
+</div>
       <Card>;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - 2xl font - bold">;
-            {stats.total_flags}
+</Card>"
+        <CardHeader className="pb - 2">;"
+</CardHeader>"
+          <CardTitle className="text - 2xl font - bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription > Total Flags</CardDescription>;
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
+</Card>"
+        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text - 2xl font - bold">;
-              {stats.pending_flags}
+</div>"
+            <CardTitle className="text - 2xl font - bold">;"
+</CardTitle>
             </CardTitle>;
             <CardDescription > Pending Review</CardDescription>;
           </div>;
-          {stats.pending_flags > 0 && (
-
-
-      
       <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">"
+</CardHeader>
           <div>
-            <CardTitle className="text-2xl font-bold text-amber-500">
-              {stats.suspicious_count}
-            </CardTitle>
-            <CardTitle className="text-2xl font-bold text-amber-500">
-              {stats.suspicious_count}
+</div>"
+            <CardTitle className="text-2xl font-bold text-amber-500">"
+</CardTitle>
+            </CardTitle>"
+            <CardTitle className="text-2xl font-bold text-amber-500">"
+</CardTitle>
             </CardTitle>
             <CardDescription>Suspicious</CardDescription>
-          </div>
-          <AlertTriangle className="h-5 w-5 text-amber-500" />
+          </div>"
+          <AlertTriangle className="h-5 w-5 text-amber-500" />"
+</AlertTriangle>
         </CardHeader>
       </Card>
 
@@ -127,19 +134,26 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
 
       <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">"
+</CardHeader>
           <div>
-            <CardTitle className="text-2xl font-bold text-red-500">
-              {stats.dangerous_count}
+</div>"
+            <CardTitle className="text-2xl font-bold text-red-500">"
+</CardTitle>
             </CardTitle>
       
       <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">"
+</CardHeader>
           <div>
-            <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>
+</div>"
+            <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>"
             <CardDescription>Dangerous</CardDescription>
-          </div>
-          <AlertCircle className="h-5 w-5 text-red-500" />
+          </div>"
+          <AlertCircle className="h-5 w-5 text-red-500" />"
+</AlertCircle>
         </CardHeader>
       </Card>
 
@@ -148,14 +162,18 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
 
       <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">
-            {stats.actioned_count}
+</Card>"
+        <CardHeader className="pb-2">"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">"
+</CardTitle>
           </CardTitle>
       
       <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
+</Card>"
+        <CardHeader className="pb-2">"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>"
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
@@ -168,9 +186,11 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
         </CardHeader>
       </Card>
       <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">
-            {stats.false_positives}
+</Card>"
+        <CardHeader className="pb-2">"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">"
+</CardTitle>
           </CardTitle>
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
@@ -179,192 +199,177 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
       
       <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
+</Card>"
+        <CardHeader className="pb-2">"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>"
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
-      </Card>
-  )
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
-import { FraudStats } from "@/types/fraud",;
-interface FraudStatsCardsProps {;
-  stats: FraudStats;
-}
-;
+      </Card>)
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+</FraudStatsCardsProps>"
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;"
+</div>
       <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">;
-            {stats && stats.total_flags}
+</Card>"
+        <CardHeader className="pb-2">;"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription>Total Flags</CardDescription>;
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">;
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text-2xl font-bold">;
-              {stats && stats.pending_flags}
+</div>"
+            <CardTitle className="text-2xl font-bold">;"
+</CardTitle>
             </CardTitle>;
             <CardDescription>Pending Review</CardDescription>;
-          </div>;
-          {stats && stats.pending_flags > 0 && (;
-            <ShieldAlert className="h-5 w-5 text-amber-500" />;
-          )}
+          </div>;"
+            <ShieldAlert className="h-5 w-5 text-amber-500" />;"
+</ShieldAlert>
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">;
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text-2xl font-bold text-amber-500">;
-              {stats && stats.suspicious_count}
+</div>"
+            <CardTitle className="text-2xl font-bold text-amber-500">;"
+</CardTitle>
             </CardTitle>;
             <CardDescription>Suspicious</CardDescription>;
-          </div>;
-          <AlertTriangle className="h-5 w-5 text-amber-500" />;
+          </div>;"
+          <AlertTriangle className="h-5 w-5 text-amber-500" />;"
+</AlertTriangle>
         </CardHeader>;
       </Card>;
-
       <Card>;
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">;
+</Card>"
+        <CardHeader className="pb-2 flex flex-row items-center justify-between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text-2xl font-bold text-red-500">;
-              {stats && stats.dangerous_count}
+</div>"
+            <CardTitle className="text-2xl font-bold text-red-500">;"
+</CardTitle>
             </CardTitle>;
-
             <CardDescription>Dangerous</CardDescription>;
-          </div>;
-          <AlertCircle className="h-5 w-5 text-red-500" />;
+          </div>;"
+          <AlertCircle className="h-5 w-5 text-red-500" />;"
+</AlertCircle>
         </CardHeader>;
       </Card>;
-
       <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">;
-            {stats && stats.actioned_count}
+</Card>"
+        <CardHeader className="pb-2">;"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription>Actions Taken</CardDescription>;
         </CardHeader>;
       </Card>;
-
       <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">;
-            {stats && stats.false_positives}
+</Card>"
+        <CardHeader className="pb-2">;"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
-    </div>;
-
-  );
-}
-
-            <ShieldAlert className="h - 5 w - 5 text - amber - 500" />)}
+    </div>;"
+            <ShieldAlert className="h - 5 w - 5 text - amber - 500" />)}"
+</ShieldAlert>
         </CardHeader>;
       </Card>;
-};
-
-
-export default FraudStatsCards;
-
-  ),;
-},; interface FraudStatsCardsProps {
-  stats: FraudStats 
 }export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({
-  stats 
-}) => {
-  return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8" > pb-2"> <CardTitle className=" text-2xl font-bold"> {
-  stats.total flags 
-}</CardTitle> <CardDescription>Total Flags</CardDescription> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Suspicious</CardDescription> </div> <AlertTriangle className=" h-5 w-5 text-amber-500"/> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Dangerous</CardDescription> </div> <AlertCircle className=" h-5 w-5 text-red-500" /> </CardHeader> </Card> <Card> <CardDescription>Actions Taken</CardDescription> </CardHeader> </Card> <Card> <CardDescription>False Positives</CardDescription> </CardHeader> </Card> </div>) 
-};
+</FraudStatsCardsProps>"
+  return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8" > pb-2"> <CardTitle className=" text-2xl font-bold"> {"
+</div>)"
+}</CardTitle> <CardDescription>Total Flags</CardDescription> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Suspicious</CardDescription> </div> <AlertTriangle className=" h-5 w-5 text-amber-500"/> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Dangerous</CardDescription> </div> <AlertCircle className=" h-5 w-5 text-red-500" /> </CardHeader> </Card> <Card> <CardDescription>Actions Taken</CardDescription> </CardHeader> </Card> <Card> <CardDescription>False Positives</CardDescription> </CardHeader> </Card> </div>)"
       <Card>;
-        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
+</Card>"
+        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text - 2xl font - bold text - amber - 500">;
-              {stats.suspicious_count}
+</div>"
+            <CardTitle className="text - 2xl font - bold text - amber - 500">;"
+</CardTitle>
             </CardTitle>;
             <CardDescription > Suspicious</CardDescription>;
-          </div>;
-          <AlertTriangle className="h - 5 w - 5 text - amber - 500" />;
+          </div>;"
+          <AlertTriangle className="h - 5 w - 5 text - amber - 500" />;"
+</AlertTriangle>
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
+</Card>"
+        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;"
+</CardHeader>
           <div>;
-            <CardTitle className="text - 2xl font - bold text - red - 500">;
-              {stats.dangerous_count}
+</div>"
+            <CardTitle className="text - 2xl font - bold text - red - 500">;"
+</CardTitle>
             </CardTitle>;
             <CardDescription > Dangerous</CardDescription>;
-          </div>;
-          <AlertCircle className="h - 5 w - 5 text - red - 500" />;
+          </div>;"
+          <AlertCircle className="h - 5 w - 5 text - red - 500" />;"
+</AlertCircle>
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - 2xl font - bold">;
-            {stats.actioned_count}
+</Card>"
+        <CardHeader className="pb - 2">;"
+</CardHeader>"
+          <CardTitle className="text - 2xl font - bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription > Actions Taken</CardDescription>;
         </CardHeader>;
       </Card>;
       <Card>;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - 2xl font - bold">;
-            {stats.false_positives}
+</Card>"
+        <CardHeader className="pb - 2">;"
+</CardHeader>"
+          <CardTitle className="text - 2xl font - bold">;"
+</CardTitle>
           </CardTitle>;
           <CardDescription > False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
     </div>);
-}
-;
-
     </div>
-
-      ;
       <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>;
+</Card>"
+        <CardHeader className="pb-2">;"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>;"
           <CardDescription>Actions Taken</CardDescription>;
         </CardHeader>;
       </Card>;
     </div>;
-
     </div>
 
     </div>;
-);
-  );
-};
-
-
-export default FraudStatsCards;
-
-  ),;
-},; interface FraudStatsCardsProps {
-  stats: FraudStats 
 }export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({
-  stats 
-}) => {
-  return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8" > pb-2"> <CardTitle className=" text-2xl font-bold"> {
-  stats.total flags 
-}</CardTitle> <CardDescription>Total Flags</CardDescription> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Suspicious</CardDescription> </div> <AlertTriangle className=" h-5 w-5 text-amber-500"/> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Dangerous</CardDescription> </div> <AlertCircle className=" h-5 w-5 text-red-500" /> </CardHeader> </Card> <Card> <CardDescription>Actions Taken</CardDescription> </CardHeader> </Card> <Card> <CardDescription>False Positives</CardDescription> </CardHeader> </Card> </div>) 
-};
+</FraudStatsCardsProps>"
+  return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8" > pb-2"> <CardTitle className=" text-2xl font-bold"> {"
+</div>)"
+}</CardTitle> <CardDescription>Total Flags</CardDescription> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Suspicious</CardDescription> </div> <AlertTriangle className=" h-5 w-5 text-amber-500"/> </CardHeader> </Card> <Card> <CardHeader className=" pb-2 flex flex-row items-center justify-between"> <div> <CardDescription>Dangerous</CardDescription> </div> <AlertCircle className=" h-5 w-5 text-red-500" /> </CardHeader> </Card> <Card> <CardDescription>Actions Taken</CardDescription> </CardHeader> </Card> <Card> <CardDescription>False Positives</CardDescription> </CardHeader> </Card> </div>)"
       <Card>;
-        <CardHeader className="pb-2">;
-          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>;
+</Card>"
+        <CardHeader className="pb-2">;"
+</CardHeader>"
+          <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>;"
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
-    </div>;
-);
-};
-
-export default FraudStatsCards;
-
+    </div>;"

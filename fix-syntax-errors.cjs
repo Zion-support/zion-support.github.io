@@ -1,31 +1,31 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Fixing syntax errors in the codebase...');
-
-// Function to fix common syntax errors
+const fs = require('fs');''
+const path = require('path');''
+const { execSync } = require('child_process');''
+console.log('🔧 Fixing syntax errors in the codebase...');'
+// Function to fix common syntax errors;
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  // TODO: Implement
+}'
+    let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false;
-
-        replacement: ''
+'
+        replacement: '''
       },
-      // Fix malformed function declarations
+      // Fix malformed function declarations;
       {
-        pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+        pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,'
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`'
       },
-      // Fix files with just return statements
+      // Fix files with just return statements;
       {
-        pattern: /^[\s\n]*return[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+        pattern: /^[\s\n]*return[\s\S]*$/,'
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`'
       },
-      // Fix malformed object literals
+      // Fix malformed object literals;
       {
-        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,'
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`'
       }
     ];
 
@@ -33,7 +33,7 @@ function fixSyntaxErrors(filePath) {
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement);
         modified = true;
-        break; // Only apply one fix per file
+        break; // Only apply one fix per file;
       }
     }
 
@@ -57,19 +57,20 @@ function findAndFixApiFiles(dir) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      fixedCount += findAndFixApiFiles(filePath);
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
+      fixedCount += findAndFixApiFiles(filePath);'
+    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {'
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
 
       }
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, lines.join('\n'));
+    if (modified) {'
+      fs.writeFileSync(filePath, lines.join('\n'));'
       return true;
     }
   } catch (error) {
     console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
   }
 
+'

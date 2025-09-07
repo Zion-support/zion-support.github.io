@@ -1,5 +1,7 @@
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -10,165 +12,73 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {Grid3X3, ListFilter} from "lucide-react";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {FilterSidebar} from "@/components/search/FilterSidebar";
-import {ActiveFiltersBar} from "@/components/search/ActiveFiltersBar";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions} from "@/data/marketplaceData";
-import {toast} from "@/hooks/use-toast";
-import {useNavigate} from "react-router-dom";
-import {SearchSuggestion} from "@/types/search";
-import {AppLayout} from "@/layout/AppLayout";
-export default function Marketplace() {;
-
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-
-
-
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { Grid3X3, ListFilter } from "lucide-react",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { FilterSidebar } from "@/components/search/FilterSidebar",
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { SearchSuggestion } from "@/types/search";
-import { AppLayout } from "@/layout/AppLayout";
-export default function Marketplace() {
-
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
+</number>
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
-  const filterOptions = generateFilterOptions();
-  const navigate = useNavigate(),
-  const [searchQuery, setSearchQuery] = useState(""),
+</number>
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
-  
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  const filterOptions = generateFilterOptions(),
-  
-
-  // Filter listings based on selected filters
-  const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
-    // Search filter
-    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
-      return false
-
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
-import { Grid3X3, ListFilter } from "lucide-react",;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { FilterSidebar } from "@/components/search/FilterSidebar",;
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",;
-import { ProductListingCard } from "@/components/ProductListingCard",;
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",;
-import { toast } from "@/hooks/use-toast",;
-import { useNavigate } from "react-router-dom",;
-import { SearchSuggestion } from "@/types/search",;
-import { AppLayout } from "@/layout/AppLayout",;
-export default function Marketplace() {;
-  const navigate = useNavigate(),;
-  const [searchQuery, setSearchQuery] = useState(""),;
+</number>
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),;
+</string>
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),;
+</string>
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),;
+</string>
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
-  const filterOptions = generateFilterOptions(),;
-  // Filter listings based on selected filters;
-  const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {;
-    // Search filter;
-    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&;
-        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
-        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
-      return false;
-
-
-    }
-    // Product type filter
-    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-      return false
-    }
-    // Location filter
-    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
-      return false
-    }
-    // Availability filter
-    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
-      return false
-    }
-    // Rating filter
+</number>
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
-      return false
+      return false;
     }
 
 
     
-    return true
+    return true;
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 
 
-    return true
+    return true;
   });
   const handleFilterChange = (filterType: string, value: string) => {
-    switch (filterType) {
-      case 'productType':
-        setSelectedProductTypes(prev =>
+    switch (filterType) {'
+      case 'productType':'
+        setSelectedProductTypes(prev =>)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
-        break;
-      case 'location':
-        setSelectedLocations(prev =>
+        break;'
+      case 'location':'
+        setSelectedLocations(prev =>)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
-        break;
-      case 'availability':
-        setSelectedAvailability(prev =>
+        break;'
+      case 'availability':'
+        setSelectedAvailability(prev =>)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
@@ -176,7 +86,7 @@ export default function Marketplace() {;
 
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {;
-    // Search filter;
+    // Search filter;)
     if (searchQuery && !listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) && ;
         !listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
         !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;
@@ -208,19 +118,19 @@ export default function Marketplace() {;
 
   const handleFilterChange = (filterType: string, value: string) => {;
     console && console.log(`Filter changed: ${filterType} = ${value}`),;
-    switch (filterType) {;
-      case 'productType':;
-        setSelectedProductTypes(prev => ;
+    switch (filterType) {;'
+      case 'productType':;'
+        setSelectedProductTypes(prev => ;)
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
-        break;
-      case 'location':;
-        setSelectedLocations(prev => ;
+        break;'
+      case 'location':;'
+        setSelectedLocations(prev => ;)
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
-        break;
-      case 'availability':;
-        setSelectedAvailability(prev => ;
+        break;'
+      case 'availability':;'
+        setSelectedAvailability(prev => ;)
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
         break;
@@ -229,8 +139,8 @@ export default function Marketplace() {;
   };
 
   const clearAllFilters = () => {;
-
-    setSearchQuery("");
+'
+    setSearchQuery("");"
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
@@ -244,8 +154,8 @@ export default function Marketplace() {;
   },
   
 
-  const clearAllFilters = () => {
-    setSearchQuery(""),
+  const clearAllFilters = () => {"
+    setSearchQuery(""),"
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
@@ -255,54 +165,54 @@ export default function Marketplace() {;
   
 
 
-  // Handle requesting a quote
+  // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
     if (listing) {
-      toast({
-        title: "Quote Requested"
-        description: `Your quote request for ${listing.title} has been sent.`
+      toast({"
+        title: "Quote Requested"",
+  description: `Your quote request for ${listing.title} has been sent.`
 
-
+)
       }),
       
 
 
-      // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
-        state: {
-          serviceType: listing.category
-          specificItem: {
-            id: listing.id
-            title: listing.title
-            category: listing.category
+      // Navigate to the quote request page with the listing information;"
+      navigate("/request-quote", {"
+        state: {,
+  serviceType: listing.category;
+          specificItem: {,
+  id: listing.id;
+            title: listing.title;,
+  category: listing.category;
             image: listing.images?.[0]
 
 ;
-    return true;
+    return true;)
   }),;
   const handleFilterChange = (filterType: string, value: string) => {;
     // // // console.log(`Filter changed: ${filterType} = ${value}`),;
-    switch (filterType) {;
-      case 'productType':;
-        setSelectedProductTypes(prev =>;
+    switch (filterType) {;"
+      case 'productType':;'
+        setSelectedProductTypes(prev =>;)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
-        break,;
-      case 'location':;
-        setSelectedLocations(prev =>;
+        break,;'
+      case 'location':;'
+        setSelectedLocations(prev =>;)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
-        break,;
-      case 'availability':;
-        setSelectedAvailability(prev =>;
+        break,;'
+      case 'availability':;'
+        setSelectedAvailability(prev =>;)
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
         ),;
         break;
     }
   },;
-  const clearAllFilters = () => {;
-    setSearchQuery(""),;
+  const clearAllFilters = () => {;'
+    setSearchQuery(""),;"
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
@@ -315,38 +225,38 @@ export default function Marketplace() {;
     const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId),;
 
     if (listing) {;
-      toast({;
-        title: "Quote Requested",;
-        description: `Your quote request for ${listing && listing.title} has been sent.`;
+      toast({;"
+        title: "Quote Requested",;"
+        description: `Your quote request for ${listing && listing.title} has been sent.`;)
       });
 
-      // Navigate to the quote request page with the listing information;
-      navigate("/request-quote", {;
-        state: { ;
-          serviceType: listing && listing.category,;
+      // Navigate to the quote request page with the listing information;"
+      navigate("/request-quote", {;"
+        state: { ;,
+  serviceType: listing && listing.category,;
           specificItem: {;
-
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { Button } from '@/components / ui / button';
-import { Link } from './react-router-dom';
-import { Grid3X3, ListFilter } from './lucide-react';
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
-import { FilterSidebar } from '@/components / search / FilterSidebar';
-import { ActiveFiltersBar } from '@/components / search / ActiveFiltersBar';
-import { ProductListingCard } from '@/components / ProductListingCard';
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from '@/data / marketplace_data';
-import { toast } from '@/hooks / use - toast';
-import { use_navigate } from './react-router-dom';
-import { SearchSuggestion } from '@/types / search';
-import { AppLayout } from '@/layout / AppLayout';
+"
+import React, { useState } from './react';''
+import { Header } from '@/components / Header';''
+import { Footer } from '@/components / Footer';''
+import { Button } from '@/components / ui / button';''
+import { Link } from './react-router-dom';''
+import { Grid3X3, ListFilter } from './lucide-react';''
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';''
+import { FilterSidebar } from '@/components / search / FilterSidebar';''
+import { ActiveFiltersBar } from '@/components / search / ActiveFiltersBar';''
+import { ProductListingCard } from '@/components / ProductListingCard';''
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from '@/data / marketplace_data';''
+import { toast } from '@/hooks / use - toast';''
+import { use_navigate } from './react-router-dom';''
+import { SearchSuggestion } from '@/types / search';''
+import { AppLayout } from '@/layout / AppLayout';'
 export default /**
- * Marketplace - Function description
- */
+ * Marketplace - Function description;
+ */)
 function Marketplace() {
-  const navigate = use_navigate ();
-  const [search_query, setSearchQuery] = useState ("");
+  const navigate = use_navigate ();'
+  const [search_query, setSearchQuery] = useState ("");"
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
@@ -357,9 +267,9 @@ function Marketplace() {
 ;
   // Filter listings based on selected filters;
   const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {
-    // Search filter;
+    // Search filter;)
     if (.includes (search_query.toLowerCase ()) &&) {
-  $2
+  $2;
 }
         !listing.description.toLowerCase ().includes (search_query.toLowerCase ()) &&;
         !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {
@@ -367,25 +277,25 @@ function Marketplace() {
     }
     // Product type filter;
     if () {) {
-  $2
+  $2;
 }
       return false;
     }
     // Location filter;
     if () {) {
-  $2
+  $2;
 }
       return false;
     }
     // Availability filter;
     if () {) {
-  $2
+  $2;
 }
       return false;
     }
     // Rating filter;
     if () {) {
-  $2
+  $2;
 }
       return false;
     }
@@ -393,25 +303,29 @@ function Marketplace() {
   });
 ;
   const handleFilterChange = (filter_type: string, value: string) =>: any {
+  // TODO: Implement
+}
     console.log (`Filter changed: ${filter_type} = ${value}`),
-    switch (filter_type) {
-      case 'product_type':;
-        setSelectedProductTypes (prev =>;
+    switch (filter_type) {"
+      case 'product_type':;'
+        setSelectedProductTypes (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-        break;
-      case 'location':;
-        setSelectedLocations (prev =>;
+        break;'
+      case 'location':;'
+        setSelectedLocations (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-        break;
-      case 'availability':;
-        setSelectedAvailability (prev =>;
+        break;'
+      case 'availability':;'
+        setSelectedAvailability (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;
     }
   }
 ;
   const clearAllFilters = () =>: any {
-    setSearchQuery ("");
+  // TODO: Implement
+}'
+    setSearchQuery ("");"
     setSelectedProductTypes ([]);
     setSelectedLocations ([]);
     setSelectedAvailability ([]);
@@ -420,33 +334,34 @@ function Marketplace() {
 ;
   // Handle requesting a quote;
   const handleRequestQuote = (listing_id: string) =>: any {
-    const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
-    // Check condition
-if ( {) {
-  $2
+  // TODO: Implement
 }
-      toast ({
-        title: "Quote Requested",
-        description: `Your quote request for ${listing.title} has been sent.`;
+    const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
+    // Check condition;
+if ( {) {
+  $2;
+}
+      toast ({"
+        title: "Quote Requested","
+        description: `Your quote request for ${listing.title} has been sent.`;)
       });
 ;
-      // Navigate to the quote request page with the listing information;
-      navigate ("/request - quote", {
-        state: {
-          service_type: listing.category,
-          specific_item: {
-            id: listing.id,
+      // Navigate to the quote request page with the listing information;"
+      navigate ("/request - quote", {"
+        state: {,
+  service_type: listing.category,
+          specific_item: {,
+  id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0];
-
-            id: listing.id,;
+            image: listing.images?.[0];,
+  id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
 
           }
-        }
+        })
       });
     }
 
@@ -462,87 +377,96 @@ if ( {) {
   return (
 
     <AppLayout>;
-      <main className="flex-grow container mx-auto px-4 py-8">;
-        <div className="max-w-4xl mx-auto mb-8">;
-          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
-          <p className="text-zion-slate-light">;
-;
-  return (
+</AppLayout>"
+      <main className="flex-grow container mx-auto px-4 py-8">;"
+</main>"
+        <div className="max-w-4xl mx-auto mb-8">;"
+</div>"
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;""
+          <p className="text-zion-slate-light">;"
+</p>
     <AppLayout>;
-      <main className="flex - grow container mx - auto px - 4 py - 8">;
-        <div className="max - w-4xl mx - auto mb - 8">;
-          <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;
-          <p className="text - zion - slate - light">;
-
-  }
-            Discover professional services and products for your AI and tech projects.;
-            Browse our curated collection of solutions from verified providers.;
+</AppLayout>"
+      <main className="flex - grow container mx - auto px - 4 py - 8">;"
+</main>"
+        <div className="max - w-4xl mx - auto mb - 8">;"
+</div>"
+          <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;""
+          <p className="text - zion - slate - light">;"
+</p>
           </p>;
-        </div>;
-        {/* Search and filter bar */}
-        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
-          <div className="flex flex - col md:flex - row gap - 4">;
-            <div className="relative flex - 1">;
+        </div>;"
+        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;"
+</div>"
+          <div className="flex flex - col md:flex - row gap - 4">;"
+</div>"
+            <div className="relative flex - 1">;"
+</div>
               <EnhancedSearchInput;
                 value={search_query}
-                on_change={setSearchQuery}
-                placeholder="Search the marketplace...";
+                on_change={setSearchQuery}"
+                placeholder="Search the marketplace...";"
                 search_suggestions={search_suggestions}
               />;
-            </div>;
-            <div className="flex gap - 2">;
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
-                <Grid3X3 className="h - 4 w - 4" />;
-              </Button>;
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
-                <ListFilter className="h - 4 w - 4" />;
-
+</EnhancedSearchInput>
+            </div>;"
+            <div className="flex gap - 2">;"
+</div>"
+              <Button variant="ghost" size="icon" className="text - zion - slate - light">;"
+</Button>"
+                <Grid3X3 className="h - 4 w - 4" />;"
+</Grid3X3>
+              </Button>;"
+              <Button variant="ghost" size="icon" className="text - zion - slate - light">;"
+</Button>"
+                <ListFilter className="h - 4 w - 4" />;"
+</ListFilter>
               </Button>;
             </div>;
           </div>;
-        </div>;
-
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
-          {/* Sidebar Filters */}
-          <div className="lg: col - span - 1">;
+        </div>;"
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
+</div>"
+          <div className="lg: col - span - 1">;"
+</div>
             <FilterSidebar;
 
               filters={{
 
-                selectedProductTypes
-                selectedLocations
+                selectedProductTypes;
+                selectedLocations;
                 selectedAvailability,
 
-              <EnhancedSearchInput
+              <EnhancedSearchInput;
                 value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Search the marketplace..."
+                onChange={setSearchQuery}"
+                placeholder="Search the marketplace...""
                 searchSuggestions={searchSuggestions}
               </Button>;
+</FilterSidebar>
             </div>;
           </div>;
-        </div>;
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
-          {/* Sidebar Filters */}
-          <div className="lg: col-span-1">;
-            <FilterSidebar
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
-          {/* Sidebar Filters */}
-          <div className="lg: col - span - 1">;
+        </div>;"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;"
+</div>"
+          <div className="lg: col-span-1">;"
+</div>
+            <FilterSidebar;
+        {/* Main layout with sidebar and results */}"
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
+</FilterSidebar>"
+          <div className="lg: col - span - 1">;"
+</div>
             <FilterSidebar;
               filters={{
                 selectedProductTypes;
                 selectedLocations;
-                selectedAvailability
-
+                selectedAvailability;
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
 
-                selectedRating
+                selectedRating;
                 selected_locations;
                 selected_availability,
                 selected_rating;
@@ -551,134 +475,104 @@ if ( {) {
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}
               onClearFilters={clearAllFilters}
-          {/* Main content */}
-          <div className="lg:col-span-3">;
-            {/* Active filters display */}
-            <ActiveFiltersBar
+          {/* Main content */}"
+          <div className="lg:col-span-3">;"
+</FilterSidebar>
+            <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
               selected_locations={selected_locations}
               selected_availability={selected_availability}
               selected_rating={selected_rating}
               search_query={search_query}
               onRemoveFilter={handleFilterChange}
-            {/* Results count */}
-            <div className="mb-6">;
-              <p className="text-zion-slate-light">;
-                Showing {filteredListings && filteredListings.length} results;
-                {searchQuery && ` for "${searchQuery}"`}
-
-
-            
-
-
-                selectedRating
-              }}
-              filterOptions={filterOptions}
-              onFilterChange={handleFilterChange}
-              onRatingChange={setSelectedRating}
-              onClearFilters={clearAllFilters}
-            />
-          </div>
-          {/* Main content */}
-          <div className="lg:col-span-3">
-            {/* Active filters display */}
-            <ActiveFiltersBar
+            {/* Results count */}"
+            <div className="mb-6">;"
+</ActiveFiltersBar>"
+              <p className="text-zion-slate-light">;"
+</p>
+          </div>"
+          <div className="lg:col-span-3">"
+</div>
+            <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
               selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
               searchQuery={searchQuery}
-              onRemoveFilter={handleFilterChange}
+              onRemoveFilter={handleFilterChange})
               onRemoveRating={() => setSelectedRating(null)}
-              onClearSearch={() => setSearchQuery("")}
-            />
-            {/* Results count */}
-            <div className="mb-6">
-              <p className="text-zion-slate-light">
-                Showing {filteredListings.length} results
-                {searchQuery && ` for "${searchQuery}"`}
+</ActiveFiltersBar>"
+            <div className="mb-6">"
+</div>"
+              <p className="text-zion-slate-light">"
+</p>
               </p>
-            </div>
-            
-            {/* Display actual marketplace listings */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredListings.length > 0 ? (
-                filteredListings.map((listing) => (
-                  <ProductListingCard
+            </div>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>
+                  <ProductListingCard;
                     key={listing.id}
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />
-                ))
-              ) : (
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
-                    We couldn't find any listings matching your filters. Try adjusting your search criteria.
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">"
+</p>
                   </p>
               </p>;
-            </div>;
-
-            {/* Display actual marketplace listings */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              {filteredListings && filteredListings.length > 0 ? (;
-                filteredListings && filteredListings.map((listing) => (;
-                  <ProductListingCard
+            </div>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+</div>
+                  <ProductListingCard;
                     key={listing && listing.id} 
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />;
-                ));
-              ) : (;
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
-                    We couldn't find any listings matching your filters. Try adjusting your search criteria.;
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
+</p>
                   </p>;
-                  <Button
-                    onClick={clearAllFilters}
-                    className="bg-zion-purple hover:bg-zion-purple-dark">;
-                    Clear Filters;
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark">;"
+</Button>
                   </Button>;
-                </div>;
-              )}
-
-              onRemoveRating={() => setSelectedRating (null)}
-              onClearSearch={() => setSearchQuery ("")}
-            />;
-            {/* Results count */}
-            <div className="mb - 6">;
-              <p className="text - zion - slate - light">;
-                Showing {filtered_listings.length} results;
-                {search_query && ` for "${search_query}"`}
+                </div>;"
+            <div className="mb - 6">;"
+</div>"
+              <p className="text - zion - slate - light">;"
+</p>
               </p>;
-            </div>;
-            {/* Display actual marketplace listings */}
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {filtered_listings.length > 0 ? (
-                filtered_listings.map ((listing) => (
+            </div>;"
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+</div>
                   <ProductListingCard;
                     key={listing.id}
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />))) : (
-                <div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">;
-                  <h2 className="text - 2xl font - bold text - white mb - 4">No Results Found</h2>;
-                  <p className="text - zion - slate - light max - w-md mx - auto mb - 8">;
-                    We couldn't find any listings matching your filters. Try adjusting your search criteria.;
+</ProductListingCard>"
+                <div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">;"
+</div>"
+                  <h2 className="text - 2xl font - bold text - white mb - 4">No Results Found</h2>;""
+                  <p className="text - zion - slate - light max - w-md mx - auto mb - 8">;"
+</p>
                   </p>;
                   <Button;
-                    on_click={clearAllFilters}
-                    className="bg - zion - purple hover:bg - zion - purple - dark";
+                    on_click={clearAllFilters}"
+                    className="bg - zion - purple hover:bg - zion - purple - dark";"
                   >;
-                    Clear Filters;
-                  </Button>;
-                </div>)}
-
-          ;
-          {/* Main content */}
-          <div className="lg:col-span-3">;
-            {/* Active filters display */}
+</Button>
+                  </Button>;)
+                </div>)}"
+          <div className="lg:col-span-3">;"
+</div>
             <ActiveFiltersBar ;
               selectedProductTypes={selectedProductTypes}              selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
@@ -686,149 +580,90 @@ if ( {) {
               searchQuery={searchQuery}
               onRemoveFilter={handleFilterChange}
               onRemoveRating={() => setSelectedRating(null)}
-              onClearSearch={() => setSearchQuery("")}
-            />;
-;
-            {/* Results count */}
-            <div className="mb-6">;
-              <p className="text-zion-slate-light">;
-                Showing {filteredListings.length} results;
-                {searchQuery && ` for "${searchQuery}"`}
+</ActiveFiltersBar>"
+            <div className="mb-6">;"
+</div>"
+              <p className="text-zion-slate-light">;"
+</p>
               </p>;
-            </div>;
-            ;
-            {/* Display actual marketplace listings */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              {filteredListings.length > 0 ? (;
-                filteredListings.map((listing) => (;
+            </div>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+</div>
                   <ProductListingCard ;
                     key={listing.id} ;
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
                   />;
-                ));
-              ) :(;
-                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;
-                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
-                    We couldn't find any listings matching your filters. Try adjusting your search criteria.;
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
+</p>
                   </p>;
                   <Button ;
-                    onClick={clearAllFilters}
-                    className="bg-zion-purple hover:bg-zion-purple-dark";
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark";"
                   >;
-                    Clear Filters;
+</Button>
                   </Button>;
                 </div>;
-              )}
-                  <Button
-                    onClick={clearAllFilters}
-                    className="bg-zion-purple hover:bg-zion-purple-dark"
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark""
                   >
-                    Clear Filters
+</Button>
                   </Button>
                 </div>
-              )}
             </div>
           </div>
         </div>
       </main>
     </AppLayout>
-  )
-}
             </div>;
           </div>;
         </div>;
       </main>;
-
     </AppLayout>);
-}
-
-    </AppLayout>;
-  ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
-const filterOptions = generateFilterOptions ();
-//Search filter if (searchQuery && !listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) {
-  return true;
-});
-switch (filterType) {
-  case 'productType': setSelectedProductTypes (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break;
-case 'location': setSelectedLocations (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break;
-case 'availability': setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break 
-}
-;
-
-};
-const clearAllFilters = () => {
-  //Handle requesting a quote const handleRequestQuote = (listingId: string) => {
-  const listing = MARKETPLACE LISTINGS.find (item => item.id === listingId);
-if (listing) {
-  toast ({
-  title: "Quote Requested";
-description: `Your quote request for $ {
-  listing.title 
-}has been sent.` 
-});
-//Navigate to the quote request page with the listing information navigate ("/request-quote", {
-  state: {
-  serviceType: listing.category;
-specificItem: {
-  id: listing.id;
-title: listing.title;
-category: listing.category;
-image: listing.images?.[0] 
-}
-}
-}) 
-}
-};
-Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" /> </Button> <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" /> </Button> </div> </div> </div> <FilterSidebar filters= {
+    </AppLayout>;"
+Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" /> </Button> <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" /> </Button> </div> </div> </div> <FilterSidebar filters= {"
   {
-  selectedProductTypes, selectedLocations, selectedAvailability, selectedRating 
+  selectedProductTypes, selectedLocations, selectedAvailability, selectedRating;
 }
 }filterOptions= {
-  filterOptions 
+  filterOptions;
 }onFilterChange= {
-  handleFilterChange 
+  handleFilterChange;
 }onRatingChange= {
-  setSelectedRating 
+  setSelectedRating;
 }onClearFilters= {
-  clearAllFilters 
+  clearAllFilters;
 }/> </div> <ActiveFiltersBar selectedProductTypes= {
-  selectedProductTypes 
+  selectedProductTypes;
 }selectedLocations= {
-  selectedLocations 
+  selectedLocations;
 }selectedAvailability= {
-  selectedAvailability 
+  selectedAvailability;
 }selectedRating= {
-  selectedRating 
+  selectedRating;
 }searchQuery= {
-  searchQuery 
+  searchQuery;
 }onRemoveFilter= {
-  handleFilterChange 
+  handleFilterChange;
 }onRemoveRating= {
   () => setSelectedRating (null) 
-}onClearSearch= {
-  () => setSearchQuery ("") 
-}/> {
-  /* Results count */ 
-}<div className="mb-6"> </p> </div> {
-  /* Display actual marketplace listings */ 
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {
+</ActiveFiltersBar>"
+}<div className="mb-6"> </p> </div> {""
+}<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {"
+</div>
   filteredListings.length > 0 ? (filteredListings.map ( (listing) => (<ProductListingCard key= {
-  listing.id 
+  listing.id;
 }listing= {
-  listing 
+  listing;
 }onRequestQuote= {
-  handleRequestQuote 
-}/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {
-  clearAllFilters 
-}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>) 
+  handleRequestQuote;)"
+}/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {'
+</ProductListingCard>)'
+}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
 }</div> </div> </div> </main> </AppLayout>) 
-}
-    </AppLayout>;
-  );
-}
-;
+    </AppLayout>;"

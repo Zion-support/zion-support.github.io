@@ -1,7 +1,9 @@
 export interface ProjectBrief {
-  projectName: string;
+  // TODO: Implement
+}
+  projectName: string;,
   goals: string;
-  timeline: string;
+  timeline: string;,
   budget: string;
   techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] };

@@ -1,139 +1,44 @@
 
 
-import {Navigate} from 'react-router-dom';
-
+import {Navigate} from 'react-router-dom';'
 export interface ProtectedRouteProps {
-  children: React.ReactNode,;
-import React from 'react';
+  // TODO: Implement
+}
+  children: React.ReactNode,;'
+import React from 'react';'
   adminOnly?: boolean;
-  tenantAdminAllowed?: boolean;
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
+  tenantAdminAllowed?: boolean;'
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
 }
 
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-
-  children;
-
-  adminOnly = false;
-
-
-  children;
-
-  adminOnly = false;
-  tenantAdminAllowed = false
-  requiredUserType
-}) => {
-  const { user, isLoading } = useAuth();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
-  const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
-
+</ProtectedRouteProps>
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-  children;
-  adminOnly = false;
-
-
-
+</ProtectedRouteProps>
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-
-  children;
-
-  adminOnly = false;
-
-
-
+</ProtectedRouteProps>
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-  children;
-  adminOnly = false;
-
-import React from 'react',
-import { Navigate } from 'react-router-dom',
-import { useAuth } from '@/hooks/useAuth',
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
-import { useWhitelabel } from '@/context/WhitelabelContext',
-export interface ProtectedRouteProps {
-  children: React.ReactNode,
-  adminOnly?: boolean,
-  tenantAdminAllowed?: boolean,
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
-}
-
+</ProtectedRouteProps>
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-  children,
-  adminOnly = false,
-
-  tenantAdminAllowed = false,
-  requiredUserType
-}) => {
-  const { user, isLoading } = useAuth(),
-  const { tenant } = useWhitelabel(),
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
-  
-  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
-
-  tenantAdminAllowed = false,
-  requiredUserType
-}) => {
-  // Show loading state if auth or tenant admin status is still being checked
-  if (isCheckingPermissions) {
-    return <div className="flex h-screen w-full items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
-    </div>
-  }
-  // Redirect to login if not authenticated
-  if (!user) {
-    return <Navigate to="/login" />
-  }
-  // Check for admin access if required
-  if (adminOnly) {
-    const hasAdminAccess = user.userType === 'admin' |user.role === 'admin' |(tenantAdminAllowed && isTenantAdmin);
-    if (!hasAdminAccess) {
-      return <Navigate to="/unauthorized" />
-    }
-  }
-  // Check for specific user type if required
-  if (requiredUserType && user.userType !== requiredUserType) {
-    return <Navigate to="/unauthorized" />
-
-
-import React from 'react',;
-import { Navigate } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
-export interface ProtectedRouteProps {;
-  children: React.ReactNode,;
-  adminOnly?: boolean,;
-  tenantAdminAllowed?: boolean,;
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
-}
-;
+</ProtectedRouteProps>"
+    return <div className="flex h-screen w-full items-center justify-center">"
+</div>"
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>"
+    </div>"
+    return <Navigate to="/login" />"
+</Navigate>"
+      return <Navigate to="/unauthorized" />"
+</Navigate>"
+    return <Navigate to="/unauthorized" />"
+</Navigate>
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
-  children,;
-  adminOnly = false,;
-
-
-
-
-
-
-export default ProtectedRoute;
-
-import {use_auth} from '@/hooks / use_auth';
-import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
-import {use_whitelabel} from '@/context / WhitelabelContext';
-export interface ProtectedRouteProps {
-  children: React.ReactNode,
-  admin_only?: boolean;
-  tenantAdminAllowed?: boolean;
-  requiredUserType?: "creator" | "job_seeker" | "employer" | "buyer" | "admin";
-}
+</ProtectedRouteProps>
 export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({
   children;
   admin_only = false;
   tenantAdminAllowed = false,
-  requiredUserType;
+  requiredUserType;)
 }) => {
   const { user, is_loading } = use_auth ();
   const { tenant } = use_whitelabel ();
@@ -141,96 +46,52 @@ export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({
   const isCheckingPermissions = is_loading || isCheckingTenantAdmin;
 ;
   // Show loading state if auth or tenant admin status is still being checked;
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
-}
-    return <div className="flex h - screen w - full items - center justify - center">;
-      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
-    </div>;
-  }
-  // Redirect to login if not authenticated;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/login" />;
-  }
-  // Check for admin access if required;
-  // Check condition
-if ( {) {
-  $2
-}
-    const hasAdminAccess = user.user_type === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return <Navigate to="/unauthorized" />;
-    }
-  }
-  // Check for specific user type if required;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/unauthorized" />;
-  }
+  $2;
+}"
+    return <div className="flex h - screen w - full items - center justify - center">;"
+</div>"
+      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;"
+    </div>;"
+    return <Navigate to="/login" />;"
+</Navigate>"
+      return <Navigate to="/unauthorized" />;"
+</Navigate>"
+    return <Navigate to="/unauthorized" />;"
+</Navigate>
   return <>{children}</>;
 }
 ;
 export default ProtectedRoute;
 ;
-
-import React from 'react',;
-import { Navigate } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
+"
+import React from 'react',;''
+import { Navigate } from 'react-router-dom',;''
+import { useAuth } from '@/hooks/useAuth',;''
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;''
+import { useWhitelabel } from '@/context/WhitelabelContext',;'
 ;
 export interface ProtectedRouteProps {;
   children:React.ReactNode,;
   adminOnly?:boolean,;
-  tenantAdminAllowed?:boolean,;
-  requiredUserType?:"creator" | "jobSeeker" | "employer" | "buyer" | "admin";
+  tenantAdminAllowed?:boolean,;'
+  requiredUserType?:"creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
 }
 ;
 export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
-  children,;
-  adminOnly = false,;
-  tenantAdminAllowed = false,;
-  requiredUserType;
-}) => {;
-  const { user, isLoading } = useAuth(),;
-  const { tenant } = useWhitelabel(),;
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),;
-  const isCheckingPermissions = isLoading || isCheckingTenantAdmin,;
-  // Show loading state if auth or tenant admin status is still being checked;
-  if (isCheckingPermissions) {;
-    return <div className="flex h-screen w-full items-center justify-center">;
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
-    </div>;
-  }
-;
-  // Redirect to login if not authenticated;
-  if (!user) {;
-    return <Navigate to="/login" />;
-  }
-;
-  // Check for admin access if required;
-  if (adminOnly) {;
-    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),;
-    if (!hasAdminAccess) {;
-      return <Navigate to="/unauthorized" />;
-    }
-  }
-;
-  // Check for specific user type if required;
-  if (requiredUserType && user.userType !== requiredUserType) {;
-    return <Navigate to="/unauthorized" />;
-  }
-;
+</ProtectedRouteProps>"
+    return <div className="flex h-screen w-full items-center justify-center">;"
+</div>"
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;"
+    </div>;"
+    return <Navigate to="/login" />;"
+</Navigate>"
+      return <Navigate to="/unauthorized" />;"
+</Navigate>"
+    return <Navigate to="/unauthorized" />;"
+</Navigate>
   return <>{children}</>;
 };
 export default ProtectedRoute;
+)"

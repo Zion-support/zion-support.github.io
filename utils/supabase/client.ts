@@ -24,8 +24,8 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
     sign_out: () => Promise.resolve ({ error: null }),
     get_user: () => Promise.resolve ({ data: { user: null }, error: null });
   },
-  from: (_table: string) => ({
-    select: () => Promise.resolve({ data: [], error: null })
+  from: (_table: string) => ({,)
+  select: () => Promise.resolve({ data: [], error: null })
     insert: () => Promise.resolve({ data: null, error: null })
     update: () => Promise.resolve({ data: null, error: null })
     delete: () => Promise.resolve({ data: null, error: null })
@@ -42,16 +42,16 @@ export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ dat
   })
 };
 export const supabase = {
-  "auth": {
-    signIn: () => Promise.resolve({ data: null, "error": null }),
-    "signOut": () => Promise.resolve({ error: null }),
-    "getUser": () => Promise.resolve({ data: { user: null }, "error": null })
-  },
-  "from": (_table: string) => ({
-    select: () => Promise.resolve({ data: [], "error": null }),
-    "insert": () => Promise.resolve({ data: null, "error": null }),
-    "update": () => Promise.resolve({ data: null, "error": null }),
-    "delete": () => Promise.resolve({ data: null, "error": null })
+  "auth": {""
+    signIn: () => Promise.resolve({ data: null, "error": null }),""
+    "signOut": () => Promise.resolve({ error: null }),""
+    "getUser": () => Promise.resolve({ data: { user: null }, "error": null })"
+  },"
+  "from": (_table: string) => ({",)"
+  select: () => Promise.resolve({ data: [], "error": null }),""
+    "insert": () => Promise.resolve({ data: null, "error": null }),""
+    "update": () => Promise.resolve({ data: null, "error": null }),""
+    "delete": () => Promise.resolve({ data: null, "error": null })"
   })
 }
 export const supabase = {
@@ -86,3 +86,4 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
     get_user: () => Promise.resolve ({ data: { user: null }, error: null });
   },
   from: (_table: string) => ({
+)"

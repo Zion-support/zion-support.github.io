@@ -1,63 +1,20 @@
-import _React from 'react';,
-';
-import '@testing-library/jest-dom';';
-import AccessibilityManager from '../components/AccessibilityManager';';
-import _React from 'react';,
-';
-import '@testing-library/jest-dom';';
-import AccessibilityManager from '../components/AccessibilityManager';';
-describe('AccessibilityManager', () => {'}
-  test('renders without crashing', () => {'}
+import _React from 'react';,''
+';''
+import '@testing-library/jest-dom';';''
+import AccessibilityManager from '../components/AccessibilityManager';';''
+import _React from 'react';,''
+';''
+import '@testing-library/jest-dom';';''
+import AccessibilityManager from '../components/AccessibilityManager';';''
+describe('AccessibilityManager', () => {'}''
+  test('renders without crashing', () => {'}'
     render(<AccessibilityManager />);,
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();';,
-  });,
-  test('displays correct content', () => {'}
+</AccessibilityManager>
     render(<AccessibilityManager />);,
-  });,
-  test('handles user interactions', () => {'}
+</AccessibilityManager>
     render(<AccessibilityManager />);,
-  });,
-  test('applies correct styling', () => {'}
+</AccessibilityManager>
     render(<AccessibilityManager />);,
-  });
-<<<<<<< HEAD
-=======
-});
-});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-import _React from 'react'
-''
-import '@testing-library/jest-dom';'
-import AccessibilityManager from '../components/AccessibilityManager';'
-describe('AccessibilityManager', () => {'
-  test('renders without crashing', () => {'
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();'
-  test('displays correct content', () => {'
-  test('handles user interactions', () => {'
-  test('applies correct styling', () => {'
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AccessibilityManager from '../components/AccessibilityManager';
-
-describe('AccessibilityManager', () => {
-  test('renders without crashing', () => {
+</AccessibilityManager>
     render(<AccessibilityManager />);
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
-  });
-});
-});
-});
-<<<<<<< HEAD
-import _React from 'react'
-'
-import '@testing-library/jest-dom';
-import AccessibilityManager from '../components/AccessibilityManager';
-describe('AccessibilityManager', () => {'
-  test('renders without crashing', () => {'
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
-  test('displays correct content', () => {'
-  test('handles user interactions', () => {'
-  test('applies correct styling', () => {'
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+</AccessibilityManager>'

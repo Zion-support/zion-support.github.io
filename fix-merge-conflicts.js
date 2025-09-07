@@ -1,45 +1,50 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs');''
+const path = require('path');'
 function findFilesWithConflicts(dir) {
   const files = [];
 
   function scanDirectory(currentDir) {
     try {
+  // TODO: Implement
+}
       const items = fs.readdirSync(currentDir);
 
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
 
         try {
+  // TODO: Implement
+}
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
-            // Skip certain directories
-            if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
+            // Skip certain directories;'
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {'
               scanDirectory(fullPath);
             }
           } else if (stat.isFile()) {
-            // Check for common source file extensions
-            const ext = path.extname(item);
-            if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
+            // Check for common source file extensions;
+            const ext = path.extname(item);'
+            if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {'
               try {
-                const content = fs.readFileSync(fullPath, 'utf8');
-                if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+  // TODO: Implement
+}'
+                const content = fs.readFileSync(fullPath, 'utf8');''
+                if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {'
                   files.push(fullPath);
                 }
-              } catch (error) {
-                // Skip files that can't be read
+              } catch (error) {'
+                // Skip files that can't be read;'
               }
             }
           }
         } catch (error) {
-          // Skip broken symlinks or inaccessible files
+          // Skip broken symlinks or inaccessible files;
           continue;
         }
       }
-    } catch (error) {
-      // Skip directories that can't be read
+    } catch (error) {'
+      // Skip directories that can't be read;'
       return;
     }
   }
@@ -50,14 +55,15 @@ function findFilesWithConflicts(dir) {
 
 function resolveConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep the main branch version
+  // TODO: Implement
+}'
+    let content = fs.readFileSync(filePath, 'utf8');'
+    // Remove merge conflict markers and keep the main branch version;
     content = content.replace(/    
-    // Remove any remaining conflict markers
-    content = content.replace(/    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    fs.writeFileSync(filePath, content, 'utf8');
+    // Remove any remaining conflict markers;)'
+    content = content.replace(/    content = content.replace(/\n?/g, '');'
+    content = content.replace(/    )'
+    fs.writeFileSync(filePath, content, 'utf8');'
     console.log(`Fixed conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -66,10 +72,9 @@ function resolveConflicts(filePath) {
   }
 }
 
-// Main execution
-const workspaceDir = process.cwd();
-console.log('Scanning for files with merge conflicts...');
-
+// Main execution;
+const workspaceDir = process.cwd();'
+console.log('Scanning for files with merge conflicts...');'
 const filesWithConflicts = findFilesWithConflicts(workspaceDir);
 console.log(`Found ${filesWithConflicts.length} files with conflicts`);
 
@@ -79,18 +84,19 @@ for (const file of filesWithConflicts) {
     fixedCount++;
   }
 }
-<<<<<<< HEAD
+
 
 console.log(`Fixed conflicts in ${fixedCount} files`);
-=======
+
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-// Run TypeScript check to see remaining errors
-console.log('\nRunning TypeScript check...');
+// Run TypeScript check to see remaining errors;'
+console.log('\nRunning TypeScript check...');'
 try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
-  console.log('TypeScript check passed!');
-} catch (error) {
-  console.log('TypeScript check found some issues, but continuing...');
-}
-console.log('\nMerge conflict fixing complete!');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+  // TODO: Implement
+}'
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });''
+  console.log('TypeScript check passed!');'
+} catch (error) {'
+  console.log('TypeScript check found some issues, but continuing...');'
+}'
+console.log('\nMerge conflict fixing complete!');''

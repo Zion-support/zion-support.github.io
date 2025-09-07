@@ -1,205 +1,159 @@
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-const CommunityRoutes = () => {
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage",
-import ForumCategoryPage from "../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage",
-import CreatePostPage from "../pages/CreatePostPage",
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-
+import { Fragment } from "react";""
+import { Route, Routes } from "react-router-dom";""
+import { ProtectedRoute } from "../components/ProtectedRoute";""
+import CommunityPage from "../pages/CommunityPage";""
+import ForumCategoryPage from "../pages/ForumCategoryPage";""
+import ForumPostPage from "../pages/ForumPostPage";""
+import CreatePostPage from "../pages/CreatePostPage";""
+import EditPostPage from "../pages/EditPostPage";""
+import CommunityProfilePage from "../pages/CommunityProfilePage";"
+const CommunityRoutes = () => {"
+import {Fragment} from "react";""
+import {Route, Routes} from "react-router-dom";""
+import {ProtectedRoute} from "../components/ProtectedRoute";""
+import CommunityPage from "../pages/CommunityPage";""
+import ForumCategoryPage from "../pages/ForumCategoryPage";""
+import ForumPostPage from "../pages/ForumPostPage";""
+import CreatePostPage from "../pages/CreatePostPage";""
+import EditPostPage from "../pages/EditPostPage";""
+import CommunityProfilePage from "../pages/CommunityProfilePage";""
+import { Fragment } from "react",""
+import { Route, Routes } from "react-router-dom",""
+import { ProtectedRoute } from "../components/ProtectedRoute",""
+import CommunityPage from "../pages/CommunityPage",""
+import ForumCategoryPage from "../pages/ForumCategoryPage",""
+import ForumPostPage from "../pages/ForumPostPage",""
+import CreatePostPage from "../pages/CreatePostPage",""
+import EditPostPage from "../pages/EditPostPage";""
+import CommunityProfilePage from "../pages/CommunityProfilePage";"
 const CommunityRoutes = () => {
   return (
     <Routes>
-      {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
-
-
-
-const CommunityRoutes = () => {
-const CommunityRoutes = () => {
-const CommunityRoutes = () => {;
-  return (
+</Routes>"
+      <Route path="/community" element={<CommunityPage />} />"
+</Route>"
+      <Route path="/forum" element={<CommunityPage />} />"
+</Route>"
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />"
+</Route>"
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />"
+</Route>"
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />"
+</Route>
     <Routes>;
-      {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route
-        path="/community/category/:categoryId"
+</Routes>"
+      <Route path="/community" element={<CommunityPage />} />"
+</Route>"
+      <Route path="/forum" element={<CommunityPage />} />"
+</Route>
+      <Route;"
+        path="/community/category/:categoryId""
         element={<ForumCategoryPage />}
-      />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route
-        path="/community/profile/:userId"
+</Route>"
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />"
+</Route>
+      <Route;"
+        path="/community/profile/:userId""
         element={<CommunityProfilePage />}
-      />
-
-      {/* Protected routes */}
-      <Route
-        path="/community/create"
+</Route>
+      <Route;"
+        path="/community/create""
         element={
           <ProtectedRoute>
+</Route>
             <CreatePostPage />
+</CreatePostPage>
           </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/community/edit/:postId"
+      <Route;"
+        path="/community/edit/:postId""
         element={
           <ProtectedRoute>
+</Route>
             <EditPostPage />
+</EditPostPage>
           </ProtectedRoute>
-        }
-      />
     </Routes>
-  );
-};
-
-
-
-
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "../components/ProtectedRoute",;
-import CommunityPage from "../pages/CommunityPage",;
-import ForumCategoryPage from "../pages/ForumCategoryPage",;
-import ForumPostPage from "../pages/ForumPostPage",;
-import CreatePostPage from "../pages/CreatePostPage",;
-import EditPostPage from "../pages/EditPostPage",;
-import CommunityProfilePage from "../pages/CommunityProfilePage",;
-;
-const CommunityRoutes = () => {;
-  return (;
     <Routes>;
-      {/* Public routes */}
-
-      <Route path="/community" element={<CommunityPage />} />;
-      <Route path="/forum" element={<CommunityPage />} />;
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />;
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
-
-  return (
+</Routes>"
+      <Route path="/community" element={<CommunityPage />} />;"
+</Route>"
+      <Route path="/forum" element={<CommunityPage />} />;"
+</Route>"
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;"
+</Route>"
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />;"
+</Route>"
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;"
+</Route>
     <Routes>;
-      {/* Public routes */}
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '../components / ProtectedRoute';
-import CommunityPage from "../pages / CommunityPage";
-import ForumCategoryPage from "../pages / ForumCategoryPage";
-import ForumPostPage from "../pages / ForumPostPage";
-import CreatePostPage from "../pages / CreatePostPage";
-import EditPostPage from "../pages / EditPostPage";
-import CommunityProfilePage from "../pages / CommunityProfilePage";
-const CommunityRoutes = () =>: any {
-  return (
+</Routes>
     <Routes>;
-      {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />;
-      <Route path="/forum" element={<CommunityPage />} />;
-      <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;
-      <Route path="/community / post/:post_id" element={<ForumPostPage />} />;
-      <Route path="/community / profile/:user_id" element={<CommunityProfilePage />} />;
-      {/* Protected routes */}
-      <Route;
-        path="/community / create";
+</Routes>"
+      <Route path="/community" element={<CommunityPage />} />;"
+</Route>"
+      <Route path="/forum" element={<CommunityPage />} />;"
+</Route>"
+      <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;"
+</Route>"
+      <Route path="/community / post/:post_id" element={<ForumPostPage />} />;"
+</Route>"
+      <Route path="/community / profile/:user_id" element={<CommunityProfilePage />} />;"
+</Route>
+      <Route;"
+        path="/community / create";"
         element={
           <ProtectedRoute>;
+</Route>
             <CreatePostPage />;
+</CreatePostPage>
           </ProtectedRoute>;
-        }
-      />;
-
-      <Route;
-        path="/community / edit/:post_id";
-
+      <Route;"
+        path="/community / edit/:post_id";"
         element={
           <ProtectedRoute>;
+</Route>
             <EditPostPage />;
+</EditPostPage>
           </ProtectedRoute>;
-        }
-
-      />;
     </Routes>;
-  );
-
-      />;
-    </Routes>;
-},;
-export default CommunityRoutes;
-
-
-};
-      />;
+    </Routes>;)
     </Routes>);
-}
-;
-export default CommunityRoutes;
-;
-  ),;
-},;
-;export default CommunityRoutes,
- const CommunityRoutes = () => {
   return (<Routes> {
-  /* Public routes */ 
-}<Route path="/community" element= {
+</Routes>"
+}<Route path="/community" element= {"
   <CommunityPage /> 
-}/> <Route path="/forum" element= {
+</Route>"
+}/> <Route path="/forum" element= {"
   <CommunityPage /> 
-}/> <Route path="/community/category/:categoryId" element= {
+</Route>"
+}/> <Route path="/community/category/:categoryId" element= {"
   <ForumCategoryPage /> 
-}/> <Route path="/community/post/:postId" element= {
+</Route>"
+}/> <Route path="/community/post/:postId" element= {"
   <ForumPostPage /> 
-}/> <Route path="/community/profile/:userId" element= {
+</Route>"
+}/> <Route path="/community/profile/:userId" element= {"
   <CommunityProfilePage /> 
-}/> /* Protected routes */ 
+</Route>
 }<Route <CreatePostPage /> </ProtectedRoute> 
+</Route>
 }/> <Route <EditPostPage /> </ProtectedRoute> 
+</Route>)
 }/> </Routes>) 
-};
-export default CommunityRoutes;
-      {/* Protected routes */}
-      <Route
-        path="/community/create"
+      <Route;"
+        path="/community/create""
         element={
           <ProtectedRoute>
+</Route>
             <CreatePostPage />
+</CreatePostPage>
           </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/community/edit/:postId"
+      <Route;"
+        path="/community/edit/:postId""
         element={
           <ProtectedRoute>
+</Route>
             <EditPostPage />
+</EditPostPage>
           </ProtectedRoute>
-        }
-      />;
-    </Routes>;
-  );
-},;
-export default CommunityRoutes;
-;
+    </Routes>;"

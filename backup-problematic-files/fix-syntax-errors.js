@@ -6,57 +6,56 @@ fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log(' Syntax error fixes completed'),,
+// // // console.log(' Syntax error fixes completed'),,'
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
 fixAiServices(),
 fixApiDocs(),
 fixCareers(),
-,
-console.log(' Syntax error fixes completed'),
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-
+,'
+console.log(' Syntax error fixes completed'),'
+#!/usr/bin/env node;'
+import fs from 'fs';''
+import path from 'path';''
+import { execSync } from 'child_process';''
+import { fileURLToPath } from 'url';'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-console.log(' Starting syntax error fixes...');
-
-// Function to fix merge conflict markers and syntax errors
+'
+console.log(' Starting syntax error fixes...');'
+// Function to fix merge conflict markers and syntax errors;
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  // TODO: Implement
+}'
+    let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false;
 
-    // Remove merge conflict markers
+    // Remove merge conflict markers;
     const conflictRegex = /^[<>=]{7}.*$/gm;
-    if (conflictRegex.test(content)) {
-      content = content.replace(conflictRegex, '');
+    if (conflictRegex.test(content)) {'
+      content = content.replace(conflictRegex, '');'
       modified = true;
     }
 
-    // Fix common syntax patterns
+    // Fix common syntax patterns;
     const fixes = [
-      // Fix function declarations with semicolons
-      { pattern: /export function (\w+)\s*\(\s*\{([^}]*)\}\s*\)\s*\{/g, replacement: 'export function $1({ $2 }) {' },
-      // Fix object destructuring with semicolons
-      { pattern: /const\s*\{\s*([^}]*)\s*\}\s*=\s*([^;]+);/g, replacement: 'const { $1 } = $2;' },
-      // Fix JSX with semicolons
-      { pattern: /className=\s*\{\s*cn\s*\(\s*"([^"]*)"\s*([^}]*)\s*\)\s*;\s*"/g, replacement: 'className={cn("$1", $2)}' },
-      // Fix unterminated strings
-      { pattern: /"([^"]*)\n/g, replacement: '"$1"' },
-      // Fix missing semicolons in object properties
-      { pattern: /(\w+):\s*"([^"]*)"\s*([^,}\n])/g, replacement: '$1: "$2",' },
-      // Fix malformed JSX
-      { pattern: /<(\w+)\s*([^>]*)\s*>\s*\{([^}]*)\}\s*<\/\1>/g, replacement: '<$1 $2>{$3}</$1>' },
+      // Fix function declarations with semicolons;]'
+      { pattern: /export function (\w+)\s*\(\s*\{([^}]*)\}\s*\)\s*\{/g, replacement: 'export function $1({ $2 }) {' },'
+      // Fix object destructuring with semicolons;'
+      { pattern: /const\s*\{\s*([^}]*)\s*\}\s*=\s*([^;]+);/g, replacement: 'const { $1 } = $2;' },'
+      // Fix JSX with semicolons;'
+      { pattern: /className=\s*\{\s*cn\s*\(\s*"([^"]*)"\s*([^}]*)\s*\)\s*;\s*"/g, replacement: 'className={cn("$1", $2)}' },'
+      // Fix unterminated strings;'
+      { pattern: /"([^"]*)\n/g, replacement: '"$1"' },'
+      // Fix missing semicolons in object properties;'
+      { pattern: /(\w+):\s*"([^"]*)"\s*([^,}\n])/g, replacement: '$1: "$2",' },'
+      // Fix malformed JSX;'
+      { pattern: /<(\w+)\s*([^>]*)\s*>\s*\{([^}]*)\}\s*<\/\1>/g, replacement: '<$1 $2>{$3}</$1>' },'
     ];
 
-    fixes.forEach(fix => {
+    fixes.forEach(fix => {)
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement);
         modified = true;
@@ -74,8 +73,8 @@ function fixFile(filePath) {
   return false;
 }
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+// Function to find all TypeScript/JavaScript files;'
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {'
   const files = [];
   
   function traverse(currentDir) {
@@ -84,8 +83,8 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      '
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -97,8 +96,8 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-// Main execution
-const srcDir = path.join(__dirname, 'src');
+// Main execution;'
+const srcDir = path.join(__dirname, 'src');'
 const files = findFiles(srcDir);
 
 console.log(` Found ${files.length} files to check...`);
@@ -112,11 +111,14 @@ for (const file of files) {
 
 console.log(` Fixed ${fixedCount} files`);
 
-// Try to run build again
-console.log('  Running build...');
+// Try to run build again;'
+console.log('  Running build...');'
 try {
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log(' Build successful!');
-} catch (error) {
-  console.log(' Build still has errors, continuing with manual fixes...');
+  // TODO: Implement
+}'
+  execSync('npm run build', { stdio: 'inherit' });''
+  console.log(' Build successful!');'
+} catch (error) {'
+  console.log(' Build still has errors, continuing with manual fixes...');'
 }
+'

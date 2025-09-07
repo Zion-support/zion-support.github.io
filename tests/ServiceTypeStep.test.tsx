@@ -1,33 +1,40 @@
-import React from 'react';
+import React from 'react';'
 interface ServiceTypeStep.testProps {
-  // Add props here as needed
+  // TODO: Implement
 }
-<<<<<<< HEAD
+  // Add props here as needed;
+}
+
 
 interface ServiceTypeStep.testProps {
-  // Add props here as needed
+  // TODO: Implement
+}
+  // Add props here as needed;
 <=
 }
 
 >interface ServiceTypeStep.testProps {
-=======
+  // TODO: Implement
+}
 }
 
 
 interface ServiceTypeStep.testProps {
-  // Add props here as needed
+  // TODO: Implement
+}
+  // Add props here as needed;
 interface ServiceTypeStep.testProps {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-  // Add props here as needed
+  // TODO: Implement
+}
+  // Add props here as needed;
 }
 export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
   return (
     <div>
+</div>
       <h1>ServiceTypeStep.test</h1>
       <p>This component is currently under development.</p>
     </div>
-  );
-<<<<<<< HEAD
 <
 
 =
@@ -38,12 +45,13 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
 
 >}
 >
-=======
 
-
-}
-}
 
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+}
+
+
+}
+
+)'

@@ -1,6 +1,6 @@
-// Security-audit utility
+// Security-audit utility;
 export const Security-audit = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 

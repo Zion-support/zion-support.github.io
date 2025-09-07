@@ -1,11 +1,8 @@
-import React from 'react';
-
+import React from 'react';'
 const AIClimatePrediction.js = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>AIClimatePrediction.js</h1>
       <p>This component is under development.</p>
-    </div>
-  );
-};
-
+    </div>)'

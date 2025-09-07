@@ -1,28 +1,21 @@
 
 
-import {useState} from 'react';
-import {Conversation, Message} from '@/types/messaging';
+import {useState} from 'react';''
+import {Conversation, Message} from '@/types/messaging';'
 /**
- * Hook to manage messaging state
+ * Hook to manage messaging state;
  */
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
+</Message>
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+</Message>
 
 
   const [conversations, setConversations] = useState<Conversation[]>([]);
-  const [unreadCount, setUnreadCount] = useState(0);
+</Conversation>
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
-  const [isLoading, setIsLoading] = useState(false);
-import {useState} from 'react';
-import {Conversation, Message} from '@/types / messaging';
-/**;
-* Hook to manage messaging state;
-*/;
-export /**
- * useConversationState - Function description
- */
-function useConversationState() {
+</Conversation>
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -31,6 +24,8 @@ function useConversationState() {
   const [is_loading, setIsLoading] = useState (false);
 ;
   return {
+  // TODO: Implement
+}
     // State;
     messages;
     set_messages;
@@ -41,33 +36,18 @@ function useConversationState() {
     unread_count;
     setUnreadCount;
 
-    activeConversation;
-import { useState } from 'react',;
-import { Conversation, Message } from '@/types/messaging',;
+    activeConversation;'
+import { useState } from 'react',;''
+import { Conversation, Message } from '@/types/messaging',;'
 /**;
  * Hook to manage messaging state;
  */;
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]),;
+</Message>
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
+</Message>
   const [conversations, setConversations] = useState<Conversation[]>([]),;
-  const [unreadCount, setUnreadCount] = useState(0),;
+</Conversation>
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
-  const [isLoading, setIsLoading] = useState(false),;
-  return {;
-    // State;
-    messages,;
-    setMessages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    active_conversation;
-    setActiveConversation;
-    is_loading;
-    setIsLoading}
-}
-}
+</Conversation>'

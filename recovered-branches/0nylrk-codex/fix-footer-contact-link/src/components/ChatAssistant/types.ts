@@ -7,18 +7,20 @@ export interface Message {;
 
 
 export interface Message {
+  // TODO: Implement
+}
 export interface Message {;
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
+  id: string;,
+  role: 'user' | 'assistant';'
+  message: string;,
   timestamp: Date;
-  read?: boolean
+  read?: boolean;
 }
 
 
 
 export interface Recipient {;
-  id: string;
+  id: string;,
   name: string;
   avatarUrl?: string;
   role?: string;
@@ -26,8 +28,8 @@ export interface Recipient {;
 
 
 export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
+  id: string,;'
+  role: 'user' | 'assistant',;'
   message: string,;
   timestamp: Date,;
   read?: boolean;
@@ -52,5 +54,8 @@ export interface Recipient {;
 ;
 ;
 export interface Recipient {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   name: string;
+'

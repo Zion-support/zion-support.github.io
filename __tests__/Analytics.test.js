@@ -1,63 +1,20 @@
-import _React from 'react';,
-';
-import '@testing-library/jest-dom';';
-import Analytics from '../components/Analytics';';
-import _React from 'react';,
-';
-import '@testing-library/jest-dom';';
-import Analytics from '../components/Analytics';';
-describe('Analytics', () => {'}
-  test('renders without crashing', () => {'}
+import _React from 'react';,''
+';''
+import '@testing-library/jest-dom';';''
+import Analytics from '../components/Analytics';';''
+import _React from 'react';,''
+';''
+import '@testing-library/jest-dom';';''
+import Analytics from '../components/Analytics';';''
+describe('Analytics', () => {'}''
+  test('renders without crashing', () => {'}'
     render(<Analytics />);,
-    expect(screen.getByTestId('analytics')).toBeInTheDocument();';,
-  });,
-  test('displays correct content', () => {'}
+</Analytics>
     render(<Analytics />);,
-  });,
-  test('handles user interactions', () => {'}
+</Analytics>
     render(<Analytics />);,
-  });,
-  test('applies correct styling', () => {'}
+</Analytics>
     render(<Analytics />);,
-  });
-<<<<<<< HEAD
-=======
-});
-});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-import _React from 'react'
-''
-import '@testing-library/jest-dom';'
-import Analytics from '../components/Analytics';'
-describe('Analytics', () => {'
-  test('renders without crashing', () => {'
-    expect(screen.getByTestId('analytics')).toBeInTheDocument();'
-  test('displays correct content', () => {'
-  test('handles user interactions', () => {'
-  test('applies correct styling', () => {'
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Analytics from '../components/Analytics';
-
-describe('Analytics', () => {
-  test('renders without crashing', () => {
+</Analytics>
     render(<Analytics />);
-    expect(screen.getByTestId('analytics')).toBeInTheDocument();
-  });
-});
-});
-});
-<<<<<<< HEAD
-import _React from 'react'
-'
-import '@testing-library/jest-dom';
-import Analytics from '../components/Analytics';
-describe('Analytics', () => {'
-  test('renders without crashing', () => {'
-    expect(screen.getByTestId('analytics')).toBeInTheDocument();
-  test('displays correct content', () => {'
-  test('handles user interactions', () => {'
-  test('applies correct styling', () => {'
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+</Analytics>'

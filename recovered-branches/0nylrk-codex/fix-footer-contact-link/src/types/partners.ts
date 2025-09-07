@@ -1,13 +1,16 @@
 export interface PartnerProfile {
-
-
+  // TODO: Implement
+}
 export interface PartnerProfile {;
 
 export interface PartnerProfile {
-
+  // TODO: Implement
+}
 export interface PartnerProfile {;
 export interface PartnerProfile {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   user_id: string;
   name: string;
   website?: string;
@@ -18,11 +21,11 @@ export interface PartnerProfile {
     linkedin?: string;
     [key: string]: string | undefined;
   };
-  niche: string;
+  niche: string;,
   audience_size: string;
-  payout_method: string;
+  payout_method: string;,
   bio: string;
-  status: "pending" | "approved" | "rejected";
+  status: "pending" | "approved" | "rejected";",
   created_at: string;
   updated_at: string;
   commission_rate?: number;
@@ -31,36 +34,41 @@ export interface PartnerProfile {
 
 export interface PartnerSettings {;
 
-  id: string;
+  id: string;,
   commission_rate: number;
-  fraud_threshold: number;
+  fraud_threshold: number;,
   is_payouts_enabled: boolean;
 }
 
 
 export interface PartnerReferralLink {;
 
-  updated_at: string
-
-  commission_rate?: number
+  updated_at: string;
+  commission_rate?: number;
 }
 export interface PartnerSettings {
-
+  // TODO: Implement
+}
 export interface PartnerSettings {;
 export interface PartnerSettings {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   commission_rate: number;
 }
 export interface PartnerReferralLink {
-
+  // TODO: Implement
+}
 export interface PartnerReferralLink {;
 export interface PartnerReferralLink {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   name: string;
   url: string;
   campaign?: string;
   source?: string;
-  clicks: number;
+  clicks: number;,
   conversions: number;
   created_at: string;
 }
@@ -68,22 +76,26 @@ export interface PartnerReferralLink {
 
 export interface PartnerPayout {;
 
-  conversions: number
-
-  created_at: string
+  conversions: number;,
+  created_at: string;
 }
 export interface PartnerPayout {
-
+  // TODO: Implement
+}
 export interface PartnerPayout {;
 export interface PartnerPayout {
-
+  // TODO: Implement
+}
 export interface PartnerPayout {;
 export interface PartnerPayout {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   partner_id: string;
-  amount: number;
-  status: "pending" | "processing" | "completed" | "failed";
-  method: string;
+  amount: number;,"
+  status: "pending" | "processing" | "completed" | "failed";"
+  method: string;,
   created_at: string;
   completed_at?: string;
 }
+"

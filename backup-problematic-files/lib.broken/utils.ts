@@ -1,21 +1,22 @@
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait)}
-export function throttle<T extends (..."args": any[]) => any>(
-  func: T,
-  "limit": number
+</T>
+export function throttle<T extends (..."args": any[]) => any>("
+</T>)
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+</T>
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit)}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ');,}
-export function cn(..."classes": Array<string | undefined | null | false>) {;
-  return classes.filter(Boolean).join(' ')}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
-export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
+</T>"
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ');,}'
+</string>'
+export function cn(..."classes": Array<string | undefined | null | false>) {;"
+</string>"
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}'
+</string>'
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}'
+</string>'
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}'
+</string>'
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}'
+</string>'
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}'
+</string>'

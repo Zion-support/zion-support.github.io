@@ -1,13 +1,14 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
- * Clean Duplicate Imports
- * Removes duplicate imports from files
+ * Clean Duplicate Imports;
+ * Removes duplicate imports from files;
  */
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs');''
+const path = require('path');'
 class ImportCleaner {
+  // TODO: Implement
+}
   constructor() {
     this.cleanedFiles = [];
   }
@@ -18,48 +19,50 @@ class ImportCleaner {
 
   cleanFile(filePath) {
     try {
+  // TODO: Implement
+}
       if (!fs.existsSync(filePath)) {
         return false;
       }
-
-      let content = fs.readFileSync(filePath, 'utf8');
-
-      // Find lucide-react import
-      const importMatch = content.match(
-        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/
+'
+      let content = fs.readFileSync(filePath, 'utf8');'
+      // Find lucide-react import;
+      const importMatch = content.match()'
+        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/"
       );
       if (!importMatch) {
-        return true; // No lucide-react import
+        return true; // No lucide-react import;
       }
 
       const importContent = importMatch[1];
-      const imports = importContent
-        .split(',')
+      const imports = importContent;"
+        .split(',')'
         .map(imp => imp.trim())
         .filter(imp => imp.length > 0);
 
-      // Remove duplicates while preserving order
+      // Remove duplicates while preserving order;
       const uniqueImports = [];
       const seen = new Set();
 
-      for (const imp of imports) {
-        // Extract the base name (before 'as')
-        const baseName = imp.split(' as ')[0].trim();
+      for (const imp of imports) {'
+        // Extract the base name (before 'as')''
+        const baseName = imp.split(' as ')[0].trim();'
         if (!seen.has(baseName)) {
           uniqueImports.push(imp);
           seen.add(baseName);
         }
       }
 
-      // Create new import statement
-      const newImportStatement = `import { 
-  ${uniqueImports.join(',\n  ')}
-} from 'lucide-react';`;
-
-      // Replace the old import
-      content = content.replace(
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
-        newImportStatement
+      // Create new import statement;
+      const newImportStatement = `import {
+  // TODO: Implement
+}'
+  ${uniqueImports.join(',\n  ')}''
+} from 'lucide-react';`;'
+      // Replace the old import;
+      content = content.replace('
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;"
+        newImportStatement;)
       );
 
       fs.writeFileSync(filePath, content);
@@ -72,13 +75,12 @@ class ImportCleaner {
     }
   }
 
-  async cleanAllFiles() {
-    this.log('🚀 Starting import cleaning...');
-
-    const filesToClean = [
-      'pages/components/Navigation.tsx';
-      'pages/it-services.tsx';
-      'pages/components/Footer.tsx';
+  async cleanAllFiles() {"
+    this.log('🚀 Starting import cleaning...');'
+    const filesToClean = ['
+      'pages/components/Navigation.tsx';''
+      'pages/it-services.tsx';''
+      'pages/components/Footer.tsx';']
     ];
 
     for (const file of filesToClean) {
@@ -90,10 +92,11 @@ class ImportCleaner {
   }
 }
 
-// Run if called directly
+// Run if called directly;
 if (require.main === module) {
   const cleaner = new ImportCleaner();
   cleaner.cleanAllFiles().catch(console.error);
 }
 
 module.exports = ImportCleaner;
+'

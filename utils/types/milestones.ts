@@ -3,63 +3,68 @@ export type ProjectParticipants = {
 export type ProjectParticipants = {;
 
 
-  clientUserId: string;
+  clientUserId: string;,
   talentUserId: string;
 }
-export type Project = {  id: string;
+export type Project = {  id: string;,
   title: string;
   description?: string;
   title: string;
   description?: string;
-  due_date: string;
+  due_date: string;,
   amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
+  status: 'pending' | 'completed' | 'cancelled';'
   attachments?: MilestoneAttachment[];
 
-  updatedAt: string
-
+  updatedAt: string;
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  // TODO: Implement
+}
   return (
-
+)
   );export interface MilestoneAttachment {
-
-
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||;
-    value === 'Paid';
+  // TODO: Implement
+}'
+    value === 'Pending' ||''
+    value === 'In Progress' ||''
+    value === 'Submitted' ||''
+    value === 'Approved' ||;''
+    value === 'Paid';'
   );export interface MilestoneAttachment {;
-  id: string;
+  id: string;,
   name: string;
-  url: string;
+  url: string;,
   type: string;
   size: number;
 export interface CreateMilestoneRequest {
-
-
+  // TODO: Implement
+}
 export interface CreateMilestoneRequest {;
 
   title: string;
   description?: string;
 }
 export interface UpdateMilestoneRequest {
-
-
+  // TODO: Implement
+}
 export interface UpdateMilestoneRequest {;
 
 export interface UpdateMilestoneRequest {
+  // TODO: Implement
+}
   title?: string;
   description?: string;
   due_date?: string;
-  amount_usd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
+  amount_usd?: number;'
+  status?: 'pending' | 'completed' | 'cancelled';'
   attachments?: MilestoneAttachment[];
 }
 
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
+  // TODO: Implement
+}
   if (!milestone.dueDate) return null;
   const dueDate = new Date(milestone.dueDate);
   const now = new Date();
@@ -69,3 +74,4 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 
 }
 }
+'

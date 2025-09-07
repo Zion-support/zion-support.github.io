@@ -1,11 +1,13 @@
 // Security utility functions;
 export class SecurityUtils {
+  // TODO: Implement
+}
   static sanitizeInput(input) {
-  if (typeof input !== "string") return input;
-    return input;
-      .replace(/[<>]/g, "") // Remove potential HTML tags;
-      .replace(/"javascript": /gi, "") // Remove "javascript": protocol;
-      .replace(/on\w+=/gi, "") // Remove event handlers;
+  if (typeof input !== "string") return input;"
+    return input;"
+      .replace(/[<>]/g, "") // Remove potential HTML tags;""
+      .replace(/"javascript": /gi, "") // Remove "javascript": protocol;""
+      .replace(/on\w+=/gi, "") // Remove event handlers;"
       .trim()}
   static validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -15,9 +17,9 @@ export class SecurityUtils {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/;
     return passwordRegex && passwordRegex.test(password)}
   static escapeHtml(text) {
-  const map = {
-  "&": "&amp;",
-      "<": "&lt;">;
-      ">": "&gt;",
-      """: "&quot;",
-      """: "&#039;"}
+  const map = {"
+  "&": "&amp;",""
+      "<": "&lt;">;""
+      ">": "&gt;",""
+      """: "&quot;",""
+      """: "&#039;"}""

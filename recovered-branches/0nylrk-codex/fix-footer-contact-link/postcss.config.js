@@ -1,19 +1,21 @@
 
 export default {
-  plugins: {
-    tailwindcss: {}
+  // TODO: Implement
+}
+  plugins: {,
+  tailwindcss: {}
     autoprefixer: {}}}
 
 
 export default {;
-  plugins: {;
-    tailwindcss: {};
+  plugins: {;,
+  tailwindcss: {};
 
     autoprefixer: {}}}
-export default {plugins: {;
-    tailwindcss: {}
+export default {plugins: {;,
+  tailwindcss: {}
 export default {;
-  plugins: {;
-    tailwindcss: {};
+  plugins: {;,
+  tailwindcss: {};
     autoprefixer: {}}}
     autoprefixer: {}}}

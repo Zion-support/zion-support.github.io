@@ -1,16 +1,18 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
+const path = require('path');''
+const { spawnSync } = require('child_process');'
 function runNode(relPath, args = []) {
-
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
-    encoding: 'utf8'
+'
+  const abs = path.resolve(__dirname, '..', '..', relPath);''
+  const res = spawnSync('node', [abs, ...args], {''
+    stdio: 'pipe'','
+  encoding: 'utf8'')
   });
   return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
+  // TODO: Implement
+}
+    status: res.status |0;,'
+  stdout: res.stdout |''''
+    stderr: res.stderr |'''
   }
 
 exports.handler = async () => {
@@ -23,8 +25,8 @@ exports.handler = async () => {
     logs.push(`exit=${status}`);
 
     return status;
-  }
-  logStep('components:generate-docs', () =>
-    runNode('automation/component-props-docs.cjs')
-  );
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  }'
+  logStep('components:generate-docs', () =>''
+    runNode('automation/component-props-docs.cjs')'
+  );'
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));''

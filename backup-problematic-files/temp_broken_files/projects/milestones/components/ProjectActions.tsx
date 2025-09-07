@@ -1,9 +1,9 @@
 
-import React from 'react',;
-import { Button } from '@/components/ui/button',;
-import Link from 'next/link',;
-import { ShieldAlert } from 'lucide-react';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+import React from 'react',;''
+import { Button } from '@/components/ui/button',;''
+import Link from 'next/link',;''
+import { ShieldAlert } from 'lucide-react';''
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;'
 ;
 interface ProjectActionsProps {;
   projectId:string,;
@@ -18,40 +18,34 @@ export function ProjectActions({;
   isUnderDispute,;
   disputeId,;
   isTalent,;
-  onAddMilestone;
+  onAddMilestone;)
 } ProjectActionsProps) {;
-  return (;
-    <div className="flex gap-2">;
-      {isUnderDispute && disputeId ? (;
-        <Button variant="outline" asChild>;
+  return (;'
+    <div className="flex gap-2">;"
+</div>"
+        <Button variant="outline" asChild>;"
+</Button>
           <Link href={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
-            View Active Dispute;
+</Link>"
+            <ShieldAlert className="h-4 w-4 mr-2" />;"
+</ShieldAlert>
           </Link>;
         </Button>;
-      ) :(;
         <RaiseDisputeButton ;
-          projectId={projectId}
-          variant="outline";
+          projectId={projectId}"
+          variant="outline";"
         />;
-      )}
-      {isTalent && !isUnderDispute && (;
+</RaiseDisputeButton>
         <Button onClick={onAddMilestone}>;
-          Add Milestone;
+</Button>
         </Button>;
-      )}
-    </div>;
-  ),;}
- {;
-  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
-  `/dashboard/disputes/$ {;
-  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
-}{;
+    </div>;"
+  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;"
+</Button>)"
+  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;"
+</ShieldAlert>
   isTalent && !isUnderDispute && (<Button onClick={;
-  onAddMilestone ;
-}> Add Milestone </Button>) ;
-:temp_broken_files/projects/milestones/components/ProjectActions.tsx
-}</div>) ;"}"
-}</div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/components/ProjectActions.tsx
+  onAddMilestone ;)
+}> Add Milestone </Button>) ;"
+}</div>) ;"}""
+}</div>) ;"

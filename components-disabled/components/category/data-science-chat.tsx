@@ -1,103 +1,92 @@
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+import type { NextPage } from 'next';''
+import Head from 'next/head';''
+import Link from 'next/link';'
 const DataScienceChat: NextPage = () => {
   return (
     <div>
+</div>
       <Head>
-
-const DataScienceChat: NextPage = () => {;
-  return (
+</Head>
     <div>;
+</div>
       <Head>;
-        <title>DataScienceChat - Zion Tech Solutions</title>;
-        <meta name="description" content="DataScienceChat blog post" />{" "
-const DataScienceChat: NextPage = () => {
-  return (
+</Head>
+        <title>DataScienceChat - Zion Tech Solutions</title>;'
+        <meta name="description" content="DataScienceChat blog post" />{" ""
+</meta>
     <div>
+</div>
       <Head>
+</Head>
 
       </Head>;
-
       <main>
+</main>
         <h1>DataScienceChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <p>Blog content coming soon...</p>"
+        <a href="/blog">Back to Blog</a>"
       </main>
     </div>
       </Head>;
-
       <main>;
+</main>
         <h1>DataScienceChat</h1>;
-        <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <p>Blog content coming soon...</p>;"
+        <a href="/blog">Back to Blog</a>;"
       </main>;
     </div>;
-  );
-
-export default DataScienceChat;
-
         <title>DataScienceChat - Zion Tech Solutions</title>
-
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
-const DataScienceChat: NextPage = () => {
-  return (
     <div>;
+</div>
       <Head>;
-        <title > DataScienceChat - Zion Tech Solutions</title>;
-        <meta name="description" content="DataScienceChat blog post" />{" "}
+</Head>
+        <title > DataScienceChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="DataScienceChat blog post" />{" "}"
+</meta>
       </Head>;
       <main>;
+</main>
         <h1 > DataScienceChat</h1>;
-        <p > Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
+        <p > Blog content coming soon...</p>;"
+        <a href="/blog">Back to Blog</a>;"
+      </main>;)
     </div>);
-
-;
-export default DataScienceChat;
-;
     <div>
+</div>
       <Head>
+</Head>
         <title>DataScienceChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;DataScienceChat blog post&quot; />
+</meta>
       </Head>
       
       <main>
+</main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
         <a href=&quot;/blog&quot;>Back to Blog</a>
       </main>
     </div>
-  )
-},
-
-export default DataScienceChat
-
-const DataScienceChat: NextPage = () => {
-  return (
     <div>
+</div>
       <Head>
-        <title>DataScienceChat - Zion Tech Solutions</title>
-        <meta name="description" content="DataScienceChat blog post" />{" "}
+</Head>
+        <title>DataScienceChat - Zion Tech Solutions</title>"
+        <meta name="description" content="DataScienceChat blog post" />{" "}"
+</meta>
       </Head>
       <main>
+</main>
         <h1>DataScienceChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <p>Blog content coming soon...</p>"
+        <a href="/blog">Back to Blog</a>"
       </main>
     </div>
-  );
-
-export default DataScienceChat;
-
         <title>DataScienceChat - Zion Tech Solutions</title>
         <title>DataScienceChat - Zion Tech Solutions</title>
+"

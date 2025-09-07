@@ -1,40 +1,33 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ContactForm from '../components/ContactForm';
 
 
-  test('displays correct content', () => {
+
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'""
+</ContactForm>"
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'""
+</ContactForm>"
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>
     render(<ContactForm />);
-  });
-
-  test('handles user interactions', () => {
+</ContactForm>
     render(<ContactForm />);
-  });
-
-  test('applies correct styling', () => {
+</ContactForm>
     render(<ContactForm />);
-  });
-});
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
+</ContactForm>'
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'""
+</ContactForm>"
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'""
+</ContactForm>"
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })'
+</ContactForm>'

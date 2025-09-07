@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 require('@testing-library/jest-dom');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -14,16 +12,53 @@ jest.mock("next/router", () => ({
       pop: jest.fn(),
       reload: jest.fn(),
       back: jest.fn(),
-      prefetch: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
       beforePopState: jest.fn(),
       events: {
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn(),
       },
+      isFallback: false,
     };
   },
 }));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />;
+  },
+}));
+
+// Mock Next.js Link component
+jest.mock("next/link", () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  },
+}));
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -40,26 +75,21 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-// Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    "media": query,
-    "onchange": null,
-    "addListener": jest.fn(), // deprecated
-    "removeListener": jest.fn(), // deprecated
-    "addEventListener": jest.fn(),
-    "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-<<<<<<< HEAD
 
-// Global test setup
-beforeEach(() => {
-  jest.clearAllMocks();
+// Suppress console warnings in tests
+const originalWarn = console.warn;
+beforeAll(() => {
+  console.warn = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
 });
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+afterAll(() => {
+  console.warn = originalWarn;
+});

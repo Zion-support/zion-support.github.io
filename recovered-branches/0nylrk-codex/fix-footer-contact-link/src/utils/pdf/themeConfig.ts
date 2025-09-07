@@ -1,43 +1,39 @@
     ? {
-  return theme === 'light' 
-    ? { ;
-export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
-  return theme === 'light';
-
+  return theme === 'light''
+    ? { ;'
+export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {'
+  // TODO: Implement
+}'
+  return theme === 'light';'
     ? {
 
-
-  return theme === 'light' 
+'
+  return theme === 'light''
     ? { ;
-
-        background: '#ffffff';
-        text: '#000000';
-        heading: '#222222';
-
-        subheading: '#444444',
-        accent: '#9b87f5';
-
+'
+        background: '#ffffff';','
+  text: '#000000';''
+        heading: '#222222';','
+  subheading: '#444444',''
+        accent: '#9b87f5';',
   background: string;
-  text: string;
+  text: string;,
   heading: string;
-    ? {
-        background: '#ffffff';
-        text: '#000000';
-        heading: '#222222';
-        subheading: '#444444'
-        accent: '#9b87f5'
+    ? {'
+        background: '#ffffff';','
+  text: '#000000';''
+        heading: '#222222';','
+  subheading: '#444444'''
+        accent: '#9b87f5''
       }
-    : {
-        background: '#1A1F2C';
-        text: '#ffffff';
-        heading: '#ffffff';
-
-        subheading: '#cccccc',
-        accent: '#9b87f5';
-
-        subheading: '#cccccc'
-
-        accent: '#9b87f5'
+    : {'
+        background: '#1A1F2C';','
+  text: '#ffffff';''
+        heading: '#ffffff';','
+  subheading: '#cccccc',''
+        accent: '#9b87f5';','
+  subheading: '#cccccc'''
+        accent: '#9b87f5''
 /**;
  * Theme configuration for PDF export */;
 export interface PdfThemeColors {;
@@ -47,24 +43,23 @@ export interface PdfThemeColors {;
   subheading: string,;
   accent: string;
 }
-;
-export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
-  return theme === 'light';
-    ? {;
-        background: '#ffffff',;
-        text: '#000000',;
-        heading: '#222222',;
-        subheading: '#444444',;
-        accent: '#9b87f5';
+;'
+export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;''
+  return theme === 'light';'
+    ? {;'
+        background: '#ffffff',;''
+        text: '#000000',;''
+        heading: '#222222',;''
+        subheading: '#444444',;''
+        accent: '#9b87f5';'
       }
-    : {;
-        background: '#1A1F2C',;
-        text: '#ffffff',;
-        heading: '#ffffff',;
-        subheading: '#cccccc';
-        accent: '#9b87f5';
-        subheading: '#cccccc',
-        accent: '#9b87f5';
-
+    : {;'
+        background: '#1A1F2C',;''
+        text: '#ffffff',;''
+        heading: '#ffffff',;''
+        subheading: '#cccccc';','
+  accent: '#9b87f5';''
+        subheading: '#cccccc',''
+        accent: '#9b87f5';'
       }
-}
+}'

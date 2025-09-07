@@ -1,184 +1,90 @@
 
 
 
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { 
+import {useState} from "react";""
+import {useForm} from "react-hook-form";""
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";""
+import {Input} from "@/components/ui/input";""
+import {Button} from "@/components/ui/button";""
+import {Textarea} from "@/components/ui/textarea";""
+import {ForumCategory} from "@/types/community";""
+import { useState } from "react",""
+import { useForm } from "react-hook-form",""
+import { useState } from "react",""
+import { useForm } from "react-hook-form",""
+import { useState } from "react",""
+import { useForm } from "react-hook-form",""
+import { useState } from "react",""
+import { useForm } from "react-hook-form","
+import {
+  // TODO: Implement
+}
   Card;
   CardContent;
   CardFooter;
   CardHeader;
-  CardTitle
-} from "@/components/ui/card",
+  CardTitle;"
+} from "@/components/ui/card","
 import {
+  // TODO: Implement
+}
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-  FormMessage
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-
-
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-
+  FormMessage;"
+} from "@/components/ui/form",""
+import { Input } from "@/components/ui/input",""
+import { Button } from "@/components/ui/button",""
+import { Textarea } from "@/components/ui/textarea",""
+import { ForumCategory } from "@/types/community","
 interface PostFormValues {
+  // TODO: Implement
+}
   title: string,
   content: string,
   categoryId: ForumCategory,
-  tags: string
-
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
-}
-interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
-  isEditing?: boolean
-}
-
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle;
-} from "@/components/ui/card",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { ForumCategory } from "@/types/community",;
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
+  tags: string;,
+  title: string;
+  content: string;,
+  categoryId: ForumCategory;
   tags: string;
 }
-;
-interface PostFormProps {;
+interface PostFormProps {
+  // TODO: Implement
+}
+  initialValues?: Partial<PostFormValues>;
+</PostFormValues>
   initialValues?: Partial<PostFormValues>,;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
-
-
+</PostFormValues>
   initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void
-  isEditing?: boolean
-}
-export const PostForm = ({
-  initialValues;
-  onSubmit;
-  isEditing = false
-}: PostFormProps) => {
+</PostFormValues>
   const form = useForm<PostFormValues>({
-    defaultValues: {
-
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-
-interface PostFormProps {;
+</PostFormValues>
   initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
-
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-  isEditing = false;
-}: PostFormProps) => {;
+</PostFormValues>
   const form = useForm<PostFormValues>({;
-    defaultValues: {;
-      title: initialValues?.title || "",;
-      content: initialValues?.content || "",;
-      categoryId: initialValues?.categoryId || "project-help",;
-      tags: initialValues?.tags || "";
-
-    }
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-import { useState } from './react';
-import { use_form } from './react - hook - form';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { ForumCategory } from '@/types / community';
-interface PostFormValues {
-  title: string,
-  content: string,
-  category_id: ForumCategory,
-  tags: string;
-}
-interface PostFormProps {
-  initial_values?: Partial < PostFormValues>;
+</PostFormValues>
+  initial_values?: Partial < PostFormValues>;)
   on_submit: (values: PostFormValues) => void,
   is_editing?: boolean;
 }
 export const PostForm = ({
   initial_values;
   on_submit;
-  is_editing = false;
+  is_editing = false;)
 }: PostFormProps) =>: any {
+  // TODO: Implement
+}
   const form = use_form < PostFormValues>({
-    default_values: {
-      title: initial_values?.title || "",
-      content: initial_values?.content || "",
-      category_id: initial_values?.category_id || "project - help",
-      tags: initial_values?.tags || "";
-    }
+    default_values: {,"
+  title: initial_values?.title || "",""
+      content: initial_values?.content || "",""
+      category_id: initial_values?.category_id || "project - help",""
+      tags: initial_values?.tags || "";"
+    })
   });
 ;
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -187,15 +93,17 @@ export const PostForm = ({
     setIsSubmitting (true),
 
     try {
+  // TODO: Implement
+}
       await on_submit (values);
     } finally {
-
-
-  }
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
+  // TODO: Implement
+}
+  }"
+      title: initialValues?.title || "",""
+      content: initialValues?.content || "",""
+      categoryId: initialValues?.categoryId || "project-help",""
+      tags: initialValues?.tags || """
     }
   };
   }),;
@@ -213,520 +121,476 @@ export const PostForm = ({
   }
   return (
     <Card>;
+</Card>
       <CardHeader>;
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
+</CardHeader>"
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;"
       </CardHeader>;
       <CardContent>;
+</CardContent>
         <Form {...form}>;
-          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField
-              control={form && form.control}
-              name="title"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Title</FormLabel>;
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+</Form>)"
+          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;"
+</form>
             <FormField;
-              control={form.control}
-              name="title";
-              render={({ field }) => (
+              control={form && form.control}"
+              name="title""
+              render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
+                  <FormLabel>Title</FormLabel>;
+    <Card>;
+</Card>
+      <CardHeader>;
+</CardHeader>"
+        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;"
+      </CardHeader>;
+      <CardContent>;
+</CardContent>
+        <Form {...form}>;
+</Form>)"
+          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;"
+</form>
+            <FormField;
+              control={form.control}"
+              name="title";"
+              render={({ field }) => (
+</FormField>
+                <FormItem>;
+</FormItem>
                   <FormLabel > Title</FormLabel>;
                   <FormControl>;
-                    <Input placeholder="Enter post title..." {...field} />;
+</FormControl>"
+                    <Input placeholder="Enter post title..." {...field} />;"
+</Input>
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name="content"
-
+</FormMessage>
+            <FormField;
+              control={form && form.control}"
+              name="content"")
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Content</FormLabel>;
                   <FormControl>;
-                    <Textarea
-                      placeholder="Write your post content here..." 
-                      className="min-h-[200px]"
+</FormControl>
+                    <Textarea;"
+                      placeholder="Write your post content here..."""
+                      className="min-h-[200px]""
                       {...field} 
                     />;
+</Textarea>
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>
                 </FormItem>;
-              )}
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name="categoryId"
+            <FormField;
+              control={form && form.control}"
+              name="categoryId"")
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                    <select
-                      className="w-full p-2 border rounded-md"
+</FormControl>
+                    <select;"
+                      className="w-full p-2 border rounded-md""
                       {...field}>;
-                      <option value="getting-hired">Getting Hired</option>;
-                      <option value="project-help">Project Help</option>;
-                      <option value="ai-tools">AI Tools Discussion</option>;
-                      <option value="feedback">Feedback & Feature Requests</option>;
+</select>"
+                      <option value="getting-hired">Getting Hired</option>;""
+                      <option value="project-help">Project Help</option>;""
+                      <option value="ai-tools">AI Tools Discussion</option>;""
+                      <option value="feedback">Feedback & Feature Requests</option>;"
                     </select>;
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>
                 </FormItem>;
-              )}
-
-            />;
-
-
-            <FormField
-              control={form && form.control}
-              name="tags"
-
+            <FormField;
+              control={form && form.control}"
+              name="tags"")
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>)
                   <FormLabel>Tags (comma-separated)</FormLabel>;
                   <FormControl>;
-                    <Input
-                      placeholder="e && e.g. resume, hiring, flutter" 
+</FormControl>
+                    <Input;"
+                      placeholder="e && e.g. resume, hiring, flutter""
                       {...field} 
                     />;
+</Input>
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-    }
-  }
-
-
-
-    }
-  return (
+</FormMessage>
+                </FormItem>;"
+            <Button type="submit" disabled={isSubmitting}>;"
+</Button>
     <Card>;
+</Card>
       <CardHeader>;
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
+</CardHeader>"
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;"
       </CardHeader>;
       <CardContent>;
+</CardContent>
         <Form {...form}>;
-          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField
-              control={form && form.control}
-              name="title"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Title</FormLabel>;
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+</Form>"
+          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;"
+</form>
             <FormField;
-              control={form.control}
-              name="title";
-              render={({ field }) => (
+              control={form && form.control}"
+              name="title""
+              render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
+                  <FormLabel>Title</FormLabel>;
+    <Card>;
+</Card>
+      <CardHeader>;
+</CardHeader>"
+        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;"
+      </CardHeader>;
+      <CardContent>;
+</CardContent>
+        <Form {...form}>;
+</Form>)"
+          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;"
+</form>
+            <FormField;
+              control={form.control}"
+              name="title";"
+              render={({ field }) => (
+</FormField>
+                <FormItem>;
+</FormItem>
                   <FormLabel > Title</FormLabel>;
                   <FormControl>;
-                    <Input placeholder="Enter post title..." {...field} />;
+</FormControl>"
+                    <Input placeholder="Enter post title..." {...field} />;"
+</Input>
                   </FormControl>;
                   <FormMessage />;
-              render={({ field }) => (;
+</FormMessage>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                      <option value="feedback">Feedback & Feature Requests</option>;
+</FormControl>"
+                      <option value="feedback">Feedback & Feature Requests</option>;"
                     </select>;
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>
                 </FormItem>;
-              )}
-            />;
-            <FormField
-              control={form && form.control}
-              name="tags"
+            <FormField;
+              control={form && form.control}"
+              name="tags"")
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>)
                   <FormLabel>Tags (comma-separated)</FormLabel>;
                   <FormControl>;
-                    <Input
-                      placeholder="e && e.g. resume, hiring, flutter" 
+</FormControl>
+                    <Input;"
+                      placeholder="e && e.g. resume, hiring, flutter""
                       {...field} 
                     />;
+</Input>
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-    }
-  },
-
-  return (
+</FormMessage>
+                </FormItem>;"
+            <Button type="submit" disabled={isSubmitting}>;"
+</Button>
     <Card>
+</Card>
       <CardHeader>
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>
+</CardHeader>"
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>"
       </CardHeader>
       <CardContent>
+</CardContent>
         <Form {...form}>
-          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>
-            <FormField
-              control={form.control}
-              name="title"
+</Form>"
+          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>"
+</form>
+            <FormField;
+              control={form.control}"
+              name="title""
               render={({ field }) => (
+</FormField>
                 <FormItem>
+</FormItem>
                   <FormLabel>Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter post title..." {...field} />
+</FormControl>"
+                    <Input placeholder="Enter post title..." {...field} />"
+</Input>
                   </FormControl>
                   <FormMessage />
+</FormMessage>
                 </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="content"
+            <FormField;
+              control={form.control}"
+              name="content"")
               render={({ field }) => (
+</FormField>
                 <FormItem>
+</FormItem>
                   <FormLabel>Content</FormLabel>
                   <FormControl>
-                    <Textarea
-                      placeholder="Write your post content here..."
-                      className="min-h-[200px]"
+</FormControl>
+                    <Textarea;"
+                      placeholder="Write your post content here..."""
+                      className="min-h-[200px]""
                       {...field}
                     />
+</Textarea>
                   </FormControl>
                   <FormMessage />
+</FormMessage>
                 </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="categoryId"
+            <FormField;
+              control={form.control}"
+              name="categoryId"")
               render={({ field }) => (
+</FormField>
                 <FormItem>
+</FormItem>
                   <FormLabel>Category</FormLabel>
                   <FormControl>
-                    <select
-                      className="w-full p-2 border rounded-md"
+</FormControl>
+                    <select;"
+                      className="w-full p-2 border rounded-md""
                       {...field}
                     >
-                      <option value="getting-hired">Getting Hired</option>
-                      <option value="project-help">Project Help</option>
-                      <option value="ai-tools">AI Tools Discussion</option>
-                      <option value="feedback">Feedback & Feature Requests</option>
+</select>"
+                      <option value="getting-hired">Getting Hired</option>""
+                      <option value="project-help">Project Help</option>""
+                      <option value="ai-tools">AI Tools Discussion</option>""
+                      <option value="feedback">Feedback & Feature Requests</option>"
                     </select>
                   </FormControl>
                   <FormMessage />
+</FormMessage>
                 </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="tags"
+            <FormField;
+              control={form.control}"
+              name="tags"")
               render={({ field }) => (
+</FormField>
                 <FormItem>
+</FormItem>)
                   <FormLabel>Tags (comma-separated)</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="e.g. resume, hiring, flutter"
+</FormControl>
+                    <Input;"
+                      placeholder="e.g. resume, hiring, flutter""
                       {...field}
                     />
+</Input>
                   </FormControl>
                   <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
+</FormMessage>
+                </FormItem>"
+            <Button type="submit" disabled={isSubmitting}>"
+</Button>
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
-  )
                 </FormItem>)}
-            />;
             <FormField;
-              control={form.control}
-              name="content";
+              control={form.control}"
+              name="content";"
               render={({ field }) => (
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel > Content</FormLabel>;
                   <FormControl>;
-                    <Textarea;
-                      placeholder="Write your post content here...";
-                      className="min - h-[200px]";
+</FormControl>
+                    <Textarea;"
+                      placeholder="Write your post content here...";""
+                      className="min - h-[200px]";"
                       {...field}
                     />;
+</Textarea>
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>)
                 </FormItem>)}
-            />;
             <FormField;
-              control={form.control}
-              name="category_id";
+              control={form.control}"
+              name="category_id";"
               render={({ field }) => (
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel > Category</FormLabel>;
                   <FormControl>;
-                    <select;
-                      className="w - full p - 2 border rounded - md";
+</FormControl>
+                    <select;"
+                      className="w - full p - 2 border rounded - md";"
                       {...field}
                     >;
-                      <option value="getting - hired">Getting Hired</option>;
-                      <option value="project - help">Project Help</option>;
-                      <option value="ai - tools">AI Tools Discussion</option>;
-                      <option value="feedback">Feedback & Feature Requests</option>;
+</select>"
+                      <option value="getting - hired">Getting Hired</option>;""
+                      <option value="project - help">Project Help</option>;""
+                      <option value="ai - tools">AI Tools Discussion</option>;""
+                      <option value="feedback">Feedback & Feature Requests</option>;"
                     </select>;
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>)
                 </FormItem>)}
-            />;
             <FormField;
-              control={form.control}
-              name="tags";
+              control={form.control}"
+              name="tags";"
               render={({ field }) => (
+</FormField>
                 <FormItem>;
+</FormItem>)
                   <FormLabel > Tags (comma - separated)</FormLabel>;
                   <FormControl>;
-                    <Input;
-                      placeholder="e.g. resume, hiring, flutter";
+</FormControl>
+                    <Input;"
+                      placeholder="e.g. resume, hiring, flutter";"
                       {...field}
                     />;
+</Input>
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>)}
-            />;
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
-
+</FormMessage>
+                </FormItem>)}"
+            <Button type="submit" disabled={is_submitting}>;"
+</Button>
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-
     </Card>);
-}
-;
-export default PostForm;
-;
-
-},
-
-
-
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { ;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle;
-} from "@/components/ui/card",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { ForumCategory } from "@/types/community",;
-;
-interface PostFormValues {;
-  title:string,;
-  content:string,;
-  categoryId:ForumCategory,;
-  tags:string;}
-;
-interface PostFormProps {;
   initialValues?:Partial<PostFormValues>,;
-  onSubmit:(values:PostFormValues) => void,;
-  isEditing?:boolean;
-}
-;
-export const PostForm = ({;
-  initialValues,;
-  onSubmit,;
-  isEditing = false;
-} PostFormProps) => {;
+</PostFormValues>
   const form = useForm<PostFormValues>({;
-    defaultValues:{;
-      title:initialValues?.title || "",;
-      content:initialValues?.content || "",;
-      categoryId:initialValues?.categoryId || "project-help",;
-      tags:initialValues?.tags || "";
-    }
-  }),;
-;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-;
-  const handleSubmit = async (values:PostFormValues) => {;
-    setIsSubmitting(true),;
-    try {;
-      await onSubmit(values);
-    } finally {;
-      setIsSubmitting(false),;
-    }
-  },;
-;
-  return (;
+</PostFormValues>
     <Card>;
+</Card>
       <CardHeader>;
-        <CardTitle>{isEditing ? "Edit Post" :"Create New Post"}</CardTitle>;
+</CardHeader>"
+        <CardTitle>{isEditing ? "Edit Post" :"Create New Post"}</CardTitle>;"
       </CardHeader>;
       <CardContent>;
+</CardContent>
         <Form {...form}>;
-          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>;
+</Form>)"
+          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>;"
+</form>
             <FormField;
-              control={form.control}
-              name="title";
+              control={form.control}"
+              name="title";"
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Title</FormLabel>;
                   <FormControl>;
-                    <Input placeholder="Enter post title..." {...field} />;
+</FormControl>"
+                    <Input placeholder="Enter post title..." {...field} />;"
+</Input>
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>)
                 </FormItem>;              )}
-            />;
-            ;
             <FormField;
-              control={form.control}
-              name="content";
+              control={form.control}"
+              name="content";"
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Content</FormLabel>;
                   <FormControl>;
-                    <Textarea ;
-                      placeholder="Write your post content here..." ;
-                      className="min-h-[200px]";
+</FormControl>
+                    <Textarea ;"
+                      placeholder="Write your post content here..." ;""
+                      className="min-h-[200px]";"
                       {...field} ;
                     />;
+</Textarea>
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>)
                 </FormItem>;              )}
-            />;
-            ;
             <FormField;
-              control={form.control}
-              name="categoryId";
+              control={form.control}"
+              name="categoryId";"
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>
                   <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                    <select;
-                      className="w-full p-2 border rounded-md";
+</FormControl>
+                    <select;"
+                      className="w-full p-2 border rounded-md";"
                       {...field}
                     >;
-                      <option value="getting-hired">Getting Hired</option>;
-                      <option value="project-help">Project Help</option>;
-                      <option value="ai-tools">AI Tools Discussion</option>;
-                      <option value="feedback">Feedback & Feature Requests</option>;
+</select>"
+                      <option value="getting-hired">Getting Hired</option>;""
+                      <option value="project-help">Project Help</option>;""
+                      <option value="ai-tools">AI Tools Discussion</option>;""
+                      <option value="feedback">Feedback & Feature Requests</option>;"
                     </select>;
                   </FormControl>;
                   <FormMessage />;
+</FormMessage>)
                 </FormItem>;              )}
-            />;
-            ;
             <FormField;
-              control={form.control}
-              name="tags";
+              control={form.control}"
+              name="tags";"
               render={({ field }) => (;
+</FormField>
                 <FormItem>;
+</FormItem>)
                   <FormLabel>Tags (comma-separated)</FormLabel>;
                   <FormControl>;
-                    <Input ;
-                      placeholder="e.g. resume, hiring, flutter" ;
+</FormControl>
+                    <Input ;"
+                      placeholder="e.g. resume, hiring, flutter" ;"
                       {...field} ;
                     />;
+</Input>
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-            ;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." :isEditing ? "Update Post" :"Create Post"}
+</FormMessage>
+                </FormItem>;"
+            <Button type="submit" disabled={isSubmitting}>;"
+</Button>
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
     </Card>;
-  ),;
-},;
-;
-export default PostForm,; import {
-  Card;
-CardContent;
-CardFooter;
-CardHeader;
-CardTitle import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-FormMessage interface PostFormValues {
-  title: string;
-content: string;
-categoryId: ForumCategory;
-tags: string 
-}interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
-onSubmit: (values: PostFormValues) => void;
-isEditing?: boolean 
-}initialValues, onSubmit, isEditing = false 
-}: PostFormProps) => {
+</PostFormValues>
   const form = useForm<PostFormValues> ({
-  defaultValues: {
-  const [isSubmitting, setIsSubmitting] = useState (false);
+</PostFormValues>)
 return (<Card> <CardHeader> </FormControl> <FormMessage /> </FormItem>) 
+</Card>
 }/> <FormField <FormItem> <FormLabel>Content</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>) 
+</FormField>"
+}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="getting-hired" >Getting Hired</option> <option value="project-help" >Project Help</option> <option value="ai-tools" >AI Tools Discussion</option> <option value="feedback" >Feedback & Feature Requests</option> </select> </FormControl> <FormMessage /> </FormItem>)"
+</FormField>
 }/> <FormField <FormItem> <FormLabel>Tags (comma-separated) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </Button> </form> </Form> </CardContent> </Card>) 
-};
-export default PostForm;
-}
-export default PostForm;
-
-},
-
-export default PostForm,
-export default PostForm;
-export default PostForm,
-export default PostForm;
-export default PostForm,
-
+</FormField>
+}/> </Button> </form> </Form> </CardContent> </Card>) "

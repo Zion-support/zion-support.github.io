@@ -1,6 +1,6 @@
-// Health-check utility
+// Health-check utility;
 export const Health-check = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 

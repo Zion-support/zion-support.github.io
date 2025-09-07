@@ -1,6 +1,6 @@
-// Lighthouse.spec utility
+// Lighthouse.spec utility;
 export const Lighthouse.spec = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 };
 

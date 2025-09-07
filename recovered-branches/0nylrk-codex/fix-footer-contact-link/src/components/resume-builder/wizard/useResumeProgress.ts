@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { Resume } from "@/types/resume";
+import { useState, useEffect } from "react";""
+import { Resume } from "@/types/resume";"
 export const useResumeProgress = (resume: Resume | null) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Calculate progress based on completed sections
+    // Calculate progress based on completed sections;
     if (!resume) {
       setProgress(0);
       return;
@@ -44,9 +44,9 @@ export const useResumeProgress = (resume: Resume | null) => {
   return progress;
   return progress;
 };
-
-import { useState, useEffect } from 'react',;
-import { Resume } from '@/types/resume',;
+"
+import { useState, useEffect } from 'react',;''
+import { Resume } from '@/types/resume',;'
 ;
 export const useResumeProgress = (resume:Resume | null) => {;
   const [progress, setProgress] = useState(0),;
@@ -91,10 +91,11 @@ export const useResumeProgress = (resume:Resume | null) => {;
 },; useEffect ( () => {
   // Calculate progress based on completed sections if (!resume) {
   // Basic info is always considered (1 point) completed += 1;
-// Work experience (1 point if at least one entry) return progress 
+// Work experience (1 point if at least one entry) return progress;
 };
   return progress;
 
 };
 
 };
+'

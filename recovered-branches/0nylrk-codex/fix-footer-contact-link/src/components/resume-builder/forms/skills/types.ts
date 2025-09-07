@@ -1,68 +1,53 @@
-import { Skill } from "@/types/resume";
+import { Skill } from "@/types/resume";"
 export interface SkillsFormProps {
-  resumeId: string;
+  // TODO: Implement
+}
+  resumeId: string;,
   skills: Skill[];
-  onComplete: () => void;
+  onComplete: () => void;,
   onBack: () => void;
 }
 
-  resumeId: string;
+  resumeId: string;,
   skills: Skill[];
 
-  on_complete: () => void;
+  on_complete: () => void;,
   on_back: () => void;
 
-
-import { Skill  } from '@/types / resume';
-
+"
+import { Skill  } from '@/types / resume';'
 export interface SkillsFormProps {
+  // TODO: Implement
+}
   resume_id: string;
-
-import {Skill} from '@/types/resume';
+'
+import {Skill} from '@/types/resume';'
 export interface SkillsFormProps {;
-  resumeId: string;
+  resumeId: string;,
   skills: Skill[];
-  onComplete: () => void;
+  onComplete: () => void;,
   onBack: () => void;
 }
 export interface SkillItemProps {
-  skill: Skill;
+  // TODO: Implement
+}
+  skill: Skill;,
   category: string;
   onDelete: (id: string, category: string) => Promise<void>;
-}
-
-export interface SkillCategoryProps {
-  category: string;
-  skills: Skill[];
+</void>
   onDelete: (id: string, category: string) => Promise<void>;
-}
-
-
-export interface SkillCategoryProps {;
-
-  category: string;
-  skills: Skill[];
-
-
-
-export interface AddSkillFormProps {;
-
-  resumeId: string;
+</void>
   onAddSkill: (skill: Skill) => Promise<boolean>;
-  defaultCategory?: string;
-}
-
-export interface BulkAddSkillsProps {
-  resumeId: string;
+</boolean>
   onSuccess: () => Promise<void>;
-}
-export interface AddSkillFormProps {
-  resume_id: string;
+</void>
   onAddSkill: (skill: Skill) => Promise < boolean>;
   default_category?: string;
 }
 export interface BulkAddSkillsProps {
-  resume_id: string;
+  // TODO: Implement
+}
+  resume_id: string;,
   on_success: () => Promise < void>;
 }
 
@@ -74,3 +59,4 @@ export interface BulkAddSkillsProps {
 
 ;
 ;
+'

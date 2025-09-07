@@ -1,23 +1,27 @@
-import { Resume } from "@/types/resume";
+import { Resume } from "@/types/resume";"
 export interface StepProps {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   label: string;
 }
 export interface NavigationButtonsProps {
-
+  // TODO: Implement
+}
 export interface NavigationButtonsProps {;
 export interface NavigationButtonsProps {
+  // TODO: Implement
+}
   on_back?: () => void;
   on_next?: () => void;
-
-import { Resume } from "@/types/resume",
-
-import {Resume} from "@/types/resume";
+"
+import { Resume } from "@/types/resume",""
+import {Resume} from "@/types/resume";"
 export interface StepProps {
-  id: string;
-  label: string
-
-
+  // TODO: Implement
+}
+  id: string;,
+  label: string;
 export interface NavigationButtonsProps {;
 
   onBack?: () => void;
@@ -29,53 +33,14 @@ export interface NavigationButtonsProps {;
 }
 
 export interface ResumeProgressProps {
-  resume: Resume | null;
+  // TODO: Implement
+}
+  resume: Resume | null;,
   progress: number;
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
-  isLoading: boolean;
-}
-
-;
-export interface CreateResumeFormProps {;
+</void>
   onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
-  isLoading: boolean;
-
-
-  onCancel: () => void;
-  isLoading: boolean;
-}
-
-
-}
-export interface EmptyResumeProps {
-  onCreateClick: () => void;
-}
-;
-
-}
-export interface EmptyResumeProps {
-
-  onCreateClick: () => void;
-}
-}
-;
-
-}
-export interface EmptyResumeProps {
-  onCreateClick: () => void;
-}
-  onCreateClick: () => void
-}
-;
-
-}
-export interface EmptyResumeProps {
-  onCreateClick: () => void;
-}
-;
-
+</void>"

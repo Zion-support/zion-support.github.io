@@ -1,5 +1,7 @@
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -10,173 +12,100 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
-import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-export default function ServiceDescriptionGenerator() {;
-
-  const { isAuthenticated, isLoading } = useAuth();
-
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-
-
-
-
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
-
+</string>
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth(),
+</string>
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
-  
-  // Show loading while checking authentication
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-        <div className="animate-pulse text-zion-purple text-lg">
-          Loading...
+</string>'
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
+</div>"
+        <div className="animate-pulse text-zion-purple text-lg">"
+</div>
         </div>
-      </div>
-    )
-  }
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
-  }
-  const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription)
-    // Here you could also save to database if needed
-
-
-  },
-
-
-
-  return (
-    <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO
-        title="Service Description Generator"
-        description="Generate professional service descriptions using AI"
-        keywords="service description, AI content, professional description generator"
+      </div>"
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />'
+</Navigate>'
+    <div className="min-h-screen flex flex-col bg-zion-blue">"
+</div>
+      <SEO;"
+        title="Service Description Generator"""
+        description="Generate professional service descriptions using AI"""
+        keywords="service description, AI content, professional description generator""
       />
+</SEO>
       <Header />
-      <main className="flex-1 p-6 md:p-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>
-          <p className="text-zion-slate mb-8">
-            Create professional service descriptions with the help of AI. Just provide basic details about your service.
-          </p>
-          <div className="space-y-8">
+</Header>"
+      <main className="flex-1 p-6 md:p-10">"
+</main>"
+        <div className="max-w-4xl mx-auto">"
+</div>"
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>""
+          <p className="text-zion-slate mb-8">"
+</p>
+          </p>"
+          <div className="space-y-8">"
+</div>
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
-            {generatedDescription && (
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-export default function ServiceDescriptionGenerator() {;
-  const { isAuthenticated, isLoading } = useAuth(),;
+</ServiceDescriptionForm>
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
-
-  // Show loading while checking authentication;
-  if (isLoading) {;
-    return (
-  // Show loading while checking authentication;
-  if (isLoading) {;
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
-        <div className="animate-pulse text-zion-purple text-lg">;
-          Loading...;
+</string>"
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+</div>"
+        <div className="animate-pulse text-zion-purple text-lg">;"
+</div>
         </div>;
-      </div>;
-    );
-  }
-
-  // Redirect to login if not authenticated;
-  if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
-  }
-
-  const handleDescriptionSave = (editedDescription: string) => {;
-    setGeneratedDescription(editedDescription),;
-    // Here you could also save to database if needed;
-  };
-
-  return (
-    <div className="min-h-screen flex flex-col bg-zion-blue">;
-      <SEO
-        title="Service Description Generator" 
-        description="Generate professional service descriptions using AI"
-        keywords="service description, AI content, professional description generator"
+      </div>;"
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;'
+</Navigate>'
+    <div className="min-h-screen flex flex-col bg-zion-blue">;"
+</div>
+      <SEO;"
+        title="Service Description Generator"""
+        description="Generate professional service descriptions using AI"""
+        keywords="service description, AI content, professional description generator""
       />;
+</SEO>
       <Header />;
-      <main className="flex-1 p-6 md:p-10">;
-        <div className="max-w-4xl mx-auto">;
-          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>;
-          <p className="text-zion-slate mb-8">;
-            Create professional service descriptions with the help of AI. Just provide basic details about your service.;
-          </p>;
-
-          <div className="space-y-8">;
+</Header>"
+      <main className="flex-1 p-6 md:p-10">;"
+</main>"
+        <div className="max-w-4xl mx-auto">;"
+</div>"
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>;""
+          <p className="text-zion-slate mb-8">;"
+</p>
+          </p>;"
+          <div className="space-y-8">;"
+</div>
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
-
-            {generatedDescription && (;
-
+</ServiceDescriptionForm>
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-              <GeneratedDescriptionDisplay
-              <GeneratedDescriptionDisplay
-
-              <GeneratedDescriptionDisplay 
-
-              <GeneratedDescriptionDisplay
-          ;
-          <div className="space-y-8">;
+</string>
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+          ;"
+          <div className="space-y-8">;"
+</GeneratedDescriptionDisplay>
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
-            ;
-            {generatedDescription && (;
+</ServiceDescriptionForm>
               <GeneratedDescriptionDisplay ;
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
-            )}
-
+</GeneratedDescriptionDisplay>
           </div>;
         </div>;
       </main>;
       <Footer />;
+</Footer>
 
-    </div>);
-}
-
+    </div>);"

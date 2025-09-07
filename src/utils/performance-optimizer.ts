@@ -1,40 +1,40 @@
-// Performance optimization utilities
+// Performance optimization utilities;
 export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy';
+  const images = document.querySelectorAll('img');'
+  images.forEach(img => {)
+    if (!img.loading) {'
+      img.loading = 'lazy';'
     }
-    if (!img.decoding) {
-      img.decoding = 'async';
+    if (!img.decoding) {'
+      img.decoding = 'async';'
     }
   });
 };
 
 export const preloadCriticalResources = () => {
-  const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
+  const criticalResources = ['
+    '/fonts/main.woff2',''
+    '/css/critical.css'']
   ];
   
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+  criticalResources.forEach(resource => {)'
+    const link = document.createElement('link');''
+    link.rel = 'preload';'
+    link.href = resource;'
+    link.as = resource.endsWith('.css') ? 'style' : 'font';'
     document.head.appendChild(link);
   });
 };
 
 export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
+  // Dynamic imports for non-critical components;
   const loadComponent = (componentName: string) => {
     return import(`./components/${componentName}`);
   };
 };
 
-export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
+export const lazyLoadComponents = () => {'
+  console.log('Lazy loading components...');'
 };
 
 export const debounce = (func: Function, wait: number) => {
@@ -64,7 +64,7 @@ export const optimizeScrollPerformance = () => {
   let ticking = false;
   
   const updateScrollPosition = () => {
-    // Update scroll position logic here
+    // Update scroll position logic here;
     ticking = false;
   };
   
@@ -74,24 +74,24 @@ export const optimizeScrollPerformance = () => {
       ticking = true;
     }
   };
-  
-  window.addEventListener('scroll', requestTick, { passive: true });
+  '
+  window.addEventListener('scroll', requestTick, { passive: true });'
 };
 
 export const preloadRoute = (route: string) => {
-  // Preload route components
-  const link = document.createElement('link');
-  link.rel = 'prefetch';
+  // Preload route components;'
+  const link = document.createElement('link');''
+  link.rel = 'prefetch';'
   link.href = route;
   document.head.appendChild(link);
 };
 
 export const optimizeMemoryUsage = () => {
-  // Clean up unused event listeners and references
-  if (typeof window !== 'undefined') {
-    // Remove unused event listeners
-    window.removeEventListener('scroll', () => {});
-    window.removeEventListener('resize', () => {});
+  // Clean up unused event listeners and references;'
+  if (typeof window !== 'undefined') {'
+    // Remove unused event listeners;'
+    window.removeEventListener('scroll', () => {});''
+    window.removeEventListener('resize', () => {});'
   }
 };
 
@@ -101,4 +101,4 @@ export const measurePerformance = (name: string, fn: Function) => {
   const end = performance.now();
   console.log(`${name} took ${end - start} milliseconds`);
   return result;
-};
+};'

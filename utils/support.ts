@@ -1,6 +1,6 @@
-  logEvent: (event: any) => null
+  logEvent: (event: any) => null;,
   getArticles: () => []
-  getArticleById: (id: string) => null
+  getArticleById: (id: string) => null;
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
@@ -8,20 +8,24 @@
 };
 
 export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here
+  // Add support event logging functionality here;
   return null;
 
 
 export interface IntentMatch {
-  intentMatched: boolean;
+  // TODO: Implement
+}
+  intentMatched: boolean;,
   matchedArticleIds: string[];
   confidence: number;
 }
 
 export function matchIntent(
   query: string,
-  articles: HelpArticle[],
+  articles: HelpArticle[],)
 ): IntentMatch {
+  // TODO: Implement
+}
   const queryLower = query.toLowerCase();
   const matchedArticles: string[] = [];
   let confidence = 0;
@@ -40,6 +44,8 @@ export function matchIntent(
   }
 
   return {
+  // TODO: Implement
+}
     intentMatched: matchedArticles && matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
     confidence: Math.min(confidence, 1),
@@ -48,24 +54,24 @@ export function matchIntent(
 
 export function getArticlesByCategory(
   articles: HelpArticle[],
-  category: string,
+  category: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.category === category);
 }
 
 export function getArticlesByTag(
   articles: HelpArticle[],
-  tag: string,
+  tag: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.tags.includes(tag));
 }
 
 export function searchArticles(
   articles: HelpArticle[],
-  query: string,
+  query: string,)
 ): HelpArticle[] {
   const queryLower = query.toLowerCase();
-  return articles.filter(
+  return articles.filter()
     (article) =>
       article.title.toLowerCase().includes(queryLower) ||
       article.content.toLowerCase().includes(queryLower) ||

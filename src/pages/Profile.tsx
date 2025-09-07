@@ -1,2 +1,2 @@
-import React from 'react';
-export default Profile;
+import React from 'react';'
+export default Profile;'

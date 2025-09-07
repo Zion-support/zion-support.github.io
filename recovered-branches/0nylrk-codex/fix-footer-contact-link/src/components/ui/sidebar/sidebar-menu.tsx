@@ -1,53 +1,15 @@
-import React, { forwardRef } from "react";
-import {ChevronDown} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {SafeRef} from "@/types/ref-types";
+import React, { forwardRef } from "react";""
+import {ChevronDown} from "lucide-react";""
+import {cn} from "@/lib/utils";""
+import {SafeRef} from "@/types/ref-types";"
 interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React && React.ReactNode;
-
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React && React.ReactNode;
-
-
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React && React.ReactNode;
+</HTMLButtonElement>
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode,
-  active?: boolean,
-  href?: string,
-  target?: string,
-  badge?: React.ReactNode
-
-import React, { forwardRef } from "react",;
-import { ChevronDown } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { SafeRef } from "@/types/ref-types",;
+</HTMLButtonElement>
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React.ReactNode,;
-  active?: boolean,;
-  href?: string,;
-  target?: string,;
-  badge?: React.ReactNode;
-
-}
-
+</HTMLButtonElement>
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
-  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {;
-    if (href) {;
-import React, { forward_ref } from './react';
-import { ChevronDown } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { SafeRef } from '@/types / ref - types';
+</HTMLButtonElement>
 interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
   icon?: React.ReactNode;
   active?: boolean;
@@ -55,280 +17,156 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   target?: string;
   badge?: React.ReactNode;
 }
-const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
+const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>()
   ({ icon, active, children, href, target, badge, class_name, ...props }, ref) => {
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       return (
         <a;
           href={href}
-          target={target}
-          rel={target === "_blank" ? "noopener noreferrer" : undefined}
-
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-            active && "bg-accent font-medium text-accent-foreground",
-
-            className
+          target={target}"
+          rel={target === "_blank" ? "noopener noreferrer" : undefined}""
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"""
+            active && "bg-accent font-medium text-accent-foreground","
+            className;)
           )}>;
-
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-            active && "bg-accent font-medium text-accent-foreground",
-
-            className
-          )}
-        >
-          <div className="flex items-center gap-2">
-            {icon && <span className="text-muted-foreground">{icon}</span>}
+</a>"
+          <div className="flex items-center gap-2">"
+</div>"
+            {icon && <span className="text-muted-foreground">{icon}</span>}"
             <span>{children}</span>
           </div>
           {badge && <span>{badge}</span>}
         </a>
-      )
-
-
-          rel={target === "_blank" ? "noopener noreferrer" : undefined}
-          className={cn(;
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
-            active && "bg-accent font-medium text-accent-foreground",;
-            className;
-          )}
-        >;
-
-import React, { forwardRef } from "react",;
-import { ChevronDown } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { SafeRef } from "@/types/ref-types",;
-;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
-  icon?:React.ReactNode,;
-  active?:boolean,;
-  href?:string,;
-  target?:string,;
-  badge?:React.ReactNode,;
-}
-;
+</HTMLButtonElement>
 const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
-  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {;
-    if (href) {;
-      return (;
+</HTMLButtonElement>
         <a;
           href={href}
-          target={target}
-          rel={target === "_blank" ? "noopener noreferrer" :undefined}
-          className={cn(;
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
-            active && "bg-accent font-medium text-accent-foreground",;
-            className;
+          target={target}"
+          rel={target === "_blank" ? "noopener noreferrer" :undefined}"
+          className={cn(;"
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;""
+            active && "bg-accent font-medium text-accent-foreground",;"
+            className;)
           )}
         >;
-          <div className="flex items-center gap-2">;            {icon && <span className="text-muted-foreground">{icon}</span>}
-            className
-          )}>;
-          <div className="flex items-center gap-2">;
-            {icon && <span className="text-muted-foreground">{icon}</span>}
+</a>"
+          <div className="flex items-center gap-2">;            {icon && <span className="text-muted-foreground">{icon}</span>}"
+</div>"
+          <div className="flex items-center gap-2">;"
+</div>"
+            {icon && <span className="text-muted-foreground">{icon}</span>}"
             <span>{children}</span>;
           </div>;
           {badge && <span>{badge}</span>}
-        </a>;
-      );
-
-          className={cn (
-            "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
-            active && "bg - accent font - medium text - accent - foreground",
-            class_name)}
-        >;
-          <div className="flex items - center gap - 2">;
-            {icon && <span className="text - muted - foreground">{icon}</span>}
+        </a>;"
+          <div className="flex items - center gap - 2">;"
+</div>"
+            {icon && <span className="text - muted - foreground">{icon}</span>}"
             <span>{children}</span>;
           </div>;
           {badge && <span>{badge}</span>}
         </a>);
-
-
-
-    }
-    return (
       <button;
         ref={ref}
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-
-          className
+"
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"""
+          active && "bg-accent font-medium text-accent-foreground",""
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",""
+          active && "bg-accent font-medium text-accent-foreground","
+          className;
         )}
         {...props}>;
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-          className
-        )}
-        {...props}>;
-      ),;
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-    }
-    return (
+</button>
       <button;
         ref={ref}
-          className
+          className;
         )}
         {...props}
       >;
-        {...props}>;
-        <div className="flex items-center gap-2">;
-          {icon && <span className="text-muted-foreground">{icon}</span>}
+</button>"
+        <div className="flex items-center gap-2">;"
+</div>"
+          {icon && <span className="text-muted-foreground">{icon}</span>}"
           <span>{children}</span>;
         </div>;
         {badge && <span>{badge}</span>}
       </button>;
-    );
-  }
-
-
-),
-),
-
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-    );
-  }
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string
-  children: React.ReactNode
-}
+</HTMLDivElement>
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
-  return (
-    <div className="space-y-1" {...props}>
-      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>
-      <div className="pl-2">{children}</div>
+</SidebarMenuGroupProps>"
+    <div className="space-y-1" {...props}>"
+</div>"
+      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>""
+      <div className="pl-2">{children}</div>"
     </div>
-  )
-
-
-export { SidebarMenuItem, SidebarMenuGroup },
-),;
-SidebarMenuItem.displayName = "SidebarMenuItem",;
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-
-);
-SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
+</HTMLDivElement>
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
-  title: string,;
-  children: React && React.ReactNode;
-}
+</HTMLDivElement>
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
-  return (
-    <div className="space-y-1" {...props}>;
-      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;
-      <div className="pl-2">{children}</div>;
-    </div>;
-  );
-};
-
-);
-
-        type="button";
-        className={cn (
-          "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
-          active && "bg - accent font - medium text - accent - foreground",
-          class_name)}
-        {...props}
-      >;
-        <div className="flex items - center gap - 2">;
-          {icon && <span className="text - muted - foreground">{icon}</span>}
+</SidebarMenuGroupProps>"
+    <div className="space-y-1" {...props}>;"
+</div>"
+      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;""
+      <div className="pl-2">{children}</div>;"
+    </div>;"
+        <div className="flex items - center gap - 2">;"
+</div>"
+          {icon && <span className="text - muted - foreground">{icon}</span>}"
           <span>{children}</span>;
         </div>;
         {badge && <span>{badge}</span>}
       </button>);
-  }
-);
-;
-SidebarMenuItem.display_name = "SidebarMenuItem";
-;
 interface SidebarMenuGroupProps extends React.HTMLAttributes < HTMLDivElement> {
   title: string,
   children: React.ReactNode;
 }
 const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, ...props }) => {
-  return (
-    <div className="space - y-1" {...props}>;
-      <div className="rounded - md px - 3 py - 2 text - sm font - medium">{title}</div>;
-      <div className="pl - 2">{children}</div>;
+  return ("
+    <div className="space - y-1" {...props}>;"
+</div>"
+      <div className="rounded - md px - 3 py - 2 text - sm font - medium">{title}</div>;""
+      <div className="pl - 2">{children}</div>;")
     </div>);
-}
-;
-export { SidebarMenuItem, SidebarMenuGroup }
-;
-
-},
-
-
-export { SidebarMenuItem, SidebarMenuGroup };
-export { SidebarMenuItem, SidebarMenuGroup };
-  ),;
-},;
-;
 export { SidebarMenuItem, SidebarMenuGroup },; interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode;
-active?: boolean;
-href?: string;
-target?: string;
-badge?: React.ReactNode 
+</HTMLButtonElement>
 }const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps> ( ({
-  icon, active, children, href, target, badge, className, ...props 
-}, ref) => {
-  if (href) {
+</HTMLButtonElement>
   return (<a href= {
-  href 
+  href;
 }target= {
-  target 
-}rel= {
-  target === "blank" ? "noopener noreferrer" : undefined 
-}className= {
-  cn ("flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-active && "bg-accent font-medium text-accent-foreground";
-className) 
-}> <div className="flex items-center gap-2" > {
-  icon && <span className="text-muted-foreground" > {
-  icon 
+  target;
+}rel= {"
+  target === "blank" ? "noopener noreferrer" : undefined;"
+}className= {"
+  cn ("flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";""
+active && "bg-accent font-medium text-accent-foreground";")
+className) "
+}> <div className="flex items-center gap-2" > {"
+</a>"
+  icon && <span className="text-muted-foreground" > {"
+</span>
 }</span> 
 }<span> {
-  children 
+</span>
 }</span> </div> {
   badge && <span> {
-  badge 
+</span>
 }</span> 
 }</a>) 
 }return (<button) 
 }{
-  ...props 
+  ...props;
 }> </div> {
+</button>
   badge && <span> {
-  badge 
+</span>
 }</span> 
 }</button>) 
-});
-</div>) 
-};
-  );
-},;
-export { SidebarMenuItem, SidebarMenuGroup };
-export { SidebarMenuItem, SidebarMenuGroup };
+</div>) "

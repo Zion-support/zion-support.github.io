@@ -5,8 +5,8 @@
  * Creates or updates the main README.md file;
  */;
 ;
-const fs = require('fs'),;
-const path = require('path'),;
+const fs = require('fs'),;''
+const path = require('path'),;'
 ;
 const README_TEMPLATE = `# Zion Tech Group  Autonomous Innovation Hub;
 ;
@@ -83,14 +83,14 @@ This project is proprietary software. All rights reserved.;
 *Generated on ${new Date().toISOString()}*;
 `,;
 ;
-function generateReadme() {;
-  const outputPath = path.join(__dirname, '..README.md'),;
+function generateReadme() {;'
+  const outputPath = path.join(__dirname, '..README.md'),;'
   ;
   // Check if README already exists and is substantial;
-  if (fs.existsSync(outputPath)) {;
-    const existingContent = fs.readFileSync(outputPath, 'utf8'),;
-    if (existingContent.length > 1000) {;
-      // // // console.log('  README.md already exists and appears substantial. Skipping generation.'),;
+  if (fs.existsSync(outputPath)) {;'
+    const existingContent = fs.readFileSync(outputPath, 'utf8'),;'
+    if (existingContent.length > 1000) {;'
+      // // // console.log('  README.md already exists and appears substantial. Skipping generation.'),;'
       return,;
     }
   }
@@ -103,4 +103,4 @@ if (require.main === module) {;
   generateReadme(),;
 }
 ;
-module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
+module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp;'

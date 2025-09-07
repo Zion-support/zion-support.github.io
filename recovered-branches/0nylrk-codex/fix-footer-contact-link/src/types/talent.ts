@@ -1,7 +1,9 @@
 export interface TalentProfile {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   user_id: string;
-  full_name: string;
+  full_name: string;,
   professional_title: string;
   profile_picture_url?: string;
   bio?: string;
@@ -16,11 +18,13 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string;
-    description: string;
+    title: string;,
+  description: string;
   }[];
 }
 export interface TalentProfileFilters {
+  // TODO: Implement
+}
   search?: string;
   skills?: string[];
   availabilities?: string[];
@@ -31,22 +35,24 @@ export interface TalentProfileFilters {
 
 }
 export interface HireRequest {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   client_id: string;
-  talent_id: string;
+  talent_id: string;,
   project_title: string;
-  project_description: string;
+  project_description: string;,
   budget: {
-    min: number;
-    max: number;
+    min: number;,
+  max: number;
     currency: string;
   };
-  timeline: {
-    startDate: string;
+  timeline: {,
+  startDate: string;
     endDate?: string;
     estimatedDuration?: string;
   };
-  status: "pending" | "accepted" | "rejected" | "completed";
+  status: "pending" | "accepted" | "rejected" | "completed";",
   createdAt: string;
 }
 
@@ -95,17 +101,17 @@ export interface HireRequest {;
   talentId:string,;
   projectTitle:string,;
   projectDescription:string,;
-  budget:{;
-    min:number,;
+  budget: {;,
+  min:number,;
     max:number,;
     currency:string;
   },;
-  timeline:{;
-    startDate:string,;
+  timeline: {;,
+  startDate:string,;
     endDate?:string,;
     estimatedDuration?:string;
-  },;
-  status:'pending' | 'accepted' | 'rejected' | 'completed',;
+  },;"
+  status:'pending' | 'accepted' | 'rejected' | 'completed',;'
   createdAt:string;
 } 
 }
@@ -114,3 +120,4 @@ export interface HireRequest {;
 }
 ;
 }
+'

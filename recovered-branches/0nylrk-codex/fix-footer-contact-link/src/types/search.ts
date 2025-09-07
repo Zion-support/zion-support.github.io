@@ -1,24 +1,30 @@
 export interface SearchSuggestion {
-  text: string;
-  type: "product" | "category" | "tag" | "skill" | "person" | "recent";
+  // TODO: Implement
+}
+  text: string;,
+  type: "product" | "category" | "tag" | "skill" | "person" | "recent";"
   iconUrl?: string;
 }
 export interface SearchHighlight {
-  before: string;
+  // TODO: Implement
+}
+  before: string;,
   match: string;
   after: string;
 }
 export interface FilterOptions {
-  productTypes: {
-    label: string;
+  // TODO: Implement
+}
+  productTypes: {,
+  label: string;
     value: string;
   }[];
-  locations: {
-    label: string;
+  locations: {,
+  label: string;
     value: string;
   }[];
-  availabilityOptions: {
-    label: string;
+  availabilityOptions: {,
+  label: string;
     value: string;
   }[];
   ratingOptions: number[];
@@ -32,8 +38,8 @@ export interface SearchSuggestion {;
 }
 
 export interface SearchSuggestion {;
-  text:string,;
-  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
+  text:string,;"
+  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;'
   iconUrl?:string;
 }
 ;
@@ -44,16 +50,16 @@ export interface SearchHighlight {;
 }
 ;
 export interface FilterOptions {;
-  productTypes:{;
-    label:string,;
+  productTypes: {;,
+  label:string,;
     value:string;
   }[],;
-  locations:{;
-    label:string,;
+  locations: {;,
+  label:string,;
     value:string;
   }[],;
-  availabilityOptions:{;
-    label:string,;
+  availabilityOptions: {;,
+  label:string,;
     value:string;
   }[],;
   ratingOptions:number[];
@@ -63,16 +69,16 @@ export interface FilterOptions {;
 }
 ;
 export interface FilterOptions {;
-  productTypes: {;
-    label: string,;
+  productTypes: {;,
+  label: string,;
     value: string;
   }[],;
-  locations: {;
-    label: string,;
+  locations: {;,
+  label: string,;
     value: string;
   }[],;
-  availabilityOptions: {;
-    label: string,;
+  availabilityOptions: {;,
+  label: string,;
     value: string;
   }[];
   ratingOptions: number[];
@@ -81,5 +87,8 @@ export interface FilterOptions {;
 }
 ;
 export interface SearchSuggestion {
+  // TODO: Implement
+}
   text: string;
 }
+'

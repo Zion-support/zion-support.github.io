@@ -1,9 +1,10 @@
 
 
 
-import React from "react";
+import React from "react";"
 import {
-
+  // TODO: Implement
+}
   Dialog,
   DialogContent,
   DialogDescription,
@@ -11,127 +12,83 @@ import {
 DialogTitle,;
 
 
-DialogTitle,;
-} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
+DialogTitle,;"
+} from "@/components/ui/dialog";""
+import { ApplyForm } from "./ApplyForm";""
+import { ApplyToJobModalProps } from "./types";"
 export function ApplyToJobModal({
-  job
-  isOpen
-  onClose
-  onApplySuccess
+  job;
+  isOpen;
+  onClose;
+  onApplySuccess;)
 }: ApplyToJobModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px]">
+</Dialog>"
+      <DialogContent className="sm:max-w-[600px]">"
+</DialogContent>
         <DialogHeader>
+</DialogHeader>
           <DialogTitle>Apply to Job: {job.title}</DialogTitle>
           <DialogDescription>
-            Complete your application for this position
+</DialogDescription>
           </DialogDescription>
         </DialogHeader>
-
-
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogHeader,;
-  DialogTitle,;
-} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
-export function ApplyToJobModal(): any ({;
-  job,;
-  isOpen,;
-  onClose,;
-  onApplySuccess,;
-}: ApplyToJobModalProps) {;
-  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="sm:max-w-[600px]">;
+</Dialog>"
+      <DialogContent className="sm:max-w-[600px]">;"
+</DialogContent>
         <DialogHeader>;
+</DialogHeader>
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
-
-
-
-import React from './react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-import { ApplyForm  } from './ApplyForm';
-import { ApplyToJobModalProps  } from './types';
-export /**
- * ApplyToJobModal - Function description
- */
-function ApplyToJobModal() {
-  return (
     <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="sm:max - w-[600px]">;
+</Dialog>"
+      <DialogContent className="sm:max - w-[600px]">;"
+</DialogContent>
         <DialogHeader>;
+</DialogHeader>
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
-  DialogTitle} from '@/components/ui/dialog',;
-import { ApplyForm } from './ApplyForm',;
-import { ApplyToJobModalProps } from './types',;
-;
-export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyToJobModalProps) {;
-  return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="sm:max-w-[600px]">;
+</Dialog>"
+      <DialogContent className="sm:max-w-[600px]">;"
+</DialogContent>
         <DialogHeader>;
+</DialogHeader>
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
           <DialogDescription>;
-            Complete your application for this position;
+</DialogDescription>
           </DialogDescription>;
         </DialogHeader>;
-
         <ApplyForm;
 
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
+</ApplyForm>
       </DialogContent>;
-
-
-    </Dialog>;
-
-
-  );
+    </Dialog>;)
     </Dialog>);
-}
     </Dialog>;
-  );
     </Dialog>);
-}
     </Dialog>;
-  ),;}
  <DialogHeader> <DialogTitle>Apply to Job: {
-  job.title 
+</DialogHeader>
 }</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
-  job 
+  job;
 }onClose= {
-  onClose 
+  onClose;
 }onApplySuccess= {
-  onApplySuccess 
+  onApplySuccess;
 }/> </DialogContent> </Dialog>) 
-}
-<ApplyForm
+<ApplyForm;
           job={job}
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
+</ApplyForm>
       </DialogContent>
 </Dialog>
     </Dialog>;
-
-  );
-}
-  );
-    </Dialog>);
-}
+    </Dialog>);"

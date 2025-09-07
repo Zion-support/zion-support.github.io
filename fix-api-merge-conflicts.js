@@ -1,16 +1,15 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Fixing merge conflicts in API files...');
-
-// Find all files with merge conflicts
+#!/usr/bin/env node;
+const fs = require('fs');''
+const path = require('path');''
+const { execSync } = require('child_process');''
+console.log('🔧 Fixing merge conflicts in API files...');'
+// Find all files with merge conflicts;
 const findConflictedFiles = () => {
   try {
-    const result = execSync('grep -r "<<<<<<< HEAD" pages/api/ --include="*.ts" --include="*.js" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file);
+  // TODO: Implement
+}'
+    const result = execSync('grep -r "")"
+    return result.trim().split('\n').filter(file => file);'
   } catch (error) {
     return [];
   }
@@ -18,20 +17,20 @@ const findConflictedFiles = () => {
 
 const fixMergeConflicts = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  // TODO: Implement
+}'
+    let content = fs.readFileSync(filePath, 'utf8');'
+    // Remove merge conflict markers and keep the main branch content;
+    content = content.replace(/
     
-    // Remove merge conflict markers and keep the main branch content
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+    // Clean up any remaining conflict markers;
+    content = content.replace(/
+    content = content.replace(/
+    content = content.replace(/
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
-    // Fix common syntax issues
-    content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons
-    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements
-    
+    // Fix common syntax issues;)'
+    content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons;''
+    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements;'
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
     return true;
@@ -44,8 +43,8 @@ const fixMergeConflicts = (filePath) => {
 const main = () => {
   const conflictedFiles = findConflictedFiles();
   
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found in API files');
+  if (conflictedFiles.length === 0) {'
+    console.log('✅ No merge conflicts found in API files');'
     return;
   }
   
@@ -53,7 +52,7 @@ const main = () => {
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
   
   let fixed = 0;
-  conflictedFiles.forEach(file => {
+  conflictedFiles.forEach(file => {)
     if (fixMergeConflicts(file)) {
       fixed++;
     }
@@ -62,4 +61,4 @@ const main = () => {
   console.log(`\n🎉 Fixed ${fixed}/${conflictedFiles.length} files`);
 };
 
-main();
+main();'

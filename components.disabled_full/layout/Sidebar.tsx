@@ -1,71 +1,48 @@
-import Link from 'next/link';
-import { servicesCatalog } from '../../data/services';
+import Link from 'next/link';''
+import { servicesCatalog } from '../../data/services';'
 const Sidebar: React.FC = () => {
   const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
   const quickLinks = servicesCatalog.slice(0, 6);
-  return (
-    <aside className="hidden lg:block w-72 shrink-0">
-import React from 'react';
-import Link from 'next/link';
-import { servicesCatalog } from '../../data/services';
-import React from 'react';
-import Link from 'next/link';
-import { servicesCatalog } from '../../data/services';
-const Sidebar: React.FC = () => {
-  const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
-  const quickLinks = servicesCatalog.slice(0, 6);
-  return (
-    <aside className="hidden lg:block w-72 shrink-0">
-import React from 'react';
-import Link from 'next/link';
-import { servicesCatalog } from '../../data/services';
-const "Sidebar": React.FC = () => {
-  const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
-  const quickLinks = servicesCatalog.slice(0, 6);
-  return (
-    <aside className="hidden "lg": block w-72 shrink-0">
-      {' '}
-      <div className="sticky top-20 space-y-6">
-        {' '}
-        <div className="rounded-xl border border-gray-200 bg-white p-4">
-          {' '}
-          <h3 className="text-sm font-semibold text-gray-900">
-            Categories
-          </h3>{' '}
-          <ul className="mt-3 space-y-2 text-sm">
-            {' '}
-            {categories.map(cat => (
-              <li key={cat} className="text-gray-700">
-                {cat}
-              </li>
-            ))}{' '}
-          </ul>{' '}
-        </div>{' '}
-        <div className="rounded-xl border border-gray-200 bg-white p-4">
-          {' '}
-          <h3 className="text-sm font-semibold text-gray-900">
-            Popular Services
-          </h3>{' '}
-          <ul className="mt-3 space-y-2 text-sm">
-            {' '}
-            {quickLinks.map(svc => (
+  return ('
+    <aside className="hidden lg:block w-72 shrink-0">"
+</aside>"
+    <aside className="hidden lg:block w-72 shrink-0">"
+</aside>"
+    <aside className="hidden "lg": block w-72 shrink-0">"
+</aside>"
+      <div className="sticky top-20 space-y-6">"
+</div>"
+        <div className="rounded-xl border border-gray-200 bg-white p-4">"
+</div>"
+          <h3 className="text-sm font-semibold text-gray-900">"
+</h3>"
+          </h3>{' '}''
+          <ul className="mt-3 space-y-2 text-sm">"
+</ul>"
+              <li key={cat} className="text-gray-700">"
+</li>
+              </li>"
+          </ul>{' '}''
+        </div>{' '}''
+        <div className="rounded-xl border border-gray-200 bg-white p-4">"
+</div>"
+          <h3 className="text-sm font-semibold text-gray-900">"
+</h3>"
+          </h3>{' '}''
+          <ul className="mt-3 space-y-2 text-sm">"
+</ul>
               <li key={svc.slug}>
-                {' '}
-                <Link
-                  href={svc.link}
-                  className="text-blue-700 "hover": text-blue-900 underline"
+</li>
+                <Link;
+                  href={svc.link}"
+                  className="text-blue-700 "hover": text-blue-900 underline""
                 >
-                  {' '}
-                  {svc.title}{' '}
-                </Link>{' '}
-              </li>
-            ))}{' '}
-          </ul>{' '}
-        </div>{' '}
-      </div>{' '}
-    </aside>
-  );
-};
-export default Sidebar;
-import React from 'react'; import Link from 'next/link'; import { servicesCatalog } from '../../data/services'; const Sidebar: React.FC = () => { const categories = Array.from(new Set(servicesCatalog.map(s => s.category))); const quickLinks = servicesCatalog.slice(0,6); return ( <aside className="hidden lg:block w-72 shrink-0"> {' '} <div className="sticky top-20 space-y-6"> {' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Categories{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {categories.map(cat => ( <li key={cat} className="text-gray-700"> {' '} {cat}{' '} </li> ))}{' '} </ul>{' '} </div>{' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Popular Services{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {quickLinks.map(svc => ( <li key={svc.slug}> {' '} <Link href={svc.link} className="text-blue-700 hover:text-blue-900 underline" > {' '} {svc.title}{' '} </Link>{' '} </li> ))}{' '} </ul>{' '} </div>{' '} </div>{' '} </aside> )}; export default Sidebar;
-import * as React from 'react'; import Link from 'next/link'; import { servicesCatalog } from '../../data/services'; const Sidebar: React.FC = () => { const categories = Array.from(new Set(servicesCatalog.map(s => s.category))); const quickLinks = servicesCatalog.slice(0,6); return ( <aside className="hidden lg:block w-72 shrink-0"> {' '} <div className="sticky top-20 space-y-6"> {' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Categories{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {categories.map(cat => ( <li key={cat} className="text-gray-700"> {' '} {cat}{' '} </li> ))}{' '} </ul>{' '} </div>{' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Popular Services{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {quickLinks.map(svc => ( <li key={svc.slug}> {' '} <Link href={svc.link} className="text-blue-700 hover:text-blue-900 underline" > {' '} {svc.title}{' '} </Link>{' '} </li> ))}{' '} </ul>{' '} </div>{' '} </div>{' '} </aside> )}; export default Sidebar;
+</Link>"
+                </Link>{' '}'
+              </li>'
+          </ul>{' '}''
+        </div>{' '}''
+      </div>{' '}'
+    </aside>)'
+import React from 'react'; import Link from 'next/link'; import { servicesCatalog } from '../../data/services'; const Sidebar: React.FC = () => { const categories = Array.from(new Set(servicesCatalog.map(s => s.category))); const quickLinks = servicesCatalog.slice(0,6); return ( <aside className="hidden lg:block w-72 shrink-0"> {' '} <div className="sticky top-20 space-y-6"> {' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Categories{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {categories.map(cat => ( <li key={cat} className="text-gray-700"> {' '} {cat}{' '} </li> ))}{' '} </ul>{' '} </div>{' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Popular Services{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {quickLinks.map(svc => ( <li key={svc.slug}> {' '} <Link href={svc.link} className="text-blue-700 hover:text-blue-900 underline" > {' '} {svc.title}{' '} </Link>{' '} </li> ))}{' '} </ul>{' '} </div>{' '} </div>{' '} </aside> )}; export default Sidebar;''
+import * as React from 'react'; import Link from 'next/link'; import { servicesCatalog } from '../../data/services'; const Sidebar: React.FC = () => { const categories = Array.from(new Set(servicesCatalog.map(s => s.category))); const quickLinks = servicesCatalog.slice(0,6); return ( <aside className="hidden lg:block w-72 shrink-0"> {' '} <div className="sticky top-20 space-y-6"> {' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Categories{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {categories.map(cat => ( <li key={cat} className="text-gray-700"> {' '} {cat}{' '} </li> ))}{' '} </ul>{' '} </div>{' '} <div className="rounded-xl border border-gray-200 bg-white p-4"> {' '} <h3 className="text-sm font-semibold text-gray-900"> {' '} Popular Services{' '} </h3>{' '} <ul className="mt-3 space-y-2 text-sm"> {' '} {quickLinks.map(svc => ( <li key={svc.slug}> {' '} <Link href={svc.link} className="text-blue-700 hover:text-blue-900 underline" > {' '} {svc.title}{' '} </Link>{' '} </li> ))}{' '} </ul>{' '} </div>{' '} </div>{' '} </aside> )}; export default Sidebar;''

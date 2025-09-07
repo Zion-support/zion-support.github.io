@@ -1,9 +1,10 @@
-export type AccessLevel = 'public' | 'private' | 'admin';
-
+export type AccessLevel = 'public' | 'private' | 'admin';'
 export interface SearchResult {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
-  description: string;
+  description: string;,
   type: string;
   rating?: number;
   price?: number;
@@ -12,3 +13,4 @@ export interface SearchResult {
   keywords?: string[];
 }
 }
+'

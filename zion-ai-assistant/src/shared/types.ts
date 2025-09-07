@@ -1,16 +1,20 @@
 
 
-export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other","
 export interface MilestoneSuggestionInput {
+  // TODO: Implement
+}
   scopeOfWork: string,
 
-
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
+"
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;"
 export interface MilestoneSuggestionInput {;
   scopeOfWork: string,;
-
-export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+"
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other","
 export interface MilestoneSuggestionInput {
+  // TODO: Implement
+}
   scopeOfWork: string,
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
@@ -19,6 +23,8 @@ export interface MilestoneSuggestionInput {
 
 
 export interface SuggestedMilestoneItem {
+  // TODO: Implement
+}
   title: string,
   description: string,
 
@@ -29,19 +35,25 @@ export interface SuggestedMilestoneItem {;
   description: string,;
 
 export interface SuggestedMilestoneItem {
+  // TODO: Implement
+}
   title: string,
   description: string,
 
-  suggestedDueDateIso: string;
-  estimatedEffortHours: number, // estimated hours;
-  tags?: string[], // e.g., ["AI Suggested"];
+  suggestedDueDateIso: string;,
+  estimatedEffortHours: number, // estimated hours;"
+  tags?: string[], // e.g., ["AI Suggested"];"
 }
 
 export interface MilestoneSuggestionResponse {
+  // TODO: Implement
+}
   milestones: SuggestedMilestoneItem[];
 }
 
 export interface MilestoneSuggestionResponse {
+  // TODO: Implement
+}
   milestones: SuggestedMilestoneItem[];
 }
 
@@ -56,8 +68,8 @@ export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
-  estimatedEffortHours:number, // estimated hours;
-  tags?:string[], // e.g., ["AI Suggested"];
+  estimatedEffortHours:number, // estimated hours;"
+  tags?:string[], // e.g., ["AI Suggested"];"
 }
 ;
 export interface MilestoneSuggestionResponse {;
@@ -68,3 +80,4 @@ export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 }
+"

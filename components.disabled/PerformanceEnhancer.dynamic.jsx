@@ -1,20 +1,10 @@
-const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
+const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,''
 </p>'
-</p>'
-<<<<<<< HEAD
-=======
-</p>'
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-</p>'
-
-
-</p>'
-<<<<<<< HEAD
-=======
-
-</p>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-</p>'
-</p>'
+</p>'''
+</p>'''
+</p>'''
+</p>'''
+</p>'''
+</p>'''
+</p>'''
+</p>'''

@@ -1,50 +1,30 @@
 
 function Skeleton({
-  className
-  ...props
+  className;
+  ...props;)
 }: React.HTMLAttributes<HTMLDivElement>) {
-import { cn } from &quot;@/lib / utils & quot;
-;
-/**
- * Skeleton - Function description
- */
-function Skeleton() {
-  return (
+</HTMLDivElement>
     <div;
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";"
 ;
 function Skeleton({;
   className,;
-  ...props;
+  ...props;)
 } React.HTMLAttributes<HTMLDivElement>) {;
-  return (;
-    <div;
-      className={cn("animate-pulse rounded-md bg-muted", className)}
+</div>
+    <div;"
+      className={cn("animate-pulse rounded-md bg-muted", className)}"
       {...props}
     />);
-}
-;
-
-;
-export { Skeleton } function Skeleton ({
-  className, ...props 
+</div>
 }: React.HTMLAttributes<HTMLDivElement>) {
+</HTMLDivElement>
   return (<div />) 
-}export {
-  Skeleton 
-}
-  return (
-    <div
-      className={cn("animate-pulse rounded-md bg-muted", className)}
+</div>
+    <div;"
+      className={cn("animate-pulse rounded-md bg-muted", className)}"
       {...props}
     />;
-  );
-}
-export { Skeleton }
-;
-export { Skeleton };
-export { Skeleton }
-;
-;
+</div>"

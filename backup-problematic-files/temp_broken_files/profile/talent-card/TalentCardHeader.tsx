@@ -1,8 +1,8 @@
 
-import React from "react",;
-import { BadgeCheck } from 'lucide-react';
-import { TalentCardAvatar } from "./TalentCardAvatar",;
-import { TalentCardAvailability } from "./TalentCardAvailability",;
+import React from "react",;""
+import { BadgeCheck } from 'lucide-react';''
+import { TalentCardAvatar } from "./TalentCardAvatar",;""
+import { TalentCardAvailability } from "./TalentCardAvailability",;"
 ;
 interface TalentCardHeaderProps {;
   fullName:string,;
@@ -17,52 +17,37 @@ export function TalentCardHeader({ ;
   professionalTitle, ;
   profilePicture, ;
   availabilityType,;
-  yearsExperience;
+  yearsExperience;)
 } TalentCardHeaderProps) {;
-  return (;
-    <div className="flex items-start gap-4 mb-4">;
+  return (;"
+    <div className="flex items-start gap-4 mb-4">;"
+</div>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-      ;
-      <div className="flex-1">;
-        <div className="flex items-center justify-between">;
-          <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
-            {fullName}
-            {/* AI score could be used for verification badge */}
-            {yearsExperience > 5 && (;
-              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
-            )}
+</TalentCardAvatar>"
+      <div className="flex-1">;"
+</div>"
+        <div className="flex items-center justify-between">;"
+</div>"
+          <h3 className="text-lg font-semibold text-white flex items-center gap-1">;"
+</h3>"
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;"
+</BadgeCheck>
           </h3>;
-          ;
           <TalentCardAvailability availabilityType={availabilityType} />;
-        </div>;
-        ;
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
+</TalentCardAvailability>
+        </div>;"
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;"
       </div>;
-    </div>;
-  ),;}
- interface TalentCardHeaderProps {;
-  fullName: string;
-professionalTitle: string;
-profilePicture?: string;
-availabilityType: string;
-yearsExperience: number ;
-}export function TalentCardHeader ({;
-  fullName;
-professionalTitle;
-profilePicture;
-availabilityType;
-yearsExperience ;
-}: TalentCardHeaderProps) {;
-  return (<div className="flex items-start gap-4 mb-4" > <TalentCardAvatar profilePicture= {;
-  profilePicture ;
-}fullName= {;"  fullName ";"}/> <div className="flex-1" > <div className="flex items-center justify-between" > <h3 className="text-lg font-semibold text-white flex items-center gap-1" > {;
-  fullName ;
-}{;
-  /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> ;
+    </div>;"
+  return (<div className="flex items-start gap-4 mb-4" > <TalentCardAvatar profilePicture= {;"
+</div>"
+}fullName= {;"  fullName ";"}/> <div className="flex-1" > <div className="flex items-center justify-between" > <h3 className="text-lg font-semibold text-white flex items-center gap-1" > {;"
+</div>"
+  /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> ;"
+</BadgeCheck>
 }</h3> <TalentCardAvailability availabilityType= {;
   availabilityType ;
-:temp_broken_files/profile/talent-card/TalentCardHeader.tsx
-}/> </div> </div> </div>) ;"}"
-}/> </div> </div> </div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardHeader.tsx
+:temp_broken_files/profile/talent-card/TalentCardHeader.tsx;)"
+}/> </div> </div> </div>) ;"}""
+</TalentCardAvailability>
+}/> </div> </div> </div>) ;"
