@@ -1,4 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
+import ServiceCard from './src/components/ServiceCard';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
+import ContactSection from './src/components/ContactSection';
+import BenefitsSection from './src/components/BenefitsSection';
+import HowItWorksSection from './src/components/HowItWorksSection';
+import FaqSection from './src/components/FaqSection';
+import ChatAssistant from './src/components/ChatAssistant';
+import ScrollToTop from './src/components/ScrollToTop';
+import ParticleBackground from './src/components/ParticleBackground';
+>>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
 
 export default function App() {
   return (
@@ -13,4 +27,8 @@ export default function App() {
       </div>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6

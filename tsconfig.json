@@ -1,0 +1,88 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src",
+    "src.pages.disabled",
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
+  ]
+}
