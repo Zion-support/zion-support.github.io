@@ -34,6 +34,7 @@ import {
   FileText,
   Cpu
 } from 'lucide-react';
+import { SEO } from '../../components/SEO';
 
 export default function AISupplyChainOptimization() {
   const features = [
@@ -58,6 +59,8 @@ export default function AISupplyChainOptimization() {
       description: 'End-to-end visibility across all suppliers, warehouses, and distribution centers'
     },
     {
+      title: 'Predictive Risk Management',
+      description: 'Identify supply chain disruptions before they impact operations',
       icon: Shield,
       title: 'Risk Management',
       description: 'AI-powered risk assessment and mitigation for supply chain disruptions'
