@@ -132,18 +132,97 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Testimonials Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Trusted by leading companies worldwide
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 rounded-lg p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations."
+                </p>
+                <div className="font-semibold text-gray-900">Sarah Johnson</div>
+                <div className="text-gray-600">CEO, TechCorp</div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Outstanding micro SaaS development. They delivered on time and within budget."
+                </p>
+                <div className="font-semibold text-gray-900">Michael Chen</div>
+                <div className="text-gray-600">CTO, InnovateLabs</div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner."
+                </p>
+                <div className="font-semibold text-gray-900">Emily Rodriguez</div>
+                <div className="text-gray-600">VP Engineering, DataFlow</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
         <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">500+</div>
+                <div className="text-blue-100">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">99%</div>
+                <div className="text-blue-100">Client Satisfaction</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-blue-100">Expert Team Members</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">24/7</div>
+                <div className="text-blue-100">Support Available</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI and technology solutions can accelerate your growth.
             </p>
             <a 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
