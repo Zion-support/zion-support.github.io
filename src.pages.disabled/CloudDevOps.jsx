@@ -25,7 +25,7 @@ import React from 'react';
 interface CloudDevOpsProps {
   // Add props here as needed
 
-
+}
 
 export default function CloudDevOps({ }: CloudDevOpsProps) {
   return (
@@ -35,10 +35,11 @@ export default function CloudDevOps({ }: CloudDevOpsProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/CloudDevOps.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/CloudDevOps.jsx

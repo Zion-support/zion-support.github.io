@@ -1,13 +1,12 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-
-
-
-
   quotes
   isArchived = false
   isLoading
@@ -16,7 +15,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
-=======
   quotes,
   isArchived = false,
   isLoading,
@@ -25,9 +23,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
+
   deleteQuote,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onViewDetails
 },) => {
   return (
@@ -61,19 +58,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
-
-
-              <TableRow 
-                key={quote.id}
-
-
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-=======
+
   quotes;
   is_archived = false;
 import React from './react';
@@ -148,7 +139,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {quote.requester_name}
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -169,10 +159,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     </Button>
 
 
-                    
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {isArchived ? (
                       <>
                         <Button
@@ -185,6 +171,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         </Button>
                         <Button
                           variant="ghost"
+
 
 
   quotes;
@@ -206,7 +193,6 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
-=======
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -247,11 +233,11 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
-
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+
 
                             className="text-red-500"
                           >
@@ -260,7 +246,6 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -281,7 +266,6 @@ import {;
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 import { formatDate } from "@/utils/dateUtils",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
   isArchived?: boolean;
@@ -372,6 +356,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
+
                     {isArchived ? (;
                       <>;
                         <Button
@@ -382,64 +367,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-                        <Button
-                          variant="ghost" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                          size="icon"
-                          className="text-red-500"
-                          onClick = {() => {;
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote && quote.id);
-                            ,}
-                          }}
-
-                        >;
-                          <Trash2 className="h-4 w-4" />;
-                          <span className="sr-only">Delete</span>;
-                        </Button>;
-                      </>;
-                    ) : (;
-                      <DropdownMenu>;
-                        <DropdownMenuTrigger asChild>;
-                          <Button variant="ghost" size="icon" aria-label="More actions">;
-                            <MoreHorizontal className="h-4 w-4" />;
-                            <span className="sr-only">Actions</span>;
-                          </Button>;
-                        </DropdownMenuTrigger>;
-                        <DropdownMenuContent align="end">;
-                          <DropdownMenuItem onClick={(,) => updateStatus(quote && quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
-                            <Archive className="h-4 w-4 mr-2" />;
-                            Archive;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem
-                            onClick = {() => {;
-                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                                deleteQuote(quote && quote.id);
-                              };                            }}
-                            className="text-red-500";
-                          >;
-                            <Trash2 className="h-4 w-4 mr-2" />;
-                            Delete;
-                          </DropdownMenuItem>;
-                        </DropdownMenuContent>;
-                      </DropdownMenu>;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </TableCell>;
@@ -453,7 +380,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '";
 
 
-=======
         </TableBody>;
       </Table>;
     </div>;
@@ -462,10 +388,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 '"
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </div>;
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -566,11 +489,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
+
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

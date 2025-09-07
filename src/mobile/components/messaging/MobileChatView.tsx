@@ -1,6 +1,4 @@
-
-
-  id: string;
+id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
@@ -20,7 +18,6 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-
 
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -69,12 +66,6 @@ if (!== '') {) {
       onSendMessage (new_message);
       setNewMessage ('');
 
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
@@ -102,7 +93,6 @@ if ( {) {
     router.push (`/call/${room_id}?audio_only = true`);
 
   }
-=======
 export function MobileChatView(): any ({;
   contact,;
   messages,;
@@ -126,27 +116,25 @@ export function MobileChatView(): any ({;
 
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
-    toast && toast.success('Starting video call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting video call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page;
-    router && router.push(`/call/${roomId}`);
-  };
+    router && router.push(`/call/${roomId}`)
+};
 
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact && contact.id}`;
-    toast && toast.success('Starting audio call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting audio call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page with audio-only flag;
-    router && router.push(`/call/${roomId}?audioOnly=true`);
-  };
+    router && router.push(`/call/${roomId}?audioOnly=true`)
+};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
 
   },
   
@@ -171,7 +159,6 @@ export function MobileChatView(): any ({;
   },
   
 
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -188,8 +175,6 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>
@@ -228,12 +213,10 @@ export function MobileChatView(): any ({;
               <Phone className='h-5 w-5' />;
             </Button>;
 
-
             <Button
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-
 
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
@@ -241,7 +224,6 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-
 
             </Button>
           </div>
@@ -254,7 +236,6 @@ export function MobileChatView(): any ({;
 
             <Button variant='ghost' size='icon' aria-label='More options'>;
               <MoreVertical className='h-5 w-5' />;
-=======
     <div className='flex flex - col h - full pb - safe'>;
       <header className='sticky top - 0 z - 10 bg - background border - b border - border'>;
         <div className='flex items - center h - 14 px - 4'>;
@@ -312,8 +293,8 @@ export function MobileChatView(): any ({;
 
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}>;
-              <p>{message && message.content}</p>;
+              )}            >
+              <p>{message.content}</p>
               <div
                 className={cn(
 
@@ -322,17 +303,10 @@ export function MobileChatView(): any ({;
 
                     ? 'text-primary-foreground/80'
                     : 'text-muted-foreground'
-                )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className='ml-1'>;
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;
                 )}
 
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
         {messages.map (message => (
-=======
 
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -360,16 +334,16 @@ export function MobileChatView(): any ({;
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting video call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page;
     router.push(`/call/${roomId}`);
   },;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting audio call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);
@@ -444,28 +418,23 @@ export function MobileChatView(): any ({;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {message.timestamp}
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {message.status === 'read' ? '✓✓' : '✓'}
 
               </div>;
             </div>;
           </div>;
         ))}
-=======
 
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
             <PaperclipIcon className="h-5 w-5" />
-=======
 
           </Button>
           <Input
@@ -483,6 +452,57 @@ export function MobileChatView(): any ({;
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'          >
             <Send className='h-5 w-5' />
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+      </div>;
+    </div>;
+  )
+};
+}
+}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          
+          <Input
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message..."
+            className="flex-1"
+          />
+          
+          <Button
+            size="icon"
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
           </Button>
         </div>
 
@@ -494,10 +514,8 @@ export function MobileChatView(): any ({;
             <PaperclipIcon className='h-5 w-5' />;
           </Button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             value={newMessage}
-
 
             onChange={(e) => setNewMessage(e.target.value)}
 
@@ -507,8 +525,6 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-
-
 
           </Button>
         </div>
@@ -533,7 +549,6 @@ export function MobileChatView(): any ({;
   );
 }
 
-=======
                   </span>)}
               </div>;
             </div>;
@@ -562,12 +577,6 @@ export function MobileChatView(): any ({;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -26,6 +26,7 @@ interface InputProps {
   // Add props here as needed
 
 
+}
 
 export default function Input({ }: InputProps) {
   return (
@@ -36,9 +37,6 @@ export default function Input({ }: InputProps) {
   );
 
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+:src.disabled/components/ui/input.jsx
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/input.jsx
+}

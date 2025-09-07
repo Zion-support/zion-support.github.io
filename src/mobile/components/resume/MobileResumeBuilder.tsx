@@ -1,5 +1,3 @@
-
-
 import {;
   Select;
   SelectContent;
@@ -46,10 +44,9 @@ export function MobileResumeBuilder() {;
     }
   },;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className="space-y-6 px-4 pb-24">;
-      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
+    <div className="space-y-6 px-4 pb-24">
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
 
 
@@ -67,7 +64,6 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Experience
         </Button>
@@ -77,7 +73,6 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Education
         </Button>
@@ -87,8 +82,6 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         >
           Skills
         </Button>
@@ -102,7 +95,6 @@ export function MobileResumeBuilder() {;
       </Button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -199,7 +191,6 @@ function BasicsStep() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -216,7 +207,6 @@ function ExperienceStep() {
 };
 
 
-=======
   Select;
   SelectContent;
   SelectItem;
@@ -347,7 +337,6 @@ function ExperienceStep() {
   },
   const remove_experience = (id: string, ) =>: any {
     set_experiences (experiences.filter (exp => exp.id !== id));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const remove_education = (id: string, ) =>: any {
     set_educations (educations.filter (edu => edu.id !== id));
@@ -355,7 +344,6 @@ function ExperienceStep() {
   const remove_skill = (id: string, ) =>: any {
     set_skills (skills.filter (skill => skill.id !== id));
   }
-=======
 
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
@@ -380,20 +368,27 @@ function ExperienceStep() {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id));
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
 
-=======
   );
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};";
+  () => removeSkill (skill.id) ";
+}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
+}</div>) ) ";
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
+}"

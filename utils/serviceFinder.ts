@@ -1,11 +1,7 @@
 
-=======
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export interface Service {
   id: string;
-  name: string;
+  name: string,
   description: string;
   category: string;
   price?: number;
@@ -17,12 +13,12 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.category.toLowerCase().includes(searchTerm)
-  );
+  )
 };
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
-  );
+  )
 };
 export default {
   findService,
@@ -31,15 +27,5 @@ export default {
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
-  return null;
+  return null
 };
-
-
-
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,5 +1,10 @@
 
 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react'
+
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
@@ -26,7 +31,6 @@ interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ReferralReward } from "@/types/referrals"
 import { formatDate } from "@/utils/referralUtils"
@@ -34,10 +38,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -53,7 +54,6 @@ interface RewardsCardProps {
   rewards: ReferralReward[]
 
   isLoading: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -61,15 +61,12 @@ interface RewardsCardProps {
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-=======
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Your Rewards
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
@@ -83,7 +80,6 @@ interface RewardsCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     )
   }
   if (rewards.length === 0) {
@@ -96,7 +92,6 @@ interface RewardsCardProps {
             <BadgeDollarSign className="h-5 w-5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -113,11 +108,8 @@ interface RewardsCardProps {
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -127,7 +119,6 @@ interface RewardsCardProps {
         </CardContent>
       </Card>
 
-=======
 
     )
 
@@ -140,7 +131,6 @@ interface RewardsCardProps {
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -149,7 +139,6 @@ interface RewardsCardProps {
 
 }
 
-=======
         <div className="space-y-4">
           {rewards.map((reward, index) => (
             <div 
@@ -168,12 +157,10 @@ interface RewardsCardProps {;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <BadgeDollarSign className='h-5 w-5' />;
-=======
   rewards: ReferralReward[],
   is_loading: boolean;
 }
@@ -221,7 +208,6 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <BadgeDollarSign className='h - 5 w - 5' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Your Rewards;
           </CardTitle>;
           <CardDescription>;
@@ -230,10 +216,8 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 
-=======
     )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   if (rewards && rewards.length === 0) {;
@@ -265,7 +249,6 @@ if ( {) {
         </CardContent>;
       </Card>;
     );  }    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
@@ -332,7 +315,6 @@ if ( {) {
                   <p className="text-xs text-muted-foreground">;
                   </p>;
 
-=======
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -365,13 +347,19 @@ if ( {) {
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
+
                 </p>
                 {reward.expires_at && (
                   <p className="text-xs text-muted-foreground">
+
+<p className='text-xs text-muted-foreground mt-1'>
+                  Earned on {formatDate(reward.created_at)}
+                </p>
+                {reward.expires_at && (
+                  <p className='text-xs text-muted-foreground'>
                     Expires on {formatDate(reward.expires_at)}
                   </p>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </div>;
             </div>;
@@ -383,7 +371,6 @@ if ( {) {
   );
 }
 
-=======
         <div className='space - y-4'>          {rewards.map ((reward, index) => (
             <div;
               key={reward.id}
@@ -422,10 +409,4 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

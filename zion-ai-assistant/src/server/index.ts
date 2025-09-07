@@ -1,4 +1,4 @@
-
+});
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
@@ -25,7 +25,6 @@ if ( {) {
   $2
 }
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
-=======
 
 import "dotenv/config",;
 import express from "express",;
@@ -50,16 +49,9 @@ app.post("/api/ai/milestones", async (req, res) => {;
   } catch (error) {;
     if (error instanceof z.ZodError) {;
       return res.status(400).json({ error: "Invalid input", details: error.issues });
-
-    }
-    console.error (error),
-    res.status (500).json ({ error: "Failed to generate milestones" });
-  }
-
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 
-
-});
+});});

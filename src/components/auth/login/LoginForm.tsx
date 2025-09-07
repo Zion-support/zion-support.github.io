@@ -1,6 +1,28 @@
 
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';
+import { fireEvent } from '@/lib/analytics';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from '@/components/ui/form';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -8,23 +30,6 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
-import { useState } from 'react';
-import { use_router } from 'next / router';
-import { use_form, ControllerRenderProps } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';
-import { fire_event } from '@/lib / analytics';
-import { use_auth } from '@/context / auth / AuthProvider';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { useState  } from './react';
-import { use_form, ControllerRenderProps  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { use_auth  } from '@/context / auth / AuthProvider';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
 import {
   Form,
   FormControl,
@@ -88,7 +93,6 @@ if ( {) {
           ) {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
-=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -108,22 +112,21 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any,
+    resolver: zodResolver(loginSchema) as any
     defaultValues: {
-      email: '',
-      password: '',
-      rememberMe: false,
-    },
+      email: ''
+      password: ''
+      rememberMe: false
+    }
   })
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+    if (isSubmitting) return
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true)
       // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe);
-      if (result?.error) {;
+      const result = await login(data.email, data.password, data.rememberMe)
+      if (result?.error) {
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (
@@ -131,8 +134,26 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-=======
-
+} from '@/components/ui/form'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
+const loginSchema = z.object({
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required')
+  password: z.string().min(6, 'Password must be at least 6 characters')
+  rememberMe: z.boolean()
+})
+type LoginFormValues = z.infer<typeof loginSchema>
+export function LoginForm() {
+  const { isLoading, login } = useAuth()
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isResending, setIsResending] = useState(false)
+  const [verificationMessage, setVerificationMessage] = useState('')
+  const router = useRouter()
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -154,10 +175,10 @@ export function LoginForm() {
   const [verificationMessage, setVerificationMessage] = useState(''),
   const router = useRouter(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
+
 
       email: "",
       password: "",
@@ -170,11 +191,14 @@ export function LoginForm() {
     try {
       setIsSubmitting(true)
       // Pass email and password to the login function
-
-      const result = await login(data.email, data.password, data.rememberMe),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
           } else {
             error_message = result.error.message;
           }
@@ -214,8 +238,7 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-=======
-=======
+
 
         form.setError("root", { message: errorMessage })
       } else {
@@ -230,72 +253,19 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import Link from 'next/link';
-
-import { Checkbox } from '@/components/ui/checkbox';// Form validation schema;
-const loginSchema = z && z.object({;
-  email: z;
-    .string();
-    .email('Please enter a valid email');
-    .min(1, 'Email is required'),;
-  password: z && z.string().min(6, 'Password must be at least 6 characters'),;
-  rememberMe: z && z.boolean(),;
-});
-
-type LoginFormValues = z && z.infer<typeof loginSchema>;
-
-export function LoginForm() {;
-  const { isLoading, login } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isResending, setIsResending] = useState(false);
-  const [verificationMessage, setVerificationMessage] = useState('');
-  const router = useRouter();
-
-  const form = useForm<LoginFormValues>({;
-    resolver: zodResolver(loginSchema) as any,;
-    defaultValues: {;
-      email: '',;
-      password: '',;
-      rememberMe: false,;
-    },;
-  });
-
-  const onSubmit = async (data: LoginFormValues) => {;
-    if (isSubmitting) return;
-    try {;
-      setIsSubmitting(true),;
-      // Pass email and password to the login function;
-      const result = await login(data && data.email, data && data.password, data && data.rememberMe);
-      if (result?.error) {;
-        let errorMessage = 'Login failed. Please try again.'; // Default generic error;
-        if (result?.error && result?.error?.message) {;
-          if (;
-            result && result.error.message && message.toLowerCase().includes('email not confirmed');
-          ) {;
-            errorMessage =;
-              'Your email is not confirmed. Please check your inbox for a confirmation link.';
-          } else {;
-            errorMessage = result && result.error.message;
-          }
-        }
-        form && form.setError('root', { message: errorMessage });
       } else {;
         fireEvent('login', { method: 'email' });
       }
     } finally {;
       setIsSubmitting(false);
     }
+
   };
 
   const handleResendEmail = async () => {;
@@ -310,23 +280,13 @@ export function LoginForm() {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ email }),;
-      });
-      const data = await response && response.json();
-      if (response && response.ok) {;
-        setVerificationMessage(;
-          'Verification email sent. Please check your inbox.';
-        );
-      } else {;
-        setVerificationMessage(;
-          data && data.message || 'Failed to resend verification email.';
-        );
       }
     } catch (err) {;
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
     }
+
   };
 
   const handleCheckStatus = () => {;
@@ -350,7 +310,6 @@ export function LoginForm() {;
         <FormField
           control={form && form.control}
           name='email'
-=======
       {form.form_state.errors.root && (
         <Alert variant='destructive' className='mb - 4'>;
           <AlertDescription>;
@@ -371,7 +330,6 @@ if ( {) {
         <FormField;
           control={form.control}
           name='email';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
@@ -385,7 +343,6 @@ if ( {) {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-
       <form;
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
@@ -394,6 +351,25 @@ if ( {) {
           }
         })}
         className="space-y-6"
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import Link from "next/link";
+import { Checkbox } from "@/components/ui/checkbox";
+// Form validation schema
+const loginSchema = null;
+          if (firstError) {
+            form.setFocus(firstError)
+          }        })}
+        className='space-y-6'
       >
         <FormField
           control={form.control}
@@ -402,79 +378,18 @@ if ( {) {
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <FormControl>
-                <div className='relative'>
-=======
-            field: ControllerRenderProps<LoginFormValues, 'email'>;
-          }) => (            <FormItem>;
-              <FormLabel className='text-zion-slate-light'>;
-=======
-            field: ControllerRenderProps < LoginFormValues, 'email'>;
-          }) => (            <FormItem>;
-              <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                Email address;
-              </FormLabel>;
-              <FormControl>;
-                <div className='relative'>;
-
-                  <Input;
-                    placeholder='you@example.com';
-                    aria - label='Email address';
-                    aria - invalid={!!form.form_state.errors.email}
-                    className='bg - zion - blue pl - 10 text - white placeholder:text - zion - blue - light border - zion - blue - light focus:border - zion - purple'                    {...field}
-                  />;
-                  <User className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                </div>;
-              </FormControl>;
-              <FormMessage className='text - red - 400' />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name='password';
-
-          render={({
-            field
-          }: {
-
-            field: ControllerRenderProps<LoginFormValues, 'password'>;
-          }) => (            <FormItem>;
-              <FormLabel className='text-zion-slate-light'>Password</FormLabel>;
-              <FormControl>;
-                <div className='relative'>;
-
+                <div className="relative">
                   <Input
-                    type={showPassword ? 'text' : 'password'}
-                    placeholder='Enter password'
-                    aria-label='Password'
-                    aria-invalid={!!form && form.formState.errors && errors.password}
-                    className='bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple'                    {...field}
-                  />;
-                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />;
-                  <Button
-                    type='button'
-                    variant='ghost'
-                    size='sm'
-                    className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
-                    onClick={() => setShowPassword(!showPassword)}                  >;
-=======
 
-                    placeholder="you@example.com"
-                    aria-label="Email address"
-                    aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
-                    {...field}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
+
+
 
         className="space-y-6";
       >;
@@ -495,12 +410,10 @@ if ( {) {
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
             </FormItem>
-
           )}
         />;
         <FormField;
@@ -562,7 +475,6 @@ if ( {) {
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                     onClick={() => setShowPassword(!showPassword)}
                   >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {showPassword ? (;
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
@@ -570,7 +482,6 @@ if ( {) {
                     )}
                     <span className='sr-only'>;
                       {showPassword ? 'Hide password' : 'Show password'}
-=======
             field: ControllerRenderProps < LoginFormValues, 'password'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>Password</FormLabel>;
@@ -595,11 +506,11 @@ if ( {) {
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </Button>;
                 </div>;
               </FormControl>;
+
 
               <FormMessage className='text - red - 400' />;
             </FormItem>)}
@@ -608,98 +519,25 @@ if ( {) {
           control={form.control}
 
               <FormControl>
-=======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <FormControl>
                 <Checkbox
-
                   checked={field.value}
                   onCheckedChange={field.onChange}
-
-                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
-                  aria-label="Remember me"
-                />
-
-
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
-        />;
-        <div className='flex items-center justify-between'>;
-          <div className='text-sm'>;
+        />
+        <div className="flex items-center justify-between">
+          <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
             {/* If "Remember me" was previously here, it's moved. */}
-
-            field: ControllerRenderProps < LoginFormValues, 'remember_me'>;
-          }) => (
-            <FormItem className='flex flex - row items - start space - x-3 space - y-0'>;
-              <FormControl>;
-                <Checkbox;
-                  checked={field.value}
-                  onCheckedChange={field.on_change}
-                  className='border - zion - blue - light data-[state = checked]:bg - zion - purple data-[state = checked]:text - white';
-                  aria - label='Remember me'                />;
-              </FormControl>;
-              <div className='space - y-1 leading - none'>;
-                <FormLabel className='text - zion - slate - light'>;
-                  Remember me;
-                </FormLabel>;
-              </div>;
-            </FormItem>)}
-        />;
-        <div className='flex items - center justify - between'>;
-          <div className='text - sm'>;
-            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here, it's moved. */}
-          </div>;
-          <div className='text - sm'>;
-            <Link;
-              href='/forgot - password';
-              className='font - medium text - zion - cyan hover:text - zion - cyan - light';
-            >;
-
-              Forgot password?;
-            </Link>;
-          </div>;
-        </div>;
-
-          disabled={isLoading || isSubmitting}>;
-          {isLoading || isSubmitting ? 'Logging in...' : 'Login'}
-        </Button>;
-        {verificationMessage && (;
-          <p className='text-sm text-center text-zion-slate-light mt-2'>;
-
-            {verificationMessage}
-          </p>;
-        )}
-        <div className='flex justify-between mt-4'>;
-          <Button
-            type='button'
-            variant='secondary'
-            className='w-1/2 mr-2'
-            onClick={handleResendEmail}
-            disabled={isResending}>;
-            {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
-          </Button>;
-          <Button
-            type='button'
-            variant='outline'
-            className='w-1/2 ml-2'
-            onClick={handleCheckStatus}>;
-            Check status;
-          </Button>;
-        </div>;
-        <p className='text-sm text-center mt-4'>;
-          <Link
-            href='/signup'
-
           </div>
           <div className="text-sm">
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -708,89 +546,26 @@ if ( {) {
           </div>
         </div>
         <Button
-
-          type="submit"
-          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
-          disabled={isLoading || isSubmitting}
-        >
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
-        </Button>
-        {verificationMessage && (
-          <p className="text-sm text-center text-zion-slate-light mt-2">
-          name="rememberMe";
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (;
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
-              <FormControl>;
-                <Checkbox;
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white";
-                  aria-label="Remember me";
-                />;
-              </FormControl>;
-              <div className="space-y-1 leading-none">;
-                <FormLabel className="text-zion-slate-light">Remember me</FormLabel>;
-              </div>;
-            </FormItem>;
-          )}
-        />
-        <div className='flex items-center justify-between'>
-          <div className='text-sm'>
-            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here, it's moved. */}
-          </div>;
-          <div className="text-sm">;
-            <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-              Forgot password?;
-            </Link>;
-          </div>;
-        </div>;
-        <Button;
-          type="submit";
-          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible";
-          disabled={isLoading || isSubmitting}
-        >;
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
-        </Button>;
-        {verificationMessage && (;
-          <p className="text-sm text-center text-zion-slate-light mt-2">;
-            {verificationMessage}
-          </p>
-        )}
-        <div className="flex justify-between mt-4">
           <Button
-            type="button"
-            variant="secondary"
-            className="w-1/2 mr-2"
+            type='button'
+            variant='secondary'
+            className='w-1/2 mr-2'
             onClick={handleResendEmail}
-            disabled={isResending}
-          >;
-            {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
-          </Button>
           <Button
-            type="button"
-            variant="outline"
-            className="w-1/2 ml-2"
-            onClick={handleCheckStatus}
-          >
-
-
+            type='button'
+            variant='outline'
+            className='w-1/2 ml-2'
             Check status
           </Button>
         </div>
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Create account
           </Link>
         </p>
       </form>
     </Form>
   )
-
-
-return;
-
 
 }setIsResending (true);'
 setVerificationMessage ('')
@@ -822,6 +597,7 @@ if (!email) {'
 })
 
 
+
 return;
 
 
@@ -845,19 +621,15 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-=======
-            className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
             Create account;
           </Link>;
         </p>;
       </form>;
+
     </Form>;
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -967,12 +739,5 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

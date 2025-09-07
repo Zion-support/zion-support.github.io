@@ -1,37 +1,21 @@
-
-
-          
 import { logInfo, logWarn } from '@/utils/productionLogger'
-
-=======
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash",
-import { logInfo, logWarn } from '@/utils/productionLogger',
-
-
-
 
 
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
 
    */
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -134,11 +118,9 @@ if ( {) {
   $2
 }
               setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
-=======
 
           setApiSuggestions([]),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           } else {
 
@@ -152,7 +134,7 @@ if ( {) {
           setApiSuggestions ([]);
 
         } finally {
-          set_loading (false);
+          setLoading(false)
         }
 
       }, 300);
@@ -186,7 +168,7 @@ if ( {) {
           setFilteredSuggestions (data.slice (0, 8));
 
         } else {
-          setFilteredSuggestions ([]);
+          setFilteredSuggestions([])
         }
 
 
@@ -243,11 +225,9 @@ if ( {) {
     onChange(suggestionObj.text),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
-=======
         setHighlightedIndex (-1);
       });
       .catch (() => setFilteredSuggestions ([]));
@@ -279,18 +259,17 @@ if ( {) {
 }
       log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
       onSelectSuggestion (suggestion_obj);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
 
         router.push (`/search/${suggestion_obj.slug || slugify (suggestion_obj.text)}`);
 
       }
     }
-    setIsFocused (false);
-    input_ref.current?.blur ();
-    setHighlightedIndex (-1);
+    setIsFocused(false)
+    inputRef.current?.blur()
+    setHighlightedIndex(-1)
   }
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>, ) =>: any {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     switch (e.key) {
 
       case 'ArrowDown':;
@@ -332,23 +311,18 @@ if ( {) {
     debouncedFilterSuggestions (value, search_suggestions);
     setHighlightedIndex (-1);
     return () => {
-      debouncedFilterSuggestions.cancel ();
+      debouncedFilterSuggestions.cancel()
 }
-}, [value, search_suggestions, debouncedFilterSuggestions]);
-  useEffect (() => {
-  // TODO: Add dependencies if needed;
+}, [value, searchSuggestions, debouncedFilterSuggestions])
+  useEffect(() => {
+  // TODO: Add dependencies if needed
   return () => {
-    // Cleanup function;
+    // Cleanup function
 }
-}, []); []);
-    /**
- * handleClickOutside - Function description
- */
-function handleClickOutside() {
-      if () {) {
-  $2
-}
-        setIsFocused (false);
+}, []); [])
+    function handleClickOutside(event: MouseEvent) {
+      if(containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsFocused(false)
 }
     }
 
@@ -669,24 +643,67 @@ if ( {) {
           input_ref.current?.blur ();
 
         } else {
-          // Prevent empty form submission;
-          e.prevent_default ();
+          // Prevent empty form submission
+          e.preventDefault()
         }
-        break;
+        break
+      case 'Escape':
+        e.preventDefault()
+        setIsFocused(false)
+        setHighlightedIndex(-1)
+        setValueOnFocus(null)
+        inputRef.current?.blur()
+        break
+      default:
+        // For other keys (character input), reset enterHandledPostFocus
+        setEnterHandledPostFocus(false)
+        break
+    }
+  }
+
+    switch(e && e.key) {;
+      case 'ArrowDown':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
+        }
+        break,;
+      case 'ArrowUp':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
+        }
+        break,;
+      case 'Enter':;
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e.preventDefault(), // Prevent form submission;
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
+        } else if (value.trim()) {;
+          // Manually trigger search navigation to ensure consistent behavior;
+          e.preventDefault(),;
+          logInfo('EnhancedSearchInput manual submit:', { data: value }),;
+          router.push(`/search?q=${encodeURIComponent(value)}`),;
+          setIsFocused(false),;
+          setHighlightedIndex(-1),;
+          inputRef.current?.blur();
+        } else {;
+          // Prevent empty form submission;
+          e.preventDefault();
+        }
+        break,;
       case 'Escape':;
-        e.prevent_default ();
-        setIsFocused (false);
-        setHighlightedIndex (-1);
-        setValueOnFocus (null);
-        input_ref.current?.blur ();
-        break;
+        e.preventDefault(),;
+        setIsFocused(false),;
+        setHighlightedIndex(-1),;
+        setValueOnFocus(null),;
+        inputRef.current?.blur(),;
+        break,;
       default:;
         // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus (false);
+        setEnterHandledPostFocus(false),;
         break;
     }
   }
-=======
 
     switch(e && e.key) {;
       case 'ArrowDown':;
@@ -738,83 +755,7 @@ if ( {) {
         setEnterHandledPostFocus(false);
         break;
     }
-  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      // Provide a sensible default navigation if the parent did not supply a handler
-
-      logWarn('onSelectSuggestion callback not provided'),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      if (suggestionObj.id) {
-        router.push(`/marketplace/listing/${suggestionObj.id}`)
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
-        router.push(suggestionObj.slug)
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
-        router.push(`/blog/${suggestionObj.slug}`)
-      } else {
-
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
-      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
-      onClick = {(,) => inputRef && inputRef.current?.focus(),}
-    >;
-      <div className="relative flex items-center w-full">;
-        <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />;
-
-        <Input
-
-
-          ref={inputRef}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          type="text"
-          id="enhanced-search-input"
-          name="search"
-          value={value}
-
-    <div;
-      className="relative w - full";
-      ref = {container_ref, }
-      role="combobox";
-      aria - expanded = {is_focused && filtered_suggestions.length > 0, }
-      aria - haspopup="listbox";
-      aria - controls="autocomplete - suggestions - list" // Added aria - controls;
-      on_click = {(, ) => input_ref.current?.focus (), }
-    >;
-      <div className="relative flex items - center w - full">;
-        <Search;
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
-        />;
-        <Input;
-          ref = {input_ref, }
-          type="text";
-          id="enhanced - search - input";
-          name="search";
-          value={value}
-          on_change={(e) => {
-            on_change (e.target.value);
-            setEnterHandledPostFocus (false);
-
-          }}
-          on_focus={(e) => {
-            setIsFocused (true);            setHighlightedIndex (-1), // Explicitly reset on focus;
-            const current_val = e.target.value;
-            setValueOnFocus (current_val);
-            setEnterHandledPostFocus (false);
-            e.target.setSelectionRange (current_val.length, current_val.length);
-          }}
-
-=======
 
 
           onChange={(e) => {;
@@ -830,9 +771,23 @@ if ( {) {
           }}
           onBlur={(e) => {;
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;
+
+            onChange(e.target.value),;
+            setEnterHandledPostFocus(false);
+          }}
+          onFocus={(e) => {;
+            setIsFocused(true),;
+            setHighlightedIndex(-1), // Explicitly reset on focus;
+            const currentVal = e.target.value,;
+            setValueOnFocus(currentVal),;
+            setEnterHandledPostFocus(false),;
+            e.target.setSelectionRange(currentVal.length, currentVal.length);
+          }}
+          onBlur={(e) => {;
+            const relatedTarget = e.relatedTarget as HTMLElement;
+            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
               setIsFocused(false);
               setHighlightedIndex(-1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ,}
             setValueOnFocus(null);
           }}
@@ -843,11 +798,10 @@ if ( {) {
 
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off";
-        />;
-        {value && (;
+          autoComplete="off"
+        />
+        {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick = {(,) => onChange(''),}
@@ -865,7 +819,6 @@ if ( {) {
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
-=======
 
       </div>;
       <AutocompleteSuggestions;
@@ -874,8 +827,6 @@ if ( {) {
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
 
@@ -965,10 +916,7 @@ break ;
   );
 }
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
@@ -1074,5 +1022,3 @@ break;
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

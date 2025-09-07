@@ -13,23 +13,44 @@ import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
-=======
+import React from "react";
+import {
+  Card
+  CardHeader
+  CardTitle
+  CardDescription
+  CardContent
+import React from "react";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,;
 
-interface JobMatchesProps {
-  jobId: string
-}
-export function JobMatches({ jobId }: JobMatchesProps) {
+import {;
+  Card,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardContent,;
 
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
+} from "@/components/ui/card";
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
+import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
-    useJobMatches(jobId);
+import { useJobMatches } from "@/hooks/useJobMatches";
+import { Skeleton } from "@/components/ui/skeleton";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
+import { JobMatchCard } from "@/components/jobs/JobMatchCard",
+import { useJobMatches } from "@/hooks/useJobMatches",
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);
 
-=======
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Card>
@@ -49,74 +70,32 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-48" />
                 <Skeleton className="h-4 w-32" />
               </div>
-            </div>
-
-
-
-=======
-import React from "react",;
+            </div>import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
-import { Skeleton } from "@/components/ui/skeleton",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-interface JobMatchesProps {;
+import { Skeleton } from "@/components/ui/skeleton",;interface JobMatchesProps {;
   jobId: string;
 }
 
-
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
-
     useJobMatches(jobId);
 
   if (isLoading) {;
-    return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <Skeleton className="h-4 w-24" />;
-          </CardTitle>;
-          <CardDescription>;
-            <Skeleton className="h-4 w-full" />;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          {[1, 2, 3].map((i) => (;
-            <div key={i} className="flex items-center gap-4">;
-              <Skeleton className="h-12 w-12 rounded-full" />;
-              <div className="space-y-2">;
-                <Skeleton className="h-4 w-48" />;
-                <Skeleton className="h-4 w-32" />;
-              </div>;
-            </div>;
-          ))}
-        </CardContent>;
-      </Card>;
-    );
-  }
-
-
-  if (matches && matches.length === 0) {;
-
-    return (
+    return (    return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
         isProcessing={isProcessing}
       />;
     );
   }
-=======
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
@@ -134,11 +113,9 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
           matchPercent={match && match.match_score || 0}
           skills={match && match.talent_profile?.skills || []}
         />;
-
       ))}
     </div>;
   );
-=======
 import React from './react';
 import {
   Card,
@@ -168,20 +145,20 @@ if ( {) {
     return (
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <Skeleton className="h - 4 w - 24" />;
+          <CardTitle className="flex items - center gap-2">;
+            <Skeleton className="h - 4 w-24" />;
           </CardTitle>;
           <CardDescription>;
-            <Skeleton className="h - 4 w - full" />;
+            <Skeleton className="h - 4 w-full" />;
           </CardDescription>;
         </CardHeader>;
-        <CardContent className="space - y-4">;
+        <CardContent className="space-y-4">;
           {[1, 2, 3].map ((i) => (
-            <div key={i} className="flex items - center gap - 4">;
-              <Skeleton className="h - 12 w - 12 rounded - full" />;
-              <div className="space - y-2">;
-                <Skeleton className="h - 4 w - 48" />;
-                <Skeleton className="h - 4 w - 32" />;
+            <div key={i} className="flex items - center gap-4">;
+              <Skeleton className="h - 12 w - 12 rounded-full" />;
+              <div className="space-y-2">;
+                <Skeleton className="h - 4 w-48" />;
+                <Skeleton className="h - 4 w-32" />;
               </div>;
             </div>))}
         </CardContent>;
@@ -198,28 +175,16 @@ if ( {) {
       />);
   }
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       {matches.map ((match) => (
         <JobMatchCard;
           key={match.id}
           match_id={match.id}
-          talent_id={match.talent_profile?.id || ""}
-=======
-
-          talentId={match.talent_profile?.id || ""}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          name={match.talent_profile?.full_name || ""}
-          title={match.talent_profile?.professional_title || ""}
-          company={match.talent_profile?.company_name || ""}
-          avatar={match.talent_profile?.profile_picture_url || ""}
-          location={match.talent_profile?.location || "Remote"}
-          category={match.talent_profile?.category || "Development"}
-          match_percent={match.match_score || 0}
-          skills={match.talent_profile?.skills || []}
-
-        />
-      ))}
+          talent_id={match.talent_profile?.id || ""}    </div>
+    </div>;
 
   );
 
+        />))}
+    </div>);
 }

@@ -25,7 +25,7 @@ import React from 'react';
 interface FiveGEnterpriseSolutionsProps {
   // Add props here as needed
 
-
+}
 
 export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {
   return (
@@ -35,10 +35,11 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/FiveGEnterpriseSolutions.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/FiveGEnterpriseSolutions.jsx

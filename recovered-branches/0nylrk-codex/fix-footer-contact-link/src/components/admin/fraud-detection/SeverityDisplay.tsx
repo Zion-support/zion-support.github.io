@@ -8,14 +8,39 @@ interface SeverityDisplayProps {
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
 
-}) => {
-=======
+}) => {  return (
+  severity: string
+}
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
-  severity,;
-}) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
+};
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
+  );
+    />
+  )
+};
+  ),;
+},; interface SeverityDisplayProps {
+  severity: string 
+}severity 
+}) => {
 
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
@@ -25,16 +50,10 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
 }
 ;
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SeverityDisplayProps {
   severity: string
 }
 
-
+}
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

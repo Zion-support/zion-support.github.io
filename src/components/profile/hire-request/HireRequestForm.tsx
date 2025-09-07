@@ -1,24 +1,9 @@
-
-
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 
 
-import React from 'react';
-import { useHireRequestForm, FormValues } from './useHireRequestForm';
-import { Button } from '@/components/ui/button';
-import { DialogFooter } from '@/components/ui/dialog';
-import { Form } from '@/components/ui/form';
-import { Loader2 } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { PersonalInfoFields } from './PersonalInfoFields';
-import { ProjectDetailsField } from './ProjectDetailsField';
-import { TimelineField } from './TimelineField';
-import { BudgetFields } from './BudgetFields';
-export interface HireRequestFormProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent: TalentProfile;
   onClose: () => void;
   initialJobTitle?: string;
@@ -53,7 +38,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
@@ -99,9 +83,10 @@ export function HireRequestForm(): any ({;
             type='button'
             variant='outline'
             onClick={onClose}
-            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}>;
-            Cancel;
-          </Button>;
+            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
+          >
+            Cancel
+          </Button>
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
@@ -109,7 +94,6 @@ export function HireRequestForm(): any ({;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
 
-=======
 
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
@@ -132,7 +116,6 @@ export interface HireRequestFormProps {
   };
   onSubmitSuccess?: () => void
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
@@ -144,80 +127,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
     userDetails ;
   });
 
-  return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <PersonalInfoFields form={form} />;
-        </div>;
-
-        <ProjectDetailsField form={form} />;
-        <TimelineField form={form} />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <BudgetFields form={form} talent={talent} />;
-        </div>;
-
-        <DialogFooter className="pt-4">;
-          <Button
-=======
-
-        
-        <ProjectDetailsField form={form} />
-        <TimelineField form={form} />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <BudgetFields form={form} talent={talent} />
-        </div>
-        
-        <DialogFooter className="pt-4">
-          <Button 
-
-            type="button" 
-            variant="outline" 
-            onClick={onClose}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled={isSubmitting}
-
-
-            onClick = {onClose,}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}>;
-            Cancel;
-          </Button>;
-          <Button
-            type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            disabled={isSubmitting}
-            disabled = {isSubmitting,}>;
-            {isSubmitting ? (;
-              <>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                Submitting...;
-              </>;
-            ) : (;
-              'Submit Request';
-
-=======
-=======
-
-          >
-            Cancel
-          </Button>
-          <Button 
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Submitting...
               </>
             ) : (
@@ -227,7 +136,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 }
 
 
-=======
           </Button>;
         </DialogFooter>;
       </form>;
@@ -238,7 +146,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   );
 }
 
-=======
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';
@@ -355,10 +262,4 @@ function HireRequestForm() {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

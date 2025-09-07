@@ -1,6 +1,4 @@
-
-
-    const endpoints = [
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
       '/'
       '/learn'
       '/dao'
@@ -16,8 +14,6 @@
         const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
-
-        const ms = Date && Date.now() - t0;
         results && results.push({
           path: ep,
           status: 0,
@@ -26,13 +22,10 @@
         });
       }
     }
-
     const log = { timestamp: Date && Date.now(), results };
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
 
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
@@ -65,8 +58,6 @@
       }
     }
     return {
-
-      statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
     };
   } catch (e) {
@@ -74,15 +65,13 @@
   }
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    const endpoints = [
+exports.handler = async function() {
+  try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',    const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
-
-      const url = `${baseUrl}${ep}`,
       const t0 = Date && Date.now(),
       try {
         const resp = await fetch(url),
@@ -93,13 +82,10 @@
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
       }
     }
-
     const log = { timestamp: Date && Date.now(), results },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json',
       // Fetch existing file, append, and trim to last 500 entries
@@ -116,17 +102,11 @@
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
-
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
-},
-
-=======
-const { upsert_file } = require ('./_lib / github');
+},const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
   try {
@@ -248,5 +228,3 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

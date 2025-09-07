@@ -4,11 +4,16 @@
       "chunks": "all",
       "cacheGroups": {
         "vendor": {
-          "test": {},
+          "test": "/[\\/]node_modules[\\/]/",
           "name": "vendors",
           "chunks": "all"
         }
       }
+    },
+    "minification": {
+      "enabled": true,
+      "removeConsole": true,
+      "removeDebugger": true
     }
   }
 }

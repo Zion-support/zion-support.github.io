@@ -1,10 +1,4 @@
 
-
-=======
-
-...formData;            startDate: startDate?.toISOString(),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             endDate: endDate?.toISOString()}
         }
       })
@@ -14,7 +8,6 @@
 
 
 
-=======
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
@@ -23,12 +16,10 @@
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+
 
 ;
 
-=======
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -205,6 +196,7 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
+
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -507,7 +499,3 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

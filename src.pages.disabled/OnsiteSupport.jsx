@@ -25,7 +25,7 @@ import React from 'react';
 interface OnsiteSupportProps {
   // Add props here as needed
 
-
+}
 
 export default function OnsiteSupport({ }: OnsiteSupportProps) {
   return (
@@ -35,10 +35,11 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/OnsiteSupport.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/OnsiteSupport.jsx

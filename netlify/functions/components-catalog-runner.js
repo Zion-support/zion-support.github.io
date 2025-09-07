@@ -1,7 +1,3 @@
-
-
-function runNode(relPath, args = []) {
-
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -13,21 +9,25 @@ function run_node() {
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
 
+
+
+
 exports.config = {
   schedule: '*/30 * * * *'
 }
-=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
-
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
+
+
+
 
 
     logs.push(`exit=${res.status |0}`);
@@ -37,12 +37,7 @@ exports && exports.config = {
     runNode('automation/components-catalog && catalog.cjs')
   );
 
-  const abs = path.resolve(__dirname, '....', relPath),
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
-
 }
-
-=======
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
@@ -51,7 +46,6 @@ exports && exports.config = {
 },
 
 
-=======
 }
 ;
 exports.handler = async () => {
@@ -78,5 +72,23 @@ function step() {
 }  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '....', relPath);
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+}
+
+exports.config = {
+  schedule: '*/30 * * * *'};
+exports.handler = async () => {
+  const logs = [];
+  function step(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const res = fn();
+    if (res.stdout) logs.push(res.stdout);
+    if (res.stderr) logs.push(res.stderr);
+  return { statusCode: 200, body: logs.join('\n') };
+};
+

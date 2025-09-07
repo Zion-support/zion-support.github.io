@@ -25,7 +25,7 @@ import React from 'react';
 interface ContentCreationProps {
   // Add props here as needed
 
-
+}
 
 export default function ContentCreation({ }: ContentCreationProps) {
   return (
@@ -35,10 +35,11 @@ export default function ContentCreation({ }: ContentCreationProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/ContentCreation.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/ContentCreation.jsx

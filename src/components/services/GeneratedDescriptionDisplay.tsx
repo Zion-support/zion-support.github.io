@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -12,42 +10,7 @@ import {;
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
-
-interface GeneratedDescriptionDisplayProps {;
-  description: string;
-  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string,) => void;
-}
-
-export function GeneratedDescriptionDisplay(): any ({;
-  description,;
-  onSave,;
-}: GeneratedDescriptionDisplayProps) {;
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-
-  const handleSave = () => {;
-    onSave(editedDescription);
-    setIsEditing(false);
-    toast({;
-      title: 'Description Saved',;
-      description: 'Your edited description has been saved.',;
-    });
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
-
-
-
-
-
-
-
-
-
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -62,7 +25,6 @@ export function GeneratedDescriptionDisplay(): any ({;
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />
@@ -111,7 +73,6 @@ export function GeneratedDescriptionDisplay({;
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isEditing ? (;
               <>;
                 <Check className='h-4 w-4 mr-1' />;
@@ -123,7 +84,6 @@ export function GeneratedDescriptionDisplay({;
                 Edit;
               </>;
             )}
-=======
     <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
       <CardHeader>;
         <CardTitle className='text - white flex items - center justify - between'>;
@@ -142,7 +102,6 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className='h - 4 w - 4 mr - 1' />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
@@ -154,23 +113,18 @@ export function GeneratedDescriptionDisplay({;
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {editedDescription}
-          </div>;
+          </div>
         )}
-
-
 
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-          <Button
+
             onClick={handleSave}
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
-
 
             Save Changes
           </Button>
@@ -182,8 +136,6 @@ export function GeneratedDescriptionDisplay({;
 }'";
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </Card>;
   );
 
@@ -200,12 +152,6 @@ export function GeneratedDescriptionDisplay({;
 }'";
 }
 
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -236,11 +182,4 @@ export function GeneratedDescriptionDisplay({;
 }</Card>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

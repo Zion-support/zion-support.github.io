@@ -1,22 +1,16 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
+return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
 
-
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
 
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -42,12 +36,6 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-=======
-
-      
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -55,14 +43,9 @@ function AvailabilityFilter() {
                 id={`availability-${option.id}`}
 
       </button>;
-=======
 
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -79,13 +62,11 @@ import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "project", label: "Project-based" }
-]
 
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
@@ -95,7 +76,6 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-
 
               <Checkbox
                 id={`availability-${option && option.id}`}
@@ -111,11 +91,12 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
               </label>;
             </div>;
 
-=======
               <Checkbox
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -123,7 +104,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;
@@ -141,7 +122,6 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
 }</div>) ;
 }"}
 
-=======
                 checked={selected_availability.includes (option.id)}
                 onCheckedChange={() => toggle_availability (option.id)}
             <div key={option.id} className="flex items - center">;
@@ -198,9 +178,6 @@ function AvailabilityFilter() {
 }</div>);
 }</div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -209,8 +186,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { id: "project", label: "Project-based" }
 ]
 
@@ -236,7 +211,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
+className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+              />
               <label
                 htmlFor={`availability-${option.id}`}
 
@@ -246,7 +222,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</div>) ;
 }"};
 
-=======
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}
@@ -259,7 +234,3 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

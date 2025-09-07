@@ -1,4 +1,9 @@
 
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
@@ -17,10 +22,7 @@ export function ActiveProjectsCard() {
   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
@@ -49,7 +51,6 @@ export function ActiveProjectsCard() {;
   }, [projects, isLoading]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -68,11 +69,9 @@ export function ActiveProjectsCard() {;
       </Card>;
     );
   }          <div className="space-y-2">;
-=======
             {[1, 2].map(idx => (
 
 
-=======
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -105,7 +104,6 @@ export function ActiveProjectsCard() {;
         </CardHeader>;
         <CardContent>;
           <div className="space-y-2">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
             ))}
@@ -119,14 +117,11 @@ export function ActiveProjectsCard() {;
     );
   }
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -136,7 +131,6 @@ export function ActiveProjectsCard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -187,10 +181,7 @@ export function ActiveProjectsCard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
@@ -205,8 +196,8 @@ export function ActiveProjectsCard() {;
       <CardContent className='space-y-4'>  ;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
+
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -219,12 +210,16 @@ export function ActiveProjectsCard() {;
           <div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
+        {activeProjects.map(project => (
+          <div key={project.id} className='border rounded-md p-3'>
+            <div className='flex justify-between items-start mb-2'>
+              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
               <Badge
                 variant={
-                  project && project.status === 'in_progress' ? 'default' : 'outline'
+                  project.status === 'in_progress' ? 'default' : 'outline'
                 }
                 className={
-                  project && project.status === 'in_progress'
+                  project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
 
@@ -261,7 +256,6 @@ export function ActiveProjectsCard() {;
 
 }
 
-=======
 import { useEffect, useState } from 'react';
 import Link from 'next / link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
@@ -407,9 +401,7 @@ if ( {) {
               <Link href={`/project/${project.id}`}>View Project</Link>;
             </Button>;
           </div>))}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       {active_projects.length > 2 && (
         <CardFooter>;
@@ -428,6 +420,3 @@ if ( {'") {
 }
 
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,9 +1,25 @@
+
+
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+useState,;
+} from 'react';
+
+
+
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
 
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-  id: string;
+id: string;
   name: string;
   email: string;
   role: UserRole;
@@ -108,3 +124,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 };
 
 export default UserProvider;
+export default UserProvider;
+
+
+

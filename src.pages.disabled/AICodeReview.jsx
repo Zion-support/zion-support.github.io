@@ -25,7 +25,7 @@ import React from 'react';
 interface AICodeReviewProps {
   // Add props here as needed
 
-
+}
 
 export default function AICodeReview({ }: AICodeReviewProps) {
   return (
@@ -35,10 +35,11 @@ export default function AICodeReview({ }: AICodeReviewProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/AICodeReview.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/AICodeReview.jsx

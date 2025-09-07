@@ -1,12 +1,10 @@
-
-
-export interface ComprehensiveService { id: string, name: string, tagline: string, price: string, period?: string; description: string, features: string[], category: string, subcategory: string, realImplementation: boolean, contactInfo: {
+export interface ComprehensiveService { id: string, name: string, tagline: string, price: string, period?: string,
+  description: string, features: string[], category: string, subcategory: string, realImplementation: boolean, contactInfo: {
        mobile: string, email: string,
     address: string
     },
-
-
-export interface ComprehensiveService { id: string, name: string, tagline: string, price: string, period?: string; description: string, features: string[], category: string, subcategory: string, realImplementation: boolean, contactInfo: {
+export interface ComprehensiveService { id: string, name: string, tagline: string, price: string, period?: string,
+  description: string, features: string[], category: string, subcategory: string, realImplementation: boolean, contactInfo: {
        mobile: string, email: string,
     address: string
     },

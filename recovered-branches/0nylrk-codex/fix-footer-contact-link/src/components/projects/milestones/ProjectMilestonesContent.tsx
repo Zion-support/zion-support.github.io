@@ -1,10 +1,7 @@
 
 
-
-
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
-
 
   const { user } = useAuth();
   const { getProjectById } = useProjects();
@@ -13,175 +10,57 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
-=======
-
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const { getProjectById } = useProjects();
-  const { ;
-    milestones, ;
-    activities;
-    isLoading: milestonesLoading, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    createMilestone;
-    updateMilestoneStatus;
-    deleteMilestone;
-    uploadDeliverable;
-    isSubmitting;
-    refetch;
-  } = useMilestones(projectId);
-  const [project, setProject] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('milestones');
-
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+import React, { useState, useEffect } from 'react';
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {;
     async function loadProject() {;
-      if (!projectId) return;
+        if (projectData) {;
+          setProject(projectData);
 
-      setIsLoading(true);
+    async function loadProject() {;
+      if (!projectId) return,;
+      ;
+      setIsLoading(true),;
       try {;
 
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } catch (error) {;
-        console && console.error("Error loading project:", error);
+        console.error("Error loading project:", error),;
+      } finally {;
+        setIsLoading(false),;      }
+        const projectData = await getProjectById(projectId);
+        if (projectData) {
+          setProject(projectData)}
+      } catch (error) {} finally {setIsLoading(false)}
+    }
+      <ProjectHeader title={project.job?.title |"Untitled Project"} />
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+        <ProjectActions
+          projectId={projectId |''}
+        <ProjectActions 
+      } catch (error) {;
+        console.error("Error loading project:", error);
       } finally {;
         setIsLoading(false);
       }
     }
-
-
-
-    loadProject();
+;
+    loadProject(),;
     refetch();
-  }, [projectId, getProjectById, refetch]);
-
-=======
-
-    
-    loadProject(),
-    refetch()
-  }, [projectId, getProjectById, refetch]),
-
-
-  const handleMilestoneCreated = async () => {;
-    await refetch();
-  };
-
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
-
-
-  if (isLoading || !project) {
-
-
-    return (
-      <div className="container mx-auto py-8 px-4">;
-        <div className="flex justify-center items-center h-64">;
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-        </div>;
-      </div>;
-    );
-  }
-
-
-  const handleMilestoneSubmit = async (data: any) => {;
-    if (!projectId) return,;
-
-    // Ensure all required fields are present;
-    const milestoneData = {;
-      project_id: projectId,;
-      title: data && data.title,;
-      description: data && data.description || "",;
-      amount: data && data.amount,;
-      status: "pending" as const,;
-      due_date: data && data.due_date ? data && data.due_date.toISOString() : undefined;
-    };
-
-    await createMilestone(milestoneData);
-    setActiveTab('milestones');
-    await handleMilestoneCreated();
-  };
-
-  return (
-    <div className="container mx-auto py-8 px-4">;
-      <ProjectHeader title={project && project.job?.title || "Untitled Project"} />;
-
-      <div className="flex justify-between items-center my-6">;
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-        <ProjectActions
-=======
-
-    },
-    
-    await createMilestone(milestoneData),
-    setActiveTab('milestones'),
-    await handleMilestoneCreated()
-  },
-
-
-  return (
-    <div className="container mx-auto py-8 px-4">
-
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />
-
-      <div className="flex justify-between items-center my-6">
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>
-
-        <ProjectActions 
-
-
-          projectId={projectId || ''}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          isUnderDispute={isUnderDispute}
-          disputeId={disputeId}
-          isTalent={isTalent}
-          onAddMilestone={() => setActiveTab('create')}
-
-        />;
-      </div>;
-
-      <Tabs value={activeTab} onValueChange={setActiveTab}>;
-        <TabsList className="mb-6">;
-          <TabsTrigger value="milestones">Milestones</TabsTrigger>;
-          <TabsTrigger value="activity">Activity</TabsTrigger>;
-          {isTalent && (;
-            <TabsTrigger value="create">Create Milestone</TabsTrigger>;
-          )}
-        </TabsList>;
-
-        <TabsContent value="milestones">;
-          <MilestoneManager
-            projectId={projectId || ''}
-
-=======
-
-          <MilestoneManager 
-            projectId={projectId || ''}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            milestones={milestones}
+  }, [projectId, getProjectById, refetch]),;            milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
-            paymentTerms={project && project.payment_terms}
-            isSubmitting={isSubmitting}
+            paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
-=======
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
 import {use_milestones} from '@/hooks / use_milestones';
@@ -259,9 +138,9 @@ if ( {) {
   $2
 }
     return (
-      <div className="container mx - auto py - 8 px - 4">;
-        <div className="flex justify - center items - center h - 64">;
-          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
+      <div className="container mx - auto py - 8 px-4">;
+        <div className="flex justify - center items - center h-64">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
         </div>;
       </div>);
   }
@@ -286,10 +165,10 @@ if (return, ) {
   }
 ;
   return (
-    <div className="container mx - auto py - 8 px - 4">;
+    <div className="container mx - auto py - 8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      <div className="flex justify - between items - center my - 6">;
-        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
+      <div className="flex justify - between items - center my-6">;
+        <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
           project_id={project_id || ''}
           isUnderDispute={isUnderDispute}
@@ -299,7 +178,7 @@ if (return, ) {
         />;
       </div>;
       <Tabs value={active_tab} onValueChange={setActiveTab}>;
-        <TabsList className="mb - 6">;
+        <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
           <TabsTrigger value="activity">Activity</TabsTrigger>;
           {is_talent && (
@@ -316,30 +195,10 @@ if (return, ) {
             payment_terms={project.payment_terms}
             is_submitting={is_submitting}
             onCreateMilestone={create_milestone}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
-            refetch={refetch}
-
-          />;
-        </TabsContent>;
-
-        <TabsContent value="activity">;
-          <MilestoneActivities projectId={projectId || ''} />;
-        </TabsContent>;
-
-        <TabsContent value="create">;
-          {(isClient || isTalent) && (;
-
-            <MilestoneCreator
-=======
-
-          {(isClient || isTalent) && (
-            <MilestoneCreator 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              onSubmit={handleMilestoneSubmit}
+            refetch={refetch}              onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
@@ -353,30 +212,108 @@ if (return, ) {
       </Tabs>;
     </div>;
   );
+}  ),; setIsLoading (true);
+try {
+  
+}finally {
+  setIsLoading (false) 
 }
-
-          />;
-        </TabsContent>;
-        <TabsContent value="activity">;
-          <MilestoneActivities project_id={project_id || ''} />;
-        </TabsContent>;
-        <TabsContent value="create">;
-          {(is_client || is_talent) && (
-            <MilestoneCreator;
-              on_submit={handleMilestoneSubmit}
-              is_submitting={is_submitting}
-              on_cancel={() => setActiveTab ('milestones')}
-              project_scope={project.scope_summary}
-              projectStartDate={project.start_date}
-              projectEndDate={project.end_date}
-              project_type={project_type}
-            />)}
-        </TabsContent>;
-      </Tabs>;
-    </div>);
-}
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}loadProject ();
+refetch () 
+}, [projectId, getProjectById, refetch]);
+if (isLoading || !project) {
+  return (<div className="container mx-auto py-8 px-4" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" ></div> </div> </div>) 
+}const handleMilestoneSubmit = async (data: any) => {
+  if (!projectId) return;
+//Ensure all required fields are present const milestoneData = {
+  project id: projectId;
+title: data.title,
+  description: data.description || "";
+amount: data.amount;
+status: " pending"as const;
+due date: data.due date ? data.due date.toISOString () : undefined 
+};
+setActiveTab ('milestones');
+await handleMilestoneCreated () 
+};
+<div className="flex justify-between items-center my-6"> <h2 className="text-2xl font-bold">Payment Milestones</h2> <ProjectActions projectId= {
+  projectId || '' 
+}isUnderDispute= {
+  isUnderDispute 
+}disputeId= {
+  disputeId 
+}isTalent= {
+  isTalent 
+}onAddMilestone= {
+  () => setActiveTab ('create') 
+}/> </div>) 
+}</TabsList> <TabsContent value=" milestones" > <MilestoneManager projectId= {
+  projectId || '' 
+}milestones= {
+  milestones 
+}activities= {
+  activities 
+}isLoading= {
+  milestonesLoading 
+}isClient= {
+  isClient 
+}isTalent= {
+  isTalent 
+}paymentTerms= {
+  project.payment terms 
+}isSubmitting= {
+  isSubmitting 
+}onCreateMilestone= {
+  createMilestone 
+}onUpdateStatus= {
+  updateMilestoneStatus 
+}onDeleteMilestone= {
+  deleteMilestone 
+}onUploadDeliverable= {
+  uploadDeliverable 
+}refetch= {
+  refetch 
+}/> </TabsContent> onSubmit= {
+  handleMilestoneSubmit 
+}isSubmitting= {
+  isSubmitting 
+}onCancel= {
+  () => setActiveTab ('milestones') 
+}projectScope= {
+  project.scope summary 
+}projectStartDate= {
+  project.start date 
+}projectEndDate= {
+  project.end date 
+}projectType= {
+  projectType 
+}/>) 
+}</TabsContent> </Tabs> </div>) 
+}
+          {(isClient |isTalent) && (
+            <MilestoneCreator
+          {(isClient || isTalent) && (
+            <MilestoneCreator 
+              onSubmit={handleMilestoneSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setActiveTab('milestones')}
+              projectScope={project.scope_summary}
+              projectStartDate={project.start_date}
+              projectEndDate={project.end_date}
+              projectType={projectType}
+            />
+          )}
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+        </TabsContent>;
+      </Tabs>;
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

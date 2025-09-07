@@ -25,7 +25,7 @@ import React from 'react';
 interface AIAnalyticsProps {
   // Add props here as needed
 
-
+}
 
 export default function AIAnalytics({ }: AIAnalyticsProps) {
   return (
@@ -35,10 +35,11 @@ export default function AIAnalytics({ }: AIAnalyticsProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/AIAnalytics.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/AIAnalytics.jsx

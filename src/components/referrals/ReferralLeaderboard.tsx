@@ -1,9 +1,5 @@
-
-
-  rank: number,
+rank: number,
   name: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   referrals: number
 }
 
@@ -32,8 +28,6 @@ export function ReferralLeaderboard() {
     { rank: 3, name: "Taylor Wong", referrals: 15 }
     { rank: 4, name: "Casey Brown", referrals: 12 }
     { rank: 5, name: "Jordan Lee", referrals: 10 }]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Card,;
   CardContent,;
@@ -70,7 +64,6 @@ export function ReferralLeaderboard() {;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
     { rank: 4, name: "Casey Brown", referrals: 12 },;
     { rank: 5, name: "Jordan Lee", referrals: 10 }],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card>;
       <CardHeader>;
@@ -111,7 +104,6 @@ export function ReferralLeaderboard() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <div className="flex items-center gap-3">
                 <div 
@@ -130,7 +122,6 @@ export function ReferralLeaderboard() {;
   );
 };
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -184,7 +175,6 @@ export function ReferralLeaderboard() {;
               <span className="text-sm">
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
               </span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           ))}
         </div>
@@ -223,16 +213,9 @@ export function ReferralLeaderboard() {;
   );
 }
 
-=======
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

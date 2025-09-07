@@ -7,11 +7,21 @@ after_each (() => {
   cleanup (),
   vi.restoreAllMocks ();
 }),
-
-=======
-
 import '@testing-library/jest-dom',;
 import { afterEach, vi } from 'vitest',;
 import { cleanup } from '@testing-library/react',;
+// Ensure React Testing Library cleans up and mocks are restored between tests
+afterEach(() => {
+  cleanup()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  vi.restoreAllMocks()
+})
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+}),
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+afterEach(() => {;
+  cleanup(),;
+  vi.restoreAllMocks();
+});

@@ -1,13 +1,10 @@
-
-
-    }
+}
 
   },
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -24,115 +21,87 @@
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
                 : 'An unexpected error occurred while loading this page'}
-
-import React from 'react';
-import Link from 'next / link';
-import { ErrorBoundary, FallbackProps } from 'react - error - boundary';
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
 import {
-  log_info,
-  logErrorToProduction as prodLogError,
-} from '@/utils / production_logger';
+  logInfo
+  logErrorToProduction as prodLogError
+} from '@/utils/productionLogger'
 interface PageErrorFallbackProps extends FallbackProps {
-  page_name?: string;
-/**
- * PageErrorFallback - Function description
- */
-function PageErrorFallback() {
-  const isAuthConfigError =;
-    error?.message?.includes ('Auth0') ||;
-    error?.message?.includes ('AUTH0') ||;
-    error?.message?.includes ('authentication') ||;
-    error?.message?.includes ('environment');
-  const handle_refresh = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      resetErrorBoundary ();
+  pageName?: string
+function PageErrorFallback({
+  error
+  resetErrorBoundary
+  pageName
+}: PageErrorFallbackProps) {
+    error?.message?.includes('environment')
+  const handleRefresh = () => {
+    if (resetErrorBoundary) {
+      resetErrorBoundary()
     } else {
-      window.location.reload ();
+      window.location.reload()
     }
   }
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',;
+interface PageErrorFallbackProps extends FallbackProps {;
+  pageName?: string;
+}
+;
+function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {;
+  const isAuthConfigError = error?.message?.includes('Auth0') ||;
+                           error?.message?.includes('AUTH0') ||;
+                           error?.message?.includes('authentication') ||;
+                           error?.message?.includes('environment'),;
+  const handleRefresh = () => {;
+    if (resetErrorBoundary) {;
+      resetErrorBoundary();
+    } else {;
+      window.location.reload();
+    }
+  },
+
   return (
-    <div className='min - h-screen bg - zion - blue flex items - center justify - center p - 4'>;
-      <div className='max - w-2xl w - full'>;
+    <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
         {/* Main Error Card */}
-        <div className='bg - white rounded - 2xl shadow - xl border border - red - 200 p - 8 mb - 6'>;
-          <div className='text - center mb - 6'>;
-            <div className='mx - auto mb - 4 h - 16 w - 16 rounded - full bg - red - 100 flex items - center justify - center'>;
-              <AlertTriangle className='h - 8 w - 8 text - red - 600' />;
-            </div>;
-            <h1 className='text - 3xl font - bold text - gray - 900 mb - 2'>;
-              {page_name ? `${page_name} Unavailable` : 'Page Unavailable'}
-            </h1>;
-            <p className='text - gray - 600'>;
-              {isAuthConfigError;
-                ? 'This page cannot load due to missing authentication configuration';
-                : 'An unexpected error occurred while loading this page'}
-            </p>;
-          </div>;
+        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+          <div className="text-center mb-6">
+            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
+            </h1>
+            <p className="text-gray-600">
+              {isAuthConfigError 
+                ? 'This page cannot load due to missing authentication configuration'
+                : 'An unexpected error occurred while loading this page'
+              }
+            </p>
+          </div>
           {isAuthConfigError && (
-            <div className='bg - yellow - 50 border border - yellow - 200 rounded - lg p - 4 mb - 6'>;
-              <div className='flex'>;
-                <Settings className='h - 5 w - 5 text - yellow - 600 mt - 0.5 mr - 3' />;
-                <div>;
-                  <h3 className='font - semibold text - yellow - 800 mb - 1'>;
-                    Configuration Required;
-                  </h3>;
-                  <p className='text - yellow - 700 text - sm'>;
-                    This application requires Auth0 authentication to be;
-                    properly configured. Please contact your system;
-                    administrator.;
-                  </p>;
-                </div>;
-              </div>;
-            </div>)}
-
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+              <div className="flex">
+                <Settings className="h-5 w-5 text-yellow-600 mt-0.5 mr-3" />
+                <div>
+                  <h3 className="font-semibold text-yellow-800 mb-1">Configuration Required</h3>
+                  <p className="text-yellow-700 text-sm">
+                    This application requires Auth0 authentication to be properly configured. 
+                    Please contact your system administrator.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
           {error?.message && (
-
-            </p>;
-          </div>;
-
-          {isAuthConfigError && (;
-            <div className='bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6'>;
-              <div className='flex'>;
-                <Settings className='h-5 w-5 text-yellow-600 mt-0 && 0.5 mr-3' />;
-                <div>;
-                  <h3 className='font-semibold text-yellow-800 mb-1'>;
-                    Configuration Required;
-                  </h3>;
-                  <p className='text-yellow-700 text-sm'>;
-                    This application requires Auth0 authentication to be;
-                    properly configured. Please contact your system;
-                    administrator.;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          )}
-
-          {error?.message && (;
-            <details className='bg-gray-50 rounded-lg p-4 mb-6'>;
-              <summary className='cursor-pointer text-gray-700 font-medium'>;
-                Technical Details;
-              </summary>;
-              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>;
-                {error && error.message}
-              </pre>;
-            </details>;
-
-          )}
-          {/* Action Buttons */}
-          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
-            <button
-              onClick={handleRefresh}
-
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+
 
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
@@ -153,15 +122,12 @@ if ( {) {
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-
-
             >
               <Home className="w-4 h-4 mr-2" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Go Home
             </Link>
           </div>
-=======
+
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label="Button">;
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
@@ -175,7 +141,6 @@ if ( {) {
             </Link>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Navigation Options */}
           <div className='border-t pt-6'>;
             <h3 className='font-semibold text-gray-900 mb-3'>;
@@ -195,7 +160,6 @@ if ( {) {
                 Services;
               </Link>;
               <Link href='/about' className='text-blue-600 hover:underline'>;
-=======
               </pre>;
             </details>)}
           {/* Action Buttons */}
@@ -295,11 +259,8 @@ function PageErrorBoundary() {
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
-=======
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-
-=======
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -344,9 +305,8 @@ function PageErrorBoundary() {
               className="text-blue-400 hover:underline";
             >;
               support@zion.tech;
-
             </a>;
-            <Link href='/status' className='text-blue-400 hover:underline'>;
+            <Link href="/status" className="text-blue-400 hover:underline">;
               Service Status;
             </Link>;
           </div>;
@@ -354,71 +314,65 @@ function PageErrorBoundary() {
       </div>;
     </div>;
   );
-
+}
+;
 interface PageErrorBoundaryProps {;
-  children: React && React.ReactNode;
-  pageName?: string;
-  fallback?: React && React.ComponentType<FallbackProps>;
-
-const Component = React && React.memo(function PageErrorBoundary(): any ({;
+  children: React.ReactNode,;
+  pageName?: string,;
+  fallback?: React.ComponentType<FallbackProps>;
+}
+;
+export default function PageErrorBoundary({;
   children,;
   pageName,;
-  fallback,;
+  fallback;
 }: PageErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
-    prodLogError(;
-      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,;
-      error;
-    );
-
-    logErrorToProduction(;
-      error instanceof Error ? error && error.message : String(error),;
-      error instanceof Error ? error : undefined,;
-      {;
-        page: pageName || 'unknown',;
-        componentStack: errorInfo && errorInfo.componentStack || undefined,;
-        errorBoundary: 'PageErrorBoundary',;
-        timestamp: new Date().toISOString(),;
-      }
-    );
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {;
+    prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),;
+    logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {;
+      page: pageName || 'unknown',;
+      componentStack: errorInfo.componentStack || undefined,;
+      errorBoundary: 'PageErrorBoundary',;
+      timestamp: new Date().toISOString();
+    });
   };
-
-  const FallbackComponent =;
-    fallback ||;
-    ((props: FallbackProps) => (;
-      <PageErrorFallback {...props} pageName={pageName} />;
-    ));
-
-
-      onReset={() => {        // Reset any application state if needed;
+  const FallbackComponent = fallback || ((props: FallbackProps) => (;
+    <PageErrorFallback {...props} pageName={pageName} />;
+  ));
+  return (;
+    <ErrorBoundary;
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {;
+        // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    <ErrorBoundary
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {
+        // Reset any application state if needed
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
       }}
-    >;
+    >
       {children}
-
-
 } ;
 } ;
 };
 }
 
 
-=======
     </ErrorBoundary>;
   );
 } ;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const FallbackComponent =;
     fallback ||;
     ((props: FallbackProps) => (
@@ -429,13 +383,13 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
     >;
       {children}
     </ErrorBoundary>);
+  );}
+;
+interface PageErrorBoundaryProps {;
+  children:React.ReactNode,;
+  pageName?:string,;
+  fallback?:React.ComponentType<FallbackProps>;
 }
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </ErrorBoundary>
+  );

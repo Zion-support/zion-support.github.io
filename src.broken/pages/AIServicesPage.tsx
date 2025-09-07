@@ -279,8 +279,8 @@ import {;
 export default function AIServicesPage() {;
   const aiServices = [;
     {;
-      name: "AI Content Generation Suite",;
-      description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.",;
+      name: "AI Content Generation Suite",,
+  description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.",;
       icon: <FileText className="w-12 h-12 text-blue-500" />,;
       features: [;
         "Multi-language content generation",;
@@ -309,8 +309,8 @@ export default function AIServicesPage() {;
       website: "https://ziontechgroup.com/ai-content-generation";
     },;
     {;
-      name: "AI Customer Service Platform",;
-      description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",;
+      name: "AI Customer Service Platform",,
+  description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",;
       icon: <MessageSquare className="w-12 h-12 text-green-500" />,;
       features: [;
         "Natural language understanding",;
@@ -339,8 +339,8 @@ export default function AIServicesPage() {;
       website: "https://ziontechgroup.com/ai-customer-service";
     },;
     {;
-      name: "AI Sales Intelligence Platform",;
-      description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",;
+      name: "AI Sales Intelligence Platform",,
+  description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",;
       icon: <BarChart3 className="w-12 h-12 text-purple-500" />,;
       features: [;
         "Advanced lead scoring algorithms",;
@@ -369,8 +369,8 @@ export default function AIServicesPage() {;
       website: "https://ziontechgroup.com/ai-sales-intelligence";
     },;
     {;
-      name: "AI-Powered Search & RAG System",;
-      description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",;
+      name: "AI-Powered Search & RAG System",,
+  description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",;
       icon: <Search className="w-12 h-12 text-orange-500" />,;
       features: [;
         "Vector-based semantic search",;
@@ -399,8 +399,8 @@ export default function AIServicesPage() {;
       website: "https://ziontechgroup.com/ai-search-rag";
     },;
     {;
-      name: "AI Security & Guardrails",;
-      description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",;
+      name: "AI Security & Guardrails",,
+  description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",;
       icon: <Shield className="w-12 h-12 text-red-500" />,;
       features: [;
         "Content safety filtering",;
@@ -429,8 +429,8 @@ export default function AIServicesPage() {;
       website: "https://ziontechgroup.com/ai-security-guardrails";
     },;
     {;
-      name: "AI Evaluation & Testing Lab",;
-      description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",;
+      name: "AI Evaluation & Testing Lab",,
+  description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",;
       icon: <Brain className="w-12 h-12 text-indigo-500" />,;
       features: [;
         "Automated model testing",;
@@ -572,7 +572,7 @@ export default function AIServicesPage() {;
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                       <ul className="space-y-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
-                          <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
+                          <li key={useCaseIndex} className="text-xs text-gray-300"> {useCase}</li>
                         ))}
                       </ul>
                     </div>
@@ -582,7 +582,7 @@ export default function AIServicesPage() {;
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
+                        <li key={benefitIndex} className="text-xs text-gray-300"> {benefit}</li>
                       ))}
                     </ul>
                   </div>
@@ -755,7 +755,7 @@ export default function AIServicesPage() {;
           
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved. | 
+               2024 Zion Tech Group. All rights reserved. | 
               <a href="/privacy" className="hover:text-blue-400 transition-colors ml-2">Privacy Policy</Link> | 
               <a href="/terms" className="hover:text-blue-400 transition-colors ml-2">Terms of Service</Link>
             </p>
@@ -895,7 +895,7 @@ export default function AIServicesPage() {;
           </div>;
           <div className="border-t border-white/20 mt-8 pt-8 text-center">;
             <p className="text-gray-400 text-sm">;
-              © 2024 Zion Tech Group. All rights reserved. |;
+               2024 Zion Tech Group. All rights reserved. |;
               <a href="/privacy" className="hover:text-blue-400 transition-colors ml-2">Privacy Policy</a> |;
               <a href="/terms" className="hover:text-blue-400 transition-colors ml-2">Terms of Service</a>;
             </p>;

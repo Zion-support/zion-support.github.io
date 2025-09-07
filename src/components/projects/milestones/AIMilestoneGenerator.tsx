@@ -1,6 +1,3 @@
-
-
-
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
@@ -8,12 +5,8 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-
-
-
     if (!scope || !startDate || !projectType) {
       return;
-
 
     }
     const input: MilestoneInput = {
@@ -21,7 +14,6 @@ interface AIMilestoneGeneratorProps {;
       startDate
       endDate
       projectType
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -70,7 +62,6 @@ if ( {) {
       start_date,
       end_date,
       project_type,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     await generate_milestones (input);
     // Initially select all milestones;
@@ -80,12 +71,13 @@ if ( {) {
     });
     setSelectedMilestones (initial_selection);
   }
-  const handleAddToProject = () =>: any {
-    const selectedMilestonesList = generated_milestones.filter (
-      (_, index) => selected_milestones[index]);
-    onAddMilestones (selectedMilestonesList);
-    clearGeneratedMilestones ();
-    setSelectedMilestones ({});
+  const handleAddToProject = () => {
+    const selectedMilestonesList = generatedMilestones.filter(
+      (_, index) => selectedMilestones[index]
+    )
+    onAddMilestones(selectedMilestonesList)
+    clearGeneratedMilestones()
+    setSelectedMilestones({})
   }
 
   const toggleMilestoneSelection = (index: number, ) =>: any {
@@ -95,21 +87,17 @@ if ( {) {
     }));
 
   }
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) =>: any {
-    onAddMilestone (milestone);
+  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
+    onAddMilestone(milestone)
   }
-  const format_date = (date_string: string, ) =>: any {
+  const formatDate = (dateString: string,) => {
     try {
-      return format (parseISO (date_string), 'MMM dd, yyyy');
+      return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
 
-=======
       return dateString
     }
   }
-=======
-
-
 
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -131,23 +119,12 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
 
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-export function AIMilestoneGenerator(): any ({;
+
   scope,;
   startDate,;
   endDate,;
   projectType,;
   onAddMilestones,;
-  onAddMilestone,;
-}: AIMilestoneGeneratorProps) {;
-  const {;
-    generateMilestones,;
-    generatedMilestones,;
-    isGenerating,;
-    clearGeneratedMilestones,;
-  } = useMilestoneGenerator();
-  const [selectedMilestones, setSelectedMilestones] = useState<;
-    Record<string, boolean>;
-  >({});
 
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
@@ -158,72 +135,26 @@ export function AIMilestoneGenerator(): any ({;
       scope,;
       startDate,;
       endDate,;
-      projectType,;
-    };
 
-    await generateMilestones(input);
-    // Initially select all milestones;
-    const initialSelection: Record<number, boolean> = {};
-    generatedMilestones && generatedMilestones.forEach((_, index: number) => {;
-      initialSelection[index] = true;
-    });
-    setSelectedMilestones(initialSelection);
-  };
-
-  const handleAddToProject = () => {;
-    const selectedMilestonesList = generatedMilestones && generatedMilestones.filter(;
-      (_, index) => selectedMilestones[index];
-    );
-
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({});
-  };
-  const toggleMilestoneSelection = (index: number,) => {;
-    setSelectedMilestones(prev => ({;
-      ...prev,;
-      [index]: !prev[index],;
-    }));
-  };
-
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
-    onAddMilestone(milestone);
-  };
-  const formatDate = (dateString: string,) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-        <h3 className='text-lg font-medium flex items-center'>;
-          <Sparkles className='w-5 h-5 mr-2 text-primary' />;
-          AI Milestone Generator;
-        </h3>;
-        <Button
 
+        <Button
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
-=======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -282,22 +213,22 @@ export function AIMilestoneGenerator(): any ({;
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
-                  className='border p-2 rounded-md mb-2'>;
-                  <div className='flex items-center justify-between'>;
+                  className='border p-2 rounded-md mb-2'
+                >
+                  <div className='flex items-center justify-between'>
                     <div className='flex items-center flex-1'>                      <input
                         type='checkbox'
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
-                        className='mr-2 w-4 h-4 rounded text-primary'                      />;
-                      <AccordionTrigger className='hover:no-underline flex-1 text-left'>;
-                        <div className='flex items-center'>;
-                          <span className='font-medium'>{milestone && milestone.title}</span>;
+                        className='mr-2 w-4 h-4 rounded text-primary'                      />
+                      <AccordionTrigger className='hover:no-underline flex-1 text-left'>
+                        <div className='flex items-center'>
+                          <span className='font-medium'>{milestone.title}</span>
                           <Badge
                             variant='secondary'
                             className='ml-2 flex items-center'>;
                             <Sparkles className='w-3 h-3 mr-1' />;
-=======
       return date_string;
     }
   }
@@ -359,13 +290,11 @@ export function AIMilestoneGenerator(): any ({;
                             className='ml - 2 flex items - center';
                           >;
                             <Sparkles className='w - 3 h - 3 mr - 1' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             AI Suggested;
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-
 
               <Button 
                 onClick={handleAddToProject}
@@ -393,7 +322,6 @@ export function AIMilestoneGenerator(): any ({;
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
 
-
                             AI Suggested
                           </Badge>
                         </div>
@@ -401,8 +329,6 @@ export function AIMilestoneGenerator(): any ({;
                     </div>
                     <Button
 
-
-=======
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -411,9 +337,13 @@ export function AIMilestoneGenerator(): any ({;
                       }}
                       className="mr-2"
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
                     >
                       <Plus className='h-4 w-4' />
                     </Button>
@@ -455,10 +385,8 @@ export function AIMilestoneGenerator(): any ({;
                 </AccordionItem>;
 
               ))}
-=======
               ))}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Accordion>;
           </CardContent>;
         </Card>;
@@ -468,7 +396,6 @@ export function AIMilestoneGenerator(): any ({;
   );
 }
 
-=======
                     <Button;
                       variant='ghost';
                       size='sm';
@@ -498,8 +425,3 @@ export function AIMilestoneGenerator(): any ({;
         </Card>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

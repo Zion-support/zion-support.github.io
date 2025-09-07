@@ -1,9 +1,68 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+export interface User {
+  id: string;
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name?: string;
+}
+
+export interface AuthContext {
+  user: User | null;
+  login: (email: string, password: string) => Promise<User | null>;
+  logout: () => void;
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+}
+
+export function validateUser(userId: string, role: string): User | null {
+  if (!userId || !role) return null;
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+  
+  return {
+    id: userId,
+    email: '',
+    role: role as User['role']
+  };
+}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+
+    return null;
+  }
+  return user;
+}
+
+
+
+
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
+}
+    return null;
+  }
+  return user;
+}
+
+
+
+
+
+

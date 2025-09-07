@@ -1,33 +1,24 @@
-
-
-=======
-
-
-};
+}
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
+}
 };
-};
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-};
-};
-  return (;
-    <a href={resolved} className={className} {...rest}>;
-      {children};
-};
-};
-};
->>>>>>> origin/automation-improvements-final
 import React from 'react';
-
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children}
+};
+}
+};
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,46 +53,45 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
-
-
-interface HTMLAnchorElement extends HTMLElement {;
-
-  tagName: 'A';
-  href: string;
+  tagName: 'A';  href: string;
   target: string;
 }
-
-=======
-
-=======
+type Href = string | { pathname?: string; href?: string }
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children}
+};
+};
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+}
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}}
 };
 };
   return (;
     <a href={resolved} className={className} {...rest}>;
-      {children};
+      {children}
 };
-};
-
-};
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-function resolveHref(href: Href): string {
-=======
-
-type Href = string | { pathname?: string; href?: string };
-
-type LinkProps = React && React.AnchorHTMLAttributes<HTMLAnchorElement> & {;
-  href: Href;
-  children: React && React.ReactNode;
 };
-
-function resolveHref(): any (href: Href): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import React from 'react';
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string }
+}
+  tagName: 'A';
+  href: string;
+  target: string;
+}
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -118,37 +108,26 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
     });
   }
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   "href": Href;
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
 
-
-
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
-
 
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
-    const existingClass = (children.props as { className?: string })?.className || '';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-    return React.cloneElement(children as React.ReactElement, {
-      "href": resolved,
-      "className": mergedClassName,
-      ...rest});
-=======
+    const existingClass =
+      (children.props as { className?: string })?.className || "";
+    const mergedClassName = [existingClass, className]
+      .filter(Boolean)
+      .join(" ");
 
 export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
@@ -162,52 +141,32 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
       className: mergedClassName,;
       ...rest,;
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-=======
 
-
-
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   return (
     <a href={resolved} className={className} {...rest}>;
       {children}
     </a>;
   );
-
-
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
+}
+import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
+}
+}
+}
 
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
+}
+
+}
+
+}
+
 ;
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {
@@ -252,11 +211,10 @@ function Link() {
       href: resolved,
       class_name: mergedClassName,
       ...rest,
-    });
-  }
+    });  }
   return (
     <a href={resolved} className={class_name} {...rest}>;
       {children}
-    </a>);
+    </a>
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -25,7 +25,7 @@ import React from 'react';
 interface PortfolioBuilderProps {
   // Add props here as needed
 
-
+}
 
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
   return (
@@ -35,10 +35,11 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/PortfolioBuilder.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PortfolioBuilder.jsx

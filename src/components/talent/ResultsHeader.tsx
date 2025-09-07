@@ -1,5 +1,3 @@
-
-
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
   isLoading: boolean;
@@ -34,13 +32,14 @@ interface ResultsHeaderProps {;
 }
 
 }
-=======
           <span>Loading talents...</span>
         </div>
       ) : (
         <span>
+          {resultCount === 0
+            ? 'No talents found. Try adjusting your filters.'
+            : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
-=======
 
 
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
@@ -56,8 +55,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 
           {resultCount === 0 ? (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
@@ -69,7 +66,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 };
 
 
-=======
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {
   is_loading: boolean;
@@ -118,7 +114,3 @@ function ResultsHeader() {
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

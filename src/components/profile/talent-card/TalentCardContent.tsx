@@ -1,9 +1,8 @@
-
-
-  summary: string | undefined;
+summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
+
 
 
 export function TalentCardContent(): any ({;
@@ -14,18 +13,11 @@ export function TalentCardContent(): any ({;
 }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 
-  return (
-    <div>;
-      {/* Location */}
-      {timezone && (;
-        <div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>;
-          <MapPin className='h-3 w-3' />;
-          <span>{timezone}</span>;
-        </div>;
       )}
       {/* Short bio or summary - longer on hover for desktop */}
       <div
-        className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+        className='overflow-hidden transition-all duration-300'
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
 
@@ -105,8 +97,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

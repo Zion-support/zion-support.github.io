@@ -4,11 +4,11 @@
     "immutable": true
   },
   "dynamic": {
-    "maxAge": 86400,
-    "staleWhileRevalidate": 3600
+    "maxAge": 3600,
+    "staleWhileRevalidate": 86400
   },
   "api": {
     "maxAge": 300,
-    "staleWhileRevalidate": 60
+    "staleWhileRevalidate": 3600
   }
 }

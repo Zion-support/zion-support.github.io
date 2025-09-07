@@ -25,7 +25,7 @@ import React from 'react';
 interface PartnersProps {
   // Add props here as needed
 
-
+}
 
 export default function Partners({ }: PartnersProps) {
   return (
@@ -35,10 +35,11 @@ export default function Partners({ }: PartnersProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Partners.jsx

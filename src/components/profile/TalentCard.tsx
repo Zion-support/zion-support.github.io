@@ -1,5 +1,4 @@
 
-
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
@@ -20,7 +19,7 @@ export interface TalentCardProps {
       onRequestHire(talent) }
       onRequestHire(talent)
     if (onRequestHire) {
-      onRequestHire(talent)
+onRequestHire(talent);
     }
   }
   const handleToggleSave = (e: React.MouseEvent) => {
@@ -68,9 +67,7 @@ export function TalentCard(): any ({;
   const handleViewProfile = () => {;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
-=======
       onToggleSave(talent.id, !isSaved)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   };
 
@@ -109,7 +106,6 @@ export function TalentCard(): any ({;
                 <Image
                   src={talent && talent.profile_picture_url}
                   alt={talent && talent.full_name || 'Talent Avatar'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
@@ -124,14 +120,12 @@ export function TalentCard(): any ({;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent && talent.profile_picture_url} ;
                   alt={talent && talent.full_name || 'Talent Avatar'}
 
-=======
 
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
 
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
-=======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -141,34 +135,6 @@ import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export interface TalentCardProps {
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-
-  talent: TalentProfile,
-  onViewProfile: (id: string,) => void,
-  onRequestHire: (talent: TalentProfile,) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean,) => void,
-  isAuthenticated: boolean
-
-                  alt={talent.full_name || 'Talent Avatar'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  fill={true}
-                  style={{ objectFit: 'cover' }}
-
-=======
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
-                  onError={() => setAvatarError(true)}
-                  priority={false}
 
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
@@ -186,13 +152,9 @@ export interface TalentCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 />;
                 <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
               </Button>;
@@ -208,7 +170,6 @@ export interface TalentCardProps {
                 </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
@@ -232,8 +193,6 @@ export interface TalentCardProps {
                 </span>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -259,7 +218,6 @@ export interface TalentCardProps {
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent.skills?.length || 0) - 5} more;
                 </span>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           </div>;
@@ -271,10 +229,8 @@ export interface TalentCardProps {
                 variant='secondary'
                 onClick={handleRequestHire}
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-=======
 ;
         <div className="mt-5 flex items-center justify-between">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
@@ -284,11 +240,9 @@ export interface TalentCardProps {
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
 
-=======
         
         <div className="mt-5 flex items-center justify-between">
           <div>
-=======
                 <span className='text - zion - slate - light font - normal'>/hr</span>;
               </div>) : (
               <div className='text - zion - slate - light'>Rate not specified</div>)}
@@ -312,26 +266,17 @@ export interface TalentCardProps {
             {isAuthenticated && (;
 
               <Button
-=======
               <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </Button>;
           </div>;
         </div>;
       </div>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

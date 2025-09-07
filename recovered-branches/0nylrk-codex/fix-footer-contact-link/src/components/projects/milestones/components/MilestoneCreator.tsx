@@ -4,38 +4,15 @@ interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
   isSubmitting: boolean,;
   onCancel: () => void,;
-
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
 
-
 export function MilestoneCreator(): any ({;
 
-=======
-
-
-
-export function MilestoneCreator({;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  onSubmit;
-  isSubmitting;
-  onCancel;
-  projectScope;
-  projectStartDate;
-  projectEndDate;
-
-  projectType
-}: MilestoneCreatorProps) {
-  return (
-
-    <AddMilestoneForm 
-
-=======
-import React from 'react',;
+export function MilestoneCreator({;import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -59,23 +36,35 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm;
 
+  return (
+    <AddMilestoneForm
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      onSubmit={onSubmit}
-      isSubmitting={isSubmitting}
-      onCancel={onCancel}
-      projectScope={projectScope}
-      projectStartDate={projectStartDate}
-      projectEndDate={projectEndDate}
-      projectType={projectType}
-
-    />;
-  );
+import React from 'react',;
+import { AddMilestoneForm } from '../AddMilestoneForm',;
+;
+interface MilestoneCreatorProps {;
+  onSubmit:(data:any) => Promise<void>,;
+  isSubmitting:boolean,;
+  onCancel:() => void,;
+  projectScope?:string,;
+  projectStartDate?:string,;
+  projectEndDate?:string | null,;
+  projectType?:string;
 }
-
-=======
-  on_submit: (data: any) => Promise < void>,
+;
+export function MilestoneCreator({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope,;
+  projectStartDate,;
+  projectEndDate,;
+  projectType;
+} MilestoneCreatorProps) {;
+  return (;
+    <AddMilestoneForm ;
+  return (;
+    <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
   project_scope?: string;
@@ -98,4 +87,3 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

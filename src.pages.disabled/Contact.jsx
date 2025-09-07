@@ -25,7 +25,7 @@ import React from 'react';
 interface ContactProps {
   // Add props here as needed
 
-
+}
 
 export default function Contact({ }: ContactProps) {
   return (
@@ -35,10 +35,11 @@ export default function Contact({ }: ContactProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/Contact.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Contact.jsx

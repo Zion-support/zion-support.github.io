@@ -1,15 +1,16 @@
 
 
-=======
+
 
 import {useState} from 'react';
+
+
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
-
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
@@ -17,7 +18,36 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import { useState  } from 'react';
+import {useState} from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+
+const categories: GrantCategory[] = [
+  'Ecosystem Tools'
+  'Talent Development'
+  'Regional Expansion'
+  'Research Grants'
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+
+
+
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+
+export default function ApplyGrantPage() {
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',;
+  'Talent Development',;
+  'Regional Expansion',;
+  'Research Grants',;
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+export default function ApplyGrantPage() {;
+
+
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -27,12 +57,20 @@ export default function ApplyGrantPage() {;
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
 
 
+
+
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );
+
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+
 
 import {useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -134,58 +172,60 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
             .map((s) => s && s.trim());
             .filter(Boolean);
-=======
       set_loading (false);    }          budget_amount: Number (budget_amount || 0),
           budget_currency;
           supporting_links: supporting_links;
             .split ('\n');
             .map ((s) => s.trim ());
             .filter (Boolean);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           pitchDeckUrl;
           region;
 
-          sector: (sector as any) || undefined,;
-          submit})});
-      const data = await resp && resp.json();
-      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
-      router && router.push(`/grants/${data && data.id}`);
-    } catch (e: any) {;
-      setError(e && e.message);
-    } finally {;
-      setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+    }
+
+
+
     }
   }
-=======
-    }
 
-
-  };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  return (
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={3}
+            value={teamInfo}
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={6}
+            value={proposalSummary}
+            <input
+              type='number'
+              className='mt-1 w-full border rounded p-2'
+              value={budgetAmount}
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={3}
+            value={supportingLinks}
 
 
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
-=======
-            onChange={e => setPitchDeckUrl(e && e.target.value)}
+            onChange={e => setSupportingLinks(e && e.target.value)}
           />;
         </label>;
-
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-
-        <div className='flex gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <label className='text-sm'>;
+          Pitch Deck URL;
+          <input
+            className='mt-1 w-full border rounded p-2'
+            value={pitchDeckUrl}
           <button
             disabled={loading}
             onClick={() => save(false)}
@@ -196,6 +236,7 @@ function ApplyGrantPage() {
           <button
             disabled={loading}
             onClick={() => save(true)}
+
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >;
             Submit for Review;
@@ -203,41 +244,144 @@ function ApplyGrantPage() {
       </div>;
     </EnhancedLayout>;
   );
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+
+  const _save = async (_submit: boolean) => {
+    try {
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+  const save = async (submit: boolean) => {
+    try {
+      setLoading(true);
+      setError(null)
+      const resp = await fetch('/api/grants', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map(s => s.trim())
+            .filter(Boolean)
+          pitchDeckUrl
+          region
+          sector: (sector as any) |undefined
+          submit
+        })
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`);
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
+  };
+
+  }
+    }
+
+
+  };
+
+
+  return (
+
+
+
+
+
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+          <button
+            disabled={loading}
+            onClick={() => save(false)}
+            className='px-4 py-2 border rounded disabled:opacity-50'
+          >
+            Save Draft
+          </button>
+          <button
+            disabled={loading}
+            onClick={() => save(true)}
+            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+          >
+            Submit for Review
+          </button>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+
 
 
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
           </label>;
-
-
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-          <label className="text - sm">Region;
-            <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
+          <label className="text-sm">Region;
+            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
           </label>;
         </div>;
-        <label className="text - sm">Supporting Links (one per line);
-          <textarea className="mt - 1 w - full border rounded p - 2" rows={3} value={supporting_links} on_change={(e) => setSupportingLinks (e.target.value)} />;
+        <label className="text-sm">Supporting Links (one per line);
+          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
         </label>;
-        <label className="text - sm">Pitch Deck URL;
-          <input className="mt - 1 w - full border rounded p - 2" value={pitchDeckUrl} on_change={(e) => setPitchDeckUrl (e.target.value)} />;
+        <label className="text-sm">Pitch Deck URL;
+          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
-        {error && <div className="text - sm text - red - 600">{error}</div>}
-        <div className="flex gap - 3">;
-          <button disabled={loading} on_click={() => save (false)} className="px - 4 py - 2 border rounded disabled:opacity - 50">Save Draft</button>;
-          <button disabled={loading} on_click={() => save (true)} className="px - 4 py - 2 bg - blue - 600 text - white rounded disabled: opacity - 50">Submit for Review</button>;
-        </div>;
-      </div>;
-    </EnhancedLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
+
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+  );
+
+);
+}
+  );
+
+
+}
+  );
+}
+
+
+

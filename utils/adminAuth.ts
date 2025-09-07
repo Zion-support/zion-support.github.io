@@ -1,9 +1,21 @@
 
+export interface Session {
 
+export interface Session {;
+  userId: string;
+}
+
+
+
+
+export interface Session {
+  user_id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+
+
+
 
 
   // Check for internal agent headers or IPs;
@@ -14,13 +26,21 @@
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
-=======
+
+
+
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
 
-=======
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+
+
+
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -135,8 +155,8 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -168,10 +188,41 @@ export const is_admin = () =>: any {
 
 
 
-=======
+
+
+
+
+export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  // Check for internal agent headers or IPs
+  const userAgent = req.headers['user-agent'] |'';
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
+  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+}
+
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = () => {
+  // Placeholder implementation
+  return true;
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export const isAdmin = () => {
+  // Placeholder implementation;
+  return true;
+}
+
+};
+
+
+
+
+
+
+
+
+
+
+};
+

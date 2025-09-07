@@ -1,5 +1,6 @@
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,11 +12,19 @@ const NetworkSecurityChat: NextPage = () => {;
         <meta name="description" content="NetworkSecurityChat service" />{" "}
 
 
+
+
+
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
-
+      <main>
+        <h1>NetworkSecurityChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
       </Head>;
 
 
@@ -25,18 +34,21 @@ const NetworkSecurityChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default NetworkSecurityChat;
 
 
-=======
+
+
+
+
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -57,4 +69,11 @@ const NetworkSecurityChat: NextPage = () => {
 ;
 export default NetworkSecurityChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+
+
+
+

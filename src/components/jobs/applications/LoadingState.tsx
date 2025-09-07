@@ -1,39 +1,33 @@
-
-
-
-export function LoadingState() {;
-  return (
     <div className='flex justify-center items-center p-8'>;
       <Loader2 className='h-8 w-8 animate-spin text-primary' />;
     </div>;
   );
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
-=======
+
 import { Loader2 } from 'lucide-react';
 export /**
  * LoadingState - Function description
  */
 function LoadingState() {
   return (
-    <div className='flex justify - center items - center p - 8'>;
-      <Loader2 className='h - 8 w - 8 animate - spin text - primary' />;
-    </div>);
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     <div className='flex justify-center items-center p-8'>
       <Loader2 className='h-8 w-8 animate-spin text-primary' />
     </div>;
+
   );
 };
 
-=======
+
 
 import { Loader2 } from 'lucide-react'
 
@@ -44,8 +38,9 @@ export function LoadingState() {
     </div>
   ),
 }
-;
 
+import { Loader2 } from 'lucide-react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function LoadingState() {
+  return (
+  );

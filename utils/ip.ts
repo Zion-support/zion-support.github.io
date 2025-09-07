@@ -1,5 +1,29 @@
 
 
+
+
+
+export function extractClientIp(req: NextApiRequest): string | null {
+  const xff = (req.headers['x-forwarded-for'] as string) |'';
+
+export function extractClientIp(req: NextApiRequest): string | null {;
+  const xff = (req.headers['x-forwarded-for'] as string) || '';
+  const ip =
+    xff.split(',')[0]?.trim() |
+    (req.headers['x-real-ip'] as string) |
+    (req.socket?.remoteAddress ?? null);
+  if (!ip) return null;
+  if (ip.startsWith('::ffff:')) return ip.substring(7);
+  return ip;
+}
+export function getClientIp(req: any): string {
+
+export function getClientIp(req: any): string {;
+
+
+
+
+
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
@@ -8,9 +32,43 @@
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+  return remoteAddress |'unknown';
+}
+
+  // Check IP reputation
+  async getIpReputation(ip: string): Promise<IpReputation | null> {
+    if (!this.isValidIp(ip)) {
+      return null;
+    }
+
+    // Check cache first
+    const cached = this.cache.get(`reputation_${ip}`);
+    if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
+      return cached.data;
+    }
+
+    try {
+      // Mock reputation check - in production, integrate with real reputation services
+      const reputation = await this.checkMockReputation(ip);
+      
+      // Cache the result
+      this.cache.set(`reputation_${ip}`, { data: reputation, timestamp: Date.now() });
+      
+      return reputation;
+    } catch (error) {
+      console.error('Error checking IP reputation:', error);
+      return null;
+    }
+  }
+
+
+
+
+
+
+

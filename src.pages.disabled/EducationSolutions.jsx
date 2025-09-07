@@ -25,7 +25,7 @@ import React from 'react';
 interface EducationSolutionsProps {
   // Add props here as needed
 
-
+}
 
 export default function EducationSolutions({ }: EducationSolutionsProps) {
   return (
@@ -35,10 +35,11 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/EducationSolutions.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/EducationSolutions.jsx

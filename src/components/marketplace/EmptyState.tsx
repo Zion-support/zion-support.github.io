@@ -1,49 +1,18 @@
-
-
-import React from 'react';
-import * as React from 'react';
-import {;
-  RefreshCw,;
-  Wifi,;
-  Server,;
-  ShoppingCart,;
-  Users,;
-  Wrench,;
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-export interface EmptyStateProps {;
-=======
-import * as React from 'react';
+import * as React from 'react'
+import * as React from 'react'
 import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
-export interface EmptyStateProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  type:;
-    | 'products';
-    | 'categories';
-    | 'talent';
-    | 'equipment';
-    | 'search';
-    | 'error';
-    | 'network';
-    | 'loading';
+  RefreshCw
+  Wifi
+  Server
+  ShoppingCart
+  Users
+  Wrench
+  Lightbulb
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
-=======
-
-=======
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -56,10 +25,11 @@ export interface EmptyStateProps {;
   action?: {;
     label: string,;
 
-    onClick: () => void;
-  };
-  icon?: React && React.ReactNode;
 
+    onClick: () => void;
+  },;
+  icon?: React.ReactNode;
+}
 
 
 
@@ -98,31 +68,46 @@ const defaultContent = {
     title: 'Loading...',
 
 
+      
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+        {displayDescription}
+      </p>;
+      {action && (;
+        <Button;
+          onClick={action.onClick}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
+          {action.label}
+        </Button>
+      )}
+
           {action.label}
         </Button>
       )}
 
       
 
-=======
 
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {type === 'error' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
+
 
 
       
 
 
       {type === 'network' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
 
   title?: string;
@@ -229,11 +214,12 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
+
 }: {
-  on_retry?: () => void;
-  onAddProduct?: () => void;
-  is_authenticated?: boolean }) {
-  const action = onAddProduct;
+  onRetry?: () => void
+  onAddProduct?: () => void
+  isAuthenticated?: boolean }) {
+  const action = onAddProduct
     ? {
 
 
@@ -249,7 +235,6 @@ export function ProductsEmptyState ({
             {t('general && general.check_status_page')}{' '}
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
-=======
 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -281,7 +266,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 
-=======
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -294,27 +278,21 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       )}
     </div>;
   );
-
+}
+;
 // Specific empty state variants for quick use;
-export function ProductsEmptyState(): any ({;
+export function ProductsEmptyState({;
   onRetry,;
   onAddProduct,;
-  isAuthenticated = false,;
+  isAuthenticated = false;
 }: {;
-  onRetry?: () => void;
-  onAddProduct?: () => void;
-  isAuthenticated?: boolean;}) {;
+  onRetry?: () => void,;
+  onAddProduct?: () => void,;
+  isAuthenticated?: boolean;
+}) {;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-        onClick: onAddProduct,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      }
-    : onRetry;
-      ? { label: 'Try Again', onClick: onRetry }
-
-      : undefined;
-=======
 
   return (
     <EmptyState
@@ -324,45 +302,58 @@ export function ProductsEmptyState(): any ({;
   );
 }
 
-
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
+  return (;
+    <EmptyState;
+      type="products";
+      action={action}
+      description={customDescription}
+    />;
   );
+}
 
-export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="equipment"
+      action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="search"
+      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function EquipmentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="network"
+      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function SearchEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function NetworkErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="error"
+      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
+    />;
   );
 } ;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -386,10 +377,7 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  
+    />
+  );

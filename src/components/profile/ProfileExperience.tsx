@@ -1,6 +1,4 @@
-
-
-          <div key={exp.id} className="flex">
+<div key={exp.id} className="flex">
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
                 <Briefcase className="h-5 w-5 text-zion-purple" />
@@ -11,7 +9,6 @@
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>
               <h4 className='text-white font-medium'>{exp.role}</h4>
               <div className='text-zion-cyan mb-1'>{exp.company}</div>
@@ -29,16 +26,13 @@
 
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
-=======
 
 }
 
-=======
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Briefcase } from 'lucide-react';
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
@@ -78,13 +72,11 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
   );
 }
 
-=======
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Experience</h3>;
       <div className='space - y-6'>;
@@ -114,10 +106,4 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

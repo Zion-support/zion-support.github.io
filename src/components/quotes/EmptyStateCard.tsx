@@ -1,22 +1,16 @@
-
-
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 
-=======
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-=======
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type EmptyStateCardProps = {
 
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
@@ -24,7 +18,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
-};
 
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
@@ -44,7 +37,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 
   type: 'active' | 'archived'
 
-
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -63,8 +55,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
           {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-=======
-
 
           }
         </p>
@@ -73,20 +63,17 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   )
 }
 
-=======
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
-          {isActive ;
+          {isActive;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
           }
-        </p>;
+        </p>
       </CardContent>;
     </Card>;
   );
 
-
-=======
 export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
   const is_active = type === 'active';
   return (
@@ -109,10 +96,5 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

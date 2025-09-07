@@ -1,5 +1,3 @@
-
-
 import { Search } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -8,7 +6,6 @@ export default function HelpCenter() {
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId)
     setSelectedArticle(null)
-=======
 import React, { useState } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
@@ -28,10 +25,9 @@ function HelpCenter() {
   const handleCategorySelect = (category_id: string) =>: any {
     setSelectedCategory (category_id);
     setSelectedArticle (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-  const handleArticleSelect = (article_id: string) =>: any {
-    setSelectedArticle (article_id);
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId)
   }
 
 export default /**
@@ -57,10 +53,8 @@ function HelpCenter() {
     setSelectedArticle (null);
   }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -95,7 +89,6 @@ import { HelpCategoryList } from './HelpCategoryList';
 import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
-=======
 
           
           <div className="relative mb-8">
@@ -127,7 +120,6 @@ import { HelpCategoryList } from "./HelpCategoryList",;
 import { HelpArticleList } from "./HelpArticleList",;
 import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Search } from 'lucide-react';
 
 export default function HelpCenter() {;
@@ -143,29 +135,6 @@ export default function HelpCenter() {;
   const handleArticleSelect = (articleId: string) => {;
     setSelectedArticle(articleId);
   };
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-
-  const handleCategorySelect = (categoryId: string,) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-
-  const handleArticleSelect = (articleId: string,) => {;
-    setSelectedArticle(articleId);
-  },;
-
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-
   return (
     <>;
       <div className='container mx-auto px-4 py-8'>;
@@ -176,6 +145,30 @@ export default function HelpCenter() {;
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
             team.;
+
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+  const handleArticleSelect = (articleId: string) => {;
+    setSelectedArticle(articleId);
+  },;
+  const handleBackToCategories = () => {;
+    setSelectedCategory(null),;
+    setSelectedArticle(null);
+  };
+  const handleBackToArticles = () => {;
+    setSelectedArticle(null);
+  };
+  return (;
+    <>;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="max-w-4xl mx-auto">;
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+            Help Center;
+          </h1>;
+          <p className="text-zion-slate-light mb-6">;
+            Find answers to common questions or get in touch with our support team.;
           </p>;
 
           <div className='relative mb-8'>;
@@ -225,9 +218,8 @@ export default function HelpCenter() {;
                   categories={HELP_CATEGORIES} ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}                />;
+                  searchQuery={searchQuery}                />
               )}
 
 
@@ -236,22 +228,21 @@ export default function HelpCenter() {;
 
               {selectedCategory && !selectedArticle && (
                 <>
-=======
 
               {selectedCategory && !selectedArticle && (;
                 <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant='ghost'
                     onClick={handleBackToCategories}
-                    className='mb-4'>;
-                    ← All Categories;
-                  </Button>;
+                    className='mb-4'
+                  >
+                    ← All Categories
+                  </Button>
                   <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}                  />;
-                </>;
+                    searchQuery={searchQuery}                  />
+                </>
               )}
 
 
@@ -261,10 +252,22 @@ export default function HelpCenter() {;
                   <Button
                     variant='ghost'
                     onClick={handleBackToArticles}
-                    className='mb-4'>;
-                    ← Back to Articles;
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
+                    className='mb-4'                  >
+              
+              {selectedCategory && !selectedArticle && (
+                <>
+                  <Button
+                    variant="ghost"
+                    onClick={handleBackToCategories}
+                    className="mb-4"
+                  >
+                    ← All Categories
+                  </Button>
+                  <HelpArticleList 
+                    categoryId={selectedCategory}
+                    onArticleSelect={handleArticleSelect}
+                    searchQuery={searchQuery}
+                  />;
                 </>;
               )}
 
@@ -287,15 +290,12 @@ export default function HelpCenter() {;
             </TabsContent>
 
 
-=======
             
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I hire someone on Zion?
@@ -312,7 +312,6 @@ export default function HelpCenter() {;
                   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       What are the payment terms?
@@ -338,12 +337,10 @@ export default function HelpCenter() {;
 
                   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </p>
                   </div>
                 </div>
@@ -367,7 +364,6 @@ export default function HelpCenter() {;
                       Our AI matching algorithm analyzes your requirements and;
                       preferences to match you with the most compatible talent;
                       or services. The process takes into account skills,;
-=======
             <TabsContent value='articles'>;
               {!selected_category && !selected_article && (
                 <HelpCategoryList;
@@ -482,7 +478,6 @@ export default function HelpCenter() {;
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         support@ziontechgroup.com
                       </a>
                     </div>
@@ -497,7 +492,7 @@ export default function HelpCenter() {;
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>;
 
                         <svg
-                          xmlns='http://www && www.w3.org/2000/svg'
+                          xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
 
@@ -509,7 +504,6 @@ export default function HelpCenter() {;
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </svg>
                       </div>
                       <span className='text-zion-slate-light'>
@@ -534,7 +528,6 @@ export default function HelpCenter() {;
                   <form className="space-y-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <Input placeholder='Your email' />
                     </div>
@@ -553,7 +546,6 @@ export default function HelpCenter() {;
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       Submit Feedback
                     </Button>
                   </form>
@@ -568,7 +560,6 @@ export default function HelpCenter() {;
                         </svg>;
                       </div>;
                       <span className='text-zion-slate-light'>;
-=======
             <TabsContent value='contact'>;
               <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
                 <div className='bg - zion - blue - light / 20 rounded - lg p - 6'>;
@@ -579,35 +570,22 @@ export default function HelpCenter() {;
                     Our support team is available 24 / 7 to assist you with any;
                     questions or issues.;
                   </p>;
-                  <div className='space - y-4'>;
-                    <div className='flex items - center'>;
-                      <div className='bg - zion - purple / 10 p - 2 rounded - full mr - 3'>;
-                        <svg;
-                          xmlns='http://www.w3.org / 2000 / svg';
-                          className='h - 5 w - 5 text - zion - purple';
-                          view_box='0 0 20 20';
-                          fill='current_color';
-                        >;
-                          <path d='M2.003 5.884L10 9.882l7.997 - 3.998A2 2 0 0016 4H4a2 2 0 00 - 1.997 1.884z' />;
-                          <path d='M18 8.118l - 8 4 - 8-4V14a2 2 0 002 2h12a2 2 0 002 - 2V8.118z' />;
+                  <div className="space-y-4">;
+                    <div className="flex items-center">;
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">;
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />;
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />;
                         </svg>;
                       </div>;
-                      <a;
-                        href='mailto:support@ziontechgroup.com';
-                        className='text - zion - cyan hover:underline';
-                      >;
+                      <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">;
                         support@ziontechgroup.com;
                       </a>;
                     </div>;
-                    <div className='flex items - center'>;
-                      <div className='bg - zion - purple / 10 p - 2 rounded - full mr - 3'>;
-                        <svg;
-                          xmlns='http://www.w3.org / 2000 / svg';
-                          className='h - 5 w - 5 text - zion - purple';
-                          view_box='0 0 20 20';
-                          fill='current_color';
-                        >;
-                          <path d='M2 3a1 1 0 011 - 1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l - 1.548.773a11.037 11.037 0 006.105 6.105l.774 - 1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01 - 1 1h - 2C7.82 18 2 12.18 2 5V3z' />;
+                    <div className="flex items-center">;
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">;
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />;
                         </svg>;
                       </div>;
                       <span className='text - zion - slate - light'>;
@@ -640,8 +618,8 @@ export default function HelpCenter() {;
                     <div>;
 
                       <textarea;
-                        className='w - full min - h-[120px] px - 3 py - 2 rounded - md border border - zion - blue - light bg - zion - blue / 20 text - black';
-                        placeholder='Your feedback or suggestion';
+                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black";
+                        placeholder="Your feedback or suggestion";
                       />;
                     </div>;
                     <Button className='w - full bg - zion - cyan hover:bg - zion - cyan / 80'>;
@@ -657,18 +635,10 @@ export default function HelpCenter() {;
       </div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </div>
     </>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

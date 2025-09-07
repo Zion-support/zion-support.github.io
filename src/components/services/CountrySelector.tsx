@@ -1,13 +1,13 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
   selectedCountry: CountryPricing | null
 }
   // Set top/popular countries
   useEffect(() => {
+
+
+
 
 
 
@@ -25,7 +25,6 @@
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
 
-=======
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
@@ -33,7 +32,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setTopCountries(top)
   }, [])
   // Handle country selection
@@ -53,8 +51,6 @@ import {;
   CountryPricing,;
   onsiteServicePricing,;
 } from '@/data/onsiteServicePricing';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void;
@@ -92,7 +88,6 @@ export function CountrySelector(): any ({;
       onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
     onCountryChange(country);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
       </h3>;
@@ -148,7 +143,6 @@ export function CountrySelector(): any ({;
     </div>;
 
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
@@ -182,7 +176,6 @@ export function CountrySelector(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -288,11 +281,9 @@ function CountrySelector() {
     </div>);
 }
 
-=======
 
 ;
 
-=======
           </div>;
         </SelectContent>;
       </Select>;
@@ -300,7 +291,3 @@ function CountrySelector() {
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

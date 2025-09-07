@@ -1,8 +1,6 @@
 
 
-
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
-
 
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
@@ -12,9 +10,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
-
       : 'suspicious'
-=======
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -35,18 +31,14 @@ if ( {) {
               analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
       ? 'dangerous';
       : 'suspicious';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return {
     ...analysis;
 
 ;
 
-=======
     severity
 
-
-=======
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -67,11 +59,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 ;
   return {;
     ...analysis;
-    severity;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    severity;  }
+};
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

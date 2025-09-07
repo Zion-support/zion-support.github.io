@@ -1,19 +1,10 @@
-
-import * as Sentry from '@sentry / react',
-// Check condition
-if ( {) {
-  $2
-}
-  Sentry.init ({
-    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',
-    tracesSampleRate: 0.1,
-
+if (typeof window !== 'undefined') {Sentry.init({;
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
+    tracesSampleRate: 0.1;
     integrations: [];
-    enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
-}
-=======
-
-=======
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+import * as Sentry from '@sentry/react',;
+import * as Sentry from '@sentry/react';
 
 if (typeof window !== 'undefined') {;
   Sentry.init({;
@@ -21,7 +12,3 @@ if (typeof window !== 'undefined') {;
     tracesSampleRate: 0.1,;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
-
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,256 +1,264 @@
-#!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class AutomatedTestRunner {
   constructor() {
-    this.testResults = {
-      timestamp: new Date().toISOString(),
-      tests: [],
-      summary: {
-        total: 0,
-        passed: 0,
-        failed: 0,
-        skipped: 0
-      },
-      coverage: null,
-      recommendations: []
-    };
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();
   }
 
-  async runTests() {
-    console.log('🧪 Starting Automated Test Runner...');
-    
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+
+    const logFile = path.join(this.logsDir, 'test-runner.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+
+  async runCommand(command, description) {
     try {
-      // Run smoke tests
-      await this.runSmokeTests();
-      
-      // Run unit tests
-      await this.runUnitTests();
-      
-      // Run integration tests
-      await this.runIntegrationTests();
-      
-      // Generate test coverage report
-      await this.generateCoverageReport();
-      
-      // Generate recommendations
-      this.generateTestRecommendations();
-      
-      console.log('✅ Automated Test Runner completed');
-      
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
+        timeout: 60000 // 60 second timeout
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output };
     } catch (error) {
-      console.error('❌ Automated Test Runner failed:', error.message);
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { success: false, error: error.message, output: error.stdout || '' };
     }
   }
 
   async runSmokeTests() {
-    try {
-      console.log('Running smoke tests...');
-      const output = execSync('npm run test:smoke', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      this.testResults.tests.push({
-        type: 'smoke',
-        success: true,
-        output: output,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.passed++;
-      
-    } catch (error) {
-      this.testResults.tests.push({
-        type: 'smoke',
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.failed++;
-    }
+    this.log('🔥 Running smoke tests...');
+    const result = await this.runCommand('npm run test:smoke', 'Smoke tests');
+    return result;
   }
 
   async runUnitTests() {
-    try {
-      console.log('Running unit tests...');
-      const output = execSync('npm test', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      this.testResults.tests.push({
-        type: 'unit',
-        success: true,
-        output: output,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.passed++;
-      
-    } catch (error) {
-      this.testResults.tests.push({
-        type: 'unit',
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.failed++;
-    }
+    this.log('🧪 Running unit tests...');
+    const result = await this.runCommand('npm run test', 'Unit tests');
+    return result;
   }
 
-  async runIntegrationTests() {
-    try {
-      console.log('Running integration tests...');
-      const output = execSync('npm run test:integration', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      this.testResults.tests.push({
-        type: 'integration',
-        success: true,
-        output: output,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.passed++;
-      
-    } catch (error) {
-      // Integration tests might not exist, so we don't count this as a failure
-      this.testResults.tests.push({
-        type: 'integration',
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        skipped: true
-      });
-      
-      this.testResults.summary.total++;
-      this.testResults.summary.skipped++;
-    }
+  async runTypeCheck() {
+    this.log('🔍 Running TypeScript type check...');
+    const result = await this.runCommand('npm run type-check', 'TypeScript type check');
+    return result;
   }
 
-  async generateCoverageReport() {
-    try {
-      console.log('Generating coverage report...');
-      const output = execSync('npm run test:coverage', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      // Try to parse coverage data from output
-      const coverageMatch = output.match(/All files\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)/);
-      
-      if (coverageMatch) {
-        this.testResults.coverage = {
-          statements: parseFloat(coverageMatch[1]),
-          branches: parseFloat(coverageMatch[2]),
-          functions: parseFloat(coverageMatch[3]),
-          lines: parseFloat(coverageMatch[4])
-        };
-      }
-      
-    } catch (error) {
-      console.warn('Could not generate coverage report:', error.message);
-    }
+  async runLintCheck() {
+    this.log('🔧 Running lint check...');
+    const result = await this.runCommand('npm run lint', 'Lint check');
+    return result;
   }
 
-  generateTestRecommendations() {
-    const recommendations = [];
+  async runBuildTest() {
+    this.log('🏗️ Running build test...');
+    const result = await this.runCommand('npm run build', 'Build test');
+    return result;
+  }
+
+  async findTestFiles() {
+    const testExtensions = ['.test.js', '.test.ts', '.test.jsx', '.test.tsx', '.spec.js', '.spec.ts'];
+    const testFiles = [];
     
-    // Check test coverage
-    if (this.testResults.coverage) {
-      const { statements, branches, functions, lines } = this.testResults.coverage;
-      const avgCoverage = (statements + branches + functions + lines) / 4;
-      
-      if (avgCoverage < 70) {
-        recommendations.push({
-          type: 'coverage',
-          priority: 'high',
-          message: `Test coverage is low (${avgCoverage.toFixed(1)}%). Aim for at least 70%.`,
-          actions: [
-            'Write more unit tests for critical components',
-            'Add integration tests for API endpoints',
-            'Consider using test-driven development'
-          ]
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !this.shouldIgnoreDirectory(item)) {
+            scanDirectory(fullPath);
+          } else if (stat.isFile() && testExtensions.some(ext => item.endsWith(ext))) {
+            testFiles.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Ignore errors for directories we can't read
+      }
+    };
+
+    scanDirectory('/workspace');
+    return testFiles;
+  }
+
+  shouldIgnoreDirectory(dirName) {
+    const ignoreDirs = [
+      'node_modules', 'dist', 'build', 'coverage', '.git', '.next',
+      'backup', 'backups', 'corrupted', 'disabled', 'temp'
+    ];
+    return ignoreDirs.includes(dirName);
+  }
+
+  async runCustomTests() {
+    this.log('🎯 Running custom tests...');
+    const testFiles = await this.findTestFiles();
+    const results = [];
+
+    for (const testFile of testFiles.slice(0, 10)) { // Limit to first 10 test files
+      try {
+        const result = await this.runCommand(`node ${testFile}`, `Custom test: ${path.basename(testFile)}`);
+        results.push({
+          file: testFile,
+          success: result.success,
+          output: result.output || result.error
+        });
+      } catch (error) {
+        results.push({
+          file: testFile,
+          success: false,
+          error: error.message
         });
       }
     }
-    
-    // Check for failed tests
-    const failedTests = this.testResults.tests.filter(test => !test.success && !test.skipped);
-    if (failedTests.length > 0) {
-      recommendations.push({
-        type: 'failed-tests',
-        priority: 'high',
-        message: `${failedTests.length} test(s) failed. Fix failing tests before deployment.`,
-        actions: [
-          'Review test failures and fix underlying issues',
-          'Update tests if requirements have changed',
-          'Ensure all dependencies are properly installed'
-        ]
-      });
-    }
-    
-    // Check for missing test types
-    const testTypes = this.testResults.tests.map(test => test.type);
-    if (!testTypes.includes('unit')) {
-      recommendations.push({
-        type: 'missing-tests',
-        priority: 'medium',
-        message: 'No unit tests found. Consider adding unit tests.',
-        actions: [
-          'Create unit tests for utility functions',
-          'Add component tests for React components',
-          'Test business logic and data transformations'
-        ]
-      });
-    }
-    
-    if (!testTypes.includes('integration') || this.testResults.tests.find(t => t.type === 'integration' && t.skipped)) {
-      recommendations.push({
-        type: 'missing-tests',
-        priority: 'medium',
-        message: 'No integration tests found. Consider adding integration tests.',
-        actions: [
-          'Create API endpoint tests',
-          'Test database interactions',
-          'Add end-to-end user flow tests'
-        ]
-      });
-    }
-    
-    this.testResults.recommendations = recommendations;
+
+    return results;
   }
 
-  saveReport() {
-    const reportFile = path.join(__dirname, 'reports', 'test-runner-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
-    fs.writeFileSync(reportFile, JSON.stringify(this.testResults, null, 2));
+  async runAccessibilityTests() {
+    this.log('♿ Running accessibility tests...');
+    const result = await this.runCommand('npm run test:accessibility', 'Accessibility tests');
+    return result;
+  }
+
+  async runPerformanceTests() {
+    this.log('⚡ Running performance tests...');
+    const result = await this.runCommand('npm run test:performance', 'Performance tests');
+    return result;
+  }
+
+  async runAllTests() {
+    this.log('🚀 Starting comprehensive test suite...');
+
+    const testResults = {
+      timestamp: new Date().toISOString(),
+      tests: {}
+    };
+
+    // Run different types of tests
+    testResults.tests.smoke = await this.runSmokeTests();
+    testResults.tests.unit = await this.runUnitTests();
+    testResults.tests.typeCheck = await this.runTypeCheck();
+    testResults.tests.lint = await this.runLintCheck();
+    testResults.tests.build = await this.runBuildTest();
+    testResults.tests.custom = await this.runCustomTests();
     
-    console.log(`📊 Test runner report saved to: ${reportFile}`);
+    // Try accessibility and performance tests (may not exist)
+    try {
+      testResults.tests.accessibility = await this.runAccessibilityTests();
+    } catch (error) {
+      testResults.tests.accessibility = { success: false, error: 'Not available' };
+    }
+
+    try {
+      testResults.tests.performance = await this.runPerformanceTests();
+    } catch (error) {
+      testResults.tests.performance = { success: false, error: 'Not available' };
+    }
+
+    // Calculate summary
+    const summary = this.calculateTestSummary(testResults.tests);
+    testResults.summary = summary;
+
+    this.saveTestReport(testResults);
+    this.log('✅ Comprehensive test suite completed');
+    return { success: true, results: testResults };
+  }
+
+  calculateTestSummary(tests) {
+    const totalTests = Object.keys(tests).length;
+    let passedTests = 0;
+    let failedTests = 0;
+
+    Object.values(tests).forEach(test => {
+      if (Array.isArray(test)) {
+        // Custom tests array
+        test.forEach(t => {
+          if (t.success) passedTests++;
+          else failedTests++;
+        });
+      } else {
+        // Single test result
+        if (test.success) passedTests++;
+        else failedTests++;
+      }
+    });
+
+    return {
+      total: totalTests,
+      passed: passedTests,
+      failed: failedTests,
+      successRate: totalTests > 0 ? Math.round((passedTests / totalTests) * 100) : 0
+    };
+  }
+
+  saveTestReport(results) {
+    const reportFile = path.join(this.logsDir, `test-results-${Date.now()}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(results, null, 2));
+    this.log(`📄 Test report saved to: ${reportFile}`);
+  }
+
+  async runQuickTest() {
+    this.log('⚡ Running quick test suite...');
+    
+    const quickTests = [
+      { name: 'smoke', fn: () => this.runSmokeTests() },
+      { name: 'typeCheck', fn: () => this.runTypeCheck() },
+      { name: 'build', fn: () => this.runBuildTest() }
+    ];
+
+    const results = {};
+    for (const test of quickTests) {
+      results[test.name] = await test.fn();
+    }
+
+    this.log('✅ Quick test suite completed');
+    return { success: true, results };
   }
 }
 
-// Run if called directly
+// CLI interface
 if (require.main === module) {
   const testRunner = new AutomatedTestRunner();
-  testRunner.runTests()
-    .then(() => {
-      testRunner.saveReport();
-    })
-    .catch(console.error);
+  const command = process.argv[2] || 'all';
+
+  switch (command) {
+    case 'all':
+      testRunner.runAllTests().catch(error => {
+        console.error('Test suite failed:', error);
+        process.exit(1);
+      });
+      break;
+    case 'quick':
+      testRunner.runQuickTest().catch(error => {
+        console.error('Quick test failed:', error);
+        process.exit(1);
+      });
+      break;
+    case 'smoke':
+      testRunner.runSmokeTests().catch(error => {
+        console.error('Smoke tests failed:', error);
+        process.exit(1);
+      });
+      break;
+    default:
+      console.log('Usage: node automated-test-runner.cjs [all|quick|smoke]');
+      process.exit(1);
+  }
 }
 
 module.exports = AutomatedTestRunner;

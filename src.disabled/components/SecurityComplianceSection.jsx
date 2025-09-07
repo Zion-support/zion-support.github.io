@@ -26,6 +26,7 @@ interface SecurityComplianceSectionProps {
   // Add props here as needed
 
 
+}
 
 export default function SecurityComplianceSection({ }: SecurityComplianceSectionProps) {
   return (
@@ -36,9 +37,6 @@ export default function SecurityComplianceSection({ }: SecurityComplianceSection
   );
 
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+:src.disabled/components/SecurityComplianceSection.jsx
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/SecurityComplianceSection.jsx
+}

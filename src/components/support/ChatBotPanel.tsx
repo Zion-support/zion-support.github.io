@@ -1,6 +1,18 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Separator } from '@/components/ui/separator';
+import { toast } from '@/components/ui/use-toast';
+import { cn } from '@/lib/utils';
+import { ChatMessage } from './ChatMessage';
+import { QuickReplyButton } from './QuickReplyButton';
+import { Send, Loader2 } from 'lucide-react';
+import { useTheme } from '@/hooks/useTheme';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -9,255 +21,108 @@ import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
-
-import React, { useState, useRef, useEffect } from './react';
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { ScrollArea  } from '@/components / ui / scroll - area';
-import { Separator  } from '@/components / ui / separator';
-import { toast  } from '@/components / ui / use - toast';
-import { cn  } from '@/lib / utils';
-import { ChatMessage  } from './ChatMessage';
-import { QuickReplyButton  } from './QuickReplyButton';
-import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks / use_theme';
-// Define suggested quick replies;
-const QUICK_REPLIES = [;
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }],
-type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
-  timestamp: Date;
-
-}
-export /**
- * ChatBotPanel - Function description
- */
-function ChatBotPanel() {
-  const [messages, set_messages] = useState < Message[]>([;
-    {
-
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date ()}]),
-  const [input_value, setInputValue] = useState ("");
-  const [is_loading, setIsLoading] = useState (false);
-  const [failed_attempts, setFailedAttempts] = useState (0);
-  const scrollAreaRef = useRef < HTMLDivElement>(null);
-  const input_ref = useRef < HTMLInputElement>(null);
-  const { theme } = use_theme ();
-  // Auto - scroll to bottom when messages change;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
-
-    }
-  }, [messages]);
-  // Focus input when component mounts;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      input_ref.current.focus ();
-    }
-
-import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme";
-=======
 import { Send, Loader2 } from 'lucide-react'
-
-import { useTheme } from "@/hooks/useTheme",
-
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
-const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }],
+  );
 
+}, [messages]);
+//Focus input when component mounts useEffect ( () => {;
+  if (inputRef.current) {;
+  inputRef.current.focus () ;
 
-  // Auto-scroll to bottom when messages change
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+}, []);
+const handleSendMessage = async (text: string = inputValue) => {;
+  if (!text.trim () ) return;
+id: `user-$ {;
+  Date.now () ;
+}`;
+content: text;
+setIsLoading (true);
+  id: `bot-$ {;
+  Date.now () ;
+}`;
+//After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {;
+  setFailedAttempts ( (prev) => prev + 1);
+if (failedAttempts >= 2) {;
+  suggestEscalation () ;
 
-    if (!text.trim()) return;
-      timestamp: new Date()},
-    
-        timestamp: new Date()},
-      
-        description: "We're having trouble connecting to our support service."}),
-            
+}finally {;
+  setIsLoading (false) ;
 
-=======
-import React, { useState, useRef, useEffect } from "react",;
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import { cn } from "@/lib/utils",;
-import { ChatMessage } from "./ChatMessage",;
-import { QuickReplyButton } from "./QuickReplyButton",;
-import { Send, Loader2 } from 'lucide-react';
-import { useTheme } from "@/hooks/useTheme",;
-
-// Define suggested quick replies;
-const QUICK_REPLIES = [;
-  { id: "hire", text: "How do I hire?" },;
-  { id: "match", text: "How do I get matched?" },;
-  { id: "billing", text: "Billing help" }],;
-type Message = {;
-  id: string,;
-  content: string,;
-  sender: "user" | "bot",;
-  timestamp: Date;
 };
+const sendToAIAssistant = async (message: string) => {;
+  try {;
+  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {";
+  method: "POST";
+headers: {";
+  "Content-Type" : "application/json" ;
+};
+body: JSON.stringify ({;
+  ;
+}) ;
+});
+}const data = await response.json ();
+return {;
+  success: true;
+message: data.message ;
 
-export function ChatBotPanel() {;
-  const [messages, setMessages] = useState<Message[]>([;
-    {;
-      id: "welcome",;
-      content: "Hi! How can I help you?",;
-      sender: "bot",;
-      timestamp: new Date()}]),;
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { theme } = useTheme();
+}catch (error) {;
+  ;
 
-  // Auto-scroll to bottom when messages change;
-  useEffect((,) => {;
-    if (scrollAreaRef && scrollAreaRef.current) {;
-      scrollAreaRef && scrollAreaRef.current.scrollTop = scrollAreaRef && scrollAreaRef.current.scrollHeight;
-    }
-  }, [messages]);
+};
+const suggestEscalation = () => {;
+  const escalationMessage: Message = {;
+  id: `bot-escalation-$ {;
+  Date.now () ;
+}`;
+content: //Log this interaction for the support team logSupportEscalation () ;
+};
+const logSupportEscalation = async () => {;
+  try {;
+  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
+  content: m.content,  sender: m.sender, timestamp: m.timestamp ;
+}) );
+component: 'ChatBotPanel' ;
 
-  // Focus input when component mounts;
-  useEffect((,) => {;
-    if (inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-    }
-  }, []);
-
-  const handleSendMessage = async (text: string = inputValue) => {;
-    if (!text && text.trim()) return;
-      timestamp: new Date()},;
-
-        timestamp: new Date()},;
-
-        description: "We're having trouble connecting to our support service."}),;
-
-
-  );
+};
+const handleEscalateToLiveAgent = () => {;
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  Date.now () ;
+}`;'";
+content: "I'd like to speak with a human agent";";
+sender: "user";
+timestamp: new Date () ;
+};
+timestamp: new Date () ;
+}]);
+//In a real implementation, this would trigger a live chat request ;
+};
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  Date.now () ;
+}`;'";
+content: "I'd like to email support";";
+sender: "user";
+timestamp: new Date () ;
+};
+timestamp: new Date () ;
+}]) ;
+};
+</div>) ;
+}</div> </ScrollArea> key= {;
+  reply.id ;
+}text= {;
+  reply.text ;
+}onClick={;
+  () => handleQuickReply (reply.text) ;
+}/>) ) ;
+}</div> </div>) ";
+}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";
+}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;
+}'"
+  )
 }
-
-=======
-  }, []);
-  const handleSendMessage = async (text: string = input_value) => {
-    if () return) {
-  $2
+  )
 }
-      timestamp: new Date ()},
-        timestamp: new Date ()},
-        description: "We're having trouble connecting to our support service."}),
-      id: `bot - escalation-${Date.now ()}`,
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
-      sender: "bot",
-      timestamp: new Date ()},
-  const handleQuickReply = (text: string, ) =>: any {
-    handleSendMessage (text);
-  }
-  );
-}
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  const sendToAIAssistant = async (message: string) => {
-    try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
-        })}),
-      
-      if (!response.ok) {
-        return {
-          success: false,
-          message: "I'm having trouble connecting to my knowledge base right now."
-        }
-          message: "I'm having trouble connecting to my knowledge base right now."
-        };
-      }
-;
-      const data = await response.json(),;
-      return {;
-        success: true,;
-        message: data.message;
-      }
-    } catch (error) {
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
-      return {
-        success: false,
-        message: "I'm experiencing technical difficulties. Please try again later."
-      }
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' });
-      return {
-        success: false,
-        message: "I'm experiencing technical difficulties. Please try again later."
-      };
-    }
-  },
-
-  const suggestEscalation = () => {
-    const escalationMessage: Message = {
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      id: `bot-escalation-${Date.now()}`,
-      content: 
-        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
-      sender: "bot",
-      timestamp: new Date()},
-    
-    setMessages((prev) => [...prev, escalationMessage]),
-    
-    // Log this interaction for the support team
-    logSupportEscalation()
-  },
-
-  const logSupportEscalation = async () => {
-    try {
-      // Send the conversation to the backend for logging
-      // This would be implemented in a real system
-      logDebug("Support escalation triggered", {
-        conversationHistory: messages.map(m => ({
-          content: m.content,
-          sender: m.sender,
-          timestamp: m.timestamp
-        })),
-        component: 'ChatBotPanel'
-      })
-    } catch (error) {
-      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
-    }
-  },
-
-  const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

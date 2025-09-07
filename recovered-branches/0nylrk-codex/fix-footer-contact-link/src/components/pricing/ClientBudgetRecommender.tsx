@@ -1,17 +1,10 @@
-
-
-
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
-
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -19,69 +12,20 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
-
-import {Button} from "@/components/ui/button";
-import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
-interface ClientBudgetRecommenderProps {;
-  jobTitle: string,;
-  category: string,;
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from "lucide-react";
+interface ClientBudgetRecommenderProps {
 
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
-}
-
-
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
-
   jobTitle;
   category;
   timeline;
   scope;
-
-  experienceLevel,;
-  onSuggestionApplied}) => {;
-
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-
-
-  const generateSuggestion = async () => {;
-    if (!jobTitle || !category) {;
-      return;
-
-    }
-    setIsLoading(true);
-
-    try {;
-      const params: ClientBudgetParams = {;
-        jobTitle,;
-        category};
-
-      if (timeline) params && params.timeline = timeline;
-      if (scope) params && params.scope = scope;
-      if (experienceLevel) params && params.experienceLevel = experienceLevel;
-
-
-      const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating budget suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-
-  };
-
-=======
-
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
@@ -90,8 +34,39 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
-
-
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+}
+;
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
     }
 
     setIsLoading(true),
@@ -105,16 +80,11 @@ interface ClientBudgetRecommenderProps {
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
-
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
-
-  };
-
-=======
 ;
     setIsLoading(true),;
     try {;
@@ -132,7 +102,6 @@ interface ClientBudgetRecommenderProps {
       setIsLoading(false);
     }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
@@ -146,17 +115,19 @@ interface ClientBudgetRecommenderProps {
           suggestedMax: suggestion && suggestion.maxRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
-
   },
 
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating budget suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
   return (
     <div className="space-y-4">;
       <div>;
@@ -165,6 +136,11 @@ interface ClientBudgetRecommenderProps {
             type="button"
             variant="outline"
             onClick={generateSuggestion}
+}
+
+      </div>;
+    </div>;
+  );
 
             disabled={!jobTitle || !category}
             className="w-full">;
@@ -173,7 +149,6 @@ interface ClientBudgetRecommenderProps {
         ) : (;
 
           <PricingSuggestionBox
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
@@ -257,7 +232,7 @@ if ( {) {
   }
 ;
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       <div>;
         {!suggestion && !is_loading ? (
           <Button;
@@ -265,35 +240,22 @@ if ( {) {
             variant="outline";
             on_click={generate_suggestion}
             disabled={!job_title || !category}
-            className="w - full";
+            className="w-full";
           >;
-            <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 
-
-
-
-=======
       </div>;
     </div>;
-  );
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  )
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             rate_type="hourly";
           />)}
       </div>;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,17 +1,7 @@
-
-
-import { Loader2 } from "lucide-react",
-
-=======
-import {Loader2} from "lucide-react";
-=======
-import { Loader2 } from "lucide-react",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
   isLoading: boolean;
-  resultCount: number
+  resultCount: number;
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -23,10 +13,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-
-import {Loader2} from "lucide-react";
-interface ResultsHeaderProps {;
-  isLoading: boolean,;
   resultCount: number;
 }
 
@@ -44,17 +30,19 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
             "No talents found. Try adjusting your filters.";
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
-=======
 
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
 
-
           )}
-        </span>;
-      )}
+        </span>;      )}
+    </div>
+
+  )
+}
+;
 
 import { Loader2  } from './lucide-react';
 interface ResultsHeaderProps {
@@ -66,10 +54,10 @@ export /**
  */
 function ResultsHeader() {
   return (
-    <div className="flex items - center mb - 6 text - zion - slate - light">;
+    <div className="flex items - center mb - 6 text - zion - slate-light">;
       {is_loading ? (
-        <div className="flex items - center">;
-          <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
+        <div className="flex items-center">;
+          <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
           <span > Loading talents...</span>;
         </div>) : (
         <span>;
@@ -79,12 +67,3 @@ function ResultsHeader() {
         </span>)}
     </div>);
 }
-
-=======
-    </div>
-
-  )
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

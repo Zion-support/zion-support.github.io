@@ -16,6 +16,15 @@
 // Run the fixer
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

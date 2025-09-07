@@ -1,43 +1,44 @@
-
-
-
-export interface ModerationAction {;
-
-
+export interface ModerationResult {
   id: string;
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
   reason?: string;
-  createdAt: string;
-
+  moderatedBy?: string;
+  moderatedAt: Date;
 ;
 export interface ModerationAction {
   id: string;
-  type: 'approve' | 'remove' | 'warn' | 'ban';
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  admin_id: string;
+  type: "approve" | "remove" | "warn" | "ban";
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  adminId: string;
   reason?: string;
-  created_at: string,
+  createdAt: string;
+}
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+  id: string;
+  type: "spam" | "inappropriate" | "harassment" | "other";
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  status: ModerationStatus;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;
+}
 
 }
 export interface ModerationFlag {
-=======
 }
 
-
-export interface ModerationFlag {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export interface ModerationRule {
   id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  content: string;
-  reporter_id: string;
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  status: ModerationStatus;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';
+}

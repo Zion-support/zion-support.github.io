@@ -1,41 +1,51 @@
 
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const CloudArchitectureChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>;
+        <meta
+          name="description"
+          content="CloudArchitectureChat blog post"
+        />{" "}
+      <main>
+        <h1>CloudArchitectureChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+      </Head>;
 
-      <main>;
-        <h1>CloudArchitectureChat</h1>;
-        <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-}
-export default CloudArchitectureChat;
 
-
-=======
 
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const CloudArchitectureChat: NextPage = () => {
   return (
     <div>
       <Head>
 
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>
+
+
+
+
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -59,4 +69,10 @@ const CloudArchitectureChat: NextPage = () => {
 ;
 export default CloudArchitectureChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+
+
+

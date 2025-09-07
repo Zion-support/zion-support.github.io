@@ -1,5 +1,3 @@
-
-
 interface MilestoneSuggestionsProps {
   project_name: string;
   scope_summary: string;
@@ -14,13 +12,53 @@ interface MilestoneSuggestionsProps {
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
-=======
 
 
+
+
+
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+projectName: string;
+  scopeSummary: string;
+  startDate: Date;
+  endDate?: Date;
+  projectType: string;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 
 export function MilestoneSuggestions({
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+  onMilestonesGenerated,
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } =
+    useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`,
+startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || 'Other',
+    };
+
+    const milestones = await generateMilestones(input);
+
+    if (milestones.length > 0) {
+      setShowSuggestions(true);
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones);
+export function MilestoneSuggestions({
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -32,9 +70,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 interface MilestoneSuggestionsProps {;
   projectName: string;
@@ -80,7 +116,6 @@ export function MilestoneSuggestions(): any ({;
 }
 
 export function MilestoneSuggestions(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projectName;
   scopeSummary;
   startDate;
@@ -97,10 +132,8 @@ export function MilestoneSuggestions(): any ({;
 
 
 
-=======
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -115,7 +148,6 @@ export function MilestoneSuggestions(): any ({;
   };
 
 
-=======
 
 
 
@@ -141,8 +173,6 @@ export function MilestoneSuggestions({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       {!showSuggestions && (
@@ -160,7 +190,6 @@ export function MilestoneSuggestions({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Generating milestones...
             </>
@@ -171,10 +200,8 @@ export function MilestoneSuggestions({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Suggest Project Milestones with AI
             </>
-=======
           disabled={isGenerating || !scopeSummary || !startDate}
           className='w-full'>;
           {isGenerating ? (;
@@ -202,17 +229,14 @@ export function MilestoneSuggestions({
             </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
-        </Button>;
+        </Button>
       )}
 
           <CardHeader className="pb-3">
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
@@ -230,7 +254,6 @@ export function MilestoneSuggestions({
                       <Badge variant="secondary" className="ml-2 text-xs">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         AI Suggested
                       </Badge>
                     </div>
@@ -254,11 +277,8 @@ export function MilestoneSuggestions({
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
@@ -269,14 +289,11 @@ export function MilestoneSuggestions({
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
               </div>
@@ -352,7 +369,6 @@ export function MilestoneSuggestions({
     </div>;
   );
 
-=======
     <div className='space - y-4'>;
       {!show_suggestions && (
         <Button;
@@ -453,21 +469,13 @@ export function MilestoneSuggestions({
 }<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>);
 }</div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"};
 ;
 
-=======
     </div>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

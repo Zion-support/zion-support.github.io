@@ -26,8 +26,7 @@ function ThemeProvider() {
     // Only access local_storage on the client side;
     // Check condition
 if ( {) {
-  $2
-}
+  $2}
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -88,14 +87,8 @@ export const use_theme = () =>: any {
   $2
 }
 
-
   return context;
-}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-"use client",;
+}"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
@@ -168,6 +161,6 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
+  return context
 };
 

@@ -13,8 +13,8 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
 
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency || '$'}${listing.price.toLocaleString()}`;
-  };
+    return `${listing.currency || '$'}${listing.price.toLocaleString()}`
+};
 
   const handleImageError = () => {
     if (!imageError) {
@@ -24,8 +24,8 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
   };
 
   const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
+    navigate(`${detailBasePath}/${listing.id}`)
+};
 
   const handleRequestQuote = (e) => {
     e.preventDefault();
@@ -85,7 +85,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             </div>
             {listing.rating && (
               <div className="flex items-center text-yellow-400">
-                {'★'.repeat(Math.floor(listing.rating))}
+                {''.repeat(Math.floor(listing.rating))}
                 <span className="text-slate-400 text-xs ml-1">({listing.reviewCount})</span>
               </div>
             )}

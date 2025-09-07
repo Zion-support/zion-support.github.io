@@ -1,5 +1,3 @@
-
-
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -13,69 +11,13 @@ import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
 
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
-import { HireNowCTA } from './HireNowCTA';
-import { ProfileHero } from './ProfileHero';
-import { ProfileSkills } from './ProfileSkills';
-import { ProfileExperience } from './ProfileExperience';
-import { ProfileProjects } from './ProfileProjects';
-import { ProfileAvailability } from './ProfileAvailability';
-import { ProfileContact } from './ProfileContact';
-import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
-import { Availability } from '@/types/profile';
-interface TalentProfileProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-  onMessageTalent?: () => void
-
-
-export function TalentProfile(): any ({;
-  profile,;
-  onRequestHire,;
-  onMessageTalent,;
-}: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth();
-
-  // Create proper availability object from talent profile;
-  const availability: Availability = {;
-    status:;
-      profile && profile.availability_type === 'full_time';
-        ? 'available';
-        : profile && profile.availability_type === 'part_time';
-          ? 'limited';
-          : 'unavailable',;
-    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`,;
-  };
-
-  // Create proper skills array for ProfileSkills component;
-  const skillsArray =;
-    profile && profile.skills?.map(skill => ({;
-      name: skill,;
-      level: 3, // Default level since we don't have this data;
-    })) || [];
-
-  // Create proper projects array for ProfileProjects component;
-  const projectsArray =;
-    profile && profile.key_projects?.map((proj, i) => ({;
-      id: `project-${i}`,;
-      title: proj && proj.title,;
-      description: proj && proj.description,;
-      date: new Date().toISOString(), // Default date since we don't have this data;
-    })) || [];
-
   return (
-    <div className='container mx-auto px-4 py-8'>;
+    <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
       <ProfileHero
-        name={profile && profile.full_name}
-        title={profile && profile.professional_title}
-        avatarUrl={profile && profile.profile_picture_url}
+        name={profile.full_name}
+        title={profile.professional_title}
+        avatarUrl={profile.profile_picture_url}
         profileType='talent'
 
         rating={profile && profile.average_rating}
@@ -196,11 +138,11 @@ function TalentProfile() {
 
 
           {/* Ratings Section */}
-          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>;
-            <h2 className='text-xl font-bold text-white mb-4 flex items-center'>;
-              <Star className='mr-2 h-5 w-5 text-yellow-400' />;
-              Reviews & Ratings;
-            </h2>;
+          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>
+            <h2 className='text-xl font-bold text-white mb-4 flex items-center'>
+              <Star className='mr-2 h-5 w-5 text-yellow-400' />
+              Reviews & Ratings
+            </h2>
             <ProfileRatings
 
               </p>;
@@ -271,7 +213,6 @@ function TalentProfile() {
                       <MessageSquare className='mr-2 h-5 w-5' />;
                       Message;
                     </Button>;
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
@@ -326,7 +267,6 @@ export function TalentProfile({
             />;
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -357,17 +297,14 @@ export function TalentProfile({
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Message
                     </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
-                </div>;
-              </div>;
-            </div>;
+                </div>
+              </div>
+            </div>
           )}
 
-=======
 
 
         </div>;
@@ -377,10 +314,7 @@ export function TalentProfile({
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 </p>;
                 <div className='flex flex - wrap gap - 4 justify - center'>;
                   <Button;
@@ -406,10 +340,4 @@ export function TalentProfile({
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

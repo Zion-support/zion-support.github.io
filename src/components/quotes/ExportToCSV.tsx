@@ -1,6 +1,3 @@
-
-
-
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -42,12 +39,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Create CSV content
     const csvContent = [
       headers.join()
+
       ...rows.map(row =>
         row.map(cell =>
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
@@ -71,7 +67,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
       URL.revokeObjectURL(url)
     }, 100)
-=======
 import { Button } from '@/components / ui / button';
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from '@/types / quotes';
@@ -189,7 +184,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       document.body.remove_child (link);
       URL.revokeObjectURL (url);
     }, 100);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
       >;
       <Download size={16} />;
@@ -200,7 +194,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 
-=======
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -248,12 +241,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : cell
         ).join()
       )
-=======
 '"},;
 ;
   );
 };
-=======
 
     ].join('\n'),
     
@@ -348,9 +339,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <Button
@@ -367,7 +356,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 
-=======
     <Button;
       variant="outline";
       on_click = {handle_export, }
@@ -376,15 +364,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     >;
       <Download size={16} />;
       Export CSV;
-    </Button>);
-}
-'"},
+    </Button>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

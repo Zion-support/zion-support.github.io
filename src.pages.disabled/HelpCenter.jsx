@@ -25,7 +25,7 @@ import React from 'react';
 interface HelpCenterProps {
   // Add props here as needed
 
-
+}
 
 export default function HelpCenter({ }: HelpCenterProps) {
   return (
@@ -35,10 +35,11 @@ export default function HelpCenter({ }: HelpCenterProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/HelpCenter.jsx

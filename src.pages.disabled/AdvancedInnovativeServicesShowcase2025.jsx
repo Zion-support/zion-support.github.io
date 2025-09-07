@@ -25,7 +25,7 @@ import React from 'react';
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 
-
+}
 
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
   return (
@@ -35,10 +35,11 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx

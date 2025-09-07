@@ -2,18 +2,20 @@
   "healthCheck": {
     "interval": 30000,
     "endpoints": [
-      "/api/health"
+      "/api/health",
+      "/api/status"
     ]
   },
   "performance": {
-    "interval": 60000,
-    "metrics": [
-      "responseTime",
-      "memoryUsage"
-    ]
-  },
-  "errorTracking": {
     "enabled": true,
-    "logLevel": "error"
+    "thresholds": {
+      "responseTime": 1000,
+      "memoryUsage": 0.8,
+      "cpuUsage": 0.8
+    }
+  },
+  "alerts": {
+    "enabled": true,
+    "channels": ["email", "slack"]
   }
 }

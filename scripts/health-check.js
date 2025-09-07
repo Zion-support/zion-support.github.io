@@ -1,6 +1,22 @@
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+ursor/fix-syntax-push-and-merge-to-main-40de
+const express = // // require("child_process");
+const app = express()
+app.get("/health", (req, res) => {
+  res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime();
+    memory: process.memoryUsage();
+    version: process.env.npm_package_version || "1.0.0"})})
+app.get("/ready", (req, res) => {
+  // Add readiness checks here
+  res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
+module.exports = app
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
 
-
-=======
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -8,10 +24,6 @@ const { execSync } = require('child_process');
 
 class HealthChecker {
   constructor() {
-
-    this && this.checks = [],
-    this && this.results = []
-
   }
 
   async checkBuildFiles() {
@@ -65,12 +77,6 @@ class HealthChecker {
     const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
     const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
-
-    console && console.log('\n📊 Health Check Results: '),
-    this && this.results.forEach(result => {
-      const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
-      console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
-
     });
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);

@@ -12,53 +12,33 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+export default function RequestToHirePage() {
 
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-
-
   const [form, setForm] = useState({
-=======
-import { use_router } from 'next / router';
-import { TALENT_PROFILES } from '../data / talent';
-;
-export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (
-    () => TALENT_PROFILES.find (t => t.slug === talent),
-    [talent]);export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
-  const [form, set_form] = useState ({
-
     name: '',
     email: '',
     budget: '',
     timeline: '',
-
-
-
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -73,40 +53,19 @@ export default function RequestToHirePage() {;
     name: '',;
     email: '',;
     budget: '',;
-    timeline: '',;
-    description: '',;
+    timeline: '',,
+  description: '',;
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null| { id: string message: string }>(;
     null;
-  );  const [error, setError] = useState<string | null>(null);    description: ''}),;
+  );  const [error, setError] = useState<string | null>(null),
+  description: ''}),;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
   const [error, setError] = useState<string | null>(null);
-
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError(null),;
-
-    if (!form && form.name || !form && form.email || !form && form.description) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError('Please fill in name, email, and description.');
       return;    }      return;
-
-=======
-    setError(null);
-
-    if (!form.name || !form.email || !form.description) {
-      setError('Please fill in name, email, and description.');
-      return
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -114,47 +73,7 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-
-=======
     }
-
-  };
-
-
-
-    const normalizedBudget = form && form.budget.replace(/[^0-9.\-]/g, '');
-
-    setSubmitting(true);
-    try {;
-      const res = await fetch('/api/requests/create', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          ...form,;
-          budget: normalizedBudget,;
-          talentSlug: selected?.slug || null,;
-        }),;
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
-      setResult({ id: data && data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {;
-      setError(err && err.message || 'Something went wrong');
-    } finally {;
-      setSubmitting(false);    }          budget: normalizedBudget,;
-          talentSlug: selected?.slug || null})}),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
-      setResult({ id: data && data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {;
-      setError(err && err.message || 'Something went wrong');
-    } finally {;
-      setSubmitting(false);
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-  }
 
   if (result) {;
     return (
@@ -226,21 +145,6 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
-
-=======
-    }
-  };
-
-  if (result) {
-    return (
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-      </div>
-    )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -267,26 +171,14 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-
-
-          {submitting ? 'Submitting…' : 'Submit Request'}
-
-        </button>;
-      </form>;
-    </div>;
   );
 }
-
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     description: '',
   });
   const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < null | { id: string; message: string }>(
-    null);  const [error, set_error] = useState < string | null>(null);    description: ''}),
+    null);  const [error, set_error] = useState < string | null>(null),
+  description: ''}),
   const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < null | { id: string, message: string }>(null),
   const [error, set_error] = useState < string | null>(null);
@@ -410,40 +302,32 @@ if ( {) {
         >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>);
   }
   return (
-    <div className="max - w-xl mx - auto">;
-      <h1 className="text - 2xl font - semibold mb - 4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>;
-      <form className="space - y-4" on_submit={on_submit}>;
+    <div className="max-w-xl mx-auto">;
+      <h1 className="text - 2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>;
+      <form className="space-y-4" on_submit={on_submit}>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Your Name">Your Name</label>;
-          <input className="w - full border rounded px - 3 py - 2" value={form.name} on_change={(e) => set_form ({ ...form, name: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Your Name">Your Name</label>;
+          <input className="w - full border rounded px-3 py-2" value={form.name} on_change={(e) => set_form ({ ...form, name: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Email">Email</label>;
-          <input type="email" className="w - full border rounded px - 3 py - 2" value={form.email} on_change={(e) => set_form ({ ...form, email: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Email">Email</label>;
+          <input type="email" className="w - full border rounded px-3 py-2" value={form.email} on_change={(e) => set_form ({ ...form, email: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Budget (USD)">Budget (USD)</label>;
-          <input className="w - full border rounded px - 3 py - 2" placeholder="$5, 000" value={form.budget} on_change={(e) => set_form ({ ...form, budget: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Budget (USD)">Budget (USD)</label>;
+          <input className="w - full border rounded px-3 py-2" placeholder="$5, 000" value={form.budget} on_change={(e) => set_form ({ ...form, budget: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Timeline">Timeline</label>;
-          <input className="w - full border rounded px - 3 py - 2" placeholder="2 - 3 months" value={form.timeline} on_change={(e) => set_form ({ ...form, timeline: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Timeline">Timeline</label>;
+          <input className="w - full border rounded px-3 py-2" placeholder="2 - 3 months" value={form.timeline} on_change={(e) => set_form ({ ...form, timeline: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Project Description">Project Description</label>;
-          <textarea className="w - full border rounded px - 3 py - 2" rows={5} value={form.description} on_change={(e) => set_form ({ ...form, description: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Project Description">Project Description</label>;
+          <textarea className="w - full border rounded px-3 py-2" rows={5} value={form.description} on_change={(e) => set_form ({ ...form, description: e.target.value })} />;
         </div>;
-        {error && <div className="text - sm text - red - 600">{error}</div>}
-        <button disabled={submitting} className="px - 4 py - 2 rounded bg - black text - white">;
+        {error && <div className="text - sm text-red-600">{error}</div>}
+        <button disabled={submitting} className="px - 4 py - 2 rounded bg-black text-white">;
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

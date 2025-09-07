@@ -1,5 +1,22 @@
 
 
+import React from 'react',
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { format  } from 'date-fns';
+import React from 'react'
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { format } from 'date-fns'
+
 import { Check, ArrowDown, X } from 'lucide-react'
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
@@ -45,13 +62,10 @@ export function MilestoneCard({
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
-=======
 
-=======
 
 import React from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -87,7 +101,6 @@ export function MilestoneCard(): any ({;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -97,7 +110,6 @@ export function MilestoneCard(): any ({;
         return 'bg-red-500';
 
 
-=======
 import React from 'react';
 import {
   Card,
@@ -129,7 +141,6 @@ import { Button  } from '@/components / ui / button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,
-=======
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -142,7 +153,6 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 interface MilestoneCardProps {
   id: string,
   projectId: string,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string,
   description?: string,
   amount: number,
@@ -158,7 +168,6 @@ interface MilestoneCardProps {
             <CardTitle className="text-xl">{title}</CardTitle>;
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
-=======
   dueDate?: string,
 
 
@@ -171,9 +180,7 @@ interface MilestoneCardProps {
             {dueDate && (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <p className="text-sm text-muted-foreground">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
@@ -195,12 +202,9 @@ interface MilestoneCardProps {
             )}
           </div>
 
-=======
           </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
@@ -211,7 +215,6 @@ interface MilestoneCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
@@ -226,7 +229,6 @@ interface MilestoneCardProps {
         )}
         <div className="mt-4">
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
-=======
 
 
         </div>
@@ -260,9 +262,7 @@ interface MilestoneCardProps {
         <div>;
           {status !== 'completed' && status !== 'rejected' && (;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <RaiseDisputeButton
               projectId={projectId}
               milestoneId={id}
@@ -283,7 +283,6 @@ interface MilestoneCardProps {
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
-=======
 
         
         <div className="flex gap-2">
@@ -294,7 +293,6 @@ interface MilestoneCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
           
           {status === 'pending' && onApprove && !isUnderDispute && (
@@ -307,6 +305,7 @@ interface MilestoneCardProps {
           {isUnderDispute && (
 
         </div>;
+
 
         <div className='flex gap-2'>;
           {status === 'pending' && onReject && !isUnderDispute && (;
@@ -330,11 +329,8 @@ interface MilestoneCardProps {
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <CardHeader className='pb - 2'>;
         <div className='flex justify - between items - start'>;
           <div>;
@@ -404,8 +400,9 @@ interface MilestoneCardProps {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </div>
+      </CardFooter>
+    </Card>
+  );
+}

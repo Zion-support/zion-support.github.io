@@ -1,6 +1,5 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+export function AIEnhancementButton({
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -9,9 +8,9 @@
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
 
+
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-=======
 
       }),
       return
@@ -68,7 +67,6 @@ if ( {) {
       toast ({
         title: "Content applied",
         description: "AI - enhanced content has been applied."});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
   const handle_regenerate = async () => {
@@ -144,7 +142,6 @@ export function AIEnhancementButton(): any ({;
     }
 
 
-=======
   },
   
   const handleRegenerate = async () => {
@@ -158,87 +155,35 @@ export function AIEnhancementButton(): any ({;
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (showActions) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex gap-2 items-center">;
+  if (showActions) {
+    return (
+      <div className="flex gap-2 items-center">
+
         <Button
           type="button"
           variant="ghost"
           size="sm"
+
           onClick = {handleAccept,}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;
           <Check className="h-4 w-4 mr-1" />;
           Apply;
         </Button>;
+
         <Button
           type="button"
           variant="ghost"
           size="sm"
           onClick = {handleRegenerate,}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled = {isEnhancing,}>;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
-          ) : (;
-            <RefreshCw className="h-4 w-4 mr-1" />;
-          )}
-          Regenerate;
-        </Button>;
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick = {handleCancel,}
-
-          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
-          <X className="h-4 w-4 mr-1" />;
-          Cancel;
-        </Button>;
-      </div>;
-    ),;
-  }
-
-
-  return (
-    <Button
-      type="button"
-      variant = {variant,}
-      size = {size,}
-      className={`gap-1 ${className}`}
-      onClick = {handleEnhance,}
-      disabled = {isEnhancing,}>;
-      {isEnhancing ? (;
-        <Loader2 className="h-4 w-4 animate-spin" />;
-      ) : (;
-        <Sparkles className="h-4 w-4" />;
-      )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
-
-};";
-<Buttontype="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20"> <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
-}</Button>) ;
-}"}
-
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex gap - 2 items - center">;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+
           on_click = {handle_accept, }
           className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
         >;
@@ -249,13 +194,6 @@ if ( {) {
           type="button";
           variant="ghost";
           size="sm";
-          on_click = {handle_regenerate, }
-          className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
-          disabled = {is_enhancing, }
-        >;
-          {is_enhancing ? (
-            <Loader2 className="h - 4 w - 4 mr - 1 animate - spin" />) : (
-            <RefreshCw className="h - 4 w - 4 mr - 1" />)}
           Regenerate;
         </Button>;
         <Button;
@@ -292,18 +230,22 @@ if ( {) {
 }return (<Button) : (<Sparkles className=" h - 4 w - 4" />);
 }</Button>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-    >
-      {isEnhancing ? (
-        <Loader2 className="h-4 w-4 animate-spin" />
-      ) : (
-        <Sparkles className="h-4 w-4" />
-      )}
-      <span className="text-xs">{buttonText}</span>
+      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
 
+    </Button>
+  );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"

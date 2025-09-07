@@ -1,14 +1,10 @@
-
-
-// Define HTML element types;
-interface HTMLElement {;
-
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+
 
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
@@ -24,12 +20,7 @@ interface HTMLElement {
 }
 
 interface HTMLDivElement extends HTMLElement {
-  tag_name: 'DIV';
-}
-
-
-interface HTMLDivElement extends HTMLElement {;
-  tagName: 'DIV';
+  tagName: "DIV";
 }
 
 const badgeVariants = cva(;
@@ -55,7 +46,6 @@ const badgeVariants = cva(;
 export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
-
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
 
   return (
@@ -63,7 +53,6 @@ function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
   );
 }
 export { Badge, badgeVariants }
-=======
 const badge_variants = cva (
   "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
   {
@@ -92,7 +81,11 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
+
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
 }
-export { Badge, badge_variants }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export { Badge, badgeVariants };
+
+
+

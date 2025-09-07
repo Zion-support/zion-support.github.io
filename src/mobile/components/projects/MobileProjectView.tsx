@@ -1,8 +1,6 @@
-
-
-    id: string;
+id: string;
     title: string;
-    client: {;
+    client: {
       name: string;
       avatar?: string
     },
@@ -28,14 +26,11 @@ import { Progress } from '@/components / ui / progress';
 import { SeverityIndicator } from '../common / SeverityIndicator';
 import { use_router } from 'next / router';
 import { toast } from 'sonner';
-=======
 
 
 
-=======
 
 
-=======
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -95,7 +90,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   };
 
 
-=======
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -119,8 +113,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    description: string
+  }
+  milestones: Milestone[]
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+  const router = null;
   return (
 
 
@@ -129,7 +127,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <div className="flex justify-between items-center text-sm">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <span>Progress</span>
                 <span className='font-medium'>{project.progress}%</span>
               </div>
@@ -141,7 +138,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             <div className="grid grid-cols-2 gap-3 text-sm">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <p className='text-muted-foreground'>Start Date</p>
                 <p className='font-medium'>{project.startDate}</p>
@@ -168,7 +164,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>
               <p className='text-sm text-muted-foreground mb-1'>Description</p>
               <p className='text-sm'>{project.description}</p>
@@ -226,9 +221,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 size='sm'
                 variant='outline'
                 className='gap-1 flex-1'
-                onClick={messageClient}>;
-                <MessageSquare className='h-4 w-4' /> Message;
-              </Button>;
+                onClick={messageClient}              >
+                <MessageSquare className='h-4 w-4' /> Message
+              </Button>
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
@@ -255,7 +250,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <Video className="h-4 w-4" /> Call
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </div>
@@ -276,10 +270,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                       <CheckCircle className="h-5 w-5 text-green-500" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ) : (
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
-=======
                 onClick={startProjectCall}>;
                 <Video className='h-4 w-4' /> Call;
               </Button>;
@@ -299,7 +291,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                       <CheckCircle className='h-5 w-5 text-green-500' />;
                     ) : (;
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
 
                     }>;
@@ -340,9 +331,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   );
 }
 
-=======
     <div className='space - y-6 px - 4 pb - 24'>;
-=======
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
 
@@ -368,7 +357,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   };
   return (;
     <div className="space-y-6 px-4 pb-24">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>;
         <CardContent className='p - 4'>;
           <div className='space - y-4'>;
@@ -488,8 +476,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </Badge>;
                 </div>;
                 <div className='pl - 7'>;
@@ -525,5 +511,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 ;
 
+        </div>
+      </section>
+    </div>
+  );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

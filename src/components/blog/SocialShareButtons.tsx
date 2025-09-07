@@ -1,10 +1,12 @@
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
-
+  const shareUrl =
   const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
@@ -124,19 +126,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
-
-    </div>;
-  );
-}
-
-}
-
-}
-=======
-
-
-
-=======
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -172,12 +161,9 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
+
   },
 
   const shareToFacebook = () => {
@@ -188,22 +174,19 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const copyLink = () => {
     if (typeof window === 'undefined') return,
-
-
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+
 
     </div>;
   );
 };
 };
 
-=======
   },
 
   const buttons = [
@@ -256,8 +239,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
-;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>
+  );

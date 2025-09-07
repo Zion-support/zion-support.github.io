@@ -1,16 +1,17 @@
 
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+
+import React from 'react',
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-
-
-
 export function BackToDirectoryButton() {
-=======
 import { ArrowLeft } from 'lucide-react';
 export function BackToDirectoryButton() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='container mx-auto px-4 md:px-6 mb-12'>;
       <Button variant='outline' asChild className='my-8'>;
@@ -20,7 +21,6 @@ export function BackToDirectoryButton() {;
 
           Back to Talent Directory
 
-=======
         </Link>
       </Button>
     </div>
@@ -28,10 +28,8 @@ export function BackToDirectoryButton() {;
 };
   );
 };
-=======
           Back to Talent Directory
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Link>
       </Button>
     </div>
@@ -39,9 +37,6 @@ export function BackToDirectoryButton() {;
 
           className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'>;
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory    <div className="container mx-auto px-4 md: px-6 mb-12">;
-=======
-
-=======
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -54,22 +49,19 @@ export function BackToDirectoryButton() {;
       <Button variant="outline" asChild className="my-8">;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
+
         </Link>;
       </Button>;
     </div>;
   );
 }
 
-
-=======
           Back to Talent Directory
         </Link>
       </Button>
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
@@ -97,11 +89,4 @@ function BackToDirectoryButton() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

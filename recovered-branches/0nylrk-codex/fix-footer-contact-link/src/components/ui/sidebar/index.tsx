@@ -13,19 +13,4 @@ export * from &quot;./sidebar - menu & quot;
 export type { SafeRef } from &quot;../sidebar.types & quot;
 ;
 
-=======
-
-
-import * as React from "react"
-
 // Export all components from the sidebar subcomponents
-export * from "./sidebar-context"
-export * from "./sidebar-trigger"
-export * from "./sidebar-main"
-export * from "./sidebar-content"
-export * from "./sidebar-group"
-export * from "./sidebar-menu"
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,4 @@
-#!/usr / bin / env node;
+#!/usr/bin/env node;
 // Accessibility Implementation Script;
 
 const fs = require ('fs'),
@@ -7,7 +7,7 @@ console.log ('🚀 Implementing Accessibility Improvements...'),
 // This script would add ARIA labels, keyboard navigation, and color contrast fixes;
 console.log ('✅ Accessibility implementation completed'),
 
-=======
+
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -15,4 +15,3 @@ console.log('🚀 Implementing Accessibility Improvements...'),;
 // This script would add ARIA labels, keyboard navigation, and color contrast fixes;
 console.log('✅ Accessibility implementation completed'),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

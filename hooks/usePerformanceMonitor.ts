@@ -1,7 +1,27 @@
-;
-interface PerformanceMetrics {
+import { useState, useEffect } from 'react';
 
-      const entries = list && list.getEntries();
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
+export function usePerformanceMonitor(): PerformanceMetrics | null {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    // Check if Performance Observer is supported
+    if (!('PerformanceObserver' in window)) {
+    setIsSupported(false)
+    return
+  }
+    setIsSupported(true);
+    const observer = new PerformanceObserver((list) => {
+    const updateMetrics = () => {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (window.performance as any).memory;
       
       entries && entries.forEach((entry) => {
         if (entry && entry.entryType === 'navigation') {
@@ -11,42 +31,9 @@ interface PerformanceMetrics {
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
-        
-        if (entry && entry.entryType === 'paint') {
-
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-
-              ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
-            }));
-          }
-        }
-        
-        if (entry && entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry;
-          setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
-          }));
-        }
-        
-        if (entry && entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
-          }));
-        }
-        
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          setMetrics(prev => ({
-            ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
-
-=======
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -129,33 +116,17 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
     });
-
-      observer && observer.disconnect();
-    };
-
   }, []);
   return { metrics, isSupported }
 }
-
-=======
-;
-    // Observe different performance entry types;
-    try {
-      observer.observe ({ entry_types: ['navigation', 'paint', 'largest - contentful - paint', 'first - input', 'layout - shift'] });
-    } catch (error) {
-      // eslint - disable - next - line no - console;
-      console.warn ('Performance Observer not fully supported:', error);
-    }
     return () => {
-      observer.disconnect ();
-    }
+      window.removeEventListener('load', updateMetrics)
+};
   }, []);
-;
-  return { metrics, is_supported }
+
+  return metrics;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

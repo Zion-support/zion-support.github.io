@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
         <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
@@ -45,7 +43,6 @@
                           variant='outline'
 
                           className='cursor-pointer hover:bg-primary/5'>;
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Slider } from '@/components / ui / slider';
@@ -161,7 +158,6 @@ function BrowseFilters() {
                     </div>;
 
                           className='cursor-pointer hover:bg-primary/5'>;
-=======
                   </>) : (
                   <>;
                     <div className='space - y-2'>;
@@ -195,7 +191,6 @@ function BrowseFilters() {
                       </div>;
                     </div>;
 
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -203,14 +198,11 @@ import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-
-
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-
 
   return (
     <div className="space-y-3">
@@ -228,11 +220,9 @@ interface BrowseFiltersProps {
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 
-              
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -244,10 +234,8 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
@@ -268,7 +256,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -280,7 +267,6 @@ interface BrowseFiltersProps {
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
@@ -288,10 +274,8 @@ interface BrowseFiltersProps {
                   </>
                 )}
 
-                
                 <div className="space-y-2">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
@@ -306,33 +290,20 @@ interface BrowseFiltersProps {
                   </Select>
                 </div>
 
-
-                
                 <div className="space-y-2">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Salary Range</Label>
-                  <div className='flex gap-4 items-center'>
-                    <Input placeholder='Min' type='number' className='w-full' />
-                    <span>to</span>
-                    <Input placeholder='Max' type='number' className='w-full' />
+
                   </div>
                 </div>
 
-
-                
                 <div className="space-y-2">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
-=======
 
                 <div className='space-y-2'>;
                   <Label>Location</Label>;
-=======
                     <div className='space - y-2'>;
                       <Label > Experience (years)</Label>;
                       <Slider;
@@ -349,7 +320,6 @@ interface BrowseFiltersProps {
                   </>)}
                 <div className='space - y-2'>;
                   <Label > Location</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select location' />;
@@ -363,22 +333,13 @@ interface BrowseFiltersProps {
                   </Select>;
                 </div>;
 
-
-                
                 <div className="flex items-center justify-between">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
 
-
-              
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -393,11 +354,6 @@ interface BrowseFiltersProps {
             </SheetContent>
           </Sheet>
 
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -428,7 +384,6 @@ interface BrowseFiltersProps {
                 <Button
                   className='w-full'
                   onClick={() => addFilter('Experience: 3+ years')}
-=======
                 <div className='space - y-2'>;
                   <Label > Salary Range</Label>;
                   <div className='flex gap - 4 items - center'>;
@@ -510,15 +465,11 @@ interface BrowseFiltersProps {
             </SelectContent>;
           </Select>;
 
-=======
-
       </div>;
     </div>;
   );
 };
 
-=======
-          
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -539,11 +490,6 @@ interface BrowseFiltersProps {
   );
 }
 
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           {active_filters.map (filter => (
             <Badge;
               key={filter}
@@ -559,11 +505,4 @@ interface BrowseFiltersProps {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

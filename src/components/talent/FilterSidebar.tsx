@@ -1,5 +1,3 @@
-
-
 import { Filter } from 'lucide-react'
 import { SearchFilter } from "./filters/SearchFilter",
 import { SortFilter } from "./filters/SortFilter",
@@ -39,7 +37,6 @@ export function FilterSidebar(): any ({;
   setSortOption,;
   clearFilters,;
   isMobileFilterOpen,}: FilterSidebarProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       {/* Filter header */}
@@ -48,6 +45,8 @@ export function FilterSidebar(): any ({;
         <h3 className='text-lg font-semibold text-white flex items-center'>;
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
 
+
+  searchTerm;
   setSearchTerm;
   selectedSkills;
   toggleSkill;
@@ -67,7 +66,7 @@ export function FilterSidebar(): any ({;
 
 
   return (
-    <>;
+    <>
       {/* Filter header */}
 
       <div className="flex items-center justify-between mb-6">
@@ -79,7 +78,6 @@ export function FilterSidebar(): any ({;
         <Button
           variant="ghost"
           size="sm"
-=======
 
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
@@ -123,8 +121,6 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-=======
-=======
 
   isMobileFilterOpen
 }: FilterSidebarProps) {
@@ -136,14 +132,11 @@ export function FilterSidebar({
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Filters
         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
@@ -203,12 +196,10 @@ export function FilterSidebar({;
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-=======
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           Clear All;
         </Button>;
@@ -231,12 +222,11 @@ export function FilterSidebar({;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Skills */}
       <SkillsFilter
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
-        expanded={expandedSections && expandedSections.skills}
+        expanded={expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -246,7 +236,7 @@ export function FilterSidebar({;
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
-        expanded={expandedSections && expandedSections.availability}
+        expanded={expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -256,7 +246,7 @@ export function FilterSidebar({;
       <RegionFilter
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
-        expanded={expandedSections && expandedSections.region}
+        expanded={expandedSections.region}
         toggleSection={() => toggleSection('region')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -266,7 +256,7 @@ export function FilterSidebar({;
       <ExperienceFilter
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
-        expanded={expandedSections && expandedSections.experience}
+        expanded={expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -276,7 +266,7 @@ export function FilterSidebar({;
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
-        expanded={expandedSections && expandedSections.price}
+        expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -284,8 +274,8 @@ export function FilterSidebar({;
       {isMobileFilterOpen && (;
 
         <Button
-          onClick={() =>;
-            window && window.dispatchEvent(new CustomEvent('closeMobileFilter'));
+          onClick={() =>
+            window.dispatchEvent(new CustomEvent('closeMobileFilter'))
           }
 
 import React from 'react';
@@ -381,8 +371,8 @@ function FilterSidebar() {
         isMobileFilterOpen={isMobileFilterOpen}      />;
 
       {/* Years of Experience */}
-      <ExperienceFilter;
-        experience_range={experience_range}
+      <ExperienceFilter
+        experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
 
         expanded={expanded_sections.experience}
@@ -390,17 +380,15 @@ function FilterSidebar() {
         isMobileFilterOpen={isMobileFilterOpen}      />;
 
       {/* Price Range */}
-      <PriceFilter;
-        price_range={price_range}
+      <PriceFilter
+        priceRange={priceRange}
         setPriceRange={setPriceRange}
 
       
-=======
 
         <Button 
 
 
-=======
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -413,7 +401,6 @@ function FilterSidebar() {
         <Button;
           on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Search */}
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
@@ -432,7 +419,6 @@ function FilterSidebar() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
@@ -505,13 +491,11 @@ function FilterSidebar() {
       )}
     </>;
   );
+
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button;
           on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
@@ -520,16 +504,10 @@ function FilterSidebar() {
         </Button>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
     </>;
   );
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

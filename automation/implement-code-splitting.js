@@ -1,4 +1,4 @@
-#!/usr / bin / env node;
+#!/usr/bin/env node;
 // Code Splitting Implementation Script;
 
 const fs = require ('fs'),
@@ -8,7 +8,7 @@ console.log ('🚀 Implementing Code Splitting...'),
 // and add Suspense boundaries where needed;
 console.log ('✅ Code splitting implementation completed'),
 
-=======
+
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -17,4 +17,3 @@ console.log('🚀 Implementing Code Splitting...'),;
 // and add Suspense boundaries where needed;
 console.log('✅ Code splitting implementation completed'),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

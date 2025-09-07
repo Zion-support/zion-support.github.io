@@ -1,19 +1,5 @@
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from 'sonner';
-
-
-export const useDeleteMilestone = () => {;
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-=======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -21,19 +7,10 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
-
-  
-  const deleteMilestone = async (milestoneId: string) => {
-    if (!user) return false,
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    try {
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .delete()
-
       
       toast && toast.success("Milestone deleted successfully");
       
@@ -42,41 +19,9 @@ export const useDeleteMilestone = () => {
       console && console.error("Error deleting milestone:", err);
       toast && toast.error("Failed to delete milestone: " + err && err.message),
 
-      return false
-=======
-export const useDeleteMilestone = () =>: any {
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const delete_milestone = async (milestone_id: string) => {
-    // Check condition
-if (return false) {
-  $2
-}
-    try {
-      setIsSubmitting (true),
-      const { error } = await supabase;
-        .from ('project_milestones');
-        .delete ();
-        .eq ('id', milestone_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast.success ("Milestone deleted successfully");
-;
-      return true;
-    } catch (err: any) {
-      console.error ("Error deleting milestone:", err);
-      toast.error ("Failed to delete milestone: " + err.message),
-      return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } finally {
+      return false    } finally {
       setIsSubmitting (false);
     }
-
-=======
 
         .eq('id', milestoneId),
       
@@ -92,7 +37,6 @@ if (throw error) {
     } finally {
       setIsSubmitting(false)
 
-
   }
 ;
   return {
@@ -100,5 +44,5 @@ if (throw error) {
     is_submitting;
   }
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+};

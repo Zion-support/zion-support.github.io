@@ -25,7 +25,7 @@ import React from 'react';
 interface DeveloperPortalProps {
   // Add props here as needed
 
-
+}
 
 export default function DeveloperPortal({ }: DeveloperPortalProps) {
   return (
@@ -35,10 +35,11 @@ export default function DeveloperPortal({ }: DeveloperPortalProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/DeveloperPortal.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/DeveloperPortal.jsx

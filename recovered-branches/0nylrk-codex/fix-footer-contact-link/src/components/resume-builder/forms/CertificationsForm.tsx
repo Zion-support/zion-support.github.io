@@ -1,4 +1,0 @@
-
-
-export { CertificationsForm } from './certifications';
-

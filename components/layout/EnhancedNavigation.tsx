@@ -1,58 +1,3 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  User,;
-  Settings,;
-  LogOut,;
-  Bell,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Dna,;
-  DollarSign,;
-  Lock,;
-  Wifi,;
-  Truck,;
-  Gamepad2,;
-  Bot,;
-  Factory,;
-  Car,;
-
-=======
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-
   Menu,
   X,
   ChevronDown,
@@ -74,17 +19,11 @@ import {
   Bot,
   Factory,
   Car,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-
-
-
-
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
@@ -168,21 +107,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-
-
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
-        { name: "Quantum Computing", href: "/services?category=quantum" },
-        { name: "Space Technology", href: "/services?category=space" },
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" },
-        { name: "Financial Services", href: "/services?category=finance" },
-        { name: "Cybersecurity", href: "/services?category=security" },
-        { name: "Edge Computing", href: "/services?category=edge" },
-        { name: "Blockchain", href: "/services?category=blockchain" },
-        { name: "View All Services", href: "/services" },
-      ],
-    },
-
-
     {
       name: "Solutions"
       href: "/solutions"
@@ -200,40 +124,43 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
-
-
-
-
-
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
-=======
-
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
-  className = "",;
-}) => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
-    };
-
-    window && window.addEventListener("scroll", handleScroll);
-    return () => window && window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
+  ];
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10"
+          : "bg-transparent"
+      } ${className}`}>;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex items-center justify-between h-20">;
+          {" "}
+          {/* Logo */}
+          <motion&& motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0 && 0.5 }}
+            className="flex items-center space-x-3">;
+            <Link href="/" className="flex items-center space-x-3 group">;
+              <div className="relative">;
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
+                  <Zap className="w-6 h-6 text-white" />;
+                </div>;
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-cyan-400">;
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
@@ -250,42 +177,31 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
           : "bg - transparent";
       } ${class_name}`}
     >;
-      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="flex items - center justify - between h - 20">;
+      <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+        <div className="flex items - center justify-between h-20">;
           {" "}
           {/* Logo */}
           <motion.div;
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items - center space - x-3";
           >;
-            <Link href="/" className="flex items - center space - x-3 group">;
+            <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
-                <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
-                  <Zap className="w - 6 h - 6 text - white" />;
+                <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition-transform duration-300">;
+                  <Zap className="w - 6 h-6 text-white" />;
                 </div>;
-                <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300" />;
+                <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition-opacity duration-300" />;
               </div>;
               <div className="hidden sm:block">;
-                <div className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                <div className="text - xl font - bold text - white group - hover:text - cyan - 400 transition-colors duration-300">;
                   Zion Tech Group;
                 </div>;
-                <div className="text - xs text - cyan - 400">;
-
+                <div className="text - xs text-cyan-400">;
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
-
-                      />;
-                    </button>;
-
-                    <AnimatePresence>;
-                      {activeDropdown === item && item.name && (;
-                        <motion&& motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -306,23 +222,20 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   </div>;
                 ) : (;
                   <Link
-                    href={item && item.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
-          </div>;
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
           </motion.div>;
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items - center space - x-8">;
+          <div className="hidden lg:flex items-center space-x-8">;
             {navigation_items.map ((item, index) => (
               <motion.div;
                 key={item.name}
@@ -337,7 +250,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
               >;
                 {item.has_dropdown ? (
                   <div className="relative">;
-                    <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2">;
+                    <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2">;
                       <span>{item.name}</span>;
                       <ChevronDown;
                         className={`w - 4 h - 4 transition - transform duration - 300 ${
@@ -352,14 +265,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                           animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                           exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden";
+                          className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan-500 / 20 overflow-hidden";
                         >;
-                          <div className="p - 2">;
+                          <div className="p-2">;
                             {item.dropdown_items?.map ((dropdown_item) => (
                               <Link;
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
-                                className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
+                                className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
                               >;
                                 {dropdown_item.name}
                               </Link>))}
@@ -369,59 +282,29 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   </div>) : (
                   <Link;
                     href={item.href}
-                    className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";
+                    className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2";
                   >;
                     {item.name}
                   </Link>)}
               </motion.div>))}
           </div>;
           {/* Right side actions */}
-          <div className="hidden lg:flex items - center space - x-4">;
+          <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
-
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
-              <Search className="w-5 h-5" />;
-            </motion && motion.button>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
+              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
             >;
-              <Search className="w - 5 h - 5" />;
+              <Search className="w-5 h-5" />;
             </motion.button>;
             {/* Notifications */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
-
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
-              <Bell className="w-5 h-5" />;
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
-            </motion && motion.button>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -435,26 +318,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-          <motion&& motion.button
             initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
-          >;
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -472,32 +339,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-
-                />;
-              </div>;
-
-
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
-
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
-                  >;
-                    {item && item.name}
-                  </Link>;
-
-                  {item && item.hasDropdown && item && item.dropdownItems && (;
-                    <div className="ml-4 space-y-1">;
-                      {item && item.dropdownItems.map((dropdownItem) => (;
-
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
@@ -506,24 +357,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   )}
                 </div>;
               ))}
-=======
-                        <Link
-                          key={dropdownItem.name}
-                          href={dropdownItem.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -539,18 +372,15 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                 </div>;
               </div>;
 
-
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
+              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative";
             >;
-              <Bell className="w - 5 h - 5" />;
-              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded - full animate - pulse" />;
+              <Bell className="w-5 h-5" />;
+              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded-full animate-pulse" />;
             </motion.button>;
             {/* CTA Button */}
             <motion.div;
@@ -560,7 +390,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             >;
               <Link;
                 href="/contact";
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25";
               >;
                 Get Started;
               </Link>;
@@ -572,9 +402,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
             on_click={() => setIsOpen (!is_open)}
-            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
+            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
           >;
-            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </motion.button>;
         </div>;
       </div>;
@@ -586,61 +416,60 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20";
+            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border-cyan-500 / 20";
           >;
-            <div className="px - 4 py - 6 space - y-4">;
+            <div className="px - 4 py-6 space-y-4">;
               {/* Search */}
               <div className="relative">;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w-5 h-5" />;
                 <input;
                   type="text";
                   placeholder="Search services...";
-                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500";
+                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border-cyan-500";
                 />;
               </div>;
               {/* Navigation Items */}
               {navigation_items.map ((item) => (
-                <div key={item.name} className="space - y-2">;
+                <div key={item.name} className="space-y-2">;
                   <Link;
                     href={item.href}
                     on_click={() => setIsOpen (false)}
-                    className="block text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";
+                    className="block text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2";
                   >;
                     {item.name}
                   </Link>;
                   {item.has_dropdown && item.dropdown_items && (
-                    <div className="ml - 4 space - y-1">;
+                    <div className="ml-4 space-y-1">;
                       {item.dropdown_items.map ((dropdown_item) => (
                         <Link;
                           key={dropdown_item.name}
                           href={dropdown_item.href}
                           on_click={() => setIsOpen (false)}
-                          className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm";
+                          className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py-1 text-sm";
                         >;
                           {dropdown_item.name}
                         </Link>))}
                     </div>)}
                 </div>))}
               {/* Contact Info */}
-              <div className="pt - 4 border - t border - cyan - 500 / 20">;
-                <div className="space - y-2 text - sm text - gray - 400">;
-                  <div className="flex items - center space - x-2">;
-                    <Globe className="w - 4 h - 4" />;
+              <div className="pt - 4 border - t border-cyan-500 / 20">;
+                <div className="space - y-2 text - sm text-gray-400">;
+                  <div className="flex items-center space-x-2">;
+                    <Globe className="w-4 h-4" />;
                     <span>{contact_info.website}</span>;
                   </div>;
-                  <div className="flex items - center space - x-2">;
-                    <User className="w - 4 h - 4" />;
+                  <div className="flex items-center space-x-2">;
+                    <User className="w-4 h-4" />;
                     <span>{contact_info.email}</span>;
                   </div>;
                 </div>;
               </div>;
               {/* Mobile CTA */}
-              <div className="pt - 4">;
+              <div className="pt-4">;
                 <Link;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
-                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition-all duration-300";
                 >;
                   Get Started Today;
                 </Link>;
@@ -651,23 +480,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
       </AnimatePresence>;
     </nav>);
 }
-export default EnhancedNavigation;
-;
-
-=======
-      </AnimatePresence>
-    </nav>
-
+export default EnhancedNavigation
 };
-
-export default EnhancedNavigation;
-
-=======
-);
+)
 };
-
-
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

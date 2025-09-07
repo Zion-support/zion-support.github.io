@@ -25,7 +25,7 @@ import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 
-
+}
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
   return (
@@ -35,10 +35,11 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
     </div>
   );
 
-
-
 }
-
-=======
-
-
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PricingGuidePage.jsx
