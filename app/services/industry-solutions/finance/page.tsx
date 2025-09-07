@@ -1,9 +1,9 @@
 export const metadata = {
-  title: "Financial Services Technology | Zion Tech Group",
+  title: 'Financial Services Technology | Zion Tech Group',
   description:
-    "Secure financial technology solutions including trading platforms, payment processing, fraud detection, risk management, and regulatory compliance systems.",
+    'Secure financial technology solutions including trading platforms, payment processing, fraud detection, risk management, and regulatory compliance systems.',
   keywords:
-    "fintech, financial technology, trading platforms, payment processing, fraud detection, risk management, financial compliance",
+    'fintech, financial technology, trading platforms, payment processing, fraud detection, risk management, financial compliance',
 };
 
 export default function FinancialServicesPage() {
@@ -29,12 +29,12 @@ export default function FinancialServicesPage() {
             title="Trading Platform"
             description="High-frequency trading platform with real-time market data and algorithmic trading capabilities"
             features={[
-              "Real-time trading",
-              "Algorithmic trading",
-              "Risk management",
-              "Market data feeds",
-              "Order management",
-              "Compliance reporting",
+              'Real-time trading',
+              'Algorithmic trading',
+              'Risk management',
+              'Market data feeds',
+              'Order management',
+              'Compliance reporting',
             ]}
             price="$100,000-500,000"
             icon="📈"
@@ -43,12 +43,12 @@ export default function FinancialServicesPage() {
             title="Payment Processing System"
             description="Secure payment gateway with support for multiple payment methods and currencies"
             features={[
-              "Multi-currency support",
-              "PCI DSS compliance",
-              "Fraud detection",
-              "Recurring payments",
-              "Mobile payments",
-              "Analytics dashboard",
+              'Multi-currency support',
+              'PCI DSS compliance',
+              'Fraud detection',
+              'Recurring payments',
+              'Mobile payments',
+              'Analytics dashboard',
             ]}
             price="$50,000-200,000"
             icon="💳"
@@ -57,12 +57,12 @@ export default function FinancialServicesPage() {
             title="Fraud Detection AI"
             description="AI-powered fraud detection system with real-time transaction monitoring"
             features={[
-              "Real-time monitoring",
-              "Machine learning models",
-              "Risk scoring",
-              "Alert system",
-              "Pattern recognition",
-              "False positive reduction",
+              'Real-time monitoring',
+              'Machine learning models',
+              'Risk scoring',
+              'Alert system',
+              'Pattern recognition',
+              'False positive reduction',
             ]}
             price="$75,000-250,000"
             icon="🛡️"
@@ -71,12 +71,12 @@ export default function FinancialServicesPage() {
             title="Digital Banking Platform"
             description="Complete digital banking solution with mobile app and web interface"
             features={[
-              "Account management",
-              "Mobile banking",
-              "Bill payment",
-              "Transfer services",
-              "Investment tracking",
-              "Customer support",
+              'Account management',
+              'Mobile banking',
+              'Bill payment',
+              'Transfer services',
+              'Investment tracking',
+              'Customer support',
             ]}
             price="$150,000-400,000"
             icon="🏦"
@@ -85,12 +85,12 @@ export default function FinancialServicesPage() {
             title="Risk Management System"
             description="Comprehensive risk assessment and management platform for financial institutions"
             features={[
-              "Credit risk analysis",
-              "Market risk assessment",
-              "Operational risk",
-              "Regulatory reporting",
-              "Stress testing",
-              "Portfolio analysis",
+              'Credit risk analysis',
+              'Market risk assessment',
+              'Operational risk',
+              'Regulatory reporting',
+              'Stress testing',
+              'Portfolio analysis',
             ]}
             price="$80,000-300,000"
             icon="⚖️"
@@ -99,12 +99,12 @@ export default function FinancialServicesPage() {
             title="Cryptocurrency Exchange"
             description="Secure cryptocurrency trading platform with advanced security features"
             features={[
-              "Multi-crypto support",
-              "Cold storage",
-              "KYC/AML compliance",
-              "Trading engine",
-              "API integration",
-              "Security monitoring",
+              'Multi-crypto support',
+              'Cold storage',
+              'KYC/AML compliance',
+              'Trading engine',
+              'API integration',
+              'Security monitoring',
             ]}
             price="$200,000-600,000"
             icon="₿"
@@ -113,12 +113,12 @@ export default function FinancialServicesPage() {
             title="Wealth Management Platform"
             description="Comprehensive wealth management solution for advisors and clients"
             features={[
-              "Portfolio management",
-              "Client onboarding",
-              "Performance tracking",
-              "Reporting tools",
-              "Goal planning",
-              "Tax optimization",
+              'Portfolio management',
+              'Client onboarding',
+              'Performance tracking',
+              'Reporting tools',
+              'Goal planning',
+              'Tax optimization',
             ]}
             price="$60,000-180,000"
             icon="💰"
@@ -127,12 +127,12 @@ export default function FinancialServicesPage() {
             title="Regulatory Compliance System"
             description="Automated compliance monitoring for financial regulations and reporting"
             features={[
-              "Regulatory reporting",
-              "Compliance monitoring",
-              "Audit trails",
-              "Policy management",
-              "Alert system",
-              "Documentation",
+              'Regulatory reporting',
+              'Compliance monitoring',
+              'Audit trails',
+              'Policy management',
+              'Alert system',
+              'Documentation',
             ]}
             price="$40,000-120,000"
             icon="📋"
@@ -141,12 +141,12 @@ export default function FinancialServicesPage() {
             title="Insurance Technology Platform"
             description="Complete insurance management system with claims processing and underwriting"
             features={[
-              "Policy management",
-              "Claims processing",
-              "Underwriting tools",
-              "Customer portal",
-              "Agent dashboard",
-              "Analytics",
+              'Policy management',
+              'Claims processing',
+              'Underwriting tools',
+              'Customer portal',
+              'Agent dashboard',
+              'Analytics',
             ]}
             price="$70,000-220,000"
             icon="🛡️"
@@ -191,11 +191,11 @@ export default function FinancialServicesPage() {
             title="Algorithmic Trading"
             description="AI-powered trading algorithms for automated market analysis and execution"
             applications={[
-              "Market analysis",
-              "Pattern recognition",
-              "Risk assessment",
-              "Portfolio optimization",
-              "Execution algorithms",
+              'Market analysis',
+              'Pattern recognition',
+              'Risk assessment',
+              'Portfolio optimization',
+              'Execution algorithms',
             ]}
             icon="🤖"
           />
@@ -203,11 +203,11 @@ export default function FinancialServicesPage() {
             title="Credit Scoring"
             description="Advanced credit risk assessment using machine learning and alternative data"
             applications={[
-              "Credit scoring",
-              "Default prediction",
-              "Risk segmentation",
-              "Alternative data analysis",
-              "Real-time decisions",
+              'Credit scoring',
+              'Default prediction',
+              'Risk segmentation',
+              'Alternative data analysis',
+              'Real-time decisions',
             ]}
             icon="📊"
           />
@@ -215,11 +215,11 @@ export default function FinancialServicesPage() {
             title="Customer Analytics"
             description="AI-driven customer insights and personalized financial services"
             applications={[
-              "Customer segmentation",
-              "Churn prediction",
-              "Product recommendations",
-              "Behavioral analysis",
-              "Lifetime value",
+              'Customer segmentation',
+              'Churn prediction',
+              'Product recommendations',
+              'Behavioral analysis',
+              'Lifetime value',
             ]}
             icon="👥"
           />
@@ -234,31 +234,31 @@ export default function FinancialServicesPage() {
           <TechStack
             title="Trading & Markets"
             technologies={[
-              "FIX Protocol",
-              "WebSocket",
-              "Redis",
-              "Kafka",
-              "PostgreSQL",
+              'FIX Protocol',
+              'WebSocket',
+              'Redis',
+              'Kafka',
+              'PostgreSQL',
             ]}
           />
           <TechStack
             title="Security & Compliance"
             technologies={[
-              "OAuth 2.0",
-              "JWT",
-              "HSM",
-              "Encryption",
-              "Audit Logging",
+              'OAuth 2.0',
+              'JWT',
+              'HSM',
+              'Encryption',
+              'Audit Logging',
             ]}
           />
           <TechStack
             title="AI/ML"
             technologies={[
-              "TensorFlow",
-              "PyTorch",
-              "Scikit-learn",
-              "Pandas",
-              "NumPy",
+              'TensorFlow',
+              'PyTorch',
+              'Scikit-learn',
+              'Pandas',
+              'NumPy',
             ]}
           />
         </div>
@@ -360,7 +360,7 @@ function FinanceServiceCard({
         <div className="text-sm text-gray-500">Starting price</div>
       </div>
       <ul className="text-gray-600 space-y-2">
-        {features.map((feature) => (
+        {features.map(feature => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {feature}
           </li>
@@ -411,7 +411,7 @@ function AICard({
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="text-gray-600 space-y-2">
-        {applications.map((app) => (
+        {applications.map(app => (
           <li key={app} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {app}
           </li>
@@ -432,7 +432,7 @@ function TechStack({
     <div className="border border-gray-200 rounded-xl p-6 bg-white">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
+        {technologies.map(tech => (
           <span
             key={tech}
             className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -494,11 +494,11 @@ function Pricing() {
           name="Compliance Assessment"
           price="$10k–$25k"
           features={[
-            "Regulatory review",
-            "Security audit",
-            "Risk assessment",
-            "Compliance roadmap",
-            "Recommendations",
+            'Regulatory review',
+            'Security audit',
+            'Risk assessment',
+            'Compliance roadmap',
+            'Recommendations',
           ]}
           popular={false}
         />
@@ -506,11 +506,11 @@ function Pricing() {
           name="Solution Development"
           price="$50k–$300k"
           features={[
-            "Custom development",
-            "Security implementation",
-            "Compliance integration",
-            "Testing",
-            "Training",
+            'Custom development',
+            'Security implementation',
+            'Compliance integration',
+            'Testing',
+            'Training',
           ]}
           popular={true}
         />
@@ -518,11 +518,11 @@ function Pricing() {
           name="Managed Services"
           price="$5k+/mo"
           features={[
-            "24/7 monitoring",
-            "Compliance management",
-            "Security updates",
-            "Support",
-            "Maintenance",
+            '24/7 monitoring',
+            'Compliance management',
+            'Security updates',
+            'Support',
+            'Maintenance',
           ]}
           popular={false}
         />
@@ -544,7 +544,7 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-8 relative ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -556,7 +556,7 @@ function Plan({
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-3 mb-6">
-        {features.map((feature) => (
+        {features.map(feature => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-3">✓</span> {feature}
           </li>
@@ -566,8 +566,8 @@ function Plan({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Get Started

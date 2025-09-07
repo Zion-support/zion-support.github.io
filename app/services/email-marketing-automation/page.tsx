@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Email Marketing Automation | Zion Tech Group',
-  description: 'Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.'
+  description: 'Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.',
 };
 
 export default function EmailMarketingAutomationPage() {
@@ -8,37 +8,37 @@ export default function EmailMarketingAutomationPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Email Marketing Automation</h1>
       <p className="text-xl text-gray-600 mb-12">Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI-Powered Campaigns" 
+        <FeatureCard
+          title="AI-Powered Campaigns"
           features={[
-            "Personalized content generation",
-            "Optimal send time prediction",
-            "Subject line optimization",
-            "A/B testing automation"
-          ]} 
+            'Personalized content generation',
+            'Optimal send time prediction',
+            'Subject line optimization',
+            'A/B testing automation',
+          ]}
         />
-        <FeatureCard 
-          title="Advanced Segmentation" 
+        <FeatureCard
+          title="Advanced Segmentation"
           features={[
-            "Behavioral targeting",
-            "Demographic analysis",
-            "Engagement scoring",
-            "Dynamic lists"
-          ]} 
+            'Behavioral targeting',
+            'Demographic analysis',
+            'Engagement scoring',
+            'Dynamic lists',
+          ]}
         />
-        <FeatureCard 
-          title="Comprehensive Analytics" 
+        <FeatureCard
+          title="Comprehensive Analytics"
           features={[
-            "ROI tracking",
-            "Engagement metrics",
-            "Conversion analysis",
-            "Predictive insights"
-          ]} 
+            'ROI tracking',
+            'Engagement metrics',
+            'Conversion analysis',
+            'Predictive insights',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Email Marketing Automation?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function EmailMarketingAutomationPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Revolutionize Your Email Marketing?</h2>
         <p className="text-gray-600 mb-6">Start with a free audit of your current email campaigns and see the potential for improvement.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$49/mo" 
+        <Plan
+          name="Starter"
+          price="$49/mo"
           features={[
-            "Up to 5,000 subscribers",
-            "Basic automation",
-            "Email templates",
-            "Email support"
-          ]} 
+            'Up to 5,000 subscribers',
+            'Basic automation',
+            'Email templates',
+            'Email support',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$149/mo" 
+        <Plan
+          name="Professional"
+          price="$149/mo"
           features={[
-            "Up to 25,000 subscribers",
-            "Advanced AI features",
-            "A/B testing",
-            "Priority support",
-            "Custom integrations"
-          ]} 
+            'Up to 25,000 subscribers',
+            'Advanced AI features',
+            'A/B testing',
+            'Priority support',
+            'Custom integrations',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$399/mo" 
+        <Plan
+          name="Enterprise"
+          price="$399/mo"
           features={[
-            "Unlimited subscribers",
-            "Custom AI models",
-            "White-label solution",
-            "Dedicated support",
-            "Advanced analytics"
-          ]} 
+            'Unlimited subscribers',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'Advanced analytics',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-pink-600 text-white hover:bg-pink-700' 
+          popular
+            ? 'bg-pink-600 text-white hover:bg-pink-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

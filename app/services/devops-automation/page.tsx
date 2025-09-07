@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'DevOps Automation Services | Zion Tech Group',
-  description: 'Professional DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring solutions. DevOps services starting at $12k.'
+  description: 'Professional DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring solutions. DevOps services starting at $12k.',
 };
 
 export default function DevOpsAutomationPage() {
@@ -11,43 +11,43 @@ export default function DevOpsAutomationPage() {
         <p className="text-xl text-gray-600 mb-8">
           Professional DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation solutions.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="CI/CD Pipelines" 
+          <Item
+            title="CI/CD Pipelines"
             details={[
-              "Automated testing",
-              "Build automation",
-              "Deployment pipelines",
-              "Quality gates",
-              "Rollback automation",
-              "Multi-environment support",
-              "Performance testing"
-            ]} 
+              'Automated testing',
+              'Build automation',
+              'Deployment pipelines',
+              'Quality gates',
+              'Rollback automation',
+              'Multi-environment support',
+              'Performance testing',
+            ]}
           />
-          <Item 
-            title="Infrastructure as Code" 
+          <Item
+            title="Infrastructure as Code"
             details={[
-              "Terraform automation",
-              "Ansible playbooks",
-              "Kubernetes deployment",
-              "Docker containerization",
-              "Server provisioning",
-              "Configuration management",
-              "Environment replication"
-            ]} 
+              'Terraform automation',
+              'Ansible playbooks',
+              'Kubernetes deployment',
+              'Docker containerization',
+              'Server provisioning',
+              'Configuration management',
+              'Environment replication',
+            ]}
           />
-          <Item 
-            title="Monitoring & Observability" 
+          <Item
+            title="Monitoring & Observability"
             details={[
-              "Application monitoring",
-              "Infrastructure monitoring",
-              "Log aggregation",
-              "Alerting systems",
-              "Performance metrics",
-              "Error tracking",
-              "Uptime monitoring"
-            ]} 
+              'Application monitoring',
+              'Infrastructure monitoring',
+              'Log aggregation',
+              'Alerting systems',
+              'Performance metrics',
+              'Error tracking',
+              'Uptime monitoring',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">DevOps Automation Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Basic DevOps" 
-          price="$12k–$25k" 
+        <Plan
+          name="Basic DevOps"
+          price="$12k–$25k"
           duration="4–8 weeks"
           features={[
-            "Basic CI/CD pipeline",
-            "Docker containerization",
-            "Simple monitoring",
-            "Automated testing",
-            "Basic documentation",
-            "Email support",
-            "30-day warranty"
-          ]} 
+            'Basic CI/CD pipeline',
+            'Docker containerization',
+            'Simple monitoring',
+            'Automated testing',
+            'Basic documentation',
+            'Email support',
+            '30-day warranty',
+          ]}
         />
-        <Plan 
-          name="Professional DevOps" 
-          price="$25k–$50k" 
+        <Plan
+          name="Professional DevOps"
+          price="$25k–$50k"
           duration="8–16 weeks"
           features={[
-            "Everything in Basic",
-            "Advanced CI/CD",
-            "Infrastructure as Code",
-            "Comprehensive monitoring",
-            "Security automation",
-            "Priority support",
-            "90-day warranty"
-          ]} 
+            'Everything in Basic',
+            'Advanced CI/CD',
+            'Infrastructure as Code',
+            'Comprehensive monitoring',
+            'Security automation',
+            'Priority support',
+            '90-day warranty',
+          ]}
         />
-        <Plan 
-          name="Enterprise DevOps" 
-          price="$50k+" 
+        <Plan
+          name="Enterprise DevOps"
+          price="$50k+"
           duration="12–24 weeks"
           features={[
-            "Everything in Professional",
-            "Custom automation",
-            "Multi-cloud deployment",
-            "Advanced security",
-            "Dedicated support",
-            "SLA guarantees",
-            "Ongoing optimization"
-          ]} 
+            'Everything in Professional',
+            'Custom automation',
+            'Multi-cloud deployment',
+            'Advanced security',
+            'Dedicated support',
+            'SLA guarantees',
+            'Ongoing optimization',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your DevOps?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=DevOps Automation Services Inquiry"
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
       >

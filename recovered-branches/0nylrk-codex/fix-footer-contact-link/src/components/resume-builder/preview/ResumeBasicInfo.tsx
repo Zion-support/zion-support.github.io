@@ -1,4 +1,4 @@
-import { ResumeBasicInfo } from "@/types/resume";
+import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
@@ -16,4 +16,3 @@ export function ResumeBasicInfoSection({
   );
 }
 ;
-

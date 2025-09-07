@@ -23,12 +23,16 @@ interface NotificationContextType {
   clearAllNotifications: () => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextType | undefined>(
+  undefined,
+);
 
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error(
+      'useNotifications must be used within a NotificationProvider',
+    );
   }
   return context;
 };
@@ -37,29 +41,36 @@ interface NotificationProviderProps {
   children: React.ReactNode;
 }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({
+  children,
+}) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification: Notification = {
-      id,
-      duration: 5000,
-      ...notification,
-    };
+  const addNotification = useCallback(
+    (notification: Omit<Notification, 'id'>) => {
+      const id = Math.random().toString(36).substr(2, 9);
+      const newNotification: Notification = {
+        id,
+        duration: 5000,
+        ...notification,
+      };
 
-    setNotifications(prev => [...prev, newNotification]);
+      setNotifications(prev => [...prev, newNotification]);
 
-    // Auto remove notification after duration
-    if (newNotification.duration && newNotification.duration > 0) {
-      setTimeout(() => {
-        removeNotification(id);
-      }, newNotification.duration);
-    }
-  }, []);
+      // Auto remove notification after duration
+      if (newNotification.duration && newNotification.duration > 0) {
+        setTimeout(() => {
+          removeNotification(id);
+        }, newNotification.duration);
+      }
+    },
+    [],
+  );
 
   const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
+    setNotifications(prev =>
+      prev.filter(notification => notification.id !== id),
+    );
   }, []);
 
   const clearAllNotifications = useCallback(() => {
@@ -106,17 +117,17 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       }}
     >
       {children}
-      
+
       {/* Notification Container */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>
-          {notifications.map((notification) => (
+          {notifications.map(notification => (
             <motion.div
               key={notification.id}
               initial={{ opacity: 0, x: 300, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 300, scale: 0.8 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
               className={`max-w-sm w-full ${getBgColor(notification.type)} backdrop-blur-sm rounded-lg border p-4 shadow-lg`}
             >
               <div className="flex items-start">

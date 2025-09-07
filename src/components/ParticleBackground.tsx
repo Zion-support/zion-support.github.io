@@ -38,11 +38,13 @@ const ParticleBackground: React.FC<{
       size: Math.random() * 3 + 1,
       speedX: (Math.random() - 0.5) * 0.5,
       speedY: (Math.random() - 0.5) * 0.5,
-      opacity: Math.random() * 0.5 + 0.1
+      opacity: Math.random() * 0.5 + 0.1,
     });
 
     const initParticles = () => {
-      particlesRef.current = Array.from({ length: particleCount }, (_, i) => createParticle(i));
+      particlesRef.current = Array.from({ length: particleCount }, (_, i) =>
+        createParticle(i),
+      );
     };
 
     const updateParticles = () => {
@@ -60,7 +62,7 @@ const ParticleBackground: React.FC<{
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       particlesRef.current.forEach(particle => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);

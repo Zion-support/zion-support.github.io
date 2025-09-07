@@ -29,32 +29,102 @@ const Footer: React.FC = () => {
               Empowering businesses with cutting-edge technology solutions.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
-              <li><Link to="/services/ai" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
-              <li><Link to="/services/cloud" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link to="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/ai"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/cloud"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/cybersecurity"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cybersecurity
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/careers"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><Link to="/help" className="text-gray-400 hover:text-white transition-colors">Help Center</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li>
+                <Link
+                  to="/help"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -65,9 +135,24 @@ const Footer: React.FC = () => {
             © 2024 Zion Tech Group. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              to="/cookies"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Cookie Policy
+            </Link>
           </div>
         </div>
 

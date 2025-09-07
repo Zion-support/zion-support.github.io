@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'AI Chatbot Development | Zion Tech Group',
-  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.'
+  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
 };
 
 export default function AIChatbotPage() {
@@ -11,43 +11,43 @@ export default function AIChatbotPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build intelligent AI chatbots with natural language processing, multi-channel support, and seamless human handoff capabilities.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Natural Language Processing" 
+          <Item
+            title="Natural Language Processing"
             details={[
-              "Intent recognition",
-              "Entity extraction",
-              "Context understanding",
-              "Multi-language support",
-              "Sentiment analysis",
-              "Conversation flow",
-              "Fallback handling"
-            ]} 
+              'Intent recognition',
+              'Entity extraction',
+              'Context understanding',
+              'Multi-language support',
+              'Sentiment analysis',
+              'Conversation flow',
+              'Fallback handling',
+            ]}
           />
-          <Item 
-            title="Multi-Channel Integration" 
+          <Item
+            title="Multi-Channel Integration"
             details={[
-              "Website chat widget",
-              "Facebook Messenger",
-              "WhatsApp Business",
-              "Slack integration",
-              "Telegram support",
-              "Voice interfaces",
-              "Mobile apps"
-            ]} 
+              'Website chat widget',
+              'Facebook Messenger',
+              'WhatsApp Business',
+              'Slack integration',
+              'Telegram support',
+              'Voice interfaces',
+              'Mobile apps',
+            ]}
           />
-          <Item 
-            title="Advanced Features" 
+          <Item
+            title="Advanced Features"
             details={[
-              "Human handoff",
-              "Knowledge base integration",
-              "API connections",
-              "Analytics dashboard",
-              "A/B testing",
-              "Custom training",
-              "White-label options"
-            ]} 
+              'Human handoff',
+              'Knowledge base integration',
+              'API connections',
+              'Analytics dashboard',
+              'A/B testing',
+              'Custom training',
+              'White-label options',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Chatbot Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Basic Chatbot" 
-          price="$8k–$15k" 
+        <Plan
+          name="Basic Chatbot"
+          price="$8k–$15k"
           duration="4–6 weeks"
           features={[
-            "Basic NLP capabilities",
-            "Single channel integration",
-            "Pre-built responses",
-            "Simple analytics",
-            "Basic customization",
-            "Email support",
-            "Standard hosting"
-          ]} 
+            'Basic NLP capabilities',
+            'Single channel integration',
+            'Pre-built responses',
+            'Simple analytics',
+            'Basic customization',
+            'Email support',
+            'Standard hosting',
+          ]}
         />
-        <Plan 
-          name="Professional Chatbot" 
-          price="$15k–$35k" 
+        <Plan
+          name="Professional Chatbot"
+          price="$15k–$35k"
           duration="6–10 weeks"
           features={[
-            "Everything in Basic",
-            "Multi-channel support",
-            "Custom training",
-            "Advanced analytics",
-            "API integrations",
-            "Human handoff",
-            "Priority support"
-          ]} 
+            'Everything in Basic',
+            'Multi-channel support',
+            'Custom training',
+            'Advanced analytics',
+            'API integrations',
+            'Human handoff',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise Chatbot" 
-          price="$35k+" 
+        <Plan
+          name="Enterprise Chatbot"
+          price="$35k+"
           duration="8–16 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "Advanced AI models",
-            "White-label options",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'Advanced AI models',
+            'White-label options',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Chatbot?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Chatbot Development Inquiry"
         className="block w-full mt-6 bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >

@@ -12,7 +12,10 @@ interface SearchResult {
   category?: string;
 }
 
-const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
+const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
+  isOpen,
+  onClose,
+}) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -25,18 +28,20 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
     {
       id: '1',
       title: 'AI Services',
-      description: 'Custom AI solutions powered by machine learning and deep learning technologies',
+      description:
+        'Custom AI solutions powered by machine learning and deep learning technologies',
       url: '/services/ai-services',
       type: 'service',
-      category: 'Services'
+      category: 'Services',
     },
     {
       id: '2',
       title: 'IT Services',
-      description: 'Comprehensive IT infrastructure and digital transformation solutions',
+      description:
+        'Comprehensive IT infrastructure and digital transformation solutions',
       url: '/services/it-services',
       type: 'service',
-      category: 'Services'
+      category: 'Services',
     },
     {
       id: '3',
@@ -44,15 +49,16 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
       description: 'Advanced security solutions to protect your digital assets',
       url: '/services/cybersecurity',
       type: 'service',
-      category: 'Services'
+      category: 'Services',
     },
     {
       id: '4',
       title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission to transform businesses',
+      description:
+        'Learn about Zion Tech Group and our mission to transform businesses',
       url: '/about',
       type: 'page',
-      category: 'Pages'
+      category: 'Pages',
     },
     {
       id: '5',
@@ -60,7 +66,7 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
       description: 'Flexible pricing plans for all your technology needs',
       url: '/pricing',
       type: 'page',
-      category: 'Pages'
+      category: 'Pages',
     },
     {
       id: '6',
@@ -68,7 +74,7 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
       description: 'Get in touch with our team for consultations and support',
       url: '/contact',
       type: 'page',
-      category: 'Pages'
+      category: 'Pages',
     },
     {
       id: '7',
@@ -76,16 +82,17 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
       description: 'Explore the latest AI trends that are reshaping industries',
       url: '/blog/future-ai-business-trends-2024',
       type: 'blog',
-      category: 'Blog'
+      category: 'Blog',
     },
     {
       id: '8',
       title: 'Cybersecurity Best Practices',
-      description: 'Learn essential cybersecurity strategies for small to medium businesses',
+      description:
+        'Learn essential cybersecurity strategies for small to medium businesses',
       url: '/blog/cybersecurity-best-practices-smb',
       type: 'blog',
-      category: 'Blog'
-    }
+      category: 'Blog',
+    },
   ];
 
   useEffect(() => {
@@ -101,15 +108,16 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
     }
 
     setIsLoading(true);
-    
+
     // Simulate API delay
     const timer = setTimeout(() => {
-      const filteredResults = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.category?.toLowerCase().includes(query.toLowerCase())
+      const filteredResults = searchData.filter(
+        item =>
+          item.title.toLowerCase().includes(query.toLowerCase()) ||
+          item.description.toLowerCase().includes(query.toLowerCase()) ||
+          item.category?.toLowerCase().includes(query.toLowerCase()),
       );
-      
+
       setResults(filteredResults);
       setIsLoading(false);
     }, 300);
@@ -144,9 +152,9 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
       type: 'info',
       title: 'Navigating...',
       message: `Going to ${result.title}`,
-      duration: 2000
+      duration: 2000,
     });
-    
+
     window.location.href = result.url;
     onClose();
   };
@@ -180,7 +188,7 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.2 }}
             className="max-w-2xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             {/* Search Input */}
             <div className="flex items-center p-4 border-b border-gray-700/50">
@@ -190,7 +198,7 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
                 type="text"
                 placeholder="Search services, pages, and content..."
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={e => setQuery(e.target.value)}
                 className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
               />
               <button
@@ -247,7 +255,9 @@ const SearchModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
                 <div className="p-8 text-center text-gray-400">
                   <Search className="w-8 h-8 mx-auto mb-2 opacity-50" />
                   <p>No results found for "{query}"</p>
-                  <p className="text-sm mt-1">Try different keywords or check spelling</p>
+                  <p className="text-sm mt-1">
+                    Try different keywords or check spelling
+                  </p>
                 </div>
               ) : (
                 <div className="p-8 text-center text-gray-400">

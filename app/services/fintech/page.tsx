@@ -17,7 +17,7 @@ export default function FinTechPage() {
               FinTech Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your financial services with cutting-edge FinTech solutions. 
+              Transform your financial services with cutting-edge FinTech solutions.
               From payment processing to digital banking, we build secure, scalable financial technology that drives growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -52,12 +52,12 @@ export default function FinTechPage() {
               title="Digital Banking Platform"
               description="Complete digital banking solution with account management, transfers, and financial planning tools."
               features={[
-                "Multi-account management",
-                "Real-time transfers & payments",
-                "Financial planning tools",
-                "Mobile banking app",
-                "Fraud detection & prevention",
-                "Regulatory compliance (PCI DSS, SOX)"
+                'Multi-account management',
+                'Real-time transfers & payments',
+                'Financial planning tools',
+                'Mobile banking app',
+                'Fraud detection & prevention',
+                'Regulatory compliance (PCI DSS, SOX)',
               ]}
               pricing="$50,000-300,000"
               marketSize="$8.2B digital banking market"
@@ -67,12 +67,12 @@ export default function FinTechPage() {
               title="Payment Processing Gateway"
               description="Secure payment processing with support for multiple payment methods, currencies, and global transactions."
               features={[
-                "Multi-payment method support",
-                "Global currency processing",
-                "Fraud prevention & detection",
-                "PCI DSS compliance",
-                "Real-time transaction monitoring",
-                "API integration & webhooks"
+                'Multi-payment method support',
+                'Global currency processing',
+                'Fraud prevention & detection',
+                'PCI DSS compliance',
+                'Real-time transaction monitoring',
+                'API integration & webhooks',
               ]}
               pricing="$25,000-150,000"
               marketSize="$89.2B payment processing market"
@@ -82,12 +82,12 @@ export default function FinTechPage() {
               title="Cryptocurrency Exchange"
               description="Secure cryptocurrency trading platform with advanced security, liquidity management, and regulatory compliance."
               features={[
-                "Multi-cryptocurrency support",
-                "Advanced trading features",
-                "Cold storage security",
-                "KYC/AML compliance",
-                "Liquidity management",
-                "Real-time market data"
+                'Multi-cryptocurrency support',
+                'Advanced trading features',
+                'Cold storage security',
+                'KYC/AML compliance',
+                'Liquidity management',
+                'Real-time market data',
               ]}
               pricing="$100,000-500,000"
               marketSize="$1.2T cryptocurrency market"
@@ -97,12 +97,12 @@ export default function FinTechPage() {
               title="Peer-to-Peer Lending Platform"
               description="P2P lending marketplace connecting borrowers and lenders with automated risk assessment and loan management."
               features={[
-                "Automated risk assessment",
-                "Loan origination system",
-                "Payment processing",
-                "Credit scoring algorithms",
-                "Investor dashboard",
-                "Regulatory compliance"
+                'Automated risk assessment',
+                'Loan origination system',
+                'Payment processing',
+                'Credit scoring algorithms',
+                'Investor dashboard',
+                'Regulatory compliance',
               ]}
               pricing="$75,000-400,000"
               marketSize="$67.9B P2P lending market"
@@ -112,12 +112,12 @@ export default function FinTechPage() {
               title="Investment Management Platform"
               description="Robo-advisor and investment management platform with portfolio optimization and automated rebalancing."
               features={[
-                "Robo-advisory algorithms",
-                "Portfolio optimization",
-                "Automated rebalancing",
-                "Risk assessment tools",
-                "Tax-loss harvesting",
-                "Performance analytics"
+                'Robo-advisory algorithms',
+                'Portfolio optimization',
+                'Automated rebalancing',
+                'Risk assessment tools',
+                'Tax-loss harvesting',
+                'Performance analytics',
               ]}
               pricing="$40,000-200,000"
               marketSize="$1.4T robo-advisor market"
@@ -127,12 +127,12 @@ export default function FinTechPage() {
               title="Insurance Technology (InsurTech)"
               description="Digital insurance platform with automated underwriting, claims processing, and risk assessment."
               features={[
-                "Automated underwriting",
-                "Claims processing automation",
-                "Risk assessment algorithms",
-                "Policy management system",
-                "Customer portal",
-                "Regulatory compliance"
+                'Automated underwriting',
+                'Claims processing automation',
+                'Risk assessment algorithms',
+                'Policy management system',
+                'Customer portal',
+                'Regulatory compliance',
               ]}
               pricing="$60,000-350,000"
               marketSize="$5.4B InsurTech market"
@@ -142,12 +142,12 @@ export default function FinTechPage() {
               title="RegTech & Compliance"
               description="Regulatory technology solutions for compliance monitoring, reporting, and risk management."
               features={[
-                "Automated compliance monitoring",
-                "Regulatory reporting",
-                "Risk assessment tools",
-                "Audit trail management",
-                "Policy management",
-                "Real-time alerts"
+                'Automated compliance monitoring',
+                'Regulatory reporting',
+                'Risk assessment tools',
+                'Audit trail management',
+                'Policy management',
+                'Real-time alerts',
               ]}
               pricing="$30,000-180,000"
               marketSize="$6.3B RegTech market"
@@ -157,12 +157,12 @@ export default function FinTechPage() {
               title="Wealth Management Platform"
               description="Comprehensive wealth management solution with client onboarding, portfolio management, and reporting."
               features={[
-                "Client onboarding automation",
-                "Portfolio management tools",
-                "Performance reporting",
-                "Client communication portal",
-                "Document management",
-                "Compliance monitoring"
+                'Client onboarding automation',
+                'Portfolio management tools',
+                'Performance reporting',
+                'Client communication portal',
+                'Document management',
+                'Compliance monitoring',
               ]}
               pricing="$45,000-250,000"
               marketSize="$1.1T wealth management market"
@@ -172,12 +172,12 @@ export default function FinTechPage() {
               title="Digital Wallet & Mobile Payments"
               description="Secure digital wallet with mobile payment capabilities, loyalty programs, and merchant integration."
               features={[
-                "Mobile payment processing",
-                "Digital wallet management",
-                "Loyalty program integration",
-                "Merchant payment solutions",
-                "Biometric authentication",
-                "Transaction history & analytics"
+                'Mobile payment processing',
+                'Digital wallet management',
+                'Loyalty program integration',
+                'Merchant payment solutions',
+                'Biometric authentication',
+                'Transaction history & analytics',
               ]}
               pricing="$35,000-200,000"
               marketSize="$2.1T mobile payments market"
@@ -187,12 +187,12 @@ export default function FinTechPage() {
               title="Trading & Market Data Platform"
               description="Real-time trading platform with market data feeds, charting tools, and algorithmic trading capabilities."
               features={[
-                "Real-time market data",
-                "Advanced charting tools",
-                "Algorithmic trading",
-                "Order management system",
-                "Risk management tools",
-                "Market analysis tools"
+                'Real-time market data',
+                'Advanced charting tools',
+                'Algorithmic trading',
+                'Order management system',
+                'Risk management tools',
+                'Market analysis tools',
               ]}
               pricing="$80,000-400,000"
               marketSize="$25.6B trading platform market"
@@ -202,12 +202,12 @@ export default function FinTechPage() {
               title="Financial Analytics & BI"
               description="Advanced financial analytics platform with predictive modeling, risk analysis, and business intelligence."
               features={[
-                "Predictive financial modeling",
-                "Risk analysis & assessment",
-                "Business intelligence dashboards",
-                "Real-time reporting",
-                "Data visualization",
-                "Custom analytics development"
+                'Predictive financial modeling',
+                'Risk analysis & assessment',
+                'Business intelligence dashboards',
+                'Real-time reporting',
+                'Data visualization',
+                'Custom analytics development',
               ]}
               pricing="$25,000-150,000"
               marketSize="$4.2B financial analytics market"
@@ -217,12 +217,12 @@ export default function FinTechPage() {
               title="Blockchain Financial Services"
               description="Blockchain-based financial services including DeFi protocols, smart contracts, and tokenization."
               features={[
-                "DeFi protocol development",
-                "Smart contract implementation",
-                "Tokenization services",
-                "Cross-chain integration",
-                "Decentralized identity",
-                "Yield farming platforms"
+                'DeFi protocol development',
+                'Smart contract implementation',
+                'Tokenization services',
+                'Cross-chain integration',
+                'Decentralized identity',
+                'Yield farming platforms',
               ]}
               pricing="$50,000-300,000"
               marketSize="$13.6B DeFi market"
@@ -232,12 +232,12 @@ export default function FinTechPage() {
               title="Credit Scoring & Lending"
               description="AI-powered credit scoring and lending platform with automated decision-making and risk assessment."
               features={[
-                "AI credit scoring models",
-                "Automated loan decisions",
-                "Risk assessment algorithms",
-                "Alternative data analysis",
-                "Fraud detection",
-                "Regulatory compliance"
+                'AI credit scoring models',
+                'Automated loan decisions',
+                'Risk assessment algorithms',
+                'Alternative data analysis',
+                'Fraud detection',
+                'Regulatory compliance',
               ]}
               pricing="$40,000-250,000"
               marketSize="$3.8B credit scoring market"
@@ -247,12 +247,12 @@ export default function FinTechPage() {
               title="Financial Planning & Advisory"
               description="Digital financial planning platform with goal setting, budgeting, and investment advice."
               features={[
-                "Goal-based financial planning",
-                "Budgeting & expense tracking",
-                "Investment recommendations",
-                "Retirement planning tools",
-                "Tax optimization",
-                "Client communication tools"
+                'Goal-based financial planning',
+                'Budgeting & expense tracking',
+                'Investment recommendations',
+                'Retirement planning tools',
+                'Tax optimization',
+                'Client communication tools',
               ]}
               pricing="$30,000-180,000"
               marketSize="$2.7B financial planning market"
@@ -262,12 +262,12 @@ export default function FinTechPage() {
               title="Cross-Border Payments"
               description="International payment processing with currency conversion, compliance, and real-time settlement."
               features={[
-                "Multi-currency support",
-                "Real-time settlement",
-                "Regulatory compliance (AML, KYC)",
-                "Exchange rate optimization",
-                "Transaction tracking",
-                "Risk management"
+                'Multi-currency support',
+                'Real-time settlement',
+                'Regulatory compliance (AML, KYC)',
+                'Exchange rate optimization',
+                'Transaction tracking',
+                'Risk management',
               ]}
               pricing="$60,000-350,000"
               marketSize="$156B cross-border payments market"
@@ -322,12 +322,12 @@ export default function FinTechPage() {
               price="$25,000 - $75,000"
               duration="8-16 weeks"
               features={[
-                "Core financial functionality",
-                "Basic security implementation",
-                "Payment processing integration",
-                "User authentication & authorization",
-                "Compliance framework setup",
-                "Mobile-responsive design"
+                'Core financial functionality',
+                'Basic security implementation',
+                'Payment processing integration',
+                'User authentication & authorization',
+                'Compliance framework setup',
+                'Mobile-responsive design',
               ]}
               bestFor="Startups and new FinTech ventures"
             />
@@ -336,13 +336,13 @@ export default function FinTechPage() {
               price="$75,000 - $300,000"
               duration="16-32 weeks"
               features={[
-                "Full-featured financial platform",
-                "Advanced security & compliance",
-                "Multi-currency support",
-                "Real-time processing",
-                "Advanced analytics & reporting",
-                "Third-party integrations",
-                "24/7 monitoring & support"
+                'Full-featured financial platform',
+                'Advanced security & compliance',
+                'Multi-currency support',
+                'Real-time processing',
+                'Advanced analytics & reporting',
+                'Third-party integrations',
+                '24/7 monitoring & support',
               ]}
               bestFor="Established financial institutions"
               popular={true}
@@ -352,13 +352,13 @@ export default function FinTechPage() {
               price="$300,000+"
               duration="Custom timeline"
               features={[
-                "Bespoke financial solution",
-                "Advanced AI & ML integration",
-                "Blockchain & DeFi features",
-                "White-label customization",
-                "Multi-tenant architecture",
-                "Custom compliance requirements",
-                "Dedicated support team"
+                'Bespoke financial solution',
+                'Advanced AI & ML integration',
+                'Blockchain & DeFi features',
+                'White-label customization',
+                'Multi-tenant architecture',
+                'Custom compliance requirements',
+                'Dedicated support team',
               ]}
               bestFor="Large enterprises and banks"
             />
@@ -371,7 +371,7 @@ export default function FinTechPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Financial Services?</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our FinTech solutions can modernize your financial services, improve efficiency, and drive growth. 
+            Let's discuss how our FinTech solutions can modernize your financial services, improve efficiency, and drive growth.
             Our team has delivered 100+ successful FinTech projects with combined transaction volume of $50B+.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -397,20 +397,20 @@ export default function FinTechPage() {
   );
 }
 
-function FinTechServiceCard({ 
-  title, 
-  description, 
-  features, 
-  pricing, 
-  marketSize, 
-  icon 
-}: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  pricing: string; 
-  marketSize: string; 
-  icon: string; 
+function FinTechServiceCard({
+  title,
+  description,
+  features,
+  pricing,
+  marketSize,
+  icon,
+}: {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+  marketSize: string;
+  icon: string;
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-emerald-300 hover:shadow-lg transition-all duration-200">
@@ -442,20 +442,20 @@ function FeatureCard({ title, description }: { title: string; description: strin
   );
 }
 
-function FinTechPricingCard({ 
-  name, 
-  price, 
-  duration, 
-  features, 
-  bestFor, 
-  popular = false 
-}: { 
-  name: string; 
-  price: string; 
-  duration: string; 
-  features: string[]; 
-  bestFor: string; 
-  popular?: boolean; 
+function FinTechPricingCard({
+  name,
+  price,
+  duration,
+  features,
+  bestFor,
+  popular = false,
+}: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  bestFor: string;
+  popular?: boolean;
 }) {
   return (
     <div className={`relative bg-white border rounded-xl p-8 ${popular ? 'border-emerald-500 shadow-lg' : 'border-gray-200'}`}>
@@ -479,8 +479,8 @@ function FinTechPricingCard({
       <a
         href="tel:+13024640950"
         className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-emerald-600 text-white hover:bg-emerald-700' 
+          popular
+            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
             : 'border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white'
         }`}
       >

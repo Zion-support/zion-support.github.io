@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   keywords = 'AI services, cybersecurity, cloud infrastructure, digital transformation, machine learning, technology solutions, business automation',
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website'
+  type = 'website',
 }) => {
   return (
     <Helmet>
@@ -25,21 +25,21 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index,follow" />
       <link rel="canonical" href={url} />
-      
+
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      
+
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      
+
       {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="publisher" content="Zion Tech Group" />

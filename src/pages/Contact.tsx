@@ -8,13 +8,15 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -30,9 +32,9 @@ const Contact: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -42,13 +44,13 @@ const Contact: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
       variants={containerVariants}
       initial="hidden"
@@ -60,16 +62,28 @@ const Contact: React.FC = () => {
             Contact Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            We're here to help! Reach out to us for any inquiries, support, or partnership opportunities.
+            We're here to help! Reach out to us for any inquiries, support, or
+            partnership opportunities.
           </p>
         </motion.div>
 
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12" variants={itemVariants}>
-          <motion.div className="bg-slate-800 p-8 rounded-lg shadow-lg" variants={itemVariants}>
-            <h2 className="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          variants={itemVariants}
+        >
+          <motion.div
+            className="bg-slate-800 p-8 rounded-lg shadow-lg"
+            variants={itemVariants}
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white">
+              Send Us a Message
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-gray-300 text-sm font-bold mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -84,7 +98,10 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-300 text-sm font-bold mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -99,7 +116,10 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-gray-300 text-sm font-bold mb-2">
+                <label
+                  htmlFor="company"
+                  className="block text-gray-300 text-sm font-bold mb-2"
+                >
                   Company (Optional)
                 </label>
                 <input
@@ -113,7 +133,10 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-300 text-sm font-bold mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-300 text-sm font-bold mb-2"
+                >
                   Message
                 </label>
                 <textarea
