@@ -1,37 +1,14 @@
-export default function About() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>About Us</h1>
-      <p>Learn about Zion Tech Group</p>
-    </main>
-  );
-}
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
-export const metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-  title: "About | Zion Tech Group",
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-export const metadata = {
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-import React from 'react';
-import { Metadata } from 'next';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | Enterprise AI & IT Solutions',
   description: 'Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation.',
   keywords: 'about us, Zion Tech Group, company, mission, values, team, AI services, IT solutions, micro SaaS'
 };
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -128,6 +105,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  )
-}
+  );
 }

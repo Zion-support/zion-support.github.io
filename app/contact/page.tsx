@@ -1,19 +1,13 @@
-export default function Contact() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Contact Us</h1>
-      <p>Get in touch with Zion Tech Group</p>
-    </main>
-  );
-}
 'use client';
 import React, { useState } from 'react';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'Contact Us - Zion Tech Group | Get In Touch',
   description: 'Contact Zion Tech Group for your AI services, IT solutions, and micro SaaS development needs. Get in touch with our expert team today.',
   keywords: 'contact us, get in touch, Zion Tech Group, AI services, IT solutions, micro SaaS, support'
 };
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,49 +15,27 @@ export default function ContactPage() {
     company: '',
     service: '',
     message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setSubmitStatus('success')
-    setIsSubmitting(false)
-    setFormData({ name: '', email: '', company: '', service: '', message: '' })
-  }
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
+    });
   };
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Ready to transform your business? Let's discuss your project and find the perfect solution.
-            </p>
-          </div>
-        </div>
-      </div>
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', company: '', service: '', message: '' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -229,5 +201,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
