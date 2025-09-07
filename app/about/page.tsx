@@ -1,145 +1,109 @@
-export const metadata = {
-  title: "About | Zion Tech Group",
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group | Enterprise AI & IT Solutions',
+  description: 'Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation.',
+  keywords: 'about us, Zion Tech Group, company, mission, values, team, AI services, IT solutions, micro SaaS'
 };
+
 export default function AboutPage() {
   return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="max-w-4xl mx-auto">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          About Zion Tech Group
-        </h1>{" "}
-        <div className="prose prose-lg max-w-none">
-          {" "}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            {" "}
-            We are a technology consulting firm specializing in AI,micro SaaS
-            development,and enterprise IT solutions. Our mission is to help
-            businesses leverage cutting-edge technology to drive growth and
-            efficiency.{" "}
-          </p>{" "}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {" "}
-            <div>
-              {" "}
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Mission
-              </h2>{" "}
-              <p className="text-gray-600 leading-relaxed">
-                {" "}
-                To democratize access to enterprise-grade technology
-                solutions,making AI,cloud infrastructure,and software
-                development accessible to businesses of all sizes.{" "}
-              </p>{" "}
-            </div>{" "}
-            <div>
-              {" "}
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Vision
-              </h2>{" "}
-              <p className="text-gray-600 leading-relaxed">
-                {" "}
-                A world where every business can leverage advanced technology to
-                compete effectively and scale efficiently,regardless of their
-                technical expertise.{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div className="bg-gray-50 rounded-lg p-8 mb-12">
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Values
-            </h2>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {" "}
-              <div className="text-center">
-                {" "}
-                <div className="text-4xl mb-3">🎯</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  Results-Driven
-                </h3>{" "}
-                <p className="text-sm text-gray-600">
-                  We focus on delivering measurable business outcomes
-                </p>{" "}
-              </div>{" "}
-              <div className="text-center">
-                {" "}
-                <div className="text-4xl mb-3">🚀</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">Innovation</h3>{" "}
-                <p className="text-sm text-gray-600">
-                  We stay ahead of technology trends and best practices
-                </p>{" "}
-              </div>{" "}
-              <div className="text-center">
-                {" "}
-                <div className="text-4xl mb-3">🤝</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  Partnership
-                </h3>{" "}
-                <p className="text-sm text-gray-600">
-                  We work as an extension of your team
-                </p>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div className="mb-12">
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Expertise
-            </h2>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {" "}
-              <div className="border border-gray-200 rounded-lg p-6">
-                {" "}
-                <h3 className="font-semibold text-gray-900 mb-3">
-                  AI & Machine Learning
-                </h3>{" "}
-                <ul className="text-gray-600 space-y-2">
-                  {" "}
-                  <li>• Large Language Model (LLM) applications</li>{" "}
-                  <li>• Retrieval-Augmented Generation (RAG)</li>{" "}
-                  <li>• AI agents and automation</li>{" "}
-                  <li>• MLOps and model deployment</li>{" "}
-                </ul>{" "}
-              </div>{" "}
-              <div className="border border-gray-200 rounded-lg p-6">
-                {" "}
-                <h3 className="font-semibold text-gray-900 mb-3">
-                  Cloud & Infrastructure
-                </h3>{" "}
-                <ul className="text-gray-600 space-y-2">
-                  {" "}
-                  <li>• AWS,GCP,and Azure migration</li>{" "}
-                  <li>• Kubernetes and containerization</li>{" "}
-                  <li>• DevOps and CI/CD pipelines</li>{" "}
-                  <li>• Security and compliance</li>{" "}
-                </ul>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-          <div className="text-center">
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
-            </h2>{" "}
-            <p className="text-gray-600 mb-6">
-              {" "}
-              Let's discuss how we can help your business leverage technology
-              for growth.{" "}
-            </p>{" "}
-            <a
-              href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Pioneering the future of technology with innovative solutions that transform businesses and drive digital transformation.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+            <p className="text-lg text-slate-300 mb-6">
+              To empower businesses with cutting-edge technology solutions that drive innovation, 
+              efficiency, and growth. We believe in the transformative power of AI, cloud computing, 
+              and modern software development to solve complex business challenges.
+            </p>
+            <p className="text-lg text-slate-300">
+              Our mission is to make advanced technology accessible and practical for businesses 
+              of all sizes, from startups to enterprise organizations.
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
-              {" "}
-              Contact Us Today{" "}
-            </a>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
-    </div>;
+              Get in Touch
+              <ArrowRightIcon className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+            <p className="text-lg text-slate-300 mb-6">
+              To be the leading provider of micro SaaS products and AI services, creating a 
+              world where technology seamlessly integrates with business operations to deliver 
+              unprecedented value and efficiency.
+            </p>
+            <p className="text-lg text-slate-300">
+              We envision a future where every business has access to enterprise-grade 
+              technology solutions that are both powerful and easy to use.
+            </p>
+          </div>
+        </div>
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold mb-8 text-center">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Innovation",
+                description: "We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve problems.",
+                icon: "💡"
+              },
+              {
+                title: "Quality",
+                description: "We deliver solutions that meet the highest standards of performance, reliability, and user experience.",
+                icon: "⭐"
+              },
+              {
+                title: "Partnership",
+                description: "We work closely with our clients as partners, understanding their unique needs and challenges.",
+                icon: "🤝"
+              }
+            ].map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
+                <p className="text-slate-300">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-8">Ready to Work With Us?</h2>
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how our innovative solutions can help transform your business 
+            and drive your digital transformation goals.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              Get In Touch
+            </a>
+            <a 
+              href="/services" 
+              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

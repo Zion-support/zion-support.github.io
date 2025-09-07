@@ -9,31 +9,24 @@
   "overallStatus": "secure",
   "checks": {
     "npmAudit": {
-      "status": "passed",
-      "vulnerabilities": 0
+      "status": "secure",
+      "vulnerabilities": 0,
+      "message": "No vulnerabilities found"
     },
     "dependencies": {
-      "status": "passed",
-      "outdated": 0
+      "status": "secure",
+      "vulnerablePackages": [],
+      "message": "Dependencies look secure"
     },
-    "securityHeaders": {
-      "status": "passed",
-      "configured": true
+    "sensitiveFiles": {
+      "status": "secure",
+      "foundFiles": [],
+      "message": "No sensitive files found in root"
+    },
+    "environmentVariables": {
+      "status": "secure",
+      "foundSensitiveVars": [],
+      "message": "No sensitive environment variables found"
     }
-  },
-  "summary": {
-    "totalIssues": 0,
-    "fixesApplied": 0
   }
-  "timestamp": "2025-09-06T04:56:16.606Z",
-  "vulnerabilities": [
-    {
-      "file": "/workspace/package.json",
-      "type": "potential_hardcoded_secret",
-      "severity": "high"
-    }
-  "totalVulnerabilities": 1,
-  "highSeverity": 1,
-  "mediumSeverity": 0,
-  "lowSeverity": 0
 }

@@ -10,7 +10,7 @@
       "startTime": "2025-09-04T15:39:44.632Z",
       "status": "success",
       "duration": 27,
-      "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report-1757000384656.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 5\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n"
+      "output": " Starting Health Check...\n Health check completed\n Report saved to: health-check-report-1757000384656.json\n Health Check Summary:\n   - Total checks: 5\n   - OK: 5\n   - Errors: 0\n   - Status: HEALTHY\n System is healthy!\n"
     },
     {
       "name": "Dependency Installation",
@@ -30,7 +30,7 @@
       "startTime": "2025-09-04T15:39:46.195Z",
       "status": "success",
       "duration": 836,
-      "output": "🔒 Starting Security Scan...\n✅ Security scan completed. Report: security-scan-report-1757000387027.json\n"
+      "output": " Starting Security Scan...\n Security scan completed. Report: security-scan-report-1757000387027.json\n"
     },
     {
       "name": "System Health & Dependencies",
@@ -38,7 +38,7 @@
       "tasks": [
         {
           "success": true,
-          "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report-1757000384656.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 5\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n",
+          "output": " Starting Health Check...\n Health check completed\n Report saved to: health-check-report-1757000384656.json\n Health Check Summary:\n   - Total checks: 5\n   - OK: 5\n   - Errors: 0\n   - Status: HEALTHY\n System is healthy!\n",
           "duration": 27
         },
         {
@@ -48,7 +48,7 @@
         },
         {
           "success": true,
-          "output": "🔒 Starting Security Scan...\n✅ Security scan completed. Report: security-scan-report-1757000387027.json\n",
+          "output": " Starting Security Scan...\n Security scan completed. Report: security-scan-report-1757000387027.json\n",
           "duration": 836
         }
       ],
@@ -186,7 +186,7 @@
       "startTime": "2025-09-04T15:39:53.042Z",
       "status": "failed",
       "duration": 898,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⚠ Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services.tsx\" - \"app/services/page.tsx\"\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n  Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n  Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n  Conflicting app and page files were found, please remove the conflicting files to continue:\n    \"pages/index.tsx\" - \"app/page.tsx\"\n    \"pages/services.tsx\" - \"app/services/page.tsx\"\n"
     },
     {
       "name": "Build & Test",
@@ -204,7 +204,7 @@
         },
         {
           "success": false,
-          "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⚠ Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services.tsx\" - \"app/services/page.tsx\"\n",
+          "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n  Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n  Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n  Conflicting app and page files were found, please remove the conflicting files to continue:\n    \"pages/index.tsx\" - \"app/page.tsx\"\n    \"pages/services.tsx\" - \"app/services/page.tsx\"\n",
           "duration": 898
         }
       ],

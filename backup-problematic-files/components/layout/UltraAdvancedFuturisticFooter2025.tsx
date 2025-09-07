@@ -78,18 +78,6 @@ const footerSections: FooterSection[] = [;
 ],
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-],;
-const quickLinks = [;
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },;
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },;
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-],
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
@@ -336,51 +324,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                  >;
-                    Subscribe;
-                  </motion.button>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-        {/* Bottom Bar */}
-        <motion.div;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-gray-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved. | 
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2">
+
                   Privacy Policy
                 </a> | 
                 <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2">
                   Terms of Service
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-4 text-gray-400 text-sm">
-                <span>Powered by</span>
-                <div className="flex items-center space-x-2">
-                  <Brain className="w-4 h-4 text-cyan-400" />
-                  <span>AI Consciousness</span>
-                </div>
-                <span>•</span>
-                <div className="flex items-center space-x-2">
-                  <Atom className="w-4 h-4 text-purple-400" />
-                  <span>Quantum Computing</span>
-                </div>
-                <span>•</span>
-                <div className="flex items-center space-x-2">
-                  <Rocket className="w-4 h-4 text-pink-400" />
-                  <span>Space Technology</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </motion.div>

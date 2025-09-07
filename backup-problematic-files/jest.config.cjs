@@ -1,3 +1,81 @@
+<<<<<<< HEAD
+
+
+module.exports = {;
+  testEnvironmen:t:'jsdom',;
+  setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
+  moduleNameMappin:g:{;
+    '^@/(.*)$':'<rootDir>/$1',;
+  },;
+  testMatc:h:[;
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',;
+    '**/*.(test|spec).(js|jsx|ts|tsx)',;
+  ],;
+  collectCoverageFro:m:[;
+    'components/**/*.{js,jsx,ts,tsx}',;
+    'pages/**/*.{js,jsx,ts,tsx}',;
+    '!**/*.d.ts',;
+    '!**/node_modules/**',;
+  ],;
+  transfor:m:{;
+    '^.+\\.(js|jsx|ts|tsx)$':['babel-jest', { preset:s:['next/babel'] }],;
+  },;
+  moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
+  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;
+};  transform: {
+module.exports = { preset: "ts-jest","" testEnvironment: "jsdom"," globals: {" "ts-jest": { diagnostics: false," isolatedModules: true}},"" setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]," moduleNameMapper: {" "^@/(.*)$": "<rootDir>/src/$1"," "\.(css|less|scss|sass)$": "identity-obj-proxy"},"" testMatch: ["**/__tests__*.(js|jsx|ts|tsx)"," "***.{js,jsx,ts,tsx}"," "!src*.d.ts"," "!src*.stories.{js,jsx,ts,tsx}", ]," coverageThreshold: { global: { branches: 50," functions: 50," lines: 50," statements: 50}}," transform: {" "^.+\.(ts|tsx)$": "ts-jest"," "^.+\.(js|jsx)$": "babel-jest"},"" moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],"" testPathIgnorePatterns: ["/node_modules/"," "/dist/"," "/pages\.disabled/"," "/pages-disabled/"," "/pages\.broken/"," "/pages\.bak/"," "/pages-backup/"," "/pages\.__backup/"," "/src\.pages\.disabled/"," "/src\.disabled/"," "/src/disabled/"," "/tests/integration/", ]};'"'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+module.exports = {
+  preset: 'ts-jest',
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = {}
+<<<<<<< HEAD
+  "preset": 'ts-jest',
+  "testEnvironment": 'jsdom',
+  "globals": {}
+    'ts-jest': {}
+      diagnostics: false,
+      "isolatedModules": true}},
+  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
+  "moduleNameMapper": {}
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
+  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  "coverageThreshold": {}
+    global: {}
+      branches: 50,
+      "functions": 50,
+      "lines": 50,
+      "statements": 50}},
+  "transform": {}
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'},
+  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
+  "testPathIgnorePatterns": ['/node_modules/',]
+    '/dist/',
+    '/pages\\.disabled/',
+    '/pages-disabled/',
+    '/pages\\.broken/',
+    '/pages\\.bak/',
+    '/pages-backup/',
+    '/pages\\.__backup/',
+    '/src\\.pages\\.disabled/',
+    '/src\\.disabled/',
+    '/src/disabled/',
+    '/tests/integration/',
+  ]};
+module.exports = {
+  preset: 'ts-jest',
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -8,119 +86,97 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+module.exports = {
+module.exports = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-    '<rootDir>/out/',
-    '<rootDir>/coverage/',
-    '<rootDir>/src.corrupted/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/src.broken/',
-    '<rootDir>/src.pages.disabled/',
-    '<rootDir>/solutions.disabled/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/components.corrupted/',
-    '<rootDir>/hooks.disabled/',
-    '<rootDir>/lib.disabled/',
-    '<rootDir>/lib.corrupted/',
-    '<rootDir>/zion-os.disabled/',
-    '<rootDir>/zion_academy/',
-    '<rootDir>/contracts.disabled/',
-    '<rootDir>/corrupted-files-backup/',
-    '<rootDir>/corrupted_files_backup_2/',
-    '<rootDir>/cypress.disabled/',
-    '<rootDir>/cypress_backup/',
-    '<rootDir>/data/',
-    '<rootDir>/e2e/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/pages.disabled_backup/',
-    '<rootDir>/pages_backup/',
-    '<rootDir>/pages.disabled_full/',
-    '<rootDir>/pages_backup_before_cleanup/',
-    '<rootDir>/pages_backup_conflicts/',
-    '<rootDir>/pages.bak/',
-    '<rootDir>/pages.broken/',
-    '<rootDir>/pages.corrupted.*/',
-    '<rootDir>/pages._quarantine/',
-    '<rootDir>/pages._archive_corrupted/',
-    '<rootDir>/pages-quarantine/',
-    '<rootDir>/pages.blog.disabled/',
-    '<rootDir>/pages.disabled_auto/',
-    '<rootDir>/pages_api.disabled/',
-    '<rootDir>/components.disabled_full/',
-    '<rootDir>/components.broken/',
-    '<rootDir>/backup-corrupted-files/',
-    '<rootDir>/lib.broken/',
-    '<rootDir>/data.disabled/',
-    '<rootDir>/test_build/',
-    '<rootDir>/server/',
-    '<rootDir>/types/',
-    '<rootDir>/temp-backup/',
-    '<rootDir>/temp_backup/',
-    '<rootDir>/temp_broken_files/',
-    '<rootDir>/temp_working/',
-    '<rootDir>/tests.disabled/',
-    '<rootDir>/supabase/',
-    '<rootDir>/deployments/',
-    '<rootDir>/pages.__backup/',
-    '<rootDir>/pages-disabled/',
-    '<rootDir>/src/',
-    '<rootDir>/automation/',
-    '<rootDir>/automation_backup/',
-    '<rootDir>/data_backup/',
-    '<rootDir>/pm2-automation/',
-    '<rootDir>/scripts/',
-    '<rootDir>/tests/',
-    '<rootDir>/test-results/',
-    '<rootDir>/test-reports/',
-    '<rootDir>/api/',
-    '<rootDir>/api.disabled/',
-    '<rootDir>/api.disabled.temp/',
-    '<rootDir>/disabled-api/',
-  ],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^@/components/(.*)$': '<rootDir>/components/$1',
-    '^@/lib/(.*)$': '<rootDir>/lib/$1',
-    '^@/utils/(.*)$': '<rootDir>/utils/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/types/(.*)$': '<rootDir>/types/$1',
-  },
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'lib/**/*.{js,jsx,ts,tsx}',
-    'hooks/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!**/.next/**',
-    '!**/dist/**',
-    '!**/build/**',
-    '!**/out/**',
-    '!**/coverage/**',
-  ],
   testMatch: [
-    '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/out/',
+    '/dist/',
+    '/recovered-branches/',
+    '/src_backup/',
+    '/e2e/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}'
+  ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1'
+  },
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
   transformIgnorePatterns: [
+  transformIgnorePatterns: [
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
+<<<<<<< HEAD
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
+=======
 module.exports = createJestConfig(customJestConfig)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> origin/automation-improvements-final
+=======
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+module.exports = createJestConfig(customJestConfig)
+module.exports = createJestConfig(customJestConfig)
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
+  transform: {
+    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+};
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

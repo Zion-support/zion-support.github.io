@@ -1,13 +1,12 @@
-import React from 'react';
-
-const PostJob = ({ className }) => {
-  return (
-    <div className={className || ''}>
+return (
+    <div>
       <h1>PostJob</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
+
 }
 }
-}
+<
+
 }

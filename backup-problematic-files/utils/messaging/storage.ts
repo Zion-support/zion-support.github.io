@@ -103,7 +103,6 @@ export function listConversations(_userId: string): InboxItem[] {_const _convers
       return {_conversation: c, _otherParticipant: other, _lastMessage, _unreadCount};
     })
     .sort(_(a, _b) => (b.conversation.lastMessageAt || '').localeCompare(a.conversation.lastMessageAt || ''));
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return items
 }
@@ -186,7 +185,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   let conversation: Conversation | undefined
   if (input.conversationId) {
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
     conversation = conversations.find((c) => c.id === input.conversationId)
   }
   if (!conversation) {

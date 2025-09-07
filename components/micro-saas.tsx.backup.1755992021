@@ -86,7 +86,6 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '10 minutes',
       category: 'Development & DevOps'
-<<<<<<< HEAD
 =======
     },
     {
@@ -632,27 +631,6 @@ export default function MicroSaasPage() {
                 <div className="flex items-center text-green-400">
                   <Check className="w-4 h-4 mr-2" />
                   <span>Single sign-on access</span>
-=======
-            <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12">
-              75+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring, 
-              SEO automation, chatbots, business intelligence, email marketing, social media management, 
-              customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation, 
-              HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics, 
-              market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards, 
-              meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization, 
-              predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization, 
-              email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics,
-              product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, lead generation, 
-              churn prediction, and advanced analytics. Focused, affordable solutions that deliver specific value 
-              without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
-            </p>
-            
-            {/* Domain Information */}
-                          <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 mb-12 max-w-4xl mx-auto">
-                <div className="flex items-center justify-center mb-4">
-                  <Globe className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">All 75+ Services Available on Zion Tech Group Domain</h3>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-website-improvements-05c6
                 </div>
                 <div className="flex items-center text-green-400">
                   <Check className="w-4 h-4 mr-2" />
@@ -681,12 +659,7 @@ export default function MicroSaasPage() {
                 size="lg"
                 className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
               >
-<<<<<<< HEAD
                 View Pricing
-=======
-                View All 75 Services
-                <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-website-improvements-05c6
               </Button>
             </div>
           </div>

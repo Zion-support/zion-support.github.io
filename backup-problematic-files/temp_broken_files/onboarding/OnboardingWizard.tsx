@@ -1,12 +1,4 @@
- ;
-}];
-const talentSteps: WizardStep[] = [ ;
-};
-skipText: "Skip for now",
-};"}];";": index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light") ;"}/>) ) ";"}</div> </div> </div> </CardContent> <CardFooter className="flex flex-col space-y-2" > <Button >{;
-  steps[currentStep]?.action.text ;"}</Button> {";"  steps[currentStep]?.skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick={;
-  handleSkip ;
-}>{;
-  steps[currentStep]?.skipText ;
-}</Button>) ;
-}</CardFooter> </Card>) ;"}"
+<Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
+      <CardHeader>;
+        <CardTitle className="text-center text-white">;
+          {type === 'client' ? ;

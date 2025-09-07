@@ -1,63 +1,56 @@
 import React from 'react';
-import Image from 'next/image';
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+export default OptimizedImage;
+
+  );
+};
+
+export default OptimizedImage;
 
 interface OptimizedImageProps {
-
-  src: string, alt: string,
-  width?: number;
-  height?: number;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
   className?: string;
+
   priority?: boolean;
-  sizes?: string;
   quality?: number;
-  fill?: boolean;
-  style?: React.CSSProperties;
+  sizes?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
-  className = '',
-  priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style
-}) => {
-  if (fill) {
+
+}
     return (
-      <Image
+      <Image;
         src={src}
         alt={alt}
-        fill
-        className={className}
+        fill;
+        className={class_name}
         priority={priority}
         sizes={sizes}
         quality={quality}
         style={style}
-      />
-    );
-  }
 
-    <Image
       src={src}
-      alt={alt}
 
-      width={width || 800}
-      height={height || 600}
+      alt={alt}
+      width={width}
+      height={height}
       className={className}
       priority={priority}
-      sizes={sizes}
-<<<<<<< HEAD
-quality={quality}
-      style={style}
-=======
-      quality={quality}
-      style={style}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      sizes={sizes}
+      quality={quality}
+
+    />
   );
 };
 

@@ -17,7 +17,7 @@ export default function MicroSaasPage() {
         'SEO-optimized content generationMulti-language support (15+ languages)Brand voice customizationContent templates library (100+ templates)Plagiarism-free writing guaranteeAdvanced content analyticsTeam collaboration toolsAPI access for integrations'
       ],
       popular: true,
-      icon: '📝',
+      icon: '',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://contentgen.ziontechgroup.com',
@@ -36,7 +36,7 @@ export default function MicroSaasPage() {
         'Component library managementDesign token automationStyle guide generationDesign-to-code workflowTeam collaboration toolsVersion control & historyDesign system analyticsIntegration with Figma, Sketch, Adobe XD'
       ],
       popular: false,
-      icon: '🎨',
+      icon: '',
       color: 'from-violet-500 to-purple-600',
       textColor: 'text-violet-400',
       link: 'https://design.ziontechgroup.com',
@@ -55,7 +55,7 @@ export default function MicroSaasPage() {
         'Performance metrics trackingError monitoring & alertingUser experience analyticsAutomated optimizationCustom dashboardsReal-time alertsPerformance budgetsIntegration with popular frameworks'
       ],
       popular: false,
-      icon: '📱',
+      icon: '',
       color: 'from-amber-500 to-orange-600',
       textColor: 'text-amber-400',
       link: 'https://monitor.ziontechgroup.com',
@@ -75,7 +75,7 @@ export default function MicroSaasPage() {
         'Intelligent organizationAdvanced searchKnowledge graphsCollaboration toolsIntegration capabilitiesAnalytics & reportingMobile app accessAPI access'
       ],
       popular: false,
-      icon: '📚',
+      icon: '',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-knowledge-base',
@@ -95,7 +95,7 @@ export default function MicroSaasPage() {
         'AI-powered personalizationAdvanced automation workflowsBehavioral targetingA/B testing automationPredictive analyticsAdvanced segmentationRevenue attributionIntegration with major platforms'
       ],
       popular: true,
-      icon: '📧',
+      icon: '',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       link: 'https://ziontechgroup.com/ai-email-marketing-pro',
@@ -115,7 +115,7 @@ export default function MicroSaasPage() {
         'AI keyword researchContent optimizationTechnical SEO auditRanking trackingCompetitor analysisLocal SEO toolsSchema markup generatorPerformance reporting'
       ],
       popular: true,
-      icon: '🔍',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-seo-suite',
@@ -135,7 +135,7 @@ export default function MicroSaasPage() {
         'AI content generationSmart schedulingPerformance analyticsHashtag optimizationCompetitor monitoringMulti-platform managementContent calendarTeam collaboration'
       ],
       popular: false,
-      icon: '📱',
+      icon: '',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup.com/ai-social-media-manager',
@@ -155,7 +155,7 @@ export default function MicroSaasPage() {
         'Conversion funnel analysisCustomer behavior trackingProduct performance insightsA/B testing toolsRevenue attributionCustomer lifetime valuePredictive analyticsIntegration with major platforms'
       ],
       popular: false,
-      icon: '🛒',
+      icon: '',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-ecommerce-analytics',
@@ -175,7 +175,7 @@ export default function MicroSaasPage() {
         'Natural language processingMulti-language supportTicket automationKnowledge base integrationEscalation managementPerformance analyticsCustom brandingIntegration with help desks'
       ],
       popular: false,
-      icon: '🤖',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-customer-support-bot',
@@ -195,7 +195,7 @@ export default function MicroSaasPage() {
         'AI task prioritizationResource optimizationProgress trackingRisk assessmentTeam collaborationTime trackingReporting & analyticsIntegration with popular tools'
       ],
       popular: false,
-      icon: '📋',
+      icon: '',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-project-management',
@@ -215,7 +215,7 @@ export default function MicroSaasPage() {
         'AI-powered budgetingFinancial forecastingCash flow analysisExpense trackingFinancial reportingTax planningInvestment analysisIntegration with accounting software'
       ],
       popular: false,
-      icon: '💰',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-financial-planning',
@@ -235,7 +235,7 @@ export default function MicroSaasPage() {
         'AI content ideationSmart schedulingPerformance trackingContent templatesTeam collaborationMulti-platform publishingAnalytics & insightsIntegration with CMS platforms'
       ],
       popular: false,
-      icon: '📅',
+      icon: '',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-content-calendar',
@@ -255,7 +255,7 @@ export default function MicroSaasPage() {
         'Real-time monitoringPerformance alertsRoot cause analysisCapacity planningCustom dashboardsAPI monitoringMobile app monitoringIntegration with DevOps tools'
       ],
       popular: false,
-      icon: '📊',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-performance-monitoring',
@@ -275,7 +275,7 @@ export default function MicroSaasPage() {
         'AI chart recommendationsInteractive dashboardsReal-time data updatesCustom brandingExport capabilitiesTeam collaborationMobile responsivenessAPI integration'
       ],
       popular: false,
-      icon: '📈',
+      icon: '',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-data-visualization',
@@ -295,7 +295,7 @@ export default function MicroSaasPage() {
         'Interactive product toursProgress trackingPersonalized guidanceSuccess metricsIntegration with productsAnalytics & reportingCustom workflowsMulti-language support'
       ],
       popular: false,
-      icon: '🚀',
+      icon: '',
       color: 'from-emerald-500 to-teal-600',
       textColor: 'text-emerald-400',
       link: 'https://ziontechgroup.com/ai-customer-onboarding',
@@ -315,7 +315,7 @@ export default function MicroSaasPage() {
         'Statistical significance testingAI optimization suggestionsMultivariate testingReal-time resultsIntegration capabilitiesAdvanced analyticsCustom goalsTeam collaboration'
       ],
       popular: false,
-      icon: '🧪',
+      icon: '',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-ab-testing-platform',
@@ -335,7 +335,7 @@ export default function MicroSaasPage() {
         'Multi-channel feedback collectionAI sentiment analysisFeedback categorizationAction item trackingIntegration with toolsReal-time dashboardsTeam collaborationExport capabilities'
       ],
       popular: false,
-      icon: '💬',
+      icon: '',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup.com/ai-customer-feedback-hub',
@@ -355,7 +355,7 @@ export default function MicroSaasPage() {
         'Demand forecastingSeasonal analysisSupplier optimizationCost optimizationReal-time trackingIntegration with ERP systemsMobile app accessAdvanced analytics'
       ],
       popular: false,
-      icon: '📦',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',
@@ -375,7 +375,7 @@ export default function MicroSaasPage() {
         'AI prospect discoveryLead qualificationContact enrichmentIntegration with CRM systemsCampaign automationPerformance analyticsTeam collaborationExport capabilities'
       ],
       popular: true,
-      icon: '🎯',
+      icon: '',
       color: 'from-emerald-500 to-teal-600',
       textColor: 'text-emerald-400',
       link: 'https://ziontechgroup.com/ai-lead-generation',
@@ -395,7 +395,7 @@ export default function MicroSaasPage() {
         'Churn risk scoringBehavioral analysisRetention recommendationsEarly warning alertsIntegration with CRM systemsPerformance analyticsTeam collaborationCustom models'
       ],
       popular: false,
-      icon: '📉',
+      icon: '',
       color: 'from-red-500 to-pink-600',
       textColor: 'text-red-400',
       link: 'https://ziontechgroup.com/ai-churn-prediction',
@@ -412,7 +412,7 @@ export default function MicroSaasPage() {
         'AI demand forecastingAutomated reorder pointsInventory optimizationMulti-location managementSupplier performance trackingCost optimizationReal-time analyticsIntegration with e-commerce platforms'
       ],
       popular: false,
-      icon: '📦',
+      icon: '',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       link: 'https://ziontechgroup.com/ai-inventory-management',
@@ -429,7 +429,7 @@ export default function MicroSaasPage() {
         'AI sentiment analysisTrend predictionContent performance analysisCompetitor benchmarkingOptimal posting timeHashtag optimizationROI trackingMulti-platform analytics'
       ],
       popular: false,
-      icon: '📊',
+      icon: '',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-social-media-analytics',
@@ -446,7 +446,7 @@ export default function MicroSaasPage() {
         'AI-powered insightsSupport performance analyticsCustomer satisfaction trackingResponse time optimizationSupport ticket analysisAgent performance metricsAutomated reportingIntegration with support tools'
       ],
       popular: false,
-      icon: '📞',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-support-analytics',
@@ -463,7 +463,7 @@ export default function MicroSaasPage() {
         'AI performance analysisAutomated optimizationSpeed testing & monitoringSEO optimizationMobile optimizationCore Web Vitals trackingPerformance analyticsIntegration with analytics tools'
       ],
       popular: true,
-      icon: '⚡',
+      icon: '',
       color: 'from-yellow-500 to-orange-600',
       textColor: 'text-yellow-400',
       link: 'https://ziontechgroup.com/ai-website-optimizer',
@@ -480,7 +480,7 @@ export default function MicroSaasPage() {
         'AI sentiment analysisFeedback categorizationTrend identificationAutomated insightsAction recommendationsReal-time monitoringIntegration with feedback toolsCustom reporting'
       ],
       popular: false,
-      icon: '💭',
+      icon: '',
       color: 'from-purple-500 to-violet-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-feedback-sentiment',
@@ -497,7 +497,7 @@ export default function MicroSaasPage() {
         'AI-powered segmentationIntelligent personalizationAutomated workflowsA/B testing automationSend time optimizationPerformance analyticsTemplate optimizationIntegration with marketing tools'
       ],
       popular: true,
-      icon: '📧',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-email-automation',
@@ -514,7 +514,7 @@ export default function MicroSaasPage() {
         'AI journey mappingTouchpoint analysisOptimization recommendationsPerformance trackingCustomer behavior insightsJourney analyticsIntegration with analytics toolsCustom reporting'
       ],
       popular: false,
-      icon: '🗺️',
+      icon: '',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-customer-journey',
@@ -531,7 +531,7 @@ export default function MicroSaasPage() {
         'AI competitive monitoringMarket analysisStrategy insightsPerformance benchmarkingTrend identificationAutomated alertsCustom reportingIntegration with analytics tools'
       ],
       popular: false,
-      icon: '🔍',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-competitive-intelligence',
@@ -548,7 +548,7 @@ export default function MicroSaasPage() {
         'AI CLV predictionOptimization strategiesCustomer segmentationRetention optimizationUpselling automationPerformance analyticsIntegration with CRMCustom reporting'
       ],
       popular: false,
-      icon: '💰',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-clv-optimization',
@@ -566,7 +566,7 @@ export default function MicroSaasPage() {
         'AI contract analysisRisk assessment & scoringCompliance checkingAutomated legal reviewContract template libraryVersion control & trackingIntegration with legal toolsCustom compliance rules'
       ],
       popular: true,
-      icon: '⚖️',
+      icon: '',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       link: 'https://ziontechgroup.com/ai-contract-analysis',
@@ -583,7 +583,7 @@ export default function MicroSaasPage() {
         'AI sales forecastingPipeline optimizationRevenue predictionSales trend analysisPerformance benchmarkingCustom forecasting modelsIntegration with CRM systemsReal-time analytics dashboard'
       ],
       popular: true,
-      icon: '📈',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-sales-forecasting',
@@ -600,7 +600,7 @@ export default function MicroSaasPage() {
         'AI sentiment analysisSupport performance trackingCustomer satisfaction metricsResponse time optimizationAgent performance analyticsAutomated insightsIntegration with support toolsCustom reporting dashboards'
       ],
       popular: false,
-      icon: '📊',
+      icon: '',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-customer-service-analytics',
@@ -617,7 +617,7 @@ export default function MicroSaasPage() {
         'AI recommendation algorithmsPersonalized suggestionsBehavioral analysisConversion optimizationA/B testing automationReal-time recommendationsIntegration with e-commerce platformsPerformance analytics'
       ],
       popular: true,
-      icon: '🎯',
+      icon: '',
       color: 'from-purple-500 to-violet-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-product-recommendations',
@@ -634,7 +634,7 @@ export default function MicroSaasPage() {
         'AI fraud detectionReal-time monitoringRisk assessmentAutomated threat responsePattern recognitionCompliance reportingIntegration with payment systemsCustom security rules'
       ],
       popular: false,
-      icon: '🛡️',
+      icon: '',
       color: 'from-red-500 to-pink-600',
       textColor: 'text-red-400',
       link: 'https://ziontechgroup.com/ai-fraud-detection',
@@ -651,7 +651,7 @@ export default function MicroSaasPage() {
         'AI demand forecastingInventory optimizationAutomated reorderingSeasonal trend analysisSupplier performance trackingCost optimizationIntegration with ERP systemsReal-time analytics'
       ],
       popular: false,
-      icon: '📦',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',
@@ -668,7 +668,7 @@ export default function MicroSaasPage() {
         'AI onboarding personalizationProgress trackingActivation optimizationUser behavior analysisAutomated workflowsIntegration with CRM systemsPerformance analyticsCustom onboarding paths'
       ],
       popular: false,
-      icon: '🚀',
+      icon: '',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://ziontechgroup.com/ai-customer-onboarding',
@@ -685,7 +685,7 @@ export default function MicroSaasPage() {
         'AI deliverability optimizationReal-time monitoringReputation managementSpam filter analysisAuthentication setupPerformance analyticsIntegration with email platformsAutomated improvements'
       ],
       popular: true,
-      icon: '📮',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-email-deliverability',
@@ -702,7 +702,7 @@ export default function MicroSaasPage() {
         'AI content optimizationAutomated schedulingPerformance analyticsHashtag optimizationContent recommendationsMulti-platform managementIntegration with social platformsCustom automation rules'
       ],
       popular: false,
-      icon: '📱',
+      icon: '',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://ziontechgroup.com/ai-social-media-management',
@@ -719,7 +719,7 @@ export default function MicroSaasPage() {
         'AI sentiment analysisTrend identificationActionable insightsFeedback categorizationReal-time monitoringIntegration with feedback toolsCustom reportingAutomated alerts'
       ],
       popular: false,
-      icon: '💭',
+      icon: '',
       color: 'from-purple-500 to-violet-600',
       textColor: 'text-purple-400',
       link: 'https://ziontechgroup.com/ai-customer-feedback-analysis',
@@ -736,7 +736,7 @@ export default function MicroSaasPage() {
         'Professional signature templatesTeam signature managementCompliance monitoringAnalytics & trackingMobile optimizationIntegration with email clientsBrand asset managementA/B testing'
       ],
       popular: false,
-      icon: '✍️',
+      icon: '',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       link: 'https://emailsignature.ziontechgroup.com',
@@ -756,7 +756,7 @@ export default function MicroSaasPage() {
         'Real-time transcriptionAction item extractionMeeting summariesCalendar integrationTeam collaborationSearchable archivesAnalytics dashboardIntegration with Zoom, Teams'
       ],
       popular: false,
-      icon: '🎤',
+      icon: '',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://meetings.ziontechgroup.com',
@@ -776,7 +776,7 @@ export default function MicroSaasPage() {
         'Secure password storageTeam sharing & managementSecurity breach monitoringPassword strength analysisAuto-fill capabilitiesMulti-device syncAdmin controlsIntegration with SSO'
       ],
       popular: false,
-      icon: '🔐',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://passwords.ziontechgroup.com',
@@ -796,7 +796,7 @@ export default function MicroSaasPage() {
         'Automatic time trackingProductivity analyticsProject time allocationTeam collaborationMobile appIntegration with project toolsCustom reportingBilling automation'
       ],
       popular: false,
-      icon: '⏰',
+      icon: '',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://timetracking.ziontechgroup.com',
@@ -816,7 +816,7 @@ export default function MicroSaasPage() {
         'Drag-and-drop builderAI-powered validationConditional logicAdvanced analyticsMulti-language supportMobile optimizationIntegration capabilitiesCustom branding'
       ],
       popular: false,
-      icon: '📝',
+      icon: '',
       color: 'from-purple-500 to-violet-600',
       textColor: 'text-purple-400',
       link: 'https://forms.ziontechgroup.com',
@@ -836,7 +836,7 @@ export default function MicroSaasPage() {
         'Smart scheduling suggestionsConflict detectionProductivity analyticsTeam availability syncIntegration with calendarsMobile appCustom preferencesAnalytics dashboard'
       ],
       popular: false,
-      icon: '📅',
+      icon: '',
       color: 'from-cyan-500 to-blue-600',
       textColor: 'text-cyan-400',
       link: 'https://calendar.ziontechgroup.com',
@@ -856,7 +856,7 @@ export default function MicroSaasPage() {
         'Multi-platform analyticsCompetitor monitoringContent performance trackingAudience insightsAutomated reportingROI measurementTrend analysisIntegration with social platforms'
       ],
       popular: false,
-      icon: '📱',
+      icon: '',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
       link: 'https://socialanalytics.ziontechgroup.com',
@@ -876,7 +876,7 @@ export default function MicroSaasPage() {
         'AI-powered design suggestionsContent optimizationSEO automationMobile-first designTemplate libraryE-commerce integrationAnalytics dashboardCustom domain support'
       ],
       popular: false,
-      icon: '🌐',
+      icon: '',
       color: 'from-emerald-500 to-teal-600',
       textColor: 'text-emerald-400',
       link: 'https://websitebuilder.ziontechgroup.com',
@@ -896,7 +896,7 @@ export default function MicroSaasPage() {
         'Natural language processingMulti-language supportIntegration with support toolsAnalytics dashboardCustom trainingEscalation to humansMobile optimizationAPI access'
       ],
       popular: false,
-      icon: '🤖',
+      icon: '',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://chatbot.ziontechgroup.com',
@@ -916,7 +916,7 @@ export default function MicroSaasPage() {
         'OCR invoice processingData extractionValidation automationApproval workflowsIntegration with accountingMobile app accessCustom reportingMulti-currency support'
       ],
       popular: false,
-      icon: '🧾',
+      icon: '',
       color: 'from-yellow-500 to-orange-600',
       textColor: 'text-yellow-400',
       link: 'https://invoiceprocessing.ziontechgroup.com',
@@ -936,7 +936,7 @@ export default function MicroSaasPage() {
         'Risk identificationImpact assessmentMitigation strategiesReal-time monitoringTeam collaborationReporting dashboardIntegration with PM toolsMobile alerts'
       ],
       popular: false,
-      icon: '⚠️',
+      icon: '',
       color: 'from-red-500 to-pink-600',
       textColor: 'text-red-400',
       link: 'https://riskmanagement.ziontechgroup.com',
@@ -956,7 +956,7 @@ export default function MicroSaasPage() {
         'Personalized onboarding pathsProgress trackingDocument managementTask automationIntegration with HRISMobile app accessAnalytics dashboardCustom workflows'
       ],
       popular: false,
-      icon: '👋',
+      icon: '',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://onboarding.ziontechgroup.com',
@@ -976,7 +976,7 @@ export default function MicroSaasPage() {
         'AI-powered segmentationBehavioral analysisPredictive modelingCampaign automationIntegration with marketing toolsReal-time updatesCustom dashboardsAPI access'
       ],
       popular: false,
-      icon: '🎯',
+      icon: '',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
       link: 'https://customersegmentation.ziontechgroup.com',
@@ -996,7 +996,7 @@ export default function MicroSaasPage() {
         'Demand forecastingInventory optimizationSupplier managementRoute optimizationReal-time trackingAnalytics dashboardIntegration with ERPsMobile app access'
       ],
       popular: false,
-      icon: '🚚',
+      icon: '',
       color: 'from-blue-500 to-cyan-600',
       textColor: 'text-blue-400',
       link: 'https://supplychain.ziontechgroup.com',
@@ -1016,7 +1016,7 @@ export default function MicroSaasPage() {
         'Regulatory monitoringCompliance assessmentRisk identificationAutomated reportingDocument managementIntegration with systemsCustom dashboardsMobile alerts'
       ],
       popular: false,
-      icon: '✅',
+      icon: '',
       color: 'from-emerald-500 to-teal-600',
       textColor: 'text-emerald-400',
       link: 'https://compliance.ziontechgroup.com',
@@ -1036,7 +1036,7 @@ export default function MicroSaasPage() {
         'Performance trackingGoal managementFeedback automationAnalytics dashboardTeam collaborationIntegration with HR toolsCustom reportingMobile app access'
       ],
       popular: false,
-      icon: '📊',
+      icon: '',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://window.window.window.performance.ziontechgroup.com',
@@ -1056,7 +1056,7 @@ export default function MicroSaasPage() {
         'CLV calculationPredictive modelingCustomer scoringCampaign optimizationIntegration with CRMsAnalytics dashboardCustom reportingAPI access'
       ],
       popular: false,
-      icon: '💰',
+      icon: '',
       color: 'from-yellow-500 to-orange-600',
       textColor: 'text-yellow-400',
       link: 'https://clv.ziontechgroup.com',
@@ -1076,217 +1076,7 @@ export default function MicroSaasPage() {
         'Visual workflow builderAI-powered optimizationIntegration capabilitiesAnalytics dashboardTeam collaborationMobile app accessCustom workflowsAPI access'
       ],
       popular: false,
-      icon: '🎯',
-      color: 'from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/ai-powered-customer-segmentation',
-      marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',
-      targetAudience: 'Marketing teams, data analysts, and customer experience professionals'
-    },
-    // New enhanced services
-    {
-      name: 'AI Landing Page Builder',
-      tagline: 'Convert visitors to customers',
-      price: '$59',
-      period: '/month',
-      description: 'AI-powered landing page creation with conversion optimization and A/B testing capabilities.',
-      features: [
-        'AI-powered page generationConversion optimizationA/B testing automationMobile-responsive templatesSEO optimizationAnalytics & heatmapsIntegration with marketing toolsCustom domain support'
-      ],
-      popular: true,
-      icon: '🚀',
-      color: 'from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-landing-page-builder',
-      marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',
-      targetAudience: 'Marketers, agencies, and e-commerce businesses'
-    },
-    {
-      name: 'AI Website Optimizer',
-      tagline: 'Boost your website performance',
-      price: '$49',
-      period: '/month',
-      description: 'AI-powered website optimization for speed, SEO, and conversion rate improvement.',
-      features: [
-        'Performance optimizationSEO enhancementConversion rate optimizationMobile optimizationCore Web Vitals monitoringAutomated fixesPerformance reportingIntegration with analytics'
-      ],
-      popular: false,
-      icon: '⚡',
-      color: 'from-yellow-500 to-orange-600',
-      textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-website-optimizer',
-      marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',
-      targetAudience: 'Web developers, digital marketers, and business owners'
-    },
-    {
-      name: 'AI Churn Prediction Pro',
-      tagline: 'Predict and prevent customer churn',
-      price: '$89',
-      period: '/month',
-      description: 'Advanced AI-powered churn prediction with automated retention strategies and customer insights.',
-      features: [
-        'AI churn prediction modelsBehavioral pattern analysisAutomated retention campaignsCustomer health scoringReal-time alertsROI trackingIntegration with CRMsCustom prediction models'
-      ],
-      popular: false,
-      icon: '📉',
-      color: 'from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/ai-churn-prediction-pro',
-      marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',
-      targetAudience: 'SaaS companies, subscription businesses, and customer success teams'
-    },
-    {
-      name: 'AI Email Deliverability Monitor',
-      tagline: 'Ensure your emails reach inboxes',
-      price: '$39',
-      period: '/month',
-      description: 'Monitor and improve email deliverability with AI-powered insights and automated optimization.',
-      features: [
-        'Deliverability monitoringSender reputation trackingSpam score analysisAutomated optimizationBlacklist monitoringPerformance analyticsIntegration with ESPsReal-time alerts'
-      ],
-      popular: false,
-      icon: '📧',
-      color: 'from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-email-deliverability',
-      marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',
-      targetAudience: 'Email marketers, sales teams, and marketing agencies'
-    },
-    {
-      name: 'AI Customer Journey Mapper',
-      tagline: 'Map and optimize customer experiences',
-      price: '$79',
-      period: '/month',
-      description: 'AI-powered customer journey mapping with behavioral analysis and optimization recommendations.',
-      features: [
-        'Journey mapping automationBehavioral analysisTouchpoint optimizationConversion funnel analysisCustomer segmentationJourney analyticsIntegration with analytics toolsCustom journey templates'
-      ],
-      popular: false,
-      icon: '🗺️',
-      color: 'from-purple-500 to-violet-600',
-      textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ai-customer-journey',
-      marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',
-      targetAudience: 'UX designers, product managers, and customer experience teams'
-    },
-    {
-      name: 'AI Contract Analysis Platform',
-      tagline: 'Intelligent contract review and analysis',
-      price: '$99',
-      period: '/month',
-      description: 'AI-powered contract analysis with risk assessment, compliance checking, and automated insights.',
-      features: [
-        'AI contract reviewRisk assessmentCompliance checkingAutomated insightsContract templatesVersion controlIntegration with legal toolsCustom analysis rules'
-      ],
-      popular: false,
-      icon: '📄',
-      color: 'from-indigo-500 to-purple-600',
-      textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/ai-contract-analysis',
-      marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',
-      targetAudience: 'Legal professionals, contract managers, and compliance officers'
-    },
-    {
-      name: 'AI Sales Forecasting Engine',
-      tagline: 'Predict sales with AI accuracy',
-      price: '$89',
-      period: '/month',
-      description: 'AI-powered sales forecasting with predictive analytics and revenue optimization insights.',
-      features: [
-        'AI sales forecastingPredictive analyticsRevenue optimizationPipeline analysisPerformance trackingCustom forecasting modelsIntegration with CRMsReal-time insights'
-      ],
-      popular: false,
-      icon: '📊',
-      color: 'from-blue-500 to-cyan-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-sales-forecasting',
-      marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',
-      targetAudience: 'Sales managers, revenue operations teams, and business analysts'
-    },
-    {
-      name: 'AI Customer Service Analytics',
-      tagline: 'Optimize customer service performance',
-      price: '$69',
-      period: '/month',
-      description: 'AI-powered analytics for customer service optimization and performance improvement.',
-      features: [
-        'Service performance analyticsCustomer satisfaction trackingResponse time optimizationAgent performance metricsAutomated insightsIntegration with help desksCustom reportingReal-time monitoring'
-      ],
-      popular: false,
-      icon: '🎧',
-      color: 'from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/ai-customer-service-analytics',
-      marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',
-      targetAudience: 'Customer service managers, support teams, and operations managers'
-    },
-    {
-      name: 'AI Product Recommendation Engine',
-      tagline: 'Boost sales with intelligent recommendations',
-      price: '$79',
-      period: '/month',
-      description: 'AI-powered product recommendation engine for e-commerce and content platforms.',
-      features: [
-        'AI recommendation algorithmsPersonalized suggestionsBehavioral analysisA/B testingPerformance analyticsIntegration with e-commerce platformsCustom recommendation rulesReal-time optimization'
-      ],
-      popular: false,
-      icon: '🎯',
-      color: 'from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/ai-product-recommendations',
-      marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',
-      targetAudience: 'E-commerce businesses, content platforms, and digital marketers'
-    },
-    {
-      name: 'AI Fraud Detection System',
-      tagline: 'Protect your business from fraud',
-      price: '$119',
-      period: '/month',
-      description: 'AI-powered fraud detection with real-time monitoring and automated prevention measures.',
-      features: [
-        'Real-time fraud detectionAI risk assessmentAutomated preventionTransaction monitoringCustom fraud rulesPerformance analyticsIntegration with payment systems24/7 monitoring'
-      ],
-      popular: false,
-      icon: '🛡️',
-      color: 'from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/ai-fraud-detection',
-      marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',
-      targetAudience: 'E-commerce businesses, financial institutions, and online platforms'
-    },
-    {
-      name: 'AI Inventory Forecasting',
-      tagline: 'Optimize inventory with AI predictions',
-      price: '$89',
-      period: '/month',
-      description: 'AI-powered inventory forecasting with demand prediction and optimization recommendations.',
-      features: [
-        'AI demand forecastingInventory optimizationSeasonal trend analysisAutomated reorderingCost optimizationIntegration with ERP systemsCustom forecasting modelsReal-time insights'
-      ],
-      popular: false,
-      icon: '📦',
-      color: 'from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-inventory-forecasting',
-      marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',
-      targetAudience: 'Retail businesses, manufacturers, and supply chain managers'
-    },
-    {
-      name: 'AI Social Media Automation',
-      tagline: 'Automate your social media presence',
-      price: '$49',
-      period: '/month',
-      description: 'AI-powered social media automation with content scheduling and engagement optimization.',
-      features: [
-        'AI content schedulingEngagement optimizationMulti-platform managementContent calendarPerformance analyticsHashtag optimizationIntegration with design toolsAutomated responses'
-      ],
-      popular: false,
-      icon: '📱',
-      color: 'from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-social-media-automation',
-      marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',
-      targetAudience: 'Social media managers, marketers, and content creators'
+
     }
   ],;
 ;
@@ -1317,32 +1107,30 @@ export default function MicroSaasPage() {
 
   const competitiveAdvantages = [
     {
-      title: &quot;Specialized Focus&quot;,
-      description: &quot;Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.&quot;,
-      icon: &quot;🎯&quot;
+
     },
     {
-      icon: '💰',
+      icon: '',
       title: 'Transparent Pricing',
       description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
     },
     {
-      icon: '🔒',
+      icon: '',
       title: 'Enterprise Security',
       description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
     },
     {
-      icon: '🎯',
+      icon: '',
       title: 'Focused Solutions',
       description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
     },
     {
-      icon: '📱',
+      icon: '',
       title: 'Mobile First',
       description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
     },
     {
-      icon: '🔄',
+      icon: '',
       title: 'Seamless Integration',
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
     }
@@ -1383,8 +1171,7 @@ export default function MicroSaasPage() {
               Specialized Tools for
               <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400&quot;> Every Business Need</span>
             </h1>
-            <p className=&quot;text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12&quot;>
-              65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring, 
+
               SEO automation, chatbots, business intelligence, email marketing, social media management, 
               customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation, 
               HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics, 
@@ -1392,8 +1179,7 @@ export default function MicroSaasPage() {
               meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization, 
               predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization, 
               email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics,
-              product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection,
-              inventory forecasting, and more. Focused, affordable solutions that deliver specific value 
+
               without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
             </p>
             

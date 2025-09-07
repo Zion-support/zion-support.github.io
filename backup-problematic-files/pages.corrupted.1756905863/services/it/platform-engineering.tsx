@@ -6,11 +6,10 @@ interface Platform-engineeringProps {
 }
 
 const Platform-engineering: React.FC<Platform-engineeringProps> = ({ className }) => {
+
   return (
     <div className={className || ''}>
       <h1>Platform-engineering</h1>
       <p>This component is under development.</p>
     </div>
   );
-}
-}

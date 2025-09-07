@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-<<<<<<< HEAD
 =======
 import FuturisticNavigation from './FuturisticNavigation';
 import FuturisticFooter from './FuturisticFooter';
@@ -41,14 +40,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <main className="col-span-12 md:col-span-9 lg:col-span-10">
         {children}
       </main>
-=======
-    <div className="min-h-screen bg-black text-white">
-      <FuturisticNavigation />
-      <main className="pt-32 lg:pt-36">
-        {children}
-      </main>
-      <FuturisticFooter />
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1c42
     </div>
   );
 }

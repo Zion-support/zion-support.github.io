@@ -1,3 +1,69 @@
+import React from 'react';
+
+const researchAreas = [
+  {
+    title: 'Artificial Intelligence',
+    description: 'Advancing the frontiers of AI through cutting-edge research',
+    focus: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing']
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Pioneering quantum algorithms and quantum machine learning',
+    focus: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation']
+  },
+  {
+    title: 'Autonomous Systems',
+    description: 'Developing self-managing and adaptive systems',
+    focus: ['Autonomous Agents', 'Self-Healing Systems', 'Adaptive Learning', 'Distributed Intelligence']
+  },
+  {
+    title: 'Human-AI Collaboration',
+    description: 'Enhancing human capabilities through AI partnership',
+    focus: ['Augmented Intelligence', 'Human-AI Interfaces', 'Collaborative AI', 'Ethical AI']
+  }
+];
+
+export default function ResearchPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Research & Development
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pushing the boundaries of technology through innovative research and development initiatives.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {researchAreas.map((area, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
+              <p className="text-gray-600 mb-6">{area.description}</p>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Focus:</h4>
+                <ul className="space-y-2">
+                  {area.focus.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center">
+                      <span className="text-blue-600 mr-3">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Join Our Research Team</h2>
+          <p className="text-lg text-gray-600 mb-6">
+            We're always looking for talented researchers and engineers to join our mission of advancing technology.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            View Open Positions
+          </button>
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -113,15 +179,9 @@ const academicPartners = [
     focus: 'Robotics & Autonomous Systems',
     collaboration: 'Robotic learning and human-robot interaction'}]
 
-<<<<<<< HEAD
-export default function ResearchPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
-const Page: React.FC<PageProps> = ({ className }) => {
+export default function ResearchPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -139,6 +199,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>
         </div>
       </div>
+
       {/* Research Focus Areas */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -174,17 +235,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Recent Research
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -224,17 +278,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Research Impact */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Impact</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -255,17 +302,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Academic Collaborations */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Academic Partnerships
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -301,15 +341,9 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -331,6 +365,4 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}

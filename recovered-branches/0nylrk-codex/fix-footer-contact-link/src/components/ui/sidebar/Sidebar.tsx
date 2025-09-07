@@ -1,41 +1,123 @@
+import React from "react",
 
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-=======
+import { cn } from "@/lib/utils",
+
+;
+  className?: string;
+
 import React from "react",
 import { cn } from "@/lib/utils",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+  children?: React && React.ReactNode;
+}
+
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
+  return (
+    <div
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
+  return (
+    <div;
+      className={cn(;"
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
+
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
+
+  children?: React && React.ReactNode;
 }
 
-export function Sidebar({ className, children, ...props }: SidebarProps) {
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
-<<<<<<< HEAD
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
+  return (
+    <div
+
       className={cn(;
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
+
         className
-=======
+        className
+
       className={cn(
-        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200",
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
+
+import { cn } from "@/lib/utils";
 import React from "react",;
+import { cn } from "@/lib/utils",;
+import {cn} from "@/lib/utils";
+import React from "react",;
+import { cn } from "@/lib/utils",;
+
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+
+  children?: React && React.ReactNode;
+
+}
+
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
+  return (
+    <div
+
+      className={cn(;
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
+
+        className
+
+        className
+
+import React from "react",;
+
 import { cn } from "@/lib/utils",;
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
   children?: React.ReactNode;
 }
 ;
-export function Sidebar({ className, children, ...props }: SidebarProps) {;
-  return (;
+
+        className
+
+      )}
+      {...props}>;
+      {children}
+
+import React from './react';
+
+import { cn } from '@/lib / utils';
+interface SidebarProps extends React.HTMLAttributes < HTMLDivElement> {}
+  class_name?: string;
+  children?: React.ReactNode;
+}
+export /**;
+ * Sidebar - Function description;
+ */
+function Sidebar() {}
+  return (
     <div;
-      className={cn(;
-        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
-        className;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      className={cn ("
+
+  cn () 
+}{
+  ...props;
+}> {
+}</div>) 
+}
       )}
       {...props}
     >

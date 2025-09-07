@@ -1,38 +1,31 @@
-<<<<<<< HEAD
-import React from 'react';
-};
-import React, { Suspense, lazy } from 'react';
-
-=======
-import React from 'react'
-};
-import React, { Suspense, lazy } from 'react';
-
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface LazyComponentProps {
-  component: ComponentType<Record<string, unknown>>;
-  fallback?: ReactNode;
-  [key: string]: unknown,
+  fallback?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  component: Component, 
-  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,
-  ...props
+  fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
+  children 
+}) => {
   return (
     <Suspense fallback={fallback}>
-      <Component {...props} />
+      {children}
     </Suspense>
   );
 };
 
 export default LazyComponent;
-<<<<<<< HEAD
-import React from 'react',;
-},
 
-=======
+interface LazyComponentProps {
+  children: ReactNode;
+  fallback?: ReactNode;
 
+  return (
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
+};
+
+export default LazyComponent;

@@ -1,55 +1,83 @@
-import * as React from "react"
-import * as LabelPrimitive from "@radix-ui/react-label"
-<<<<<<< HEAD
-import {cva, type, VariantProps} from "class-variance-authority"
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
 
-import {cn} from "@/lib/utils"
-=======
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva, type, VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-const labelVariants = cva(
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
-)
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
+);
 
 const Label = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ElementRef<typeof LabelPrimitive.Root>
+
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
     VariantProps<typeof labelVariants>
 >(({ className, ...props }, ref) => (
-  <LabelPrimitive.Root
-<<<<<<< HEAD
-    ref={ref}
-    className={cn(labelVariants(), className)}
-    {...props}
-  />
-))
-Label.displayName = LabelPrimitive.Root.displayName
 
-export { Label };
-;
-=======
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
-const labelVariants = cva(;
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
-);
-const Label = React.forwardRef<;
-  React.ElementRef<typeof LabelPrimitive.Root>;
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &;
-    VariantProps<typeof labelVariants>;
->(({ className, ...props }, ref) => (;
   <LabelPrimitive.Root;
+"
+import * as React from "react";"
+import * as LabelPrimitive from "@radix-ui/react-label";"
+import { cva, type VariantProps } from "class-variance-authority";"
+import { cn } from "@/lib/utils";
+const labelVariants = cva(;"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
   />;
 ));
+Label && Label.displayName = LabelPrimitive && LabelPrimitive.Root.displayName;
+
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+export { Label };
+  />));
+Label.display_name = LabelPrimitive.Root.display_name;
+;
+
+Label.displayName = LabelPrimitive.Root.displayName;
+;
+"
+import React from 'react';
+import {cva, type, VariantProps} from "class-variance-authority";""
+import {cn} from "@/lib/utils";"
+const labelVariants = cva(;"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";")
+
+const Label = React && React.forwardRef<;
+  React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
+
+  React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
+    VariantProps<typeof labelVariants>;
+  <LabelPrimitive&& LabelPrimitive.Root;
+    ref={ref}
+    className={cn (label_variants (), class_name)}
+    {...props}"
+import { cva, type VariantProps } from "class-variance-authority";""
+  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";")
+const Label = React.forwardRef<;
+  React.ElementRef<typeof LabelPrimitive.Root>,;
+
+  React.ElementRef<typeof LabelPrimitive.Root>;
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &;
+
+</LabelPrimitive>
+export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
+</typeof>)
+}, ref) => (<LabelPrimitive.Root ref= {
+  ref;
+}className= {)
+  cn (labelVariants (), className) 
+}{
+  ...props;
+}/>) ) Label.displayName = LabelPrimitive.Root.displayName export {
+  Label 
+}
 Label.displayName = LabelPrimitive.Root.displayName;
 export { Label }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

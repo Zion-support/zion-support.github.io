@@ -1,11 +1,88 @@
-<<<<<<< HEAD
+export interface OperatorSession {};
+  id: string;
+  name: string;
+  status: "active" | "inactive" | "busy";
+  currentSessions: string[];
+  tags: string[];
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+
+  status: "active" | "inactive" | "busy";",
+  currentSessions: string[];
+  tags: string[];,
+  createdAt: Date;
+  updatedAt: Date;
+
+}
+
+  type: string;
+  sessionId: string;
+
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+}
 // Operator utilities
 export const operator = {
   // Add operator functionality here
-  logEvent: (event: any) => null,
-  getEvents: () => [],
-  getEventById: (id: string) => null;
-};
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  logEvent: (event: any) => null
+  getEvents: () => []
+  getEventById: (id: string) => null
+}
+
+    console.log(`Tagging session ${sessionId} with tag: ${tag}`);
+  }
+
+  logSupportEvent(event: SupportEvent): void {}
+    this.events.push(event);"
+    console.log("Support event logged:", event);
+  // TODO: Implement
+}
+    this.events.push(event);"
+    console.log("Support event logged:", event);"
+
+  }
+
+  getOperatorSessions(): OperatorSession[] {}
+
+    return Array.from(this.sessions.values());
+
+  getSupportEvents(): SupportEvent[] {}
+    return [...this.events];
+pr-12325
+
+const operatorManager = new OperatorManager();
+
+export const tagOperatorSession = (sessionId: string, tag: string) =>;
+  operatorManager.tagOperatorSession(sessionId, tag);
+
+export const logSupportEventToOperator = (event: SupportEvent) =>;
+  operatorManager.logSupportEvent(event);
+
+export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
+export async function logSupportEventToOperator(
+  event: OperatorEvent
+): Promise<void> {
+  // Placeholder for real Operator integration; could POST to external service
+  // For now, we just no-op to avoid failures
+  return Promise.resolve();
+}
+
+export async function tagOperatorSession(
+  sessionId: string,
+  tag: string
+): Promise<void> {
+  return Promise.resolve();
+}
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;

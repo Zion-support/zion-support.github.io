@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function EmergingTechnologyTrendsPage() {
@@ -9,8 +8,3 @@ export default function EmergingTechnologyTrendsPage() {
     </div>
   );
 }
-=======
-export default function EmergingTechnologyTrendsPage() {
-  return <div className="py-8 text-slate-300">Emerging Technology Trends</div>;
-}
->>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450

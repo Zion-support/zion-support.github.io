@@ -1,1 +1,198 @@
-export const metadata = { title: 'Contact | Zion Tech Group',description: 'Get in touch with Zion Tech Group for AI,micro SaaS,and IT services. We reply within one business day.',}; export default function ContactPage() { return ( <div className="animate-fade-in"> <div className="max-w-4xl mx-auto"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1> <p className="text-xl text-gray-600">We reply within one business day</p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"> {} <div className="space-y-8"> <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm"> <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2> <div className="space-y-6"> <div className="flex items-start space-x-4"> <div className="text-2xl">📞</div> <div> <h3 className="font-semibold text-gray-900">Phone</h3> <p className="text-gray-600">+1 302 464 0950</p> <p className="text-sm text-gray-500">Available 9 AM - 6 PM EST</p> </div> </div> <div className="flex items-start space-x-4"> <div className="text-2xl">✉️</div> <div> <h3 className="font-semibold text-gray-900">Email</h3> <p className="text-gray-600"> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors"> kleber@ziontechgroup.com </a> </p> <p className="text-sm text-gray-500">We respond within 24 hours</p> </div> </div> <div className="flex items-start space-x-4"> <div className="text-2xl">📍</div> <div> <h3 className="font-semibold text-gray-900">Office</h3> <p className="text-gray-600"> 364 E Main St STE 1008<br /> Middletown,DE 19709 </p> <p className="text-sm text-gray-500">By appointment only</p> </div> </div> </div> </div> <div className="bg-blue-50 border border-blue-200 rounded-xl p-6"> <h3 className="font-semibold text-blue-900 mb-2">Quick Response</h3> <p className="text-blue-800 text-sm"> For urgent matters,call us directly. For project inquiries,email us with your requirements and we'll get back to you within one business day. </p> </div> </div> {} <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm"> <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2> <form className="space-y-6"> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2"> First Name </label> <input type="text" id="firstName" name="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required /> </div> <div> <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2"> Last Name </label> <input type="text" id="lastName" name="lastName" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required /> </div> </div> <div> <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2"> Email </label> <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2"> Service Interest </label> <select id="service" name="service" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" > <option value="">Select a service</option> <option value="ai-services">AI Services</option> <option value="micro-saas">Micro SaaS Development</option> <option value="it-services">IT Services</option> <option value="consulting">General Consulting</option> </select> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"> Message </label> <textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your project or requirements..." required ></textarea> </div> <button type="submit" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" > Send Message </button> </form> </div> </div> <div className="mt-12 text-center"> <p className="text-gray-600 mb-4">Or visit our main website for more information</p> <a href="https: className="inline-block border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors" > Visit Main Site </a> </div> </div> </div> )};
+'use client';
+import React, { useState } from 'react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', company: '', service: '', message: '' });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+            Contact Us
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Ready to transform your business? Get in touch with our expert team to discuss your project requirements.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+            <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your.email@company.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium mb-2">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select a service</option>
+                  <option value="ai-services">AI Services</option>
+                  <option value="micro-saas">Micro SaaS Development</option>
+                  <option value="cloud-infrastructure">Cloud Infrastructure</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="blockchain">Blockchain Solutions</option>
+                  <option value="devops">DevOps & Automation</option>
+                  <option value="consulting">Consulting</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your project requirements..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Get in touch</h2>
+              <p className="text-lg text-slate-300 mb-8">
+                We&apos;re here to help you transform your business with innovative technology solutions. 
+                Reach out to us through any of the channels below.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Email</h3>
+                  <p className="text-slate-300">info@ziontechgroup.com</p>
+                  <p className="text-slate-300">support@ziontechgroup.com</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Phone</h3>
+                  <p className="text-slate-300">+1 (302) 464-0950</p>
+                  <p className="text-slate-300">Mon-Fri 9AM-6PM EST</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Office</h3>
+                  <p className="text-slate-300">New York, NY</p>
+                  <p className="text-slate-300">United States</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+              <h3 className="text-lg font-semibold mb-4">Response Time</h3>
+              <p className="text-slate-300 mb-2">
+                We typically respond to all inquiries within 24 hours during business days.
+              </p>
+              <p className="text-slate-300">
+                For urgent matters, please call us directly at +1 (302) 464-0950.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

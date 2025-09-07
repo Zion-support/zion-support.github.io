@@ -1,4 +1,3 @@
-  
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -8,7 +7,6 @@
 
   try {
     // Check PM2 processes
-    
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
@@ -17,14 +15,11 @@
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
-      
     } catch (error) {
-      
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
-    
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
@@ -49,7 +44,6 @@
     }
 
     // Check system health
-    
     const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
@@ -80,11 +74,6 @@
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    
-    
-    
-    
-    
 
     return statusReport;
   } catch (error) {
@@ -108,6 +97,11 @@ if (require.main === module) {
 }
 
 module.exports = { checkAutomationStatus };
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

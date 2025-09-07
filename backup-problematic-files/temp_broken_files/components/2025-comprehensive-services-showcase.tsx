@@ -5,7 +5,6 @@ import {
   Brain, Building, Target, Cpu, Shield,
   Check, Phone, Mail, MapPin,
   TrendingUp, Zap, Globe
-} from 'lucide-react',
 
 // Import our new service data,
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
@@ -15,43 +14,6 @@ import { industrySpecificSolutions } from '../data/2025-industry-specific-soluti
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all'),
-
-// Helper function to get service pricing,
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter,
-  if (service.price?.monthly) return `$${service.price.monthly}/month`,
-  if (typeof service.price === 'string') return service.price,
-  return 'Contact for pricing'
-},
-
-// Helper function to get service features,
-const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || []
-},
-
-// Helper function to get service setup time,
-const getServiceSetupTime = (service: any) => {
-  if (service.setupTime) return service.setupTime,
-  if (service.pricing?.setupTime) return service.pricing.setupTime,
-  if (service.price?.setupTime) return service.price.setupTime,
-  return 'N/A'
-},
-
-// Helper function to get service trial days,
-const getServiceTrialDays = (service: any) => {
-  if (service.trialDays) return service.trialDays,
-  if (service.pricing?.trialDays) return service.pricing.trialDays,
-  if (service.price?.trialDays) return service.price.trialDays,
-  return 'N/A'
-},
-// All services combined,
-const allServices = [
-  ...advancedAIMLServices,
-  ...advancedCybersecurityServices,
-      ...advancedCloudDevOpsServices2025,
-  ...industrySpecificSolutions,
-  ...emergingTechnologyServices
-],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
@@ -206,7 +168,7 @@ key={service.id}
                         </span>
                       </div>
                       <div className="text-xs text-gray-500">
-                        {_(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''} • {_(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
+                        {_(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''}  {_(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
                       </div>
                     </div>
                   </div>
@@ -528,5 +490,3 @@ href="https://ziontechgroup.com"
     </div>
   )
 },
-
-export default ComprehensiveServicesShowcase,

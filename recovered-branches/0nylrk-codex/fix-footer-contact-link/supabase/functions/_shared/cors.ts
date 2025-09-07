@@ -1,7 +1,17 @@
+export const corsHeaders = {;
+'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
 
 export const corsHeaders = {;
-<<<<<<< HEAD
+
 'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
-=======
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};export const corsHeaders = {;
+'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
+
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export const cors_headers = {
+'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type_access - Control - Allow - Methods': 'GET, POST, PUT, DELETE, OPTIONS'}
+
+;
+
+export const corsHeaders = {;

@@ -7,7 +7,6 @@ import {
   EndpointSpec,
   Visibility,;
 } from '../../data/api-docs/types';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1; // could switch by version later
@@ -44,8 +43,7 @@ export default function ApiDocsPage() {
 
   return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       <Sidebar
         spec={spec}
         activeEndpointId={activeEndpoint?.id}

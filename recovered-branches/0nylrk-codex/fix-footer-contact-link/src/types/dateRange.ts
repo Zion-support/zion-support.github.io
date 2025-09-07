@@ -1,10 +1,24 @@
-export interface DateRange {;
-  from?: Date;
-<<<<<<< HEAD
+from?: Date;
   to?: Date
 }
-=======
+
+  to?: Date;
+}
+
+export interface DateRange {;
+  from?: Date;
+  to?: Date;
+}
   to?: Date;
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export interface DateRange {
+
+  from?: Date;
+}export interface DateRange {
+
+  from?: Date;
+}export interface DateRange {
+  from?: Date;
+}

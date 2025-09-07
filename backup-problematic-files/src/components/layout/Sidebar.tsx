@@ -1,9 +1,8 @@
 import React from 'react';
 
 export default function Sidebar() {
+
   return (
-    <aside className="sidebar">
+    <aside className="sidebar">"
+</aside>
       <p>Sidebar</p>
-    </aside>
-  );
-}

@@ -1,32 +1,23 @@
-
-<<<<<<< HEAD
-import React from 'react';
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
-import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
-  title: string,
+title: string,
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
-  initialContent?: string
+  initialContent?: string;
+
 }
 
 export function AIEnhancementDialog({;
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
-=======
+import React from 'react';
+
 import React from 'react',;
+
 import {;
   Dialog,;
   DialogContent,;
-  DialogHeader,;
-  DialogTitle} from '@/components/ui/dialog',;
-import { AIEnhancementPanel } from './AIEnhancementPanel',;
+  DialogHeader,;'
+  DialogTitle} from '@/components/ui/dialog',;'
+import { AIEnhancementPanel } from './AIEnhancementPanel',;'
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementDialogProps {;
   title: string,;
@@ -37,34 +28,106 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
-export function AIEnhancementDialog({
+  title: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onApply: (content: string) => void;
+  defaultOptions: AIEnhancementOptions;
+  initialContent?: string;
+}
+export function AIEnhancementDialog({};
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
+
   title,
   isOpen,
   onClose,
   onApply,
   defaultOptions,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  initialContent
-}: AIEnhancementDialogProps) {
-  const handleApply = (content: string) => {
-    onApply(content),
-    onClose()
+
+  initialContent;
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose();
+  };
+
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;import React from 'react',;
+  defaultOptions;
+
   },
 
   return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
-        <AIEnhancementPanel
+
+    <Dialog open={isOpen} onOpenChange={() => onClose()}>;
+      <DialogContent className="max-w-3xl">;
+        <DialogHeader>;
+          <DialogTitle>{title}</DialogTitle>;
+        </DialogHeader>;
+
           title={title}
+
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-        />
+
+'
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';'
+import {AIEnhancementPanel} from './AIEnhancementPanel';'
+import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
+interface AIEnhancementDialogProps {}
+
+  title: string,
+  is_open: boolean,
+  on_close: () => void,
+  on_apply: (content: string) => void,
+  default_options: AIEnhancementOptions,
+  initial_content?: string;
+}
+
+    on_apply (content),
+    on_close ();
+  }
+;
+  return (
+
+      <DialogContent className="max - w-3xl">;
+        <DialogHeader>;
+          <DialogTitle>{title}</DialogTitle>;
+        </DialogHeader>;
+        <AIEnhancementPanel;
+          title={title}
+
+          default_options={default_options}
+          on_apply={handle_apply}
+          initial_content={initial_content}
+        />;
+      </DialogContent>;
+    </Dialog>);
+}
+
+  ),;});
+ <DialogHeader> <DialogTitle> {
+
+}  <AIEnhancementPanel title= {
+}defaultOptions= {
+}onApply= {
+  handleApply;
+}initialContent= {
+}/>  ) 
+
+pr-12325
+  initialContent;
+}/> </DialogContent> </Dialog>) 
+</AIEnhancementPanel>
       </DialogContent>
     </Dialog>
   )
 }
-;

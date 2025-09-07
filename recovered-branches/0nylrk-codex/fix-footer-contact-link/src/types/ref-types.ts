@@ -1,13 +1,12 @@
-
-<<<<<<< HEAD
 import {LegacyRef, Ref} from "react";
-// A type that safely handles all possible reference types
-=======
-import { LegacyRef, Ref } from "react",
+// A type that safely handles all possible reference types;
+"
 
-// A type that safely handles all possible reference types
-export type SafeRef<T> = LegacyRef<T> | Ref<T>,
+import { LegacyRef, Ref } from "react",
+;
+// A type that safely handles all possible reference types;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>,";
 import { LegacyRef, Ref } from "react",;
 // A type that safely handles all possible reference types;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;

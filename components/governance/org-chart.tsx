@@ -1,21 +1,18 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+return <OrgChartPage />;
+}
 
-const OrgChartPage = dynamic(
-  () => import('../../components/org/OrgChartPage'),
-  { ssr: false }
-);
+}
 
-export default function OrgChartGovernancePage() {;
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
-<<<<<<< HEAD
-export default function OrgChartGovernancePage() {;
+}
+export default function OrgChartGovernancePage() {};
   return <OrgChartPage />;
 }
+;
+export default /**;
+ * OrgChartGovernancePage - Function description;
+ */
 
-}
-=======
-export default function OrgChartGovernancePage() {
+ */
+function OrgChartGovernancePage() {}
   return <OrgChartPage />;
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

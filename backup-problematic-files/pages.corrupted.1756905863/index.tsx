@@ -2,15 +2,12 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 
 interface IndexProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;
 
 const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+
+    <div className={className || }>
+</div>
       <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-}
-}

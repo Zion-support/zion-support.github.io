@@ -1,9 +1,3 @@
-// Error-monitor utility
-export const Error-monitor = () => {
-  // Implementation here
-  return null;
-};
-
 /**
  * Error Monitor - PM2 Automation Script
  * Monitors the application for errors and automatically fixes common issues
@@ -14,6 +8,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 class ErrorMonitor {
+  // TODO: Implement
+}
   constructor() {
     this.projectRoot = process.cwd();
     this.monitoringReport = {
@@ -24,6 +20,8 @@ class ErrorMonitor {
       healthStatus: 'healthy',
       metrics: {
         totalErrors: 0,
+      metrics: {,
+  totalErrors: 0,
         totalWarnings: 0,
         buildSuccess: false,
         typeCheckSuccess: false,
@@ -48,7 +46,11 @@ class ErrorMonitor {
 
     // Initial health check
     await this.performHealthCheck();
+    // Start continuous monitoring
+    this.startContinuousMonitoring();
 
+    // Initial health check
+    await this.performHealthCheck();
     // Start continuous monitoring
     this.startContinuousMonitoring();
 
@@ -59,23 +61,17 @@ class ErrorMonitor {
 
   async performHealthCheck() {
     console.log('🏥 Performing health check...');
-
     try {
       // Check TypeScript errors
       await this.checkTypeScriptErrors();
-
       // Check ESLint errors
       await this.checkESLintErrors();
-
       // Check build status
       await this.checkBuildStatus();
-
       // Check for critical files
       await this.checkCriticalFiles();
-
       // Update health status
       this.updateHealthStatus();
-
       // Log results
       this.logHealthStatus();
 
@@ -84,11 +80,12 @@ class ErrorMonitor {
         await this.triggerErrorFixer();
       }
     } catch (error) {
-      console.error('❌ Health check failed:', error);
+
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
         timestamp: new Date().toISOString()
+
         timestamp: new Date().toISOString(),
       });
     }
@@ -102,18 +99,13 @@ class ErrorMonitor {
         stdio: ['pipe', 'pipe', 'pipe'],
       });
 
-      this.monitoringReport.metrics.typeCheckSuccess = true;
-      console.log('✅ TypeScript check passed');
     } catch (error) {
+
       if (error.stdout) {
         const errors = this.parseTypeScriptErrors(error.stdout);
         this.monitoringReport.errorsDetected.push(...errors);
         this.monitoringReport.metrics.totalErrors += errors.length;
         this.monitoringReport.metrics.typeCheckSuccess = false;
-        console.log(`❌ TypeScript check failed with ${errors.length} errors`);
-      }
-    }
-  }
 
   async checkESLintErrors() {
     try {
@@ -123,18 +115,12 @@ class ErrorMonitor {
         stdio: ['pipe', 'pipe', 'pipe'],
       });
 
-      this.monitoringReport.metrics.lintSuccess = true;
-      console.log('✅ ESLint check passed');
     } catch (error) {
       if (error.stdout) {
         const errors = this.parseESLintErrors(error.stdout);
         this.monitoringReport.errorsDetected.push(...errors);
         this.monitoringReport.metrics.totalErrors += errors.length;
         this.monitoringReport.metrics.lintSuccess = false;
-        console.log(`❌ ESLint check failed with ${errors.length} errors`);
-      }
-    }
-  }
 
   async checkBuildStatus() {
     try {
@@ -146,8 +132,6 @@ class ErrorMonitor {
         timeout: 30000, // 30 second timeout
       });
 
-      this.monitoringReport.metrics.buildSuccess = true;
-      console.log('✅ Build check passed');
     } catch (error) {
       this.monitoringReport.metrics.buildSuccess = false;
       this.monitoringReport.errorsDetected.push({
@@ -156,9 +140,34 @@ class ErrorMonitor {
         timestamp: new Date().toISOString(),
       });
       this.monitoringReport.metrics.totalErrors += 1;
-      console.log('❌ Build check failed');
+
     }
   }
+        console.log(` TypeScript check failed with ${errors.length} errors`);
+
+  async checkESLintErrors() {
+  // TODO: Implement
+      execSync('npx eslint . --format=compact --no-eslintrc', {
+
+      this.monitoringReport.metrics.lintSuccess = true;
+      console.log(' ESLint check passed');
+        const errors = this.parseESLintErrors(error.stdout);
+        this.monitoringReport.metrics.lintSuccess = false;`;
+        console.log(` ESLint check failed with ${errors.length} errors`);
+
+  async checkBuildStatus() {
+  // TODO: Implement
+      // Quick build check (without full build)
+      execSync('npx next build --dry-run', {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        timeout: 30000, // 30 second timeout;)
+
+      this.monitoringReport.metrics.buildSuccess = true;
+      console.log(' Build check passed');
+      this.monitoringReport.metrics.buildSuccess = false;
+        type: 'build_failure',
+      this.monitoringReport.metrics.totalErrors += 1;
+      console.log(' Build check failed');
 
   async checkCriticalFiles() {
     const criticalFiles = [
@@ -176,6 +185,7 @@ class ErrorMonitor {
           type: 'missing_critical_file',
           file: file,
           message: `Critical file ${file} is missing`,
+
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -183,10 +193,31 @@ class ErrorMonitor {
     }
   }
 
+            timestamp: new Date().toISOString(),
+          });
+    );
+        }
+      }
+    }
+
+    return errors;
+  }
+  parseESLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-
     for (const line of lines) {
       if (line.includes('error TS')) {
         const match = line.match(
@@ -200,6 +231,7 @@ class ErrorMonitor {
             column: parseInt(match[3]),
             message: match[4].trim(),
             timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString()
             timestamp: new Date().toISOString(),
           });
         }
@@ -208,24 +240,15 @@ class ErrorMonitor {
 
     return errors;
   }
-
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
 
-    for (const line of lines) {
-      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
-      if (match) {
-        errors.push({
-          type: 'eslint_error',
-          file: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
           timestamp: new Date().toISOString()
         });
       }
     }
+
           timestamp: new Date().toISOString(),
         });
       }
@@ -233,6 +256,25 @@ class ErrorMonitor {
 
     return errors;
   }
+  updateHealthStatus() {
+    const totalErrors = this.monitoringReport.metrics.totalErrors;
+    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
+
+    return errors;
+  }
+  updateHealthStatus() {
+    const totalErrors = this.monitoringReport.metrics.totalErrors;
+    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
+      'src/pages/index.tsx',']
+    ];
+
+  parseTypeScriptErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    return errors;
+
+  parseESLintErrors(output) {
+          timestamp: new Date().toISOString()
 
   updateHealthStatus() {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
@@ -252,12 +294,6 @@ class ErrorMonitor {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 
-    console.log(`📊 Health Status: ${status.toUpperCase()}`);
-    console.log(`📈 Total Errors: ${totalErrors}`);
-    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -268,15 +304,40 @@ class ErrorMonitor {
       `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
     );
   }
-
   async triggerErrorFixer() {
     console.log('🚀 Triggering error fixer...');
 
+    console.log(
+      `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`
+    );
+    console.log(
+      `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
+    );
+  }
+  async triggerErrorFixer() {
+    console.log('🚀 Triggering error fixer...');
     try {
+  // TODO: Implement
+      this.monitoringReport.healthStatus = 'critical';
+
+  logHealthStatus() {
+    const status = this.monitoringReport.healthStatus;
+
+    console.log(`;
+      `  Build Success: ${this.monitoringReport.metrics.buildSuccess ?  : }`')
+    );
+      ` Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ?  : }`')
+      ` Lint Success: ${this.monitoringReport.metrics.lintSuccess ?  : }`')
+
+  async triggerErrorFixer() {
+    console.log(' Triggering error fixer...');
+
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-      console.log('✅ Error fixer completed');
 
       console.log('✅ Error fixer completed');
     } catch (error) {
@@ -284,24 +345,6 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-        timestamp: new Date().toISOString()
-        timestamp: new Date().toISOString(),
-      });
-    }
-  }
-
-  startContinuousMonitoring() {
-    console.log(
-      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
-    );
-
-    setInterval(async () => {
-      if (this.isRunning) {
-        await this.performHealthCheck();
-        await this.saveReport();
-      }
-    }, this.checkInterval);
-  }
 
   async saveReport() {
     const reportPath = path.join(
@@ -310,6 +353,9 @@ class ErrorMonitor {
       `error-monitor-report-${Date.now()}.json`
     );
     const reportDir = path.dirname(reportPath);
+
+    // Add duration to report
+    this.monitoringReport.duration = Date.now() - this.startTime;
 
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
@@ -323,10 +369,6 @@ class ErrorMonitor {
       JSON.stringify(this.monitoringReport, null, 2)
     );
 
-    // Keep only the latest 10 reports
-    this.cleanupOldReports(reportDir);
-  }
-
   cleanupOldReports(reportDir) {
     try {
       const files = fs
@@ -334,6 +376,44 @@ class ErrorMonitor {
         .filter(file => file.startsWith('error-monitor-report-'))
         .map(file => ({
           name: file,
+      console.error(' Error fixer failed:', error);
+        type: 'error_fixer_failure',
+
+  startContinuousMonitoring() {
+    console.log()`;
+      ` Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
+
+    setInterval(async () => {
+      if (this.isRunning) {
+        await this.saveReport();
+    }, this.checkInterval);
+
+  async saveReport() {
+    const reportPath = path.join(
+      this.projectRoot,
+      'error-reports',')`;
+      `error-monitor-report-${Date.now()}.json`
+    const reportDir = path.dirname(reportPath);
+
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    // Add duration to report;
+    this.monitoringReport.duration = Date.now() - this.startTime;
+
+    fs.writeFileSync(
+      reportPath,)
+      JSON.stringify(this.monitoringReport, null, 2)
+
+    // Keep only the latest 10 reports;
+    this.cleanupOldReports(reportDir);
+
+  cleanupOldReports(reportDir) {
+  // TODO: Implement
+      const files = fs;
+        .readdirSync(reportDir)
+        .filter(file => file.startsWith('error-monitor-report-'))
+        .map(file => ({
+          name: file,)
           path: path.join(reportDir, file),
           time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
         }))
@@ -353,19 +433,13 @@ class ErrorMonitor {
   async shutdown() {
     console.log('🛑 Shutting down Error Monitor...');
     this.isRunning = false;
-
     // Save final report
     await this.saveReport();
-
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
-}
 
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-}
-
-module.exports = ErrorMonitor;

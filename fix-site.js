@@ -1,42 +1,123 @@
-<<<<<<< HEAD
-const fs = require('fs'),;
-=======
+const fs = require ('fs'),
+
+console.log ('🔧 Fixing site loading issues...'),
+// Fix Next.js configuration;'
+const next_config = `/** @type {import ('next').NextConfig} */;
+const next_config = {}
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },'
+  page_extensions: ['tsxtsjsxjs'],
+
 const fs = require('fs');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-console.log('🔧 Fixing site loading issues...'),;
+
+console.log('🔧 Fixing site loading issues...');
+// Fix Next.js configuration;'`
+
+const nextConfig = `/** @type {import('next').NextConfig} */;
+const nextConfig = {reactStrictMode: true;,
+  eslint: { ignoreDuringBuilds: true }
+
+    console.log(`✅ Removed empty file: ${file}`);
+  }
+
+const fs = require('fs');
+
+const fs = require ('fs'),
+console.log ('🔧 Fixing site loading issues...'),
+// Fix Next.js configuration;
+const next_config = `/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  page_extensions: ['tsxtsjsxjs'],
+  images: {
+
+const nextConfig = {;
+
+  reactStrictMode: true;
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+  eslint: { ignoreDuringBuilds: true },;
+  typescript: { ignoreBuildErrors: true },;'
+  pageExtensions: ['tsxtsjsxjs'],;
+  images: {;
+
+  },
+
+  output: 'standalone',
+  trailing_slash: false,'
+  dist_dir: '.next';
+
+console.log ('✅ Next.js configuration fixed'),
+// Remove empty files that might cause issues;
+
+const emptyFiles = [;'
+  'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
+
+emptyFiles.forEach(file => {;
+  if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
+    fs.unlinkSync(file),;`
+    console.log(`✅ Removed empty file: ${file}`);
+
+],;
+
+emptyFiles.forEach(file => {;)
+  if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
+    fs.unlinkSync(file),;`;
+
+}),
+console.log ('🎉 Site fixes completed!'),
+}),
+console.log ('🎉 Site fixes completed!'),
+const fs = require('fs');
+;
+console.log('🔧 Fixing site loading issues...');
+;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
-<<<<<<< HEAD
-  reactStrictMode: true,;
-=======
-  reactStrictMode: true;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  eslint: { ignoreDuringBuilds: true },;
-  typescript: { ignoreBuildErrors: true },;
-  pageExtensions: ['tsxtsjsxjs'],;
-  images: {;
-    domains: ["localhost", "ziontechgroup.com"];
+  reactStrictMode:true,;
+  eslint:{ ignoreDuringBuilds:true },;
+  typescript:{ ignoreBuildErrors:true },;
+  pageExtensions:['tsx', 'ts', 'jsx', 'js'],;
+  images:{;
+    domains:["localhost", "ziontechgroup.com"],;
   },;
-  output: 'standalone',;
-  trailingSlash: false,;
-  distDir: '.next';
-},;
-module.exports = nextConfig,`,;
-fs.writeFileSync('next.config.js', nextConfig),;
-console.log('✅ Next.js configuration fixed'),;
+  output:'standalone',;
+  trailingSlash:false,;
+  distDir:'.next',;
+};
+;
+module.exports = nextConfig;`;
+;
+fs.writeFileSync('next.config.js', nextConfig);
+console.log('✅ Next.js configuration fixed');
+;
 // Remove empty files that might cause issues;
 const emptyFiles = [;
-  'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
-<<<<<<< HEAD
-],;
-=======
+  'components/BundleAnalyzer.js',;
+  'components/PerformanceMonitor.js',;
+  'components/SEO.js';
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
-    fs.unlinkSync(file),;
-    console.log(`✅ Removed empty file: ${file}`);
+    fs.unlinkSync(file);
+    console.log(`✅ Removed empty file:${file}`);
+  }
+});
+;
+console.log('🎉 Site fixes completed!');
   }
 }),;
 console.log('🎉 Site fixes completed!'),;
+
+  }
+}),'
+console.log ('🎉 Site fixes completed!'),

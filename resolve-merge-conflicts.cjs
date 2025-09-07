@@ -1,254 +1,350 @@
 <<<<<<< HEAD
-#!/usr/bin/env node
-=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+#!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+#!/usr/bin/env node
 
-console.log('🔧 Starting comprehensive merge conflict resolution...');
+#!/usr/bin/env node
+=======
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let changesMade = false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node
 
-    // Remove merge conflict markers
-    const conflictPatterns = [
-      /<<<<<<< HEAD\n/g,
-      /=======\n/g,
-      />>>>>>> [^\n]+\n/g
-    ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-    conflictPatterns.forEach(pattern => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, '');
-        changesMade = true;
-      }
-    });
-
-    // Fix common syntax issues that might arise from merge conflicts
-    const syntaxFixes = [
-      // Fix import/export issues
-      { from: /from 'next' export/g, to: "from 'next'; export" },
-      { from: /from 'react' import/g, to: "from 'react'; import" },
-      { from: /from 'react',/g, to: "from 'react';" },
-      
-      // Fix interface and type issues
-      { from: /interface LayoutProps {,/g, to: "interface LayoutProps {" },
-      { from: /children: ReactNode,/g, to: "children: ReactNode;" },
-      { from: /children: React\.ReactNode,/g, to: "children: React.ReactNode;" },
-      
-      // Fix string literal issues
-      { from: /title = "Zion Tech Group,/g, to: 'title = "Zion Tech Group",' },
-      { from: /keywords = technology, AI, cloud, micro SaaS"/g, to: 'keywords = "technology, AI, cloud, micro SaaS"' },
-      
-      // Fix object and array syntax
-      { from: /};,/g, to: '};' },
-      { from: /}\)/g, to: '})' },
-      { from: /}\]/g, to: '}]' },
-      { from: /}\}/g, to: '}}' },
-      
-      // Fix extra closing braces (multiple newlines)
-      { from: /}\n\n+}/g, to: '}\n}' },
-      
-      // Fix common API route issues
-      { from: /export default async function \(req, res\)/g, to: 'export default async function handler(req, res)' },
-      { from: /export default function \(req, res\)/g, to: 'export default function handler(req, res)' },
-      
-      // Fix missing semicolons
-      { from: /(\w+)\n(export|import|const|let|var|function|class)/g, to: '$1;\n$2' },
-      
-      // Fix duplicate imports
-      { from: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"];/g, to: 'import { $1 } from "$2";' },
-      
-      // Fix missing return statements in API routes
-      { from: /res\.json\(\{([^}]+)\}\);\s*$/gm, to: 'return res.json({$1});' },
-      
-      // Fix TypeScript issues
-      { from: /: any\[\]/g, to: ': any[]' },
-      { from: /: string\[\]/g, to: ': string[]' },
-      { from: /: number\[\]/g, to: ': number[]' },
-      
-      // Fix async/await issues
-      { from: /async\s+function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, to: 'async function $1(req, res) {\n  try {' },
-      
-      // Fix missing error handling
-      { from: /}\s*$/gm, to: '  } catch (error) {\n    console.error("Error:", error);\n    return res.status(500).json({ error: "Internal server error" });\n  }\n}' },
-    ];
-
-    syntaxFixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        changesMade = true;
-      }
-    });
-
-    // Clean up extra whitespace and newlines
-    content = content.replace(/\n{3,}/g, '\n\n');
-    content = content.replace(/\s+$/gm, '');
+    content = content
+      .replace(/[^\n]+/g, '');
     
-    if (changesMade || content !== originalContent) {
-      fs.writeFileSync(filePath, content);
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Resolved conflicts in: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error resolving ${filePath}:`, error.message);
     return false;
   }
 }
-
-// Function to get all files with merge conflicts
-function getConflictedFiles() {
-  try {
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
-    console.error('Error getting conflicted files:', error.message);
-    return [];
-  }
-}
-
-// Function to handle deleted files
-function handleDeletedFiles() {
-  try {
-    const result = execSync('git status --porcelain | grep "^DU\\|^UD"', { encoding: 'utf8' });
-    const lines = result.trim().split('\n').filter(line => line.length > 0);
-    
-    lines.forEach(line => {
-      const parts = line.trim().split(/\s+/);
-      if (parts.length >= 2) {
-        const status = parts[0];
-        const file = parts[1];
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
         
-        if (status === 'DU' || status === 'UD') {
-          // File was deleted in one branch, modified in another
-          if (fs.existsSync(file)) {
-            console.log(`📁 Keeping modified file: ${file}`);
-            execSync(`git add "${file}"`);
-          } else {
-            console.log(`🗑️ File was deleted: ${file}`);
-            execSync(`git rm "${file}"`);
+        if (stat.isDirectory()) {
+          // Skip certain directories
+          if (!['node_modules', '.git', 'dist', 'build', '.next', 'cache'].includes(item)) {
+            traverse(fullPath);
           }
-        }
-      }
-    });
-  } catch (error) {
-    // No deleted files to handle
-  }
-}
+        } else if (stat.isFile()) {
+          const ext = path.extname(item);
+          if (['.js', '.ts', '.tsx', '.jsx'].includes(ext)) {
+            try {
+              const content = fs.readFileSync(fullPath, 'utf8');
+// Get list of conflicted files
+const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
 
-// Main resolution process
-function resolveAllConflicts() {
-  console.log('🔍 Finding files with merge conflicts...');
-  
-  const conflictedFiles = getConflictedFiles();
-  console.log(`Found ${conflictedFiles.length} files with conflicts`);
-  
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    return true;
-  }
+console.log(`Found ${conflictedFiles.length} conflicted files`);
 
-  let resolvedCount = 0;
-  let totalFiles = conflictedFiles.length;
-
-  // Handle deleted files first
-  handleDeletedFiles();
-
-  // Resolve conflicts in each file
-  conflictedFiles.forEach(filePath => {
-    if (fs.existsSync(filePath)) {
-      if (resolveMergeConflicts(filePath)) {
-        resolvedCount++;
-      }
-    }
-  });
-
-  console.log(`\n📊 Resolution Summary:`);
-  console.log(`   Total files: ${totalFiles}`);
-  console.log(`   Resolved: ${resolvedCount}`);
-  console.log(`   Remaining: ${totalFiles - resolvedCount}`);
-
-  return resolvedCount === totalFiles;
-}
-
-// Function to add resolved files to git
-function addResolvedFiles() {
-  try {
-    console.log('📝 Adding resolved files to git...');
-    execSync('git add .', { stdio: 'inherit' });
-    console.log('✅ All resolved files added to git');
-    return true;
-  } catch (error) {
-    console.error('❌ Error adding files to git:', error.message);
-    return false;
-  }
-}
-
-// Function to commit the merge
-function commitMerge() {
-  try {
-    console.log('💾 Committing merge resolution...');
-    execSync('git commit -m "Resolve merge conflicts automatically - comprehensive fix"', { stdio: 'inherit' });
-    console.log('✅ Merge conflicts resolved and committed');
-    return true;
-  } catch (error) {
-    console.error('❌ Error committing merge:', error.message);
-    return false;
-  }
-}
-
-// Main execution
-function main() {
-  console.log('🚀 Starting comprehensive merge conflict resolution...\n');
-  
-  const allResolved = resolveAllConflicts();
-  
-  if (allResolved) {
-    console.log('\n🎉 All merge conflicts resolved!');
-    
-    if (addResolvedFiles()) {
-      if (commitMerge()) {
-        console.log('\n✅ Merge completed successfully!');
-        console.log('🔄 Ready to push changes to main branch');
-        return true;
-      }
-    }
-  } else {
-    console.log('\n⚠️ Some conflicts may need manual resolution');
-    console.log('Run "git status" to see remaining conflicts');
-  }
-  
-  return false;
-}
-
-// Run the script
-if (require.main === module) {
-  main();
-}
-
-module.exports = { resolveAllConflicts, resolveMergeConflicts };
+// Strategy: For modify/delete conflicts, accept the deletion (main branch)
+// For content conflicts, we'll need to resolve manually
 =======
-// If content changed, write it back
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`✅ Resolved conflicts in: ${file}`);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+    console.error(`❌ Error processing ${file}:`, error.message);
+    errorCount++;
+});
+"
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+main
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+const { execSync } = require('child_process');
+=======
+
+
+// Function to resolve conflicts by choosing incoming changes;
+function resolveConflicts(filePath) {
+  // TODO: Implement
+}`;
+    console.log(`Resolving conflicts in ${filePath}...`);
+    // Read the file content;
+    // Replace merge conflict markers with incoming changes;
+    // Remove and;
+    content = content.replace(/[\s\S]*?
+    // Write the resolved content back;)
+    fs.writeFileSync(filePath, content);
+    // Add the file to git;`;
+    execSync(`git add "${filePath}"`, { stdio: 'inherit' });`;
+    console.log(`✅ Resolved conflicts in ${filePath}`);
+    console.error(`❌ Failed to resolve conflicts in ${filePath}:`, error.message);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+// Get list of files with merge conflicts;
+
+// Function to resolve conflicts by choosing incoming changes;
+  // TODO: Implement
+    // Read the file content;
+    // Replace merge conflict markers with incoming changes;
+    // Remove and;
+    // Write the resolved content back;)
+    // Add the file to git;`;
+
+// Resolve conflicts for each file;
+conflictFiles.forEach(resolveConflicts);
+
+
+// Run linter to check if issues are resolved;
+console.log('\n🔍 Running linter to check if issues are resolved...');
+  // TODO: Implement
+  execSync('npm run lint', { stdio: 'inherit' });
+  console.log('⚠️  Linter still has issues (this may be expected)');
+function resolveMergeConflicts() {
+    console.log('Resolving merge conflicts...');
+  // TODO: Implement
+        // Get list of conflicted files;
+            if (!fs.existsSync(file)) {`;
+                console.log(`Skipping non-existent file: ${file}`);
+                continue;
+            console.log(`Resolving conflicts in: ${file}`);
+            // For most files, accept the main branch version (ours)
+            // For deleted files in main, remove them;
+            if (file.includes('performance-monitor.cjs') ||
+                file.includes('coach.ts') ||
+                file.includes('complete.ts') ||
+                file.includes('leaderboard.ts')) {
+                // These files were deleted in main, so remove them;
+  // TODO: Implement
+                    fs.unlinkSync(file);`;
+                    console.log(`Removed deleted file: ${file}`);
+                } catch (err) {`;
+                    console.log(`Could not remove file ${file}: ${err.message}`);
+            } else {
+  // TODO: Implement
+                // Accept main branch version for other files;
+  // TODO: Implement
+                    execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });`;
+                    execSync(`git add "${file}"`, { stdio: 'pipe' });`;
+                    console.log(`Resolved conflicts in: ${file}`);
+                    console.log(`Could not resolve ${file}: ${err.message}`);
+
+  // TODO: Implement
+      // For content conflicts, we'll accept the current branch version (HEAD)`;
+      console.log(`📝 Resolving content conflict: ${file}`);
+      // Check if file exists and has conflict markers;
+      if (fs.existsSync(file)) {
+        const content = fs.readFileSync(file, 'utf8');
+          // Accept HEAD version (current branch)`;
+          execSync(`git checkout --ours "${file}"`);""`;
+          execSync(`git add "${file}"`);"
+  // TODO: Implement
+          // No conflict markers, just add the file;"`;
+
+  // TODO: Implement
+}"
+        // File doesn't exist, remove it;`;
+    console.log(`⚠️  Manual resolution needed for: ${file}`);
+    manualCount++;
+console.log(`\n✅ Resolved ${resolvedCount} files automatically`);`;
+console.log(`⚠️  ${manualCount} files need manual resolution`);
+
+if (manualCount > 0) {"
+  console.log('\nFiles needing manual resolution:');
+  const remainingConflicts = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+  remainingConflicts.forEach(file => console.log(`  - ${file}`));
+
+console.log('\n🎯 Merge conflict resolution complete!');
+// Get all conflicted files;
+const conflictedFiles = execSync('git diff --name-only --diff-filter=U').toString().trim().split('\n').filter(f => f);`;
+
+// Categorize conflicts;
+const modifyDeleteConflicts = [];
+const contentConflicts = [];
+const addAddConflicts = [];
+
+conflictedFiles.forEach(file => {)`;
+  const status = execSync(`git status --porcelain "${file}"`).toString().trim();""
+  if (status.startsWith('UD') || status.startsWith('DU')) {
+    modifyDeleteConflicts.push(file);
+  } else if (status.startsWith('UU')) {
+    contentConflicts.push(file);
+  } else if (status.startsWith('AA')) {
+    addAddConflicts.push(file);
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+  
+  traverse(dir);
+  return files;
+}
+// Main execution
+const targetDir = process.cwd();
+console.log(`📁 Scanning ${targetDir} for files with merge conflicts`);
+
+const files = findFilesWithConflicts(targetDir);
+console.log(`📄 Found ${files.length} files with merge conflicts`);
+let resolvedCount = 0;
+let errorCount = 0;
+
+for (const file of files) {
+  try {
+    if (resolveMergeConflicts(file)) {
       resolvedCount++;
-    } else {
-      console.log(`⚠️ No changes needed for: ${file}`);
     }
   } catch (error) {
-    console.error(`❌ Error resolving ${file}:`, error.message);
+    console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
+<<<<<<< HEAD
+}
+console.log(`\n🎉 Merge conflict resolution complete!`);
+console.log(`✅ Resolved: ${resolvedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Starting automatic merge conflict resolution...');
+
+// Get list of files with merge conflicts
+const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+const conflictFiles = gitStatus.split('\n')
+  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+  .map(line => line.split(' ').pop())
+  .filter(file => file && file !== '');
+
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+// Function to resolve conflicts by choosing incoming changes
+function resolveConflicts(filePath) {
+  try {
+    console.log(`Resolving conflicts in ${filePath}...`);
+
+    // Read the file content
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    // Replace merge conflict markers with incoming changes
+    // Remove and
+    content = content.replace(/[\s\S]*?
+
+    // Write the resolved content back
+    fs.writeFileSync(filePath, content);
+
+    // Add the file to git
+    execSync(`git add "${filePath}"`, { stdio: 'inherit' });
+
+    console.log(`✅ Resolved conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`❌ Failed to resolve conflicts in ${filePath}:`, error.message);
+  }
+}
+
+=======
+<<<<<<< HEAD
+// Resolve conflicts for each file
+conflictFiles.forEach(resolveConflicts);
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+console.log(`Modify/Delete conflicts: ${modifyDeleteConflicts.length}`);
+console.log(`Content conflicts: ${contentConflicts.length}`);
+=======
+console.log(`Modify/Delete conflicts: ${modifyDeleteConflicts.length}`);`;
+console.log(`Content conflicts: ${contentConflicts.length}`);`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+console.log(`Add/Add conflicts: ${addAddConflicts.length}`);
+
+// Resolve modify/delete conflicts by accepting remote deletion;
+console.log('\nResolving modify/delete conflicts...');
+modifyDeleteConflicts.forEach(file => {
+  // TODO: Implement
+})`;
+    execSync(`git rm "${file}"`);"`;
+    console.log(`✓ Deleted: ${file}`);
+    console.error(`✗ Failed to delete ${file}: ${error.message}`);
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -289,24 +385,182 @@ function resolveConflicts(filePath) {
   }
 }
 
-<<<<<<< HEAD
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
+=======
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-console.log('🎉 Merge conflict resolution completed!');
-console.log('Files resolved:', conflictFiles.length);
 
-// Check if there are any remaining conflicts
-const remainingConflicts = execSync('git status --porcelain', { encoding: 'utf8' })
-  .split('\n')
-  .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+// Resolve add/add conflicts by choosing one version;"
+console.log('\nResolving add/add conflicts...');
+addAddConflicts.forEach(file => {
+  // TODO: Implement
+})
+    // For add/add conflicts, prefer the current version (HEAD)`;
+    execSync(`git add "${file}"`);"`;
+    console.log(`✓ Resolved add/add conflict: ${file}`);
+    console.error(`✗ Failed to resolve add/add conflict in ${file}: ${error.message}`);
 
-if (remainingConflicts.length === 0) {
-  console.log('✅ All conflicts resolved successfully!');
-} else {
-  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Run linter to check if issues are resolved
+console.log('\n🔍 Running linter to check if issues are resolved...');
+try {
+  execSync('npm run lint', { stdio: 'inherit' });
+} catch (error) {
+  console.log('⚠️  Linter still has issues (this may be expected)');
+<<<<<<< HEAD
 }
 =======
+function resolveMergeConflicts() {
+    console.log('Resolving merge conflicts...');
+    
+    try {
+        // Get list of conflicted files
+        const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+            .trim()
+            .split('\n')
+            .filter(file => file.length > 0);
+        
+        console.log(`Found ${conflictedFiles.length} conflicted files`);
+        
+        for (const file of conflictedFiles) {
+            if (!fs.existsSync(file)) {
+                console.log(`Skipping non-existent file: ${file}`);
+                continue;
+            }
+            
+            console.log(`Resolving conflicts in: ${file}`);
+            
+            // For most files, accept the main branch version (ours)
+            // For deleted files in main, remove them
+            if (file.includes('performance-monitor.cjs') || 
+                file.includes('coach.ts') || 
+                file.includes('complete.ts') || 
+                file.includes('leaderboard.ts')) {
+                // These files were deleted in main, so remove them
+                try {
+                    fs.unlinkSync(file);
+                    console.log(`Removed deleted file: ${file}`);
+                } catch (err) {
+                    console.log(`Could not remove file ${file}: ${err.message}`);
+                }
+            } else {
+                // Accept main branch version for other files
+                try {
+                    execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+                    execSync(`git add "${file}"`, { stdio: 'pipe' });
+                    console.log(`Resolved conflicts in: ${file}`);
+                } catch (err) {
+                    console.log(`Could not resolve ${file}: ${err.message}`);
+                }
+            }
+        }
+        
+        // Add all resolved files
+        execSync('git add .', { stdio: 'pipe' });
+        
+        console.log('Merge conflicts resolved successfully');
+        return true;
+        
+    } catch (error) {
+        console.error('Error resolving merge conflicts:', error.message);
+        return false;
+=======
+// Resolve content conflicts by preferring our version for most files
+console.log('\nResolving content conflicts...');
+contentConflicts.forEach(file => {
+  try {
+    // For content conflicts, prefer our version (HEAD) for most files
+    // But for specific files, we might want to prefer remote
+    if (file.includes('yarn.lock') || file.includes('package-lock.json')) {
+      execSync(`git checkout --theirs "${file}"`);
+    } else {
+      execSync(`git checkout --ours "${file}"`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+    }
+    execSync(`git add "${file}"`);
+=======
+// Resolve content conflicts by preferring our version for most files;"
+console.log('\nResolving content conflicts...');
+contentConflicts.forEach(file => {
+  // TODO: Implement
+    // For content conflicts, prefer our version (HEAD) for most files;
+    // But for specific files, we might want to prefer remote;
+    if (file.includes('yarn.lock') || file.includes('package-lock.json')) {`;
+      execSync(`git checkout --theirs "${file}"`);"
+  // TODO: Implement
+}"`;
+      execSync(`git checkout --ours "${file}"`);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    console.log(`✓ Resolved content conflict: ${file}`);
+    console.error(`✗ Failed to resolve content conflict in ${file}: ${error.message}`);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+if (resolveMergeConflicts()) {
+    console.log('Ready to commit merge resolution');
+} else {
+}
+  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
+}
 console.log('\n🎉 Merge conflict resolution completed!');
->>>>>>> main
+
+=======
+
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+console.log('\nMerge conflict resolution completed!');
+console.log('Run "git status" to check remaining conflicts.');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+console.log('\nMerge conflict resolution completed!');
+console.log('Run "git status" to check remaining conflicts.');
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+if (resolveMergeConflicts()) {
+    console.log('Ready to commit merge resolution');
+} else {
+}
+  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
+}
+console.log('\n🎉 Merge conflict resolution completed!');
+
+
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"`;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

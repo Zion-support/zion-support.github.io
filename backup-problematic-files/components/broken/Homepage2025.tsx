@@ -66,14 +66,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   ],;
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),;
   const navigationSections = [;
-    { id: 'hero', label: 'Home', icon: '🏠' },;
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },;
-    { id: 'ai', label: 'AI Services', icon: '🧠' },;
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },;
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },;
-    { id: 'it', label: 'IT Solutions', icon: '💻' },;
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },;
-    { id: 'contact', label: 'Contact', icon: '📞' }
+    { id: 'hero', label: 'Home', icon: '' },;
+    { id: 'services', label: 'Micro SAAS', icon: '' },;
+    { id: 'ai', label: 'AI Services', icon: '' },;
+    { id: 'automation', label: 'AI Automation', icon: '' },;
+    { id: 'quantum', label: 'Quantum Security', icon: '' },;
+    { id: 'it', label: 'IT Solutions', icon: '' },;
+    { id: 'emerging', label: 'Emerging Tech', icon: '' },;
+    { id: 'contact', label: 'Contact', icon: '' }
   ],
 
   return (
@@ -242,14 +242,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       href="tel:+13024640950"
                       className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
                     >
-                      <span>📱</span>
+                      <span></span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
                     >
-                      <span>✉️</span>
+                      <span></span>
                       <span>kleber@ziontechgroup.com</span>
                     </a>
                   </div>
@@ -577,21 +577,21 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <div className="text-3xl mb-4">📱</div>
+                <div className="text-3xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <div className="text-3xl mb-4">✉️</div>
+                <div className="text-3xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <div className="text-3xl mb-4">📍</div>
+                <div className="text-3xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-300 text-sm">
                   364 E Main St STE 1008<br />
@@ -656,7 +656,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
                 <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter/X</a></li>
+
               </ul>
             </div>
           </div>
@@ -684,32 +684,32 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 {
                   title: 'Innovation First',
                   description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.',
-                  icon: '🚀'
+                  icon: ''
                 },
                 {
                   title: 'Proven Results',
                   description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',
-                  icon: '📈'
+                  icon: ''
                 },
                 {
                   title: 'Future-Proof Technology',
                   description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',
-                  icon: '🔮'
+                  icon: ''
                 },
                 {
                   title: 'Expert Team',
                   description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',
-                  icon: '👥'
+                  icon: ''
                 },
                 {
                   title: '24/7 Support',
                   description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.',
-                  icon: '🛡️'
+                  icon: ''
                 },
                 {
                   title: 'Scalable Solutions',
                   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
-                  icon: '📊'
+                  icon: ''
                 }
               ].map((feature, index) => (;
                 <motion.div;

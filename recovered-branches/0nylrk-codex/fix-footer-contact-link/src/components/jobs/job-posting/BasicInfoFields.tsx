@@ -1,201 +1,298 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
+FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage,;
+
+pr-12325
+import React, { useState } from \"react\";
+import { Control } from \"react-hook-form\";
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+
 import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,;
+
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-=======
-import React, { useState } from "react",
-import { Control } from "react-hook-form",
-import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
-import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-interface BasicInfoFieldsProps {
-  control: Control<any>
+import { Card, CardContent } from "@/components/ui/card";
+
+import React, { useState } from './react';
+
+import { Control  } from './react - hook - form';
+import {}
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
+
+import { Control } from "react-hook-form",
+
+  control: Control < any>;
 }
 
-<<<<<<< HEAD
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control,
-}) => {;
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-=======
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>(""),
-  const [maxBudget, setMaxBudget] = useState<string>(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-  const handleSuggestionApplied = (min: number, max: number) => {
-    setMinBudget(min.toString()),
-    setMaxBudget(max.toString())
-  },
-
   return (
+
     <div className="space-y-4">
-      <FormField
-        control={control}
+      <FormField;
+        control={control}"
         name="title"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Title</FormLabel>
-            <FormControl>
+            <FormControl>"
               <Input placeholder="e.g. Senior React Developer" {...field} />
             </FormControl>
             <FormMessage />
-          </FormItem>
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",;
+          </FormItem>"
+import React, { useState } from "react",;"
 import { Control } from "react-hook-form",;
 import {;
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+  FormMessage;"
+} from "@/components/ui/form",;"
+import { Input } from "@/components/ui/input",;"
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;"
 import { Card, CardContent } from "@/components/ui/card",;
+
 interface BasicInfoFieldsProps {;
   control: Control<any>;
 }
-;
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {;
-  const [minBudget, setMinBudget] = useState<string>(""),;
-  const [maxBudget, setMaxBudget] = useState<string>(""),;
-  const handleSuggestionApplied = (min: number, max: number) => {;
-    setMinBudget(min.toString()),;
-    setMaxBudget(max.toString());
-  },;
-  return (;
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
+  control,;
+}) => {;"
+  const [minBudget, setMinBudget] = useState<string>("");"
+  const [maxBudget, setMaxBudget] = useState<string>("");
+
+  return ("
     <div className="space-y-4">;
       <FormField;
-        control={control}
+        control={control}"
         name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Title</FormLabel>
-            <FormControl>
-              <Input placeholder="e.g. Senior React Developer" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-        )}
-      />
 
-      <FormField
-        control={control}
-        name="company"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Company</FormLabel>
-            <FormControl>
-              <Input placeholder="e.g. Acme Corporation" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-<<<<<<< HEAD
-      />
+        name="category"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Job Category</FormLabel>;
+            <FormControl>;
 
-      <FormField
-=======
+  control,
+}) => {";
+  const [min_budget, setMinBudget] = useState < string>("");"
+  const [max_budget, setMaxBudget] = useState < string>("");
+;
+  const handleSuggestionApplied = (min: number, max: number) =>: any {}
+    (setMinBudget (min.to_string ()), setMaxBudget (max.to_string ()));
+  }
+;
+  return ("
+    <div className="space - y-4">;
+      <FormField;
+        control={control}"
+
+        name="title";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Job Title</FormLabel>;
+
+        name="company";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Company</FormLabel>;
+
+        name="category";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Job Category</FormLabel>;
+            <FormControl>;
+
+          </FormItem>;
+        )}
+      />;
+
+      />;
+
       />;
       <FormField;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
         control={control}
         name="category"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Category</FormLabel>
-            <FormControl>
-              <select
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+      ;
+      <FormField;
+        control={control}
+        name="category";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Job Category</FormLabel>;
+            <FormControl>;
+              <select;
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                 {...field}
-              >
-                <option value="">Select a category</option>
-                <option value="development">Development</option>
-                <option value="design">Design</option>
-                <option value="marketing">Marketing</option>
-                <option value="content">Content</option>
-                <option value="data">Data</option>
-                <option value="business">Business</option>
-                <option value="other">Other</option>
-              </select>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+              >;
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={control}
+                <option value="">Select a category</option>;
+                <option value="development">Development</option>;
+                <option value="design">Design</option>;
+                <option value="marketing">Marketing</option>;
+                <option value="content">Content</option>;
+                <option value="data">Data</option>;
+                <option value="business">Business</option>;
+
+                <option value="other">Other</option>;
+              </select>;
+            </FormControl>;
+            <FormMessage />;
+
           name="budgetMin"
-          render={({ field: { onChange, ...rest } }) => (
-            <FormItem>
-              <FormLabel>Budget (Min)</FormLabel>
-              <FormControl>
-                <Input
-                  type="number"
-                  placeholder="e.g. 30"
-                  value={minBudget || rest.value}
-<<<<<<< HEAD
-                  onChange={(e) => {
+          render={({ field: { onChange, ...rest } }) => (;
+            <FormItem>;
+              <FormLabel>Budget (Min)</FormLabel>;
+              <FormControl>;
+
+                  value={minBudget |rest.value}
+                  onChange={(e) => {}
+
                     setMinBudget(e.target.value);
-=======
+                  value={minBudget || rest.value}
                   onChange={e => {;
                     setMinBudget(e.target.value),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+                  placeholder="e && e.g. 30"
+                  value={minBudget || rest && rest.value}
+                  onChange={(e) => {;
+                    setMinBudget(e && e.target.value);
+
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
+                  value={minBudget || rest.value}
+                  onChange={(e) => {}
+                    setMinBudget(e.target.value);
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
                     onChange(e);
+
+          </FormItem>)}
+      />;"
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={control}"
+
+          name="budget_min";
+          render={({ field: { on_change, ...rest } }) => (
+            <FormItem>;
+              <FormLabel > Budget (Min)</FormLabel>;
+              <FormControl>;
+
+          </FormItem>;
+        )}
+      />;
+;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        <FormField;
+
+          control={control}
+          name="budgetMin";
+          render={({ field:{ onChange, ...rest } }) => (;
+            <FormItem>;
+              <FormLabel>Budget (Min)</FormLabel>;
+              <FormControl>;
+                <Input;
+                  type="number";
+                  placeholder="e.g. 30";
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+                    onChange(e),;
+
                   }}
                   {...rest}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                />;
+              </FormControl>;
+              <FormMessage />;
 
         <FormField
+
           control={control}
+
           name="budgetMax"
-          render={({ field: { onChange, ...rest } }) => (
-            <FormItem>
-              <FormLabel>Budget (Max)</FormLabel>
-              <FormControl>
-                <Input
-                  type="number"
-                  placeholder="e.g. 60"
+          render={({ field: { onChange, ...rest } }) => (;
+            <FormItem>;
+              <FormLabel>Budget (Max)</FormLabel>;
+              <FormControl>;
+
                   value={maxBudget || rest.value}
-<<<<<<< HEAD
-                  onChange={(e) => {
-=======
                   onChange={e => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-                    setMaxBudget(e.target.value);
-                    onChange(e);
-                  }}
-                  {...rest}
+
+                  value={maxBudget |rest.value}
+                  onChange={(e) => {}
+                  value={maxBudget || rest.value}
+                  onChange={e => {;
+
+                  value={maxBudget || rest.value}
+                  onChange={(e) => {}
+                  onChange={e => {;
+
+                  value={maxBudget || rest.value}
+
+                  onChange={(e) => {
+                  onChange={e => {;
+
+                  placeholder="e && e.g. 60"
+                  value={maxBudget || rest && rest.value}
+                  onChange={(e) => {;
+                    setMaxBudget(e && e.target.value);
+
+            </FormItem>)}
+        />;
+        <FormField;
+          control={control}"
+          name="budget_max";
+          render={({ field: { on_change, ...rest } }) => (
+            <FormItem>;
+              <FormLabel > Budget (Max)</FormLabel>;
+              <FormControl>;
+                <Input;"
+                  type="number";"
+                  placeholder="e.g. 60";
+                  value={max_budget || rest.value}
+                  on_change={(e) => {}
+                    setMaxBudget (e.target.value);
+                    on_change (e);
+
                 />
               </FormControl>
               <FormMessage />
@@ -203,39 +300,87 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           )}
         />
       </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
-            jobTitle={control._formValues.title || ""}
-            category={control._formValues.category || ""}
-            experienceLevel={control._formValues.experienceLevel || ""}
-            onSuggestionApplied={handleSuggestionApplied}
-          />
-        </CardContent>
-      </Card>
-      <FormField
-        control={control}
+            jobTitle={control._formValues.title |""}
+            category={control._formValues.category |""}
+            experienceLevel={control._formValues.experienceLevel |""}
+
+      <Card>
+
+        <CardContent className="pt-4">
+          <ClientBudgetRecommender"
+            jobTitle={control._formValues.title |""}"
+            category={control._formValues.category |""}"
+            experienceLevel={control._formValues.experienceLevel |""}
+                />;
+              </FormControl>;
+              <FormMessage />;
+
+          />;
+        </CardContent>;
+      </Card>;
+
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Location</FormLabel>;
+            <FormControl>;
+
+                {...field}
+
+              />;
+            </FormControl>;
+            <FormMessage />;
+
+          </FormItem>)}
+      />;
+    </div>);
+}
+
         name="location"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Location</FormLabel>
-            <FormControl>
+
               <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
+
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+      />;
+    </div>;
+  ),;
+
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+
+}/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender /> </CardContent> </Card> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div>) 
+};
+/>
+    </div>
+
+  );
+});
+
+};
+
       />
     </div>
-);
-=======
+  );
+});
       />;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 };

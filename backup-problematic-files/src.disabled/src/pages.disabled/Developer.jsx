@@ -1,12 +1,9 @@
-import React from 'react';
-
 const Developer = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>Developer</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
-
-export default Developer;

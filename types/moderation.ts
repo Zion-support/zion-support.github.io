@@ -1,28 +1,66 @@
-<<<<<<< HEAD
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+id: string;
 
-export interface ModerationAction {;
   id: string;
-  type: 'approve' | 'remove' | 'warn' | 'ban';
+
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
+  reason?: string;
+  moderatedBy?: string;
+
+;
+
+export interface ModerationAction {
+  id: string;
+  type: "approve" | "remove" | "warn" | "ban";
   targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-  createdAt: string,
+
 }
+
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+  id: string;
+  type: "spam" | "inappropriate" | "harassment" | "other";
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  status: ModerationStatus;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;
+
+export interface ModerationRule {};
+  id: string;
+
+}
+export interface ModerationFlag {
 
 export interface ModerationFlag {;
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
-  reporterId: string;
-  targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
-  createdAt: string;
-  updatedAt: string;
-  adminNotes?: string,
-}
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string,
+}
+
+}
+
+export interface ModerationFlag {;
+
+  id: string;
+
+  name: string;
+  pattern: string;'
+  action: 'approve' | 'reject' | 'flag';'
+  severity: 'low' | 'medium' | 'high';

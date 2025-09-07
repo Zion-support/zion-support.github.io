@@ -91,7 +91,6 @@ class AutomationRunner {
       this.results.linting.success = true;
     } else {
       this.results.linting.errors.push(lintResult.error);
-      
       // Try to fix linting issues
       const fixResult = await this.runCommand(
         'npm run lint -- --fix',
@@ -132,7 +131,6 @@ class AutomationRunner {
     );
     if (!auditResult.success) {
       this.results.security.issues.push('Security vulnerabilities found');
-      
       // Try to fix automatically
       const fixResult = await this.runCommand(
         'npm audit fix',

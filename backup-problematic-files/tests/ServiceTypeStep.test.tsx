@@ -1,16 +1,14 @@
 import React from 'react';
 
 interface ServiceTypeStep.testProps {
-  className?: string;
+  // Add props here as needed
 }
+export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
 
-const ServiceTypeStep.test: React.FC<ServiceTypeStep.testProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div>
       <h1>ServiceTypeStep.test</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-}
+      <p>This component is currently under development.</p>
+
 }
 }

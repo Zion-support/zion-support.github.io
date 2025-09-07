@@ -19,11 +19,9 @@ export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   if (!userId || !role) return null,
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
-
   if (!userId || !role) return null,
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   return { userId, role }
 }
 
@@ -36,5 +34,5 @@ export function requireUser(
     res.status(401).json({ error: 'Unauthorized' }),
     return null
   }
-  return user
+
 }

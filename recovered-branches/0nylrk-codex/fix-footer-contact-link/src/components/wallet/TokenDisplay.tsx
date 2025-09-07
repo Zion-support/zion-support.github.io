@@ -1,24 +1,14 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
-<<<<<<< HEAD
-import React from "react";
-import {BadgeDollarSign} from "lucide-react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
-export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
-=======
+
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 export function TokenDisplay() {
-  const { wallet, loading } = useWallet(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Card>
@@ -30,6 +20,7 @@ export function TokenDisplay() {
         <BadgeDollarSign className="h-6 w-6 text-primary" />
       </CardHeader>
       <CardContent>
+
         {loading ? (
           <Skeleton className="h-12 w-28" />
         ) : (
@@ -47,22 +38,12 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
+
         )}
       </CardContent>
     </Card>
   )
-}
-=======
-import React from "react",;
-import { BadgeDollarSign } from "lucide-react",;
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Skeleton } from "@/components/ui/skeleton",;
-export function TokenDisplay() {;
-  const { wallet, loading } = useWallet();
-  return (;
+
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -84,15 +65,10 @@ export function TokenDisplay() {;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
+
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-          </div>;
-        )}
-      </CardContent>;
-    </Card>;
-  );
+
 }
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

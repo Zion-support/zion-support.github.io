@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna } from 'lucide-react';
@@ -375,11 +374,6 @@ const pricingPlans = [
     popular: false
   }
 ];
-=======
-import SEO from '../components/SEO';
-import Homepage2025 from '../components/Homepage2025';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
 
   return (
     aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('AI')).length + autonomousSpaceTech2025Services.filter(s => s.category.includes('AI')).length,
@@ -420,7 +414,6 @@ import Layout from '../components/layout/Layout';
         <UltraAdvancedNavigationV2 />
 =======
     <>
-<<<<<<< HEAD
       <Head>
         <title>Zion Tech Group - Revolutionary AI, Quantum & Emerging Technology Solutions</title>
         <meta name="description" content="Leading provider of cutting-edge AI, quantum computing, and emerging technology solutions. Transform your business with our innovative micro SAAS services and enterprise solutions." />
@@ -889,14 +882,5 @@ import Layout from '../components/layout/Layout';
         {/* Footer */}
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2029>
-=======
-      <SEO />
-      <Layout>
-        <main id="main">
-          <Homepage2025 showInternalNav={false} />
-        </main>
-      </Layout>
-    </>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
   );
 }

@@ -1,31 +1,70 @@
-<<<<<<< HEAD
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
 import Link from 'next/link';
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-const DatabaseDesignChat: NextPage = () => {
+const DatabaseDesignChat: NextPage = () => {}
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>
+
+import type { NextPage } from "next";
+import Head from "next/head";
+
+import Link from "next/link";
+const DatabaseDesignChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>DatabaseDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="DatabaseDesignChat service" />{" "}
+
+      </Head>;
+
+        <meta name="description" content="DatabaseDesignChat service" />
       </Head>
+pr-12243
+
       <main>
         <h1>DatabaseDesignChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+      </Head>;
 
+      <main>;
+        <h1>DatabaseDesignChat</h1>;
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
 export default DatabaseDesignChat;
-=======
+
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import type { NextPage } from './next';
+import Head from './next / head';
+
+import Link from './next / link';
+const DatabaseDesignChat: NextPage = () => {}
+  return (
+    <div>;
+      <Head>;
+        <title > DatabaseDesignChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="DatabaseDesignChat service" />{" "}
+      </Head>;
+      <main>;
+        <h1 > DatabaseDesignChat</h1>;
+        <p > Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>);
+}
+;
+export default DatabaseDesignChat;
+;

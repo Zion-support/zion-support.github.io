@@ -1,37 +1,80 @@
-
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-=======
+import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+import {cn} from "@/lib/utils";
+interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
 }
 
-export function SidebarContent({ className, children, ...props }: SidebarContentProps) {
+import React from "react";
+
+interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
+
+}
+
+export function SidebarContent({
+  className,
+  children,
+  ...props
+}: SidebarContentProps) {
   return (
+
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>
-<<<<<<< HEAD
       {children}
     </div>
+  );
+}
+
   )
-=======
+
+  )
+
+  )
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
-  children?: React.ReactNode;
-}
+
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
+
+"
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
+
+export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
+  return (;
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+
+}
+
 ;
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+import React from './react';'
+import { cn  } from '@/lib / utils';
+
+      {children}
+    </div>);
+}

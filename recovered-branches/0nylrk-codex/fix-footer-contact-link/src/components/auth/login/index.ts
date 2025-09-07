@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 export * from "./LoginCard";
 export * from "./LoginContent";
 export * from "./LoginForm";
 export * from "./SocialLogin";
 export * from "./Web3Login";
-=======
 
+pr-12325
 export * from './LoginCard',;
 export * from './LoginContent',;
 export * from './LoginForm',;
 export * from './SocialLogin',;
 export * from './Web3Login';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

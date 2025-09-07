@@ -6,11 +6,10 @@ interface Devops-autopilotProps {
 }
 
 const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
+
   return (
     <div className={className || ''}>
       <h1>Devops-autopilot</h1>
       <p>This component is under development.</p>
     </div>
   );
-}
-}

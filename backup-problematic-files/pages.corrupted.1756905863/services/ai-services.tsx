@@ -6,11 +6,10 @@ interface Ai-servicesProps {
 }
 
 const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
+
   return (
-    <div className={className || ''}>
-      <h1>Ai-services</h1>
-      <p>This component is under development.</p>
+    <div>
+      <h1>Aiservices</h1>
+      <p>This component is currently under development.</p>
     </div>
   );
-}
-}

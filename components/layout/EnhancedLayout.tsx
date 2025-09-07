@@ -1,56 +1,43 @@
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-import i18n, { isRtl } from '../../utils/i18n';
-import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
-<<<<<<< HEAD
-export type EnhancedLayoutProps = {;
-=======
-export type EnhancedLayoutProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;
-};
+}, []);
 
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {;
-    const lng = i18n.resolvedLanguage || i18n.language;
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-  }, []);
+"
+      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
+      <footer>;
+        <EnhancedFooter />;
+      </footer>;
+    </div>;
+}
+});
+});
+}"
+    <div className="min - h-screen flex flex - col">;
+        <EnhancedNavigation />;
+        <LanguageSwitchPrompt />;
+      </header>;'
+      <main id='main' className='flex - 1 container mx - auto px - 4 py - 6'>;
+        {children}"
+      </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
+      <footer>;
+        <EnhancedFooter />;
+      </footer>;
+    </div>);
+}
+});
+}
 
   return (
-    <div className='min-h-screen flex flex-col'>      <header>
+    <div className='min-h-screen flex flex-col' />
+      <header />
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>
+<main id='main' className='flex-1 container mx-auto px-4 py-6' />
         {children}
-      </main>      <footer>    document.documentElement.setAttribute('lang', lng)
-  }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <LanguageSwitchPrompt />
-      </header>
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>
-        {children}
-      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
+      </main>
+      <footer />
         <EnhancedFooter />
       </footer>
     </div>
-<<<<<<< HEAD
-);
-}
-}
   );
 }
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+origin/cursor/automate-test-improve-and-merge-code-2533

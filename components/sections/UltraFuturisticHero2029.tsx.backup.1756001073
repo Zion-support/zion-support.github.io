@@ -193,11 +193,7 @@ const UltraFuturisticHero2029: React.FC = () => {
           >
             Experience the future of technology with our revolutionary 2029 services. 
             From AI consciousness simulation to Mars colonization automation, 
-<<<<<<< HEAD
             we&apos;re building tomorrow&apos;s solutions today.
-=======
-            we're building tomorrow's solutions today.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
           </motion.p>
 
           {/* Floating Icons */}

@@ -1,50 +1,35 @@
-#!/usr/bin/env node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class EnhancedAppOptimizer {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'enhanced-app-optimizer.log');
-    this.ensureDirectories();
-    this.results = {}
-      "timestamp": new Date().toISOString(),
-      "optimizations": [],
-      "performance": {},
-      "security": {},
-      "seo": {},
-      "accessibility": {};
-    }};
-  ensureDirectories() {}
-    const dirs = ['automation/logs', 'scripts/automation/reports'];
+
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
       if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
+        fs.mkdirSync(dirPath, { "recursive": true })};"
+    })};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(}
+
+    const timestamp = new Date().toISOString(})
 });
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
-      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
-      console.error('Failed to write to log "file": ', error.message)};
-  };
-  async optimizePerformance() {}
-    this.log('Starting performance optimization...');
-    const optimizations = [];
 
+<<<<<<< HEAD
     try {}
       // Analyze bundle size;
       const bundleAnalysis = execSync('npm run "build": analyze', { })
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
         "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -56,73 +41,23 @@ class EnhancedAppOptimizer {}
     try {}
       const publicDir = path.join(this.projectRoot, 'public';);
       if () {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const imageFiles = this.findImageFiles(publicDir) {}
-    ) {}
-        const imageFiles = this.findImageFiles(publicDir}
-});
-        if ( {})
-          optimizations.push({ "type": 'image-optimization', "status": 'completed', "count": imageFiles.length })) {}
-     {}
-          optimizations.push({ "type": 'image-optimization', "status": 'completed', "count": imageFiles.length })};
-          this.log(`Found ${imageFiles.length} images for optimization`)};
-      };
-    } catch(error) {}
-      this.log(`Image optimization "failed": ${error.message}`, 'WARN')};
-    // Check for unused CSS;
-    try {}
-      const stylesDir = path.join(this.projectRoot, 'styles';);
-      if () {}
-        optimizations.push({ "type": 'css-optimization', "status": 'completed' })) {}
-    ) {}
-        optimizations.push({ "type": 'css-optimization', "status": 'completed' })};
-        this.log('CSS optimization completed')};
-    } catch(error) {}
-      this.log(`CSS optimization "failed": ${error.message}`, 'WARN')};
-    this.results.performance = { optimizations };
-    return optimizations};
-  async optimizeSEO() {}
-    this.log('Starting SEO optimization...');
-    const seoOptimizations = [];
+        const imageFiles = this.findImageFiles(publicDir})
 
-    // Generate sitemap;
-    try {}
-      const sitemapContent = this.generateSitemap(;);
-      fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemapContent);
-      seoOptimizations.push({ "type": 'sitemap-generation', "status": 'completed' }
-});
-      this.log('Sitemap generated')} catch(error) {}
-      this.log(`Sitemap generation "failed": ${error.message}`, 'WARN')};
-    // Generate robots.txt;
-    try {}
-      const robotsContent = this.generateRobotsTxt(;);
-      fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsContent);
-      seoOptimizations.push({ "type": 'robots-txt-generation', "status": 'completed' }
-});
-      this.log('Robots.txt generated')} catch(error) {}
-      this.log(`Robots.txt generation "failed": ${error.message}`, 'WARN')};
-    // Check meta tags;
-    try {}
-      const pagesDir = path.join(this.projectRoot, 'pages';);
-      if () {}
         const pages = this.findPageFiles(pagesDir) {}
-    ) {}
-        const pages = this.findPageFiles(pagesDir}
-});
-        seoOptimizations.push({ "type": 'meta-tags-check', "status": 'completed', "pages": pages.length }
-});
-        this.log(`Checked meta tags for ${pages.length} pages`)};
-    } catch(error) {}
-      this.log(`Meta tags check "failed": ${error.message}`, 'WARN')};
-    this.results.seo = { "optimizations": seoOptimizations };
-    return seoOptimizations};
-  async optimizeSecurity() {}
-    this.log('Starting security optimization...');
-    const securityOptimizations = [];
+        const pages = this.findPageFiles(pagesDir})
 
+<<<<<<< HEAD
     // Run security audit;
     try {}
       execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
         "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -163,12 +98,14 @@ class EnhancedAppOptimizer {}
     try {}
       const pagesDir = path.join(this.projectRoot, 'pages';);
       const componentsDir = path.join(this.projectRoot, 'components';);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let imageCount = ;0;
       let altTextCount = ;0;
 
       [pagesDir, componentsDir].forEach(dir => {})
-        if () {}
           const files = this.findReactFiles(dir) {}
+<<<<<<< HEAD
     ) {}
           const files = this.findReactFiles(dir}
 });
@@ -182,9 +119,15 @@ class EnhancedAppOptimizer {}
 });
 
       accessibilityOptimizations.push({ })
+<<<<<<< HEAD
+        "type": 'alt-text-check',
+        "status": 'completed',
+        "images": imageCount,
+=======
         "type": 'alt-text-check', 
         "status": 'completed', 
         "images": imageCount, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -196,11 +139,19 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
     
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)};
@@ -213,11 +164,19 @@ class EnhancedAppOptimizer {}
   findPageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
     
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {}
         files.push(fullPath)};
@@ -230,11 +189,19 @@ class EnhancedAppOptimizer {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
     
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -315,4 +282,17 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          const files = this.findReactFiles(dir})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 module.exports = EnhancedAppOptimizer;
+module.exports = EnhancedAppOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

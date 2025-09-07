@@ -1,6 +1,3 @@
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
 import { ;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -12,7 +9,7 @@ import { ;
   DropdownMenuRadioItem,;
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',;
 // Use the centralized icon wrapper to avoid missing icon issues;
-import { FileText, ChevronDown, Loader2, Download } from 'lucide-react';
+
 import { Resume } from '@/types/resume',;
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',;
 import { toast } from '@/hooks/use-toast',;
@@ -59,7 +56,7 @@ export function PdfExportButton({ resume } PdfExportButtonProps) {;
         title:"Success!",;
         description:"Your resume has been downloaded as a PDF."}),;
     } catch (error) {;
-      logErrorToProduction('Error exporting PDF:', { data:error }),;
+
       toast({;
         title:"Export failed",;
         description:"There was an error exporting your resume to PDF.",;
@@ -109,34 +106,8 @@ export function PdfExportButton({ resume } PdfExportButtonProps) {;
         <DropdownMenuSeparator />;
         <DropdownMenuCheckboxItem ;
           checked={includePortfolio}
+
           onCheckedChange={setIncludePortfolio}
         >;
           Include Portfolio Projects;
         </DropdownMenuCheckboxItem>;
-        ;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem onClick={handleExport}>;
-          <Download className="h-4 w-4 mr-2" />;
-          Download PDF;
-        </DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-  ),; setIsExporting (true);
-try {;
-  const options: ExportOptions = {;
-  ;
-}catch (error) {;
-  logErrorToProduction ('Error exporting PDF:', {;
-  data: error ;
-});
-toast ({;
-  ;
-}finally {;
-  setIsExporting (false) ;
-}
-};
-h-4 w-4"/>) ";"}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
-  includePortfolio ;
-}onCheckedChange= {;
-  setIncludePortfolio ;
-}> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;"}'"

@@ -4,7 +4,6 @@ export function buildPrintableHtml(project: BookProject): string {
   const quotesHtml = visuals.quoteCallouts
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
     .join('\n'),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   const _chapterHtml = chapters
     .map(_(c) => `
@@ -43,7 +42,7 @@ export function buildPrintableHtml(project: BookProject): string {
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
   .visual { break-inside: avoid, margin: 12px 0 }
   .visual img { max-width: 100%, height: auto }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
 </style>
 </head>
 <body>
@@ -71,4 +70,3 @@ function paragraphize(text: string): string {
 
 function escapeHtml(s: string): string {
   return s
-    .replace(/&/g, '&amp,')

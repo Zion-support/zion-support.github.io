@@ -1,7 +1,7 @@
-// Health-check utility
 export const Health-check = () => {
   // Implementation here
+  return null
+  // Implementation here;
   return null;
+pr-12325
 };
-
-export default Health-check;

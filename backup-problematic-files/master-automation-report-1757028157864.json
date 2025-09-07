@@ -10,7 +10,7 @@
       "startTime": "2025-09-04T23:22:37.864Z",
       "status": "success",
       "duration": 29,
-      "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report-1757028157890.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 3\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n"
+      "output": " Starting Health Check...\n Health check completed\n Report saved to: health-check-report-1757028157890.json\n Health Check Summary:\n   - Total checks: 5\n   - OK: 3\n   - Errors: 0\n   - Status: HEALTHY\n System is healthy!\n"
     },
     {
       "name": "Dependency Installation",
@@ -30,7 +30,7 @@
       "startTime": "2025-09-04T23:22:53.865Z",
       "status": "success",
       "duration": 869,
-      "output": "🔒 Starting Security Scan...\n✅ Security scan completed. Report: security-scan-report-1757028174731.json\n"
+      "output": " Starting Security Scan...\n Security scan completed. Report: security-scan-report-1757028174731.json\n"
     },
     {
       "name": "System Health & Dependencies",
@@ -38,7 +38,7 @@
       "tasks": [
         {
           "success": true,
-          "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report-1757028157890.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 3\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n",
+          "output": " Starting Health Check...\n Health check completed\n Report saved to: health-check-report-1757028157890.json\n Health Check Summary:\n   - Total checks: 5\n   - OK: 3\n   - Errors: 0\n   - Status: HEALTHY\n System is healthy!\n",
           "duration": 29
         },
         {
@@ -48,7 +48,7 @@
         },
         {
           "success": true,
-          "output": "🔒 Starting Security Scan...\n✅ Security scan completed. Report: security-scan-report-1757028174731.json\n",
+          "output": " Starting Security Scan...\n Security scan completed. Report: security-scan-report-1757028174731.json\n",
           "duration": 869
         }
       ],
@@ -186,7 +186,7 @@
       "startTime": "2025-09-04T23:23:03.704Z",
       "status": "success",
       "duration": 17008,
-      "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\" && node scripts/remove-console-logs.cjs\n\nStarting build...\n\n📊 Summary:\n   Files processed: 1584\n   Console statements removed: 0\n\n✨ No console statements found to remove.\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n ✓ Compiled successfully in 5.4s\n   Collecting page data ...\n   Generating static pages (0/13) ...\n   "
+      "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\" && node scripts/remove-console-logs.cjs\n\nStarting build...\n\n Summary:\n   Files processed: 1584\n   Console statements removed: 0\n\n No console statements found to remove.\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n    Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n  Compiled successfully in 5.4s\n   Collecting page data ...\n   Generating static pages (0/13) ...\n   "
     },
     {
       "name": "Build & Test",
@@ -204,7 +204,7 @@
         },
         {
           "success": true,
-          "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\" && node scripts/remove-console-logs.cjs\n\nStarting build...\n\n📊 Summary:\n   Files processed: 1584\n   Console statements removed: 0\n\n✨ No console statements found to remove.\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n ✓ Compiled successfully in 5.4s\n   Collecting page data ...\n   Generating static pages (0/13) ...\n   Generating static pages (3/13) \r\n   Generating static pages (6/13) \r\n   Generating static pages (9/13) \r\n ✓ Generating static pages (13/13)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     2.75 kB         130 kB\n├   /_app                                     0 B        84.9 kB\n├ ○ /404                                    180 B          85 kB\n├ ○ /about                                4.44 kB         125 kB\n├ ○ /ai-services                          8.36 kB         129 kB\n├ ○ /blog                                 2.64 kB         130 kB\n├ ○ /contact                              2.15 kB         130 kB\n├ ○ /it-services                          8.48 kB         129 kB\n├ ○ /micro-saas                           9.33 kB         129 kB\n├ ○ /privacy                              1.36 kB         129 kB\n├ ○ /services                             3.54 kB         124 kB\n├ ○ /talent                               3.63 kB         131 kB\n└ ○ /terms                                1.58 kB         129 kB\n+ First Load JS shared by all             87.5 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-dd65141bd58862df.js       39.1 kB\n  └ other shared chunks (total)            3.7 kB\n\nƒ Middleware                              33.1 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n",
+          "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\" && node scripts/remove-console-logs.cjs\n\nStarting build...\n\n Summary:\n   Files processed: 1584\n   Console statements removed: 0\n\n No console statements found to remove.\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n    Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n  Compiled successfully in 5.4s\n   Collecting page data ...\n   Generating static pages (0/13) ...\n   Generating static pages (3/13) \r\n   Generating static pages (6/13) \r\n   Generating static pages (9/13) \r\n  Generating static pages (13/13)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n  /                                     2.75 kB         130 kB\n   /_app                                     0 B        84.9 kB\n  /404                                    180 B          85 kB\n  /about                                4.44 kB         125 kB\n  /ai-services                          8.36 kB         129 kB\n  /blog                                 2.64 kB         130 kB\n  /contact                              2.15 kB         130 kB\n  /it-services                          8.48 kB         129 kB\n  /micro-saas                           9.33 kB         129 kB\n  /privacy                              1.36 kB         129 kB\n  /services                             3.54 kB         124 kB\n  /talent                               3.63 kB         131 kB\n  /terms                                1.58 kB         129 kB\n+ First Load JS shared by all             87.5 kB\n   chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n   chunks/main-dd65141bd58862df.js       39.1 kB\n   other shared chunks (total)            3.7 kB\n\n Middleware                              33.1 kB\n\n  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n",
           "duration": 17008
         }
       ],

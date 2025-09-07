@@ -1,25 +1,35 @@
-<<<<<<< HEAD
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'node: path';
-;
-// https://vitejs.dev/config/
+// https://vitejs && vitejs.dev/config/
+
 export default defineConfig({
-  plugins: [react()],
+
+export default defineConfig({}
+  plugins: [react()]
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
-=======
+    }
+  }
+})
+
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+'
+import react from '@vitejs/plugin-react';'
 import path from 'node: path';
 // https://vitejs.dev/config/;
 export default defineConfig({;
   plugins: [react()];
   resolve: {;
-    alias: {;
+    alias: {;'
       '@': path.resolve(__dirname, './src');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    }
-  }
+
+;
+
+// https://vitejs.dev / config/;
+export default define_config ({}
+  plugins: [react ()],
+
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },;
 });

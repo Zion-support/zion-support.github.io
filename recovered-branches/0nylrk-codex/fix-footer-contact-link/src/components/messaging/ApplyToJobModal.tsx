@@ -1,8 +1,18 @@
-<<<<<<< HEAD
-// Export all job application components from the job-application folder
-export * from "./job-application";
-=======
+// Export all job application components from the job-application folder;
+export * from './job-application';
+
+// Export all job application components from the job - application folder;
+export * from "./job - application";export * from "./job-application";
 
 // Export all job application components from the job-application folder;
 export * from './job-application';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export * from "./job-application";
+
+// Export all job application components from the job - application folder;
+export * from "./job - application";
+// Export all job application components from the job-application folder;
+export * from './job-application';
+
+// Export all job application components from the job - application folder;"
+export * from "./job - application";

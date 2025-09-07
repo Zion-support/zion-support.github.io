@@ -1,31 +1,6 @@
-import React from 'react',;
-;
-interface FilterSidebarProps {;
-  className?:string,;
-  children?:React.ReactNode,;
-}
-;
-export const FilterSidebar:React.FC<FilterSidebarProps> = ({ ;
-  className,;
-  children ;
-}) => {;
-  return (;
-    <div className={`filter-sidebar ${className || ''}`}>;
-      {children}
-    </div>;
-  ),;
-},;
-;export default FilterSidebar,
- export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
-  className, children ;
-}) => {;
-  return (<div className= {;
-  `filter-sidebar $ {;
-  className || '' ;
-}` ;
-}>{;
-  children ;
-}</div>) ;
-};
-export default FilterSidebar;
-'
+{/* Product Type Filter */}
+      <div className="mb-6">;
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+          Product Type;
+        </label>;
+        <div className="space-y-2">;

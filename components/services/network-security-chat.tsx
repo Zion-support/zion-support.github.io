@@ -1,31 +1,70 @@
-<<<<<<< HEAD
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
 import Link from 'next/link';
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-const NetworkSecurityChat: NextPage = () => {
+const NetworkSecurityChat: NextPage = () => {}
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
+
+import type { NextPage } from "next";
+import Head from "next/head";
+
+import Link from "next/link";
+const NetworkSecurityChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;"
         <meta name="description" content="NetworkSecurityChat service" />{" "}
+
+      </Head>;
+
+        <meta name="description" content="NetworkSecurityChat service" />
       </Head>
+pr-12243
+
       <main>
         <h1>NetworkSecurityChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+      </Head>;
 
+      <main>;
+        <h1>NetworkSecurityChat</h1>;
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
 export default NetworkSecurityChat;
-=======
+
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import type { NextPage } from './next';
+import Head from './next / head';
+
+import Link from './next / link';
+const NetworkSecurityChat: NextPage = () => {}
+  return (
+    <div>;
+      <Head>;
+        <title > NetworkSecurityChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="NetworkSecurityChat service" />{" "}
+      </Head>;
+      <main>;
+        <h1 > NetworkSecurityChat</h1>;
+        <p > Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>);
+}
+;
+export default NetworkSecurityChat;
+;

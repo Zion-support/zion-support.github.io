@@ -1,7 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
 console.log('🔧 Fixing final syntax errors...');
 
 // Function to fix specific syntax issues
@@ -138,75 +148,46 @@ if (require.main === module) {
 }
 
 module.exports = { fixFinalSyntax };
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Syntax Errors Fix...');
-console.log('ℹ️ [2025-09-06T09:26:05.800Z] ==================================================');
-console.log('');
-
-// Fix livekit room file
-const livekitRoomPath = '/workspace/pages/api/livekit/room.ts';
-if (fs.existsSync(livekitRoomPath)) {
-  let content = fs.readFileSync(livekitRoomPath, 'utf8');
-  
-  // Add missing closing brace
-  if (!content.trim().endsWith('}')) {
-    content += '\n}';
-  }
-  
-  fs.writeFileSync(livekitRoomPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/livekit/room.ts');
+// Function to fix specific syntax issues;
+function fixFinalSyntax(filePath) {
+  try {
+  // TODO: Implement
 }
 
-// Fix marketplace offers file
-const marketplaceOffersPath = '/workspace/pages/api/marketplace/offers.ts';
-if (fs.existsSync(marketplaceOffersPath)) {
-  let content = fs.readFileSync(marketplaceOffersPath, 'utf8');
-  
-  // Fix the syntax error
-  content = content.replace(
-    '  saveProject,;',
-    '  saveProject,'
-  );
-  
-  fs.writeFileSync(marketplaceOffersPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/offers.ts');
-}
+    let originalContent = content;
+    let changesMade = false;
 
-// Fix marketplace projects file
-const marketplaceProjectsPath = '/workspace/pages/api/marketplace/projects.ts';
-if (fs.existsSync(marketplaceProjectsPath)) {
-  let content = fs.readFileSync(marketplaceProjectsPath, 'utf8');
-  
-  // Fix the syntax error
-  content = content.replace(
-    '  ProjectNote,;',
-    '  ProjectNote,'
-  );
-  
-  fs.writeFileSync(marketplaceProjectsPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/projects.ts');
-}
+    // Fix specific patterns;
+    const fixes = [
+      // Fix type definitions with extra commas;
 
-// Fix marketplace upload file
-const marketplaceUploadPath = '/workspace/pages/api/marketplace/upload.ts';
-if (fs.existsSync(marketplaceUploadPath)) {
-  let content = fs.readFileSync(marketplaceUploadPath, 'utf8');
-  
-  // Add missing closing brace
-  if (!content.trim().endsWith('}')) {
-    content += '\n}';
-  }
-  
-  fs.writeFileSync(marketplaceUploadPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/upload.ts');
-}
+</string>]
 
+<<<<<<< HEAD
 // Fix media generate file
 const mediaGeneratePath = '/workspace/pages/api/media/generate.ts';
 if (fs.existsSync(mediaGeneratePath)) {
@@ -224,7 +205,7 @@ if (fs.existsSync(mediaGeneratePath)) {
 
 console.log('');
 console.log('📊 FINAL SYNTAX ERRORS FIX REPORT');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
@@ -253,4 +234,6 @@ const report = {
 
 fs.writeFileSync('/workspace/final-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to final-syntax-errors-fix-report.json');
->>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

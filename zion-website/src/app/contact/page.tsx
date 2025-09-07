@@ -1,6 +1,5 @@
-import React from 'react';
-
 const contactMethods = [
+
   {
     name: 'Email',
     description: 'Get in touch with our team',
@@ -8,6 +7,7 @@ const contactMethods = [
     href: 'mailto:contact@ziontechgroup.com',
     icon: EnvelopeIcon},
   {
+
     name: 'Phone',
     description: 'Speak with an expert',
     value: '+1 (555) 123-4567',
@@ -54,32 +54,51 @@ const faqs = [
     question: 'What security measures do you have?',
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
-<<<<<<< HEAD
-export default function ContactPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
-export default function ContactPage() {
+  {
+    question: 'What industries do you serve?'
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
+  {
+
+  {
+    question: 'Do you provide ongoing support?'
+    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
+  {
+
   return (
-    <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    <div className=&quot;bg - black & quot;>;
+
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Get in{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
-              technology can accelerate your growth and innovation.
-            </p>
-          </div>
-        </div>
-      </div>
+
+  {
+    name: 'Email'
+    description: 'Get in touch with our team'
+    value: 'contact@ziontechgroup.com'
+    href: 'mailto:contact@ziontechgroup.com'
+    icon: EnvelopeIcon}
+  {
+  {
+    question: 'What industries do you serve?'
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
+  {
+  {
+    question: 'Do you provide ongoing support?'
+    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
+  {
+  return (
+    <div className="bg-black">
+
+      {/* Hero section */}
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
+          <div className=&quot;text - center & quot;>;
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+              Get in{' '}
+
       {/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -94,15 +113,32 @@ export default function ContactPage() {
               <div key={method.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {method.name}
-                </dt>
+
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
                   <p className="mt-6">
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+
                     >
+
+export default function ContactPage() {
+
+  return (
+    <div className="min-h-screen bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
+        <div className="text-center mb-16">"
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
+            Contact Us;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Get in touch with our team.
+          </p>
+        </div>
+
+                    >
+
                       {method.value} <span aria-hidden="true">→</span>
                     </Link>
                   </p>
@@ -113,17 +149,17 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
+
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>"
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>"
+            <div className="space-y-6">
+
             Let's start a conversation
           </p>
         </div>
@@ -143,53 +179,67 @@ export default function ContactPage() {
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   />
                 </div>
+
+                <p className="text-gray-600">+1 (555) 123-4567</p>
+
               </div>
-              <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+              <div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>"
+                <p className="text-gray-600">
+                  123 Technology Drive<br />
+                  Innovation City, IC 12345;
+                </p>
               </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
-                  Email
+            </div>
+          </div>
+
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name;
                 </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <input"
+                  type="text""
+                  id="name""
+                  name="name""
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required;
+                />
               </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
-                  Company
+              <div>"
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email;
                 </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    autoComplete="organization"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <input"
+                  type="email""
+                  id="email""
+                  name="email""
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required;
+                />
               </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
-                  Message
+              <div>"
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message;
                 </label>
+
+                  name="message"
+                  rows={4}"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required;
+                ></textarea>
+              </div>
+              <button"
+                type="submit""
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+              >
+                Send Message;
+              </button>
+
+                    {office.hours}
+                  </p>;
+                </div>;
+              </div>;
+            ))}
+
                 <div className="mt-2.5">
                   <textarea
                     name="message"
@@ -212,6 +262,7 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
+
       {/* Office locations */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -246,23 +297,30 @@ export default function ContactPage() {
                     {office.hours}
                   </p>;
                 </div>;
-              </div>;
-            ))}
+
           </div>;
         </div>;
       </div>;
       {/* FAQ */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
+
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+            Common questions
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <dl className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+                <dt className="text-lg font-semibold leading-7 text-white mb-4">
+
+                  {faq.question}
+                </dt>;
+                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+
             Common questions
           </p>
         </div>
@@ -272,25 +330,17 @@ export default function ContactPage() {
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
                   {faq.question}
+
                 </dt>
                 <dd className="text-base leading-7 text-gray-300">
                   {faq.answer}
                 </dd>;
-              </div>;
-            ))}
+
           </dl>;
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -305,12 +355,9 @@ export default function ContactPage() {
             </Link>
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
-            </Link>
+
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Page;

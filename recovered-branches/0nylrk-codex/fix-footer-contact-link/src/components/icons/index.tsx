@@ -1,65 +1,254 @@
-<<<<<<< HEAD
-import React from 'react';
-import * as LucideIcons from 'lucide-react';
-// Alias for missing icons or for icons with different names
-const iconAliases: Record<string, keyof typeof LucideIcons> = {
-  // Grid views
+const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
+
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+
+  LayoutGrid: 'LayoutGrid'
+  List: 'List'
+  // UI elements
+  Zap: 'Zap'
+  Settings: 'Settings'
+  Plus: 'Plus'
+  HelpCircle: 'HelpCircle'
+  // Social media
+  Twitter: 'Twitter'
+  Linkedin: 'Linkedin'
+  Facebook: 'Facebook'
+  Instagram: 'Instagram'
+  Github: 'Github'
+  // Services
+  Server: 'Server'
+  // There is no 'Network' icon in lucide-react.
+  // Map to a similar existing icon.
+  Network: 'Share2'
+  Recycle: 'Recycle'
+  Truck: 'Truck'
+  HardDrive: 'HardDrive'
+  // Status and actions
+  Check: 'Check'
+  CheckIcon: 'Check'
+  Handshake: 'Handshake'
+  StarIcon: 'Star'
+  // Theme
+  Moon: 'Moon'
+  Sun: 'Sun'
+  // Notifications
+  Bell: 'Bell'
+  // Calendar
+  CalendarIcon: 'Calendar'
+  // Navigation
+  ChevronRight: 'ChevronRight'
+  MoreHorizontal: 'MoreHorizontal'
+  MoreVertical: 'MoreVertical'
+  // Content
+  Quote: 'Quote'
+  // Alerts
+  Info: 'Info'
+  AlertTriangle: 'AlertTriangle'
+  Ban: 'Ban'
+  ShieldAlert: 'ShieldAlert'
+  // Actions
+  Archive: 'Archive'
+  Trash2: 'Trash2'
+  Trash: 'Trash2'
+  Power: 'Power'
+  RefreshCw: 'RefreshCcw'
+  Copy: 'Copy'
+  ClipboardCopy: 'ClipboardCopy'
+  Download: 'Download'
+  // Auth
+  LogIn: 'LogIn'
+  EyeOff: 'EyeOff'
+  Wallet: 'Wallet'
+  // Development
+  Code: 'Code'
+  // Cast to any to work around missing type for Megaphone
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons
+  Terminal: 'Terminal'
+  // Community
+  ThumbsUp: 'ThumbsUp'
+  ThumbsDown: 'ThumbsDown'
+  Pin: 'Pin'
+  Lock: 'Lock'
+  Trophy: 'Trophy'
+  Award: 'Award'
+  BadgeCheck: 'BadgeCheck'
+  MessageSquare: 'MessageSquare'
+  // Misc
+  Link: 'Link'
+  Briefcase: 'Briefcase'
+  FileText: 'FileText'
+  Clock: 'Clock'
+  Save: 'Save'
+  StarOff: 'Star'
+  LayoutDashboard: 'LayoutDashboard'
+  BarChart: 'BarChart3'
+  BookOpen: 'BookOpen'
+  Key: 'Key'
+  Tag: 'Tag' as keyof typeof LucideIcons}
+type IconProps = LucideIcons.LucideProps;
+// Create a type safe export for each icon
+const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
+  const IconComponent = (props: IconProps) => {
+    // Fix: Use proper type casting to access the icon component
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>
+    return <LucideIcon {...props} />
+  }
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
+
+  LayoutGrid: 'LayoutGrid'
+  List: 'List'
+  // UI elements
+  Zap: 'Zap'
+  Settings: 'Settings'
+  Plus: 'Plus'
+  HelpCircle: 'HelpCircle'
+  // Social media
+  Twitter: 'Twitter'
+  Linkedin: 'Linkedin'
+  Facebook: 'Facebook'
+  Instagram: 'Instagram'
+  Github: 'Github'
+  // Services
+  Server: 'Server'
+  // There is no 'Network' icon in lucide-react.
+  // Map to a similar existing icon.
+  Network: 'Share2'
+  Recycle: 'Recycle'
+  Truck: 'Truck'
+  HardDrive: 'HardDrive'
+  // Status and actions
+  Check: 'Check'
+  CheckIcon: 'Check'
+  Handshake: 'Handshake'
+  StarIcon: 'Star'
+  // Theme
+  Moon: 'Moon'
+  Sun: 'Sun'
+  // Notifications
+  Bell: 'Bell'
+  // Calendar
+  CalendarIcon: 'Calendar'
+  // Navigation
+  ChevronRight: 'ChevronRight'
+  MoreHorizontal: 'MoreHorizontal'
+  MoreVertical: 'MoreVertical'
+  // Content
+  Quote: 'Quote'
+  // Alerts
+  Info: 'Info'
+  AlertTriangle: 'AlertTriangle'
+  Ban: 'Ban'
+  ShieldAlert: 'ShieldAlert'
+  // Actions
+  Archive: 'Archive'
+  Trash2: 'Trash2'
+  Trash: 'Trash2'
+  Power: 'Power'
+  RefreshCw: 'RefreshCcw'
+  Copy: 'Copy'
+  ClipboardCopy: 'ClipboardCopy'
+  Download: 'Download'
+  // Auth
+  LogIn: 'LogIn'
+  EyeOff: 'EyeOff'
+  Wallet: 'Wallet'
+  // Development
+  Code: 'Code'
+  // Cast to any to work around missing type for Megaphone
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons
+  Terminal: 'Terminal'
+  // Community
+  ThumbsUp: 'ThumbsUp'
+  ThumbsDown: 'ThumbsDown'
+  Pin: 'Pin'
+  Lock: 'Lock'
+  Trophy: 'Trophy'
+  Award: 'Award'
+  BadgeCheck: 'BadgeCheck'
+  MessageSquare: 'MessageSquare'
+  // Misc
+  Link: 'Link'
+  Briefcase: 'Briefcase'
+  FileText: 'FileText'
+  Clock: 'Clock'
+  Save: 'Save'
+  StarOff: 'Star'
+  LayoutDashboard: 'LayoutDashboard'
+  BarChart: 'BarChart3'
+  BookOpen: 'BookOpen'
+  Key: 'Key'
+  Tag: 'Tag' as keyof typeof LucideIcons}
+type IconProps = LucideIcons.LucideProps;
+// Create a type safe export for each icon
+const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
+  const IconComponent = (props: IconProps) => {
+    // Fix: Use proper type casting to access the icon component
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>
+    return <LucideIcon {...props} />
+  }
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
+
+  IconComponent.displayName = aliasName;
+  return IconComponent
+}
+// Export all of our icon components
+const iconExports: Record<string, React.FC<IconProps>> = {}
+// Generate icon exports
+Object.entries(iconAliases).forEach(([alias, lucideName]) => {
+  if (LucideIcons[lucideName]) {
+
+  // Grid views;
   LayoutGrid: 'LayoutGrid',
   List: 'List',
-  
-  // UI elements
+  // UI elements;
   Zap: 'Zap',
   Settings: 'Settings',
   Plus: 'Plus',
   HelpCircle: 'HelpCircle',
-  
-  // Social media
+  // Social media;
   Twitter: 'Twitter',
   Linkedin: 'Linkedin',
   Facebook: 'Facebook',
   Instagram: 'Instagram',
   Github: 'Github',
-  
-  // Services
+  // Services;
   Server: 'Server',
-  // There is no 'Network' icon in lucide-react.
-  // Map to a similar existing icon.
+  // There is no 'Network' icon in lucide-react.;
+  // Map to a similar existing icon.;
   Network: 'Share2',
   Recycle: 'Recycle',
   Truck: 'Truck',
   HardDrive: 'HardDrive',
-  
-  // Status and actions
+  // Status and actions;
   Check: 'Check',
   CheckIcon: 'Check',
   Handshake: 'Handshake',
   StarIcon: 'Star',
-  
-  // Theme
+  // Theme;
   Moon: 'Moon',
   Sun: 'Sun',
-  
-  // Notifications
+  // Notifications;
   Bell: 'Bell',
-  
-  // Calendar
+  // Calendar;
   CalendarIcon: 'Calendar',
-  
-  // Navigation
+  // Navigation;
   ChevronRight: 'ChevronRight',
   MoreHorizontal: 'MoreHorizontal',
   MoreVertical: 'MoreVertical',
-  
-  // Content
+  // Content;
   Quote: 'Quote',
-  
-  // Alerts
+  // Alerts;
   Info: 'Info',
   AlertTriangle: 'AlertTriangle',
   Ban: 'Ban',
   ShieldAlert: 'ShieldAlert',
-  
-  // Actions
+  // Actions;
   Archive: 'Archive',
   Trash2: 'Trash2',
   Trash: 'Trash2',
@@ -68,19 +257,16 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {
   Copy: 'Copy',
   ClipboardCopy: 'ClipboardCopy',
   Download: 'Download',
-  
-  // Auth
+  // Auth;
   LogIn: 'LogIn',
   EyeOff: 'EyeOff',
   Wallet: 'Wallet',
-  
-  // Development
+  // Development;
   Code: 'Code',
-  // Cast to any to work around missing type for Megaphone
+  // Cast to any to work around missing type for Megaphone;
   Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,
   Terminal: 'Terminal',
-  
-  // Community
+  // Community;
   ThumbsUp: 'ThumbsUp',
   ThumbsDown: 'ThumbsDown',
   Pin: 'Pin',
@@ -89,8 +275,7 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {
   Award: 'Award',
   BadgeCheck: 'BadgeCheck',
   MessageSquare: 'MessageSquare',
-  
-  // Misc
+  // Misc;
   Link: 'Link',
   Briefcase: 'Briefcase',
   FileText: 'FileText',
@@ -102,36 +287,157 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {
   BookOpen: 'BookOpen',
   Key: 'Key',
   Tag: 'Tag' as keyof typeof LucideIcons},
-
 type IconProps = LucideIcons.LucideProps;
+;
+// Create a type safe export for each icon;
+const createIconComponent = (alias_name: string, icon_name: keyof typeof LucideIcons) =>: any {
+  const IconComponent = (props: IconProps) =>: any {
+    // Fix: Use proper type casting to access the icon component;
+    const LucideIcon = LucideIcons[icon_name] as React.FC < IconProps>,
+    return <LucideIcon {...props} />;
+  }
+  IconComponent.display_name = alias_name;
 
-// Create a type safe export for each icon
-const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
-  const IconComponent = (props: IconProps) => {
-    // Fix: Use proper type casting to access the icon component
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+  return IconComponent;
+}
+// Export all of our icon components;
+const iconExports: Record<string, React.FC<IconProps>> = {}
+// Generate icon exports;
+
+  } else {
+
+    console.warn (`Icon '${lucide_name}' not found in lucide-react`);
+    // Use a fallback icon;'
+    icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
+  }
+});
+
+export const {
+
+// Alias for missing icons or for icons with different names;
+
+const iconAliases: Record<string, keyof typeof LucideIcons> = {;
+  // Grid views;'
+  LayoutGrid: 'LayoutGrid',;'
+  List: 'List',;
+  // UI elements;'
+  Zap: 'Zap',;'
+  Settings: 'Settings',;'
+  Plus: 'Plus',;'
+  HelpCircle: 'HelpCircle',;
+  // Social media;'
+  Twitter: 'Twitter',;'
+  Linkedin: 'Linkedin',;'
+  Facebook: 'Facebook',;'
+  Instagram: 'Instagram',;'
+  Github: 'Github',;
+  // Services;'
+  Server: 'Server',;'
+  // There is no 'Network' icon in lucide-react.;
+  // Map to a similar existing icon.;'
+  Network: 'Share2',;'
+  Recycle: 'Recycle',;'
+  Truck: 'Truck',;'
+  HardDrive: 'HardDrive',;
+  // Status and actions;'
+  Check: 'Check',;'
+  CheckIcon: 'Check',;'
+  Handshake: 'Handshake',;'
+  StarIcon: 'Star',;
+  // Theme;'
+  Moon: 'Moon',;'
+  Sun: 'Sun',;
+  // Notifications;'
+  Bell: 'Bell',;
+  // Calendar;'
+  CalendarIcon: 'Calendar',;
+  // Navigation;'
+  ChevronRight: 'ChevronRight',;'
+  MoreHorizontal: 'MoreHorizontal',;'
+  MoreVertical: 'MoreVertical',;
+  // Content;'
+  Quote: 'Quote',;
+  // Alerts;'
+  Info: 'Info',;'
+  AlertTriangle: 'AlertTriangle',;'
+  Ban: 'Ban',;'
+  ShieldAlert: 'ShieldAlert',;
+  // Actions;'
+  Archive: 'Archive',;'
+  Trash2: 'Trash2',;'
+  Trash: 'Trash2',;'
+  Power: 'Power',;'
+  RefreshCw: 'RefreshCcw',;'
+  Copy: 'Copy',;'
+  ClipboardCopy: 'ClipboardCopy',;'
+  Download: 'Download',;
+  // Auth;'
+  LogIn: 'LogIn',;'
+  EyeOff: 'EyeOff',;'
+  Wallet: 'Wallet',;
+  // Development;'
+  Code: 'Code',;
+  // Cast to any to work around missing type for Megaphone;'
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,;'
+  Terminal: 'Terminal',;
+  // Community;'
+  ThumbsUp: 'ThumbsUp',;'
+  ThumbsDown: 'ThumbsDown',;'
+  Pin: 'Pin',;'
+  Lock: 'Lock',;'
+  Trophy: 'Trophy',;'
+  Award: 'Award',;'
+  BadgeCheck: 'BadgeCheck',;'
+  MessageSquare: 'MessageSquare',;
+  // Misc;'
+  Link: 'Link',;'
+  Briefcase: 'Briefcase',;'
+  FileText: 'FileText',;'
+  Clock: 'Clock',;'
+  Save: 'Save',;'
+  StarOff: 'Star',;'
+  LayoutDashboard: 'LayoutDashboard',;'
+  BarChart: 'BarChart3',;'
+  BookOpen: 'BookOpen',;'
+  Key: 'Key',;'
+  Tag: 'Tag' as keyof typeof LucideIcons},;
+
+// Create a type safe export for each icon;
+const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
+  const IconComponent = (props: IconProps) => {;
+    // Fix: Use proper type casting to access the icon component;
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,;
     return <LucideIcon {...props} />;
   };
-  IconComponent.displayName = aliasName;
-  return IconComponent
+  IconComponent && IconComponent.displayName = aliasName;
+  return IconComponent;
 };
 
-// Export all of our icon components
-const iconExports: Record<string, React.FC<IconProps>> = {};
+Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
+  if (LucideIcons[lucideName]) {;
+    iconExports[alias] = createIconComponent(alias, lucideName);
+  } else {;'`
+    console && console.warn(`Icon '${lucideName}' not found in lucide-react`);
+    // Use a fallback icon;'
+    iconExports[alias] = createIconComponent(alias, 'HelpCircle');
+  }
 
-// Generate icon exports
-Object.entries(iconAliases).forEach(([alias, lucideName]) => {
-  if (LucideIcons[lucideName]) {
-    iconExports[alias] = createIconComponent(alias, lucideName)
+export const {;
+
+export const {;
+
   } else {
     console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
     iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
 });
+export const {
 
 export const {;
+
   LayoutGrid;
+
   List;
   Zap;
   Settings;
@@ -194,99 +500,93 @@ export const {;
   LayoutDashboard;
   BarChart;
   BookOpen;
-  Key;
-  Tag} = iconExports;
 
-// Also export all original icons from lucide-react;
-export * from 'lucide-react';
-=======
-import React from 'react',;
 import * as LucideIcons from 'lucide-react',;
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string keyof typeof LucideIcons> = {;
-  // Grid views;
-  LayoutGrid: 'LayoutGrid',;
+  // Grid views;'
+  LayoutGrid: 'LayoutGrid',;'
   List: 'List',;
-  // UI elements;
-  Zap: 'Zap',;
-  Settings: 'Settings',;
-  Plus: 'Plus',;
+  // UI elements;'
+  Zap: 'Zap',;'
+  Settings: 'Settings',;'
+  Plus: 'Plus',;'
   HelpCircle: 'HelpCircle',;
-  // Social media;
-  Twitter: 'Twitter',;
-  Linkedin: 'Linkedin',;
-  Facebook: 'Facebook',;
-  Instagram: 'Instagram',;
+  // Social media;'
+  Twitter: 'Twitter',;'
+  Linkedin: 'Linkedin',;'
+  Facebook: 'Facebook',;'
+  Instagram: 'Instagram',;'
   Github: 'Github',;
-  // Services;
-  Server: 'Server',;
+  // Services;'
+  Server: 'Server',;'
   // There is no 'Network' icon in lucide-react.;
-  // Map to a similar existing icon.;
-  Network: 'Share2',;
-  Recycle: 'Recycle',;
-  Truck: 'Truck',;
+  // Map to a similar existing icon.;'
+  Network: 'Share2',;'
+  Recycle: 'Recycle',;'
+  Truck: 'Truck',;'
   HardDrive: 'HardDrive',;
-  // Status and actions;
-  Check: 'Check',;
-  CheckIcon: 'Check',;
-  Handshake: 'Handshake',;
+  // Status and actions;'
+  Check: 'Check',;'
+  CheckIcon: 'Check',;'
+  Handshake: 'Handshake',;'
   StarIcon: 'Star',;
-  // Theme;
-  Moon: 'Moon',;
+  // Theme;'
+  Moon: 'Moon',;'
   Sun: 'Sun',;
-  // Notifications;
+  // Notifications;'
   Bell: 'Bell',;
-  // Calendar;
+  // Calendar;'
   CalendarIcon: 'Calendar',;
-  // Navigation;
-  ChevronRight: 'ChevronRight',;
-  MoreHorizontal: 'MoreHorizontal',;
+  // Navigation;'
+  ChevronRight: 'ChevronRight',;'
+  MoreHorizontal: 'MoreHorizontal',;'
   MoreVertical: 'MoreVertical',;
-  // Content;
+  // Content;'
   Quote: 'Quote',;
-  // Alerts;
-  Info: 'Info',;
-  AlertTriangle: 'AlertTriangle',;
-  Ban: 'Ban',;
+  // Alerts;'
+  Info: 'Info',;'
+  AlertTriangle: 'AlertTriangle',;'
+  Ban: 'Ban',;'
   ShieldAlert: 'ShieldAlert',;
-  // Actions;
-  Archive: 'Archive',;
-  Trash2: 'Trash2',;
-  Trash: 'Trash2',;
-  Power: 'Power',;
-  RefreshCw: 'RefreshCcw',;
-  Copy: 'Copy',;
-  ClipboardCopy: 'ClipboardCopy',;
+  // Actions;'
+  Archive: 'Archive',;'
+  Trash2: 'Trash2',;'
+  Trash: 'Trash2',;'
+  Power: 'Power',;'
+  RefreshCw: 'RefreshCcw',;'
+  Copy: 'Copy',;'
+  ClipboardCopy: 'ClipboardCopy',;'
   Download: 'Download',;
-  // Auth;
-  LogIn: 'LogIn',;
-  EyeOff: 'EyeOff',;
+  // Auth;'
+  LogIn: 'LogIn',;'
+  EyeOff: 'EyeOff',;'
   Wallet: 'Wallet',;
-  // Development;
+  // Development;'
   Code: 'Code',;
-  // Cast to any to work around missing type for Megaphone;
-  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,;
+  // Cast to any to work around missing type for Megaphone;'
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,;'
   Terminal: 'Terminal',;
-  // Community;
-  ThumbsUp: 'ThumbsUp',;
-  ThumbsDown: 'ThumbsDown',;
-  Pin: 'Pin',;
-  Lock: 'Lock',;
-  Trophy: 'Trophy',;
-  Award: 'Award',;
-  BadgeCheck: 'BadgeCheck',;
+  // Community;'
+  ThumbsUp: 'ThumbsUp',;'
+  ThumbsDown: 'ThumbsDown',;'
+  Pin: 'Pin',;'
+  Lock: 'Lock',;'
+  Trophy: 'Trophy',;'
+  Award: 'Award',;'
+  BadgeCheck: 'BadgeCheck',;'
   MessageSquare: 'MessageSquare',;
-  // Misc;
-  Link: 'Link',;
-  Briefcase: 'Briefcase',;
-  FileText: 'FileText',;
-  Clock: 'Clock',;
-  Save: 'Save',;
-  StarOff: 'Star',;
-  LayoutDashboard: 'LayoutDashboard',;
-  BarChart: 'BarChart3',;
-  BookOpen: 'BookOpen',;
-  Key: 'Key',;
+  // Misc;'
+  Link: 'Link',;'
+  Briefcase: 'Briefcase',;'
+  FileText: 'FileText',;'
+  Clock: 'Clock',;'
+  Save: 'Save',;'
+  StarOff: 'Star',;'
+  LayoutDashboard: 'LayoutDashboard',;'
+  BarChart: 'BarChart3',;'
+  BookOpen: 'BookOpen',;'
+  Key: 'Key',;'
   Tag: 'Tag' as keyof typeof LucideIcons},;
 type IconProps = LucideIcons.LucideProps,;
 // Create a type safe export for each icon;
@@ -305,9 +605,9 @@ const iconExports: Record<string React.FC<IconProps>> = {},;
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
     iconExports[alias] = createIconComponent(alias, lucideName);
-  } else {;
+  } else {;'`
     console.warn(`Icon '${lucideName}' not found in lucide-react`),;
-    // Use a fallback icon;
+    // Use a fallback icon;'
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 }),;
@@ -377,6 +677,14 @@ export const {;
   BookOpen,;
   Key,;
   Tag} = iconExports;
-// Also export all original icons from lucide-react;
+
 export * from 'lucide-react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+// Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
+// Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
+  const IconComponent = (props: IconProps) => {
+  // Fix: Use proper type casting to access the icon component // Export all of our icon components const iconExports: Record<string React.FC<IconProps>> = {
+  
+};
+// Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
+;

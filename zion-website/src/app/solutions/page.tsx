@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -9,8 +10,63 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline'
 
-const flagshipSolutions = [
+const solutions = [
   {
+    title: 'Enterprise AI Platform',
+    description: 'Complete AI infrastructure for large organizations',
+    benefits: ['Scalable Architecture', 'Real-time Processing', 'Advanced Analytics', 'Enterprise Security']
+  },
+  {
+    title: 'Quantum Optimization',
+    description: 'Quantum-powered solutions for complex optimization problems',
+    benefits: ['Faster Processing', 'Better Results', 'Cost Reduction', 'Innovation']
+  },
+  {
+    title: 'Autonomous Operations',
+    description: 'Self-managing business processes and systems',
+    benefits: ['Reduced Manual Work', 'Improved Efficiency', '24/7 Operations', 'Cost Savings']
+  },
+  {
+    title: 'Smart Analytics',
+    description: 'Intelligent data analysis and business intelligence',
+    benefits: ['Predictive Insights', 'Real-time Monitoring', 'Data-driven Decisions', 'Competitive Advantage']
+  }
+];
+
+export default function SolutionsPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready-to-deploy solutions that address your specific business challenges and drive measurable results.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {solutions.map((solution, index) => (
+            <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 border border-gray-200 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+              <p className="text-gray-600 mb-6">{solution.description}</p>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                <ul className="space-y-2">
+                  {solution.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center">
+                      <span className="text-blue-600 mr-3">✓</span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Learn More
+              </button>
+            </div>
+          ))}
     name: 'AI Research Assistant',
     description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
     icon: LightBulbIcon,
@@ -92,15 +148,9 @@ const implementationSteps = [
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
     icon: ShieldCheckIcon}]
 
-<<<<<<< HEAD
-export default function SolutionsPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
-const Page: React.FC<PageProps> = ({ className }) => {
+export default function SolutionsPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -118,6 +168,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>
         </div>
       </div>
+
       {/* Flagship Solutions */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -148,11 +199,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>;
                 <a;
                   href={solution.href}
-<<<<<<< HEAD
-className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-=======
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -162,17 +209,10 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Industry Applications */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -205,17 +245,10 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Implementation Process */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -244,15 +277,9 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -274,6 +301,4 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       </div>
     </div>
   );
-};
-
-export default Page;
+}

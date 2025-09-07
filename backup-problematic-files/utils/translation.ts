@@ -5,7 +5,7 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
   return map[preferred] || map[preferred.split('-')[0]] || map['en'] || map['en-US']
 }
 
-export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string string>> {
+export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {
   const res = await fetch('/api/translate', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

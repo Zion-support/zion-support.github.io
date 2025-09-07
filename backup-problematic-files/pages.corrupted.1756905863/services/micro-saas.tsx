@@ -6,11 +6,10 @@ interface Micro-saasProps {
 }
 
 const Micro-saas: React.FC<Micro-saasProps> = ({ className }) => {
+
   return (
-    <div className={className || ''}>
-      <h1>Micro-saas</h1>
-      <p>This component is under development.</p>
+    <div>
+      <h1>Microsaas</h1>
+      <p>This component is currently under development.</p>
     </div>
   );
-}
-}

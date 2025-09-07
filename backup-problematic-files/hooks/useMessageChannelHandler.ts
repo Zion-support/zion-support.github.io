@@ -1,61 +1,54 @@
-import { useEffect, useCallback } from 'react';
-
-// Define MessageEvent if not available
 interface Event {
-  type: string;
-  target: EventTarget | null;
+  // TODO: Implement
 }
-
+  type: string;,
+  target: EventTarget | null;
 type EventListener = (event: Event) => void;
 
 interface EventTarget {
-  addEventListener(type: string, listener: EventListener): void;
-  removeEventListener(type: string, listener: EventListener): void;
-}
-
+  // TODO: Implement
+  addEventListener (type: string, listener: EventListener): void;
+  removeEventListener (type: string, listener: EventListener): void;
 interface MessageEventSource {
-  postMessage(message: any, targetOrigin: string): void;
-}
-
+  // TODO: Implement
+  post_message (message: any, target_origin: string): void;
 interface MessagePort {
-  postMessage(message: any): void;
-  start(): void;
-  close(): void;
-}
+  // TODO: Implement
+  post_message (message: any): void;
+  start (): void;
+  close (): void;
 
-interface MessageEvent<T = any> extends Event {
   data: T;
+
   origin: string;
-  lastEventId: string;
+  lastEventId: string;,
   source: MessageEventSource | null;
-  ports: ReadonlyArray<MessagePort>;
-}
-
+  ports: ReadonlyArray < MessagePort>;
 interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void;
-  onError?: (error: Error) => void;
-}
+  // TODO: Implement
+  on_message?: (message: unknown) => void;
+  on_error?: (error: Error) => void;
 
-export function useMessageChannelHandler({
-  onMessage,
   onError
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {;
-        onMessage(event.data);
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+
+      try {
+  // TODO: Implement
+        // Check condition;
+if ( {) {
+  $2;
+          on_message (event.data);
+      } catch (error) {
+        // Check condition;
+          on_error (error as Error);
+
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-      }
-    }
-  }, [onMessage, onError]);
 
+    [onMessage, onError]
+  );
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
-    return () => {
-      window.removeEventListener('message', handleMessage);
-    };
-  }, [handleMessage]);
-}

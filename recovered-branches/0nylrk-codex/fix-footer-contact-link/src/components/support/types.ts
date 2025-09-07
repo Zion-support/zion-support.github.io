@@ -1,33 +1,61 @@
+import { ReactNode  } from './react';
 
-<<<<<<< HEAD
+export interface HelpArticle {
+
+  id: string;
+  title: string;
+  content: string;
+
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
   title: string;
   content: string;
-  lastUpdated: string,
-  tags: string[]
+
+  tags: string[];
+
 }
 
 export interface HelpCategory {;
-  id: string;
-  name: string;
-  description: string;
-  icon: ReactNode,
-  articles: HelpArticle[]
+
+  lastUpdated: string;
+  tags: string[];
 }
 
-export interface SupportTicket {;
+export interface HelpCategory {;
+
   id: string;
-  userId: string;
-  subject: string;
-  message: string;
-  status: "open" | "in-progress" | "resolved" | "closed";
-  priority: "low" | "medium" | "high";
-  createdAt: string,
-  updatedAt: string
+  title: string;
+  content: string;
 }
-=======
+
+export interface HelpCategory {;  lastUpdated: string;
+  tags: string[];
+}
+
+export interface HelpCategory {;
+
+import { ReactNode } from "react";"
+
+export interface HelpArticle {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+
+  content: string;,
+  lastUpdated: string;
+  tags: string[];
+
+export interface HelpCategory {;
+
+  lastUpdated: string;,
+
+  name: string;
+
+  articles: HelpArticle[];
+}
+
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -69,8 +97,5 @@ export interface SupportTicket {;
   message: string,;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
+
   createdAt: string;
-  updatedAt: string;
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

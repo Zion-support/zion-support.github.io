@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 console.log(' Fixing react-router-dom imports...')
 const pagesDir = path.join(__dirname, '..', 'pages')
 const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
@@ -12,4 +13,16 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
       "
     content = content.replace(/to="/g, 'href=')
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
         "
+        "
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

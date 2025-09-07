@@ -97,6 +97,9 @@ import Link from 'next/link',
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
 
+  const newsArticles = [
+    {
+
       id: 1,
       title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
       excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
@@ -172,6 +175,9 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
+      tags: ['AI', 'Quantum Computing', 'Innovation'],
+import Head from 'next/head';
+
       tags: ['AIQuantum ComputingInnovation'],
 import Head from 'next/head',
 export default function NewsPage() {
@@ -184,7 +190,7 @@ export default function NewsPage() {
       category: "Company News",
       author: "Zion Tech Group",
       readTime: "3 min read",
-      image: "🚀",
+      image: "",
       featured: true
     },
     {
@@ -267,6 +273,7 @@ export default function NewsPage() {
             </div>
           </section>
         )}
+
 ;
         {/* Category Filter */}
         <section className="py-12 bg-black/50">
@@ -407,6 +414,8 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { 
@@ -702,6 +711,17 @@ export default function News() {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
+    'All News',
+    'Company News',
+    'Partnerships',
+    'AI & Ethics',
+    'Quantum Technology',
+    'Space Technology',
+    'Micro SAAS',
+    'IT Services',
+    'Metaverse',
+    'Industry Insights'
+  ];
     'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services',
     'MetaverseIndustry Insights'
   ],
@@ -1546,7 +1566,7 @@ export default function News() {;
       category: "Partnerships",
       author: "Sarah Chen",
       readTime: "2 min read",
-      image: "🤝"
+      image: ""
     },
     {
       id: 3,
@@ -1556,7 +1576,7 @@ export default function News() {;
       category: "Innovation",
       author: "Dr. Emily Watson",
       readTime: "4 min read",
-      image: "⚖️"
+      image: ""
     },
     {
       id: 4,
@@ -1566,7 +1586,7 @@ export default function News() {;
       category: "Company News",
       author: "Marcus Rodriguez",
       readTime: "2 min read",
-      image: "🌏"
+      image: ""
     },
     {
       id: 5,
@@ -1576,7 +1596,7 @@ export default function News() {;
       category: "Technology",
       author: "Dr. James Wilson",
       readTime: "5 min read",
-      image: "🧠"
+      image: ""
     },
     {
       id: 6,
@@ -1586,7 +1606,7 @@ export default function News() {;
       category: "Sustainability",
       author: "Lisa Park",
       readTime: "6 min read",
-      image: "🌱"
+      image: ""
     },
     {
       id: 7,
@@ -1596,7 +1616,7 @@ export default function News() {;
       category: "Case Studies",
       author: "Alex Thompson",
       readTime: "4 min read",
-      image: "📊"
+      image: ""
     },
     {
       id: 8,
@@ -1606,7 +1626,7 @@ export default function News() {;
       category: "Research",
       author: "Prof. Maria Garcia",
       readTime: "7 min read",
-      image: "📚"
+      image: ""
     }
   ],
 
@@ -1671,7 +1691,7 @@ export default function News() {;
       category: "Partnerships",;
       author: "Sarah Chen",;
       readTime: "2 min read",;
-      image: "🤝";
+      image: "";
     },;
     {;
       id: 3,;
@@ -1681,7 +1701,7 @@ export default function News() {;
       category: "Innovation",;
       author: "Dr. Emily Watson",;
       readTime: "4 min read",;
-      image: "⚖️";
+      image: "";
     },;
     {;
       id: 4,;
@@ -1691,7 +1711,7 @@ export default function News() {;
       category: "Company News",;
       author: "Marcus Rodriguez",;
       readTime: "2 min read",;
-      image: "🌏";
+      image: "";
     },;
     {;
       id: 5,;
@@ -1701,7 +1721,7 @@ export default function News() {;
       category: "Technology",;
       author: "Dr. James Wilson",;
       readTime: "5 min read",;
-      image: "🧠";
+      image: "";
     },;
     {;
       id: 6,;
@@ -1711,7 +1731,7 @@ export default function News() {;
       category: "Sustainability",;
       author: "Lisa Park",;
       readTime: "6 min read",;
-      image: "🌱";
+      image: "";
     },;
     {;
       id: 7,;
@@ -1721,7 +1741,7 @@ export default function News() {;
       category: "Case Studies",;
       author: "Alex Thompson",;
       readTime: "4 min read",;
-      image: "📊";
+      image: "";
     },;
     {;
       id: 8,;
@@ -1731,7 +1751,7 @@ export default function News() {;
       category: "Research",;
       author: "Prof. Maria Garcia",;
       readTime: "7 min read",;
-      image: "📚";
+      image: "";
     }
   ];
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
@@ -1792,9 +1812,9 @@ export default function News() {;
                     </p>
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">
                       <span>By {article.author}</span>
-                      <span>•</span>
+                      <span></span>
                       <span>{article.date}</span>
-                      <span>•</span>
+                      <span></span>
                       <span>{article.readTime}</span>
                     </div>
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">

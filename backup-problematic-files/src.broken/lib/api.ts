@@ -1,14 +1,14 @@
-import axios from 'axios',;
-import { toast } from '@/hooks/use-toast',;
+import axios from 'axios';
+import { toast } from '@/hooks/use-toast';
 ;
-const api = axios.create(),;
+const api = axios.create();
 ;
 api.interceptors.response.use(;
-  res => res,;
+  res => res;
   err => {;
-    toast.error(err.response?.data?.error || 'Network error'),;
-    return Promise.reject(err),;
+    toast.error(err.response?.data?.error || 'Network error');
+    return Promise.reject(err);
   }
-),;
+);
 ;
-export default api,; export default api;
+export default api; export default api;

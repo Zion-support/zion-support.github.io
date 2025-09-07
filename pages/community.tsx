@@ -1,168 +1,39 @@
-<<<<<<< HEAD
 import React from 'react';
-import Head from 'next/head';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Community - Zion Tech Group',
+  description: 'Community forum and resources for Zion Tech Group users',
+  keywords: 'community, forum, resources, Zion Tech Group'
+};
+
 export default function CommunityPage() {
   return (
-    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-      <Head>
-        <title>Community | Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Community forum and resources for Zion Tech Group users'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/community' />
-        <meta
-          name='description'
-          content='Join the Zion Tech Group community and stay updated.'
-        />
-      </Head>
-      <div className='max-w-5xl mx-auto space-y-8'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Community
         </h1>
-        <p className='text-slate-300'>
-          Join our community. Ask questions, share solutions, and learn best
-          practices.
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Community forum and resources for Zion Tech Group users.
         </p>
-        <div className='grid md:grid-cols-2 gap-6'>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Get Help</h2>
-            <p className='text-slate-300'>
-              Visit the{' '}
-              <a className='text-cyan-400 underline' href='/support'>
-                Support Center
-              </a>{' '}
-              or email{' '}
-              <a
-                className='text-purple-400'
-                href='mailto: kleber@ziontechgroup.com'
-              >
-                kleber@ziontechgroup.com
-              </a>
-              .
-            </p>
-          </div>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
-            <ul className='text-slate-300 space-y-1'>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://linkedin.com/company/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://github.com/Zion-Holdings'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://instagram.com/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://youtube.com/@ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>;
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This page is currently under development. Please contact us for more information.
+        </p>
+      </div>
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Community Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
   );
-
 }
-=======
-import React from 'react',
-import Head from 'next/head',
-export default function CommunityPage() {
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Community | Zion Tech Group</title>
-				<meta name="description" content="Community forum and resources for Zion Tech Group users" />
-				<link rel="canonical" href="https://ziontechgroup.com/community" />
-				<meta name="description" content="Join the Zion Tech Group community and stay updated." />
-			</Head>
-			<div className="max-w-5xl mx-auto space-y-8">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
-				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>
-				<div className="grid md: grid-cols-2 gap-6">
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>
-						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-					</div>
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
-						<ul className="text-slate-300 space-y-1">
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
-import React from 'react';
-import Head from 'next/head';
-export default function CommunityPage(req, res) {
-  try {
-	return (;
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-			<Head>;
-				<title>Community | Zion Tech Group</title>;
-				<meta name="description" content="Community forum and resources for Zion Tech Group users" />;
-				<link rel="canonical" href="https://ziontechgroup.com/community" />;
-				<meta name="description" content="Join the Zion Tech Group community and stay updated." />;
-			</Head>;
-			<div className="max-w-5xl mx-auto space-y-8">;
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>;
-				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>;
-				<div className="grid md: grid-cols-2 gap-6">;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>;
-						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
-					</div>;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>;
-						<ul className="text-slate-300 space-y-1">;
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>;
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>;
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>;
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>;
-						</ul>;
-					</div>;
-				</div>;
-			</div>;
-		</div>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

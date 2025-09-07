@@ -1,12 +1,18 @@
-<<<<<<< HEAD
 export interface Job {;
+
+export interface Job {;
+
+export interface Job {
+export interface Job {;
+
   id: string;
   title: string;
-  description: string;
-  company_name?: string;
-  budget?: string;
-  client_id: string;
+
 }
+
+export interface ApplyToJobModalProps {
+  job: Job;
+  isOpen: boolean;
 
 export interface ApplyToJobModalProps {;
   job: Job;
@@ -14,7 +20,6 @@ export interface ApplyToJobModalProps {;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-=======
 
 export interface Job {;
   id: string,;
@@ -27,9 +32,26 @@ export interface Job {;
 ;
 export interface ApplyToJobModalProps {;
   job: Job,;
-  isOpen: boolean,;
+
   onClose: () => void;
+
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+
+  is_open: boolean;
+  on_close: () => void;
+  onApplySuccess?: (job_id: string) => Promise < void>;
+}
+
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+
+;
+;
+export interface ApplyToJobModalProps {
+job: Job;
+export interface ApplyToJobModalProps {
+  job: Job;
