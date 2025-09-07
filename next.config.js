@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
-  compress: true,
-  poweredByHeader: false,
-=======
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -50,15 +45,5 @@ const nextConfig = {
     return config;
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-<<<<<<< HEAD
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
 };
-
 export default nextConfig;
-=======
-};
-module.exports = nextConfig;
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98

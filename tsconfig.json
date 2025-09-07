@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "ES2017",
-=======
     "target": "ES2020",
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
     "lib": [
       "dom",
       "dom.iterable",
@@ -26,15 +22,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-=======
     "incremental": true,
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -63,11 +51,6 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
-    "strictNullChecks": true,
-    "maxNodeModuleJsDepth": 0,
-    "disableSourceOfProjectReferenceRedirect": true
-=======
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "declaration": false,
@@ -88,7 +71,6 @@
         "name": "next"
       }
     ]
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
   },
   "include": [
     "src/**/*.ts",
@@ -112,23 +94,6 @@
     "pages.__*",
     "backup-pages",
     "src.pages.disabled",
-<<<<<<< HEAD
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled",
-    "src_backup/**",
-    "recovered-branches/**",
-    "temp_backup/**",
-    "api.disabled/**",
-    "lib/analytics.ts"
-  ],
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true
-  }
-}
-=======
     "lib_backup*",
     "src_backup*",
     "corrupted-files-backup*",
@@ -145,4 +110,3 @@
     "hardhat"
   ]
 }
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
