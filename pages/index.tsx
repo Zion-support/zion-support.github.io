@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { ArrowRight, CheckCircle, Star, Users, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, TrendingUp, Shield, Globe } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -51,32 +51,32 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
                   <Zap className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
                 <p className="text-gray-600">Rapid development and deployment of enterprise solutions</p>
               </div>
               
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 group-hover:bg-green-200 transition-colors">
                   <CheckCircle className="h-8 w-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Assured</h3>
                 <p className="text-gray-600">Rigorous testing and quality assurance processes</p>
               </div>
               
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4 group-hover:bg-purple-200 transition-colors">
                   <Users className="h-8 w-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
                 <p className="text-gray-600">Experienced developers and AI specialists</p>
               </div>
               
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4 group-hover:bg-yellow-200 transition-colors">
                   <Star className="h-8 w-8 text-yellow-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
@@ -86,8 +86,69 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Technology Stack Section */}
+        <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Powered by Modern Technology
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                We leverage the latest technologies to build scalable, secure, and efficient solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
+                  <TrendingUp className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">AI & Machine Learning</h3>
+                <p className="text-gray-600 mb-4">
+                  Advanced AI models, natural language processing, and predictive analytics to drive intelligent automation.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• OpenAI GPT Integration</li>
+                  <li>• Custom ML Models</li>
+                  <li>• Computer Vision</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">
+                  <Shield className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud & Security</h3>
+                <p className="text-gray-600 mb-4">
+                  Enterprise-grade cloud infrastructure with robust security measures and compliance standards.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• AWS & Azure</li>
+                  <li>• End-to-End Encryption</li>
+                  <li>• SOC 2 Compliance</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
+                  <Globe className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable Architecture</h3>
+                <p className="text-gray-600 mb-4">
+                  Microservices architecture with containerization and auto-scaling for optimal performance.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Kubernetes</li>
+                  <li>• Docker Containers</li>
+                  <li>• Auto-scaling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Preview */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -99,33 +160,45 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="h-6 w-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-                <p className="text-gray-600 mb-4">
-                  Custom AI implementations, machine learning models, and intelligent automation systems.
+                <p className="text-gray-600 mb-6">
+                  Custom AI implementations, machine learning models, and intelligent automation systems that transform your business operations.
                 </p>
-                <a href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
-                  Learn More →
+                <a href="/services" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
               
-              <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+                  <Globe className="h-6 w-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
-                <p className="text-gray-600 mb-4">
-                  Scalable software-as-a-service platforms built for rapid growth and market expansion.
+                <p className="text-gray-600 mb-6">
+                  Scalable software-as-a-service platforms built for rapid growth and market expansion with modern architecture.
                 </p>
-                <a href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
-                  Learn More →
+                <a href="/services" className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold group">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
               
-              <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="h-6 w-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Cloud migration, DevOps, infrastructure management, and technical consulting.
+                <p className="text-gray-600 mb-6">
+                  Cloud migration, DevOps, infrastructure management, and technical consulting for enterprise-grade solutions.
                 </p>
-                <a href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
-                  Learn More →
+                <a href="/services" className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold group">
+                  Learn More 
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
