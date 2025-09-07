@@ -495,16 +495,6 @@ function PricingCard({
   popular: boolean;
 }) {
   return (
-<<<<<<< HEAD
-    <div
-      className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}
-    >
-      {popular && (
-        <div className="text-center mb-4">
-          <span className="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -648,7 +638,6 @@ function PricingCard({
           <div className="mt-8 text-gray-400">
             <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
         </div>
       )}
       <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>

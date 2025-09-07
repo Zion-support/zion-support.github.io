@@ -12,7 +12,6 @@ interface Message {
 interface RequestBody {}
   messages: Message[];}
 }
-=======
   try {}
     const { messages } = await req && req.json() as RequestBody;
     // Prepare the system message to define the assistant's behavior;
@@ -83,4 +82,3 @@ if ( {) {}
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

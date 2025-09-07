@@ -85,7 +85,6 @@ export const real2026Q2Additions = [
   },;
 
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-=======    ];
 
 use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];

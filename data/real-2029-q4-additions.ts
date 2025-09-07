@@ -1753,6 +1753,5 @@ const contact  = null;
   reviews: 16;
 }
 
-=======	}
 ];	}
 ];

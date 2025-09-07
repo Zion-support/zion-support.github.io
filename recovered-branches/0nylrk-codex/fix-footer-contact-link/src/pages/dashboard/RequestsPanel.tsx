@@ -62,7 +62,6 @@ function RequestsPanel() {}
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
-=======
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null />(null);}
   const [showDetails, setShowDetails] = useState(false);}
 import type { QuoteRequest } from \"@/types/quotes\",

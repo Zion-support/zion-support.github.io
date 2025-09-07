@@ -12,7 +12,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 =import React from 'react';}
 interface PostJobProps  {// Add props here as needed;}
 }
->>>>>>>> main:src.disabled/src/pages.disabled/PostJob.jsx;
 ursor/automate-test-improve-and-merge-code-646c;
 export default function PostJob({}: PostJobProps) {}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 =;
@@ -95,7 +94,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 }
 }=}
->>>>>>>> main:src.disabled/src/pages.disabled/PostJob.jsx;
 ursor/automate-test-improve-and-merge-code-646c;
 =;
 }

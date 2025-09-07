@@ -18,7 +18,6 @@ if (req && req.method === 'OPTIONS') {}
   }
   try {
 
-=======;
 
 try {;
     // Get the OpenAI API key from environment variables;

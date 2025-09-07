@@ -1,5 +1,4 @@
 
-=======export const innovativeITInfrastructureServices2025 = [
   {
 
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'

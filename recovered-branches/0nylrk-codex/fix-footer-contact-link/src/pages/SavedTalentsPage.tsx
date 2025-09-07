@@ -382,4 +382,3 @@ return (<> <SEO title=\"Saved Talents | Zion AI Marketplace\" description=\"View
 }</div> <Footer /> </>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

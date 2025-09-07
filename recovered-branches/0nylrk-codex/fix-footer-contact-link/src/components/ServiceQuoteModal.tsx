@@ -263,7 +263,6 @@ id=\"email\"
                   type=\"email\"
                   {endDate && (              </div />;
             </div>;
-=======              <div className=\"bg-zion-blue-dark border border-zion-blue-light rounded-md p-4\" />;
                 <h3 className=\"font-medium text-zion-cyan mb-2\" />Quote Summary</h3>;
                 <div className=\"space-y-2 text-sm\" />;
                   <div className=\"flex justify-between\" />;}

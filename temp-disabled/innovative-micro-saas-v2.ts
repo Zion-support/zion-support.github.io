@@ -576,7 +576,6 @@ export interface InnovativeMicroSaasV2  {id: string, name: string,tagline: strin
     customers: 789;
     rating: 4.8;
 
-=======    integrations: [;
 
       'Plaid',
       'Yodlee',

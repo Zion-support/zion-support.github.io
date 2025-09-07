@@ -277,7 +277,6 @@ ref={ref}
       disabled={!canScrollPrev}
       on_click={scroll_prev}
       {...props}
-=======      disabled={!canScrollPrev}
       on_click={scroll_prev}
       {...props}
     </Button />

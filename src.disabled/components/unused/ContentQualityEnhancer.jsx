@@ -27,7 +27,6 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 =import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' \"export\": const ContentQualityEnhancer = ( const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [selectedElement,setSelectedElement] = useState(null)''';] ) => {
   return $3;}
 }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'''}
->>>>>>>> main:corrupted_backup/ContentQualityEnhancer.jsx;
 \"export\": const ContentQualityEnhancer = ( const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState(\'overview\') const [selectedElement,setSelectedElement] = useState(null)\';\"\";) => {
   return $3;}
 }

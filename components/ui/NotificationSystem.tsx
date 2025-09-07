@@ -1,65 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle  } from 'lucide-react';
-ursor/automate-test-improve-and-merge-code-646c;
-  id: string;
-  type: \"success\" | \"error\" | \"warning\" | \"info\";title?: string;
-  message: string;
-  duration?: number;
-}
-"
-const getNotificationStyles = (type: Notification[\"type\"]): string => ;"
-  const baseStyles = \"border-l-4\";
-"
-const typeStyles = {success: \"bg-green-50 border-green-400 text-green-800\";"
-    error: \"bg-red-50 border-red-400 text-red-800\";"
-    warning: \"bg-yellow-50 border-yellow-400 text-yellow-800\";}"
-    info: \"bg-blue-50 border-blue-400 text-blue-800\";}
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
-}
-
-export default function NotificationSystem({notifications;}
-  onDismiss;}
-key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}>
-"
-          <div className=\"flex items-start justify-between\" />;"
-            <div className=\"flex-1\" />;"
-              {notification.title && (<h4 className=\"font-medium mb-1\" />{notification.title}</h4>)}"
-              <p className=\"text-sm\" />{notification.message}</p>;
-            </div>;
-            {onDismiss && (<button;}
-                onClick = {() = /> onDismiss(notification.id)}
-import React, { createContext, useContext,;}
-  useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion  } from 'framer-motion';
-
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error';}
-}
-
-type NotificationContextValue = {notify: (message: string, tone?: 'default' | 'success' | 'error') => void;}
-}
-
-const NotificationContext = createContext<NotificationContextValue />({ notify: () => {}
-})export function useToast() ;
-  return useContext(NotificationContext;
-}
-
-export function NotificationProvider() {const [toasts, setToasts] = useState<Toast[] />([])const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => ;}"
-  const id = Math.random().toString(36).slice(2)setToasts((prev) => [...prev, { id, message, tone }])setTimeout(() => {setToasts((prev) => prev.filter((t) => t.id !== id))}, 3000)}, [])success: \"bg-green-50 border-green-400 text-green-800\",error: \"bg-red-50 border-red-400 text-red-800\",warning: \"bg-yellow-50 border-yellow-400 text-yellow-800\",info: \"bg-blue-50 border-blue-400 text-blue-800\";"
-    info: \"bg-blue-50 border-blue-400 text-blue-800\";
-  }return `${baseStyles} ${typeStyles[type]}`;
-}import React from 'react';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-interface Notification  {id: string;}
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
-
-export interface Notification {
-=======
 interface Notification {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title?: string;
@@ -74,59 +13,12 @@ interface NotificationSystemProps {
 }
 }
 
-<<<<<<< HEAD
-const NotificationSystem: React.FC<NotificationSystemProps /> = ({ notifications,
-  onDismiss}
-  position = 'top-right'}
-   }) => {
-
-
-
- ;
-  const [visibleNotifications, setVisibleNotifications] = useState<Notification[] />([]);
-
-const handleDismiss = useCallback((id: string) => {
-    setVisibleNotifications(prev => prev.filter(n => n.id !== id));}
-    onDismiss?.(id);}
-  }, [onDismiss]);
-
-  useEffect(() => {
-}
-    setVisibleNotifications(notifications);}
-  }, [notifications]);
-
-  useEffect(() => {
-
-    const timers: ReturnType<typeof setTimeout />[] = [];
-    
-    notifications.forEach(notification = > {
-      if (notification.duration && notification.duration > 0) {
-       ;
-  const timer = setTimeout(() => {}
-          handleDismiss(notification.id);}
-        }, notification.duration);
-        timers.push(timer);
-      }
-    });
-
-    return () => {}
-      timers.forEach(timer => clearTimeout(timer))}
-};
-
-  }, [notifications, handleDismiss]);
-
-const getNotificationStyles = (
-   ;
-  const baseStyles = 'border-l-4';
-    
-=======
 const NotificationSystem = ({ 
   notifications, 
   onDismiss, 
   className = '' 
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e405
     switch (type) {
       case 'success':) => {
   return $3;}

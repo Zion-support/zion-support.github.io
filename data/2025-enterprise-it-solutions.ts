@@ -839,6 +839,5 @@ const contact  = null;
   reviews: 38;
 }
 
-=======	}
 ];	}
 ];

@@ -73,4 +73,3 @@ console && console.error('Failed to parse AI response as JSON:', parseError);}
     )
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

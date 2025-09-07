@@ -269,7 +269,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-=======];
 ;
 export type InnovativeMicroSaas = {;
 	id: string,;

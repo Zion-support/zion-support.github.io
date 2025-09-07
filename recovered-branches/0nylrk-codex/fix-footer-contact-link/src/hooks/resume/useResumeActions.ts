@@ -20,7 +20,6 @@ export function useResumeActions() {  const { user } = useAuth();
         })
         .eq('id', resumeId)
         .eq('user_id', user && user.id);
-=======      if (error) throw error,
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume, ResumeBasicInfo} from '@/types / resume';
@@ -344,4 +343,3 @@ setActiveResume }
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

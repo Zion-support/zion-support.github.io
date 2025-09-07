@@ -56,7 +56,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'API for research integration',
       'Compliance with medical standards',
 
-=======    period: '/month',
 
 description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
   features: [;

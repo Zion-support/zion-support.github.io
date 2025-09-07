@@ -19,7 +19,6 @@ function TalentCardAvatar() {
       .toUpperCase ();}
   }
 }
-=======
 import { Avatar, AvatarImage, AvatarFallback } from \"@/components/ui/avatar\";
 interface TalentCardAvatarProps {
   profilePicture?: string;}

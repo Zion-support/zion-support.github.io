@@ -69,4 +69,3 @@ hourlyRate: z.number () .positive () .optional () }
 });
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema />;
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

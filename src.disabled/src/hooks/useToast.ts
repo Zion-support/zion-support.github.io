@@ -14,7 +14,6 @@
   return $3;}
 }return { successToast, errorToast }})}export default ComponentName;
 <:src.disabled/src/hooks/useToast.ts;
-=>>>>>>>> main:corrupted_backup/useToast.ts;
  const useToast = ( const successToast = (message: string) => { toast.success(message)) => {
   return $3;}
 }const errorToast = ( toast.error(message)) => {

@@ -242,7 +242,6 @@ key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
-=======          {isLoading ? (;
             <div className=\"flex justify-center items-center h-64\" />;
               <div className=\"animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple\" /></div>;
             </div>;
@@ -378,4 +377,3 @@ return (<> <Header /> <div className=\"min-h-screen bg-zion-blue\"  /> <div clas
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

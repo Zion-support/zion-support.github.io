@@ -120,7 +120,6 @@ export function PartnerResources() {;
 import {Button} from \"@/components/ui/button\";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from \"lucide-react\";
 import {toast} from \"@/hooks/use-toast\";
-=======                  <Button;
 onClick={() = /> handleDownload(resource)}
                     size=\"sm\"
                     variant=\"outline\"

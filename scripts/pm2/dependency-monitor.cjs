@@ -32,5 +32,3 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
-<<<<<<< HEAD
-      '\n� "CRITICAL"

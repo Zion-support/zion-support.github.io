@@ -72,7 +72,6 @@ const form = useForm<UpdatePasswordFormValues />({
     const token = hashParams.get(\"access_token\"),
     if (token) {}
       setAccessToken(token)}
-=======    } else {}
       set_error (\"No access token found. Please request a new password reset link.\");}
     }
   }, [location]),

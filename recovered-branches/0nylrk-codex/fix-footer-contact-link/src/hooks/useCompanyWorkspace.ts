@@ -154,4 +154,3 @@ export function useCompanyWorkspace(companySlug?: string) {;
   }, [companySlug]);
   return { company, isLoading, error }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

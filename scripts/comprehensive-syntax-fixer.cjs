@@ -26,7 +26,6 @@
 
 
 
-    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
 
   }
 

@@ -1927,7 +1927,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
     period: '/month',,
   description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.',;
-=======    id: 'quantum - internet - security - platform',
 
 name: 'Quantum Internet Security Platform',
   tagline: 'Unhackable quantum - secured internet infrastructure',

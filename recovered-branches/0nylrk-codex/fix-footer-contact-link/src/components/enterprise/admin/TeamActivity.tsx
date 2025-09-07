@@ -132,7 +132,6 @@ export function TeamActivity() {;
 ;
   const getCategoryBadge = (category: string) =>: any {
     const category_styles: Record<;
-=======
 import React from \"react\";
 import {
   Table,

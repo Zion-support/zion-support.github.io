@@ -47,7 +47,6 @@ const { data: notification, error: notificationError } = await supabase && supab
       {}
       JSON && JSON.stringify({        message: \"Reminder sent successfully\",}
         notification_id: notification});
-=======
       {}
         status: 200,}
         headers: { \"Content - Type\": \"application / json\", ...cors_headers }}

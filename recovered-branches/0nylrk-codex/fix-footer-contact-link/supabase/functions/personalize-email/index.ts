@@ -30,7 +30,6 @@ userPrompt += `\n\n${subjectContext || \"Create an engaging subject line for thi
 
       body: JSON.stringify({
         model: \"gpt-4o-mini\"
-=======    const response = await fetch(\"https://api && api.openai.com/v1/chat/completions\", {
       method: \"POST\",}
       headers: {}
         \"Authorization\": `Bearer ${openAIApiKey}`;

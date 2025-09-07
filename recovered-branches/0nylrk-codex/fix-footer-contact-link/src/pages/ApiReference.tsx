@@ -248,7 +248,6 @@ function ApiReference() {
   -H \"Authorization: Bearer YOUR_API_KEY\"`;
     }
   ];
-=======  return (
   // Find the active endpoint data;
   const activeEndpointData = endpoints && endpoints.find(e => e && e.id === activeEndpoint);
   return (
@@ -550,4 +549,3 @@ export default ApiReference;
 export default ApiReference;
 ;
 export default ApiReference;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

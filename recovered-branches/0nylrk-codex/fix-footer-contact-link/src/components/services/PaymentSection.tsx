@@ -37,7 +37,6 @@ amount={selectedCountry.pricePerIncident}
         serviceId=\"it-onsite-service\"
         providerId=\"zion-tech-group\"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
-=======
         serviceId=\"it-onsite-service\"
         providerId=\"zion-tech-group\"
         buttonText={`Pay for Service in ${selectedCountry.country}`}

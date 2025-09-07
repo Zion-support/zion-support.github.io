@@ -2,8 +2,6 @@
 interface NavigationItem {
   name: string, href: string;
 submenu?: NavigationItem[];
-=======}
->>>>>>> }
 }
 interface InteractiveNavigationProps {
   items: NavItem[];}
@@ -131,5 +129,3 @@ const InteractiveNavigation: React.FC: = () => {\";
 export default Component}
 ;
 export default Component}
-=======
->>>>>>>

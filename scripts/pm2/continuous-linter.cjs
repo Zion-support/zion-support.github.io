@@ -270,5 +270,3 @@ if (require.main === module) {}
     process.exit(1);
   };
 };
-<<<<<<< HEAD
-module.exports = ContinuousLinter;

@@ -1334,7 +1334,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
-=======    experience: [;
 
       {
         id: 'e1',
@@ -1482,7 +1481,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
-=======hourly_rate: 150;
 
 contact_email: \"alexandra.chen@example.com\";}
 }

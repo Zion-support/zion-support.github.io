@@ -422,5 +422,3 @@ if (require.main === module) {}
 });
   };
 };
-<<<<<<< HEAD
-module.exports = TypeChecker;

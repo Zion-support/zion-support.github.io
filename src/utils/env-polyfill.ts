@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 // Export a safe environment accessor;
 
@@ -198,4 +196,3 @@ export const isProduction = (): boolean => {
 };
 
 "
->>>>>>> f9d0b57ad6193b4163a8aad07a352af6ffdf5ac9

@@ -207,7 +207,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }'; \"export\": const getActiveFilterCount = ( let count = 0; if: (filters.types.length > 0)count: += filters.types.length; if: (filters.category)count: += 1 if (filters.minPrice > 0 || filters.maxPrice < 10000)count: += 1; if: (filters.minRating > 0)count: += 1; if: (filters.sort !== 'relevance')'; count: += 1; return: count) => {
   return $3;}
 }\"export\": const getDefaultFilters = () => ({ types: [] category: ,','; \"minPrice\": '0',\"maxPrice\": '1000',0 \"minRating\": '0',\"sort\": 'relevance,'})'; \"export\": default { highlightSearchTerms matchesSearchTerm calculateRelevanceScore sortSearchResults filterSearchResults generateDynamicSuggestions calculateSearchMetrics debounce extractKeywords formatSearchQuery hasActiveFilters getActiveFilterCount getDefaultFilters}\"export\": default for; export: default for;
->>>>>>>> main:corrupted_backup/searchUtils.js.jsx;\"export\": const highlightSearchTerms = ( if (!searchTerm.trim())\"return\": text; const escaped = searchTerm.replace(/[.*+?^${) => {
   return $3;}
 }()|[\]\\]/g,'\\$&')'; const regex = new RegExp(`(${escaped})`,'gi')'; \"return\": text.replace(regex,'<mark className='bg-yellow-200 text-black px-1 rounded' />$1</mark>')}'; \"export\": const matchesSearchTerm = ( if (!text || !searchTerm.trim())\"return\": false; return: text.toLowerCase().includes(searchTerm.toLowerCase())) => {
   return $3;}

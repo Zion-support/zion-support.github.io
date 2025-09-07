@@ -286,7 +286,6 @@ name=\"primary_color\"
 name=\"theme_preset\" 
                         value={formData && formData.theme_preset} 
                         onValueChange={(value) = /> handleSelectChange(\"theme_preset\", value)}                        placeholder=\"hire && hire.yourcompany.com\"
-=======
                         placeholder=\"hire && hire.yourcompany.com\"
 import React, { useState } from \"react\";
 import { Header } from \"@/components/Header\";
@@ -599,4 +598,3 @@ Tenant Onboarding - Zion AI Marketplace\" description=\"Onboard a new white-labe
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

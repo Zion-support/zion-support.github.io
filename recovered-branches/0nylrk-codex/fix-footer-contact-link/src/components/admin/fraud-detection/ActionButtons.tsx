@@ -13,7 +13,6 @@ variant=\"ghost\"
           size=\"sm\"
     </div />;
 );}
-=======import React from \"React\";}
 import { Button } from \"@/components/ui/button\",;
 import { Eye, Info, AlertTriangle, Ban } from \"lucide-react\",;
 interface ActionButtonsProps {;
@@ -61,7 +60,6 @@ export const ActionButtons: React.FC<ActionButtonsProps /> = ({ flagId, status, 
         <Ban className=\"h-4 w-4\" />;
       </Button>;
       {status === \"pending\" && (;
-=======}
 import React from \"react\";}
 import { Button } from \"@/components/ui/button\";
 import { Eye, Info, AlertTriangle, Ban } from \"lucide-react\";

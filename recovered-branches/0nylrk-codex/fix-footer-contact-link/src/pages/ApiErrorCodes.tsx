@@ -232,4 +232,3 @@ code: \"service_unavailable\"
           <a href=\"#\" className=\"text-zion-cyan\" /> contact our support team</a>.;
         </p>;
 export default ApiErrorCodes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

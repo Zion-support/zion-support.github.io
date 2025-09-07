@@ -27,7 +27,6 @@ function resolveMergeConflict(filePath) {;
 ;
     let content = fs.readFileSync(filePath, "utf8");    let originalContent = content;    let fixed = false;
     // Strategy 1": Remove all variations of merge conflict markers;
-    // Handle corrupted markers like     if (content.includes("      content.includes("") ||";      content.includes(">>>>>>>")") {";      // Remove everything between ;
       // Remove everything between  and       content = content.replace(/[\s\S]*?);      // Remove any remaining       content = content.replace(/);      // Remove any remaining  sections;
       content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,,}
 ;
@@ -114,7 +113,6 @@ function log(message, color = "reset")
     // Strategy "1"
     // Handle corrupted markers like "
       content.includes("      content.includes("")
-      content.includes(">>>>>>>")
       content = content.replace(/[\s\S]*/g, "")
     // Strategy "2"
       /import\s+[^]*?from\s+["][^"]*["]

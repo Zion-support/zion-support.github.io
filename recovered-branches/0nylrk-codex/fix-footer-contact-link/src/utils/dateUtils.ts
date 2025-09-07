@@ -32,4 +32,3 @@ export const formatDate = (dateString: string): string => {;
     return format(new Date(dateString), 'PP');}
   } catch (e) {;}
     return dateString;}
-  }>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;

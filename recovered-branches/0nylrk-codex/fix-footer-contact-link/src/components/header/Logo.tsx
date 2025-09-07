@@ -35,7 +35,6 @@ export function Logo({ customLogo, customColor }: LogoProps) {}
       </div>
     </Link>
   )
-=======  return (
     <Link to=\"/\" className=\"flex items-center\" />;
       <div;
 className=\"text-2xl font-bold\"
@@ -122,4 +121,3 @@ export function Logo({ customLogo, customColor } LogoProps) {;}
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

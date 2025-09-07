@@ -82,4 +82,3 @@ function TalentDirectoryHeader() {
         <p className=\"text-zion-slate-light max-w-2xl\" />
 }
 }
-=======

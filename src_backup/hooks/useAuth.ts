@@ -72,4 +72,3 @@ import { useState, useEffect } from \"react\"; interface User { id: string email
 }; return { user: authState.user, loading: authState.isLoading, login, logout, register, isAuthenticated: authState.isAuthenticated, isLoading: authState.isLoading, \" isAdmin authState.user?.role = == \"admin;}"
 };\";
 }
->>>>>>> origin/chore/fix-automation-and-build;"
