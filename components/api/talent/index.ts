@@ -1,37 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 
-<<<<<<< HEAD
-const hasSupabase =
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
-  .split(',')
-  .map(x => x.trim());
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method === 'GET') {
-    try {
-      if (hasSupabase) {
-        const { data, error } = await supabaseClient
-          .from('talent_profiles')
-=======
-export default async function handler() { return null; }
-  if (req && req.method === 'GET') {}
-    try {}
-      if (hasSupabase) {}
-        const { data, error } = await supabaseClient'
-          .from('talent_profiles')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] });
@@ -153,31 +124,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
-<<<<<<< HEAD
-=======
-      }
-      // Fallback: return the slug as if saved;
-      return res.status (201).json ({ slug: item.slug,}
-});
-    } catch (e: any) {}
-      return res.status (500).json ({ error: e.message,}
-});
-    }
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-}
-}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 return res;
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

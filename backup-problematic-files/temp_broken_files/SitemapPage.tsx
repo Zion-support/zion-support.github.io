@@ -1,21 +1,8 @@
-
-=======
-import React from 'react',;
-import { completeSitemap, dynamicPaths } from '@/config/sitemap',;
-import { Link } from 'react-router-dom',;
-import { ChevronRight } from 'lucide-react',;
-import { SEO } from './SEO',;
-import { AppLayout } from '@/layout/AppLayout',;
-;
-export const SitemapPage:React.FC = () => {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <AppLayout>;
+<AppLayout>;
       <SEO;
         title="Sitemap | Zion AI Marketplace";
         description="Complete sitemap of the Zion AI Marketplace";
         keywords="sitemap, zion, ai marketplace, navigation";
-<<<<<<< HEAD
 
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -30,4 +17,3 @@ export const SitemapPage:React.FC = () => {;
                   </div>;
                 </li>;
               ))}
-

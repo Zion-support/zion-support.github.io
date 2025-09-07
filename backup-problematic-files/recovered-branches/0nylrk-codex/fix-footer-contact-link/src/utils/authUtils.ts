@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
 ;
@@ -78,13 +77,3 @@ export const checkNewRegistration = async (user:UserDetails) => {;
   try {
   //Check if user has received welcome email already .from ("email campaigns") .select ("id") .eq ("user id", user.id) .eq ("campaign type", "welcome series") .maybeSingle ();
 // Create a scheduled job for the welcome email await supabase .from ("scheduled jobs") .insert ({
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
-
-=======
-  
-}
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

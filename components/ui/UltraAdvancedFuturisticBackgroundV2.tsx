@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -16,17 +10,6 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
   className;
 
-<<<<<<< HEAD
-const UltraAdvancedFuturisticBackgroundV2: React.FC<
-  UltraAdvancedFuturisticBackgroundV2Props
-> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  useEffect(() => {
-=======
-  useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -58,14 +41,7 @@ if (return) {}
     canvas.height = window.inner_height;
 ;
     let animationFrameId: number;
-<<<<<<< HEAD
 
-let animationFrameId: number;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    let particles: Array<{
-=======
-    let particles: Array<{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       coordinate_x: number;
       coordinate_y: number;
       vx: number;
@@ -160,19 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-<<<<<<< HEAD
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
-          animate={{
-          transition={{
-            duration: 7
-            repeat: Infinity
-=======
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20";
-          animate={{}
-          transition={{}
-            duration: 7;
-            repeat: Infinity'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             ease: 'easeInOut',          }}          }}
 
         <motion&& motion.div"
@@ -189,19 +153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'easeInOut',          }}          }}
         />;
-<<<<<<< HEAD
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
-          animate={{
-            duration: 7
-            repeat: Infinity
-=======
-        <motion.div;"
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
-          animate={{}
-            duration: 7;
-            repeat: Infinity'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             ease: 'easeInOut',            ease: "easeInOut"
 ctx.stroke();
             }
@@ -349,13 +301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />
       </div>
-<<<<<<< HEAD
-      {/* Quantum Energy Particles */}
-<div className='fixed inset-0 pointer-events-none z-20'>
-=======
-      {/* Quantum Energy Particles */}'
-      <div className='fixed inset-0 pointer-events-none z-20'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         {[...Array(20)].map((_, i) => (
           <motion.div;
             key={i}'
@@ -426,29 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset-0 pointer-events-none z-30'>;'
         <svg className='w-full h-full'>;
           <defs>;
-<<<<<<< HEAD
-<div className='fixed inset-0 pointer-events-none z-30'>
-        <svg className='w-full h-full'>
-          <defs>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <linearGradient
-              id='neuralGradient'
-              x1='0%'
-              y1='0%'
-              x2='100%'
-              y2='100%'>;
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;
-=======
-            <linearGradient'
-              id='neuralGradient''
-              x1='0%''
-              y1='0%''
-              x2='100%''
-              y2='100%'>;'
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;'"
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         <svg className="w-full h-full">;
           <defs>;"
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;"
@@ -461,30 +385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1={Math && Math.random() * 100}
               y1={Math && Math.random() * 100}
               x2={Math && Math.random() * 100}
-<<<<<<< HEAD
-              y2={Math && Math.random() * 100}
-              stroke='url(#neuralGradient)'
-              y2='100%'
-            >
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
-            </linearGradient>
-          </defs>
-          {[...Array(15)].map((_, i) => (
-            <motion.line
-              key={i}
-              x1={Math.random() * 100}
-              y1={Math.random() * 100}
-              x2={Math.random() * 100}
-              y2={Math.random() * 100}
-stroke='url(#neuralGradient)'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              strokeWidth='1'
-=======
-              y2={Math && Math.random() * 100}'
-              stroke='url(#neuralGradient)''
-              strokeWidth='1''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               opacity='0 && 0.1'
               animate={{"
               strokeWidth="1""
@@ -520,13 +421,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />
           ))}
 
-<<<<<<< HEAD
-      {/* Content */}
-<div className='relative z-40'>{children}</div>
-=======
-      {/* Content */}'
-      <div className='relative z-40'>{children}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
         </svg>;
@@ -578,12 +472,3 @@ export default UltraAdvancedFuturisticBackgroundV2
 };
 
 };
-
-<<<<<<< HEAD
-export default UltraAdvancedFuturisticBackgroundV2;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

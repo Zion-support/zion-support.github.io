@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -19,11 +9,7 @@ import { ;
   DropdownMenuRadioItem,;
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',;
 // Use the centralized icon wrapper to avoid missing icon issues;
-<<<<<<< HEAD
-import { FileText, ChevronDown, Loader2, Download } from '@/components/icons',;
-=======
-import { FileText, ChevronDown, Loader2, Download } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 import { Resume } from '@/types/resume',;
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',;
 import { toast } from '@/hooks/use-toast',;
@@ -70,11 +56,7 @@ export function PdfExportButton({ resume } PdfExportButtonProps) {;
         title:"Success!",;
         description:"Your resume has been downloaded as a PDF."}),;
     } catch (error) {;
-<<<<<<< HEAD
-      console.error('Error exporting PDF:', error),;
-=======
-      logErrorToProduction('Error exporting PDF:', { data:error }),;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
       toast({;
         title:"Export failed",;
         description:"There was an error exporting your resume to PDF.",;
@@ -124,44 +106,8 @@ export function PdfExportButton({ resume } PdfExportButtonProps) {;
         <DropdownMenuSeparator />;
         <DropdownMenuCheckboxItem ;
           checked={includePortfolio}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
           onCheckedChange={setIncludePortfolio}
         >;
           Include Portfolio Projects;
         </DropdownMenuCheckboxItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-=======
-        ;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem onClick={handleExport}>;
-          <Download className="h-4 w-4 mr-2" />;
-          Download PDF;
-        </DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-  ),; setIsExporting (true);
-try {;
-  const options: ExportOptions = {;
-  ;
-}catch (error) {;
-  logErrorToProduction ('Error exporting PDF:', {;
-  data: error ;
-});
-toast ({;
-  ;
-}finally {;
-  setIsExporting (false) ;
-}
-};
-h-4 w-4"/>) ";"}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
-  includePortfolio ;
-}onCheckedChange= {;
-  setIncludePortfolio ;
-}> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;"}'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

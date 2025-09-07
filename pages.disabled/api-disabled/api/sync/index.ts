@@ -2,37 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
 import { filterEventsByScope } from "../../../utils/sync/storage",;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-  const state = readState()
-<<<<<<< HEAD
 
-  if (req.method === "GET") {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
-main
-
-  if (req.method === "GET") {
-ursor/fix-website-loading-errors-and-merge-6662
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-const state = readState(),
-
-  if (req.method === "GET") {
-  const state = readState()
-
-  if (req.method === "GET") {
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -91,33 +61,16 @@ import { filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
   if (req.method === "GET") {
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
     const scope = state.config.scope
     const scoped_events = filterEventsByScope (state.events, scope)
-
-
 
   if (req.method === "GET") {
     const scope = state.config.scope,
     const scoped_events = filterEventsByScope (state.events, scope),
 
     return res.status (200).json ({
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-return res.status(405).json({ error: "Method not allowed" })
-};
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
       status: "ok",
       instanceId: state.config.instanceId,
       config: state.config,
@@ -125,52 +78,14 @@ return res.status(405).json({ error: "Method not allowed" })
       counts: {
 
         totalEvents: scopedEvents.length,
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-<<<<<<< HEAD
-proposals: scopedEvents.filter((e) => e.type === "proposal").length,
-=======
 
-    const scope = state.config.scope
-    const scoped_events = filterEventsByScope (state.events, scope)
-    return res.status (200).json ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 
-=======
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-  return res.status(405).json({ error: "Method not allowed" })
-};
-
-    const scope = state.config.scope
-    const scoped_events = filterEventsByScope (state.events, scope)
-    return res.status (200).json ({
-      status: "ok";
-      instanceId: state.config.instanceId;
-      config: state.config;
-      lastSyncedAt: state.lastSyncedAt;
-      counts: {
-
-        totalEvents: scopedEvents.length;
-proposals: scopedEvents.filter((e) => e.type === "proposal").length;
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length;
-
-
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length;
-        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length;
-        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length;
-        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length;
-        leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -238,27 +153,14 @@ export default function handler(req, res) {
 }
 }
 
-
-
   return res.status(405).json({ error: "Method not allowed" })
 };
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-=======
->>>>>>> pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
+
       status: "ok"
       instanceId: state.config.instanceId
       config: state.config
       lastSyncedAt: state.lastSyncedAt
       counts: {
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
 
         totalEvents: scopedEvents.length
         proposals: scopedEvents.filter((e) => e.type === "proposal").length
@@ -266,10 +168,3 @@ pr-12243
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
-<<<<<<< HEAD:pages_backup/api/sync/index.ts
-<<<<<<< HEAD
-=======
-main
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts

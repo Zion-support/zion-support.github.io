@@ -46,16 +46,7 @@ export default function AuditLogVaultPage() {
 </ul>"
                   <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{f}</span></li>"
               </ul>
-<<<<<<< HEAD
-            </Card>
-            <Card className="p-6 bg-black/40 border border-gray-700/50">
-              <div className="text-sm text-gray-400 mb-1">Pricing</div>
-              <div className="text-3xl font-bold text-white">$89<span className="text-base text-gray-400">/month</span></div>
-<<<<<<< HEAD
-              <div className="text-sm text-gray-400 mt-2">Trial: 14 days • Setup: 30 minutes</div>
-=======
-              <div className="text-sm text-gray-400 mt-2">Trial: 14 days  Setup: 30 minutes</div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
               <div className="mt-6 flex gap-3">
                 <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Contact Sales</Button>
                 <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
@@ -73,20 +64,3 @@ export default function AuditLogVaultPage() {
   )
 }
 ;
-=======
-            <Card className="p-6 bg-black/40 border border-gray-700/50">"
-              <div className="text-sm text-gray-400 mb-1">Pricing</div>""
-              <div className="text-3xl font-bold text-white">$89<span className="text-base text-gray-400">/month</span></div>""
-              <div className="text-sm text-gray-400 mt-2">Trial: 14 days  Setup: 30 minutes</div>""
-              <div className="mt-6 flex gap-3">"
-                <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">Contact Sales"
-                <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More"
-
-              <div className="mt-6 space-y-3 text-sm">"
-</div>)"
-                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, )}`} className="hover:underline">{contactInfo.mobile}</a></div>""`;
-                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>""`;
-                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>"
-            
-    "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

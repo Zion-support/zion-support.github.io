@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';'
-import SEO from '../components/SEO';'
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
-=======
-
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 export default function ResourcesPage() {}
   return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-=======
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
@@ -107,21 +90,7 @@ export default ResourcesPage;
             { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' }'
             { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },'
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
-<<<<<<< HEAD
-          ].map ((it) => (
-            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan-500 / 50 transition-colors block">;
-              <div className="text - sm text-gray-400">Resource</div>;
-              <h3 className="text - xl font-semibold text-white">{it.name}</h3>;
-              <p className="mt - 1 text-gray-300">{it.blurb}</p>;
-              <div className="mt - 3 text-cyan-300">Open →</div>))}
-=======
-          ].map ((it) => ("
-            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan - 500 / 50 transition - colors block">;"
-              <div className="text - sm text - gray - 400">Resource</div>;"
-              <h3 className="text - xl font - semibold text - white">{it.name}</h3>;"
-              <p className="mt - 1 text - gray - 300">{it.blurb}</p>;"
-              <div className="mt - 3 text - cyan - 300">Open →</div>))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </div>;
       </div>;
     </UltraFuturisticBackground>));
@@ -129,19 +98,3 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
-<<<<<<< HEAD
-              <div className='mt-3 text-cyan-300'>Open →</div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </UltraFuturisticBackground>
-);
-
-export default ResourcesPage;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

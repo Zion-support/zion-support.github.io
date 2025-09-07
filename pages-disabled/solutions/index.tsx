@@ -1,45 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import MainLayout from '../../components/layout/MainLayout';
-
-export default function SolutionsPage() {
-  return (
-    <MainLayout title="Solutions - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Our Solutions</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the solutions page.
-        </p>
-      </div>
-    </MainLayout>
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
-
-
-origin/main;
-origin/automation-improvements-final;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import {}
   Shield, 
@@ -67,13 +30,6 @@ import { ;
 '
 } from 'lucide-react';'
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 
 const solutions = []
   {}
@@ -127,13 +83,10 @@ const solutions = []
       "Ongoing Support"
     ]"
     color: "from-orange-600 to-orange-800"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const solutions = [;
   {;"
-    title: "Enterprise Solutions",;"
+    title: "Enterprise Solutions","
     description: "Comprehensive technology solutions for large organizations",;
     icon: Building,;"
     href: "/solutions/enterprise",;
@@ -146,7 +99,7 @@ const solutions = [;
     color: "from-blue-600 to-blue-800";
   },;
   {;"
-    title: "Startup Solutions",;"
+    title: "Startup Solutions","
     description: "Rapid deployment solutions for growing startups",;
     icon: Rocket,;"
     href: "/solutions/startup",;
@@ -159,7 +112,7 @@ const solutions = [;
     color: "from-green-600 to-green-800";
   },;
   {;"
-    title: "Industry Solutions",;"
+    title: "Industry Solutions","
     description: "Specialized solutions for specific industries",;
     icon: BarChart3,;"
     href: "/solutions/industry",;
@@ -172,7 +125,7 @@ const solutions = [;
     color: "from-purple-600 to-purple-800";
   },;
   {;"
-    title: "Custom Development",;"
+    title: "Custom Development","
     description: "Tailored solutions built specifically for your needs",;
     icon: Settings,;"
     href: "/solutions/custom",;
@@ -202,15 +155,6 @@ const stats = [;'
   { number: '24/7', label: 'Support Available' }
 ];
 
-<<<<<<< HEAD
-export default function SolutionsPage() {;
-import type { NextPage } from 'next',
-import Head from 'next/head',
-=======
-export default function SolutionsPage() { return null; }
-import type { NextPage } from 'next','
-import Head from 'next/head','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link',
 const SolutionsPage: NextPage = () => {}
   const solutions = [;
@@ -431,10 +375,6 @@ const SolutionsPage: NextPage = () => {}
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
 
                 efficiency, and innovation across all industries.
@@ -447,66 +387,12 @@ const SolutionsPage: NextPage = () => {}
                   Learn More;
                 </Link>
 
-<<<<<<< HEAD
-const SolutionsPage: NextPage = () => {
-  const solutions = [
-    // Healthcare Solutions
-    {
-      category: "Healthcare & Life Sciences",
-      solutions: [
-        {
-          name: "AI-Powered Medical Imaging",
-          description: "Advanced AI algorithms for medical image analysis, diagnosis assistance, and treatment planning.";
-          useCases: ["Radiology departments", "Medical research", "Telemedicine platforms", "Clinical trials"];
-          benefits: ["Improved diagnostic accuracy", "Faster diagnosis", "Reduced costs", "Better patient outcomes"];
-          pricing: "$15,000 - $75,000";
-          link: "https://ziontechgroup.com/solutions/healthcare-ai",
-          icon: "🏥"
-        };
-        {
-          name: "Healthcare Data Analytics Platform",
-          description: "Comprehensive healthcare analytics solution for patient data, operational efficiency, and predictive insights.";
-          useCases: ["Hospitals", "Clinics", "Health insurance", "Pharmaceutical companies"];
-          benefits: ["Patient care optimization", "Operational efficiency", "Cost reduction", "Compliance management"];
-          pricing: "$25,000 - $100,000";
-          link: "https://ziontechgroup.com/solutions/healthcare-analytics",
-          icon: "📊"
-        };
-        {
-          name: "Telemedicine Platform",
-          description: "Secure, HIPAA-compliant telemedicine solution with AI-powered triage and appointment scheduling.";
-          useCases: ["Primary care", "Specialist consultations", "Mental health", "Rural healthcare"];
-          benefits: ["Improved access to care", "Reduced travel costs", "Better patient engagement", "Scalable operations"];
-          pricing: "$20,000 - $80,000";
-          link: "https://ziontechgroup.com/solutions/telemedicine",
-          icon: "💻"
-        }
-      ]
-    };
-    // Financial Services Solutions
-    {
-=======
-const SolutionsPage: NextPage = () => {}
-  const solutions = []
-    // Healthcare Solutions;
-    {}
-    // Financial Services Solutions;
-    {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       category: "Financial Services & FinTech",
       solutions: []
         {"
           name: "AI-Powered Risk Assessment","
           description: "Machine learning-based risk assessment and fraud detection for financial institutions.",
-<<<<<<< HEAD
-          useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"];
-          benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"];
-          pricing: "$30,000 - $120,000";
-          link: "https://ziontechgroup.com/solutions/financial-risk-ai",
-=======
-"
-          link: "https://ziontechgroup.com/solutions/financial-risk-ai","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           icon: "🏦"
         };
         {"
@@ -528,35 +414,12 @@ const SolutionsPage: NextPage = () => {}
           icon: "📋"
         }
       ]
-<<<<<<< HEAD
-    };
-    // Manufacturing & Industry 4.0
-    {
-=======
 
-
-    // Manufacturing & Industry 4.0;
-    {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       category: "Manufacturing & Industry 4.0",
       solutions: []
         {"
           name: "IoT Manufacturing Platform",
-<<<<<<< HEAD
-          description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.";
-          useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"];
-          benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"];
-          pricing: "$50,000 - $200,000";
-          link: "https://ziontechgroup.com/solutions/iot-manufacturing",
-=======
-"
-          description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.";"
-          useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"];"
-          benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"];"
-          pricing: "$50,000 - $200,000";
-"
-          link: "https://ziontechgroup.com/solutions/iot-manufacturing","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           icon: "🏭"
         };
         {"
@@ -578,30 +441,13 @@ const SolutionsPage: NextPage = () => {}
           icon: "🔄"
         }
       ]
-<<<<<<< HEAD
-    };
-    // Retail & E-commerce Solutions
-    {
-=======
 
-
-    // Retail & E-commerce Solutions;
-    {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       category: "Retail & E-commerce",
       solutions: []
         {"
           name: "AI-Powered Customer Analytics","
           description: "Advanced customer behavior analysis and personalized marketing automation platform.",
-<<<<<<< HEAD
-          useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"];
-          benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"];
-          pricing: "$20,000 - $80,000";
-          link: "https://ziontechgroup.com/solutions/retail-analytics",
-=======
-"
-          link: "https://ziontechgroup.com/solutions/retail-analytics","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           icon: "🛒"
         };
         {"
@@ -623,30 +469,13 @@ const SolutionsPage: NextPage = () => {}
           icon: "🥽"
         }
       ]
-<<<<<<< HEAD
-    };
-    // Education & Training Solutions
-    {
-=======
 
-
-    // Education & Training Solutions;
-    {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       category: "Education & Training",
       solutions: []
         {"
           name: "AI-Powered Learning Platform","
           description: "Personalized learning platform with AI-driven content recommendations and adaptive assessments.",
-<<<<<<< HEAD
-          useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"];
-          benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"];
-          pricing: "$25,000 - $100,000";
-          link: "https://ziontechgroup.com/solutions/ai-learning",
-=======
-"
-          link: "https://ziontechgroup.com/solutions/ai-learning","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           icon: "🎓"
         };
         {"
@@ -668,34 +497,12 @@ const SolutionsPage: NextPage = () => {}
           icon: "📊"
         }
       ]
-<<<<<<< HEAD
-    };
-    // Government & Public Sector
-    {
-=======
 
-
-    // Government & Public Sector;
-    {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       category: "Government & Public Sector",
       solutions: []
         {"
           name: "Smart City Platform",
-<<<<<<< HEAD
-          description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.";
-          useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"];
-          benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"];
-          pricing: "$100,000 - $500,000";
-          link: "https://ziontechgroup.com/solutions/smart-city",
-=======
-"
-          description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.";"
-          useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"];"
-          benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"];"
-          pricing: "$100,000 - $500,000";"
-          link: "https://ziontechgroup.com/solutions/smart-city","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           icon: "🏙️"
         };
         {"
@@ -730,45 +537,18 @@ const SolutionsPage: NextPage = () => {}
         {/* Solutions Grid */}"
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-            <motion.div
-=======
-            <motion.div;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solution Categories
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We offer comprehensive technology solutions tailored to different business needs and stages.
-              </p>
-            </motion.div>
-=======
-            >"
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solution Categories;
-              </h2>"
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We offer comprehensive technology solutions tailored to different business needs and stages.
-              </p>
-            </motion.div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions.map((solution, index) => {;
                 const IconComponent = solution.icon;
                 const IconComponent = solution.icon;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;"
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -782,15 +562,7 @@ const SolutionsPage: NextPage = () => {}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {solutions && solutions.map((solution, index) => {;
                 const IconComponent = solution && solution.icon;
-<<<<<<< HEAD
-                    <Link
-                      href={solution && solution.href}
-=======
 
-
-                    <Link;
-                      href={solution && solution.href}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
                       <span>Explore {solution && solution.title}</span>;"
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -799,26 +571,12 @@ const SolutionsPage: NextPage = () => {}
                 );
               })}
 
-<<<<<<< HEAD
-        {/* Industries Section */}
-        <section className="py-20 bg-white">;
-=======
-
-        {/* Industries Section */}"
-        <section className="py-20 bg-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
-                  key={index}
-=======
-
-                  key={index}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -834,16 +592,6 @@ const SolutionsPage: NextPage = () => {}
                 </motion && motion.div>;
               ))}
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <section className="py-20 bg-gray-900 text-white">;
-          <div className="container mx-auto px-4">;
-=======
-
-        {/* Stats Section */}"
-        <section className="py-20 bg-gray-900 text-white">;"
-          <div className="container mx-auto px-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
               {stats && stats.map((stat, index) => (;
                 <motion&& motion.div;
@@ -860,14 +608,6 @@ const SolutionsPage: NextPage = () => {}
                 </motion && motion.div>;
               ))}
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-=======
-
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -895,115 +635,17 @@ const SolutionsPage: NextPage = () => {}
     </Layout>;
   );
 }
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 };
 
 export default SolutionsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <motion.div;
-                    key={index}
-=======
 
-
-                  <motion.div;
-"
-          description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.","
-          useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],"
-          benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"],"
-          pricing: "$100,000 - $500,000","
-          link: "https://ziontechgroup.com/solutions/smart-city","
-          icon: "🏙️"
-        },
-        {"
-          name: "Government Data Analytics","
-          description: "Advanced analytics platform for government data analysis and decision support.","
-          useCases: ["Policy analysis", "Resource allocation", "Performance monitoring", "Public reporting"],"
-          benefits: ["Better policy decisions", "Transparency", "Efficiency improvement", "Public trust"],"
-          pricing: "$50,000 - $200,000","
-          link: "https://ziontechgroup.com/solutions/government-analytics","
-          icon: "📊"
-        },
-        {"
-          name: "Digital Identity Platform","
-          description: "Secure digital identity and authentication platform for government services.","
-          useCases: ["Citizen services", "Voting systems", "Healthcare access", "Financial services"],"
-          benefits: ["Secure access", "Reduced fraud", "Better service delivery", "Cost savings"],"
-          pricing: "$75,000 - $300,000","
-          link: "https://ziontechgroup.com/solutions/digital-identity","
-          icon: "🆔"
-          } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-      ];
-      } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  return (
-
-                efficiency, and innovation across all industries.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Custom Solution;
-                </Link>"
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Learn More;
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Solutions Grid */}"
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">
-            <motion.div"
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >"
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Solution Categories;
-                    key={index}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-              </h2>"
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We offer comprehensive technology solutions tailored to different business needs and stages.
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {}
-                const IconComponent = solution.icon;
-                return (
-                  <motion.div;
-                    key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     whileHover={{ y: -5 }}
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>"
@@ -1015,11 +657,7 @@ export default SolutionsPage;
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => ("
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -1031,14 +669,7 @@ export default SolutionsPage;
                     <Link;
                       href={solution.href}"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-<<<<<<< HEAD
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
-=======
-"
-                    <div className="mb-4">"
-                      <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       <ul className="space-y-1">
                         {solution.useCases.map((useCase, useCaseIndex) => ("
                           <li key={useCaseIndex} className="text-sm text-gray-600 flex items-center">"
@@ -1098,20 +729,7 @@ export default SolutionsPage;
                         </li>))}
                     </ul>;
                     <Link;
-<<<<<<< HEAD
-=======
 
-
-                    >
-                      <span>Explore {solution.title}</span>"
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-
-                  </motion.div>
-                );
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               })}
             </div>;
           </div>;
@@ -1203,384 +821,18 @@ export default SolutionsPage;
         </section>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Link;
                       href={solution.link  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     >
                       <span>Explore {solution.title}</span>"
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Our solutions are designed to meet the unique challenges and requirements of various industries.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-                    {industry.icon}
-                  </div>
-                  <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
-                    {industry.name}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Stats Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss your specific needs and create a custom solution that drives your success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free Consultation
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-                  </div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </div>;
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>;
-        {/* Success Stories Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Success Stories
-          </h2>
-          <p className="text-xl mb-6 opacity-90">
-            See how our solutions have transformed businesses across industries
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div>
-              <h3 className="font-semibold mb-2">🏥 Healthcare Provider</h3>
-              <p>40% reduction in diagnostic time with AI-powered imaging</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">🏭 Manufacturing Company</h3>
-              <p>60% decrease in downtime with IoT predictive maintenance</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">🏦 Financial Institution</h3>
-              <p>80% reduction in fraud losses with AI risk assessment</p>
-            </div>
-          </div>
-          <Link
-            href="/contact"
-            className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
-            View Case Studies
-          </Link>
-        </div>
-        {/* Custom Solutions Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Need a Custom Solution?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find exactly what you need? Our expert team can design and develop
-            custom solutions tailored to your specific requirements and industry challenges.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-xl font-semibold mb-2">Custom Development</h3>
-              <p className="text-gray-600">Tailored solutions built from the ground up</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-semibold mb-2">System Integration</h3>
-              <p className="text-gray-600">Seamless integration with existing systems</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-xl font-semibold mb-2">Training & Support</h3>
-              <p className="text-gray-600">Comprehensive training and ongoing support</p>
-            </div>
-          </div>
-          <Link
-            href="/contact"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Discuss Custom Solutions
-          </Link>
-        </div>
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our industry-specific solutions can address your unique challenges
-            and drive measurable business outcomes.
-          </p>
-          <div className="flex justify-center gap-4 mb-8">
-            <Link
-              href="/contact"
-              className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Schedule Consultation
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Request Demo
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">
-            <div>
-              <h3 className="font-semibold mb-2">📱 Mobile</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">✉️ Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">🌐 Website</h3>
-              <p>https://ziontechgroup.com</p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  )
-};
-
-},
-export default SolutionsPage,
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">;
-          <h2 className="text-3xl font-bold mb-4">;
-            Success Stories;
-          </h2>;
-          <p className="text-xl mb-6 opacity-90">;
-            See how our solutions have transformed businesses across industries;
-          </p>;
-          <div className="grid md:grid-cols-3 gap-6 mb-8">;
-            <div>;
-              <h3 className="font-semibold mb-2">🏥 Healthcare Provider</h3>;
-              <p>40% reduction in diagnostic time with AI-powered imaging</p>;
-            </div>;
-            <div>;
-              <h3 className="font-semibold mb-2">🏭 Manufacturing Company</h3>;
-              <p>60% decrease in downtime with IoT predictive maintenance</p>;
-            </div>;
-            <div>;
-              <h3 className="font-semibold mb-2">🏦 Financial Institution</h3>;
-              <p>80% reduction in fraud losses with AI risk assessment</p>;
-            </div>;
-          </div>;
-          <Link;
-            href="/contact";
-            className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors";
-          >;
-            View Case Studies;
-          </Link>;
-        </div>;
-        {/* Custom Solutions Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mt-16 text-center">;
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">;
-            Need a Custom Solution?;
-          </h2>;
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-            Can't find exactly what you need? Our expert team can design and develop;
-            custom solutions tailored to your specific requirements and industry challenges.;
-          </p>;
-          <div className="grid md:grid-cols-3 gap-6 mb-8">;
-            <div className="text-center">;
-              <div className="text-4xl mb-4">🔧</div>;
-              <h3 className="text-xl font-semibold mb-2">Custom Development</h3>;
-              <p className="text-gray-600">Tailored solutions built from the ground up</p>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-4xl mb-4">🔗</div>;
-              <h3 className="text-xl font-semibold mb-2">System Integration</h3>;
-              <p className="text-gray-600">Seamless integration with existing systems</p>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-4xl mb-4">📚</div>;
-              <h3 className="text-xl font-semibold mb-2">Training & Support</h3>;
-              <p className="text-gray-600">Comprehensive training and ongoing support</p>;
-            </div>;
-          </div>;
-          <Link;
-            href="/contact";
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors";
-          >;
-            Discuss Custom Solutions;
-          </Link>;
-        </div>;
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mt-16 text-center">;
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">;
-            Ready to Transform Your Business?;
-          </h2>;
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-            Let's discuss how our industry-specific solutions can address your unique challenges;
-            and drive measurable business outcomes.;
-          </p>;
-          <div className="flex justify-center gap-4 mb-8">;
-            <Link;
-              href="/contact";
-              className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors";
-            >;
-              Schedule Consultation;
-            </Link>;
-            <Link;
-              href="/contact";
-              className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors";
-            >;
-              Request Demo;
-            </Link>;
-          </div>;
-          <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">;
-            <div>;
-              <h3 className="font-semibold mb-2">📱 Mobile</h3>;
-              <p>+1 302 464 0950</p>;
-            </div>;
-            <div>;
-              <h3 className="font-semibold mb-2">✉️ Email</h3>;
-              <p>kleber@ziontechgroup.com</p>;
-            </div>;
-            <div>;
-              <h3 className="font-semibold mb-2">🌐 Website</h3>;
-              <p>https://ziontechgroup.com</p>;
-            </div>;
-          </div>;
-        </div>;
-      </main>;
-    </div>;
-  );
-},;
-
-export default SolutionsPage;
-
-export default SolutionsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-
-
-export default SolutionsPage;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 '
 import React from 'react';'
@@ -1598,27 +850,3 @@ export default function SolutionsPage() {}
     </MainLayout>;
   );
 }
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-const SolutionsPage: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

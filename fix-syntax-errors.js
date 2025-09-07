@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -77,13 +70,7 @@ files.forEach((file) => {
           modified = true;
           return match.trim() + ";";
 
-
-
-
-
-
 #!/usr/bin/env node
-
 
 #!/usr/bin/env node;
 ;
@@ -167,9 +154,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     );
 
-
-
-
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -218,20 +202,12 @@ if (&&) {
           !match.includes("import")
         ) {
 
-
-
-
-
-
           modified = true;
           return match + ";";
         }
         return match;
       },
     );
-
-
-
 
 ;
     // Check condition
@@ -258,17 +234,11 @@ if ( {) {
     console.error(`Error processing ${file}:`, error.message);
   }
 
-
-
-
-
-
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
 
   }
-
 
 }},
 
@@ -320,10 +290,7 @@ if (&&) {$2;}
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }},
 ,
 // Run all fixes,
@@ -351,15 +318,7 @@ fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 
-
 }},
-
-
-
-
-
-
-
 
 }},
 }},
@@ -559,9 +518,3 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
 };
 
 main();
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

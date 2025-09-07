@@ -1,16 +1,4 @@
-
-=======
-import { useWallet } from '@/hooks/useWallet',;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
-import { BadgeDollarSign } from 'lucide-react',;
-;
-export default function WalletPage() {;
-  const { wallet, transactions, loading } = useWallet(),;
-;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="container max-w-4xl py-10">;
+<div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
         <BadgeDollarSign className="h-6 w-6" /> Wallet;
       </h1>;
@@ -24,7 +12,6 @@ export default function WalletPage() {;
         <CardContent>;
           {loading ? (;
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
-<<<<<<< HEAD
 
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
@@ -42,4 +29,3 @@ export default function WalletPage() {;
         <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>;
       </div>;
     </div>;
-

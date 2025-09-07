@@ -12,321 +12,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight,
   Play,
   AlertTriangle,
-<<<<<<< HEAD
-} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
-=======
-} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() { return null; }
 } from 'lucide-react';
 
-<<<<<<< HEAD
-'
-import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
-import { Zap, Star } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Clock,
   Database,;
 } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function APITestingSuitePage() {
-=======
-export default function APITestingSuitePage() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);'
   const [apiEndpoint, setApiEndpoint] = useState('');'
   const [apiKey, setApiKey] = useState('');
-<<<<<<< HEAD
 
-icon: <Code className='w-8 h-8 text-white' />,
-      title: 'Comprehensive API Testing',
-      description:
-        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.'
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
-      gradient: 'from-indigo-400 to-purple-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Performance Testing'
-      description:
-        'Load testing, stress testing, and performance benchmarking for your APIs.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
-    }
-    {
-      icon: <Shield className='w-8 h-8 text-white' />
-      title: 'Security Testing'
-      description:
-        'Automated security testing including authentication, authorization, and vulnerability scanning.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Real-Time Monitoring'
-      description:
-        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-  ];
-  const testTypes = [
-    {
-      name: 'Functional Testing'
-      description:
-        'Verify that your API endpoints work correctly and return expected responses.'
-      tests: [
-        'Request/response validation'
-        'Status code verification'
-        'Data format checking'
-        'Error handling'
-      ]
-    }
-    {
-      name: 'Performance Testing'
-      description:
-        'Ensure your APIs can handle expected load and perform under pressure.'
-      tests: [
-        'Load testing'
-        'Stress testing'
-        'Response time analysis'
-        'Throughput measurement'
-      ]
-    }
-    {
-      name: 'Security Testing'
-      description:
-        'Identify security vulnerabilities and ensure proper authentication and authorization.'
-      tests: [
-        'Authentication testing'
-        'Authorization checks'
-        'Input validation'
-        'SQL injection testing'
-      ]
-    }
-    {
-      name: 'Integration Testing'
-      description:
-        'Test how your APIs integrate with other systems and services.'
-      tests: [
-        'End-to-end workflows',
-        'Third-party integrations',
-        'Data flow validation',
-        'Error propagation',
-      ],
-    },
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ];
-  const pricing = []
-    {'
-      name: 'Starter''
-      price: '$49''
-      period: '/month''
-      description: 'Perfect for developers and small teams'
-      features: []
-  const features = [;
-    {;'
-      icon: <Code className='w-8 h-8 text-white' />,;
-      description:;'
-        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',;'
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',;'
-      gradient: 'from-indigo-400 to-purple-500',;
-    },;
-    {;'
-      icon: <Zap className='w-8 h-8 text-white' />,;'
-      title: 'Performance Testing',;
-      description:;'
-        'Load testing, stress testing, and performance benchmarking for your APIs.',;'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;'
-      gradient: 'from-orange-400 to-red-500',;
-    },;
-    {;'
-      icon: <Shield className='w-8 h-8 text-white' />,;'
-      title: 'Security Testing',;
-      description:;'
-        'Automated security testing including authentication, authorization, and vulnerability scanning.',;'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;'
-      gradient: 'from-green-400 to-emerald-500',;
-    },;
-    {;'
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;'
-      title: 'Real-Time Monitoring',;
-      description:;'
-        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',;'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;'
-      gradient: 'from-blue-400 to-cyan-500',;
-    },;'
-        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
-      ];
-      popular: false;
-    };
-    {}
-export default /**;
- * APITestingSuitePage - Function description;
- */
-function APITestingSuitePage() {}
-  const [is_testing, setIsTesting] = useState (false);
-  const [test_results, setTestResults] = useState (null);'
-  const [api_endpoint, setApiEndpoint] = useState ('');'
-  const [api_key, setApiKey] = useState ('');
-;
-  const features = [;
-    {'
-      icon: <Code className='w - 8 h - 8 text - white' />,
-      description:;'
-        'Test REST, GraphQL, and SOAP APIs with automated test suites and real - time monitoring.','
-      color: 'bg - gradient - to - br from - indigo - 500 to - purple - 600','
-      gradient: 'from - indigo - 400 to - purple - 500',
-    },
-    {'
-      icon: <Zap className='w - 8 h - 8 text - white' />,'
-      title: 'Performance Testing',
-      description:;'
-        'Load testing, stress testing, and performance benchmarking for your APIs.','
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600','
-      gradient: 'from - orange - 400 to - red - 500',
-    },
-    {'
-      icon: <Shield className='w - 8 h - 8 text - white' />,'
-      title: 'Security Testing',
-      description:;'
-        'Automated security testing including authentication, authorization, and vulnerability scanning.','
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600','
-      gradient: 'from - green - 400 to - emerald - 500',
-    },
-    {'
-      icon: <BarChart3 className='w - 8 h - 8 text - white' />,'
-      title: 'Real - Time Monitoring',
-      description:;'
-        '24 / 7 API monitoring with instant alerts for downtime, errors, and performance issues.','
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600','
-      gradient: 'from - blue - 400 to - cyan - 500',
-    },
-  ];
-;
-  const test_types = [;
-    {'
-      name: 'Functional Testing',
-      description:;'
-        'Verify that your API endpoints work correctly and return expected responses.',
-      tests: [;'
-        'Request / response validation','
-        'Status code verification','
-        'Data format checking','
-        'Error handling',
-      ],
-    },
-    {'
-      name: 'Performance Testing',
-      description:;'
-        'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: [;'
-        'Load testing','
-        'Stress testing','
-        'Response time analysis','
-        'Throughput measurement',
-      ],
-    },
-    {'
-      name: 'Security Testing',
-      description:;'
-        'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: [;'
-        'Authentication testing','
-        'Authorization checks','
-        'Input validation','
-        'SQL injection testing',
-      ],
-    },
-    {'
-      name: 'Integration Testing',
-      description:;'
-        'Test how your APIs integrate with other systems and services.',
-      tests: [;'
-        'End - to - end workflows','
-        'Third - party integrations','
-        'Data flow validation','
-        'Error propagation',
-      ],'
-    },  ];      description: 'Test how your APIs integrate with other systems and services.','
-      tests: ['End - to - end workflows_third - party integrations_data flow validation_error propagation'];
-    }
-  ];
-;
-  const pricing = [;
-    {'
-      name: 'Starter','
-      price: '$49','
-      period: '/month','
-      description: 'Perfect for developers and small teams',
-<<<<<<< HEAD
-      features: [;
-        '100 API tests / month',
-'100 API tests/month',
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Basic test scenarios',
-        'Email notifications',
-        'Basic reporting',
-        '5 API endpoints',
-=======
-      features: [;'
-        '100 API tests / month','
-        'Basic test scenarios','
-        'Email notifications','
-        'Basic reporting','
-        '5 API endpoints','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Community support',
       ],
       popular: false,'
     },    {        '100 API tests / month_basic test scenarios_email notifications_basic reporting5 API endpoints_community support';
       ];
       popular: false;
-<<<<<<< HEAD
-    }
-    },
-    {
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and development teams',
-      features: [
-'500 API tests/month',
-        'Advanced test scenarios',
-        'SMS & email alerts',
-        'Advanced reporting',
-        '25 API endpoints',
-        'Performance testing',
-        'API access',
-        'Priority support',
-      ],
-      popular: true,
-    },
-    {
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-=======
-    }'
-      name: 'Professional','
-      price: '$99','
-      period: '/month','
-      description: 'Ideal for growing businesses and development teams','
-      name: 'Enterprise','
-      price: '$299','
-      period: '/month','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       description: 'For large organizations with complex API requirements',
     },  ];
 
@@ -381,22 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         responseTime: '245ms',;
         statusCode: 200,;
         tests: [;
-<<<<<<< HEAD
-          {;
-            name: 'Response Time',;
-            status: 'pass',;
-            value: '245ms',;
-{
-            name: 'Response Time',
-            status: 'pass',
-            value: '245ms',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          {;'
-            name: 'Response Time',;'
-            status: 'pass',;'
-            value: '245ms',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             threshold: '<500ms',
           },
           {'
@@ -455,7 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Monitoring Tool;
         </title>;
 
-
         recommendations: ['
           'Consider implementing response caching for better performance''
           'Monitor response times during peak usage''
@@ -463,19 +155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ]
       });
       setIsTesting(false);
-<<<<<<< HEAD
-    }, 3000);
-  };
 
-=======
-    }, 3000);  };        recommendations: ['
-          'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
-        ]
-      });
-      setIsTesting(false)
-    }, 3000)
-  }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
@@ -516,12 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and;
             secure.
 
-
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           {/* API Testing Form */}'
@@ -537,11 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type='text''
                 placeholder='API Key (optional)'
                 value={apiKey}
-<<<<<<< HEAD
-                onChange={e => setApiKey(e && e.target.value)}'
-=======
-                onChange={e => setApiKey(e && e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'              />;
             </div>;
             <Button;
@@ -552,10 +222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               size='lg''
               className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              size="lg""
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 onChange={e => setApiKey(e.target.value)}
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
               />
@@ -601,22 +268,7 @@ href='/contact'
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";
               variant="outline";
               size="lg";
-=======
-            <Button'
-              href='#pricing''
-              variant='outline''
-              size='lg''
-              className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl'>;
-              View Pricing;
-            </Button>;
-            <Button'
-              href='/contact''
-              variant='outline''
-              size='lg''"
-              className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";"
-              variant="outline";"
-              size="lg";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl";
               View Pricing;
             </Button>;
@@ -701,25 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
 
-
-
-
-<<<<<<< HEAD
-      {/* Test Types Section */}
-<section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-=======
-      {/* Test Types Section */}'
-      <section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Comprehensive Testing Coverage;
             </h2>'
@@ -739,31 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center mb-20'>;'
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
               Comprehensive Testing Coverage;
-<<<<<<< HEAD
-            </h2>;'
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;`
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
-                <div className="flex items-start space-x-6">;"
-                  <div className="relative">;`
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-                      {feature && feature.icon}
-                    </div>;`
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
-                  </div>;"
-                  <div className="flex-1">;"
-=======
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className="flex items-start space-x-6">;
-                  <div className="relative">;
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
-                      {feature && feature.icon}
-                    </div>;
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;} />;
-                  </div>;
-                  <div className="flex-1">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     <h3 className="text-2xl font-bold mb-4 text-white">;
                       {feature && feature.title}
                     </h3>;"
@@ -793,21 +403,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {testTypes && testTypes.map((type, index) => (;
-<<<<<<< HEAD
-              <Card;
-                key={index}"
-                className="card-hover border-gradient-indigo"`
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
-                <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;"
-                <p className="text-gray-400 mb-6">{type && type.description}</p>;"
-=======
-              <Card
-                key={index}
-                className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;
-                <p className="text-gray-400 mb-6">{type && type.description}</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 <ul className="space-y-2">;
                   {type && type.tests.map((test, testIndex) => (;"
                     <li key={testIndex} className="flex items-center text-gray-300">;"
@@ -841,17 +437,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Demo Test Results */}
       {testResults && (
-<<<<<<< HEAD
-"
-        <section className="section-padding bg-gradient-cursor-accent">"
-          <div className="container-cursor">"
-            <div className="text-center mb-12">"
-=======
 
-        <section className="section-padding bg-gradient-cursor-accent">
-          <div className="container-cursor">
-            <div className="text-center mb-12">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 API Test Results;
               </h2>"
@@ -954,10 +540,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'`
                         }`}>
                           {test.status}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1020,10 +603,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {test.value}
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
-=======
-                        </span>"
-                        <span className="text-xs text-gray-400">{test.value}</span>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       </div>
                         </span>                      </div>
 
@@ -1034,17 +614,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </Card>
 
-
-
-
-
-<<<<<<< HEAD
-              {/* Performance Metrics */}
-<Card className='border-gradient-indigo'>
-=======
-              {/* Performance Metrics */}'
-              <Card className='border-gradient-indigo'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-2xl font-bold mb-6 text-white'>
                   Performance Metrics;
                 </h3>'
@@ -1055,9 +624,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {testResults.responseTime}
                     </span>
 
-
-
-
                   </div>'
                   <div className='flex justify-between items-center'>'
                     <span className='text-gray-400'>Throughput</span>'
@@ -1066,15 +632,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex justify-between items-center'>'
                     <span className='text-gray-400'>Reliability</span>'
                     <span className='text-green-400 font-bold'>99.9%</span>
-<<<<<<< HEAD
-                  </div>'
-                  <div className='flex justify-between items-center'>'
-                    <span className='text-gray-400'>Uptime</span>'
-=======
-                  </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-400'>Uptime</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     <span className='text-green-400 font-bold'>24/7</span>                  </div>                  </div>
                   ))}"
                   <div className="flex justify-between items-center">"
@@ -1093,29 +651,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </Card>
-<<<<<<< HEAD
-            </div>
-            <Card className='border-gradient-indigo'>
-            {/* Recommendations */}
-<Card className='border-gradient-indigo'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            </div>'
-            <Card className='border-gradient-indigo'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <h3 className='text-2xl font-bold mb-6 text-white'>
                 Optimization Recommendations;
               </h3>'
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-                {testResults.recommendations.map((rec, index) => ('
-                  <div key={index} className='flex items-start space-x-3'>'
-                    <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />'
-=======
-                {testResults.recommendations.map((rec, index) => (
-                  <div key={index} className='flex items-start space-x-3'>
-                    <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
@@ -1145,7 +686,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       )}
 
-
               Simple Pricing;
       {/* Pricing Section */}
             </h2>"
@@ -1154,10 +694,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1177,12 +714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
-=======
-            {pricing.map((plan, index) => ('
-      <section id='pricing' className='section-padding bg-gradient-cursor'>;'
-        <div className='container-cursor'>;'
-          <div className='text-center mb-20'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
               Simple Pricing;
             </h2>;'
@@ -1190,17 +722,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             {test_types.map ((type, index) => (
               <Card;
-<<<<<<< HEAD
-                key={index}'
-                className='card - hover border - gradient - indigo';`
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;'
-=======
-                key={index}
-                className='card - hover border - gradient - indigo';
-                style={{ animation_delay: `${index * 0.1;}s` }}
-              >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 <h3 className='text - xl font - bold mb - 4 text - white'>;
                   {type.name}
                 </h3>;'
@@ -1220,21 +742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
             {test_types.map ((type, index) => (
               <Card;
-<<<<<<< HEAD
-                key={index}"
-                className="card - hover border - gradient - indigo";`
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;"
-                <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;"
-                <p className="text - gray - 400 mb - 6">{type.description}</p>;"
-=======
-                key={index}
-                className="card - hover border - gradient - indigo";
-                style={{ animation_delay: `${index * 0.1;}s` }}
-              >;
-                <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;
-                <p className="text - gray - 400 mb - 6">{type.description}</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 <ul className="space - y-2">;
                   {type.tests.map ((test, test_index) => ("
                     <li key={test_index} className="flex items - center text - gray - 300">;"
@@ -1447,24 +955,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>
                   ))}
-<<<<<<< HEAD
-                <Button
-href='/contact'
-=======
-                <Button'
-                  href='/contact''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   size='lg'
                       {feature}
 
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-=======
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
@@ -1482,39 +980,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-
-<<<<<<< HEAD
-              </Card>'`
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
-                  Get Started;'"
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";"
-                  size="lg";'`
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-=======
-              </Card>
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
-                  size="lg";
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Get Started;"
                   <ArrowRight className="w-5 h-5 ml-2" />;
               </Card>;
             ))}
       {/* CTA Section */}
-<<<<<<< HEAD
-      {/* CTA Section */}
-<section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='container-cursor text-center relative z-10'>
-=======
-      {/* CTA Section */}'
-      <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />'
-        <div className='container-cursor text-center relative z-10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
           </h2>'
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1539,11 +1011,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/contact''
               variant='outline''
               size='lg'
-<<<<<<< HEAD
-              Schedule Demo;
-=======
-              Schedule Demo
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             </Button>
           </div>
         </div>
@@ -1560,8 +1028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </>;
   );
-}
-  );
+});
 }
     </>);
 }'"
@@ -1569,32 +1036,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline""
               size="lg""
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
               Schedule Demo
-=======
-              Schedule Demo;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             </Button>
           </div>
         </div>
       </section>
     </>
-}
-
-  );
+});
 }
 }
 }
-<<<<<<< HEAD
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

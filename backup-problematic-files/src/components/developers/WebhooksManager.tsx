@@ -1,35 +1,10 @@
-
-=======
-import { useState, useEffect } from "react",;
-import { format } from "date-fns",;
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react';
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
-;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Switch } from "@/components/ui/switch",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-;
-export function WebhooksManager() {;
-  const {;
-    webhooks,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    loading,;
+loading,;
     testResult,;
     fetchWebhooks,;
     createWebhook,;
     toggleWebhook,;
     deleteWebhook,;
     testWebhook,;
-<<<<<<< HEAD
 
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
@@ -171,4 +146,3 @@ if (showTestResult) {;
 setShowTestResult (false);
 clearTestResult ();
 }
-

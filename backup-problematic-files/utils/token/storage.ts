@@ -41,10 +41,7 @@ class InMemoryTokenStore {
 
   constructor() {
     const fromDisk = readFromDisk()
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.data =
       fromDisk ?? {
         wallets: {},
@@ -92,8 +89,3 @@ export const tokenStore = {
   getTransactions(userId?: string): TokenTransaction[] {
     const txs = store.getData().transactions
     if (!userId) return txs,
-<<<<<<< HEAD
-    return txs.filter((t) => t.userId === userId)
-=======
-    return txs.filter((t) => t.userId === userId);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

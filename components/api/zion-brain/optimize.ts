@@ -1,96 +1,4 @@
-<<<<<<< HEAD
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse;
-) {}
-  if (req && req.method !== "POST")"
-    return res && res.status(405).json({ error: "Method not allowed" });
-  if (!isAuthorized(req))"
-    return res && res.status(401).json({ error: "Unauthorized" });
-  function isAuthorized(req: NextApiRequest): boolean {}
-    return !superToken || token === superToken;
-  }
-
-
-export default async function handler() { return null; }
-    return res.status(405).json({ error: "Method not allowed" });
-  if (!isAuthorized(req))"
-    return res.status(401).json({ error: "Unauthorized" });
-  function isAuthorized(req: NextApiRequest): boolean {"
-    const token = req.headers["x-admin-token"] |req.query.token;
-    const superToken = process.env.SUPERADMIN_TOKEN;
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { appendLog, optimizePrompt } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-    return res.status(500).json({ error: 'Optimization failure' })
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }
-  export default async function handler(;
-    req: NextApiRequest;
-    res: NextApiResponse;
-  ) {}
-    if (!isAuthorized(req))"
-      return res && res.status(401).json({ error: "Unauthorized" });
-    const started = Date && Date.now();
-    try {}
-export default async /**;
- * handler - Function description;
- */
-function handler() {}
-  if ("
-    return res.status (405).json ({ error: "Method not allowed" })) {}
-  $2;
-}
-  if ()) {}
-  $2;
-}"
-    return res.status (401).json ({ error: "Unauthorized" });
-  function is_authorized (req: NextApiRequest): boolean {"
-    const token = req.headers["x - admin - token"] || req.query.token;
-    const super_token = process.env.SUPERADMIN_TOKEN;
-    return !super_token || token === super_token;
-  }
-  export default async /**;
- * handler - Function description;
-=======
-
-  }
-
-export default async function handler(
-    req: NextApiRequest;
-res: NextApiResponse;
-  ) {
-    if (!isAuthorized(req))}
-      return res && res.status(401).json({ error: \"Unauthorized\"}
-});
-
-const started = Date && Date.now();
-    try {
-export default async /**
- * handler - Function description;
- */
-function handler() {}
-  if (}"
-    return res.status (405).json ({ error: \"Method not allowed\" })) {
-  $2}
-}
-}
-  if ()) {$2;}
-}"
-    return res.status (401).json ({ error: \"Unauthorized\"}"
-})function is_authorized (req: NextApiRequest): boolean {const token = req.headers[\"x - admin - token\"] || req.query.token;
-
-const super_token = process.env.SUPERADMIN_TOKEN;
-    return !super_token || token === super_token;}
-}
-  }
-  export default async /**
- * handler - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
- */
+*/
 function handler() {}
     if ("
       return res.status (405).json ({ error: "Method not allowed" })) {}
@@ -142,8 +50,5 @@ function handler() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 "

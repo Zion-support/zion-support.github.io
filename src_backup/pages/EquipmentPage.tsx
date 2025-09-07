@@ -1,50 +1,8 @@
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
-import { ProductListing  } from '@/types/listings';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
+
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -72,28 +30,16 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
+
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -262,172 +208,11 @@ const EquipmentFilterControls = ({
   </div>
 ),
 
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
-
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-},
 
-// Loading grid
-const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>
-),
-
-// Error fallback component
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
-  return (
-    <div className="container py-8">
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-8 text-center">
-          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-          <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-          <p className="text-red-700 mb-4">
-            We're having trouble loading the equipment listings. This might be a temporary issue.
-          </p>
-          <div className="flex gap-2 justify-center">
-            <Button onClick={resetErrorBoundary} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Try Again
-            </Button>
-            <Button onClick={() => window.location.reload()} variant="default">
-              Refresh Page
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-;
-// Main component;
-function EquipmentPageContent() {;
-  const router = useRouter(),;
-  const [sortBy, setSortBy] = useState('newest'),;
-  const [filterCategory, setFilterCategory] = useState(''),;
-  const [showRecommended, setShowRecommended] = useState(false),;
-  // Generate a consistent seed based on current filters for deterministic data;
-  const dataSeed = useMemo(() => {;
-    return `equipment-${filterCategory}-${showRecommended}`;
-  }, [filterCategory, showRecommended]),;
-  const fetchEquipment = useCallback(async (page: number, limit: number) => {;
-    // Simulate realistic API delay;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
-    try {;
-      // Generate consistent virtual dataset using the seed;
-      const VIRTUAL_DATASET_SIZE = 150,;
-      const baseVirtualEquipment = generateDatacenterEquipment(;
-        VIRTUAL_DATASET_SIZE,;
-        INITIAL_EQUIPMENT.length,;
-        dataSeed;
-      ),;
-      let fullVirtualDataset: ProductListing[] = [;
-        ...INITIAL_EQUIPMENT,;
-        ...baseVirtualEquipment;
-      ],;
-      // Deduplicate by ID in case of overlaps;
-      const dedupMap = new Map<string ProductListing>(),;
-      for (const item of fullVirtualDataset) {;
-        if (!dedupMap.has(item.id)) {;
-          dedupMap.set(item.id, item);
-        }
-      }
-      fullVirtualDataset = Array.from(dedupMap.values()),;
-      // Apply category filtering;
-      let processedDataset = fullVirtualDataset,;
-      if (filterCategory) {;
-        processedDataset = processedDataset.filter(e => e.category === filterCategory);
-      }
-;
-      // Apply recommended filtering;
-      if (showRecommended) {;
-        processedDataset = getRecommendedEquipment(processedDataset);
-      }
-;
-      // Sort the processed dataset;
-      processedDataset.sort((a, b) => {;
-        switch (sortBy) {;
-          case 'price-low':;
-            return (a.price || 0) - (b.price || 0),;
-          case 'price-high':;
-            return (b.price || 0) - (a.price || 0),;
-          case 'rating':;
-            return (b.rating || 0) - (a.rating || 0),;
-          default: // 'newest';
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
-        }
-      }),;
-      // Slice for pagination;
-      const startIndex = (page - 1) * limit,;
-      const endIndex = startIndex + limit,;
-      const items = processedDataset.slice(startIndex, endIndex),;
-      return {;
-        items,;
-        hasMore: endIndex < processedDataset.length,;
-        total: processedDataset.length;
-      }
-    } catch (error) {;
-      logErrorToProduction('Error in fetchEquipment:', { data: error }),;
-      throw new Error('Failed to load equipment data. Please try again.');
-    }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]),
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -439,31 +224,12 @@ function EquipmentPageContent() {;
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
         </motion.div>
         <EquipmentLoadingGrid />
-=======
-import React from "react";
-import MainLayout from "../components/layout/MainLayout";
 
-const EquipmentPage: React.FC = () => {
-  return (
-    <MainLayout title="Equipment - Zion Tech Group" description="Professional equipment and technology solutions.">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Equipment</h1>
-        <p className="text-lg">This is the Equipment page. Content coming soon.</p>
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
     </MainLayout>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -582,12 +348,6 @@ const EquipmentPage: React.FC = () => {
         />
       </motion.div>
 
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
@@ -674,33 +434,9 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
-<<<<<<< HEAD
-=======
-
-
 
 ;
-}
-// Main export with error boundary;
-export default /**
- * EquipmentPage - Function description
- */
-function EquipmentPage() {
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
-    </EquipmentErrorBoundary>);
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-export default EquipmentPage;
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
+
   );
 
 }animate= {;
@@ -871,9 +607,3 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-<<<<<<< HEAD:src/pages/EquipmentPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx

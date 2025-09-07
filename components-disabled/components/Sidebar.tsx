@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
-
-;
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { useRouter  } from 'next/router';
-import { X,ChevronDown,ChevronRight,Home,Briefcase,Users,FileText,HelpCircle,LogOut,User,Search,Brain,Shield,Cloud,Code,Network,Zap,Phone,Mail,MapPin,Building2;
- } from 'lucide-react';
-const navigation = {'Services': [;
-    { name: 'AI Services', href: '/ai-services' },{ name: 'IT Services', href: '/it-services' },{ name: 'Micro SaaS', href: '/micro-saas' },{ name: 'Cloud Solutions', href: '/cloud-solutions' },{ name: 'Cybersecurity', href: '/cybersecurity' },{ name: 'Quantum Computing', href: '/quantum-computing' },{ name: 'Blockchain', href: '/blockchain' },{ name: 'IoT Solutions', href: '/iot-solutions' }
-  ],'Solutions': [;
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },{ name: 'Startup Solutions', href: '/solutions/startup' },{ name: 'Digital Transformation', href: '/solutions/digital-transformation' },{ name: 'Custom Development', href: '/solutions/custom' }
-  ],'Industries': [;
-    { name: 'Healthcare', href: '/industries/healthcare' },{ name: 'Finance', href: '/industries/finance' },{ name: 'Education', href: '/industries/education' },{ name: 'Government', href: '/industries/government' },{ name: 'Manufacturing', href: '/industries/manufacturing' },{ name: 'Retail', href: '/industries/retail' },{ name: 'Agriculture', href: '/industries/agriculture' },{ name: 'Energy', href: '/industries/energy' }
-  ],'Resources': [;
-    { name: 'Blog', href: '/blog' },{ name: 'Documentation', href: '/docs' },{ name: 'API Documentation', href: '/docs/api' },{ name: 'Tutorials', href: '/tutorials' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Webinars', href: '/webinars' },{ name: 'Training', href: '/training' },{ name: 'FAQ', href: '/faq' }
-  ],'Company': [;
-    { name: 'About Us', href: '/about' },{ name: 'Our Team', href: '/team' },{ name: 'Careers', href: '/careers' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'News', href: '/news' },{ name: 'Partners', href: '/partners' },{ name: 'Contact', href: '/contact' },{ name: 'Privacy Policy', href: '/privacy' }
-  ];
-}const quickLinks = [;
-  { name: 'Free Consultation', href: '/consultation' },{ name: 'Get Quote', href: '/quote' },{ name: 'Support', href: '/support' }
-];interface SidebarProps  {isOpen: boolean;
-  onClose: () => void;
-}export function Sidebar() {const [activeDropdown, setActiveDropdown]  = useState<string | null>(null)useEffect(() => {if (isOpen) {document.body.style.overflow = 'hidden';
-    } else {document.body.style.overflow = 'unset';
-    }
-    return () => {document.body.style.overflow = 'unset';
-    }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
-      {isOpen && (<>;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -446,18 +410,6 @@ const quickLinks = [
 
 interface SidebarProps {
   isOpen: boolean;
-<<<<<<< HEAD
-  onClose: () => void;
-<<<<<<< HEAD:components/Sidebar.tsx
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
-  onClose: () => void;}
-}
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
@@ -545,31 +497,9 @@ const handleDropdownToggle = (
             className="fixed inset-0 bg-black bg-opacity-50 z-40""
             onClick={onClose}
           />
-<<<<<<< HEAD
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
-          >;
-            <div className="p-6">;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
+
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-</motion>
-          <motion.div;"
-            initial={{ x: '-100%' ;}}
-            animate={{ x: 0 ;}}
-            exit={{ x: '-100%' ;}}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto""
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
           >
 </motion>"
             <div className="p-6">"
@@ -597,7 +527,6 @@ const handleDropdownToggle = (
 "
                         <ChevronRight className="w-4 h-4" />"
 
-
                           initial={{ height: 0;, opacity: 0 ;}}"
                           animate={{ height: 'auto';, opacity: 1 ;}}
                           exit={{ height: 0;, opacity: 0 ;}}
@@ -607,7 +536,6 @@ const handleDropdownToggle = (
                               href={link.href}"
                               className="block text-gray-600 hover:text-blue-600 transition-colors py-1""
 
-                            
                         </motion.div>
                       )}
                     
@@ -616,7 +544,6 @@ const handleDropdownToggle = (
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>""
                 <div className="space-y-2">"
 
-                    
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>""
                 <div className="space-y-2 text-sm text-gray-600">"
                   <p>+1 302 464 0950</p>
@@ -659,33 +586,9 @@ const handleDropdownToggle = (
                 </div>;
                 <button;
                   onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
-                >;
-                  <X className="w-6 h-6" />;
-                </button>;
-              </div>;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
+
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-                  className=\"p-2 text-gray-500 hover:text-gray-700 transition-colors\";
-                 />;
-                  <X className=\"w-6 h-6\" />;
-                </button>;
-              </div>;
-                  className=\"p-2 hover:bg-gray-100 rounded-lg transition-colors\"
-                  className=\"p-2 text-gray-500 hover:text-gray-700 transition-colors\";
-                >;
-                  <X className=\"w-6 h-6\" />;
-                </button>;
-              </div>;
-                  className=\"p-2 hover:bg-gray-100 rounded-lg transition-colors\"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
                 >
                   <X className=\"w-6 h-6\" />
                 </button>
@@ -694,22 +597,7 @@ const handleDropdownToggle = (
               {/* Navigation *,}
 }
               {/* Navigation */}
-<<<<<<< HEAD
-              <nav className="space-y-4">
-                {Object.entries(navigation).map(([title, links]) => (
-                  <div key={title}>
-                    <button
-                      onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
-=======
-              <nav className=\"space-y-4\" />;
-                {Object.entries(navigation).map(([title, links]) => (<div key={title} />;
-                    <button;
-                      onClick={() = /> handleDropdownToggle(title)}
-                      className=\"flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors\";
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
                     >;
                       <span />{title}</span>;
                       <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === title ? 'rotate-180' : '';}
@@ -738,13 +626,9 @@ const handleDropdownToggle = (
                   </div>;
                 ))}
               </nav>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
+
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
-=======
-                      className=\"flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover: text-blue-600 hover:bg-gray-50 rounded-lg transition-colors\"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
                     >
                       <span className=\"font-medium\" />{title}</span>
                       {openDropdowns.includes(title) ? (
@@ -958,8 +842,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
                     <ExternalLink className="w - 4 h - 4" />;"
 
           </motion.div>;
-        </>)}
-    );
+        </>)});
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
             exit={{ opacity: 0 ;}}"
@@ -981,13 +864,11 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
                               expandedItems.includes(item.label) ? 'rotate-180' : `;
                             }`}
 
-                    
                       <div className="ml-8 space-y-1">"
                             key={child.label}
                             href={child.href}"
                             className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md""
 
-                          
                   <div className="flex items-center">"
                     <MapPin className="h-4 w-4 mr-2" />"
 
@@ -1787,19 +1668,9 @@ key={child.label}
 }
     </AnimatePresence>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 }
 interface SidebarProps {
   isOpen: boolean;}
   onClose: () => void;}
 }
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

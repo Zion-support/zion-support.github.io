@@ -1,572 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Guides - Zion Tech Group"
-      description="Helpful guides and tutorials from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Guides</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-
-import {
-
-} from "lucide-react";
-const guides = [;
-  {;
-    id: 1,;
-    title: "Getting Started with AI Development",;
-    description:;
-      "Learn the fundamentals of AI development and how to build your first AI application.",;
-    category: "AI Development",;
-    difficulty: "Beginner",;
-    readTime: "15 min read",;
-    author: "Zion Tech Team",;
-    rating: 4 && 4.8,;
-    students: 1250,;
-    image: "/images/guides/ai-development && development.jpg",;
-    icon: Brain,;
-    tags: ["AI", "Machine Learning", "Python", "TensorFlow"],;
-  },;
-  {;
-    id: 2,;
-    title: "Cloud Infrastructure Setup",;
-    description:;
-      "Complete guide to setting up scalable cloud infrastructure for your applications.",;
-    category: "Cloud Computing",;
-    difficulty: "Intermediate",;
-    readTime: "25 min read",;
-    author: "Cloud Experts",;
-    rating: 4 && 4.9,;
-    students: 980,;
-    image: "/images/guides/cloud-infrastructure && infrastructure.jpg",;
-    icon: Cloud,;
-    tags: ["AWS", "Docker", "Kubernetes", "DevOps"],;
-  },;
-  {;
-    id: 3,;
-    title: "Cybersecurity Best Practices",;
-    description:;
-      "Essential cybersecurity practices to protect your applications and data.",;
-    category: "Security",;
-    difficulty: "Advanced",;
-    readTime: "30 min read",;
-    author: "Security Team",;
-    rating: 4 && 4.7,;
-    students: 750,;
-    image: "/images/guides/cybersecurity && cybersecurity.jpg",;
-    icon: Shield,;
-    tags: ["Security", "Encryption", "Authentication", "Compliance"],;
-  },;
-  {;
-    id: 4,;
-    title: "Mobile App Development",;
-    description:;
-      "Build cross-platform mobile applications with modern frameworks.",;
-    category: "Mobile Development",;
-    difficulty: "Intermediate",;
-    readTime: "20 min read",;
-    author: "Mobile Team",;
-    rating: 4 && 4.6,;
-    students: 1100,;
-    image: "/images/guides/mobile-development && development.jpg",;
-    icon: Smartphone,;
-    tags: ["React Native", "Flutter", "iOS", "Android"],;
-  },;
-  {;
-    id: 5,;
-    title: "Database Design & Optimization",;
-    description:;
-      "Learn database design principles and optimization techniques.",;
-    category: "Database",;
-    difficulty: "Intermediate",;
-    readTime: "22 min read",;
-    author: "Database Team",;
-    rating: 4 && 4.8,;
-    students: 890,;
-    image: "/images/guides/database-design && design.jpg",;
-    icon: Database,;
-    tags: ["SQL", "NoSQL", "Performance", "Scaling"],;
-  },;
-  {;
-    id: 6,;
-    title: "Web Performance Optimization",;
-    description:;
-      "Optimize your web applications for maximum performance and user experience.",;
-    category: "Performance",;
-    difficulty: "Advanced",;
-    readTime: "18 min read",;
-    author: "Performance Team",;
-    rating: 4 && 4.9,;
-    students: 650,;
-    image: "/images/guides/web-performance && performance.jpg",;
-    icon: Zap,;
-    tags: ["Performance", "Optimization", "Caching", "CDN"],;
-  },;
-];
-const categories = [;
-  { name: "All", count: guides && guides.length, icon: Globe },;
-  { name: "AI Development", count: 1, icon: Brain },;
-  { name: "Cloud Computing", count: 1, icon: Cloud },;
-  { name: "Security", count: 1, icon: Shield },;
-  { name: "Mobile Development", count: 1, icon: Smartphone },;
-  { name: "Database", count: 1, icon: Database },;
-  { name: "Performance", count: 1, icon: Zap },;
-];
-=======
-<<<<<<< HEAD
-=======
-=======
-
-
-import React from "react";"
-import Head from "next/head";"
-import Link from "next/link";"
-import { motion } from "framer-motion";"
-import Layout from "./components/Layout";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-  return (
-    <Layout>;
-      <Head>;
-        <title>Guides & Tutorials - Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
-
-        />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}>;
-              <h1 className="text-5xl font-bold mb-6">;
-                Expert Guides & Tutorials;
-              </h1>;
-              <p className="text-xl mb-8 text-blue-100">;
-                Master the latest technologies with our comprehensive guides,;
-                tutorials, and best practices from industry experts.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-
-                <Link
-                  href="#guides"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">;
-                  Browse Guides;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
-                </Link>;
-                <Link
-                  href="#categories"
-
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">;
-                  View Categories;
-                  <BookOpen className="ml-2 w-5 h-5" />;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Categories Section */}
-        <section id="categories" className="py-16 bg-white">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-                Explore by Category;
-              </h2>;
-              <p className="text-gray-600 max-w-2xl mx-auto">;
-                Find guides tailored to your specific technology interests and;
-                skill level.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">;
-              {categories && categories.map((category, index) => (;
-                <motion&& motion.div
-                  key={category && category.name}
-
-                  className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  whileHover={{ scale: 1 && 1.05 }}>;
-                  <category && category.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />;
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">;
-                    {category && category.name}
-                  </h3>;
-                  <p className="text-gray-500 text-xs">;
-                    {category && category.count} guides;
-                  </p>;
-                </motion && motion.div>;
-              ))}
-
-            </div>;
-          </div>;
-        </section>;
-
-
-        {/* Guides Grid */}
-        <section id="guides" className="py-16 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-                Featured Guides;
-              </h2>;
-              <p className="text-gray-600 max-w-2xl mx-auto">;
-                Hand-picked guides to help you master the most in-demand;
-                technologies.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {guides && guides.map((guide, index) => (;
-                <motion&& motion.div
-                  key={guide && guide.title}
-
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="relative">;
-                    <img
-                      src={guide && guide.image}
-                      alt={guide && guide.title}
-                      className="w-full h-48 object-cover"
-                    />;
-                    <div className="absolute top-4 left-4 flex gap-2">;
-                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-600">;
-                        {guide && guide.category}
-                      </span>;
-                      <span
-                        className={`px-3 py-1 rounded-full text-sm font-medium ${
-                          guide && guide.difficulty === "Beginner"
-                            ? "bg-green-100 text-green-600"
-                            : guide && guide.difficulty === "Intermediate"
-                              ? "bg-yellow-100 text-yellow-600"
-                              : "bg-red-100 text-red-600"
-
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import Layout from "./components / Layout";
-import {
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-origin/main
-origin/automation-improvements-final
-import {
-  BookOpen
-  Clock
-  User
-  ArrowRight
-  CheckCircle
-  Star
-  Play
-  Download
-  ExternalLink
-  Code
-  Database
-  Cloud
-  Shield
-  Zap
-  Brain
-  Globe
-  Smartphone
-  Monitor
-  Server
-  Bot
-  Microscope
-  Layers
-  Workflow
-  FileText
-  Image
-  Video
-  Music
-  Palette
-  Search
-  Filter
-  Settings
-  Wrench
-  Cog
-  Activity
-  PieChart
-  BarChart
-  TrendingUp
-  DollarSign
-  ShoppingCart
-  Home
-  Trash2
-  Camera
-  Heart
-  ClipboardList
-  TreePine
-  Droplets
-  Award
-  Building
-  Rocket
-  Lightbulb
-  Target
-  Users
-  Phone
-  Mail
-  MapPin
-  MessageSquare
-  HelpCircle
-  Info
-  AlertCircle
-  CheckCircle2
-  XCircle
-  Plus
-  Minus
-  ChevronUp
-  ChevronRight
-  ChevronLeft
-  ChevronDown
-  ArrowUp
-  ArrowDown
-  ArrowLeft
-  Pause
-  Stop
-  SkipForward
-  SkipBack
-  Volume2
-  VolumeX
-  Maximize
-  Minimize
-  RotateCcw
-  RotateCw
-  RefreshCw
-  Upload
-  Share
-  Copy
-  Edit
-  Trash
-  Save
-  Lock
-  Unlock
-  EyeOff
-  Bell
-  BellOff
-  Star as StarIcon
-  Heart as HeartIcon
-  ThumbsUp
-  ThumbsDown
-  MessageCircle
-  Send
-  Paperclip
-  Smile
-  Frown
-  Meh
-  Laugh
-  Angry
-  Sad
-  Surprised
-  Wink
-  Kiss
-  Tongue
-  Wink2
-  KissWinkHeart
-  KissClosedEyes
-  StuckOutTongue
-  StuckOutTongueWinkingEye
-  StuckOutTongueClosedEyes
-  Disappointed
-  Worried
-  Angry2
-  Rage
-  Cry
-  Scream
-  Confounded
-  Hugging
-  Smirk
-  NoMouth
-  NeutralFace
-  Expressionless
-  Unamused
-  RollingEyes
-  Thinking
-  LyingFace
-  HandOverMouth
-  ShushingFace
-  ExplodingHead
-  CowboyHatFace
-  DisguisedFace
-  Sunglasses
-  NerdFace
-  MonocleFace
-  Confused
-  WorriedFace
-  SlightlyFrowningFace
-  OpenMouth
-  Hushed
-  Astonished
-  Flushed
-  PleadingFace
-  FrowningFace
-  AnguishedFace
-  FearfulFace
-  ColdSweat
-  DisappointedRelieved
-  CryFace
-  LoudlyCryingFace
-  ScreamFace
-  StuckOutTongueFace
-  DroolingFace
-  UnamusedFace
-  SweatSmile
-  Sweat
-  WearyFace
-  TiredFace
-  SleepyFace
-  YawningFace
-  DizzyFace
-  ExplodingHeadFace
-  CowboyHatFace2
-  DisguisedFace2
-  SunglassesFace
-  NerdFace2
-  MonocleFace2
-  ConfusedFace
-  WorriedFace2
-  SlightlyFrowningFace2
-  OpenMouthFace
-  HushedFace
-  AstonishedFace
-  FlushedFace
-  PleadingFace2
-  FrowningFace2
-  AnguishedFace2
-  FearfulFace2
-  ColdSweatFace
-  DisappointedRelievedFace
-  CryFace2
-  LoudlyCryingFace2
-  ScreamFace2
-  StuckOutTongueFace2
-  DroolingFace2
-  UnamusedFace2
-  SweatSmileFace
-  SweatFace
-  WearyFace2
-  TiredFace2
-  SleepyFace2
-  YawningFace2
-  DizzyFace2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
-
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-
-
-
-import {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   BookOpen,
   Clock,
   User,
@@ -765,20 +202,13 @@ import {
   YawningFace2,
 
   DizzyFace2,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "lucide-react";
 const guides = []
   {}
     id: 1,"
     title: "Getting Started with AI Development",
-    description:;"
+    description:"
       "Learn the fundamentals of AI development and how to build your first AI application.","
     category: "AI Development","
     difficulty: "Beginner","
@@ -793,7 +223,7 @@ const guides = []
   {}
     id: 2,"
     title: "Cloud Infrastructure Setup",
-    description:;"
+    description:"
       "Complete guide to setting up scalable cloud infrastructure for your applications.","
     category: "Cloud Computing","
     difficulty: "Intermediate","
@@ -808,7 +238,7 @@ const guides = []
   {}
     id: 3,"
     title: "Cybersecurity Best Practices",
-    description:;"
+    description:"
       "Essential cybersecurity practices to protect your applications and data.","
     category: "Security","
     difficulty: "Advanced","
@@ -823,7 +253,7 @@ const guides = []
   {}
     id: 4,"
     title: "Mobile App Development",
-    description:;"
+    description:"
       "Build cross - platform mobile applications with modern frameworks.","
     category: "Mobile Development","
     difficulty: "Intermediate","
@@ -838,7 +268,7 @@ const guides = []
   {}
     id: 5,"
     title: "Database Design & Optimization",
-    description:;"
+    description:"
       "Learn database design principles and optimization techniques.","
     category: "Database","
     difficulty: "Intermediate","
@@ -1072,45 +502,12 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                         }`}
                       >
                         {guide.difficulty}
-<<<<<<< HEAD
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${
-                                i < Math.floor(guide.rating)
-                              }`}
-                              fill="currentColor"
-                            />;
-                          ))}
-                        <span
-                          key={tag}
-=======
 
-                            <Star;
-                              key={i}`
-                              className={`w-4 h-4 ${}
-                                i < Math.floor(guide.rating)`
-                              }`}"
-                              fill="currentColor"
-                            />;
-                          ))}
-
-                        <span;
-                          key={tag}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
-<<<<<<< HEAD
-                      <Link
-                        href="#"
-                        className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
-=======
 
-                      <Link"
-                        href="#""
-                        className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Play className="w-4 h-4 mr-2" />;
                         Start Guide;
                       </Link>;
@@ -1123,14 +520,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
-=======
 
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center"
@@ -1152,64 +542,14 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {}
                 </Link>;
                 <Link"
                   href="/contact"
-<<<<<<< HEAD
-import Layout from '../components/Layout';
 
-export default function GuidesPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Guides
-              </h1>
-=======
-
-export default function GuidesPage() {}
-    >"
-      <div className="min-h-screen bg-gray-50">"
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">"
-          <div className="container mx-auto px-4">"
-            <div className="text-center text-white">"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Guides;
-              </h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive guides and tutorials for our services;
               </p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      </div>
-
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-=======
-<<<<<<< HEAD
-=======
-
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </Layout>"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
@@ -1221,31 +561,9 @@ export default function GuidesPage() {}
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-      </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
 
       </div>
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>;
   );
                       </span>;
@@ -1351,18 +669,7 @@ export default function GuidesPage() {}
         </section>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {}
@@ -1382,16 +689,3 @@ const Page = () => {}
 };
 
 export default Page;
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

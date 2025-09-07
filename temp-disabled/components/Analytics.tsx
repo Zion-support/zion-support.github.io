@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect } from 'react';
 
 import Head from 'next / head';
@@ -30,7 +6,6 @@ import Head from 'next / head';
 interface AnalyticsProps {
   tracking_id?: string;
 }
-
 
 interface AnalyticsProps {;
   trackingId?: string;
@@ -111,14 +86,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   if (typeof window !== 'undefined') {;
 
     (window as any).trackEvent = trackEvent;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
-=======
-const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {}
-  useEffect (() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     // Google Analytics 4;
     // Check condition;
 if ( {) {}
@@ -218,20 +189,7 @@ if ( {) {}
     (window as any).trackExternalLink = trackExternalLink;
   }
   return (
-<<<<<<< HEAD
-    <Head>;
-<<<<<<< HEAD
 
-      <script;
-        dangerouslySetInnerHTML={{
-
-=======
-                      });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-    <Head>;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           __html: `
             // Performance monitoring'
             if ('performance' in window) {'
@@ -240,14 +198,7 @@ if ( {) {}
                   const perfData = performance.getEntriesByType('navigation')[0];
                   if (perfData) {}
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-<<<<<<< HEAD
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    if (window.gtag) {'
-                      window.gtag('event', 'timing_complete', {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart;
                     if (window && window.gtag) {'
@@ -256,124 +207,3 @@ if ( {) {}
                         value: Math && Math.round(loadTime),
                       })
                     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  }
-
-          `
-
-        }}
-
-export default Analytics;
-export default Analytics;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React, { useEffect } from 'react';
-// We avoid declaring global window.gtag types here to prevent conflicts;
-
-// We avoid declaring global window.gtag types here to prevent conflicts
-
-interface AnalyticsProps {
-  trackingId?: string;}
-}
-
-
-const Analytics: React.FC<AnalyticsProps> = ({
-  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID
-}) => {
-  useEffect(() => {
-    if (!trackingId || typeof window === 'undefined') return;
-
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(script1);
-
-
-useEffect(() => {
-if (!trackingId || typeof window = == 'undefined');
-  return;
-
-const script1 = document.createElement('script')script1.async = true;}
-    script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingI,}
-}`;
-    document.head.appendChild(script1)const script2 = document.createElement('script')script2.innerHTML = `;
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${trackingId}', {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-    `;
-    document.head.appendChild(script2);
-
-    const handleRouteChange = () => {
-      if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
-        window.gtag('config', trackingId, {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
-    };
-
-    window.addEventListener('popstate', handleRouteChange);
-    return () => window.removeEventListener('popstate', handleRouteChange);
-  }, [trackingId]);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const trackPerformance = () => {
-      if (typeof window.gtag !== 'undefined' && 'performance' in window) {
-        const perf = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-        if (perf) {
-          const loadTime = (perf.loadEventEnd || 0) - (perf.fetchStart || 0);
-          window.gtag('event', 'page_load_time', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(loadTime)
-          });
-        }
-      }
-    };
-    window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance);
-  }, []);
-
-  return null;
-};
-
-export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
-    window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    });
-  }
-};
-
-export const trackPageView = (url: string, title: string) => {
-  const id = process.env.NEXT_PUBLIC_GA_TRACKING_ID || '';
-  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined' && id) {
-    window.gtag('config', id, {
-      page_title: title,
-      page_location: url,
-    });
-  }
-};
-
-<<<<<<< HEAD:components/Analytics.tsx
-export default Analytics;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-export default Analytics;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/Analytics.tsx

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -19,11 +14,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-8 h-8';,
     lg: 'w-12 h-12';
   };
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', text,
   className = '', }) => {
@@ -37,28 +28,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     lg: 'h-12 w-12';
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
-<<<<<<< HEAD
-=======
-import React from 'react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className={`inline-block ${className}`}>
       <div 
@@ -69,20 +39,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <span className="sr-only">Loading...</span>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   );
 };
 
 export default LoadingSpinner;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   )
 React from, react''
 import { Loader2  } from 'lucide-react'';interface LoadingSpinnerProps {'
@@ -193,19 +155,3 @@ export default function LoadingSpinner() {
   }
 }
 pr-12243
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
-  );
-};
-
-export default LoadingSpinner;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,46 +1,3 @@
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
-// Define form schema
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)}),
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   }
   // Handle removing skill tags;
@@ -72,7 +29,7 @@ if ( {) {}
 }
       toast ({'
         title: 'More information needed',
-        description:;'
+        description:'
           'Please provide at least a detailed bio before generating enhanced content.',
       });
       return;
@@ -103,7 +60,7 @@ if ( {) {}
         setGeneratedContent (data as EnhancedProfile);
         toast ({'
           title: 'Enhanced Profile Generated',
-          description:;'
+          description:'
             'AI has created a professional bio and suggested additional skills for your profile.',
         });
       } else {}
@@ -122,7 +79,7 @@ if ( {) {}
         });
         toast ({'
           title: 'Enhanced Profile Generated',
-          description:;'
+          description:'
             'AI has created a professional bio and suggested additional skills for your profile.',
         });
       }
@@ -132,124 +89,22 @@ if ( {) {}
       });
       toast ({'
         title: 'Generation failed',
-        description:;
+        description:
           error.message ||;'
           'There was an error generating your enhanced profile. Please try again.','
         variant: 'destructive',
       });
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-    } finally {
-      setIsGenerating (false);
-=======
-    } finally {}
-      setIsGenerating(false)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
     }
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-type TalentFormValues = z.infer<typeof talentProfileSchema>,
-=======
-      )
-      if (error) {}
-        throw new Error(error.message)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-interface CategorizedSkills {
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  softSkills: string[],
-  other: string[]
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Switch } from "@/components/ui/switch",;
-import { Badge } from "@/components/ui/badge",;
-import { Separator } from "@/components/ui/separator",;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-import {;
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { useAuth } from "@/hooks/useAuth",;
-// Define form schema;
-const talentProfileSchema = z.object({;
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),;
-  title: z.string().min(5, "Professional title is required"),;
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
-  location: z.string().min(2, "Location is required"),;
-  skills: z.string().min(2, "Enter at least one skill"),;
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
-    message: "Hourly rate must be a number"}),;
-  availability: z.enum(["available", "limited", "unavailable"]),;
-  enhancedProfile: z.boolean().default(true)}),;
-type TalentFormValues = z.infer<typeof talentProfileSchema>,;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
-interface CategorizedSkills {;
-  programming: string[],;
-  devops: string[],;
-  platforms: string[],;
-  softSkills: string[],;
-  other: string[];
-}
-;
-interface EnhancedProfile {;
-  summary: string,;
-  categorizedSkills: CategorizedSkills;
-}
-
-export function TalentRegistrationForm() {
-  // Remove the useToast() hook since we're importing the toast function directly
-  const { user } = useAuth(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [skillTags, setSkillTags] = useState<string[]>([]),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
-  
-  // Initialize form with default values
-  const form = useForm<TalentFormValues>({
-    resolver: zodResolver(talentProfileSchema) as any,
-    defaultValues: {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       name: user?.displayName || "",
       title: "",
       bio: "",
       location: "",
       skills: "",
       hourlyRate: "",
-=======
-      name: user?.displayName || "","
-      title: "","
-      bio: "","
-      location: "","
-      skills: "","
-      hourlyRate: "","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
       availability: "available",
       enhancedProfile: true}}),
 
@@ -285,7 +140,7 @@ export function TalentRegistrationForm() { return null; }
     resolver: zodResolver(talentProfileSchema) as any,;
     defaultValues: {;"
       name: user?.displayName || "",;"
-      title: "",;"
+      title: "","
       bio: "",;"
       location: "",;"
       skills: "",;"
@@ -336,15 +191,7 @@ export function TalentRegistrationForm() { return null; }
   const generateEnhancedProfile = async () => {;
     const formData = form.getValues(),;
     if (!formData.bio || formData.bio.length < 20) {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      toast({;
-        title: "More information needed",,
-  description: "Please provide at least a detailed bio before generating enhanced content."}),;
-=======
-      toast({;"
-        title: "More information needed",;"
-        description: "Please provide at least a detailed bio before generating enhanced content."}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
       return;
     }
 ;
@@ -367,53 +214,10 @@ export function TalentRegistrationForm() { return null; }
 
       }
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      // Check if data exists before type assertion
-      if (data && typeof data === 'object') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        setGeneratedContent(data as EnhancedProfile),
-        
-        toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
-      } else {
-        // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content'),
-        setGeneratedContent({
-          summary: "Experienced professional with expertise in modern technologies and best practices.",
-          categorizedSkills: {
-            programming: ["JavaScript", "TypeScript", "React"],
-            devops: ["Docker", "CI/CD", "AWS"],
-            platforms: ["Node.js", "Next.js", "Vercel"],
-            softSkills: ["Communication", "Problem Solving", "Team Leadership"],
-            other: ["Project Management", "Technical Writing"]
-          }
-        }),
-        
-        toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
-      }
-      
-    } catch (error: any) {
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
       }
       
     } catch (error: any) {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      // Check if data exists before type assertion'
-      if (data && typeof data === 'object') {}
-      }
-      
-    } catch (error: any) {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({"
         title: "Generation failed","
@@ -432,38 +236,16 @@ export function TalentRegistrationForm() { return null; }
       // Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
-<<<<<<< HEAD
-      
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
-              newSkills.push(skill)
-;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             if (true) {}
 
             ) {
-=======
-      // Safely extract and flatten skills from each category;
-      Object.values(allCategorizedSkills).forEach(categorySkills => {}
-        if (Array.isArray(categorySkills)) {}
-          categorySkills.forEach(skill => {}
-            if (true) {}
 
-
-            ) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
               newSkills.push(skill)
 import {;
   Form,;
@@ -531,27 +313,13 @@ interface CategorizedSkills {;
 });";"
 availability: z && z.enum (["available", "limited", "unavailable"]);
 enhancedProfile: z && z.boolean () .default (true) ;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-});
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other'
-=======
-});'
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
 };
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {;
   setSkillTags (skillTags && skillTags.filter ( (s) => s !== skill) ) 
 };
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-export function TalentRegistrationForm() {;
-  // Remove the useToast() hook since we're importing the toast function directly;
-=======
-
-export function TalentRegistrationForm() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
@@ -611,15 +379,7 @@ export function TalentRegistrationForm() { return null; }
   const generateEnhancedProfile = async () => {;
     const formData = form && form.getValues();
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      toast({;
-        title: 'More information needed',,
-  description:;
-=======
-      toast({;'
-        title: 'More information needed',;
-        description:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
           'Please provide at least a detailed bio before generating enhanced content.',;
       });
       return;
@@ -641,233 +401,44 @@ export function TalentRegistrationForm() { return null; }
               location: formData && formData.location,;
             },;
           },;
-        }
-      );
+        });
 
       if (error) {;
         throw new Error(error && error.message);
       }
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      // Check if data exists before type assertion;
-      if (data && typeof data === 'object') {;
-        setGeneratedContent(data as EnhancedProfile),;
-        toast({;
-<<<<<<< HEAD
-          title: "Enhanced Profile Generated",;
-          description: "AI has created a professional bio and suggested additional skills for your profile."});
-=======
-          title: 'Enhanced Profile Generated',,
-  description:;
-=======
-      // Check if data exists before type assertion;'
-      if (data && typeof data === 'object') {;
-        setGeneratedContent(data as EnhancedProfile);
-
-        toast({;'
-          title: 'Enhanced Profile Generated',;
-          description:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
             'AI has created a professional bio and suggested additional skills for your profile.',;
         });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       } else {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        // Fallback for mock/development mode;
-        logWarn('Mock AI response - using fallback content'),;
-        setGeneratedContent({;
-          summary: "Experienced professional with expertise in modern technologies and best practices.",;
-          categorizedSkills: {;
-            programming: ["JavaScript", "TypeScript", "React"],;
-            devops: ["Docker", "CI/CD", "AWS"],;
-            platforms: ["Node.js", "Next.js", "Vercel"],;
-            softSkills: ["Communication", "Problem Solving", "Team Leadership"],;
-            other: ["Project Management", "Technical Writing"];
-          }
-        }),;
-        toast({;
-<<<<<<< HEAD
-          title: "Enhanced Profile Generated",;
-          description: "AI has created a professional bio and suggested additional skills for your profile."});
-=======
-          title: 'Enhanced Profile Generated',,
-  description:;
-=======
-        // Fallback for mock/development mode;'
-        logWarn('Mock AI response - using fallback content');
-        setGeneratedContent({;
-          summary:;'
-            'Experienced professional with expertise in modern technologies and best practices.',;
-          categorizedSkills: {;'
-            programming: ['JavaScript', 'TypeScript', 'React'],;'
-            devops: ['Docker', 'CI/CD', 'AWS'],;'
-            platforms: ['Node && Node.js', 'Next && Next.js', 'Vercel'],;'
-            softSkills: ['Communication', 'Problem Solving', 'Team Leadership'],;'
-            other: ['Project Management', 'Technical Writing'],;
-          },;
-        });
 
-        toast({;'
-          title: 'Enhanced Profile Generated',;
-          description:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
             'AI has created a professional bio and suggested additional skills for your profile.',;
         });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       }
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-;
-    } catch (error: any) {;
-      logErrorToProduction('Error generating enhanced profile:', { data: error }),;
-      toast({;
-<<<<<<< HEAD
-        title: "Generation failed",;
-        description: error.message || "There was an error generating your enhanced profile. Please try again.",;
-        variant: "destructive"});
-=======
-        title: 'Generation failed',,
-  description:;
-          error && error.message ||;
-          'There was an error generating your enhanced profile. Please try again.',;
-=======
-    } catch (error: any) {;'
-      logErrorToProduction('Error generating enhanced profile:', {;
-        data: error,;
-      });
-      toast({;'
-        title: 'Generation failed',;
-        description:;
-          error && error.message ||;'
-          'There was an error generating your enhanced profile. Please try again.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         variant: 'destructive',;
       });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     } finally {;
       setIsGenerating(false);
     }
   },;
   // Apply generated content to form;
   const applyGeneratedContent = () => {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-    if (generatedContent) {;
-      form.setValue("bio", generatedContent.summary),;
-=======
-    if (generatedContent) {;'
-      form && form.setValue('bio', generatedContent && generatedContent.summary);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       // Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generatedContent.categorizedSkills,;
       const newSkills: string[] = [],;
       // Safely extract and flatten skills from each category;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      Object.values(allCategorizedSkills).forEach(categorySkills => {;
-        if (Array.isArray(categorySkills)) {;
-          categorySkills.forEach(skill => {;
-            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
-              newSkills.push(skill);
-=======
-      Object && Object.values(allCategorizedSkills).forEach(categorySkills => {;
-        if (Array && Array.isArray(categorySkills)) {;
-          categorySkills && categorySkills.forEach(skill => {;
-            if (;'
-              typeof skill === 'string' &&;
-              skill &&;
-              !skillTags && skillTags.includes(skill);
-            ) {;
-              newSkills && newSkills.push(skill);
-  // Apply generated content to form;
-  const applyGeneratedContent = () =>: any {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      form.set_value ('bio', generated_content.summary);
-      // Extract all skills from categorized skills and properly type cast them;
-      const allCategorizedSkills = generated_content.categorized_skills;
-      const new_skills: string[] = [];
-      // Safely extract and flatten skills from each category;
-      Object.values (allCategorizedSkills).for_each (category_skills => {}
-        if () {) {}
-  $2;
-}
-          category_skills.for_each (skill => {}
-            // Check condition;
-if (
-            ) {) {}
-  $2;
-}
-              new_skills.push (skill);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
             }
           });
         }
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      }),;
-      if (newSkills.length > 0) {;
-        setSkillTags([...skillTags, ...newSkills]);
-      }
-    }
-  },;
-  // Get category color;
-  const getCategoryColor = (category: CategoryType) => {;
-    switch (category) {;
-      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;
-      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',;
-      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',;
-      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;
-      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
-      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
-=======
 
-      });
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        setSkillTags ([...skill_tags, ...new_skills]);
-
-      }
-    }
-  }
-  // Get category color;
-  const getCategoryColor = (category: CategoryType,) => {}
-    switch (category) {'
-      case 'programming':'
-        return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500''
-      case 'devops':'
-        return 'bg-green-500/20 hover:bg-green-500/30 text-green-500''
-      case 'platforms':'
-        return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500''
-      case 'softSkills':'
-        return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500''
-      case 'other':'
-        return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
-      default:'
-        return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
     }
   },
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-  // Send notification email
-  const sendEnhancementNotification = async (userId: string, email: string) => {
-    try {
-      await supabase.functions.invoke('send-email', {
-        body: {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
 
@@ -879,86 +450,10 @@ if ( {) {}
             <p>You can review and edit these enhancements in your profile dashboard.</p>
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
               <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
-=======
 
-
-
-  // Send notification email;
-  const sendEnhancementNotification = async (userId: string, email: string) => {}
-    try {'
-      await supabase.functions.invoke('send-email', {}
-        body: {}
-          to: email,"
-          subject: "Your Zion Talent Profile Has Been Enhanced",
-
-
-          html: `"
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">"
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>'
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>'
-            <p>We've added a professional summary and categorized your skills to help you stand out.</p>
-            <p>You can review and edit these enhancements in your profile dashboard.</p>"
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">"
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
             </div>
           </div>
-<<<<<<< HEAD
-          `
-  },;
-  // Send notification email;
-  const sendEnhancementNotification = async (userId: string, email: string) => {;
-    try {;
-      await supabase.functions.invoke('send-email', {;
-        body: {;
-          to: email,;
-          subject: "Your Zion Talent Profile Has Been Enhanced",;
-          html: `;
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>;
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p>You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `;
-        }
-      });
-    } catch (error) {;
-      logErrorToProduction('Failed to send notification email:', { data: error });
-    }
-  },
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-  // Handle form submission
-  const onSubmit = async (values: TalentFormValues,) => {
-    if (skillTags.length === 0) {
-      toast({
-<<<<<<< HEAD
-=======
-
-          to: email,
-          subject: 'Your Zion Talent Profile Has Been Enhanced',
-          html: `;
-          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>;
-            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-=======
-  // Handle form submission;
-  const onSubmit = async (values: TalentFormValues) => {}
-    if (skillTags.length === 0) {}
-      toast({}
-          to: email,'
-          subject: 'Your Zion Talent Profile Has Been Enhanced',`
-          html: `;"
-          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;"
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>;'
-            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
             <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
             <p > You can review and edit these enhancements in your profile dashboard.</p>;"
             <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;">;"
@@ -999,16 +494,7 @@ if ( {) {}
       // For actual implementation with Supabase;
       if (!user?.id) {'
         throw new Error('User not authenticated')
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        title: "Skills required",
-        description: "Please add at least one skill to your profile.",
-=======
-"
-        title: "Skills required","
-        description: "Please add at least one skill to your profile.","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
         variant: "destructive"}),
       return;
     }
@@ -1019,12 +505,6 @@ if ( {) {}
       // For actual implementation with Supabase;
       if (!user?.id) {"
         throw new Error("User not authenticated")
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
@@ -1037,8 +517,7 @@ if ( {) {}
       if (!user?.id) {"
         throw new Error("User not authenticated")
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      
+
       // Enhance profile if not already done"
       let finalSummary = "",
       let finalSkills = skillTags,
@@ -1055,76 +534,9 @@ if ( {) {}
                 location: values.location;
   },;
   // Handle form submission;
-<<<<<<< HEAD
-  const onSubmit = async (values: TalentFormValues,) => {;
-    if (skillTags && skillTags.length === 0) {;
-      toast({;
-        title: 'Skills required',,
-  description: 'Please add at least one skill to your profile.',;
-        variant: 'destructive',;
-      });
-      return;
-    }
 
-    setIsSubmitting(true);
-
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;
-        throw new Error('User not authenticated');
-      }
-
-      // Enhance profile if not already done;
-<<<<<<< HEAD
-      let finalSummary = "",;
-      let finalSkills = skillTags,;
-      if (values.enhancedProfile && !generatedContent) {;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-  const onSubmit = async (values: TalentFormValues) => {;
-    if (skillTags.length === 0) {;
-      toast({;"
-        title: "Skills required",;"
-        description: "Please add at least one skill to your profile.",;"
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsSubmitting(true),;
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;"
-        throw new Error("User not authenticated");
-      }
-;
-      // Enhance profile if not already done;"
-      let finalSummary = "",;
-      let finalSkills = skillTags,;
-      if (values.enhancedProfile && !generatedContent) {;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
         try {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;
-            body: {;
-              talentData: {;
-                name: values.name,;
-                title: values.title,;
-                bio: values.bio,;
-                skills: skillTags,;
-                location: values.location;
-              }
-=======
-      let finalSummary = '';
-      let finalSkills = skillTags;
 
-      if (values && values.enhancedProfile && !generatedContent) {;        try {;
-          const { data: aiData } = await supabase && supabase.functions.invoke(;
-=======
-          const { data: aiData } = await supabase && supabase.functions.invoke(;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
             'talent-profile-enhancer',;
             {;
               body: {;
@@ -1136,107 +548,15 @@ if ( {) {}
                   location: values && values.location,;
                 },;
               },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             }
           }),;
           if (aiData) {;
             finalSummary = (aiData as EnhancedProfile).summary,;
             // Safely merge AI suggested skills with user-provided skills;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills,;
-            const aiSkills: string[] = [],;
-            // Extract skills from each category and ensure they're strings;
-            Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array.isArray(categorySkills)) {;
-                categorySkills.forEach(skill => {;
-=======
-            const categorizedSkills = (aiData as EnhancedProfile);
-              .categorizedSkills;
-            const aiSkills: string[] = [];
-'
-            // Extract skills from each category and ensure they're strings;
-            Object && Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array && Array.isArray(categorySkills)) {;
-                categorySkills && categorySkills.forEach(skill => {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                   if (typeof skill === 'string' && skill) {;
-<<<<<<< HEAD
-                    aiSkills.push(skill);
-                  }
-                });
-              }
-=======
-                    aiSkills && aiSkills.push(skill);
 
-      // Enhance profile if not already done;'
-      let final_summary = '';
-      let final_skills = skill_tags;
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        try {}
-          const { data: ai_data } = await supabase.functions.invoke ('
-            'talent - profile - enhancer',
-            {}
-              body: {}
-                talent_data: {}
-                  name: values.name,
-                  title: values.title,
-                  bio: values.bio,
-                  skills: skill_tags,
-                  location: values.location,
-                },
-              },
-            }
-          );
-          // Check condition;
-if ( {) {}
-  $2;
-}
-            final_summary = (ai_data as EnhancedProfile).summary;
-            // Safely merge AI suggested skills with user - provided skills;
-            const categorized_skills = (ai_data as EnhancedProfile);
-              .categorized_skills;
-            const ai_skills: string[] = [];'
-            // Extract skills from each category and ensure they're strings;
-            Object.values (categorized_skills).for_each (category_skills => {}
-              if () {) {}
-  $2;
-}
-                category_skills.for_each (skill => {}
-                  // Check condition;
-if ( {) {}
-  $2;
-}
-                    ai_skills.push (skill);
-
-                  }
-                });
-              }
-
-            });
-            // Create a unique set of skills;
-            final_skills = [...new Set ([...skill_tags, ...ai_skills])];
-
-          }
-        } catch (error) {'
-          logErrorToProduction('Error enhancing profile:', { data: error })
-          // Continue with submission even if enhancement fails'
-          finalSummary = ''
-        }
-      } else if (generatedContent) {}
-        finalSummary = generatedContent.summary;
-      }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -1258,119 +578,25 @@ if ( {) {}
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout((,) => {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-=======
-      // Create the talent profile;
-      // In a real implementation, this would save to Supabase;
-      setTimeout(() => {}
-        toast({}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
           title: 'Profile Created Successfully',
 
           description:'
             'Your talent profile has been published and is now visible in the directory.'
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          title: "Profile Created Successfully",
-=======
-        })"
-          title: "Profile Created Successfully","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
           description: "Your talent profile has been published and is now visible in the directory."}),
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-        // Send notification email if we have user email
-        if (userEmail && values.enhancedProfile && user?.id) {
-=======
-
-        // Send notification email if we have user email;
-        if (userEmail && values.enhancedProfile && user?.id) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-          sendEnhancementNotification(user.id, userEmail)
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-        setIsSubmitting(false)
-      }, 1500)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
         setIsSubmitting(false)
       }, 1500),
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      // Here would be the actual code to save the profile to Supabase
-=======
-
-
-
-      // Here would be the actual code to save the profile to Supabase;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       /*
       const { error } = await supabase'
         .from('talent_profiles')
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        .insert({
-<<<<<<< HEAD
-=======
-          user_id: user.id
-          name: values.name
-          title: values.title
-          bio: values.bio
-          summary: finalSummary
-          location: values.location
-          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
-          hourly_rate: Number(values.hourlyRate)
-          availability_status: values.availability
-          // Other fields would be handled here
 
-=======
-        .insert({}
-          user_id: user.id;
-          name: values.name;
-          title: values.title;
-          bio: values.bio;
-          summary: finalSummary;
-          location: values.location;
-          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level;
-          hourly_rate: Number(values.hourlyRate)
-          availability_status: values.availability;
-          // Other fields would be handled here;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
         }),
 
       if (error) throw error,
@@ -1399,15 +625,7 @@ if ( {) {}
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout((,) => {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        toast({;
-          title: 'Profile Created Successfully',,
-  description:;
-=======
-        toast({;'
-          title: 'Profile Created Successfully',;
-          description:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
             'Your talent profile has been published and is now visible in the directory.',;
         });
 
@@ -1440,19 +658,7 @@ if ( {) {}
       */;
     } catch (error: any) {;'
       logErrorToProduction('Error creating profile:', { data: error });
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      toast({;
-        title: 'Error Creating Profile',,
-  description:;
-          error && error.message ||;
-          'There was an error creating your profile. Please try again.',;
-=======
-      toast({;'
-        title: 'Error Creating Profile',;
-        description:;
-          error && error.message ||;'
-          'There was an error creating your profile. Please try again.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         variant: 'destructive',;
       });
       setIsSubmitting(false);
@@ -1465,7 +671,7 @@ if ( {) {}
       set_timeout ((, ) => {}
         toast ({'
           title: 'Profile Created Successfully',
-          description:;'
+          description:'
             'Your talent profile has been published and is now visible in the directory.',
         });
         // Send notification email if we have user email;
@@ -1481,12 +687,7 @@ if ( {) {}
       /*;
       const { error } = await supabase;'
         .from ('talent_profiles');
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        .insert ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        .insert ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
           user_id: user.id,
           name: values.name,
           title: values.title,
@@ -1496,30 +697,11 @@ if ( {) {}
           skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-          // Other fields would be handled here
-        }),
 
-      if (error) throw error,
-      */
-
-    } catch (error: any) {
-<<<<<<< HEAD
-=======
-=======
-          // Other fields would be handled here;
-        });
-      // Check condition;
-if (throw error) {}
-  $2;
-}
-      */;
-    } catch (error: any) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       logErrorToProduction ('Error creating profile:', { data: error });
       toast ({'
         title: 'Error Creating Profile',
-        description:;
+        description:
           error.message ||;'
           'There was an error creating your profile. Please try again.','
         variant: 'destructive',
@@ -1538,9 +720,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -1555,68 +735,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 // Define form schema
 const talentProfileSchema = null;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-'
-    <div className='max-w-4xl mx-auto p-4 md:p-6'>;'
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>;
-        <CardHeader>;'
-          <CardTitle className='text-2xl text-white'>;
-            Create Your Talent Profile;
-          </CardTitle>;'
-          <CardDescription className='text-zion-slate'>;'
-    <div className='max - w-4xl mx - auto p - 4 md:p - 6'>;'
-      <Card className='bg - zion - blue - dark border - zion - blue - light'>;
-        <CardHeader>;'
-          <CardTitle className='text - 2xl text - white'>;
-            Create Your Talent Profile;
-          </CardTitle>;'
-          <CardDescription className='text - zion - slate'>;
 
-            Showcase your skills and experience to potential clients and;
-            employers.;
-          </CardDescription>;
-        </CardHeader>;
-
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (on_submit)}>;'
-            <CardContent className='space - y-8'>;
-              {/* Basic Information */}'
-              <div className='space - y-4'>;'
-                <h3 className='text - lg font - medium text - white'>;
-                  Basic Information;
-                </h3>;'
-                <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>;'
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}'
-                      name='name';
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text - zion - slate - light'>;
-
-                            Full Name;
-                          </FormLabel>;
-                          <FormControl>;'
-                            <div className='relative'>;
-'
-                              <UserRound className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;'
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';'
-                                placeholder='Your full name';
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({"
         title: "Error Creating Profile","
@@ -1630,15 +749,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        toast({;
-          title: "Profile Created Successfully",,
-  description: "Your talent profile has been published and is now visible in the directory."}),;
-=======
-        toast({;"
-          title: "Profile Created Successfully",;"
-          description: "Your talent profile has been published and is now visible in the directory."}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         // Send notification email if we have user email;
         if (userEmail && values.enhancedProfile && user?.id) {;
           sendEnhancementNotification(user.id, userEmail);
@@ -1666,15 +777,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       */;
     } catch (error: any) {;'
       logErrorToProduction('Error creating profile:', { data: error }),;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      toast({;
-        title: "Error Creating Profile",,
-  description: error.message || "There was an error creating your profile. Please try again.",;
-=======
-      toast({;"
-        title: "Error Creating Profile",;"
-        description: error.message || "There was an error creating your profile. Please try again.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         variant: "destructive"});
       setIsSubmitting(false);
     }
@@ -1695,13 +798,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="space-y-4">"
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-=======
 
-              {/* Basic Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                   <div className="col-span-1">
                     <FormField;
                       control={form.control}"
@@ -1719,152 +816,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               />;
                             </div>;
                           </FormControl>;
-<<<<<<< HEAD
-=======
 
-                    />;
-                  </div>;
-'
-                  <div className='col-span-1'>;
-
-                    <FormField;
-                      control={form && form.control}'
-                      name='title'
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text-zion-slate-light'>;'
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;'
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}'
-                      name='title';
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text - zion - slate - light'>;
-                            Professional Title;
-                          </FormLabel>;
-                          <FormControl>;'
-                            <div className='relative'>;
-'
-                              <Briefcase className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;'
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';'
-                                placeholder='e.g., Senior Software Developer';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-'
-                  <div className='col-span-1'>;
-
-                    <FormField;
-                      control={form && form.control}'
-                      name='location'
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text-zion-slate-light'>;'
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;'
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}'
-                      name='location';
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text - zion - slate - light'>;
-                            Location;
-                          </FormLabel>;
-                          <FormControl>;'
-                            <div className='relative'>;
-'
-                              <MapPin className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;'
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';'
-                                placeholder='City, State / Province, Country';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-'
-                  <div className='col-span-1'>;
-
-                    <FormField;
-                      control={form && form.control}'
-                      name='hourlyRate'
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text-zion-slate-light'>;'
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;'
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}'
-                      name='hourly_rate';
-                      render={({ field }: { field: any }) => (                        <FormItem>;'
-                          <FormLabel className='text - zion - slate - light'>;
-                            Hourly Rate (USD);
-                          </FormLabel>;
-                          <FormControl>;'
-                            <div className='relative'>;
-'
-                              <span className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate'>;
-                                $;
-                              </span>;
-                              <Input;'
-                                className='pl - 8 bg - zion - blue border - zion - blue - light text - white';'
-                                placeholder='e.g., 85';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-                </div>;
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                {/* Upload Avatar */}
-                <div className='space-y-2'>;
-                  <FormLabel className='text-zion-slate-light'>;
-                    Profile Picture;
-                  </FormLabel>;
-                  <div className='flex items-center gap-6'>;
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>;
-                      {uploadedAvatar ? (;
-                        <AspectRatio ratio={1 / 1}>;
-                          <img
-                            src={uploadedAvatar}
-                            alt='Avatar preview'
-                            className='w-full h-full object-cover'
-                            loading='lazy'                          />
-=======
-
-                {/* Upload Avatar */}'
-                <div className='space-y-2'>'
-                  <FormLabel className='text-zion-slate-light'>
-                    Profile Picture;
-                  </FormLabel>'
-                  <div className='flex items-center gap-6'>'
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>
-                      {uploadedAvatar ? (
-                        <AspectRatio ratio={1 / 1}>
-                          <img;
-                            src={uploadedAvatar}'
-                            alt='Avatar preview''
-                            className='w-full h-full object-cover''
-                            loading='lazy'                          />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({"
         title: "Error Creating Profile","
@@ -1878,15 +830,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-        toast({;
-          title: "Profile Created Successfully",,
-  description: "Your talent profile has been published and is now visible in the directory."}),;
-=======
-        toast({;"
-          title: "Profile Created Successfully",;"
-          description: "Your talent profile has been published and is now visible in the directory."}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         // Send notification email if we have user email;
         if (userEmail && values.enhancedProfile && user?.id) {;
           sendEnhancementNotification(user.id, userEmail);
@@ -1914,15 +858,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       */;
     } catch (error: any) {;'
       logErrorToProduction('Error creating profile:', { data: error }),;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-      toast({;
-        title: "Error Creating Profile",,
-  description: error.message || "There was an error creating your profile. Please try again.",;
-=======
-      toast({;"
-        title: "Error Creating Profile",;"
-        description: error.message || "There was an error creating your profile. Please try again.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
         variant: "destructive"});
       setIsSubmitting(false);
     }
@@ -1975,12 +911,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         accept='image/*''
                         className='hidden'
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                        onChange={handleAvatarUpload}                      />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                        onChange={handleAvatarUpload}                      />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
@@ -2069,10 +999,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             className="w-full h-full object-cover""
                             loading="lazy"
                           />
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                         </AspectRatio>
                       ) : ("
                         <div className="flex items-center justify-center h-full">"
@@ -2080,26 +1007,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       )}
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-=======
-"
-                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
                       <input"
@@ -2109,64 +1019,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         onChange={handleAvatarUpload}
                       />;
                     </label>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  </div>;
-                  <p className="text-sm text-zion-slate">;
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  </p>;
-                </div>;
-              </div>;
-=======
-                  </div>;'
-                  <p className='text-sm text-zion-slate'>;'
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}'
-                <div className='space - y-2'>;'
-                  <FormLabel className='text - zion - slate - light'>;
-                    Profile Picture;
-                  </FormLabel>;'
-                  <div className='flex items - center gap - 6'>;'
-                    <div className='relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light'>;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}'
-                            alt='Avatar preview';'
-                            className='w - full h - full object - cover';'
-                            loading='lazy'                          />;
-                        </AspectRatio>) : ('
-                        <div className='flex items - center justify - center h - full'>;'
-                          <UserRound className='h - 10 w - 10 text - zion - slate opacity - 50' />;
-                        </div>)}
-                    </div>;'
-                    <label className='flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors'>;'
-                      <Upload className='mr - 2 h - 4 w - 4' />;
-                      <span > Upload Photo</span>;
-                      <input;'
-                        type='file';'
-                        accept='image/*';'
-                        className='hidden';
-                        on_change={handleAvatarUpload}                      />;
-                    </label>;
-                  </div>;'
-                  <p className='text - sm text - zion - slate'>;
-                    For best results, use an image at least 400x400 pixels in;
-                    JPG, PNG, or GIF format.;
-                  </p>;
-                </div>;
-              </div>;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-=======
-                  </p>;
-                </div>;
-              </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
               <Separator className="bg-zion-blue-light/50" />;
               {/* Bio Section */}"
               <div className="space-y-4">"
@@ -2177,26 +1030,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   render={({ field }: { field: any }) => (
                     <FormItem>"
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                       <FormControl>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                        <Textarea
-                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
-                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-                        <Textarea'
-                          className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white''
-                          placeholder='Describe your professional background, expertise, and the value you bring to clients...'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                           {...field}
-<<<<<<< HEAD
-=======
-                          {...field}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                         />
                       </FormControl>
                       <FormMessage className="text-red-400" />
@@ -2204,85 +1042,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  )}
-=======
 
-                        />;
-                      </FormControl>;'
-                      <FormMessage className='text-red-400' />;'
-                      <FormDescription className='text-zion-slate'>;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
-                  )}
                 />;
 
-                {/* AI Enhancement Option */}
-                <FormField;
-                  control={form && form.control}'
-                  name='enhancedProfile'
-                  render={({ field }: { field: any }) => (;'
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>;'
-                      <div className='space-y-0 && 0.5'>;'
-                        <FormLabel className='text-white flex items-center'>;'
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
-                        </FormLabel>;'
-                        <FormDescription className='text-zion-slate-light'>;'
-              <Separator className='bg - zion - blue - light / 50' />;
-              {/* Bio Section */}'
-              <div className='space - y-4'>;'
-                <h3 className='text - lg font - medium text - white'>;
-                  Professional Bio;
-                </h3>;
-                <FormField;
-                  control={form.control}'
-                  name='enhancedProfile'
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
-                      <div className='space-y-0.5'>
-                        <FormLabel className='text-white flex items-center'>
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                  render={({ field }: { field: any }) => ('
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>'
-                      <div className='space-y-0.5'>'
-                        <FormLabel className='text-white flex items-center'>'
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-                />;
-=======
-                  )}
-                />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                 {/* AI Enhancement Option */}
                 <FormField;
                   control={form.control}"
                   name="enhancedProfile"
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  render={({ field }: { field: any }) => (
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-                    <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
-                      <div className='space - y-0.5'>;
-                        <FormLabel className='text - white flex items - center'>;
-=======
-                  render={({ field }: { field: any }) => ('
-                    <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;'
-                      <div className='space - y-0.5'>;'
-                        <FormLabel className='text - white flex items - center'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                           <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
                         </FormLabel>;'
                         <FormDescription className='text - zion - slate - light'>;
@@ -2310,39 +1083,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Button>;
                   </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                         </FormLabel>
-=======
-                        </FormLabel>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement;
                         </FormDescription>
                       </div>
                       <FormControl>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                        <Switch
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                        <Switch;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}"
@@ -2352,11 +1100,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-                
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
@@ -2368,172 +1112,66 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                     </Button>
                   </div>
                 )}
 ;
                 {/* Generated Content Display */}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-                {generatedContent && (;
-                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
-                    <div className='flex items-center justify-between mb-3'>;
-                      <h4 className='text-white font-medium flex items-center'>;
-                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
-                        AI-Generated Content;
-                      </h4>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                 {generatedContent && (
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="text-white font-medium flex items-center">
-=======
-                {generatedContent && ("
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">"
-                    <div className="flex items-center justify-between mb-3">"
-                      <h4 className="text-white font-medium flex items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                         AI-Generated Content;
                       </h4>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
                       <Button
-<<<<<<< HEAD
-=======
-=======
-                {generatedContent && (;
-                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
-                    <div className='flex items-center justify-between mb-3'>;
-                      <h4 className='text-white font-medium flex items-center'>;
-                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
-                        AI-Generated Content;
-                      </h4>;                      <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                         onClick={applyGeneratedContent}>;
                         <Check className='mr-1 h-3 w-3' /> Apply;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      <Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                         type="button"
                         size="sm"
-=======
-                      <Button;
-                        onClick={applyGeneratedContent}>;'
-                        <Check className='mr-1 h-3 w-3' /> Apply;
-"
-                        type="button""
-                        size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={applyGeneratedContent}
                       >;"
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
                     </div>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-'
-                    <div className='space-y-4'>;
-                      <div>;'
-                        <h5 className='text-zion-slate-light text-sm mb-1'>;
-                          Professional Summary;
-                        </h5>;'
-                        <p className='text-zion-slate italic'>;
-                          {generatedContent && generatedContent.summary}
-                        </p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                       </div>;
                       {generatedContent.categorizedSkills && (;
                         <div>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-                      </div>;
-                      {generatedContent.categorizedSkills && (;
-                        <div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
-=======
-"
-                          <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;"
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >;
                                   {category}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >;
-                                  {category}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                                 </Badge>;
-=======
-                                </Badge>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                                 <div className="flex flex-wrap gap-1">;
                                   {skills.map((skill: string) => (;
                                     <Badge;
                                       key={skill}"
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                                       {skill}
                                     </Badge>;
                                   ))}
@@ -2546,123 +1184,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 )}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </div>;
-              <Separator className="bg-zion-blue-light/50" />;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               </div>;
 '
               <Separator className='bg-zion-blue-light/50' />;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              {/* Skills and Availability */}
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-=======
-              </div>;
-              <Separator className="bg-zion-blue-light/50" />;
-              {/* Skills and Availability */}
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Skills Section */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Skills & Expertise;
-                  </h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
-                {/* Skills Section */}
-<<<<<<< HEAD
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                  <FormField
-=======
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Skills & Expertise;
-                  </h3>;                  <FormField
-=======
-=======
-=======
-              {/* Skills and Availability */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Skills Section */}"
                 <div className="space-y-4">"
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-                  <FormField
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-
-                  <FormField
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <FormField
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                     control={form.control}
-=======
-                  <FormField;
-                    control={form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                     name="skills"
                     render={({ field }: { field: any }) => (
                       <FormItem>"
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>"
                         <div className="flex gap-2">
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                           <FormControl>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                            <Input
-                              className='flex-1 bg-zion-blue border-zion-blue-light text-white'
-                              placeholder='Add a skill...'
-=======
-                            <Input"
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white""
-                              placeholder="Add a skill..."
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                               {...field}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-                              onKeyDown={handleSkillKeyPress}
-                            />
-                          </FormControl>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                              onKeyDown={handleSkillKeyPress}
-                            />
-                          </FormControl>
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
                           <Button
-<<<<<<< HEAD
-=======
-=======
-                              onKeyDown = {handleSkillKeyPress,}
-                            />;
-                          </FormControl>;                          <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
-                          <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                   />;
 '
                   <div className='flex flex-wrap gap-2 mt-2'>;
@@ -2683,18 +1230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                     {skillTags.length === 0 && ('
                       <p className='text-zion-slate text-sm italic'>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-                        No skills added yet
-                      </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                            type="button"
-                            variant="outline"
-=======
-                        No skills added yet;
-                      </p>"
-                            type="button""
-                            variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddSkill}
                           >;
@@ -2724,32 +1260,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </button>;
                       </Badge>;
                     ))}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-                    {skillTags.length === 0 && (;
-                      <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-=======
-                    {skillTags && skillTags.length === 0 && (;
-=======
-                    {skillTags && skillTags.length === 0 && (;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                       <p className='text-zion-slate text-sm italic'>;
                         No skills added yet;
                       </p>;
 "
                             type="button""
                             variant="outline""
-=======
-                              onKeyDown = {handleSkillKeyPress,}
-                            />;
-                          </FormControl>;
-                              onKeyDown={handleSkillKeyPress}
-                            />
-                          </FormControl>
-                          <Button
-                            type="button"
-                            variant="outline"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddSkill}
                           >;
@@ -2781,29 +1299,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                     {skillTags.length === 0 && (;"
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    )}
-                  </div>;
-                </div>;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {/* Availability Section */}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
 
-                                className='text-white flex items-center gap-2'>;
-=======
-'
-                                className='text-white flex items-center gap-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                                 <div className='h-2 w-2 rounded-full bg-green-500'></div>;
                                 Available Now;
                               </label>;
@@ -2926,15 +1424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Skills & Expertise;
                   </h3>;
                   <FormField;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    )}
-                  </div>;
-                </div>;
-                {/* Availability Section */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
@@ -2997,17 +1487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     name='availability';
                     render={({ field }: { field: any }) => (
                       <FormItem className="space-y-4">
-=======
-"
-                <div className="space-y-4">"
-                  <h3 className="text-lg font-medium text-white">Availability</h3>
-                  <FormField;
-                    control={form.control}"
-                    name="availability"
-                    render={({ field }: { field: any }) => (
-"
-                      <FormItem className="space-y-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>"
                           <div className="space-y-2">"
@@ -3052,16 +1532,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               />"
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">"
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                                 Currently Unavailable
-=======
 
-                                Currently Unavailable;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                               </label>
                             </div>
                           </div>
@@ -3069,21 +1542,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <FormMessage className="text-red-400" />
                       </FormItem>
                     )}
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
                   />
                 </div>
               </div>
             </CardContent>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
 
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                         <FormMessage className='text - red - 400' />;
                       </FormItem>)}
 
@@ -3091,53 +1555,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </CardContent>;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
 
-=======
-
-            <CardFooter className="border-t border-zion-blue-light pt-6">
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                 <Button
                   type="button"
                   variant="outline"
-=======
 
-
-"
-            <CardFooter className="border-t border-zion-blue-light pt-6">"
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-
-
-                <Button"
-                  type="button""
-                  variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
                   className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                 >
                   Save as Draft;
                 </Button>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
                 <Button 
                   type="submit"
-=======
-                <Button "
-                  type="submit""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
                 >"
@@ -3149,67 +1582,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Form>
       </Card>
     </div>
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
-  )
+
 }
 ;
-//Generate enhanced profile with AI return;
-}
 
-//Generate enhanced profile with AI return;
-
-}//Call the Supabase Edge Function const {
-  data, error ';
-}= await supabase.functions.invoke ('talent - profile - enhancer', {
-  body: {
-
-  talent_data: {
-  name: form_data.name, title: form_data.title, bio: form_data.bio,  skills: skill_tags, location: form_data.location;
-});
-}else {';
-  //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content');
-setGeneratedContent ({";
-  summary: "Experienced professional with expertise in modern technologies and best practices.";
-categorized_skills: {";
-  programming: ["JavaScript", "TypeScript", "React" ];";
-devops: ["Docker", "CI / CD", "AWS" ];";
-platforms: ["Node.js", "Next.js", "Vercel" ];";
-soft_skills: ["Communication", "Problem Solving",  "Team Leadership" ];";
-other: ["Project Management", "Technical Writing" ];
-});
-
-toast ({
-}catch (error: any) {'
-  logErrorToProduction ('Error generating enhanced profile:', {
-
-  data: error;
-});
-toast ({
-}finally {
-  setIsGenerating (false);
-
-}
-//Apply generated content to form const applyGeneratedContent = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
-}
-;
-=======
-
-            <CardFooter className='border - t border - zion - blue - light pt - 6'>;
-=======
-'
-            <CardFooter className='border - t border - zion - blue - light pt - 6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
               <div className='flex flex - col sm:flex - row gap - 4 w - full sm:justify - between'>;
                 <Button;'
                   type='button';'
@@ -3265,81 +1641,8 @@ toast ({}
 }finally {}
   setIsGenerating (false);
 
-<<<<<<< HEAD
-}
-//Apply generated content to form const applyGeneratedContent = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
-//Apply generated content to form const applyGeneratedContent = () => {}
-  if (generatedContent) {}
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills;
-const newSkills: string[] = []
-if (Array.isArray (categorySkills) ) {'
-  categorySkills.forEach (skill => {''
-  if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {}
-})
-}
-
-
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
-  new Date () .getFullYear () 
-
-}Zion Marketplace</p>
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generated_content.categorized_skills;
-const new_skills: string[] = [];
-if () {) {}
-  $2;
-}'
-  category_skills.for_each (skill => {';
-  if () {) {}
-  $2;
-}
-});
-}
-//Get category color //Send notification email const sendEnhancementNotification = async (user_id: string, email: string) => {'
-  try {';'
-  await supabase.functions.invoke ('send - email', {'"
-  body: {'";'"
-  <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p > We've added a professional summary and categorized your skills to help you stand out.</p> <p > You can review and edit these enhancements in your profile dashboard.</p> <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, "> <p style="color: #666,  font - size: 12px, ">© $ {}
-  new Date () .getFullYear ();
-}Zion Marketplace</p>;
-}
-//Handle form submission const on_submit = async (values: TalentFormValues) => {}
-  // Check condition;
-if ( {) {}
-  $2;
-}
-//Handle form submission const onSubmit = async (values: TalentFormValues) => {}
-  if (skillTags.length === 0) {}
-  toast ({}
-  return;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-}setIsSubmitting (true);try {
-=======
-=======
-}setIsSubmitting (true)
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-
-=======
-}setIsSubmitting (true);
-}setIsSubmitting (true)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
 try {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   //For actual implementation with Supabase if (!user?.id) {
   try {
   const {
@@ -3354,22 +1657,7 @@ try {
   if () {) {
   $2
 }
-=======
-try {}
-  //For actual implementation with Supabase if (!user?.id) {}
-  try {}
-  const {'
-  data: aiData ''
-}= await supabase.functions.invoke ('talent-profile-enhancer', {}
-  body: {}
-  talent_data: {}
-  name: values.name, title: values.title, bio: values.bio,  skills: skill_tags, location: values.location;'
-});';'
-//Extract skills from each category and ensure they're strings Object.values (categorized_skills) .for_each (category_skills => {}
-  if () {) {}
-  $2;
-}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
   category_skills.for_each (skill => {';
   // Check condition;
 if ( {) {}
@@ -3398,102 +1686,12 @@ availability status: values.availability;
 if (throw error) {}
   $2;
 }
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-*/ setIsSubmitting (false);
-}";
-return (<div className="max - w-4xl mx - auto p - 4 md:p-6"> <Card className="bg - zion - blue - dark border - zion - blue-light"> <CardHeader> <CardTitle className="text - 2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text - zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
-  ...form;
-}> <form on_submit= {
-  form.handle_submit (on_submit) ";
-}> <CardContent className="space-y-8"> {
-  /* Basic Information */ ";
-}<div className="space-y-4"> <h3 className="text - lg font - medium text-white">Basic Information</h3> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6"> <div className="col - span-1" > <FormField <FormItem> <FormLabel className="text - zion - slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text - red-400" /> </FormItem>) ";
-}/> </div> <div className="col - span-1" > <FormField <FormItem> <FormLabel className="text - zion - slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text - red-400" /> </FormItem>) ";
-}/> </div> <div className="col - span-1" > <FormField <FormItem> <FormLabel className="text - zion - slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text - red-400" /> </FormItem>) ";
-}/> </div> <div className="col - span-1" > <FormField <FormItem> <FormLabel className="text - zion - slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text - red-400" /> </FormItem>);
-}/> </div> </div> {
-  /* Upload Avatar */ ";
-}<div className="space-y-2"> <FormLabel className="text - zion - slate-light">Profile Picture</FormLabel> <div className="flex items - center gap-6"> <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue-light"> {
-  uploaded_avatar ? (<AspectRatio ratio= {
-  1 / 1;
-}> <img src= {
-  uploaded_avatar ";
-}alt="Avatar preview" className="w - full h - full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items - center justify - center h-full"> <UserRound className="h - 10 w - 10 text - zion - slate opacity-50" /> </div>) ";
-}</div> <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition-colors"> <Upload className="mr - 2 h - 4 w-4" /> <span > Upload Photo</span> <input type="file" accept="image/*" className="hidden" on_change= {
-  handleAvatarUpload ";
-}/> </label> </div> <p className="text - sm text - zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg - zion - blue-light / 50" /> {
-  /* Bio Section */ ";
-}<div className="space-y-4"> <h3 className="text - lg font - medium text-white" >Professional Bio</h3> <FormField <FormItem> <FormLabel className="text - zion - slate-light">About Yourself</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>);
-}/> {
-  /* AI Enhancement Option */ ";
-}<FormField <FormItem className="flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded-md"> <div className="space-y-0.5"> <FormLabel className="text - white flex items-center"> <Sparkles className="w - 4 h - 4 mr - 2 text - zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text - zion - slate-light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
-}/> <Button type="button" variant="outline" className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10" on_click={
-=======
-*/ setIsSubmitting (false);"
-}";"
-return (<div className="max - w-4xl mx - auto p - 4 md:p - 6"> <Card className="bg - zion - blue - dark border - zion - blue - light"> <CardHeader> <CardTitle className="text - 2xl text - white">Create Your Talent Profile</CardTitle> <CardDescription className="text - zion - slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {}
-  ...form;
-}> <form on_submit= {"
-  form.handle_submit (on_submit) ";"
-}> <CardContent className="space - y-8"> {"
-  /* Basic Information */ ";"
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white">Basic Information</h3> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6"> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
-}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
-}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
-}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
-}/> </div> </div> {"
-  /* Upload Avatar */ ";"
-}<div className="space - y-2"> <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel> <div className="flex items - center gap - 6"> <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light"> {}
-  uploaded_avatar ? (<AspectRatio ratio= {}
-  1 / 1;
-}> <img src= {"
-  uploaded_avatar ";"
-}alt="Avatar preview" className="w - full h - full object - cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items - center justify - center h - full"> <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" /> </div>) ";"
-}</div> <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors"> <Upload className="mr - 2 h - 4 w - 4" /> <span > Upload Photo</span> <input type="file" accept="image/*" className="hidden" on_change= {"
-  handleAvatarUpload ";"
-}/> </label> </div> <p className="text - sm text - zion - slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg - zion - blue - light / 50" /> {"
-  /* Bio Section */ ";"
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Professional Bio</h3> <FormField <FormItem> <FormLabel className="text - zion - slate - light">About Yourself</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>);
-}/> {"
-  /* AI Enhancement Option */ ";"
-}<FormField <FormItem className="flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md"> <div className="space - y-0.5"> <FormLabel className="text - white flex items - center"> <Sparkles className="w - 4 h - 4 mr - 2 text - zion - purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text - zion - slate - light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";"
-}/> <Button type="button" variant="outline" className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10" on_click={}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
   generateEnhancedProfile;
 }disabled= {}
   is_generating;
 }> </Button> </div>);
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-}{
-  /* Generated Content Display */;
-}{";
-  generated_content && (<div className="bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p-4"> <div className="flex items - center justify - between mb-3"> <h4 className="text - white font - medium flex items-center"> <Sparkles className="w - 4 h - 4 mr - 2 text - zion-purple" /> AI - Generated Content </h4> <Button type="button" size="sm" className="bg - zion - purple hover:bg - zion - purple - dark text-white" on_click={
-  applyGeneratedContent ";
-}> <Check className="mr - 1 h - 3 w-3" /> Apply </Button> </div> <div className="space-y-4"> <div> <h5 className="text - zion - slate - light text - sm mb-1">Professional Summary</h5> <p className="text - zion-slate italic"> {
-  generated_content.summary;
-}</p> </div> {";
-  generated_content.categorized_skills && (<div> <h5 className="text - zion - slate - light text - sm mb-1">Categorized Skills</h5> <div className="flex flex - wrap gap - 2 mt-1"> {
-  Object.entries (generated_content.categorized_skills) .map ( ([category, skills]) => (<div key= {
-  category ";
-}className="flex items - center gap-2"> <Badge className= {
-  `w - fit $ {
-  getCategoryColor (category as CategoryType);
-=======
-}{}
-  /* Generated Content Display */;"
-}{";"
-  generated_content && (<div className="bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p - 4"> <div className="flex items - center justify - between mb - 3"> <h4 className="text - white font - medium flex items - center"> <Sparkles className="w - 4 h - 4 mr - 2 text - zion - purple" /> AI - Generated Content </h4> <Button type="button" size="sm" className="bg - zion - purple hover:bg - zion - purple - dark text - white" on_click={"
-  applyGeneratedContent ";"
-}> <Check className="mr - 1 h - 3 w - 3" /> Apply </Button> </div> <div className="space - y-4"> <div> <h5 className="text - zion - slate - light text - sm mb - 1">Professional Summary</h5> <p className="text - zion - slate italic"> {}
-  generated_content.summary;"
-}</p> </div> {";"
-  generated_content.categorized_skills && (<div> <h5 className="text - zion - slate - light text - sm mb - 1">Categorized Skills</h5> <div className="flex flex - wrap gap - 2 mt - 1"> {}
-  Object.entries (generated_content.categorized_skills) .map ( ([category, skills]) => (<div key= {"
-  category ";"
-}className="flex items - center gap - 2"> <Badge className= {}`
-  `w - fit $ {}
-  getCategoryColor (category as CategoryType);`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
 }`;
 
 }> {"
@@ -3507,90 +1705,28 @@ return (<div className="max - w-4xl mx - auto p - 4 md:p - 6"> <Card className="
         </Form>;
       </Card>;
     </div>;
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-  )
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
+
   );
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 //Generate enhanced profile with AI return;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-}//Call the Supabase Edge Function const {;
-  data, error ';
-}= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {;
-  body: {;
-  talentData: {;
-  name: formData && formData.name, title: formData && formData.title, bio: formData && formData.bio,  skills: skillTags, location: formData && formData.location ;
-}= await supabase.functions.invoke ('talent-profile-enhancer', {;
-=======
-}//Call the Supabase Edge Function const {;'
-  data, error ';'
-}= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
   body: {;
   talentData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location ;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-});
-}else {';
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
-setGeneratedContent ({";
-  summary: "Experienced professional with expertise in modern technologies and best practices.";
-categorizedSkills: {";
-  programming: ["JavaScript", "TypeScript", "React" ];";
-devops: ["Docker", "CI/CD", "AWS" ];";
-platforms: ["Node && Node.js", "Next && Next.js", "Vercel" ];";
-platforms: ["Node.js", "Next.js", "Vercel" ];";
-origin/cursor/automate-test-improve-and-merge-code-2533
-softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";
-=======
-});'
-}else {';'
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');"
-setGeneratedContent ({";"
-  summary: "Experienced professional with expertise in modern technologies and best practices.";"
-categorizedSkills: {";"
-  programming: ["JavaScript", "TypeScript", "React" ];";"
-devops: ["Docker", "CI/CD", "AWS" ];";"
-platforms: ["Node && Node.js", "Next && Next.js", "Vercel" ];";"
-softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
 other: ["Project Management", "Technical Writing" ] ;
 
 });
 toast ({;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }catch (error: any) {';
-=======
-'
-}catch (error: any) {';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
   logErrorToProduction ('Error generating enhanced profile:', {;
   data: error ;
 });
@@ -3603,31 +1739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 //Apply generated content to form const applyGeneratedContent = () => {;
   if (generatedContent) {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
-const newSkills: string[] = [];
-if (Array && Array.isArray (categorySkills) ) {;'
-  categorySkills && categorySkills.forEach (skill => {';'
-  if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-})
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
-const newSkills: string[] = [];
-if (Array && Array.isArray (categorySkills) ) {;
-  categorySkills && categorySkills.forEach (skill => {';
-  if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
   //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills;
 const newSkills: string[] = [];
 if (Array.isArray (categorySkills) ) {;
@@ -3636,46 +1748,16 @@ if (Array.isArray (categorySkills) ) {;
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 });
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;
-  try {';
-  await supabase && supabase.functions.invoke ('send-email', {;
-  await supabase.functions.invoke ('send-email', {;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  body: {'";
-=======
-//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;'
-  try {';'
-  await supabase && supabase.functions.invoke ('send-email', {;'"
-  body: {'";'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {;
   new Date () .getFullYear () ;
-<<<<<<< HEAD
-}Zion Marketplace</p> 
-=======
-}Zion Marketplace</p> ;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {;
   if (skillTags && skillTags.length === 0) {;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-};
-//Handle form submission const onSubmit = async (values: TalentFormValues) => {;
-  if (skillTags && skillTags.length === 0) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
 
 };
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {;
@@ -3687,49 +1769,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 try {;
   //For actual implementation with Supabase if (!user?.id) {;
   try {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-  const {;
-  data: aiData ';
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-=======
-  const {;'
-  data: aiData ';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
 }= await supabase && supabase.functions.invoke ('talent-profile-enhancer', {;
   body: {;
   talentData: {;
   name: values && values.name, title: values && values.title, bio: values && values.bio,  skills: skillTags, location: values && values.location ;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-'
-});';'
-//Extract skills from each category and ensure they're strings Object && Object.values (categorizedSkills) .forEach (categorySkills => {;
-  if (Array && Array.isArray (categorySkills) ) {;'
-  categorySkills && categorySkills.forEach (skill => {';'
-  if (typeof skill === 'string'&& skill) {;
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-
-});';
-//Extract skills from each category and ensure they're strings Object && Object.values (categorizedSkills) .forEach (categorySkills => {;
-  if (Array && Array.isArray (categorySkills) ) {;
-  categorySkills && categorySkills.forEach (skill => {';
-  if (typeof skill === 'string'&& skill) {;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
 }= await supabase.functions.invoke ('talent-profile-enhancer', {;
   body: {;
   talentData: {;
   name: values.name, title: values.title, bio: values.bio,  skills: skillTags, location: values.location ;
-
 
 });';
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {;
@@ -3739,7 +1788,6 @@ try {;
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 });
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] ;
 }//Continue with submission even if enhancement fails ;
@@ -3765,52 +1813,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //Other fields would be handled here ;
 });
 if (error) throw error;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-*/ setIsSubmitting (false)
-};";
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form{
-  ...form 
-}> <formonSubmit= {
-  form && form.handleSubmit (onSubmit) "
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {;
-  ...form ;
-}> <form onSubmit= {;
-  form.handleSubmit (onSubmit) ";
-origin/cursor/automate-test-improve-and-merge-code-2533
-}> <CardContent className="space-y-8"> {;
-  /* Basic Information */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-=======
-*/ setIsSubmitting (false);
-"
-};";"
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form{}
-  ...form;
-}> <formonSubmit= {"
-  form && form.handleSubmit (onSubmit) ""
-}> <CardContent className="space-y-8"> {;"
-  /* Basic Information */ ";"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx
+
 }/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> </div> </div> {;"
   /* Upload Avatar */ ";"
 }<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-  uploadedAvatar ? (<AspectRatioratio= {
-  1/1 
-}> <imgsrc= {
-  uploadedAvatar "
-}alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";
-}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <inputtype="file" accept="image/*" className="hidden" onChange= {
-  handleAvatarUpload "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
   uploadedAvatar ? (<AspectRatio ratio= {;
   1/1 ;
 }> <img src= {;
@@ -3912,177 +1920,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Availability Section */ ";
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/TalentRegistrationForm.tsx
-<<<<<<< HEAD
-}'"}
 
-  skill ";
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border-none" > {
-=======
-}'"}
-
-
-  skill ";
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none" > {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
   skill;
 }</Badge>) );
 }</div> </div>) );
 }</div> </div>);
 }</div> </div>) ";
-<<<<<<< HEAD:src_backup/components/profile/TalentRegistrationForm.tsx
-}</div> <Separator className="bg - zion - blue-light / 50" /> {
-  /* Skills and Availability */ ";
-}<div className="grid grid - cols - 1 md:grid - cols - 2 gap-8"> {
-  /* Skills Section */ ";
-}<div className="space-y-4"> <h3 className="text - lg font - medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text - zion - slate-light">Skills</FormLabel> <div className="flex gap-2"> <FormControl> <Input /> </FormControl> <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text-white" on_click={
-  handleAddSkill ";
-}> Add </Button> </div> <FormDescription className="text - zion-slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text - red-400" /> </FormItem>) ";
-}/> <div className="flex flex - wrap gap - 2 mt-2"> {
-  skill_tags.map (skill => (<Badge key= {
-  skill ";
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap-1" > {
-  skill ";
-}<button className="rounded - full hover:bg - zion - purple - dark / 20 p-0.5" > <X className="h - 3 w-3" /> </button> </Badge>) );
-}{";
-  skill_tags.length === 0 && (<p className="text - zion - slate text-sm italic">No skills added yet</p>);
-}</div> </div> {
-  /* Availability Section */ ";
-<<<<<<< HEAD
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
-}'"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}<div className="space-y-4"> <h3 className="text - lg font - medium text-white" >Availability</h3> <FormField <FormLabel className="text - zion - slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items - center space-x-2" > <input /> <label html_for="available" className="text - white flex items - center gap-2"> <div className="h - 2 w - 2 rounded - full bg - green-500"></div> Available Now </label> </div> <div className="flex items - center space-x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap-2"> <div className="h - 2 w - 2 rounded - full bg - yellow-500"></div> Limited Availability </label> </div> <div className="flex items - center space-x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap-2"> <div className="h - 2 w - 2 rounded - full bg - red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red-400" /> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt-6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify-between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
-}'"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-}'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-}</div> <Separator className="bg - zion - blue - light / 50" /> {
-  /* Skills and Availability */ ";
-}<div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8"> {
-  /* Skills Section */ ";
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Skills</FormLabel> <div className="flex gap - 2"> <FormControl> <Input /> </FormControl> <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" on_click={
-  handleAddSkill ";
-}> Add </Button> </div> <FormDescription className="text - zion - slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> <div className="flex flex - wrap gap - 2 mt - 2"> {
-  skill_tags.map (skill => (<Badge key= {
-  skill ";
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1" > {
-  skill ";
-}<button className="rounded - full hover:bg - zion - purple - dark / 20 p - 0.5" > <X className="h - 3 w - 3" /> </button> </Badge>) );
-}{";
-  skill_tags.length === 0 && (<p className="text - zion - slate text - sm italic">No skills added yet</p>);
-}</div> </div> {
-  /* Availability Section */ ";
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
-}'"}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/TalentRegistrationForm.tsx
+
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentRegistrationForm.tsx
-=======
-  uploadedAvatar ? (<AspectRatioratio= {}
-  1/1;
-}> <imgsrc= {"
-  uploadedAvatar ""
-}alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";"
-}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <inputtype="file" accept="image/*" className="hidden" onChange= {"
-  handleAvatarUpload ""
-}/> </label> </div> <p className="text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg-zion-blue-light/50" /> {;"
-  /* Bio Section */ ";"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Professional Bio</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">About Yourself</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>) ;
-}/> {;"
-  /* AI Enhancement Option */ ";"
-}<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md"> <div className="space-y-0 && 0.5"> <FormLabel className="text-white flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";"
-}/> <Buttontype="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={}
-  generateEnhancedProfile;
-}disabled= {}
-  isGenerating;
-}> </Button> </div>) ;
-}{;
-  /* Generated Content Display */ ;"
-}{";"
-  generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Buttontype="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={"
-  applyGeneratedContent ""
-}> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {;
-  generatedContent && generatedContent.summary ;"
-}</p> </div> {";"
-  generatedContent && generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {;
-  Object && Object.entries (generatedContent && generatedContent.categorizedSkills) .map ( ([category, skills]) => (<divkey= {"
-  category ""
-}className="flex items-center gap-2"> <BadgeclassName= {}`
-  `w-fit $ {}
-  getCategoryColor (category as CategoryType) `
-}` 
-}> {;"
-  category ";"
-}</Badge> <div className="flex flex-wrap gap-1"> {;
-  skills && skills.map ( (skill: string) => (<Badgekey= {"
-  skill ""
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {;
-  skill ;
-}</Badge>) ) ;
-}</div> </div>) ) ;
-}</div> </div>) ;"
-}</div> </div>) ";"
-}</div> <Separator className="bg-zion-blue-light/50" /> {;"
-  /* Skills and Availability */ ";"
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {;"
-  /* Skills Section */ ";"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Skills</FormLabel> <div className="flex gap-2"> <FormControl> <Input /> </FormControl> <Buttontype="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={"
-  handleAddSkill ""
-}> Add </Button> </div> <FormDescription className="text-zion-slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text-red-400" /> </FormItem>) ";"
-}/> <div className="flex flex-wrap gap-2 mt-2"> {;
-  skillTags && skillTags.map (skill => (<Badgekey= {"
-  skill ""
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1"> {;"
-  skill ";"
-}<button className="rounded-full hover:bg-zion-purple-dark/20 p-0 && 0.5" > <X className="h-3 w-3" /> </button> </Badge>) ) ;"
-}{";"
-  skillTags && skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>) ;
-}</div> </div> {;"
-  /* Availability Section */ ";"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";"
-}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;'"
-}'"}
-
-"
-  skill ";"
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none" > {}
-  skill;
-}</Badge>) );
-}</div> </div>) );
-}</div> </div>);"
-}</div> </div>) ";"
-}</div> <Separator className="bg - zion - blue - light / 50" /> {"
-  /* Skills and Availability */ ";"
-}<div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8"> {"
-  /* Skills Section */ ";"
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Skills</FormLabel> <div className="flex gap - 2"> <FormControl> <Input /> </FormControl> <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" on_click={"
-  handleAddSkill ";"
-}> Add </Button> </div> <FormDescription className="text - zion - slate"> Press Enter or click Add to include a skill </FormDescription> <FormMessage className="text - red - 400" /> </FormItem>) ";"
-}/> <div className="flex flex - wrap gap - 2 mt - 2"> {}
-  skill_tags.map (skill => (<Badge key= {"
-  skill ";"
-}className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1" > {"
-  skill ";"
-}<button className="rounded - full hover:bg - zion - purple - dark / 20 p - 0.5" > <X className="h - 3 w - 3" /> </button> </Badge>) );"
-}{";"
-  skill_tags.length === 0 && (<p className="text - zion - slate text - sm italic">No skills added yet</p>);
-}</div> </div> {"
-  /* Availability Section */ ";"
-}<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";"
-}/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);'"
-}'"}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentRegistrationForm.tsx

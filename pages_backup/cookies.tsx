@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/cookies.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-export default function CookiesPage() {
-  return (
-    <MainLayout
-      title="Cookie Policy - Zion Tech Group"
-      description="Cookie policy for Zion Tech Group website"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
-          <p className="text-xl text-gray-600">This is a placeholder for the cookie policy.</p>
-        </div>
-      </div>
-    </MainLayout>
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cookies.tsx
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -329,28 +287,13 @@ import Layout from '../components/Layout';
         </section>;
       </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/cookies.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cookies.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -383,13 +326,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
 ursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD:pages/cookies.tsx
-=======
-origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cookies.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   );
       </Layout>
@@ -399,63 +335,3 @@ origin/automation-improvements-final
   );
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/cookies.tsx
-<<<<<<< HEAD
-          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-}
-}
-}
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-    </>);
-;
-<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    <MainLayout
-      title="Cookie Policy - Zion Tech Group"
-      description="Cookie policy for Zion Tech Group website"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
-          <p className="text-xl text-gray-600">This is a placeholder for the cookie policy.</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-}
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/cookies.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,41 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-import {v4, as, uuidv4} from 'uuid';'
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-
-function grantPath() { return null; }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-import {v4, as, uuidv4} from 'uuid';
-
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-
-function grantPath(id: string) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-<<<<<<< HEAD
-function readGrant(id: string): GrantApplication | null {
-<<<<<<< HEAD
-  return path.join(GRANTS_DIR, `${id}.json`);
 
-function readGrant(id: string): GrantApplication | null {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-function writeGrant(record: GrantApplication) {
-=======
-function readGrant(id: string): GrantApplication | null {}
-function writeGrant(record: GrantApplication) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
     grantPath(record && record.id),
@@ -71,7 +38,6 @@ export default function handler() { return null; }
   res && res.setHeader('Allow', 'GET, POST');'
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
-
 
     writeGrant(existing);
     return res && res.status(201).json({ update })
@@ -131,15 +97,7 @@ if ( {) {}
   $2;
 }
     const { content } = req.body as { content?: string }
-<<<<<<< HEAD
-    if (!content |!content.trim())
-  if (req.method === 'POST') {
-    const { content } = req.body as { content?: string };
-if (!content || !content.trim())
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    if (!content |!content.trim())'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       return res.status(400).json({ error: 'Missing content' });
     const update = {}
       id: uuidv4()
@@ -159,22 +117,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }'
   res.set_header ('AllowGET, POST');'
   res.status (405).end ('Method Not Allowed');
-
-
-
-<<<<<<< HEAD
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

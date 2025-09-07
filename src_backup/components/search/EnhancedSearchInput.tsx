@@ -1,20 +1,3 @@
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { logInfo, logWarn } from '@/utils/productionLogger'
-
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import { logInfo, logWarn } from '@/utils/productionLogger'
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -24,84 +7,21 @@ import { SearchSuggestion } from "@/types/search",
 import { useDebounce } from "@/hooks/useDebounce",
 import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-import { debounce } from "lodash",
-=======
-import React, { useState, useEffect, useRef, useMemo } from "react","
-import { useTranslation } from "react-i18next",'
-import { Search, X } from 'lucide-react'"
-import { Input } from "@/components/ui/input","
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions","
-import { SearchSuggestion } from "@/types/search","
-import { useDebounce } from "@/hooks/useDebounce","
-import { useRouter } from "next/router","
-import { slugify } from "@/lib/slugify","
-import { debounce } from "lodash",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
 import { logInfo, logWarn } from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
-import { debounce } from "lodash";
-import { logInfo, logWarn } from '@/utils/productionLogger';
-interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface EnhancedSearchInputProps {
   value: string
   onChange: (value: string,) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional callback when a suggestion is selected. This allows parent
-=======
 
-interface EnhancedSearchInputProps {}
-  value: string,
-  onChange: (value: string) => void,
-  /**;
-   * Optional callback when a suggestion is selected. This allows parent;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
    * components to perform actions such as navigation.
-<<<<<<< HEAD
-   */
-=======
-
-   */
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
 
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
-  /**
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
+
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -111,15 +31,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
    */
   searchSuggestions?: SearchSuggestion[]
 }
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-
-export function EnhancedSearchInput({
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   value
   onChange
@@ -128,15 +39,6 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 
-=======
-export function EnhancedSearchInput({};
-  value;
-  onChange;
-  onSelectSuggestion"
-  placeholder = "Search..."
-  searchSuggestions;
-}: EnhancedSearchInputProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 "
@@ -145,270 +47,30 @@ import { Search, X  } from 'lucide-react''
 import { Input } from '@/components/ui/input''
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions''
 import { SearchSuggestion } from '@/types/search'
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-export function EnhancedSearchInput({
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = "Search...",
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-<<<<<<< HEAD
-  const [isFocused, setIsFocused] = useState(false),
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),
-  const { t } = useTranslation(),
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
-  const [loading, setLoading] = useState(false),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const debounced = useDebounce(value, 200),
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
-=======
-  const debouncedFetchSuggestions = useMemo(
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    () =>
-      debounce(async (query: string) => {
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
         if (!query.trim()) {
-<<<<<<< HEAD
-          setApiSuggestions([]),
-          return
-import React, { useState, useEffect, useRef, useMemo } from "react",;
-import { useTranslation } from "react-i18next",;
-import { Search, X } from 'lucide-react';
-import { Input } from "@/components/ui/input",;
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
-import { SearchSuggestion } from "@/types/search",;
-import { useDebounce } from "@/hooks/useDebounce",;
-import { useRouter } from "next/router",;
-import { slugify } from "@/lib/slugify",;
-import { debounce } from "lodash",;
-import { logInfo, logWarn } from '@/utils/productionLogger',;
-interface EnhancedSearchInputProps {;
-  value: string,;
-  onChange: (value: string) => void,;
-=======
-=======
-  const debouncedFetchSuggestions = useMemo(
-    (,) =>
-      debounce(async (query: string,) => {        if (!query.trim()) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 ;
-=======
-export function EnhancedSearchInput({}
-  value,
-  onChange,
-  onSelectSuggestion,";
-  placeholder = "Search...",;
-  searchSuggestions;
-}: EnhancedSearchInputProps) {}
-  const debouncedFetchSuggestions = useMemo(
-    () =>
-      debounce(async (query: string) => {}
-        if (!query.trim()) {}
-;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
 import { log_info, log_warn } from '@/utils / production_logger';
 interface EnhancedSearchInputProps {}
   value: string,
   on_change: (value: string, ) => void,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   /**;
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-  * Optional callback when a suggestion is selected. This allows parent;
-  * components to perform actions such as navigation.;
-  */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;  /**;
-  * Optional list of fallback suggestions (e.g. recent searches).;
-  * If provided, these will be shown when the input is empty.;
-  */;
-  search_suggestions?: SearchSuggestion[];
-}
-export /**
- * EnhancedSearchInput - Function description
- */
-function EnhancedSearchInput() {
-import React, { useState, useEffect, useRef, useCallback, useMemo } from './react'; // Added useMemo;
-import { Search, X  } from 'lucide-react';
-import { Input } from '@/components / ui / input';
-import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types / search';
-export /**
- * EnhancedSearchInput - Function description
- */
-function EnhancedSearchInput() {
-  const [is_focused, setIsFocused] = useState (false);
-  const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([]);
-  const [highlighted_index, setHighlightedIndex] = useState < number>(-1);
-  const input_ref = useRef < HTMLInputElement>(null);
-  const container_ref = useRef < HTMLDivElement>(null);
-  const [valueOnFocus, setValueOnFocus] = useState < string | null>(null);
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState (false);
-  const { t } = use_translation ();
-  const [api_suggestions, setApiSuggestions] = useState < SearchSuggestion[]>([]);
-  const [loading, set_loading] = useState (false);
-  const debounced = use_debounce (value, 200);
-  const debouncedFetchSuggestions = useMemo (
-    (, ) =>;
-      debounce (async (query: string, ) => {
-        if () {) {
-  $2
-}
-          setApiSuggestions ([]),          return;
-=======
-=======
-   * Optional callback when a suggestion is selected. This allows parent;
-   * components to perform actions such as navigation.;
-   */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
-  placeholder?: string,;
-  /**;
-   * Optional list of fallback suggestions (e.g. recent searches).;
-   * If provided, these will be shown when the input is empty.;
-   */;
-  searchSuggestions?: SearchSuggestion[];
-}
-;
-export function EnhancedSearchInput() { return null; }
-  const { t } = useTranslation(),;
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),;
-  const [loading, setLoading] = useState(false),;
-  const debounced = useDebounce(value, 200),;
-  const debouncedFetchSuggestions = useMemo(;
-    () =>;
-      debounce(async (query: string) => {;
-        if (!query.trim()) {;
-          setApiSuggestions([]),;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
 
           return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
         }
-<<<<<<< HEAD
-;
-        setLoading(true),;
-        try {;
-          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
-            signal: AbortSignal.timeout(5000) // 5 second timeout;
-          }),;
-          if (response.ok) {;
-            const data = await response.json(),;
-            if (Array.isArray(data)) {;
-              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
-=======
-        set_loading (true);
 
-        try {}
-          const response = await fetch (`/api / search / suggest?q=${encodeURIComponent (query)}`, {}
-            signal: AbortSignal.timeout (5000) // 5 second timeout;
-          });
-          // Check condition;
-if ( {) {}
-  $2;
-}
-            const data = await response.json ();
-            if () {) {}
-  $2;
-}
-              setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
-
-          setApiSuggestions([]),
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-          } else {;
-            // Silently fail for search suggestions - don't show error toast;
-            logWarn('Search suggestions API error:', { data: response.status }),;
-            setApiSuggestions([]);
-          }
-        } catch (error) {;
-          // Silently fail for search suggestions - don't show error toast;
-          logWarn('Search suggestions fetch error:', { data: error }),;
-          setApiSuggestions([]);
-        } finally {;
-          setLoading(false);
-=======
-          } else {}
-'
-            // Silently fail for search suggestions - don't show error toast;'
-            log_warn ('Search suggestions API error:', { data: response.status }),
-            setApiSuggestions ([]);
-          }
-        } catch (error) {'
-          // Silently fail for search suggestions - don't show error toast;'
-          log_warn ('Search suggestions fetch error:', { data: error }),
-          setApiSuggestions ([]);
 
-        } finally {}
-          setLoading(false)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
-        }
-<<<<<<< HEAD
-=======
-
-      }, 300);
-    []);
-  // Fetch suggestions from API when input value changes;
-  useEffect ((, ) => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      // Show recent suggestions provided via props when no query entered;
-      setFilteredSuggestions ('
-        (search_suggestions || []).filter (string => s.type === 'recent'));
-      setHighlightedIndex (-1);
-      return;
-    }
-    const controller = new AbortController ();`
-    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {}
-      signal: controller.signal;
-    });
-      .then (res => {'
-        if (throw new Error ('Failed to fetch suggestions')) {}
-  $2;
-}
-        return res.json ();
-      });
-      .then (data => {}
-        if () {) {}
-  $2;
-}
-          setFilteredSuggestions (data.slice (0, 8));
-
-        } else {}
-          setFilteredSuggestions([])
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }, 300),;
     [];
   ),;
@@ -457,111 +119,12 @@ if ( {) {}
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {'
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),
-=======
-    if (onSelectSuggestion) {'
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
       onSelectSuggestion(suggestionObj)
-<<<<<<< HEAD
-    } else {
-      // Provide a sensible default navigation if the parent did not supply a handler
-      logWarn('onSelectSuggestion callback not provided'),
-      if (suggestionObj.id) {
-        router.push(`/marketplace/listing/${suggestionObj.id}`)
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
-        router.push(suggestionObj.slug)
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
-        router.push(`/blog/${suggestionObj.slug}`)
-      } else {
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
-;
-    document.addEventListener("mousedown", handleClickOutside),;
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []),;
-  const router = useRouter(),;
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
-    onChange(suggestionObj.text),;
-=======
-        setHighlightedIndex (-1);
-      });
-      .catch (() => setFilteredSuggestions ([]));
-    return () => controller.abort ();
-  }, [debounced, search_suggestions]);
-  // Handle clicks outside the component to close suggestions;
-  useEffect ((, ) => {}
-    /**
- * handleClickOutside - Function description;
- */
-function handleClickOutside() {}
-      if () {) {}
-  $2;
-}
-        setIsFocused (false),
-        // setHighlightedIndex (-1), // Already handled in on_blur generally;
-      }
-    }"
-    document.addEventListener ("mousedown", handleClickOutside);"
-    return () => document.removeEventListener ("mousedown", handleClickOutside);
-  }, []);
-  const router = use_router ();
-  const handleSelectSuggestion = (suggestion_obj: SearchSuggestion, ) =>: any {'
-    log_info ('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestion_obj }),
-    on_change (suggestion_obj.text);
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
-      onSelectSuggestion (suggestion_obj);
-    } else {}`
-        router.push (`/search/${suggestion_obj.slug || slugify (suggestion_obj.text)}`);
 
-      }
-    }
-    setIsFocused(false)
-    inputRef.current?.blur()
-    setHighlightedIndex(-1)
-  }
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {}
-    switch (e.key) {}
-'
-      case 'ArrowDown':;
-        // Check condition;
-if ( {) {}
-  $2;
-}
-          e.prevent_default (),
-          setHighlightedIndex (prev => (prev + 1) % filtered_suggestions.length);
-
-        }
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-  const debouncedFilterSuggestions = useMemo (// Changed from useCallback to useMemo;
-    () => debounce ((current_value: string, suggestions: SearchSuggestion[]) => {
-      // Check condition
-if ( {) {
-  $2
-=======
-  const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
-    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {}
-      if(!currentValue) {'
-        setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'))
-        return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
 }
 '
         setFilteredSuggestions (suggestions.filter (string => s.type === 'recent'));
@@ -582,26 +145,9 @@ if ( {) {
 
   return () => {}
     // Cleanup function;
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-}
-}, []); []);
-    debouncedFilterSuggestions (value, search_suggestions);
-    setHighlightedIndex (-1);    return () => {
-=======
-=======
-};
-}, []); [])
-    debouncedFilterSuggestions(value, searchSuggestions)
-    setHighlightedIndex(-1)
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
 
     return () => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    return () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
       debouncedFilterSuggestions.cancel()
 }
 }, [value, searchSuggestions, debouncedFilterSuggestions])
@@ -617,10 +163,6 @@ if ( {) {
 }
     }
 
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
 import { logInfo, logWarn } from '@/utils/productionLogger';
 '
 import { logInfo, logWarn } from '@/utils/productionLogger';
@@ -755,39 +297,7 @@ export function EnhancedSearchInput(): any ({;
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {;'
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
     onChange(suggestionObj && suggestionObj.text);
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    if (onSelectSuggestion) {;
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
-      onSelectSuggestion(suggestionObj);
-    } else {;
-      // Provide a sensible default navigation if the parent did not supply a handler;
-<<<<<<< HEAD
-      logWarn('onSelectSuggestion callback not provided'),;
-      if (suggestionObj.id) {;
-        router.push(`/marketplace/listing/${suggestionObj.id}`);
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {;
-        router.push(suggestionObj.slug);
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {;
-        router.push(`/blog/${suggestionObj.slug}`);
-      } else {;
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
-      }
-    }
-    setIsFocused(false),;
-    inputRef.current?.blur(),;
-    setHighlightedIndex(-1);
-  },;
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
-    switch (e.key) {;
-=======
-=======
-    if (onSelectSuggestion) {;'
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
-      onSelectSuggestion(suggestionObj);
-    } else {;
-      // Provide a sensible default navigation if the parent did not supply a handler;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
       logWarn('onSelectSuggestion callback not provided');
       if (suggestionObj && suggestionObj.id) {;`
         router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`);'
@@ -982,12 +492,6 @@ if ( {) {}
     }
   }
 
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-    switch(e && e.key) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    switch(e && e.key) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -1029,112 +533,15 @@ if ( {) {}
         setEnterHandledPostFocus(false),;
         break;
     }
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-  
-=======
-  };
 
-      // Provide a sensible default navigation if the parent did not supply a handler;
-'
-      logWarn('onSelectSuggestion callback not provided'),
-
-      if (suggestionObj.id) {}`
-        router.push(`/marketplace/listing/${suggestionObj.id}`)'
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {}
-        router.push(suggestionObj.slug)'
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {}`
-        router.push(`/blog/${suggestionObj.slug}`)
-      } else {}`
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-    <div
-      className="relative w-full"
-      ref={containerRef}
-      role="combobox"
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls
-      onClick={() => inputRef.current?.focus()}
-    >
-      <div className="relative flex items-center w-full">
-        <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />
-        <Input
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ref={inputRef}
           type="text"
           id="enhanced-search-input"
-=======
 
-      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}"
-      aria-haspopup="listbox";"
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
-      onClick = {(,) => inputRef && inputRef.current?.focus(),}
-    >;"
-      <div className="relative flex items-center w-full">;
-        <Search"
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />;
-
-        <Input;
-          ref={inputRef}
-
-"
-          type="text""
-          id="enhanced-search-input""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
           name="search"
           value={value}
-<<<<<<< HEAD
-=======
-
-    <div;"
-      className="relative w - full";
-      ref = {container_ref, }"
-      role="combobox";
-      aria - expanded = {is_focused && filtered_suggestions.length > 0, }"
-      aria - haspopup="listbox";"
-      aria - controls="autocomplete - suggestions - list" // Added aria - controls;
-      on_click = {(, ) => input_ref.current?.focus (), }
-    >;"
-      <div className="relative flex items - center w - full">;
-        <Search;"
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
-        />;
-        <Input;
-          ref = {input_ref, }"
-          type="text";"
-          id="enhanced - search - input";"
-          name="search";
-          value={value}
-          on_change={(e) => {}
-            on_change (e.target.value);
-            setEnterHandledPostFocus (false);
-
-          }}
-          onFocus={(e) => {}
-            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
-            const currentVal = e.target.value;
-            setValueOnFocus(currentVal)
-            setEnterHandledPostFocus(false)
-            e.target.setSelectionRange(currentVal.length, currentVal.length)
-          }}
-
-=======
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     switch(e && e.key) {;
       case 'ArrowDown':;
@@ -1187,7 +594,6 @@ if ( {) {}
         break;
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onChange={(e) => {;
             onChange(e && e.target.value);
             setEnterHandledPostFocus(false);
@@ -1201,11 +607,7 @@ if ( {) {}
           }}
           onBlur={(e) => {;
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;              setIsFocused(false);
-=======
 
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
   };
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -1266,30 +668,6 @@ if ( {) {}
             on_change (e.target.value);
             setEnterHandledPostFocus (false);
 
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-          onChange={(e) => {;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-            onChange(e && e.target.value);
-            setEnterHandledPostFocus(false);
-=======
-=======
-          }}
-          onFocus={(e) => {
-            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus
-            const currentVal = e.target.value
-            setValueOnFocus(currentVal)
-            setEnterHandledPostFocus(false)
-            e.target.setSelectionRange(currentVal.length, currentVal.length)
-          }}
-
-
-
-
-          onChange={(e) => {;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
   value;
   onChange;
   onSelectSuggestion;
@@ -1322,110 +700,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onBlur={(e) => {;
             const relatedTarget = e.relatedTarget as HTMLElement;
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
               setIsFocused(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
               setHighlightedIndex(-1);
             }
             setValueOnFocus(null);
           }}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-          onKeyDown={handleKeyDown}
-          aria-label={t('general.search')}
 
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off"
-        />
-        {value && (
-          <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
             onClick={() => onChange('')}
-=======
 
-          onKeyDown={handleKeyDown}'
-          aria-label={t('general.search')}
-
-"
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0""
-          aria-autocomplete="list"`
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}"
-          autoComplete="off"
-        />
-        {value && (
-          <button"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"'
-            onClick={() => onChange('')}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
             aria-label="Clear search"
           >"
             <X className="h-4 w-4" />
           </button>
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
         )}
-<<<<<<< HEAD
-=======
-=======
-            onClick = {(,) => onChange(''),}
-            aria-label="Clear search";
-          >;
-            <X className="h-4 w-4" />;
-          </button>;        )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       </div>;
 
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-      <AutocompleteSuggestions
-=======
-
-      <AutocompleteSuggestions;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
         suggestions = {filteredSuggestions,}
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-<<<<<<< HEAD
-      />
-    </div>
-  )
-}
-;
-=======
 
-=======
-
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex"
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
       />;
     </div>;
   );
@@ -1444,18 +749,7 @@ setValueOnFocus (null);
 inputRef && inputRef.current?.blur ();
 break;
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-break 
-};
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <InputonClick={'
-  () => onChange ('') ";
-=======
-break ;
 
-};'"
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <InputonClick={''"
-  () => onChange ('') ";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;'"
 }'"  );
@@ -1511,63 +805,14 @@ break ;
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
 
-        highlightedIndex={highlightedIndex} "
-        listId="autocomplete-suggestions-list" 
-      />;
-    </div>;
-  );
-}
-
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-          on_blur={(e) => {
-            const related_target = e.related_target as HTMLElement;            if () {) {
-  $2
-=======
-
-          on_blur={(e) => {}
-            const related_target = e.related_target as HTMLElement;            if () {) {}
-  $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
 }
               setIsFocused (false);
               setHighlightedIndex (-1);
             , }
             setValueOnFocus (null);
           }}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-          onKeyDown = {handleKeyDown, }
-          aria - label = {t ('general.search'), }
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min-w-0";
-          aria - autocomplete="list";
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
-          auto_complete="off";
-        />;
-        {value && (
-          <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text-white";
-            on_click = {(, ) => on_change (''), }
-            aria - label="Clear search";
-          >;
-            <X className="h - 4 w-4" />;
-=======
-          onKeyDown = {handleKeyDown, }'
-          aria - label = {t ('general.search'), }"
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min - w-0";"
-          aria - autocomplete="list";`
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}"
-          auto_complete="off";
-        />;
-        {value && (
-          <button;"
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";'
-            on_click = {(, ) => on_change (''), }"
-            aria - label="Clear search";
-          >;"
-            <X className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -1597,45 +842,19 @@ input_ref.current?.blur ();
 break;
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
 break;
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-}
-> <div className="relative flex items - center w-full" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate" /> <Input on_click={';
-  () => on_change ('') ";
-}aria - label="Clear search" > <X className="h - 4 w-4" /> </button>);
-}</div> <AutocompleteSuggestions /> </div>);
-=======
-}'"
-> <div className="relative flex items - center w - full" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" /> <Input on_click={';'"
-  () => on_change ('') ";"
-}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
-}</div> <AutocompleteSuggestions /> </div>);'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
 }'"  );
       default:;
         break;
 }
   }
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-  return (<div;
-      className="relative w-full";
-      ref={container_ref}
-=======
-  return (<div;"
-      className="relative w - full";
-      ref={container_ref}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
       role="combobox";
       aria - expanded={is_focused && filtered_suggestions.length > 0}"
       aria - haspopup="listbox";"
       aria - controls="autocomplete - suggestions - list">;"
       <div className="relative">;
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-        <Search;
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate";
-=======
-        <Search;"
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
         />;
         <Input;
           ref={input_ref}"
@@ -1646,31 +865,7 @@ break;
 }}
           on_focus={() => setIsFocused (true)}
           onKeyDown={handleKeyDown}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-          placeholder={placeholder}
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion-slate";
-          aria - autocomplete="list";
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
-        />;
-        {value && (
-          <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text-white";
-            on_click={() => on_change ('')}
-          >;
-            <X className="h - 4 w-4" />;
-=======
-          placeholder={placeholder}"
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";"
-          aria - autocomplete="list";`
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
-        />;
-        {value && (
-          <button;"
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";'
-            on_click={() => on_change ('')}
-          >;"
-            <X className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
+
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -1682,14 +877,7 @@ break;
         list_id="autocomplete - suggestions - list";
       />;
     </div>);
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
+
         highlightedIndex={highlightedIndex}
         listId="autocomplete-suggestions-list"
       />
@@ -1718,12 +906,3 @@ break ;
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
-=======
-}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx

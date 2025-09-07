@@ -1,7 +1,4 @@
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-  name, ;
+name, ;
   title, ;
   company, ;
   avatar, ;
@@ -24,7 +21,7 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }% Match</span> </div> <Badge variant="outline" className="bg-background" > {;
   formatDistanceToNow (postedDate, {;
   addSuffix: true ;
-}) ;
+});
 }</Badge> </div> {;
   /* Talent details */ ";
 }<div className="p-4" > <div className="flex justify-between items-start gap-2 mb-3" > <h3 className="text-lg font-bold line-clamp-2" > {;

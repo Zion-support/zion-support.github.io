@@ -1,45 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-import React from 'react';
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-=======
-'use client';
-'
-import { useState } from 'react';'
-import { Dialog } from '@headlessui/react';'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-<<<<<<< HEAD
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  { name: 'Contact', href: '/contact' }];
-export default /**
- * Navigation - Function description
- */
-function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   return (;
     <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
@@ -49,15 +11,6 @@ function Navigation() {
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
-<<<<<<< HEAD
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
-=======
-=======
-
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -145,56 +98,21 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </Dialog.Panel>;
       </Dialog>;
     </header>);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-'use client'
-=======
-import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
-=======
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-const navigation = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   { name: 'Home', href: '/' }
   { name: 'About', href: '/about' }
   { name: 'Services', href: '/services' }
   { name: 'Solutions', href: '/solutions' }
   { name: 'Research', href: '/research' }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  { name: 'Contact', href: '/contact' }]
-=======
-const navigation = ['
-  { name: 'Home', href: '/' },'
-  { name: 'About', href: '/about' },'
-  { name: 'Services', href: '/services' },'
-  { name: 'Solutions', href: '/solutions' },'
-  { name: 'Research', href: '/research' },'
-  { name: 'Contact', href: '/contact' },
-];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Navigation() {};
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-=======
-  { name: 'Contact', href: '/contact' },
-];
-
-=======
-  { name: 'Contact', href: '/contact' }]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 ;
@@ -206,38 +124,12 @@ export default function Navigation() {
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  return (
-<<<<<<< HEAD
-=======
-const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Zion Tech Group</span>
-<<<<<<< HEAD
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
-              Zion Tech Group
-=======
-            <div className="h-8 w-auto text-2xl font-bold text-blue-600">
-              Zion Tech
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-    <header className="bg-white shadow-sm">"
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">"
-        <div className="flex lg:flex-1">"
-          <a href="/" className="-m-1.5 p-1.5">"
-            <span className="sr-only">Zion Tech Group</span>"
-            <div className="h-8 w-auto text-2xl font-bold text-blue-600">
-              Zion Tech;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             </div>
           </a>
         </div>"
@@ -297,13 +189,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </Link>
-=======
-                  </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
                 ))}
               </div>"
               <div className="py-6">
@@ -319,44 +205,5 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
         </Dialog.Panel>
       </Dialog>
     </header>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
+
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-</Link>))}
-              </div>;
-              <div className=&quot;py - 6&quot;>;
-                <a;
-                  href=&quot;/contact & quot;
-                  className=&quot;-mx - 3 block rounded - lg px - 3 py - 2.5 text - base font - semibold leading - 7 text - white bg - blue - 600 hover:bg - blue - 700 transition - colors duration - 200 & quot;
-                  on_click={() => setMobileMenuOpen (false)}
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
-            </div>;
-          </div>;
-        </Dialog.Panel>;
-      </Dialog>;
-<<<<<<< HEAD
-    </header>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </header>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

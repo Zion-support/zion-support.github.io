@@ -1,47 +1,5 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
-=======
-onViewDetails, }
-
-  )
-}
-
-
-
-import { use_router } from 'next / router';'
-import { Button  } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';'
-import { Input  } from '@/components / ui / input';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';'
-import { Badge  } from '@/components / ui / badge';'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';'
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';'
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';'
-import { toast  } from '@/hooks / use - toast';'
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';'
-import { logErrorToProduction } from '@/utils / production_logger';'
-import { EmptyState  } from '@/components / ui / empty - state';
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/PartnerManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PartnerProfile {
-=======
-interface PartnerProfile {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/PartnerManager.tsx
+
   id: string,
   user_id: string,
   name: string,'
@@ -49,110 +7,10 @@ interface PartnerProfile {}
   created_at: string,
   niche: string,
   audience_size: string,
-<<<<<<< HEAD
-  social_media?: Record<string string>,
-  website?: string,
-  bio?: string,
-  payout_method?: string,
-  fraud_flags?: number,
-  commission_rate?: number
-}
 
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
-      return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useRouter } from 'next/router',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",;
-import { logErrorToProduction } from '@/utils/productionLogger',;
-import { EmptyState } from "@/components/ui/empty-state",;
-interface PartnerProfile {;
-  id: string,;
-  user_id: string,;
-  name: string,;
-  status: 'pending' | 'approved' | 'rejected',;
-  created_at: string,;
-  niche: string,;
-  audience_size: string,;
-  social_media?: Record<string string>,;
-  website?: string,;
-  bio?: string,;
-  payout_method?: string,;
-  fraud_flags?: number,;
-=======
-  social_media?: Record < string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   commission_rate?: number;
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/PartnerManager.tsx
-;
-export default function PartnerManager() {;
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),;
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [activeTab, setActiveTab] = useState("pending"),;
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),;
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),;
-  const [commissionRate, setCommissionRate] = useState(25),;
-  const { user, isAuthenticated } = useAuth(),;
-  const router = useRouter(),;
-  useEffect(() => {;
-    if (!isAuthenticated) {;
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),;
-=======
-export default /**;
- * PartnerManager - Function description;
- */
-function PartnerManager() {}
-  const [partners, set_partners] = useState < PartnerProfile[]>([]);
-  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [search_query, setSearchQuery] = useState ("");"
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
-  const [commission_rate, setCommissionRate] = useState (25);
-  const { user, is_authenticated } = use_auth ();
-  const router = use_router ();
-  useEffect ((, ) => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/PartnerManager.tsx
+
       return;
     }
 ;
@@ -272,7 +130,7 @@ if ( {) {}
     } catch (error) {;'
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),;
       toast({;"
-        title: "Error",;"
+        title: "Error","
         description: "Failed to load partner data",;"
         variant: "destructive"});
     } finally {;
@@ -378,8 +236,7 @@ if ( {) {}
       toast({"
         title: "Error","
         description: "Failed to update partner settings","
-        variant: "destructive"})
-;
+        variant: "destructive"});
     setFilteredPartners(filtered);
   },;
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -421,7 +278,7 @@ if ( {) {}
     } catch (error) {;'
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),;
       toast({;"
-        title: "Error",;"
+        title: "Error","
         description: "Failed to update partner status",;"
         variant: "destructive"});
     }
@@ -439,14 +296,14 @@ if ( {) {}
         searchQuery;
       ),;
       toast({;"
-        title: "Settings Updated",;"
+        title: "Settings Updated","
         description: "Partner settings have been updated successfully.",;"
         variant: "default"}),;
       setIsSettingsOpen(false);
     } catch (error) {;'
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),;
       toast({;"
-        title: "Error",;"
+        title: "Error","
         description: "Failed to update partner settings",;"
         variant: "destructive"});
     }
@@ -797,11 +654,7 @@ if ( {) {}
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 interface PartnerTableProps {;
   partners: PartnerProfile[],;

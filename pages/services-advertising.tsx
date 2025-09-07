@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-)
-import React from 'react',
-import SEO from '../components/SEO',
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
 export default function ServicesAdvertisingPage() {}
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -45,55 +7,16 @@ export default function ServicesAdvertisingPage() {}
   const benefits = []
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling''
     'Flexible deployment: SaaS or self-hosted options'
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ]
-				{/* New: Core micro SaaS and AI additions */}
-  ],
-  ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-  ],
-=======
-
-
-
-  ],
-<<<<<<< HEAD
-=======
-
-  ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				{/* New: Core micro SaaS and AI additions */  } catch (error) {
     console.error("Error:", error);
-=======
-				{/* New: Core micro SaaS and AI additions */  } catch (error) {";
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  ],
-=======
-=======
-
-  ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
   ],
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ],
 
 "
@@ -103,23 +26,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>'
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
   const pricingRefs = []
@@ -133,23 +40,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$30/mo + usage</li>'
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>"
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -176,15 +67,6 @@ export default function ServicesAdvertisingPage() {}
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] }'
                 { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] }'
                 { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
-<<<<<<< HEAD
-              {[ 
-              {[
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
@@ -195,67 +77,14 @@ export default function ServicesAdvertisingPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-                    {o.points.map((p) => (<li key={p}>{p}</li>))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </ul>
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              {[]
-              {[]
-'
-                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },'
-                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },'
-                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },'
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] },'
-                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map']   } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-              ].map((o) => ("
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">"
-                  <div className="text-sm text-gray-400 mb-1">From</div>"
-                  <div className="text-2xl font-bold text-white">{o.price}</div>"
-                  <div className="text-gray-200 mt-2 mb-3">{o.name}</div>"
-                  <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </section>
           <section>"
@@ -277,23 +106,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $40–$200/mo</li>'
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>"
 				<section className="space-y-6">"
@@ -302,23 +115,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $30–$150/mo</li>'
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>"
 				<section className="space-y-6">"
@@ -327,23 +124,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $15–$60/mo</li>'
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>"
 				<section className="space-y-6">"
@@ -352,23 +133,7 @@ export default function ServicesAdvertisingPage() {}
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$60/mo + usage</li>'
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>"
 				<section id="ai-evaluation-orchestrator" className="space-y-6">"
@@ -449,20 +214,7 @@ export default function ServicesAdvertisingPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </section>
           <section>"
@@ -579,24 +331,10 @@ export default function ServicesAdvertisingPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="text-center mt-6">
-=======
 
-
-            </div>"
-            <div className="text-center mt-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
             </div>
           </section>
@@ -605,33 +343,7 @@ export default function ServicesAdvertisingPage() {}
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => ("
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-                  {a.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </section>
           <section>"
@@ -647,55 +359,17 @@ export default function ServicesAdvertisingPage() {}
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">"
                 <MapPin className="w-5 h-5 text-emerald-400" />"
                 <span className="text-gray-200 text-sm">{contact.address}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </section>
           <section>"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-              {[
 
-                { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },
-                { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },
-                { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
-                { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
-                { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
-<<<<<<< HEAD
-=======
-=======
-const ext = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
     console.error("Error:", error);
-=======
-              {[]
-'
-                { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },'
-                { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },'
-                { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },'
-                { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },'
-                { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },'
-                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }'
-                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -704,10 +378,7 @@ const ext = null;
                   <div className="text-sm text-gray-400 mb-1">From</div>"
                   <div className="text-2xl font-bold text-white">{o.price}</div>"
                   <div className="text-gray-200 mt-2">{o.name}</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 }
 };
                 </Link>
@@ -716,35 +387,11 @@ const ext = null;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 };
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 import React from 'react',
-=======
 
-}'
-import React from 'react','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any ('"`
 <a className="text - cyan - 400 underline" href={`/out?u=${encodeURIComponent (url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace ('https://', '')}</a>),
@@ -1131,395 +778,10 @@ return ("
     </UltraAdvancedFuturisticBackground>);
 }
 
-
-
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
 }
 
-<<<<<<< HEAD
-  const _pricingRefs = [
-    {_title: 'AI Platforms', _links: [
-        { name: 'OpenAI', _href: 'https://openai.com/api/pricing'},
-        {_name: 'Anthropic', _href: 'https://www.anthropic.com/pricing'},
-        {_name: 'Google Vertex AI', _href: 'https://cloud.google.com/vertex-ai/pricing'},
-        {_name: 'Azure OpenAI', _href: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/'},
-        {_name: 'Langfuse', _href: 'https://langfuse.com/pricing'},
-        {_name: 'Groq', _href: 'https://wow.groq.com/pricing'},
-        {_name: 'OpenRouter', _href: 'https://openrouter.ai/models'},
-        {_name: 'Weights & Biases', _href: 'https://wandb.ai/site/pricing'},
-        {_name: 'Humanloop', _href: 'https://humanloop.com/pricing'}
-      ],
-      note: 'SMB budgets: $100–$2,000/mo. Enterprise: $5k–$100k+/mo depending on volume and models.'
-    },
-    {_title: 'Security & Compliance', _links: [
-        { name: 'Wiz', _href: 'https://www.wiz.io/pricing'},
-        {_name: 'Prisma Cloud', _href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing'},
-        {_name: 'HashiCorp Vault', _href: 'https://www.hashicorp.com/products/vault/pricing'},
-        {_name: 'Cloudflare Zero Trust', _href: 'https://www.cloudflare.com/products/zero-trust/pricing/'},
-        {_name: 'Snyk', _href: 'https://snyk.io/plans/'},
-        {_name: 'Okta', _href: 'https://www.okta.com/pricing/'}
-      ],
-      note: 'SMB budgets: $200–$5,000/mo. Enterprise: $10k–$250k/yr+ for broader suites.'
-    },
-    {_title: 'Vector & Search', _links: [
-        { name: 'Pinecone', _href: 'https://www.pinecone.io/pricing/'},
-        {_name: 'Weaviate', _href: 'https://weaviate.io/pricing'},
-        {_name: 'Qdrant', _href: 'https://qdrant.tech/pricing/'},
-        {_name: 'Elasticsearch Serverless', _href: 'https://www.elastic.co/pricing/'},
-        {_name: 'Milvus', _href: 'https://zilliz.com/pricing'}
-      ],
-      note: 'SMB budgets: $50–$1,000/mo. Enterprise: $2k–$50k+/mo depending on throughput/latency.'
-    },
-    {_title: 'Cloud & Edge', _links: [
-        { name: 'AWS Calculator', _href: 'https://calculator.aws'},
-        {_name: 'Azure', _href: 'https://azure.microsoft.com/pricing'},
-        {_name: 'Google Cloud', _href: 'https://cloud.google.com/pricing'},
-        {_name: 'Cloudflare', _href: 'https://www.cloudflare.com/plans/'},
-        {_name: 'Netlify', _href: 'https://www.netlify.com/pricing/'},
-        {_name: 'Vercel', _href: 'https://vercel.com/pricing'}
-      ],
-      note: 'SMB budgets: $200–$10,000/mo.'
-    },
-    {_title: 'Product Analytics', _links: [
-        { name: 'Mixpanel', _href: 'https://mixpanel.com/pricing/'},
-        {_name: 'Amplitude', _href: 'https://amplitude.com/pricing'},
-        {_name: 'PostHog', _href: 'https://posthog.com/pricing'}
-      ],
-      note: 'SMB budgets: $0–$1,500/mo.'
-    },
-    {_title: 'Incident & On‑Call', _links: [
-        { name: 'PagerDuty', _href: 'https://www.pagerduty.com/pricing/'},
-        {_name: 'Opsgenie', _href: 'https://www.atlassian.com/software/opsgenie/pricing'},
-        {_name: 'Better Stack', _href: 'https://betterstack.com/status/pricing'}
-      ],
-      note: 'SMB budgets: $10–$1,000/mo.'
-    },
-    {_title: 'Email & Deliverability', _links: [
-        { name: 'SendGrid', _href: 'https://sendgrid.com/pricing/'},
-        {_name: 'Mailgun', _href: 'https://www.mailgun.com/pricing/'},
-        {_name: 'Postmark', _href: 'https://postmarkapp.com/pricing'}
-      ],
-      note: 'SMB budgets: $15–$500/mo.'
-    },
-    {_title: 'Observability & APM', _links: [
-        { name: 'Datadog', _href: 'https://www.datadoghq.com/pricing/'},
-        {_name: 'New Relic', _href: 'https://newrelic.com/pricing'},
-        {_name: 'Grafana Cloud', _href: 'https://grafana.com/pricing/'}
-      ],
-      note: 'SMB budgets: $50–$2,000/mo.'
-    }
-  ],
-
-				<section className=&quot;space-y-6&quot;>
-					<h2 className=&quot;text-2xl font-semibold text-white&quot;>AI Document Summarizer</h2>
-					<p className=&quot;text-slate-300&quot;>Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
-					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
-						<li>Typical budget: $10–$30/mo + usage</li>
-						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-						<li>Try: <a href=&quot;/services/ai-document-summarizer&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-document-summarizer</Link></li>
-					</ul>
-				</section>
-
-      <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;max-w-7xl mx-auto space-y-12&quot;>
-          <header className=&quot;text-center&quot;>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4&quot;>
-              Services That Ship Outcomes
-            </h1>
-            <p className=&quot;text-gray-300 text-lg&quot;>AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
-            <div className=&quot;mt-8 flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
-              <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>
-                Talk to Sales <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
-              </Button>
-              <Button href=&quot;/market-pricing&quot; variant=&quot;outline&quot; className=&quot;px-8 py-4 border border-gray-600 text-gray-200&quot;>
-                View Market Pricing <ExternalLink className=&quot;w-5 h-5 ml-2&quot; />
-              </Button>
-            </div>
-          </header>
-
-          <section>
-            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>New Real Micro SaaS</h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
-              {[ 
-import React from 'react';
-import SEO from '../components/SEO';
-
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-)
-import React from 'react',
-import SEO from '../components/SEO',
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
-
-export default function ServicesAdvertisingPage() {
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-  const benefits = [
-    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
-    'Flexible deployment: SaaS or self-hosted options'
-  ]
-				{/* New: Core micro SaaS and AI additions */}
-  ],
-  ],
-
-				{/* New: Core micro SaaS and AI additions */}
-				{/* New: Core micro SaaS and AI additions */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
-					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $20–$80/mo</li>
-						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-<<<<<<< HEAD
-
-					</ul>
-				</section>
-  const pricingRefs = [
-    {
-      title: 'AI Platforms'
-      links: [
-
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
-					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10–$30/mo + usage</li>
-						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-
-					</ul>
-				</section>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
-              Services That Ship Outcomes
-            </h1>
-            <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
-                Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
-                View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
-          </header>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
-                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
-                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] },
-
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
-                  <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-
-            </div>
-          </section>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {benefits.map((b) => (
-                <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
-                    <p className="text-gray-200">{b}</p>
-
-                  </div>
-                </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>
-          </section>
-
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
-					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $30–$150/mo</li>
-						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
-					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $15–$60/mo</li>
-						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
-					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10–$60/mo + usage</li>
-						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-
-					</ul>
-				</section>
-				<section id="ai-evaluation-orchestrator" className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
-					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50–$400/mo + API usage</li>
-						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
-					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50–$1,000/mo</li>
-						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://console.weaviate.cloud/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
-					</ul>
-				</section>
-				<section id="managed-postgres-ha" className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
-					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $1,200–$5,000/mo</li>
-						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Guardrails & Safety</h2>
-					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $0–$500/mo</li>
-						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
-					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $100–$1,500/mo</li>
-						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
-					</ul>
-				</section>
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
-					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $99–$350/mo</li>
-						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
-					</ul>
-				</section>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-
-                { name: 'Affiliate Marketing Tracker Pro', price: '$99/mo', href: '/affiliate-marketing-tracker-pro', refs: [{ n: 'Refersion', u: 'https://www.refersion.com/pricing' }] },
-                { name: 'SMB Privacy Web Analytics', price: '$12/mo', href: '/smb-privacy-web-analytics', refs: [{ n: 'Plausible', u: 'https://plausible.io/#pricing' }] },
-                { name: 'MSP Helpdesk & ITSM', price: '$149/mo', href: '/msp-helpdesk-itsm', refs: [{ n: 'Freshdesk', u: 'https://freshdesk.com/pricing' }] },
-                { name: 'AI Content Creation Studio', price: '$39/mo', href: '/ai-content-creation-studio', refs: [{ n: 'Jasper', u: 'https://www.jasper.ai/pricing' }] },
-                { name: 'E-commerce Returns Manager', price: '$59/mo', href: '/ecommerce-returns-manager', refs: [{ n: 'Loop Returns', u: 'https://www.loopreturns.com/pricing' }] },
-                { name: 'Automated Email Follow-ups', price: '$29/mo', href: '/automated-email-followups', refs: [{ n: 'Reply.io', u: 'https://reply.io/pricing' }] },
-                { name: 'Podcast Transcription Pro', price: '$15/mo', href: '/podcast-transcription-pro', refs: [{ n: 'Rev', u: 'https://www.rev.com/pricing' }] },
-                { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/freelancer-portfolio-builder', refs: [{ n: 'Webflow', u: 'https://webflow.com/pricing' }] },
-                { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] },
-
-              ].map((o) => (
-                <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <a href={o.href} className="block group">
-                    <div className="text-sm text-gray-400 mb-1">From</div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{o.name}</div>
-                      <div className="text-cyan-300 font-medium">{o.price}</div>
-                    </div>
-
-            </div>
-          </section>
-
-                { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
-
-              ].map((group) => (
-                <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-white">{group.title}</h3>
-                    <span className="text-sm text-gray-300">{group.range}</span>
-                  </div>
-                  <ul className="text-slate-300 space-y-1">
-                    {group.links.map((l) => (
-
-            </div>
-
-            </div>
-          </section>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-200">{contact.mobile}</span>
-
-            </div>
-          </section>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-
-                { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },
-                { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },
-                { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
-                { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
-                { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
-
-                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					</ul>
 				</section>
   const pricingRefs = [
@@ -1772,10 +1034,6 @@ export default function ServicesAdvertisingPage(req, res) {
   }
 }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
@@ -1785,10 +1043,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1849,10 +1104,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </div>
           </section>
           <section>
@@ -1880,10 +1132,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1894,10 +1143,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1908,10 +1154,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -1922,10 +1165,7 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -2044,10 +1284,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </div>
           </section>
           <section>
@@ -2169,10 +1406,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -2197,10 +1431,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </div>
           </section>
           <section>
@@ -2227,10 +1458,7 @@ export default function ServicesAdvertisingPage(req, res) {
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
               </Link>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             </div>
           </section>
           <section>
@@ -2260,9 +1488,7 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 </a>
               ))}
             </div>
@@ -2272,44 +1498,7 @@ export default function ServicesAdvertisingPage(req, res) {
     </UltraAdvancedFuturisticBackground>
   )
 }
-<<<<<<< HEAD
-};
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-}
-            </div>;
-          </section>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react',
-=======
-'
-import React from 'react','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any ('"`
 <a className="text - cyan - 400 underline" href={`/out?u=${encodeURIComponent (url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace ('https://', '')}</a>),
@@ -2696,19 +1885,4 @@ return ("
     </UltraAdvancedFuturisticBackground>);
 }
 
-
-
 ;
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

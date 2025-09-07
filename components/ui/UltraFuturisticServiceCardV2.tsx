@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 import { motion  } from 'framer-motion';
 
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ArrowRight
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  Globe
-=======
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   Rocket;
   ArrowRight,
   Star,
@@ -38,7 +13,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Shield,
   Globe,;
   Rocket,;
-
 
 } from 'lucide-react';
 interface ServiceCardProps {}
@@ -56,9 +30,7 @@ import {;
 interface ServiceCardProps {;
   service: {;
     id: string;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     name: string;
     tagline: string;
     description: string;
@@ -90,28 +62,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: string;
     icon: string;
     color: string;
-<<<<<<< HEAD
-    popular: boolean;'
-        return <Zap className='w-5 h-5' />;'
-      case 'quantum & emerging tech':;'
-        return <Rocket className='w-5 h-5' />;'
-      case 'enterprise it':;'
-        return <Shield className='w-5 h-5' />;'
-      case 'space & metaverse':;'
-        return <Globe className='w-5 h-5' />;'
-      case 'micro saas':;'
-=======
 
-    popular: boolean;
-        return <Zap className='w-5 h-5' />;
-      case 'quantum & emerging tech':;
-        return <Rocket className='w-5 h-5' />;
-      case 'enterprise it':;
-        return <Shield className='w-5 h-5' />;
-      case 'space & metaverse':;
-        return <Globe className='w-5 h-5' />;
-      case 'micro saas':;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return <TrendingUp className='w-5 h-5' />;
         return <Rocket className="w-5 h-5" />;'
       case 'enterprise it':;"
@@ -126,10 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
         return <Zap className='w-5 h-5' />;    }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: string;
 
     customers: number;
@@ -137,27 +84,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: number;
     marketSize?: string;
 
-<<<<<<< HEAD
-
-
-
-  };
-
-  const getGradientClass = (color: string) => {'
-    if (color.includes('from-') && color.includes('to-')) {}
-  };
-
-<<<<<<< HEAD
-return color;
-    }
-    return 'from-cyan-500 to-blue-500';
-  }
-    >
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Glow effect */}
-=======
-      {/* Glow effect */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
       {/* Main card */}'
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
@@ -216,8 +142,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </div>
-
-            
 
 origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
@@ -351,50 +275,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-
-<<<<<<< HEAD
-              </div>
-              <div className='text-xs text-gray-400'>Reviews</div>
-            </div>
-          </div>
-        </div>
-        {/* Pricing */}
-<div className='relative z-10 mb-6'>
-          <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-600/30'>
-            <div className='flex items-center justify-between mb-2'>
-              <span className='text-sm text-gray-400'>Starting at</span>
-              <span className='text-xs text-gray-500'>per month</span>
-            </div>
-            <div className='flex items-baseline space-x-2'>
-              <span className='text-3xl font-bold text-white'>
-                ${service.price.monthly}
-              </span>
-              <span className='text-lg text-gray-400'>/mo</span>
-            </div>
-            <div className='flex items-center space-x-2 mt-2'>
-              <span className='text-xs text-gray-500'>or</span>
-              <span className='text-sm text-cyan-400 font-medium'>
-                ${service.price.yearly}/year
-              </span>
-              <span className='text-xs text-gray-500'>(save 17%)</span>
-            </div>
-            {service.price.enterprise && (
-              <div className='mt-2 pt-2 border-t border-gray-600/30'>
-                <span className='text-xs text-gray-500'>Enterprise: </span>
-                <span className='text-sm text-purple-400 font-medium'>
-                  ${service.price.enterprise}/mo
-                </span>
-              </div>
-            )}
-          </div>
-        </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Features preview */}
-<div className='relative z-10 mb-6'>
-=======
-        {/* Features preview */}'
-        <div className='relative z-10 mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features;
           </h4>'"
@@ -403,7 +283,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-2">'
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
-
           <div className='space-y-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {service.features.slice(0, 3).map((feature, idx) => (
@@ -411,40 +290,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
-                transition={{ delay: 0.6 + idx * 0.1 }}
-className='flex items-center space-x-2 text-sm'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
-                <span className='text-gray-300'>{feature}</span>
-              </motion.div>
-            ))}
-            {service.features.length > 3 && (
-              <div className='text-xs text-gray-500 mt-2'>
-                +{service.features.length - 3} more features
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features
 
-                +{service.features.length - 3} more features
-
-=======
-              >'
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>'
-                <span className='text-gray-300'>{feature}</span>
-              </motion.div>
-            ))}
-            {service.features.length > 3 && ('
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >"
-                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>"
-                <span className="text-gray-300">{feature}</span>
-              </motion.div>
-            ))}
-            {service.features.length > 3 && ("
-              <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features'
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features;
-                +{service.features.length - 3} more features;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
         {/* Features preview */}'
         <div className='relative z-10 mb-6'>;'
@@ -556,13 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
-                transition={{ delay: 0.8 + idx * 0.1 }}
-className='flex items-center space-x-2 text-sm'
-=======
-                transition={{ delay: 0.8 + idx * 0.1 }}'
-                className='flex items-center space-x-2 text-sm'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
                 <span className='text-gray-300'>{benefit}</span>
@@ -573,8 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;'
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
-
-
 
         {/* Market info */}
 
@@ -634,14 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-        {/* CTA Button */}
-<div className='relative z-10'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <motion.a
-=======
-          <motion.a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}"
@@ -689,7 +520,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
           </motion && motion.a>;
         </div>;
-
 
           </motion.a>
 
@@ -778,8 +608,6 @@ export default UltraFuturisticServiceCardV2;        />;
 export default UltraFuturisticServiceCardV2;
 ;
 
-
-
 className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
 origin/cursor/automate-test-improve-and-merge-code-2533
         />
@@ -797,15 +625,3 @@ export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;
 
 };
-
-
-<<<<<<< HEAD
-};
-
-export default UltraFuturisticServiceCardV2;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

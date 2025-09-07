@@ -1,56 +1,3 @@
-
-<<<<<<< HEAD
-import {}
-  ArrowRight,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Clock,
-  Check,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,;
-  Lock,;
-  Globe,;} from 'lucide-react';
-
-
-import {};
-  ArrowRight;
-  ExternalLink;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Shield;
-  Clock;
-  Check;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock'
-  Globe;} from 'lucide-react';
-  Users, Zap, Shield, Clock, Check, Brain;
-<<<<<<< HEAD
-  Rocket, Dna, DollarSign, Lock, Globe
-
-
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ExternalLink, Star, TrendingUp;
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
- } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface UltraAdvancedServiceCardProps {
-=======
-  Rocket, Dna, DollarSign, Lock, Globe;
-interface UltraAdvancedServiceCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   ArrowRight,;
   ExternalLink,;
@@ -73,8 +20,7 @@ import {;
 interface UltraAdvancedServiceCardProps {;
   service: {;
     id: string;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     name: string;
     tagline: string;
     price: string;
@@ -89,122 +35,18 @@ interface UltraAdvancedServiceCardProps {;
       website: string;
     }
 
-
     reviews: number;
   };
 
-
-
-
-<<<<<<< HEAD
-  service: {}
-    id: string,
-    name: string,
-    tagline: string,
-    price: string,
-    period: string,
-    description: string,
-    features: string[],
-    popular: boolean,
-    icon: string,
-    color: string,
-    textColor: string,
-    link: string,
-    marketPosition: string,
-    targetAudience: string,
-    trialDays: number,
-    setupTime: string,
-    category: string,
-    realService: boolean,
-    technology: string[],
-    integrations: string[],
-    useCases: string[],
-    roi: string,
-    competitors: string[],
-    marketSize: string,
-    growthRate: string,
-    variant: string,
-    contactInfo: {}
-      mobile: string,
-      email: string,
-      address: string,
-=======
-  service: {
-    id: string;,
-    name: string;,
-    tagline: string;,
-    price: string;,
-    period: string;,
-    description: string;,
-    features: string[];,
-    popular: boolean;,
-    icon: string;,
-    color: string;,
-    textColor: string;,
-    link: string;,
-    marketPosition: string;,
-    targetAudience: string;,
-    trialDays: number;,
-    setupTime: string;,
-    category: string;,
-    realService: boolean;,
-    technology: string[];,
-    integrations: string[];,
-    useCases: string[];,
-    roi: string;,
-    competitors: string[];,
-    marketSize: string;,
-    growthRate: string;,
-    variant: string;,
-    contactInfo: {
-      mobile: string;,
-      email: string;,
-      address: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
       website: string;
     }
-<<<<<<< HEAD
-    realImplementation: boolean
-    implementationDetails: string
-    launchDate: string
-    customers: number
-    rating: number
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
-    contactInfo: {mobile: string;
-      email: string;
-<<<<<<< HEAD
-      address: string;
-      website: string
-    },
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-    reviews: number
-=======
-    reviews: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {}
@@ -296,56 +138,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
           is_hovered ? 'opacity - 100' : 'opacity - 50';`
         }`}
-<<<<<<< HEAD
-      <div 
 
-
-  const getCategoryIcon = null;
-      return <Brain className='w-4 h-4' />;
-    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
-    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
-    if (category.includes('Biotech') |category.includes('Healthcare'))
-      return <Dna className='w-4 h-4' />;
-    if (category.includes('Finance') |category.includes('Trading'))
-      return <DollarSign className='w-4 h-4' />;
-    if (category.includes('Security') |category.includes('Cybersecurity'))
-      return <Lock className='w-4 h-4' />;
-    if (category.includes('Internet') |category.includes('Network'))
-      return <Globe className='w-4 h-4' />;
-    return <Zap className='w-4 h-4' />;
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-ease: 'easeOut' as const,
-      },
-    },
-    hover: {
-      y: -10
-      transition: {
-        duration: 0.3,
-ease: 'easeOut' as const,
-      },
-    },
-  };
-
-  const contentVariants = {
-    hidden: { opacity: 0, height: 0 },
-visible: {
-      opacity: 1,
-      height: 'auto',
-      transition: {
-origin/cursor/automate-test-improve-and-merge-code-2533
-        duration: 0.5,
-=======
-      <div;
-        duration: 0.5,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ease: 'easeOut' as const,
       },
     },
@@ -357,50 +150,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
-<<<<<<< HEAD
-<div
-        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-50'
-=======
-      <div  return (
-    <motion.div"
-      className="relative group"
-      variants={containerVariants}"
-      initial="hidden""
-      animate="visible""
-      whileHover="hover"
-      onHoverEnd={() => setIsHovered(false)}
-    >
-      {/* Glow Effect */}
-      <div;`
-        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${'
-          isHovered ? 'opacity-100' : 'opacity-50'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         }`}
         style={{}`
           background: `linear-gradient(135deg, ${service.color})`'
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'
         }}
       />
-<<<<<<< HEAD
-      {/* Main Card */}
-      <div
-=======
-      {/* Main Card */}`
-      <div        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${'
-          isHovered ? 'shadow-2xl' : 'shadow-lg'`
-        }`}
-      >'`
-        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${'
-          isHovered ? 'opacity-100' : 'opacity-50';`
-        }`}
-        style={{}`
-          background: `linear-gradient(135deg, ${service.color})`;'
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
-      />
-      {/* Main Card */}
-      <div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     hidden: { opacity: 0, height: 0 },
 
       <div;`
@@ -408,17 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           isHovered ? 'shadow-2xl' : 'shadow-lg'`
         }`}
       >
-<<<<<<< HEAD
-<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          {/* Header */}
-          <div className='flex items - start justify - between mb - 4'>;
-            <div className='flex items - center space - x-3'>;
-=======
-          {/* Header */}'
-          <div className='flex items - start justify - between mb - 4'>;'
-            <div className='flex items - center space - x-3'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <div className='text - 3xl'>{service.icon}</div>;
               <div>;'
                 <div className='flex items - center space - x-2'>;
@@ -503,15 +250,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             )}
           </div>
-<<<<<<< HEAD
-          {/* Tagline */}
-<p className='text-gray-300 text-sm mb-4 leading-relaxed'>
-=======
-          {/* Tagline */}'
-          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
-          </p>"
-          {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             {service.tagline}
           </p>
           {/* Price */}
@@ -530,52 +269,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center space-x-2 text-sm">"
               <Users className="w-4 h-4 text-blue-400" />"
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
-<<<<<<< HEAD
-<div className='flex items-center justify-between mb-4'>
-            <div className='flex items-baseline space-x-1'>
-              <span className='text-2xl font-bold text-white'>
-                {service.price}
-              </span>
-              <span className='text-gray-400'>{service.period}</span>
-            <div className='flex items-center space-x-2'>
-              <div className='flex items-center space-x-1'>
-                <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                <span className='text-white text-sm'>{service.rating}</span>
-              </div>
-              <span className='text-gray-400 text-sm'>({service.reviews})</span>
-            </div>
-          </div>
-          {/* Quick Stats */}
-<div className='grid grid-cols-2 gap-3 mb-4'>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Users className='w-4 h-4 text-blue-400' />
-              <span className='text-gray-300'>
-                {service.customers.toLocaleString()}+ users
-              </span>
-            </div>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Clock className='w-4 h-4 text-green-400' />
-              <span className='text-gray-300'>
-                {service.trialDays} day trial
-              </span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            </div>
-          </div>
-          {/* Market Data */}
-<div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
-            <div className='flex items-center justify-between text-sm'>
-              <span className='text-gray-400'>Market Size:</span>
-=======
-            </div>"
-            <div className="flex items-center space-x-2 text-sm">"
-              <Clock className="w-4 h-4 text-green-400" />"
-              <span className="text-gray-300">{service.trialDays} day trial</span>
-          </div>
-          {/* Market Data */}'
-          <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>'
-            <div className='flex items-center justify-between text-sm'>'
-              <span className='text-gray-400'>Market Size:</span>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <span className='text-green-400 font-semibold'>
                 {service.marketSize}
               </span>
@@ -664,8 +358,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
-
-
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
@@ -701,7 +393,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text-gray-300">{feature}</span>'
                         <span className='text-gray-300'>{feature}</span>                      </div>
 
-
 <h4 className='text-white font-semibold mb-2'>
                     Key Features
                   </h4>
@@ -717,22 +408,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
 
-
-
-
-<<<<<<< HEAD
-                {/* ROI */}
-<div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
-                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
-=======
-                {/* ROI */}'
-                <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>'
-                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
-
-
-
 
                 </div>
                 {/* Contact Info */}'
@@ -821,41 +497,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ExternalLink className='w-4 h-4' />;
             </motion && motion.button>;
 
-<<<<<<< HEAD
-            <motion&& motion.button
-              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
-                isExpanded
-                  ? 'border-gray-600 text-gray-400'
-              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
-                isExpanded
-                  ? 'border-gray-600 text-gray-400'
-                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
-<div className='flex space-x-3 mt-6'>
-            <motion.button
-              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => window.open(service.link, '_blank')}
-            >
-              <span>Learn More</span>
-<ExternalLink className='w-4 h-4' />
-            </motion.button>
-            <motion.button
-              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
-                isExpanded
-                  ? 'border-gray-600 text-gray-400'
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            <motion&& motion.button;`
-              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${}
-                isExpanded'
-                  ? 'border-gray-600 text-gray-400'`
-              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${}
-                isExpanded'
-                  ? 'border-gray-600 text-gray-400''
-                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -864,22 +505,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {isExpanded ? 'Show Less' : 'Details'}
 
           {/* Expand/Collapse Indicator */}
-<<<<<<< HEAD
-          <motion.div
-className='flex justify-center mt-4'
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ArrowRight className='w-5 h-5 text-gray-400' />
-          </motion.div>
-=======
-          <motion.div'
-            className='flex justify-center mt-4'
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >'
-            <ArrowRight className='w-5 h-5 text-gray-400' />          </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </div>
       </div>
     </motion.div>
@@ -891,9 +517,7 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
             </motion && motion.button>;
           </div>;
 
-
           {/* Expand/Collapse Indicator */}
-
 
 };
 "
@@ -911,7 +535,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
   );
 export default UltraAdvancedServiceCard;  );
 };
-
 
 export default UltraAdvancedServiceCard;
 '
@@ -966,28 +589,3 @@ export default UltraAdvancedServiceCard;
     </motion.div>
 
 };
-
-
-<<<<<<< HEAD
-);
-};
-
-export default UltraAdvancedServiceCard;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-    reviews: number
-    reviews: number;
-  }
-}
-
-const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   ;}
-}) => {
-
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

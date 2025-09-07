@@ -1,155 +1,8 @@
-
-
-<<<<<<< HEAD
- const SolutionsPage: React.FC = () => {}
-  const industrySolutions = [ {}
-  category: 'Healthcare & Life Sciences', solutions: [ {}
-  ]
-}
-{'
-  category: 'Financial Services', solutions: [ {}
-  ]
-}
-{'
-  category: 'Manufacturing & Industry', solutions: [ {}
-  ]
-}
-{'
-  category: 'Retail & E-commerce', solutions: [ {}
-  ]
-}
-{'
-  category: 'Government & Public Sector', solutions: [ {}
-  ]
-}
-{'
-  category: 'Education & Training', solutions: [ {}
-  ]
-}
-{'
-  category: 'Sustainability & Energy', solutions: [ {}
-  ]
-}];
-> Revolutionary Solutions </motion.h1> <motion.p > Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results. </motion.p> {}
-  /* Stats Grid */
-}<motion.div </div>) )
-}</motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion.div> > <div className= {}
-  `w-16 h-16 bg-gradient-to-br $ {}
-  solution.color;`
-}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`
-}> {}
-  solution.icon;
-}</div> </li>) )"
-}</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) )'"
-}</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs. </p> </motion.div> key= {}
-  category.category;
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';
- const SolutionsPage: React.FC = () => {;
-  const industrySolutions = [ {;'
-  category: 'Healthcare & Life Sciences', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Financial Services', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Manufacturing & Industry', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Retail & E-commerce', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Government & Public Sector', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Education & Training', solutions: [ {;
-  ] 
-};
-{;'
-  category: 'Sustainability & Energy', solutions: [ {;
-=======
-import React from 'react';
- const SolutionsPage: React.FC = () => {;
-  const industrySolutions = [ {;
-  category: 'Healthcare & Life Sciences';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Financial Services';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Manufacturing & Industry';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Retail & E-commerce';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Government & Public Sector';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Education & Training';, solutions: [ {;
-  ] 
-};
-{;
-  category: 'Sustainability & Energy';, solutions: [ {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  ] ;
+] ;
 }];
 > Revolutionary Solutions </motion && motion.h1> <motion && motion.p > Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results. </motion && motion.p> {;
   /* Stats Grid */ ;
-<<<<<<< HEAD
-}<motion && motion.div </div>) ) ;"
-}</motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion && motion.div> > <divclassName= {}`
-  `w-16 h-16 bg-gradient-to-br $ {}
-  solution && solution.color;`
-}rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300` 
-}> {;
-  solution && solution.icon ;
-}</div> </li>) ) ;"
-}</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion && motion.div>) ) ;'"
-}</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs. </p> </motion && motion.div> key= {;
-=======
-}<motion && motion.div </div>) ) ;
-}</motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our Solution Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive technology solutions designed to address the most complex business challenges </p> </motion && motion.div> > <divclassName= {
-  `w-16 h-16 bg-gradient-to-br $ {
-  solution && solution.color 
-}rounded-xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300` ;
-}> {;
-  solution && solution.icon ;
-}</div> </li>) ) ;
-}</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion && motion.div>) ) ;
-}</div> <h1 className="text-5xl md: text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing;, we deliver specialized solutions that address your industry's unique needs. </p> </motion && motion.div> key= {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   category && category.category ;
 }initial= {;
   {;
@@ -167,398 +20,18 @@ import React from 'react';
   {;
   once: true ;
 
-<<<<<<< HEAD
-}> <motion&& motion.div key= {}
-  solution && solution.name;
-}initial= {}
-  {}
-  opacity: 0, y: 30;
-}whileInView= {}
-  {}
-}transition= {}
-  {}
-  duration: 0.8, delay: categoryIndex * 0.2;
-}viewport= {}
-  {}
-  once: true;
-}> <motion.div key= {}
-  solution.name;
-}initial= {}
-  {}
-  opacity: 0, y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, y: 0;
-}transition= {}
-  {}
-}viewport= {}
-  {}
-  once: true;
-}className= {}`
-  `bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 $ {'
-  solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' `
-}` "
-=======
-}> <motion&& motion.div key= {
-  solution && solution.name 
-}initial= {
-  {
-  opacity: 0;, y: 30;
-}whileInView= {
-  {
-
-}transition= {
-  {
-  duration: 0.8;, delay: categoryIndex * 0.2 ;
-
-}viewport= {
-  {
-  once: true;
-}> <motion.div key= {
-  solution.name
-}initial= {
-  {
-  opacity: 0;, y: 30;
-}whileInView= {
-  {
-  opacity: 1;, y: 0;
-}transition= {
-  {
-}viewport= {
-  {
-  once: true;
-}className= {
-  `bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 $ {
-  solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' 
-}` 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }> > Learn More <ArrowRight className="ml-2 w-4 h-4" /> </a> </motion && motion.div>) ) ;
 }</div> </motion && motion.div>) ) ;
-<<<<<<< HEAD
-}</div> </div> </section> <motion&& motion.div initial= {
-  {
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
-=======
-}</div> </div> </section> <motion&& motion.div initial= {}
-  {'
-import React from 'react';'
-import Layout from '../components/layout/Layout';'
-import Link from 'next/link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {}
-  Heart, DollarSign, Factory, ShoppingCart, Building2, ;
-=======
-import { 
-  Heart, DollarSign, Factory, ShoppingCart, Building2, 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
   Users, Globe, Cpu, Database, Network, Target'
 } from 'lucide-react';
-<<<<<<< HEAD
-const SolutionsPage: React.FC = () => {}
-  const industrySolutions = []
-    {'
-      category: 'Healthcare & Life Sciences',
-      solutions: []
-        {'
-          name: 'Healthcare AI Solutions','
-          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms','
-    href: '/healthcare-solutions',
-          featured: true,"
-          icon: <Heart className="w-6 h-6" />
-        };
-        {'
-          name: 'AI Healthcare Diagnostics','
-          description: 'Advanced diagnostic systems using machine learning and medical imaging','
-          href: '/ai-healthcare-diagnostics',
-        };
-        {'
-          name: 'Biotech AI Research Platform','
-          description: 'AI-driven research tools for biotechnology and pharmaceutical development','
-          href: '/biotech-ai-research-platform',
-        }
-      ]
-    };
-    {'
-      category: 'Financial Services',
-      solutions: []
-        {'
-          name: 'Financial Solutions','
-          description: 'Comprehensive financial technology solutions for modern enterprises','
-          href: '/financial-solutions',
-          featured: true,
-        };
-        {'
-          name: 'AI Financial Intelligence','
-          description: 'Intelligent financial analysis and decision-making platforms','
-          href: '/ai-financial-intelligence',
-        };
-        {'
-          name: 'Quantum Financial Trading','
-          description: 'Quantum-powered trading algorithms and financial modeling','
-          href: '/quantum-financial-trading',
-        }
-      ]
-    };
-    {'
-      category: 'Manufacturing & Industry',
-      solutions: []
-        {'
-          name: 'Manufacturing AI Solutions','
-          description: 'AI-powered automation and optimization for manufacturing processes','
-          href: '/manufacturing-ai-solutions',
-          featured: true,
-        };
-        {'
-          name: 'Industrial Automation AI','
-          description: 'Intelligent automation systems for industrial operations','
-          href: '/industrial-automation-ai',
-        };
-        {'
-          name: 'Autonomous Manufacturing','
-          description: 'Self-managing manufacturing systems with AI oversight','
-          href: '/autonomous-manufacturing',
-        }
-      ]
-    };
-    {'
-      category: 'Retail & E-commerce',
-      solutions: []
-        {'
-          name: 'Retail Technology Solutions','
-          description: 'Advanced technology solutions for modern retail operations','
-          href: '/retail-technology-solutions',
-          featured: true,
-        };
-        {'
-          name: 'AI Customer Journey Analytics','
-          description: 'Comprehensive customer behavior analysis and optimization','
-          href: '/ai-customer-journey-analytics',
-        };
-        {'
-          name: 'AI Content Personalization','
-          description: 'Dynamic content adaptation based on customer preferences','
-          href: '/ai-content-personalization-engine',
-        }
-      ]
-    };
-    {'
-      category: 'Government & Public Sector',
-      solutions: []
-        {'
-          name: 'Government Technology Solutions','
-          description: 'Innovative technology solutions for government agencies and public services','
-          href: '/government-technology-solutions',
-          featured: true,
-        };
-        {'
-          name: 'AI Ethics & Governance Framework','
-          description: 'Comprehensive frameworks for responsible AI deployment','
-          href: '/ai-ethics-governance-framework',
-        };
-        {'
-          name: 'Cybersecurity Solutions','
-          description: 'Advanced security solutions for government and enterprise','
-          href: '/cybersecurity',
-        }
-      ]
-    };
-    {'
-      category: 'Education & Training',
-      solutions: []
-        {'
-          name: 'Education Technology Solutions','
-          description: 'Innovative technology solutions for modern education and training','
-          href: '/education-technology-solutions',
-          featured: true,
-        };
-        {'
-          name: 'AI Education Platform','
-          description: 'Intelligent learning systems and educational content platforms','
-          href: '/ai-education-platform',
-        };
-        {'
-          name: 'Training Solutions','
-          description: 'Comprehensive training and development platforms','
-          href: '/training',
-        }
-      ]
-    };
-    {'
-      category: 'Sustainability & Energy',
-      solutions: []
-        {'
-          name: 'Energy & Utilities Solutions','
-          description: 'Technology solutions for energy optimization and sustainability','
-          href: '/energy-utilities-solutions',
-          featured: true,
-        };
-        {'
-          name: 'AI Sustainability Platform','
-          description: 'AI-driven sustainability monitoring and optimization','
-          href: '/ai-sustainability-platform',
-        };
-        {'
-          name: 'Quantum Energy Platform','
-          description: 'Quantum computing solutions for energy optimization','
-          href: '/quantum-energy-platform',
-=======
-const SolutionsPage: React.FC = () => {
-  const industrySolutions = [
-    {
-      category: 'Healthcare & Life Sciences';,
-      solutions: [
-        {
-          name: 'Healthcare AI Solutions';,
-          description: 'AI-powered diagnostic tools;, patient care optimization, and medical research platforms',
-    href: '/healthcare-solutions';,
-          featured: true;,
-          icon: <Heart className="w-6 h-6" />;
-        };
-        {
-          name: 'AI Healthcare Diagnostics';,
-          description: 'Advanced diagnostic systems using machine learning and medical imaging';,
-          href: '/ai-healthcare-diagnostics';,
-        };
-        {
-          name: 'Biotech AI Research Platform';,
-          description: 'AI-driven research tools for biotechnology and pharmaceutical development';,
-          href: '/biotech-ai-research-platform';,
-        }
-      ]
-    };
-    {
-      category: 'Financial Services';,
-      solutions: [
-        {
-          name: 'Financial Solutions';,
-          description: 'Comprehensive financial technology solutions for modern enterprises';,
-          href: '/financial-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'AI Financial Intelligence';,
-          description: 'Intelligent financial analysis and decision-making platforms';,
-          href: '/ai-financial-intelligence';,
-        };
-        {
-          name: 'Quantum Financial Trading';,
-          description: 'Quantum-powered trading algorithms and financial modeling';,
-          href: '/quantum-financial-trading';,
-        }
-      ]
-    };
-    {
-      category: 'Manufacturing & Industry';,
-      solutions: [
-        {
-          name: 'Manufacturing AI Solutions';,
-          description: 'AI-powered automation and optimization for manufacturing processes';,
-          href: '/manufacturing-ai-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'Industrial Automation AI';,
-          description: 'Intelligent automation systems for industrial operations';,
-          href: '/industrial-automation-ai';,
-        };
-        {
-          name: 'Autonomous Manufacturing';,
-          description: 'Self-managing manufacturing systems with AI oversight';,
-          href: '/autonomous-manufacturing';,
-        }
-      ]
-    };
-    {
-      category: 'Retail & E-commerce';,
-      solutions: [
-        {
-          name: 'Retail Technology Solutions';,
-          description: 'Advanced technology solutions for modern retail operations';,
-          href: '/retail-technology-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'AI Customer Journey Analytics';,
-          description: 'Comprehensive customer behavior analysis and optimization';,
-          href: '/ai-customer-journey-analytics';,
-        };
-        {
-          name: 'AI Content Personalization';,
-          description: 'Dynamic content adaptation based on customer preferences';,
-          href: '/ai-content-personalization-engine';,
-        }
-      ]
-    };
-    {
-      category: 'Government & Public Sector';,
-      solutions: [
-        {
-          name: 'Government Technology Solutions';,
-          description: 'Innovative technology solutions for government agencies and public services';,
-          href: '/government-technology-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'AI Ethics & Governance Framework';,
-          description: 'Comprehensive frameworks for responsible AI deployment';,
-          href: '/ai-ethics-governance-framework';,
-        };
-        {
-          name: 'Cybersecurity Solutions';,
-          description: 'Advanced security solutions for government and enterprise';,
-          href: '/cybersecurity';,
-        }
-      ]
-    };
-    {
-      category: 'Education & Training';,
-      solutions: [
-        {
-          name: 'Education Technology Solutions';,
-          description: 'Innovative technology solutions for modern education and training';,
-          href: '/education-technology-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'AI Education Platform';,
-          description: 'Intelligent learning systems and educational content platforms';,
-          href: '/ai-education-platform';,
-        };
-        {
-          name: 'Training Solutions';,
-          description: 'Comprehensive training and development platforms';,
-          href: '/training';,
-        }
-      ]
-    };
-    {
-      category: 'Sustainability & Energy';,
-      solutions: [
-        {
-          name: 'Energy & Utilities Solutions';,
-          description: 'Technology solutions for energy optimization and sustainability';,
-          href: '/energy-utilities-solutions';,
-          featured: true;,
-        };
-        {
-          name: 'AI Sustainability Platform';,
-          description: 'AI-driven sustainability monitoring and optimization';,
-          href: '/ai-sustainability-platform';,
-        };
-        {
-          name: 'Quantum Energy Platform';,
-          description: 'Quantum computing solutions for energy optimization';,
-          href: '/quantum-energy-platform';,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         }
       ]
     }
@@ -581,17 +54,7 @@ const SolutionsPage: React.FC = () => {
             >
               Revolutionary Solutions;
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-=======
-            <motion.p 
-              initial={{ opacity: 0;, y: 30 ;}}
-              animate={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0.8;, delay: 0.2 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             >
             {/* Stats Grid */}
             <motion.div "
@@ -631,19 +94,7 @@ const SolutionsPage: React.FC = () => {
                 <motion.div;
                   key={index}"
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-<<<<<<< HEAD
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >"
-=======
-                  initial={{ opacity: 0;, y: 30 ;}}
-                  whileInView={{ opacity: 1;, y: 0 ;}}
-                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}
-                  viewport={{ once: true ;}}
-                >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <ul className="space-y-3 mb-8">
                     {solution.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
@@ -687,21 +138,7 @@ const SolutionsPage: React.FC = () => {
       </section>"
       <section className="py-20 px-4 bg-black">"
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >"
-=======
-          <motion.div
-            initial={{ opacity: 0;, y: 30 ;}}
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0.8 ;}}
-            viewport={{ once: true ;}}
-          >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry-Specific Solutions;
             </h2>"
@@ -713,19 +150,7 @@ const SolutionsPage: React.FC = () => {
             {industrySolutions.map((category, categoryIndex) => (
               <motion.div;
                 key={category.category}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-              >"
-=======
-                initial={{ opacity: 0;, y: 30 ;}}
-                whileInView={{ opacity: 1;, y: 0 ;}}
-                transition={{ duration: 0.8;, delay: categoryIndex * 0.2 ;}}
-                viewport={{ once: true ;}}
-              >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
                 </h3>"
@@ -733,21 +158,7 @@ const SolutionsPage: React.FC = () => {
                   {category.solutions.map((solution, solutionIndex) => (
                     <motion.div;
                       key={solution.name}
-<<<<<<< HEAD
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
-                      viewport={{ once: true }}`
-                      className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${'
-                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'`
-=======
-                      initial={{ opacity: 0;, y: 30 ;}}
-                      whileInView={{ opacity: 1;, y: 0 ;}}
-                      transition={{ duration: 0.6;, delay: solutionIndex * 0.1 ;}}
-                      viewport={{ once: true ;}}
-                      className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
-                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                       }`}
                     >
                       {solution.featured && ("
@@ -777,21 +188,7 @@ const SolutionsPage: React.FC = () => {
       </section>"
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">"
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >"
-=======
-          <motion.div
-            initial={{ opacity: 0;, y: 30 ;}}
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0.8 ;}}
-            viewport={{ once: true ;}}
-          >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Industry?
             </h2>"
@@ -821,33 +218,9 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
-<<<<<<< HEAD
-  opacity: 0, coordinate_y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, coordinate_y: 0;
-}transition= {}
-  {}
-=======
-  opacity: 0;, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1;, coordinate_y: 0;
-}transition= {
-  {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   duration: 0.8;
-<<<<<<< HEAD
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text - xl text - gray-300 mb-8" > Let's discuss how our industry - specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline - block ml - 2 w-5 h-5" /> </a> <Link href="/services" className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur-md hover:bg-white / 10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>);
-=======
-}viewport= {}
-  {}
-  once: true;'"
-}> <h2 className="text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Industry? </h2> <p className="text - xl text - gray - 300 mb - 8" > Let's discuss how our industry - specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:shadow - 2xl hover:shadow - green - 500 / 25 transition - all duration - 300" > Start Your Transformation <ArrowRight className="inline - block ml - 2 w - 5 h - 5" /> </a> <Link href="/services" className="border border - white / 30 hover:border - white / 50 text - white px - 8 py - 4 rounded - full text - lg font - semibold transition - all duration - 300 backdrop - blur - md hover:bg - white / 10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 }
 export default Solutions;}
 ;
@@ -866,21 +239,10 @@ export default Solutions;}
 }
 ;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { Heart, DollarSign, Factory, ShoppingCart, Building2;
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
   Users, Globe, Cpu, Database, Network, Target
  } from 'lucide-react';
 const SolutionsPage: React.FC;
 export default Solutions;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

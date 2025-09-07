@@ -1,36 +1,7 @@
-
-=======
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Job, JobStatus } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Edit, X, Eye } from "lucide-react",;
-import { format } from "date-fns",;
-import { Link } from "react-router-dom",;
-;
-interface JobsListProps {;
-  filter?:JobStatus,;
-  onSelectJob?:(jobId:string, jobTitle:string) => void;
-}
-;
-export function JobsList({ filter, onSelectJob } JobsListProps) {;
-  const { user } = useAuth(),;
-  const [jobs, setJobs] = useState<Job[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
-    const fetchJobs = async () => {;
-      if (!user) return,;
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      try {;
+try {;
         let query = supabase;
           .from("jobs");
           .select("*");
-<<<<<<< HEAD
 
       <div className="text-center p-8 border rounded-md bg-muted/20">;
         <p className="text-lg text-muted-foreground">;

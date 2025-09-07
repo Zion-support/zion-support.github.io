@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServicesPage() {;
-
-=======
-export default function ServicesPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 
 export default function ServicesPage() {}
@@ -52,17 +45,7 @@ export default function ServicesPage() {}
         <section id="mvp" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">"
           <Rocket className="h-6 w-6 text-indigo-500" />"
           <div className="mt-3 text-lg font-semibold">MVP Acceleration</div>"
-=======
 
-export default function ServicesPage() {
-  return (
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Services</h1>
-      <div className="mt-6 grid md:grid-cols-3 gap-6">
-        <section id="mvp" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
-          <Rocket className="h-6 w-6 text-indigo-500" />
-          <div className="mt-3 text-lg font-semibold">MVP Acceleration</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <p className="mt-1 text-sm opacity-80">Dedicated squads to launch your MVP in weeks with tight feedback cycles.</p>
         </section>"
         <section id="security" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">"
@@ -121,18 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
-}'
-import EnhancedLayout from '../components / layout / EnhancedLayout';'
-import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-export default /**;
- * ServicesPage - Function description;
-=======
-}
-import EnhancedLayout from '../components / layout / EnhancedLayout';
-export default /**
- * ServicesPage - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
  */
 function ServicesPage() {}
   return (
@@ -172,19 +144,7 @@ function ServicesPage() {}
             product.;
           </p>        </section>;
       </div>;
-<<<<<<< HEAD
-    </EnhancedLayout>);
-}        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg-gray-950">;
-          <BadgeCheck className="h - 6 w - 6 text-indigo-500" />;
-          <div className="mt - 3 text-lg font-semibold">AI Integrations</div>;
-          <p className="mt - 1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>;
-=======
-    </EnhancedLayout>);"
-}        <section id="ai" className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;"
-          <BadgeCheck className="h - 6 w - 6 text - indigo - 500" />;"
-          <div className="mt - 3 text - lg font - semibold">AI Integrations</div>;"
-          <p className="mt - 1 text - sm opacity - 80">Copilots, agents, vector search, and automation tailored to your product.</p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       </div>;
     </EnhancedLayout>);
 }"
@@ -194,13 +154,3 @@ function ServicesPage() {}
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
       </div>
     </EnhancedLayout>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

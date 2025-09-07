@@ -1,23 +1,8 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 type EpisodeListItem = any;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-useEffect ( () => {
-  const load = async () => {
-  try {
-=======
-useEffect ( () => {}
-  const load = async () => {}
-  try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   return (
     <div className='space-y-6'>;'
       <div className='flex items-center justify-between'>;'
@@ -75,10 +60,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     MP3;
                   </a>;
                 )}
-=======
 
-                )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {ep && ep.audio?.wavUrl && (;
                   <a;
                     href={ep && ep.audio.wavUrl}'
@@ -97,19 +79,7 @@ href={ep.audio.wavUrl}
                     WAV;
                   </a>;
                 )}
-<<<<<<< HEAD
-                {ep && ep.audio?.mp4Url && (;
-                  <a;
-                    href={ep && ep.audio.mp4Url}'
-                    className='px-3 py-2 bg-purple-700 text-white rounded'"
-                    download>                    MP4                  <a href={ep && ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>;
-=======
-                {ep.audio?.mp4Url && (<a;}
-                    href={ep.audio.mp4Url}
-                    className='px-3 py-2 bg-purple-700 text-white rounded';
-                    download />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     MP4;
                   </a>;
                 )}
@@ -161,15 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
-  // Check condition;
-if (return <div > Loading episodes…</div>) {}
-  $2;
-=======
-  // Check condition
-if (return <div > Loading episodes…</div>) {
-  $2
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 }
   return ('
     <div className='space - y-6'>;'
@@ -260,14 +222,5 @@ if (return <div > Loading episodes…</div>) {}
     </div>);
 }
 
-
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
-'"`
-=======
-
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

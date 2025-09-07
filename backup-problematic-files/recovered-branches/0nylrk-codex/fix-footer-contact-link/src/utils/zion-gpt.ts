@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;
 ;
@@ -138,28 +132,12 @@ export async function callZionGPT({;
 } // ZionGPT Utility Functions // This file handles interaction with the fine-tuned ZionGPT model // Get the latest active model ID for a specific purpose export async function getActiveModelId (purpose: 'job' | 'resume' | 'support') : Promise<ModelVersion> {
   try {
   const {
-<<<<<<< HEAD
-  data, error
-}= await supabase .from ('model versions') .select ('id') .eq ('purpose', purpose) .eq ('active', true) .order ('version', {
-  ascending: false
-=======
-  data, error 
-}= await supabase .from ('model versions') .select ('id') .eq ('purpose', purpose) .eq ('active', true) .order ('version', {
-  ascending: false 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 }) .limit (1) .single ();
 await supabase .from ('model usage logs') .insert ({
   if (error) throw error;
 // Log usage for analytics if (data.tokensUsed) {
   await logModelUsage (modelId, data.tokensUsed, `$ {
-<<<<<<< HEAD
-  purpose
-}-generation`;
-userId)
-=======
-  purpose 
-}-generation`;
-userId) 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 }
 }

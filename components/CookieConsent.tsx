@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-
-export default function CookieConsent() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
 export default function CookieConsent() { return null; }
   const [preferences, setPreferences] = useState({}
     necessary: true;
@@ -32,19 +19,6 @@ export default function CookieConsent() { return null; }
       functional: true;
     }
 
-<<<<<<< HEAD
-export default function CookieConsent() {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const [isVisible, setIsVisible] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [preferences, setPreferences] = useState({;
-    necessary: true,;
-    analytics: false,;
-    marketing: false,;
-    functional: false,;
-=======
-export default function CookieConsent() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
 
   useEffect(() => {;"
@@ -59,15 +33,7 @@ export default function CookieConsent() { return null; }
       necessary: true,;
       analytics: true,;
       marketing: true,;
-<<<<<<< HEAD
-      functional: true,
-};
-    setPreferences(allAccepted);
-=======
-      functional: true,;
-    };
-    setPreferences(allAccepted);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
     setPreferences(onlyNecessary);"
@@ -117,119 +83,25 @@ export default function CookieConsent() { return null; }
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-            <div className="flex flex - col sm:flex - row gap - 2 w-full md:w-auto">;
-              <button;
-                on_click={() => setShowSettings (true)}
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray - 800 transition - colors flex items-center gap-2";
-              >;
-                <Settings className="w-4 h-4" />;
-                Cookie Settings;
-              </button>;
-              <button;
-                on_click={reject_all}
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray-800 transition-colors";
-=======
-  );"
-            <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
-              <button;
-                on_click={() => setShowSettings (true)}"
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray - 800 transition - colors flex items - center gap - 2";
-              >;"
-                <Settings className="w - 4 h - 4" />;
-                Cookie Settings;
-              </button>;
-              <button;
-                on_click={reject_all}"
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray - 800 transition - colors";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >;
                 Reject All;
               </button>;
               <button;
-<<<<<<< HEAD
-                on_click={accept_all}
-                className="px - 6 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition-colors font-medium";
-=======
-                on_click={accept_all}"
-                className="px - 6 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - medium";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >;
                 Accept All;
               </button>;
             </div>;
           </div>) : (
-<<<<<<< HEAD
-          <div>;
-            <div className="flex items - center justify-between mb-4">;
-              <h3 className="text - lg font - semibold text-gray-900">;
-                Cookie Preferences;
-              </h3>;
-              <button;
-                on_click={() => setShowSettings (false)}
-                className="text - gray - 400 hover:text - gray-600 transition-colors";
-              >;
-                <X className="w-5 h-5" />;
-              </button>;
-            </div>;
-            <div className="space-y-4 mb-6">;
-              <div className="flex items - center justify - between p - 3 bg - gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font - medium text-gray-900">;
-                    Necessary Cookies;
-                  </h4>;
-                  <p className="text - sm text-gray-600">;
-=======
-          <div>;"
-            <div className="flex items - center justify - between mb - 4">;"
-              <h3 className="text - lg font - semibold text - gray - 900">;
-                Cookie Preferences;
-              </h3>;
-              <button;
-                on_click={() => setShowSettings (false)}"
-                className="text - gray - 400 hover:text - gray - 600 transition - colors";
-              >;"
-                <X className="w - 5 h - 5" />;
-              </button>;
-            </div>;"
-            <div className="space - y-4 mb - 6">;"
-              <div className="flex items - center justify - between p - 3 bg - gray - 50 rounded - lg">;
-                <div>;"
-                  <h4 className="font - medium text - gray - 900">;
-                    Necessary Cookies;
-                  </h4>;"
-                  <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     Required for the website to function properly;
                   </p>;
                 </div>;
                 <input;"
                   type="checkbox";
                   checked={preferences.necessary}
-<<<<<<< HEAD
-                  disabled;
-                  className="w - 4 h - 4 text-blue-600 rounded";
-                />;
-              </div>;
-              <div className="flex items - center justify - between p - 3 bg - gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font - medium text-gray-900">;
-                    Analytics Cookies;
-                  </h4>;
-                  <p className="text - sm text-gray-600">;
-=======
-                  disabled;"
-                  className="w - 4 h - 4 text - blue - 600 rounded";
-                />;
-              </div>;"
-              <div className="flex items - center justify - between p - 3 bg - gray - 50 rounded - lg">;
-                <div>;"
-                  <h4 className="font - medium text - gray - 900">;
-                    Analytics Cookies;
-                  </h4>;"
-                  <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     Help us understand how visitors interact with our website;
                   </p>;
                 </div>;
@@ -241,29 +113,7 @@ export default function CookieConsent() { return null; }
                       ...prev,
                       analytics: e.target.checked,
                     }));
-<<<<<<< HEAD
-                  }
-                  className="w - 4 h - 4 text-blue-600 rounded";
-                />;
-              </div>;
-              <div className="flex items - center justify - between p - 3 bg - gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font - medium text-gray-900">;
-                    Marketing Cookies;
-                  </h4>;
-                  <p className="text - sm text-gray-600">;
-=======
-                  }"
-                  className="w - 4 h - 4 text - blue - 600 rounded";
-                />;
-              </div>;"
-              <div className="flex items - center justify - between p - 3 bg - gray - 50 rounded - lg">;
-                <div>;"
-                  <h4 className="font - medium text - gray - 900">;
-                    Marketing Cookies;
-                  </h4>;"
-                  <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     Used to track visitors across websites for advertising;
                     purposes;
                   </p>;
@@ -276,29 +126,7 @@ export default function CookieConsent() { return null; }
                       ...prev,
                       marketing: e.target.checked,
                     }));
-<<<<<<< HEAD
-                  }
-                  className="w - 4 h - 4 text-blue-600 rounded";
-                />;
-              </div>;
-              <div className="flex items - center justify - between p - 3 bg - gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font - medium text-gray-900">;
-                    Functional Cookies;
-                  </h4>;
-                  <p className="text - sm text-gray-600">;
-=======
-                  }"
-                  className="w - 4 h - 4 text - blue - 600 rounded";
-                />;
-              </div>;"
-              <div className="flex items - center justify - between p - 3 bg - gray - 50 rounded - lg">;
-                <div>;"
-                  <h4 className="font - medium text - gray - 900">;
-                    Functional Cookies;
-                  </h4>;"
-                  <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     Enable enhanced functionality and personalization;
                   </p>;
                 </div>;
@@ -310,38 +138,12 @@ export default function CookieConsent() { return null; }
                       ...prev,
                       functional: e.target.checked,
                     }));
-<<<<<<< HEAD
-                  }
-                  className="w - 4 h - 4 text-blue-600 rounded";
-                />;
-              </div>;
-            </div>;
-            <div className="flex flex - col sm:flex - row gap-2 justify-end">;
-              <button;
-                on_click={reject_all}
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray-800 transition-colors";
-=======
-                  }"
-                  className="w - 4 h - 4 text - blue - 600 rounded";
-                />;
-              </div>;
-            </div>;"
-            <div className="flex flex - col sm:flex - row gap - 2 justify - end">;
-              <button;
-                on_click={reject_all}"
-                className="px - 4 py - 2 text - sm text - gray - 600 hover:text - gray - 800 transition - colors";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >;
                 Reject All;
               </button>;
               <button;
-<<<<<<< HEAD
-                on_click={accept_selected}
-                className="px - 6 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition-colors font-medium";
-=======
-                on_click={accept_selected}"
-                className="px - 6 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - medium";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >;
                 Save Preferences;
               </button>;

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -22,7 +9,6 @@ const __dirname = path.dirname(__filename);
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -56,41 +42,13 @@ function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src')); 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -111,32 +69,8 @@ class ErrorBoundary extends React.Component {}
   }
 }
 
-<<<<<<< HEAD
-#!/usr/bin/env node
-<<<<<<< HEAD
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src'));
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
-=======
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 function createValidReactComponent(filePath) {
-=======
-#!/usr/bin/env node;
-function createValidReactComponent(filePath) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .split("-")
@@ -144,56 +78,13 @@ function createValidReactComponent(filePath) {}
     .join("")"
     .replace(/[^a-zA-Z0-9]/g, "");"
   return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
-<<<<<<< HEAD
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src')); 
-import fs from 'fs';
-import path from 'path';
-=======
 
-
-'"`
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src')); '
-import fs from 'fs';'
-import path from 'path';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
 const __filename = fileURLToPath(import.meta.url);
-<<<<<<< HEAD
-=======
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';=======import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src')); 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 const __dirname = path.dirname(__filename);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-function createValidReactComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-function createValidReactComponent(filePath) {}
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))'
     .join('')'
@@ -213,58 +104,14 @@ export default function ${componentName}() {}
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional ${componentName} services delivered with cutting-edge technology and expertise.
           </p>
-=======
 
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;""`;
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join() .replace(/[^a-zA-Z0-9]/g,); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} }  const fixedCount = processDirectory(path.join(__dirname,'src'));
-function createValidReactComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName;
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join()
-    .replace(/[^a-zA-Z0-9]/g, );`;
-  return `import React from "react";"
-export default function ${componentName}() {
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-</div>"
-      <SEO title="${componentName} - Zion Technologies"""
-        description="Professional ${componentName} services by Zion Technologies""
-      />
-"
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-white mb-8">"
-</h1>
-          </h1>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
     </div>;
   );`
 }`;
 }
-<<<<<<< HEAD
-function fixFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    // Basic "heuristic": if the file is very short or empty, rewrite it
-    </div>)
-    if (content.trim().length < 20) {
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-function fixFile(filePath) {}
-  try {'
-    const content = fs.readFileSync(filePath, 'utf8');"
-    // Basic "heuristic": if the file is very short or empty, rewrite it;
-    if (content.trim().length < 20) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
       return true;
@@ -273,72 +120,14 @@ function fixFile(filePath) {}
   } catch (error) {}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }      }
-    }
-    return fixedCount;
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
   }
 function processDirectory(dirPath) {
-=======
-  }
 
-function processDirectory(dirPath) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let fixedCount = 0;
   try {}
     const items = fs.readdirSync(dirPath);
-<<<<<<< HEAD
-     else if (
-        item.endsWith(".tsx") ||
-        item.endsWith(".ts") ||
-        item.endsWith(".js") ||
-        item.endsWith(".jsx")
-      ) {
-        if (fixFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-    return fixedCount;
-  } catch (error) {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-    return 0;
-  }
-const fixedCount = processDirectory(path.join(__dirname, "src"));
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -354,99 +143,14 @@ function createValidReactComponent(filePath) {
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
 export default function ${componentName}() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}`;
-}
-<<<<<<< HEAD
-=======
-#!/usr / bin / env node;
-import fs from './fs';
-import path from './path';
-import { fileURLToPath  } from './url';
-;
-const __filename = fileURLToPath (import.meta.url);
-const __dirname = path.dirname (__filename);
-;
-/**
- * createValidReactComponent - Function description
- */
-function createValidReactComponent() {
-  const file_name = path.basename (file_path, path.extname (file_path));
-  const component_name = file_name;
-    .split ("-");
-    .map ((word) => word.char_at (0).toUpperCase () + word.slice (1));
-    .join ("");
-    .replace (/[^a - z_a - Z0 - 9]/g, "");
-;
-  return `import React from './react';
-;
-export default function ${component_name}() {
-  return (
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}`;
-}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-}`;
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-      ) {}
-        if (fixFile(fullPath)) {}
-          fixedCount++;
-        }
-      }
-    }
-    return fixedCount;
-  } catch (error) {}`
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-    return 0;
-  }
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    <div>;
-      <h1>${component_name}</h1>;
-      <p > This is a valid React component.</p>;
-    </div>);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }`;
 }
 
 /**
  * fix_file - Function description;
  */
-<<<<<<< HEAD
-function fix_file() {
-  try {
-<<<<<<< HEAD
-    const content = fs.readFileSync(filePath, "utf8");
-    
-    // Check if it's a React component file
-    if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
-      // If file is empty or has syntax errors, create a valid component
-    // Basic "heuristic": if the file is very short or empty, rewrite it
-    if (content.trim().length < 20) {
-      const newContent = createValidReactComponent(filePath);
-      fs.writeFileSync(filePath, newContent);
-      return true;
-    return false;
-  } catch (error) {`;
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function processDirectory(dirPath) {
   let fixedCount = 0;
   try {
@@ -517,7 +221,6 @@ function processDirectory(dirPath) {
   try {
         fixedCount += fixFile(fullPath);
 
-
       }
     }
     return fixedCount;
@@ -529,11 +232,7 @@ function processDirectory(dirPath) {
 
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
-<<<<<<< HEAD
-console.log(`Fixed ${fixedCount} files`);
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -546,48 +245,6 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-<<<<<<< HEAD
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
-=======
-  return `import React from "react";
-export default function ${componentName}() {
-}`;
-}
-#!/usr / bin / env node;
-import fs from './fs';
-import path from './path';
-import { fileURLToPath  } from './url';
-;
-const __filename = fileURLToPath (import.meta.url);
-const __dirname = path.dirname (__filename);
-;
-/**
- * createValidReactComponent - Function description
- */
-function createValidReactComponent() {
-  const file_name = path.basename (file_path, path.extname (file_path));
-  const component_name = file_name;
-    .split ("-");
-    .map ((word) => word.char_at (0).toUpperCase () + word.slice (1));
-    .join ("");
-    .replace (/[^a - z_a - Z0 - 9]/g, "");
-;
-  return `import React from './react';
-;
-export default function ${component_name}() {
-  return (
-    <div>;
-      <h1>${component_name}</h1>;
-      <p > This is a valid React component.</p>;
-    </div>);
-    <div>
-      <h1>${componentName}</h1>
-      <p>This is a valid React component.</p>
-    </div>;
-  );
-}`;
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 function fixFile(filePath) {
   try {
@@ -685,11 +342,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
-=======
-=======
-function fix_file() {}
-  try {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     const content = fs.readFileSync (file_path, "utf8");
 ;'
     // Check if it's a React component file;"
@@ -700,7 +353,7 @@ function fix_file() {}
         const new_content = createValidReactComponent (file_path);
         fs.writeFileSync (file_path, new_content);`
         console.log (`Fixed: ${file_path}`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
         return 1;
       }
     }
@@ -739,67 +392,11 @@ function process_directory() {}
     }
     return fixed_count;
 
-<<<<<<< HEAD
-  } catch (error) {
-    console.error (`Error processing directory ${dir_path}:`, error.message);
-    return 0;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const content = fs && fs.readFileSync(filePath, "utf8");
     // Check if it's a React component file
     if (filePath && filePath.endsWith(".jsx") || filePath && filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  } catch (error) {}`
-    console.error (`Error processing directory ${dir_path}:`, error.message);
-    return 0;
-  }
-"
-    const content = fs && fs.readFileSync(filePath, "utf8");'
-    // Check if it's a React component file"
-    if (filePath && filePath.endsWith(".jsx") || filePath && filePath.endsWith(".tsx")) {}
-      // If file is empty or has syntax errors, create a valid component;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);`
         console.log(`Fixed: ${filePath}`);
@@ -811,94 +408,17 @@ function process_directory() {}
     return 0;
   }
 
-<<<<<<< HEAD
-function processDirectory(dirPath) {
-  try {
-<<<<<<< HEAD
-=======
-function processDirectory(dirPath) {}
-  try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    if (!fs && fs.existsSync(dirPath)) {
-      return 0;
-    }
-
-    const items = fs && fs.readdirSync(dirPath);
-
-    let fixedCount = 0;
-    for (const item of items) {
-
-      const fullPath = path && path.join(dirPath, item);
-      const stat = fs && fs.statSync(fullPath);
-      if (stat && stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
-      } else if (stat && stat.isFile() && (item && item.endsWith(".js") || item && item.endsWith(".jsx") || item && item.endsWith(".ts") || item && item.endsWith(".tsx"))) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         fixedCount += fixFile(fullPath);
       }
     }
     return fixedCount;
-<<<<<<< HEAD
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     console && console.error(`Error processing directory ${dirPath}:`, error && error.message);
     return 0;
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-console.log("Starting aggressive fix...");
-const fixedCount = processDirectory(path.join(__dirname, "src"));
-console.log(`Fixed ${fixedCount} files`);
-=======
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-console.log(`Fixed ${fixedCount} files`);
-=======
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 console && console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path && path.join(__dirname, "src"));
@@ -908,11 +428,6 @@ console && console.log(`Fixed ${fixedCount} files`);
 console.log ("Starting aggressive fix...");
 const fixed_count = process_directory (path.join (__dirname, "src"));
 console.log (`Fixed ${fixed_count} files`);
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 console.log(`Fixed ${fixedCount} files`);
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
@@ -926,119 +441,9 @@ console.log ("Starting aggressive fix...");
 const fixed_count = process_directory (path.join (__dirname, "src"));
 console.log (`Fixed ${fixed_count} files`);
 
-<<<<<<< HEAD
-
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 console.log('Starting aggressive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));
 console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  } catch (error) {}
-"
-console && console.log("Starting aggressive fix...");"
-const fixedCount = processDirectory(path && path.join(__dirname, "src"));`
-console && console.log(`Fixed ${fixedCount} files`);
-
-
-}"
-console.log ("Starting aggressive fix...");"
-const fixed_count = process_directory (path.join (__dirname, "src"));`
-console.log (`Fixed ${fixed_count} files`);
-
-
-
-
-
-
-
-
-}'
-console.log('Starting aggressive fix...');'
-const fixedCount = processDirectory(path.join(__dirname, 'src'));`
-console.log(`Fixed ${fixedCount} files`);
-
-
-
-'"`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('') .replace(/[^a-zA-Z0-9]/g,''); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);
-
-
-
-
-
-
-
-<<<<<<< HEAD
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-     else if ()"
-        item.endsWith(".tsx") ||""
-        item.endsWith(".ts") ||""
-        item.endsWith(".js") ||""
-        item.endsWith(".jsx")"
-      ) {
-        if (fixFile(fullPath)) {
-          fixedCount++;
-    .split("-")"
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))"
-    .join("")""
-    .replace(/[^a-zA-Z0-9]/g, "");""`;
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;"
-    <div>;
-      <h1>${component_name}</h1>;
-      <p > This is a valid React component.</p>;
-    </div>);"`;
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath)); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join() .replace(/[^a-zA-Z0-9]/g,); return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); if (content.trim().length < 20) { const newContent = createValidReactComponent(filePath); fs.writeFileSync(filePath,newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } function processDirectory(dirPath) { let fixedCount = 0; try { const items = fs.readdirSync(dirPath); for (const item of items) { const fullPath = path.join(dirPath,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { fixedCount += processDirectory(fullPath)} else if ( item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') ) { if (fixFile(fullPath)) { fixedCount++} } } return fixedCount} catch (error) { console.error(`Error processing directory ${dirPath}:`,error.message); return 0} } console.log('Starting aggressive fix...'); const fixedCount = processDirectory(path.join(__dirname,'src')); console.log(`Fixed ${fixedCount} files`);`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

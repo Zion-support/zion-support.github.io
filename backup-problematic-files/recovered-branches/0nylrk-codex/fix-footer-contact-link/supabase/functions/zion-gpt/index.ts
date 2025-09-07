@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 ;
@@ -57,8 +56,7 @@ serve(async (req) => {;
         tokensUsed:data.usage?.total_tokens || 0;
       });
       {;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    );
+        headers:{ ...corsHeaders, "Content-Type":"application/json" }});
   } catch (error) {;
     console.error("Error in zion-gpt function:", error);
     ;
@@ -66,8 +64,7 @@ serve(async (req) => {;
       JSON.stringify({ error:error.message });
       {;
         status:500;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    );  }
+        headers:{ ...corsHeaders, "Content-Type":"application/json" }});  }
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
@@ -102,7 +99,3 @@ return new Response (JSON.stringify ({
 );
 }
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

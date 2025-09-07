@@ -17,17 +17,7 @@ const LiveChat: React.FC = () => {,
       text: 'Hello! Welcome to Zion Tech Group. How can I help you today?','
       isUser: false,
       timestamp: new Date(),
-<<<<<<< HEAD
-      type: 'system',
-    },
-  ]);
-  const [inputText, setInputText] = useState('');
-=======
-type: 'system''
-    }
-  ]);,
-  const [inputText, setInputText] = useState('');,
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { addNotification } = useNotifications();
@@ -51,19 +41,7 @@ type: 'system''
     // Simulate bot response
     setTimeout(() => {,
       const responses = [
-<<<<<<< HEAD
-        'That\'s a great question! Let me connect you with our technical team.',
-        'I understand you\'re interested in our services. Would you like to schedule a consultation?',
-        'Thank you for reaching out! Our team will get back to you within 24 hours.',
-        'I can help you with that. Let me provide you with more information.',
-        'That\'s an excellent point. Our experts would love to discuss this with you.',
-=======
-"That's a great question! Let me connect you with our technical team.","
-        "I understand you're interested in our services. Would you like to schedule a consultation?","
-        "Thank you for reaching out! Our team will get back to you within 24 hours.","
-        "I can help you with that. Let me provide you with more information.","
-        "That's an excellent point. Our experts would love to discuss this with you.""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
       ];
       const botMessage: ChatMessage = {,
         id: (Date.now() + 1).toString(),
@@ -82,37 +60,7 @@ type: 'system''
     }
   };,
   const quickActions = [
-<<<<<<< HEAD
-    {
-      label: 'Schedule Call',
-      icon: Phone,
-      action: () =>
-        addNotification({
-          type: 'info',
-          title: 'Call Scheduled',
-          message: 'We\'ll call you within 30 minutes!',
-        }),
-    },
-    {
-      label: 'Send Email',
-      icon: Mail,
-      action: () =>
-        addNotification({
-          type: 'info',
-          title: 'Email Sent',
-          message: 'Check your inbox for our response!',
-        }),
-    },
-    {
-      label: 'View Services',
-      icon: MessageCircle,
-      action: () => (window.location.href = '/services'),
-    },
-=======
-{ label: 'Schedule Call', icon: Phone, action: () => addNotification({ type: 'info', title: 'Call Scheduled', message: 'We\'ll call you within 30 minutes!' }) },'
-    { label: 'Send Email', icon: Mail, action: () => addNotification({ type: 'info', title: 'Email Sent', message: 'Check your inbox for our response!' }) },'
-    { label: 'View Services', icon: MessageCircle, action: () => window.location.href = '/services' }'
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   ];
   return (
     <>
@@ -165,13 +113,7 @@ type: 'system''
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl flex flex-col"
-=======
-transition={{ duration: 0.3, ease: "easeOut" }}"
-            className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl flex flex-col""
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           >
             {/* Chat Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-700/50">"
@@ -190,13 +132,7 @@ transition={{ duration: 0.3, ease: "easeOut" }}"
               </button>
             </div>
             {/* Messages */}
-<<<<<<< HEAD
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.map(message => (
-=======
-<div className="flex-1 overflow-y-auto p-4 space-y-4">"
-              {messages.map((message) => (
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
@@ -207,30 +143,7 @@ transition={{ duration: 0.3, ease: "easeOut" }}"
                   <div
                     className={`max-w-xs px-4 py-2 rounded-2xl ${`
                       message.isUser
-<<<<<<< HEAD
-                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white'
-                        : message.type === 'system'
-                          ? 'bg-gray-800 text-gray-300'
-                          : 'bg-gray-700 text-white'
-                    }`}
-                  >
-                    <p className="text-sm">{message.text}</p>
-                    <p className="text-xs opacity-70 mt-1">
-                      {message.timestamp.toLocaleTimeString([], {
-                        hour: '2-digit',
-                        minute: '2-digit',
-                      })}
-=======
-                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white''
-                        : message.type === 'system''
-                        ? 'bg-gray-800 text-gray-300''
-                        : 'bg-gray-700 text-white''
-                    }`}`
-                  >
-                    <p className="text-sm">{message.text}</p>"
-                    <p className="text-xs opacity-70 mt-1">",
-                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}'
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
                     </p>
                   </div>
                 </motion.div>
@@ -241,25 +154,7 @@ transition={{ duration: 0.3, ease: "easeOut" }}"
                   animate={{ opacity: 1 }}
                   className="flex justify-start""
                 >
-<<<<<<< HEAD
-                  <div className="bg-gray-700 text-white px-4 py-2 rounded-2xl">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div
-                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                        style={{ animationDelay: '0.1s' }}
-                      ></div>
-                      <div
-                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                        style={{ animationDelay: '0.2s' }}
-                      ></div>
-=======
-                  <div className="bg-gray-700 text-white px-4 py-2 rounded-2xl">"
-                    <div className="flex space-x-1">"
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>"
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>'
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
                     </div>
                   </div>
                 </motion.div>

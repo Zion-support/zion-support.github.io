@@ -1,39 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button","
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-<<<<<<< HEAD
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-import './video-call.css',
-interface Participant {
-  id: string,
-  name: string,
-  avatar?: string,
-  isMuted?: boolean,
-  isVideoEnabled?: boolean,
-  isScreenSharing?: boolean,
-  isHost?: boolean
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-=======
 
-=======
-";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-
-
 
 }
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({};
@@ -103,31 +73,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({};
       onLeave()
     }
 
-
   },
 
   return ('`
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
 
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
-        <div className="flex items-center space-x-2">
-          <CardTitle className="text-white">Video Call</CardTitle>
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css',;
-interface Participant {;
-=======
-"
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">"
-        <div className="flex items-center space-x-2">"
-          <CardTitle className="text-white">Video Call</CardTitle>"
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">'
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';'
-import './video-call ;interface Participant {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
   id: string,;
   name: string,;
   avatar?: string,;
@@ -172,10 +122,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     const hrs = Math.floor(seconds / 3600),;
     const mins = Math.floor((seconds % 3600) / 60),;
     const secs = seconds % 60,;
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
+
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
   },;
   const handleToggleMute = () => {;
@@ -191,11 +138,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
     }
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-;
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
+
     // If turning video back on, ensure we're not in audio-only mode;
     if (newVideoState) {;
       setIsAudioOnly(false);
@@ -223,21 +166,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     }
   },
 
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-  return (
-    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
-        <div className="flex items-center space-x-2">
-          <CardTitle className="text-white">Video Call</CardTitle>
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-=======
-  return ('`
-    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;"
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;"
-        <div className="flex items-center space-x-2">;"
-          <CardTitle className="text-white">Video Call</CardTitle>;"
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             Room: {roomId}
           </Badge>
         </div>"
@@ -373,63 +301,17 @@ if ( {) {}
           </Badge>;"
           <Badge variant="outline" className="text - white">;'
             {participants.length} participant{participants.length !== 1 ? 's' : ''}
-<<<<<<< HEAD
-          </Badge>
-        </div>
-      </CardHeader>
-=======
-          </Badge>;
-        </div>;
-      </CardHeader>;"
-      <CardContent className="p - 0">;"
-        <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
 
-          {participants.length > 0 ? (
-            participants.map ((participant, ) => ("
-              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
-
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
             participants.map((participant) => (
-=======
-      "
-      <CardContent className="p-0">"
-        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {participants.length > 0 ? (
-            participants.map((participant) => (
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
+
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
-<<<<<<< HEAD
-                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
-=======
 
-          </Badge>;"
-          <Badge variant="outline" className="text-white">;'
-            {participants && participants.length} participant{participants && participants.length !== 1 ? 's' : ''}
-          </Badge>;
-        </div>;
-      </CardHeader>;
-"
-      <CardContent className="p-0">;"
-        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-          {participants && participants.length > 0 ? (;
-            participants && participants.map((participant,) => (;"
-              <div key={participant && participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
-                {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;"
-                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
-
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* Placeholder for actual video stream */}
-=======
-                    {/* Placeholder for actual video stream */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
+
                     <Video className="h-12 w-12 opacity-50" />
                   </div>
                 ) : participant.isScreenSharing ? ("
@@ -447,9 +329,6 @@ if ( {) {}
                     </Avatar>;
                   </div>;
                 )}
-
-
-                
 
 "
                 <div className="video-metadata flex items-center space-x-2">
@@ -469,54 +348,7 @@ if ( {) {}
             </div>
           )}
         </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-          <Button
-            variant="outline"
-            size="icon"
-            className="video-button rounded-full h-10 w-10"
-            onClick={handleToggleMute}
-=======
-
-"
-        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-"
-                <div className="video-metadata flex items-center space-x-2">;
-                  <span>{participant && participant.name}</span>;"
-                  {participant && participant.isMuted && <MicOff className="h-4 w-4" />}"
-                  {participant && participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
-                </div>;
-              </div>;
-            ));
-          ) : (;"
-            <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">;"
-              <Video className="h-16 w-16 mb-4 opacity-30" />;"
-              <p className="text-center text-lg mb-2">No participants yet</p>;"
-              <p className="text-center text-sm text-gray-300">;
-                Share the meeting link to invite others;
-              </p>;
-            </div>;
-          )}
-        </div>;
-"
-        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
-          <Button"
-            variant="outline""
-            size="icon""
-            className="video-button rounded-full h-10 w-10"
-
-          </Button>;
-
-
-
-            onClick={handleToggleMute}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
           >;
             {isMuted ? <MicOff /> : <Mic />}
@@ -526,15 +358,7 @@ if ( {) {}
             variant="outline""
             size="icon""
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-            onClick={handleToggleVideo}
-=======
 
-          </Button>;
-
-
-            onClick={handleToggleVideo}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >;
             {isVideoEnabled ? <Video /> : <VideoOff />}
@@ -544,15 +368,7 @@ if ( {) {}
             variant="outline""
             size="icon""
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-            onClick={handleToggleScreenShare}
-=======
 
-          </Button>;
-
-
-            onClick={handleToggleScreenShare}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
@@ -562,15 +378,7 @@ if ( {) {}
             variant="outline""
             size="icon""
             className="video-button rounded-full h-10 w-10"
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-            onClick={handleToggleAudioOnly}
-=======
 
-          </Button>;
-
-
-            onClick={handleToggleAudioOnly}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
@@ -580,158 +388,10 @@ if ( {) {}
             variant="destructive""
             size="icon""
             className="video-button video-button-danger rounded-full h-10 w-10"
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-            onClick={handleLeaveCall}
-            aria-label="Leave call"
-          >
-=======
 
-            onClick={handleLeaveCall}"
-            aria-label="Leave call"
-          >
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
             <Phone className="rotate-135" />
           </Button>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD:src_backup/components/video/VideoCallRoom.tsx
-},
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import './video-call.css';
-interface Participant {
-  id: string;
-  name: string;
-  avatar?: string;
-  isMuted?: boolean;
-  isVideoEnabled?: boolean;
-  isScreenSharing?: boolean;
-import './video-call.css';interface Participant {
-  id: string
-  name: string
-  avatar?: string
-  isMuted?: boolean
-  isVideoEnabled?: boolean
-  isScreenSharing?: boolean
-  isHost?: boolean
-}
-interface VideoCallRoomProps {
-  );
-};
-</Badge> </div> </CardHeader> {;
-  /* Placeholder for actual video stream */ ;
-}<Video className="h-12 w-12 opacity-50" /> </div>) : participant.isScreenSharing ? (</AvatarFallback> </Avatar> </div>) ";
-}</div> </div>) ) ) : (<div className="col-span-full flex flex-col items-center justify-center py-12 text-white" > <Video className="h-16 w-16 mb-4 opacity-30" /> <p className="text-center text-lg mb-2" >No participants yet</p> <p className="text-center text-sm text-gray-300" > Share the meeting link to invite others </p> </div>) ";
-}</div> <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3" > <Button > {;
-  isMuted ? <MicOff /> : <Mic /> ;
-}</Button> <Button > {;
-  isVideoEnabled ? <Video /> : <VideoOff /> ;
-}</Button> <Button > {;
-  isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
-}</Button> <Button > {;
-  isAudioOnly ? <VolumeX /> : <Volume2 /> ";
-}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
-};
-'"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-"
-            aria-label="Leave call">;"
-            <Phone className="rotate-135" />;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-},;
-
-"
-                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
-                    {/* Placeholder for actual video stream */}"
-                    <Video className="h - 12 w - 12 opacity - 50" />;
-                  </div>) : participant.isScreenSharing ? ("
-                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text - white">;
-                    {/* Placeholder for screen share */}"
-                    <ScreenShare className="h - 12 w - 12 opacity - 50" />;
-                  </div>) : ("
-                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify - center">;"
-                    <Avatar className="h - 20 w - 20">;
-                      <AvatarImage src={participant.avatar} alt={participant.name} />;"
-                      <AvatarFallback className="bg - zion - purple text - white text - 2xl">;
-                        {participant.name.char_at (0).toUpperCase ()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                  </div>)}"
-                <div className="video - metadata flex items - center space - x-2">;
-                  <span>{participant.name}</span>;"
-                  {participant.is_muted && <MicOff className="h - 4 w - 4" />}"
-                  {participant.is_host && <Badge variant="secondary" className="text - xs">Host</Badge>}
-                </div>;
-              </div>))) : ("
-            <div className="col - span - full flex flex - col items - center justify - center py - 12 text - white">;"
-              <Video className="h - 16 w - 16 mb - 4 opacity - 30" />;"
-              <p className="text - center text - lg mb - 2">No participants yet</p>;"
-              <p className="text - center text - sm text - gray - 300">;
-                Share the meeting link to invite others;
-              </p>;
-            </div>)}
-        </div>;"
-        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space - x-3">;
-          <Button;"
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w - 10";
-            on_click = {handleToggleMute, }'
-            aria - label = {is_muted ? 'Unmute microphone' : 'Mute microphone', }
-          >;
-            {is_muted ? <MicOff /> : <Mic />}
-          </Button>;
-          <Button;"
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w - 10";
-            on_click = {handleToggleVideo, }'
-            aria - label = {isVideoEnabled ? 'Disable camera' : 'Enable camera', }
-          >;
-            {isVideoEnabled ? <Video /> : <VideoOff />}
-          </Button>;
-          <Button;"
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w - 10";
-            on_click = {handleToggleScreenShare, }'
-            aria - label = {isScreenSharing ? 'Stop sharing screen' : 'Share screen', }
-          >;
-            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
-          </Button>;
-          <Button;"
-            variant="outline";"
-            size="icon";"
-            className="video - button rounded - full h - 10 w - 10";
-            on_click = {handleToggleAudioOnly, }'
-            aria - label = {isAudioOnly ? 'Disable audio only' : 'Enable audio only', }
-          >;
-            {isAudioOnly ? <VolumeX /> : <Volume2 />}
-          </Button>;
-          <Button;"
-            variant="destructive";"
-            size="icon";"
-            className="video - button video - button - danger rounded - full h - 10 w - 10";
-            on_click = {handleLeaveCall, }"
-            aria - label="Leave call";
-          >;"
-            <Phone className="rotate - 135" />;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-},
-;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx

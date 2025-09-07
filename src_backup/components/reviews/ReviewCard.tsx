@@ -1,86 +1,7 @@
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
-import { Textarea } from "@/components/ui/textarea",
-interface ReviewCardProps {
-  review: Review,
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
-}
-
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
-  
-  const handleReport = async () => {
-    if (!reportReason.trim()) return,
-    
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
-    
-    if (success) {
-      setReportReason(""),
-      setIsReportDialogOpen(false)
-    }
-  },
-  
-  const renderStars = (rating?: number) => {
-    if (!rating) return null,
-    
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    )
-  },
-  
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  },
-  
-  return (
-    <div className="border rounded-lg p-4 bg-card">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-3">
-          {review.is_anonymous ? (
-            <Avatar>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
+
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
@@ -151,10 +72,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Star
             key={star}
-=======
-          <Star;
-            key={star}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
 
@@ -176,22 +94,6 @@ import {}
   DialogHeader,
   DialogTitle,
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-=======
-"
-import { useState } from "react","
-import { formatDistanceToNow } from "date-fns",'
-import { Star, Flag, User } from 'lucide-react'"
-import { Review } from "@/types/reviews","
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Button } from "@/components/ui/button","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
 import { Badge } from "@/components/ui/badge",
 import {}
   Dialog,
@@ -202,20 +104,7 @@ import {}
   DialogTitle,
           />
         ))}
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
       </div>
     )
   }
@@ -251,33 +140,16 @@ import {}
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
+
               <AvatarFallback className="bg-muted">
-=======
-"
-              <AvatarFallback className="bg-muted">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
                 <User className="h-4 w-4" />
               </AvatarFallback>
             </Avatar>
           ) : (
             <Avatar>
               {review.reviewer_profile?.avatar_url ? (
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
-              ) : (
-                <AvatarFallback>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -331,157 +203,16 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
     return name;
       .split(" ");
       .map((n) => n[0]);
-=======
-                  {review.reviewer_profile?.display_name ? ";
-import { useState } from "react",;"
-import { formatDistanceToNow } from "date-fns",;'
-import { Star, Flag, User } from 'lucide-react';'
-import { Review } from '@/types / reviews';'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
-import { Button } from '@/components / ui / button';'
-import { Badge } from '@/components / ui / badge';
-import {  Dialog,  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,';
-} from '@/components / ui / dialog';'
-import { Textarea } from '@/components / ui / textarea';
-interface ReviewCardProps {}
-  review: Review;
-on_report: (review_id: string, reason: string) => Promise < boolean>;
-}export /**;
- * ReviewCard - Function description;
- */
-function ReviewCard() {}
-  const handle_report = async () => {}
-  if () return) {}
-  $2;
-}
-setIsReporting (true);
-const success = await on_report (review.id, report_reason);
-setIsReporting (false);
-// Check condition;
-if ( {) {}
-  $2;
-}
-export /**;
- * ReviewCard - Function description;
- */
-function ReviewCard() { return null; }
-  const handle_report = async () => {}
-    if () return) {}
-  $2;
-}
-    setIsReporting (true);
-    const success = await on_report (review.id, report_reason);
-    setIsReporting (false);
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      setReportReason ('');
-      setIsReportDialogOpen (false);
-    }
-  }
-  const render_stars = (rating?: number) =>: any {}
-    // Check condition;
-if (return null) {}
-  $2;
-}
-    return ('
-      <div className='flex'>;
-        {[1, 2, 3, 4, 5].map (star => (
-          <Star;
-            key={star}'`
-            className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}
-          />))}
-      </div>);
-  }
-  const get_initials = (name: string) =>: any {}
-    return name;'
-      .split (' ');
-      .map (number => n[0]);'"`
-      .join ('')            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
-          />))}
-      </div>);
-  },
-  const get_initials = (name: string, ) =>: any {}
-    return name;"
-      .split (" ");
-      .map ((n, ) => n[0]);"
-      .join ("");
-      .toUpperCase ();
-      .substring (0, 2);
-  }
-  return (
-'
-    <div className='border rounded - lg p - 4 bg - card'>;'
-      <div className='flex justify - between items - start mb - 3'>;'
-        <div className='flex items - center gap - 3'>;
-          {review.is_anonymous ? (
 
-  }
-      </div>;
-    );
-  },;
-
-  const getInitials = (name: string,) => {;
-    return name;"
-      .split(" ");
-      .map((n,) => n[0]);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
       .join("");
       .toUpperCase();
       .substring(0, 2);
   };
-<<<<<<< HEAD
-  return (;
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className="bg-muted">;
-                <User className="h-4 w-4" />;
-              </AvatarFallback>;
-            </Avatar>;
-          ) : (;
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
-                  {review.reviewer_profile?.display_name ?;
-                    getInitials(review.reviewer_profile.display_name) : "??"}
-                </AvatarFallback>;
-=======
 
-  return (
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </Avatar>;
           )}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-=======
 
-    <div className="border rounded-lg p-4 bg-card">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-3">
-    <div className="border rounded - lg p - 4 bg - card">;
-      <div className="flex justify - between items - start mb - 3">;
-=======
-"
-    <div className="border rounded-lg p-4 bg-card">"
-      <div className="flex justify-between items-start mb-3">"
-        <div className="flex items-center gap-3">"
-    <div className="border rounded - lg p - 4 bg - card">;"
-      <div className="flex justify - between items - start mb - 3">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
         <div className="flex items - center gap - 3">;
 
           {review.is_anonymous ? (
@@ -499,9 +230,6 @@ if (return null) {}
                   {review && review.reviewer_profile?.display_name ? ;"
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
 <AvatarImage
                   src={review.reviewer_profile.avatar_url}
                   alt={review.reviewer_profile.display_name}
@@ -516,16 +244,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </Avatar>
           )}
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
 <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -547,18 +266,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
+
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
-=======
-        review.would_work_again !== undefined) && ('
-        <div className='border-t pt-3 mt-3'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
 
@@ -603,120 +314,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          
-          <div>
-            <div className="font-medium">
-              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
                 {review.would_work_again
                   ? 'Would work again'
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-                  : 'Would not work again'}              </Badge>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                {review.would_work_again ? "Would work again" : "Would not work again"}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-            </div>
-            <div className="text-sm text-muted-foreground">
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
-            </div>;
-          </div>;
-        </div>;
-        <div className="flex">;
-          {renderStars(review.rating)}
-        </div>
-      </div>
-      
-      <div className="mb-4">
-=======
-              <Badge'
-                variant={review.would_work_again ? 'default' : 'secondary'}'`
-                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
-                {review.would_work_again'
-                  ? 'Would work again''
-                  : 'Would not work again'}              </Badge>"
-                {review.would_work_again ? "Would work again" : "Would not work again"}
-
-          
-
-            </div>"
-            <div className="text-sm text-muted-foreground">
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
-            </div>
-          </div>
-        </div>"
-        <div className="flex">
-          {renderStars(review.rating)}
-        </div>
-      </div>"
-      <div className="mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-      
-=======
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
-=======
 
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && ("
-        <div className="border-t pt-3 mt-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && ("
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication"
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
-<<<<<<< HEAD
-              </Badge>
-            )}
-            
-=======
 
-          <div>;"
-            <div className="font - medium">;"
-              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
-            </div>;"
-            <div className="text - sm text - muted - foreground">;
-              {formatDistanceToNow (new Date (review.created_at), { add_suffix: true })}
-            </div>;
-          </div>;
-        </div>;"
-        <div className="flex">;
-          {render_stars (review.rating)}
-        </div>;
-      </div>;"
-      <div className="mb - 4">;"
-        <p className="text - sm whitespace - pre - wrap">{review.review_text}</p>;
-      </div>;
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && ("
-        <div className="border - t pt - 3 mt - 3">;"
-          <div className="flex flex - wrap gap - 2">;
-            {review.communication_rating && ("
-              <Badge variant="outline" className="flex gap - 1 items - center">;
-                Communication;"
-                <span className="ml - 1 text - yellow - 500">{review.communication_rating}/5</span>;
-              </Badge>)}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -725,19 +341,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
             
             {review.timeliness_rating && (
-<<<<<<< HEAD
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Timeliness
-                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
-=======
-=======
-            {review.quality_rating && ("
-              <Badge variant="outline" className="flex gap - 1 items - center">;
-                Quality;"
-                <span className="ml - 1 text - yellow - 500">{review.quality_rating}/5</span>;
-              </Badge>)}
-            {review.timeliness_rating && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
               <Badge variant="outline" className="flex gap - 1 items - center">;
                 Timeliness;"
                 <span className="ml - 1 text - yellow - 500">{review.timeliness_rating}/5</span>;
@@ -761,64 +365,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Timeliness"
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </Badge>
             )}
             
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-              <Badge 
-                variant={review.would_work_again ? "default" : "secondary"}
-=======
 
-              <Badge;
-"
-                variant={review.would_work_again ? "default" : "secondary"}"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >"
                 {review.would_work_again ? "Would work again" : "Would not work again"}
-<<<<<<< HEAD
-              </Badge>
-=======
 
-          <div>;'
-            <div className='font-medium'>;
-              {review && review.is_anonymous;'
-                ? 'Anonymous';'
-                : review && review.reviewer_profile?.display_name || 'User'}
-            </div>;'
-            <div className='text-sm text-muted-foreground'>;
-              {formatDistanceToNow(new Date(review && review.created_at), {;
-                addSuffix: true,;
-              })}
-            </div>;
-          </div>;
-        </div>;
-'
-        <div className='flex'>{renderStars(review && review.rating)}</div>;
-      </div>;
-'
-      <div className='mb-4'>;'
-        <p className='text-sm whitespace-pre-wrap'>{review && review.review_text}</p>;
-      </div>;
-
-      {(review && review.communication_rating ||;
-        review && review.quality_rating ||;
-        review && review.timeliness_rating ||;
-        review && review.would_work_again !== undefined) && (;'
-        <div className='border-t pt-3 mt-3'>;'
-          <div className='flex flex-wrap gap-2'>;
-            {review && review.communication_rating && (;'
-              <Badge variant='outline' className='flex gap-1 items-center'>;
-                Communication;'
-                <span className='ml-1 text-yellow-500'>;
-                  {review && review.communication_rating}/5;
-                </span>;
-              </Badge>;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
                   : 'Would not work again'}
               </Badge>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -899,103 +454,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;"
                 {review && review.would_work_again ? "Would work again" : "Would not work again"}
               </Badge>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             )}
           </div>;
         </div>;
       )}
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-
-
-
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      
-=======
-'
-      <div className='mt-3 flex justify-end'>
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-          <DialogTrigger asChild>'
-            <Button variant='ghost' size='sm' className='text-muted-foreground'>'
-              <Flag className='h-3 w-3 mr-1' />              Report;
-      "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>"
             <Button variant="ghost" size="sm" className="text-muted-foreground">"
               <Flag className="h-3 w-3 mr-1" />
               Report
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-              Report
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-              Report
-
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
 <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />
               Report
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
-=======
-              Report;
-              Report;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
+
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-                If you believe this review violates our community guidelines,
-
-=======
-
-
-                If you believe this review violates our community guidelines,
-
-
-=======
-If you believe this review violates our community guidelines,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-If you believe this review violates our community guidelines,
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1042,17 +533,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>;
               <Button;
                 onClick={handleReport}
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
 
-              onChange = {(e,) => setReportReason(e.target.value),}
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1061,88 +542,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="min-h-[100px]"
             />
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
             <DialogFooter>
-=======
 
-
-"
-              className="min-h-[100px]"
-            />
-            
-            <DialogFooter>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel;
               </Button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button 
-=======
 
-              <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >"
                 {isReporting ? "Submitting..." : "Submit Report"}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-=======
-                disabled={!reportReason.trim() || isReporting}
-              >
-                {isReporting ? 'Submitting...' : 'Submit Report'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                disabled={!reportReason.trim() || isReporting}
-              >
-                {isReporting ? 'Submitting...' : 'Submit Report'}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
-;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 disabled={!reportReason && reportReason.trim() || isReporting}>;'"
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
@@ -1224,15 +644,7 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
   handle_report;
 }disabled= {}
   !report_reason.trim () || is_reporting;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
-}"}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
+
       </div>
     </div>
   );
@@ -1276,13 +688,3 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
   !reportReason.trim () || isReporting ;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>) ;
 }"
-<<<<<<< HEAD:src/components/reviews/ReviewCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewCard.tsx
-=======
-}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);"
-}"}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/reviews/ReviewCard.tsx

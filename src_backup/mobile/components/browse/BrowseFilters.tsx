@@ -1,9 +1,3 @@
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
     <div className='space-y-3'>;'
       <div className='flex justify-between items-center px-4'>;'
@@ -197,90 +191,16 @@ function BrowseFilters() {}
                       </div>;
                     </div>;
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
-import { X, Filter } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label",
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
-<<<<<<< HEAD
-  type: "jobs" | "talents"
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Slider } from "@/components/ui/slider",;
-import { Switch } from "@/components/ui/switch",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { X, Filter } from 'lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
-import { Badge } from "@/components/ui/badge",;
-import { Label } from "@/components/ui/label",;
-interface BrowseFiltersProps {;
-  type: "jobs" | "talents";
-}
-;
-export function BrowseFilters({ type }: BrowseFiltersProps) {;
-  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
-  const addFilter = (filter: string) => {;
-    if (!activeFilters.includes(filter)) {;
-      setActiveFilters([...activeFilters, filter]);
-    }
-  },
-  
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-  
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
-=======
-import React, { useState } from "react","
-import { Button } from "@/components/ui/button","
-import { Slider } from "@/components/ui/slider","
-import { Switch } from "@/components/ui/switch","
-import { Input } from "@/components/ui/input","
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-
-'
-import { X, Filter } from 'lucide-react'"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet","
-import { Badge } from "@/components/ui/badge","
-import { Label } from "@/components/ui/label",
-interface BrowseFiltersProps {}
-  return ("
-    <div className="space-y-3">"
-      <div className="flex justify-between items-center px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
           <Sheet>
             <SheetTrigger asChild>"
@@ -293,28 +213,11 @@ interface BrowseFiltersProps {}
               <SheetHeader>"
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
                   <>
-=======
-              "
-              <div className="py-6 space-y-6">"
-                {type === "jobs" ? (
 
-                  <>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
                       <Label>Job Type</Label>"
                       <div className="flex gap-2 flex-wrap">"
@@ -324,32 +227,13 @@ interface BrowseFiltersProps {}
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="space-y-2">
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
-=======
-                    "
-                    <div className="space-y-2">
 
-                      <Label>Experience Level</Label>"
-                      <div className="flex gap-2 flex-wrap">"
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>"
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
                       </div>
                     </div>
@@ -365,21 +249,7 @@ interface BrowseFiltersProps {}
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                    "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider"
@@ -396,219 +266,39 @@ interface BrowseFiltersProps {}
                     </div>
                   </>
                 )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-                    <SelectTrigger>
-                      <SelectValue placeholder='Select location' />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value='remote'>Remote</SelectItem>
-                      <SelectItem value='us'>United States</SelectItem>
-                      <SelectItem value='europe'>Europe</SelectItem>
-                      <SelectItem value='asia'>Asia</SelectItem>
-=======
-                    <SelectTrigger>"
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>"
-                      <SelectItem value="remote">Remote</SelectItem>"
-                      <SelectItem value="us">United States</SelectItem>"
-                      <SelectItem value="europe">Europe</SelectItem>"
-                      <SelectItem value="asia">Asia</SelectItem>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
+
                     </SelectContent>
                   </Select>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-                <div className="space-y-2">
-=======
-                
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                <div className="space-y-2">
+
                   <Label>Salary Range</Label>
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
                     <Input placeholder='Max' type='number' className='w-full' />                  </div>
-=======
-                <div className="space-y-2">
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-                  <Label>Salary Range</Label>
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-=======
-=======
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-=======
-                  <div className="flex gap-4 items-center">
-=======
-                  <Label>Salary Range</Label>"
-                  <div className="flex gap-4 items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>"
-                    <Input placeholder="Max" type="number" className="w-full" />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
 
                   </div>
                 </div>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-                  <Label>Salary Range</Label>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-                  </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-                </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-                <div className="space-y-2">
-=======
-                
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <div className="space-y-2">
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                <div className="space-y-2">
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                  <Label>Skills</Label>
-<<<<<<< HEAD
-                  <div className="grid grid-cols-2 gap-2">
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
-                  </div>
-                </div>
-=======
-=======
-                  <Label>Skills</Label>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
-                  <div className='grid grid-cols-2 gap-2'>
-'
-                <div className='space-y-2'>;
-                  <Label>Location</Label>;'
-                    <div className='space - y-2'>;
-                      <Label > Experience (years)</Label>;
-                      <Slider;'
-                        aria - label='Years of experience';
-                        default_value={[0, 10]}
-                        max={20}
-                        step={1}'
-                        className='my - 4'                      />;'
-                      <div className='flex justify - between text - xs text - muted - foreground'>;
-                        <span > 0+ years</span>;
-                        <span > 20+ years</span>;
-                      </div>;
-                    </div>;
-                  </>)}'
-                <div className='space - y-2'>;
-                  <Label > Location</Label>;
-                  <Select>;
-                    <SelectTrigger>;'
-                      <SelectValue placeholder='Select location' />;
-                    </SelectTrigger>;
-                    <SelectContent>;'
-                      <SelectItem value='remote'>Remote</SelectItem>;'
-                      <SelectItem value='us'>United States</SelectItem>;'
-                      <SelectItem value='europe'>Europe</SelectItem>;'
-                      <SelectItem value='asia'>Asia</SelectItem>;
-                    </SelectContent>;
-                  </Select>;
-                </div>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-                <div className="flex items-center justify-between">
-=======
-                
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
-                <div className="flex items-center justify-between">
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <div className="flex items-center justify-between">
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                <div className="flex items-center justify-between">
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -619,28 +309,11 @@ interface BrowseFiltersProps {}
                 >
                   Apply Filters
                 </Button>
-=======
 
-              <SheetFooter>"
-                <Button variant="outline" className="w-full">Reset</Button>"
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
               </SheetFooter>
             </SheetContent>
           </Sheet>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -651,23 +324,7 @@ interface BrowseFiltersProps {}
               <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-<<<<<<< HEAD
-=======
 
-=======
-
-          <Select>"
-            <SelectTrigger className="w-[120px] h-8">"
-              <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
-            <SelectContent>"
-              <SelectItem value="newest">Newest</SelectItem>"
-              <SelectItem value="relevance">Best Match</SelectItem>"
-              <SelectItem value="salary">Highest Pay</SelectItem>
-            </SelectContent>
-          </Select>
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
                     </Badge>;
@@ -773,14 +430,6 @@ interface BrowseFiltersProps {}
   )
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeFilters.map((filter) => (
             <Badge;
               key={filter} "
@@ -794,25 +443,12 @@ interface BrowseFiltersProps {}
               />
             </Badge>
           ))}
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {active_filters.map (filter => (
             <Badge;
@@ -829,25 +465,8 @@ interface BrowseFiltersProps {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx

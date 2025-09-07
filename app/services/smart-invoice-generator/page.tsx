@@ -1,134 +1,31 @@
 export const metadata = {
-<<<<<<< HEAD
-  title: 'Smart Invoice Generator | Zion Tech Group',
-<<<<<<< HEAD
-  description: 'Intelligent invoice generation with AI capabilities.',
-  keywords: 'smart-invoice-generator, services, business, technology'
-}
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Smart Invoice Generator
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Intelligent invoice generation with AI capabilities.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored smart-invoice-generator solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your smart-invoice-generator solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
-  description: 'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.',
-=======
-<<<<<<< HEAD
-  title: 'Smart Invoice Generator - Zion Tech Group',
-  description: 'Professional smart invoice generator solutions for your business needs.',
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-  title: "Smart Invoice Generator | Zion Tech Group",
-  description:
-    "Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.",
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-<<<<<<< HEAD
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Invoice Generator</h1>
-      <p className="text-xl text-gray-600 mb-12">Automate your invoicing process with AI-powered generation, intelligent payment tracking, and comprehensive financial analytics.</p>
-=======
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
-        Smart Invoice Generator
-      </h1>
-      <p className="text-xl text-gray-600 mb-12">
-        Automate your invoicing process with AI-powered generation, intelligent
-        payment tracking, and comprehensive financial analytics.
-      </p>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="AI-Powered Generation"
           features={[
-<<<<<<< HEAD
-            'Auto-populate from contracts',
-            'Smart line item suggestions',
-            'Tax calculation automation',
-            'Multi-currency support',
-=======
-            "Auto-populate from contracts",
-            "Smart line item suggestions",
-            "Tax calculation automation",
-            "Multi-currency support",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
         <FeatureCard
           title="Payment Management"
           features={[
-<<<<<<< HEAD
-            'Automated payment reminders',
-            'Online payment processing',
-            'Late fee calculations',
-            'Payment status tracking',
-=======
-            "Automated payment reminders",
-            "Online payment processing",
-            "Late fee calculations",
-            "Payment status tracking",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
         <FeatureCard
           title="Financial Analytics"
           features={[
-<<<<<<< HEAD
-            'Revenue forecasting',
-            'Cash flow analysis',
-            'Client payment patterns',
-            'Tax reporting',
-=======
-            "Revenue forecasting",
-            "Cash flow analysis",
-            "Client payment patterns",
-            "Tax reporting",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
       </div>
-
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Transform Your Invoicing Process
@@ -142,9 +39,9 @@ export default function SmartInvoiceGeneratorPage() {
               </h3>
               <p className="text-gray-600">
                 Automate invoice creation, sending, and follow-ups
-              </p>
-            </div>
-          </div>
+        </p>
+      </div>
+      </div>
           <div className="flex items-start">
             <span className="text-green-500 mr-3 text-xl">✓</span>
             <div>
@@ -154,9 +51,9 @@ export default function SmartInvoiceGeneratorPage() {
               <p className="text-gray-600">
                 Automated reminders and easy payment options increase collection
                 rates
-              </p>
-            </div>
-          </div>
+        </p>
+      </div>
+      </div>
           <div className="flex items-start">
             <span className="text-green-500 mr-3 text-xl">✓</span>
             <div>
@@ -165,9 +62,9 @@ export default function SmartInvoiceGeneratorPage() {
               </h3>
               <p className="text-gray-600">
                 Customizable templates that reflect your brand identity
-              </p>
-            </div>
-          </div>
+        </p>
+      </div>
+      </div>
           <div className="flex items-start">
             <span className="text-green-500 mr-3 text-xl">✓</span>
             <div>
@@ -176,12 +73,11 @@ export default function SmartInvoiceGeneratorPage() {
               </h3>
               <p className="text-gray-600">
                 GDPR compliant with bank-level security and audit trails
-              </p>
-            </div>
-          </div>
-        </div>
+        </p>
       </div>
-
+      </div>
+      </div>
+      </div>
       <Pricing />
 
       <div className="mt-16 text-center">
@@ -204,18 +100,15 @@ export default function SmartInvoiceGeneratorPage() {
           >
             Email Us
           </a>
-        </div>
+      </div>
       </div>
     </section>
   );
-}
 
 function FeatureCard({
-  title,
-  features,
+
 }: {
-  title: string;
-  features: string[];
+
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
@@ -227,9 +120,8 @@ function FeatureCard({
           </li>
         ))}
       </ul>
-    </div>
+      </div>
   );
-}
 
 function Pricing() {
   return (
@@ -242,36 +134,14 @@ function Pricing() {
           name="Solo"
           price="$29/mo"
           features={[
-<<<<<<< HEAD
-            'Up to 50 invoices/month',
-            'Basic templates',
-            'Payment tracking',
-            'Email support',
-=======
-            "Up to 50 invoices/month",
-            "Basic templates",
-            "Payment tracking",
-            "Email support",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
         <Plan
           name="Business"
           price="$79/mo"
           features={[
-<<<<<<< HEAD
-            'Unlimited invoices',
-            'Custom branding',
-            'Advanced analytics',
-            'Priority support',
-            'API access',
-=======
-            "Unlimited invoices",
-            "Custom branding",
-            "Advanced analytics",
-            "Priority support",
-            "API access",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
           popular={true}
         />
@@ -279,35 +149,22 @@ function Pricing() {
           name="Enterprise"
           price="$199/mo"
           features={[
-<<<<<<< HEAD
-            'Multi-user access',
-            'Custom integrations',
-            'Dedicated support',
-            'Advanced reporting',
-            'White-label solution',
-=======
-            "Multi-user access",
-            "Custom integrations",
-            "Dedicated support",
-            "Advanced reporting",
-            "White-label solution",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
       </div>
-    </div>
+      </div>
   );
-}
 
 function Plan({
   name,
   price,
-  features,
+
   popular = false,
 }: {
   name: string;
   price: string;
-  features: string[];
+
   popular?: boolean;
 }) {
   return (
@@ -317,7 +174,7 @@ function Plan({
       {popular && (
         <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
-        </div>
+      </div>
       )}
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-green-600 mb-4">{price}</div>
@@ -332,18 +189,10 @@ function Plan({
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-<<<<<<< HEAD
-            ? 'bg-green-600 text-white hover:bg-green-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-=======
-            ? "bg-green-600 text-white hover:bg-green-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
         }`}
       >
         Get Started
       </a>
-    </div>
+      </div>
   );
-}
->>>>>>> origin/main

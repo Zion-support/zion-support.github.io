@@ -1,37 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createServerClient } from '../../../utils/supabase/server';
 
-import { createServerClient } from '../../../utils/supabase/server';
-pr-12243
-
-      supabase
-import { createServerClient } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const supabase = null;
-        { label: 'ai', value: 1 }]})
-  try {
-    const supabase = createServerClient();
-    const talentId = (req.query.talentId as string) |null
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-supabase
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-      supabase
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         .from('profile_views')
         .select('id, talent_id')
-=======
 
-
-      supabase'
-        .from('profile_views')'
-        .select('id, talent_id')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq('talent_id', talentId)
       supabase'
         .from('quotes')'
@@ -57,62 +28,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'node', value: 1 }'
         { label: 'ai', value: 1 }
       ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-
-    });
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-<<<<<<< HEAD
-}
-pr-12243
-=======
-
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-
-    });
-
-
-  }
 
 }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
   }
 
 }
 
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-}
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**;
@@ -198,33 +122,8 @@ function handler() {}
   }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { createServerClient } from '../../../utils/supabase/server';
 
-
-  }
-}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-<<<<<<< HEAD
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

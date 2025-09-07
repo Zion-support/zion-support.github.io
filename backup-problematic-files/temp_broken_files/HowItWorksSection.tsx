@@ -1,30 +1,4 @@
-
-=======
-import { GradientHeading } from "./GradientHeading",;
-import { Check, Handshake, Search, Send } from "lucide-react",;
-;
-const steps = [;
-  {;
-    title:"Post",;
-    description:"Publish your service, job, or equipment in minutes with our AI-powered form.",;
-    icon:Send},;
-  {;
-    title:"Match",;
-    description:"Our AI automatically matches your needs with the perfect providers or opportunities.",;
-    icon:Search},;
-  {;
-    title:"Hire/Buy",;
-    description:"Connect directly with matched providers and complete your transaction securely.",;
-    icon:Handshake},;
-  {;
-    title:"Done",;
-    description:"Enjoy hassle-free delivery and support for your technology solutions.",;
-    icon:Check}],;
-;
-export function HowItWorksSection() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <section className="py-20 bg-zion-blue">;
+<section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <GradientHeading>How It Works</GradientHeading>;
@@ -32,7 +6,6 @@ export function HowItWorksSection() {;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
-<<<<<<< HEAD
 
                 </div>;
               </div>;
@@ -41,4 +14,3 @@ export function HowItWorksSection() {;
         </div>;
       </div>;
     </section>;
-

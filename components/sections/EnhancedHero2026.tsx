@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
-import Button from '../ui/Button';
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-=======
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Rocket;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  CheckCircle;
+CheckCircle;
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {;
@@ -40,66 +13,21 @@ interface EnhancedHero2026Props {;
 
 '
 } from 'lucide-react';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-
-import React from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface EnhancedHero2026Props {
   contact_info: {
-=======
-interface EnhancedHero2026Props {}
-  contact_info: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    mobile: string;
-    email: string;
-    address: string;
-<<<<<<< HEAD
-    website: string;
-  };
-  serviceStats: {;
-  Rocket,;
-  CheckCircle,;'
-} from 'lucide-react';
 
     mobile: string;
     email: string;
     address: string;
 
-    website: string;
-    website: string
-  },
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   serviceStats: {
     totalServices: number;
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-<<<<<<< HEAD
-      }
-    }
-  }
 
-        staggerChildren: 0.2,
-      },
-    },  }        ease: "ease_out" as const;
-
-      }
-    }
-  }
-;
-  const stats_variants = {}
-    hidden: { scale: 0.8, opacity: 0 },
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     revolutionaryServices: number
 }
     revolutionaryServices: number}
@@ -108,18 +36,7 @@ interface EnhancedHero2026Props {}
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = null;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
-=======
-    visible: {}
-      y: 0;
-      opacity: 1;
-      transition: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
     visible: {;
@@ -144,18 +61,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },;
     },;
   };
-<<<<<<< HEAD
-        duration: 0.6,
-ease: 'easeOut' as const,
-      },
-    },
-  };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}'
@@ -192,8 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,'
               ease: 'easeInOut',
               delay: Math && Math.random() * 2,            }}  }
-
-
 
   return ("
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
@@ -267,45 +171,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
               ease: 'easeInOut',"
               delay: Math.random() * 2,              ease: "easeInOut",
-<<<<<<< HEAD
-              delay: Math.random() * 2
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-ease: 'easeInOut',
-              delay: Math.random() * 2,
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              delay: Math.random() * 2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            }}
 
             }}
 
-
+            }}
 
           />
 
             }}
           />;
         ))}
-<<<<<<< HEAD
-      </div>
 
-<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-          variants={containerVariants}
-          initial='hidden';
-          animate='visible';
-=======
-          variants={containerVariants}'
-          initial='hidden';'
-          animate='visible';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='space-y-8';
         >;
           {/* Main Headline */}
@@ -409,9 +285,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((stat, index) => (
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion.div
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 key={stat.label}
                 variants={statsVariants}
                 whileHover={{ scale: 1.05, y: -5 }
@@ -433,14 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {/* Enhanced CTA Section */}
-<motion.div variants={itemVariants} className='space-y-6'>
-=======
-          {/* Enhanced CTA Section */}'
-          <motion.div variants={itemVariants} className='space-y-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Button'
                 href='/services''
@@ -453,76 +319,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Explore All Services;
                 </span>"
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-=======
-            )
-}
-          </motion.div>;
-          {/* Enhanced CTA Section */}
 
-<motion.div variants={itemVariants} className='space-y-6' />
-            <div className='flex flex-col sm: flex-row gap-4 justify-center items-center' />
-              <Button;
-href='/services'
-                variant='primary'
-                size='xl'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-               />              >
-                <span className=\"flex items-center\" />"
-                  <Rocket className=\"mr-3 w-7 h-7 group-hover:rotate-12 transition-transform\" />
-                  Explore All Services;
-                </span>"
-                <ArrowRight className=\"ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Button>
 
           {/* Enhanced CTA Section */}
 
-<<<<<<< HEAD
-              
-              <Button "
-                href="/contact" 
-
-
-              <Button "
-                href="/contact" 
-"
-                variant="secondary""
-                size="xl""
-                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
-              >
-              <Button'
-                href='/contact''
-                variant='secondary''
-                size='xl'"
-                  <Shield className="mr-3 w-7 h-7" />
-<<<<<<< HEAD
-=======
-              <Button;"
-href=\"/contact\" 
-
-              <Button;"
-href=\"/contact\" 
-"
-                variant=\"secondary\"
-                size=\"xl\"
-                className=\"text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl\"
-               />
-              <Button;
-href='/contact'
-                variant='secondary'
-                size='xl'
-                  <Shield className="mr-3 w-7 h-7" />
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
                />
                 <span className='flex items-center' />
                   <Shield className='mr-3 w-7 h-7' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Expert Consultation
-=======
-                  Get Expert Consultation;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 </span>
               </Button>
             </div>
@@ -557,75 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span />24/7 Expert Support</span>
               </div>
             </div>
-<<<<<<< HEAD
-          </motion.div>'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;'
-                <span className='flex items-center'>;'"
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;"
-                  <Shield className="mr-3 w-7 h-7" />;
-                  Get Expert Consultation;
-                </span>;
-              </Button>;
-            </div>;
 
-            {/* Trust Indicators */}'
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>;'
-              <div className='flex items-center space-x-2'>;'
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>5000+ Happy Customers</span>;
-              </div>                <span>5000+ Happy Customers</span>;
-              </div>;"
-              <div className="flex items-center space-x-2">;"
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>99 && 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items-center space-x-2'>;'
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>99 && 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items-center space-x-2'>;'"
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">;"
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>24/7 Expert Support</span>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-          {/* Contact Information */}"
-=======
-          </motion.div>
-
-                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
-                <span className='flex items-center' />;"
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className=\"flex items-center\" />;"
-                  <Shield className=\"mr-3 w-7 h-7\" />;
-                  Get Expert Consultation;
-                </span>;
-              </Button>;
-            </div>;{/* Trust Indicators */}
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400' />;
-              <div className='flex items-center space-x-2' />;
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span />5000+ Happy Customers</span>;
-              </div>                <span />5000+ Happy Customers</span>;
-              </div>;"
-              <div className=\"flex items-center space-x-2\" />;"
-                <CheckCircle className=\"w-5 h-5 text-green-400\" />;
-                <span />99 && 99.9% Uptime Guarantee</span>;
-              </div>;
-              <div className='flex items-center space-x-2' />;
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span />99 && 99.9% Uptime Guarantee</span>;
-              </div>;
-              <div className='flex items-center space-x-2' />;"
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span />24/7 Expert Support</span>              <div className=\"flex items-center space-x-2\" />;"
-                <CheckCircle className=\"w-5 h-5 text-green-400\" />;
-                <span />24/7 Expert Support</span>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-
-          {/* Contact Information */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >"
             <div className="text-center mb-4">"
@@ -794,21 +534,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>));
-}
-
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-);
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+});

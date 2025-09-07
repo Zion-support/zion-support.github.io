@@ -1,74 +1,3 @@
-<<<<<<< HEAD
-export const metadata = {
-  title: 'AI Social Scheduler | Zion Tech Group',
-  description: 'Smart AI social media scheduling solutions.',
-  keywords: 'ai-social-scheduler, services, business, technology'
-}
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Social Scheduler
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Smart AI social media scheduling solutions.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai-social-scheduler solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai-social-scheduler solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'Ai Social Scheduler | Zion Tech Group',
-  description: 'Professional ai social scheduler services for your business needs.',
-  keywords: 'ai-social-scheduler, services, business, technology'
-
-=======
-import React from "react";
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.',
-  keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization',
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-import React from "react";
-
-export const metadata = {
-  title: "AI Social Media Scheduler | Zion Tech Group",
-  description:
-    "Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.",
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 };
 
 export default function AISocialSchedulerPage() {
@@ -97,7 +26,7 @@ export default function AISocialSchedulerPage() {
           >
             Schedule Demo
           </a>
-        </div>
+      </div>
       </section>
 
       {/* Features Section */}
@@ -172,7 +101,7 @@ export default function AISocialSchedulerPage() {
               "Customer service integration",
             ]}
           />
-        </div>
+      </div>
       </section>
 
       {/* Pricing Section */}
@@ -225,7 +154,7 @@ export default function AISocialSchedulerPage() {
             ]}
             popular={false}
           />
-        </div>
+      </div>
       </section>
 
       {/* Success Stories */}
@@ -255,7 +184,7 @@ export default function AISocialSchedulerPage() {
             content="Managing 20+ client accounts became effortless. The AI suggestions are spot-on every time."
             avatar="👩‍🎨"
           />
-        </div>
+      </div>
       </section>
 
       {/* Benefits Section */}
@@ -273,8 +202,8 @@ export default function AISocialSchedulerPage() {
               <StatItem number="75%" label="Time Saved on Content Creation" />
               <StatItem number="300%" label="Follower Growth Rate" />
               <StatItem number="98%" label="Customer Satisfaction" />
-            </div>
-          </div>
+      </div>
+      </div>
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
               Enterprise Features
@@ -301,8 +230,8 @@ export default function AISocialSchedulerPage() {
                 <span>White-label solutions available</span>
               </li>
             </ul>
-          </div>
-        </div>
+      </div>
+      </div>
       </section>
 
       {/* CTA Section */}
@@ -327,25 +256,18 @@ export default function AISocialSchedulerPage() {
           >
             Email Us
           </a>
-        </div>
+      </div>
         <div className="mt-6 text-sm text-purple-100">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
+      </div>
       </section>
-    </div>
+      </div>
   );
-}
 
 function FeatureCard({
-  icon,
-  title,
-  description,
-  features,
+
 }: {
-  icon: string;
-  title: string;
-  description: string;
-  features: string[];
+
 }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
@@ -360,23 +282,20 @@ function FeatureCard({
           </li>
         ))}
       </ul>
-    </div>
+      </div>
   );
-}
 
 function PricingCard({
   name,
   price,
   period,
-  description,
-  features,
+
   popular,
 }: {
   name: string;
   price: string;
   period: string;
-  description: string;
-  features: string[];
+
   popular: boolean;
 }) {
   return (
@@ -388,7 +307,7 @@ function PricingCard({
           <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
             Most Popular
           </span>
-        </div>
+      </div>
       )}
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -413,9 +332,8 @@ function PricingCard({
       >
         Start Free Trial
       </button>
-    </div>
+      </div>
   );
-}
 
 function TestimonialCard({
   name,
@@ -438,20 +356,17 @@ function TestimonialCard({
           <h4 className="font-semibold text-gray-900">{name}</h4>
           <p className="text-sm text-gray-600">
             {role} at {company}
-          </p>
-        </div>
+        </p>
+      </div>
       </div>
       <p className="text-gray-600 italic">"{content}"</p>
-    </div>
+      </div>
   );
-}
 
 function StatItem({ number, label }: { number: string; label: string }) {
   return (
     <div className="flex items-center justify-between">
       <span className="text-3xl font-bold text-purple-600">{number}</span>
       <span className="text-gray-600">{label}</span>
-    </div>
+      </div>
   );
-}
->>>>>>> origin/main

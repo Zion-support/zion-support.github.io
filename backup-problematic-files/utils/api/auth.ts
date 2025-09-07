@@ -19,10 +19,6 @@ export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   if (!userId || !role) return null,
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!userId || !role) return null,
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
@@ -38,9 +34,5 @@ export function requireUser(
     res.status(401).json({ error: 'Unauthorized' }),
     return null
   }
-<<<<<<< HEAD
-  return user
-=======
-  return user;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }

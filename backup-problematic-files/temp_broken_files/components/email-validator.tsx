@@ -1,34 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
 import Button from '../components/ui/Button',;
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(),;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
-<<<<<<< HEAD
-  const [isValidating, setIsValidating] = useState(false),;
-  const [bulkMode, setBulkMode] = useState(false),;
-<<<<<<< HEAD
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -36,9 +15,7 @@ export default function EmailValidatorPage() {;
     const emailList = emails.split('\n').filter(email => email.trim());
     const results = [];
     // Simulate email validation with realistic results;
-=======
-</any>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     for (let i = 0, i < emailList.length, i++) {;
       await new Promise(resolve => setTimeout(resolve, 200));
       const email = emailList[i].trim();
@@ -77,19 +54,7 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState(),
   const [validationResults, setValidationResults] = useState<any[]>([]),
@@ -145,43 +110,16 @@ const commonTypos = {
     // Additional checks,
 if (email.length > 254) {
       issues.push('Email too long')
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
       issues.push('Email too long');
     if (email.split('@')[0].length > 64) {status = 'invalid';
       issues.push('Local part too long');
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'valid':
     }
   }
-  const getStatusColor = (status: string) => {switch (status) {;
-      case 'valid':;
-        return 'text-green-400';
-      case 'suspicious':;
-        return 'text-yellow-400';
-      case 'disposable':;
-        return 'text-orange-400';
-      case 'invalid':;
-        return 'text-red-400';
-      default:;
-        return 'text-gray-400';
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    }
-  }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     if (score >= 40) return 'text-orange-400';
@@ -217,81 +155,31 @@ if (email.length > 254) {
 </div>
           <div className=&quot;mb-8&quot;>
             <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-medium mb-6&quot;>
-<<<<<<< HEAD
-              <Mail className=&quot;w-4 h-4 mr-2&quot; />              Email Validation & Verification
-=======
-              <Mail className=&quot;w-4 h-4 mr-2&quot; />
-<<<<<<< HEAD
-              Email Validation & Verification
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             </div>
           </div>
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
 </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>
       </section>
       {/* Email Validation Tool */}
-=======
-</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-16&quot;>
-<<<<<<< HEAD
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
-=======
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
-<<<<<<< HEAD
-              Validate Your Emails
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
             </h2>
-=======
-</h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
 
               <div className=&quot;flex items-center justify-between mb-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />                  Email Input
-                </h3>
-                <div className=&quot;flex items-center space-x-2&quot;>
-                  <label className=&quot;text-sm text-gray-300&quot;>Bulk Mode</label>
-                  <input,
-type=&quot;checkbox&quot;
-                    checked={bulkMode}
-                    onChange={(e) => setBulkMode(e.target.checked)}
-                    className=&quot;w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2&quot;                  />
-                </div>
-              </div>
-              <div className=&quot;space-y-6&quot;>
-                {bulkMode ? (                  <div>
-                    <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
-                      Email Addresses (One per line)
-                    </label>
-                    <textarea,
-value={emails}
-                      onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD:components/email-validator.tsx
-=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />
 
                 <div className=&quot;flex items-center space-x-2&quot;>
@@ -304,42 +192,14 @@ value={emails}
               <div className=&quot;space-y-6&quot;>
                   <div>
                     <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
-<<<<<<< HEAD
-                      Email Addresses (One per line)
-                    </label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                    )}
-                  </Button>;
-                  {validation_results.length > 0 && (
-=======
-</label>
-                  ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    <Button;
-<<<<<<< HEAD
-                      onClick={clearResults}
-variant=&quot;outline&quot;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    <Button;
+
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
 
-                    
                 <div className=&quot;text-sm text-gray-400&quot;>
-<<<<<<< HEAD
-                  <p>• Validates email format and syntax</p>
-                  <p>• Checks for disposable email domains</p>
-                  <p>• Detects common typos and mistakes</p>
-                  <p>• Provides deliverability score</p>
-=======
-                  <p> Validates email format and syntax</p>
-                  <p> Checks for disposable email domains</p>
-                  <p> Detects common typos and mistakes</p>
-                  <p> Provides deliverability score</p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
                 </div>
               </div>
             </Card>
@@ -347,43 +207,16 @@ variant=&quot;outline&quot;
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-<<<<<<< HEAD
-                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />                  Validation Results
-                </h3>
-                {validationResults.length > 0 && (
-                  <Button,
-onClick={copyResults}
-=======
-=======
-            
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />
 </BarChart3>
                     onClick={copyResults}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
                     variant=&quot;outline&quot;
                     size=&quot;sm&quot;
 
                     <Copy className=&quot;w-4 h-4 mr-2&quot; />
-<<<<<<< HEAD
-                    Copy Results
-                  </Button>
-                )}
-              </div>
-<<<<<<< HEAD
-=======
-                      on_click={clear_results}
-variant=&quot;outline & quot;
-                      className=&quot;border - gray - 600 text - gray - 300 hover:bg - gray - 700 & quot;
-                    >;
-                      Clear;
-                    </Button>)}
-=======
 
-                  
-                    )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>;
                   <p>• Validates email format and syntax</p>;
@@ -403,14 +236,6 @@ variant=&quot;outline & quot;
                   >;
 
                     <Copy className=&quot;w - 4 h - 4 mr - 2&quot; />;
-<<<<<<< HEAD
-                    Copy Results;
-                  </Button>)}
-              </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              {stats && (
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                       <div className=&quot;flex items - center justify - between mb - 2&quot;>;
                         <div className=&quot;flex items - center space - x-3 & quot;>;
@@ -418,20 +243,7 @@ variant=&quot;outline & quot;
                           <span className={`font - medium ${getStatusColor (result.status)}`}>;
 </span>
                           </span>;
-<<<<<<< HEAD
-                        </div>;
-<<<<<<< HEAD
-                        <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-              )}
-{validationResults.length > 0 ? (
-                <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {validationResults.map((result, index) => (                    <div,
 key={index}`;
                       className={_`p-4 rounded-lg border ${
@@ -445,73 +257,18 @@ key={index}`;
                           <span className={`font-medium ${getStatusColor(result.status)}`}>
                             {result.email}                          </span>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                          Score: {result.score}
 
-</span>;
-                      </div>;
-                      <div className=&quot;text - sm text - gray - 300 mb - 2&quot;>;
-                        <span className=&quot;text - gray - 400 & quot;>Domain:</span>;
-                        <span className=&quot;ml - 2&quot;>{result.domain}</span>;
-                      </div>;
-
-                      {result.issues.length > 0 && (
-<<<<<<< HEAD
-
-                        <div className=&quot;text-sm&quot;>
-                          <span className=&quot;text-gray-400&quot;>Issues:</span>
-                          <ul className=&quot;mt-1 space-y-1&quot;>
-                            {result.issues.map((issue: string, issueIndex: number) => (
-                              <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
-                                <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
-
-                            ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                          </ul>;
-                        </div>;
-                      )}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                        </div>
-                      )}
-                      {result.hasTypo && (
-                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>                          💡 Possible typo detected in domain
-=======
-                        </div>
-                      )}
-                      {result.hasTypo && (
-                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>
-                          💡 Possible typo detected in domain
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         </div>
                       )}
                     </div>;
                   ))}
 </div>
               ) : (
-=======
-                      <div className=&quot;text - sm text - gray - 300 mb - 2&quot;>;
-                        <span className=&quot;text - gray - 400 & quot;>Domain:</span>;
-                        <span className=&quot;ml - 2&quot;>{result.domain}</span>;
-                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 <div className=&quot;bg-gray-900 p-6 rounded-lg border border-gray-700 text-center&quot;>
-<<<<<<< HEAD
-                  <div className=&quot;text-6xl mb-4&quot;>📧</div>
-=======
-                  <div className=&quot;text-6xl mb-4&quot;></div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
                   <p className=&quot;text-gray-400&quot;>
-<<<<<<< HEAD
-                    Validation results will appear here. Enter an email address and click validate to get started.
-                  </p>
-                </div>
-              )}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                         </div>)}
                         <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
                         <div className=&quot;mt - 2 p - 2 bg - yellow - 500 / 20 border border - yellow - 500 / 30 rounded text - sm text - yellow - 300 & quot;>;
@@ -520,24 +277,7 @@ key={index}`;
                 <div className=&quot;bg - gray - 900 p - 6 rounded - lg border border - gray - 700 text - center & quot;>;
                   <div className=&quot;text - 6xl mb - 4&quot;>📧</div>;
                   <p className=&quot;text - gray - 400 & quot;>;
-<<<<<<< HEAD
-                    Validation results will appear here. Enter an email address and click validate to get started.;
-                  </p>;
-                </div>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
 
-=======
-
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -660,25 +400,7 @@ key={index}`;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-=======
-                  </p>;)
-      </section>;
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">"
-</section>"
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-</div>"
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <p className=&quot;text-xl text-blue-100 mb-8&quot;>
@@ -690,15 +412,7 @@ href=&quot;/contact&quot;
 
               <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
 
-            
 href=&quot;/pricing&quot;
               className=&quot;border-white text-white hover:bg-white hover:text-blue-600&quot;
 
-            
     </>
-<<<<<<< HEAD
-  )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

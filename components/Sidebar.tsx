@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -94,44 +82,12 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SidebarProps {}
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
-pr-12243
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -168,44 +124,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
-<<<<<<< HEAD
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-=======
-          <motion.div
-            initial={{ opacity: 0 ;}}
-            animate={{ opacity: 1 ;}}
-            exit={{ opacity: 0 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
@@ -214,12 +138,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}'
             exit={{ x: '-100%' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
             initial={{ x: '-100%' ;}}
@@ -229,17 +148,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 
 pr-12243
-<<<<<<< HEAD
-=======
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          >
-=======
 
-          >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          >
+
             <div className="p-6">
               {/* Header */}"
               <div className="flex items-center justify-between mb-8">"
@@ -251,74 +162,19 @@ pr-12243
                 </div>
                 <button;
                   onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
 
-pr-12243
-=======
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
-=======
 
-                >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
-<<<<<<< HEAD
-pr-12243
-              {/* Navigation */}
-=======
-              {/* Navigation */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button;
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-                    >
-                      <span>{title}</span>
-                      <ChevronDown className={`w-5 h-5 transition-transform ${
-                        activeDropdown === title ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    {activeDropdown === title && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="ml-4 space-y-2 mt-2"
-                      >
-                        {links.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span className="font-medium">{title}</span>
@@ -349,40 +205,7 @@ pr-12243
                         </motion.div>
                       )}
                     </AnimatePresence>
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  </div>
-                ))}
-              </nav>
 
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-                    >
-                      <span>{title}</span>
-                      <ChevronDown className={`w-5 h-5 transition-transform ${
-                        activeDropdown === title ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    {activeDropdown === title && (
-                      <motion.div
-                        initial={{ opacity: 0;, height: 0 ;}}
-                        animate={{ opacity: 1;, height: 'auto' ;}}
-                        exit={{ opacity: 0;, height: 0 ;}}
-                        className="ml-4 space-y-2 mt-2"
-                      >
-                        {links.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 ))}
               </nav>
@@ -391,12 +214,7 @@ pr-12243
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-=======
 
-              {/* Quick Links */}"
-              <div className="mt-8 pt-8 border-t border-gray-200">"
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link;
@@ -410,19 +228,7 @@ pr-12243
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>24/7 Support Available</p>
-                </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -445,25 +251,6 @@ pr-12243
                   <span className="font-medium">Sign Out</span>
                 </button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>24/7 Support Available</p>
-                </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </motion.div>
@@ -471,23 +258,12 @@ pr-12243
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default Sidebar;
 }
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -718,16 +494,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
 ;
 export default Sidebar;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
   X, 
@@ -766,184 +533,14 @@ const navigation = {
 
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
-  const services = [
-    { name: 'Web Development', href: '/services/web-development', icon: Code },
-    { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
-    { name: 'Security Services', href: '/services/security', icon: Shield },
-    { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
-  ];
-
-  const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
-    { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
-    { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
-    { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
-  ];
-
-  const industries = [
-    { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-    { name: 'Logistics', href: '/industries/logistics', icon: Truck },
-    { name: 'Finance', href: '/industries/finance', icon: CreditCard },
-    { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-    { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-  ];
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
-  const handleLinkClick = () => {
-    onClose();
-  };
-
-=======
-const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
-  const menuItems = [
-    { href: '/dashboard';, label: 'Dashboard';, icon: Home ;},
-    { href: '/profile';, label: 'Profile';, icon: User ;},
-    { href: '/settings';, label: 'Settings';, icon: Settings ;},
-  ];
-
-  return (
-    <>
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={onClose}
-        />
-      )}
-
-      <div
-        className={'fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ' + (isOpen ? 'translate-x-0' : '-translate-x-full')}
-      >
-        <div className="p-4">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-gray-800">Menu</h2>
-            <button
-              onClick={onClose}
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
-
-          <nav className="space-y-2">
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                  onClick={onClose}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Sidebar;
-
-
-
-
-
-pr-12243
-<<<<<<< HEAD
-=======
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-const navigationItems = [
-  {
-    label: 'Home',
-    href: '/',
-    icon: Home
-  },
-  {
-    label: 'Services',
-    href: '/services',
-    icon: Briefcase,
-    children: [
-      { label: 'AI Services', href: '/ai-services' },
-      { label: 'IT Services', href: '/it-services' },
-      { label: 'Micro SaaS', href: '/micro-saas' }
-    ]
-  },
-  {
-    label: 'About',
-    href: '/about',
-    icon: Users
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
-];
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const toggleExpanded = (label: string) => {
-    setExpandedItems(prev => 
-      prev.includes(label) 
-        ? prev.filter(item => item !== label)
-        : [...prev, label]
-    );
-  };
-
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
   return (
     <AnimatePresence>
       {isOpen && (
@@ -966,228 +563,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-8">
-<<<<<<< HEAD
-                <h2 className="text-2xl font-bold text-gray-900">Zion Tech Group</h2>
-                <button
-                  onClick={onClose}
-                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <X className="h-6 w-6 text-gray-600" />
-                </button>
-              </div>
 
-              {/* Navigation */}
-              <nav className="space-y-2">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={handleLinkClick}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-
-                {/* Services Dropdown */}
-                <div>
-                  <button
-                    onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                  >
-                    <span>Services</span>
-                    <motion.div
-                      animate={{ rotate: isServicesOpen ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </motion.div>
-                  </button>
-                  <AnimatePresence>
-                    {isServicesOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 space-y-1">
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-                            >
-                              <service.icon className="h-4 w-4" />
-                              <span>{service.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Solutions Dropdown */}
-                <div>
-                  <button
-                    onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                  >
-                    <span>Solutions</span>
-                    <motion.div
-                      animate={{ rotate: isSolutionsOpen ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </motion.div>
-                  </button>
-                  <AnimatePresence>
-                    {isSolutionsOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 space-y-1">
-                          {solutions.map((solution) => (
-                            <Link
-                              key={solution.name}
-                              href={solution.href}
-                              onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-                            >
-                              <solution.icon className="h-4 w-4" />
-                              <span>{solution.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Industries Dropdown */}
-                <div>
-                  <button
-                    onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                  >
-                    <span>Industries</span>
-                    <motion.div
-                      animate={{ rotate: isIndustriesOpen ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </motion.div>
-                  </button>
-                  <AnimatePresence>
-                    {isIndustriesOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 space-y-1">
-                          {industries.map((industry) => (
-                            <Link
-                              key={industry.name}
-                              href={industry.href}
-                              onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-                            >
-                              <industry.icon className="h-4 w-4" />
-                              <span>{industry.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-=======
-                <h2 className="text-xl font-bold text-gray-900">Menu</h2>
-                <button
-                  onClick={onClose}
-                  className="p-2 hover:bg-gray-100 rounded-md"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-
-              <nav className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
-                      onClick={onClose}
-                    >
-                      <item.icon className="h-5 w-5 mr-3" />
-                      {item.label}
-                      {item.children && (
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            toggleExpanded(item.label);
-                          }}
-                          className="ml-auto"
-                        >
-                          <ChevronDown 
-                            className={`h-4 w-4 transition-transform ${
-                              expandedItems.includes(item.label) ? 'rotate-180' : ''
-                            }`} 
-                          />
-                        </button>
-                      )}
-                    </Link>
-                    
-                    {item.children && expandedItems.includes(item.label) && (
-                      <div className="ml-8 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md"
-                            onClick={onClose}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
               </nav>
 
               <div className="mt-8 pt-8 border-t border-gray-200">
-<<<<<<< HEAD
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Mail className="h-4 w-4" />
-                    <span>info@ziontechgroup.com</span>
-=======
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="h-4 w-4 mr-2" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="h-4 w-4 mr-2" />
-                    <span>kleber@ziontechgroup.com</span>
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
+
                   </div>
                 </div>
               </div>
@@ -1197,13 +577,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
-};
-
-export default Sidebar;
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398

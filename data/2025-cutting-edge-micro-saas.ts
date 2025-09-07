@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-export const cuttingEdgeMicroSaasServices2025 = [
-  {
-    id: 'customer-success-ai-pro'
-    name: 'Customer Success AI Pro'
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-
-
-
-export const cuttingEdgeMicroSaasServices2025 = [
-  {
-    id: 'customer-success-ai-pro'
-    name: 'Customer Success AI Pro'
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -446,33 +423,11 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
-<<<<<<< HEAD
-      'Basel III'
-      'Solvency II'
-      'Dodd-Frank'
-      'Financial Regulations'
-      'Risk Management Standards'
-    ]
-  }
-=======
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-      'Basel III'
-      'Solvency II'
-      'Dodd-Frank'
-      'Financial Regulations'
-      'Risk Management Standards'
-    ]
-  }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
 export const cuttingEdgeMicroSaasServices2025 = [
   {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 export const cuttingEdgeMicroSaasServices2025 = []
   {};
@@ -513,21 +468,9 @@ export const cuttingEdgeMicroSaasServices2025 = []
     ];'
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
-
 ;'
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;'
     id: 'customer-success-ai-pro',;'
@@ -733,21 +676,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;'
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;'
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-  },
-    ];
-    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-    compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
-  }
-];
-;
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
   }
 ];
@@ -762,31 +690,3 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-
-  }
-];
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  }
-];
-  },
-    ];
-    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
-    compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
-  }
-];
-;
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

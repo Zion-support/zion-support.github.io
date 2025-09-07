@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-  variant?: 'primary' | 'secondary' | 'outline';'
-=======
-  variant?: 'primary' | 'secondary' | 'outline';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  size?: 'sm' | 'md' | 'lg';
+size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({;
   children,;'
   variant = 'primary',;'
@@ -22,27 +17,6 @@ export default function Button(): any ({;
       'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500',;
     secondary:;'
       'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50',;
-<<<<<<< HEAD
-    outline:;
-      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',
-};
-
-  const sizeClasses = {;
-    sm: 'px-3 py-1 && 1.5 text-sm',;
-    md: 'px-4 py-2 text-base',;
-    lg: 'px-6 py-3 text-lg',
-};
-=======
-    outline:;'
-      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',;
-  };
-
-  const sizeClasses = {;'
-    sm: 'px-3 py-1 && 1.5 text-sm',;'
-    md: 'px-4 py-2 text-base',;'
-    lg: 'px-6 py-3 text-lg',;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const disabledClasses = disabled;'
     ? 'opacity-50 cursor-not-allowed';'
@@ -138,12 +112,3 @@ export default function Button({
 
     </button>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

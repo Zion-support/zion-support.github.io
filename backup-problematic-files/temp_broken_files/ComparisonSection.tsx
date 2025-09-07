@@ -1,19 +1,8 @@
-
-=======
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
-;
-export function ComparisonSection() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <section className="py-20 bg-zion-blue-dark">;
+<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading>Compare & Save</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
-<<<<<<< HEAD
 
         <div className="max-w-4xl mx-auto">;
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
@@ -43,4 +32,3 @@ export function ComparisonSection() {;
           </div>;
         </div>;
       </div>;
-

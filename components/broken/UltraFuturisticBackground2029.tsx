@@ -1,4 +1,4 @@
-      life: number;
+life: number;
     }> = [];
 ;
     // Initialize particles;
@@ -22,26 +22,12 @@
       ctx.clear_rect (0, 0, canvas.width, canvas.height);
 ;
       // Update and draw particles;
-<<<<<<< HEAD
-      particles.for_each ((particle, index) => {
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2029: React.FC;
-<<<<<<< HEAD
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      particles.for_each ((particle, index) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
@@ -278,10 +264,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
 
-
             duration: 20,
             repeat: Infinity,
-
 
             duration: 20,
             repeat: Infinity,
@@ -335,50 +319,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />;
 
-<<<<<<< HEAD
-      <motion.div
-className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
-        animate={{
-          rotate: [0, 360],
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-ease: 'linear',
-        }}
-      />
-      <motion.div
-        className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
-        animate={{
-          y: [0, -20, 0],
-          opacity: [0.2, 0.5, 0.2],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-ease: 'easeInOut',
-        }}
-      />
-
-      <motion.div
-className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        animate={{
-          rotate: [45, 405],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-=======
-        animate={{}
-          rotate: [45, 405]"
-          scale: [1, 1.2, 1],        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
-        animate={{}
-          rotate: [45, 405];
-          scale: [1, 1.2, 1]
-        transition={{'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ease: 'linear',          ease: "linear"
           duration: 12,
           repeat: Infinity,
@@ -388,14 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Animated grid lines */}'
       <div className='absolute inset-0 opacity-20'>;
-<<<<<<< HEAD
-        <motion&& motion.div
-<div className='absolute inset-0 opacity-20'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <motion&& motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           className='absolute inset-0'
           style={{}
             backgroundImage: `
@@ -447,27 +380,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
       </div>
-<<<<<<< HEAD
-      {/* Quantum energy waves */}
-<div className='absolute inset-0'>
-        <motion.div
 
-        <motion.div
-
-=======
-      {/* Quantum energy waves */}'
-      <div className='absolute inset-0'>
-        <motion.div;
-        <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
 
         />;
       </div>;
 
-
       {/* Quantum energy waves */}
-
 
           }}
       {/* Quantum energy waves */}'
@@ -507,29 +426,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0.1, 0.3, 0.1],
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
-<<<<<<< HEAD
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
-=======
-          transition={{}
-            duration: 8;
-            repeat: Infinity'"
-            ease: 'easeInOut',            ease: "easeInOut"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          }}
-          }}
-          transition={{}
-            duration: 8,
-            repeat: Infinity,
 
+          }}
+          }}
+          transition={{}
+            duration: 8,
+            repeat: Infinity,
 
         />
       </div>
 
       {/* Holographic elements */}
-
 
         animate={{}
         transition={{}
@@ -568,42 +475,7 @@ ease: 'easeInOut',
           ease: 'linear',          ease: "linear";
         }}
       />;
-<<<<<<< HEAD
-      <motion.div
-className='absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full'
-        animate={{
-          rotate: [0, 360],
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.3, 0.1],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-ease: 'linear',
-        }}
-      />
-      <motion.div
-className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full'
-        animate={{
-          rotate: [360, 0],
-          scale: [1.2, 1, 1.2],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-ease: 'linear',
-        }}
-      />
-      {/* Neural network connections */}
-<div className='absolute inset-0'>
-        {Array.from({ length: 8 }).map((_, i) => (
-          <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-            key={i}
-=======
-            key={i}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             className='absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full';
             style={{}`
               left: `${20 + i * 10}%``
@@ -681,7 +553,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,
               delay: i * 0.3,
 
-
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div;
       {/* Data streams */}"
@@ -713,17 +584,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ease: 'linear',            }}              ease: "linear"
             }}
 
-
-
-
             transition={{}
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,'
               ease: 'linear',            }}
-
-
-
 
           />
         ))}
@@ -763,19 +628,3 @@ export default UltraFuturisticBackground2029);
 export default UltraFuturisticBackground2029;
 
 };
-
-
-<<<<<<< HEAD
-    </div>
-);
-};
-
-export default UltraFuturisticBackground2029;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

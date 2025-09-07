@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      }}
-    >;
-      {/* Image */}
-
-=======
-import React, { useState } from 'react',;
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { ProductListing } from "@/types/listings",;
-=======
-import React, { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { ProductListing } from "@/types/listings";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from "@/components/RatingStars";""
 import { FavoriteButton } from "@/components/FavoriteButton";""
@@ -150,50 +128,7 @@ pr-12325
                   key={idx} ;"
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full";"
                 >;                  {tag}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                </span>;
-              ))}
-            </div>;
-          )}
-        </div>;
-<<<<<<< HEAD
 
-=======
-        ;
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">;
-          <div className="text-sm font-medium">;
-            {listing.price !== null ? (;
-              <div className="flex items-center text-primary">;
-                <DollarSign className="h-4 w-4 mr-1" />;
-                {getPrice()}
-              </div>;
-            ) :(;
-              <span className="text-foreground/80">;
-                {getPrice()}
-              </span>;
-            )}
-          </div>;
-          ;
-          <div className="flex gap-2">;
-            <Button;
-              size="sm";
-              className="bg-primary hover:bg-primary/80 text-primary-foreground";
-=======
-</span>
-                </span>;
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">;"
-          <div className="text-sm font-medium">;"
-              <div className="flex items-center text-primary">;"
-                <DollarSign className="h-4 w-4 mr-1" />;"
-
-              <span className="text-foreground/80">;"
-          <div className="flex gap-2">;"
-            <Button;"
-              size="sm";""
-              className="bg-primary hover:bg-primary/80 text-primary-foreground";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={(e) => {;
 
                 <>;"
@@ -227,27 +162,12 @@ setImageError (true) ;
   /* Image */ ;
 }<div ;
 }> <div className= {;
-<<<<<<< HEAD
-  `relative $ {;
-  imageContainerClasses ;
-}` ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-}> {;
-  /* Ensure this container has dimensions */ ;
-}<Image Featured </Badge>) ;
-}{;
-<<<<<<< HEAD
 
-=======
-=======
-}<Image Featured ) ;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   stockStatus && (<Badge variant= {;
   stockVariant as any ;
 }className="absolute top-2 left-2" > {;"
 )
-}) ;
+});
 }<FavoriteButton itemId= {;
   listing.id ;
 }/> </div> </div> {;
@@ -264,28 +184,7 @@ setImageError (true) ;
 }/>) ;
 
 }</div> <span key= {;
-<<<<<<< HEAD
-  idx ";
-}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  tag ;
-}</span>) ) ;
-}</div>) ;
-}</div> </span>) ";
-<<<<<<< HEAD
 
-=======
-}</div> <div className="flex gap-2" > <Button onClick={;
-=======
-  idx ";""
-}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;"
-}</span>) ) ;
-}</div>) ;"
-}</div> </span>) ";""
-}</div> <div className="flex gap-2" > <Button onClick={;"
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;"
-} <Button onClick={;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   (e) => {;
   e.stopPropagation (), //Prevent card click event addToCart () ;
 }
@@ -308,13 +207,3 @@ router.push ('/checkout') ;
 }</div> </div> </div> </div>) 
 };
 '"
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}> Buy Now  {";""
-  onRequestQuote && (<Button size="sm" variant="outline" onClick={;""
-  handleRequestQuote ";")"
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote ) ;"
-}</div> </div> </div> </div>) ;"`;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

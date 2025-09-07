@@ -1,48 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Service {;
-  id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-export interface Service {
-=======
-
-
-export interface Service {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
-
 export interface Service {
 
-
-export interface Service {
-  // TODO: Implement
-}
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,
   name: string,
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
@@ -52,67 +9,25 @@ pr-12325
     starter: string,
     professional: string,
     enterprise: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 export interface Service {id: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
   description: string;
-<<<<<<< HEAD
-  features: string[];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
 
-
     custom?: string;
-<<<<<<< HEAD
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
-  contactInfo: {;
-    email: string;
-    phone: string;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  features: string[];  pricing: {;
-    starter: string;
-    professional: string;
-    enterprise: string;
-=======    custom?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
     address: string;
   }
 }
 ;
 export const services: Service[] = [;
-<<<<<<< HEAD
-  // AI Services;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {;
-    id: 'ai-code-assistant';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   {'
     id: 'ai - code - assistant','
@@ -120,11 +35,6 @@ export const services: Service[] = [;
     category: 'AI Services','
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  {id: 'ai-code-assistant';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
     description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.';
@@ -451,23 +361,7 @@ export const services: Service[] = [;
     }
   }
 ];
-<<<<<<< HEAD
-=======
-export const getServicesByCategory = (category: Service['category']) => {return services.filter(service => service.category === category);
-}
-export const getServiceById = (id: string) => {return services.find(service => service.id === id);
-}
-export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface Service {;
   id: string,;
   name: string,;'
@@ -825,12 +719,6 @@ export const services: Service[] = [;
     }
   }
 
-<<<<<<< HEAD
-],;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-],;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const getServicesByCategory = (category: Service['category']) => {;
   return services.filter(service => service.category === category);
 };
@@ -839,53 +727,6 @@ export const getServiceById = (id: string) => {;
 };
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
-<<<<<<< HEAD
-};
-=======
-};
-
-
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export interface Service {id: string;
-export interface Service {;
-  id: string;
-  name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
-  description: string;
-  features: string[];
-  pricing: {;
-  features: string[];  pricing: {;
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-    address: string;
-  }
-}
-export const services: Service[] = [;
-  // AI Services;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  // AI Services;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
-
-
 
   pricing: {,
   starter: string,
@@ -910,7 +751,6 @@ export const services: Service[] = [;
     name: 'ZionAI Code Assistant',
     category: 'AI Services',
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
-
 
   {id: 'ai-code-assistant';
   };
@@ -1343,10 +1183,6 @@ export const getServiceById = (id: string) => {return services.find(service => s
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
 }
 
-
-
-
-
 export interface Service {;
   id: string,;
   name: string,;
@@ -1537,16 +1373,7 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 
-
-
-
-
-
-
-
 };
-
-
 
 export const getServicesByCategory = (category: Service['category']) => {;
   return services.filter(service => service.category === category);
@@ -1557,9 +1384,3 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/training.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-import React from 'react';
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -42,20 +19,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function Training() {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 import React from 'react';
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
-    </MainLayout>
-  );
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function Training() {
 import {
   GraduationCap,
@@ -1029,31 +995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/training.tsx
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-      </div>
-    </Layout>
-  ),
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-      </div>
-    </MainLayout>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-export default Page;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 };
 }
@@ -1064,9 +1006,6 @@ export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
     </Layout>
-
-
-
 
   {
   opacity: 0, y: 20 
@@ -1103,7 +1042,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-
 
 };export default Training;
 
@@ -1145,60 +1083,11 @@ export default Training,
       </div>;
     </Layout>);
 }
-}
-  );
+});
 }
 ;
 export default Training;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/training.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}export default Training;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </div>
     </Layout>
 );
@@ -1257,13 +1146,3 @@ export default Training;
 };export default Training;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/training.tsx
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/training.tsx
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

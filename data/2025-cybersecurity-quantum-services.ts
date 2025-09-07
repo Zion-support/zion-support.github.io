@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface CybersecurityQuantumService {
-export interface CybersecurityQuantumService {;
-  id: string;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export interface CybersecurityQuantumService {
-export interface CybersecurityQuantumService {;
-  id: string;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-export interface CybersecurityQuantumService {
-export interface CybersecurityQuantumService {;
-  id: string;
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   name: string;
   tagline: string;
   description: string;
@@ -30,17 +11,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     enterprise: string
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -65,44 +39,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reviews: number
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-=======
-  // TODO: Implement
-}
-export interface CybersecurityQuantumService {;
-  id: string;,
-  name: string;
-  tagline: string;,
-  description: string;
-  category: string;,
-  price: {
-    monthly: number;,
-  yearly: number;
-    currency: string;,
-  trialDays: number;
-    setupTime: string;
-
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   {}
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.','
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    techStack: ['
-=======
-    techStack: [
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',']
 pr-12325
@@ -125,14 +68,6 @@ pr-12325
     ]
     support:'
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-<<<<<<< HEAD
-    compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
@@ -140,7 +75,7 @@ pr-12325
     id: 'ai - powered - threat - hunting - platform',
     name: 'AI - Powered Threat Hunting Platform',
     tagline: 'Proactive threat detection with autonomous security intelligence',
-    description:;
+    description:
       'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.',
     category: 'AI Cybersecurity & Threat Intelligence',
     price: {
@@ -208,65 +143,12 @@ pr-12325
 
     icon: '🕵️',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    compliance: []
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
-    techStack: [
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
-    ],
-    realImplementation: true,
-
-    implementationDetails:
-      'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
-    useCases: [
-      'Advanced persistent threat detection'
-      'Malware analysis and classification'
-      'Network security monitoring'
-      'Endpoint threat detection'
-      'Security incident investigation'
-      'Threat intelligence sharing'
-    ]
-    integrations: [
-      'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools'
-    ]
-    support:
-      '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-    compliance: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,'
-=======
-    color: 'from - purple - 500 to - indigo - 600',
-      'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.,
-  useCases: [
-      'Advanced persistent threat detection
-      'Malware analysis and classification
-      'Network security monitoring
-      'Endpoint threat detection
-      'Security incident investigation
-      'Threat intelligence sharing]
-    ]
-    integrations: [
-      'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools]
-    support:
-      '24/7 security support, threat hunting training, custom development, and dedicated security manager.
-    compliance: [,
-  color: 'from - purple - 500 to - indigo - 600',
-pr-12325
-    popular: true,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     launch_date: '2024 - 02 - 01',
   {
-
 
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',''
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],'
@@ -301,12 +183,6 @@ pr-12325
     rating: 4 && 4.8,
     reviews: 950,
   },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
@@ -314,22 +190,10 @@ pr-12325
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
-=======
-  {}
-    implementationDetails:'
-      'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
     useCases: ['
       'Secure remote access''
@@ -343,10 +207,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
@@ -354,7 +214,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'zero - trust - network - access - platform',
     name: 'Zero - Trust Network Access Platform',
     tagline: 'Secure access with continuous verification and least privilege',
-    description:;
+    description:
       'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.',
     category: 'Zero - Trust Security & Access Control',
     price: {
@@ -420,33 +280,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🛡️',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,'
-=======
-    color: 'from - blue - 500 to - cyan - 600',
-    popular: true,
-      'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.,
-      'Secure remote access
-      'Application access control
-      'Cloud security
-      'Compliance management
-      'Identity governance
-      'Risk management]
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers]
-    color: 'from - blue - 500 to - cyan - 600',
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     launch_date: '2024 - 01 - 20',
     implementationDetails:'
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'''
@@ -470,12 +307,6 @@ pr-12325
     rating: 4 && 4.7,
     reviews: 1400,
   },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
@@ -483,7 +314,7 @@ pr-12325
     id: 'quantum - key - distribution - network',
     name: 'Quantum Key Distribution Network',
     tagline: 'Unhackable communication with quantum entanglement',
-    description:;
+    description:
       'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
     category: 'Quantum Communications & Security',
     price: {
@@ -553,25 +384,10 @@ pr-12325
 
     icon: '🔮',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     color: 'from - purple - 500 to - pink - 600',
     popular: true,'
-=======
-    color: 'from - purple - 500 to - pink - 600',
-    popular: true,
-    color: 'from - purple - 500 to - pink - 600',
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     launch_date: '2024 - 03 - 01',
   {'
     color: 'from - purple - 500 to - pink - 600','
@@ -581,12 +397,6 @@ pr-12325
     rating: 4 && 4.9,
     reviews: 95,
   },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
@@ -594,22 +404,10 @@ pr-12325
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
-=======
-  {}
-    implementationDetails:'
-      'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
     useCases: ['
       'Application security testing''
@@ -623,73 +421,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.,
-      'Application security testing
-      'Network vulnerability assessment
-      'Cloud security scanning
-      'Compliance auditing
-      'Penetration testing
-      'Security monitoring]
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools]
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
     icon: '🔍',
-=======
-'
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.','
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],'
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment','
-    icon: '🔍','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     color: 'from-green-500 to-emerald-600',
-<<<<<<< HEAD
-    popular: true,'
-=======
-    popular: true,
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     launchDate: '2024-02-15',
     customers: 2500,
     rating: 4.8,
     reviews: 1900,
   },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
-
-
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-=======
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    ];
-    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
-    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     techStack: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'],
     realImplementation: true;
     implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
@@ -836,30 +585,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
-
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
-=======
-'
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
-
-'
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],'
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment','
-    id: 'ai - powered - vulnerability - assessment','
-    name: 'AI - Powered Vulnerability Assessment Platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     tagline: 'Intelligent security scanning with AI - driven risk analysis',
-    description:;'
+    description:'
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.','
     category: 'Vulnerability Management & Security Testing',
     price: {}
@@ -920,20 +653,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.','
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],'
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
-<<<<<<< HEAD
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     icon: '🔍',
-=======
-'
-    icon: '🔍','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     color: 'from - green - 500 to - emerald - 600',
     popular: true,'
     launch_date: '2024 - 02 - 15',
@@ -941,42 +663,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 1900,
   },
-<<<<<<< HEAD
 
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-}
-
-
-];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
-origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
 '
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];'
@@ -984,83 +671,14 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 '
     icon: '🔍';
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-
-    icon: '🔍';
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     color: 'from - green - 500 to - emerald - 600';
     popular: true;'
     launch_date: '2024 - 02 - 15';
     customers: 2500;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    rating: 4.8,
-    reviews: 1900;
-  }
-    rating: 4.8,
-    reviews: 1900;
-  }
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-;
-
-
-<<<<<<< HEAD
-    reviews: 1900
-    rating: 4.8,
-    reviews: 1900;
-  }
-
-
-export interface CybersecurityQuantumService {;
-
-  }
-
-];
-origin/cursor/integrate-build-improve-and-re-verify-2156
-;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
-];
-export interface CybersecurityQuantumService {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
-    rating: 4.8,
-    reviews: 1900;
-  }
-;
-    rating: 4.8,
-    reviews: 1900;
-  }
 
 ;
-  }
-];
-export interface CybersecurityQuantumService {;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1322,100 +940,18 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    rating: 4.8,
-    reviews: 1900;
-=======
 
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
     rating: 4.8;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 1900
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-
-
-  }
-];
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    rating: 4.8,
-=======
-    launchDate: '2024-02-15',;
-    customers: 2500,;
-    reviews: 1900;,
-pr-12325
-
-  {;'
-    id: 'ai-powered-vulnerability-assessment',;''
-    name: 'AI-Powered Vulnerability Assessment Platform',;''
-    tagline: 'Intelligent security scanning with AI-driven risk analysis',;''
-    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',;''
-    category: 'Vulnerability Management & Security Testing',;'
-    price: {;,
-  monthly: 199,;
-      yearly: 1990,;'
-      currency: 'USD',;'
-      trialDays: 14,;'
-      setupTime: '1-3 days',;''
-      enterprise: 'Custom pricing';'
-
-    },;
-    features: [;'
-      'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support',;''
-      'API for automationCompliance reporting';']
-    ],;
-    benefits: [;'
-      'Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture';']
-    ],;
-    targetAudience: [;'
-      'Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers';']
-    ],;'
-    marketPosition: 'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',;''
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],;''
-    techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis'],;'
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',;''
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',;'
-    useCases: [;'
-      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring';']
-    ],;'
-    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],;''
-    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',;''
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],;''
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',;''
-    icon: '🔍',;''
-    color: 'from-green-500 to-emerald-600',;'
-    popular: true,;'
-    launchDate: '2024-02-15',;'
-    customers: 2500,;
-    rating: 4.8,;
-
-    reviews: 1900;,
-  rating: 4.8,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 1900;
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

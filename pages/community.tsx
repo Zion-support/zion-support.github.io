@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-  return (
+return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
         <title>Community | Zion Tech Group</title>;
@@ -150,16 +139,11 @@ function CommunityPage() {}
         </div>;
       </div>;
 
-
-
-
-
 }
 
 '
 import React from 'react','
 import Head from 'next/head',
-
 
 export default function CommunityPage() {}
 	return (
@@ -182,7 +166,6 @@ export default function CommunityPage() {}
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>"
 						<ul className="text-slate-300 space-y-1">
 
-
 						</ul>
 					</div>
 				</div>
@@ -192,26 +175,10 @@ export default function CommunityPage() {}
 ;
 ;
 
-
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
-=======
 
-'
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { MessageCircle, Calendar, Users, Award } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Layout from '../components/Layout';
 
 export default function CommunityPage() {}
@@ -348,15 +315,7 @@ export default function CommunityPage() {}
     </Layout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -400,158 +359,3 @@ export default function CommunityPage() {}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-}
-import React from 'react',
-import Head from 'next/head',
-                href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
-                kleber@ziontechgroup && ziontechgroup.com;
-import Head from 'next / head';
-export default /**
- * CommunityPage - Function description
- */
-function CommunityPage() {
-  return (
-    <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <Head>;
-        <title > Community | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Community forum and resources for Zion Tech Group users';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / community' />;
-        <meta;
-          name='description';
-          content='Join the Zion Tech Group community and stay updated.';
-        />;
-      </Head>;
-      <div className='max - w-5xl mx - auto space - y-8'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-          Community;
-        </h1>;
-        <p className='text - slate - 300'>;
-          Join our community. Ask questions, share solutions, and learn best;
-          practices.;
-        </p>;
-        <div className='grid md:grid - cols - 2 gap - 6'>;
-          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
-            <h2 className='text - white text - xl font - semibold mb - 2'>Get Help</h2>;
-            <p className='text - slate - 300'>;
-              Visit the{' '}
-              <a className='text - cyan - 400 underline' href='/support'>;
-                Support Center;
-              </a>{' '}
-              or email{' '}
-              <a;
-                className='text - purple - 400';
-                href='mailto: kleber@ziontechgroup.com';
-              >;
-                kleber@ziontechgroup.com;
-              </a>;
-              .;
-            </p>;
-          </div>;
-
-          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
-            <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
-            <ul className='text - slate - 300 space - y-1'>;
-              <li>;
-                <a;
-                  className='text - cyan - 400';
-                  href='https://linkedin.com / company / ziontechgroup';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-
-                  LinkedIn;
-                </a>;
-              </li>;
-              <li>;
-
-                <a;
-                  className='text - cyan - 400';
-                  href='https://github.com / Zion - Holdings';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-
-                  GitHub;
-                </a>;
-              </li>;
-              <li>;
-
-                <a;
-                  className='text - cyan - 400';
-                  href='https://instagram.com / ziontechgroup';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-
-                  Instagram;
-                </a>;
-              </li>;
-              <li>;
-
-                  rel='noopener noreferrer'>;
-                <a;
-                  className='text - cyan - 400';
-                  href='https://youtube.com/@ziontechgroup';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
-
-                  YouTube;
-                </a>;
-              </li>;
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-
-export default function CommunityPage() {
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Community | Zion Tech Group</title>
-				<meta name="description" content="Community forum and resources for Zion Tech Group users" />
-				<link rel="canonical" href="https://ziontechgroup.com/community" />
-				<meta name="description" content="Join the Zion Tech Group community and stay updated." />
-			</Head>
-			<div className="max-w-5xl mx-auto space-y-8">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
-				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>
-				<div className="grid md: grid-cols-2 gap-6">
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>
-						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-					</div>
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
-						<ul className="text-slate-300 space-y-1">
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-;
-
-<<<<<<< HEAD
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

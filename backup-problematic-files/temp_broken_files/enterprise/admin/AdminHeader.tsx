@@ -1,18 +1,4 @@
-
-=======
-import React from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { Download, Settings } from "lucide-react",;
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
-;
-export function AdminHeader() {;
-  const { user } = useAuth(),;
-  const { company } = useCompanyWorkspace(),;
-;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="space-y-4">;
+<div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -27,5 +13,3 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-<<<<<<< HEAD
-

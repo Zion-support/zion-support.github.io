@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { FaRocket;
-=======
-  FaRocket;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  FaBrain;
+FaBrain;
   FaCloud;
   FaShieldAlt;
   FaChartLine;
@@ -17,39 +9,7 @@ import { FaRocket;
   FaDatabase;
   FaNetworkWired;
   FaRobot;
-<<<<<<< HEAD
-  FaSearch
- } from 'react-icons/fa';
-import { SiNextdotjs;
-  SiReact;
-  SiTypescript;
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
-  SiMicrosoftazure
- } from 'react-icons/si';
-<<<<<<< HEAD
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-  FaCogs
-  FaLightbulb
-  FaGlobe
-  FaMobile
-  FaDatabase
-  FaNetworkWired
-  FaRobot
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   FaSearch;
 import {};
   SiNextdotjs;
@@ -101,205 +61,36 @@ import {}
 '
 } from 'react-icons/si';
 
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Service {
-=======
-interface Service {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   id: string;
   title: string;
   description: string;
     starter: number;
     professional: number;
-<<<<<<< HEAD
-
-    enterprise: number;
-  }
-  technologies: string[];
-  benefits: string[];
-
-
-<<<<<<< HEAD
-  color: string;  id: string
-  name: string
-  description: string
-  icon: React.ReactNode
-
-    enterprise: number
-  },
-  technologies: string[];
-  benefits: string[]
-}
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ServiceCategory {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-  color: string
-=======
-  color: string;  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 }
 
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
-=======
 
-}
-
-  color: string;  id: string;,
-  name: string;,
-  description: string;,
-  icon: React.ReactNode;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   color: string;
 }
 
-
-<<<<<<< HEAD
-const serviceCategories: ServiceCategory[] = []
-  {}
-'
-    id: 'ai-ml''
-    name: 'AI & Machine Learning'
-    description:'
-      'Cutting-edge artificial intelligence and machine learning solutions''
-    icon: <FaBrain className='w-8 h-8' />'
-    color: 'from-purple-500 to-pink-500'
-  },  {'
-    id: 'cloud''
-    name: 'Cloud & DevOps''
-    description: 'Scalable cloud infrastructure and development operations''
-    icon: <FaCloud className='w-8 h-8' />'
-    color: 'from-blue-500 to-cyan-500'
-  },  {'
-    id: 'security''
-    name: 'Cybersecurity''
-    description: 'Advanced security solutions for modern threats''
-    icon: <FaShieldAlt className='w-8 h-8' />'
-    color: 'from-red-500 to-orange-500'
-  },  {'
-    id: 'data''
-    name: 'Data & Analytics''
-    description: 'Comprehensive data management and analytics platforms''
-    icon: <FaDatabase className='w-8 h-8' />'
-    color: 'from-green-500 to-emerald-500'
-  },  {'
-    id: 'iot''
-    name: 'IoT & Edge Computing''
-    description: 'Internet of Things and edge computing solutions''
-    icon: <FaNetworkWired className='w-8 h-8' />'
-    color: 'from-indigo-500 to-purple-500'
-  },  {'
-    id: 'automation''
-    name: 'Process Automation''
-    description: 'Intelligent automation for business processes''
-    icon: <FaRobot className='w-8 h-8' />'
-    color: 'from-yellow-500 to-orange-500''
-  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
-    icon: <FaBrain className="w-8 h-8" />'
-    color: 'from-purple-500 to-pink-500'
-  }'
-    id: 'cloud''
-    name: 'Cloud & DevOps''
-    description: 'Scalable cloud infrastructure and development operations''
-    icon: <FaCloud className='w-8 h-8' />'
-    color: 'from-blue-500 to-cyan-500'"
-  },    icon: <FaCloud className="w-8 h-8" />'
-    color: 'from-blue-500 to-cyan-500'
-  }
-  {'
-    id: 'security''
-    name: 'Cybersecurity''
-    description: 'Advanced security solutions for modern threats''
-    icon: <FaShieldAlt className='w-8 h-8' />'
-    color: 'from-red-500 to-orange-500'"
-  },    icon: <FaShieldAlt className="w-8 h-8" />'
-    color: 'from-red-500 to-orange-500'
-  }
-  {'
-    id: 'data''
-    name: 'Data & Analytics''
-    description: 'Comprehensive data management and analytics platforms''
-    icon: <FaDatabase className='w-8 h-8' />'
-    color: 'from-green-500 to-emerald-500'"
-  },    icon: <FaDatabase className="w-8 h-8" />'
-    color: 'from-green-500 to-emerald-500'
-  }
-  {'
-    id: 'iot''
-    name: 'IoT & Edge Computing''
-    description: 'Internet of Things and edge computing solutions''
-    icon: <FaNetworkWired className='w-8 h-8' />'
-    color: 'from-indigo-500 to-purple-500'"
-  },    icon: <FaNetworkWired className="w-8 h-8" />'
-    color: 'from-indigo-500 to-purple-500'
-  }
-  {'
-    id: 'automation''
-    name: 'Process Automation''
-    description: 'Intelligent automation for business processes''
-    icon: <FaRobot className='w-8 h-8' />'
-    color: 'from-yellow-500 to-orange-500'"
-  },    icon: <FaRobot className="w-8 h-8" />
-<<<<<<< HEAD
-=======
-const serviceCategories: ServiceCategory[] = [
-  {
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className;
 export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
-];
-const services: Service[] = [
-origin/cursor/automate-test-improve-and-merge-code-2533
-  {
-    id: 'ai-automation-suite',
-    title: 'AI-Powered Automation Suite',
-description:
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
-    icon: <FaRobot className='w-6 h-6' />,
-    category: 'automation',
-    features: [
 
-  {
-    id: 'security',
-    name: 'Cybersecurity',
-=======
-  {'
-    id: 'ai-automation-suite''
-    title: 'AI-Powered Automation Suite'
-    description:'
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization''
-    icon: <FaRobot className='w-6 h-6' />
-    features: []
-  {'
-    id: 'security','
-    name: 'Cybersecurity','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Advanced security solutions for modern threats',
   {'
     id: 'data','
@@ -330,158 +121,6 @@ description:
       enterprise: 1999;
     },
 
-<<<<<<< HEAD
-    technologies: [;
-      'Intelligent workflow automation'
-      'Natural language processing'
-      'Predictive analytics'
-      'Real-time decision making'
-      'Custom AI model training'
-      'Multi-platform integration'
-    ]
-    pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
-    },
-    technologies: [
-      'TensorFlow',
-      'PyTorch',
-      'OpenAI',
-      'LangChain',
-      'React',
-      'Node.js',
-    ],
-    benefits: [
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24/7 automated operations',
-      'Scalable AI infrastructure',
-    ],
-  },
-  {
-    id: 'quantum-computing-platform',
-    title: 'Quantum Computing Platform',
-    description:
-      'Next-generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w-6 h-6' />,
-    category: 'ai-ml',
-    features: [
-      'Quantum algorithm optimization',
-      'Hybrid classical-quantum computing',
-      'Quantum machine learning',
-      'Cryptographic solutions',
-      'Quantum simulation tools',
-      'API access to quantum hardware',
-    ],
-    pricing: {
-      starter: 999,
-      professional: 2499,
-      enterprise: 4999,
-    },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future-proof technology',
-      'Research and development support',
-    ],
-  },
-  {
-    id: 'edge-ai-platform',
-    title: 'Edge AI Computing Platform',
-    description:
-      'Distributed artificial intelligence at the edge for real-time processing',
-    icon: <FaNetworkWired className='w-6 h-6' />,
-    category: 'iot',
-    features: [
-      'Edge device optimization',
-      'Real-time AI inference',
-      'Distributed learning',
-      'Low-latency processing',
-      'Offline AI capabilities',
-      'Edge-to-cloud synchronization',
-    ],
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
-    },
-    technologies: [
-      'TensorFlow Lite',
-      'ONNX Runtime',
-      'Edge TPU',
-      'Raspberry Pi',
-      'Arduino',
-    ],
-    benefits: [
-      'Reduced latency by 90%',
-      'Lower bandwidth costs',
-      'Enhanced privacy',
-      'Scalable edge deployment',
-    ],
-  },
-  {
-    id: 'quantum-cybersecurity',
-    title: 'Quantum Cybersecurity Suite',
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography',
-    icon: <FaShieldAlt className='w-6 h-6' />,
-    category: 'security',
-    features: [
-      'Post-quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero-trust architecture',
-      'Compliance frameworks',
-      'Real-time monitoring',
-    ],
-    pricing: {
-      starter: 399,
-      professional: 999,
-      enterprise: 2499,
-    },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-    benefits: [
-      'Future-proof security',
-      'Quantum-resistant encryption',
-      'Comprehensive compliance',
-      'Advanced threat protection',
-    ],
-  },
-  {
-    id: 'data-fabric-platform',
-    title: 'Intelligent Data Fabric Platform',
-    description:
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w-6 h-6' />,
-    category: 'data',
-    features: [
-      'Unified data access',
-      'Real-time analytics',
-      'Data governance',
-      'AI-powered insights',
-      'Multi-cloud support',
-      'Data lineage tracking',
-    ],
-    pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
-    },
-    technologies: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-      'Apache Kafka',
-      'Apache Spark',
-      'Snowflake',
-      'Databricks',
-=======
-    technologies: [;'
-      'Apache Kafka','
-      'Apache Spark','
-      'Snowflake','
-      'Databricks','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Airflow',
     ],'
       'Improved data quality','
@@ -493,23 +132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Modern cloud - native development and deployment platform','
     icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];
-<<<<<<< HEAD
-    benefits: [
-      'Unified data view',
-      'Real-time insights',
-      'Improved data quality',
-      'Reduced integration costs',
-    ],
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-  {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-=======
-  {'
-    id: 'cloud-native-platform','
-    title: 'Cloud-Native Development Platform','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     description: 'Modern cloud-native development and deployment platform',
   }
   {}
@@ -523,7 +146,7 @@ const services: Service[] = [;
   {;'
     id: 'ai-automation-suite',;'
     title: 'AI-Powered Automation Suite',;
-    description:;'
+    description:'
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',;'
     icon: <FaRobot className='w-6 h-6' />,;
     features: [;'
@@ -557,7 +180,7 @@ const services: Service[] = [;
   {;'
     id: 'quantum-computing-platform',;'
     title: 'Quantum Computing Platform',;
-    description:;'
+    description:'
       'Next-generation quantum computing solutions for complex problem solving',;'
     icon: <FaBrain className='w-6 h-6' />,;'
     category: 'ai-ml',;
@@ -585,7 +208,7 @@ const services: Service[] = [;
   {;'
     id: 'edge-ai-platform',;'
     title: 'Edge AI Computing Platform',;
-    description:;'
+    description:'
       'Distributed artificial intelligence at the edge for real-time processing',;'
     icon: <FaNetworkWired className='w-6 h-6' />,;'
     category: 'iot',;
@@ -619,7 +242,7 @@ const services: Service[] = [;
   {;'
     id: 'quantum-cybersecurity',;'
     title: 'Quantum Cybersecurity Suite',;
-    description:;'
+    description:'
       'Advanced security solutions leveraging quantum-resistant cryptography',;'
     icon: <FaShieldAlt className='w-6 h-6' />,;'
     category: 'security',;
@@ -647,7 +270,7 @@ const services: Service[] = [;
   {;'
     id: 'data-fabric-platform',;'
     title: 'Intelligent Data Fabric Platform',;
-    description:;'
+    description:'
       'Unified data management and analytics across all sources and formats',;'
     icon: <FaDatabase className='w-6 h-6' />,;'
     category: 'data',;
@@ -757,32 +380,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {'
   const [selectedService, setSelectedService] = useState<Service | null>(null);'
   const [searchTerm, setSearchTerm] = useState('');'
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-<<<<<<< HEAD
-  const filteredServices = useMemo(() => {
-    let filtered = services;
-    if (selectedCategory !== 'all') {
-if (selectedCategory !== 'all') {
-      filtered = filtered.filter(
-        service => service.category === selectedCategory
-      );
-    }
-    if (searchTerm) {
-      filtered = filtered.filter(
-        service =>
-          service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.technologies.some(tech =>
-            tech.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-      );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const filteredServices = useMemo(() => {}
-    let filtered = services;'
-    if (selectedCategory !== 'all') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     }
     return filtered.sort((a, b) => {}
       switch (sortBy) {'
@@ -790,17 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return a.pricing.starter - b.pricing.starter;'
         case 'category':
           return a.category.localeCompare(b.category);
-<<<<<<< HEAD
-default:
-          return a.title.localeCompare(b.title);
-      }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const handleServiceSelect = (service: Service) => {
-=======
-  const handleServiceSelect = (service: Service) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     setSelectedService(service);
   }
   const closeModal = () => {}
@@ -819,14 +407,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Header */}"
       <div className="container mx-auto px-4 py-16">;
-<<<<<<< HEAD
-        <motion&& motion.div
-      <div className='container mx-auto px-4 py-16'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
   return ("
@@ -871,16 +452,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.2 }}
-className='mb-12'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
-=======
-        >'
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='relative flex-1 max-w-md'>
               <input'
                 type='text''
@@ -978,21 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.4 }}
-className='mb-12'
-        >
-          <div className='flex flex-wrap justify-center gap-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <button
 
-
-
-
-=======
-            <button;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;'
                 selectedCategory === 'all';'
@@ -1000,21 +557,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';`
               }`}
 
-<<<<<<< HEAD
-            >
-              All Services
-            </button>
-{serviceCategories.map(category => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <button
-
-
-
-
-
-=======
-              <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}`
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${}
@@ -1089,39 +631,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {tech}
                   </span>
                 ))}
-<<<<<<< HEAD
-                    className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {service.technologies.length > 3 && (
-<span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    +{service.technologies.length - 3} more
-=======
-                    +{service.technologies.length - 3} more;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   </span>
                 )}
               </div>"
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>"
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-<<<<<<< HEAD
-<div className='flex items-center justify-between'>
-                <div className='text-2xl font-bold text-blue-400'>
-                  ${service.pricing.starter}
-                  <span className='text-sm text-gray-400 font-normal'>
-                    /month
-                  </span>
-                </div>
-                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  Learn More
-=======
-                  Learn More;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 </button>
               </div>
             </motion.div>
@@ -1151,7 +668,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </motion && motion.div>;
 
-
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div;
@@ -1175,17 +691,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-            exit={{ opacity: 0 }}
-className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
-            onClick={closeModal}
-=======
-            exit={{ opacity: 0 }}'"
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
 
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
 
           >
             <motion.div;
@@ -1195,9 +702,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
 className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={e => e.stopPropagation()}
-
-
-
 
             >'
               <div className='flex items-start justify-between mb-6'>'
@@ -1215,23 +719,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           c => c.id === selectedService.category;
                         )?.name;
                       }
-<<<<<<< HEAD
-                    </p>
-=======
-                    </p>                  </div>
-                </div>
-                <button;
-                  onClick={closeModal}'
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >"
-              <div className="flex items-start justify-between mb-6">"
-                <div className="flex items-center gap-4">"
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
-                    {selectedService.icon}
-                  </div>
-                  <div>"
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>"
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   </div>
                 </div>
                 <button;
@@ -1303,13 +791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
-<<<<<<< HEAD
-              {/* Technologies */}
-<div className='mt-8'>
-=======
-              {/* Technologies */}'
-              <div className='mt-8'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 <h3 className='text-xl font-bold text-white mb-4'>
                   Technologies;
                 </h3>'
@@ -1338,12 +820,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 
-
-
-
-
               {/* Pricing */}
-
 
 <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1696,19 +1173,3 @@ export default EnhancedServicesShowcase2025;
 export default EnhancedServicesShowcase2025;
 
 };
-
-
-<<<<<<< HEAD
-      </AnimatePresence>
-    </div>
-);
-};
-
-export default EnhancedServicesShowcase2025;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

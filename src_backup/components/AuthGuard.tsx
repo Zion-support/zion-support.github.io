@@ -1,19 +1,5 @@
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+const returnUrl = options?.returnUrl |router.asPath
 
-<<<<<<< HEAD
-      const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
-=======
-=======
-const redirectTo = options?.redirectTo |'/login'
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
-      const returnUrl = options?.returnUrl |router.asPath
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -22,78 +8,15 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function AuthGuard({
-  children,
-  requireAuth = true,
-  requireRole,
-  redirectTo = '/auth/login',
-  fallback,
-  showToast = true,
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-    // If authentication is required but user is not authenticated
-    if (requireAuth && !isAuthenticated && !allowGuest) {
-      if (showToast) {
-        toast({
-          title: "Authentication Required",
-          description: "Please log in to access this feature.",
-          variant: "destructive"})
-;
-export function AuthGuard({;
-  children,;
-  requireAuth = true,;
-  requireRole,;
-  redirectTo = '/auth/login',;
-  fallback,;
-  showToast = true,;
-  allowGuest = false}: AuthGuardProps) {;
-  const { user, isAuthenticated, isLoading } = useAuth(),;
-  const router = useRouter(),;
-  useEffect(() => {;
-    // Don't redirect while auth is still loading;
-    if (isLoading) return,;
-    // If authentication is required but user is not authenticated;
-    if (requireAuth && !isAuthenticated && !allowGuest) {;
-      if (showToast) {;
-        toast({;
-          title: "Authentication Required",;
-          description: "Please log in to access this feature.",;
-          variant: "destructive"});
-      }
-;
-      const returnTo = encodeURIComponent(router.asPath),;
-      router.push(`${redirectTo}?returnTo=${returnTo}`),;
-      return;
-    }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
     const userRoles = user?.role ? [user && user.role] : [];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
@@ -105,8 +28,7 @@ export function AuthGuard({;
           toast({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
-            variant: "destructive"})
-;
+            variant: "destructive"});
     // If specific roles are required;
     if (requireRole && isAuthenticated && user) {;
       const userRoles = user.role ? [user.role] : [],;
@@ -114,7 +36,7 @@ export function AuthGuard({;
       if (!hasRequiredRole) {;
         if (showToast) {;
           toast({;
-            title: "Access Denied",;
+            title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,;
             variant: "destructive"});
         }
@@ -209,8 +131,7 @@ export function useAuthGuard() {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
-          variant: "destructive"})
-;
+          variant: "destructive"});
 // Hook for programmatic auth checks;
 export function useAuthGuard() {;
   const { user, isAuthenticated, isLoading } = useAuth(),;
@@ -226,7 +147,7 @@ export function useAuthGuard() {;
       const returnUrl = options?.returnUrl || router.asPath,;
       if (options?.showToast !== false) {;
         toast({;
-          title: "Authentication Required",;
+          title: "Authentication Required",
           description: "Please log in to continue.",;
           variant: "destructive"});
       }
@@ -252,8 +173,7 @@ export function useAuthGuard() {;
         toast({
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
-          variant: "destructive"})
-;
+          variant: "destructive"});
     return true;
   },;
   const requireRole = (roles: string[], options?: {;
@@ -266,7 +186,7 @@ export function useAuthGuard() {;
     if (!hasRequiredRole) {;
       if (options?.showToast !== false) {;
         toast({;
-          title: "Access Denied",;
+          title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,;
           variant: "destructive"});
       }
@@ -292,15 +212,6 @@ export function useAuthGuard() {;
     user;
     isLoading}
 }
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
-
-
 
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
@@ -315,22 +226,9 @@ export function useAuthGuard() {;
     user;
     is_loading}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 ;
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
 import React, { useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
@@ -570,9 +468,3 @@ return false;
 }'"
     isLoading}
 }
-<<<<<<< HEAD:src/components/AuthGuard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx

@@ -668,21 +668,3 @@ const Button = ({;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
-
-<<<<<<< HEAD
-=======
-:temp_conflicts/pages/enhanced-services-showcase.tsx
-  );
-};
-}
-}
-}
-  ),;
-},
-:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  );
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/enhanced-services-showcase.tsx

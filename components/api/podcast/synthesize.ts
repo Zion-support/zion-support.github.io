@@ -3,35 +3,8 @@ import fs from 'fs';'
 import path from 'path';'
 import axios from 'axios';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const EPISODES_PATH = null;
 
-<<<<<<< HEAD
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-  const { episodeId } = req && req.body || {};
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-=======
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse;
-) {}
-  const { episodeId } = req && req.body || {};'
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8');
   if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
@@ -64,21 +37,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
 
   let mp3Created = false;
-<<<<<<< HEAD
-  try {
-    if (elevenKey) {
-      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
-      const resp = await axios.post(
-`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {
-          text,
-=======
-  try {}
-    if (elevenKey) {}
-        {}
-          text,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
         },
         {}
@@ -88,8 +47,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Authorization: `Bearer ${playhtKey}`'
             'Content-Type': 'application/json'
           }
-        }
-      );
+        });
       fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data));
       mp3Created = true;
     } else {}
@@ -101,34 +59,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg'
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
-<<<<<<< HEAD
-      fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
-      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
 
-    const publicBase = '/podcast/' + baseFilename;
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    return res.status(200).json({ episode });
-    episode.audio = {
-mp3Url: publicBase + '.mp3',
-      wavUrl: publicBase + '.wav',
-      mp4Url: publicBase + '.mp4',
-    };
-
-    episodes[idx] = episode;
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-
-return res.status(200).json({ episode });
-origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch (error: any) {
-=======
-    }'
-    const publicBase = '/podcast/' + baseFilename;'
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    return res.status(200).json({ episode });
-  } catch (error: any) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.error(error);
     return res;
       .status(500)'
@@ -149,9 +80,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
 }'
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           response_type: 'arraybuffer',
           headers: {'
             'xi - api - key': eleven_key,'
@@ -173,8 +102,7 @@ if ( {) {}
             Authorization: `Bearer ${playht_key}`,'
             'Content - Type': 'application / json',
           },
-        }
-      );
+        });
       fs.writeFileSync (mp3Path, Buffer.from (resp.data));
       mp3Created = true;
     } else {}
@@ -210,41 +138,9 @@ if ( {) {}
     return res.status (200).json ({ episode });
   } catch (error: any) {}
     console.error (error);
-<<<<<<< HEAD
-    return res;
-      .status (500);'
-      .json ({ error: error?.message || 'Synthesis failed' });
-  }    return res.status (200).json ({ episode });
-  } catch (error: any) {}
-    console.error (error),'
-    return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
-}'
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');'
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-<<<<<<< HEAD
-=======
-  } catch (error: any) {
-    console.error(error);
-    return res;
-      .status(500)
-}
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       .json({ error: error?.message || 'Synthesis failed' });
   }
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      .json({ error: error?.message || 'Synthesis failed',}
-});
-  }
-}
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

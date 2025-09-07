@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
@@ -70,10 +69,7 @@ serve(async (req) => {;
           {;
             "summary":"Brief summary here";
             "projectType":"Project type here";
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           }
         `;
         ;
@@ -210,8 +206,7 @@ serve(async (req) => {;
       });
       {;
         headers:{ ...corsHeaders, "Content-Type":"application/json" };
-        status:200}
-    );
+        status:200});
   } catch (error) {;
     console.error("Error processing hire request:", error.message);
     ;
@@ -223,8 +218,7 @@ serve(async (req) => {;
       });
       {;
         headers:{ ...corsHeaders, "Content-Type":"application/json" };
-        status:500}
-    );  }
+        status:500});  }
 });
  interface HireRequest {
   talent: {

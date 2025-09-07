@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -20,16 +14,7 @@ interface UltraQuantumHolographicBackgroundProps {
 export default function UltraQuantumHolographicBackground({children;
   intensity;
             ease: "easeInOut"
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-useEffect ( () => {
-  const updateDimensions = () => {
-  setDimensions ({
-=======
-useEffect ( () => {}
-  const updateDimensions = () => {}
-  setDimensions ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const updateDimensions = () => {;
   setDimensions ({;
   updateDimensions ();
@@ -138,33 +123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       size: number,
       color: string,
       life: number,
-<<<<<<< HEAD
-      maxLife: number;
-      type: 'quantum' | 'holographic' | 'energy' | 'matrix';
-      constructor() {
-        this.x = Math.random() * dimensions.width;
-        this.y = Math.random() * dimensions.height;
-        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.size = Math.random() * 3 * intensityMultiplier + 1;
-this.color = [
-          colors.primary,
-          colors.secondary,
-          colors.tertiary,
-          colors.accent,
-        ][Math.floor(Math.random() * 4)];
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-        this.type = ['quantum', 'holographic', 'energy', 'matrix'][
-          Math.floor(Math.random() * 4)
-        ] as any;
-      }
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-      update() {
-=======
-      update() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
@@ -192,14 +151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           this.vy += 0.1;
           if (this.y > dimensions.height) {}
             this.y = -10;
-<<<<<<< HEAD
-            this.vy = Math.random() * 2 + 1
 
-this.vy = Math.random() * 2 + 1;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            this.vy = Math.random() * 2 + 1;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }
       }
@@ -222,16 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
-<<<<<<< HEAD
-            // Wave function rings
-            for (let i = 1, i <= 3, i++) {
-// Wave function rings
-            for (let i = 1; i <= 3; i++) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            // Wave function rings;
-            for (let i = 1, i <= 3, i++) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
@@ -250,38 +193,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.lineTo(this.x - this.size, this.y);
             ctx.fillStyle = this.color;
             ctx.fill();
-<<<<<<< HEAD
 
-            // Holographic grid
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = 0.5;
-            ctx.globalAlpha = alpha * 0.5;
-ctx.strokeRect(
-              this.x - this.size,
-              this.y - this.size,
-              this.size * 2,
-              this.size * 2
-            );
-            break;
-          case 'energy':
-            // Energy field
-const gradient = ctx.createRadialGradient(
-              this.x,
-              this.y,
-              0,
-              this.x,
-              this.y,
-              this.size
-            );
-origin/cursor/automate-test-improve-and-merge-code-2533
-            gradient.addColorStop(0, this.color);
-=======
-            // Holographic grid;
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = 0.5;
-            ctx.globalAlpha = alpha * 0.5;
-            gradient.addColorStop(0, this.color);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.beginPath();
@@ -407,7 +319,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <canvas;
         ref={canvasRef}
 
-
       {/* Holographic Overlay Effects */}
 
           }}
@@ -431,21 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Holographic Overlay Effects */}'
       <div className='fixed inset-0 z-10 pointer-events-none'>
-<<<<<<< HEAD
-className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        style={{
-          background: colors.background,
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,
-        }}
-      />
-      {/* Holographic Overlay Effects */}
-<div className='fixed inset-0 z-10 pointer-events-none'>
-        {/* Quantum Field Lines */}
-origin/cursor/automate-test-improve-and-merge-code-2533
-        <motion.div
-=======
-        <motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           className='absolute inset-0'
           animate={{}
             background: []`
@@ -453,7 +350,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)``
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)``
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
-
 
             ],          }}
           transition={{}
@@ -581,23 +477,13 @@ ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 
-
-
-
         />
       </div>
         />;
       </div>;
       {/* Content Layer */}'
       <div className='relative z - 20'>{children}</div>;
-<<<<<<< HEAD
-<div className='relative z-20'>{children}</div>
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Quantum Noise Effect */}
-=======
-      {/* Quantum Noise Effect */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;'
           className='absolute inset - 0';
@@ -617,25 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
             ]
           }}
-<<<<<<< HEAD
-          transition={{
 
-            background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            ],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }}
         />
       </div>
@@ -643,19 +511,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );  )
 }
     </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-);
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

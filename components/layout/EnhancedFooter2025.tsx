@@ -1,71 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Zap;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  BarChart3;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube'
-  Instagram;} from 'lucide-react';import {}
-import {}
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Zap,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Twitter,
-  Linkedin,
-  Github,;
-  Youtube,;'
-  Instagram,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Star, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Zap, Globe, Database, Lock, Cloud, BarChart3;
-<<<<<<< HEAD
-  Twitter, Linkedin, Github, Youtube, Instagram
-import { Phone, Mail, MapPin, Star, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Zap, Globe, Database, Lock, Cloud, BarChart3;
-  Twitter, Linkedin, Github, Youtube, Instagram
- } from 'lucide-react';
-const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-const serviceCategories = [
-  {
-=======
-  Twitter, Linkedin, Github, Youtube, Instagram;
-const serviceCategories = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    title: 'AI & Consciousness'
+title: 'AI & Consciousness'
     icon: Brain;
     services: []
     services: [;
@@ -300,17 +233,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-<<<<<<< HEAD
-className='space-y-4'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='flex items-center space-x-3'>
-                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
-=======
-              >'
-                <div className='flex items-center space-x-3'>'
-                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <category.icon className='w-4 h-4 text-white' />
                   </div>'
                   <h3 className='text-lg font-semibold text-white'>
@@ -354,11 +276,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>;
 
-
-
           {/* Additional Links */}'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
-
 
                       key={service.name}
                       href={service.href}"
@@ -398,15 +317,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={link.name}
                     href={link.href}"
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-<<<<<<< HEAD
-                    key={link.name}
-                    href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  >
-=======
-                  >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
@@ -442,29 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;"
               <div className="space-y-2">;
                 {legalLinks && legalLinks.map((link) => (;
-<<<<<<< HEAD
-            <div>
-<h4 className='text-white font-semibold mb-4'>Legal</h4>
-              <div className='space-y-2'>
-                {legalLinks.map(link => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
-                  >
-=======
-                  <Link;
-                    key={link.name}
-                    href={link.href}'"
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>"
-              <div className="space-y-2">
-                {legalLinks.map((link) => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}"
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                     {link.name}
                   </Link>
                 ))}
@@ -472,27 +361,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
-            <div>
-<h4 className='text-white font-semibold mb-4'>Follow Us</h4>
-              <div className='flex space-x-4'>
-                {socialLinks.map(social => (
-                  <a
 
-
-
-
-=======
-            <div>'
-              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>'
-              <div className='flex space-x-4'>"
-                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>"
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Social Links */}
-
 
                     key={social.name}
                     href={social.href}
@@ -564,13 +434,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.
-<<<<<<< HEAD
-              </motion.p>
-=======
-              </motion.p>              >
-                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
-              </motion.p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 className="text-gray-400 mb-6 max-w-2xl mx-auto"
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
@@ -613,49 +477,3 @@ export default EnhancedFooter2025;
 export default EnhancedFooter2025;
 
 };
-
-
-<<<<<<< HEAD
-                />
-                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
-                  Subscribe
-                </button>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-        {/* Bottom Bar */}
-<div className='border-t border-gray-800/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='text-gray-400 text-sm'>
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>
-
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>
-                <div className='flex items-center space-x-2'>
-                  <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                  <span>Trusted by 1000+ companies worldwide</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <div className='w-2 h-2 bg-green-400 rounded-full'></div>
-                  <span>99.9% Uptime Guarantee</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-);
-};
-
-export default EnhancedFooter2025;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

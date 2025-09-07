@@ -1,10 +1,3 @@
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
-
-import React from "react",
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button","
 import { HireNowCTA } from "./HireNowCTA","
@@ -16,24 +9,10 @@ import { ProfileAvailability } from "./ProfileAvailability","
 import { ProfileContact } from "./ProfileContact","
 import { ProfileRatings } from "./ProfileRatings","
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth",
-import { Availability } from "@/types/profile",
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-=======
-';
-import React from 'react';'
-import { Handshake, MessageSquare, Star } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
 import { Button } from '@/components/ui/button';
 '
 import { HireNowCTA } from './HireNowCTA';'
@@ -47,17 +26,7 @@ import { ProfileRatings } from './ProfileRatings';'
 import { TalentProfile as TalentProfileType } from '@/types/talent';'
 import { useAuth } from '@/hooks/useAuth';'
 import { Availability } from '@/types/profile';
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
-interface TalentProfileProps {;
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-  onMessageTalent?: () => void
 
-=======
-  onMessageTalent?: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
 export function TalentProfile(): any ({;
   profile,;
   onRequestHire,;
@@ -92,11 +61,6 @@ export function TalentProfile(): any ({;
       date: new Date().toISOString(), // Default date since we don't have this data;
     })) || [];
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
-
 interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -113,9 +77,7 @@ export function TalentProfile({
   const availability: Availability;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
       <ProfileHero;
@@ -127,12 +89,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}      />;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-      {/* Main content area */}
-=======
-
-      {/* Main content area */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>;
         {/* Left Column - Skills & Info */}'
         <div className='space-y-8'>;
@@ -144,12 +100,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             profileType='talent'          />;
         </div>;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-        {/* Right Column - Bio & Projects */}
-=======
-
-        {/* Right Column - Bio & Projects */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
         <div className='lg:col-span-2 space-y-8'>;
           {/* Bio Section */}
 '
@@ -167,79 +117,10 @@ import { ProfileRatings } from './ProfileRatings';'
 import { TalentProfile as TalentProfileType } from '@/types / talent';'
 import { use_auth } from '@/hooks / use_auth';'
 import { Availability } from '@/types / profile';
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-interface TalentProfileProps {
-  profile: TalentProfileType,
-  onRequestHire: () => void,
-  onMessageTalent?: () => void
-}
 
-export function TalentProfile({ 
-  profile,
-  onRequestHire,
-  onMessageTalent
-}: TalentProfileProps) {
-  const { isAuthenticated } = useAuth(),
-  
-  // Create proper availability object from talent profile
-  const availability: Availability = {
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-    status:;
-      profile.availability_type === 'full_time';
-        ? 'available';
-        : profile.availability_type === 'part_time';
-          ? 'limited';
-          : 'unavailable',
-    message: `${profile.professional_title} with ${profile.years_experience} years of experience`,
-  }
-  // Create proper skills array for ProfileSkills component;
-  const skills_array =;
-    profile.skills?.map (skill => ({
-      name: skill,
-      level: 3, // Default level since we don't have this data;
-    })) || [];
-  // Create proper projects array for ProfileProjects component;
-  const projects_array =;
-    profile.key_projects?.map ((proj, i) => ({
-      id: `project-${i}`,
-      title: proj.title,
-      description: proj.description,
-      date: new Date ().toISOString (), // Default date since we don't have this data;
-    })) || [];
-  return (
-    <div className='container mx - auto px - 4 py - 8'>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
-=======
-interface TalentProfileProps {}
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-  onMessageTalent?: () => void;
-export /**;
- * TalentProfile - Function description;
- */
-function TalentProfile() {}
-  const { is_authenticated } = use_auth ();
-  // Create proper availability object from talent profile;
-  const availability: Availability = {'
-    status: profile.availability_type === 'full_time' ? 'available' : '
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
   
@@ -301,39 +182,17 @@ export function TalentProfile() { return null; }
   })) || [];
   return (;"
     <div className="container mx-auto px-4 py-8">;
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
-=======
-        avatarUrl={profile.profile_picture_url}
-=======
-        avatarUrl={profile.profile_picture_url}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
         profileType="talent"
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
 
-      {/* Main content area */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-=======
-=======
-      {/* Main content area */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
       <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
         {/* Left Column - Skills & Info */}'
         <div className='space - y-8'>;
@@ -370,16 +229,6 @@ export function TalentProfile() { return null; }
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-          {/* Ratings Section */}
-          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>
-            <h2 className='text-xl font-bold text-white mb-4 flex items-center'>
-=======
-
-          {/* Ratings Section */}'
-          <div className='bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6'>'
-            <h2 className='text-xl font-bold text-white mb-4 flex items-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
               <Star className='mr-2 h-5 w-5 text-yellow-400' />
               Reviews & Ratings;
             </h2>
@@ -388,32 +237,7 @@ export function TalentProfile() { return null; }
             </div>;
           </div>;
           {/* Projects Section */}
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-          <ProfileProjects projects={projects_array} />;
-          {/* Ratings Section */}
-          <div className='bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6'>;
-            <h2 className='text - xl font - bold text - white mb - 4 flex items - center'>;
-              <Star className='mr - 2 h - 5 w - 5 text - yellow - 400' />;
-              Reviews & Ratings;
-            </h2>;
-            <ProfileRatings;
-              user_id={profile.id}
-              average_rating={profile.average_rating}
-              rating_count={profile.rating_count}            />;
-=======
-          <ProfileProjects projects={projectsArray} />;
-          {/* Ratings Section */}"
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">"
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">"
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />
-              Reviews & Ratings;
-            </h2>
-            <ProfileRatings;
-              userId={profile.id}
-              averageRating={profile.average_rating}
-              ratingCount={profile.rating_count}
-            />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
           </div>;
 
           {/* Hire Now CTA */}
@@ -478,35 +302,15 @@ interface TalentProfileProps {}
 
 export function TalentProfile({}
   profile,
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-  onRequestHire,
-  onMessageTalent
-}: TalentProfileProps) {
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Left Column - Skills & Info */}
-=======
-  onRequestHire,;
-  onMessageTalent;
-}: TalentProfileProps) {}
-        {/* Left Column - Skills & Info */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <ProfileContact 
-=======
-          <ProfileContact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
+
             email={profile.user_id}
             profileName={profile.full_name}"
             profileType="talent"
@@ -546,18 +350,7 @@ export function TalentProfile({}
                   Connect with {profile.full_name} for your next project and get started right away.`
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button "
                     size="lg" "
@@ -576,83 +369,23 @@ export function TalentProfile({}
                       onClick={onMessageTalent}
                     >"
                       <MessageSquare className="mr-2 h-5 w-5" />
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-                      Message
-=======
 
-                      Message;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
                     </Button>
                   )}
                 </div>;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
-                </p>;'
-                <div className='flex flex - wrap gap - 4 justify - center'>;
-                  <Button;'
-                    size='lg';'
-                    className='bg - zion - purple text - white hover:bg - zion - purple - dark';
-                    on_click={onRequestHire}                  >;'
-                    <Handshake className='mr - 2 h - 5 w - 5' />;
-                    Hire Now;
-                  </Button>;
-                  {onMessageTalent && (
-                    <Button;'
-                      size='lg';'
-                      variant='outline';'
-                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-                      on_click={onMessageTalent}                    >;'
-                      <MessageSquare className='mr - 2 h - 5 w - 5' />;
-                      Message;
-                    </Button>)}
-                </div>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD:src/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
-=======
-;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx

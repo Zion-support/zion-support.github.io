@@ -1,23 +1,4 @@
-
-<<<<<<< HEAD
-export default function GrantsAdminPage() {};
-  const [token, setToken] = useState('');
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [selected, setSelected] = useState<GrantApplication | null>(null);
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
-
-<<<<<<< HEAD
-  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
-
-  const load = () => {
-=======
-'
-  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
-
-
-  const load = () => {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
+fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
   useEffect(() => {}
     load()
@@ -38,17 +19,7 @@ export default function GrantsAdminPage() {};
 };
   const saveMilestones = async () => {;
     if (!selected) return;
-<<<<<<< HEAD
-  const load = () => {;
-    fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []))
-};
-  const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {;
-=======
-  const load = () => {;'
-    fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []));
-  };'
-  const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {;'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON && JSON.stringify({ status }) }),;
     load()
 };
@@ -58,39 +29,14 @@ export default function GrantsAdminPage() {};
       method: 'POST',;
       headers,;
       body: JSON && JSON.stringify({ milestones }),;
-<<<<<<< HEAD
-    });
-    alert('Milestones saved')
-};
-  const markComplete = async (milestoneId: string) => {;
-    if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;
-    alert('Milestones saved')
-};
-=======
-    });'
-    alert('Milestones saved');  };
-  const markComplete = async (milestoneId: string) => {;'`
-    if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;'
-    alert('Milestones saved');
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;`
       `/api/grants/${selected && selected.id}/milestones/${milestoneId}/complete`,;'
-      { method: 'POST', headers }
-    );`
+      { method: 'POST', headers });`
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
-<<<<<<< HEAD
-    setSelected(r && r.record)
-};
-import {useEffect, useMemo, useState} from 'react';
-import EnhancedLayout from '../../components / layout / EnhancedLayout';
-=======
-    setSelected(r && r.record);  };'
-import {useEffect, useMemo, useState} from 'react';'
-import EnhancedLayout from '../../components / layout / EnhancedLayout';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import type { GrantApplication, Milestone } from '../../types / grants';
 export default /**;
  * GrantsAdminPage - Function description;
@@ -168,64 +114,10 @@ if (return) {}
 }
     await fetch (`
       `/api / grants/${selected.id}/milestones/${milestone_id}/complete`,'
-      { method: 'POST', headers }
-    );`
+      { method: 'POST', headers });`
     const r = await fetch (`/api / grants/${selected.id}`).then (coordinate_x => x.json ());
     set_selected (r.record);  }
 ;
-<<<<<<< HEAD
-
-const headers = useMemo(
-    () =>
-      token
-        ? {
-            Authorization: `Bearer ${token}`
-            'Content-Type': 'application/json'
-          }
-        : { 'Content-Type': 'application/json' }
-    [token]
-  );
-  const load = () => {
-    fetch('/api/grants?status=Submitted')
-      .then(r => r.json())
-      .then(d => setItems(d.items |[]));
-  }
-  useEffect(() => {
-    load();
-  }, []);
-  const setStatus = async (
-    id: string
-    status: 'Under Review' | 'Approved' | 'Rejected'
-  ) => {
-    await fetch(`/api/grants/${id}/status`, {
-      method: 'POST'
-      headers
-      body: JSON.stringify({ status })
-    });
-    load();
-  };
-
-  const saveMilestones = async () => {
-    if (!selected) return;
-await fetch(`/api/grants/${selected.id}/milestones`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({ milestones }),
-    });
-    alert('Milestones saved');
-  };
-
-  const markComplete = async (milestoneId: string) => {
-    if (!selected) return;
-await fetch(
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
-      { method: 'POST', headers }
-    );
-    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
-    setSelected(r.record);
-  };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <EnhancedLayout>
@@ -235,12 +127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h1 className = 'text-2xl font-semibold mb-4' />Grants Admin</h1>
  ;
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
-=======
-  return ('`
-    <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
     set_selected (r.record);
   }
@@ -253,124 +140,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='mb - 3 flex items - center gap - 2'>;
             <input;'
               className='border rounded p - 2';'
-=======
-    <EnhancedLayout />    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
 
-const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
-    set_selected (r.record)
-};
-
-  return (
-    <EnhancedLayout />;
-
-      <h1 className='text - 2xl font - semibold mb - 4' />Grants Admin</h1>;
-      <div className='grid md:grid - cols - 3 gap - 6' />;
-        <div className='md:col - span - 2' />;
-          <div className='mb - 3 flex items - center gap - 2' />;
-            <input;
-              className='border rounded p - 2';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               placeholder='Admin Token';
               value={token}
               on_change={e = /> set_token (e.target.value)}
             />;
-<<<<<<< HEAD
-          </div>;'
-          <div className='grid gap - 3'>;
-            {items.map (g => (
-              <div;
-                key={g.id}'`
-                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}
-              >;'
-                <div className='flex items - center justify - between'>;
-                  <div>;'
-                    <div className='font - medium'>{g.project_name}</div>;'
-                    <div className='text - xs text - gray - 600'>;
-=======
-          </div>;
-          <div className='grid gap - 3' />;
-            {items.map (g => (<div;}
-                key={g.id}
-                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`} />
 
-                <div className='flex items - center justify - between' />;
-                  <div />;
-                    <div className='font - medium' />{g.project_name}</div>;
-                    <div className='text - xs text - gray - 600' />;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {g.sector} • {g.region} • {g.program}
                     </div>;
                   </div>;'
                   <div className='flex gap - 2'>;
-<<<<<<< HEAD
-                    <button;'
-                      className='px - 2 py - 1 border rounded';'
-                      on_click={() => set_status (g.id, 'Under Review')}
-                    >;
-                      Under Review;
-                    </button>;
-                    <button;'
-                      className='px - 2 py - 1 bg - emerald - 600 text - white rounded';'
-                      on_click={() => set_status (g.id, 'Approved')}
-                    >;
-                      Approve;
-                    </button>;
-                    <button;'
-                      className='px - 2 py - 1 bg - red - 600 text - white rounded';'
-                      on_click={() => set_status (g.id, 'Rejected')}
-                    >;
-                      Reject;
-                    </button>;
-                    <button;'
-                      className='px - 2 py - 1 border rounded';
-                      on_click={() => set_selected (g)}
-=======
 
-                    </div>
-                  </div>
-                  <div className='flex gap-2' />
-                    <button;
-className='px-2 py-1 border rounded'
-
-                      onClick={() = /> setStatus(g.id, 'Under Review')}
-                    >;
-                      Under Review;
-                    </button>;
-                    <button;
-                      className='px-2 py-1 bg-emerald-600 text-white rounded';
-                      onClick={() = /> setStatus(g.id, 'Approved')}
-                    >;
-                      Approve;
-                    </button>;
-                    <button;
-                      className='px-2 py-1 bg-red-600 text-white rounded';
-                      onClick={() = /> setStatus(g.id, 'Rejected')}
-                    >;
-                      Reject;
-                    </button>;
-                    <button;
-                      className='px-2 py-1 border rounded';
-                      onClick={() = /> setSelected(g)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     >;
                       Milestones;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              </div>))}                  <div className="flex gap-2">;
-                    <button className="px-2 py-1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
-                    <button className="px - 2 py - 1 bg - emerald-600 text-white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
-                    <button className="px - 2 py - 1 bg - red-600 text-white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;
-                    <button className="px-2 py-1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
-=======
-              </div>))}                  <div className="flex gap - 2">;'"
-                    <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;'"
-                    <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;'"
-                    <button className="px - 2 py - 1 bg - red - 600 text - white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;"
-                    <button className="px - 2 py - 1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 </div>;
               </div>))}
             {items.length === 0 && ('
@@ -382,10 +168,7 @@ className='px-2 py-1 border rounded'
         <div>;'
           <div className='border rounded p - 3'>;'
             <h2 className='font - medium mb - 2'>Milestone Planner</h2>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     </div>
                   </div>
                   <div className='flex gap-2'>
@@ -433,10 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='border rounded p-3' />
             <h2 className='font-medium mb-2' />Milestone Planner</h2>
             {selected ? (
-<<<<<<< HEAD
-=======
-            {selected ? ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               <div className='space - y-2'>;
                 {(milestones.length === 0;
                   ? selected.milestones || [];
@@ -449,20 +229,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       on_change={e =>;
                         set_milestones (ms => {}
                           const copy = ms.length;
-=======
-              <div className='space - y-2' />;
 
-                {(milestones.length === 0;}
-                  ? selected.milestones || [];}
-                  : milestones).map ((m, idx) => (<div key={m.id || idx} className='border rounded p - 2' />;
-                    <input;
-                      className='w - full border rounded p - 2 mb - 2';
-                      placeholder='Title';
-                      value={m.title}
-                      on_change={e = />;
-                        set_milestones (ms = > ;
-  const copy = ms.length;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             ? [...ms];
                             : [...(selected.milestones || [])];}
                           copy[idx] = { ...copy[idx], title: e.target.value,}
@@ -474,56 +241,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='w - full border rounded p - 2 mb - 2';'
                       placeholder='Description';'
                       value={m.description || ''}
-<<<<<<< HEAD
-                      on_change={e =>;
-                        set_milestones (ms => {}
-                          const copy = ms.length;
-                            ? [...ms];
-                            : [...(selected.milestones || [])];
-                          copy[idx] = {}
-                            ...copy[idx],
-                            description: e.target.value,
-                          }
-                          return copy;
-                        });
-                      }
-                    />;'
-                    <div className='grid grid - cols - 2 gap - 2'>;
-                      <input;'
-                        className='border rounded p - 2';'
-                        placeholder='Due date (YYYY - MM - DD)';'
-                        value={m.due_date || ''}
-                        on_change={e =>;
-                          set_milestones (ms => {}
-                            const copy = ms.length;
-                              ? [...ms];
-                              : [...(selected.milestones || [])];
-                            copy[idx] = {}
-                              ...copy[idx],
-                              due_date: e.target.value,
-                            }
-=======
-                      on_change={e = />;
-                        set_milestones (ms = > ;
-  const copy = ms.length;
-                            ? [...ms];}
-                            : [...(selected.milestones || [])];}
-                          copy[idx] = {...copy[idx],description: e.target.value,}
-                          return copy;
-                        })}
-                    />;
-                    <div className='grid grid - cols - 2 gap - 2' />;
-                      <input;
-                        className='border rounded p - 2';
-                        placeholder='Due date (YYYY - MM - DD)';
-                        value={m.due_date || ''}
-                        on_change={e = />;
-                          set_milestones (ms = > ;
-  const copy = ms.length;
-                              ? [...ms];}
-                              : [...(selected.milestones || [])];}
-                            copy[idx] = {...copy[idx],due_date: e.target.value,}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                             return copy;
                           })}
                       />;
@@ -532,24 +250,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         placeholder='Tranche (amount)';'
                         type='number';
                         value={m.tranche_amount || 0}
-<<<<<<< HEAD
-                        on_change={e =>;
-                          set_milestones (ms => {}
-                            const copy = ms.length;
-                              ? [...ms];
-                              : [...(selected.milestones || [])];
-                            copy[idx] = {}
-                              ...copy[idx],
-                              tranche_amount: Number (e.target.value),
-                            }
-=======
-                        on_change={e = />;
-                          set_milestones (ms = > ;
-  const copy = ms.length;
-                              ? [...ms];}
-                              : [...(selected.milestones || [])];}
-                            copy[idx] = {...copy[idx],tranche_amount: Number (e.target.value),}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                             return copy;
                           })}
                       />;
@@ -558,33 +259,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Mark Complete;
                       </button>;
                     </div>;
-<<<<<<< HEAD
-                  </div>))}'
-                <div className='flex gap - 2 mt - 2'>;
-                  <button;'
-=======
-                  </div>))}
-                <div className='flex gap - 2 mt - 2' />;
-                  <button;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     className='px - 2 py - 1 border rounded';
                     on_click={() = />;
                       set_milestones (ms => [;
-<<<<<<< HEAD
-                        ...(ms.length ? ms : selected.milestones || []),
-                        {}`
-                          id: `${Date.now ()}-${Math.random ()}`,'
-                          title: '',
-                          tranche_amount: 0,'
-=======
 
-                        ...(ms.length ? ms : selected.milestones || []),}
-                        {}
-                          id: `${Date.now ()}-${Math.random (,}
-}`,
-                          title: '',
-  tranche_amount: 0,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
@@ -629,16 +308,7 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                   </button>
                 </div>
               </div>
-<<<<<<< HEAD
-            ) : (
-              <div className='text-sm text-gray-600' />
-                Select a grant to plan milestones.
-origin/cursor/automate-test-improve-and-merge-code-2533
-              </div>
-=======
-            ) : ("
-              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             )}
           </div>
         </div>
@@ -691,14 +361,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
+});
 }
-  );
-}
-<<<<<<< HEAD
-                  <button;'
-=======
-                  <button;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
                   >;
@@ -710,67 +375,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Select a grant to plan milestones.;
               </div>            )}          </div>;
         </div>;
-<<<<<<< HEAD
-        <div>;
-          <div className="border rounded p-3">;
-            <h2 className="font-medium mb-2">Milestone Planner</h2>;
-            {selected ? (
-              <div className="space-y-2">;
-                {(milestones.length === 0 ? (selected.milestones || []) : milestones).map ((m, idx) => (
-                  <div key={m.id || idx} className="border rounded p-2">;
-                    <input className="w - full border rounded p-2 mb-2" placeholder="Title" value={m.title} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
-                    <textarea className="w - full border rounded p-2 mb-2" placeholder="Description" value={m.description || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
-                    <div className="grid grid - cols-2 gap-2">;
-                      <input className="border rounded p-2" placeholder="Due date (YYYY - MM - DD)" value={m.due_date || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], due_date: e.target.value }, return copy })} />;
-                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.tranche_amount || 0} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], tranche_amount: Number (e.target.value) }, return copy })} />;
-                    </div>;
-                    <div className="mt - 2 flex items-center gap-2">;
-                      <button className="px-2 py-1 border rounded" on_click={() => mark_complete (m.id!)} disabled={!m.id}>Mark Complete</button>;
-                    </div>;
-                  </div>))}
-                <div className="flex gap-2 mt-2">;
-                  <button className="px-2 py-1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px - 2 py - 1 bg - blue-600 text-white rounded" on_click={save_milestones}>Save Milestones</button>;
-                </div>;
-              </div>) : (
-              <div className="text - sm text-gray-600">Select a grant to plan milestones.</div>)}
-=======
-        <div>;"
-          <div className="border rounded p - 3">;"
-            <h2 className="font - medium mb - 2">Milestone Planner</h2>;
-            {selected ? ("
-              <div className="space - y-2">;
-                {(milestones.length === 0 ? (selected.milestones || []) : milestones).map ((m, idx) => ("
-                  <div key={m.id || idx} className="border rounded p - 2">;"
-                    <input className="w - full border rounded p - 2 mb - 2" placeholder="Title" value={m.title} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;'"
-                    <textarea className="w - full border rounded p - 2 mb - 2" placeholder="Description" value={m.description || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;"
-                    <div className="grid grid - cols - 2 gap - 2">;'"
-                      <input className="border rounded p - 2" placeholder="Due date (YYYY - MM - DD)" value={m.due_date || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], due_date: e.target.value }, return copy })} />;"
-                      <input className="border rounded p - 2" placeholder="Tranche (amount)" type="number" value={m.tranche_amount || 0} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], tranche_amount: Number (e.target.value) }, return copy })} />;
-                    </div>;"
-                    <div className="mt - 2 flex items - center gap - 2">;"
-                      <button className="px - 2 py - 1 border rounded" on_click={() => mark_complete (m.id!)} disabled={!m.id}>Mark Complete</button>;
-                    </div>;
-                  </div>))}"
-                <div className="flex gap - 2 mt - 2">;'"`
-                  <button className="px - 2 py - 1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;"
-                  <button className="px - 2 py - 1 bg - blue - 600 text - white rounded" on_click={save_milestones}>Save Milestones</button>;
-                </div>;
-              </div>) : ("
-              <div className="text - sm text - gray - 600">Select a grant to plan milestones.</div>)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           </div>;
         </div>;
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 ;
 export interface HelpArticle {;
@@ -14,7 +13,7 @@ export interface HelpCategory {;
   description:string;
   icon:ReactNode;
   articles:HelpArticle[];
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 }
 ;
 export interface SupportTicket {;
@@ -34,5 +33,3 @@ lastUpdated: string;
 tags: string[]
 }export interface HelpCategory {
   id: string;
-<<<<<<< HEAD
-

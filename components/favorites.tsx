@@ -1,43 +1,9 @@
-<<<<<<< HEAD
-export default function FavoritesPage() {};
-export default function FavoritesPage() { return null; }
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(
-    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
-    [favorites]
-  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => {;
-    try {;
-      const raw = localStorage && localStorage.getItem(storageKey);
-      if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
-  }, []);
-  }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
-  return { favorites, remove }
-}
-
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head',
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-  const storageKey = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return (
+return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
-export default function FavoritesPage() { return null; }
-=======
-export default function FavoritesPage() {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
     () => TALENT_PROFILES && TALENT_PROFILES.filter(t => favorites && favorites.includes(t && t.slug)),;
@@ -111,30 +77,10 @@ function FavoritesPage() {}
               Favorites;
             </li>          </ol>;
         </nav>;
-<<<<<<< HEAD
-      </div>;
-      <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>      <div className="mb - 6 text - sm text - gray - 500 dark:text-gray-400">;
-        <nav aria - label="Breadcrumb">;
-          <ol className="flex items-center gap-2">;
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>;
-            <li aria - hidden="true">/</li>;
-            <li className="text - gray - 900 dark:text-gray-100" aria - current="page">Favorites</li>;
-=======
-      </div>;'"
-      <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>      <div className="mb - 6 text - sm text - gray - 500 dark:text - gray - 400">;"
-        <nav aria - label="Breadcrumb">;"
-          <ol className="flex items - center gap - 2">;"
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>;"
-            <li aria - hidden="true">/</li>;"
-            <li className="text - gray - 900 dark:text - gray - 100" aria - current="page">Favorites</li>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         </nav>;
       </div>;'
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
@@ -161,11 +107,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {profiles.length === 0 ? (
         <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
           <div className='text - gray - 600 dark:text - gray - 300'>;
-=======
-      {profiles.length === 0 ? ('
-        <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;'
-          <div className='text - gray - 600 dark:text - gray - 300'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             You haven't saved any talent yet.;
           </div>;'
           <div className='mt - 4'>;'
@@ -209,30 +151,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link href={`/talent/${t.slug}?hire = 1`}>;'
                     <a className='px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600'>;
                       Request to Hire;
-<<<<<<< HEAD
-                    </a>;
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify-between text-sm">;
-                <div className="font-medium">${t.hourlyRateUsd}/hr</div>;
-                <div className="flex items-center gap-3">;
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo-600 text-white">View Profile</a></Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text-indigo-600">Request to Hire</a></Link>;
-=======
-                    </a>;"
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify - between text - sm">;"
-                <div className="font - medium">${t.hourlyRateUsd}/hr</div>;"
-                <div className="flex items - center gap - 3">;"`
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white">View Profile</a></Link>;"`
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600">Request to Hire</a></Link>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               </div>;
             </div>))}
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>
@@ -283,6 +208,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

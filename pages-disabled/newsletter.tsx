@@ -1,53 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
-const Page = () => {
-  return (
-    <MainLayout;
-      title="Newsletter - Zion Tech Group"""
-      description="Subscribe to our newsletter for the latest updates""
-    >
-"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Newsletter</h1>""
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-    )"
-      </div>
-    </MainLayout>)"
-
-<<<<<<< HEAD:pages/newsletter.tsx
-export default Page;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
-=======
 
-import React, { useState } from 'react';'
-import Head from 'next/head';'
-import Layout from './components/Layout';'
-import { motion } from 'framer-motion';
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ArrowRight,
   Users,
   Calendar,
@@ -81,23 +37,6 @@ import {;
   Clock,;
 
 } from "lucide-react";
-<<<<<<< HEAD
-  Clock
-} from 'lucide-react';
-=======
-
-"
-} from "lucide-react";
-  Clock'
-} from 'lucide-react';
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
 
   ArrowRight;
   Users;
@@ -115,34 +54,13 @@ import {;
   Award;
   Clock"
 } from "lucide-react";
-<<<<<<< HEAD
-const benefits = [
-  {
-=======
 
-
-const benefits = []
-  {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: "Exclusive Content"
     description:"
       "Get access to exclusive white papers, case studies, and industry insights."
     icon: FileText;
   }
-<<<<<<< HEAD
-} from './lucide-react';
-;
-const benefits = [;
-  {
-    description:
-=======
-'
-} from './lucide-react';
-;
-const benefits = [;
-  {}
-    description:"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video;
   }
@@ -155,10 +73,7 @@ const benefits = [;
   {"
     title: "Industry Insights"
     description:
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },'
@@ -176,31 +91,7 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp;
   }
-<<<<<<< HEAD
-    content:
-=======
 
-
-
-
-
-"
-      "Stay updated with the latest trends and developments in technology."
-    icon: TrendingUp;
-  }
-];
-
-;
-const testimonials = [;
-
-  {}
-"
-    name: "Sarah Johnson""
-    role: "CTO, TechCorp"
-
-
-    content:"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5;
   }
@@ -234,48 +125,12 @@ export default function NewsletterPage() { return null; }
     rating: 5;
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-=======
-export default function NewsletterPage() { return null; }
-  const handleSubmit = async (e) => {}
-    e.preventDefault();
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsSubscribed(true);
     setIsLoading(false);
   }
   return (
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
-=======
 
-      </Head>"
-      <div className="min-h-screen bg-gray-50">
-
-    <Layout>;
-      <Head>;
-        <title>Newsletter - Zion Tech Group</title>;
-        <meta"
-          name="description""
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />;
-      </Head>;"
-      <div className="min-h-screen bg-gray-50">;
-
-        {/* Hero Section */}"
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center max-w-4xl mx-auto"
@@ -285,22 +140,6 @@ export default function NewsletterPage() { return null; }
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
 
-<<<<<<< HEAD
-              {!isSubscribed ? (
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-=======
-
-
-
-
-
-
-
-
-
-              {!isSubscribed ? ("
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex flex-col sm:flex-row gap-4">
               transition={{ duration: 0 && 0.8 }}>;"
               <h1 className="text-5xl font-bold mb-6">;
@@ -350,35 +189,18 @@ export default function NewsletterPage() { return null; }
                   Successfully subscribed! Welcome to our community.;
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-16 bg-white">;
-=======
 
-        {/* Benefits Section */}"
-        <section className="py-16 bg-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-<<<<<<< HEAD
-                <motion.div
-    content:;
-=======
-                <motion.div;
-    content:;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
     rating: 5,
   },
@@ -499,12 +321,7 @@ function NewsletterPage() { return null; }
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
-<<<<<<< HEAD
-                  key={benefit.title}
-=======
 
-                  key={benefit.title}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -515,11 +332,7 @@ function NewsletterPage() { return null; }
                   </div>;"
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -564,11 +377,7 @@ function NewsletterPage() { return null; }
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div;
@@ -590,11 +399,7 @@ function NewsletterPage() { return null; }
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div"
@@ -634,11 +439,7 @@ function NewsletterPage() { return null; }
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -722,12 +523,7 @@ function NewsletterPage() { return null; }
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.8 }}>;
-=======
 
-              transition={{ duration: 0 && 0.8 }}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
               </h2>;"
@@ -744,15 +540,7 @@ function NewsletterPage() { return null; }
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     ))}
                   </div>;"
                   <p className="text-gray-600 mb-4 italic">;"
@@ -768,14 +556,7 @@ function NewsletterPage() { return null; }
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
-=======
 
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">;
             <motion&& motion.div"
               className="text-center max-w-4xl mx-auto"
@@ -785,22 +566,6 @@ function NewsletterPage() { return null; }
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
 
-<<<<<<< HEAD
-              {!isSubscribed && (
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-=======
-
-
-
-
-
-
-
-
-
-              {!isSubscribed && ("
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex flex-col sm:flex-row gap-4">
               transition={{ duration: 0 && 0.8 }}>;"
               <h2 className="text-4xl font-bold mb-6">;
@@ -841,106 +606,9 @@ function NewsletterPage() { return null; }
                   </div>;
                 </form>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-              <div className="mt-8 text-green-100 text-sm">;
-                >;
-                  <div className="flex items - center mb - 4">;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star;
-                        key={i}
-                        className="w - 4 h - 4 text - yellow - 400 fill - current";
-                      />))}
-                  </div>;
-                  <p className="text - gray - 600 mb - 4 italic">;
-                    "{testimonial.content}";
-                  </p>;
-                  <div>;
-                    <div className="font - semibold text - gray - 900">;
-                      {testimonial.name}
-                    </div>;
-                    <div className="text - sm text - gray - 500">;
-                      {testimonial.role}
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center max - w-4xl mx - auto";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 4xl font - bold mb - 6">;
-                Ready to Join Our Community?;
-              </h2>;
-              <p className="text - xl mb - 8 text - green - 100">;
-                Subscribe now and start receiving valuable insights delivered to;
-                your inbox every week.;
-              </p>;
-              {!is_subscribed && (
-                <form on_submit={handle_submit} className="max - w-md mx - auto">;
-                  <div className="flex flex - col sm:flex - row gap - 4">;
-                    <input;
-                      type="email";
-                      placeholder="Enter your email address";
-                      value={email}
-                      on_change={(e) => set_email (e.target.value)}
-                      required;
-                      className="flex - 1 px - 4 py - 3 rounded - lg text - gray - 900 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - green - 300";
-                    />;
-                    <button;
-                      type="submit";
-                      disabled={is_loading}
-                      className="bg - white text - green - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - green - 50 transition - colors disabled:opacity - 50 disabled:cursor - not - allowed inline - flex items - center justify - center";
-                    >;
-                      {is_loading ? (
-                        <>;
-                          <Clock className="w - 4 h - 4 mr - 2 animate - spin" />;
-                          Subscribing...;
-                        </>) : (
-                        <>;
-                          Subscribe Now;
-                          <Send className="ml - 2 w - 4 h - 4" />;
-                        </>)}
-                    </button>;
-                  </div>;
-                </form>)}
-              <div className="mt - 8 text - green - 100 text - sm">;
-
-                <p>✓ No spam, ever</p>;
-                <p>✓ Unsubscribe anytime</p>;
-                <p>✓ Free forever</p>;
-              </div>;
-
-}
-
-=======
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
-=======
 
-'
-import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {}
@@ -958,23 +626,3 @@ const Page = () => {}
     </MainLayout>
   );
 };
-
-<<<<<<< HEAD
-export default Page;
-=======
-export default Page;
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/newsletter.tsx

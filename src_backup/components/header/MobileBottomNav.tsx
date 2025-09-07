@@ -1,49 +1,3 @@
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useWishlist } from "@/hooks/useWishlist",
-import { useCart } from '@/context/CartContext',
-import { logWarn } from '@/utils/productionLogger',
-import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
-
-interface MobileBottomNavProps {
-  unreadCount?: number
-}
-
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length,
-
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0,
-  if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
-  } else {
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
-  }
-
-  const navItems = [
-    {
-      name: "Home",
-      href: "/",
-      icon: Home,
-      matches: (path: string) => path === "/"
-    },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link",
@@ -146,146 +100,45 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
-=======
 
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx
-
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
-  }
-  const navItems = [
-    {
-
-      name: "Home",
-      href: "/",
-      icon: Home,
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/wishlist"),
-      badge: favoritesCount,
-      authRequired: true
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
-    },
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
-<<<<<<< HEAD
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
-    }
-  ],
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
           <Link
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             key={item.name}
             href={item.href}
             aria-label={item.name}
@@ -312,79 +165,6 @@ import { logWarn } from '@/utils/productionLogger',;
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {;
   unreadCount?: number;
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-;
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
-  const router = useRouter(),;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict;
-  const favoritesCount = wishlistItems.length,;
-  const cartContextValue = useCart(), // Call hook at top level;
-  let cartCount = 0,;
-  if (cartContextValue && cartContextValue.items) {;
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0);
-  } else {;
-    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
-  }
-;
-  const navItems = [;
-    {;
-      name: "Home",;
-      href: "/",;
-      icon: Home,;
-      matches: (path: string) => path === "/";
-    },;
-    {;
-      name: "Browse",;
-      href: "/talent",;
-      icon: Search,;
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
-    },;
-    {;
-      name: "Community",;
-      href: "/community",;
-      icon: MessageCircle,;
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum");
-    },;
-    {;
-      name: "Wishlist",;
-      href: "/wishlist",;
-      icon: Heart,;
-      matches: (path: string) => path.startsWith("/wishlist"),;
-      badge: favoritesCount,;
-      authRequired: true;
-    },;
-    {;
-      name: "Messages",;
-      href: "/messages",;
-      icon: MessageSquare,;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
-      badge: unreadCount,;
-      authRequired: true;
-    },;
-    {;
-      name: "Cart",;
-      href: "/cart",;
-      icon: ShoppingCart,;
-      matches: (path: string) => path.startsWith("/cart"),;
-      badge: cartCount;
-    },;
-    {;
-      name: "Dashboard",;
-      href: "/dashboard",;
-      icon: User,;
-      matches: (path: string) => path.startsWith("/dashboard"),;
-      authRequired: true;
-    }
-  ],;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const router = useRouter();
@@ -466,16 +246,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
                 <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx
   return (;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
         {visibleItems.map(item => (;
@@ -504,23 +277,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
 
-;
-}
-
-      </div>;
-    </nav>;
-  );
-}
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx
       name: 'Browse',
       href: '/talent',
       icon: Search,
@@ -563,7 +320,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       auth_required: true,
     },
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   // Filter items based on auth status;
   const visibleItems = navItems.filter(item =>;
     !item.authRequired || (item.authRequired && isAuthenticated);
@@ -588,44 +345,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
-<<<<<<< HEAD
-                </span>;
-              )}
-            </div>
-            <span className="hidden sm:block text-xs font-medium">{item.name}</span>
-          </Link>
-        ))}
-      </div>;
-    </nav>;
-  );
-=======
-                </span>)}
-            </div>;
-            <span className='hidden sm:block text - xs font - medium'>;
-              {item.name}
-            </span>;
-          </Link>))}
-      </div>;
-    </nav>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
 ;
-<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-      </div>
-    </nav>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-      </div>
-    </nav>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx

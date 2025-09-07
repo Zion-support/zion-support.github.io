@@ -1,136 +1,8 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React, { useState } from 'react';
-
-export interface TreeNode {;
-  name: string;
-  path: string;
-'
-  type: 'folder' | 'file';
-  exists?: boolean;
-  children?: TreeNode[];
-function NodeItem({}
-  node;
-  depth;
-  onDeploy;
-}: {}
-interface TreeProps {;
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
-
-function NodeItem(): any ({;
-  node,;
-  depth,;
-  onDeploy,;
-}: {;
-  node: TreeNode;
-  depth: number;
-  name: string;
-  path: string;
-  type: "folder" | "file"
-
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path)
-};
-export interface TreeNode {;
-  name: string,;
-  path: string,;"
-  type: "folder" | "file",;
-  name: string;
-  path: string"
-  type: "folder" | "file"
-
-  name: string,
-  path: string,"
-  type: "folder" | "file",;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  exists?: boolean;
+exists?: boolean;
   children?: TreeNode[];
 }
   const [open, setOpen] = useState<boolean>(false);
 
-<<<<<<< HEAD
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen((v) => !v);"
-        "Content-Type": "application/json";
-        // Expect an admin token in local storage, fall back to prompt"
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
-      body: JSON.stringify({ path: node.path })})
-  return ('
-    <div className='ml-2'>;'
-      <div className='flex items-center gap-2 py-1'>;
-<<<<<<< HEAD
-        {hasChildren ? (;
-          <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
-import React, { useState } from 'react';
-
-export interface TreeNode {
-  name: string;
-  path: string;
-    await navigator.clipboard.writeText(node.path);
-  };
-
-  const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {
-method: 'POST',
-  exists?: boolean;
-  children?: TreeNode[]
-}
-interface TreeProps {
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void
-}
-function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const hasChildren = null;
-      headers: {
-        'Content-Type': 'application/json'
-        // Expect an admin token in local storage, fall back to prompt
-        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
-      } as any,
-      body: JSON.stringify({ path: node.path }),
-    });
-  };
-
-  const deploy = () => onDeploy && onDeploy(node.path);
-  return (
-<div className='ml-2'>
-      <div className='flex items-center gap-2 py-1'>
-        {hasChildren ? (
-          <button className='text-sm' onClick={toggle} aria-label='Toggle'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        {hasChildren ? (;'
-          <button className='text-sm' onClick={toggle} aria-label='Toggle'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {open ? '▾' : '▸'}
           </button>;
         ) : (;'
@@ -308,15 +180,7 @@ export default Tree;
 }export /**;
  * Tree - Function description;
  */
-<<<<<<< HEAD
-function Tree() {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-=======
-function Tree() { return null; }
-  return (<div className="w - full"> {}
-  nodes.map ( (n) => (<NodeItem key= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   n.path;
 }node= {}
   n;
@@ -329,14 +193,3 @@ function Tree() { return null; }
 }export default Tree;}
 export default Tree;
 ;
-<<<<<<< HEAD
-}/>) ) 
-}</div>) 
-}export default Tree;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
