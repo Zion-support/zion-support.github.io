@@ -1,49 +1,25 @@
-import React from 'react'
-import { Metadata } from 'next'
+export const metadata = {
+  title: 'Ai Healthcare Analytics - Zion Tech Group',
+  description: 'Professional ai healthcare analytics solutions for your business needs.'
+};
 
-export const metadata: Metadata = {
-  title: 'Ai Healthcare Analytics | Zion Tech Group',
-  description: 'Professional ai healthcare analytics services for your business needs.',
-  keywords: 'ai healthcare analytics, services, business, technology'
-}
-
-export default function ServicePage() {
+export default function AiHealthcareAnalyticsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ai Healthcare Analytics
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai healthcare analytics services for your business needs.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai healthcare analytics solutions for your business needs.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
-            </p>
-          </div>
+        
+        <div className="text-center">
+          <p className="text-gray-600">
+            Ai Healthcare Analytics page is under construction.
+          </p>
         </div>
 
         <div className="text-center">
@@ -57,5 +33,5 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

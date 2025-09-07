@@ -1,73 +1,46 @@
-import React from 'react'
-import { Metadata } from 'next'
+import React from "react";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ai Content Generator | Zion Tech Group',
-  description: 'Professional ai content generator services for your business needs.',
-  keywords: 'ai content generator, services, business, technology'
-}
+  title: 'AI Content Generator Pro | Zion Tech Group',
+  description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials. Generate high-quality, SEO-optimized content at scale.',
+  keywords: 'AI content generator, content creation, blog writing, social media content, marketing automation, SEO content'
+};
 
-export default function ServicePage() {
+export default function AIContentGeneratorPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Content Generator
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Content Generator Pro
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai content generator services for your business needs.
+          <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+            Transform your content marketing with our advanced AI-powered platform. Generate high-quality, 
+            SEO-optimized content for blogs, social media, and marketing materials at scale.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Ai Content Generator Inquiry"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-              >
-                Contact Us
-              </a>
-            </div>
-            <div className="mt-6 text-sm text-gray-300">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg"
+            >
+              Contact Sales
+            </a>
           </div>
         </div>
-
+        
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Contact us today to learn how our ai content generator services can transform your business.
+          <p className="text-gray-600">
+            AI Content Generator page is under construction.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
-            Contact Sales
-          </button>
         </div>
       </div>
     </div>
-  )
+  );
 }

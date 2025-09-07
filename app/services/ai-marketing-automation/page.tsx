@@ -1,228 +1,231 @@
 import React from 'react'
 import { Metadata } from 'next'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'Ai Marketing Automation | Zion Tech Group',
-  description: 'Professional ai marketing automation services for your business needs.',
-  keywords: 'ai marketing automation, services, business, technology'
+export const metadata = {
+  title: 'AI Marketing Automation | Zion Tech Group',
+  description: 'Professional AI marketing automation services for your business needs.',
+  keywords: 'ai-marketing-automation, services, business, technology'
+};
+
+function PricingCard({ name, price, period, description, features, popular }: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+}) {
+  return (
+    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+      {popular && (
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+        <div className="text-4xl font-bold text-blue-600 mb-2">
+          {price}
+          <span className="text-lg text-gray-500 font-normal">/{period}</span>
+        </div>
+        <p className="text-gray-600">{description}</p>
+      </div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            <span className="text-gray-700">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <a
+        href={`mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation - ${name} Plan`}
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-900 text-white hover:bg-gray-800'
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
 }
 
-export default function ServicePage() {
+function CaseStudy({ company, industry, result, description, metrics }: {
+  company: string;
+  industry: string;
+  result: string;
+  description: string;
+  metrics: string[];
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-xl font-semibold text-gray-900">{company}</h3>
+        <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">{industry}</span>
+      </div>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="space-y-2">
+        <div className="text-sm">
+          <span className="font-semibold text-green-600">Result: </span>
+          <span className="text-gray-700">{result}</span>
+        </div>
+        <div className="space-y-1">
+          {metrics.map((metric, index) => (
+            <div key={index} className="text-sm text-gray-600 flex items-center">
+              <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+              {metric}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function AiMarketingAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Marketing Automation
+            AI Marketing Automation
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai marketing automation services for your business needs.
+            Transform your marketing with intelligent automation. AI-powered campaigns that adapt, learn, and deliver results.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
-            <p className="text-gray-300">
-              High-performance solutions that deliver results quickly and consistently.
-            </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Smart Campaigns</h3>
+            <p className="text-gray-300 mb-6">AI-driven marketing campaigns that automatically optimize for better performance.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Automated A/B testing</li>
+              <li>• Dynamic content optimization</li>
+              <li>• Predictive analytics</li>
+              <li>• Real-time adjustments</li>
+            </ul>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🔧</div>
-            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
-            <p className="text-gray-300">
-              Seamlessly integrate with your existing systems and workflows.
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Customer Segmentation</h3>
+            <p className="text-gray-300 mb-6">Intelligent customer segmentation and personalized messaging at scale.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Behavioral analysis</li>
+              <li>• Demographic targeting</li>
+              <li>• Purchase prediction</li>
+              <li>• Lifecycle management</li>
+            </ul>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
-            <p className="text-gray-300">
-              Grow with your business with our flexible and scalable platform.
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Multi-Channel Integration</h3>
+            <p className="text-gray-300 mb-6">Seamlessly connect all your marketing channels for unified campaigns.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Email marketing automation</li>
+              <li>• Social media management</li>
+              <li>• SMS and push notifications</li>
+              <li>• Cross-platform analytics</li>
+            </ul>
           </div>
         </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Contact us today to learn how our ai marketing automation services can transform your business.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
-            Contact Sales
-          </button>
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <PricingCard
+              name="Starter"
+              price="$299"
+              period="month"
+              description="Perfect for small businesses getting started with AI marketing"
+              features={[
+                "Up to 1,000 contacts",
+                "Basic automation workflows",
+                "Email marketing campaigns",
+                "Basic analytics dashboard",
+                "Email support"
+              ]}
+              popular={false}
+            />
+            <PricingCard
+              name="Professional"
+              price="$799"
+              period="month"
+              description="Advanced features for growing businesses"
+              features={[
+                "Up to 10,000 contacts",
+                "Advanced automation workflows",
+                "Multi-channel campaigns",
+                "Advanced analytics & reporting",
+                "A/B testing tools",
+                "Priority support"
+              ]}
+              popular={true}
+            />
+            <PricingCard
+              name="Enterprise"
+              price="$1,999"
+              period="month"
+              description="Complete solution for large organizations"
+              features={[
+                "Unlimited contacts",
+                "Custom automation workflows",
+                "Advanced AI features",
+                "Custom integrations",
+                "Dedicated account manager",
+                "24/7 phone support"
+              ]}
+              popular={false}
+            />
+          </div>
+        </div>
+
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CaseStudy
+              company="TechStart Inc"
+              industry="SaaS"
+              result="300% increase in lead conversion"
+              description="Implemented AI-powered email sequences that automatically adapt to user behavior, resulting in significantly higher engagement rates."
+              metrics={[
+                "300% increase in lead conversion",
+                "45% improvement in email open rates",
+                "60% reduction in manual campaign management"
+              ]}
+            />
+            <CaseStudy
+              company="RetailPlus"
+              industry="E-commerce"
+              result="250% ROI in 6 months"
+              description="Deployed intelligent customer segmentation and personalized product recommendations across all marketing channels."
+              metrics={[
+                "250% ROI in 6 months",
+                "35% increase in average order value",
+                "50% improvement in customer retention"
+              ]}
+            />
+            <CaseStudy
+              company="FinanceFlow"
+              industry="FinTech"
+              result="400% increase in qualified leads"
+              description="Created sophisticated lead scoring and nurturing campaigns that identify and convert high-value prospects automatically."
+              metrics={[
+                "400% increase in qualified leads",
+                "70% reduction in cost per acquisition",
+                "85% improvement in sales team efficiency"
+              ]}
+            />
+          </div>
         </div>
       </div>
     </div>
-  )
-=======
-  title: 'Service | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Service | Zion Tech Group',
-    description: 'Professional services for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-export const metadata = {
-  title: 'AI Marketing Automation | Zion Tech Group',
-  description: 'Intelligent marketing automation with AI-powered personalization, predictive analytics, and automated campaign optimization.',
-  keywords: 'AI marketing automation, marketing personalization, predictive analytics, campaign optimization, marketing AI'
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-};
-
-interface FeatureCardProps {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
-    <div className="text-5xl mb-4">{icon}</div>
-    <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-
-const ContactSection: React.FC = () => (
-  <section className="py-12 bg-pink-600 rounded-lg text-white text-center">
-    <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-    <p className="text-xl mb-8 max-w-2xl mx-auto">
-      Let's discuss how our AI Marketing Automation can help your business succeed.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Inquiry"
-        className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-      >
-        Get Free Consultation
-      </a>
-      <a
-        href="tel:+13024640950"
-        className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
-      >
-        Call +1 302 464 0950
-      </a>
-    </div>
-    <div className="mt-8 text-sm">
-      <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-      <p>📧 kleber@ziontechgroup.com</p>
-    </div>
-  </section>
-);
-
-export default function ServicePage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Service
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Professional services for your business needs
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Coming Soon
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            This service page is under development. Please contact us for more information.
-          </p>
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-    </div>
   );
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          AI Marketing Automation
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Intelligent marketing automation with AI-powered personalization, predictive analytics, and automated campaign optimization.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Inquiry"
-            className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
-          >
-            Get Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions tailored to your business needs.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            title="Professional Service"
-            description="Expert solutions designed to meet your specific requirements."
-            icon="📧"
-          />
-          <FeatureCard
-            title="24/7 Support"
-            description="Round-the-clock assistance to ensure your success."
-            icon="🛠️"
-          />
-          <FeatureCard
-            title="Custom Solutions"
-            description="Tailored approaches that fit your unique business model."
-            icon="⚙️"
-          />
-        </div>
-      </section>
-
-      <ContactSection />
-    </div>
-  );
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 }

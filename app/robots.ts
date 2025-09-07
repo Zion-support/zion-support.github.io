@@ -5,7 +5,19 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/admin/', '/api/'],
+      disallow: [
+        '/api/',
+        '/admin/',
+        '/_next/',
+        '/private/',
+        '*.json',
+        '*.xml',
+        '*.txt',
+        '/scripts/',
+        '/automation/',
+        '/backup/',
+        '/temp/'
+      ]
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml',
   };
