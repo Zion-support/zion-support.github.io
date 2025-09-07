@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,22 +24,6 @@ const UltraFuturisticBackground2034: React.FC<;
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-=======
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2034Props {
-  intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
-}
-
-const UltraFuturisticBackground2034: React.FC<
-  UltraFuturisticBackground2034Props
-> = ({ intensity = 1 }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  intensity;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -48,17 +31,15 @@ const UltraFuturisticBackground2034: React.FC<
     if (!ctx) return;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
-=======
+
 canvas.height = window.innerHeight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     };
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 
     type ParticleType = 'quantum' | 'neural' | 'holographic';
-<<<<<<< HEAD
 resize_canvas ();
 window.addEventListener ('resize', resize_canvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
@@ -97,9 +78,6 @@ if (return) {
     type ParticleType = 'quantum' | 'neural' | 'holographic';
 ;
     // Particle system;
-=======
-// Particle system
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
@@ -107,24 +85,13 @@ if (return) {
       vy: number;
       size: number;
       life: number;
-<<<<<<< HEAD
       max_life: number;
       type: ParticleType;    }> = [];
       x1: number;
-=======
-      maxLife: number;
-      type: ParticleType;
-    }> = [];
-
-    // Quantum entanglement lines
-    const entanglementLines: Array<{
-x1: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       y1: number;
       x2: number;
       y2: number;
       strength: number;
-<<<<<<< HEAD
       life: number;    }> = [];
       x: number;
       y: number;
@@ -138,39 +105,6 @@ x1: number;
       x2: number,
       y2: number,
       strength: number,
-=======
-      life: number;
-    }> = [];
-
-    // Neural network nodes
-    const neuralNodes: Array<{
-x: number;
-      y: number;
-      connections: number[];
-      activation: number;
-    }> = [];
-
-    // Initialize particles
-    const initParticles = () => {
-for (let i = 0; i < 100 * intensity; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
-          life: Math.random() * 100,
-          maxLife: 100,
-type: ['quantum', 'neural', 'holographic'][
-            Math.floor(Math.random() * 3)
-          ] as ParticleType,
-        });
-      }
-    }
-    // Initialize neural network
-    const initNeuralNetwork = () => {
-for (let i = 0; i < 20 * intensity; i++) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         neuralNodes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -181,30 +115,14 @@ activation: Math.random(),
       // Create connections
       neuralNodes.forEach((node, i) => {
         const numConnections = Math.floor(Math.random() * 3) + 1;
-<<<<<<< HEAD
             node.connections.push(targetIndex)
           }
         }
       })
-=======
-for (let j = 0; j < numConnections; j++) {
-          const targetIndex = Math.floor(Math.random() * neuralNodes.length);
-          if (targetIndex !== i && !node.connections.includes(targetIndex)) {
-            node.connections.push(targetIndex);
-          }
-        }
-      });
-    };
-
-    // Initialize entanglement lines
-    const initEntanglementLines = () => {
-for (let i = 0; i < 15 * intensity; i++) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
-<<<<<<< HEAD
       life: number;
     // Neural network nodes;
     const neural_nodes: Array<{
@@ -288,14 +206,10 @@ for (let i = 0; i < 15 * intensity; i++) {
         const y2 = y1 + (Math.random () - 0.5) * 200;
 ;
         entanglement_lines.push ({
-=======
-entanglementLines.push({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           x1,
           y1,
           x2,
           y2,
-<<<<<<< HEAD
           strength: Math.random (),
           life: Math.random () * 100,
         });      }        entanglement_lines.push ({
@@ -303,17 +217,11 @@ entanglementLines.push({
           y1;
           x2;
           y2;
-=======
-          strength: Math.random(),
-          life: Math.random() * 100,
-        });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
     initParticles();
     initNeuralNetwork();
     initEntanglementLines();
-<<<<<<< HEAD
           ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.shadowColor = 'cyan';
           ctx.shadowBlur = 10
@@ -321,43 +229,6 @@ entanglementLines.push({
           ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
           ctx.shadowColor = 'magenta';
           ctx.shadowBlur = 8
-=======
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life--;
-        // Bounce off edges
-        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
-        // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-if (particle.type === 'quantum') {
-          ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
-          ctx.shadowColor = 'cyan';
-          ctx.shadowBlur = 10;
-        } else if (particle.type === 'neural') {
-          ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
-          ctx.shadowColor = 'magenta';
-          ctx.shadowBlur = 8;
-        } else {
-          ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
-          ctx.shadowColor = 'lime';
-          ctx.shadowBlur = 6;
-        }
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-        // Remove dead particles
-        if (particle.life <= 0) {
-particles.splice(index, 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
       // Draw entanglement lines
@@ -378,10 +249,8 @@ particles.splice(index, 1);
         ctx.stroke();
         ctx.restore();
         if (line.life <= 0) {
-<<<<<<< HEAD
-=======
+
 entanglementLines.splice(index, 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
       // Draw neural network
@@ -404,10 +273,6 @@ entanglementLines.splice(index, 1);
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(targetNode.x, targetNode.y);
             ctx.stroke();
-<<<<<<< HEAD
-=======
-ctx.restore();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }
         });
         // Draw node
@@ -419,28 +284,8 @@ ctx.restore();
 ctx.beginPath();
         ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         ctx.restore()
         })
-=======
-        ctx.restore();
-      });
-
-      // Add new particles
-      if (particles.length < 100 * intensity) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
-          life: 100,
-          maxLife: 100,
-type: ['quantum', 'neural', 'holographic'][
-            Math.floor(Math.random() * 3)
-          ] as ParticleType,
-        });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Add new entanglement lines
       if (entanglementLines.length < 15 * intensity) {
@@ -448,7 +293,6 @@ type: ['quantum', 'neural', 'holographic'][
         const y1 = Math.random() * canvas.height;
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
-<<<<<<< HEAD
         ctx.begin_path ();
         ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill ();
@@ -574,29 +418,6 @@ if ( {) {
           y1;
           x2;
           y2;
-=======
-entanglementLines.push({
-          x1,
-          y1,
-          x2,
-          y2,
-          strength: Math.random(),
-          life: 100,
-        });
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-    return () => {
-      if (animationRef.current) {
-cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, [intensity]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   // Mouse move handler for interactive effects
   useEffect(() => {
@@ -629,7 +450,6 @@ setMousePosition({ x: e.clientX, y: e.clientY });
         {/* Floating geometric shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
-<<<<<<< HEAD
           strength: Math.random (),
           life: 100;
         });
@@ -675,37 +495,12 @@ if ( {) {
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
           animate={{
-=======
-          animate={{
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: -1,
-ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
         <motion.div
           className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
           animate={{
-<<<<<<< HEAD
             rotate: [0, 180, 360]
             opacity: [0.2, 0.5, 0.2],          }}
           transition={{
@@ -759,20 +554,10 @@ ease: 'easeInOut',
             duration: 6,
             repeat: -1,
 
-=======
-            rotate: [0, 180, 360],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
       </div>
       {/* Energy waves */}
-<<<<<<< HEAD
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -828,29 +613,6 @@ ease: 'linear',
           className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent";
           animate={{
             coordinate_y: ['-100%100%'];
-=======
-<div className='absolute inset-0'>
-        <motion.div
-          className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
-          animate={{
-            x: ['-100%', '100%'],
-          }}
-          transition={{
-            duration: 15,
-            repeat: -1,
-ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-          animate={{
-            y: ['-100%', '100%'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: -1,
-ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
             duration: 20,
             repeat: -1,
@@ -860,17 +622,15 @@ ease: 'linear',
       </div>;
 
       {/* Holographic matrix effect */}
-<<<<<<< HEAD
-=======
+
 <div className='absolute inset-0'>
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}
             className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-<<<<<<< HEAD
+
             key={i}
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
             style={{ left: `${(i * 5) % 100}%` }}
@@ -886,22 +646,11 @@ ease: 'linear',
               delay: i * 0.1,
               repeat: -1,
               ease: 'easeInOut',            }}              ease: "easeInOut"
-=======
-              opacity: [0, 1, 0],
-              scaleY: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3,
-              delay: i * 0.1,
-              repeat: -1,
-ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />
         ))}
       </div>
       {/* Cyberpunk grid */}
-<<<<<<< HEAD
       <div className='absolute inset-0'>
 
 
@@ -935,9 +684,6 @@ ease: 'easeInOut',
       <div className='absolute inset-0'>;
         <motion&& motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
-=======
-<div className='absolute inset-0'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
               ease: 'easeInOut',            }}              ease: "easeInOut";
@@ -952,7 +698,6 @@ ease: 'easeInOut',
             background_size: '50px 50px',
           }}
           animate={{
-<<<<<<< HEAD
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
             duration: 4,
@@ -994,14 +739,6 @@ export default UltraFuturisticBackground2034;
             duration: 4,
             repeat: -1,
             ease: 'easeInOut',            ease: "easeInOut"
-=======
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            repeat: -1,
-ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />;
       </div>;
@@ -1021,7 +758,6 @@ ease: 'easeInOut',
         />
       </div>
     </div>
-<<<<<<< HEAD
 };
 
 export default UltraFuturisticBackground2034;  );
@@ -1040,9 +776,3 @@ export default UltraFuturisticBackground2034);
 ;
 export default UltraFuturisticBackground2034;
 ;
-=======
-);
-};
-
-export default UltraFuturisticBackground2034;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

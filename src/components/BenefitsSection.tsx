@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
+
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown } from 'lucide-react';
 
@@ -63,7 +58,6 @@ const BenefitsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-<<<<<<< HEAD
             <div key={index} className="text-center p-6">
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -77,14 +71,9 @@ const BenefitsSection: React.FC = () => {
 };
 
 export default BenefitsSection;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+
+
 const getBenefits = (t: any) => [
 
 
@@ -105,7 +94,7 @@ const getBenefits = (t: any) => [
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
 
-=======
+
 }
 
 const getBenefits = null;
@@ -113,22 +102,18 @@ const getBenefits = null;
     <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
 
-<<<<<<< HEAD
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-=======
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {benefits.map((benefit, index) => (
 
 class ErrorBoundary extends React.Component {
@@ -254,17 +239,10 @@ function BenefitsSection() {
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
               key={index}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-=======
-            <div
-              key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
             >
               <div className="text-blue-600 mb-4 flex justify-center">
                 {benefit.icon}
@@ -276,13 +254,12 @@ function BenefitsSection() {
                 {benefit.description}
               </p>
             </div>
-=======
+
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
 className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
             />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -305,93 +282,13 @@ className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
       </div>
     </section>
   );
-<<<<<<< HEAD
 };
 
 export default BenefitsSection;
-<<<<<<< HEAD
-=======
 
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
 
-          ))}
 
-              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-            />))}
-        </div>;
-      </div>;
-    </section>);
 }
-import React, { useState } from 'react';
-export /**;
-
-export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-export default /**
- * Page - Function description
- */
-function Page() {
-  {
 
 
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
 
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-  );
-}
-";
-    title: "24 / 7 Support", ";
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
-    icon: <Clock className="w - 8 h - 8"  />, ";
-    color: "from - zion - blue to - zion - blue - dark", ";
-    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20", "    stats: "99.9% Uptime",
-    features: [";
-      "Round - the - clock assistance", ";
-      "Expert technical support", ";
-      "Rapid response times", ";
-      "Proactive monitoring" ];
-},
-  {
-";
-    title: "Cost Reduction", ";
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
-    icon: <TrendingDown className="w - 8 h - 8"  />, ";
-    color: "from - zion - green to - zion - green - dark", ";
-    bg_color: "from - zion - green / 20 to - zion - green - dark / 20", "    stats: "40% Cost Savings",
-    features: [";
-      "Direct provider connections", ";
-      "Competitive pricing", ";
-      "Bulk discount options", ";
-      "Transparent cost structure" ];
-}
-;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

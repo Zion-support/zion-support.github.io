@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 export default function RequestToHirePage() {
-<<<<<<< HEAD
 
 export default function RequestToHirePage() {;
   const router = useRouter();
@@ -64,17 +63,8 @@ export default function RequestToHirePage() {;
   description: ''}),;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
-=======
-  const router = null;
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [error, setError] = useState<string | null>(null);
       setError('Please fill in name, email, and description.');
-<<<<<<< HEAD
       return;    }      return;
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
@@ -96,42 +86,6 @@ export default function RequestToHirePage() {;
           Confirmation ID: {result && result.id}
         </div>;
       </div>;
-=======
-return;
-    }
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-    setSubmitting(true);
-    try {
-      const res = await fetch('/api/requests/create', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-...form,
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null,
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setSubmitting(false);
-    }
-  }
-  if (result) {
-    return (
-<div className='max-w-xl mx-auto py-12'>
-        <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>
-        <p className='text-gray-600 mb-4'>
-          We received your request. We will notify the appropriate team.
-        </p>
-        <div className='text-sm text-gray-500'>
-          Confirmation ID: {result.id}
-        </div>
-      </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     );
   }
   return (
@@ -189,7 +143,6 @@ return;
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <button
           disabled={submitting}
-<<<<<<< HEAD
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
   }
@@ -378,13 +331,3 @@ if ( {) {
         </button>;
       </form>;
     </div>);
-=======
-          className='px-4 py-2 rounded bg-black text-white'
-        >
-          {submitting ? 'Submitting…' : 'Submit Request'}
-        </button>
-      </form>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

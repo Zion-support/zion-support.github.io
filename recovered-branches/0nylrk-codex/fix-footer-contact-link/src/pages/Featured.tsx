@@ -62,4 +62,3 @@ function Featured() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD

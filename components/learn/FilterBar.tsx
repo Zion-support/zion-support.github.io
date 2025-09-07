@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-};
-export default function FilterBar(): any ({;
-  category,;
-  level,;
-  isFree,;
-  onChange,;
-}: Props) {;
-=======
-
-
-type Props = {
-  category: string;
-  level: string;
-  isFree: string;
-  onChange: (next: { category: string; level: string; isFree: string }) => void;
-}
-export default function FilterBar({
-  category
-  level
-  isFree
-  onChange
-}: Props) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -38,18 +11,7 @@ type Props = {
   category: string,
   level: string,
   isFree: string,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        onChange={e => onChange({ category: e.target.value, level, isFree })}
-      >
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-  category: string
-  level: string
-  isFree: string
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -60,40 +22,14 @@ type Props = {
   isFree: string,;
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
-      <select
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
-        value={category}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 type Props = {
   category: string;
   level: string;
@@ -113,9 +49,8 @@ export default function FilterBar({
         value={category}
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
-<<<<<<< HEAD
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-<<<<<<< HEAD
+
   category: string
   level: string
   isFree: string
@@ -124,14 +59,6 @@ export default function FilterBar({
   category: string,
   level: string,
   isFree: string,
-=======
-        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
-      >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
-  category: string,;
-  level: string,;
-  isFree: string,;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
@@ -148,62 +75,25 @@ class ErrorBoundary extends React.Component {
   }
 
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
-=======
+
         <option value=''>All Categories</option>
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-<<<<<<< HEAD
   );
 }
-=======
-<<<<<<< HEAD
-        onChange={(e) => onChange({ category: e.target.value, level, isFree })}
-      >
-        <option value="">All Categories</option>
-        <option>AI Development</option>
-        <option>Freelancing</option>
-        <option>Remote Hiring</option>
-        <option>Cloud Architecture</option>
-      </select>
-      <select
-className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={level}
-        onChange={e => onChange({ category, level: e.target.value, isFree })}
-      >
-        <option value=''>All Levels</option>
-        <option>Beginner</option>
-        <option>Intermediate</option>
-        <option>Advanced</option>
-      </select>
-      <select
-className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={isFree}
-        onChange={e => onChange({ category, level, isFree: e.target.value })}
-      >
-        <option value=''>All Pricing</option>
-        <option value='true'>Free</option>
-        <option value='false'>Paid</option>
-      </select>
-    </div>;
-    </div>
-  );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   );
 
-<<<<<<< HEAD
-=======
+
   );
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
@@ -246,7 +136,6 @@ function FilterBar() {
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={level}
-<<<<<<< HEAD
         on_change={e => on_change ({ category, level: e.target.value, is_free })}
       >;
         <option value=''>All Levels</option>        <option > Beginner</option>        value={level}
@@ -276,24 +165,13 @@ function FilterBar() {
     </div>);
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
 
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -326,9 +204,7 @@ function FilterBar() {
   );
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+

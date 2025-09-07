@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(FILE_PATH))
@@ -100,8 +99,3 @@ function handler() {
   list.push (entry);
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-=======
-const DATA_DIR = null;
-  res.status(200).json({ ok: true })
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

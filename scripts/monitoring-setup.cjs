@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -36,11 +30,5 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     console.log(" Monitoring setup completed!")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.log(" Monitoring setup completed!")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

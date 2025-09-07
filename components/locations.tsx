@@ -53,7 +53,6 @@ export default function LocationsPage() {;
             +1 302 464 0950;
           </a>{" "}
           or email{" "}
-<<<<<<< HEAD
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -100,13 +99,3 @@ function LocationsPage() {
       </div>;
     </div>);
 }
-=======
-          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
-            kleber@ziontechgroup.com
-          </a>
-          .
-        </p>
-      </div>
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

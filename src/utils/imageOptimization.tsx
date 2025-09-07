@@ -1,42 +1,9 @@
-<<<<<<< HEAD
 const imgRef = useRef<HTMLDivElement>(null);
 
 
 
 
 
-=======
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  quality?: number;
-  sizes?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-  fallbackSrc?: string;
-  lazy?: boolean
-}
-
-export function OptimizedImage({
-  src;
-  alt;
-  width;
-  height;
-  className;
-  priority;
-    img.src = src
-  })
-} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -88,7 +55,6 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -101,30 +67,6 @@ if ( {) {
 }`;
 }
   const img_ref = useRef < HTMLDivElement>(null);
-=======
-;
-export function OptimizedImage({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className,;
-  priority = false,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  quality = 75,;
-  sizes,;
-  onLoad,;
-  onError,;
-  fallbackSrc,;
-  lazy = true,;
-  ...props;
-}: OptimizedImageProps) {;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [hasError, setHasError] = useState(false),;
-  const [isInView, setIsInView] = useState(!lazy || priority),;
-  const imgRef = useRef<HTMLDivElement>(null),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -325,15 +267,9 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
-<<<<<<< HEAD
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;
-=======
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-          {fallbackSrc ? (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <img
               src={fallbackSrc}
               alt={alt}
@@ -438,7 +374,6 @@ export function getImageDimensions(
   return new Promise((resolve, reject) => {
     const img = new window.Image()
     img.onload = () =>
-<<<<<<< HEAD
 
       resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject
@@ -449,9 +384,3 @@ export function getImageDimensions(
     img.src = src
   })
 }
-=======
-      resolve({ width: img.naturalWidth, height: img.naturalHeight });
-    img.onerror = reject;
-    img.src = src;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

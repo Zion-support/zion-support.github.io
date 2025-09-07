@@ -1,25 +1,15 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
 
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-=======
-import Head from 'next/head';
-import { useRouter  } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import equipment from '@/data/equipment.json';
-const EquipmentDetail: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-<<<<<<< HEAD
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
@@ -32,25 +22,6 @@ const EquipmentDetail: NextPage;
       </Head>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
-=======
-<div className='space-y-4'>
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>
-          <Link href='/products'>
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
-          </Link>
-        </div>
-      </EnhancedLayout>
-    );
-  }
-
-  return (
-    <EnhancedLayout>
-      <Head>
-        <title>{item.name} - Zion Tech Solutions</title>
-      </Head>
-<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2 space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <img
             src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug)}/1200/600`}
             alt={item && item.name}
@@ -105,7 +76,6 @@ const EquipmentDetail: NextPage;
       </div>;
     </EnhancedLayout>;
   );
-<<<<<<< HEAD
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
           </div>
@@ -225,7 +195,3 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
-=======
-};
-export default EquipmentDetail;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

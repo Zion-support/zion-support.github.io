@@ -1,5 +1,14 @@
 import Link from 'next/link';
 
+
+// Simple ServiceCard component
+const ServiceCard = ({ title, description, icon }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-3xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Comprehensive micro SaaS development services including product engineering, billing systems, analytics, and growth optimization.'
@@ -167,26 +176,6 @@ export default function MicroSaaSPage() {
   );
 }
 
-function ServiceCard({ title, details, icon }: { 
-  title: string; 
-  details: string[]; 
-  icon: string; 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-green-500 mr-2">✓</span>
-            {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 function SolutionCard({ title, description, features, pricing }: {
   title: string;

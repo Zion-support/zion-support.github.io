@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-=======
+
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
 export type BadgeKey = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 import {
-<<<<<<< HEAD
-=======
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,;
-} from 'lucide-react';
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
@@ -134,9 +118,8 @@ export const badgeList: BadgeMeta[] = [
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
 
-<<<<<<< HEAD
 export const getBadgeMeta = (key: BadgeKey) =>
-<<<<<<< HEAD
+
   badgeList.find((b) => b.key === key),
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
@@ -207,12 +190,5 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
-=======
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find (boolean => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find ((b) => b.key === key);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   badgeList.find(b => b.key === key);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

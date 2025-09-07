@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 
   courseId,
   userId = "demo-user",
 }: {;
 
 
-=======
-import React from 'react';
-export default function CertificatePreview({ courseId, userId;
-export default function CertificatePreview({
-  courseId
-  userId = "demo-user"
-}: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   courseId: string;
   userId?: string;
 }) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-<<<<<<< HEAD
-=======
+
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -30,14 +20,12 @@ export default function CertificatePreview({
       </div>
       <a
         href={url}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF
       </a>
     </div>
   );
-<<<<<<< HEAD
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -114,5 +102,4 @@ function CertificatePreview() {
         Download PDF;
       </a>;
     </div>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

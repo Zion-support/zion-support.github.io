@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function AutomationInsightsPage() {
 
   const automationTrends = [
@@ -40,9 +39,6 @@ export default function AutomationInsightsPage() {;
       featured: false
     },      featured: false
     }
-=======
-  const automationTrends = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const automationTools = [;
@@ -55,7 +51,6 @@ export default function AutomationInsightsPage() {;
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
-<<<<<<< HEAD
       id: 'automation - framework',
       title: 'Zion Automation Framework',
     };
@@ -83,30 +78,6 @@ export default function AutomationInsightsPage() {;
       complexity: 'Beginner',;
     },  ];      complexity: 'Beginner';
     }
-=======
-      id: 'automation-framework',
-      title: 'Zion Automation Framework',
-description:
-        'Our proprietary framework for building scalable automation solutions.',
-      type: 'Framework',
-      complexity: 'Advanced',
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Performance Monitoring Suite',
-      description:
-        'Comprehensive tools for monitoring and optimizing automation performance.',
-      type: 'Tool',
-      complexity: 'Intermediate',
-    },
-    {
-      id: 'deployment-automation',
-      title: 'Deployment Automation',
-      description: 'Streamlined deployment processes for automation systems.',
-      type: 'Process',
-complexity: 'Beginner',
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const successMetrics = [;
@@ -123,7 +94,6 @@ complexity: 'Beginner',
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
-<<<<<<< HEAD
       id: 'deployment - automation',
       title: 'Deployment Automation',
       description: 'Streamlined deployment processes for automation systems.',
@@ -209,77 +179,6 @@ complexity: 'Beginner',
               future of intelligent technology;
             </p>;
           </section>;
-=======
-      metric: '227',
-      label: 'Active Automations',
-description: 'Successfully deployed and running',
-    },
-    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance',
-    },
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects',
-    },
-    {
-      metric: '2,960+',
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },
-  ];
-  return (
-    <>
-      <Head>
-<title>
-          Automation Insights | Zion Tech Group - AI Automation Expertise
-        </title>
-        <meta
-          name='description'
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems."
-        />
-        <meta
-          property='og:title'
-          content='Automation Insights | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Expert insights on AI automation, autonomous systems, and industry trends.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <section className='text-center mb-16'>
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-              Automation Insights
-            </h1>
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-              Deep insights into AI automation, autonomous systems, and the
-              future of intelligent technology
-            </p>
-          </section>
-          <section className='mx-auto max-w-7xl'>
-            {/* Success Metrics */}
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
-                Our Automation Success
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                {successMetrics.map((item, index) => (
-                  <div key={index} className='text-center'>
-                    <div className='text-4xl font-bold text-fuchsia-400 mb-2'>
-                      {item.metric}
-                    </div>
-                    <div className='text-lg font-semibold text-white mb-1'>
-                      {item.label}
-                    </div>
-                    <div className='text-sm text-white/70'>
-                      {item.description}
-                    </div>
-                  </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </div>;
             </div>;
@@ -316,7 +215,6 @@ description: 'Successfully deployed and running',
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
                     <Link
-<<<<<<< HEAD
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -329,12 +227,6 @@ description: 'Successfully deployed and running',
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Read More <span className="ml-1">→</span>
-=======
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-                      Read More <span className='ml-1'>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
 
@@ -451,7 +343,6 @@ description: 'Successfully deployed and running',
                 </Link>;
                 <Link
                   href='/case-studies'
-<<<<<<< HEAD
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -476,17 +367,3 @@ description: 'Successfully deployed and running',
 }
     </>);
 }
-=======
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
-                >
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

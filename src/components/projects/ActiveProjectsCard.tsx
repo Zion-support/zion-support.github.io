@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-=======
+
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -53,22 +52,14 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
-<<<<<<< HEAD
 
 
             <BriefcaseIcon className="h-5 w-5 text-primary" />
-=======
-      <Card>
-        <CardHeader>
-<CardTitle className='flex items-center gap-2'>
-            <BriefcaseIcon className='h-5 w-5 text-primary' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className="space-y-2">
 
 
@@ -124,19 +115,6 @@ export function ActiveProjectsCard() {;
 
   }
     );
-=======
-<div className='space-y-2'>
-            {[1, 2].map(idx => (
-              <div
-                key={idx}
-                className='h-16 animate-pulse bg-muted rounded'
-              ></div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 
@@ -148,22 +126,16 @@ export function ActiveProjectsCard() {;
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
 
           <CardTitle className="flex items-center gap-2">
 
 
 
             <BriefcaseIcon className="h-5 w-5 text-primary" />
-=======
-<CardTitle className='flex items-center gap-2'>
-            <BriefcaseIcon className='h-5 w-5 text-primary' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-<<<<<<< HEAD
 
 
 
@@ -202,20 +174,10 @@ export function ActiveProjectsCard() {;
           </Button>
 
 
-=======
-<CardContent className='text-center py-6'>
-          <p className='text-muted-foreground mb-2'>
-            You don't have any active projects at the moment.
-          </p>
-          <Button variant='outline' asChild>
-            <Link href='/jobs'>Find Opportunities</Link>
-          </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
 
 
 
@@ -235,7 +197,7 @@ export function ActiveProjectsCard() {;
 
 
   return (
-<<<<<<< HEAD
+
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -248,32 +210,10 @@ export function ActiveProjectsCard() {;
           <div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
-=======
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BriefcaseIcon className="h-5 w-5 text-primary" />
-        </CardTitle>
-        <CardDescription>Your ongoing work</CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-=======
-return (
-    <Card>
-      <CardHeader>
-        <CardTitle className='flex items-center gap-2'>
-          <BriefcaseIcon className='h-5 w-5 text-primary' />
-          <span>Active Projects</span>
-        </CardTitle>
-        <CardDescription>Your ongoing work</CardDescription>
-      </CardHeader>
-<CardContent className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {activeProjects.map(project => (
           <div key={project.id} className='border rounded-md p-3'>
             <div className='flex justify-between items-start mb-2'>
               <h3 className='font-medium text-sm'>{project.job?.title}</h3>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Badge
                 variant={
                   project.status === 'in_progress' ? 'default' : 'outline'
@@ -285,7 +225,6 @@ return (
 
 
                   : 'In Progress'}
-<<<<<<< HEAD
               </Badge>;
             </div>;
             <div className='flex items-center text-xs text-muted-foreground gap-2'>;
@@ -310,22 +249,10 @@ return (
 
       )}
 
-=======
-              </Badge>
-            </div>
-            <div className='flex items-center text-xs text-muted-foreground gap-2'>
-              <Clock className='h-3 w-3' />
-              <span>
-                Started {new Date(project.start_date).toLocaleDateString()}
-              </span>
-            </div>
-            <Button size='sm' variant='outline' className='w-full mt-2' asChild>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
-<<<<<<< HEAD
 
 }
 
@@ -493,24 +420,3 @@ if ( {'") {
 }
 
 ;
-=======
-      </CardContent>
-      {activeProjects.length > 2 && (
-        <CardFooter>
-<Button variant='ghost' className='w-full' asChild>
-            <Link href='/projects'>View All Projects</Link>
-          </Button>
-        </CardFooter>
-      )}
-    </Card>
-  );
-}, [projects, isLoading]);
-return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) ) ;
-}</div> </CardContent> </Card>) ;
-}if (activeProjects.length === 0) {'";
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) ) ;
-}</CardContent> {";
-  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>) ;
-}</Card>) ;
-}'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

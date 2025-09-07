@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -11,13 +10,6 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 
 
-<<<<<<< HEAD
-=======
-import { Job } from "@/types/jobs",
-import { toast } from "sonner",
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplyToJobFormProps {
 
   job: Job
@@ -117,8 +109,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
-<<<<<<< HEAD
-=======
+
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -198,48 +189,14 @@ if ( {) {
   },
   
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { useResume } from '@/hooks/useResume';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { AlertCircle, FileText, Loader2 } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import { Job } from '@/types/jobs';
-import { toast } from 'sonner';
-
-interface ApplyToJobFormProps {
-  job: Job;
-  onSuccess?: () => void
-}
-export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-  const { user } = useAuth();
-  const { applyToJob } = useJobApplications();
-  const { resumes, isLoading: isResumesLoading } = useResume();
-  const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
-<<<<<<< HEAD
-=======
+
       
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -348,12 +305,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             rows = {6,}
 
 
-<<<<<<< HEAD
-=======
-        
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -362,10 +313,8 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -583,21 +532,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 
       <div className="flex justify-end gap-2">
-<<<<<<< HEAD
-=======
-            onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
-          />;
-        </div>;
-      </div>;
-
-      <div className="flex justify-end gap-2">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button
           type="button"
           variant="outline"
 
-<<<<<<< HEAD
-=======
+
           onClick={() => {;
             if (onSuccess) onSuccess();
 
@@ -606,7 +545,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         >;
           Cancel;
@@ -620,7 +558,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
-<<<<<<< HEAD
 
 
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
@@ -640,97 +577,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
-                    return (
-                      <SelectItem key={resume.id} value={resume.id}>;
-                        {resume.basic_info.title || "Untitled Resume"}
-                      </SelectItem>);
-                  }
-                  return null;
-                })}
-              </SelectContent>;
-            </Select>) : (
-            <div className="flex items - center justify - between mt - 2 p - 3 border rounded - md">;
-              <div className="flex items - center gap - 2">;
-                <FileText className="h - 5 w - 5 text - muted - foreground" />;
-                <span > No resumes found</span>;
-              </div>;
-              <Button;
-                variant="outline";
-                size="sm";
-                type="button";
-                on_click = {(, ) => router.push ("/dashboard / talent / portfolio"), }
-              >;
-                Create Resume;
-              </Button>;
-            </div>)}
-        </div>;
-        <div>;
-          <Label html_for="cv_upload">Or Upload CV (PDF)</Label>;
-          <input;
-            id="cv_upload";
-            type="file";
-            accept=".pdf";
-            className="mt - 1";
-            on_change = {(e, ) => setResumeFile (e.target.files?.[0] || null), }
-          />;
-        </div>;
-      </div>;
-      <div className="flex justify - end gap - 2">;
-        <Button;
-          type="button";
-          variant="outline";
-          disabled = {is_submitting, }
-          on_click={() => {
-            if (on_success ()) {
-  $2
-}
-          }}
-        >;
-          Cancel;
-        </Button>;
-        <Button type="submit" disabled={is_submitting}>;
-          {is_submitting ? (
-            <>;
-              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
-              Submitting...;
-            </>) : (
-            "Submit Application")}
-        </Button>;
-      </div>;
-    </form>);
-}set_error (null);
-// Check condition
-if ( {) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-}finally {
-  setIsSubmitting (false);
-}
-handle_submit;
-}className="space - y-6"> <div> <AlertCircle className="h - 4 w - 4" /> <AlertDescription> {
-  error;
-}</AlertDescription> </Alert>) ";
-}<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter</Label> <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
-  selectedResumeId;
-}onValueChange= {
-  setSelectedResumeId ";
-}> <SelectTrigger className="mt - 1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>);
-}return null;
-});
-}</SelectContent> </Select> > Create Resume </Button> </div>) ";
-}</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
-}</Button> </div> </form>);
-}"}
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
         </Button>
       </div>
     </form>
@@ -759,4 +607,3 @@ handleSubmit ;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

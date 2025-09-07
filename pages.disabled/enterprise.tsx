@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
@@ -564,4 +563,3 @@ const EnterpriseSolutions: NextPage = () => {
 };
 
 export default EnterpriseSolutions;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

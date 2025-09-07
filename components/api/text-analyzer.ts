@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
-<<<<<<< HEAD
   }
 }
 export default async function handler(
@@ -18,65 +17,6 @@ export default async function handler(
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text
-=======
-text: string;
-  statistics: {
-    characters: number;
-    charactersNoSpaces: number;
-    words: number;
-    sentences: number;
-    paragraphs: number;
-    syllables: number;
-    readingTime: number;
-    speakingTime: number
-  },
-  readability: {
-    fleschReadingEase: number;
-    fleschKincaidGrade: number;
-    gunningFog: number;
-    smog: number;
-    colemanLiau: number;
-    automatedReadability: number;
-    averageGrade: number
-  },
-  sentiment: {
-    score: number;
-    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
-    positiveWords: string[];
-    negativeWords: string[]
-  },
-  language: {
-    detectedLanguage: string;
-    confidence: number;
-    isEnglish: boolean
-  },
-  keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>;
-    bigrams: Array<{ phrase: string; count: number }>;
-    trigrams: Array<{ phrase: string; count: number }>;
-  };
-
-export default async function handler(
-  req: NextApiRequest;
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
-) {
-  if (req.method !== 'POST') {
-return res.status(405).json({ error: 'Method not allowed' });
-  }
-  try {
-    const { text } = req.body;
-    if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' });
-    }
-    if (text.length > 10000) {
-      return res
-        .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });
-    }
-
-    // Basic statistics
-const words = text
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -85,11 +25,10 @@ const words = text
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
-<<<<<<< HEAD
-=======
+
       .filter(para => para.trim().length > 0).length;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -97,34 +36,6 @@ const words = text
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-<<<<<<< HEAD
-=======
-return matches ? matches.length : 1;
-    };
-
-    const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word);
-    }, 0);
-
-    // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
-    const readingTime = Math.ceil(words / 200);
-    const speakingTime = Math.ceil(words / 150);
-    // Readability scores
-const fleschReadingEase = Math.max(
-      0,
-      Math.min(
-        100
-        206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
-      )
-    );
-    const fleschKincaidGrade = Math.max(
-      0
-      0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59
-    );
-    const gunningFog = Math.max(
-      0
-      0.4 *
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
@@ -180,8 +91,7 @@ const fleschReadingEase = Math.max(
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-<<<<<<< HEAD
-=======
+
 text
       .toLowerCase()
       .split(/\s+/)
@@ -199,23 +109,12 @@ text
 word,
         count,
         frequency: Math.round((count / words) * 1000) / 10,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
-<<<<<<< HEAD
-=======
 
-for (let i = 0; i < wordsArray.length - 1; i++) {
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
-      bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
-    }
-    for (let i = 0; i < wordsArray.length - 2; i++) {
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -243,7 +142,6 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-<<<<<<< HEAD
       text
         characters
         charactersNoSpaces
@@ -254,23 +152,6 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
         readingTime
         speakingTime
       }
-=======
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
-text,
-      statistics: {
-        characters,
-        charactersNoSpaces,
-        words,
-        sentences,
-        paragraphs,
-        syllables,
-        readingTime,
-        speakingTime,
-      },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
@@ -288,7 +169,6 @@ text,
       }
       language: {
   } catch (error) {
-<<<<<<< HEAD
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore;
@@ -330,11 +210,3 @@ text,
 
 
 
-=======
-    console.error('Text analysis error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-    res.status(500).json({ error: 'Internal server error' })
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

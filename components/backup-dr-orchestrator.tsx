@@ -5,7 +5,6 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
 export default function BackupDROrchestratorPage() {
-<<<<<<< HEAD
 
   const service = extraServices.find(s =>
     s.link.endsWith('/backup-dr-orchestrator')
@@ -24,15 +23,6 @@ export default function BackupDROrchestratorPage() {;
       <Head>;
         <title>{service && service.name} - Zion Tech Group</title>;
         <meta name='description' content={service && service.description} />;
-=======
-  );
-  if (!service) return null;
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-<meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/backup-dr-orchestrator'
@@ -84,7 +74,6 @@ export default function BackupDROrchestratorPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
-<<<<<<< HEAD
                 className='w-full'>;
                 Start Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -221,41 +210,14 @@ if (return null) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-=======
-                className='w-full'
-              >
-                Start Trial
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Button>
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>
-                <div className='flex items-center space-x-2'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <Mail className='w-4 h-4 text-purple-400' />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <MapPin className='w-4 h-4 text-green-400' />
-                  <span className='text-xs'>{service.contactInfo.address}</span>
-                </div>
-              </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 }
 }
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-=======
-  );
-}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

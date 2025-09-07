@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 export default function FAQ({ items }: Props) {;
@@ -20,10 +19,6 @@ export default function FAQ(): any ({ items }: Props) {;
               {it && it.a}
             </div>;
           </div>;
-=======
-import React from 'react';
-type QA = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -37,7 +32,6 @@ type QA = any;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -61,6 +55,3 @@ if (return null) {
             <div className="font-medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text-gray-300">;
               {it.a}
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

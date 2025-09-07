@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react'
-=======
-import * as React from 'react';
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import * as React from 'react'
 import {
   RefreshCw
@@ -21,62 +12,7 @@ import {
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-export interface EmptyStateProps {
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
-  title?: string;
-  description?: string;
-  action?: {
-    label: string;
-    onClick: () => void
-  }
-  icon?: React.ReactNode
-<<<<<<< HEAD
-=======
-import React from 'react';
-import * as React from 'react';
-import {;
-  RefreshCw,;
-  Wifi,;
-  Server,;
-  ShoppingCart,;
-  Users,;
-  Wrench,;
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-export interface EmptyStateProps {;
-import * as React from 'react';
-import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
-export interface EmptyStateProps {
-  type:;
-    | 'products';
-    | 'categories';
-    | 'talent';
-    | 'equipment';
-    | 'search';
-    | 'error';
-    | 'network';
-    | 'loading';
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -88,18 +24,12 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -138,21 +68,8 @@ const defaultContent = {
     title: 'Loading...',
 
 
-<<<<<<< HEAD
       
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-=======
-  const { t } = useTranslation();
-  const content = defaultContent[type];
-  const displayTitle = title || content.title;
-  const displayDescription = description || content.description;
-  const displayIcon = icon || content.icon;
-
-return (
-    <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
-      <div className='mb-4'>{displayIcon}</div>
-      <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {displayTitle}
       </h3>
       
@@ -169,14 +86,13 @@ return (
           {action.label}
         </Button>
       )}
-=======
+
           {action.label}
         </Button>
       )}
 
       
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       
       {type === 'error' && (
@@ -184,8 +100,7 @@ return (
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-<<<<<<< HEAD
-=======
+
 
 
       
@@ -299,14 +214,13 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }: {
   onRetry?: () => void
   onAddProduct?: () => void
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
-<<<<<<< HEAD
 
 
       {type === 'error' && (;
@@ -322,18 +236,6 @@ export function ProductsEmptyState ({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
-=======
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product'
-        onClick: onAddProduct
-      }
-    : onRetry
-      ? { label: 'Try Again', onClick: onRetry }
-      : undefined
-  const customDescription = isAuthenticated
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
-      />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -351,7 +253,6 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-<<<<<<< HEAD
       />
   )
 } 
@@ -392,16 +293,7 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-<<<<<<< HEAD
-=======
-        onClick: onAddProduct,;
-      }
-    : onRetry;
-      ? { label: 'Try Again', onClick: onRetry }
 
-      : undefined;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <EmptyState
       type="categories"
@@ -410,7 +302,6 @@ export function ProductsEmptyState({;
   );
 }
 
-<<<<<<< HEAD
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
@@ -419,28 +310,11 @@ export function ProductsEmptyState({;
       type="products";
       action={action}
       description={customDescription}
-=======
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
-}
-
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="talent"
-      action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     />;
   );
 }
 
-<<<<<<< HEAD
-=======
+
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
@@ -476,7 +350,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -504,12 +377,7 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   
     />
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

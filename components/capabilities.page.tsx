@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ];
 
 export default function CapabilitiesPage() {;
@@ -63,12 +62,6 @@ const CAPABILITIES = [
 ];
 
 export default function CapabilitiesPage() {;
-=======
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-const CAPABILITIES = null;
-];
-export default function CapabilitiesPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold'>Capabilities</h1>
@@ -83,7 +76,6 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
 }
   );
@@ -92,7 +84,3 @@ export default function CapabilitiesPage() {
 );
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

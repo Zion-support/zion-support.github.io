@@ -177,4 +177,3 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
           onSendMessage={handleSendMessage}
         />;
       )}
-<<<<<<< HEAD

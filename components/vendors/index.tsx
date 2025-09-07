@@ -1,15 +1,7 @@
-<<<<<<< HEAD
             Apply as Vendor;
           </a>;
         </Link>;
       </div>;
-=======
-import Link from 'next/link';
-import type { GetServerSideProps } from 'next';
-import type { Vendor } from '../../utils/vendor-types';
-type Props = any;
-export default function VendorsPage({ vendors }: Props) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -30,31 +22,7 @@ export default function VendorsPage({ vendors }: Props) {
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
-<<<<<<< HEAD
         ))}
-=======
-                <div>
-                  <div className='font-medium flex items-center gap-2'>
-                    {v.name}
-                    {v.verified && (
-                      <span className='text-xs px-2 py-0.5 rounded bg-green-100 text-green-700'>
-                        Verified
-                      </span>
-                    )}
-                  </div>
-                  <div className='text-xs text-gray-500'>
-                    Services: {v.servicesOffered?.join(', ') || '—'}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </Link>
-        ))}
-      </div>
-<div className='text-center text-xs text-gray-500'>
-        Powered by Zion • Co-brand available
-      </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
     </div>;
   );
@@ -70,7 +38,6 @@ const { listVendors } = await import('../../utils/vendor-store');
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
 const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
@@ -173,11 +140,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 };
 
 
-=======
-
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../../utils/vendor-store');
-  const vendors = listVendors();
-return { props: { vendors } };
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

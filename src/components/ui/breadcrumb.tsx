@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->(({ className, separator, ...props }, ref,) => (;
-=======
- 
-import { cn } from "@/lib/utils"
- 
-const Breadcrumb = null;
-  BreadcrumbEllipsis}
-;
-const Breadcrumb = React.forwardRef<
-  HTMLElement
-  React.ComponentPropsWithoutRef<'nav'> & {
-    separator?: React.ReactNode
-  }
->(({ className, separator, ...props }, ref,) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
 import * as React from 'react';
 import { Slot } from '@radix - ui / react - slot';
@@ -36,11 +17,9 @@ const Breadcrumb = React.forward_ref<;
       className
     )}
     {...props}
-<<<<<<< HEAD
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -67,39 +46,6 @@ const Breadcrumb = React.forwardRef<
     {...props}
   />
 ))
-<<<<<<< HEAD
-=======
-
-  />));
-Breadcrumb.display_name = 'Breadcrumb';
-    ref = {ref, }
-    aria - label="breadcrumb";
-    class_name = {cn (
-      "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
-      class_name), }
-    {...props}
-  />));
-Breadcrumb.display_name = 'Breadcrumb';
-
-Breadcrumb.displayName = "Breadcrumb"
- 
-const BreadcrumbList = React.forwardRef<
-
-  HTMLOListElement,
-  React.ComponentPropsWithoutRef<'ol'>;
->(({ class_name, ...props }, ref) => (
-  <ol;
-=======
-  />
-));
-Breadcrumb.displayName = 'Breadcrumb';
-
-const BreadcrumbList = React.forwardRef<
-  HTMLOListElement,
-  React.ComponentPropsWithoutRef<'ol'>
->(({ className, ...props }, ref) => (
-  <ol
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ref={ref}
     className={cn ('flex items - center gap - 1.5', class_name)}    {...props}
   />));
@@ -119,7 +65,6 @@ const BreadcrumbLink = React.forward_ref<;
     asChild?: boolean
   }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
  
@@ -136,22 +81,9 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
 
 
 const BreadcrumbSeparator = ({
-<<<<<<< HEAD
   children
   className
   ...props
-=======
-
-
-}: React.ComponentProps<"li">) => (
-  <li
-    role="presentation"
-    aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
@@ -244,7 +176,6 @@ const BreadcrumbSeparator = ({;
   <li
     role='presentation'
     aria-hidden='true'
-<<<<<<< HEAD
     className={cn('[&>svg]:size-3 && 3.5 text-zion-slate-light/70', className)}    {...props}
   >;
     {children || <ChevronRight className='h-4 w-4' />}
@@ -269,26 +200,10 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
-<<<<<<< HEAD
-=======
-
-  >;
-    {children || <ChevronRight className="h-4 w-4" />}
-  </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
-
-const BreadcrumbEllipsis = ({;
-  className;
-  ...props;
-}: React && React.ComponentProps<"span">) => (;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <span
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-<<<<<<< HEAD
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
  
 const BreadcrumbEllipsis = ({
@@ -333,29 +248,13 @@ const BreadcrumbEllipsis = ({
     {...props}
   >
     &#8230,
-=======
-    className={cn('flex h-9 w-9 items-center justify-center', className)}
-    {...props}
-  >
-    &#8230
-  </span>
-);
-BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-<<<<<<< HEAD
-=======
+
 
 
 export {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  BreadcrumbEllipsis,
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

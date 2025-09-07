@@ -1,7 +1,5 @@
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -22,50 +20,28 @@ function BackToTopButton() {
     document.document_element.scroll_to (opts);
     document.body.scroll_to (opts);
   }
-<<<<<<< HEAD
-=======
-      >;
-      <ArrowUp className='h - 5 w - 5' />;
-    </button>);
-}"}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
     const updateVisibility = () => {;
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
+
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-      setVisible(window.scrollY > 400);
-    };
-    updateVisibility();
-    window.addEventListener('scroll', updateVisibility);
-    return () => window.removeEventListener('scroll', updateVisibility);
-  }, []);
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
     document.documentElement.scrollTo(opts);
     document.body.scrollTo(opts);
   };
-<<<<<<< HEAD
   
   return (
     <button
@@ -78,20 +54,8 @@ export function BackToTopButton() {
       <ArrowUp className="h-4 w-4" />
     </button>
   );
-<<<<<<< HEAD
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-  
-    >
-      <ArrowUp className='h-5 w-5' />
-    </button>
-  );
-
-}"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+

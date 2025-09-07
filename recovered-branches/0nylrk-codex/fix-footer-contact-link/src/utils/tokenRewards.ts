@@ -47,4 +47,3 @@ function rewardFiveStarReview() {
     body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
 }
 ;
-<<<<<<< HEAD

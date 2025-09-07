@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -561,9 +560,6 @@ export default function MarketPricing() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
-  const markets = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 'quantum-computing': {
   marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
   ];
@@ -584,7 +580,6 @@ pricingAnalysis: {
 pricingAnalysis: {
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
-<<<<<<< HEAD
 };
 
 };
@@ -1480,12 +1475,3 @@ export default MarketPricing;export default MarketPricing;
 
 };
 
-=======
-
-};
-
-};
-
-};
-export default MarketPricing;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

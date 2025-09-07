@@ -130,4 +130,3 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
-<<<<<<< HEAD

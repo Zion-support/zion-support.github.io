@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
@@ -312,4 +311,3 @@ const ExpandedServicesPage: NextPage = () => {
 };
 
 export default ExpandedServicesPage;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

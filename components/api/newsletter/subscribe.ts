@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(FILE_PATH))
@@ -15,15 +14,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   ensure()
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
-=======
-const DATA_DIR = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(400).json({ error: 'Invalid email' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-<<<<<<< HEAD
 
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
@@ -86,8 +81,3 @@ function handler() {
 }
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-=======
-  res.status(200).json({ ok: true });
-  res.status(200).json({ ok: true })
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

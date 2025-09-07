@@ -1,25 +1,16 @@
-<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
-=======
+
 import Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useState;
 import { Star } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -27,9 +18,7 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -41,26 +30,14 @@ interface ListingScoreCardProps {
   aiScore?: number,
   rating?: number,
   reviewCount?: number,
-=======
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 
 export function ListingScoreCard({ 
-<<<<<<< HEAD
   title, 
   description, 
   image, 
   category, 
-=======
-export function ListingScoreCard(): any ({;
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   tags,
   author,
   authorImage,
@@ -69,7 +46,6 @@ export function ListingScoreCard(): any ({;
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-<<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false),
   const [authorImageError, setAuthorImageError] = useState(false),
 
@@ -81,15 +57,6 @@ export function ListingScoreCard(): any ({;
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
-=======
-
-
-      {image && !mainImageError && (
-        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
-          <Image
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -98,11 +65,9 @@ export function ListingScoreCard(): any ({;
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -128,10 +93,6 @@ export function ListingScoreCard(): any ({;
           )}
         </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -167,32 +128,7 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
-<<<<<<< HEAD
 export function ListingScoreCard(): any ({;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  title,;
-  description,;
-  image,;
-  category,;
-  tags,;
-  author,;
-  authorImage,;
-  aiScore,;
-  rating = 0,;
-  reviewCount = 0,;
-<<<<<<< HEAD
-=======
-  className,;
-}: ListingScoreCardProps) {;
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
-
-
-    >;
-      {image && !mainImageError && (;
-        <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -291,8 +227,7 @@ function ListingScoreCard() {
 
         </p>;
 
-<<<<<<< HEAD
-=======
+
   title;
   description;
   image;
@@ -307,7 +242,6 @@ function ListingScoreCard() {
                       : "text-zion-slate-light"
                   )}
                 />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -333,63 +267,15 @@ function ListingScoreCard() {
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-=======
-        {rating > 0 && (;
-          <div className='flex items-center gap-1 mb-4'>;
-            <div className='flex'>;
-              {[1, 2, 3, 4, 5].map(star => (;
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    'h-4 w-4',
-                    star <= Math && Math.round(rating)
-                      ? 'text-zion-cyan fill-zion-cyan'
-                      : 'text-zion-slate-light'
-                  )}                />;
-
-                  className={cn(;
-                    "h-4 w-4";
-                    star <= Math.round(rating);
-                      ? "text-zion-cyan fill-zion-cyan";
-                      : "text-zion-slate-light";
-                  )}
-                />;
-
-
-              ))}
-            </div>;
-            <span className='text-sm text-zion-slate-light ml-1'>;
-              ({reviewCount});
-            </span>;
-          </div>;
-        )}
-
-
-        {tags && tags.length > 0 && (;
-          <div className='flex flex-wrap gap-2 mb-4'>;
-            {tags && tags.map((tag, i) => (;
-
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </Badge>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
         
-=======
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -467,28 +353,11 @@ function ListingScoreCard() {
             )}
 
 
-<<<<<<< HEAD
                 {author.charAt(0)}
               </div>
             )}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <span className="text-sm text-zion-slate-light">{author}</span>
-          </div>
-        )}
-<<<<<<< HEAD
-      </div>;
-    </div>;
-<<<<<<< HEAD
-;
-=======
-  );
 
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

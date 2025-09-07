@@ -1,33 +1,4 @@
-<<<<<<< HEAD
 id: string;
-=======
-
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useRouter  } from 'next/router';
-import { toast } from "sonner";
-import React, { useState } from 'react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Send
-  PaperclipIcon
-  ChevronLeft
-  MoreVertical
-  Video
-  Phone
-} from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { useRouter } from 'next/router'
-import { toast } from 'sonner'
-interface Message {
-  id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   content: string;
   timestamp: string;
   isMe: boolean;
@@ -47,7 +18,6 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -448,15 +418,6 @@ export function MobileChatView(): any ({;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
               >;
-=======
-}
-
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
-  const router = null;
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {message.timestamp}
 
                 {message.isMe && message.status && (;
@@ -569,7 +530,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 
             placeholder='Type a message...';
@@ -620,6 +580,3 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 }
 ;
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

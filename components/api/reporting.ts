@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
+
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 interface ReportingData {
@@ -13,24 +12,20 @@ interface ReportingData {
 }
 
 const FILE = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
       updated_at: string;
     }
-<<<<<<< HEAD
+
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
     updatedAt: string
   }>
 }
-=======
-  >;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const tenantId = auth.tenantId!;
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
-<<<<<<< HEAD
     const entry = data.byTenant[tenantId] |{
       funnel: []
       timeToHireDays: 0
@@ -55,20 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(entry)
     const updated = updateJsonFile<ReportingData>(
       FILE
-=======
-const entry = data.byTenant[tenantId] || {
-      funnel: [],
-      timeToHireDays: 0,
-      updatedAt: new Date().toISOString(),
-    };
-    return res.status(200).json(entry);
-  }
-
-  if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-const updated = updateJsonFile<ReportingData>(
-      FILE,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       curr => {
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
@@ -88,7 +68,6 @@ const updated = updateJsonFile<ReportingData>(
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-<<<<<<< HEAD
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -167,11 +146,3 @@ if ( {) {
   }
 return res.status (405).json ({ error: 'Method not allowed' });
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-=======
-
-  return res.status(405).json({ error: 'Method not allowed' });
-    return res.status(200).json(updated.byTenant[tenantId])
-  }
-return res.status(405).json({ error: 'Method not allowed' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

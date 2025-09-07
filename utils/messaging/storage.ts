@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-  conversation_id: string;  sender_id: string;
-  recipient_id: string;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   body: string;
   link_url?: string;
   attachmentBase64?: string;
@@ -23,39 +13,14 @@
   deletedAtIso?: string;
   replyToId?: string;
   reactions: Array<{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 export interface Conversation {
-=======
-    userId: string;
-    emoji: string;
-
-    createdAt: string
-
-=======
-    created_at: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
 }
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Conversation {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-export interface Conversation {;
-
-<<<<<<< HEAD
-export interface Conversation {
-=======
-<<<<<<< HEAD
-export interface Conversation {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -68,25 +33,13 @@ export interface Conversation {
     title?: string;
     description?: string;
     type?: 'direct' | 'group' | 'support' | 'project';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-    tags?: string[]
-  }
 
-=======
-    project_id?: string;
-    tags?: string[],
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 export interface MessageThread {;
 
 
@@ -98,25 +51,11 @@ export interface MessageThread {
   messages: string[]; // message IDs;
   createdAtIso: string;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  updatedAtIso: string
 
-}
-<<<<<<< HEAD
-export interface MessageSearchResult {
-=======
-  updatedAtIso: string
-}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface MessageSearchResult {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -133,50 +72,14 @@ class MessagingStorage {
   // Message methods
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
     const newMessage: Message = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-      ...message,
-      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      sentAtIso: new Date().toISOString(),
-      isRead: false,
-      isEdited: false,
-      isDeleted: false,
-      reactions: []
-    };
-
-    this && this.messages.set(newMessage && newMessage.id, newMessage);
-
-    // Update conversation
-    await this && this.updateConversationLastMessage(newMessage && newMessage.conversationId, newMessage && newMessage.id);
-
-    // Update user conversations
-    this && this.addToUserConversations(newMessage && newMessage.senderId, newMessage && newMessage.conversationId);
-    this && this.addToUserConversations(newMessage && newMessage.recipientId, newMessage && newMessage.conversationId);
-
-    // Add to conversation messages
-    this && this.addToConversationMessages(newMessage && newMessage.conversationId, newMessage && newMessage.id);
-
-
-    return newMessage;
-  }
-  async getMessage(id: string): Promise<Message | null> {
-
-    return this.messages.get(id) |null
-
-=======
-    return this && this.messages.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -188,15 +91,8 @@ class MessagingStorage {
   async deleteMessage(id: string): Promise<boolean> {
     const message = this && this.messages.get(id);
     if (!message) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    message.deletedAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.messages.set(id, message);
 
     message && message.isDeleted = true;
@@ -205,15 +101,8 @@ class MessagingStorage {
     return true;
   }
   async markAsRead(id: string): Promise<boolean> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    message.readAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
@@ -224,15 +113,8 @@ class MessagingStorage {
     return true;
   }
   async markAsUnread(id: string): Promise<boolean> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    message.readAtIso = undefined
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
@@ -246,42 +128,15 @@ class MessagingStorage {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
     // Remove existing reaction from this user
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
 
 
-=======
-    message.reactions = message.reactions.filter(r => r.userId !== userId)
-    // Add new reaction
-
-    message && message.reactions.push({
-      userId,
-      emoji,
-      createdAt: new Date().toISOString()
-    });
-
-    this && this.messages.set(messageId, message);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return true;
   }
   async removeReaction(messageId: string, userId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    message.reactions = message.reactions.filter(r => r.userId !== userId)
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
@@ -290,39 +145,13 @@ class MessagingStorage {
   // Conversation methods
   async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
     const newConversation: Conversation = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-      ...conversation,
-      id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      createdAtIso: new Date().toISOString(),
-      updatedAtIso: new Date().toISOString()
-    };
-
-    this && this.conversations.set(newConversation && newConversation.id, newConversation);
 
 
-    // Add to user conversations
-    for (const participantId of newConversation.participants) {
-      this.addToUserConversations(participantId, newConversation.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return newConversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    return this.conversations.get(id) |null
-
-=======
-    return this && this.conversations.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
@@ -330,76 +159,40 @@ class MessagingStorage {
     if (!conversation) return null,
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     if (!conversation) return null
     const updatedConversation = {
       ...conversation
       ...updates
       updatedAtIso: new Date().toISOString()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    };
-
-    this && this.conversations.set(id, updatedConversation);
-
-    return updatedConversation;
-  }
-  async deleteConversation(id: string): Promise<boolean> {
-
-    const conversation = this && this.conversations.get(id);
-    if (!conversation) return false,
 
 
-=======
-    if (!conversation) return false
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Remove from user conversations
     for (const participantId of conversation && conversation.participants) {
       this && this.removeFromUserConversations(participantId, id);
     }
     // Delete all messages in this conversation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
     for (const messageId of messageIds) {
       this && this.messages.delete(messageId);
     }
-=======
-
-    const messageIds = this && this.conversationMessages.get(id) || new Set();
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     for (const messageId of messageIds) {
       this.messages.delete(messageId);
     }
-<<<<<<< HEAD
-=======
+
 
     this && this.conversationMessages.delete(id);
 
     return this && this.conversations.delete(id);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   }
   async archiveConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    conversation.updatedAtIso = new Date().toISOString()
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = true;
@@ -410,15 +203,8 @@ class MessagingStorage {
   async unarchiveConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    conversation.updatedAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = false;
@@ -429,15 +215,8 @@ class MessagingStorage {
   async muteConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    conversation.updatedAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = true;
@@ -448,15 +227,8 @@ class MessagingStorage {
   async unmuteConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    conversation.updatedAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = false;
@@ -466,15 +238,8 @@ class MessagingStorage {
   }
   // Query methods
   async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const messageIds = this.conversationMessages.get(conversationId) |new Set()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const sortedIds = Array.from(messageIds).sort((a, b) => {
       const msgA = this.messages.get(a);
       const msgB = this.messages.get(b);
@@ -487,22 +252,8 @@ class MessagingStorage {
       .filter((msg): msg is Message => msg !== undefined);
   }
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const conversationIds = this && this.userConversations.get(userId) || new Set();
-    const conversations = Array && Array.from(conversationIds)
-      .map(id => this && this.conversations.get(id))
 
-      .filter((conv): conv is Conversation => conv !== undefined);
-    if (!includeArchived) {
-
-      return conversations.filter(conv => !conv.isArchived)
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return conversations.sort((a, b) =>
       new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime()
@@ -514,26 +265,13 @@ class MessagingStorage {
     );
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const conversationIds = this && this.userConversations.get(userId) || new Set();
 
-    let count = 0;
-    for (const conversationId of conversationIds) {
-
-          count++
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {
         const message = this && this.messages.get(messageId);
         if (message && message.recipientId === userId && !message && message.isRead) {
-=======
+
   relevance_score: number,
 }
 class MessagingStorage {
@@ -785,34 +523,16 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           count++,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
         }
       }
     }
     return count;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const conversationIds = this && this.userConversations.get(userId) || new Set();
 
-    const unreadMessages: Message[] = [];
-    for (const conversationId of conversationIds) {
-
-          unreadMessages.push(message)
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       }
     }
@@ -822,22 +542,8 @@ if ( {) {
   }
   // Search methods
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const conversationIds = this && this.userConversations.get(userId) || new Set();
 
-    const results: MessageSearchResult[] = [];
-    for (const conversationId of conversationIds) {
-      const conversation = this.conversations.get(conversationId);
-      if (!conversation) continue;
-
-        const queryLower = query.toLowerCase()
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (body.includes(queryLower)) {
           const highlights = this.generateHighlights(message.body, query);
           const relevanceScore = this.calculateRelevanceScore(message.body, query);
@@ -849,53 +555,19 @@ if ( {) {
         }
       }
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-      id: `thread_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      conversationId,
-      rootMessageId,
-      messages: [rootMessageId],
-      createdAtIso: new Date().toISOString(),
-      updatedAtIso: new Date().toISOString()
-    };
 
-    this && this.threads.set(thread && thread.id, thread);
-
-    return thread;
-  }
-  async addMessageToThread(threadId: string, messageId: string): Promise<boolean> {
-    const thread = this.threads.get(threadId);
-    if (!thread) return false;
-
-      thread.updatedAtIso = new Date().toISOString()
-
-      this.threads.set(threadId, thread);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return true;
   }
   async getThread(threadId: string): Promise<MessageThread | null> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    return this.threads.get(threadId) |null
-
-=======
-    return this && this.threads.get(threadId) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getThreadMessages(threadId: string): Promise<Message[]> {
 
     if (!thread) return []
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     return thread.messages
       .map(id => this.messages.get(id))
     const thread = this && this.threads.get(threadId);
@@ -910,15 +582,8 @@ if ( {) {
   private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {
     const conversation = this && this.conversations.get(conversationId);
     if (!conversation) return;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    conversation.updatedAtIso = new Date().toISOString()
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.conversations.set(conversationId, conversation);
 
     conversation && conversation.lastMessageId = messageId;
@@ -935,20 +600,8 @@ if ( {) {
   private removeFromUserConversations(userId: string, conversationId: string): void {
     const userConversations = this && this.userConversations.get(userId);
     if (userConversations) {
-<<<<<<< HEAD
       userConversations && userConversations.delete(conversationId),
-=======
-<<<<<<< HEAD
-      userConversations && userConversations.delete(conversationId),
-=======
 
-      userConversations.delete(conversationId)
-
-=======
-      userConversations && userConversations.delete(conversationId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   private addToConversationMessages(conversationId: string, messageId: string): void {
@@ -961,20 +614,9 @@ if ( {) {
     const queryLower = query && query.toLowerCase();
     const textLower = text && text.toLowerCase();
     const highlights: string[] = [];
-<<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),
-=======
-<<<<<<< HEAD
-    let index = textLower && textLower.indexOf(queryLower),
-=======
 
-    let index = textLower.indexOf(queryLower)
 
-=======
-    let index = textLower && textLower.indexOf(queryLower),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     while (index !== -1) {
       const start = Math && Math.max(0, index - 20);
       const end = Math && Math.min(text && text.length, index + query && query.length + 20);
@@ -984,244 +626,61 @@ if ( {) {
     return highlights;
   }
   private calculateRelevanceScore(text: string, query: string): number {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    const textLower = text && text.toLowerCase();
-    const queryLower = query && query.toLowerCase();
-    
-    let score = 0;
-    const queryWords = queryLower && queryLower.split(/\s+/),
 
-    
-=======
-    const queryWords = queryLower.split(/\s+/)
-    for (const word of queryWords) {
-
-    return results;
-      .sort ((a, b) => b.relevance_score - a.relevance_score);
-      .slice (0, limit);
-  }
-  // Thread methods;
-  async create_thread (conversation_id: string, rootMessageId: string): Promise < MessageThread> {
-    const thread: MessageThread = {
-      id: `thread_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-      conversation_id,
-      rootMessageId,
-      messages: [rootMessageId],
-      createdAtIso: new Date ().toISOString (),
-      updatedAtIso: new Date ().toISOString ();
-    }
-;
-    this.threads.set (thread.id, thread);
-    return thread;
-  }
-  async addMessageToThread (thread_id: string, message_id: string): Promise < boolean> {
-    const thread = this.threads.get (thread_id);
-    // Check condition
-if (return false) {
-  $2
-}
-    if () {) {
-  $2
-}
-      thread.messages.push (message_id);
-      thread.updatedAtIso = new Date ().toISOString (),
-      this.threads.set (thread_id, thread);
-    }
-    return true;
-  }
-  async get_thread (thread_id: string): Promise < MessageThread | null> {
-    return this.threads.get (thread_id) || null,
-  }
-  async getThreadMessages (thread_id: string): Promise < Message[]> {
-    const thread = this.threads.get (thread_id);
-    // Check condition
-if (return [], ) {
-  $2
-}
-    return thread.messages;
-      .map (id => this.messages.get (id));
-      .filter ((msg): msg is Message => msg !== undefined);
-      .sort ((a, b) => new Date (a.sentAtIso).get_time () - new Date (b.sentAtIso).get_time ());
-  }
-  // Private helper methods;
-  private async updateConversationLastMessage (conversation_id: string, message_id: string): Promise < void> {
-    const conversation = this.conversations.get (conversation_id);
-    // Check condition
-if (return) {
-  $2
-}
-    conversation.lastMessageId = message_id;
-    conversation.lastMessageAtIso = new Date ().toISOString ();
-    conversation.updatedAtIso = new Date ().toISOString (),
-    this.conversations.set (conversation_id, conversation);
-  }
-  private addToUserConversations (user_id: string, conversation_id: string): void {
-    if () {) {
-  $2
-}
-      this.user_conversations.set (user_id, new Set ());
-    }
-    this.user_conversations.get (user_id)!.add (conversation_id);
-  }
-  private removeFromUserConversations (user_id: string, conversation_id: string): void {
-    const user_conversations = this.user_conversations.get (user_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      user_conversations.delete (conversation_id),
-    }
-  }
-  private addToConversationMessages (conversation_id: string, message_id: string): void {
-    if () {) {
-  $2
-}
-      this.conversation_messages.set (conversation_id, new Set ());
-    }
-    this.conversation_messages.get (conversation_id)!.add (message_id);
-  }
-  private generate_highlights (text: string, query: string): string[] {
-    const query_lower = query.toLowerCase ();
-    const text_lower = text.toLowerCase ();
-    const highlights: string[] = [];
-;
-    let index = text_lower.index_of (query_lower),
-    while (index !== -1) {
-      const start = Math.max (0, index - 20);
-      const end = Math.min (text.length, index + query.length + 20);
-      highlights.push (text.substring (start, end));
-      index = text_lower.index_of (query_lower, index + 1);
-    }
-    return highlights;
-  }
-  private calculateRelevanceScore (text: string, query: string): number {
-    const text_lower = text.toLowerCase ();
-    const query_lower = query.toLowerCase ();
-;
-    let score = 0;
-    const query_words = query_lower.split (/\s+/),
-    for (const word of query_words) {
-      const matches = (text_lower.match (new RegExp (word, 'g')) || []).length;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       score += matches * (word.length / query.length);
       const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).length;
       score += matches * (word && word.length / query && query.length);
     }
     return score;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    activeUsers: number
 
-  }> {
-    return {
-
-      totalMessages: this && this.messages.size,
-      totalConversations: this && this.conversations.size,
-      totalThreads: this && this.threads.size,
-      activeUsers: this && this.userConversations.size
-    };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 // Singleton instance
 export const messagingStorage = new MessagingStorage();
 // Main functions for external use
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
-  return messagingStorage.createMessage(message);
-}
-export async function getMessage(id: string): Promise<Message | null> {
 
-  return messagingStorage.getMessage(id)
-
-=======
-  return messagingStorage && messagingStorage.getMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return messagingStorage && messagingStorage.updateMessage(id, updates);
-=======
-  return messagingStorage.getMessage(id)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return messagingStorage.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
 export async function deleteMessage(id: string): Promise<boolean> {
-<<<<<<< HEAD
-=======
+
 
   return messagingStorage.deleteMessage(id)
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return messagingStorage && messagingStorage.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function markAsRead(id: string): Promise<boolean> {
-<<<<<<< HEAD
   return messagingStorage && messagingStorage.markAsRead(id),
-=======
 
-  return messagingStorage.markAsRead(id)
 
-=======
-  return messagingStorage && messagingStorage.markAsRead(id),
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
-<<<<<<< HEAD
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-<<<<<<< HEAD
   return messagingStorage && messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
-<<<<<<< HEAD
-  return messagingStorage && messagingStorage.getConversation(id),
-=======
-  return messagingStorage && messagingStorage.getConversation(id),
-=======
-=======
 
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return messagingStorage && messagingStorage.getConversation(id),
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
 
   return messagingStorage.getConversation(id)
 
-=======
+
   return messagingStorage && messagingStorage.getConversation(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }
-<<<<<<< HEAD
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage && messagingStorage.updateConversation(id, updates);
 }
@@ -1229,41 +688,19 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage && messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-  return messagingStorage.updateConversation(id, updates);
-}
-
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
-}
-
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
   return messagingStorage.getUnreadMessageCount(userId)
 
-=======
+
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }
-<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return messagingStorage.markAsRead(id)
 }
 
@@ -1300,95 +737,11 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
 
   return messagingStorage.searchMessages(query, userId, limit);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }
 // Utility functions
 export function createMessageData(
-=======
-import fs from 'fs';
-import path from 'path';
-import { v4 as uuidv4 } from 'uuid';
-import {
-  Conversation,
-  ConversationContext,
-  InboxItem,
-  Message,
-  NewMessageInput,
-  UserSummary,;
-} from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'messaging');
-const CONVERSATIONS_FILE = path.join(DATA_DIR, 'conversations.json');
-const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
-const USERS_FILE = path.join(DATA_DIR, 'users.json');
-const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
-
-function ensureFiles() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(CONVERSATIONS_FILE))
-    fs.writeFileSync(CONVERSATIONS_FILE, '[]', 'utf8');
-  if (!fs.existsSync(MESSAGES_FILE))
-    fs.writeFileSync(MESSAGES_FILE, '[]', 'utf8');
-  if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]', 'utf8');
-  if (!fs.existsSync(UPLOADS_DIR))
-    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-
-function readJson<T>(filePath: string): T {
-  ensureFiles();
-  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
-
-function writeJson<T>(filePath: string, data: T): void {
-  ensureFiles();
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-
-export function getUserById(userId: string): UserSummary | undefined {
-  const users = readJson<UserSummary[]>(USERS_FILE);
-  return users.find(u => u.id === userId);
-
-export function listUsers(): UserSummary[] {
-  return readJson<UserSummary[]>(USERS_FILE);
-
-export function listConversations(userId: string): InboxItem[] {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  const users = readJson<UserSummary[]>(USERS_FILE);
-
-  const items: InboxItem[] = conversations
-    .filter(c => c.participants.includes(userId))
-    .map(c => {
-      const convMessages = messages
-        .filter(m => m.conversationId === c.id)
-        .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-      const lastMessage = convMessages[convMessages.length - 1];
-      const otherId = c.participants.find(p => p !== userId) as string;
-      const other = users.find(u => u.id === otherId) || {
-        id: otherId,
-        name: 'User',
-        role: 'client' as const,
-      };
-      const unreadCount = convMessages.filter(
-        m => m.recipientId === userId && m.status !== 'read'
-      ).length;
-      return {
-        conversation: c,
-        otherParticipant: other,
-        lastMessage,
-        unreadCount,
-      };
-    })
-    .sort((a, b) =>
-      (b.conversation.lastMessageAt || '').localeCompare(
-        a.conversation.lastMessageAt || ''
-      )
-    );
-
-  return items;
-
-export function getConversationById(
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   conversationId: string
 ): Conversation | undefined {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
@@ -1418,16 +771,10 @@ export function markAsRead(conversationId: string, userId: string): void {
     conv.lastMessageAt = now; // keep order fresh
     writeJson(CONVERSATIONS_FILE, conversations);
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility functions
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
 export function generateMessageId(): string {
@@ -1437,59 +784,18 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function formatMessageTime(isoString: string): string {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    participants,
-    lastMessageAtIso: new Date().toISOString(),
-    isArchived: false,
-    isMuted: false,
-    ...additionalData;
-  };
-}
 
-export function generateMessageId(): string {;
-  return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateConversationId(): string {;
-  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function formatMessageTime(isoString: string): string {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
-<<<<<<< HEAD
-  if (diffInHours < 1) {
-<<<<<<< HEAD
-=======
-=======
-
-  const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60);
-
-
   if (diffInHours < 1) {
 
-    return 'Just now'
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } else if (diffInHours < 24) {
     return `${Math.floor(diffInHours)}h ago`;
   } else if (diffInHours < 168) { // 7 days
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    return date && date.toLocaleDateString();
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1519,9 +825,8 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
-=======
 
-<<<<<<< HEAD
+
   }
   // Cleanup methods;
   async clear_all (): Promise < void> {
@@ -1642,20 +947,13 @@ if ( { // 7 days) {
     return date.toLocaleDateString ();
   }
 }
-<<<<<<< HEAD
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
 
 function saveAttachmentIfProvided(
   base64?: string,
@@ -1745,4 +1043,4 @@ export function sendMessage(input: NewMessageInput): {
   writeJson(CONVERSATIONS_FILE, conversations);
 
   return { conversation, message };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

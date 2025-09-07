@@ -1,3 +1,19 @@
+
+// Simple PricingCard component
+const PricingCard = ({ title, price, features, isPopular }) => (
+  <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${isPopular ? 'border-blue-500' : 'border-gray-200'}`}>
+    <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+    <div className="text-4xl font-bold text-gray-900 mb-6">{price}</div>
+    <ul className="space-y-3 mb-8">
+      {features.map((feature, index) => (
+        <li key={index} className="flex items-center text-gray-600">
+          <span className="text-green-500 mr-2">✓</span>
+          {feature}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 export const metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
   description: 'Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.',
@@ -154,27 +170,6 @@ function FeatureItem({ title, description }: { title: string; description: strin
   );
 }
 
-function PricingCard({ plan, price, description, features }: {
-  plan: string;
-  price: string;
-  description: string;
-  features: string[];
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-blue-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 function BenefitCard({ title, description }: { title: string; description: string }) {
   return (

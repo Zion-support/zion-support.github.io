@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     title: 'Private Hiring Portal'
@@ -43,8 +36,7 @@ const features = [
     icon: Globe
   }
 ]
-<<<<<<< HEAD
-=======
+
 const features = [;
   {;
     title: 'Private Hiring Portal',;
@@ -85,16 +77,6 @@ const features = [;
 ];
 
 export function EnterpriseFeatures() {;
-=======
-import React from 'react';
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
-
-import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
-const features = null;
-export function EnterpriseFeatures() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>;
@@ -168,7 +150,6 @@ function EnterpriseFeatures() {
           {features && features.map(feature => (;
             <div
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
@@ -176,7 +157,6 @@ function EnterpriseFeatures() {
                 <feature.icon className='h-6 w-6 text-primary' />
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
-<<<<<<< HEAD
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
 
@@ -224,24 +204,6 @@ export function EnterpriseFeatures() {
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs
           </p>
         </div>
-<<<<<<< HEAD
-=======
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <div
-
-              key={feature.title}
-              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
-            >
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-                <feature.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-=======
-              <p className='text-muted-foreground'>{feature.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
 import React from "react",;
@@ -289,7 +251,6 @@ export function EnterpriseFeatures() {;
   );
 
   );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -300,41 +261,13 @@ export function EnterpriseFeatures() {;
               <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
                 <feature.icon className='h - 6 w - 6 text - primary' />;
               </div>;
-<<<<<<< HEAD
           ))}
         </div>
-<<<<<<< HEAD
       </div>;
     </section>;
   );
-=======
-              <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;
-              <p className='text - muted - foreground'>{feature.description}</p>            </div>;
-              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
-              <p className="text - muted - foreground">{feature.description}</p>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-          {features.map ((feature) => (
-            <div;
-              key={feature.title}
-              className="bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md";
-            >;
-              <div className="h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5">;
-                <feature.icon className="h - 6 w - 6 text - primary" />;
-              </div>;
-              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
-              <p className="text - muted - foreground">{feature.description}</p>;
-            </div>))}
-        </div>;
-      </div>;
-    </section>);
-}
 
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </div>
     </section>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

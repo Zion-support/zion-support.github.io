@@ -98,11 +98,5 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
       "stack"
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 console.error(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.error(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

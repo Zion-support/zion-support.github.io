@@ -4,7 +4,6 @@ export type SkeletonProps = {
 export type SkeletonProps = {;
 
             transform: translateX(100%);
-<<<<<<< HEAD
           }        }
       `}</style>;
     </div>;
@@ -89,11 +88,3 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
       `}</style>
 
 
-=======
-          }
-        }
-      `}</style>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

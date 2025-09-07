@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 };
 </header> {;
@@ -38,12 +37,6 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 }</ul> </div>) 
 
 
-=======
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -68,7 +61,6 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
 );
 }
-<<<<<<< HEAD
   );
 }
 
@@ -102,5 +94,4 @@ function InnovationDigest() {
           </li>))}
       </ul>;
     </div>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+

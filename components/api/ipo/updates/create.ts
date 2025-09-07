@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
   if (!title) return res && res.status(400).json({ error: 'Missing title' });
@@ -34,8 +33,3 @@ function handler() {
   res.status (200).json (update);
 
 
-=======
-  res.status(200).json(update);
-  res.status(200).json(update)
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

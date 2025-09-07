@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
+
+
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
 /**
@@ -46,24 +26,8 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -501,23 +465,10 @@ class IntelligentGitWorkflow {
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)
           resolvedLines.push(line);
-<<<<<<< HEAD
         }
         // Skip their version
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-      // Write resolved content;
-      fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
-      // Add resolved file
-      execSync(`git add ${filePath}`, { stdio: 'inherit' });
-
-      console.log(`✅ Resolved conflict in ${filePath}`);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       
       // Write resolved content
       await fs.writeFile(file, resolvedLines.join('\n'));
@@ -527,8 +478,7 @@ class IntelligentGitWorkflow {
       
       return { resolved: true, method: 'auto_merge' };
       
-<<<<<<< HEAD
-=======
+
 ;
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
@@ -537,10 +487,6 @@ class IntelligentGitWorkflow {
       execSync(`git add ${filePath}`, { stdio: 'inherit' });
 
       console.log(`✅ Resolved conflict in ${filePath}`);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -549,48 +495,6 @@ class IntelligentGitWorkflow {
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  updateWorkflowData() {
-    this.workflowData.lastUpdated = new Date().toISOString();
-
-    // Update performance metrics
-    const now = new Date().toISOString();
-    this.workflowData.performance[now] = {
-      commits: this.workflowData.mergeHistory.filter(m => m.success).length,
-      conflicts: this.workflowData.conflictHistory.length,
-      merges: this.workflowData.mergeHistory.length,
-    };
-  }
-
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
-
-    // Log error for analysis
-    const errorLog = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-    };
-
-    const errorFile = path.join(
-      this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
-    );
-    let errors = [];
-
-    try {
-      if (fs.existsSync(errorFile)) {
-        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
-      }
-    } catch (e) {;
-      // Start fresh if file is corrupted;
-    } catch (e) {
-      // Start fresh if file is corrupted
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
     
@@ -908,8 +812,7 @@ class IntelligentGitWorkflow {
     } catch (error) {
       this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
-<<<<<<< HEAD
-=======
+
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
@@ -947,26 +850,15 @@ class IntelligentGitWorkflow {
       // Start fresh if file is corrupted;
     } catch (e) {
       // Start fresh if file is corrupted
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     }
 
     errors.push(errorLog);
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-// Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
-=======
-=======
+
+
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -1034,7 +926,6 @@ class IntelligentGitWorkflow {
         // Determine if auto-commit should happen
         if (this.shouldAutoCommit(changes)) {
           await this.intelligentCommit(changes);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         }
       }
 
@@ -1384,10 +1275,9 @@ class IntelligentGitWorkflow {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
-<<<<<<< HEAD
-=======
+
         } else if (line.startsWith('')) {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -1457,8 +1347,7 @@ class IntelligentGitWorkflow {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
 // Run the git workflow
 if (require.main === module) {
   const gitWorkflow = new IntelligentGitWorkflow();
@@ -1466,23 +1355,15 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentGitWorkflow;
-=======
-<<<<<<< HEAD
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
+
+
       await fs.mkdir(path.join(this.projectRoot, 'logs')
-<<<<<<< HEAD
-=======
+
 ;
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
@@ -1503,30 +1384,10 @@ module.exports = IntelligentGitWorkflow;
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-=======
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
-        await this.runGitCommand('git config user.email "ai-workflow@example.com")
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

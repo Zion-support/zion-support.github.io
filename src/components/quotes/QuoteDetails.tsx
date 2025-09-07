@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 import React from "react";
 import { 
@@ -38,7 +37,7 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -368,8 +367,5 @@ if (return 'Not specified') {
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
-<<<<<<< HEAD
+
 '";
-=======
-'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

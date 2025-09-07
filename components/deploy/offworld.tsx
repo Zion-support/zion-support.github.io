@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
@@ -38,20 +37,6 @@ import {useState} from 'react';
       setError(e && e.message);
       setStatus('');    }
 
-=======
-      const res = null;
-      setStatus('')
-    }
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);
-      setProvider(data.provider || '');
-setStatus('Deployed successfully');
-    } catch (e: any) {
-      setError(e.message);
-      setStatus('');
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
@@ -87,7 +72,6 @@ setStatus('Deployed successfully');
             CID: <code className='break-all'>{cid}</code>;
           </div>;
           {provider && <div>Provider: {provider}</div>}
-<<<<<<< HEAD
           <div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
           </div>        </div>;
@@ -142,13 +126,3 @@ function handle_deploy() {
   return (
 
 
-=======
-          <div className='text-sm text-gray-600'>
-            You can open via any IPFS gateway or offline node.
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

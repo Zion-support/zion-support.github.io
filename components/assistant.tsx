@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
@@ -19,25 +18,6 @@ export default function Assistant() {;
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
-=======
-import { useEffect, useMemo, useState } from 'react';
-interface Message { role: 'user' | 'assistant', content: string }
-
-export default function Assistant() {
-  const params = null;
-      return
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search)
-      : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [messages, setMessages] = useState<Message[]>([
 {
       role: 'assistant',
@@ -57,7 +37,6 @@ export default function Assistant() {
     }),;
     [];
   );
-<<<<<<< HEAD
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
 
@@ -74,19 +53,6 @@ export default function Assistant() {
       ]);
       return;
 
-=======
-
-  async function handleAsk(question: string) {
-    const lower = question.toLowerCase();
-    const faq = Object.keys(faqs).find(key => lower.includes(key))
-    if (faq) {
-setMessages(prev => [
-        ...prev,
-        { role: 'user', content: question },
-        { role: 'assistant', content: faqs[faq] },
-      ]);
-      return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     ]);
   }
@@ -109,28 +75,9 @@ setMessages(prev => [
               m && m.role === 'assistant'
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
-<<<<<<< HEAD
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-=======
-            }
-          >
-            {m.content}
-          </div>
-        ))}
-      </div>
-      <form
-className='p-3 border-t flex gap-2'
-        onSubmit={e => {
-          e.preventDefault();
-          if (input.trim()) {
-            handleAsk(input.trim());
-            setInput('');
-          }
-        }}
-      >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -148,7 +95,6 @@ className='p-3 border-t flex gap-2'
         </button>
       </form>
     </div>
-<<<<<<< HEAD
 }
   );
   );
@@ -310,6 +256,3 @@ if ( {) {
   )
 
 }
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

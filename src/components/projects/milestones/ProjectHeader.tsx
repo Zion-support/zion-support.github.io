@@ -1,20 +1,6 @@
-<<<<<<< HEAD
 return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
       <div className='flex items-center'>;
-=======
-import React from 'react';
-import { useRouter  } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react'
-interface ProjectHeaderProps {
-  title: string
-export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const router = useRouter(); // Changed from useNavigate to useRouter
-  return (
-    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
-      <div className='flex items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <Button
           variant='ghost'
           size='sm'
@@ -25,7 +11,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </Button>;
         <h1 className='text-2xl md:text-3xl font-bold truncate max-w-xl'>;
           {title}
-<<<<<<< HEAD
 
         </h1>;
       </div>;
@@ -36,9 +21,3 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 
 }
 ;
-=======
-        </h1>
-      </div>
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
