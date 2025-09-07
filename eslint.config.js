@@ -4,28 +4,6 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-
-export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-=======
 import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
@@ -123,7 +101,6 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
       },
       parser: typescriptParser,
       parserOptions: {
@@ -136,50 +113,6 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-<<<<<<< HEAD
-      'react': react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'no-console': 'warn',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'jsx-a11y/anchor-is-valid': 'warn',
-      'react/no-unescaped-entities': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    ignores: [
-      'dist/**',
-      'node_modules/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'vite.config.*',
-      'tailwind.config.*',
-      'postcss.config.*',
-      'public/**',
-      'build/**',
-      'coverage/**',
-      '*.backup.*',
-      'temp_*/**',
-      'src_backup/**',
-      'src.disabled/**',
-      'src.broken/**',
-    ],
-=======
       react,
       'react-hooks': reactHooks,
       '@next/next': nextPlugin,
@@ -198,6 +131,5 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
     },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
   },
 ];
