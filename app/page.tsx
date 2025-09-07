@@ -354,6 +354,83 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Technology Stack Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="tech-stack-heading">
+        <div className="text-center mb-16">
+          <h2 id="tech-stack-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
+            Our Technology Stack
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
+            We use cutting-edge technologies and frameworks to deliver robust, scalable solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8" role="list" aria-label="Technology stack">
+          {[
+            { name: 'React', icon: '⚛️', color: 'from-blue-400 to-blue-600' },
+            { name: 'Next.js', icon: '▲', color: 'from-gray-700 to-gray-900' },
+            { name: 'TypeScript', icon: '🔷', color: 'from-blue-500 to-blue-700' },
+            { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-700' },
+            { name: 'Python', icon: '🐍', color: 'from-yellow-500 to-yellow-700' },
+            { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-orange-600' },
+            { name: 'Docker', icon: '🐳', color: 'from-blue-300 to-blue-500' },
+            { name: 'Kubernetes', icon: '⚙️', color: 'from-blue-600 to-blue-800' },
+            { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-green-800' },
+            { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-900' },
+            { name: 'Redis', icon: '🔴', color: 'from-red-500 to-red-700' },
+            { name: 'GraphQL', icon: '🔺', color: 'from-pink-500 to-pink-700' }
+          ].map((tech, index) => (
+            <div 
+              key={tech.name}
+              className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-stagger-1"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <span className="text-2xl">{tech.icon}</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                {tech.name}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Newsletter Signup Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl relative overflow-hidden" aria-labelledby="newsletter-heading">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <h2 id="newsletter-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-indigo-100 max-w-3xl mx-auto animate-slide-up">
+              Get the latest insights, updates, and exclusive offers delivered to your inbox.
+            </p>
+          </div>
+          
+          <div className="max-w-md mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <form className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-4 rounded-xl border-0 focus:outline-none focus:ring-4 focus:ring-white/30 text-gray-900 placeholder-gray-500"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30 shadow-lg hover:shadow-xl"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p className="text-indigo-200 text-sm mt-4 text-center">
+              No spam, unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Enhanced animated background elements */}
