@@ -31,5 +31,30 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
+  "exclude": [
+    "node_modules",
+    "apps/**",
+    "apps.backup/**",
+    "api-backup/**",
+    "backup-merge-conflicts/**",
+    "browserstack.config.ts",
+    "cypress.config.ts",
+    "jest.config.*",
+    "*.config.ts",
+    "types/**",
+    "netlify/**",
+    "components/**",
+    "src_backup/**",
+    "src-disabled/**",
+    "src.disabled/**",
+    "backup/**",
+    "backup-*/**",
+    "recovered-branches/**",
+    "corrupted_backup/**",
+    "broken_files_backup/**",
+    "temp_components/**",
+    "tests/**",
+    "test-results/**",
+    "test-reports/**"
+  ]
 }

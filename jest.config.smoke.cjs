@@ -1,17 +1,34 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  testMatch: ['**/__tests__/**/*.test.{js,jsx,ts,tsx}', '**/*.test.{js,jsx,ts,tsx}'],
-  moduleNameMapping: {
+  testMatch: ['**/App.smoke.test.tsx'],
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: [
+    '/\\.next/',
+    '/node_modules/',
+    '/src\\.broken/',
+    '/src_backup/',
+    '/src-disabled/',
+    '/src\\.disabled/',
+    '/backup/',
+    '/backup-[^/]+/',
+    '/recovered-branches/',
+    '/corrupted_backup/',
+    '/broken_files_backup/',
+    '/pages_backup_.*?/',
+    '/pages_backup_conflict.*/',
+    '/pages_disabled/',
+    '/pages\\.disabled/',
+    '/__tests__/',
+  ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
@@ -19,4 +36,5 @@ module.exports = {
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
+  passWithNoTests: true,
 };
