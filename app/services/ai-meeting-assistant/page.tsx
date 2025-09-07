@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
 export const metadata = {
   title: 'Ai Meeting Assistant | Zion Tech Group',
   description: 'Professional ai meeting assistant services for your business needs.',
@@ -12,13 +10,9 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ai Meeting Assistant
@@ -27,29 +21,6 @@ export default function ServicePage() {
             Professional ai meeting assistant services for your business needs.
           </p>
         </div>
-<<<<<<< HEAD
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai meeting assistant solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai meeting assistant solutions run smoothly.
-            </p>
-=======
 
         <div className="max-w-6xl mx-auto">
           {/* Features Grid */}
@@ -109,14 +80,11 @@ export default function ServicePage() {
                 View All Services
               </Link>
             </div>
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+

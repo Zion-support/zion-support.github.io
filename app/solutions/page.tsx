@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export const metadata = {
-  title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
-};
-
-export default function MicroSaaSPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-      <div className="container mx-auto px-4 py-16">
-=======
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -24,7 +10,7 @@ export default function MicroSaasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Micro SaaS Development

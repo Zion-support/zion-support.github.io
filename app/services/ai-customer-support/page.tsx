@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
 export const metadata = {
   title: 'Ai Customer Support | Zion Tech Group',
   description: 'Professional ai customer support services for your business needs.',
@@ -48,8 +46,5 @@ export default function ServicePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+

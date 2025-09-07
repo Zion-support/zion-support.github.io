@@ -1,49 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
-  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Services | Zion Tech Group',
-    description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Services | Zion Tech Group',
-    description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
-
-interface ServiceCardProps {
-  title: string;
-  href: string;
-  description: string;
-  icon: string;
-  category: string;
-}
-=======
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
+
 
 function ServiceCard({ title, href, description, icon, category }: ServiceCardProps) {
   return (
