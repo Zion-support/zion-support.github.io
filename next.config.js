@@ -18,13 +18,18 @@ const nextConfig = {
     ],
   },
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizeCss: false,
+    optimizePackageImports: [],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
+    // Exclude node_modules from processing
+    config.watchOptions = {
+      ignored: /node_modules/,
+    };
+    
     if (!dev && !isServer) {
       config.optimization.splitChunks.cacheGroups = {
         ...config.optimization.splitChunks.cacheGroups,

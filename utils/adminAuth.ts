@@ -28,3 +28,13 @@ export function validateAdminToken(token: string): Session | null {
   // In production, this would validate against a secure token store
   return null;
 }
+
+export function getSessionFromReq(req: any): Session | null {
+  // Placeholder for getting session from request
+  return null;
+}
+
+export function isInternalAgentRequest(req: any): boolean {
+  // Placeholder for internal agent request check
+  return false;
+}

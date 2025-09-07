@@ -29,3 +29,8 @@ export function getModerationFlags(status?: ModerationFlag['status']): Moderatio
   // Placeholder for flag retrieval logic
   return [];
 }
+
+export function readAllFlags(): ModerationFlag[] {
+  // Placeholder for reading all flags
+  return [];
+}

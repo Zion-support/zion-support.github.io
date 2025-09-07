@@ -46,3 +46,7 @@ export function processTokenTransaction(transaction: TokenTransaction): TokenTra
     status: 'completed'
   };
 }
+
+export function getConfig(): TokenConfig {
+  return defaultTokenConfig;
+}
