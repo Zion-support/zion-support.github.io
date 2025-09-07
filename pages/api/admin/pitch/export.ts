@@ -1,7 +1,8 @@
 
 
-    return res.status(200).json({ url })
-  }
+export default function handler(req, res) {
+  return res.status(200).json({ url });
+}
 
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version || ''}</title></head><body>` +

@@ -1,9 +1,6 @@
 #!/usr/bin/env node;
-
 const fs = require("$1")
 const path = require("$1")
-=======
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -13,7 +10,6 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-
 const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
@@ -58,21 +54,3 @@ function log(message, color = "reset")
     log("4. Continue with your workflow", "blue")
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}, "red")}"}"
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes "needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
-  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors "encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
-
-=======
-        resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
-  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
-  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes "needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
-  log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors "encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

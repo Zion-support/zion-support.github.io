@@ -6,14 +6,9 @@ describe('App Smoke Tests', () => {
   it('should render without crashing', () => {
     expect(() => render(<App />)).not.toThrow();
   });
+  
   it('should render a basic structure', () => {
     const { container } = render(<App />);
-<<<<<<< HEAD
     expect(container).toBeInTheDocument();
   });
 });
-=======
-    expect(container.firstChild).toBeTruthy();
-  });
-});
->>>>>>> origin/main

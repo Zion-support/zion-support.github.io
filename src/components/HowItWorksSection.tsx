@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
@@ -82,3 +83,5 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

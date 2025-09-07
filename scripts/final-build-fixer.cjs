@@ -1,8 +1,4 @@
-
 #!/usr/bin/env node;
-=======
-///usr/bin/env node
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 // console.log(' Final Build Fixer')
@@ -15,11 +11,4 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
-<<<<<<< HEAD
           "pattern"
-
-
-
-
-
-

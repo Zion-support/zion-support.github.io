@@ -1,15 +1,8 @@
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
-
-
-
-
-
-
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin')
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/)
@@ -17,26 +10,15 @@ function getRepoFromGit() {}
   return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-
     },
     "body": body ? JSON.stringify(body) : undefined;"
-
 })
   const text = await res.text();"
-
   return data}
 async function listOpenPRs(owner, repo) {}`
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
   return prs}
 function resolveConflictsFiles() {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // list conflicted files;"
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true');
   const files = output.split('\n').filter(Boolean);
@@ -56,7 +38,6 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
@@ -66,10 +47,6 @@ async function main() {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
   };
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) { console.log('No open PRs'); return};
   let merged = 0, processed = 0;
@@ -79,12 +56,6 @@ async function main() {}
     const base = pr.base.ref;`;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Checkout PR branch;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)};
       sh('git fetch origin');
@@ -121,19 +92,3 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-// list conflicted files;"
-  const prs = await listOpenPRs(owner, repo)
-  if($2) { console.log('No open PRs'); return}
-  let merged = 0, processed = 0
-  for($2) {}
-    processed++
-    const head = pr.head.ref
-    const base = pr.base.ref;`
-    console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`)
-    try {}
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
