@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
@@ -14,6 +14,7 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
+  { label: 'Enhanced Home', href: '/enhanced' },
   { 
     label: 'Services', 
     href: '/services',
@@ -38,9 +39,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+      <header className="bg-white/90 backdrop-blur-xl border-b border-slate-200/50 sticky top-0 z-50 shadow-lg shadow-slate-200/20">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}

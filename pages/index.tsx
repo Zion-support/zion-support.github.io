@@ -109,6 +109,83 @@ export default function Index() {
 				</div>
 			</section>
 
+			{/* Enhanced Services Preview */}
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-24 sm:py-32 relative overflow-hidden">
+				{/* Animated Background */}
+				<div className="absolute inset-0 -z-10">
+					<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+					<div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1500"></div>
+					<div className="absolute bottom-40 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-3000"></div>
+				</div>
+				
+				<div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Comprehensive Service Portfolio
+						</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Explore our extensive range of AI, cloud, cybersecurity, and micro SaaS solutions designed to accelerate your business growth.
+						</p>
+					</div>
+					
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+						<div className="group text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+							<div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Brain className="h-8 w-8 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">AI Solutions</h3>
+							<p className="text-sm text-gray-600 mb-4">Intelligent automation and decision-making systems</p>
+							<Link to="/enhanced-services#ai" className="text-blue-600 hover:text-blue-500 font-medium text-sm group-hover:scale-105 transition-all">
+								Learn More →
+							</Link>
+						</div>
+						
+						<div className="group text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+							<div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Cloud className="h-8 w-8 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
+							<p className="text-sm text-gray-600 mb-4">Scalable and resilient cloud platforms</p>
+							<Link to="/enhanced-services#cloud" className="text-green-600 hover:text-green-500 font-medium text-sm group-hover:scale-105 transition-all">
+								Learn More →
+							</Link>
+						</div>
+						
+						<div className="group text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+							<div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Shield className="h-8 w-8 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3>
+							<p className="text-sm text-gray-600 mb-4">Enterprise-grade security and compliance</p>
+							<Link to="/enhanced-services#cybersecurity" className="text-red-600 hover:text-red-500 font-medium text-sm group-hover:scale-105 transition-all">
+								Learn More →
+							</Link>
+						</div>
+						
+						<div className="group text-center p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+							<div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Code className="h-8 w-8 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Micro SaaS</h3>
+							<p className="text-sm text-gray-600 mb-4">Rapid SaaS development and deployment</p>
+							<Link to="/enhanced-services#saas" className="text-purple-600 hover:text-purple-500 font-medium text-sm group-hover:scale-105 transition-all">
+								Learn More →
+							</Link>
+						</div>
+					</div>
+					
+					<div className="text-center mt-12">
+						<Link
+							to="/enhanced-services"
+							className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:shadow-2xl hover:scale-105"
+						>
+							View All Services
+							<ArrowRight className="ml-2 h-5 w-5" />
+						</Link>
+					</div>
+				</div>
+			</section>
+
 			{/* Stats Section */}
 			<section className="bg-white py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
