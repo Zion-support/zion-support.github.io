@@ -67,9 +67,9 @@ const Layout: React.FC<LayoutProps> = ({
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={og_title || title} />
-        <meta name="twitter:description" content={og_description || description} />
-        <meta name="twitter:image" content={og_image} />
+        <meta name="twitter:title" content={ogTitle || title} />
+        <meta name="twitter:description" content={ogDescription || description} />
+        <meta name="twitter:image" content={ogImage} />
         
         {/* JSON-LD */}
         <script

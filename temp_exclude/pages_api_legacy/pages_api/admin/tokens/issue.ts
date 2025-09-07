@@ -1,9 +1,0 @@
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json($2);
-  const { userId, amount, reason } = req.body || {},
-  if (!userId || typeof amount !== "number") return res.status(400).json($2);
-  try {
-    const tx = issueTokens(userId, Math.floor(amount), reason || "admin_issue"),
-    return res.status(200).json({ tx })
-
