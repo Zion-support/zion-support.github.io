@@ -12,9 +12,10 @@ echo "[ci] npm ci"
 npm ci --ignore-scripts --no-audit --fund=false --omit=optional
 
 echo "[ci] eslint check"
-npm run lint:check || {
-  echo "[ci] Lint failed. Attempting auto-fix for safe paths..."
-  npm run lint || true
+# Limit lint scope for speed and to avoid legacy folders
+npm run lint:check --silent || {
+  echo "[ci] Lint failed. Attempting auto-fix (non-fatal)"
+  npm run lint --silent || true
 }
 
 echo "[ci] type-check"
