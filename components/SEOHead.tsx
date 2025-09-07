@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical_url?: string;
+  og_image?: string;
+  og_type?: string;
+  twitter_card?: string;
+  structured_data?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+      <meta name="twitter:title" content={title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={fullOgImage} />;
+      <meta name="twitter:site" content="@ziontechgroup" />;
+      <meta name="twitter:creator" content="@ziontechgroup" />;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -40,6 +57,43 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   const mergedStructuredData = structuredData || defaultStructuredData
 
+=======
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+<<<<<<< HEAD
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Technology Solutions',
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
+  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+<<<<<<< HEAD
+
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions,
+  description = Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions,
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -47,6 +101,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData,
   noindex = false,
   nofollow = false,
+<<<<<<< HEAD
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '')
@@ -73,6 +128,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     ],
   }
   const mergedStructuredData = structuredData || defaultStructuredData
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }: SEOHeadProps) {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of micro SaaS products, AI services, and IT solutions.';
@@ -90,6 +147,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
+<<<<<<< HEAD
       {/* Open Graph Tags */}
       <meta property="og: title" content={fullTitle} />
       <meta property="og: description" content={description} />
@@ -113,6 +171,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter: image" content={imageUrl} />
       <meta name="twitter: site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+=======
+      {/* Robots */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:type" content={ogType} />
+>>>>>>> origin/chore/fix-lint-and-merge
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
@@ -141,6 +208,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<<<<<<< HEAD
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https: //fonts.googleapis.com" />
@@ -176,3 +244,7 @@ export default SEOHead
     </Head>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

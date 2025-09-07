@@ -53,6 +53,25 @@ export const useAccessibility = () => {
   const context = useContext(AccessibilityContext)
   if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small | medium' | 'large;
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: small' | 'medium | large') => void;
+}
+
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+
+export function useAccessibility() {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context
 }
@@ -87,9 +106,8 @@ interface AccessibilityContextType {
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export function useAccessibility() {
-  const context = useContext(AccessibilityContext);
   if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    throw new Error(useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
 }
@@ -101,35 +119,72 @@ interface AccessibilityProviderProps {
 export default function AccessibilityProvider({ children }: AccessibilityProviderProps) {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
+  const [fontSize, setFontSize] = useState<'small | medium' | 'large>(medium');
 
   useEffect(() => {
     // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mediaQuery = window.matchMedia((prefers-reduced-motion: reduce));
     setReducedMotion(mediaQuery.matches);
 
     const handleChange = (e: MediaQueryListEvent) => {
       setReducedMotion(e.matches);
-    };
+    }
 
     mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener(change, handleChange);
   }, []);
 
   useEffect(() => {
     // Apply accessibility settings to document
     document.documentElement.setAttribute('data-high-contrast', highContrast.toString());
-    document.documentElement.setAttribute('data-reduced-motion', reducedMotion.toString());
+    document.documentElement.setAttribute(data-reduced-motion, reducedMotion.toString());
     document.documentElement.setAttribute('data-font-size', fontSize);
   }, [highContrast, reducedMotion, fontSize]);
 
   const toggleHighContrast = () => {
     setHighContrast(!highContrast);
+<<<<<<< HEAD
+  }
+
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  }
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   };
 
   const toggleReducedMotion = () => {
     setReducedMotion(!reducedMotion);
   };
+<<<<<<< HEAD
+
+  return (
+    <AccessibilityContext.Provider
+      value={{
+        announceToScreenReader,
+        setFocus,
+        highContrast,
+        largeText,
+        reducedMotion,
+        toggleHighContrast,
+        toggleLargeText,
+        toggleReducedMotion,
+      }}
+    >
+      {children}
+    </AccessibilityContext.Provider>
+  );
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  }
+  return context;
+};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const value = {
     highContrast,
@@ -144,6 +199,22 @@ export default function AccessibilityProvider({ children }: AccessibilityProvide
     <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
+<<<<<<< HEAD
+  );
+
+  )
+}
+    )
+  return context
+}
+export const useAccessibility = () => {
+  if($2) {
+    throw new Error(
+      useAccessibility must be used within an AccessibilityProvider",
+    )
+  return context
+}
+export default AccessibilityProvider;
   );
 }
   );

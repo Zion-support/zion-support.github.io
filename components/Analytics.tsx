@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 interface AnalyticsProps {
@@ -184,3 +187,5 @@ export default Analytics
 
   return null;
 }
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+<<<<<<< HEAD
+const path = require(path');
+const glob = require('glob);
 
 
 function fixSyntaxErrors(filePath) {
@@ -49,7 +50,7 @@ function fixSyntaxErrors(filePath) {
     const matches = content.match(importRegex);
     if (matches) {
       content = content.replace(importRegex, (match) => {
-        return match.replace(/,\s*$/, ';');
+        return match.replace(/,\s*$/, ;);
       });
       modified = true;
     }
@@ -173,43 +174,16 @@ function fixSyntaxErrors(filePath) {
 
     return false;
 
-      // Files with incomplete syntax
-      /^[\s\n]*\}[\s\n]*res\.setHeader[\s\S]*$/,
-      // Files with just a return statement
-      /^[\s\n]*return;[\s\S]*$/,
-    ];
-    
-    let shouldReplace = false;
-    for (const pattern of patterns) {
-      if (pattern.test(content)) {
-        shouldReplace = true;
-        break;
-      }
-    }
-    
-    if (shouldReplace) {
-      const newContent = `import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', .tsx, '.js', '.jsx'].includes(ext)) {
+    return fixSyntaxErrors(filePath);
   }
-  
-  res.status(200).json({ message: 'Endpoint working' });
-}`;
-      
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+  return false;
 }
 
 
-function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   
   files.forEach(file => {
@@ -235,3 +209,23 @@ console.log('Starting syntax error fixes...');
 const fixedCount = findAndFixFiles('./app');
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
+const fixedCount = processDirectory(workspacePath);
+console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
+
+// Also fix specific known problematic files
+const specificFiles = [
+  'pages/design-map.tsx',
+  'pages/pricing.tsx',
+  'pages/privacy.tsx',
+  'pages/space-tech.tsx'
+];
+
+for (const file of specificFiles) {
+  const filePath = path.join(workspacePath, file);
+  if (fs.existsSync(filePath)) {
+    processFile(filePath);
+  }
+}
+
+console.log('✨ Syntax error fixing completed!');
+>>>>>>> origin/chore/fix-lint-and-merge

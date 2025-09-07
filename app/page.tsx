@@ -1,10 +1,1 @@
-import React from 'react';
-
-export default function Home() {
-  return (
-    <main className="p-8">
-      <h1>Welcome to Zion Tech Group</h1>
-    </main>
-  );
-}
-
+export default function Home() { return (<main style={{padding:'2rem'}}><h1>Zion Tech Group</h1><p>Welcome.</p></main>) }

@@ -1,4 +1,18 @@
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
+import "@testing-library/jest-dom";
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+// Mock Next.js router
+jest.mock("next/router", () => ({
+  useRouter() {
+    return {
+
+      pathname: "/",
+      query: {},"
+      asPath: "/",
+
+// Jest setup file
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -72,3 +86,17 @@ global.ResizeObserver = class ResizeObserver {
 beforeEach(() => {
 	jest.clearAllMocks();
 });
+<<<<<<< HEAD
+=======
+
+});
+main
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true;,
+  default: (props) => {
+    return <img {...props} />;
+  },
+}));
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> origin/chore/fix-lint-and-merge

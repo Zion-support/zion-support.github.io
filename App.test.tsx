@@ -26,16 +26,15 @@ describe('App', () => {
     expect(screen.getByText('Get Started Today')).toBeInTheDocument();
   });
 });
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-
+  });
 });
-origin/cursor/expand-services-advertise-and-build-project-c28b
-});
-});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-
-
+  it('displays correct content, () => {
+    render(<App />);
+    // Add specific content assertions here
+  });
+  it(handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests here
+  });
 });
 

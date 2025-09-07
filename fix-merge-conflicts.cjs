@@ -16,6 +16,8 @@ const fs = require('fs');
   const fs = require('fs');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 function fixMergeConflicts(filePath) {
   try {}

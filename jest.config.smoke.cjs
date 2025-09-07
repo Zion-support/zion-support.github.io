@@ -1,17 +1,68 @@
 const nextJest = require('next/jest');
-
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './',
 });
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
   testMatch: [
-    '**/__tests__/**/*.smoke.+(ts|tsx|js)',
-    '**/*.smoke.(test|spec).+(ts|tsx|js)'
+    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
+    '**/*.smoke.test.(js|jsx|ts|tsx)',
+    '**/*.smoke.spec.(js|jsx|ts|tsx)'
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/src_backup/',
+    '/src_backup_temp/',
+    '/backup-problematic-files/',
+    '/src.disabled/',
+    '/pages_backup/',
+    '/corrupted-files-backup/',
+    '/lib_backup/',
+    '/components.disabled/',
+    '/components.disabled_full/',
+    '/pages.disabled/',
+    '/src.pages.disabled/',
+    '/recovered-branches/',
+    '/temp_backup/',
+    '/api.disabled/',
+    '/src.broken/',
+    '/src.corrupted/',
+    '/pages.broken/',
+    '/pages.corrupted/',
+    '/components.broken/',
+    '/components.corrupted/',
+    '/dist/',
+    '/build/',
+    '/temp_exclude/',
+    '/temp_components/',
+    '/temp_conflicts/',
+    '/temp_working/',
+    '/backup*/',
+    '/corrupted_backup/',
+    '/temp_*/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+=======
+  testMatch: ['**/__tests__/smoke/**/?(*.)+(test).[jt]s?(x)'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  collectCoverageFrom: [
+    'pages/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
@@ -59,11 +110,8 @@ const customJestConfig = {
     '<rootDir>/node_modules/',
     '<rootDir>/.next/',
     '<rootDir>/dist/',
-    '<rootDir>/build/'
+    '<rootDir>/build/',
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  collectCoverage: false,
   testTimeout: 30000,
   passWithNoTests: true
 };

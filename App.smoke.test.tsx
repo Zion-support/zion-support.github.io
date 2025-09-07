@@ -32,18 +32,27 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App';
 
-describe('App Smoke Tests', () => {
-  it('should render without crashing', () => {
-    expect(() => render(<App />)).not.toThrow();
-  });
-
-  it('should render a basic structure', () => {
-    const { container } = render(<App />);
-    expect(container.firstChild).toBeTruthy();
-  });
-
-  it('should have basic app structure', () => {
-    render(<App />);
-    expect(document.body).toBeInTheDocument();
-  });
+it('renders without crashing', () => {
+  render(<App />);
+  expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
 });
+=======
+<<<<<<< HEAD
+import HomePage from './app/page';
+=======
+>>>>>>> main
+
+it('renders without crashing', () => {
+  render(<HomePage />);
+  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

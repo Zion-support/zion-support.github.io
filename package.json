@@ -19,7 +19,13 @@
     "prepare": "echo \"Husky prepare script disabled\"",
     "lint": "eslint . --no-error-on-unmatched-pattern",
     "lint:fix": "eslint . --fix --no-error-on-unmatched-pattern",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "preview": "next start -p 3000",
+    "postinstall": "echo 'Postinstall completed'"
+  },
+  "pm2": {
+    "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
@@ -72,6 +78,7 @@
     "@tanstack/react-query": "^5.85.5",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
@@ -164,9 +171,11 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=10.0.0"
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   },
   "repository": {
     "type": "git",

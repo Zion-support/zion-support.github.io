@@ -1,25 +1,27 @@
-// Security middleware
 import { NextResponse } from 'next/server';
-import { securityHeaders, contentSecurityPolicy } from './lib/security';
 
 export function middleware(request) {
   const response = NextResponse.next();
   
-  // Add security headers
-  securityHeaders.forEach(({ key, value }) => {
-    response.headers.set(key, value);
-  });
+  // Security headers
+  response.headers.set('X-DNS-Prefetch-Control', 'off');
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  // Add CSP header
-  const csp = Object.entries(contentSecurityPolicy.directives)
-    .map(([key, value]) => `${key} ${value.join(' ')}`)
-    .join('; ');
+  // Content Security Policy
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'",
+  ].join('; ');
   
   response.headers.set('Content-Security-Policy', csp);
-  
-  // Rate limiting (basic implementation)
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown';
-  // Add rate limiting logic here
   
   return response;
 }
