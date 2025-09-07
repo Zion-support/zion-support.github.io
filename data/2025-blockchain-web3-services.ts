@@ -704,6 +704,7 @@ export interface BlockchainWeb3Service {;
     rating: 4.6,
     reviews: 18000;
   }
+
 ;
     rating: 4.6,
     reviews: 18000;

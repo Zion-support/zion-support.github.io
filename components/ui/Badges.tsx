@@ -117,9 +117,6 @@ function MicroTestimonial() {
 }
 
 
-    </figure>
-  );
-}
 
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {

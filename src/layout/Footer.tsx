@@ -13,11 +13,15 @@ interface ApiResponse<T = unknown>  {data: T;
   description: string;
   price: number;
   category: string;
-}interface FormData  {[key: string]: string | number | boolean | File;
-}interface ComponentProps  {className?: string;
+}interface FormData {
+  [key: string]: string | number | boolean | File;
+}interface ComponentProps {
+  className?: string;
   children?: React.ReactNode;
   [key: string]: unknown;
-}export default function Footer() {const currentYear = new Date().getFullYear()const footerSections = [;
+}export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const footerSections = [
     {title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {title: 'Solutions',links: ["";
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },"";

@@ -1394,6 +1394,7 @@ export interface EmergingTechBreakthroughServiceV2 {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [;
   // Brain-Computer Interface Platform;
