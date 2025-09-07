@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-export default function About() {
-  return <div>About page</div>;
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
