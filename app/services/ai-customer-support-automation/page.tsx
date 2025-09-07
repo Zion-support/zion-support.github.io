@@ -32,7 +32,6 @@ interface PricingTierProps {
   cta: string;
 }
 
-
 function PricingTier({
   name,
   price,

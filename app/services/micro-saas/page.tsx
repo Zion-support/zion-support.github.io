@@ -1,266 +1,201 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
+import type { Metadata } from 'next';
 
-
-export const metadata = { 
-  title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
-=======
-export const metadata = {
-  title: 'Micro Saas | Zion Tech Group',
-  description: 'Professional micro saas services for your business needs.',
-  keywords: 'micro-saas, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+export const metadata: Metadata = {
+  title: 'Micro SaaS Development - Build Revenue-Generating Solutions | Zion Tech Group',
+  description: 'Build and launch your next micro SaaS product with our comprehensive development services. From AI-powered tools to productivity apps, we help you create revenue-generating solutions.',
+  keywords: 'micro SaaS development, SaaS products, web applications, mobile apps, AI tools, productivity apps, revenue-generating solutions',
 };
 
 export default function MicroSaaSPage() {
   return (
-<<<<<<< HEAD
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Micro SaaS Development
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Build and launch your next micro SaaS product with our comprehensive development services. 
-          From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Development Inquiry"
-            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            Start Your SaaS Project
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-=======
-import Link from "next/link";
-
-export const metadata = {
-  title: "Micro SaaS Development | Zion Tech Group",
-  description: "Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.",
-  keywords: "micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence"
-};
-
-export default function MicroSAASPage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Micro SaaS Development
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build and launch successful micro SaaS products that solve specific business problems. From concept to revenue, we help you create scalable, profitable software solutions.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Micro SaaS Services</h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="🚀"
-              title="Full-Stack Development"
-              description="Complete end-to-end development of micro SaaS applications with modern tech stacks and best practices."
-              benefits={["React/Next.js frontend", "Node.js/Python backend", "Database design", "API development"]}
-            />
-            <FeatureItem
-              icon="💳"
-              title="Payment Integration"
-              description="Seamless payment processing with Stripe, PayPal, and other payment gateways for subscription billing."
-              benefits={["Subscription management", "Payment processing", "Billing automation", "Revenue tracking"]}
-            />
-            <FeatureItem
-              icon="🔐"
-              title="Authentication & Security"
-              description="Robust user authentication, authorization, and security measures to protect your users and data."
-              benefits={["User management", "Role-based access", "Data encryption", "Security compliance"]}
-            />
-            <FeatureItem
-              icon="📊"
-              title="Analytics & Monitoring"
-              description="Comprehensive analytics, user tracking, and performance monitoring to optimize your SaaS product."
-              benefits={["User analytics", "Performance metrics", "Error tracking", "Business intelligence"]}
-            />
-            <FeatureItem
-              icon="☁️"
-              title="Cloud Deployment"
-              description="Scalable cloud deployment on AWS, Azure, or GCP with automated CI/CD pipelines and monitoring."
-              benefits={["Cloud infrastructure", "Auto-scaling", "CI/CD pipelines", "24/7 monitoring"]}
-            />
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for Micro SaaS?</h2>
-          <div className="space-y-6">
-            <BenefitCard
-              icon="💰"
-              title="Revenue-Focused Development"
-              description="We build products that generate revenue from day one, with proven monetization strategies and pricing models."
-            />
-            <BenefitCard
-              icon="⚡"
-              title="Rapid Time-to-Market"
-              description="Launch your micro SaaS product in 8-12 weeks with our proven development process and pre-built components."
-            />
-            <BenefitCard
-              icon="📈"
-              title="Scalable Architecture"
-              description="Built to scale from MVP to enterprise, ensuring your product can grow with your business and user base."
-            />
-            <BenefitCard
-              icon="🛠️"
-              title="Ongoing Support"
-              description="Complete maintenance, updates, and feature additions to keep your micro SaaS product competitive and profitable."
-            />
-          </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro Saas
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Micro SaaS Development
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional micro saas services for your business needs.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Build and launch your next micro SaaS product with our comprehensive development services. 
+            From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored micro saas solutions designed for your specific business requirements.
-            </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Tools</h3>
+            <p className="text-gray-300 mb-4">Build intelligent SaaS products that leverage AI to solve specific business problems.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• AI chatbots</li>
+              <li>• Content generation tools</li>
+              <li>• Data analysis platforms</li>
+              <li>• Automation solutions</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Analytics & BI Tools</h3>
+            <p className="text-gray-300 mb-4">Create powerful analytics and business intelligence solutions for data-driven decisions.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Dashboard applications</li>
+              <li>• Reporting tools</li>
+              <li>• Data visualization</li>
+              <li>• KPI tracking</li>
+            </ul>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your micro saas solutions run smoothly.
-            </p>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💼</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Productivity Apps</h3>
+            <p className="text-gray-300 mb-4">Develop productivity-focused SaaS applications that help teams work more efficiently.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Project management tools</li>
+              <li>• Task automation</li>
+              <li>• Team collaboration</li>
+              <li>• Workflow optimization</li>
+            </ul>
           </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Financial Tools</h3>
+            <p className="text-gray-300 mb-4">Build fintech solutions for accounting, invoicing, and financial management.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Invoice generators</li>
+              <li>• Expense tracking</li>
+              <li>• Financial dashboards</li>
+              <li>• Payment processing</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🎨</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Creative Tools</h3>
+            <p className="text-gray-300 mb-4">Develop creative and design-focused SaaS applications for content creators.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Design tools</li>
+              <li>• Content creation</li>
+              <li>• Image processing</li>
+              <li>• Video editing</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Developer Tools</h3>
+            <p className="text-gray-300 mb-4">Create tools and utilities that help developers be more productive.</p>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>• Code generators</li>
+              <li>• API testing tools</li>
+              <li>• Documentation generators</li>
+              <li>• Development utilities</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Development Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300">Market research and concept validation</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
+              <p className="text-gray-300">UI/UX design and user experience</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
+              <p className="text-gray-300">Full-stack development and testing</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Launch</h3>
+              <p className="text-gray-300">Deployment and go-to-market support</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/5 rounded-xl p-6 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">MVP Development</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$15,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Basic functionality</li>
+                <li>Simple UI/UX</li>
+                <li>Core features only</li>
+                <li>Basic hosting</li>
+                <li>3 months support</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 text-center border-2 border-blue-500">
+              <h3 className="text-2xl font-bold text-white mb-4">Full SaaS</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$35,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Complete functionality</li>
+                <li>Professional UI/UX</li>
+                <li>Advanced features</li>
+                <li>Scalable hosting</li>
+                <li>6 months support</li>
+                <li>Payment integration</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Most Popular
+              </button>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-6">$75,000<span className="text-lg text-gray-300"> one-time</span></div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li>Custom features</li>
+                <li>Enterprise UI/UX</li>
+                <li>Advanced integrations</li>
+                <li>High availability</li>
+                <li>12 months support</li>
+                <li>White-label options</li>
+              </ul>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Build Your Micro SaaS?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our development team help you create a successful micro SaaS product that generates revenue.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+              Start Your Project
+            </button>
+            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
+              Schedule Consultation
+            </button>
+          </div>
+          <div className="mt-8 text-gray-400">
+            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+          </div>
         </div>
       </div>
-
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Development Process</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          We follow a proven methodology to deliver successful micro SaaS products that generate revenue.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ProcessStep
-            step="1"
-            title="Discovery & Strategy"
-            description="Market research, user personas, feature planning, and monetization strategy development."
-          />
-          <ProcessStep
-            step="2"
-            title="Development & Testing"
-            description="Agile development with regular testing, user feedback, and iterative improvements."
-          />
-          <ProcessStep
-            step="3"
-            title="Launch & Growth"
-            description="Product launch, marketing support, user onboarding, and ongoing optimization."
-          />
-        </div>
-      </div>
-
-      <CTA />
     </div>
   );
-<<<<<<< HEAD
-=======
-}
-
-function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {benefits.map((benefit, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></span>
-            {benefit}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-<<<<<<< HEAD
-}
-
-function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4 text-purple-600">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function ProcessStep({ step, title, description }: { step: string; title: string; description: string }) {
-  return (
-    <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Build Your Micro SaaS?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free consultation and let's turn your micro SaaS idea into a profitable reality.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-600">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-      </div>
-    </div>
-  );
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }

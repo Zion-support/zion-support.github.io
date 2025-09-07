@@ -1,5 +1,5 @@
-export const metadata = {
 
+export const metadata = {
   title: 'Ai Data Analysis | Zion Tech Group',
   description: 'Professional ai data analysis services for your business needs.',
   keywords: 'ai-data-analysis, services, business, technology'

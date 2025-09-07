@@ -1,315 +1,159 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-
-export const metadata = {
-  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
-  description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
-  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
-=======
+import type { Metadata } from 'next';
 import Link from "next/link";
 
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
-export const metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Professional services services for your business needs.',
-  keywords: 'services, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+export const metadata: Metadata = {
+  title: 'Services - Comprehensive Technology Solutions | Zion Tech Group',
+  description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
+  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation',
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Comprehensive technology solutions to accelerate your digital transformation. 
-          From AI development to micro SaaS products, we deliver enterprise-grade solutions that drive real results.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Services Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-=======
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
-        </p>
-      </div>
-
-      {/* Statistics Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
-          />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
-          />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
-          />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions", 
-            "Growth analytics"
-          ]}
-          icon="🚀"
-          pricing="From $2,999/month"
-        />
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖"
-          pricing="From $5,000/project"
-        />
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-          pricing="From $3,000/month"
-        />
-        <ServiceCard
-          href="/services/blockchain-solutions"
-          title="Blockchain Solutions"
-          description="Comprehensive blockchain development, DeFi solutions, NFT platforms, and Web3 integration"
-          bullets={[
-            "Smart contract development",
-            "DeFi protocol creation",
-            "NFT marketplace platforms",
-            "Cross-chain solutions"
-          ]}
-          icon="⛓️"
-          pricing="From $5,000/project"
-        />
-        <ServiceCard
-          href="/services/ai-automation-suite"
-          title="AI Automation Suite"
-          description="Intelligent automation solutions including RPA, workflow automation, and process optimization"
-          bullets={[
-            "80% manual task reduction",
-            "300% productivity increase",
-            "RPA implementation",
-            "Workflow orchestration"
-          ]}
-          icon="🤖"
-          pricing="From $2,500/month"
-        />
-        <ServiceCard
-          href="/services/cybersecurity-solutions"
-          title="Cybersecurity Solutions"
-          description="Comprehensive security services including threat detection, compliance, and 24/7 monitoring"
-          bullets={[
-            "99.9% security uptime",
-            "Threat detection & response",
-            "Compliance management",
-            "24/7 monitoring"
-          ]}
-          icon="🛡️"
-          pricing="From $2,500/month"
-        />
-        <ServiceCard
-          href="/services/cloud-solutions"
-          title="Cloud Solutions"
-          description="Cloud migration, optimization, and management services for AWS, Azure, and GCP"
-          bullets={[
-            "99.9% cloud uptime",
-            "40% cost reduction",
-            "Multi-cloud support",
-            "24/7 monitoring"
-          ]}
-          icon="☁️"
-          pricing="From $3,000/month"
-        />
-        <ServiceCard
-          href="/services/data-analytics"
-          title="Data Analytics & BI"
-          description="Advanced analytics, business intelligence, and machine learning solutions"
-          bullets={[
-            "95% data accuracy",
-            "300% faster insights",
-            "Machine learning models",
-            "Real-time dashboards"
-          ]}
-          icon="📊"
-          pricing="From $3,500/month"
-        />
-      </div>
-      
-      <CTA />
-    </div>
-  );
-}
-
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-  pricing
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-  pricing: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {bullet}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-4 text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
-    </Link>
-  );
-}
-
-function StatCard({ 
-  number, 
-  label, 
-  description 
-}: { 
-  number: string; 
-  label: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Talk to our experts about your project. We'll help you choose the right
-        service and create a custom solution for your business needs.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-600">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-      </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Services
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Our Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional services services for your business needs.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology services including AI development, micro SaaS solutions, 
+            financial technology, healthcare technology, and educational technology. 
+            Transform your business with cutting-edge solutions.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored services solutions designed for your specific business requirements.
-            </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold text-white mb-3">AI Services</h3>
+            <p className="text-gray-300 mb-4">Cutting-edge AI solutions including chatbots, analytics, content generation, and custom AI development.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• AI Chatbot Solutions</li>
+              <li>• AI Analytics Dashboard</li>
+              <li>• AI Content Generation</li>
+              <li>• Custom AI Development</li>
+            </ul>
+            <Link href="/services/ai-services" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💼</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Micro SaaS Development</h3>
+            <p className="text-gray-300 mb-4">Build and launch revenue-generating micro SaaS products with our comprehensive development services.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• AI-Powered Tools</li>
+              <li>• Analytics & BI Tools</li>
+              <li>• Productivity Apps</li>
+              <li>• Financial Tools</li>
+            </ul>
+            <Link href="/services/micro-saas" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
           </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your services solutions run smoothly.
-            </p>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🖥️</div>
+            <h3 className="text-xl font-semibold text-white mb-3">IT Services</h3>
+            <p className="text-gray-300 mb-4">Comprehensive IT solutions including cloud migration, cybersecurity, DevOps, and managed IT services.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• Cloud Migration</li>
+              <li>• Cybersecurity</li>
+              <li>• DevOps & Automation</li>
+              <li>• Managed IT Services</li>
+            </ul>
+            <Link href="/services/it-services" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-semibold text-white mb-3">FinTech Solutions</h3>
+            <p className="text-gray-300 mb-4">Innovative financial technology solutions including payment processing, blockchain, and financial analytics.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• Payment Processing</li>
+              <li>• Blockchain Solutions</li>
+              <li>• Financial Analytics</li>
+              <li>• Digital Banking</li>
+            </ul>
+            <Link href="/services/blockchain" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🏥</div>
+            <h3 className="text-xl font-semibold text-white mb-3">HealthTech Solutions</h3>
+            <p className="text-gray-300 mb-4">Healthcare technology solutions including telemedicine, health analytics, and patient management systems.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• Telemedicine Platforms</li>
+              <li>• Health Analytics</li>
+              <li>• Patient Management</li>
+              <li>• Medical AI</li>
+            </ul>
+            <Link href="/services/ai-services" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="text-4xl mb-4">🎓</div>
+            <h3 className="text-xl font-semibold text-white mb-3">EdTech Solutions</h3>
+            <p className="text-gray-300 mb-4">Educational technology solutions including learning management systems, online courses, and educational analytics.</p>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>• Learning Management Systems</li>
+              <li>• Online Course Platforms</li>
+              <li>• Educational Analytics</li>
+              <li>• Student Management</li>
+            </ul>
+            <Link href="/services/ai-services" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+              Learn More
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">10+</div>
+              <p className="text-gray-300">Years Experience</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
+              <p className="text-gray-300">Projects Delivered</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">99%</div>
+              <p className="text-gray-300">Client Satisfaction</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
+              <p className="text-gray-300">Support Available</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our expert team help you implement the right technology solutions for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
+              Get Started
+            </button>
+            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
+              Schedule Consultation
+            </button>
+          </div>
+          <div className="mt-8 text-gray-400">
+            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>
       </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }
