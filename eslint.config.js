@@ -273,20 +273,16 @@ export default [
       'resolve-all-conflicts.js',
       'resolve-conflicts.js',
       'resolve-merge-conflicts.js',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-5d83
       'run-complete-automation.js',
       'security-config.js',
       'seo-improvements.js',
       'simple-test.js',
       'syntax-fixer.js',
-<<<<<<< HEAD
       'performance-monitor.js',
-=======
       'public/sw*.js',
       'fix_typescript_syntax_errors.jsx',
       'fix_utils_files.ts',
       'middleware.ts',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-5d83
     ],
   },
 ];
