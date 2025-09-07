@@ -1,24 +1,23 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from "../../../data/api-docs/v1";
 
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import v1 from "../../../data / api - docs / v1";
-/**
- * toSDL - Function description
- */
 function toSDL() {
-  const typedefs = [`schema { query: Query, mutation: Mutation}`, 'type Query { _placeholder: String}type Mutation { _placeholder: String}'],
+  const typedefs = [
+    `schema { query: Query, mutation: Mutation}`,
+    'type Query { _placeholder: String}',
+    'type Mutation { _placeholder: String}'
+  ];
+  
   // Simple mapping: create types per section for illustration
   v1.sections.forEach((section) => {
-    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, '') + 'Type',
-    typedefs.push(`type ${typeName} { id: ID, title: String, description: String}`)
-  }),
-  return typedefs.join('\n')
-}
-
-  res.status(200).send(toSDL());
+    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, '') + 'Type';
+    typedefs.push(`type ${typeName} { id: ID, title: String, description: String}`);
+  });
+  
+  return typedefs.join('\n');
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader($2);
-  res.status(200).send(toSDL())
+  res.setHeader('Content-Type', 'text/plain');
+  res.status(200).send(toSDL());
 }

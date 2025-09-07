@@ -1,21 +1,26 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-
-import fs from 'fs',;
-import path from 'path',;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {
   try {
-
-      } catch {
-        // ignore
-      }
-    }
-    return results
+    // Placeholder for GitHub API calls
+    return [];
   } catch {
-    return []
+    return [];
   }
 }
 
-  return res.status(200).json({ logs: remote })
-};
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  
+  try {
+    const remote = await fetchFromGitHub();
+    return res.status(200).json({ logs: remote });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+}
 
