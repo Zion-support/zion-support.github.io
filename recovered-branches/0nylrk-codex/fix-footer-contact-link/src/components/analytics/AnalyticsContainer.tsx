@@ -11,18 +11,14 @@ interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-  const { isAuthenticated, isLoading, user } = useAuth();
+  const { isAuthenticated, isLoading, user } = useAuth($2);
   // Check if user is admin (using either role or userType)
-
-  const isAdmin = user?.role === "admin" |user?.userType === "admin";
-
-  // Check if user is admin (using either role or userType)
-  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
-  
+  const isAdmin = $2;
   // If still loading auth status, show loading
   if (isLoading) {
     return (
@@ -54,9 +50,10 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
+  }
         {children}
       </main>
       <Footer />
     </div>
-  );
+  )
 }

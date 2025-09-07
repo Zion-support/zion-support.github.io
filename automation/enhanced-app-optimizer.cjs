@@ -153,29 +153,24 @@ generateRobots()
   async generateReport() {
     const duration = Date.now() - this.startTime
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      optimizations: this.optimizations,
-      summary: {
-        total: this.optimizations.length,
-        completed: this.optimizations.filter(o => o.status === 'completed').length,
-        categories: [...new Set(this.optimizations.map(o => o.type))]
+
+    };
 
     }
-    const reportPath = path.join(this.projectRoot, 'enhanced-optimization-report.json')
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`📄 Optimization report saved to: ${reportPath}`)
-    return report
+
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    return report;
+  }
+
   async run() {
     this.log('🚀 Starting Enhanced App Optimization...')
     try {
-      await this.optimizeBundleSize()
-      await this.optimizePerformance()
-      await this.optimizeSEO()
-      await this.optimizeSecurity()
-      const report = await this.generateReport()
-      this.log('🎉 Enhanced App Optimization completed!')
-      this.log(`📊 Completed ${report.summary.completed}/${report.summary.total} optimizations`)
+      const report = await this.generateReport();
+
+      this.log('🏁 Enhanced App Optimizer completed');
+
+      return report;
     } catch (error) {
       this.log(`Optimization failed: ${error.message}`, 'ERROR')
       process.exit(1)

@@ -1,38 +1,87 @@
-import React from 'react';
-import { Metadata } from 'next';
+import React from 'react'
+import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Fintech Solutions - Zion Tech Group',
-  description: 'Professional fintech solutions solutions',
+export const metadata = {
+  }
+  "title": "Fintech Solutions | Zion Tech Group","
+  "description": "Revolutionize financial services with cutting-edge fintech solutions, including payment processing, digital banking, and financial analytics.","
+  "keywords": "fintech solutions, financial technology, payment processing, digital banking, financial analytics""
 };
 
 export default function FintechSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Fintech Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Professional fintech solutions solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Fintech Solutions Inquiry"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-              >
-                Contact Us
-              </a>
-            </div>
-            <div className="mt-6 text-sm text-gray-300">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-            </div>
+
+}
+
+return (;
+    <div className="max-w-6xl mx-auto px-4 py-12">"
+      <div className="text-center mb-16">"
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">"
+          Fintech Solutions
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+          Revolutionize financial services with cutting-edge fintech solutions, including payment processing, digital banking, and financial analytics.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 "md":grid-cols-3 gap-8 mb-16">"
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 "hover":shadow-xl transition-shadow">"
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">"
+            <span className="text-2xl">💳</span>"
           </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">"
+            Payment Processing
+          </h3>
+          <p className="text-gray-600">"
+            Secure and efficient payment processing solutions for all types of financial transactions.
+          </p>
         </div>
-      </section>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 "hover":shadow-xl transition-shadow">"
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">"
+            <span className="text-2xl">🏦</span>"
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">"
+            Digital Banking
+          </h3>
+          <p className="text-gray-600">"
+            Modern digital banking platforms with mobile-first design and advanced security.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 "hover":shadow-xl transition-shadow">"
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">"
+            <span className="text-2xl">📊</span>"
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">"
+            Financial Analytics
+          </h3>
+          <p className="text-gray-600">"
+            Advanced analytics and reporting tools for financial data analysis and insights.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+
+      <div className="text-center">"
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">"
+          Ready to Transform Financial Services?
+        </h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">"
+          Contact us today to discuss your fintech needs and implement cutting-edge financial solutions.
+        </p>
+        <a,
+href="/contact""
+          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold "hover":bg-blue-700 transition-colors inline-flex items-center""
+        >
+          Get Started Today
+        </a>
+      </div>
     </div>
+<<<<<<< HEAD
+  )
+=======
   );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

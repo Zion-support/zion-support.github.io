@@ -241,7 +241,7 @@ const isFormComplete = () => ,
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{ delay: 0.1 ,}
+}} transition={{delay: 0.1 }
 } className='bg-white rounded-lg shadow-lg p-6 mb-8' />'''';
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2' />'''';
           <Brain className='w-6 h-6 text-zion-cyan'/>;
@@ -361,7 +361,7 @@ const isFormComplete = () => ,
   { opacity: 0, y: 20;}
 }} animate = {}
   { opacity: 1, y: 0';';}
-}} transition={{ delay: 0.2 ,}
+}} transition={{delay: 0.2 }
 } />'''';
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center' />;
             Your Personalized Service Recommendations;
@@ -372,7 +372,7 @@ const isFormComplete = () => ,
   { opacity: 0, x: -20;}
 }} animate = {}
   { opacity: 1, x: 0';';}
-}} transition={{ delay: 0.1 * index ,}
+}} transition={{delay: 0.1 * index }
 } />'''';
                 <Card className='hover:shadow-lg transition-shadow' />'''';
                   <CardHeader />'''';
@@ -471,7 +471,7 @@ const isFormComplete = () => ,
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{ delay: 0.4 ,}
+}} transition={{delay: 0.4 }
 } className='mt-12 text-center' />'''';
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white' />'''';
               <h3 className='text-3xl font-bold mb-4' />Ready to Get Started?</h3>'''';
@@ -495,7 +495,7 @@ const isFormComplete = () => ,
   () = /> window.open('tel: +13024640950', _blank')';
 '''';
 }>'''';
-                  <Zap className='w-5 h-5 mr-2\"/>'\";
+                  <Zap className='w-5 h-5 mr-2"/>'";
                   Call Now;
                 </Button>;
               </div>;

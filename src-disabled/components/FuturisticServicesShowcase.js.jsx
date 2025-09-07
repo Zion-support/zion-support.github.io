@@ -199,7 +199,7 @@ const allIndices = new Set(filteredServices.map((_, index) => index))';';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{ duration: 0.8 ,}
+}} transition={{duration: 0.8 }
 } className='text-center mb-16' />'''';
           <h1 className='text-5xl lg:text-7xl font-bold mb-6' />'''';
             <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent' />;
@@ -268,4 +268,4 @@ const allIndices = new Set(filteredServices.map((_, index) => index))';';
     </div>
   );
 }''`;
-''`'\"`'\";
+''`'"`'";

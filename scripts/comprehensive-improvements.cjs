@@ -61,24 +61,31 @@ const urlsToCache = [
   '/static/css/',
   '/static/js/',
   '/images/'
-]
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  )
-})
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-  if($2) {
-          return response
-        return fetch(event.request)
-      })
-  )
-})
-`
+];
+
+// Service worker code - only execute in browser environment
+if (typeof self !== 'undefined' && 'addEventListener' in self) {
+  self.addEventListener('install', (event) => {
+    event.waitUntil(
+      caches.open(CACHE_NAME)
+        .then((cache) => cache.addAll(urlsToCache))
+    );
+  });
+
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        })
+    );
+  });
+}
+`;
+      
       if (!fs.existsSync(path.dirname(swPath))) {
         fs.mkdirSync(path.dirname(swPath), { recursive: true })
       fs.writeFileSync(swPath, swContent)

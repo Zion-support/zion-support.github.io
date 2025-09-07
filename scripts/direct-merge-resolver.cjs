@@ -1,10 +1,10 @@
-log("4. Continue with your workflow", "blue"),}
-  if($2) {
-  main()}
-;"
+#!/usr/bin/env node;
 
-  main()}
-module.exports = { resolveMergeConflict, findConflictedFiles }
+
+
+
+
+
 
 const fs = require("$1")
 const path = require("$1")

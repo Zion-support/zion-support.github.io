@@ -1,7 +1,7 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout'
-import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react',
-
-export default function ServicesPage() {_return (
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+export default function ServicesPage() {
+  return (
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Services</h1>
       <div className="mt-6 grid md:grid-cols-3 gap-6">

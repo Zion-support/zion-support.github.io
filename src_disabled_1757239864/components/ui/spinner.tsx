@@ -6,15 +6,15 @@ export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
 }
 
 const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
-  ({ className, size = 24, ...props }, ref,) => (
+  ({ className, size = 24, ...props }, ref) => (
     <Loader2
-      ref = {ref,}
+      ref={ref}
       {...props}
-      className = {cn('animate-spin', className),}
-      width = {size,}
-      height = {size,}
+      className={cn('animate-spin', className)}
+      width={size}
+      height={size}
     />
   )
-)
-Spinner.displayName = 'Spinner'
+);
+Spinner.displayName = 'Spinner';
 export default Spinner;

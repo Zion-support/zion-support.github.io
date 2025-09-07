@@ -1,16 +1,49 @@
 
 
 export default function FiveHundred() {;
-  return (
-    <div className='min-h-screen flex items-center justify-center'>;
-</div>
+}
+return (;
+    <div className='min-h-screen flex items-center justify-center'>;'
+      Something went wrong.;
     </div>;
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;""
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>,""
-    <div className='min - h-screen flex items - center justify - center'>;
-</div>)
+  );export default function FiveHundred() {;
+  }
+  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;"
+
+export default function FiveHundred() {
+  }
+  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>,"
+
+export default /**
+ * FiveHundred - Function description
+ */
+function FiveHundred() {
+}
+return (;
+    <div className='min - h-screen flex items - center justify - center'>;'
+      Something went wrong.;
     </div>);export default /**
+ * FiveHundred - Function description
+ */
+function FiveHundred() {
+  }
   return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;"
-const 500: React.FC<500Props> = ({ className }) => {
-</500Props>"
-    <div className='min-h-screen flex items-center justify-center'>
+
+export default function FiveHundred() {
+}
+import React from 'react';'
+
+interface 500Props {
+  }
+  className?: string;
+
+const "500": React.FC<500Props> = ({ className }) => {
+}
+return (;
+    <div className='min-h-screen flex items-center justify-center'>'
+      Something went wrong.
+    </div>;
+  );export default function FiveHundred() {;
+  }
+  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;"
+

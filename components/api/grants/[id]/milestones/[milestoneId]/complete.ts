@@ -1,62 +1,171 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import type { GrantApplication } from '../../../../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
 
-  const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');'
+
+function grantPath() {
+
+  }
+
+  return path.join(GRANTS_DIR, `${id}.json`);`
+
+function readGrant("id": string): GrantApplication | null {
+  }
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+});
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;'
+
+function writeGrant() {
+  }
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+});
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
-    'utf8'
+    'utf8''
   );
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
+
 function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
-function isAuthorized(req: NextApiRequest) {
-  const header = req.headers.authorization |''
-  const token = header.replace('Bearer ', '');
-  return (
-    token &&
-    process.env.ZION_ADMIN_TOKEN &&
-    token === process.env.ZION_ADMIN_TOKEN
-  );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
+
+function isAuthorized() {
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
+const header = req.headers.authorization |'';'
+ ;
+  const token = header.replace('Bearer ', '');'
+return (;
+    token &&
+    process && process.env.ZION_ADMIN_TOKEN &&
+    token === process && process.env.ZION_ADMIN_TOKEN
+  );
+
+export default function handler() {
   }
-  const { id, milestoneId } = req.query as { id: string; milestoneId: string }
-  if (!id |!milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' });
-    return;
+  if (!isAuthorized(req)) {
+    }
+    res.status(401).json({ "error": 'Unauthorized','
+});
+return;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
-    return;  }  }
+
+const { id, milestoneId } = req.query as { "id": string; "milestoneId": string }
+  if (!id |!milestoneId) {res.status(400).json({ "error": 'Missing id or milestoneId','
+})return;
   }
+  if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;'
+  }
+
+const existing = readGrant(id);
+  if (!existing) return res.status(404).json({ "error": 'Not found','
+});
+
+const ms = existing.milestones || [];
+
+const idx = ms.findIndex(m => { return m.id === milestoneId); }
+  if (idx = == -1);
+return res.status(404).json({ "error": 'Milestone not found',;'
+});
+  ms[idx].completed = true;
+  ms[idx].completedAt = new Date().toISOString();
+  const tranche = ms[idx].trancheAmount || 0;
+  const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })const ms = existing.milestones || [];
+const idx = ms.findIndex(m => m.id === milestoneId)if (idx === -1) return res.status(404).json({ error: 'Milestone not found' })ms[idx].completed = true;
+  ms[idx].completedAt = new Date().toISOString()const tranche = ms[idx].trancheAmount || 0;
+  existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
+  existing && existing.milestones = ms;
+  existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ "record": existing }
+}
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')}'
+/**;
+ * is_authorized - Function description;
+ */;
+function is_authorized() {const header = req.headers.authorization || '';'
+  }
+  const token = header.replace ('Bearer ', '';'
+  return (token &&;
+    process.env.ZION_ADMIN_TOKEN &&;
+    token === process.env.ZION_ADMIN_TOKEN)export default /**;
+ * handler - Function description;
+ */;
+function handler() {if () {) {$2;
+}
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+}
+export default /**;
+ * handler - Function description;
+ */;
+function handler() {if () {) {$2;
+}
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;
+  }
+
+const { id, milestone_id } = req.query as { "id": string; "milestone_id": string,;
+}
+  // Check condition;
+if ( {) {$2;
+}
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
+  }
+  // Check condition;
+if ( {) {$2;
+}
+    res.set_header ('Allow', 'POST')res.status (405).end ('Method Not Allowed')return;  }  }'
+  }
+
+const { id, milestone_id } = req.query as { "id": string, "milestone_id": string,;
+}
+  // Check condition;
+if ( {) {$2;
+}
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
+  }
+  // Check condition;
+if ( {) {$2;
+}
+    res.set_header ('AllowPOST')res.status (405).end ('Method Not Allowed')return;'
+  }
+
+const existing = read_grant (id)if ;
+return res.status (404).json ({ "error": 'Not found',;'
+})) {$2;
+}
+
+const ms = existing.milestones || [];
+
+const idx = ms.find_index (m => { return m.id === milestone_id)if ; }
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
+}
+
+const idx = ms.find_index ((m) => m.id === milestone_id)if ;
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
+}
+  ms[idx].completed = true;
+  ms[idx].completed_at = new Date ().toISOString ()const tranche = ms[idx].tranche_amount || 0;
+  existing.funds_released = (existing.funds_released || 0) + tranche;
+  existing.milestones = ms;existing.updated_at = new Date ().toISOString ()write_grant (existing)res.status (200).json ({ record: existing })res.status (200).json ({ record: existing })const tranche = ms[idx].trancheAmount || 0;
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,existing.milestones = ms,existing.updatedAt = new Date().toISOString(),writeGrant(existing)res.status(200).json({ record: existing })res.status(200).json({ record: existing })}}
+}
+}
+  writeGrant(existing)res.status(200).json({ record: existing })}
+}
+}
+  writeGrant(existing)res.status(200).json({ record: existing })existing.updatedAt = new Date().toISOString()writeGrant(existing)res.status(200).json({ record: existing })
+=======
   const { id, milestoneId } = req.query as { id: string, milestoneId: string }
   if (!id |!milestoneId) {
     res.status(400).json({ error: 'Missing id or milestoneId' });
@@ -76,11 +185,127 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ms[idx].completedAt = new Date().toISOString();
   const tranche = ms[idx].trancheAmount |0;
   existing.fundsReleased = (existing.fundsReleased |0) + tranche;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  }
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+    return;
+  }
+  const existing = readGrant(id);
+  if (!existing) return res.status(404).json({ error: 'Not found' });
+
+  const ms = existing.milestones || [];
+const idx = ms.findIndex(m => m.id === milestoneId);
+  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+  ms[idx].completed = true;
+  ms[idx].completedAt = new Date().toISOString();
+  const tranche = ms[idx].trancheAmount || 0;
+  existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
+  existing && existing.milestones = ms;
+  existing && existing.updatedAt = new Date().toISOString();
+}
+
+  res.status(200).json({ record: existing })
+}'
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
+}
+/**
+ * is_authorized - Function description;
+ */
+function is_authorized() { return null; }
+function handler() {}
+  if () {) {}
+  $2;
+}'
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+}
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  if () {) {}
+  $2;
+}'
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const { id, milestone_id } = req.query as { id: string; milestone_id: string }
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (400).json ({ error: 'Missing id or milestone_id' });
+    return;
+  }
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('Allow', 'POST');'
+    res.status (405).end ('Method Not Allowed');
+    return;  }  }
+  }
+  const { id, milestone_id } = req.query as { id: string, milestone_id: string }
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (400).json ({ error: 'Missing id or milestone_id' });
+    return;
+  }
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('AllowPOST');'
+    res.status (405).end ('Method Not Allowed');
+    return;
+  }
+  const existing = read_grant (id);'
+  if (return res.status (404).json ({ error: 'Not found' })) {}
+  $2;
+}
+  const ms = existing.milestones || [];'
+  const idx = ms.find_index (m => m.id === milestone_id);  if (return res.status (404).json ({ error: 'Milestone not found' })) {}
+  $2;
+}  const idx = ms.find_index ((m) => m.id === milestone_id);'
+  if (return res.status (404).json ({ error: 'Milestone not found' })) {}
+  $2;
+}
+  ms[idx].completed = true;
+  ms[idx].completed_at = new Date ().toISOString ();
+;
+  const tranche = ms[idx].tranche_amount || 0;
+  existing.funds_released = (existing.funds_released || 0) + tranche;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   existing.milestones = ms;
-  existing.updatedAt = new Date().toISOString();
+  existing.updated_at = new Date ().toISOString ();
+;
+write_grant (existing);
+  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+<<<<<<< HEAD
+  const tranche = ms[idx].trancheAmount || 0
+=======
+  const tranche = ms[idx].trancheAmount || 0;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
+  existing.milestones = ms,
+  existing.updatedAt = new Date().toISOString(),
+
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
-writeGrant(existing);
-  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+<<<<<<< HEAD
+=======
+
 }
+}
+}
+  writeGrant(existing);
+res.status(200).json({ "record": existing
+});
+

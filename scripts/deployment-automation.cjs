@@ -1,231 +1,371 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const { execSync } = require("child_process");class DeploymentAutomation { constructor() { this.deployments = []; this.startTime = Date.now()}" log(message, type = "INFO") { const icons = {" INFO: ""," SUCCESS: ""," ERROR: ""," WARNING: ""," PROGRESS: "" }; console.log(`${icons[type]} ${message}`)} createDockerfile() { const dockerfile = "FROM node: 18-alpine AS base# Install dependencies only when neededFROM base AS depsRUN apk add --no-cache libc6-compatWORKDIR /app# Install dependencies based on the preferred package managerCOPY package.json package-lock.json* .RUN npm ci --only=production# Rebuild the source code only when neededFROM base AS builderWORKDIR /appCOPY --from=deps /app/node_modules ./node_modulesCOPY .# Build the applicationRUN npm run build# Production image, copy all the files and run nextFROM base AS runnerWORKDIR /appENV NODE_ENV productionRUN addgroup --system --gid 1001 nodejsRUN adduser --system --uid 1001 nextjsCOPY --from=builder /app/public ./public# Set the correct permission for prerender cacheRUN mkdir .next"RUN chown nextjs: nodejs .next# Automatically leverage output traces to reduce image sizeCOPY --from=builder --chown=nextjs:nodejs /app/.next/standalone .COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/staticUSER nextjsEXPOSE 3000ENV PORT 3000"CMD ["node", "server.js"];";" fs.writeFileSync("Dockerfile", dockerfile);" this.deployments.push("Created Dockerfile");" this.log("Created Dockerfile", "SUCCESS")} createDockerCompose() {"" const dockerCompose = "version: "3.8"services: app: build: ports:" - "3000:3000" environment: - NODE_ENV=production restart: unless-stopped nginx: image: nginx:alpine ports:" - "80:80"" - "443:443" volumes: - ./nginx.conf:/etc/nginx/nginx.conf - ./ssl:/etc/nginx/ssl depends_on: - app" restart: unless-stoppe;d;";" fs.writeFileSync("docker-compose.yml", dockerCompose);" this.deployments.push("Created docker-compose.yml");" this.log("Created docker-compose.yml", "SUCCESS")} createKubernetesManifests() {" this.ensureDirectory("k8s"); " const deployment = "apiVersion: apps/v1kind: Deploymentmetadata: name: zion-tech-appspec: replicas: 3 selector: matchLabels: app: zion-tech-app template: metadata: labels: app: zion-tech-app spec: containers: - name: app image: zion-tech-app:latest ports: - containerPort: 3000 env: - name: NODE_ENV" value: "production" resources: requests:" memory: "256Mi"" cpu: "250m" limits:" memory: "512Mi"" cpu: "500m;";";" const service = "apiVersion: v1kind: Servicemetadata: name: zion-tech-servicespec: selector: app: zion-tech-app ports: - protocol: TCP port: 80 targetPort: 3000" type: LoadBalance;r;";" fs.writeFileSync("k8s/deployment.yaml", deployment);" fs.writeFileSync("k8s/service.yaml", service);" this.deployments.push("Created Kubernetes manifests");" this.log("Created Kubernetes manifests", "SUCCESS")} createGitHubActions() {" this.ensureDirectory(".github/workflows"); " const workflow = "name: CI/CD Pipelineon: push: branches: [main ] pull_request: branches: [main ]jobs: test: runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 - name: Setup Node.js uses: actions/setup-node@v3 with:" node-version: "18"" cache: "npm" - name: Install dependencies run: npm ci - name: Run tests run: npm test - name: Run linting run: npm run lint build: needs: test runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 - name: Setup Node.js uses: actions/setup-node@v3 with:" node-version: "18"" cache: "npm" - name: Install dependencies run: npm ci - name: Build application run: npm run build - name: Upload build artifacts uses: actions/upload-artifact@v3 with: name: build-files path: .next deploy: needs: build runs-on: ubuntu-latest" if: github.ref == "refs/heads/main" steps: - name: Deploy to production" run: echo "Deploying to production.;";";" fs.writeFileSync(".github/workflows/ci-cd.yml", workflow);" this.deployments.push("Created GitHub Actions workflow");" this.log("Created GitHub Actions workflow", "SUCCESS")} ensureDirectory(dirPath) { if (true) {" fs.mkdirSync(dirPath, { recursive: true })} } generateReport() { const duration = Date.now() - this.startTim) { ) {" fs.mkdirSync(dirPath, { recursive: true })} } generateReport() { const duration = Date.now() - this.startTim}e; const report = {" timestamp: new Date().toISOString(),"` duration: `${Math.round(duration / 1000)}s`," deployments: this.deployments," summary: { totalDeployments: this.deployments.length } };" fs.writeFileSync("deployment-automation-report.json", JSON.stringify(report, null, 2));" this.log(" Deployment Automation Report Generated", "SUCCESS")} async run() {" this.log(" Starting Deployment Automation.", "PROGRESS"); this.createDockerfile(); this.createDockerCompose(); this.createKubernetesManifests(); this.createGitHubActions(); this.generateReport(); " this.log(" Deployment Automation Completed", "SUCCESS")}}if ( { const automation = new DeploymentAutomation) { { const automation = new DeploymentAutomation}(;); automation.run().catch(error => {"" console.error("Deployment automation failed: ", error); process.exit(1)})}module.exports = DeploymentAutomation;""`"`
 #!/usr/bin/env node;
 /**
  * Deployment Automation
  * Automates deployment processes
  */
-const fs = require('fs')
+
+    console.error('Deployment automation "failed")
+    console.error('Deployment automation "failed")
+
+
+
+#!/usr/bin/env node
+/**
+ * Deployment Automation Script
+ * Automated deployment pipeline for Zion Tech Group application
+ */
+const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
+
 class DeploymentAutomation {
   constructor() {
-    this.deployments = [];
-    this.startTime = Date.now()}
-  log(message, type = 'INFO') {
-    const icons = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-   };
+    this.projectRoot = process.cwd();
+    this.deploymentSteps = [];
+    this.errors = [];
+    this.warnings = [];
+  }
+
+  log(message, type = 'info') {
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    console.log(`${prefix} ${message}`);
+  }
+
+  async preDeploymentChecks() {
+    this.log('🔍 Running pre-deployment checks...');
+    
+    const checks = [
+      {
+        name: 'Dependencies Check',
+        command: 'npm ci',
+        description: 'Installing dependencies'
+      },
+      {
+        name: 'Type Check',
+        command: 'npm run type-check',
+        description: 'Running TypeScript type checking'
+      },
+      {
+        name: 'Lint Check',
+        command: 'npm run lint',
+        description: 'Running ESLint checks'
+      },
+      {
+        name: 'Build Test',
+        command: 'npm run build',
+        description: 'Testing production build'
+      }
+    ];
+
+    for (const check of checks) {
+      try {
+        this.log(`Running ${check.name}...`);
+        execSync(check.command, { 
+          cwd: this.projectRoot,
+          encoding: 'utf8',
+          stdio: 'pipe',
+          cwd: process.cwd()
+        });
+        this.log(`✅ ${check.name} passed`, 'success');
+        this.deploymentSteps.push({
+          step: 'pre-deployment',
+          check: check.name,
+          status: 'passed',
+          timestamp: new Date().toISOString()
+        });
+        
+        this.deploymentSteps.push({
+          step: check.name,
+          status: 'success',
+          description: check.description
+        });
+        this.log(`${check.name} passed`, 'success');
+      } catch (error) {
+        this.deploymentSteps.push({
+          step: check.name,
+          status: 'failed',
+          description: check.description,
+          error: error.message
+        });
+        this.errors.push(`${check.name}: ${error.message}`);
+        this.log(`${check.name} failed: ${error.message}`, 'error');
+      }
     }
-  createDockerfile() {
-    const dockerfile = "FROM "node": 18-alpine AS base
-# Install dependencies only when needed
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
+  }
+
+  async optimizeForProduction() {
+    this.log('⚡ Optimizing for production...');
+    
+    try {
+      // Remove development dependencies from build
+      this.log('Cleaning up development files...');
+      
+      const devFiles = [
+        'src_backup_temp',
+        'test-reports',
+        'coverage',
+        '.nyc_output'
+      ];
+      
+      for (const file of devFiles) {
+        const filePath = path.join(this.projectRoot, file);
+        if (fs.existsSync(filePath)) {
+          execSync(`rm -rf "${filePath}"`, { cwd: this.projectRoot });
+          this.log(`Removed ${file}`, 'success');
+        }
+      }
+      
+      // Optimize images if any exist
+      this.log('Checking for image optimization...');
+      const publicDir = path.join(this.projectRoot, 'public');
+      if (fs.existsSync(publicDir)) {
+        const images = fs.readdirSync(publicDir).filter(file => 
+          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+        );
+        
+        if (images.length > 0) {
+          this.log(`Found ${images.length} images in public directory`);
+          this.warnings.push('Consider optimizing images for better performance');
+        }
+      }
+      
+      this.deploymentSteps.push({
+        step: 'Production Optimization',
+        status: 'success',
+        description: 'Optimized application for production'
+      });
+      
+      this.log('Production optimization completed', 'success');
+      return true;
+    } catch (error) {
+      this.deploymentSteps.push({
+        step: 'Production Optimization',
+        status: 'failed',
+        description: 'Failed to optimize for production',
+        error: error.message
+      });
+      this.errors.push(`Production optimization failed: ${error.message}`);
+      this.log(`Production optimization failed: ${error.message}`, 'error');
+      return false;
+    }
+  }
+
+  async generateDeploymentPackage() {
+    this.log('📦 Generating deployment package...');
+    
+    try {
+      // Create deployment directory
+      const deployDir = path.join(this.projectRoot, 'deployment');
+      if (fs.existsSync(deployDir)) {
+        execSync(`rm -rf "${deployDir}"`, { cwd: this.projectRoot });
+      }
+      fs.mkdirSync(deployDir, { recursive: true });
+      
+      // Copy necessary files
+      const filesToCopy = [
+        '.next',
+        'public',
+        'package.json',
+        'package-lock.json',
+        'next.config.js',
+        'middleware.ts',
+        'app',
+        'pages',
+        'components',
+        'utils',
+        'styles',
+        'tailwind.config.js',
+        'postcss.config.js',
+        'tsconfig.json'
+      ];
+      
+      for (const file of filesToCopy) {
+        const sourcePath = path.join(this.projectRoot, file);
+        const destPath = path.join(deployDir, file);
+        
+        if (fs.existsSync(sourcePath)) {
+          if (fs.statSync(sourcePath).isDirectory()) {
+            execSync(`cp -r "${sourcePath}" "${destPath}"`, { cwd: this.projectRoot });
+          } else {
+            fs.copyFileSync(sourcePath, destPath);
+          }
+          this.log(`Copied ${file}`, 'success');
+        }
+      }
+      
+      // Create deployment script
+      const deployScript = `#!/bin/bash
+# Zion Tech Group Deployment Script
+echo "Starting deployment..."
+
+# Install production dependencies
+npm ci --only=production
+
+# Start the application
+npm start
+
+echo "Deployment completed successfully!"
+`;
+      
+      fs.writeFileSync(path.join(deployDir, 'deploy.sh'), deployScript);
+      execSync(`chmod +x "${path.join(deployDir, 'deploy.sh')}"`, { cwd: this.projectRoot });
+      
+      this.deploymentSteps.push({
+        step: 'Deployment Package',
+        status: 'success',
+        description: 'Generated deployment package'
+      });
+      
+      this.log('Deployment package generated successfully', 'success');
+      return true;
+    } catch (error) {
+      this.deploymentSteps.push({
+        step: 'Deployment Package',
+        status: 'failed',
+        description: 'Failed to generate deployment package',
+        error: error.message
+      });
+      this.errors.push(`Deployment package generation failed: ${error.message}`);
+      this.log(`Deployment package generation failed: ${error.message}`, 'error');
+      return false;
+    }
+  }
+
+  async createDockerConfiguration() {
+    this.log('🐳 Creating Docker configuration...');
+    
+    try {
+      const dockerfile = `FROM node:18-alpine
+
 WORKDIR /app
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json* ./
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
 RUN npm ci --only=production
-# Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+
+# Copy application files
 COPY . .
+
 # Build the application
 RUN npm run build
-# Production image, copy all the files and run next
-FROM base AS runner
-WORKDIR /app
-ENV NODE_ENV production
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-COPY --from=builder /app/public ./public
-# Set the correct permission for prerender cache
-RUN mkdir .next
-RUN chown "nextjs": nodejs .next
-# Automatically leverage output traces to reduce image size
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
+
+# Expose port
 EXPOSE 3000
-ENV PORT 3000
-CMD ["node", "server.js"];";
-    fs.writeFileSync('Dockerfile', dockerfile);
-    this.deployments.push('Created Dockerfile');
-    this.log('Created Dockerfile', 'SUCCESS')}
-  createDockerCompose() {
-    const dockerCompose = ""version": '3.8'
+
+# Start the application
+CMD ["npm", "start"]
+`;
+
+      const dockerCompose = `version: '3.8'
+
 services:
-  app:
+  zion-app:
     build: .
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
-  nginx:
-    image: nginx:alpine
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./ssl:/etc/nginx/ssl
-    depends_on:
-      - app
-    restart: unless-stoppe;d;";
-    fs.writeFileSync('docker-compose.yml', dockerCompose);
-    this.deployments.push('Created docker-compose.yml');
-    this.log('Created docker-compose.yml', 'SUCCESS')}
-  createKubernetesManifests() {
-    this.ensureDirectory('k8s');
-    const deployment = ""apiVersion": apps/v1
-kind: Deployment
-metadata:
-  name: zion-tech-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: zion-tech-app
-  template:
-    metadata:
-      labels:
-        app: zion-tech-app
-    spec:
-      containers:
-      - name: app
-        image: zion-tech-app:latest
-        ports:
-        - containerPort: 3000
-        env:
-        - name: NODE_ENV
-          value: "production"
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m;";";
-    const service = "apiVersion: v1
-kind: Service
-metadata:
-  name: zion-tech-service
-spec:
-  selector:
-    app: zion-tech-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalance;r;";
-    fs.writeFileSync('k8s/deployment.yaml', deployment);
-    fs.writeFileSync('k8s/service.yaml', service);
-    this.deployments.push('Created Kubernetes manifests');
-    this.log('Created Kubernetes manifests', 'SUCCESS')}
-  createGitHubActions() {
-    this.ensureDirectory('.github/workflows');
-    const workflow = ""name": CI/CD Pipeline
-on:
-  push:
-    branches: [main ]
-  pull_request:
-    branches: [main ]
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
-    - name: Run tests
-      run: npm test
-    - name: Run linting
-      run: npm run lint
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
-    - name: Build application
-      run: npm run build
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: build-files
-        path: .next/
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-    - name: Deploy to production
-      run: echo "Deploying to production...;";";
-    fs.writeFileSync('.github/workflows/ci-cd.yml', workflow);
-    this.deployments.push('Created GitHub Actions workflow');
-    this.log('Created GitHub Actions workflow', 'SUCCESS')}
-  ensureDirectory(dirPath) {
-    if () {
-      fs.mkdirSync(dirPath, { "recursive": true })}
+`;
+
+      fs.writeFileSync(path.join(this.projectRoot, 'Dockerfile'), dockerfile);
+      fs.writeFileSync(path.join(this.projectRoot, 'docker-compose.yml'), dockerCompose);
+      
+      this.deploymentSteps.push({
+        step: 'Docker Configuration',
+        status: 'success',
+        description: 'Created Docker configuration files'
+      });
+      
+      this.log('Docker configuration created', 'success');
+      return true;
+    } catch (error) {
+      this.deploymentSteps.push({
+        step: 'Docker Configuration',
+        status: 'failed',
+        description: 'Failed to create Docker configuration',
+        error: error.message
+      });
+      this.errors.push(`Docker configuration failed: ${error.message}`);
+      this.log(`Docker configuration failed: ${error.message}`, 'error');
+      return false;
+    }
   }
-  generateReport() {
-    const duration = Date.now() - this.startTim) {
-    ) {
-      fs.mkdirSync(dirPath, { "recursive": true })}
-  }
-  generateReport() {
-    const duration = Date.now() - this.startTim}e;
+
+  async generateDeploymentReport() {
     const report = {
-      "timestamp": new Date().toISOString(),
-      "duration": `${Math.round(duration / 1000)}s`,
-      "deployments": this.deployments,
-      "summary": {
-        totalDeployments: this.deployments.length
+      timestamp: new Date().toISOString(),
+      deploymentSteps: this.deploymentSteps,
+      errors: this.errors,
+      warnings: this.warnings,
+      summary: {
+        totalSteps: this.deploymentSteps.length,
+        successfulSteps: this.deploymentSteps.filter(step => step.status === 'success').length,
+        failedSteps: this.deploymentSteps.filter(step => step.status === 'failed').length,
+        errorCount: this.errors.length,
+        warningCount: this.warnings.length
       }
-   };
-    fs.writeFileSync('deployment-automation-report.json', JSON.stringify(report, null, 2));
-    this.log('📊 Deployment Automation Report Generated', 'SUCCESS')}
+    };
+
+    const reportPath = path.join(this.projectRoot, 'deployment-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Deployment report saved to ${reportPath}`, 'success');
+
+    return report;
+  }
+
   async run() {
-    this.log('🚀 Starting Deployment Automation...', 'PROGRESS');
-    this.createDockerfile();
-    this.createDockerCompose();
-    this.createKubernetesManifests();
-    this.createGitHubActions();
-    this.generateReport();
-    this.log('✅ Deployment Automation Completed', 'SUCCESS')}
+    this.log('🚀 Starting Deployment Automation');
+    
+    try {
+      await this.preDeploymentChecks();
+      await this.optimizeForProduction();
+      await this.generateDeploymentPackage();
+      await this.createDockerConfiguration();
+      
+      const report = await this.generateDeploymentReport();
+      
+      this.log('✅ Deployment automation completed', 'success');
+      this.log(`📊 Successful steps: ${report.summary.successfulSteps}/${report.summary.totalSteps}`);
+      
+      if (report.summary.failedSteps > 0) {
+        this.log(`❌ Failed steps: ${report.summary.failedSteps}`, 'error');
+      }
+      
+      if (report.summary.warningCount > 0) {
+        this.log(`⚠️ Warnings: ${report.summary.warningCount}`);
+      }
+      
+      return report;
+    } catch (error) {
+      this.log(`❌ Deployment automation failed: ${error.message}`, 'error');
+      throw error;
+    }
+  }
 }
-if ( {
-  const automation = new DeploymentAutomation) {
-     {
-  const automation = new DeploymentAutomation}(;);
-  automation.run().catch(error => {
-    console.error('Deployment automation "failed": ', error);
-    process.exit(1)})}
-module.exports = DeploymentAutomation;
-const { execSync } = require('child_process')
-  log(message, type = 'INFO')
-      "INFO": "ℹ"
-      "SUCCESS": ""
-      "ERROR": ""
-      "WARNING": "⚠"
-      "PROGRESS": "�"
-    fs.writeFileSync('Dockerfile')
-    this.deployments.push('Created Dockerfile')
-    this.log('Created Dockerfile', 'SUCCESS')
-    const dockerCompose = ""version"
-    console.error('Deployment automation "failed")
+
+// Main execution
+if (require.main === module) {
+  const deployment = new DeploymentAutomation();
+  deployment.run().catch(error => {
+    console.error('Deployment automation failed:', error);
+    process.exit(1);
+  });
+}
+
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+
+// Run the automation
+const automation = new DeploymentAutomation();
+automation.run();
+
+
+
+    const reportFile = path.join(this.projectRoot,deployment-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    const summary = `
+Deployment Automation Report
+

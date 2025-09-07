@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react',
-
+import React, { useEffect, useState } from 'react';
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null),
   useEffect(() => {
@@ -9,13 +8,7 @@ export default function CloudAutomationsPage() {
       .catch(() => setData({ ok: false }))
   }, []),
 
-    fetch('/api/cloud-automations-status')
-      .then(_(r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }))
-  }, []),
-
-  const items = data?.data ? Object.entries(data.data) : []
+  const items = data?.data ? Object.entries(data.data) : [],
 
   return (
     <div className="space-y-6">
@@ -33,7 +26,7 @@ export default function CloudAutomationsPage() {
             ) : null}
           </div>;
         ))}
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }

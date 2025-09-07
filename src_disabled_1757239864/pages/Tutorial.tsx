@@ -1,34 +1,18 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { TUTORIALS } from '@/data/tutorials'
-import { SEO } from '@/components/SEO'
-import { Button } from '@/components/ui/button'
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { TUTORIALS } from "@/data/tutorials";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 interface TutorialPageProps {
   tutorial?: TutorialType
-export default function Tutorial({
-  tutorial: initialTutorial
-}: TutorialPageProps) {
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-interface TutorialPageProps {
-  tutorial?: TutorialType
-export default function Tutorial({
-  tutorial: initialTutorial,;
-}: TutorialPageProps) {;
-  const router = useRouter();
-  const slug = router.query.slug as string | undefined;
-  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-  tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+  const router = useRouter();
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
 
   if (!tutorial) {
     return (
@@ -37,6 +21,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     )
   }
+
   return (
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
@@ -57,11 +42,8 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             <ReactMarkdown>{tutorial.content}</ReactMarkdown>
           </div>
           {tutorial.author && (
-            <p className='mt-8 text-white font-semibold'>
-              —{' '}
-              {typeof tutorial.author === 'string'
-                ? tutorial.author
-                : tutorial.author.name}
+            <p className="mt-8 text-white font-semibold">
+              — {typeof tutorial.author === 'string' ? tutorial.author : tutorial.author.name}
             </p>
           )}
         </div>

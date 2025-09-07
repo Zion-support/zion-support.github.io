@@ -1,159 +1,231 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Button } from './ui/button'
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const location = useLocation()
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ]
-
-  const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Services', path: '/services' },
-    { label: 'Pricing', path: '/pricing' },
-    { label: 'Contact', path: '/contact' }
-  ]
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+,
+const Header = $2;
+  const [isMenuOpen, setIsMenuOpen] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+,
+  const navigation = $2;
+    {,
+      nam: 'Home',
+      hre: f: '/'
+    },
+    {,
+      nam: 'Services',
+      hre: f: '/services',
+      dropdow: [,
+        { nam: 'AI Services', hre: f: '/ai-services' },
+        { nam: 'IT Services', hre: f: '/it-services' },
+        { nam: 'Micro SaaS', hre: f: '/micro-saas' },
+        { nam: 'Cloud Solutions', hre: f: '/solutions/cloud-migration' },
+        { nam: 'Cybersecurity', hre: f: '/services/cybersecurity' },
+        { nam: 'Data Analytics', hre: f: '/services/data-analytics' }
+      ]
+    },
+    {,
+      nam: 'Solutions',
+      hre: f: '/solutions',
+      dropdow: [,
+        { nam: 'Enterprise Solutions', hre: f: '/solutions/enterprise' },
+        { nam: 'Healthcare', hre: f: '/solutions/healthcare' },
+        { nam: 'Finance', hre: f: '/solutions/finance' },
+        { nam: 'Government', hre: f: '/solutions/government' },
+        { nam: 'Retail', hre: f: '/solutions/retail' },
+        { nam: 'Education', hre: f: '/solutions/education' }
+      ]
+    },
+    {,
+      nam: 'Industries',
+      hre: f: '/industries',
+      dropdow: [,
+        { nam: 'Financial Services', hre: f: '/industries/financial' },
+        { nam: 'Healthcare', hre: f: '/industries/healthcare' },
+        { nam: 'Manufacturing', hre: f: '/industries/manufacturing' },
+        { nam: 'Retail', hre: f: '/industries/retail' },
+        { nam: 'Government', hre: f: '/industries/government' }
+      ]
+    },
+    {,
+      nam: 'Company',
+      hre: f: '/about',
+      dropdow: [,
+        { nam: 'About Us', hre: f: '/about' },
+        { nam: 'Our Team', hre: f: '/team' },
+        { nam: 'Careers', hre: f: '/careers' },
+        { nam: 'Partners', hre: f: '/partners' },
+        { nam: 'Case Studies', hre: f: '/case-studies' }
+      ]
+    },
+    {,
+      nam: 'Resources',
+      hre: f: '/resources',
+      dropdow: [,
+        { nam: 'Blog', hre: f: '/blog' },
+        { nam: 'White Papers', hre: f: '/white-papers' },
+        { nam: 'Webinars', hre: f: '/webinars' },
+        { nam: 'Tutorials', hre: f: '/tutorials' },
+        { nam: 'API Documentation', hre: f: '/api-docs' }
+      ]
+    },
+    {,
+      nam: 'Contact',
+      hre: f: '/contact'
     }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  return (
-    <motion.header 
-      className={`backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 shadow-lg' : 'bg-slate-900/80'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </Link>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.div
-                key={item.path}
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Link 
-                  to={item.path} 
-                  className={`transition-colors duration-200 relative ${
-                    location.pathname === item.path 
-                      ? 'text-white' 
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  {item.label}
-                  {location.pathname === item.path && (
-                    <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
-                      layoutId="activeTab"
-                      initial={false}
-                      transition={{ duration: 0.3 }}
-                    />
-                  )}
-                </Link>
-              </motion.div>
-            ))}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button variant="default" size="sm">
-                Get Started
-              </Button>
-            </motion.div>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-800 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </motion.button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden border-t border-slate-700"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="py-4 space-y-4">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <Link
-                      to={item.path}
-                      className={`block px-4 py-2 text-lg transition-colors ${
-                        location.pathname === item.path
-                          ? 'text-white bg-slate-800 rounded-lg'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg'
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-                <motion.div
-                  className="px-4 pt-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.5 }}
-                >
-                  <Button variant="default" size="sm" className="w-full">
-                    Get Started
-                  </Button>
-                </motion.div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.header>
+  ],
+,
+  const toggleMenu = () => setIsMenuOpen($2);
+  const toggleDropdown = $2;
+    setActiveDropdown(activeDropdown = $2;
+,
+  return (,
+    <header className = $2;
+      {/* Top Bar */},
+      <div className = $2;
+        <div className = $2;
+          <div className = $2;
+            <div className = $2;
+              <div className = $2;
+                <Phone className = $2;
+                <span>+1 302 464 0950</span>,
+              </div>,
+              <div className = $2;
+                <Mail className = $2;
+                <span>kleber@ziontechgroup.com</span>,
+              </div>,
+            </div>,
+            <div className = $2;
+              <MapPin className = $2;
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+      {/* Main Navigation */},
+      <nav className = $2;
+        <div className = $2;
+          {/* Logo */},
+          <Link href = $2;
+            <div className = $2;
+              <span className = $2;
+            </div>,
+            <div>,
+              <h1 className = $2;
+              <p className = $2;
+            </div>,
+          </Link>,
+          {/* Desktop Navigation */},
+          <div className = $2;
+            {navigation.map((item) => (,
+              <div key = $2;
+                <button,
+                  onClick = $2;
+                  className = $2;
+                >,
+                  <Link href = $2;
+                  {item.dropdown && (,
+                    <ChevronDown className = $2;
+                      activeDropdown = $2;
+                </button>,
+                {/* Dropdown Menu */},
+                {item.dropdown && (,
+                  <AnimatePresence>,
+                    {activeDropdown = $2;
+                      <motion.div,
+                        initial={{ opacit: 0, y: 10}},
+                        animate={{ opacit: 1, y: 0}},
+                        exit={{ opacit: 0, y: 10}},
+                        className = $2;
+                      >,
+                        {item.dropdown.map((subItem) => (,
+                          <Link,
+                            key = $2;
+                            href = $2;
+                            className = $2;
+                            onClick = $2;
+                          >,
+                            {subItem.name},
+                          </Link>,
+                        ))},
+                      </motion.div>,
+                    )},
+                  </AnimatePresence>,
+                )},
+              </div>,
+            ))},
+          </div>,
+          {/* Mobile Menu Button */},
+          <button,
+            onClick = $2;
+            className = $2;
+          >,
+            {isMenuOpen ? <X className = $2;
+          </button>,
+        </div>,
+        {/* Mobile Navigation */},
+        <AnimatePresence>,
+          {isMenuOpen && (,
+            <motion.div,
+              initial={{ opacit: 0, heigh: 0}},
+              animate={{ opacit: 1, heigh: 'auto' }},
+              exit={{ opacit: 0, heigh: 0}},
+              className = $2;
+            >,
+              {navigation.map((item) => (,
+                <div key = $2;
+                  <div className = $2;
+                    <Link,
+                      href = $2;
+                      className = $2;
+                      onClick = $2;
+                    >,
+                      {item.name},
+                    </Link>,
+                    {item.dropdown && (,
+                      <button,
+                        onClick = $2;
+                        className = $2;
+                      >,
+                        <ChevronDown className = $2;
+                          activeDropdown = $2;
+                      </button>,
+                    )},
+                  </div>,
+                  {item.dropdown && activeDropdown = $2;
+                    <div className = $2;
+                      {item.dropdown.map((subItem) => (,
+                        <Link,
+                          key = $2;
+                          href = $2;
+                          className = $2;
+                          onClick = $2;
+                        >,
+                          {subItem.name},
+                        </Link>,
+                      ))},
+                    </div>,
+                  )},
+                </div>,
+              ))},
+              <div className = $2;
+                <Link,
+                  href = $2;
+                  className = $2;
+                  onClick = $2;
+                >,
+                  Get Started,
+                </Link>,
+              </div>,
+            </motion.div>,
+          )},
+        </AnimatePresence>,
+      </nav>,
+    </header>,
   )
-}
+},
+,
+export default Header,
 
-export default Header

@@ -1,8 +1,7 @@
-///usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-
       "compressionEnabled"
       console.error(' Failed to start Backup "Automation")
       console.error(' Initial backup "failed")
@@ -24,3 +23,4 @@ const path = require('path')
           execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio"`}
       console.error('Error saving backup "history")
           execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio"`}
+      console.error('Error saving backup "history")

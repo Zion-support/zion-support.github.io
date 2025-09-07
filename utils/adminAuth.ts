@@ -1,28 +1,38 @@
-import type { NextApiRequest } from 'next';
-export interface Session {
-  userId: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
+<<<<<<< HEAD
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export function setSessionCookie(res: NextApiResponse, token: string) {
+  res.setHeader('Set-Cookie', `admin-session=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=86400`);
 }
-export function getSessionFromReq(req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic;
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return null;
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
+
+export function clearSessionCookie(res: NextApiResponse) {
+  res.setHeader('Set-Cookie', `admin-session=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0`);
 }
+
+export function verifyAdminToken(token: string): boolean {
+  // Simple token verification - in production, use JWT or similar
+  return token.startsWith('admin-');
+}
+
+export function getSessionFromReq(req: NextApiRequest): string | null {
+  const cookies = req.headers.cookie;
+  if (!cookies) return null;
+  
+  const sessionCookie = cookies
+    .split(';')
+    .find(c => c.trim().startsWith('admin-session='));
+  
+  if (!sessionCookie) return null;
+  
+  return sessionCookie.split('=')[1];
+}
+
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] |'';
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+  const userAgent = req.headers['user-agent'] || '';
+  return userAgent.includes('internal-agent') || userAgent.includes('bot');
 }
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-}
+=======
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = $2;
+export const isAdmin = $2;
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff

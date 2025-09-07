@@ -1,79 +1,45 @@
 {
-  "timestamp": "2025-09-06T22:36:13.829Z",
-  "duration": 42438,
+  "timestamp": "2025-09-07T10:18:44.703Z",
+  "duration": "134s",
+  "fixes": [
+    "Fixed next.config.js syntax",
+    "Removed duplicate dependencies: autoprefixer, critters, postcss",
+    "Removed corrupted file: .eslintrc.js",
+    "Removed corrupted file: eslint.config.disabled.js",
+    "Removed corrupted file: next.config.simple.js",
+    "Removed corrupted file: next.config.complex.js",
+    "Removed corrupted file: next.config.resolved.js",
+    "Created clean ESLint configuration",
+    "Removed deprecated .eslintignore file",
+    "Created performance monitoring script",
+    "Created comprehensive test runner"
+  ],
+  "tests": [
+    {
+      "check": "ESLint check",
+      "success": false,
+      "error": "Command failed: npx eslint . --max-warnings 0\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '{'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+    },
+    {
+      "check": "TypeScript type check",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "check": "Build application",
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./app/about/page.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m     )'\n    ,-[\u001b[36;1;4m/workspace/app/about/page.tsx\u001b[0m:83:1]\n \u001b[2m80\u001b[0m |                 </Link>\n \u001b[2m81\u001b[0m |               </div>\n \u001b[2m82\u001b[0m |             </div>\n \u001b[2m83\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m       </section>\n \u001b[2m84\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m     </div>\n \u001b[2m85\u001b[0m |       );\n \u001b[2m86\u001b[0m |     }\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./app/about/page.tsx\n\n./app/services/ai-project-manager/page.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m\n  \u001b[31m|\u001b[0m       )'\n    ,-[\u001b[36;1;4m/workspace/app/services/ai-project-manager/page.tsx\u001b[0m:58:1]\n \u001b[2m55\u001b[0m |                 Contact Sales\n \u001b[2m56\u001b[0m |               </button>\n \u001b[2m57\u001b[0m |             </div>\n \u001b[2m58\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m       </section>\n \u001b[2m59\u001b[0m | \u001b[35;1m|\u001b[0m   \n \u001b[2m60\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m       <section className=\"py-20\">\n \u001b[2m61\u001b[0m |             <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center\">\n \u001b[2m62\u001b[0m |               <h2 className=\"text-3xl md:text-4xl font-bold text-gray-900 mb-4\">\n \u001b[2m63\u001b[0m |                 Coming Soon\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./app/services/ai-project-manager/page.tsx\n\n./app/services/automation/page.tsx\nError:   \u001b[31mx\u001b[0m Expected '}', got '<eof>'\n     ,-[\u001b[36;1;4m/workspace/app/services/automation/page.tsx\u001b[0m:343:1]\n \u001b[2m340\u001b[0m |       </div>\n \u001b[2m341\u001b[0m |     </div>\n \u001b[2m342\u001b[0m |   );\n \u001b[2m343\u001b[0m | }\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./app/services/automation/page.tsx\n\n./app/services/consulting/page.tsx\nError:   \u001b[31mx\u001b[0m Expected '}', got '<eof>'\n     ,-[\u001b[36;1;4m/workspace/app/services/consulting/page.tsx\u001b[0m:351:1]\n \u001b[2m348\u001b[0m |       </div>\n \u001b[2m349\u001b[0m |     </div>\n \u001b[2m350\u001b[0m |   );\n \u001b[2m351\u001b[0m | }\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./app/services/consulting/page.tsx\n\n./src/pages/ApiDocsHub.tsx\nError:   \u001b[31mx\u001b[0m Expected ',', got 'BookOpen'\n   ,-[\u001b[36;1;4m/workspace/src/pages/ApiDocsHub.tsx\u001b[0m:5:1]\n \u001b[2m2\u001b[0m | import Link from 'next/link'\n \u001b[2m3\u001b[0m | import {\n \u001b[2m4\u001b[0m |   ArrowRight\n \u001b[2m5\u001b[0m |   BookOpen\n   : \u001b[35;1m  ^^^^^^^^\u001b[0m\n \u001b[2m6\u001b[0m |   Code\n \u001b[2m7\u001b[0m |   Webhook\n \u001b[2m8\u001b[0m |   AlertCircle\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./src/pages/ApiDocsHub.tsx\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "check": "Run smoke tests",
+      "success": false,
+      "error": "spawnSync /bin/sh ETIMEDOUT"
+    }
+  ],
   "summary": {
-    "totalTests": 9,
-    "successfulTests": 5,
-    "failedTests": 4,
-    "fixesApplied": 0,
-    "errors": 5
-  },
-  "results": {
-    "fixes": [],
-    "tests": [
-      {
-        "name": "TypeScript type check",
-        "status": "failed"
-      },
-      {
-        "name": "ESLint check",
-        "status": "failed"
-      },
-      {
-        "name": "Jest tests",
-        "status": "failed"
-      },
-      {
-        "name": "Project build",
-        "status": "failed"
-      },
-      {
-        "name": "Performance Monitor",
-        "status": "passed"
-      },
-      {
-        "name": "Health Checker",
-        "status": "passed"
-      },
-      {
-        "name": "Bundle Analyzer",
-        "status": "passed"
-      },
-      {
-        "name": "Performance Optimizer",
-        "status": "passed"
-      },
-      {
-        "name": "Security Enhancer",
-        "status": "passed"
-      }
-    ],
-    "errors": [
-      {
-        "command": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
-        "description": "TypeScript type check",
-        "error": "Command failed: node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck\n/workspace/node_modules/typescript/lib/_tsc.js:44171\n  function bindWorker(node) {\n                     ^\n\nRangeError: Maximum call stack size exceeded\n    at bindWorker (/workspace/node_modules/typescript/lib/_tsc.js:44171:22)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44117:5)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n    at forEachChildInBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:28389:12)\n    at forEachChild (/workspace/node_modules/typescript/lib/_tsc.js:28712:35)\n    at bindEachChild (/workspace/node_modules/typescript/lib/_tsc.js:42717:5)\n    at bindChildren (/workspace/node_modules/typescript/lib/_tsc.js:42726:7)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44123:9)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n    at forEachChildInBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:28389:12)\n\nNode.js v22.16.0\n"
-      },
-      {
-        "command": "npx eslint . --max-warnings 1000",
-        "description": "ESLint check",
-        "error": "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:5874) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
-      },
-      {
-        "command": "npx eslint . --fix --max-warnings 1000",
-        "description": "ESLint auto-fix",
-        "error": "Command failed: npx eslint . --fix --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:5916) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
-      },
-      {
-        "command": "npm test -- --passWithNoTests",
-        "description": "Jest tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/next.config.js:1\n\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at cjsLoader (node:internal/modules/esm/translators:266:5)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:200:7)\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n"
-      },
-      {
-        "command": "npm run build",
-        "description": "Project build",
-        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token '<<'\n    at <unknown> (next.config.js:1)\n"
-      }
-    ]
+    "totalFixes": 11,
+    "totalTests": 4,
+    "passedTests": 0,
+    "failedTests": 4
   }
 }

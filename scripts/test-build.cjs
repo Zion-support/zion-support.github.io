@@ -1,53 +1,51 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-// Temporarily move problematic files
-const problematicFiles = ['components/ContactForm.tsx',
-  'components/PerformanceMonitor.tsx',
-];
-const movedFiles = [];
-try {
-  // Move problematic files temporarily
-  problematicFiles.forEach((file) => {
-    if (fs.existsSync(file)) {
-      const backupPath = `${file}.backup`;
-      fs.renameSync(file, backupPath);
-      movedFiles.push({ "original": file, "backup": backupPath });
-      }
-  });
-  // Try to build
-  try {
-    execSync('npm run build', { "stdio": 'inherit' });
-    } catch (error) {
-    }
-} finally {
-  // Restore files
-  movedFiles.forEach(({ original, backup }) => {
-    try {
-      if (fs.existsSync(backup)) {
-        fs.renameSync(backup, original);
-        }
-    } catch (restoreError) {
-      }
-  })}
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Test Build.");/ Temporarily move problematic files"const problematicFiles = ["components/ContactForm.tsx"," "components/PerformanceMonitor.tsx",];const movedFiles = [];try { / Move problematic files temporarily problematicFiles.forEach((file) => { if (fs.existsSync(file)) { const backupPath = `${file}.backup`; fs.renameSync(file, backupPath); movedFiles.push({ original: file, backup: backupPath });` console.log(` Moved ${file} to ${backupPath}`)} }); / Try to build" console.log(" Attempting build without problematic files."); try {"" execSync("npm run build", { stdio: "inherit" });" console.log(" Build successful!")} catch (error) {"" console.log(" Build failed: ", error.message)}} finally { / Restore files movedFiles.forEach(({ original, backup }) => { try { if (fs.existsSync(backup)) { fs.renameSync(backup, original);` console.log(` Restored ${original}`)} } catch (restoreError) {` console.log(` Failed to restore ${original}:`, restoreError.message)} })}"console.log(" Test build completed!");'"`'"`
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
 console.log('🧪 Starting Test Build...')
-const problematicFiles = ['components/ContactForm.tsx']
+const problematicFiles = ['components/ContactForm.tsx'];
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
-    console.log(' Build "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     console.log(' Build "failed")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     console.log(' Build "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(' Build "failed")
+<<<<<<< HEAD
     console.log(' Build "failed")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-console.log(' Build "failed")
-    console.log(' Build "failed")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

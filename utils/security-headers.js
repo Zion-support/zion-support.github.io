@@ -1,1 +1,3 @@
+// JavaScript file
+module.exports = {};
 ;

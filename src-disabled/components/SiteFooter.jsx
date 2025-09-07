@@ -1,30 +1,30 @@
  import { Link } from 'react - router - dom'  export function Footer () { const currentYear = new Date () .getFullYear ()   const navSections = [ { title: 'Company',
-  links: [ { label: 'Home',}
+  links: [ {label: 'Home'}
   to: '/',}
-}, { label: 'About',}
+}, {label: 'About'}
   to: '/about',}
-}, { label: 'Partners',}
+}, {label: 'Partners'}
   to: '/partners',}
-}, { label: 'Careers',}
+}, {label: 'Careers'}
   to: '/careers',}
-}, { label: 'Contact',}
+}, {label: 'Contact'}
   to: '/contact' }  ,
 }, { title: 'Services',
-  links: [ { label: 'All Services',}
+  links: [ {label: 'All Services'}
   to: '/services',}
-}, { label: 'Pricing',}
+}, {label: 'Pricing'}
   to: '/pricing',}
-}, { label: 'FAQ',}
+}, {label: 'FAQ'}
   to: '/faq',}
-}, { label: 'Blog',}
+}, {label: 'Blog'}
   to: '/blog' } ,
 }, { title: 'Legal',
-  links: [ { label: 'Privacy Policy',}
+  links: [ {label: 'Privacy Policy'}
   to: '/privacy',}
-}, { label: 'Terms of Service',}
+}, {label: 'Terms of Service'}
   to: '/terms',}
-}, { label: 'Sitemap',}
+}, {label: 'Sitemap'}
   to: '/sitemap' } ,
 }  ] ;
-  const social = [ { label: 'LinkedIn',}
+  const social = [ {label: 'LinkedIn'}
   href: 'https:''';}

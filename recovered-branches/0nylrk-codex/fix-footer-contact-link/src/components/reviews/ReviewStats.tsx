@@ -1,10 +1,15 @@
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
-  averageRating: number;
-  totalReviews: number;
-  averageRating: number
-  totalReviews: number
+
+  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
+import { Star } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+interface ReviewStatsProps {
+  averageRating: number,
+  totalReviews: number,
+  ratingDistribution?: Record<number, number>
+}
 
   ratingDistribution?: Record<number, number>
 interface ReviewStatsProps {
@@ -14,15 +19,12 @@ interface ReviewStatsProps {
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
   // Format the average rating to one decimal place
-
-  const formattedRating = averageRating.toFixed(1);
-  
+  const formattedRating = averageRating.toFixed($2);
   // Calculate percentages for distribution if available
-  const getPercentage = (count: number) => {
-    if (totalReviews === 0) return 0
+  const getPercentage = $2;
     return (count / totalReviews) * 100
-  }
-
+  },
+  
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -65,3 +67,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     </div>
   )
 }
+export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {  // Calculate percentages for distribution if available
+  const getPercentage = (count: number) => {
+    if (totalReviews === 0) return 0
+    return (count / totalReviews) * 100

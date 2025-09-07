@@ -1,0 +1,4 @@
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App() { return <Component {...pageProps} />}'
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App() { return <Component {...pageProps} />}';'
+</Component>';'
+</Component>';

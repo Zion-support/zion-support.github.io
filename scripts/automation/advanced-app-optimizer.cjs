@@ -1,41 +1,63 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");class AdvancedAppOptimizer { constructor() { this.projectRoot = process.cwd();" this.logFile = path.join(this.projectRoot, "logs", "advanced-app-optimizer.log");" this.reportFile = path.join(this.projectRoot, "advanced-app-optimization-report.json"); this.ensureLogsDirectory()} ensureLogsDirectory() {" const logsDir = path.join(this.projectRoot, "logs";); if (true) { fs.mkdirSync(logsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString() { ) {" fs.mkdirSync(logsDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; fs.appendFileSync(this.logFile, logMessage); console.log(message)} optimizeNextConfig() {" this.log("Optimizing Next.js configuration."); " const nextConfigPath = path.join(this.projectRoot, "next.config.js";);" let nextConfig = ;";"; if (true) {" nextConfig = fs.readFileSync(nextConfigPath, "utf8")} "" const optimizedConfig = "const nextConfig = { / Performance optimizations" compress: true," poweredByHeader: false," generateEtags: false, / Image optimization" images: {" domains: ["ziontechgroup.com"],"" formats: ["image/webp", "image/avif"]," minimumCacheTTL: 60," dangerouslyAllowSVG: true,"" contentSecurityPolicy: "default-src "sel) { ) {" nextConfig = fs.readFileSync(nextConfigPath, "utf8")} "" const optimizedConfig = "const nextConfig = { / Performance optimizations" compress: true," poweredByHeader: false," generateEtags: false, / Image optimization" images: {" domains: ["ziontechgroup.com"],"" formats: ["image/webp", "image/avif"]," minimumCacheTTL: 60," dangerouslyAllowSVG: true,"" contentSecurityPolicy: "default-src "sel}f;"; script-src "none"; sandbox;"}, / Bundle optimization" webpack: (config, { dev, isServer }) => { / Production optimizations if ( { config.optimization.splitChunks = {"" chunks: "all"," cacheGroups: { vendor: { test: /[\/]node_modules[\/]/,"" name: "vendors","" chunks: "all"}," common: {" name: "common"," minChunks: 2,"" chunks: "all"," enforce: true}}}} return config) { { config.optimization.splitChunks = {"" chunks: "all"," cacheGroups: { vendor: { test: /[\/]node_modules[\/]/,"" name: "vendors","" chunks: "all"}," common: {" name: "common"," minChunks: 2,"" chunks: "all"," enforce: true}}}} return config}}, / Experimental features for performance" experimental: { optimizeCss: true,"" optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"]}, / Headers for security and performance async headers() { return [; {"" source: "/(.*)"," headers: [ {" key: "X-Frame-Options","" value: "DENY"}, {"" key: "X-Content-Type-Options","" value: "nosniff"}, {"" key: "Referrer-Policy","" value: "origin-when-cross-origin"}]}]}, / Redirects and rewrites async redirects() { return [; {"" source: "/home","" destination: "/"," permanent: true}]}};module.exports = nextConfig;""; fs.writeFileSync(nextConfigPath, optimizedConfig);" this.log("Next.js configuration optimized"); "" return { status: "success", message: "Next.js config optimized" }} optimizeTailwindConfig() {" this.log("Optimizing Tailwind CSS configuration."); " const tailwindConfigPath = path.join(this.projectRoot, "tailwind.config.js";);" let tailwindConfig = ;";"; if (true) {" tailwindConfig = fs.readFileSync(tailwindConfigPath, "utf8")} "" const optimizedConfig = "module.exports = {"" content: ["./pages*.{js,ts,jsx,tsx,mdx}"," "./components*.{js,ts,jsx,tsx,mdx}"," "./app*.{js,ts,jsx,tsx,mdx}"," "./src*.{js,ts,jsx,tsx,mdx}"]," theme: { extend: { colors: { primary: {" 50: "#eff6ff","" 500: "#3b82f6","" 600: "#2563eb","" 700: "#1d4ed8","" 900: "#1e3a8a"}," secondary: {" 50: "#f8fafc","" 500: "#64748b","" 600: "#475569","" 700: "#334155","" 900: "#0f172a"}}," fontFamily: {" sans: ["Inter", "system-ui", "sans-serif"],"" mono: ["JetBrains Mono", "monospace"]}," animation: {" "fade-in": "fadeIn 0.5s ease-in-out"," "slide-up": "slideUp 0.3s ease-out"," "bounce-subtle": "bounceSubtle 2s infinite"}," keyframes: { fadeIn: {" "0%": { opacity: "0" },"" "100%": { opacity: "1" }}," slideUp: {"" "0%": { transform: "translateY(10px)", opacity: "0" },"" "100%": { transform: "translateY(0)", opacity: "1" }}," bounceSubtle: {"" "0%, 100%": { transform: "translateY(0)" },"" "50%": { transform: "translateY(-5px)" }}}}},"" plugins: [require("@tailwindcss/forms")," require("@tailwindcss/typography")," require("@tailwindcss/aspect-ratio")], / Purge unused styles in production" purge: {" enabled: process.env.NODE_ENV === "production","" content: ["./pages*.{js,ts,jsx,tsx}"," "./components*.{js,ts,jsx,tsx}"," "./app*.{js,ts,jsx,tsx}"]," options: {" safelist: ["animate-fade-in"," "animate-slide-up"," "animate-bounce-subtle"]}}) { ) {" tailwindConfig = fs.readFileSync(tailwindConfigPath, "utf8")} "" const optimizedConfig = "module.exports = {"" content: ["./pages*.{js,ts,jsx,tsx,mdx}"," "./components*.{js,ts,jsx,tsx,mdx}"," "./app*.{js,ts,jsx,tsx,mdx}"," "./src*.{js,ts,jsx,tsx,mdx}"]," theme: { extend: { colors: { primary: {" 50: "#eff6ff","" 500: "#3b82f6","" 600: "#2563eb","" 700: "#1d4ed8","" 900: "#1e3a8a"}," secondary: {" 50: "#f8fafc","" 500: "#64748b","" 600: "#475569","" 700: "#334155","" 900: "#0f172a"}}," fontFamily: {" sans: ["Inter", "system-ui", "sans-serif"],"" mono: ["JetBrains Mono", "monospace"]}," animation: {" "fade-in": "fadeIn 0.5s ease-in-out"," "slide-up": "slideUp 0.3s ease-out"," "bounce-subtle": "bounceSubtle 2s infinite"}," keyframes: { fadeIn: {" "0%": { opacity: "0" },"" "100%": { opacity: "1" }}," slideUp: {"" "0%": { transform: "translateY(10px)", opacity: "0" },"" "100%": { transform: "translateY(0)", opacity: "1" }}," bounceSubtle: {"" "0%, 100%": { transform: "translateY(0)" },"" "50%": { transform: "translateY(-5px)" }}}}},"" plugins: [require("@tailwindcss/forms")," require("@tailwindcss/typography")," require("@tailwindcss/aspect-ratio")], / Purge unused styles in production" purge: {" enabled: process.env.NODE_ENV === "production","" content: ["./pages*.{js,ts,jsx,tsx}"," "./components*.{js,ts,jsx,tsx}"," "./app*.{js,ts,jsx,tsx}"]," options: {" safelist: ["animate-fade-in"," "animate-slide-up"," "animate-bounce-subtle"]}}}};""; fs.writeFileSync(tailwindConfigPath, optimizedConfig);" this.log("Tailwind CSS configuration optimized"); "" return { status: "success", message: "Tailwind config optimized" }} createPerformanceMonitoring() {" this.log("Creating performance monitoring utilities."); " const utilsDir = path.join(this.projectRoot, "utils";); if (true) {" fs.mkdirSync(utilsDir, { recursive: true })} / Performance monitoring utility" const performanceMonitor = "module.exports = class PerformanceMonitor { constructor() { this.metrics = new Map) { ) {" fs.mkdirSync(utilsDir, { recursive: true })} / Performance monitoring utility" const performanceMonitor = "module.exports = class PerformanceMonitor { constructor() { this.metrics = new Map}(;);" this.isClient = typeof window !== "undefined"} startTiming(name) { if ( {` performance.mark(\`\${name}-start\`)} } endTiming(name) { if (this.isClient) {` performance.mark(\`\${name}-end\`)) { {` performance.mark(\`\${name}-start\`)} } endTiming(name) { if (this.isClient) {` performance.mark(\`\${name}-end\`)}` performance.measure(name, \`\${name}-start\`, \`\${name}-end\`); const measure = performance.getEntriesByName(name)[0]; this.metrics.set(name, measure.duration); / Log slow operations if ( {"` console.warn(\`Slow operation detected: \${name} took \${measure.duration}ms\`)} } } getMetrics() { return Object.fromEntries(this.metrics)) { {"` console.warn(\`Slow operation detected: \${name} took \${measure.duration}ms\`)} } } getMetrics() { return Object.fromEntries(this.metrics)}} clearMetrics() { this.metrics.clear(); if ( { performance.clearMarks()) { { performance.clearMarks()} performance.clearMeasures()} }}module.exports = const performanceMonitor = new PerformanceMonitor;(;);"";" fs.writeFileSync(path.join(utilsDir, "performance-monitor.js"), performanceMonitor); / Web Vitals utility" const webVitals = ""const { getCLS, getFID, getFCP, getLCP, getTTFB } from "web-vital;s;";module.exports = function reportWebVitals(metric) { / Send to analytics service if ( {" window.gtag("event", metric.name, {"" value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value)," event_label: metric.id," non_interaction: true})} / Log to console in development" if (process.env.NODE_ENV === "development") { console.log(metric)) { {" window.gtag("event", metric.name, {"" value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value)," event_label: metric.id," non_interaction: true})} / Log to console in development" if (process.env.NODE_ENV === "development") { console.log(metric)}}}module.exports = function initWebVitals() { if ( { getCLS(reportWebVitals)) { { getCLS(reportWebVitals)} getFID(reportWebVitals); getFCP(reportWebVitals); getLCP(reportWebVitals); getTTFB(reportWebVitals)}}"";" fs.writeFileSync(path.join(utilsDir, "web-vitals.js"), webVitals); " this.log("Performance monitoring utilities created");"" return { status: "success", message: "Performance monitoring created" }} optimizeImages() {" this.log("Optimizing images."); " const publicDir = path.join(this.projectRoot, "public";); const imageFiles = this.findImageFiles(publicDir;); let optimizedCount = ;0; const optimizations = []; for (const file of imageFiles) { try { const stats = fs.statSync(file;); const sizeKB = Math.round(stats.size / 1024;); if ( { / Only optimize large images optimizations.push({" file: path.relative(this.projectRoot, file)," originalSize: sizeKB,"" status: "needs_optimization" })} else { optimizations.push({" file: path.relative(this.projectRoot, file)," originalSize: sizeKB,"" status: "already_optimized" })} optimizedCount++} catch (error) {" this.log("Error processing image ${file}: ${error.message}")} } " this.log("Processed ${optimizedCount} images")) { { / Only optimize large images optimizations.push({" file: path.relative(this.projectRoot, file)," originalSize: sizeKB,"" status: "needs_optimization" })} else { optimizations.push({" file: path.relative(this.projectRoot, file)," originalSize: sizeKB,"" status: "already_optimized" })} optimizedCount++} catch (error) {" this.log("Error processing image ${file}: ${error.message}")} } " this.log("Processed ${optimizedCount} images")} return { optimizedCount, optimizations }} findImageFiles(dir) {" const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]; const files = []; if () return file) { ) return file}s; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); if (true) { files.push(.this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) { files.push(fullPath)} } return files) { ) { files.push(.this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) { files.push(fullPath)} } return files}} generateOptimizationReport() {" this.log("Generating advanced app optimization report."); const report = {" timestamp: new Date().toISOString()," project: this.projectRoot," optimizations: { nextConfig: this.optimizeNextConfig()," tailwindConfig: this.optimizeTailwindConfig()," performanceMonitoring: this.createPerformanceMonitoring()," images: this.optimizeImages() }," recommendations: this.generateOptimizationRecommendations() }; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));" this.log("Advanced app optimization report saved to ${this.reportFile}"); return report} generateOptimizationRecommendations() { return [;" "Implement code splitting for better loading performance"," "Use dynamic imports for heavy components"," "Optimize images with Next.js Image component"," "Implement service worker for caching"," "Use React.memo for expensive components"," "Implement virtual scrolling for large lists"," "Use CSS-in-JS with zero runtime cost"," "Implement progressive web app features"," "Use CDN for static assets"," "Implement proper error boundaries" ]} async run() {" this.log("Advanced App Optimizer started"); try { const report = this.generateOptimizationReport(;);" this.log("Advanced App Optimizer completed successfully"); return report} catch (error) {"` this.log("Advanced App Optimizer failed: ${error.message}`); throw error} }}/ Run the optimizer if this script is executed directlyif ( { const optimizer = new AdvancedAppOptimizer) { { const optimizer = new AdvancedAppOptimizer}(;); optimizer.run().catch(console.error)}module.exports = AdvancedAppOptimizer;'"`'"`
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Advanced App Optimizer Automation
- * Advanced optimization for Next.js applications
+ * Advanced App Optimizer Automation;
+ * Advanced optimization for Next.js applications;
  */
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process');class AdvancedAppOptimizer {}
-class AutoGeneratedClass {
-  constructor($2) {}
-        this.projectRoot = process.cwd()
-  if($2) {}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class AdvancedAppOptimizer {}
+    constructor() {}
+        this.projectRoot = process.cwd();
+
+        if () {}
             fs.mkdirSync(logsDir, { "recursive": true })};"
-    }
-  log($2) {}
+    };
+    log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
         const timestamp = new Date().toISOString(})
-})
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+});
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
-        }
-    optimizeNextConfig() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
         const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
+        console.log(message)};
+<<<<<<< HEAD
+  
+=======
+    optimizeNextConfig() {}
+        this.log('Optimizing Next.js configuration...');
+        
+        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+        let nextConfig = ;';';
+        
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
-        const optimizedConfig = "/** @type {import('next').NextConfig} */
+const optimizedConfig = "/** @type {import('next').NextConfig} */;
 const nextConfig = {}
-  // Performance optimizations
+  // Performance optimizations;
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-// Image optimization
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
     "formats": ['image/webp', 'image/avif'],
@@ -43,38 +65,77 @@ const nextConfig = {}
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel) {}
     ) {}
-            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
-        const optimizedConfig = "/** @type {import('next').NextConfig} */
+            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
+const optimizedConfig = "/** @type {import('next').NextConfig} */;
 const nextConfig = {}
-  // Performance optimizations
+  // Performance optimizations;
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-// Image optimization
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
     "formats": ['image/webp', 'image/avif'],
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
-// Bundle optimization
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
-  optimizeNextConfig($2) {}"
+    optimizeNextConfig() {}"
 
   // Bundle optimization;"
   "webpack": (config, { dev, isServer }) => {}"
-    // Production optimizations
+    // Production optimizations;
     if ( {})
-      config.optimization.splitChunks = {}"
-
-    return config}},
-// Experimental features for performance
+      config.optimization.splitChunks = {}
+        "chunks": 'all',
+        "cacheGroups": {}
+          vendor: {}
+            test: /[\\\\/]node_modules[\\\\/]/,
+            "name": 'vendors',
+            "chunks": 'all'},
+          "common": {}
+            name: 'common',
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}};
+    return config) {}
+     {}
+      config.optimization.splitChunks = {}
+        "chunks": 'all',
+        "cacheGroups": {}
+          vendor: {}
+            test: /[\\\\/]node_modules[\\\\/]/,
+            "name": 'vendors',
+            "chunks": 'all'},
+          "common": {}
+            name: 'common',
+            "minChunks": 2,
+            "chunks": 'all',
+            "enforce": true}}}};
+return config}},;
+  
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Experimental features for performance;
   "experimental": {}
     optimizeCss: true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
-  // Headers for security and performance
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Headers for security and performance;
   async headers() {}
-    return [;]
+return [;];
       {}
         "source": '/(.*)',
         "headers": []
@@ -87,35 +148,59 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
-// Redirects and rewrites
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  // Redirects and rewrites;
   async redirects() {}
-    return [;]
+return [;];
       {}
         "source": '/home',
         "destination": '/',
-"permanent": true}]}}
-module.exports = nextConfig
-"
-        fs.writeFileSync(nextConfigPath, optimizedConfig)
-        this.log('Next.js configuration optimized')
-        return { "status": 'success', "message": 'Next.js config optimized' }}
-  optimizeTailwindConfig($2) {}
-        this.log('Optimizing Tailwind CSS configuration...')
-        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';)
-        let tailwindConfig = ;';'
+        "permanent": true}]}};
+<<<<<<< HEAD
+  // Experimental features for performance;"
+  "experimental": {}"
+    optimizeCss: true,"
+=======
+module.exports = nextConfig;
+";
+        fs.writeFileSync(nextConfigPath, optimizedConfig);
+        this.log('Next.js configuration optimized');
+        return { "status": 'success', "message": 'Next.js config optimized' }};
+    optimizeTailwindConfig() {}
+        this.log('Optimizing Tailwind CSS configuration...');
+        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
+        let tailwindConfig = ;';';
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
         "permanent": true}]}};"
 module.exports = nextConfig;"
 ";"
         fs.writeFileSync(nextConfigPath, optimizedConfig);"
-this.log('Next.js configuration optimized')
-        return { "status": 'success', "message": 'Next.js config optimized' }}
-  optimizeTailwindConfig($2) {}
-        this.log('Optimizing Tailwind CSS configuration...')
-        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';)
-        let tailwindConfig = ;';'
-  if($2) {}
-            tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')}
-        const optimizedConfig = "/** @type {import('tailwindcss').Config} */
+        this.log('Next.js configuration optimized');
+<<<<<<< HEAD
+
+        fs.writeFileSync(tailwindConfigPath, optimizedConfig);
+        this.log('Tailwind CSS configuration optimized');
+        
+        return { "status": 'success', "message": 'Tailwind config optimized' }};
+    createPerformanceMonitoring() {}
+        this.log('Creating performance monitoring utilities...');
+        
+=======
+        
+        return { "status": 'success', "message": 'Next.js config optimized' }};
+    optimizeTailwindConfig() {}
+        this.log('Optimizing Tailwind CSS configuration...');
+        
+        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
+        let tailwindConfig = ;';';
+        
+        if () {}
+            tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')};
+const optimizedConfig = "/** @type {import('tailwindcss').Config} */;
 module.exports = {}
   "content": ['./pages/**/*.{js,ts,jsx,tsx,mdx}',]
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -140,9 +225,9 @@ module.exports = {}
         sans: ['Inter', 'system-ui', 'sans-serif'],
         "mono": ['JetBrains Mono', 'monospace']},
       "animation": {}
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.3s ease-out",
-        "bounce-subtle": "bounceSubtle 2s infinite"},
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'bounce-subtle': 'bounceSubtle 2s infinite'},
       "keyframes": {}
         fadeIn: {}
           '0%': { opacity: '0' },
@@ -156,7 +241,7 @@ module.exports = {}
   "plugins": [require('@tailwindcss/forms'),]
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')],
-  // Purge unused styles in production
+  // Purge unused styles in production;
   "purge": {}
     enabled: process.env.NODE_ENV === 'production',
     "content": ['./pages/**/*.{js,ts,jsx,tsx}',]
@@ -167,8 +252,8 @@ module.exports = {}
         'animate-slide-up',
         'animate-bounce-subtle']}}) {}
     ) {}
-            tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')}
-        const optimizedConfig = "/** @type {import('tailwindcss').Config} */
+            tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')};
+const optimizedConfig = "/** @type {import('tailwindcss').Config} */;
 module.exports = {}
   "content": ['./pages/**/*.{js,ts,jsx,tsx,mdx}',]
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -193,9 +278,9 @@ module.exports = {}
         sans: ['Inter', 'system-ui', 'sans-serif'],
         "mono": ['JetBrains Mono', 'monospace']},
       "animation": {}
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.3s ease-out",
-        "bounce-subtle": "bounceSubtle 2s infinite"},
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'bounce-subtle': 'bounceSubtle 2s infinite'},
       "keyframes": {}
         fadeIn: {}
           '0%': { opacity: '0' },
@@ -209,7 +294,7 @@ module.exports = {}
   "plugins": [require('@tailwindcss/forms'),]
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')],
-  // Purge unused styles in production
+  // Purge unused styles in production;
   "purge": {}
     enabled: process.env.NODE_ENV === 'production',
     "content": ['./pages/**/*.{js,ts,jsx,tsx}',]
@@ -218,126 +303,152 @@ module.exports = {}
     "options": {}
       safelist: ['animate-fade-in',]
         'animate-slide-up',
-'animate-bounce-subtle']}}}
-}
-"
-        fs.writeFileSync(tailwindConfigPath, optimizedConfig)
-        this.log('Tailwind CSS configuration optimized')
-        return { "status": 'success', "message": 'Tailwind config optimized' }}
-  createPerformanceMonitoring($2) {}
-        this.log('Creating performance monitoring utilities...');        const utilsDir = path.join(this.projectRoot, 'utils';)
-  if($2) {}
-            fs.mkdirSync(utilsDir, { "recursive": true })}
-        // Performance monitoring utility
+        'animate-bounce-subtle']}}};
+};
+";
+        fs.writeFileSync(tailwindConfigPath, optimizedConfig);
+        this.log('Tailwind CSS configuration optimized');
+        return { "status": 'success', "message": 'Tailwind config optimized' }};
+    createPerformanceMonitoring() {}
+        this.log('Creating performance monitoring utilities...');
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        const utilsDir = path.join(this.projectRoot, 'utils';);
+        if () {}
+            fs.mkdirSync(utilsDir, { "recursive": true })};
+        // Performance monitoring utility;
         const performanceMonitor = "/**
- * Performance Monitoring Utility
- * Tracks and reports performance metrics
+ * Performance Monitoring Utility;
+ * Tracks and reports performance metrics;
  */
+
+  "theme": {}"
+    extend: {}
+      colors: {}
+        primary: {}"
+
+            fs.mkdirSync(utilsDir, { "recursive": true })};"
+        // Performance monitoring utility;"
+        const performanceMonitor = "/**"
+ * Performance Monitoring Utility;
+ * Tracks and reports performance metrics;
 
 export class PerformanceMonitor {}
     this.metrics = new Map) {}
+<<<<<<< HEAD
+
+=======
     ) {}
-            fs.mkdirSync(utilsDir, { "recursive": true })}
-        // Performance monitoring utility
+            fs.mkdirSync(utilsDir, { "recursive": true })};
+        // Performance monitoring utility;
         const performanceMonitor = "/**
- * Performance Monitoring Utility
- * Tracks and reports performance metrics
+ * Performance Monitoring Utility;
+ * Tracks and reports performance metrics;
  */
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export class PerformanceMonitor {}
-class AutoGeneratedClass {
-  constructor($2) {}
-    this.metrics = new Map}(;)
-    this.isClient = typeof window !== 'undefined'}
+  constructor() {}
+    this.metrics = new Map}(;);
+    this.isClient = typeof window !== 'undefined'};
         // Performance monitoring utility;"
 
     this.metrics = new Map}(;);"
-  startTiming($2) {}
-    if ( {})`
-      performance.mark(\`\${name}-start\`)}
-  endTiming($2) {}
-  if($2) {}`
+
+  startTiming(name) {}
+    if ( {})`;
+      performance.mark(\`\${name}-start\`)};
+  endTiming(name) {}
+    if (this.isClient) {}`;
       performance.mark(\`\${name}-end\`)) {`}
      {}`;
       performance.mark(\`\${name}-end\`)};`;
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
-      const measure = performance.getEntriesByName(name)[0];
-      this.metrics.set(name, measure.duration);
-      // Log slow operations
-      if ( {
-        }
-    }
-  }
-  getMetrics() {
-    return Object.fromEntries(this.metrics)) {
-     {
-        }
-    }
-  }
-  getMetrics() {
-    return Object.fromEntries(this.metrics)}}
-  clearMetrics() {
+      
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
+<<<<<<< HEAD
+      
 
+      
+      
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      
+      const measure = performance.getEntriesByName(name)[0];
+      this.metrics.set(name, measure.duration);
+
+      
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+      const measure = performance.getEntriesByName(name)[0];
+      this.metrics.set(name, measure.duration);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Log slow operations;
 
-     {}`
-      performance.mark(\`\${name}-end\`)};`
-      performance.measure(name, \`\${name}-start\`, \`\${name}-end\`)
-      const measure = performance.getEntriesByName(name)[0]
-      this.metrics.set(name, measure.duration)
-      const measure = performance.getEntriesByName(name)[0]
-      this.metrics.set(name, measure.duration)
-      const measure = performance.getEntriesByName(name)[0]
-      this.metrics.set(name, measure.duration)
-      // Log slow operations
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
-  getMetrics($2) {}
+  getMetrics() {}
     return Object.fromEntries(this.metrics)) {}
-     {}"`
-    return Object.fromEntries(this.metrics)}}
-  clearMetrics($2) {}
-    this.metrics.clear()
+     {}"`;
+    return Object.fromEntries(this.metrics)}};
+  clearMetrics() {}
+    this.metrics.clear();
       performance.clearMarks()) {}
-performance.clearMarks()}
-      performance.clearMeasures()}
-  }
-}
-export const performanceMonitor = new PerformanceMonitor;(;)
-"
-        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);export const performanceMonitor = new PerformanceMonitor;(;);"
+      performance.clearMarks()};
+      performance.clearMeasures()};
+<<<<<<< HEAD
 
-        // Web Vitals utility
-        const webVitals = "/**"
- * Web Vitals Utility
- * Measures Core Web Vitals
+        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
+        
+export const performanceMonitor = new PerformanceMonitor;(;);"
+
+=======
+  };
+};
+export const performanceMonitor = new PerformanceMonitor;(;);
+";
+        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
+export const performanceMonitor = new PerformanceMonitor;(;);"
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        // Web Vitals utility;
+const webVitals = "/**;
+ * Web Vitals Utility;
+ * Measures Core Web Vitals;
+<<<<<<< HEAD
+
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
+
+=======
  */
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';export function reportWebVitals(metric) {}
-  // Send to analytics service
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+export function reportWebVitals(metric) {}
+  // Send to analytics service;
   if ( {})
     window.gtag('event', metric.name, {})
       "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       "event_label": metric.id,
-      "non_interaction": true})}
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    ) {
-     {
-    window.gtag('event', metric.name, {
-      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      "event_label": metric.id,
-      "non_interaction": true})}
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    }}
-}
-export function initWebVitals() {
-  if ( {
-    getCLS(reportWebVitals)) {
-     {
-    getCLS(reportWebVitals)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       "non_interaction": true})};
   // Log to console in development;
   if (process.env.NODE_ENV === 'development') {}
@@ -346,38 +457,61 @@ export function initWebVitals() {
     window.gtag('event', metric.name, {})
       "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       "event_label": metric.id,
-"non_interaction": true})}
-  // Log to console in development
-  if($2) {}
+      "non_interaction": true})};
+  // Log to console in development;
+  if (process.env.NODE_ENV === 'development') {}
 "
 
-    console.log(metric)}}
+    console.log(metric)}};
 export function initWebVitals() {}
     getCLS(reportWebVitals)) {}
-    getCLS(reportWebVitals)}
-    getFID(reportWebVitals)
-    getFCP(reportWebVitals)
-    getLCP(reportWebVitals)
-    getTTFB(reportWebVitals)}
-}
-"
-        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);        this.log('Performance monitoring utilities created')
-        return { "status": 'success', "message": 'Performance monitoring created' }}
-  optimizeImages($2) {}
-        this.log('Optimizing images...')
-        const publicDir = path.join(this.projectRoot, 'public';)
-        const imageFiles = this.findImageFiles(publicDir;)
-        let optimizedCount = ;0
-        const optimizations = [];        const imageFiles = this.findImageFiles(publicDir;)
-        let optimizedCount = ;0
-        const optimizations = []
+    getCLS(reportWebVitals)};
+    getFID(reportWebVitals);
+    getFCP(reportWebVitals);
+    getLCP(reportWebVitals);
+    getTTFB(reportWebVitals)};
+<<<<<<< HEAD
+
+        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
+        
+=======
+};
+";
+        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        this.log('Performance monitoring utilities created');
+        return { "status": 'success', "message": 'Performance monitoring created' }};
+    optimizeImages() {}
+        this.log('Optimizing images...');
+<<<<<<< HEAD
+        
+        const publicDir = path.join(this.projectRoot, 'public';);
+
+        const imageFiles = this.findImageFiles(publicDir;);
+        let optimizedCount = ;0;
+        const optimizations = [];
+=======
+        const publicDir = path.join(this.projectRoot, 'public';);
+        const imageFiles = this.findImageFiles(publicDir;);
+        let optimizedCount = ;0;
+        const optimizations = [];
+        const imageFiles = this.findImageFiles(publicDir;);
+        let optimizedCount = ;0;
+        const optimizations = [];
+        
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        for (const file of imageFiles) {}
             try {}
-                const stats = fs.statSync(file;)
-                const sizeKB = Math.round(stats.size / 1024;)
+                const stats = fs.statSync(file;);
+                const sizeKB = Math.round(stats.size / 1024;);
+<<<<<<< HEAD
+                
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
-                    })}
+                    })};
                 optimizedCount++} catch (error) {}
                 this.log("Error processing image ${file}: ${error.message}")};"
         };"
@@ -385,21 +519,37 @@ export function initWebVitals() {}
      { // Only optimize large images;}
                     optimizations.push({})"
 
-const files = []
+        const files = [];
+<<<<<<< HEAD
+        
         if () return file) {}
-    ) return file}s;        if () return file) {}
-    ) return file}s
-        const items = fs.readdirSync(dir;)
-  for($2) {}
-            const fullPath = path.join(dir, item;)
-            const stat = fs.statSync(fullPath;)
-  if($2) {}
+    ) return file}s;
+        
+=======
+        if () return file) {}
+    ) return file}s;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        if () return file) {}
+    ) return file}s;
+        const items = fs.readdirSync(dir;);
+        for (const item of items) {}
+            const fullPath = path.join(dir, item;);
+            const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
+            
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+            if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
-                files.push(fullPath)}
+                files.push(fullPath)};
         return files) {}
-return files}}
-  generateOptimizationReport($2) {}
-        this.log('Generating advanced app optimization report...')
+        return files}};
+    generateOptimizationReport() {}
+<<<<<<< HEAD
+        
+=======
+        this.log('Generating advanced app optimization report...');
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -407,14 +557,22 @@ return files}}
                 nextConfig: this.optimizeNextConfig(),
                 "tailwindConfig": this.optimizeTailwindConfig(),
                 "performanceMonitoring": this.createPerformanceMonitoring(),
-                "images": this.optimizeImages()
+                "images": this.optimizeImages();
             },
-"recommendations": this.generateOptimizationRecommendations()
-       }
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
-        this.log("Advanced app optimization report saved to ${this.reportFile}");        return report}
-  generateOptimizationRecommendations($2) {}
-        return [;]
+            "recommendations": this.generateOptimizationRecommendations();
+       };
+<<<<<<< HEAD
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("Advanced app optimization report saved to ${this.reportFile}");
+        
+=======
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("Advanced app optimization report saved to ${this.reportFile}");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        return report};
+    generateOptimizationRecommendations() {}
+return [;];
             'Implement code splitting for better loading performance',
             'Use dynamic imports for heavy components',
             'Optimize images with Next.js Image component',
@@ -425,14 +583,19 @@ return files}}
             'Implement progressive web app features',
             'Use CDN for static assets',
             'Implement proper error boundaries'
-        ]}
+        ]};
     async run() {}
-this.log('Advanced App Optimizer started')
+        this.log('Advanced App Optimizer started');
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
-            const report = this.generateOptimizationReport(;)
-            this.log('Advanced App Optimizer completed successfully')
+            const report = this.generateOptimizationReport(;);
+            this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {}
-this.log("Advanced App Optimizer "failed": ${error.message}`)
+            this.log("Advanced App Optimizer "failed": ${error.message}`);
+
             "optimizations": {}"
                 nextConfig: this.optimizeNextConfig(),"
                 "tailwindConfig": this.optimizeTailwindConfig(),
@@ -443,24 +606,48 @@ this.log("Advanced App Optimizer "failed": ${error.message}`)
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
         this.log("Advanced app optimization report saved to ${this.reportFile}");"
-        return report}
-  generateOptimizationRecommendations($2) {}
+        return report};
+    generateOptimizationRecommendations() {}
         return [;]"
 
-throw error}
-// Run the optimizer if this script is executed directly
+            throw error};
+// Run the optimizer if this script is executed directly;
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
-module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AdvancedAppOptimizer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
 module.exports = AdvancedAppOptimizer;
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
-    const optimizer = new AdvancedAppOptimizer}(;)
-    optimizer.run().catch(console.error)}
-module.exports = AdvancedAppOptimizer
-module.exports = AdvancedAppOptimizer
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

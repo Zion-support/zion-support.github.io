@@ -1,122 +1,113 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  AlertTriangle
-  CheckCircle
-  XCircle
-  Clock
-  TrendingUp
-  Activity
-} from 'lucide-react'
-
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical';
-  timestamp: string;
-  uptime: number;
-  version: string;
-  environment: string;
+  status: 'healthy' | 'warning' | 'critical',
+  timestamp: string,
+  uptime: number,
+  version: string,
+  environment: string,
   metrics: {
-    errorRate: number;
-    criticalErrors: number;
-    responseTime: number;
+    errorRate: number,
+    criticalErrors: number,
+    responseTime: number,
     memoryUsage: number
-  }
+  };
   health: {
-    status: string;
-    score: number;
-    issues: string[];
+    status: string,
+    score: number,
+    issues: string[],
     recommendations: string[]
-  }
+  };
   errors: {
     summary: {
-      total: number;
-      critical: number;
-      high: number;
-      medium: number;
+      total: number,
+      critical: number,
+      high: number,
+      medium: number,
       low: number
-    }
+    };
     topErrors: Array<{
-      patternId: string;
-      description: string;
-      occurrences: number;
-      severity: string;
+      patternId: string,
+      description: string,
+      occurrences: number,
+      severity: string,
       solution?: string
-    }>
+    }>;
     byCategory: { [category: string]: number }
   }
+}
 
 const HealthDashboard: React.FC = () => {
-  const [healthData, setHealthData] = useState<HealthData | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [autoRefresh, setAutoRefresh] = useState(true)
+  const [healthData, setHealthData] = useState<HealthData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [autoRefresh, setAutoRefresh] = useState(true);
+
   const fetchHealthData = async () => {
     try {
-      const response = await fetch('/api/admin/health')
+      const response = await fetch('/api/admin/health');
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`)
       }
-      const data = await response.json()
-      setHealthData(data)
+      const data = await response.json();
+      setHealthData(data);
       setError(null)
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : 'Failed to fetch health data'
-      )
+      setError(err instanceof Error ? err.message : 'Failed to fetch health data')
     } finally {
       setLoading(false)
     }
-  }
+  };
+
   useEffect(() => {
     fetchHealthData();
-    if (autoRefresh) {;
-      const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
+
+    if (autoRefresh) {
+      const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
       return () => clearInterval(interval)
     }
+    
     return undefined
-  }, [autoRefresh])
-  const getStatusIcon = (status: string,) => {
+  }, [autoRefresh]);
+
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy':
-        return <CheckCircle className='w-5 h-5 text-green-500' />
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'warning':
-        return <AlertTriangle className='w-5 h-5 text-yellow-500' />
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
       case 'critical':
-        return <XCircle className='w-5 h-5 text-red-500' />
+        return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Activity className='w-5 h-5 text-gray-500' />
+        return <Activity className="w-5 h-5 text-gray-500" />
     }
-  }
+  };
+
   const getStatusBadge = (status: string) => {
-    const variant = null;
-      status === 'healthy'
-        ? 'default'
-        : status === 'warning'
-          ? 'secondary'
-          : 'destructive'; return (
-      <Badge variant={variant} className='ml-2'>
+    const variant = status === 'healthy' ? 'default' : 
+                   status === 'warning' ? 'secondary' : 'destructive';
+    return (
+      <Badge variant={variant} className="ml-2">
         {status.toUpperCase()}
       </Badge>
     )
-  }
+  };
+
   const formatUptime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600)
-    const minutes = Math.floor((seconds % 3600) / 60)
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
     return `${hours}h ${minutes}m`
-  }
+  };
+
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`
-  }
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -124,6 +115,7 @@ const HealthDashboard: React.FC = () => {
       </div>
     )
   }
+
   if (error) {
     return (
       <Card className="border-red-200 bg-red-50">
@@ -139,7 +131,9 @@ const HealthDashboard: React.FC = () => {
       </Card>
     )
   }
-  if (!healthData) return null
+
+  if (!healthData) return null;
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -150,9 +144,10 @@ const HealthDashboard: React.FC = () => {
         </div>
         <div className="flex items-center space-x-2">
           <Button
-            variant='outline'
-            size='sm'
-            onClick={() => setAutoRefresh(!autoRefresh)}          >
+            variant="outline"
+            size="sm"
+            onClick={() => setAutoRefresh(!autoRefresh)}
+          >
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -160,6 +155,7 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </div>
       </div>
+
       {/* Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
@@ -173,6 +169,7 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center">
@@ -184,6 +181,7 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center">
@@ -195,6 +193,7 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center">
@@ -207,6 +206,7 @@ const HealthDashboard: React.FC = () => {
           </CardContent>
         </Card>
       </div>
+
       {/* Detailed Information */}
       <Tabs defaultValue="overview" className="space-y-4">
         <TabsList>
@@ -215,8 +215,9 @@ const HealthDashboard: React.FC = () => {
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
-        <TabsContent value='overview' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+
+        <TabsContent value="overview" className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -242,6 +243,7 @@ const HealthDashboard: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -251,13 +253,11 @@ const HealthDashboard: React.FC = () => {
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-                  <ul className='space-y-2'>
+                  <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
-                      <li
-                        key={index}
-                        className='text-sm text-red-600 flex items-start'
-                      >
-                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
+                      <li key={index} className="text-sm text-red-600 flex items-start">
+                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        {issue}
                       </li>
                     ))}
                   </ul>
@@ -268,8 +268,9 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-        <TabsContent value='errors' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+
+        <TabsContent value="errors" className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -295,28 +296,23 @@ const HealthDashboard: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle>Top Errors</CardTitle>
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-                  <div className='space-y-2'>
-                    {healthData.errors.topErrors
-                      .slice(0, 5)
-                      .map((error, index) => (
-                        <div
-                          key={index}
-                          className='border-l-4 border-red-400 pl-3 py-1'
-                        >
-                          <p className='text-sm font-medium'>
-                            {error.description}
-                          </p>
-                          <p className='text-xs text-gray-600'>
-                            {error.occurrences} occurrences • {error.severity}
-                          </p>
-                        </div>
-                      ))}                  </div>
+                  <div className="space-y-2">
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
+                        <p className="text-sm font-medium">{error.description}</p>
+                        <p className="text-xs text-gray-600">
+                          {error.occurrences} occurrences • {error.severity}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
@@ -324,8 +320,9 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-        <TabsContent value='metrics' className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+
+        <TabsContent value="metrics" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
@@ -335,6 +332,7 @@ const HealthDashboard: React.FC = () => {
                 <p className="text-xs text-gray-600">Errors per request</p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Critical Errors</CardTitle>
@@ -344,6 +342,7 @@ const HealthDashboard: React.FC = () => {
                 <p className="text-xs text-gray-600">In last hour</p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Avg Response</CardTitle>
@@ -353,6 +352,7 @@ const HealthDashboard: React.FC = () => {
                 <p className="text-xs text-gray-600">API response time</p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Memory Usage</CardTitle>
@@ -364,24 +364,24 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-        <TabsContent value='recommendations' className='space-y-4'>
+
+        <TabsContent value="recommendations" className="space-y-4">
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-                <ul className='space-y-3'>
+                <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
-                    <li key={index} className='flex items-start'>
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
-                      <span className='text-sm'>{rec}</span>                    </li>
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{rec}</span>
+                    </li>
                   ))}
                 </ul>
               ) : (
-                <p className='text-gray-600'>
-                  No specific recommendations at this time
-                </p>
+                <p className="text-gray-600">No specific recommendations at this time</p>
               )}
             </CardContent>
           </Card>
@@ -389,7 +389,6 @@ const HealthDashboard: React.FC = () => {
       </Tabs>
     </div>
   )
-}
-export default HealthDashboard
-export default HealthDashboard
-export default HealthDashboard
+};
+
+export default HealthDashboard, 

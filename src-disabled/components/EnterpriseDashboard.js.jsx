@@ -277,22 +277,22 @@ const getSeverityColor = () => {
       <div className='border-b border-gray-200 dark: border-gray-700' />'''';
         <nav className='flex space-x-8 px-6' />'';
           {['';
-            { id: 'overview',}
+            {id: 'overview'}
   label: 'Overview', icon: BarChart3,}
 }, '';
-            { id: 'performance',}
+            {id: 'performance'}
   label: 'Performance', icon: TrendingUp,}
 },'';
-            { id: 'security',}
+            {id: 'security'}
   label: 'Security', icon: Shield,}
 }, '';
-            { id: 'users',}
+            {id: 'users'}
   label: 'Users', icon: Users,}
 },'';
-            { id: 'services',}
+            {id: 'services'}
   label: 'Services', icon: Server,}
 }, '';
-            { id: 'analytics',}
+            {id: 'analytics'}
   label: 'Analytics', icon: PieChart,}
 }'';
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}

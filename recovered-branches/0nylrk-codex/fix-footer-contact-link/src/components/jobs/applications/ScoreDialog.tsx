@@ -7,10 +7,11 @@ import {
 import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 interface ScoreDialogProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  application: JobApplication | null;
-interface ScoreDialogProps {
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  application: JobApplication | null,
+  onScoreUpdated: (updatedApplication: JobApplication) => void
+}
 
   open: boolean
   onOpenChange: (open: boolean) => void
@@ -64,6 +65,14 @@ export function ScoreDialog({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
+            application={application}
+            onScoreUpdated={onScoreUpdated}
+          />;
+        )}
+
+      </DialogContent>;
+    </Dialog>;
+  );
           <ApplicationScoreCard;
             application={application}
             onScoreUpdated={onScoreUpdated}
@@ -72,4 +81,5 @@ export function ScoreDialog({;
       </DialogContent>
     </Dialog>
   )
+}
 }

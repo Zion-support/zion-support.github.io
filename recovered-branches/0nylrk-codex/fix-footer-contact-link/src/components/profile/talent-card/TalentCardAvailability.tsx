@@ -1,36 +1,45 @@
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
+};
+  // Format availability status;
+  const getAvailabilityColor = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+      case 'project-based':;
+        return 'Project',;
+      default:;
+        return status;
+
+    }
+  },
 import React from "react";
 import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
-  availabilityType: string
-}
+  availabilityType: string}
+
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
-
-  const getAvailabilityColor = (status: string) => {
-    switch (status) {
-      case 'full-time':;
-        return 'bg-green-500/20 text-green-400';
+  const getAvailabilityColor = $2;
       case 'part-time':
-        return 'bg-yellow-500/20 text-yellow-400';
+        return 'bg-yellow-500/20 text-yellow-400',
       case 'project-based':
-        return 'bg-blue-500/20 text-blue-400'
+        return 'bg-blue-500/20 text-blue-400',
       default:
         return 'bg-gray-500/20 text-gray-400'
     }
-  }
+  },
+  
   // Format availability label
-  const getAvailabilityLabel = (status: string) => {
-    switch (status) {
-      case 'full-time':
-        return 'Full-time';
+  const getAvailabilityLabel = $2;
       case 'part-time':
-        return 'Part-time';
+        return 'Part-time',
       case 'project-based':
-        return 'Project'
+        return 'Project',
       default:
         return status
     }
-  }
+  },
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -38,4 +47,5 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
+}
 }

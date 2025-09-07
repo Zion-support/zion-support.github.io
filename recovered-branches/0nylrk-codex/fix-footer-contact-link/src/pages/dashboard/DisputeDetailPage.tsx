@@ -4,20 +4,17 @@ import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { DisputeDetail  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
+    </ProtectedRoute>);
+}
+
+;
+export default DisputeDetailPage;
+
+;
+export default DisputeDetailPage;
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
       <>
-
-        <SEO
-          title="Dispute Details | Zion AI Marketplace"
-          description="View and manage dispute details"
-        />
-        <AppHeader />
-        <DisputeDetail />
-        <Footer />
-      </>
-    </ProtectedRoute>
-  )
-}
-export default DisputeDetailPage;
+        <SEO 
+          title = $2;

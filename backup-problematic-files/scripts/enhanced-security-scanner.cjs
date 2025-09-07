@@ -1,3 +1,5 @@
+
+
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -35,6 +37,11 @@
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
+
+main();
+
+#!/usr/bin/env node;
+
 
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;

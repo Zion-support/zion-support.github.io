@@ -1,3 +1,4 @@
+
 }
 
 import React from 'react',
@@ -30,12 +31,16 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function EventsPage() {
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+
+
 
   return (
     <>
@@ -51,4 +56,6 @@ export default function EventsPage() {
         </p>
       </div>
     </>
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   );

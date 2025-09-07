@@ -30,6 +30,7 @@ import React from 'react';
 interface BlockchainProps {
   // Add props here as needed
 
+
 }
 
 export default function Blockchain({ }: BlockchainProps) {
@@ -39,3 +40,27 @@ export default function Blockchain({ }: BlockchainProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+}
+
+}
+:src.pages.disabled/Blockchain.jsx
+}
+}
+}
+}
+}
+
+
+
+
+
+
+:src.pages.disabled/Blockchain.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Blockchain.jsx;

@@ -1,24 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+<<<<<<< HEAD
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "es6"
     ],
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
+    "module": "ESNext",
+=======
+    "incremental": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -27,15 +33,32 @@
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+=======
+    ]
+  },
+  "include": [
+=======
+      "@/app/*": ["./app/*"],
       "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
+      "@/public/*": ["./public/*"]
     }
   },
   "include": [
@@ -46,35 +69,9 @@
   ],
   "exclude": [
     "node_modules",
-    "src_backup",
-    "temp_backup",
-    "recovered-branches",
-    "api.disabled",
-    "lib",
     ".next",
     "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
-    "src.pages.disabled",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
+    "dist"
   ]
 }
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194

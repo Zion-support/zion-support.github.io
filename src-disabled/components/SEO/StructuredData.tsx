@@ -1,6 +1,6 @@
 import Head from 'next/head'; interface StructuredDataProps {
-  \"\";"
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';\"\";}
+  "";"
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';"";}
    data?: }
 }
 

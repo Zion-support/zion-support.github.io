@@ -6,8 +6,7 @@ function cleanTestFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     // Remove merge conflict markers
-/g, '');
-    content = content.replace(/
+    
     // Remove corrupted lines with branch names
     content = content.replace(/cursor\/[^;]*;/g, '')
     // Fix common syntax issues

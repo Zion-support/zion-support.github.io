@@ -1,53 +1,78 @@
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    const { query } = await req.json(),
+    const { query } = await req && req.json();
     if (!query) {
       return new Response(
-        JSON.stringify({ error: "Query is required" });
+
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
-    if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
-    const configuration = new Configuration({ apiKey: openAiKey });
-    const openai = new OpenAIApi(configuration);
-    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini"
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
+const corsHeaders = $2;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders})
+  }
+  try {
+    const { query } = await req.json($2);
+    if (!query) {
+      return new Response($2);
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      )
+    }
+
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
-      temperature: 0.1});
-    const responseText = completion.choices[0].message.content |"";
-    let filters;
-    try {
-      const match = responseText.match(/\{[\s\S]*\}/),
-      filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
+      temperature: 0 && 0.1});
     } catch (_) {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
-      JSON.stringify({ filters });
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  } catch (error) {
-    console.error("ai-search error", error);
-    return new Response(
-      JSON.stringify({ error: error.message });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 });
+    const openAiKey = Deno.env.get($2);
+    if (!openAiKey) throw new Error($2);
+    const configuration = new Configuration($2);
+    const openai = new OpenAIApi($2);
+    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`,
 
+    const completion = await openai.chat.completions.create($2);
+    const responseText = $2;
+    let filters,
+    try {
+      const match = responseText.match($2);
+      filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
+    } catch (_) {
+      filters = { type: null, skills: null, location: null, budget: null, availability: null}
+    }
+
+    return new Response($2);
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console.error($2);
+    return new Response($2);
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
   }
-});
+}),
