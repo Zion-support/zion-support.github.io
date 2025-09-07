@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 // console.log(' Fixing All Corrupted Files...')
 console.log('=====')
 const corruptedFiles = ['pages/docs/api-reference.tsx'];
@@ -26,9 +15,3 @@ let content = '';
     "address"
     "site"
         <meta name="description" content="
-
-
-
-
-
-

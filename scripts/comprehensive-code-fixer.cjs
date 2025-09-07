@@ -1,19 +1,7 @@
 #!/usr/bin/env node;
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
   console.log('� Fixing common linting issues...')
@@ -52,4 +40,3 @@ let content = fs.readFileSync(filePath, 'utf8');
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
     console.error(' Comprehensive Code Fixer "failed")
-console.log()

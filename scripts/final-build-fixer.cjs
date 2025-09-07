@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 // console.log(' Final Build Fixer')
 console.log('=====')
 const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'];
@@ -23,9 +12,3 @@ const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
           "pattern"
-
-
-
-
-
-

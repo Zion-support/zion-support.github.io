@@ -1,18 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
   console.log(' Starting Improved Automation Orchestrator...')
     "overallStatus"
       execSync('npm install --dry-run', { "stdio"})
@@ -36,9 +25,3 @@ const auditResult = execSync('npm audit --json', { "encoding"});
       return { "status": 'completed', "message"}
         "status"
     console.error(' Improved automation "failed")
-
-
-
-
-
-

@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 // console.log(' Fixing String Quote Issues...')
 console.log('====')
 const filesToFix = ['pages/api/docs.ts'];
@@ -31,9 +20,3 @@ const filesToFix = ['pages/api/docs.ts'];
     "replacement"
     "replacement": '"$1${$2}$3"
     "replacement": '"$1\\\\\n  $2"
-
-
-
-
-
-

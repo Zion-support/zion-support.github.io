@@ -1,17 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 // console.log(' Fixing All Remaining Files...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx'];
@@ -29,9 +18,3 @@ let content = '';
     "confirmPassword"
     console.log('Signup "attempt")
         <meta name="description" content="
-
-
-
-
-
-

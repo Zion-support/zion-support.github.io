@@ -1,19 +1,7 @@
 #!/usr/bin/env node;
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log(' Starting Simple App Improvement Automation')
 console.log('====')
 const output = execSync(command, { "encoding": 'utf8', "stdio"});
@@ -35,8 +23,3 @@ console.log('🧪 Test "Summary")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
     console.error('� Automation "failed")
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Simple App Improvement Automation')

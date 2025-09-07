@@ -1,18 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 // console.log(' Improved PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -32,6 +22,3 @@ const statusResult = execSync('git status --porcelain', { "encoding"});
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-console.error('Automation "failed")"
-cursor/fix-lint-push-and-merge-to-main-f3c1
-"`

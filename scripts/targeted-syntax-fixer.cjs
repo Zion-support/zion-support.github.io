@@ -1,22 +1,6 @@
-
-
-
-
-
-main
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
 const content = fs.readFileSync(filePath, 'utf8');
@@ -37,4 +21,3 @@ const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
-    console.log('\n� Report saved "to")

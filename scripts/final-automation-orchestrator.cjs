@@ -1,23 +1,7 @@
-
-
-
-
-
-main
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log(' Final Automation Orchestrator')
 console.log('=====')
 const output = execSync(command, { "encoding": 'utf8', "stdio"});
@@ -33,8 +17,3 @@ const status = execSync('git status --porcelain', { "encoding"});
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")
     console.error(' Final automation orchestrator "failed")
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Final Automation Orchestrator')

@@ -1,81 +1,26 @@
 {
-  "timestamp": "2025-09-07T11:30:32.170Z",
-  "totalDuration": 26446,
-  "successfulTasks": 1,
-  "totalTasks": 8,
+  "timestamp": "2025-09-07T05:59:20.856Z",
+  "totalDuration": 44655,
+  "successfulTasks": 2,
+  "totalTasks": 3,
   "results": {
-    "dependencyFix": {
-      "success": false,
-      "duration": 928,
-      "errors": [
-        "Command failed: npm install\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error JSON.parse Expected ',' or '}' after property value in JSON at position 21221 (line 344 column 1) while parsing near \"...npm\\\": \\\">=8.0.0\\\"\\n  }\\n\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_05_780Z-debug-0.log\n",
-        "Command failed: npm install @eslint/js --save-dev\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error JSON.parse Expected ',' or '}' after property value in JSON at position 21221 (line 344 column 1) while parsing near \"...npm\\\": \\\">=8.0.0\\\"\\n  }\\n\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_06_109Z-debug-0.log\n"
-      ],
-      "warnings": []
-    },
-    "codeQuality": {
-      "success": false,
-      "duration": 3174,
-      "errors": [
-        "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3501) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nError: Invalid package config /workspace/package.json.\n    at getPackageScopeConfig (node:internal/modules/package_json_reader:149:33)\n    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:116:72)\n    at defaultGetFormatWithoutErrors (node:internal/modules/esm/get_format:232:36)\n    at defaultResolve (node:internal/modules/esm/resolve:1008:13)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:643:36)\n    at TracingChannel.tracePromise (node:diagnostics_channel:344:14)\n"
-      ],
-      "warnings": []
-    },
-    "securityAudit": {
-      "success": false,
-      "duration": 371,
-      "errors": [
-        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_09_865Z-debug-0.log\n"
-      ],
-      "warnings": []
-    },
-    "buildOptimization": {
-      "success": false,
-      "duration": 158,
-      "errors": [
-        "Command failed: npm run clean\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected ',' or '}' after property value in JSON at position 21221 (line 344 column 1) while parsing near \"...npm\\\": \\\">=8.0.0\\\"\\n  }\\n\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_10_234Z-debug-0.log\n",
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected ',' or '}' after property value in JSON at position 21221 (line 344 column 1) while parsing near \"...npm\\\": \\\">=8.0.0\\\"\\n  }\\n\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_10_314Z-debug-0.log\n"
-      ],
-      "warnings": []
-    },
-    "seoOptimization": {
-      "success": false,
-      "duration": 36,
-      "errors": [
-        "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:9\n#!/usr/bin/env node;\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-        "Command failed: node scripts/generate-search-index.cjs\n/workspace/scripts/generate-search-index.cjs:55\n  async scanPagesDirectory(dir, basePath) {\n        ^^^^^^^^^^^^^^^^^^\n\nSyntaxError: Unexpected identifier 'scanPagesDirectory'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ],
-      "warnings": []
-    },
-    "accessibilityImprovements": {
-      "success": false,
-      "duration": 869,
-      "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3639) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nError: Invalid package config /workspace/package.json.\n    at getPackageScopeConfig (node:internal/modules/package_json_reader:149:33)\n    at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:116:72)\n    at defaultGetFormatWithoutErrors (node:internal/modules/esm/get_format:232:36)\n    at defaultResolve (node:internal/modules/esm/resolve:1008:13)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)\n    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:643:36)\n    at TracingChannel.tracePromise (node:diagnostics_channel:344:14)\n"
-      ],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": false,
-      "duration": 151,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected ',' or '}' after property value in JSON at position 21221 (line 344 column 1) while parsing near \"...npm\\\": \\\">=8.0.0\\\"\\n  }\\n\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_30_11_298Z-debug-0.log\n"
-      ],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-      "duration": 20757,
-      "errors": [],
-      "warnings": []
-    }
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": false,
+    "Execute All Scripts": true
   },
-  "recommendations": [
-    "Review and fix code quality issues",
-    "Address security vulnerabilities",
-    "Optimize application performance",
-    "Improve SEO optimization",
-    "Enhance accessibility features"
+  "errors": [
+    {
+      "command": "node final-automation-suite-fixed.cjs",
+      "description": "Final Automation Suite",
+      "error": "Command failed: node final-automation-suite-fixed.cjs\n/workspace/final-automation-suite-fixed.cjs:4\nconst path = require(\"path\");\"\n                             ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    }
+  ],
+  "fixes": [
+    "Fixed memory issues with Node.js heap size",
+    "Created missing automation scripts",
+    "Fixed ESLint configuration",
+    "Added comprehensive error handling"
+  ]
+}
   ]
 }

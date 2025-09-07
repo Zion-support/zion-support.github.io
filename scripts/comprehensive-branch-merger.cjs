@@ -1,19 +1,7 @@
 #!/usr/bin/env node;
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
 const branches = execSync('git branch -r', { "encoding"});
@@ -34,8 +22,3 @@ const mergedBranches = execSync('git branch -r --merged main', { "encoding"});
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
     console.error(' Comprehensive branch merger "failed")
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log('� Comprehensive Branch Merger')

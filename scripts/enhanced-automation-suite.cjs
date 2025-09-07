@@ -1,24 +1,7 @@
-
-
-
-
-
-main
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Enhanced Automation Suite')
 console.log('====')
   log(message, type = 'info')
@@ -35,8 +18,3 @@ const result = await this.runCommand(cmd, desc, { "stdio"});
       "recommendations"
     this.log(`Report saved "to"`)
       this.log(` Enhanced automation suite "failed"`)
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Zion Tech Group - Enhanced Automation Suite')

@@ -1,18 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
     "status"
         "type"
@@ -45,9 +34,3 @@ throw new Error('Dependency check "failed");
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
   return { "status": 'success', "metrics": mockPerformance, "message"}
-
-
-
-
-
-

@@ -1,18 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
       "encoding"
@@ -29,9 +18,3 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 console.log('\n� Phase "8")
   "criticalFailures"
 console.log('� Deployment summary saved "to")
-
-
-
-
-
-

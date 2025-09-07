@@ -1,10 +1,6 @@
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
-///usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
 function sh(cmd) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()};
 function getToken() {}
@@ -54,9 +50,15 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-"User-Agent": "force-merge-script"
-
-    console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
+    }
+})
+  const text = await res.text()
+  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
+  let mergedCount = 0; let attempted = 0,
+  for($2) {}
+    attempted++
+    const head = pr.head && pr.head.ref,
+  console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...');

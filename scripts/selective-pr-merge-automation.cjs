@@ -1,18 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env node;
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 // console.log(' Selective PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -28,6 +18,3 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-console.error('Automation "failed")"
-cursor/fix-lint-push-and-merge-to-main-f3c1
-"`
