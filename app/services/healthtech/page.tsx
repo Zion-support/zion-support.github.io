@@ -6,343 +6,57 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page solutions for your business needs.',
-  keywords: 'page',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-  },
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+  title: 'Healthtech | Zion Tech Group',
+  description: 'Professional healthtech services for your business needs.',
+  keywords: 'healthtech'
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              HealthTech Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with innovative HealthTech solutions.
-              From telemedicine to medical AI, we build secure, HIPAA-compliant technology that improves patient outcomes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Email kleber@ziontechgroup.com
-              </a>
-            </div>
-=======
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Healthtech
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional page solutions for your business needs.
+            Professional healthtech services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced features and capabilities for your business needs.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert healthtech solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
           </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
-            <p className="text-gray-600 mb-4">
-              Transform your business with our cutting-edge solutions.
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
           </div>
-
-<<<<<<< HEAD
-      {/* Our HealthTech Solutions */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our HealthTech Solutions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive healthcare technology solutions that improve patient care, streamline operations, and enhance medical outcomes.
-=======
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive support and maintenance services.
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
-          </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <HealthTechServiceCard
-              title="Electronic Health Records (EHR)"
-              description="Comprehensive EHR system with patient management, clinical documentation, and interoperability features."
-              features={[
-                'Patient record management',
-                'Clinical documentation',
-                'Interoperability (HL7, FHIR)',
-                'Prescription management',
-                'Appointment scheduling',
-                'HIPAA compliance & security',
-              ]}
-              pricing="$75,000-400,000"
-              marketSize="$28.1B EHR market"
-              icon="📋"
-            />
-            <HealthTechServiceCard
-              title="Telemedicine Platform"
-              description="Complete telemedicine solution with video consultations, remote monitoring, and virtual care management."
-              features={[
-                'Video consultation platform',
-                'Remote patient monitoring',
-                'Virtual waiting rooms',
-                'Prescription management',
-                'Insurance verification',
-                'Multi-language support',
-              ]}
-              pricing="$50,000-250,000"
-              marketSize="$185.6B telemedicine market"
-              icon="📹"
-            />
-            <HealthTechServiceCard
-              title="Medical AI & Diagnostics"
-              description="AI-powered diagnostic tools with medical image analysis, symptom checking, and treatment recommendations."
-              features={[
-                'Medical image analysis (X-ray, MRI, CT)',
-                'Symptom checker AI',
-                'Diagnostic assistance',
-                'Treatment recommendations',
-                'Drug interaction checking',
-                'Clinical decision support',
-              ]}
-              pricing="$100,000-500,000"
-              marketSize="$7.8B medical AI market"
-              icon="🤖"
-            />
-            <HealthTechServiceCard
-              title="Healthcare Analytics Platform"
-              description="Advanced healthcare analytics with population health management, predictive modeling, and outcome tracking."
-              features={[
-                'Population health analytics',
-                'Predictive health modeling',
-                'Outcome tracking & reporting',
-                'Cost analysis & optimization',
-                'Quality metrics dashboard',
-                'Risk stratification',
-              ]}
-              pricing="$60,000-300,000"
-              marketSize="$4.2B healthcare analytics market"
-              icon="📊"
-            />
-            <HealthTechServiceCard
-              title="Patient Portal & Engagement"
-              description="Comprehensive patient portal with appointment scheduling, health records access, and communication tools."
-              features={[
-                'Appointment scheduling',
-                'Health records access',
-                'Secure messaging',
-                'Prescription refills',
-                'Lab results viewing',
-                'Health education content',
-              ]}
-              pricing="$40,000-200,000"
-              marketSize="$2.8B patient engagement market"
-              icon="👤"
-            />
-            <HealthTechServiceCard
-              title="Medical Device Integration"
-              description="IoT platform for medical device connectivity, data collection, and real-time monitoring."
-              features={[
-                'Medical device connectivity',
-                'Real-time data collection',
-                'Alert & notification system',
-                'Data visualization',
-                'Integration with EHR systems',
-                'Remote device management',
-              ]}
-              pricing="$80,000-400,000"
-              marketSize="$5.8B medical IoT market"
-              icon="🏥"
-            />
-            <HealthTechServiceCard
-              title="Pharmacy Management System"
-              description="Complete pharmacy management with inventory control, prescription processing, and patient care tools."
-              features={[
-                'Inventory management',
-                'Prescription processing',
-                'Insurance verification',
-                'Drug interaction checking',
-                'Patient counseling tools',
-                'Compliance reporting',
-              ]}
-              pricing="$45,000-225,000"
-              marketSize="$3.4B pharmacy management market"
-              icon="💊"
-            />
-            <HealthTechServiceCard
-              title="Healthcare CRM & Marketing"
-              description="Healthcare-specific CRM with patient relationship management, marketing automation, and engagement tracking."
-              features={[
-                'Patient relationship management',
-                'Marketing automation',
-                'Appointment reminders',
-                'Patient satisfaction surveys',
-                'Referral tracking',
-                'Campaign analytics',
-              ]}
-              pricing="$35,000-175,000"
-              marketSize="$2.1B healthcare CRM market"
-              icon="📞"
-            />
-            <HealthTechServiceCard
-              title="Mental Health Platform"
-              description="Digital mental health platform with therapy sessions, mood tracking, and wellness programs."
-              features={[
-                'Virtual therapy sessions',
-                'Mood & symptom tracking',
-                'Wellness programs',
-                'Crisis intervention tools',
-                'Provider matching',
-                'Progress monitoring',
-              ]}
-              pricing="$55,000-275,000"
-              marketSize="$4.2B digital mental health market"
-              icon="🧠"
-            />
-            <HealthTechServiceCard
-              title="Clinical Trial Management"
-              description="Comprehensive clinical trial platform with patient recruitment, data collection, and regulatory compliance."
-              features={[
-                'Patient recruitment tools',
-                'Electronic data capture (EDC)',
-                'Regulatory compliance',
-                'Site management',
-                'Data monitoring',
-                'Trial analytics',
-              ]}
-              pricing="$90,000-450,000"
-              marketSize="$6.8B clinical trial management market"
-              icon="🔬"
-            />
-            <HealthTechServiceCard
-              title="Healthcare Billing & Revenue Cycle"
-              description="Automated healthcare billing with claims processing, payment collection, and revenue optimization."
-              features={[
-                'Claims processing automation',
-                'Payment collection',
-                'Insurance verification',
-                'Denial management',
-                'Revenue cycle analytics',
-                'Compliance monitoring',
-              ]}
-              pricing="$65,000-325,000"
-              marketSize="$3.7B healthcare billing market"
-              icon="💰"
-            />
-            <HealthTechServiceCard
-              title="Wearable Health Integration"
-              description="Platform for integrating wearable health devices with healthcare systems and patient monitoring."
-              features={[
-                'Wearable device integration',
-                'Health data aggregation',
-                'Real-time monitoring',
-                'Alert systems',
-                'Trend analysis',
-                'Provider dashboards',
-              ]}
-              pricing="$45,000-225,000"
-              marketSize="$2.9B wearable health market"
-              icon="⌚"
-            />
-            <HealthTechServiceCard
-              title="Healthcare Supply Chain"
-              description="Healthcare supply chain management with inventory optimization, demand forecasting, and cost control."
-              features={[
-                'Inventory optimization',
-                'Demand forecasting',
-                'Supplier management',
-                'Cost control & analysis',
-                'Compliance tracking',
-                'Automated reordering',
-              ]}
-              pricing="$50,000-250,000"
-              marketSize="$2.3B healthcare supply chain market"
-              icon="📦"
-            />
-            <HealthTechServiceCard
-              title="Medical Imaging Platform"
-              description="Advanced medical imaging platform with AI analysis, storage, and sharing capabilities."
-              features={[
-                'Medical image storage & management',
-                'AI-powered image analysis',
-                'DICOM compliance',
-                'Image sharing & collaboration',
-                'Diagnostic tools',
-                'Integration with PACS',
-              ]}
-              pricing="$70,000-350,000"
-              marketSize="$4.8B medical imaging market"
-              icon="🖼️"
-            />
-            <HealthTechServiceCard
-              title="Healthcare Compliance & Risk Management"
-              description="Comprehensive compliance management with risk assessment, audit trails, and regulatory reporting."
-              features={[
-                'Compliance monitoring',
-                'Risk assessment tools',
-                'Audit trail management',
-                'Regulatory reporting',
-                'Policy management',
-                'Training & certification',
-              ]}
-              pricing="$40,000-200,000"
-              marketSize="$1.9B healthcare compliance market"
-              icon="🛡️"
-            />
-          </div>
           </div>
         </div>
-      </section>
+
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

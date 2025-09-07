@@ -191,4 +191,3 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 };
->>>>>>> origin/chore/fix-lint-and-merge

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 <<<<<<< HEAD
 export const metadata = {
@@ -16,273 +17,52 @@ export const metadata = {
 
 =======
 export const metadata: Metadata = {
-  title: 'AI Expense Tracker | Zion Tech Group',
-  description: 'Professional AI expense tracker solutions for your business needs.',
-  keywords: 'AI expense tracker, expense management, financial tracking, business expenses',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Expense Tracker | Zion Tech Group',
-    description: 'Professional AI expense tracker solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Expense Tracker | Zion Tech Group',
-    description: 'Professional AI expense tracker solutions for your business needs.',
-  },
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+  title: 'Ai Expense Tracker | Zion Tech Group',
+  description: 'Professional ai expense tracker services for your business needs.',
+  keywords: 'ai, expense, tracker'
 };
 
-export default function AIExpenseTrackerPage() {
+export default function AiexpensetrackerPage() {
   return (
-<<<<<<< HEAD
-    <div className="animate-fade-in">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Expense Tracker
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional ai expense tracker services for your business needs.
+          </p>
+        </div>
 
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="🧠"
-              title="Behavioral Analysis"
-              description="AI-powered analysis of customer interactions, purchase patterns, and engagement metrics across all touchpoints."
-            />
-            <FeatureItem
-              icon="📊"
-              title="Predictive Analytics"
-              description="Machine learning models to predict customer lifetime value, churn risk, and future purchase behavior."
-            />
-            <FeatureItem
-              icon="🎯"
-              title="Segmentation Intelligence"
-              description="Automated customer segmentation based on behavior, demographics, and preferences for targeted marketing."
-            />
-            <FeatureItem
-              icon="💬"
-              title="Sentiment Analysis"
-              description="Real-time analysis of customer feedback, reviews, and social media mentions to understand satisfaction levels."
-            />
-            <FeatureItem
-              icon="📈"
-              title="Trend Detection"
-              description="Identify emerging trends, seasonal patterns, and market shifts that impact customer behavior."
-            />
-            <FeatureItem
-              icon="🔮"
-              title="Recommendation Engine"
-              description="Personalized product and content recommendations based on individual customer preferences and behavior."
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Key Features
-          </h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="📸"
-              title="Smart Receipt Scanning"
-              description="Take a photo of any receipt and our AI automatically extracts merchant, amount, date, and category information."
-            />
-            <FeatureItem
-              icon="🏷️"
-              title="Auto-Categorization"
-              description="AI-powered expense categorization that learns from your patterns and automatically sorts expenses by type."
-            />
-            <FeatureItem
-              icon="📊"
-              title="Real-time Analytics"
-              description="Comprehensive dashboards showing spending patterns, budget tracking, and financial insights."
-            />
-            <FeatureItem
-              icon="💼"
-              title="Business Integration"
-              description="Seamlessly integrate with accounting software like QuickBooks, Xero, and SAP for streamlined workflows."
-            />
-            <FeatureItem
-              icon="🔍"
-              title="Expense Search & Filter"
-              description="Powerful search capabilities to find any expense instantly, with advanced filtering by date, category, or amount."
-            />
-            <FeatureItem
-              icon="📱"
-              title="Mobile App"
-              description="Full-featured mobile app for iOS and Android with offline capability and receipt scanning on the go."
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aiexpensetracker solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
           </div>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              plan="Personal"
-              price="$9"
-              period="per month"
-              description="Perfect for individuals and freelancers"
-              features={[
-                "Up to 100 receipts per month",
-                "Basic categorization",
-                "Expense reports",
-                "Mobile app access",
-                "Email support",
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              plan="Business"
-              price="$29"
-              period="per month"
-              description="Ideal for small to medium businesses"
-              features={[
-                "Up to 500 receipts per month",
-                "Advanced AI categorization",
-                "Team collaboration",
-                "Accounting integrations",
-                "Priority support",
-                "Custom reporting",
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              plan="Enterprise"
-              price="$99"
-              period="per month"
-              description="For large organizations with complex needs"
-              features={[
-                "Unlimited receipts",
-                "Custom AI training",
-                "Advanced analytics",
-                "Dedicated support",
-                "Custom integrations",
-                "On-premise deployment",
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
-      </div>
-
-        {/* CTA Section */}
-        <div className="text-center py-16 bg-blue-50 rounded-lg">
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Unlock Customer Insights?
-          </h2>
-
-          <div className="space-y-6">
-            <FeatureItem
-              icon="🧠"
-              title="Predictive Analytics"
-              description="AI-powered customer lifetime value prediction, churn risk analysis, and purchase behavior forecasting"
-            />
-            <FeatureItem
-              icon="😊"
-              title="Sentiment Analysis"
-              description="Real-time sentiment analysis from reviews, social media, and customer feedback across all channels"
-            />
-            <FeatureItem
-              icon="🎯"
-              title="Customer Segmentation"
-              description="Advanced AI clustering to identify high-value customer segments and personalized targeting strategies"
-            />
-            <FeatureItem
-              icon="📊"
-              title="Behavioral Analytics"
-              description="Deep insights into customer journey, engagement patterns, and conversion optimization opportunities"
-            />
-            <FeatureItem
-              icon="🔮"
-              title="Churn Prediction"
-              description="Early warning system to identify at-risk customers and trigger retention campaigns"
-            />
-            <FeatureItem
-              icon="📈"
-              title="ROI Optimization"
-              description="AI recommendations for marketing spend allocation and customer acquisition strategies"
-
-            />
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              plan="Starter"
-              price="$199"
-              period="per month"
-              description="Perfect for small businesses getting started with customer analytics"
-              features={[
-                "Up to 10,000 customer records",
-                "Basic behavioral analysis",
-                "Standard segmentation",
-                "Email support",
-                "Monthly reports"
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              plan="Professional"
-              price="$599"
-              period="per month"
-              description="Ideal for growing businesses with complex customer data"
-              features={[
-                "Up to 100,000 customer records",
-                "Advanced AI analytics",
-                "Predictive modeling",
-                "Real-time insights",
-                "Priority support",
-                "Custom dashboards"
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              plan="Enterprise"
-              price="$1,999"
-              period="per month"
-              description="For large organizations with extensive customer data needs"
-              features={[
-                "Unlimited customer records",
-                "Custom AI models",
-                "Advanced predictive analytics",
-                "Dedicated support",
-                "Custom integrations",
-                "On-premise deployment"
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
-      </div>
-
-            title="Track & Report"
-            description="View real-time analytics, generate reports, and export data to your accounting system."
-
-          />
-        </div>
-      </div>
-
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
           >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

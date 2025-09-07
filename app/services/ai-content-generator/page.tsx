@@ -3,76 +3,55 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-  title: 'AI Content Generator | Zion Tech Group',
-  description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials.',
-  keywords: 'AI content generator, content creation, blog writing, social media content, marketing copy',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Content Generator | Zion Tech Group',
-    description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Content Generator | Zion Tech Group',
-    description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials.',
-  },
+  title: 'Ai Content Generator | Zion Tech Group',
+  description: 'Professional ai content generator services for your business needs.',
+  keywords: 'ai, content, generator'
 };
 
-export default function AIContentGeneratorPage() {
+export default function AicontentgeneratorPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Content Generator</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Content Generator
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Advanced AI-powered content creation platform for blogs, social media, and marketing materials.
+            Professional ai content generator services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Blog Content</h3>
-            <p className="text-gray-600 mb-4">
-              Generate high-quality blog posts and articles with AI assistance.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aicontentgenerator solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• SEO-optimized articles</li>
-              <li>• Research-backed content</li>
-              <li>• Multiple writing styles</li>
-            </ul>
           </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
+          </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Social Media</h3>
-            <p className="text-gray-600 mb-4">
-              Create engaging social media posts and captions.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Platform-specific content</li>
-              <li>• Hashtag optimization</li>
-              <li>• Trend integration</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Marketing Copy</h3>
-            <p className="text-gray-600 mb-4">
-              Generate compelling marketing materials and ad copy.
-            </p>
-<<<<<<< HEAD
-=======
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Email campaigns</li>
-              <li>• Ad copy</li>
-              <li>• Product descriptions</li>
-            </ul>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-          </div>
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

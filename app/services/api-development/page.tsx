@@ -5,165 +5,57 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page solutions for your business needs.',
-  keywords: 'page',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-  },
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+  title: 'Api Development | Zion Tech Group',
+  description: 'Professional api development services for your business needs.',
+  keywords: 'api, development'
 };
 
-export default function ServicePage() {
+export default function ApidevelopmentPage() {
   return (
-<<<<<<< HEAD
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">API Development</h1>
-      <p className="text-xl text-gray-600 mb-12">Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.</p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard
-          title="API Design & Development"
-          features={[
-            'RESTful API design',
-            'GraphQL implementation',
-            'Microservices architecture',
-            'API documentation',
-          ]}
-        />
-        <FeatureCard
-          title="Integration & Testing"
-          features={[
-            'Third-party integrations',
-            'API testing & validation',
-            'Performance optimization',
-            'Security implementation',
-          ]}
-        />
-        <FeatureCard
-          title="API Management"
-          features={[
-            'Rate limiting',
-            'Authentication & authorization',
-            'Monitoring & analytics',
-            'Version control',
-          ]}
-        />
-      </div>
-=======
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Api Development
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional page solutions for your business needs.
+            Professional api development services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced features and capabilities for your business needs.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert apidevelopment solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
           </div>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
-            <p className="text-gray-600 mb-4">
-              Transform your business with our cutting-edge solutions.
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
           </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive support and maintenance services.
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
           </div>
         </div>
-      </div>
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
 
-      <Pricing />
-
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Build Your API?
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Start with a free consultation to design the perfect API architecture
-          for your needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-fuchsia-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-700 transition-colors"
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
           >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-fuchsia-600 text-fuchsia-600 px-8 py-3 rounded-lg font-semibold hover:bg-fuchsia-600 hover:text-white transition-colors"
-          >
-            Email Us
-
-          </a>
+            Get Started
+          </Link>
         </div>
       </div>
-    </section>
-  );
-}
-
-function FeatureCard({}
-  title,
-  features,
-}: {}
-  title: string;
-  features: string[];
-}) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">"
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
-      <ul className="space-y-2 text-gray-600">
-        {features.map((f) => ("
-          <li key={f} className="flex items-center">"
-            <span className="text-fuchsia-500 mr-2">•</span> {f}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

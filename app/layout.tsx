@@ -1,47 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import './globals.css';
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 import type { Metadata } from 'next';
-import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-// import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-<<<<<<< HEAD
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of micro SaaS products, AI services, and IT solutions.',
-    type: 'website',
-    locale: 'en_US',
-=======
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
+  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
+  description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
   keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
@@ -69,8 +34,6 @@ export const metadata: Metadata = {
         alt: 'Zion Tech Group - Enterprise AI & IT Solutions',
       },
     ],
-<<<<<<< HEAD
-=======
     locale: 'en_US',
     type: 'website',
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -78,7 +41,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    images: ['/og-image.jpg'],
   },
 <<<<<<< HEAD
 =======
@@ -96,7 +60,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
->>>>>>> origin/chore/fix-lint-and-merge
+  themeColor: '#000000',
 };
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
@@ -107,38 +71,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body>{children}</body>
-=======
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <PerformanceMonitor />
-<<<<<<< HEAD
-=======
-        <Header />
-        <main>{children}</main>
-        <Footer />
->>>>>>> origin/chore/fix-lint-and-merge
+      <body className={inter.className}>
+        {children}
       </body>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     </html>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/chore/fix-lint-and-merge

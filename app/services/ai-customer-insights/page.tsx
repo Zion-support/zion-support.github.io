@@ -3,165 +3,55 @@ import Link from 'next/link';
 =======
 import React from 'react';
 import { Metadata } from 'next';
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Customer Insights | Zion Tech Group',
-  description: 'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',
-  keywords: 'AI customer insights, customer analytics, behavior analysis, data insights',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Customer Insights | Zion Tech Group',
-    description: 'Transform customer data into actionable insights with AI-powered analytics.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Customer Insights | Zion Tech Group',
-    description: 'Transform customer data into actionable insights with AI-powered analytics.',
-  },
+  title: 'Ai Customer Insights | Zion Tech Group',
+  description: 'Professional ai customer insights services for your business needs.',
+  keywords: 'ai, customer, insights'
 };
 
-<<<<<<< HEAD
-export default function ServicePage() {
-=======
-export default function AICustomerInsightsPage() {
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+export default function AicustomerinsightsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Customer Insights</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Customer Insights
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.
+            Professional ai customer insights services for your business needs.
           </p>
         </div>
 
-<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aicustomerinsights solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Ready to Unlock Customer Insights?
-          </h2>
-          <div className="space-y-6">
-            <FeatureItem
-              icon="🧠"
-              title="Predictive Analytics"
-              description="AI-powered customer lifetime value prediction, churn risk analysis, and purchase behavior forecasting"
-            />
-            <FeatureItem
-              icon="😊"
-              title="Sentiment Analysis"
-              description="Real-time sentiment analysis from reviews, social media, and customer feedback across all channels"
-            />
-            <FeatureItem
-              icon="🎯"
-              title="Customer Segmentation"
-              description="Advanced AI clustering to identify high-value customer segments and personalized targeting strategies"
-            />
-            <FeatureItem
-              icon="📊"
-              title="Behavioral Analytics"
-              description="Deep insights into customer journey, engagement patterns, and conversion optimization opportunities"
-            />
-            <FeatureItem
-              icon="🔮"
-              title="Churn Prediction"
-              description="Early warning system to identify at-risk customers and trigger retention campaigns"
-            />
-            <FeatureItem
-              icon="📈"
-              title="ROI Optimization"
-              description="AI recommendations for marketing spend allocation and customer acquisition strategies"
-            />
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Behavior Analysis</h3>
-            <p className="text-gray-600 mb-4">
-              Analyze customer behavior patterns and preferences using advanced AI.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Purchase patterns</li>
-              <li>• Engagement metrics</li>
-              <li>• Preference tracking</li>
-            </ul>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-          </div>
-
-<<<<<<< HEAD
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              title="Starter"
-              price="$79"
-              period="per month"
-              description="Perfect for small businesses and startups"
-              features={[
-                'Up to 10,000 customers',
-                'Basic analytics',
-                'Sentiment analysis',
-                'Email support',
-                'Standard reports',
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              title="Professional"
-              price="$199"
-              period="per month"
-              description="Ideal for growing businesses and marketing teams"
-              features={[
-                'Up to 100,000 customers',
-                'Advanced AI features',
-                'Predictive modeling',
-                'Priority support',
-                'Custom dashboards',
-                'API access',
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              title="Enterprise"
-              price="$599"
-              period="per month"
-              description="For large organizations with complex customer data"
-              features={[
-                'Unlimited customers',
-                'Custom AI models',
-                'Real-time processing',
-                '24/7 support',
-                'Custom integrations',
-                'Dedicated analyst',
-              ]}
-              popular={false}
-            />
-=======
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
-            <p className="text-gray-600 mb-4">
-              Predict customer actions and optimize your strategies accordingly.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Churn prediction</li>
-              <li>• Lifetime value</li>
-              <li>• Next best action</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Insights</h3>
-            <p className="text-gray-600 mb-4">
-              Get real-time customer insights to make immediate decisions.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Live dashboards</li>
-              <li>• Instant alerts</li>
-              <li>• Dynamic reports</li>
-            </ul>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

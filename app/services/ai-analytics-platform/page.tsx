@@ -3,196 +3,55 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-  title: 'AI Analytics Platform | Zion Tech Group',
-  description: 'Comprehensive AI-powered analytics platform for advanced data processing and business intelligence.',
-  keywords: 'AI analytics platform, data processing, business intelligence, machine learning',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Analytics Platform | Zion Tech Group',
-    description: 'Comprehensive AI-powered analytics platform for advanced data processing.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Analytics Platform | Zion Tech Group',
-    description: 'Comprehensive AI-powered analytics platform for advanced data processing.',
-  },
+  title: 'Ai Analytics Platform | Zion Tech Group',
+  description: 'Professional ai analytics platform services for your business needs.',
+  keywords: 'ai, analytics, platform'
 };
 
-export default function AIAnalyticsPlatformPage() {
+export default function AianalyticsplatformPage() {
   return (
-<<<<<<< HEAD
-
-export default function ServicePage() {
-  return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-
-            AI Analytics Platform
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Analytics Platform
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional AI analytics platform services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai-analytics-platform solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai-analytics-platform solutions run smoothly.
-          icon="📊"
-        />
-        <FeatureCard"
-          title="AI-Powered Analytics"
-          features={[
-            'Predictive modeling & forecasting',
-            'Anomaly detection & alerts',
-            'Natural language query interface',
-            'Automated insight generation',
-            'Machine learning model deployment',
-            'Custom algorithm development',
-          ]}
-          icon="🧠"
-        />
-        <FeatureCard"
-          title="Visualization & Reporting"
-          features={[
-            'Interactive dashboards & charts',
-            'Automated report generation',
-            'Mobile-responsive design',
-            'Real-time data visualization',
-            'Custom KPI tracking',
-            'Scheduled report delivery',
-          ]}
-          icon="📈"
-        />
-      </div>
-"
-      <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-xl p-8 mb-16">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Platform Capabilities;
-        </h2>"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
-          <div className="text-center">"
-            <div className="text-4xl mb-4">⚡</div>"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Real-time Processing;
-            </h3>"
-            <p className="text-gray-600">
-              Process millions of data points in seconds;
-
-            </p>
-          </div>"
-          <div className="text-center">"
-            <div className="text-4xl mb-4">🎯</div>"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              95% Accuracy;
-            </h3>"
-            <p className="text-gray-600">
-              AI predictions with industry-leading accuracy;
-            </p>
-          </div>"
-          <div className="text-center">"
-            <div className="text-4xl mb-4">🔒</div>"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Enterprise Security;
-            </h3>"
-            <p className="text-gray-600">
-              SOC 2 compliant with end-to-end encryption;
-            </p>
-          </div>"
-          <div className="text-center">"
-            <div className="text-4xl mb-4">📱</div>"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Mobile Access;
-            </h3>"
-            <p className="text-gray-600">
-              Access insights anywhere with mobile apps;
-            </p>
-
-          </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Easy Integration</h3>
-              <p className="text-gray-600">
-                RESTful APIs and pre-built connectors for seamless integration
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Analytics Platform</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI-powered analytics platform for advanced data processing and business intelligence.
+            Professional ai analytics platform services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Processing</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced data processing capabilities with AI-powered insights.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aianalyticsplatform solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Real-time data streaming</li>
-              <li>• Data cleansing and validation</li>
-              <li>• Multi-source data integration</li>
-            </ul>
           </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
+          </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>
-            <p className="text-gray-600 mb-4">
-              Built-in ML models for predictive analytics and pattern recognition.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Predictive modeling</li>
-              <li>• Anomaly detection</li>
-              <li>• Pattern recognition</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Visualization</h3>
-            <p className="text-gray-600 mb-4">
-              Interactive dashboards and customizable data visualizations.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Interactive charts</li>
-              <li>• Custom dashboards</li>
-              <li>• Real-time monitoring</li>
-            </ul>
-          </div>
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

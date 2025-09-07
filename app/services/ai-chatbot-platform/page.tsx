@@ -3,110 +3,56 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-  title: 'AI Chatbot Platform | Zion Tech Group',
-  description: 'Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required.',
-  keywords: 'AI chatbot platform, conversational AI, chatbot development, customer service automation',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Chatbot Platform | Zion Tech Group',
-    description: 'Build intelligent chatbots with natural language processing and multi-channel deployment.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Chatbot Platform | Zion Tech Group',
-    description: 'Build intelligent chatbots with natural language processing and multi-channel deployment.',
-  },
+  title: 'Ai Chatbot Platform | Zion Tech Group',
+  description: 'Professional ai chatbot platform services for your business needs.',
+  keywords: 'ai, chatbot, platform'
 };
 
-export default function AIChatbotPlatformPage() {
+export default function AichatbotplatformPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Chatbot Platform</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Chatbot Platform
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management.
+            Professional ai chatbot platform services for your business needs.
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <FeatureCard
-            icon="🤖"
-            title="Natural Language Processing"
-            description="Advanced NLP for human-like conversations"
-            features={[
-              'Intent recognition',
-              'Entity extraction',
-              'Sentiment analysis',
-              'Context awareness',
-            ]}
-          />
-          <FeatureCard
-            icon="💬"
-            title="Multi-Channel Deployment"
-            description="Deploy across all your customer touchpoints"
-            features={[
-              'Website chat',
-              'Mobile apps',
-              'Social media',
-              'Voice assistants',
-            ]}
-          />
-          <FeatureCard
-            icon="🧠"
-            title="Machine Learning"
-            description="Self-improving chatbots that learn from interactions"
-            features={[
-              'Conversation learning',
-              'Performance optimization',
-              'A/B testing',
-              'Analytics insights',
-            ]}
-          />
-          <FeatureCard
-            icon="🎨"
-            title="Visual Builder"
-            description="Drag-and-drop interface for easy chatbot creation"
-            features={[
-              'No-code builder',
-              'Pre-built templates',
-              'Custom workflows',
-              'Rich media support',
-            ]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Analytics & Insights"
-            description="Comprehensive analytics for chatbot performance"
-            features={[
-              'Conversation analytics',
-              'User satisfaction',
-              'Conversion tracking',
-              'Custom reports',
-            ]}
-          />
-          <FeatureCard
-            icon="🔗"
-            title="Integrations"
-            description="Connect with your existing business tools"
-            features={[
-              'CRM integration',
-              'Help desk systems',
-              'Payment processing',
-              'Database connections',
-            ]}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aichatbotplatform solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
+          </div>
         </div>
 
-        <UseCasesSection />
-        <PricingSection />
-        <ContactSection />
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     </div>
   );

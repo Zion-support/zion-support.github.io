@@ -8,72 +8,55 @@ export default function ServicePage() {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page solutions for your business needs.',
-  keywords: 'page',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-  },
+  title: 'Ai Fintech Solutions | Zion Tech Group',
+  description: 'Professional ai fintech solutions services for your business needs.',
+  keywords: 'ai, fintech, solutions'
 };
 
-export default function ServicePage() {
+export default function AifintechsolutionsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Fintech Solutions
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional page solutions for your business needs.
+            Professional ai fintech solutions services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced features and capabilities for your business needs.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aifintechsolutions solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
           </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
+            </p>
+          </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
-            <p className="text-gray-600 mb-4">
-              Transform your business with our cutting-edge solutions.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive support and maintenance services.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
-          </div>
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

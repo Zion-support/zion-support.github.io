@@ -28,201 +28,57 @@ export const metadata = {
 =======
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'AI Project Management | Zion Tech Group',
-  description: 'Professional AI project management solutions for your business needs.',
-  keywords: 'AI project management, project automation, team collaboration, project tracking',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Project Management | Zion Tech Group',
-    description: 'Professional AI project management solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Project Management | Zion Tech Group',
-    description: 'Professional AI project management solutions for your business needs.',
-  },
+  title: 'Ai Project Management | Zion Tech Group',
+  description: 'Professional ai project management services for your business needs.',
+  keywords: 'ai, project, management'
 };
 
-export default function AIProjectManagementPage() {
+export default function AiprojectmanagementPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Project Management</h1>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Project Management
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional AI project management solutions for your business needs.
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+            Professional ai project management services for your business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced features and capabilities for your business needs.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Professional Service</h3>
+            <p className="text-gray-600">
+              Expert aiprojectmanagement solutions tailored to your business needs.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
           </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
-            <p className="text-gray-600 mb-4">
-              Transform your business with our cutting-edge solutions.
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+            <p className="text-gray-600">
+              Personalized approach to meet your specific requirements and goals.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
           </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive support and maintenance services.
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Expert Support</h3>
+            <p className="text-gray-600">
+              Dedicated support team to ensure your success and satisfaction.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
 
-      {/* Pricing */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your team size and project complexity. All plans include our core AI features.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingTier
-            name="Team"
-            price="$29"
-            period="user/month"
-            description="Perfect for small teams and startups"
-            features={[
-              "Up to 10 users",
-              "AI task prioritization",
-              "Basic automation",
-              "Project templates",
-              "Mobile app access",
-              "Email support"
-            ]}
-          />
-          <PricingTier
-            name="Professional"
-            price="$59"
-            period="user/month"
-            description="Most popular for growing teams"
-            features={[
-              "Up to 50 users",
-              "Full AI suite",
-              "Advanced analytics",
-              "Custom workflows",
-              "API access",
-              "Priority support",
-              "Advanced reporting"
-            ]}
-            popular={true}
-          />
-          <PricingTier
-            name="Enterprise"
-            price="$99"
-            period="user/month"
-            description="For large organizations with complex needs"
-            features={[
-              "Unlimited users",
-              "Custom AI models",
-              "White-label options",
-              "Dedicated support",
-              "Advanced security",
-              "Custom integrations",
-              "On-premise deployment"
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Integration Section */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Connect with your existing tools and workflows for a unified project management experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {[
-            { name: "Slack", icon: "💬" },
-            { name: "Microsoft Teams", icon: "🔵" },
-            { name: "Jira", icon: "🔧" },
-            { name: "Asana", icon: "📋" },
-            { name: "Trello", icon: "📌" },
-            { name: "GitHub", icon: "🐙" },
-            { name: "GitLab", icon: "🦊" },
-            { name: "Bitbucket", icon: "🪣" },
-            { name: "Google Workspace", icon: "🔍" },
-            { name: "Microsoft 365", icon: "📊" },
-            { name: "Zoom", icon: "📹" },
-            { name: "Calendly", icon: "📅" }
-          ].map((integration, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl mb-2">{integration.icon}</div>
-              <h3 className="font-semibold text-gray-900 text-sm">{integration.name}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Project Management?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join hundreds of teams already using our AI-powered project management platform to boost productivity and deliver projects on time.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Inquiry"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        <div className="text-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
           >
-            Start Free Trial
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
+            Get Started
+          </Link>
         </div>
       </div>
-    </section>
-  );
-}
-
-function FeatureCard({ title, features }: { title: string; features: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {features.map(f => (
-          <li key={f} className="flex items-center">
-            <span className="text-indigo-500 mr-2">•</span> {f}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
