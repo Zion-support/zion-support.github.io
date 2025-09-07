@@ -5,117 +5,39 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
+    "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
-    "build:netlify": "node scripts/build-with-error-handling.js",
-    "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "postbuild": "echo \"Build completed\"",
-=======
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
-    "lint:check": "eslint . --max-warnings 0",
-    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
-    "test": "jest --config jest.config.cjs",
-<<<<<<< HEAD
-    "test:smoke": "jest --config jest.config.cjs --testNamePattern=\"smoke\"",
-    "test:watch": "jest --config jest.config.cjs --watch",
-    "test:coverage": "jest --config jest.config.cjs --coverage",
-    "analyze": "npm run build && npx @next/bundle-analyzer",
-    "clean": "rm -rf .next out dist",
-    "precommit": "npm run lint && npm run type-check",
-    "postinstall": "echo \"Dependencies installed successfully\""
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/react": "^13.4.0",
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "@typescript-eslint/eslint-plugin": "^8.42.0",
-    "@typescript-eslint/parser": "^8.42.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "next": "^15.5.2",
-    "postcss": "^8.5.0",
-    "prettier": "^3.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.9.2"
-  },
-  "devDependencies": {
-    "@next/bundle-analyzer": "^15.5.2",
-    "@types/jest": "^29.5.12"
-=======
-    "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
-    "test:watch": "jest --watch --config jest.config.ts",
-    "test:coverage": "jest --coverage --config jest.config.ts",
-    "verify": "npm run type-check && npm run build && npm run test:smoke",
-    "check": "npm run lint && npm run type-check && npm run test:smoke",
+    "lint": "next lint",
     "seo:generate": "node scripts/generate-dynamic-sitemap.js"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "@supabase/supabase-js": "^2.57.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
-    "critters": "^0.0.23",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.536.0",
     "next": "^15.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "web-vitals": "^5.1.0"
+    "web-vitals": "^5.1.0",
+    "@heroicons/react": "^2.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.5.2",
     "@types/node": "^18.0.0",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.32",
-    "eslint-plugin-react-refresh": "^0.4.20",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.0.0"
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
-<<<<<<< HEAD
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-=======
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
-<<<<<<< HEAD
-=======
   "keywords": [
     "nextjs",
     "react",
@@ -126,6 +48,5 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   "license": "MIT"
 }

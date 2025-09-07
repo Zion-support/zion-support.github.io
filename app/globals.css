@@ -16,7 +16,16 @@
   }
 }
 
-<<<<<<< HEAD
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
 @layer components {
   .btn {
     @apply px-4 py-2 rounded-lg font-medium transition-colors;
@@ -56,16 +65,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
-=======
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
 }
 
 @layer utilities {
