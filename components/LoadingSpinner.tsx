@@ -1,15 +1,21 @@
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md'
-  text = 'Loading...'
-  className = ''
+  size = 'md',
+  text = 'Loading...',
+  className = '',
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4'
-    md: 'w-8 h-8'
-    lg: 'w-12 h-12'
-  }
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
 
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -18,7 +24,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-2 text-slate-400 text-sm">{text}</p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default LoadingSpinner
+export default LoadingSpinner;
