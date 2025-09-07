@@ -8,12 +8,16 @@ import {
   CertificationsSection,}
 } from \"./preview\";
 
+
+
 interface PreviewResumeProps {
   resume: Resume;}
   onBack: () => void;}
 }
 
+
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+
 return (}
     <div className=\"space-y-6\" />}
       <PreviewHeader resume={resume} onBack={onBack} />
@@ -27,5 +31,6 @@ return (}
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+
   );
 }

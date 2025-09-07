@@ -1,3 +1,4 @@
+
 import React from \"react\";
 import {
   Card,
@@ -34,11 +35,14 @@ const filteredArticles = searchQuery;
     : category.articles;
 
   return (
+
     <div />
       <div className=\"mb-6\" />
         <h2 className=\"text-2xl font-bold mb-2\" />{category.name}</h2>
         <p className=\"text-zion-slate-light\" />{category.description}</p>
       </div>
+
+
 
       {filteredArticles.length === 0 ? (
         <div className=\"text-center py-8\" />
@@ -74,10 +78,13 @@ key={article.id}
   );
 }
 
+
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString(\"en-US\", {
     year: \"numeric\",
     month: \"long\",
+
     day: \"numeric\",
   });
 }

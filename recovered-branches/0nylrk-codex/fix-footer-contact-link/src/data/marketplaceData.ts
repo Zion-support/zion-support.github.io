@@ -315,6 +315,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     ai_score: 95,}
   },
   {
+
+
     ]
     createdAt: \"createdAt\",
     rating: 4.9;
@@ -330,6 +332,8 @@ location: 'North America',
     featured: true,
     location: 'North America',
   availability: '2-4 Weeks',;
+}
+
   },];      name: \"ServerPro Systems\";
       id: \"serverpro\"}
     images: [\"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500\"];
@@ -455,6 +459,8 @@ type: 'product', // Use a valid type from the updated SearchSuggestion interface
   ];
   // Convert strings to SearchSuggestion objects;
 type: 'product', // Use a valid type from the updated SearchSuggestion interface;
+
+
     \"GPT integration\";
     \"Machine learning\";
     \"Computer vision\";
@@ -473,14 +479,18 @@ type: 'product', // Use a valid type from the updated SearchSuggestion interface
     \"Edge computing\";
     \"High performance storage\"
   ];
+
     }))
 };  ];
+
   // Convert strings to SearchSuggestion objects;
 return suggestions && suggestions.map(text => ({
     text;}
     type: 'product' // Use a valid type from the updated SearchSuggestion interface}
   }))
+
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),}
+
 // Generate filter options for sidebar;
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings;
@@ -566,5 +576,7 @@ export const generateFilterOptions = (): FilterOptions => {
 const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
+
   return {
+
 }

@@ -1,3 +1,5 @@
+
+
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -54,6 +56,7 @@ export const advancedAIServices2025 = [;
       'Custom AI model training'
     contact: {
       phone: '+1 302 464 0950',
+
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },  }
 ];

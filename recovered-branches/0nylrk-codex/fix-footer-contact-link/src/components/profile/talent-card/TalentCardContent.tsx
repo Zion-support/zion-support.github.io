@@ -1,12 +1,16 @@
+
 import React, { useState } from \"react\";
 import { MapPin } from \"lucide-react\";
 import { TalentCardSkills } from \"./TalentCardSkills\";
+
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;}
   skills: string[] | undefined;}
 }
+
+
 
 export function TalentCardContent({
   summary,
@@ -15,6 +19,7 @@ export function TalentCardContent({
   skills,}
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
+
 
   return (
     <div />

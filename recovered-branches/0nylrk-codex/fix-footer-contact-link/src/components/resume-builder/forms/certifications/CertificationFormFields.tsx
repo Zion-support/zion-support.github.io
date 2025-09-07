@@ -1,4 +1,6 @@
+
 import {
+
 FormField,
   FormItem,
   FormLabel,
@@ -12,15 +14,19 @@ interface CertificationFormFieldsProps {}
   form: UseFormReturn<CertificationFormValues />;}
 }
 
+
+
 export function CertificationFormFields({}
   form,}
 }: CertificationFormFieldsProps) {
   return (
+
     < />
       <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
         <FormField;
 control={form.control}
           name=\"name\"
+ /
 render={({ field }) => (
             <FormItem />
               <FormLabel />Certification Name</FormLabel>
@@ -33,10 +39,12 @@ placeholder=\"AWS Certified Solutions Architect, PMP, etc.\"
               <FormMessage />
             </FormItem>
           )}
+
         />
 
         <FormField;
 control={form.control}
+ /
 name=\"issuing_organization\"
           render={({ field }) => (
             <FormItem />
@@ -53,10 +61,12 @@ placeholder=\"Amazon Web Services, PMI, etc.\"
         />
       </div>
 
+
       <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\" />
         <FormField;
 control={form.control}
           name=\"issue_date\"
+ /
 render={({ field }) => (
             <FormItem />
               <FormLabel />Issue Date</FormLabel>
@@ -66,6 +76,7 @@ render={({ field }) => (
               <FormMessage />
             </FormItem>
           )}
+
         />
 
         <FormField;
@@ -101,6 +112,7 @@ control={form.control}
         <FormField;
 control={form.control}
           name=\"credential_url\"
+ /
 render={({ field }) => (
             <FormItem />
               <FormLabel />Credential URL (Optional)</FormLabel>
@@ -118,3 +130,4 @@ placeholder=\"https://www.credential.com/verify/abc123\"
     </>
   );
 }
+

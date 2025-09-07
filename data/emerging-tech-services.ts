@@ -1,4 +1,6 @@
+
 {
+
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
   name: 'Quantum Space Communications',
@@ -1186,8 +1188,10 @@ export interface EmergingTechService  {id: string;
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services;
   {
+
     id: 'quantum-internet-security-platform',
   name: 'Quantum Internet Security Platform',
+
 tagline: 'Unhackable quantum-secured internet infrastructure',
   price: '$12,999',
     period: '/month',
@@ -2041,4 +2045,5 @@ implementationDetails: 'Advanced autonomous AI factory platform with full manufa
     launchDate: '2024-09-01';
     customers: 35;
     rating: 4.8;
+
     reviews: 28;

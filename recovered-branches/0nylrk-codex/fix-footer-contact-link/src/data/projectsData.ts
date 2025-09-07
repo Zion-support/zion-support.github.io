@@ -1,6 +1,8 @@
+
 job: {
       title: \"title\",
     description: 'Develop dashboards using React and integrate ML models'}
+
     }
     talent_profile: {
       full_name: 'Alexandra Chen',}
@@ -83,6 +85,7 @@ export const PROJECTS: Project[] = [;
     }
   }
 ];
+
 ;
     }
   }

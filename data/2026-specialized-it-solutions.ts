@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1118,6 +1120,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
+
 export interface SpecializedITSolution2026 {}
 }
 }

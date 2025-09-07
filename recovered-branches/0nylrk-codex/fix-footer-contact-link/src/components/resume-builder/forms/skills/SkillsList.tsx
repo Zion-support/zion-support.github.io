@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from \"react\";
 import { Skill } from \"@/types/resume\";
 import { SkillCategory } from \"./SkillCategory\";
@@ -6,6 +7,7 @@ interface SkillsListProps {
   onDeleteSkill: (id: string, category: string) => Promise<void />;}
 }
 
+
 export const SkillsList = (
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[] />) => {
@@ -13,10 +15,13 @@ export const SkillsList = (
 }
   >({});
 
+
+
 useEffect(() => {
     // Group skills by category;
 const grouped = skills.reduce(
       (acc, skill) => {
+
         const category = skill.category || \"Other\";
         if (!acc[category]) {}
           acc[category] = [];}
@@ -38,6 +43,7 @@ const grouped = skills.reduce(
     <div className=\"space-y-6\" />
       <h3 className=\"text-md font-medium\" />Your Skills</h3>
 
+
       <div className=\"space-y-4\" />
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (}
           <SkillCategory;}
@@ -49,5 +55,6 @@ key={category}
         ))}
       </div>
     </div>
+
   );
 };

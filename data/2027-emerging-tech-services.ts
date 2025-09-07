@@ -1,5 +1,7 @@
+
 id: string;
   name: string,
+
 description: string;
   category: string;
   price: string;
@@ -149,6 +151,8 @@ description: string;
       'AI';
       'Genetic Engineering';
   link: string;
+
+
   {
     id: \"id\",
     name: 'Quantum Machine Learning Platform',
@@ -1408,4 +1412,5 @@ export const emergingTech2027Services: Service[] = [;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;}
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];}
   }
+
 ];

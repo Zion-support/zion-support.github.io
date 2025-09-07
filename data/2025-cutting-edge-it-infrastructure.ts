@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -969,7 +971,9 @@ export interface CuttingEdgeITInfrastructureService  {id: string,name: string,ta
       popular: true,
       customers: 6,
       rating: 4 && 4.9,
+
       reviews: 4,
+
     },;
   ];    features: [
 export interface CuttingEdgeITInfrastructureService {

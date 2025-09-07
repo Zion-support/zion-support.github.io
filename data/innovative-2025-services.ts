@@ -1,4 +1,6 @@
+
 id: 'ai - emotional - intelligence - platform',
+
 name: 'AI Emotional Intelligence Platform',
   tagline: 'Advanced emotion recognition and response generation',
     price: '$1, 799',
@@ -109,5 +111,6 @@ reviews: 32;
       'Real - time monitoring',
       'Regulatory compliance'
     ],
+
     popular: true,  }
 ];

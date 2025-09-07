@@ -1,9 +1,11 @@
+}
 import { useState, useEffect, useCallback } from 'react';
 interface UseApiOptions {}
   immediate?: boolean;}
 }
 interface UseApiResult<T /> {
   data: T | null;
+
 loading: boolean;
   error: Error | null;}
   execute: () => Promise<void />;}
@@ -57,9 +59,11 @@ export const useApi = <T />(
       execute();}
     }
   }, [execute, options.immediate]);
+
   return { data, loading, error, execute }
 };      setLoading(false)};
   return { data, loading, error, execute }}
+
 };
 };
 };
@@ -77,7 +81,9 @@ interface ApiState<T /> {
   loading: boolean;}
   error: string | null;}
 }
+
     loading: true;
+
 error: null;
 data: null,
     loading: true,
@@ -88,6 +94,8 @@ export function use_api < T>(url: string, options?: RequestInit) {
     data: null,
     loading: true,
     error: null,
+
+
 data: null,
     loading: true,}
     error: null,;}
@@ -158,7 +166,9 @@ export default useApi;
       throw error;}
       set_loading (false);}
     }
+
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any />( apiFunction: (...args: any[]) => Promise<T />,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null />(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any />(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any />( apiFunction: (...args: any[]) => Promise<T />,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null />(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any />(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+
 interface ApiState<T /> {
   data: T | null;
   loading: boolean;}
@@ -173,6 +183,8 @@ interface ApiState<T /> {
     </div>;}
   )}
 }
+
+
 interface UseApiOptions {}
   immediate?: boolean;}
 }
@@ -209,6 +221,7 @@ export default function UseApi({}: UseApiProps) {
     </div>}
   );}
 }
+
 ursor/add-new-services-and-deploy-updates-0462;
 interface ApiState<T /> {
   data: T | null, loading: boolean,
@@ -217,6 +230,7 @@ origin/automation-improvements-final;
 interface ApiState<T /> {
   data: T | null, loading: boolean,
   error: string | null,}
+
 }
 }
 export function useApi<T />(
@@ -240,9 +254,12 @@ export function useApi<T />(
       fetchData();}
     }
   }, [fetchData, options.immediate]);
+
+
 }
   }, [api_function, options]);
   useEffect (() => {
     // Check condition;
 if ( {) {
+
   $2;

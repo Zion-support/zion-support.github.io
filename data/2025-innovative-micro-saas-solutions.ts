@@ -1,5 +1,7 @@
+
 export const innovativeMicroSaasSolutions2025 = [
   {
+
 pricing: {
       starter: {
         price: 49;

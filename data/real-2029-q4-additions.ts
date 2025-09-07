@@ -1,4 +1,6 @@
+
 'Intent classification and priority scoring'
+
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
       'PII redaction and allowlist domains'
@@ -111,8 +113,10 @@ technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
+
     category: 'Developer Tools',
   useCases: [
+
       'Landing page surveys'
       'In-product polls'
       'Exit intent feedback'
@@ -359,6 +363,8 @@ reviews: 16}
   description:;
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
+
+
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -906,6 +912,8 @@ implementationDetails: 'Shared inbox connectors, rules engine, and prompt templa
 ;
 	}
 ];
+
+
 id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1744,5 +1752,6 @@ const contact  = null;
   rating: 4.4,
   reviews: 16;
 }
+
 ];	}
 ];

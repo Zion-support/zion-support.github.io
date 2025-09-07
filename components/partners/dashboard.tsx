@@ -25,7 +25,7 @@ const [loading, setLoading] = useState(false);
       method: 'POST'}
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ apiKey })
-   ,
+   
 });
 
 const data = await res.json();
@@ -39,8 +39,8 @@ const data = await res.json();
     setLoading(true);
 }
 const res = await fetch('/api/partners/usage', {}
-      headers: token ? { Authorization: `Bearer ${token}` } : ,
-},
+      headers: token ? { Authorization: `Bearer ${token}` } : 
+}
     });
 
 const data = await res.json();
@@ -52,10 +52,10 @@ const data = await res.json();
       method: 'POST'}
 }
       headers: token ? { Authorization: `Bearer ${token}` } : {}
-   ,
+   
 };
   const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
- ,
+ 
 }
 
  ;
@@ -106,7 +106,7 @@ onClick={regenerateKey}
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />
             <h3 className='font-medium mb-2' />Usage</h3>
             <button;
-onClick={fetchUsag,}
+onClick={fetchUsag}
 }
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3' />;
               {loading ? 'Loading...' : 'Refresh'}
@@ -120,7 +120,7 @@ onClick={fetchUsag,}
                 <div className='mt-3' />
                   <p className='font-medium' />By Endpoint</p>
                   <ul className='list-disc ml-6' />
-                    {Object.entries(usage.byEndpoint |,}
+                    {Object.entries(usage.byEndpoint |}
 }).map(([k, v]) => (
                       <li key={k} />
                         {k}: {v as any}
@@ -165,3 +165,4 @@ className='text-blue-600 underline'
   );
 }
 
+"

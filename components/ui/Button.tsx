@@ -7,17 +7,18 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   variant?: 'primary' | 'secondary' | 'outline';
+
   size?: 'sm' | 'md' | 'lg';}
 }
 }
 
 export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
 
-const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',}
+const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500'}
   secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
   }
 
-const sizeClasses = {sm: 'px-3 py-2 text-sm',}
+const sizeClasses = {sm: 'px-3 py-2 text-sm'}
   md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg';}
   }
 
@@ -63,7 +64,7 @@ interface ButtonProps  {children: React.ReactNode;
   href?: string;
 
 interface ButtonProps  {children: React && React.ReactNode;
-  variant?: \"primary\" | \"secondary\" | \"outline\" | \"ghost\";
+  variant?: \"primary\" | \"secondary\" | \"outline\" | \"ghost\";"
   size?: \"sm\" | \"md\" | \"lg\";}
 }
 const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
@@ -72,37 +73,37 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
       disabled;
       type;
       ...props;
-}
+}"
 const Button: React.FC<ButtonProps /> = ({ children,variant = \"primary\",size = \"md\",className = \"\",onClick,disabled = false,type = \"button\",asChild = false,...props;}
    }) => {
 
 
-const baseClasses =;
+const baseClasses =;"
     \"inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\";
+}"
+const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\",secondary: \"bg-gray-200 text-gray-900 hover:bg-gray-300\",outline: \"border border-gray-300 bg-transparent hover:bg-gray-50\",ghost: \"hover:bg-gray-100}
 }
-const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\",secondary: \"bg-gray-200 text-gray-900 hover:bg-gray-300\",outline: \"border border-gray-300 bg-transparent hover:bg-gray-50\",ghost: \"hover:bg-gray-100,}
-}
-;
-  const sizeClasses = {sm: \"h-8 px-3 text-xs\",md: \"h-10 px-4 py-2\",lg: \"h-12 px-8 text-lg,}
+;"
+  const sizeClasses = {sm: \"h-8 px-3 text-xs\",md: \"h-10 px-4 py-2\",lg: \"h-12 px-8 text-lg}
 }class_name?: string;
   on_click?: () => void;
-  disabled?: boolean;
+  disabled?: boolean;"
   type?: \"button\" | \"submit\" | \"reset\";
   as_child?: boolean;
 }
-
+"
 const Button: React.FC < ButtonProps> = ({ children,variant = \"primary\",size = \"md\",class_name = \"\",on_click,disabled = false,type = \"button\",...props;}
    }) => {
 
 
-const base_classes =;
+const base_classes =;"
     \"inline - flex items - center justify - center rounded - md font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50\";
-
-const variant_classes = {primary: \"bg - blue - 600 text - white hover:bg - blue - 700\",secondary: \"bg - gray - 200 text - gray - 900 hover:bg - gray - 300\",outline: \"border border - gray - 300 bg - transparent hover:bg - gray - 50\",ghost: \"hover:bg - gray - 100\";}
+"
+const variant_classes = {primary: \"bg - blue - 600 text - white hover:bg - blue - 700\",secondary: \"bg - gray - 200 text - gray - 900 hover:bg - gray - 300\",outline: \"border border - gray - 300 bg - transparent hover:bg - gray - 50\",ghost: \"hover:bg - gray - 100\";}"
     ghost: \"hover:bg - gray - 100\";}
   }
-
-const size_classes = {sm: \"h - 8 px - 3 text - xs\",md: \"h - 10 px - 4 py - 2\",lg: \"h - 12 px - 8 text - lg\";}
+"
+const size_classes = {sm: \"h - 8 px - 3 text - xs\",md: \"h - 10 px - 4 py - 2\",lg: \"h - 12 px - 8 text - lg\";}"
     lg: \"h - 12 px - 8 text - lg\";}
   }
 
@@ -130,7 +131,7 @@ const Button: React.FC<ButtonProps /> = ({primary:;
       'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5';}
   }
 
-const sizeClasses = {sm: 'px-4 py-2 text-sm',}
+const sizeClasses = {sm: 'px-4 py-2 text-sm'}
   md: 'px-6 py-3 text-base',lg: 'px-8 py-4 text-lg';}
   }
 
@@ -160,15 +161,18 @@ const content = (<>;
 export default Button;
 
 export { Button }
+
       </Link>
     );
   }
   
   return (
+
     <button onClick={onClick} className={classes} />
+
       {children}
     </button>
   );
 };
 
-export default Button;
+export default Button;"

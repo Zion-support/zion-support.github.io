@@ -69,6 +69,7 @@ export interface PortfolioAsset {
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+
   quantity: number;  id: string;
   user_id: string;
   currentPrice: number;
@@ -87,12 +88,14 @@ totalReturn: number}
 export interface PortfolioPerformance {
 export interface PortfolioPerformance {;
   totalReturn: number;
+
 annualizedReturn: number;
   volatility: number;
   sharpeRatio: number;
   maxDrawdown: number;
   beta: number;
   alpha: number;
+
   trackingError: number;
   informationRatio: number;}
 sortinoRatio: number}
@@ -100,6 +103,7 @@ sortinoRatio: number}
 export interface InvestmentRecommendation {
 export interface InvestmentRecommendation {;
   id: string;
+
 userId: string;
   asset: {symbol: string;
     name: string;  insurance: {life: boolean;
@@ -230,7 +234,9 @@ export interface FinancialPlan {
   insurance: {
     life: boolean;
     health: boolean;
+
     disability: boolean;
+
 property: boolean,
     recommendations: string[];
   }
@@ -325,6 +331,8 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
+
+
 requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any />;}
   preferences?: Record<string, any />}
@@ -442,14 +450,18 @@ constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.
     try {}
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
+}
           'Authorization': `Bearer ${this && this.apiKey}`}});    } catch (error) {
+
 console && console.error('Error tracking financial goals:', error);}
       throw error}
     }
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis /> {
     try {}
+}
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        headers: {}
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {}
         throw new Error(`HTTP error! status: ${response && response.status}`)
@@ -518,6 +530,8 @@ console && console.error('Error tracking financial goals:', error);}
 expectedImpact: string}
   }> {
     try {
+}
+
 const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',}
   headers: {}
@@ -981,4 +995,5 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
   lastRebalanced: Date,;
   performance: PortfolioPerformance,;
   createdAt: Date,;
+
   updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

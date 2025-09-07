@@ -1,4 +1,6 @@
+
 'Centralized API management',
+
       'Security and access controls',
       'API lifecycle management',
       'Compliance and audit trails',
@@ -133,7 +135,9 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   price: '$799', period: '/month',
   description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
+
 ];	{			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
+
 		];
 		popular: true;
 		icon: '🏛️';
@@ -395,6 +399,8 @@ implementationDetails: 'Enterprise platform with monitoring engine, observabilit
 ;
 	}
 ];
+
+
 id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -832,5 +838,6 @@ const contact  = null;
   rating: 4.8,
   reviews: 38;
 }
+
 ];	}
 ];

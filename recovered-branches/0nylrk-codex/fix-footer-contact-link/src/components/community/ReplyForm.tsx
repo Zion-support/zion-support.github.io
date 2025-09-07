@@ -1,3 +1,5 @@
+}
+
 import { useState } from \"react\";
 import { useForm } from \"react-hook-form\";
 import { Button } from \"@/components/ui/button\";
@@ -7,11 +9,14 @@ import {
   FormControl,
   FormField,
   FormItem,
+
   FormMessage,
+
 } from \"@/components/ui/form\";
 import { Card, CardContent, CardFooter } from \"@/components/ui/card\";
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void />;
+
   parentId?: string;
 }
 
@@ -30,6 +35,7 @@ export const ReplyForm = (
     },
   });
 
+
 const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {}
@@ -37,6 +43,7 @@ const handleSubmit = async (values: ReplyFormValues) => {
     } finally {}
       setIsSubmitting(false);}
     }
+}
   };
 
   return (
@@ -55,6 +62,7 @@ placeholder={
                         parentId;
                           ? \"Write your reply...\"
                           : \"Join the discussion...\"}
+ /
                       }
                       className=\"min-h-[100px] resize-y\"
                       {...field}
@@ -73,6 +81,7 @@ placeholder={
         </Form>
       </CardContent>
     </Card>
+
   );
 };
 

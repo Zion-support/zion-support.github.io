@@ -1,5 +1,7 @@
+
 export const real2026Q2Additions = [
   {
+
       'Jira',
       'ServiceNow',
       'Slack',
@@ -81,7 +83,9 @@ export const real2026Q2Additions = [
   roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;}
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;}
   },;
+
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+
 use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
@@ -285,6 +289,7 @@ export const real2026Q2Additions = [;
     id: 'msp-remote-device-ops',;
     name: 'MSP Remote Device Ops',;
     category: 'Cloud & FinOps',;
+
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
     features: [;
@@ -491,6 +496,7 @@ export const real2026Q2Additions = [;
     category: 'Cloud & FinOps',;
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
+
 features: [;
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals';
     ],;

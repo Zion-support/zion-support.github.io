@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1127,7 +1129,9 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
       launch_date: '2024 - 07 - 15',
   customers: 520,
       rating: 4 && 4.9,
+
       reviews: 267,
+
     },;
   ];    features: [
 export interface InnovativeMicroSaasExpansionService {

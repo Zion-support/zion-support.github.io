@@ -1,3 +1,5 @@
+
+
 import {
   FormField,
   FormItem,
@@ -11,6 +13,7 @@ import { BasicInfoFormData } from \"./schema\";
 interface PersonalInfoFieldsProps {}
   control: Control<BasicInfoFormData />;}
 }
+
 
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
@@ -29,6 +32,7 @@ control={control}
         )}
       />
 
+
       <FormField;
 control={control}
         name=\"title\"
@@ -43,6 +47,8 @@ control={control}
         )}
       />
 
+
+
       <FormField;
 control={control}
         name=\"email\"
@@ -56,6 +62,8 @@ control={control}
           </FormItem>
         )}
       />
+
+
 
       <FormField;
 control={control}
@@ -73,3 +81,4 @@ control={control}
     </div>
   );
 }
+

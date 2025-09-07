@@ -1,5 +1,7 @@
+
 id: string;
   name: string,
+
 description: string;
   category: string[];
   price: string;
@@ -318,6 +320,8 @@ mobile: '+1 302 464 0950',
     mobile: string;
     email: string;
     website: string;
+
+
 address: string;}
   }
 ;
@@ -1703,4 +1707,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709';}
     }
   }
+
 ];

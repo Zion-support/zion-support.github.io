@@ -1,8 +1,10 @@
 import React from \"react\";
 interface TalentDirectoryHeaderProps {
+
   title: string;
   description: string;
 }
+
 
 export function TalentDirectoryHeader({
   title,}
@@ -18,6 +20,7 @@ export function TalentDirectoryHeader({
       </div>
     </div>
   );
+}
 }
 import React from \"react\";
 ;

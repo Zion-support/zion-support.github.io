@@ -83,6 +83,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		| 'AI Quantum Computing';
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
+
+
 id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
     description:;
@@ -98,7 +100,9 @@ id: 'ai - product - spec - writer',
     integrations: ['Jira', 'Linear'],
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
+
     real_service: true,
+
   },
   {
     id: 'ai - creative - studio',
@@ -187,10 +191,12 @@ realService?: boolean;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
 		id: 'ai-emotional-support-agent';
+
 		name: 'AI Emotional Support Agent',
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
 		category: \"category\",
     pricing: { starter: '$99/mo' }
+
 features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
@@ -221,8 +227,10 @@ features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes
 
 	}
 ];
+
 name: string,
   description: string;
+
 category:;
   | 'AI Consciousness';
   | 'AI Emotional Intelligence';

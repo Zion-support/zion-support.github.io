@@ -44,9 +44,11 @@ export interface InnovativeITService {
       '5G optimization',
     ],
     popular: true,
+
     icon: '🌐',
   realImplementation: true;
     implementationDetails: \"implementationDetails\",
+
 launchDate: '2024-01-01',
   customers: 800;
 rating: 4.9;
@@ -342,5 +344,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     rating: 4.7,
     reviews: 1250;
   }
+
 ;  }
 ];

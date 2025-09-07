@@ -114,6 +114,7 @@ setFormData({
             projectDescription: '',
   budget: '',
             startDate: '',
+
 :src/components/profile/HireNowCTA.jsx;) => {
   return $3;}
 }
@@ -124,6 +125,7 @@ setFormData({
         });
         setIsFormOpen(false)
 };    const handleChange = (
+
 setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value) => {
@@ -144,6 +146,7 @@ setFormData(prev => ({
                 <DollarSign className=\"h-4 w-4\"/>;}
                 <span />Starting at ${hourlyRate}/hour</span>;
               </div>)}
+
             <p className=\"text-zion-slate-light text-sm\" />
               Ready to start your project? Send a message to discuss details and get started.
             </p>
@@ -185,10 +188,12 @@ setFormData(prev => ({
                 Cancel;
               </Button>
             </div>
+
           </form>)}
       </CardContent>;
     </Card>)}}
 }
       </CardContent>
     </Card>);
+
 }

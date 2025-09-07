@@ -1,9 +1,11 @@
+) => {
   return $3;}
 }
 import { SkillCategoryProps } from \"./types\";
 import { SkillItem } from \"./SkillItem\";
 export const SkillCategory = (
   if (!skills || skills.length === 0) return null;
+
 return (
     <div className=\"space-y-2\" />) => {
   return $3;}
@@ -20,5 +22,6 @@ key={skill.id}
         ))}
       </div>
     </div>
+
   );
 };

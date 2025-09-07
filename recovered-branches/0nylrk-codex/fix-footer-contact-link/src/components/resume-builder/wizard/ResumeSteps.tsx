@@ -6,6 +6,8 @@ interface ResumeStepsProps {
   onChange: (value: string) => void;}
 }
 
+
+
 export const ResumeSteps = (
   return (
     <TabsList className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8\" />
@@ -13,9 +15,12 @@ export const ResumeSteps = (
   return $3;}
 }
         <TabsTrigger key={step.id} value={step.id} />
+
           {step.label}
+
         </TabsTrigger>
       ))}
     </TabsList>
   );
+
 };

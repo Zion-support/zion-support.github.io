@@ -18,7 +18,7 @@ interface ImageOptimizerProps {
 }
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps /> = ({ src,alt,width,height,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL,sizes,fill = false,style,onLoad,onError,   }) => {
+const ImageOptimizer: React.FC<ImageOptimizerProps /> = ({ src,alt,width,height,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL,sizes,fill = false,style,onLoad,onError   }) => {
 
 
 const [isLoaded, setIsLoaded] =;
@@ -41,8 +41,8 @@ if (priority || !imgRef.current) return;
 }
 const observer = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {// Image is in viewport, trigger load;}
             observer.unobserve(entry.target)}
-        })},{rootMargin: '50px 0px',}
-  threshold: 0.1,}
+        })},{rootMargin: '50px 0px'}
+  threshold: 0.1}
     )observer.observe(imgRef.current)return () => {if (imgRef.current) {observer.unobserve(imgRef.current)}
     }}, [priority])if (hasError) {return (}
     <div;}
@@ -50,15 +50,15 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height, ...style }}
         role=\"img\";
         aria-label={alt}
-       />;
+       />;"
         <span className=\"text-gray-500 text-sm\" />Image failed to load</span>;
       </div>;
     )}return (<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={fill;
-          ? { position: 'relative',}
-  width: '100%', height: '100%',}
+          ? { position: 'relative'}
+  width: '100%', height: '100%'}
 }
           : { width, height, ...style }
       }
@@ -72,17 +72,17 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         }`}
         onLoad={handleLoad}
         onError={handleError}
-        style={{objectFit: 'cover',}
-  width: fill ? '100%' : width,height: fill ? '100%' : height,...style,}}
+        style={{objectFit: 'cover'}
+  width: fill ? '100%' : width,height: fill ? '100%' : height,...style}}
         loading={priority ? 'eager' : 'lazy'}
       />;
       {/* Loading skeleton */}
-      {!isLoaded && !hasError && (<div;
-          className=\"absolute inset-0 bg-gray-200 animate-pulse\";
+      {!isLoaded && !hasError && (<div;"
+          className=\"absolute inset-0 bg-gray-200 animate-pulse\";"
           aria-hidden=\"true\";}
         />;}
       )}
     </div>;
   )}
 
-export default ImageOptimizer;
+export default ImageOptimizer;"

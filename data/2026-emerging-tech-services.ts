@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -725,9 +727,11 @@ export const getEmergingTechServices2026ByCategory = (
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
+
 ];
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)
 };
+
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services;
   {
@@ -1375,6 +1379,7 @@ export const getEmergingTechServices2026ByPriceRange = (
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
+) => {
   return $3;}
 }
   })
@@ -1384,6 +1389,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (}
     service => service.category === category);}
 }
+
 export interface EmergingTechService2026 {;}
   })
 };
@@ -1447,6 +1453,7 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
+
 export interface EmergingTechService2026 {}
 }
 }

@@ -14,21 +14,21 @@ const toggle = () => setOpen(v => !v;
 }
 }
 
-export interface TreeNode {
+export interface TreeNode {"
   name: string,path: string,type: \"folder\" | \"file\",name: string;
-  path: string;
-  type: \"folder\" | \"file\";
+  path: string;"
+  type: \"folder\" | \"file\";"
   name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
   children?: TreeNode[];}
 }
 }
 
 const [open, setOpen]  = useState<boolean />(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-
+"
 const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
-        // Expect an admin token in local storage, fall back to prompt;
+        // Expect an admin token in local storage, fall back to prompt;"
         \"x-admin-token\": localStorage.getItem(\"ADMIN_TOKEN\") |\"\"} as any;
-      body: JSON.stringify({ path: node.path },
+      body: JSON.stringify({ path: node.path }
 })return (<div className='ml-2' />;
       <div className='flex items-center gap-2 py-1' />;
         {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle' />;
@@ -45,7 +45,7 @@ const clonePath = async () => ;
   children?: TreeNode[];}
 }
 
-function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void,}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void}
 }) {
   const [open, setOpen] = useState<boolean />(false);
 
@@ -53,10 +53,10 @@ const hasChildren = null;
       headers: {
         'Content-Type': 'application/json'
         // Expect an admin token in local storage, fall back to prompt}
-        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',}
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || ''}
       } as any,
-      body: JSON.stringify({ path: node.path,}
-}),
+      body: JSON.stringify({ path: node.path}
+})
     })
 };
 
@@ -100,14 +100,14 @@ const deploy = () => onDeploy && onDeploy(node.path);
 const toggle = () =>: any set_open (v => !v;}
   const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
 }
-
+"
 export interface TreeNode  {name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;}
   children?: TreeNode[];}
 }
 
 interface TreeProps  {nodes: TreeNode[],on_deploy?: (path: string) => void;}
 }
-function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void,}
+function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void}
 }) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0;
 }
 const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
@@ -115,13 +115,13 @@ const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {awa
 
 const clone_path = async () => ;
   const url = `${window.location.origin}/api / dev / source - map`;
-    await fetch (url, {method: 'POST',}
+    await fetch (url, {method: 'POST'}
   headers: {'Content - Type': 'application / json',// Expect an admin token in local storage, fall back to prompt;}
-        'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || '',} as any,body: JSON.stringify ({ path: node.path,}
-}),})}      headers: {\"Content - Type\": \"application / json\";}
-        // Expect an admin token in local storage, fall back to prompt;}
+        'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || ''} as any,body: JSON.stringify ({ path: node.path}"
+})})}      headers: {\"Content - Type\": \"application / json\";}
+        // Expect an admin token in local storage, fall back to prompt;}"
         \"x - admin - token\": local_storage.get_item (\"ADMIN_TOKEN\") || \"\"} as any;
-      body: JSON.stringify ({ path: node.path })},
+      body: JSON.stringify ({ path: node.path })}
 }
 
 const deploy = () =>: any on_deploy && on_deploy (node.path;
@@ -202,3 +202,4 @@ export default Tree;
 
 export default Tree;
 
+"

@@ -66,6 +66,7 @@ const React,{ createContext,useContext,ReactNode } from \"react\"; interface Ana
 }; const trackPageView = ( console.log(\"Page view:\",page)) => {
   return $3;}
 }; return ( <AnalyticsContext.Provider value={{ trackEvent,trackPageView }} /> {children} </AnalyticsContext.Provider> )};'\"'\"
+
 import _React,{ createContext,useContext,ReactNode } from 'react'; interface AnalyticsContextType { \"trackEvent\": (event: string,properties?: Record<string,any />) => void; \"trackPageView\": (page: string) => void} } const \"defaultContext\": AnalyticsContextType = { trackEvent: () => {},\"trackPageView\": () => {}}; const AnalyticsContext = createContext<AnalyticsContextType />(defaultContext); export const useAnalytics = (): AnalyticsContextType => { const context = useContext(AnalyticsContext); if (!context) { throw new Error('useAnalytics must be used within an AnalyticsProvider')} return context}; export const AnalyticsProvider = ({ children }: { \"children\": 'ReactNode' }): JSX.Element => { const trackEvent = ( _console.log('Analytics \"event\": ',event,properties)) => {
   return $3;}
 }; const trackPageView = ( _console.log('Page view:',page)) => {

@@ -6,6 +6,8 @@ interface ProfileErrorStateProps {}
   error: string | null;}
 }
 
+
+
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className=\"min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4\" />}
@@ -22,5 +24,6 @@ to=\"/talents\"
         </Link>
       </Button>
     </div>
+
   );
 }

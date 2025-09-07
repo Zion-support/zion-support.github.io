@@ -1,3 +1,4 @@
+
 import {
   onsiteServicePricing,}
   CountryPricing,}
@@ -25,7 +26,9 @@ onCountryChange={onCountryChange || (() = /> {})}
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
+
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   );
 }
+

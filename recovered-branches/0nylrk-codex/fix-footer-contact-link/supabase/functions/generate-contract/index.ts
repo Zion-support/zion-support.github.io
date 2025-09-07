@@ -17,6 +17,8 @@ if (req && req.method === 'OPTIONS') {}
     return new Response(null, { headers: corsHeaders })
   }
   try {
+
+
 try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;

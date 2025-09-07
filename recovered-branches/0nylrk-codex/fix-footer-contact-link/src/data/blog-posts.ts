@@ -5,10 +5,12 @@ slug: \"ai-trends-2025\",
     slug: \"ai-trends-2025\",
     excerpt: \"From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.\";
     content: `<p />As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
     id: \"id\",
     title: '10 Emerging AI Trends to Watch in 2025',
   slug: 'ai-trends-2025'
     excerpt:
+
 import { BlogPost } from '@/types/blog';
 // Sample blog data - in a real app this would come from an API or CMS;
 export const BLOG_POSTS: BlogPost[] = [
@@ -17,10 +19,14 @@ export const BLOG_POSTS: BlogPost[] = [
   title: '10 Emerging AI Trends to Watch in 2025',
     slug: 'ai-trends-2025',
   excerpt:;
+
+
 title: \"10 Emerging AI Trends to Watch in 2025\";
     slug: \"ai-trends-2025\"
     excerpt: \"From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.\";
     content: `<p />As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+}
+
     },
     published_date: 'Apr 15, 2025',
   read_time: '5 min read',
@@ -182,11 +188,15 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: \"green-it\",
     title: \"Green IT: Reducing Your Data Center's Carbon Footprint\",
+
+
 excerpt: 'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',
   content: `<p />As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     slug: \"green-it\",
     excerpt: \"Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.\",
     content: `<p />As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
+
+
 published_date: 'Apr 5, 2025',
   read_time: '6 min read',
     category: 'Sustainability',
@@ -348,6 +358,8 @@ published_date: 'Apr 5, 2025',
     title: \"AI Compute Optimization: Balancing Performance and Cost\";
     slug: \"ai-compute-optimization\";
     excerpt: \"Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.\";}
+
+
 title: \"AI Compute Optimization: Balancing Performance and Cost\";
     slug: \"ai - compute - optimization\";
     excerpt: \"Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.\";
@@ -392,6 +404,7 @@ title: \"AI Compute Optimization: Balancing Performance and Cost\";
     ],
     featured_image:;
       'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
+
   },
 ];
 }];

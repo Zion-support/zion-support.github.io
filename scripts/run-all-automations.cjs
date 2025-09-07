@@ -78,6 +78,7 @@ class RunAllAutomations {
       { name: 'Type Check', command: 'npx tsc --noEmit' },
       { name: 'Lint Fix', command: 'npm run lint' },
       { name: 'Build Application', command: 'npm run build' },
+
       { name: 'Comprehensive Test Suite', command: 'node scripts/pm2/comprehensive-test-suite.cjs' },
       { name: 'Security Audit', command: 'npm audit' },
       { name: 'Performance Monitor', command: 'node scripts/pm2/performance-monitor.cjs' },
@@ -88,6 +89,7 @@ class RunAllAutomations {
       { name: 'App Optimizer', command: 'node scripts/pm2/app-optimizer.cjs' },
       { name: 'Database Optimizer', command: 'node scripts/pm2/database-optimizer.cjs' },
       { name: 'API Monitor', command: 'node scripts/pm2/api-monitor.cjs' },
+
       { name: 'Git Status', command: 'git status' },
       { name: 'Git Add', command: 'git add .' },
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
@@ -154,4 +156,6 @@ if (require.main === module) {
   }
 }
 
+
 module.exports = RunAllAutomations;
+

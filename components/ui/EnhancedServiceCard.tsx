@@ -82,7 +82,7 @@ interface EnhancedServiceCardProps {;
 
 }
 
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   ,}
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   }
 }) => {
 
 
@@ -93,10 +93,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   ,
       scale: 1.02,
       transition: {
 
-        duration: 0.6,}
-ease: 'easeInOut' as const,}
-      },
-    },
+        duration: 0.6}
+ease: 'easeInOut' as const}
+      }
+    }
   };
 
   
@@ -104,13 +104,13 @@ ease: 'easeInOut' as const,}
 
       {/* Background Glow */}
       <div;
-        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500,
+        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500
 }
         style={{background: `linear-gradient(135deg, ${service && service.color;}
             .replace('from-', '').replace('to-', '').split(' ') />;}
       {/* Background Glow */}
       <div;
-        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500,
+        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500
 }
         style={{background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c = /> `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`;
         }}
@@ -122,9 +122,9 @@ ease: 'easeInOut' as const,}
         <div className='absolute top-4 right-4 z-10' />
           <motion.div;
 className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'}
-            initial={{ scale: 0, rotate: -180 ,}
+            initial={{ scale: 0, rotate: -180 }
 }
-            animate={{ scale: 1, rotate: 0 ,}
+            animate={{ scale: 1, rotate: 0 }
 }
             transition={{ delay: 0.2, duration: 0.5 }}
            />
@@ -141,7 +141,7 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
 
 <div className='relative p-6' />
 
-        {/* Header *,}
+        {/* Header *}
 }
         <div className='flex items-start justify-between mb-4' />;
           <motion.div;
@@ -150,13 +150,13 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
             initial='hidden';
             animate='visible';
       <div className=\"relative p-6\" />;
-        {/* Header */}
+        {/* Header */}"
         <div className=\"flex items-start justify-between mb-4\" />;
           <motion.div;
             className={`text-4xl ${service.textColor}`}
-            variants={iconVariants}
-            initial=\"hidden\";
-            animate=\"visible\";
+            variants={iconVariants}"
+            initial=\"hidden\";"
+            animate=\"visible\";"
             whileHover=\"hover\" />
 
             {service.icon}
@@ -209,14 +209,14 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
               <motion.div;}
 key={index}
                 className='flex items-center gap-2 text-sm text-gray-300';
-                initial={{ opacity: 0, x: -20 ,}
+                initial={{ opacity: 0, x: -20 }
 }
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 * index }}
 
                />
 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />
-                {featur,}
+                {featur}
 }
               </motion && motion.div>;
             ))}
@@ -264,12 +264,12 @@ key={index}
 
           </div>;
         </div>;
-        {/* Trial & Setup Info */}
-          <div className=\"flex items-center gap-2 text-gray-400\" />;
+        {/* Trial & Setup Info */}"
+          <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Clock className=\"w-4 h-4\" />;
             {service.trialDays} day trial;
-          </div>;
-          <div className=\"flex items-center gap-2 text-gray-400\" />;
+          </div>;"
+          <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Shield className=\"w-4 h-4\" />;
             <span className='text-xs text-yellow-400' />{service.roi}</span>;
           </div>;
@@ -302,13 +302,13 @@ key={index}
           <div className='flex items-center justify-between' />;
             <span className='text-xs font-semibold text-white' />ROI</span>;
             <span className='text-xs text-yellow-400' />{service && service.roi}</span>          </div>;
-        </div>;{/* Trial & Setup Info */}          </div>;
-          <div className=\"flex items-center justify-between mb-2\" />;
-            <span className=\"text-xs font-semibold text-white\" />Growth Rate</span>;
+        </div>;{/* Trial & Setup Info */}          </div>;"
+          <div className=\"flex items-center justify-between mb-2\" />;"
+            <span className=\"text-xs font-semibold text-white\" />Growth Rate</span>;"
             <span className=\"text-xs text-green-400\" />{service && service.growthRate}</span>;
-          </div>;
-          <div className=\"flex items-center justify-between\" />;
-            <span className=\"text-xs font-semibold text-white\" />ROI</span>;
+          </div>;"
+          <div className=\"flex items-center justify-between\" />;"
+            <span className=\"text-xs font-semibold text-white\" />ROI</span>;"
             <span className=\"text-xs text-yellow-400\" />{service && service.roi}</span>;
           </div>;
         </div>;{/* Trial & Setup Info */}
@@ -317,13 +317,13 @@ key={index}
             <Clock className='w-4 h-4' />;
             {service && service.trialDays} day trial;
           </div>;
-          <div className='flex items-center gap-2 text-gray-400' />;
-            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className=\"flex items-center justify-between mb-6 text-sm\" />;
-          <div className=\"flex items-center gap-2 text-gray-400\" />;
+          <div className='flex items-center gap-2 text-gray-400' />;"
+            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className=\"flex items-center justify-between mb-6 text-sm\" />;"
+          <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Clock className=\"w-4 h-4\" />;
             {service && service.trialDays} day trial;
-          </div>;
-          <div className=\"flex items-center gap-2 text-gray-400\" />;
+          </div>;"
+          <div className=\"flex items-center gap-2 text-gray-400\" />;"
             <Shield className=\"w-4 h-4\" />;
           </div>;
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
@@ -343,7 +343,7 @@ key={index}
 href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2';
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
+            whileTap={{ scale: 0 && 0.95 }
 } />;
             <ExternalLink className='w-4 h-4' />;
             Learn More;
@@ -354,7 +354,7 @@ href={service.link}
 
 
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 ,}
+            whileTap={{ scale: 0.95 }
 }
            />;
             <ArrowRight className='w-4 h-4' />;
@@ -370,24 +370,24 @@ href={service.link}
       </div>
 
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
-}>;
+            whileTap={{ scale: 0 && 0.95 }
+}>;"
             <ExternalLink className=\"w-4 h-4\" />;
             Learn More;
           </motion && motion.a>;<motion&& motion.a;
-            href={`mailto: ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name},
-}
+            href={`mailto: ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}
+}"
             className=\"bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center\";
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 ,}
-} />;
+            whileTap={{ scale: 0 && 0.95 }
+} />;"
             <ArrowRight className=\"w-4 h-4\" />;
           </motion && motion.a>;
         </div>;{/* Contact Info */}
-        <div className='mt-4 pt-4 border-t border-white/10' />;
-          <div className='text-xs text-gray-500 text-center' />        <div className=\"mt-4 pt-4 border-t border-white/10\" />;
+        <div className='mt-4 pt-4 border-t border-white/10' />;"
+          <div className='text-xs text-gray-500 text-center' />        <div className=\"mt-4 pt-4 border-t border-white/10\" />;"
           <div className=\"text-xs text-gray-500 text-center\" />;
-            Contact: {service && service.contactInfo.emai,}
+            Contact: {service && service.contactInfo.emai}
 }
           </div>;
         </div>;
@@ -397,9 +397,10 @@ href={service.link}
 
 <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500' />
     </motion.div>
-  ),
+  )
 };
 
 
 export default EnhancedServiceCard;
 
+"

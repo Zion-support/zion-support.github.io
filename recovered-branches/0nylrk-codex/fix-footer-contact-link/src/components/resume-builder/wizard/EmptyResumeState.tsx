@@ -20,5 +20,6 @@ export const EmptyResumeState = (
         </div>
       </CardContent>
     </Card>
+
   );
 };

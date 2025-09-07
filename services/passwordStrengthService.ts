@@ -867,5 +867,6 @@ return password && password.split('').sort(() => Math && Math.random() - 0 && 0.
 // Export singleton instance;
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances;
+
 export { PasswordStrengthService }
 }

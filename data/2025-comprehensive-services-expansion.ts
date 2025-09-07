@@ -1,4 +1,6 @@
+
 customers: number;
+
 rating: number;
   reviews: number;
   customers: number;
@@ -615,14 +617,18 @@ const contact = {mobile: '+1 302 464 0950',
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
+
   website: 'https://ziontechgroup.com',};
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -661,6 +667,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
+
+
 useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -3420,6 +3428,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 ];
     rating: 4.8,
     reviews: 178;
+
   }
 ];
 ;  }

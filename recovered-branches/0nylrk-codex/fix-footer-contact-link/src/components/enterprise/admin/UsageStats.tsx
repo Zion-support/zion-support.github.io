@@ -1,3 +1,4 @@
+
 import React from \"react\";
 import { Slider } from \"@/components/ui/slider\";
 import { Badge } from \"@/components/ui/badge\";
@@ -69,6 +70,7 @@ resources.
         </Card>
 
         <Card />
+
           <CardHeader />
             <CardTitle />Candidate Contacts</CardTitle>
             <CardDescription />
@@ -78,9 +80,11 @@ resources.
           <CardContent className=\"space-y-4\" />
             <div />
               <div className=\"flex items-center justify-between mb-2\" />
+
                 <div className=\"text-sm font-medium\" />
                   Monthly contact credits;
                 </div>
+
                 <Badge variant=\"outline\" />178 / 500</Badge>
               </div>
               <Progress value={35.6} className=\"h-2\" />
@@ -99,9 +103,11 @@ resources.
               Save Changes;
             </Button>
           </CardFooter>
+
         </Card>
 
         <Card />
+
           <CardHeader />
             <CardTitle />AI Features</CardTitle>
             <CardDescription />
@@ -125,6 +131,7 @@ resources.
               </div>
             </div>
           </CardContent>
+
           <CardFooter />
             <Button size=\"sm\" onClick={handleSaveChanges} />
               Save Changes;

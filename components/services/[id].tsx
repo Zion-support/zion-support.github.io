@@ -57,10 +57,10 @@ const service = getServiceById(id);
         <meta;
 property='og: title'
 
-          content={`${service.name} | Zion Tech Group,
+          content={`${service.name} | Zion Tech Group
 }
         />;
-        <meta property='og: description' content={service.descriptio,}
+        <meta property='og: description' content={service.descriptio}
 } />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -81,7 +81,7 @@ href='/services'
                 Back to Services;
               </Button>
               <Button;
-href={service.websit,}
+href={service.websit}
 }
 variant='primary';
                 size='sm';
@@ -164,3 +164,4 @@ href='/contact'
 
 }
 
+"

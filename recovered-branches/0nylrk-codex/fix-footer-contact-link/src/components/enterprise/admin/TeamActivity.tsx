@@ -1,3 +1,4 @@
+  Table;
 TableBody,
 TableCell;
 TableHead,}
@@ -220,6 +221,7 @@ const formatDate = (
 
   const getCategoryBadge = (
     const categoryStyles: Record<
+
 string,) => {
   return $3;}
 }
@@ -229,6 +231,7 @@ string,) => {
       candidates: { variant: \"outline\" },
       team: { variant: \"secondary\" },
       billing: { variant: \"destructive\" },
+
     };
 
     return <Badge variant={categoryStyles[category].variant} />{category}</Badge>;
@@ -275,11 +278,13 @@ type=\"search\"
                 <TableCell />{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className=\"text-muted-foreground\" />
                   {formatDate(activity.timestamp)}
+
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+
       </div>
 
       <div className=\"flex items-center justify-between\" />

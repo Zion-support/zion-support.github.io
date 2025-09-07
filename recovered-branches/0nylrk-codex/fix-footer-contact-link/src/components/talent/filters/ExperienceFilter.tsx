@@ -1,3 +1,4 @@
+
 import { ChevronDown, ChevronUp } from \"lucide-react\";
 import { Slider } from \"@/components/ui/slider\";
 import { ExperienceFilterProps } from \"@/types/filters\";
@@ -14,6 +15,7 @@ export function ExperienceFilter({
 }
   };
 
+
 return (
     <div className=\"mb-6 border-b border-zion-blue-light pb-6\" />
       <button;
@@ -28,22 +30,29 @@ onClick={toggleSection}
         )}
       </button>
 
+
+
       {expanded && (
         <div className=\"mt-6\" />}
           <div className=\"flex justify-between text-sm text-zion-slate-light mb-2\" />}
             <span />{experienceRange[0]} years</span>
             <span />{experienceRange[1]} years</span>
           </div>
+
           <Slider;
+ /
 value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
             className=\"mt-6\"
+
           />
         </div>
+
       )}
     </div>
   );
 }
+

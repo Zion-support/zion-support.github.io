@@ -47,7 +47,9 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
+
   website: 'https://ziontechgroup.com',};
+
 const contact = {
   mobile: \"mobile\",
     email: 'kleber@ziontechgroup.com',}
@@ -6929,6 +6931,8 @@ implementationDetails: 'Connect billing export, train anomaly baselines, configu
       'DOM diff–based selector healingAuto-wait and idempotent steps',
       'Proxies and device profilesRun history and replays',
       'Webhooks and schedules'
+
+
     ],
     popular: false,
     icon: '🕹️',
@@ -6955,6 +6959,8 @@ implementationDetails: 'Connect billing export, train anomaly baselines, configu
     customers: 5,
     reviews: 3,
     reviews: 3;
+}
+
   },
   {
     id: 'sso-scim-accelerator',
@@ -6967,6 +6973,8 @@ implementationDetails: 'Connect billing export, train anomaly baselines, configu
       'SAML/OIDC providers ready-to-goSCIM provisioning adapters',
       'End-to-end test suitesBranding and theming',
       'Audit logs and support runbooks'
+
+
     ],
     popular: true,
     icon: '🔐',
@@ -6975,6 +6983,8 @@ implementationDetails: 'Connect billing export, train anomaly baselines, configu
   link: 'https://ziontechgroup.com/services/sso-scim-accelerator',
     marketPosition: 'Faster enterprise deals with standard-compliant integration.',
   marketPosition: 'Faster enterprise deals with standard-compliant integration.',
+
+
 targetAudience: 'SaaS teams targeting enterprise',
   trialDays: 14,
     setupTime: '3-7 days',
@@ -6994,6 +7004,8 @@ targetAudience: 'SaaS teams targeting enterprise',
     customers: 4,
     reviews: 2,
     reviews: 2;
+}
+
   },
   {
     id: 'api-performance-optimizer-pro',
@@ -7006,6 +7018,8 @@ targetAudience: 'SaaS teams targeting enterprise',
       'Synthetic latency monitoringAdaptive rate-limit tuner',
       'Multi-region load testingSchema & contract validation',
       'Auto-caching recommendationsChange-impact reports'
+
+
     ],
     popular: true,
     icon: '⚡',
@@ -7014,6 +7028,8 @@ targetAudience: 'SaaS teams targeting enterprise',
   link: 'https://ziontechgroup.com/services/api-performance-optimizer-pro',
     marketPosition: 'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
   marketPosition: 'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
+
+
 targetAudience: 'Platform and API teams',
   trialDays: 14,
     setupTime: '1 day',
@@ -7033,6 +7049,8 @@ targetAudience: 'Platform and API teams',
     customers: 12,
     rating: 4.8,
     reviews: 9;
+}
+
   },
   {
     id: 'ai-rag-starter-blueprint',
@@ -7045,6 +7063,8 @@ targetAudience: 'Platform and API teams',
       'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)',
       'Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)',
       'Observability dashboardsOne-click deploys'
+
+
     ],
     popular: true,
     icon: '🧠',
@@ -7072,6 +7092,8 @@ targetAudience: 'Platform and API teams',
     customers: 15,
     rating: 4.8,
     reviews: 7;
+}
+
   },
   {
     id: 'browser-automation-copilot',
@@ -7084,6 +7106,8 @@ targetAudience: 'Platform and API teams',
       'Step-based DSLResilient selectors & healing',
       'Proxy pools & rotationCaptcha solve workflows',
       'Audit logs & video replayScheduler & webhooks'
+
+
     ],
     popular: false,
     icon: '🧩',
@@ -7092,6 +7116,8 @@ targetAudience: 'Platform and API teams',
   marketPosition:
       'Cheaper than bespoke Playwright farms, with managed reliability',
     marketPosition: 'Cheaper than bespoke Playwright farms, with managed reliability',
+
+
 targetAudience: 'Ops, growth, QA teams',
   trialDays: 14,
     setupTime: '2 hours',
@@ -7111,6 +7137,8 @@ targetAudience: 'Ops, growth, QA teams',
     customers: 22,
     rating: 4.6,
     reviews: 12;
+}
+
   },
   {
     id: 'cloud-cost-anomaly-guard',
@@ -7123,6 +7151,8 @@ targetAudience: 'Ops, growth, QA teams',
       'Anomaly detection & seasonalityService & tag attribution',
       'Slack and email alertsTerraform fix suggestions',
       'Forecast & budget guardrailsMulti-cloud support'
+
+
     ],
     popular: true,
     icon: '💸',
@@ -7150,6 +7180,8 @@ targetAudience: 'Ops, growth, QA teams',
     customers: 11,
     reviews: 5,
     reviews: 5;
+}
+
   },
   {
     id: 'serverless-batch-orchestrator-pro',
@@ -7162,6 +7194,8 @@ targetAudience: 'Ops, growth, QA teams',
       'YAML job specsCross-cloud scheduler',
       'Retries & DLQNotification hooks',
       'Cost-aware windowsAudit & run history'
+
+
     ],
     popular: false,
     icon: '⏱️',
@@ -7170,6 +7204,8 @@ targetAudience: 'Ops, growth, QA teams',
   marketPosition:
       'Lower cost than managed workflow engines for periodic jobs.',
     marketPosition: 'Lower cost than managed workflow engines for periodic jobs.',
+
+
 targetAudience: 'Data engineering, platform, ops',
   trialDays: 14,
     setupTime: '2 hours',
@@ -7190,6 +7226,8 @@ targetAudience: 'Data engineering, platform, ops',
     customers: 34,
     rating: 4.6,
     reviews: 14;
+}
+
   },
   {
     id: 'seo-technical-auditor-pro',
@@ -7202,6 +7240,8 @@ targetAudience: 'Data engineering, platform, ops',
       'Automated crawlingCWV and Lighthouse checks',
       'Broken link detectionSchema.org suggestions',
       'PR autofix workflowsSitemap & robots validation'
+
+
     ],
     popular: true,
     icon: '🔍',
@@ -7210,6 +7250,8 @@ targetAudience: 'Data engineering, platform, ops',
   marketPosition:
       'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
     marketPosition: 'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
+
+
 targetAudience: 'Growth, web, SEO engineering',
   trialDays: 14,
     setupTime: '30 minutes',
@@ -7230,6 +7272,8 @@ targetAudience: 'Growth, web, SEO engineering',
     customers: 58,
     rating: 4.7,
     reviews: 31;
+}
+
   },
   {
     id: 'gdpr-cookie-consent-manager-pro',
@@ -7242,6 +7286,8 @@ targetAudience: 'Growth, web, SEO engineering',
       'IAB TCF supportRegion-based policies',
       'Consent logs & exportsA/B banner optimization',
       'CMP integrationsAccessibility first UI'
+
+
     ],
     popular: false,
     icon: '🛡️',
@@ -7269,6 +7315,8 @@ targetAudience: 'Growth, web, SEO engineering',
     customers: 40,
     rating: 4.5,
     reviews: 16;
+}
+
   },
   {
     id: 'ai-meeting-notes-summarizer-pro',
@@ -7281,6 +7329,8 @@ targetAudience: 'Growth, web, SEO engineering',
       'Auto-record & transcribeSpeaker diarization',
       'Action item extractionCRM & PM sync',
       'PII redactionTeam workspace'
+
+
     ],
     popular: true,
     icon: '📝',
@@ -7289,6 +7339,8 @@ targetAudience: 'Growth, web, SEO engineering',
   marketPosition:
       'Lightweight, privacy-first alternative to heavy meeting bots.',
     marketPosition: 'Lightweight, privacy-first alternative to heavy meeting bots.',
+
+
 targetAudience: 'Sales, success, product, ops',
   trialDays: 14,
     setupTime: '15 minutes',
@@ -7308,6 +7360,8 @@ targetAudience: 'Sales, success, product, ops',
     customers: 120,
     rating: 4.6,
     reviews: 52;
+}
+
   },
   {
     id: 'ai-code-migration-assistant-pro',
@@ -7320,6 +7374,8 @@ targetAudience: 'Sales, success, product, ops',
       'Typed codemodsTest-aware refactors',
       'Multi-repo orchestrationRisk scoring & rollbacks',
       'CI validationChangelogs & docs'
+
+
     ],
     popular: false,
     icon: '🧩',
@@ -7338,6 +7394,8 @@ targetAudience: 'Sales, success, product, ops',
       'Next.js/React upgrades, Typescript migrations, Policy refactors'
     ],
     useCases: ['Next.js/React upgrades, Typescript migrations, Policy refactors'],
+
+
 roi: 'Cut upgrade time by 60–80%',
   competitors: ['Sourcegraph Cody, AWS CodeGuru'],
     marketSize: '$9B DevTools AI',
@@ -7350,6 +7408,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 18,
     rating: 4.5,
     reviews: 10;
+}
+
   },
   {
     id: 'incident-statuspage-automation-pro',
@@ -7362,6 +7422,8 @@ roi: 'Cut upgrade time by 60–80%',
       'SLO-triggered updatesRCA templates',
       'Subscriber messagingIncident timeline',
       'Webhook & chat opsAnalytics & CSAT'
+
+
     ],
     popular: false,
     icon: '🚨',
@@ -7389,6 +7451,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 25,
     rating: 4.6,
     reviews: 12;
+}
+
   },
   {
     id: 'multi-cloud-backup-automation-pro',
@@ -7401,6 +7465,8 @@ roi: 'Cut upgrade time by 60–80%',
       'Snapshot policiesImmutability & WORM',
       'Cross-cloud recoveryKey rotation & KMS',
       'Drills & audit logsCost-aware tiers'
+
+
     ],
     popular: true,
     icon: '🗄️',
@@ -7428,6 +7494,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 14,
     rating: 4.7,
     reviews: 8;
+}
+
   },
   {
     id: 'customer-feedback-insights-pro',
@@ -7440,6 +7508,8 @@ roi: 'Cut upgrade time by 60–80%',
       'Omnichannel ingestionLLM theme clustering',
       'Churn signal alertsRoadmap prioritization',
       'VOC dashboardsCSV & API export'
+
+
     ],
     popular: false,
     icon: '💬',
@@ -7467,6 +7537,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 63,
     reviews: 24,
     reviews: 24;
+}
+
   },
   {
     id: 'ai-sales-sequences-pro',
@@ -7479,6 +7551,8 @@ roi: 'Cut upgrade time by 60–80%',
       'ICP & persona modelingSequence generator',
       'Deliverability checksSend window optimizer',
       'A/B copy testingCRM sync'
+
+
     ],
     popular: true,
     icon: '📈',
@@ -7506,6 +7580,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 210,
     reviews: 77,
     reviews: 77;
+}
+
   },
   {
     id: 'data-pipeline-optimizer-pro',
@@ -7518,6 +7594,8 @@ roi: 'Cut upgrade time by 60–80%',
       'Throughput profilerParallelism tuner',
       'Schema drift alertsCost guardrails',
       'Auto-remediationRunbook suggestions'
+
+
     ],
     popular: false,
     icon: '📦',
@@ -7545,6 +7623,8 @@ roi: 'Cut upgrade time by 60–80%',
     customers: 11,
     reviews: 6,
     reviews: 6;
+}
+
   },
   {
     id: 'sso-rapid-integration-pro',
@@ -7557,6 +7637,8 @@ roi: 'Cut upgrade time by 60–80%',
       'SAML & OIDCSCIM provisioning',
       'Branded login pagesRole & group mapping',
       'Audit logsTenant isolation'
+
+
     ],
     popular: true,
     icon: '🔐',
@@ -7586,6 +7668,8 @@ roi: 'Cut upgrade time by 60–80%',
     reviews: 19}
   }
   ,
+
+
   {
     id: 'finops-cost-anomaly-guard',
   name: 'FinOps Cost Anomaly Guard',
@@ -7597,6 +7681,8 @@ roi: 'Cut upgrade time by 60–80%',
       'Real-time anomaly detectionBudget guardrails & alerts',
       'Auto-tagging verificationSavings recommendations',
       'Slack/Email integrationsMulti-cloud coverage (AWS/Azure/GCP)'
+
+
     ],
     popular: true,
     icon: '💸',
@@ -7605,6 +7691,8 @@ roi: 'Cut upgrade time by 60–80%',
   marketPosition:;
       'Alternative to building internal FinOps bots and dashboards; quick ROI.',
     marketPosition: 'Alternative to building internal FinOps bots and dashboards, quick ROI.',
+
+
 targetAudience: 'FinOps, platform and SRE teams',
   trialDays: 14,
     setupTime: '1 day',
@@ -7620,6 +7708,8 @@ targetAudience: 'FinOps, platform and SRE teams',
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'],
     integrations: ['Slack, Email, PagerDuty, Jira'],
     useCases: ['Budget overrun prevention, Tag hygiene, Commitment utilization'],
+
+
 roi: '5–20% monthly savings within 60 days',
   competitors: ['Anodot, CloudZero, Vantage'],
     marketSize: '$10B cloud cost optimization',
@@ -7632,6 +7722,8 @@ roi: '5–20% monthly savings within 60 days',
     customers: 11,
     rating: 4.7,
     reviews: 6;
+}
+
   },
   {
     id: 'gdpr-dsar-automation-suite',
@@ -7644,6 +7736,8 @@ roi: '5–20% monthly savings within 60 days',
       'Identity verification & consentCross-system data discovery',
       'Automatic PII redactionDeadline tracking & SLAs',
       'Export bundles & receiptsPolicy templates'
+
+
     ],
     popular: true,
     icon: '✅',
@@ -7652,6 +7746,8 @@ roi: '5–20% monthly savings within 60 days',
   marketPosition:
       'Comparable to Transcend and OneTrust modules; simpler setup for SMBs.',
     marketPosition: 'Comparable to Transcend and OneTrust modules, simpler setup for SMBs.',
+
+
 targetAudience: 'Legal, security, and data teams',
   trialDays: 14,
     setupTime: '3 days',
@@ -7672,6 +7768,8 @@ targetAudience: 'Legal, security, and data teams',
     customers: 8,
     rating: 4.8,
     reviews: 5;
+}
+
   },
   {
     id: 'incident-copilot-pro',
@@ -7684,6 +7782,8 @@ targetAudience: 'Legal, security, and data teams',
       'Playbook suggestionsAuto status page updates',
       'Root-cause timelinesSlack/PagerDuty bridges',
       'Postmortem draftsService dependency mapping'
+
+
     ],
     popular: false,
     icon: '🆘',
@@ -7692,6 +7792,8 @@ targetAudience: 'Legal, security, and data teams',
   marketPosition:
       'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
     marketPosition: 'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
+
+
 targetAudience: 'SRE, platform and support teams',
   trialDays: 14,
     setupTime: '1 day',
@@ -7712,6 +7814,8 @@ targetAudience: 'SRE, platform and support teams',
     customers: 9,
     rating: 4.7,
     reviews: 4;
+}
+
   },
   {
     id: 'ai-sales-prospecting-studio',
@@ -7724,6 +7828,8 @@ targetAudience: 'SRE, platform and support teams',
       'ICP filters & enrichmentPersonalized sequences',
       'Deliverability checksLinkedIn assist',
       'Reply classificationCRM sync'
+
+
     ],
     popular: true,
     icon: '📈',
@@ -7732,6 +7838,8 @@ targetAudience: 'SRE, platform and support teams',
   marketPosition:;
       'Faster personalization than generic sequencers; built-in compliance.',
     marketPosition: 'Faster personalization than generic sequencers, built-in compliance.',
+
+
 targetAudience: 'Growth and sales teams',
   trialDays: 14,
     setupTime: '2 hours',
@@ -7752,6 +7860,8 @@ targetAudience: 'Growth and sales teams',
     customers: 17,
     reviews: 10,
     reviews: 10;
+}
+
   },
   {
     id: 'data-contracts-health-monitor',
@@ -7764,6 +7874,8 @@ targetAudience: 'Growth and sales teams',
       'Schema diff & validationData quality checks',
       'Lineage-based ownershipSLA monitors',
       'Contract registryAuto ticketing'
+
+
     ],
     popular: false,
     icon: '🧾',
@@ -7772,6 +7884,8 @@ targetAudience: 'Growth and sales teams',
   marketPosition:
       'Pragmatic contracts vs. bespoke dbt rules; team-friendly UX.',
     marketPosition: 'Pragmatic contracts vs. bespoke dbt rules, team-friendly UX.',
+
+
 targetAudience: 'Data platform & analytics engineering',
   trialDays: 14,
     setupTime: '2 days',
@@ -7792,6 +7906,8 @@ targetAudience: 'Data platform & analytics engineering',
     customers: 6,
     rating: 4.6,
     reviews: 3;
+}
+
   },
   {
     id: 'ai-powered-email-responder',
@@ -7804,6 +7920,8 @@ targetAudience: 'Data platform & analytics engineering',
       'Priority and intent detectionSafe auto-send rules with approvals',
       'Knowledge-grounded answers (RAG)Shared inbox and assignments',
       'Analytics and SLA dashboards'
+
+
     ],
     popular: true,
     icon: '✉️',
@@ -7812,6 +7930,8 @@ targetAudience: 'Data platform & analytics engineering',
   marketPosition:
       'Lightweight vs. heavy helpdesk suites; faster time-to-value.',
     marketPosition: 'Lightweight vs. heavy helpdesk suites, faster time-to-value.',
+
+
 targetAudience: 'Support, sales, ops, founders',
   trialDays: 14,
     setupTime: '30 minutes',
@@ -7822,6 +7942,8 @@ targetAudience: 'Support, sales, ops, founders',
     useCases: ['Support inboxSales replies', 'Backoffice'],
     roi: 'Reduce manual email time by 50–80%',
   competitors: ['Front + AIZendesk AI'],
+
+
 marketSize: '$9B shared inbox',
   growthRate: '15% CAGR',
     variant: 'ai-futuristic',
@@ -7832,6 +7954,8 @@ marketSize: '$9B shared inbox',
     customers: 6,
     rating: 4.7,
     reviews: 3;
+}
+
   },
   {
     id: 'mobile-first-survey-tool',
@@ -7844,6 +7968,8 @@ marketSize: '$9B shared inbox',
       'Branching & pipingTheme & embed widgets',
       'QR & link distributionReal-time dashboards',
       'Exports & webhooks'
+
+
     ],
     popular: false,
     icon: '📱',
@@ -7861,6 +7987,8 @@ marketSize: '$9B shared inbox',
     useCases: ['NPSMarket research', 'UX surveys'],
     roi: 'Increase completion rates 1.5–2.5x',
   competitors: ['TypeformSurveyMonkey'],
+
+
 marketSize: '$5B surveys',
   growthRate: '12% CAGR',
     variant: 'holographic-advanced',
@@ -7871,6 +7999,8 @@ marketSize: '$5B surveys',
     customers: 3,
     reviews: 2,
     reviews: 2;
+}
+
   },
   {
     id: 'ecommerce-returns-management-saas',
@@ -7883,6 +8013,8 @@ marketSize: '$5B surveys',
       'Return portal & policiesLabel generation',
       'Reason codes & workflowsWarehouse disposition',
       'Refund & exchange APIs'
+
+
     ],
     popular: true,
     icon: '📦',
@@ -7900,6 +8032,8 @@ marketSize: '$5B surveys',
     useCases: ['RMA automationRefunds', 'Analytics'],
     roi: 'Cut return handling time by 40–70%',
   competitors: ['Loop ReturnsReturnly'],
+
+
 marketSize: '$3B returns tech',
   growthRate: '18% CAGR',
     variant: 'neural-quantum',
@@ -7910,6 +8044,8 @@ marketSize: '$3B returns tech',
     customers: 4,
     rating: 4.7,
     reviews: 2;
+}
+
   },
   {
     id: 'ai-email-responder-pro',
@@ -7922,12 +8058,16 @@ marketSize: '$3B returns tech',
       'Inbox categorization & prioritiesDraft reply suggestions with tone controls',
       'Policy filters and PII redactionCRM sync and tags',
       'Auto follow-ups and SLAs'
+
+
     ],
     popular: true,
     icon: '📧',
   color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
   link: '/services/ai-email-responder-pro',
+
+
 targetAudience: 'Support, sales, operations, founders',
   trialDays: 14,
     setupTime: '30 minutes',
@@ -7948,6 +8088,8 @@ targetAudience: 'Support, sales, operations, founders',
     customers: 32,
     rating: 4.7,
     reviews: 14;
+}
+
   },
   {
     id: 'mobile-first-survey-studio',
@@ -7960,12 +8102,16 @@ targetAudience: 'Support, sales, operations, founders',
       'Branching logic and conditionsBeautiful mobile templates',
       'Real‑time charts & exportsUTM and webhook integrations',
       'NPS/CSAT/CES presets'
+
+
     ],
     popular: false,
     icon: '📱',
   color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
   link: '/services/mobile-first-survey-studio',
+
+
 targetAudience: 'Marketing, CX, product research',
   trialDays: 14,
     setupTime: '20 minutes',
@@ -7986,6 +8132,8 @@ targetAudience: 'Marketing, CX, product research',
     customers: 18,
     reviews: 6,
     reviews: 6;
+}
+
   },
   {
     id: 'affiliate-tracking-hub',
@@ -7998,6 +8146,8 @@ targetAudience: 'Marketing, CX, product research',
       'Referral links and attributionCommission rules and schedules',
       'Fraud checks and blacklistsAnalytics & tax exports',
       'Webhook and API'
+
+
     ],
     popular: true,
     icon: '🔗',
@@ -8025,6 +8175,8 @@ targetAudience: 'Marketing, CX, product research',
     customers: 11,
     reviews: 5,
     reviews: 5;
+}
+
   },
   {
     id: 'podcast-transcription-studio',
@@ -8037,12 +8189,16 @@ targetAudience: 'Marketing, CX, product research',
       'Diarization & timestampsChapters and show notes',
       'Vocabulary hintsExport SRT/VTT/Docs',
       'SEO landing pages'
+
+
     ],
     popular: false,
     icon: '🎙️',
   color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
   link: '/services/podcast-transcription-studio',
+
+
 targetAudience: 'Podcasters, media teams, agencies',
   trialDays: 7,
     setupTime: '10 minutes',
@@ -8063,6 +8219,8 @@ targetAudience: 'Podcasters, media teams, agencies',
     customers: 20,
     rating: 4.6,
     reviews: 9;
+}
+
   },
   {
     id: 'ecommerce-returns-portal',
@@ -8075,12 +8233,16 @@ targetAudience: 'Podcasters, media teams, agencies',
       'Return reasons & RMA flowLabel creation and tracking',
       'Status pages and notificationsExchange or refund rules',
       'Analytics and exports'
+
+
     ],
     popular: true,
     icon: '📦',
   color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
   link: '/services/ecommerce-returns-portal',
+
+
 targetAudience: 'Shopify/WooCommerce merchants',
   trialDays: 14,
     setupTime: '1 hour',
@@ -8101,6 +8263,8 @@ targetAudience: 'Shopify/WooCommerce merchants',
     customers: 14,
     rating: 4.5,
     reviews: 7;
+}
+
   },
   {
     id: 'msP-it-helpdesk-lite',
@@ -8113,12 +8277,16 @@ targetAudience: 'Shopify/WooCommerce merchants',
       'Tickets and SLAsKB and canned replies',
       'Client portal and rolesAlerts → ticket rules',
       'Email ingest & automation'
+
+
     ],
     popular: false,
     icon: '🛠️',
   color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
   link: '/services/msp-it-helpdesk-lite',
+
+
 targetAudience: 'MSPs and internal IT teams',
   trialDays: 14,
     setupTime: '1 day',
@@ -8139,6 +8307,8 @@ targetAudience: 'MSPs and internal IT teams',
     customers: 16,
     reviews: 8,
     reviews: 8;
+}
+
   },
   {
     id: 'ai-privacy-compliance-copilot',
@@ -8151,6 +8321,8 @@ targetAudience: 'MSPs and internal IT teams',
       'Automated system discovery and RoPA builderDPIA templates with AI risk suggestions',
       'DSAR intake, identity verification, redactionPolicy generation and version control',
       'Evidence exports (ISO 27001/SOC2 mappings)'
+
+
     ],
     popular: true,
     icon: '🛡️',
@@ -8159,6 +8331,8 @@ targetAudience: 'MSPs and internal IT teams',
   marketPosition:
       'Alternative to Transcend/OneTrust for SMB/mid-market with faster time-to-value.',
     marketPosition: 'Alternative to Transcend/OneTrust for SMB/mid-market with faster time-to-value.',
+
+
 targetAudience: 'Legal, security, compliance teams',
   trialDays: 14,
     setupTime: '2–4 days',
@@ -8169,6 +8343,8 @@ targetAudience: 'Legal, security, compliance teams',
     useCases: ['DPIA/RoPA automationDSAR processing', 'Evidence collection'],
     roi: 'Reduce manual privacy ops hours by 60–80%',
   competitors: ['OneTrustTranscend', 'Securiti'],
+
+
 marketSize: '$8B privacy tech',
   growthRate: '20% CAGR',
     variant: 'holographic-matrix',
@@ -8179,6 +8355,8 @@ marketSize: '$8B privacy tech',
     customers: 9,
     rating: 4.7,
     reviews: 6;
+}
+
   },
   {
     id: 'sales-copilot-for-outreach',
@@ -8191,6 +8369,8 @@ marketSize: '$8B privacy tech',
       'Adaptive sequencing and send windowsFirmographic and technographic personalization',
       'Meeting transcription and action itemsAuto-log to Salesforce/HubSpot',
       'Safety guardrails and opt-out handling'
+
+
     ],
     popular: true,
     icon: '🚀',
@@ -8199,6 +8379,8 @@ marketSize: '$8B privacy tech',
   marketPosition:
       'Combines best of Outreach/Salesloft with native AI writing and logging.',
     marketPosition: 'Combines best of Outreach/Salesloft with native AI writing and logging.',
+
+
 targetAudience: 'SDRs, AEs, RevOps',
   trialDays: 14,
     setupTime: '1 day',
@@ -8209,6 +8391,8 @@ targetAudience: 'SDRs, AEs, RevOps',
     useCases: ['Outbound sequencesCall notes', 'CRM hygiene'],
     roi: 'Increase replies by 2–3x, reduce admin time 50%',
   competitors: ['OutreachSalesloft'],
+
+
 marketSize: '$6B sales engagement',
   growthRate: '18% CAGR',
     variant: 'holographic-matrix',
@@ -8219,6 +8403,8 @@ marketSize: '$6B sales engagement',
     customers: 21,
     rating: 4.6,
     reviews: 12;
+}
+
   },
   {
     id: 'security-evidence-automation-lite',
@@ -8231,6 +8417,8 @@ marketSize: '$6B sales engagement',
       'Cloud config collectors (AWS/GCP/Azure)Access review workflows and attestations',
       'Vulnerability snapshot with exceptionsTicket sampling and change history',
       'Auditor-ready exports'
+
+
     ],
     popular: false,
     icon: '📁',
@@ -8239,6 +8427,8 @@ marketSize: '$6B sales engagement',
   marketPosition:
       'Streamlined alternative to full GRC suites for smaller teams.',
     marketPosition: 'Streamlined alternative to full GRC suites for smaller teams.',
+
+
 targetAudience: 'Security, compliance, platform',
   trialDays: 14,
     setupTime: '1–3 days',
@@ -8249,6 +8439,8 @@ targetAudience: 'Security, compliance, platform',
     useCases: ['SOC2 evidenceISO controls', 'Audit prep'],
     roi: 'Save 40–60% audit prep time',
   competitors: ['DrataVanta (lite)'],
+
+
 marketSize: '$3B compliance ops',
   growthRate: '22% CAGR',
     variant: 'holographic-matrix',
@@ -8259,6 +8451,8 @@ marketSize: '$3B compliance ops',
     customers: 11,
     reviews: 7,
     reviews: 7;
+}
+
   },
   {
     id: 'ai-product-research-analyst',
@@ -8271,6 +8465,8 @@ marketSize: '$3B compliance ops',
       'Competitor monitoring and diffsUser review mining and clustering',
       'Opportunity scoring and tagsWeekly executive briefings',
       'Export to slides and docs'
+
+
     ],
     popular: true,
     icon: '🧭',
@@ -8288,6 +8484,8 @@ marketSize: '$3B compliance ops',
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
     roi: 'Cut research time by 70%',
   competitors: ['CrayonKlue (lite)'],
+
+
 marketSize: '$2B CI tools',
   growthRate: '15% CAGR',
     variant: 'holographic-matrix',
@@ -8298,6 +8496,8 @@ marketSize: '$2B CI tools',
     customers: 18,
     reviews: 10,
     reviews: 10;
+}
+
   },
   {
     id: 'marketing-brief-generator-pro',
@@ -8310,6 +8510,8 @@ marketSize: '$2B CI tools',
       'Persona and JTBD inputsChannel mix recommendations',
       'Creative prompts and examplesBenchmark KPIs by industry',
       'Export to Google Docs/Slides'
+
+
     ],
     popular: false,
     icon: '📝',
@@ -8318,6 +8520,8 @@ marketSize: '$2B CI tools',
   marketPosition:
       'Faster planning vs manual templates and agencies for SMBs.',
     marketPosition: 'Faster planning vs manual templates and agencies for SMBs.',
+
+
 targetAudience: 'Marketing managers, agencies, founders',
   trialDays: 7,
     setupTime: '30 minutes',
@@ -8328,6 +8532,8 @@ targetAudience: 'Marketing managers, agencies, founders',
     useCases: ['Campaign planningBrief standardization', 'Rapid iteration'],
     roi: 'Reduce planning time 80%',
   competitors: ['Notion templatesAgency briefs'],
+
+
 marketSize: '$1B planning tools',
   growthRate: '12% CAGR',
     variant: 'holographic-matrix',
@@ -8338,6 +8544,8 @@ marketSize: '$1B planning tools',
     customers: 25,
     reviews: 9,
     reviews: 9;
+}
+
   },
   {
     id: 'customer-feedback-hub',
@@ -8350,6 +8558,8 @@ marketSize: '$1B planning tools',
       'NPS/CSAT and feedback widgetsTopic clustering and trends',
       'Product area routing rulesRoadmap linkage and voting',
       'Weekly summaries to Slack'
+
+
     ],
     popular: true,
     icon: '💬',
@@ -8367,6 +8577,8 @@ marketSize: '$1B planning tools',
     useCases: ['Feedback centralizationPrioritization', 'VOC analytics'],
     roi: 'Improve roadmap-fit and customer satisfaction',
   competitors: ['CannyProductboard (lite)'],
+
+
 marketSize: '$1.2B feedback tools',
   growthRate: '14% CAGR',
     variant: 'holographic-matrix',
@@ -8377,6 +8589,8 @@ marketSize: '$1.2B feedback tools',
     customers: 15,
     reviews: 8,
     reviews: 8;
+}
+
   },
   {
     id: 'real-time-feature-flags-lite',
@@ -8389,6 +8603,8 @@ marketSize: '$1.2B feedback tools',
       'Edge evaluation and low latencySDKs for JS, Node, Python',
       'Audit log and approvalsExperiments and rollouts',
       'Usage quotas'
+
+
     ],
     popular: false,
     icon: '🚩',
@@ -8407,6 +8623,8 @@ marketSize: '$1.2B feedback tools',
     technology: ['Edge runtimeKV store', 'SDKs'],
     integrations: ['VercelCloudflare', 'Netlify'],
     useCases: ['Kill switchesExperiments', 'Progressive rollout'],
+
+
 roi: 'Speed up releases and reduce incidents',
   competitors: ['LaunchDarkly (lite)'],
     marketSize: '$2B feature flagging',
@@ -8419,6 +8637,8 @@ roi: 'Speed up releases and reduce incidents',
     customers: 10,
     reviews: 5,
     reviews: 5;
+}
+
   },
   {
     id: 'ai-legal-clause-recommender',
@@ -8431,6 +8651,8 @@ roi: 'Speed up releases and reduce incidents',
       'Risk heatmap and clause classificationSuggested language with alternatives',
       'Counterparty playbooks and historyExport redlines to Word',
       'Audit and approval workflows'
+
+
     ],
     popular: false,
     icon: '⚖️',
@@ -8439,6 +8661,8 @@ roi: 'Speed up releases and reduce incidents',
   marketPosition:
       'Focused legal assistant for faster reviews, not a replacement.',
     marketPosition: 'Focused legal assistant for faster reviews, not a replacement.',
+
+
 targetAudience: 'In-house legal, procurement',
   trialDays: 7,
     setupTime: '1–2 days',
@@ -8449,6 +8673,8 @@ targetAudience: 'In-house legal, procurement',
     useCases: ['Playbook adherenceNegotiation prep', 'Drafting'],
     roi: 'Reduce review cycle 30–50%',
   competitors: ['Ironclad (assist)LinkSquares (assist)'],
+
+
 marketSize: '$1B legal tech AI',
   growthRate: '18% CAGR',
     variant: 'holographic-matrix',
@@ -8459,6 +8685,8 @@ marketSize: '$1B legal tech AI',
     customers: 8,
     reviews: 4,
     reviews: 4;
+}
+
   },
   {
     id: 'ai-incident-analysis-bot',
@@ -8471,6 +8699,8 @@ marketSize: '$1B legal tech AI',
       'Timeline and RCA suggestionsChange correlation and diffs',
       'Duplicate detection and clusteringRemediation proposals with context',
       'Report and postmortem draft'
+
+
     ],
     popular: true,
     icon: '🧯',
@@ -8479,6 +8709,8 @@ marketSize: '$1B legal tech AI',
   marketPosition:
       'Faster learning loop layered on top of existing APM/alerting.',
     marketPosition: 'Faster learning loop layered on top of existing APM/alerting.',
+
+
 targetAudience: 'SRE, platform, dev teams',
   trialDays: 14,
     setupTime: '1 day',
@@ -8489,6 +8721,8 @@ targetAudience: 'SRE, platform, dev teams',
     useCases: ['Incident summarizationRegression detection', 'Runbook upkeep'],
     roi: 'Reduce MTTR and toil',
   competitors: ['FireHydrant (assist)Rootly (assist)'],
+
+
 marketSize: '$5B incident mgmt',
   growthRate: '17% CAGR',
     variant: 'holographic-matrix',
@@ -8499,6 +8733,8 @@ marketSize: '$5B incident mgmt',
     customers: 7,
     reviews: 3,
     reviews: 3;
+}
+
   },
   {
     id: 'ai-data-quality-monitor',
@@ -8511,6 +8747,8 @@ marketSize: '$5B incident mgmt',
       'Schema and distribution monitoringDrift detection and anomaly alerts',
       'Ownership inference and routingFix suggestions and PR templates',
       'Dashboards and SLAs'
+
+
     ],
     popular: true,
     icon: '📊',
@@ -8519,6 +8757,8 @@ marketSize: '$5B incident mgmt',
   marketPosition:
       'Lightweight alternative to heavy data observability tools.',
     marketPosition: 'Lightweight alternative to heavy data observability tools.',
+
+
 targetAudience: 'Data engineering, analytics',
   trialDays: 14,
     setupTime: '2–4 hours',
@@ -8530,6 +8770,8 @@ targetAudience: 'Data engineering, analytics',
     technology: ['Warehouse APIsAnomaly detection', 'LLM'],
     integrations: ['SnowflakeBigQuery', 'Redshiftdbt'],
     useCases: ['Data SLAsIncident routing', 'Automated fixes'],
+
+
 roi: 'Reduce broken dashboards and ML drift',
   competitors: ['Monte Carlo (lite)'],
     marketSize: '$3B data ops',
@@ -8542,6 +8784,8 @@ roi: 'Reduce broken dashboards and ML drift',
     customers: 12,
     reviews: 6,
     reviews: 6;
+}
+
   },
   {
     id: 'ai-ux-copy-optimizer',
@@ -8554,6 +8798,8 @@ roi: 'Reduce broken dashboards and ML drift',
       'Copy suggestions with tone controlsExperiment setup in minutes',
       'Segmentation and resultsExport diffs and PRs',
       'Design tool plugins'
+
+
     ],
     popular: false,
     icon: '✍️',
@@ -8562,6 +8808,8 @@ roi: 'Reduce broken dashboards and ML drift',
   marketPosition:
       'Complements product analytics by focusing on copy changes.',
     marketPosition: 'Complements product analytics by focusing on copy changes.',
+
+
 targetAudience: 'Product, design, growth',
   trialDays: 7,
     setupTime: '30 minutes',
@@ -8573,6 +8821,8 @@ targetAudience: 'Product, design, growth',
     technology: ['LLMExperiments', 'SDK'],
     integrations: ['FigmaLaunchDarkly', 'Heap'],
     useCases: ['ActivationOnboarding', 'Paywall copy'],
+
+
 roi: 'Lift conversion 5–15%',
   competitors: ['Mutiny (lite)'],
     marketSize: '$1B CRO tools',
@@ -8585,6 +8835,8 @@ roi: 'Lift conversion 5–15%',
     customers: 14,
     reviews: 5,
     reviews: 5;
+}
+
   },
   {
     id: 'ai-governance-policy-center',
@@ -8597,6 +8849,8 @@ roi: 'Lift conversion 5–15%',
       'System registry and ownershipRisk assessment and mitigations',
       'Prompt evals and guardrailsApproval workflows and logs',
       'Policy templates and training'
+
+
     ],
     popular: true,
     icon: '📚',
@@ -8615,6 +8869,8 @@ roi: 'Lift conversion 5–15%',
     technology: ['RegistryEvals', 'Workflows'],
     integrations: ['GitHubJira', 'Slack'],
     useCases: ['Model registryRisk tracking', 'Policy compliance'],
+
+
 roi: 'Reduce policy drift and audit risk',
   competitors: ['Holistic AI (lite)'],
     marketSize: '$1 && 1.5B AI governance',
@@ -8782,4 +9038,5 @@ roi: 'Reduce policy drift and audit risk',
     reviews: 2}
   }
 ];
+
 ;

@@ -430,5 +430,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     rating: 4.9,
     reviews: 250;
   }
+
 ;  }
 ];

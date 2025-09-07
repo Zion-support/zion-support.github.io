@@ -1,3 +1,4 @@
+
 import React from \"react\";
 import { completeSitemap, dynamicPaths } from \"@/config/sitemap\";
 import { Link } from \"react-router-dom\";
@@ -6,6 +7,7 @@ import { SEO } from \"./SEO\";
 import { AppLayout } from \"@/layout/AppLayout\";
 export const SitemapPage: React.FC = () => {
   return (
+
     <AppLayout />
       <SEO;
 title=\"Sitemap | Zion AI Marketplace\"
@@ -168,6 +170,7 @@ to={route.path}
                   </div>
                 </li>
               ))}
+
             </ul>
           </div>
         </div>

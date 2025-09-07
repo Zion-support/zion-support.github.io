@@ -1,5 +1,7 @@
+
 {
     id: \"id\",
+
 name: 'AI Consciousness Evolution 2030',
   tagline: 'Next-generation AI consciousness development'
     price: '$39,999',

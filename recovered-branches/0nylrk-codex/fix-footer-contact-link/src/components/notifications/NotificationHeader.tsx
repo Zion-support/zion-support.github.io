@@ -1,3 +1,4 @@
+}
 import React from \"react\";}
 import { Button } from \"@/components/ui/button\";
 interface NotificationHeaderProps {
@@ -6,6 +7,7 @@ interface NotificationHeaderProps {
 }
 
 export const NotificationHeader: React.FC<NotificationHeaderProps /> = ({
+
 unreadCount,}
   onMarkAllAsRead,}
 }) => {
@@ -17,6 +19,7 @@ unreadCount,}
 variant=\"ghost\"}
           size=\"sm\"}
           onClick={onMarkAllAsRead}
+
           className=\"text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark\"
         >
           Mark all as read;

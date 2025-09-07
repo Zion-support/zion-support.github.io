@@ -1,3 +1,4 @@
+) => {
   return $3;}
 }
 import { Button } from \"./ui/button\";
@@ -20,6 +21,7 @@ setTimeout(() => {
     }, 1000);
   };
 
+
 return (
     <section className=\"py-20 bg-zion-blue\" />
       <div className=\"container mx-auto px-4 sm:px-6 lg:px-8\" />
@@ -30,6 +32,8 @@ return (
 revolutionize your IT operations;
           </p>
         </div>
+
+
 
         <div className=\"max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8\" />
           {isSubmitted ? (
@@ -76,6 +80,7 @@ htmlFor=\"name\"
                    />
                     Name;
                   </label>
+
                   <Input;
 id=\"name\"
                     type=\"text\"
@@ -104,6 +109,7 @@ htmlFor=\"email\"
                     Email;
                   </label>
                   <Input;
+ /
 id=\"email\"
                     type=\"email\"
                     className=\"w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white\"
@@ -121,11 +127,13 @@ htmlFor=\"phone\"
 id=\"phone\"
                     type=\"tel\"
                     className=\"w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white\"
+
                   />
                 </div>
               </div>
 
               <div className=\"mt-6\" />
+
                 <label;
 htmlFor=\"interest\"
                   className=\"block text-sm font-medium text-zion-slate-light mb-1\"
@@ -147,6 +155,7 @@ htmlFor=\"interest\"
 id={`interest-${index}`}
                         type=\"checkbox\"
                         className=\"h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50\"
+
                       />
                       <label;
 htmlFor={`interest-${index}`}
@@ -158,6 +167,7 @@ htmlFor={`interest-${index}`}
                   ))}
                 </div>
               </div>
+
 
               <div className=\"mt-6\" />
                 <label;
@@ -172,6 +182,8 @@ id=\"message\"
                   className=\"w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white\"
                  /></textarea>
               </div>
+
+
 
               <div className=\"mt-6\" />
                 <Button;
@@ -191,3 +203,4 @@ type=\"submit\"
     </section>
   );
 }
+

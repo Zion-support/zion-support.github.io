@@ -13,6 +13,7 @@ export function ReviewsList({
 }: ReviewsListProps) {
   if (isLoading) {
     return (
+
       <div className=\"space-y-4\" />
         {Array(3)
           .fill(0)
@@ -20,6 +21,7 @@ export function ReviewsList({
             <div;}
 key={i}
               className=\"border rounded-lg p-4 bg-card animate-pulse\"
+ /
             >
               <div className=\"flex items-center gap-3 mb-3\" />
                 <div className=\"h-10 w-10 rounded-full bg-muted\" /></div>
@@ -49,6 +51,7 @@ key={i}
       </div>}
     );}
   }
+
 
   return (
     <div className=\"space-y-4\" />

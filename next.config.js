@@ -19,6 +19,27 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
+  // Webpack configuration to handle TypeScript and JSX
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Handle TypeScript files
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            compilerOptions: {
+              jsx: 'preserve',
+            },
+          },
+        },
+      ],
+    });
+    
+    return config;
+  },
+  
   // Image optimization
   images: {
     domains: ['localhost'],
@@ -59,11 +80,6 @@ const nextConfig = {
     ];
   },
   
-  // Webpack configuration
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configuration here if needed
-    return config;
-  },
   
   // Experimental features
   experimental: {

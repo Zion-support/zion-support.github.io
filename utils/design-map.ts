@@ -1,3 +1,4 @@
+
 export type UIKitKind = \"ios\" | \"android\" | \"web\";
 export type UIKitKind = \"ios\" | \"android\" | \"web\";
 export interface TokenSet {
@@ -6,9 +7,11 @@ export interface TokenSet {;
   colors: Record<string, string />;
   typography: Record<string, any />;}
   spacing: Record<string, number />;}
+
 }
 
 export interface UIKit {
+
 
 export interface UIKit {;
   components: Record<string, any />;}
@@ -395,6 +398,7 @@ export async function buildUIKit(
           backgroundColor: tokens.colors.primary,}
           padding: tokens.spacing.md,}
         },
+
       },
       typography: {
         fontFamily: "Inter, sans-serif",

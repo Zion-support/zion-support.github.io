@@ -29,6 +29,8 @@ export interface ComprehensiveITService {
     mobile: string;
     email: string;
     address: string;
+
+
   {
 
     id: 'quantum - cloud - infrastructure',
@@ -200,9 +202,11 @@ export interface ComprehensiveITService {
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services;
   {
+
     id: 'enterprise-it-infrastructure',
   name: 'Enterprise IT Infrastructure Management',
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
+
 price: '$25,999',
   period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
@@ -974,4 +978,5 @@ implementationDetails: 'Advanced quantum cybersecurity platform with quantum enc
     launchDate: '2024-09-15';
     customers: 180;
     rating: 4.9;
+
     reviews: 156;

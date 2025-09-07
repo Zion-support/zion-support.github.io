@@ -307,6 +307,8 @@ import { ApiDocsSpec } from './types';
 }
 export default v1;
   ];
+
+
       ]
     },
       id: \"id\",
@@ -355,6 +357,8 @@ export default v1;
   properties: { items: { type: 'array',}
   items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
+
+
         }
       ];
     }
@@ -362,6 +366,8 @@ export default v1;
   code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token />'` },
             { language: 'javascript',}
   code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token />' } }).then(r => r && r.json())` },
+
             { language: 'python',
   code: `import requests\nrequests ;
+
 }

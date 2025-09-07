@@ -3,8 +3,8 @@
 
 
 export type RedemptionType =;
-  | \"boost_profile\";
-  | \"promote_listing\";
+  | \"boost_profile\";"
+  | \"promote_listing\";"
   | \"premium_support\";
 
 export default function UseTokensModal({
@@ -16,8 +16,8 @@ defaultType}
 
   isOpen,
   onClose,
-  serviceId,}
-  defaultType,}
+  serviceId}
+  defaultType}
 }: {;
   isOpen: boolean;
   onClose: () => void;
@@ -59,10 +59,10 @@ if (accs && accs.length > 0) setAccount(accs[0]);}
     try {
 
       const res = await fetch('/api/tokens/redeem', {
-        method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
+        method: 'POST'}
+  headers: { 'Content-Type': 'application/json'}
 },
-body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+body: JSON.stringify({ account, amount: tokens, type, serviceId })
       });
 
 const data = await res && res.json();
@@ -83,7 +83,7 @@ const data = await res && res.json();
         <div className='flex items-center justify-between mb-3' />
           <div className='font-semibold' />Use ZION Tokens</div>
           <button;
-onClick={onClos,}
+onClick={onClos}
 }
             className='px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800' />
 
@@ -138,59 +138,59 @@ access premium support.
           </div>
           <button;
 disabled={!account |isSubmitting |tokens <= 0}
-            onClick={redeem}
-            className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />;
-          <div className=\"text - sm\" />;
-            <div className=\"mb - 1\" />Amount (ZION)</div>;
-          <div className=\"text-sm\" />;
+            onClick={redeem}"
+            className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />;"
+          <div className=\"text - sm\" />;"
+            <div className=\"mb - 1\" />Amount (ZION)</div>;"
+          <div className=\"text-sm\" />;"
             <div className=\"mb-1\" />Amount (ZION)</div>;
-            <input;
+            <input;"
               type=\"number\";
               min={1}
-              value={tokens}
-              on_change={(e) = /> set_tokens (parse_int (e.target.value || \"0\", 10))}
+              value={tokens}"
+              on_change={(e) = /> set_tokens (parse_int (e.target.value || \"0\", 10))}"
               className=\"w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2\";
-            />;
+            />;"
             <div className=\"opacity - 70 mt - 1\" />Approx. ${usd_value} USD</div>;
-          </div>;
-          <div className=\"text - sm\" />;
-            <div className=\"mb - 1\" />Wallet</div>;
-            {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2\" />;
+          </div>;"
+          <div className=\"text - sm\" />;"
+            <div className=\"mb - 1\" />Wallet</div>;"
+            {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2\" />;"
               className=\"w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px-2 py-2\";}
-            />;}
+            />;}"
             <div className=\"opacity-70 mt-1\" />Approx. ${usd_value} USD</div>;
-          </div>;
-          <div className=\"text-sm\" />;
-            <div className=\"mb-1\" />Wallet</div>;
+          </div>;"
+          <div className=\"text-sm\" />;"
+            <div className=\"mb-1\" />Wallet</div>;"
             {account ? (<div className=\"rounded border border - green - 600 text - green - 700 dark:text - green - 400 px-2 py-2\" />;}
                 Connected: {account.slice (0, 6)}…{account.slice (-4)}
               </div>) : (<button;
-                on_click={connect}
-                className=\"enhanced - button enhanced - button - primary\";
+                on_click={connect}"
+                className=\"enhanced - button enhanced - button - primary\";"
                 className=\"enhanced - button enhanced-button-primary\" />
 
                 Connect MetaMask;
               </button>)}
           </div>;
-        </div>;
-        <div className=\"mt - 4 flex items - center justify - between\" />;
-          <div className=\"text - xs opacity - 70\" />;
-        <div className=\"mt - 4 flex items-center justify-between\" />;
+        </div>;"
+        <div className=\"mt - 4 flex items - center justify - between\" />;"
+          <div className=\"text - xs opacity - 70\" />;"
+        <div className=\"mt - 4 flex items-center justify-between\" />;"
           <div className=\"text-xs opacity-70\" />;
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
           <button;
             disabled={!account || is_submitting || tokens <= 0}
-            on_click={redeem}
-            className=\"enhanced - button enhanced - button - primary disabled: opacity - 50\";
+            on_click={redeem}"
+            className=\"enhanced - button enhanced - button - primary disabled: opacity - 50\";"
             className=\"enhanced - button enhanced - button-primary disabled: opacity-50\" />
 
             Redeem;
           </button>;
-        </div>;
-      </div>;<div className=\"mt-4 flex items-center justify-between\" />;
-          <div className=\"text-xs opacity-70\" />You can spend tokens to boost visibility, promote listings, or access premium support.</div>;
+        </div>;"
+      </div>;<div className=\"mt-4 flex items-center justify-between\" />;"
+          <div className=\"text-xs opacity-70\" />You can spend tokens to boost visibility, promote listings, or access premium support.</div>;"
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className=\"enhanced-button enhanced-button-primary disabled: opacity-50\" />Redeem</button>;
         </div>;
       </div>;
@@ -201,3 +201,4 @@ disabled={!account |isSubmitting |tokens <= 0}
 
 
 
+"

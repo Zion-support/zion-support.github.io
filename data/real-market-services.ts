@@ -1,4 +1,6 @@
+
 customers: number;
+
 rating: number;
   reviews: number;
   customers: number;
@@ -3632,14 +3634,18 @@ ursor/fix-website-loading-errors-and-merge-6662;}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+
   website: 'https://ziontechgroup.com',};
 export const realMarketServices: RealMarketService[] = [;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
 export const realMarketServices: RealMarketService[] = [;
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -4389,6 +4395,8 @@ realImplementation: true;
     variant: 'integration-futuristic',
   contactInfo: contact,
     realImplementation: true,
+
+
 implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
   launchDate: '2025-08-22'
     customers: 15;
@@ -5299,12 +5307,15 @@ export const realMarketServices: RealMarketService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;}
   }
 ];
+
+
 website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
     launch_date: '2025 - 02 - 01';
     customers: 88;
+
   }
 ];
 ;
@@ -5861,6 +5872,7 @@ export const realMarketServices: RealMarketService[] = [;
     launchDate: '2024-08-18',;
     customers: 61,;
     rating: 4.5,;
+
 reviews: 36;}
 }
   },;
@@ -7488,4 +7500,5 @@ reviews: 36;}
     customers: 88,;
     rating: 4.6;
     reviews: 36;
+
 ];

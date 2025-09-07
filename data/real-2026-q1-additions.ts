@@ -1,4 +1,6 @@
+
 {      'Multichannel ingestion',
+
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export'
@@ -326,7 +328,9 @@
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
+
     implementationDetails: 'Connectors, clustering, scoring models';
+
 launchDate: '2026-01-12';
 		customers: 9;}
 		reviews: 5}
@@ -1166,4 +1170,5 @@ implementationDetails: 'Schema importers, generators, UI';
 		customers: 9;
 		reviews: 6;
 	}
+
 ];

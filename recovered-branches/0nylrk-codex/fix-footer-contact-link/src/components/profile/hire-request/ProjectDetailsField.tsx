@@ -1,6 +1,7 @@
 import React from \"react\";
 import { UseFormReturn } from \"react-hook-form\";
 import {
+
   FormField,
   FormItem,
   FormLabel,
@@ -12,6 +13,7 @@ import { FormValues } from \"./useHireRequestForm\";
 interface ProjectDetailsFieldProps {}
   form: UseFormReturn<FormValues />;}
 }
+
 
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (}
@@ -34,3 +36,4 @@ placeholder=\"Describe your project, goals, and requirements\"
     />
   );
 }
+

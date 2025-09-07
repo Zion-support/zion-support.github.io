@@ -1,3 +1,4 @@
+
 import { ChevronDown, ChevronUp } from \"lucide-react\";
 import { Checkbox } from \"@/components/ui/checkbox\";
 import { RegionFilterProps } from \"@/types/filters\";
@@ -45,10 +46,12 @@ id={`region-${region.id}`}
 htmlFor={`region-${region.id}`}
                 className=\"ml-2 text-sm text-zion-slate-light cursor-pointer\"
                />
+
                 {region.label}
               </label>
             </div>
           ))}
+
         </div>
       )}
     </div>

@@ -1,3 +1,4 @@
+  ];
 ;
   return (
     <div className=\"grid gap - 4 md:grid - cols - 2 lg:grid - cols-4\" />;
@@ -20,10 +21,13 @@ import {Award, Share, Star, TrendingUp} from \"lucide-react\";
 import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";
 import { ReferralStats, as, ReferralStatsType } from \"@/types/referrals\";
 import { Award, Share, Star, TrendingUp } from \"lucide-react\";
+
 interface ReferralStatsProps {
   stats: ReferralStatsType;}
   isLoading: boolean;}
 }
+
+
 
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -53,6 +57,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     },
   ];
 
+
+
 return (
     <div className=\"grid gap-4 md:grid-cols-2 lg:grid-cols-4\" />
       {statCards.map((card, i) => (}
@@ -72,6 +78,7 @@ return (
                 </p>
               </>
             )}
+
           </CardContent>
         </Card>
       ))}

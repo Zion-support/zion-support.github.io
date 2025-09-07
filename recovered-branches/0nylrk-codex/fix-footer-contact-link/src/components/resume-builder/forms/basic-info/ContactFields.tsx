@@ -1,3 +1,5 @@
+
+
 import {
   FormField,
   FormItem,
@@ -11,6 +13,7 @@ import { BasicInfoFormData } from \"./schema\";
 interface ContactFieldsProps {}
   control: Control<BasicInfoFormData />;}
 }
+
 
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
@@ -42,6 +45,7 @@ control={control}
           </FormItem>
         )}
       />
+
       <FormField;
 control={control}
         name=\"linkedin\"
@@ -57,6 +61,7 @@ placeholder=\"https://linkedin.com/in/username\"
             <FormMessage />
           </FormItem>
         )}
+
       />
 
       <FormField;
@@ -70,8 +75,10 @@ control={control}
             </FormControl>
             <FormMessage />
           </FormItem>
+
         )}
       />
     </div>
   );
 }
+

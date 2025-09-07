@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -174,10 +176,12 @@ export interface PracticalBusinessSolution2029 {;
 ;
     }
   }
+
 ;    }
   }
 ;export interface PracticalBusinessSolution2029 {}
 };
+
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
     {

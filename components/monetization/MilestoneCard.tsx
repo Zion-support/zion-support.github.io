@@ -1,7 +1,7 @@
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true ,}
+  static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
@@ -48,7 +48,7 @@ const canClientMarkPaid =;
         <div />;}
           <h3 className='text-lg font-semibold' />{milestone && milestone.title}</h3>;
           <p className='text-sm text-gray-600' />;
-            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString(,}
+            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString(}
 }
           </p>;
         </div>;
@@ -63,13 +63,13 @@ className='text-sm text-blue-600'
         </button>;
       </div>;
 <div className='mt-3' />;
-  return (<div className=\"border rounded-lg p-4 bg-white shadow-sm\" />;
+  return (<div className=\"border rounded-lg p-4 bg-white shadow-sm\" />;"
       <div className=\"flex items-start justify-between\" />;
-        <div />;
-          <h3 className=\"text-lg font-semibold\" />{milestone.title}</h3>;
-          <p className=\"text-sm text-gray-600\" />Due: {new Date(milestone.dueDate).toLocaleDateString(,}
+        <div />;"
+          <h3 className=\"text-lg font-semibold\" />{milestone.title}</h3>;"
+          <p className=\"text-sm text-gray-600\" />Due: {new Date(milestone.dueDate).toLocaleDateString(}
 }</p>;
-        </div>;
+        </div>;"
         <button className=\"text-sm text-blue-600\" onClick={() = /> setExpanded((v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
 
@@ -94,14 +94,14 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
 const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
 
 const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-
-const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className=\"border rounded - lg p - 4 bg - white shadow - sm\" />;
+"
+const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className=\"border rounded - lg p - 4 bg - white shadow - sm\" />;"
       <div className=\"flex items - start justify - between\" />;}
-        <div />;}
-          <h3 className=\"text - lg font - semibold\" />{milestone.title}</h3>;
-          <p className=\"text - sm text - gray - 600\" />Due: {new Date (milestone.due_date).toLocaleDateString (,}
+        <div />;}"
+          <h3 className=\"text - lg font - semibold\" />{milestone.title}</h3>;"
+          <p className=\"text - sm text - gray - 600\" />Due: {new Date (milestone.due_date).toLocaleDateString (}
 }</p>;
-        </div>;
+        </div>;"
         <button className=\"text - sm text - blue - 600\" on_click={() = /> set_expanded ((v) => !v)}>;
           {expanded ? 'Hide' : 'Details'}
         </button>;
@@ -135,7 +135,7 @@ className={
 
 <div className='mt-2 text-xs text-gray-700' />
 
-          Status: {milestone.statu,}
+          Status: {milestone.statu}
 }
         </div>;
       </div>;
@@ -160,10 +160,10 @@ className='text-blue-600 underline'
                     </a>
                   </li>
 
-                      rel='noreferrer'>                      {a && a.label || a && a.ur,}
-}              <div className=\"font-medium\" />Attachments</div>;
+                      rel='noreferrer'>                      {a && a.label || a && a.ur}"
+}              <div className=\"font-medium\" />Attachments</div>;"
               <ul className=\"list-disc ml-5\" />;
-                {milestone && milestone.attachments.map((a) => (<li key={a && a.id} />;
+                {milestone && milestone.attachments.map((a) => (<li key={a && a.id} />;"
                     <a className=\"text-blue-600 underline\" href={a && a.url} target=\"_blank\" rel=\"noreferrer\" />;
                     </a>;
                   </li>;
@@ -174,7 +174,7 @@ className='text-blue-600 underline'
         </div>;
       )}
           <button;
-          <button;
+          <button;"
             className=\"px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700\";
       <div className='mt-4 flex flex-wrap gap-2' />;
         {canClientMarkInProgress && (<button;}
@@ -228,3 +228,4 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
   );
 }
 
+"

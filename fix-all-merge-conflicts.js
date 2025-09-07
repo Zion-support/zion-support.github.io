@@ -20,10 +20,18 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+      if (line.startsWith('<<<<<<<')) {
+        inConflict = true;
+        modified = true;
+        continue;
+      }
+      
+      if (line.startsWith('=======')) {
         keepLines = true;
         continue;
       }
       
+      if (line.startsWith('>>>>>>>')) {
         inConflict = false;
         keepLines = false;
         continue;
@@ -73,3 +81,55 @@ function findFilesWithConflicts(dir) {
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.cjs'))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
+            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+              files.push(fullPath);
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
+}
+
+// Main execution
+try {
+  console.log('🔍 Scanning for files with merge conflicts...');
+  const conflictFiles = findFilesWithConflicts('.');
+  
+  if (conflictFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+  } else {
+    console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);
+    
+    let resolvedCount = 0;
+    for (const file of conflictFiles) {
+      console.log(`🔧 Processing: ${file}`);
+      if (resolveMergeConflicts(file)) {
+        resolvedCount++;
+      }
+    }
+    
+    console.log(`\n🎉 Resolved conflicts in ${resolvedCount} files!`);
+    
+    // Add all resolved files to git
+    try {
+      console.log('📝 Adding resolved files to git...');
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ All resolved files added to git!');
+    } catch (error) {
+      console.error('❌ Error adding files to git:', error.message);
+    }
+  }
+} catch (error) {
+  console.error('❌ Fatal error:', error.message);
+  process.exit(1);
+}
+
+console.log('🎯 Merge conflict resolution completed!');

@@ -74,6 +74,7 @@ import React from 'react';,import {Brain,MessageSquare,BarChart3,FileText,Search
         </div>;
       </div>;
       {/* Stats Section */}
+
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -283,6 +284,7 @@ export default function AIServicesPage() {;
         \"Comprehensive evaluation\";
       ],;
       website: \"https://ziontechgroup.com/ai-evaluation-lab\";
+
     }
   ],const stats = [;
     { label: \"AI Models Deployed\", value: \"500+\" },{ label: \"Client Satisfaction\", value: \"98%\" },{ label: \"Cost Savings\", value: \"40-60%\" }{ label: \"Implementation Time\", value: \"2-4 weeks\" }

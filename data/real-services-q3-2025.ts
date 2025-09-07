@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -117,8 +119,10 @@ export const realServicesQ32025: Q3Service[] = [
   description:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     features: [}
+
 export const realServicesQ32025: Q3Service[] = [
   {
+
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -184,7 +188,9 @@ export const realServicesQ32025: Q3Service[] = [
     market_size: '$30B+ subscription economy tooling';
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
+
     customers: 24;    // @ts-expect-error augment common shape for UI components that expect contactInfo;
+
 contactInfo: contact}
   }
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
@@ -312,6 +318,8 @@ contactInfo: contact}
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
+
+
 ];
 ;
 }

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1151,4 +1153,5 @@ export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
 ;
+
 export default comprehensiveInnovativeServices;

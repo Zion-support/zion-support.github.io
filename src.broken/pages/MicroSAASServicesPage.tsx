@@ -86,6 +86,7 @@ import React from 'react';,import {Zap,Users,FileText,BarChart3,Calendar,CreditC
         </div>;
       </div>;
       {/* Stats Section */}
+
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -311,6 +312,7 @@ export default function MicroSAASServicesPage() {;
       website: \"https://ziontechgroup.com/analytics-dashboard\",;
       freeTrial: \"30 days\",;
       setupTime: \"Under 3 hours\";
+
     }
   ],const additionalMicroSAAS = [;
     {name: \"Time Tracking Tool\",,description: \"Simple time tracking for teams and freelancers with project billing and productivity insights.\",pricing: \"$19/month\",icon: <Calendar className=\"w-8 h-8 text-blue-400\" />;}

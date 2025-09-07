@@ -121,6 +121,8 @@ export type InnovativeMicroSaas = {'Multi-speaker diarization',launch_date?: str
 		| 'Supply Chain Management';
 		| 'Customer Support';
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
+
+
   {
 
     id: 'local - seo - reviews - booster',
@@ -182,11 +184,14 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     integrations: ['Greenhouse', 'Lever'],
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
+
     real_service: true,
   },
+
 ];	id: string;
 	id: string, name: string,
 	description: string, tagline?: string,
+
 	}
 ];
 name: string,
@@ -449,6 +454,7 @@ export type InnovativeMicroSaas = {
     integrations: ['Greenhouse', 'Lever'],
   },
 ];	id: string;
+
 category:
 		| 'Content Marketing'
 		| 'Business Operations'

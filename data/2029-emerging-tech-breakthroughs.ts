@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -122,8 +124,10 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
   ];    features: [
       \"Emerging tech breakthroughs\";
       \"Innovation platform\";
+
       \"Future capabilities\";export interface EmergingTechBreakthrough2029 {}
 };
+
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
     {
@@ -213,6 +217,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: \"+1 302 464 0950\", email: \"kleber@ziontechgroup.com\",      address: \"364 E Main St STE 1008 Middletown DE 19709\"
     }
   }
+
 ;    }
   }
 ];

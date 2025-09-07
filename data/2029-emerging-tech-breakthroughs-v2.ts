@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1406,7 +1408,9 @@ export interface EmergingTechBreakthroughServiceV2 {
     mobile: string, email: string,
     address: string,
     website: string;
+
     },    ];
+
 popular: true, icon: '🧠',
   color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
   link: 'https://ziontechgroup.com/brain-computer-interface-enterprise', marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.',

@@ -1,9 +1,11 @@
+) => {
   return $3;}
 }
 import { useState, useEffect } from \"react\";
 import { Resume } from \"@/types/resume\";
 export const useResumeProgress = (
   const [progress, setProgress] = useState(0);
+
 
 useEffect(() => {
     // Calculate progress based on completed sections;
@@ -13,6 +15,7 @@ if (!resume) {
   return $3;}
 }
     }
+
 
     let completed = 0;
 
@@ -24,20 +27,26 @@ if (!resume) {
       completed += 1;}
     }
 
+
     // Education (1 point if at least one entry)
     if (resume.education && resume.education.length > 0) {}
       completed += 1;}
     }
+
+
 
     // Skills (1 point if at least one entry)
     if (resume.skills && resume.skills.length > 0) {}
       completed += 1;}
     }
 
+
+
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {}
       completed += 1;}
     }
+
 
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -37,6 +39,8 @@ name: string;
   launchDate: string;
   customers: number;
   rating: number;
+
+
 reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
@@ -695,6 +699,8 @@ export interface InnovativeAIAutomationService  {id: string,name: string,tagline
     mobile: string;
     email: string;
     address: string;
+}
+
   }
   }
   realImplementation: boolean;
@@ -1332,4 +1338,5 @@ real_implementation: true,
     rating: 4.9,}
     reviews: 28;}
   }
+
 }

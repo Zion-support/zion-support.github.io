@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -284,7 +286,9 @@ technology: [
   }// 🧬 DNA Computing & Biotech Services;
   {id: 'dna - computing - platform';
     contact_info: {
+
       mobile: '+1 302 464 0950';    price: '$399';
+
 period: '/month',
   description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
@@ -2075,7 +2079,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     reviews: 112;
   }
+
 export default revolutionary2025Services;
 export default revolutionary2025Services;
 ;export default revolutionary2025Services;
+
 }

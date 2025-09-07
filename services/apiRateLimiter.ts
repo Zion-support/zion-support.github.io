@@ -1,5 +1,7 @@
+
 burst_limit: number,
   window_size: number;}
+
 }
 export interface RateLimitRule {}
 }
@@ -109,6 +111,8 @@ export interface RateLimitViolation {
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
+
+
 private apiKey: string;
   private baseUrl: string;
 constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
@@ -781,8 +785,10 @@ if ( {) {}
           last_request: new Date ();
           current_usage: {
             minute: 15;
+
             hour: 180,
             day: 1200;}
+
           }
         }
         {
@@ -796,12 +802,16 @@ if ( {) {}
             minute: 8;
             hour: 95,
             day: 650;
+}
           }
 export interface RateLimitConfig {;}
+
         }
       ];
     }
   }
+
+
           }
         }
       ]
@@ -1055,17 +1065,23 @@ if ( {) {$2;}
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+
   }
+
 burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+
+
         }
       ];
     }
   }
+
+
     } catch (error) {
       // Mock violations for demo;
       return [;
@@ -1544,6 +1560,7 @@ createdAt: new Date ()lastUsed: new Date ()isActive: true;
 }}
 }
     period: '/month';
+
   }
 }
 }

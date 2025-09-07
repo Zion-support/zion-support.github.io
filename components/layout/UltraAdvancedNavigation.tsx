@@ -33,8 +33,8 @@ setIsScrolled(window.scrollY > 50)) => {
 const navigationItems = [
     {
       name: 'Home',
-  href: '/',}
-icon: null,}
+  href: '/'}
+icon: null}
     },
     {
       name: 'AI Services',
@@ -47,38 +47,38 @@ description: 'Cutting-edge AI solutions',
           name: 'AI Agent Orchestrator',
   href: '/ai-agents',
           icon: Bot,
-          description: 'Multi-agent workflow automation',}
-  price: '$2,999/month',}
+          description: 'Multi-agent workflow automation'}
+  price: '$2,999/month'}
         },
         {
           name: 'AI Cybersecurity',
   href: '/security',
           icon: Shield,
-          description: 'AI-powered threat detection',}
-  price: '$4,999/month',}
+          description: 'AI-powered threat detection'}
+  price: '$4,999/month'}
         },
         {
           name: 'AI Healthcare Analytics',
   href: '/ai-data-analytics',
           icon: Dna,
-          description: 'Patient outcome prediction',}
-  price: '$3,999/month',}
+          description: 'Patient outcome prediction'}
+  price: '$3,999/month'}
         },
         {
           name: 'AI Supply Chain',
   href: '/quantum-logistics',
           icon: Package,
-          description: 'End-to-end optimization',}
-  price: '$2,499/month',}
+          description: 'End-to-end optimization'}
+  price: '$2,499/month'}
         },
         {
           name: 'AI Financial Risk',
   href: '/ai-financial-risk',
           icon: DollarSign,
-          description: 'Advanced risk management',}
-  price: '$5,999/month',}
-        },
-      ],
+          description: 'Advanced risk management'}
+  price: '$5,999/month'}
+        }
+      ]
     },
     {
       name: 'Quantum Computing',
@@ -90,38 +90,38 @@ description: 'Cutting-edge AI solutions',
           name: 'Quantum AI Supercomputer',
   href: '/quantum-ai-cognitive',
           icon: Cpu,
-          description: 'Enterprise quantum computing',}
-  price: '$15,999/month',}
+          description: 'Enterprise quantum computing'}
+  price: '$15,999/month'}
         },
         {
           name: 'Quantum Internet Security',
   href: '/quantum-internet-security-platform',
           icon: Lock,
-          description: 'Future-proof encryption',}
-  price: '$8,999/month',}
+          description: 'Future-proof encryption'}
+  price: '$8,999/month'}
         },
         {
           name: 'Quantum Drug Discovery',
   href: '/biotech-ai',
           icon: Dna,
-          description: 'Accelerated drug development',}
-  price: '$12,999/month',}
+          description: 'Accelerated drug development'}
+  price: '$12,999/month'}
         },
         {
           name: 'Quantum Financial Trading',
   href: '/quantum-financial-trading',
           icon: DollarSign,
-          description: 'Nanosecond precision trading',}
-  price: '$19,999/month',}
+          description: 'Nanosecond precision trading'}
+  price: '$19,999/month'}
         },
         {
           name: 'Quantum IoT Platform',
   href: '/quantum-iot',
           icon: Wifi,
-          description: 'Quantum-secured IoT',}
-  price: '$4,999/month',}
-        },
-      ],
+          description: 'Quantum-secured IoT'}
+  price: '$4,999/month'}
+        }
+      ]
     },
     {
       name: 'Space Technology',
@@ -133,17 +133,17 @@ description: 'Cutting-edge AI solutions',
           name: 'Space Mission Control',
   href: '/space-technology',
           icon: Rocket,
-          description: 'Complete mission management',}
-  price: '$25,999/month',}
+          description: 'Complete mission management'}
+  price: '$25,999/month'}
         },
         {
           name: 'Space Debris Cleanup',
   href: '/space-technology',
           icon: Package,
-          description: 'AI-powered debris removal',}
-  price: '$35,999/month',}
-        },
-      ],
+          description: 'AI-powered debris removal'}
+  price: '$35,999/month'}
+        }
+      ]
     },
     {
       name: 'Enterprise IT',
@@ -155,83 +155,83 @@ description: 'Cutting-edge AI solutions',
           name: 'Cloud Migration',
   href: '/cloud-platform',
           icon: Cloud,
-          description: 'Zero-downtime migration',}
-  price: '$8,999/month',}
+          description: 'Zero-downtime migration'}
+  price: '$8,999/month'}
         },
         {
           name: 'DevOps Automation',
   href: '/automation',
           icon: Code,
-          description: 'AI-powered automation',}
-  price: '$5,999/month',}
+          description: 'AI-powered automation'}
+  price: '$5,999/month'}
         },
         {
           name: 'Data Analytics',
   href: '/ai-data-analytics',
           icon: Database,
-          description: 'AI-powered insights',}
-  price: '$6,999/month',}
+          description: 'AI-powered insights'}
+  price: '$6,999/month'}
         },
         {
           name: 'Security Operations',
   href: '/security',
           icon: Shield,
-          description: '24/7 security monitoring',}
-  price: '$12,999/month',}
+          description: '24/7 security monitoring'}
+  price: '$12,999/month'}
         },
         {
           name: 'API Management',
   href: '/api-observability',
           icon: Code,
-          description: 'Complete lifecycle management',}
-  price: '$4,999/month',}
+          description: 'Complete lifecycle management'}
+  price: '$4,999/month'}
         },
         {
           name: 'Digital Transformation',
   href: '/solutions',
           icon: Zap,
-          description: 'AI-powered transformation',}
-  price: '$15,999/month',}
+          description: 'AI-powered transformation'}
+  price: '$15,999/month'}
         },
         {
           name: 'IoT Management',
   href: '/it-asset-discovery-agent',
           icon: Wifi,
-          description: 'AI-powered device management',}
-  price: '$7,999/month',}
-        },
-      ],
+          description: 'AI-powered device management'}
+  price: '$7,999/month'}
+        }
+      ]
     },
     {
       name: 'Micro SaaS',
   href: '/services',
-      icon: Monitor,}
-description: '300+ micro SaaS services',}
+      icon: Monitor}
+description: '300+ micro SaaS services'}
     },
     {
 
       name: 'Market Pricing',
   href: '/market-pricing',
-      icon: DollarSign,}
-description: 'Benchmarks & vendor references',}
+      icon: DollarSign}
+description: 'Benchmarks & vendor references'}
     },
     {
       name: 'About',
-  href: '/about',}
-      icon: null,}
+  href: '/about'}
+      icon: null}
     },
     {
 
       name: 'Contact',
-  href: '/contact',}
-      icon: null,}
-    },
+  href: '/contact'}
+      icon: null}
+    }
   ];
 
 const contactInfo = {
     mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',}
-address: '364 E Main St STE 1008 Middletown DE 19709',}
+  email: 'kleber@ziontechgroup.com'}
+address: '364 E Main St STE 1008 Middletown DE 19709'}
   };
 
   
@@ -239,10 +239,10 @@ address: '364 E Main St STE 1008 Middletown DE 19709',}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
         <div className='flex justify-between items-center h-20' />
 
-          {/* Logo *,}
+          {/* Logo *}
 }
           <motion.div;
-            initial={{ opacity: 0, x: -20 ,}
+            initial={{ opacity: 0, x: -20 }
 }
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -264,7 +264,7 @@ className='flex items-center'
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation *,}
+          {/* Desktop Navigation *}
 }
 <div className='hidden lg:flex items-center space-x-8' />
             {navigationItems.map((item, index) => (}
@@ -280,7 +280,7 @@ onClick={() = />
                   >
 
                     {item.icon && <item.icon className='w-4 h-4' />}
-                    <span />{item.nam,}
+                    <span />{item.nam}
 }</span>;
                     <ChevronDown;
                       className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : '';}
@@ -299,25 +299,25 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
 
                 )}
 
-                {/* Dropdown Menu *,}
+                {/* Dropdown Menu *}
 }
                 {item && item.dropdown && (<AnimatePresence />;
                     {activeDropdown === item && item.name && (<motion&& motion.div;}
-                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 ,}
+                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }
 }
-                        animate={{ opacity: 1, y: 0, scale: 1 ,}
+                        animate={{ opacity: 1, y: 0, scale: 1 }
 } />;
-                        <div className=\"p-4\" />;
-                          <div className=\"text-sm text-gray-400 mb-3\" />{item.description}</div>;
+                        <div className=\"p-4\" />;"
+                          <div className=\"text-sm text-gray-400 mb-3\" />{item.description}</div>;"
                           <div className=\"space-y-2\" />;
                             {item.dropdown.map((dropdownItem) => (<Link;}
                   </Link />;}
                 )}{/* Dropdown Menu */}
                 {item.dropdown && (<AnimatePresence />;
                     {activeDropdown === item.name && (<motion.div;}
-                        initial={{ opacity: 0, y: 10, scale: 0.95 ,}
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
-                        animate={{ opacity: 1, y: 0, scale: 1 ,}
+                        animate={{ opacity: 1, y: 0, scale: 1 }
 }
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
 
@@ -328,7 +328,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                         <div className='p-4' />
                           <div className='text-sm text-gray-400 mb-3' />
 
-                            {item.descriptio,}
+                            {item.descriptio}
 }
                           </div>;
                           <div className='space-y-2' />;
@@ -372,11 +372,11 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
               <a;
           </div />
 
-          {/* Contact Info & CTA */}
-          <div className=\"hidden lg:flex items-center space-x-6\" />
-            <div className=\"flex items-center space-x-4 text-sm text-gray-300\" />
-              <a href={`tel:${contactInfo.mobile}`} className=\"flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200\" />
-                <Phone className=\"w-4 h-4\" />
+          {/* Contact Info & CTA */}"
+          <div className=\"hidden lg:flex items-center space-x-6\" />"
+            <div className=\"flex items-center space-x-4 text-sm text-gray-300\" />"
+              <a href={`tel:${contactInfo.mobile}`} className=\"flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200\" />"
+                <Phone className=\"w-4 h-4\" />"
                 <span className=\"hidden xl:inline\" />{contactInfo.mobile}</span>
               </a>
 
@@ -394,7 +394,7 @@ href='/contact'
 
 <div className='lg:hidden' />
             <button;
-onClick={() = /> setIsOpen(!isOpen,}
+onClick={() = /> setIsOpen(!isOpen}
 }
               className='text-gray-300 hover:text-white transition-colors duration-200'>
 
@@ -410,9 +410,9 @@ onClick={() = /> setIsOpen(!isOpen,}
       {/* Mobile Menu */}
       <AnimatePresence />;
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 ,}
+            initial={{ opacity: 0, height: 0 }
 }
-            animate={{ opacity: 1, height: 'auto' ,}
+            animate={{ opacity: 1, height: 'auto' }
 }
 
             exit={{ opacity: 0, height: 0 }}
@@ -435,7 +435,7 @@ onClick={() = />
                         <div className='flex items-center space-x-3' />
 
                           {item.icon && <item.icon className='w-5 h-5' />}
-                          <span />{item.nam,}
+                          <span />{item.nam}
 }</span>;
                         </div>;
                         <ChevronDown;
@@ -454,7 +454,7 @@ className='block py-2 text-gray-400 hover: text-white transition-colors duration
 
                             </Link>
 
-                          ),
+                          )
 }
                         </div>;
                       )}
@@ -476,12 +476,12 @@ className='flex items-center space-x-3 text-gray-300 hover: text-white transitio
               ))}
 
 
-{/* Mobile Contact Info *,}
+{/* Mobile Contact Info *}
 }
               <div className='pt-6 border-t border-gray-800/50' />;
                 <div className='space-y-3 text-sm text-gray-400' />;
                   <a;
-                    href={`tel: ${contactInfo.mobile},
+                    href={`tel: ${contactInfo.mobile}
 }
                     className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200' />
 
@@ -505,7 +505,7 @@ className='flex items-center space-x-3 text-gray-300 hover: text-white transitio
 href='/contact'
 
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
+                  whileTap={{ scale: 0.95 }
 }
                   className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300' />
 
@@ -524,3 +524,4 @@ href='/contact'
 
 export default UltraAdvancedNavigation;
 
+"

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1340,6 +1342,8 @@ export const getServicesByCategory = (return realMicroSaasServices.filter(servic
     mobile: string;
     email: string;
     address: string;
+}
+
   }
 }
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -2650,9 +2654,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     launchDate: '2025-02-08',
   customers: 19,
     rating: 4.6,
+
     reviews: 6,
   },];
     id: \"id\",
+
 name: 'AI Legal Document Generator',
   tagline: 'Generate legally compliant documents in seconds with AI'
     price: '$89',
@@ -6354,6 +6360,8 @@ export const serviceCategories = [
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
+
+
 ;
 export interface RealMicroSaasService {;
   id: string,;

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1748,8 +1750,10 @@ export interface InnovativeMicroSaasService2025  {id: string,name: string,taglin
       launch_date: '2025 - 03 - 05',
   customers: 75,
       rating: 4 && 4.8,
+
       reviews: 45,
     },;
+
   ];    features: [
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,

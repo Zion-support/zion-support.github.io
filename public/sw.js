@@ -1,5 +1,5 @@
 
-;
+// Service Worker for caching and performance
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [;
   '/','/static/css/main.css','/static/js/main.js';

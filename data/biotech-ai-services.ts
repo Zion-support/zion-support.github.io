@@ -62,9 +62,11 @@ export interface BiotechAIService {
       'API for lab integration',
     ],
     popular: true,
+
     icon: '🔬',
   realImplementation: true;
     implementationDetails: \"implementationDetails\",
+
 launchDate: '2024-01-15',
   customers: 120;
 rating: 5.0;
@@ -430,5 +432,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     rating: 4.9,
     reviews: 45;
   }
+
 ;  }
 ];

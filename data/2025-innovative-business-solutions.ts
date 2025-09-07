@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -933,6 +935,8 @@ export interface InnovativeBusinessSolution {
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
 ;
     realImplementation: true;
     implementationDetails: \"implementationDetails\",
@@ -1348,7 +1352,9 @@ implementationDetails: 'Comprehensive AI-powered project management platform wit
     rating: 4.7;
 reviews: 26;
   }
+
 ];import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeBusinessSolution {;
   id: string,;
   name: string,;
@@ -1643,5 +1649,6 @@ website: 'https://ziontechgroup.com';}
     customers: 38;
     rating: 4.7,
     reviews: 26;
+
   }  }
 }

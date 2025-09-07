@@ -8,7 +8,11 @@ function fixMergeConflicts(filePath) {
 
         // Remove merge conflict markers
         const conflictPatterns = [
+            /[\s\S]*?
+            /<<<<<<< [a-f0-9]+.*[\s\S]*?
+            /<<<<<<< [a-f0-9]+.*[\s\S]*?
             /origin\/cursor\/fix-lint-push-and-merge-to-main-[a-f0-9]+/g,
+            /<<<<<<< [a-f0-9]+.*[\s\S]*?
         ];
 
         for (const pattern of conflictPatterns) {

@@ -10,7 +10,7 @@ interface Service  {id: string;
   description: string;
   features: string[];
 }
-  link: string,}
+  link: string}
 }
 
 interface UltraFuturisticServiceShowcase2029Props {
@@ -20,20 +20,20 @@ interface UltraFuturisticServiceShowcase2029Props {
 
 export default function UltraFuturisticServiceShowcase2029({
   services,
-  title = '2029 Cutting-Edge Services',}
-  subtitle = 'Experience the future of technology with our revolutionary solutions',}
+  title = '2029 Cutting-Edge Services'}
+  subtitle = 'Experience the future of technology with our revolutionary solutions'}
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black' />}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />,}
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />}
 }: UltraFuturisticServiceShowcase2029Props) {
  ;
   return (
     <section className=\"py-20 bg-gradient-to-br from-black via-gray-900 to-black\" />;
-
+"
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
         <motion&& motion.div;}
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
 
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ className='text-center mb-16'
           <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6' />
             {title}
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto' />{subtitl,}
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto' />{subtitl}
 }</p>
         </motion.div>
 
@@ -52,14 +52,14 @@ className='text-center mb-16'
           {services.slice(0, 6).map((service, index) => (}
             <motion.div;}
 key={service.id}
-          </p />;
+          </p />;"
         </motion && motion.div>;<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" />;
           {services && services.slice(0, 6).map((service, index) => (<motion&& motion.div;}
               key={service && service.id}
-              initial={{ opacity: 0, y: 20 ,}
+              initial={{ opacity: 0, y: 20 }
 }
 
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={{ opacity: 1, y: 0 }
 }
 
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -77,7 +77,7 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
               </div>
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors' />
 
-                {service.nam,}
+                {service.nam}
 }
               </h3>;
               <p className='text - gray - 400 text - sm mb - 3' />{service.tagline}</p>;
@@ -107,16 +107,16 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
               </Link>
             </motion.div>
 
-          ),
+          )
 }
         <motion.div;
         </div />;<motion&& motion.div;
-          initial={{ opacity: 0, y: 20 ,}
+          initial={{ opacity: 0, y: 20 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
-          transition={{ duration: 0.6, delay: 0.6 ,}
+          transition={{ duration: 0.6, delay: 0.6 }
 }
 
 className='text-center mt-12'
@@ -135,3 +135,4 @@ href='/services'
 
 }
 
+"

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -213,10 +215,12 @@ const contact = {mobile: '+1 302 464 0950',
     ];
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
+}
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: \"roi\",}
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];  }
 ];
 ;    ];
     popular: true, icon: '🧠',
+
   }
 ];

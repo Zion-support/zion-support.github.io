@@ -4,6 +4,7 @@ export interface StepProps {
   label: string;}
 }
 
+
 export interface NavigationButtonsProps {
   onBack?: () => void;
   onNext?: () => void;
@@ -11,10 +12,12 @@ export interface NavigationButtonsProps {
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean;}
+
 }
 
 export interface ResumeProgressProps {
   resume: Resume | null;
+
   progress: number;
 }
 

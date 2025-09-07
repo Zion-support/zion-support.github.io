@@ -24,8 +24,10 @@ export function ITServicePricingTable() {
     direction: \"ascending\",}
   });
 
+
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
+
 
     // Filter by search query;
 if (searchQuery) {
@@ -34,11 +36,14 @@ if (searchQuery) {
       );}
     }
 
+
+
     // Sort data;
 filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {}
         return sortConfig.direction === \"ascending\" ? -1 : 1;}
       }
+
       if (a[sortConfig.key]  /> b[sortConfig.key]) {}
         return sortConfig.direction === \"ascending\" ? 1 : -1;}
       }
@@ -73,6 +78,7 @@ placeholder=\"Search by country...\"
           />
         </div>
       </div>
+
 
       <div className=\"rounded-md border border-zion-blue-light overflow-hidden\" />
         <Table />
@@ -132,3 +138,4 @@ colSpan={2}
     </div>
   );
 }
+

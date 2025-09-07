@@ -1,3 +1,4 @@
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 
@@ -144,3 +145,4 @@ if (failed === 0) {
 } else {
   console.log('⚠️  Code quality issues detected. Please review and fix.');
 }
+

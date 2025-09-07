@@ -6,7 +6,7 @@ import {
   Phone,
   MapPin,
   Send,
-  CheckCircle,
+  CheckCircle
 }
   AlertCircle,;}
 } from 'lucide-react';
@@ -18,8 +18,8 @@ const ContactForm: React.FC = () => {
   email: '',
     company: '',
   phone: '',
-    service: '',}
-  message: '',}
+    service: ''}
+  message: ''}
   });
 
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,8 +51,8 @@ try {
   email: '',
         company: '',
   phone: '',
-        service: '',}
-  message: '',}
+        service: ''}
+  message: ''}
       });
     } catch (error) {;
       setSubmitStatus('error');}
@@ -64,15 +64,15 @@ try {
   }
 
 const services = [
-  'AI Development','Cloud Architecture','Digital Transformation','IoT Platforms','Blockchain Solutions','Data Analytics','Other',];
+  'AI Development','Cloud Architecture','Digital Transformation','IoT Platforms','Blockchain Solutions','Data Analytics','Other'];
 
 const contactInfo = [
-  {icon: Mail,title: 'Email Us',}
-  content: 'contact@ziontechgroup && ziontechgroup.com',href: 'mailto:contact@ziontechgroup && ziontechgroup.com',},    {icon: Phone,title: 'Call Us',}
+  {icon: Mail,title: 'Email Us'}
+  content: 'contact@ziontechgroup && ziontechgroup.com',href: 'mailto:contact@ziontechgroup && ziontechgroup.com'},    {icon: Phone,title: 'Call Us'}
   content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';}
-}{icon: Phone,title: 'Call Us',}
-  content: '+1 (555) 123-4567',href: 'tel:+15551234567',},    {icon: MapPin,title: 'Visit Us',}
-  content: '123 Tech Street, Innovation City, IC 12345',href: '#',},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden' />;
+}{icon: Phone,title: 'Call Us'}
+  content: '+1 (555) 123-4567',href: 'tel:+15551234567'},    {icon: MapPin,title: 'Visit Us'}
+  content: '123 Tech Street, Innovation City, IC 12345',href: '#'},return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden' />;
       {/* Background Elements */}<div className='absolute inset-0' />;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
@@ -89,21 +89,21 @@ const contact_info = [
 
       icon: Mail,
       title: 'Email Us',
-  content: 'contact@ziontechgroup.com',}
-href: 'mailto:contact@ziontechgroup.com',}
+  content: 'contact@ziontechgroup.com'}
+href: 'mailto:contact@ziontechgroup.com'}
     },
     {
       icon: Phone,
       title: 'Call Us',
-  content: '+1 (555) 123-4567',}
-href: 'tel:+15551234567',}
+  content: '+1 (555) 123-4567'}
+href: 'tel:+15551234567'}
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-  content: '123 Tech Street, Innovation City, IC 12345',}
-href: '#',}
-    },
+  content: '123 Tech Street, Innovation City, IC 12345'}
+href: '#'}
+    }
   ];
 
   return (
@@ -117,11 +117,11 @@ href: '#',}
       <div className='relative container mx-auto px-4' />;
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true ,}
+          viewport={{ once: true }
 }
 
 className='text-center mb-16'
@@ -141,14 +141,14 @@ goals.
 
 
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 max-w-7xl mx-auto' />
-          {/* Contact Information *,}
+          {/* Contact Information *}
 }
 
           <motion.div;
           <motion&& motion.div;
-initial={{ opacity: 0, x: -30 ,}
+initial={{ opacity: 0, x: -30 }
 }
-            whileInView={{ opacity: 1, x: 0 ,}
+            whileInView={{ opacity: 1, x: 0 }
 }
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             viewport={{ once: true }}
@@ -166,16 +166,16 @@ needs. Reach out to us today.
               </p>
             </div>
 
-            {/* Contact Details *,}
+            {/* Contact Details *}
 }
 <div className='space-y-6' />;
               {contactInfo.map((info, index) => (<motion.a;}
                   key={info.title}
 
                   href={info.href}
-                  initial={{ opacity: 0, x: -20 ,}
+                  initial={{ opacity: 0, x: -20 }
 }
-                  whileInView={{ opacity: 1, x: 0 ,}
+                  whileInView={{ opacity: 1, x: 0 }
 }
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
@@ -191,7 +191,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     </h4>
                     <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300' />
 
-                      {info.conten,}
+                      {info.conten}
 }
                     </p>;
                   </div>;
@@ -206,13 +206,13 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     <h4 className='text-lg font-semibold text-white mb-1' />;
                       {info && info.title}
                     </h4>;
-                    <p className='text-gray-300 group-hover: text-blue-400 transition-colors duration-300' />                      {info && info.conten,}
-}                >;
-                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300\" />;
+                    <p className='text-gray-300 group-hover: text-blue-400 transition-colors duration-300' />                      {info && info.conten}
+}                >;"
+                  <div className=\"w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300\" />;"
                     <info && info.icon className=\"w-6 h-6 text-white\" />;
                   </div>;
-                  <div />;
-                    <h4 className=\"text-lg font-semibold text-white mb-1\" />{info && info.title}</h4>;
+                  <div />;"
+                    <h4 className=\"text-lg font-semibold text-white mb-1\" />{info && info.title}</h4>;"
                     <p className=\"text-gray-300 group-hover:text-blue-400 transition-colors duration-300\" />;
                       {info && info.content}
                     </p>;
@@ -221,9 +221,9 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               ))}
             {/* Additional Info */}
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 ,}
+              initial={{ opacity: 0, y: 20 }
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={{ opacity: 1, y: 0 }
 }
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
 
@@ -255,23 +255,23 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
             </motion.div>
           </motion.div>
 
-          {/* Contact Form *,}
+          {/* Contact Form *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, x: 30 ,}
+            initial={{ opacity: 0, x: 30 }
 }
-            whileInView={{ opacity: 1, x: 0 ,}
+            whileInView={{ opacity: 1, x: 0 }
 }
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
 
-            viewport={{ once: true ,}
+            viewport={{ once: true }
 }
 
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
            />
             {submitStatus === 'success' ? (
               <motion.div;}
-initial={{ opacity: 0, scale: 0.8 ,}
+initial={{ opacity: 0, scale: 0.8 }
 }
                 animate={{ opacity: 1, scale: 1 }}
 
@@ -314,7 +314,7 @@ type='email'
 
                       value={formData.email}
 
-                      onChange={handleChang,}
+                      onChange={handleChang}
 }
                       required;
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors';
@@ -372,7 +372,7 @@ id='service'
                     name='service'
 
                     value={formData.service}
-                    onChange={handleChang,}
+                    onChange={handleChang}
 }
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors' />
 
@@ -415,7 +415,7 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                 {submitStatus === 'error' && (<motion.div;
                   />;
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;}
-                    initial={{ opacity: 0, y: -10 ,}
+                    initial={{ opacity: 0, y: -10 }
 }
 
                     animate={{ opacity: 1, y: 0 }}
@@ -426,7 +426,7 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <span />Something went wrong. Please try again.</span>
                   </motion.div>
 
-                ,
+                
 }
                 <button;
 type='submit';
@@ -444,7 +444,7 @@ type='submit';
 <Send className='w-5 h-5' />
                       <span />Send Message</span>
                     </>}
-                  ,}
+                  }
 }
                 </button>;
               </form>;
@@ -460,3 +460,4 @@ type='submit';
 
 export default ContactForm;
 
+"

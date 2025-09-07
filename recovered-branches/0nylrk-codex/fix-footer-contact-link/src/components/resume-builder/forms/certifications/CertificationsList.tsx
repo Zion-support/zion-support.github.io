@@ -1,3 +1,4 @@
+
 import { Certification } from \"@/types/resume\";
 import { Card, CardContent } from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
@@ -65,6 +66,7 @@ variant=\"ghost\"
                 </Button>
               </div>
             </div>
+
             {cert.credential_url && (
               <p className=\"text-xs mt-2\" />}
                 <a;}
@@ -74,7 +76,9 @@ href={cert.credential_url}
                   className=\"text-primary hover:underline\"
                  />
                   View credential;
+
                 </a>
+
               </p>
             )}
           </CardContent>
@@ -83,3 +87,4 @@ href={cert.credential_url}
     </div>
   );
 }
+

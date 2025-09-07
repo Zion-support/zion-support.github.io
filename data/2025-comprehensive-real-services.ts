@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   description: string;
@@ -28,6 +30,8 @@ name: string;
   contact: {
     phone: string;
     email: string;
+
+
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';}
       address: '364 E Main St STE 1008 Middletown DE 19709';}
@@ -2255,8 +2259,10 @@ reviews: 1250;
     launch_date: '2024 - 01 - 10';
     customers: 950;
     reviews: 520;
+
     reviews: 520;
 export interface ComprehensiveService {;}
+
   }
 ];
   id: string, name: string,

@@ -1,8 +1,11 @@
+
+
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
+
   KeyboardEvent,
 } from \"react\";
 import { Button } from \"@/components/ui/button\";
@@ -43,10 +46,12 @@ inputRef.current?.focus();}
 
   return (
     <form onSubmit={handleSubmit} className=\"flex items-end gap-2\" />
+
       <textarea;
 ref={inputRef}
         className=\"flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light\"
         placeholder=\"Type your message...\"
+
         value={message}
         onChange={(e) = /> setMessage(e.target.value)}
         onKeyDown={handleKeyPress}

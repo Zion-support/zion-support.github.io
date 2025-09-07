@@ -63,7 +63,7 @@ interface UltraAdvancedFuturisticBackground2026Props  {intensity?: 'low' | 'medi
 
 const UltraAdvancedFuturisticBackground2026: React.FC<;}
   UltraAdvancedFuturisticBackground2026Props;}
-> = ({intensity = 'high',color_scheme = 'neural - network',particle_count = 300,animation_speed = 2.0,enable_holographic = true,enableQuantumEffects = true,enableNeuralNetworks = true,enable_multidimensional = true,children, }) => ;
+> = ({intensity = 'high',color_scheme = 'neural - network',particle_count = 300,animation_speed = 2.0,enable_holographic = true,enableQuantumEffects = true,enableNeuralNetworks = true,enable_multidimensional = true,children }) => ;
   const UltraAdvancedFuturisticBackground2026: React.FC < UltraAdvancedFuturisticBackground2026Props> = ({intensity = 'high';
   color_scheme = 'neural - network';
   particle_count = 300;
@@ -386,8 +386,8 @@ function getColorSchemeColor(): string {
 'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
         'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
         cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
-        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],}
-        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],}
+        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000']}
+        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff']}
       };
 
 const schemeColors = colors[colorScheme] || colors['neural-network'];
@@ -470,27 +470,27 @@ const bgColors = {
         'neural-network': [
           'rgba(0, 0, 20, 0.8)',
           'rgba(0, 20, 40, 0.6)',
-          'rgba(20, 0, 40, 0.4)',
+          'rgba(20, 0, 40, 0.4)'
         ],
         'quantum-field': [
           'rgba(0, 20, 0, 0.8)',
           'rgba(20, 40, 0, 0.6)',
-          'rgba(40, 0, 20, 0.4)',
+          'rgba(40, 0, 20, 0.4)'
         ],
         cyberpunk: [
           'rgba(40, 0, 20, 0.8)',
           'rgba(20, 0, 40, 0.6)',
-          'rgba(0, 20, 40, 0.4)',
+          'rgba(0, 20, 40, 0.4)'
         ],
         holographic: [
           'rgba(40, 0, 40, 0.8)',
           'rgba(0, 40, 40, 0.6)',
-          'rgba(40, 40, 0, 0.4)',
+          'rgba(40, 40, 0, 0.4)'
         ],
         multidimensional: [
           'rgba(20, 0, 40, 0.8)',
           'rgba(0, 40, 20, 0.6)',
-          'rgba(40, 20, 0, 0.4)',
+          'rgba(40, 20, 0, 0.4)'
         ],) => {
   return $3;}
 }
@@ -592,7 +592,7 @@ enableMultidimensional;
 ref={canvasRef}
         className='absolute inset-0 w-full h-full';
         style={{ zIndex: -1 }}
-      {/* Additional visual effects *,}
+      {/* Additional visual effects *}
 }
 
       {enableMultidimensional && (;
@@ -602,17 +602,17 @@ className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded
 
             animate={{
               scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],}
-              opacity: [0.1, 0.3, 0.1],}
+              rotate: [0, 180, 360]}
+              opacity: [0.1, 0.3, 0.1]}
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
-ease: 'easeInOut',}
+ease: 'easeInOut'}
 }
             }}
-            transition={{animate={{scale: [1, 1.2, 1],rotate: [0, 180, 360],opacity: [0.1, 0.3, 0.1],}}
-            transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+            transition={{animate={{scale: [1, 1.2, 1],rotate: [0, 180, 360],opacity: [0.1, 0.3, 0.1]}}
+            transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}}
           />;
 
           <motion&& motion.div;
@@ -620,13 +620,13 @@ className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 r
             animate={{
 
               scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],}
-              opacity: [0.1, 0.3, 0.1],}
+              rotate: [360, 180, 0]}
+              opacity: [0.1, 0.3, 0.1]}
             }}
             transition={{
               duration: 10,
-              repeat: Infinity,}
-ease: 'easeInOut',}
+              repeat: Infinity}
+ease: 'easeInOut'}
             }}
 
           />;
@@ -635,7 +635,7 @@ ease: 'easeInOut',}
           <motion.div;
             className=\"absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full\";
             animate={{}}
-            transition={{duration: 10,repeat: Infinity,}}
+            transition={{duration: 10,repeat: Infinity}}
           />;
         </div>;
       )}
@@ -648,3 +648,4 @@ ease: 'easeInOut',}
 
 export default UltraAdvancedFuturisticBackground2026;
 
+"

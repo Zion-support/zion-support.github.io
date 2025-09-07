@@ -1,4 +1,6 @@
+
 id: \"id\",
+
 name: 'Affiliate Analytics Hub',
   tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
     price: '$89',
@@ -49,6 +51,8 @@ reviews: 21}
   description:;
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
+
+
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi - touch attribution and deduplication',
@@ -433,6 +437,8 @@ implementationDetails: 'Webhook ingestion, cookie-less heuristics';
 ;
 	}
 ];
+
+
 id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
   tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';
@@ -827,5 +833,6 @@ const contact  = null;
   rating: 4.5,
   reviews: 6;
 }
+
 ];	}
 ];

@@ -1,4 +1,6 @@
+
 id: 'finops - scheduler - optimizer',
+
 name: 'FinOps Scheduler Optimizer',
   tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
@@ -41,7 +43,9 @@ name: 'FinOps Scheduler Optimizer',
   launch_date: '2025 - 02 - 12',
     customers: 18,
     rating: 4 && 4.5,
+
     reviews: 9,
+
   },;
       'Modern alternative to legacy APM add‑ons with focused insights.'
     targetAudience: \"targetAudience\",
@@ -85,7 +89,9 @@ reviews: 9;
   launchDate: '2025-02-12',
     customers: 18,
     rating: 4.5,
+
     reviews: 9,
+
   },;
 ];	{
 		period: '/month',
@@ -204,6 +210,8 @@ reviews: 9;
 ;
 	}
 ];
+
+
 id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -414,8 +422,10 @@ const contact  = null;
   rating: 4.5,
   reviews: 9;
 }
+
 ];
 ;import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+
 const contact = {;
 	mobile: '+1 302 464 0950',;
 	email: 'kleber@ziontechgroup.com',;

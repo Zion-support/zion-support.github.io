@@ -244,8 +244,10 @@ export interface ContentGenerationResponse {
 export interface ContentTemplate {
   suggestions: string[];
   metadata: {
+
     title: string,
   description: string;
+
 tags: string[]}
   }
 }
@@ -636,6 +638,8 @@ export const AI_CONTENT_PRICING = {
 
 
     period: '/month',
+
+
 features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];}
@@ -657,8 +661,10 @@ features: [;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
+
   },
 };
   }
 }
+
 }

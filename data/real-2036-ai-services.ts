@@ -1,3 +1,5 @@
+
+
 export const real2036AIServices = [
   {
     id: \"id\",
@@ -1001,8 +1003,10 @@ export const real2036AIServices = [;
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
+
       'Safety systems',
     ],}
+
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
@@ -1029,5 +1033,6 @@ export const real2036AIServices = [
 
   }
 ];
+
 ;  }
 ];

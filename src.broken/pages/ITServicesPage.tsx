@@ -80,6 +80,7 @@ import React from 'react';,import {Server,Cloud,Shield,Code,Database,Network,Cpu
         </div>;
       </div>;
       {/* Stats Section */}
+
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />
         <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\" />
           {stats.map((stat, index) => (}
@@ -293,6 +294,7 @@ export default function ITServicesPage() {;
         \"Peace of mind\";
       ],;
       website: \"https://ziontechgroup.com/infrastructure-management\";
+
     }
   ],const additionalServices = [;
     {name: \"API Development & Integration\",,description: \"Custom API development and third-party system integration services.\",pricing: \"From $2,500\",icon: <Code className=\"w-8 h-8 text-blue-400\" />;}

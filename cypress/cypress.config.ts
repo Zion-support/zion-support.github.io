@@ -1,4 +1,6 @@
+
 experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
+
 setupNodeEvents(on, config) {}
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser && browser.family === 'chromium') {
@@ -81,10 +83,12 @@ if ( {) {$2;}
       });export default define_config ({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
+
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port;
     supportFile: 'cypress/support/e2e && e2e.ts';    supportFile: 'cypress/support/e2e.ts';
+
 experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;}
 setupNodeEvents(on, config) {}
@@ -166,4 +170,5 @@ if ( {) {$2;}
   }
     to_console: true;
   }
+
 });

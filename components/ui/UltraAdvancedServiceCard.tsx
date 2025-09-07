@@ -34,7 +34,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp;
   Rocket, Dna, DollarSign, Lock, Globe;}
   } from 'lucide-react';
 
-interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
+interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react';
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
 
@@ -81,7 +81,7 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
   }
 }
 
-const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   ,}
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   }
 }) => {
 
 
@@ -103,36 +103,36 @@ const getCategoryIcon = null;
 
 
 const containerVariants = {}
-    hidden: { opacity: 0, y: 20,}
+    hidden: { opacity: 0, y: 20}
 },
 visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,}
-ease: 'easeOut' as const,}
-      },
+        duration: 0.6}
+ease: 'easeOut' as const}
+      }
     },
     hover: {
       y: -10;
 transition: {
-        duration: 0.3,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.3}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
 const contentVariants = {}
-    hidden: { opacity: 0, height: 0,}
+    hidden: { opacity: 0, height: 0}
 },
 visible: {
       opacity: 1,
       height: 'auto',
   transition: {
-        duration: 0.5,}
-        ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.5}
+        ease: 'easeOut' as const}
+      }
+    }
   };
 
       onHoverStart={() => setIsHovered(true)}
@@ -149,7 +149,7 @@ visible: {
       />;
       {/* Main Card */}
       <div;
-    hidden: { opacity: 0, height: 0,}
+    hidden: { opacity: 0, height: 0}
 },<div;
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';}
         }`}
@@ -181,7 +181,7 @@ visible: {
 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'}
 }
                 animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity ,}
+                transition={{ duration: 2, repeat: Infinity }
 }
                />;
                 POPULAR;
@@ -243,7 +243,7 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
 
 
 
-          {/* Expandable Content *,}
+          {/* Expandable Content *}
 }
           <AnimatePresence />;
             {isExpanded && (;}
@@ -264,7 +264,7 @@ initial='hidden'
                 </div>
 
                 <div />;
-                  <h4 className=\"text-white font-semibold mb-2\" />Description</h4>;
+                  <h4 className=\"text-white font-semibold mb-2\" />Description</h4>;"
                   <p className=\"text-gray-300 text-sm leading-relaxed\" />;
                   </p>;
 
@@ -337,7 +337,7 @@ key={index}
             <motion.button;
 className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
               whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 ,}
+              whileTap={{ scale: 0.98 }
 }
               onClick={() = /> window.open(service.link, '_blank')}
             >
@@ -353,7 +353,7 @@ className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
-              onClick={() = /> setIsExpanded(!isExpanded,}
+              onClick={() = /> setIsExpanded(!isExpanded}
 }
             >;
               {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}
@@ -369,9 +369,10 @@ className='flex justify-center mt-4';
       </div>
     </motion.div>
 
-),
+)
 };
 
 
 export default UltraAdvancedServiceCard;
 
+"

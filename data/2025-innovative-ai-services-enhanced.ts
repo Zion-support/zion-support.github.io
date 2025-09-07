@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -599,4 +601,5 @@ export interface InnovativeAIService2025 {
       address: \"address\",
     website: 'https://ziontechgroup.com'
     }
+
     reviews: 89;

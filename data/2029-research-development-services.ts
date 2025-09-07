@@ -1,5 +1,7 @@
+
 id: string;
   name: string,
+
 description: string;
   category: string[];
   price: string;
@@ -400,6 +402,8 @@ description: string;
     ];
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
+
+
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';

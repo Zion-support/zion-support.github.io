@@ -1,3 +1,4 @@
+
 import React, { useState } from \"react\";
 import { Card, CardHeader, CardTitle, CardContent } from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
@@ -9,11 +10,13 @@ interface ChangelogManagerProps {}
   platform: AppPlatform;}
 }
 
+
 type ChangelogEntry = {
   id: string;
   version: string;
   date: string;
   changes: string;}
+
 };
 
 export const ChangelogManager: React.FC<ChangelogManagerProps /> = ({}

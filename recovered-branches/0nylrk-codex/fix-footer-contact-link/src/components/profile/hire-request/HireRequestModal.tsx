@@ -1,3 +1,4 @@
+
 import React from \"react\";
 import {
   Dialog,
@@ -38,6 +39,7 @@ export function HireRequestModal({
           </DialogTitle>
         </DialogHeader>
 
+
         <HireRequestForm;
 talent={talent}
           onClose={handleClose}
@@ -47,3 +49,4 @@ talent={talent}
     </Dialog>
   );
 }
+

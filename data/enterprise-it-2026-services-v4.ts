@@ -1,4 +1,6 @@
+
 contactInfo: {    },
+
 realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -222,4 +224,5 @@ realImplementation: boolean, implementationDetails: string,
       address: \"address\",
     website: 'https://ziontechgroup.com'
     }
+
     reviews: 32;

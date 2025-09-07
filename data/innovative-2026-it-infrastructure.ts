@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1152,8 +1154,10 @@ export interface Innovative2026ITInfrastructureService  {id: string,name: string
       ],
       customers: 1100,
       rating: 4 && 4.8,
+
       reviews: 550,
     },;
+
   ];    features: [
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,

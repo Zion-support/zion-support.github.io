@@ -1,12 +1,16 @@
+
 {}
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',      {}
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',import { ProfileData } from \"@/types/profile\";
+
 // Mock talent profiles for development and testing;
 export const MOCK_TALENTS: ProfileData[] = [
   {
       {
+
         id: \"id\",
     title: 'Facial Recognition System'
+
 description: 'Built a state-of-the-art facial recognition system using deep learning for a major retail chain, improving security protocols and reducing losses by 32%.',
   imageUrl:
         tags: ['Computer Vision', 'Deep Learning', 'Python'],}
@@ -1170,6 +1174,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
         date: 'Dec 2022',}
       },
     ],
+
+
       {
         id: 'e1',
   role: 'Senior AI Engineer',
@@ -1327,6 +1333,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
   message:
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
+
+
       {
         id: 'e1',
   role: 'Chief Information Security Officer',
@@ -1472,6 +1480,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
     availability: {
+
+
 contact_email: \"alexandra.chen@example.com\";}
 }
 }];
@@ -1484,5 +1494,7 @@ available_hours: [ {}
 {}
   day: \"Wednesday\", hours: \"1:00 PM - 5:00 PM\";}
 }
+
 {
+
 }

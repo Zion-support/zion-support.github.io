@@ -1,11 +1,15 @@
+
 import { ChevronDown, ChevronUp } from \"lucide-react\";
 import { Checkbox } from \"@/components/ui/checkbox\";
+
 import { AvailabilityFilterProps } from \"@/types/filters\";
 const AVAILABILITY_OPTIONS = [
   { id: \"full_time\", label: \"Full-time\" },
   { id: \"part_time\", label: \"Part-time\" },
   { id: \"project\", label: \"Project-based\" },
 ];
+
+
 
 export function AvailabilityFilter({
   selectedAvailability,
@@ -28,6 +32,8 @@ onClick={toggleSection}
         )}
       </button>
 
+
+
       {expanded && (
         <div className=\"mt-4 space-y-2\" />}
           {AVAILABILITY_OPTIONS.map((option) => (}
@@ -42,6 +48,7 @@ id={`availability-${option.id}`}
 htmlFor={`availability-${option.id}`}
                 className=\"ml-2 text-sm text-zion-slate-light cursor-pointer\"
                />
+
                 {option.label}
               </label>
             </div>

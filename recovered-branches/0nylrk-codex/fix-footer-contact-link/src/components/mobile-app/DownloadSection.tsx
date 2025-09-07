@@ -6,6 +6,8 @@ export const DownloadSection: React.FC = () => {
 const appStoreUrl = \"#\"; // Replace with actual App Store URL when available;
 const googlePlayUrl = \"#\"; // Replace with actual Google Play URL when available;
 
+
+
 return (
     <section className=\"py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark\" />
       <div className=\"container mx-auto px-4\" />
@@ -20,6 +22,8 @@ return (
 needs to the next level. Available on iOS and Android.
               </p>}
 
+
+ /
               <AppStoreButtons;}
 className=\"mb-8\"}
                 appStoreUrl={appStoreUrl}
@@ -30,11 +34,15 @@ className=\"mb-8\"}
                 }
               />
 
+
+
               <div className=\"text-sm text-gray-400\" />
                 <p />Compatible with iOS 14+ and Android 8.0+</p>
                 <p />Free download, in-app purchases available</p>
               </div>
             </div>
+
+
 
             <div className=\"flex-shrink-0 bg-white p-4 rounded-lg\" />
               <div className=\"w-36 h-36 flex items-center justify-center bg-white rounded-lg\" />
@@ -49,5 +57,6 @@ className=\"mb-8\"}
         </div>
       </div>
     </section>
+
   );
 };

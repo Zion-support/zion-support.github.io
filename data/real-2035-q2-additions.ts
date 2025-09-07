@@ -1,4 +1,6 @@
+
 'Intent classification + prioritization'
+
       'On-brand response drafting'
       'Automatic polite follow-ups'
       'Lead/contact enrichment'
@@ -491,6 +493,8 @@ reviews: 12}
       'CI integration'
     ],
     popular: false,
+
+
   {
     id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
@@ -2042,6 +2046,8 @@ reviews: 5}
 ;
 	}
 ];
+
+
 id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';
@@ -3961,5 +3967,6 @@ const contact  = null;
   rating: 4.6,
   reviews: 6;
 }
+
 ];	}
 ];

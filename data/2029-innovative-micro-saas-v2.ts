@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -572,9 +574,11 @@ contactInfo: {
         'Workforce planning'
       ]
     }
+
   ];    price: \"$2,499/month\",
   description: \"Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.\",
   description: \"Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.\";
+
 features: [
       \"AI-powered churn prediction\";
       \"Automated customer health scoring\";
@@ -914,4 +918,5 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     ],
     useCases: [
       \"Talent acquisition optimization\";
+
       \"Employee retention strategies\";

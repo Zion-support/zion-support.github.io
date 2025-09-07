@@ -4,7 +4,9 @@ export interface EmergingTechService  {export interface EmergingTechService  {ex
 export interface EmergingTechService  {export interface EmergingTechService  {import { ServiceVariant  } from '../types/service-variants';
 export interface EmergingTechService2025  {export interface EmergingTechService  {id: string;
 export interface EmergingTechService {
+
 export interface EmergingTechService {
+
 export interface EmergingTechService {;
 export interface EmergingTechService {
 

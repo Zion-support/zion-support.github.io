@@ -1,4 +1,5 @@
 import React, { useState } from \"react\";
+
 import { Input } from \"@/components/ui/input\";
 import { Button } from \"@/components/ui/button\";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";
@@ -39,6 +40,7 @@ export default function HelpCenter() {
   };
 
   return (
+
     <AppLayout />
       <div className=\"container mx-auto px-4 py-8\" />
         <div className=\"max-w-4xl mx-auto\" />
@@ -50,6 +52,8 @@ export default function HelpCenter() {
 team.
           </p>
 
+
+
           <div className=\"relative mb-8\" />
             <Input;
 placeholder=\"Search for help articles...\"
@@ -60,12 +64,15 @@ placeholder=\"Search for help articles...\"
             <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />
           </div>
 
+
+
           <Tabs defaultValue=\"articles\" className=\"mb-8\" />
             <TabsList className=\"w-full grid grid-cols-3 mb-6\" />
               <TabsTrigger value=\"articles\" />Articles</TabsTrigger>
               <TabsTrigger value=\"faq\" />FAQ</TabsTrigger>
               <TabsTrigger value=\"contact\" />Contact Us</TabsTrigger>
             </TabsList>
+
 
             <TabsContent value=\"articles\" />
               {!selectedCategory && !selectedArticle && (}
@@ -75,6 +82,7 @@ categories={HELP_CATEGORIES}
                   searchQuery={searchQuery}
                 />
               )}
+
 
               {selectedCategory && !selectedArticle && (
                 <>
@@ -89,6 +97,7 @@ variant=\"ghost\"}
 categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
+
                   />
                 </>
               )}
@@ -113,6 +122,7 @@ variant=\"ghost\"}
                   Frequently Asked Questions;
                 </h2>
 
+
                 <div className=\"space-y-6\" />
                   <div />
                     <h3 className=\"font-medium text-zion-cyan mb-2\" />
@@ -120,12 +130,14 @@ variant=\"ghost\"}
                     </h3>
                     <p className=\"text-zion-slate-light\" />
                       Our AI matching algorithm analyzes your requirements and;
+
                       preferences to match you with the most compatible talent;
 or services. The process takes into account skills,
                       experience, availability, and past performance to ensure;
 optimal results.
                     </p>
                   </div>
+
 
                   <div />
                     <h3 className=\"font-medium text-zion-cyan mb-2\" />
@@ -139,6 +151,8 @@ protects both parties throughout the engagement.
                     </p>
                   </div>
 
+
+
                   <div />
                     <h3 className=\"font-medium text-zion-cyan mb-2\" />
                       What are the payment terms?
@@ -150,6 +164,8 @@ fees. Funds are held in escrow until deliverables are;
 approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+
+
 
                   <div />
                     <h3 className=\"font-medium text-zion-cyan mb-2\" />
@@ -166,6 +182,8 @@ our team through the Contact tab.
               </div>
             </TabsContent>
 
+
+
             <TabsContent value=\"contact\" />
               <div className=\"grid grid-cols-1 md: grid-cols-2 gap-8\" />
                 <div className=\"bg-zion-blue-light/20 rounded-lg p-6\" />
@@ -176,6 +194,8 @@ our team through the Contact tab.
                     Our support team is available 24/7 to assist you with any;
 questions or issues.
                   </p>
+
+
 
                   <div className=\"space-y-4\" />
                     <div className=\"flex items-center\" />
@@ -195,8 +215,10 @@ href=\"mailto:support@ziontechgroup.com\"
                         className=\"text-zion-cyan hover:underline\"
                        />
                         support@ziontechgroup.com;
+
                       </a>
                     </div>
+
 
                     <div className=\"flex items-center\" />
                       <div className=\"bg-zion-purple/10 p-2 rounded-full mr-3\" />
@@ -215,10 +237,14 @@ xmlns=\"http://www.w3.org/2000/svg\"
                     </div>
                   </div>
 
+
+
                   <Button className=\"w-full mt-6 bg-zion-purple hover:bg-zion-purple-light\" />
                     Open Live Chat;
                   </Button>
                 </div>
+
+
 
                 <div className=\"bg-zion-blue-light/20 rounded-lg p-6\" />
                   <h2 className=\"text-xl font-semibold mb-4\" />
@@ -228,6 +254,8 @@ xmlns=\"http://www.w3.org/2000/svg\"
                     We value your input and are constantly looking to improve;
 our platform.
                   </p>
+
+
 
                   <form className=\"space-y-4\" />
                     <div />
@@ -243,6 +271,8 @@ className=\"w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-li
                       />
                     </div>
 
+
+
                     <Button className=\"w-full bg-zion-cyan hover:bg-zion-cyan/80\" />
                       Submit Feedback;
                     </Button>
@@ -256,3 +286,4 @@ className=\"w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-li
     </AppLayout>
   );
 }
+

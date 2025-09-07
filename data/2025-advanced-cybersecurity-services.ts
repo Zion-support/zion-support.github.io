@@ -1,4 +1,6 @@
+
 'Continuous identity verification and authentication',
+
         'Micro - segmentation and network isolation',
         'Adaptive access controls and policies',
         'Real - time threat detection and response',
@@ -149,7 +151,9 @@ reviews: 21;
       launchDate: '2024-09-25',
   customers: 43,
       rating: 4.7,
+
       reviews: 21,
+
     },;
       id: 'iot - security - platform',
   name: 'IoT Security Platform',
@@ -193,7 +197,9 @@ reviews: 21;
       rating: 4 && 4.7,
       reviews: 21;
   ];    features: [
+
   email: 'kleber@ziontechgroup.com',
+
 address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
     },
@@ -431,7 +437,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 ];
 ];
 ;
+
 import { ServiceVariant } from '../types/service-variants';
+
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;

@@ -1,4 +1,6 @@
+
 'Alternative data analysis',
+
       'Machine learning models',
       'Real - time scoring',
       'Risk prediction',
@@ -497,5 +499,6 @@ export interface AdvancedFintechSolution2025  {id: string,name: string,tagline: 
 ];
 ;
   }
+
 ];  }
 ];

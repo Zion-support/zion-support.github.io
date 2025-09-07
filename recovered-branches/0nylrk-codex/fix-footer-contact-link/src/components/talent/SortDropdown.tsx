@@ -9,12 +9,16 @@ import {
   DropdownMenuTrigger,}
 } from \"@/components/ui/dropdown-menu\";
 
+
+
 interface SortDropdownProps {
   sortOption: string;}
   setSortOption: (option: string) => void;}
 }
 }
+}
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+
 return (
     <DropdownMenu />
       <DropdownMenuTrigger asChild />
@@ -29,6 +33,7 @@ variant=\"outline\"
           </div>
           <ChevronDown className=\"h-4 w-4 ml-2 opacity-50\" />
         </Button>
+
       </DropdownMenuTrigger>
       <DropdownMenuContent;
 align=\"start\"
@@ -43,11 +48,13 @@ key={option.value}
                 ? \"bg-zion-purple/20 text-zion-purple\"}
                 : \"\"}
             }`}
+
           >
             {option.label}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
+
   );
 }

@@ -4,7 +4,9 @@ export interface EmergingTechInnovationService  {export interface EmergingTechIn
 export interface EmergingTechInnovationService  {export interface EmergingTechInnovationService  {import { ServiceVariant  } from '../types/service-variants';
 export interface EmergingTechInnovation  {export interface EmergingTechInnovationService  {id: string;
 export interface EmergingTechInnovationService {
+
 export interface EmergingTechInnovationService {
+
 export interface EmergingTechInnovationService {;
 export interface EmergingTechInnovationService {
 
@@ -699,7 +701,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
   contact_info: {
     mobile: string;
     email: string;
+
     address: string;    tagline: \"tagline\",
+
 price: '$6,999',
   period: '/month'
     description:
@@ -1143,7 +1147,9 @@ implementationDetails:
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
+
       'Only quantum-powered cybersecurity platform with proven AI integration',
+
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
@@ -1979,16 +1985,20 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       '90% faster threat detection70% reduction in false positivesQuantum advantageAI-driven intelligence24/7 monitoring';
     ],capabilities: [;
 ];
+
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
       'Only quantum-powered cybersecurity platform with proven AI integration',}
+
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
+
 import { ServiceVariant } from '../types/service-variants';
+
 export interface EmergingTechInnovation {;
   id: string,;
   name: string,;

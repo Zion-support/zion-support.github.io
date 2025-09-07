@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from \"react\";
 import { Card, CardContent } from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\";
@@ -8,10 +9,12 @@ import { PortfolioProject } from \"@/types/resume\";
 import { usePortfolio } from \"@/hooks/usePortfolio\";
 export function PortfolioBuilder() {}
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+
 const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null />(
     null,
   );
+
 
   useEffect(() => {}
     fetchProjects();}
@@ -31,20 +34,25 @@ const [showAddProject, setShowAddProject] = useState(false);
 }
   };
 
+
 const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
     if (success) {}
       fetchProjects();}
     }
+}
   };
 
   if (isLoading) {
+
 return (
       <div className=\"flex justify-center items-center h-64\" />
         <Loader2 className=\"h-8 w-8 animate-spin text-primary\" />
       </div>}
     );}
   }
+
+
 
 return (
     <div className=\"space-y-6\" />
@@ -58,20 +66,25 @@ return (
         <Button;
 onClick={() = /> setShowAddProject(true)}
           className=\"gap-2\"
+
           disabled={showAddProject || !!editingProject}
+
         >
           <FilePlus className=\"h-4 w-4\" />
           Add Project;
         </Button>
       </div>
 }
+}
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
+
         <Card />
           <CardContent className=\"pt-6\" />}
             <h2 className=\"text-xl font-semibold mb-6\" />}
               {editingProject ? \"Edit Project\" : \"Add New Project\"}
             </h2>
+
 
             <ProjectForm;
 project={editingProject || undefined}
@@ -95,6 +108,7 @@ key={project.id}
               onEdit={() = /> setEditingProject(project)}
               onDelete={handleDeleteProject}
             />
+
           ))}
         </div>
       ) : (
@@ -126,3 +140,4 @@ onClick={() = /> setShowAddProject(true)}
     </div>
   );
 }
+

@@ -46,22 +46,22 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: { opacity: 0}
 }
     visible: {
       opacity: 1;
 transition: {
-        staggerChildren: 0.2,}
-delayChildren: 0.1,}
-      },
-    },
+        staggerChildren: 0.2}
+delayChildren: 0.1}
+      }
+    }
   };
 
 const itemVariants = {
     hidden: {
 opacity: 0,
-      y: 50,}
-      scale: 0.9,}
+      y: 50}
+      scale: 0.9}
     },
     visible: {
       opacity: 1,
@@ -69,10 +69,10 @@ opacity: 0,
       scale: 1,
       transition: {
 
-        duration: 0.6,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.6}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
 const cardVariants = {
@@ -80,16 +80,16 @@ const cardVariants = {
       y: -10;
 scale: 1.02;
 transition: {
-        duration: 0.3,}
-ease: 'easeOut' as const,}
-      },
-    },
+        duration: 0.3}
+ease: 'easeOut' as const}
+      }
+    }
   };
 
 const renderServiceCard = (service: any, index: number) => (
     <motion.div;
 key={service.id}
-      variants={itemVariant,}
+      variants={itemVariant}
 }
 whileHover='hover'
       className='group relative'
@@ -111,7 +111,7 @@ className='group relative' />;
               <div />
                 <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors duration-300' />
 
-                  {service.nam,}
+                  {service.nam}
 }
                 </h3>;
                 <p className='text-slate-400 text-sm' />{service.tagline}</p>;
@@ -138,7 +138,7 @@ className='group relative' />;
                 .slice(0, 3)
                 .map((feature: string, idx: number) => (
                   <div;}
-key={id,}
+key={id}
 }
                     className='flex items-center space-x-2 text-xs text-slate-400' />
 
@@ -160,7 +160,7 @@ key={id,}
             </div>
             <motion.button;
 whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 ,}
+              whileTap={{ scale: 0.95 }
 }
 className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25' />
 
@@ -179,7 +179,7 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         </div>
 
 
-        {/* Hover glow effect *,}
+        {/* Hover glow effect *}
 }
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
       </motion.div>;
@@ -192,10 +192,10 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       <div className='container mx-auto px-4 relative z-10' />
         {/* Section header */}
         <motion.div;
-initial={{ opacity: 0, y: 30 ,}
+initial={{ opacity: 0, y: 30 }
 }
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 ,}
+          transition={{ duration: 0.8 }
 }
 
 className='text-center mb-16'
@@ -224,9 +224,9 @@ the future of business.
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
       <div className='container mx-auto px-4 relative z-10' />;
         {/* Section header */}<motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
 
@@ -240,7 +240,7 @@ className='mb-20'
             </h3>
           </div>
           <motion.div;
-variants={containerVariant,}
+variants={containerVariant}
 }
             initial='hidden'
             whileInView='visible'
@@ -253,7 +253,7 @@ variants={containerVariant,}
           </motion.div>
         </motion.div>
 
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 ,}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
@@ -268,23 +268,23 @@ variants={containerVariant,}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {innovative2026AIServices && innovative2026AIServices.map((service, index) =>;}
               renderServiceCard(service, index))}          </motion && motion.div>        >;
-          <div className=\"flex items-center space-x-3 mb-8\" />;
-            <Brain className=\"w-6 h-6 text-cyan-400\" />;
+          <div className=\"flex items-center space-x-3 mb-8\" />;"
+            <Brain className=\"w-6 h-6 text-cyan-400\" />;"
             <h3 className=\"text-2xl font-bold text-white\" />AI-Powered Services</h3>;
           </div>;
           <motion&& motion.div;
-            variants={containerVariants}
-            initial=\"hidden\";
-            whileInView=\"visible\";
+            variants={containerVariants}"
+            initial=\"hidden\";"
+            whileInView=\"visible\";"
             className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\" />;
             {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;{/* IT Infrastructure Section */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
 
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
 
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -297,7 +297,7 @@ className='mb-20'
             </h3>
           </div>
           <motion.div;
-variants={containerVariant,}
+variants={containerVariant}
 }
             initial='hidden';
             whileInView='visible';
@@ -307,7 +307,7 @@ variants={containerVariant,}
               renderServiceCard(service, index))}
           </motion.div>;
         </motion.div>;
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 ,}
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
@@ -318,11 +318,11 @@ variants={containerVariant,}
           </div>;
         {/* Micro SAAS Section */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
-          transition={{ duration: 0.8, delay: 0.6 ,}
+          transition={{ duration: 0.8, delay: 0.6 }
 }
          />;
 <div className='flex items-center space-x-3 mb-8' />;
@@ -348,11 +348,11 @@ variants={containerVariant,}
 
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          whileInView={{ opacity: 1, y: 0 ,}
+          whileInView={{ opacity: 1, y: 0 }
 }
-          transition={{ duration: 0.8, delay: 0.8 ,}
+          transition={{ duration: 0.8, delay: 0.8 }
 }
 
 className='text-center mt-16'
@@ -377,7 +377,7 @@ whileHover={{ scale: 1.05 }}
               </motion.button>
               <motion.button;
 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 ,}
+                whileTap={{ scale: 0.95 }
 }
 
 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
@@ -393,3 +393,4 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
   );
 }
 
+"

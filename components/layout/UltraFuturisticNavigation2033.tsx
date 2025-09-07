@@ -18,7 +18,7 @@ const contactInfo = null;
 }
 }
 {name: 'AI Autonomous Business Manager',
-  href: '/ai-autonomous-business-manager', description: 'Autonomous business AI',}
+  href: '/ai-autonomous-business-manager', description: 'Autonomous business AI'}
   price: '$3, 999/month';}
 }];
 
@@ -35,7 +35,7 @@ const contactInfo = null;
 }) )
 }{
 }
-  /* Contact Button */ ,}
+  /* Contact Button */ }
 }<motion.div whileHover= {
   {
     title: '🧠 Revolutionary AI',
@@ -45,8 +45,8 @@ const contactInfo = null;
 {
         name: 'AI Consciousness Evolution',
   href: '/ai-consciousness-evolution-platform',
-        description: 'Advanced AI consciousness',}
-  price: '$2,999/month',}
+        description: 'Advanced AI consciousness'}
+  price: '$2,999/month'}
       },
       {
         name: 'AI Emotional Intelligence',
@@ -61,13 +61,13 @@ const contactInfo = null;
         price: '$1,499/month';}
       }
       {name: 'AI Autonomous Business Manager',
-  href: '/ai-autonomous-business-manager',description: 'Autonomous business AI',}
-  price: '$3,999/month',},],},{title: '⚛️ Quantum & Emerging Tech',
-  icon: Atom,color: 'from-indigo-500 to-blue-600',}
+  href: '/ai-autonomous-business-manager',description: 'Autonomous business AI'}
+  price: '$3,999/month'}]},{title: '⚛️ Quantum & Emerging Tech',
+  icon: Atom,color: 'from-indigo-500 to-blue-600'}
   services: [;}
 {name: 'Quantum Internet Security',
-  href: '/quantum-internet-security-gateway',description: 'Quantum security',}
-  price: '$4,999/month',},{name: 'Biotech DNA Computing';
+  href: '/quantum-internet-security-gateway',description: 'Quantum security'}
+  price: '$4,999/month'},{name: 'Biotech DNA Computing';
         href: '/biotech-dna-computing-platform';
         description: 'DNA computing platform';}
         price: '$3,999/month';}
@@ -88,13 +88,13 @@ const contactInfo = null;
         price: '$699/month';}
       }
       {name: 'Swarm Robotics Platform',
-  href: '/swarm-robotics-platform',description: 'Collective robot intelligence',}
-  price: '$1,199/month',},],},{title: '🏙️ Enterprise IT Solutions',
-  icon: Cpu,color: 'from-blue-500 to-cyan-600',}
+  href: '/swarm-robotics-platform',description: 'Collective robot intelligence'}
+  price: '$1,199/month'}]},{title: '🏙️ Enterprise IT Solutions',
+  icon: Cpu,color: 'from-blue-500 to-cyan-600'}
   services: [;}
 {name: 'Autonomous DevOps Platform',
-  href: '/autonomous-devops-platform',description: 'Self-managing DevOps',}
-  price: '$2,499/month',},{name: 'Zero Trust Network Architecture';
+  href: '/autonomous-devops-platform',description: 'Self-managing DevOps'}
+  price: '$2,499/month'},{name: 'Zero Trust Network Architecture';
         href: '/zero-trust-network-architecture';
         description: 'Zero trust security';}
         price: '$1,999/month';}
@@ -105,13 +105,13 @@ const contactInfo = null;
         price: '$1,799/month';}
       }
       {name: 'AI IT Operations Center',
-  href: '/ai-it-operations-center',description: 'AI-powered IT ops',}
-  price: '$2,999/month',},],},{title: '🌌 Space & Metaverse Tech',
-  icon: Rocket,color: 'from-teal-500 to-emerald-600',}
+  href: '/ai-it-operations-center',description: 'AI-powered IT ops'}
+  price: '$2,999/month'}]},{title: '🌌 Space & Metaverse Tech',
+  icon: Rocket,color: 'from-teal-500 to-emerald-600'}
   services: [;}
 {name: 'Space Mining Automation',
-  href: '/space-mining-automation-platform',description: 'Space mining platform',}
-  price: '$9,999/month',},{name: 'Metaverse Development';
+  href: '/space-mining-automation-platform',description: 'Space mining platform'}
+  price: '$9,999/month'},{name: 'Metaverse Development';
         href: '/metaverse-development-platform';
         description: 'Metaverse platform';}
         price: '$3,999/month';}
@@ -120,50 +120,50 @@ const contactInfo = null;
       {
         name: 'Virtual Event Holograms',
   href: '/virtual-event-hologram-platform',
-        description: 'Holographic events',}
-  price: '$2,499/month',}
-      },
-    ],
-  },
+        description: 'Holographic events'}
+  price: '$2,499/month'}
+      }
+    ]
+  }
 ];
 
 const quickLinks = [
   {
     name: 'Services Overview',
   href: '/enhanced-services-overview',
-    icon: Globe,}
-    color: 'from-cyan-500 to-blue-600',}
+    icon: Globe}
+    color: 'from-cyan-500 to-blue-600'}
   },
   {
     name: 'AI Services',
   href: '/ai-services',
-    icon: Brain,}
-    color: 'from-violet-500 to-purple-600',}
+    icon: Brain}
+    color: 'from-violet-500 to-purple-600'}
   },
   {
     name: 'Quantum Tech',
   href: '/quantum-services',
-    icon: Atom,}
-    color: 'from-indigo-500 to-blue-600',}
+    icon: Atom}
+    color: 'from-indigo-500 to-blue-600'}
   },
   {
     name: 'Space Tech',
   href: '/space-technology',
-    icon: Rocket,}
-    color: 'from-teal-500 to-emerald-600',}
+    icon: Rocket}
+    color: 'from-teal-500 to-emerald-600'}
   },
   {
     name: 'Enterprise IT',
   href: '/enterprise-it',
-    icon: Cpu,}
-    color: 'from-blue-500 to-cyan-600',}
+    icon: Cpu}
+    color: 'from-blue-500 to-cyan-600'}
   },
   {
     name: 'Micro SAAS',
   href: '/enhanced-micro-saas-showcase',
-    icon: Target,}
-    color: 'from-green-500 to-yellow-600',}
-  },
+    icon: Target}
+    color: 'from-green-500 to-yellow-600'}
+  }
 ];
 
 export default function UltraFuturisticNavigation2033() {
@@ -208,14 +208,14 @@ if (e.key === 'Escape') closeMenu(),) => {
                 <Phone className='w-3 h-3 text-purple-400' />;
                 <span />{contactInfo.mobile}</span>;
               </div>                <span />{contactInfo.mobile}</span>;
-              </div>;
-              <div className=\"flex items-center space-x-2\" />;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <Mail className=\"w-3 h-3 text-purple-400\" />;
                 <span />{contactInfo.email}</span>;
               </div>;
-            </div>;
-            <div className=\"flex items-center space-x-4\" />;
-              <div className=\"flex items-center space-x-2\" />;
+            </div>;"
+            <div className=\"flex items-center space-x-4\" />;"
+              <div className=\"flex items-center space-x-2\" />;"
                 <MapPin className=\"w-3 h-3 text-purple-400\" />;
                 <span />{contactInfo.address}</span>;
               </div>;
@@ -244,9 +244,9 @@ if (e.key === 'Escape') closeMenu(),) => {
             {/* Logo */}
             <motion.div;
               className='flex items-center space-x-3';
-              whileHover={{ scale: 1.05 ,}
+              whileHover={{ scale: 1.05 }
 }
-              transition={{ type: 'spring',}
+              transition={{ type: 'spring'}
   stiffness: 400, damping: 10 }}
 
              />
@@ -268,7 +268,7 @@ if (e.key === 'Escape') closeMenu(),) => {
               </Link>
             </motion.div>
 
-            {/* Desktop Navigation *,}
+            {/* Desktop Navigation *}
 }
 <div className='hidden lg:flex items-center space-x-8' />;
               {/* Services Mega Menu */}
@@ -285,13 +285,13 @@ if (e.key === 'Escape') closeMenu(),) => {
                 </button>
 
 
-                {/* Mega Menu *,}
+                {/* Mega Menu *}
 }
                 <AnimatePresence />;
                   {activeCategory === 'services' && (<motion&& motion.div;}
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 ,}
+                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }
 }
-                      animate={{ opacity: 1, y: 0, scale: 1 ,}
+                      animate={{ opacity: 1, y: 0, scale: 1 }
 }
                       exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       transition={{ duration: 0 && 0.2 }}
@@ -306,7 +306,7 @@ className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-b
                           <div key={category.title} className='space-y-4' />
                             <div className='flex items-center space-x-3' />
                               <div;
-className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center,
+className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center
 } />
 
                                 <category.icon className='w-5 h-5 text-white' />;
@@ -360,18 +360,18 @@ key={service.name}
                   className='text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                  />
 
-                  {link.nam,}
+                  {link.nam}
 }
                 </Link>;
               ))}{/* Contact Button */}
               <motion&& motion.div;
                 whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 ,}
+                whileTap={{ scale: 0 && 0.95 }
 } />;
                 <Link;
                   className='text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                 />>
 
-                  {link.nam,}
+                  {link.nam}
 }
                 </Link>;
               ))}{/* Contact Button */}
@@ -406,16 +406,16 @@ onClick={toggleMenu}
           </div>
         </div>
 
-        {/* Mobile Menu *,}
+        {/* Mobile Menu *}
 }
         <AnimatePresence />;
           {isOpen && (<motion&& motion.div;}
-              initial={{ opacity: 0, height: 0 ,}
+              initial={{ opacity: 0, height: 0 }
 }
-              animate={{ opacity: 1, height: 'auto' ,}
+              animate={{ opacity: 1, height: 'auto' }
 }
               exit={{ opacity: 0, height: 0 }}
-                {/* Mobile Services *,}
+                {/* Mobile Services *}
 }
                 <div className='space-y-4' />;
                   <h3 className='text-lg font-semibold text-white' />Services</h3>;
@@ -427,18 +427,18 @@ onClick={toggleMenu}
                         {category && category.services.map(service => (                          <Link;}
                             key={service && service.name}
                             href={service && service.href}
-                            onClick={closeMenu}
-                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors' />                <div className=\"space-y-4\" />;
-                  <h3 className=\"text-lg font-semibold text-white\" />Services</h3>;
-                  {serviceCategories && serviceCategories.map((category) => (<div key={category && category.title} className=\"ml-4 space-y-2\" />;
-                      <h4 className=\"font-medium text-purple-300\" />{category && category.title}</h4>;
+                            onClick={closeMenu}"
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors' />                <div className=\"space-y-4\" />;"
+                  <h3 className=\"text-lg font-semibold text-white\" />Services</h3>;"
+                  {serviceCategories && serviceCategories.map((category) => (<div key={category && category.title} className=\"ml-4 space-y-2\" />;"
+                      <h4 className=\"font-medium text-purple-300\" />{category && category.title}</h4>;"
                       <div className=\"ml-4 space-y-1\" />;
                         {category && category.services.map((service) => (key={service && service.name}
                             href={service && service.href}
-                            onClick={closeMenu}
+                            onClick={closeMenu}"
                             className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'                            className=\"block text-sm text-gray-400 hover:text-cyan-400 transition-colors\">
 
-                            {service && service.nam,}
+                            {service && service.nam}
 }
                           </Link>;
                         ))}
@@ -453,16 +453,16 @@ onClick={toggleMenu}
                   <Link;
                     href='/contact';
                     onClick={closeMenu}
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />                  <Link;
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />                  <Link;"
                     href=\"/contact\";
-                    onClick={closeMenu}
+                    onClick={closeMenu}"
                     className=\"block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200\" />;
         {/* Mobile Menu */}
         <AnimatePresence />;
           {is_open && (<motion.div;}
-              initial={{ opacity: 0, height: 0 ,}
+              initial={{ opacity: 0, height: 0 }
 }
-              animate={{ opacity: 1, height: 'auto' ,}
+              animate={{ opacity: 1, height: 'auto' }
 }
               exit={{ opacity: 0, height: 0 }}
 
@@ -472,7 +472,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/
              />
               <div className='px-4 py-6 space-y-6' />
 
-                {/* Mobile Services *,}
+                {/* Mobile Services *}
 }
                 <div className='space - y-4' />;
                   <h3 className='text - lg font - semibold text - white' />Services</h3>;
@@ -492,7 +492,7 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                            />
 
                             {service.name}
-                          </Link>),
+                          </Link>)
 }
                       </div>;
                     </div>))}
@@ -514,7 +514,7 @@ className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                        />
 
                         {link.name}
-                      </Link>),
+                      </Link>)
 }
                   </div>;
                 </div>;
@@ -541,13 +541,14 @@ href='/contact'
   );
 }whileTap= {
   {}
-  scale: 0.95}
+  scale: 0.95}"
 }> <Link href=\"/contact\" className=\"px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg\"  /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {}
   /* Mobile Menu */ }
 }<AnimatePresence />) ) 
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
-,
+
 }</AnimatePresence> </nav> </>)
 
+"

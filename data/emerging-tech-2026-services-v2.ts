@@ -1,4 +1,6 @@
+
 contactInfo: {
+
 mobile: string, email: string,
     address: string,}
     website: string}
@@ -74,6 +76,8 @@ export interface EmergingTech2026ServiceV2 {;
   rating: number,;
   reviews: number;
 }
+
+
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform;
   {
@@ -109,5 +113,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     launch_date: '2026 - 06 - 15';
     customers: 65;
     rating: 4.9,
+
     reviews: 45;  }
 ];

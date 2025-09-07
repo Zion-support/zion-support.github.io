@@ -1,3 +1,4 @@
+}
 import React from \"react\";}
 import { Milestone } from \"@/hooks/useMilestones\";
 import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";
@@ -20,6 +21,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps /> = ({
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
 
+
 return (
     <Card className=\"mb-8 bg-muted/30\" />
       <CardHeader className=\"pb-3\" />
@@ -33,6 +35,7 @@ return (
             <p className=\"text-sm text-muted-foreground mb-1\" />Total Payment</p>}
             <p className=\"text-2xl font-semibold\" />${totalPayment}</p>
           </div>
+
 
           <div />
             <p className=\"text-sm text-muted-foreground mb-1\" />Payment Terms</p>

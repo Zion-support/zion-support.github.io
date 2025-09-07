@@ -62,7 +62,7 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
           </Link>;
       </div>;value={filters && filters.status || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, status: e && e.target.value || undefined,}
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined}
 }))GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
 
 const categories: GrantCategory[] = [;
@@ -180,7 +180,7 @@ const params = new URLSearchParams();
       <div className='grid md: grid-cols-4 gap-4 mb-6' />
         <select;
 className='border rounded p-2'
-          value={filters.sector |',}
+          value={filters.sector |'}
 }
           onChange={e = />}
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
@@ -195,10 +195,10 @@ className='border rounded p-2'
         </select>
         <select;
 className='border rounded p-2'
-          value={filters.status |',}
+          value={filters.status |'}
 }
           onChange={e = />}
-            setFilters(f => ({ ...f, status: e.target.value |undefined,}
+            setFilters(f => ({ ...f, status: e.target.value |undefined}
 }))
 export default /**
  * GrantsPage - Function description;
@@ -244,7 +244,7 @@ const [filters, set_filters] = useState<{ sector?: string, status?: string, regi
           className='border rounded p-2';
           value={filters.sector |''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, sector: e.target.value |undefined }),
+            setFilters(f => ({ ...f, sector: e.target.value |undefined })
 }
         >;
           <option value='' />All Sectors</option>;
@@ -257,7 +257,7 @@ const [filters, set_filters] = useState<{ sector?: string, status?: string, regi
           className='border rounded p-2';
           value={filters.status |''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, status: e.target.value |undefined,}
+            setFilters(f => ({ ...f, status: e.target.value |undefined}
 }))export default /**;
  * GrantsPage - Function description;
  */;
@@ -275,7 +275,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           </Link>;
       </div>;value={filters && filters.status || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, status: e && e.target.value || undefined }),
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined })
 }
         >;
           <option value='' />All Stages</option>;
@@ -289,10 +289,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           placeholder='Region';
           value={filters && filters.region || ''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined }))value={filters.region |',}
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined }))value={filters.region |'}
 }
           onChange={e =>;}
-            setFilters(f => ({ ...f, region: e.target.value |undefined }),
+            setFilters(f => ({ ...f, region: e.target.value |undefined })
 }
         />;
         <select;
@@ -312,7 +312,7 @@ className='border rounded p-2'
 
           value={filters && filters.region || ''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined,}
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined}
 }));
 
           }
@@ -325,9 +325,9 @@ className='border rounded p-2'
           className='border rounded p - 2';
           value={filters.sector || ''}
           on_change={e = />;}
-            set_filters (function => ({ ...f, sector: e.target.value || undefined }),
+            set_filters (function => ({ ...f, sector: e.target.value || undefined })
 }
-            set_filters (function => ({ ...f, sector: e.target.value || undefined,}
+            set_filters (function => ({ ...f, sector: e.target.value || undefined}
 }));
           }
         >;
@@ -358,7 +358,7 @@ className='border rounded p-2'
           className='border rounded p - 2';
           value={filters.program || ''}
           on_change={e = />;}
-            set_filters (function => ({ ...f, program: e.target.value || undefined }),
+            set_filters (function => ({ ...f, program: e.target.value || undefined })
 }
         >;
           <option value='' />All Programs</option>;
@@ -392,7 +392,7 @@ className='border rounded p-2'
 }
           value={filters && filters.program || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, program: e.target.value |undefined }),
+            setFilters(f => ({ ...f, program: e.target.value |undefined })
 }
         >;
           <option value='' />All Programs</option>;
@@ -400,10 +400,10 @@ className='border rounded p-2'
           <option value='incubator' />Incubator</option>;
         </select>;
       </div>;
-      <div className=\"flex items-center justify-between mb-6\" />
-        <h1 className=\"text-2xl font-semibold\" />Zion Grants & Incubator</h1>
-        <div className=\"flex gap-2\" />
-          <Link href=\"/grants/apply\" /><a className=\"px-3 py-2 bg-blue-600 text-white rounded\" />Apply</a></Link>
+      <div className=\"flex items-center justify-between mb-6\" />"
+        <h1 className=\"text-2xl font-semibold\" />Zion Grants & Incubator</h1>"
+        <div className=\"flex gap-2\" />"
+          <Link href=\"/grants/apply\" /><a className=\"px-3 py-2 bg-blue-600 text-white rounded\" />Apply</a></Link>"
           <Link href=\"/incubator\" /><a className=\"px-3 py-2 bg-purple-600 text-white rounded\" />Incubator</a></Link>
         </div>
       </div>
@@ -432,18 +432,18 @@ className='border rounded p-2'
               <div className='flex gap - 2 items - center' />;
                 {g.program === 'incubator' && (value={filters && filters.program || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, program: e && e.target.value || undefined }),
+            setFilters(f => ({ ...f, program: e && e.target.value || undefined })
 }
         >;
           <option value='' />All Programs</option>;
           <option value='grant' />Grant</option>;
           <option value='incubator' />Incubator</option>;
         </select>;
-      </div>;
-      <div className=\"flex items-center justify-between mb-6\" />;
-        <h1 className=\"text-2xl font-semibold\" />Zion Grants & Incubator</h1>;
-        <div className=\"flex gap-2\" />;
-          <Link href=\"/grants/apply\" /><a className=\"px-3 py-2 bg-blue-600 text-white rounded\" />Apply</a></Link>;
+      </div>;"
+      <div className=\"flex items-center justify-between mb-6\" />;"
+        <h1 className=\"text-2xl font-semibold\" />Zion Grants & Incubator</h1>;"
+        <div className=\"flex gap-2\" />;"
+          <Link href=\"/grants/apply\" /><a className=\"px-3 py-2 bg-blue-600 text-white rounded\" />Apply</a></Link>;"
           <Link href=\"/incubator\" /><a className=\"px-3 py-2 bg-purple-600 text-white rounded\" />Incubator</a></Link>;
         </div>;
       </div>;
@@ -491,7 +491,7 @@ className='border rounded p-2'
               {g && g.proposalSummary}
             </p>;
             <div className='mt-3 text-sm text-gray-600 dark:text-gray-400' />;
-              Budget: {g && g.budgetAmount} {g && g.budgetCurrenc,}
+              Budget: {g && g.budgetAmount} {g && g.budgetCurrenc}
 }
             </div>;
           </div>;
@@ -540,7 +540,7 @@ className='border rounded p-2'
               {g.proposal_summary}
             </p>;
             <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400' />;
-              Budget: {g.budget_amount} {g.budget_currenc,}
+              Budget: {g.budget_amount} {g.budget_currenc}
 }
             </div>;
           </div>))}
@@ -549,3 +549,4 @@ className='border rounded p-2'
     </EnhancedLayout>)})
     </EnhancedLayout>);
 }
+"

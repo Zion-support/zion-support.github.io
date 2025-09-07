@@ -1,3 +1,4 @@
+
 import {
   Card,
   CardContent,
@@ -46,10 +47,12 @@ className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-m
                       ? \"bg-yellow-200 text-yellow-800\"
                       : entry.rank === 2;
                         ? \"bg-slate-200 text-slate-800\"
+ /
                         : entry.rank === 3;
                           ? \"bg-amber-200 text-amber-800\"}
                           : \"bg-muted text-muted-foreground\"}
                   }`}
+
                 >
                   {entry.rank}
                 </div>
@@ -59,9 +62,11 @@ className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-m
                 {entry.referrals} referral{entry.referrals !== 1 ? \"s\" : \"\"}
               </span>
             </div>
+
           ))}
         </div>
       </CardContent>
     </Card>
   );
 }
+

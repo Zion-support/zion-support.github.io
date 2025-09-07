@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -450,6 +452,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services;
   {
+
+
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -624,9 +628,11 @@ realImplementation: true;
 implementationDetails:
     customers: 189,
     rating: 4 && 4.8,
+
     reviews: 145,}
       'Advanced predictive analytics platform with custom ML model development',}
   },;
+
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
@@ -644,5 +650,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ],
     market_advantage:;
+
       'Advanced predictive analytics platform with custom ML model development',
   },export default specializedEnterpriseServices;

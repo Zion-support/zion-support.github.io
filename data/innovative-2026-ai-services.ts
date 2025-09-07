@@ -1,4 +1,6 @@
+
 contactInfo: {
+
 mobile: string, email: string,
     address: string,}
     website: string}
@@ -31,6 +33,8 @@ implementationDetails: 'Enterprise-grade sales intelligence platform with AI-pow
     rating: 4.8;
 reviews: 950;
   }
+
+
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence;
   {
@@ -68,7 +72,9 @@ website: 'https://ziontechgroup.com';}
     customers: 1900;
     rating: 4.8,
     reviews: 950;
+
 ];import { ServiceVariant } from '../types/service-variants';
+
 export interface Innovative2026AIService {;
   id: string,;
   name: string,;
@@ -333,4 +339,5 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   }
 ];
   }
+
 }

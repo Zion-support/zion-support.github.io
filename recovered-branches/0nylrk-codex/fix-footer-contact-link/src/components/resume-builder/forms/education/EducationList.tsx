@@ -1,3 +1,4 @@
+
 import { Education } from \"@/types/resume\";
 import { EducationItem } from \"./EducationItem\";
 interface EducationListProps {
@@ -21,6 +22,7 @@ export function EducationList({
       {educationEntries.map((edu) => (}
         <EducationItem;}
 key={edu.id}
+ /
 education={edu}
           onEdit={onEdit}
           onDelete={onDelete}
@@ -29,3 +31,4 @@ education={edu}
     </div>
   );
 }
+

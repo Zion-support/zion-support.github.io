@@ -1,17 +1,17 @@
 
 
-    { icon: Users, value: '500+',}
-  label: 'Happy Clients',}
+    { icon: Users, value: '500+'}
+  label: 'Happy Clients'}
 },
-    { icon: Award, value: '50+',}
-  label: 'Awards Won',}
+    { icon: Award, value: '50+'}
+  label: 'Awards Won'}
 },
-    { icon: Star, value: '99%',}
-  label: 'Client Satisfaction',}
+    { icon: Star, value: '99%'}
+  label: 'Client Satisfaction'}
 },
-{ icon: Zap, value: '24/7',}
-  label: 'Support Available',}
-},
+{ icon: Zap, value: '24/7'}
+  label: 'Support Available'}
+}
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900' />;
@@ -23,15 +23,15 @@
           className='absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl';
 
 const stats = [
-  { icon: Users, value: '500+',}
-  label: 'Happy Clients',}
-},{ icon: Award, value: '50+',}
-  label: 'Awards Won',}
-},{ icon: Star, value: '99%',}
-  label: 'Client Satisfaction',}
-},{ icon: Zap, value: '24 / 7',}
-  label: 'Support Available',}
-},];return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - blue - 900' />;
+  { icon: Users, value: '500+'}
+  label: 'Happy Clients'}
+},{ icon: Award, value: '50+'}
+  label: 'Awards Won'}
+},{ icon: Star, value: '99%'}
+  label: 'Client Satisfaction'}
+},{ icon: Zap, value: '24 / 7'}
+  label: 'Support Available'}
+}];return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - blue - 900' />;
       {/* Animated Background Elements */}
       <div className='absolute inset - 0' />;
         {/* Floating Orbs */}
@@ -46,7 +46,7 @@ repeat: Infinity;}
 ease: 'easeInOut'}
           }}
 
-        {/* Grid Pattern *,}
+        {/* Grid Pattern *}
 }
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size: 50px_50px]' />
@@ -54,37 +54,37 @@ ease: 'easeInOut'}
 
       <div className='relative container mx-auto px-4 text-center z-10' />
 
-        {/* Main Content *,}
+        {/* Main Content *}
 }
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 ,}
+          initial={{ opacity: 0, y: 30 }
 }
-          animate={{ opacity: 1, y: 0 }}{/* Badge *,}
+          animate={{ opacity: 1, y: 0 }}{/* Badge *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, scale: 0 && 0.8 ,}
+            initial={{ opacity: 0, scale: 0 && 0.8 }
 }
             duration: 10,repeat: Infinity,ease: \"easeInOut\";
           }}
         />;
-        {/* Grid Pattern */}
+        {/* Grid Pattern */}"
         <div className=\"absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]\" />;
-      </div>;
+      </div>;"
       <div className=\"relative container mx - auto px - 4 text - center z - 10\" />;
         {/* Main Content */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 ,}
+          initial={{ opacity: 0, coordinate_y: 30 }
 }
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
 className='max-w-6xl mx-auto' />
 
-          {/* Badge *,}
+          {/* Badge *}
 }
           <motion.div;
-            initial={{ opacity: 0, scale: 0.8 ,}
+            initial={{ opacity: 0, scale: 0.8 }
 }
-            animate={{ opacity: 1, scale: 1 ,}
+            animate={{ opacity: 1, scale: 1 }
 }
             transition={{ duration: 0.6, delay: 0.2 }}
 
@@ -97,12 +97,12 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
           </motion.div>
 
 
-          {/* Main Heading *,}
+          {/* Main Heading *}
 }
           <motion.h1;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 ,}
+            animate={{ opacity: 1, y: 0 }
 }
 
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -115,15 +115,15 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
             </span>
           </motion.h1>
 
-          {/* Subtitle *,}
+          {/* Subtitle *}
 }
           <motion.p;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 ,}
+            animate={{ opacity: 1, y: 0 }
 }
 
-            transition={{ duration: 0.8, delay: 0.4 ,}
+            transition={{ duration: 0.8, delay: 0.4 }
 }
 
 className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
@@ -136,9 +136,9 @@ in the modern technology landscape.
 
           {/* CTA Buttons */}
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 ,}
+            animate={{ opacity: 1, y: 0 }
 }
 
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -160,15 +160,15 @@ href='/contact'
             </button>
           </motion.div>
 
-          {/* Stats *,}
+          {/* Stats *}
 }
           <motion.div;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={{ opacity: 0, y: 30 }
 }
-            animate={{ opacity: 1, y: 0 ,}
+            animate={{ opacity: 1, y: 0 }
 }
 
-            transition={{ duration: 0.8, delay: 0.6 ,}
+            transition={{ duration: 0.8, delay: 0.6 }
 }
 
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
@@ -176,9 +176,9 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
             {stats.map((stat, index) => (}
               <motion.div;}
 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 ,}
+                initial={{ opacity: 0, scale: 0.8 }
 }
-                animate={{ opacity: 1, scale: 1 ,}
+                animate={{ opacity: 1, scale: 1 }
 }
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
 
@@ -194,7 +194,7 @@ className='text-center group'
               </motion.div>
 
 
-            ),
+            )
 }
           </motion.div>;
         </motion.div>;
@@ -205,10 +205,10 @@ className='text-center group'
       {/* Scroll Indicator */}
       <motion&& motion.div;
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 ,}
+        animate={{ opacity: 1 }
 }
 
-        transition={{ duration: 1, delay: 1 ,}
+        transition={{ duration: 1, delay: 1 }
 }
 
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
@@ -216,12 +216,12 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
         <motion.div;
 animate={{ y: [0, 10, 0] }}
 ;
-
+"
 export default HeroSection;        className=\"absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2\" />
 
         <motion.div;
           animate={{ coordinate_y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity ,}
+          transition={{ duration: 2, repeat: Infinity }
 }
 
 className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'
@@ -234,9 +234,10 @@ className='w-1 h-3 bg-white/60 rounded-full mt-2'
         </motion.div>
       </motion.div>
     </section>
-),
+)
 };
 
 
 export default HeroSection;
 
+"

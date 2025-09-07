@@ -1,4 +1,6 @@
+
 customers: number;
+
 rating: number;
   reviews: number;
   customers: number;
@@ -386,14 +388,18 @@ export interface InnovativeAgricultureService  {id: string;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
+
   website: 'https://ziontechgroup.com',};
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
 mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -726,11 +732,13 @@ ursor/fix-website-loading-errors-and-merge-6662;
     implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launch_date: '2025 - 02 - 02';
     customers: 123;
+
     rating: 4.6,
     reviews: 89;
   }
 ];
 ;import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeAgricultureService {;
   id: string,;
   name: string,;

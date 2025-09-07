@@ -1,10 +1,10 @@
 
 
-    name: \"\";
-    entityType: \"\";
-    pocName: \"\";
-    pocEmail: \"\";
-    useCaseType: \"Education Partnership,
+    name: \"\";"
+    entityType: \"\";"
+    pocName: \"\";"
+    pocEmail: \"\";"
+    useCaseType: \"Education Partnership
 });
 
 const [result, setResult] = useState<any />(null),
@@ -40,7 +40,7 @@ const data = await res && res.json();
             <input;
               className='w-full border rounded px-3 py-2 mb-4';
               value={form && form.name}
-              onChange={e = /> setForm({ ...form, name: e && e.target.value },
+              onChange={e = /> setForm({ ...form, name: e && e.target.value }
 }
               required;
             />;
@@ -48,7 +48,7 @@ const data = await res && res.json();
             <input;
               className='w-full border rounded px-3 py-2 mb-4';
               value={form && form.entityType}
-              onChange={e = /> setForm({ ...form, entityType: e && e.target.value },
+              onChange={e = /> setForm({ ...form, entityType: e && e.target.value }
 }
               required;
             />;
@@ -58,7 +58,7 @@ const data = await res && res.json();
                 placeholder='Name';
                 className='border rounded px-3 py-2';
                 value={form && form.pocName}
-                onChange={e = /> setForm({ ...form, pocName: e && e.target.value },
+                onChange={e = /> setForm({ ...form, pocName: e && e.target.value }
 }
                 required;
               />;
@@ -67,7 +67,7 @@ const data = await res && res.json();
                 type='email';
                 className='border rounded px-3 py-2';
                 value={form && form.pocEmail}
-                onChange={e = /> setForm({ ...form, pocEmail: e && e.target.value },
+                onChange={e = /> setForm({ ...form, pocEmail: e && e.target.value }
 }
                 required;
               />;
@@ -79,35 +79,35 @@ className='w-full border rounded px-3 py-2 mb-6'
 
               value={form.useCaseType}
 
-              onChange={e = /> setForm({ ...form, useCaseType: e.target.value },
+              onChange={e = /> setForm({ ...form, useCaseType: e.target.value }
 }
             >;
-    setResult(data)}
+    setResult(data)}"
   return (<div className=\"min-h-screen bg-gray-50 text-gray-900\" />;
       <Head />;
         <title />Zion Partners</title>;
-      </Head>;
-      <div className=\"max-w-4xl mx-auto py-12 px-4\" />;
-        <h1 className=\"text-3xl font-semibold mb-2\" />Integrate Zion</h1>;
-        <p className=\"text-gray-600 mb-8\" />Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>;
-        <div className=\"grid md:grid-cols-2 gap-8\" />;
-          <form onSubmit={submit} className=\"bg-white p-6 rounded-lg shadow\" />;
-            <h2 className=\"text-xl font-medium mb-4\" />Partner Registration</h2>;
-            <label className=\"block text-sm mb-2\" htmlFor=\"input-Name\" />Name</label>;
-            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.name} onChange={(e) = /> setForm({ ...form, name: e.target.value },
+      </Head>;"
+      <div className=\"max-w-4xl mx-auto py-12 px-4\" />;"
+        <h1 className=\"text-3xl font-semibold mb-2\" />Integrate Zion</h1>;"
+        <p className=\"text-gray-600 mb-8\" />Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>;"
+        <div className=\"grid md:grid-cols-2 gap-8\" />;"
+          <form onSubmit={submit} className=\"bg-white p-6 rounded-lg shadow\" />;"
+            <h2 className=\"text-xl font-medium mb-4\" />Partner Registration</h2>;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Name\" />Name</label>;"
+            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.name} onChange={(e) = /> setForm({ ...form, name: e.target.value }
+} required />;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Entity Type\" />Entity Type</label>;"
+            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.entityType} onChange={(e) = /> setForm({ ...form, entityType: e.target.value }
+} required />;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Point of Contact\" />Point of Contact</label>;"
+            <div className=\"grid grid-cols-2 gap-3 mb-4\" />;"
+              <input placeholder=\"Name\" className=\"border rounded px-3 py-2\" value={form.pocName} onChange={(e) = /> setForm({ ...form, pocName: e.target.value }
+} required />;"
+              <input placeholder=\"Email\" type=\"email\" className=\"border rounded px-3 py-2\" value={form.pocEmail} onChange={(e) = /> setForm({ ...form, pocEmail: e.target.value }
 } required />;
-            <label className=\"block text-sm mb-2\" htmlFor=\"input-Entity Type\" />Entity Type</label>;
-            <input className=\"w-full border rounded px-3 py-2 mb-4\" value={form.entityType} onChange={(e) = /> setForm({ ...form, entityType: e.target.value },
-} required />;
-            <label className=\"block text-sm mb-2\" htmlFor=\"input-Point of Contact\" />Point of Contact</label>;
-            <div className=\"grid grid-cols-2 gap-3 mb-4\" />;
-              <input placeholder=\"Name\" className=\"border rounded px-3 py-2\" value={form.pocName} onChange={(e) = /> setForm({ ...form, pocName: e.target.value },
-} required />;
-              <input placeholder=\"Email\" type=\"email\" className=\"border rounded px-3 py-2\" value={form.pocEmail} onChange={(e) = /> setForm({ ...form, pocEmail: e.target.value },
-} required />;
-            </div>;
-            <label className=\"block text-sm mb-2\" htmlFor=\"input-Use Case\" />Use Case</label>;
-            <select className=\"w-full border rounded px-3 py-2 mb-6\" value={form.useCaseType} onChange={(e) = /> setForm({ ...form, useCaseType: e.target.value },
+            </div>;"
+            <label className=\"block text-sm mb-2\" htmlFor=\"input-Use Case\" />Use Case</label>;"
+            <select className=\"w-full border rounded px-3 py-2 mb-6\" value={form.useCaseType} onChange={(e) = /> setForm({ ...form, useCaseType: e.target.value }
 }>;
               <option />Education Partnership</option>;
               <option />Workforce Development</option>;
@@ -118,7 +118,7 @@ className='w-full border rounded px-3 py-2 mb-6'
               disabled={loading}
               className='bg-black text-white px-4 py-2 rounded disabled: opacity-50' />
 
-              {loading ? 'Submitting...' : 'Register,}
+              {loading ? 'Submitting...' : 'Register}
 }
 
             </button>
@@ -169,7 +169,7 @@ className='text-blue-600 underline'
             <p className='text-sm' />Your API Key:</p>
             <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto' />
 }
-              {result.apiKe,}
+              {result.apiKe}
 }
             </pre>;
             <a;
@@ -186,3 +186,4 @@ className='text-blue-600 underline'
   );
 }
 
+"

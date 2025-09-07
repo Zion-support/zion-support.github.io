@@ -1,3 +1,4 @@
+
 import React, { useState } from \"react\";
 import { MessageCircle } from \"lucide-react\";
 import { Button } from \"@/components/ui/button\";
@@ -16,11 +17,13 @@ interface DiscussionPost {
 }
 
 const initialPosts: DiscussionPost[] = [
+
   {
     id: 1,
     author: \"Anna Zhou\",
     time: \"2h ago\",
     title: \"What AI trends are you most excited for in 2025?\",
+
     body: \"Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?\",
   },
   {
@@ -51,11 +54,14 @@ export const CommunityDiscussion: React.FC = () => {
 }
       },
       ...posts,
+
     ]);
     setNewTitle(\"\");
     setNewBody(\"\");
     setShowNew(false);
+
   };
+
 
 return (
     <div className=\"w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in\" />
@@ -85,13 +91,16 @@ className=\"bg-zion-purple text-white hover:bg-zion-purple-light transition hove
 placeholder=\"Title (e.g., Share an AI tool, Ask for help...)\"}
               className=\"mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate\"}
               value={newTitle}
+
               onChange={(e: React.ChangeEvent<HTMLInputElement />) =>}
                 setNewTitle(e.target.value)}
               }
+
 maxLength={80}
             />
             <Textarea;
 placeholder=\"What's on your mind?\"
+
               className=\"mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]\"
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement />) =>}

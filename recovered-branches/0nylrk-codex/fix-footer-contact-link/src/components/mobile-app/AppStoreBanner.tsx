@@ -5,6 +5,8 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();}
 
+
+
 useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before;
 if (isMobile && !localStorage.getItem(\"appBannerDismissed\")) {
@@ -12,6 +14,7 @@ if (isMobile && !localStorage.getItem(\"appBannerDismissed\")) {
 const timer = setTimeout(() => {}
         setIsVisible(true);}
       }, 2000);
+
 
       return () => clearTimeout(timer);
     }
@@ -26,6 +29,7 @@ const timer = setTimeout(() => {}
 
   // Only render on mobile devices;
 if (!isMobile || !isVisible) return null;
+
 
 return (
     <div className=\"fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40\" />
@@ -43,12 +47,15 @@ href=\"/open-app\"
             className=\"px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium\"
            />
             View;
+
           </a>
+
           <button onClick={dismissBanner} className=\"text-gray-400\" />
             <X className=\"h-5 w-5\" />
           </button>
         </div>
       </div>
     </div>
+
   );
 };

@@ -8,7 +8,7 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
   return (
     <div className=\"space-y-4\" />
 export default function EndpointDetail({}
-  endpoint,}
+  endpoint}
 }: {}
   endpoint: EndpointSpec;}
 }) {
@@ -88,3 +88,4 @@ method={endpoint && endpoint.method}
 
 }
 
+"

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1920,7 +1922,9 @@ reviews: 28}
   customers: 34;
 rating: 4.9;
 reviews: 28;
+
     }  ];    features: [
+
 export interface InnovativeMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -2574,7 +2578,9 @@ rating: 4.9;
 reviews: 28;
   }
 ];
+
 import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;
@@ -3335,7 +3341,9 @@ realImplementation: true, implementationDetails: 'Robotics-grade platform with A
   launchDate: '2023-10-01', customers: 34;
 rating: 4.9;
 reviews: 28;
+
 import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;

@@ -1,4 +1,6 @@
+
 id: string;
+
 name: string;
   tagline: string;
   price: string;
@@ -1134,7 +1136,9 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       launch_date: '2024 - 11 - 01',
   customers: 34,
       rating: 4 && 4.8,
+
       reviews: 19,
+
     },;
   ];    features: [
 export interface AdvancedHealthcareBiotechService {

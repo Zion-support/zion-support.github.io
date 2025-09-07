@@ -38,68 +38,68 @@ const getColorScheme = (;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;) => {
   return $3;}
 }
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
 
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
         }case 'neon-cyber':;
         return {primary: '#ff0080',
-  secondary: '#00ff80',accent: '#8000ff',}
-  background: 'rgba(0, 0, 0, 0 && 0.9)',glow: 'rgba(255, 0, 128, 0 && 0.4)',        }background: 'rgba(0, 0, 0, 0 && 0.9)';
+  secondary: '#00ff80',accent: '#8000ff'}
+  background: 'rgba(0, 0, 0, 0 && 0.9)',glow: 'rgba(255, 0, 128, 0 && 0.4)'        }background: 'rgba(0, 0, 0, 0 && 0.9)';
           glow: 'rgba(255, 0, 128, 0 && 0.4)';
         }case 'holographic-matrix':;
         return {primary: '#00ff41',
-  secondary: '#ff0040',accent: '#0040ff',}
-  background: 'rgba(0, 0, 0, 0 && 0.92)',glow: 'rgba(0, 255, 65, 0 && 0.35)',        }background: 'rgba(0, 0, 0, 0 && 0.92)';
+  secondary: '#ff0040',accent: '#0040ff'}
+  background: 'rgba(0, 0, 0, 0 && 0.92)',glow: 'rgba(0, 255, 65, 0 && 0.35)'        }background: 'rgba(0, 0, 0, 0 && 0.92)';
           glow: 'rgba(0, 255, 65, 0 && 0.35)';
         }case 'space-time':;
         return {primary: '#ff6b35',
-  secondary: '#4ecdc4',accent: '#45b7d1',}
-  background: 'rgba(0, 0, 0, 0 && 0.88)',glow: 'rgba(255, 107, 53, 0 && 0.3)',        }background: 'rgba(0, 0, 0, 0 && 0.88)';
+  secondary: '#4ecdc4',accent: '#45b7d1'}
+  background: 'rgba(0, 0, 0, 0 && 0.88)',glow: 'rgba(255, 107, 53, 0 && 0.3)'        }background: 'rgba(0, 0, 0, 0 && 0.88)';
           glow: 'rgba(255, 107, 53, 0 && 0.3)';
         }default:;
         return {primary: '#00ffff',
-  secondary: '#ff00ff',accent: '#ffff00',}
-  background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',}}          background: 'rgba(0, 0, 0, 0 && 0.95)';
+  secondary: '#ff00ff',accent: '#ffff00'}
+  background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)'}}          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 
         return {
           primary: '#00ffff',
   secondary: '#ff00ff',
           accent: '#ffff00',
-  background: 'rgba(0, 0, 0, 0.95)',}
-glow: 'rgba(0, 255, 255, 0.3)',}
+  background: 'rgba(0, 0, 0, 0.95)'}
+glow: 'rgba(0, 255, 255, 0.3)'}
         };
       case 'neon-cyber':
         return {
           primary: '#ff0080',
   secondary: '#00ff80',
           accent: '#8000ff',
-  background: 'rgba(0, 0, 0, 0.9)',}
-glow: 'rgba(255, 0, 128, 0.4)',}
+  background: 'rgba(0, 0, 0, 0.9)'}
+glow: 'rgba(255, 0, 128, 0.4)'}
         };
       case 'holographic-matrix':
         return {
           primary: '#00ff41',
   secondary: '#ff0040',
           accent: '#0040ff',
-  background: 'rgba(0, 0, 0, 0.92)',}
-glow: 'rgba(0, 255, 65, 0.35)',}
+  background: 'rgba(0, 0, 0, 0.92)'}
+glow: 'rgba(0, 255, 65, 0.35)'}
         };
       case 'space-time':
         return {
           primary: '#ff6b35',
   secondary: '#4ecdc4',
           accent: '#45b7d1',
-  background: 'rgba(0, 0, 0, 0.88)',}
-glow: 'rgba(255, 107, 53, 0.3)',}
+  background: 'rgba(0, 0, 0, 0.88)'}
+glow: 'rgba(255, 107, 53, 0.3)'}
         };
       default:
         return {
           primary: '#00ffff',
   secondary: '#ff00ff',
           accent: '#ffff00',
-  background: 'rgba(0, 0, 0, 0.95)',}
-glow: 'rgba(0, 255, 255, 0.3)',}
+  background: 'rgba(0, 0, 0, 0.95)'}
+glow: 'rgba(0, 255, 255, 0.3)'}
         };
     }
 
@@ -326,44 +326,44 @@ className='absolute inset-0'
 }
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
-              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
-            ],
+              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`
+            ]
           }}
           transition={{
             duration: 8,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity}
+ease: 'easeInOut'}
           }}
 
         {/* Holographic scan lines */}
         <div className=\"absolute inset-0 opacity-20\" />;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;}
-                opacity: [0, 1, 0],scale_x: [0, 1, 0],              }}          }}
+                opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
         />;
-        {/* Holographic scan lines */}
+        {/* Holographic scan lines */}"
         <div className=\"absolute inset - 0 opacity - 20\" />;
           {[...Array (20)].map ((_, i) => (<motion.div;}
-              key={i}
+              key={i}"
               className=\"absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\";
               style={{}}
               animate={{opacity: [0, 1, 0];
                 scaleX: [0, 1, 0];}
-                top: `${(i / 20) * 10,}
+                top: `${(i / 20) * 10}
 }%`,color: colors.primary;
               }}
 
               animate={{
 
-                opacity: [0, 1, 0],}
-                scaleX: [0, 1, 0],}
+                opacity: [0, 1, 0]}
+                scaleX: [0, 1, 0]}
               }}
 
 
               transition={{
                 duration: 3,
                 delay: i * 0.1,
-                repeat: Infinity,}
-ease: 'easeInOut',}
+                repeat: Infinity}
+ease: 'easeInOut'}
               }}
 
 
@@ -390,3 +390,4 @@ ease: 'easeInOut',}
 
 export default UltraFuturisticBackground2035;
 
+"

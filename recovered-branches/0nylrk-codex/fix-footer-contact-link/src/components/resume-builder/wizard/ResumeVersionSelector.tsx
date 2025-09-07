@@ -1,3 +1,4 @@
+
 import { useState } from \"react\";
 import {
   DropdownMenu,
@@ -23,6 +24,7 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void;}
 }
 
+
 export function ResumeVersionSelector({
   currentResume,}
   onResumeChange,}
@@ -33,6 +35,8 @@ export function ResumeVersionSelector({
   const [existingResumes, setExistingResumes] = useState<Resume[] />([]);
   const [isLoading, setIsLoading] = useState(false);
 
+
+
 const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {}
       setIsLoading(true);}
@@ -41,6 +45,7 @@ const handleCreateNewVersion = async () => {
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+}
         setNewResumeTitle(\"\");}
       }
       setIsLoading(false);
@@ -98,6 +103,7 @@ value={newResumeTitle}
 onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
               className=\"gap-2\"
+ /
             >
               {isLoading && <Loader2 className=\"h-4 w-4 animate-spin\" />}
               <Save className=\"h-4 w-4\" />
@@ -109,3 +115,4 @@ onClick={handleCreateNewVersion}
     </div>
   );
 }
+

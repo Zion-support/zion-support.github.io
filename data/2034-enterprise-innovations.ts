@@ -1,5 +1,7 @@
+
 id: string;
   name: string,
+
 description: string;
   category: string;
   price: string;
@@ -22,6 +24,8 @@ description: string;
   scalability: string;
   uptime: string;
   contact: string;
+
+
   {
       'Advanced AI algorithms',
       'Machine learning systems',
@@ -175,8 +179,10 @@ integrations: [
     compliance: [
       'Data center standards',
       'Energy efficiency',
+
       'Security compliance',
     ],  }
+
 ];
   id: string,;
   name: string,;

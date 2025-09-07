@@ -288,6 +288,8 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket /> {
     try {}
+
+
 if (!response && response.ok) {}
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
       }
@@ -1119,7 +1121,9 @@ export interface CustomerServiceResponse  {ticket_id: string;
     }
   }
 }
+
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 export interface CustomerTicket {;
+
 }

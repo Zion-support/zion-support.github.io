@@ -1,3 +1,4 @@
+
 import { useState } from \"react\";
 import { format } from \"date-fns\";
 import { Calendar } from \"@/components/ui/calendar\";
@@ -25,6 +26,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         </h3>
 
         <div className=\"space-y-4\" />
+
           <div className=\"flex items-center space-x-4\" />
             <div;
 className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -40,6 +42,8 @@ className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
               </p>
             </div>
 
+
+
             <div;
 className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === \"flexible\"
@@ -54,6 +58,7 @@ className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
               </p>
             </div>
           </div>
+
 
           {formData.timeline === \"fixed\" && (
             <div className=\"grid grid-cols-1 md: grid-cols-2 gap-4 mt-6\" />
@@ -94,6 +99,7 @@ className=\"p-3 pointer-events-auto\"
               </div>
 
               <div />
+
                 <Label className=\"block mb-2 text-zion-slate-light\" />
                   End Date;
                 </Label>
@@ -101,10 +107,12 @@ className=\"p-3 pointer-events-auto\"
                   <PopoverTrigger asChild />
                     <Button;
 variant=\"outline\"
+
                       className={cn(
                         \"w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark\",}
                         !formData.endDate && \"text-zion-slate-light\",}
                       )}
+ /
                     >
                       <CalendarIcon className=\"mr-2 h-4 w-4\" />
                       {formData.endDate ? (
@@ -124,6 +132,7 @@ mode=\"single\"
                       onSelect={(date) = /> updateFormData({ endDate: date })}
                       initialFocus;
 className=\"p-3 pointer-events-auto\"
+
                       disabled={(date) =>}
                         date < (formData.startDate || new Date())}
                       }

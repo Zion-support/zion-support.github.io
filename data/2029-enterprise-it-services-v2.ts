@@ -1,3 +1,4 @@
+
 contact: {
     description: \"description\",
     category: [
@@ -177,16 +178,19 @@ contact: {
     },
   },
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
+
     ];
     marketSize: '$28 && 28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
     technology: ['AI/MLAutomationMonitoringITSM'];
     integration: ['ITSM platformsMonitoring toolsEnterprise systems'];
+}
     support: ['24/7 operations supportIT expertsImplementation team'];}
     }
   }
 ];
 ;
+
 export interface EnterpriseITService2029V2 {;
   id: string;
   name: string;
@@ -1125,6 +1129,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
   documentation: 'Operations guides, best practices',
+
+
 compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
     roi: '450% within 18 months',
@@ -1236,4 +1242,5 @@ ursor/fix-website-loading-errors-and-merge-6662;
   address: '364 E Main St STE 1008 Middletown DE 19709';}
     }
   }
+
 ];

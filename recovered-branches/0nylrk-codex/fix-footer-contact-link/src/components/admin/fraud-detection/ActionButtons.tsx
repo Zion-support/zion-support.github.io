@@ -1,3 +1,4 @@
+      >
         <AlertTriangle className=\"h-4 w-4\" />
       </Button>
         disabled={status === \"actioned\" || status === \"ignored\"}
@@ -114,14 +115,18 @@ variant=\"ghost\"
         <Ban className=\"h-4 w-4\" />
       </Button>
       {status === \"pending\" && (
+
         <Button;
 variant=\"ghost\"}
           size=\"sm\"}
           onClick={() = /> onAction(flagId, \"ignore\")}
+
+
         >
           Ignore;
         </Button>
       )}
+
     </div>
   );
 };

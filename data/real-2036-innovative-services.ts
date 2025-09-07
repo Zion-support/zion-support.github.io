@@ -1,4 +1,6 @@
+
 id: string, name: string,
+
 tagline: string, description: string,
   category: string, price: string,
 
@@ -1547,12 +1549,15 @@ useCases?: string[];
   price: '$699',
     period: '/month',
   features: [;
+
+
       'Inventory optimization',
       'Route optimization',
       'Supplier management',
       'Risk assessment',
       'Real - time tracking',
       'Performance analytics',
+
       'Custom workflows',
     ],}
   useCases?: string[]}
@@ -1937,6 +1942,7 @@ marketSize: '$8.9B',
       'Production optimization'
       'Real-time monitoring'
       'Supply chain integration'
+
       'Custom workflows'
     ],
 

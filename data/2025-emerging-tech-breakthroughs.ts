@@ -1,4 +1,6 @@
+
 mobile: '+1 302 464 0950',
+
 email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -37,6 +39,8 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
 ;
     realImplementation: true;
     implementationDetails: \"implementationDetails\",
@@ -359,7 +363,9 @@ implementationDetails: 'Complete metaverse AI development platform with AI-power
     rating: 4.7;
 reviews: 18;
   }
+
 ];import { ServiceVariant } from '../types/service-variants';
+
 export interface EmergingTechBreakthrough2025 {;
   id: string,;
   name: string,;
@@ -620,5 +626,6 @@ website: 'https://ziontechgroup.com';}
     customers: 32;
     rating: 4.7,
     reviews: 18;
+
   }  }
 }

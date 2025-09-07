@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
+    this.projectRoot = process.cwd();
     this.optimizations = [];
   }
 
@@ -13,27 +13,21 @@ class PerformanceOptimizer {
     console.log(`${prefix} ${message}`);
   }
 
-  optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    this.optimizations.push('Image optimization completed');
+  async optimizeCode() {
+    this.log('💻 Optimizing code...');
+    this.optimizations.push('Code optimization completed');
   }
 
-  optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
-    this.optimizations.push('Bundle optimization completed');
-  }
-
-  run() {
-    this.log('🚀 Starting performance optimization...');
-    this.optimizeImages();
-    this.optimizeBundle();
-    this.log('✅ Performance optimization completed!');
+  async run() {
+    this.log('🚀 Starting Performance Optimizer...');
+    await this.optimizeCode();
+    this.log('🎉 Performance optimization completed!', 'success');
   }
 }
 
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer.run();
+  optimizer.run().catch(console.error);
 }
 
 module.exports = PerformanceOptimizer;

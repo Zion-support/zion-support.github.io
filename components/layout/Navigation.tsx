@@ -35,8 +35,8 @@ setIsScrolled(window.scrollY > 50)) => {
 const navigationItems = [
     {
       name: 'Home',
-  href: '/',}
-icon: Home,}
+  href: '/'}
+icon: Home}
     },
     {
       name: 'Services',
@@ -47,8 +47,8 @@ dropdown: [
 {
           name: 'AI Services',
   href: '/ai-services',
-          icon: Brain,}
-          description: 'Revolutionary AI solutions',}
+          icon: Brain}
+          description: 'Revolutionary AI solutions'}
         },
         {
 
@@ -62,39 +62,39 @@ description: 'Enterprise IT solutions'}
   href: '/micro-saas'
           icon: Rocket;
 description: 'Specialized software solutions'}
-       ,}
+       }
 }
         {
           name: 'Innovative Showcase',
   href: '/innovative-services-showcase',
-          icon: Globe,}
-          description: 'Cutting-edge technology',}
-        },
-      ],
+          icon: Globe}
+          description: 'Cutting-edge technology'}
+        }
+      ]
     },
     {
 
       name: 'Solutions',
-  href: '/solutions',}
-      icon: Cpu,}
+  href: '/solutions'}
+      icon: Cpu}
     },
     {
       name: 'About',
-  href: '/about',}
-      icon: Globe,}
+  href: '/about'}
+      icon: Globe}
     },
     {
       name: 'Contact',
-  href: '/contact',}
-      icon: Phone,}
-    },
+  href: '/contact'}
+      icon: Phone}
+    }
   ];
 
 const contactInfo = {
     mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com',}
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
+  website: 'https://ziontechgroup.com'}
   };
 
   return (
@@ -112,16 +112,16 @@ isScrolled;
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
             : 'bg-transparent'}
 }
-        },
+        }
 } />
 
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
+        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
           <div className=\"flex items-center justify-between h-16 lg:h-20\" />;
 
             {/* Logo */}
 
             <motion.div;
-whileHover={{ scale: 1.05 ,}
+whileHover={{ scale: 1.05 }
 }
               className='flex items-center space-x-2' />
 
@@ -155,17 +155,17 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                     >
                       <span className='font-medium' />{item.name}</span>
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
-                      {/* Dropdown Menu *,}
+                      {/* Dropdown Menu *}
 }
                       <AnimatePresence />
                         {activeDropdown === item.name && (
                           <motion.div;}
-initial={{ opacity: 0, y: 10, scale: 0.95 ,}
+initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
-                            animate={{ opacity: 1, y: 0, scale: 1 ,}
+                            animate={{ opacity: 1, y: 0, scale: 1 }
 }
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 ,}
+                            transition={{ duration: 0.2 }
 }
 
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
@@ -184,7 +184,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                                       </div>
 
                                       <div className='text-gray-400 text-sm' />
-                                        {dropdownItem.descriptio,}
+                                        {dropdownItem.descriptio}
 }
                                       </div>
                                     </div>
@@ -198,25 +198,25 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                   )}
                 </div>;
               ))}
-            </div>;
+            </div>;"
                 href=\"/contact\";
             {/* Mobile Menu Button */}
             <div className='lg:hidden' />;
               <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
-            {/* Mobile Menu Button *,}
-}
+            {/* Mobile Menu Button *}
+}"
             <div className=\"lg:hidden\" />;
               <motion.button;
                 whileTap={{ scale: 0.95 }}
-                onClick={() = /> setIsOpen(!isOpen,}
+                onClick={() = /> setIsOpen(!isOpen}
 }
                 className='text-gray-300 hover:text-white transition-colors duration-300'>
 
                 {isOpen ? (<X className='w-6 h-6' />;}
                 ) : (<Menu className='w-6 h-6' />;}
                 )}              </motion && motion.button>              <motion&& motion.button;
-                whileTap={{ scale: 0 && 0.95 ,}
+                whileTap={{ scale: 0 && 0.95 }
 }
                             </div />;
                           </motion.div>;
@@ -233,7 +233,7 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
                       <span className='font-medium' />{item.name}</span>
                     </Link>
 
-                  ,
+                  
 }
                 </div>;
               ))}
@@ -256,7 +256,7 @@ href='/contact'
 <div className='lg:hidden' />
               <motion.button;
 whileTap={{ scale: 0.95 }}
-                onClick={() = /> setIsOpen(!isOpen,}
+                onClick={() = /> setIsOpen(!isOpen}
 }
                 className='text-gray-300 hover:text-white transition-colors duration-300'>
 
@@ -273,9 +273,9 @@ whileTap={{ scale: 0.95 }}
       {/* Mobile Navigation */}
       <AnimatePresence />;
         {isOpen && (<motion.div;}
-            initial={{ opacity: 0, x: '100%' ,}
+            initial={{ opacity: 0, x: '100%' }
 }
-            animate={{ opacity: 1, x: 0 ,}
+            animate={{ opacity: 1, x: 0 }
 }
 
             exit={{ opacity: 0, x: '100%' }}
@@ -293,7 +293,7 @@ className='absolute inset-0 bg-black/50 backdrop-blur-sm'
 
 
 
-            {/* Mobile Menu *,}
+            {/* Mobile Menu *}
 }
             <motion&& motion.div;
               initial={{ x: '100%' }}
@@ -306,7 +306,7 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
              />
               <div className='p-6' />
 
-                {/* Close Button *,}
+                {/* Close Button *}
 }
                 <div className='flex justify-end mb-6' />;
                   <motion&& motion.button;
@@ -327,7 +327,7 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
                         <div className='space-y-2' />
                           <div className='text-gray-400 font-medium text-sm uppercase tracking-wider' />
 }
-                            {item.nam,}
+                            {item.nam}
 }
                           </div>;
                           <div className='pl-4 space-y-2' />;
@@ -368,7 +368,7 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
                     </div>
                   ))}
                 </div>
-                      ,
+                      
 }
                     </div>;
                   ))}
@@ -405,7 +405,7 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
                   <motion.a;
                     href='/contact';
                     whileTap={{ scale: 0.95 }}
-                    onClick={() = /> setIsOpen(false,}
+                    onClick={() = /> setIsOpen(false}
 }
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'>
 
@@ -425,3 +425,4 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
 
 export default Navigation;
 
+"
