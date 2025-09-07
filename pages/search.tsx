@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Page() {
@@ -12,3 +13,6 @@ export default function Page() {
     </div>
   );
 }
+=======
+import React from "react"; export default function SearchPage() { return <div>Search Page - Coming Soon</div>; }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
