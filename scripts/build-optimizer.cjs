@@ -1,55 +1,94 @@
-<<<<<<< HEAD
-const { execSync } = require('child_process')
-const fs = require('fs')
-// console.log(' Build Optimizer Starting...')
-    console.log('🧹 Cleaning previous builds...')
-    if (fs.existsSync('.next')
-        execSync('rm -rf .next', { "stdio"})
-        execSync('rm -rf out', { "stdio"})
-    execSync('npm run build', { "stdio"})
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-=======
-<<<<<<< HEAD
-    console.error(' Build optimization "failed")
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🚀 Build Optimizer Starting...');
+console.log('🔍 Build Optimizer Starting...');
 
-try {
-  // Clean previous builds
-  console.log('🧹 Cleaning previous builds...');
-  if (fs.existsSync('.next')) {
-    execSync('rm -rf .next', { stdio: 'inherit' });
-  }
-  if (fs.existsSync('out')) {
-    execSync('rm -rf out', { stdio: 'inherit' });
-  }
-  if (fs.existsSync('dist')) {
-    execSync('rm -rf dist', { stdio: 'inherit' });
-  }
-  
-  // Run build
-  console.log('🏗️  Running optimized build...');
-  execSync('npm run build', { stdio: 'inherit' });
-  
-  // Check build size
-  console.log('📊 Analyzing build size...');
-  if (fs.existsSync('.next/static')) {
-    const { execSync } = require('child_process');
-    try {
-      execSync('du -sh .next/static', { stdio: 'inherit' });
-    } catch (e) {
-      console.log('Build size analysis not available');
+const optimizationTasks = [
+  {
+    name: 'Clean Build Directory',
+    task: () => {
+      const buildDir = '.next';
+      if (fs.existsSync(buildDir)) {
+        fs.rmSync(buildDir, { recursive: true, force: true });
+        console.log('🧹 Cleaned build directory');
+      }
+    }
+  },
+  {
+    name: 'Clean Node Modules',
+    task: () => {
+      const nodeModulesDir = 'node_modules';
+      if (fs.existsSync(nodeModulesDir)) {
+        // Only clean if it's very large (over 500MB)
+        const stats = fs.statSync(nodeModulesDir);
+        if (stats.size > 500 * 1024 * 1024) {
+          fs.rmSync(nodeModulesDir, { recursive: true, force: true });
+          console.log('🧹 Cleaned node_modules (was too large)');
+        }
+      }
+    }
+  },
+  {
+    name: 'Clean Cache Files',
+    task: () => {
+      const cacheFiles = [
+        '.next/cache',
+        'node_modules/.cache',
+        'tsconfig.tsbuildinfo'
+      ];
+      
+      cacheFiles.forEach(file => {
+        if (fs.existsSync(file)) {
+          fs.rmSync(file, { recursive: true, force: true });
+          console.log(`🧹 Cleaned ${file}`);
+        }
+      });
+    }
+  },
+  {
+    name: 'Reinstall Dependencies',
+    task: () => {
+      console.log('📦 Reinstalling dependencies...');
+      execSync('npm install', { stdio: 'pipe' });
+      console.log('✅ Dependencies reinstalled');
+    }
+  },
+  {
+    name: 'Run Build',
+    task: () => {
+      console.log('🏗️  Running build...');
+      execSync('npm run build', { stdio: 'pipe' });
+      console.log('✅ Build completed');
     }
   }
-  
-  console.log('✅ Build optimization completed successfully!');
-} catch (error) {
-  console.error('❌ Build optimization failed:', error.message);
+];
+
+let completed = 0;
+let failed = 0;
+
+optimizationTasks.forEach(task => {
+  try {
+    console.log(`\n🔄 Running ${task.name}...`);
+    task.task();
+    console.log(`✅ ${task.name} completed`);
+    completed++;
+  } catch (error) {
+    console.log(`❌ ${task.name} failed: ${error.message}`);
+    failed++;
+  }
+});
+
+console.log(`\n📊 Build Optimization Results:`);
+console.log(`✅ Completed: ${completed}`);
+console.log(`❌ Failed: ${failed}`);
+
+if (failed === 0) {
+  console.log('\n🎉 Build optimization completed successfully!');
+  process.exit(0);
+} else {
+  console.log('\n⚠️  Some optimization tasks failed. Please review the issues.');
   process.exit(1);
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

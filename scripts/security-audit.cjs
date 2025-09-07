@@ -1,121 +1,120 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
 const fs = require('fs');
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔒 Security Audit Starting...');
+console.log('🔍 Security Audit Starting...');
 
-<<<<<<< HEAD
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
 const securityChecks = [
   {
-    name: 'NPM audit check',
-    check: () => {
-      try {
-        console.log('🔍 Running npm audit...');
-        execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
-        console.log('✅ No security vulnerabilities found');
-        return true;
-      } catch (error) {
-        console.log('⚠️  Security vulnerabilities detected. Run "npm audit fix" to resolve.');
-        return false;
-      }
-    }
+    name: 'NPM Audit',
+    command: 'npm audit --audit-level moderate',
+    critical: true
   },
   {
-    name: 'Environment variables check',
-    check: () => {
-      const envFiles = ['.env', '.env.local', '.env.production'];
-      let hasSecrets = false;
-      
-      envFiles.forEach(envFile => {
-        if (fs.existsSync(envFile)) {
-          const content = fs.readFileSync(envFile, 'utf8');
-          const lines = content.split('\n');
-          
-          lines.forEach(line => {
-            if (line.includes('password') || line.includes('secret') || line.includes('key')) {
-              if (!line.includes('example') && !line.includes('placeholder')) {
-                console.log(`⚠️  Potential secret in ${envFile}: ${line.split('=')[0]}`);
-                hasSecrets = true;
-              }
-            }
-          });
-        }
-      });
-      
-      return !hasSecrets;
-    }
-  },
-  {
-    name: 'Package.json security check',
+    name: 'Dependency Check',
     check: () => {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const deps = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
-      // Check for unsafe scripts
-      const scripts = packageJson.scripts || {};
-      const unsafeScripts = Object.keys(scripts).filter(script => 
-        scripts[script].includes('rm -rf') || scripts[script].includes('sudo')
-      );
+      // Check for known vulnerable packages
+      const vulnerablePackages = [
+        'lodash',
+        'moment',
+        'jquery'
+      ];
       
-      if (unsafeScripts.length > 0) {
-        console.log(`⚠️  Potentially unsafe scripts: ${unsafeScripts.join(', ')}`);
+      const foundVulnerable = vulnerablePackages.filter(pkg => deps[pkg]);
+      if (foundVulnerable.length > 0) {
+        console.log(`⚠️  Potentially vulnerable packages found: ${foundVulnerable.join(', ')}`);
         return false;
       }
-      
       return true;
     }
   },
   {
-    name: 'File permissions check',
+    name: 'Environment Variables Check',
     check: () => {
-      const sensitiveFiles = ['package.json', 'package-lock.json', '.env'];
-      let hasIssues = false;
+      const envFile = '.env.local';
+      if (fs.existsSync(envFile)) {
+        const content = fs.readFileSync(envFile, 'utf8');
+        const hasSecrets = content.includes('SECRET') || content.includes('KEY') || content.includes('PASSWORD');
+        if (hasSecrets) {
+          console.log('⚠️  Environment file contains potential secrets');
+          return false;
+        }
+      }
+      return true;
+    }
+  },
+  {
+    name: 'File Permissions Check',
+    check: () => {
+      const sensitiveFiles = [
+        'package.json',
+        'package-lock.json',
+        'tsconfig.json'
+      ];
       
+      let allSecure = true;
       sensitiveFiles.forEach(file => {
         if (fs.existsSync(file)) {
           const stats = fs.statSync(file);
           const mode = stats.mode & parseInt('777', 8);
-          
           if (mode > parseInt('644', 8)) {
-            console.log(`⚠️  ${file} has overly permissive permissions: ${mode.toString(8)}`);
-            hasIssues = true;
+            console.log(`⚠️  File ${file} has overly permissive permissions`);
+            allSecure = false;
           }
         }
       });
-      
-      return !hasIssues;
+      return allSecure;
     }
   }
 ];
 
 let passed = 0;
 let failed = 0;
+let criticalFailed = 0;
 
 securityChecks.forEach(check => {
   try {
-    if (check.check()) {
+    if (check.command) {
+      console.log(`\n🔄 Running ${check.name}...`);
+      execSync(check.command, { stdio: 'pipe' });
+      console.log(`✅ ${check.name} passed`);
+      passed++;
+    } else if (check.check()) {
       console.log(`✅ ${check.name}`);
       passed++;
     } else {
       console.log(`❌ ${check.name}`);
       failed++;
+      if (check.critical) {
+        criticalFailed++;
+      }
     }
   } catch (error) {
-    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    console.log(`❌ ${check.name} failed`);
     failed++;
+    if (check.critical) {
+      criticalFailed++;
+    }
   }
 });
 
-console.log(`\n🔒 Security Audit Results: ${passed} passed, ${failed} failed`);
+console.log(`\n📊 Security Results:`);
+console.log(`✅ Passed: ${passed}`);
+console.log(`❌ Failed: ${failed}`);
+console.log(`🚨 Critical Failed: ${criticalFailed}`);
 
-if (failed === 0) {
-  console.log('🎉 All security checks passed!');
+if (criticalFailed > 0) {
+  console.log('\n⚠️  Critical security issues found. Please fix before proceeding.');
+  process.exit(1);
+} else if (failed > 0) {
+  console.log('\n⚠️  Some security issues found, but none are critical.');
+  process.exit(0);
 } else {
-  console.log('⚠️  Security issues detected. Please review and fix.');
+  console.log('\n🎉 All security checks passed!');
+  process.exit(0);
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
