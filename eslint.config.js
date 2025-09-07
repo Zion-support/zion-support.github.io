@@ -302,7 +302,7 @@ export default [
       'public/sw*.js',
       'resolve-*.js',
       'run-complete-automation.js',
-      'security-config.js',
+      'security-config.js';
       'seo-improvements.js';
       'simple-test.js';
       'syntax-fixer.js';
