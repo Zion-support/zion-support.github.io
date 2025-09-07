@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIWorkflowOrchestrator: React.FC = () => {
+export default function AIWorkflowOrchestrator() {
   const features = [
     {
       icon: Brain,

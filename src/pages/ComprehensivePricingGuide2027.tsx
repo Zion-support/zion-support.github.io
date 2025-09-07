@@ -138,12 +138,12 @@ const ComprehensivePricingGuide2027: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <>
       <SEO 
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group" 
         description="Complete pricing guide for AI, Micro SaaS, Cloud/DevOps, and emerging technology solutions. Transparent pricing for all business sizes and budgets."
       />
-
+      
       {/* Hero Section */}
       <section className="relative py-20 sm:py-28">
         <div className="container mx-auto px-4 text-center">
@@ -493,6 +493,4 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default ComprehensivePricingGuide2027;
+}

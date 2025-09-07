@@ -66,7 +66,7 @@ export default function AICustomerSuccessPlatform() {
     }
   ];
 
-  const pricingPlans = [
+  const benefits = [
     {
       name: 'Growth',
       price: '$399',
@@ -171,7 +171,7 @@ export default function AICustomerSuccessPlatform() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="AI Customer Success Platform - Zion Tech Group"
         description="Revolutionary AI-powered customer success platform that predicts churn, optimizes onboarding, and maximizes customer lifetime value."
@@ -351,7 +351,7 @@ export default function AICustomerSuccessPlatform() {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <p className="text-slate-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
