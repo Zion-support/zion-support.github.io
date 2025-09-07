@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
+
 interface TestimonialCardProps {
-  name: string
-  role: string
-  company: string
-  content: string
-  avatar?: string
-  rating?: number
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar?: string;
+  rating?: number;
+}
+
 export default function TestimonialCard({
   name,
   role,
@@ -15,18 +19,20 @@ export default function TestimonialCard({
   rating = 5
 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 h-full">
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
       <div className="flex items-center mb-4">
         {avatar ? (
-          <img
+          <Image
             src={avatar}
-            alt={name}
-            className="w-12 h-12 rounded-full mr-4 object-cover"
+            alt={name || 'User'}
+            width={48}
+            height={48}
+            className="w-12 h-12 rounded-full mr-4"
           />
         ) : (
           <div className="w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
-            <span className="text-gray-600 font-semibold text-lg">
-              {name.charAt(0).toUpperCase()}
+            <span className="text-gray-600 font-semibold">
+              {name ? name.charAt(0) : 'U'}
             </span>
           </div>
         )}
@@ -48,7 +54,7 @@ export default function TestimonialCard({
           </svg>
         ))}
       </div>
-
+      
       <blockquote className="text-gray-700 italic">
         &ldquo;{content}&rdquo
       </blockquote>

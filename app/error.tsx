@@ -1,5 +1,8 @@
-'use client'
-import React from 'react'
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -29,13 +32,13 @@ export default function Error({ error, reset }: ErrorProps) {
           >
             Try Again
           </button>
-
-          <a
+          
+          <Link
             href="/"
             className="block w-full border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
           >
             Go Home
-          </a>
+          </Link>
         </div>
 
         {process.env.NODE_ENV === 'development' && (
