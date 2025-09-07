@@ -19,14 +19,14 @@ export function ClickableBadge(): any ({;  children;
 }
 export function ClickableBadge({
 
-import React from "react",
-import { X } from "lucide-react",
+import React from "react",;
+import { X } from "lucide-react",;
 import { cn } from "@/lib/utils";
 import { badgeVariants } from "@/components/ui/badge-variants";
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
+import { cn } from "@/lib/utils",;
+import { badgeVariants } from "@/components/ui/badge-variants",;
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void,
 

@@ -127,14 +127,14 @@ function CybersecurityServicesPage() {
   CheckCircle,
   Star,
   Users,
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import {
   Shield, Lock, Eye, Zap, Cpu, Database,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
+import EnhancedNavigation from '../../components/EnhancedNavigation',;
+import EnhancedFooter from '../../components/EnhancedFooter',;
 export default function CybersecurityServicesPage() {
   const services = [
     {

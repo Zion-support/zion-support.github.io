@@ -1,15 +1,15 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import React from 'react';
+import Head from 'next/head';
+import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 ;
 export default function AIGuardrailsPage() {;
 	const contactInfo = {;
-		mobile:'+1 302 464 0950',;
-		email:'kleber@ziontechgroup.com',;
-		address:'364 E Main St STE 1008 Middletown DE 19709',;
+		mobile: '+1 302 464 0950';,;
+		email: 'kleber@ziontechgroup.com';,;
+		address: '364 E Main St STE 1008 Middletown DE 19709';,;
 		website:'https://ziontechgroup.com';
 	},;
 	const features = [;
@@ -23,7 +23,7 @@ export default function AIGuardrailsPage() {;
 			<Head>;
 
 				<title>AI Guardrails Suite | Zion Tech Group</title>;
-				<meta name="description" content="Production-grade safety and governance for AI apps:policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />;"
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement;, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />;"
 </meta>"
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />;"
 </link>
@@ -64,9 +64,9 @@ export default function AIGuardrailsPage() {;
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>;""
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">;"
 </div>)"
-							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, )}`}>{contactInfo.mobile}</a></div>;`;
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>;""`;
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>;"
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel: ${contactInfo.mobile.replace(/[^+\d]/g;, )}`}>{contactInfo.mobile}</a></div>;`;
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto: ${contactInfo.email;}`}>{contactInfo.email}</a></div>;""`;
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address);}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>;"
 						<div className="text-center mt-6">;"
 							<Button href="/services" variant="outline" className="border-rose-500 text-rose-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" />;"
 			</section>;

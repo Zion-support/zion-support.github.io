@@ -7,7 +7,7 @@ import {Sparkles} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
-import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton",;
   description: string,;
   tags: string[],;
   suggestedPrice: {;

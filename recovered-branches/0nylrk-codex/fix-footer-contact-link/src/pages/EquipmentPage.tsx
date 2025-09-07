@@ -16,7 +16,7 @@ class ErrorBoundary extends React.Component {
   }
 import React from "react";"
 const EquipmentPage = () => {"
-import React from 'react',
+import React from 'react',;
 const EquipmentPage = () => {
 const EquipmentPage = () => {;
 class ErrorBoundary extends React.Component {

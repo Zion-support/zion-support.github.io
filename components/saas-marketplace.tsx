@@ -5,7 +5,6 @@ import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
-import {
   Zap,
   Shield,
   BarChart3,
@@ -65,20 +64,18 @@ export default function SaaSMarketplacePage() {
         'Team collaboration'
       ]
       website: 'https://zapier.com'
-      useCase:
-        'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
+      useCase: 'Perfect for businesses looking to automate customer support;, marketing, and sales processes.'
       pros: [
         'Easy to use'
         'Extensive integrations'
         'Reliable'
         'Great support'
       ]
-      cons: ['Can get expensive', 'Limited customization']
+      cons: ['Can get expensive';, 'Limited customization']
     }
     {
       name: 'Notion'
-      description:
-        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.'
+      description: 'All-in-one workspace for notes;, docs, projects, and team collaboration. Organize everything in one place.'
       category: 'Productivity'
       pricing: 'Free - $8/month'
       rating: 4.7
@@ -94,20 +91,18 @@ export default function SaaSMarketplacePage() {
         'API integration'
       ]
       website: 'https://notion.so'
-      useCase:
-        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.'
+      useCase: 'Ideal for teams that need a flexible workspace for documentation;, project management, and knowledge sharing.'
       pros: [
         'Highly flexible'
         'Beautiful interface'
         'Great templates'
         'Free tier'
       ]
-      cons: ['Learning curve', 'Limited offline access']
+      cons: ['Learning curve';, 'Limited offline access']
     }
     {
       name: 'Stripe'
-      description:
-        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
+      description: 'Complete payment processing platform for online businesses. Accept payments;, manage subscriptions, and handle compliance.'
       category: 'Payments'
       pricing: '2.9% + 30¢ per transaction'
       rating: 4.9
@@ -123,20 +118,18 @@ export default function SaaSMarketplacePage() {
         'Analytics dashboard'
       ]
       website: 'https://stripe.com'
-      useCase:
-        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
+      useCase: 'Essential for any online business that needs to accept payments;, especially SaaS companies and e-commerce.'
       pros: [
         'Developer-friendly'
         'Global reach'
         'Excellent docs'
         'Reliable'
       ]
-      cons: ['Higher fees than some alternatives', 'Complex for beginners']
+      cons: ['Higher fees than some alternatives';, 'Complex for beginners']
     }
     {
       name: 'Intercom'
-      description:
-        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
+      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized;, messenger-based experiences.'
       category: 'Customer Support'
       pricing: '$39 - $999/month'
       rating: 4.6
@@ -160,18 +153,17 @@ export default function SaaSMarketplacePage() {
         'Good integrations'
         'Mobile apps'
       ]
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
+      cons: ['Expensive';, 'Complex pricing', 'Can be overwhelming']
     }
     {
       name: 'Mixpanel'
-      description:
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
-      category: 'Analytics',
-      pricing: 'Free - $25/month',
-      rating: 4.5,
-      users: '26K+',
-icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.';,
+      category: 'Analytics';,
+      pricing: 'Free - $25/month';,
+      rating: 4.5;,
+      users: '26K+';,
+icon: <BarChart3 className='w-8 h-8 text-purple-400' />;,
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600';,
       features: [
         'User behavior tracking',
         'Funnel analysis',
@@ -180,27 +172,25 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
         'Custom events',
         'Mobile analytics',
       ],
-      website: 'https://mixpanel.com',
-      useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
+      website: 'https://mixpanel.com';,
+      useCase: 'Essential for product teams that need to understand user behavior;, optimize conversion funnels, and make data-driven decisions.'
       pros: [
         'Powerful analytics'
         'Real-time data'
         'Good documentation'
         'Flexible'
       ]
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
+      cons: ['Complex setup';, 'Expensive at scale', 'Steep learning curve']
     }
     {
       name: 'MongoDB Atlas'
-      description:
-        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
-      category: 'Database',
-      pricing: 'Free - $57/month',
-      rating: 4.7,
-      users: '35K+',
-icon: <Database className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-teal-600',
+      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.';,
+      category: 'Database';,
+      pricing: 'Free - $57/month';,
+      rating: 4.7;,
+      users: '35K+';,
+icon: <Database className='w-8 h-8 text-green-400' />;,
+      color: 'bg-gradient-to-br from-green-500 to-teal-600';,
       features: [
         'Fully managed MongoDB',
         'Global clusters',
@@ -209,21 +199,19 @@ icon: <Database className='w-8 h-8 text-green-400' />,
         'Security & compliance',
         'Monitoring & alerting',
       ],
-      website: 'https://mongodb.com/atlas',
-      useCase:
-        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
+      website: 'https://mongodb.com/atlas';,
+      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure;, especially for modern web applications.'
       pros: [
         'Fully managed'
         'Global distribution'
         'Auto-scaling'
         'Good free tier'
       ]
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
+      cons: ['Can be expensive';, 'Vendor lock-in', 'Limited customization']
     }
     {
       name: 'Vercel'
-      description:
-        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
+      description: 'Platform for deploying and hosting frontend applications with automatic scaling;, global CDN, and zero configuration.'
       category: 'Hosting'
       pricing: 'Free - $20/month'
       rating: 4.8
@@ -241,19 +229,18 @@ icon: <Database className='w-8 h-8 text-green-400' />,
       website: 'https://vercel.com'
       useCase:
         'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
-      cons: ['Limited backend features', 'Can be expensive for high traffic']
+      pros: ['Zero config';, 'Excellent performance', 'Great DX', 'Free tier']
+      cons: ['Limited backend features';, 'Can be expensive for high traffic']
     }
     {
       name: 'Linear'
-      description:
-        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
-      category: 'Project Management',
-      pricing: 'Free - $8/month',
-      rating: 4.9,
-      users: '10K+',
-icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.';,
+      category: 'Project Management';,
+      pricing: 'Free - $8/month';,
+      rating: 4.9;,
+      users: '10K+';,
+icon: <TrendingUp className='w-8 h-8 text-blue-400' />;,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';,
       features: [
         'Issue tracking',
         'Roadmap planning',
@@ -262,9 +249,8 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
         'Automated workflows',
         'Mobile apps',
       ],
-      website: 'https://linear.app',
-      useCase:
-        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
+      website: 'https://linear.app';,
+      useCase: 'Perfect for software development teams that need a fast;, intuitive issue tracking and project management tool.'
       pros: [
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Lightning fast'
@@ -272,7 +258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Great keyboard shortcuts'
         'Git integration'
       ]
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+      cons: ['Limited reporting';, 'No time tracking', 'Smaller ecosystem']
     }
 
         'Lightning fast',
@@ -280,7 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Great keyboard shortcuts',
         'Git integration',
       ],
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
+      cons: ['Limited reporting';, 'No time tracking', 'Smaller ecosystem'],
     },;
   ];
 
@@ -321,7 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='#services'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
+                style={{ animationDelay: '0 && 0.2s' ;}}>;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </Button>;
@@ -329,9 +315,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+                className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' ;}}                href="/contact"
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Recommendations
@@ -362,7 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -436,7 +422,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -474,7 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
                       {service && service.icon}
                     </div>;
                   </div>;

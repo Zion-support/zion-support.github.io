@@ -5,16 +5,16 @@
 
 
 
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
+import { useEffect, useState } from "react",;
+import { useRouter } from 'next/router',;
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { useProjects } from "@/hooks/useProjects",;
+import { Project } from "@/types/projects",;
 export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),

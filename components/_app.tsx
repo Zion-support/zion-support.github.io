@@ -1,7 +1,7 @@
 
 pr-12243
-import type { AppProps } from 'next / app',
-import '../styles / globals.css',
+import type { AppProps } from 'next / app';
+import '../styles / globals.css';
 /**
  * MyApp - Function description
  */

@@ -4,8 +4,8 @@
 };
 
 body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd
+  service: values.serviceTitle;, description: values.projectDescription;, timeline: {
+  start: values.timelineStart;, end: values.timelineEnd;
 }
 budgetRange: values.budgetRange;
 }
@@ -20,11 +20,11 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
-import type { NextPage } from 'next',
-import Head from 'next/head';,
-import React from 'react';,
-import SEO from '../../components/SEO';,
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';,
+import type { NextPage } from 'next';
+import Head from 'next/head';;
+import React from 'react';;
+import SEO from '../../components/SEO';;
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';;
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
@@ -53,11 +53,11 @@ export default function ServicesIndexPage () {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
  ;
   const res = await fetch ('/api/quote-request', {
-  method: 'POST',
+  method: 'POST';,
   headers: {
 body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {}
-  start: values.timelineStart, end: values.timelineEnd}
+  service: values.serviceTitle;, description: values.projectDescription;, timeline: {;}
+  start: values.timelineStart;, end: values.timelineEnd;}
 }
 budgetRange: values.budgetRange;
 }
@@ -79,11 +79,11 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   provider: 'Zion Provider'
   priceRangeUSD: item.priceRangeUSD
   categories: [item.category]
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10;})
 const ServicesPage: NextPage = () => {
   const [services, setServices] = React.useState<ServiceItem[]>([]);
   const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] })
+  const [filters, setFilters] = React.useState<Filters>({ categories: [] ;})
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
@@ -92,8 +92,8 @@ export default function ServicesIndexPage() {
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
-  service: values.service_title, description: values.project_description, timeline: {
-  start: values.timeline_start, end: values.timeline_end;
+  service: values.service_title;, description: values.project_description;, timeline: {
+  start: values.timeline_start;, end: values.timeline_end;
 }
 budget_range: values.budget_range;
 ;
@@ -110,17 +110,17 @@ budget_range: values.budget_range;
 }/> </div>);
 }export default ServicesPage;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug,
-  title: item.name,
-  description: item.description,
-  provider: 'Zion Provider',
-  priceRangeUSD: item.priceRangeUSD,
-  categories: [item.category],
-  rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
+  slug: item.slug;,
+  title: item.name;,
+  description: item.description;,
+  provider: 'Zion Provider';,
+  priceRangeUSD: item.priceRangeUSD;,
+  categories: [item.category];,
+  rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10;}),
 const ServicesPage: NextPage = () => {
   const [services, set_services] = React.useState < ServiceItem[]>([]);
   const [filtered, set_filtered] = React.useState < ServiceItem[]>([]);
-  const [filters, set_filters] = React.useState < Filters>({ categories: [] }),
+  const [filters, set_filters] = React.useState < Filters>({ categories: [] ;}),
   const [modal_open, setModalOpen] = React.useState (false);
   const [selected, set_selected] = React.useState < ServiceItem | null>(null);
 ;
@@ -172,10 +172,10 @@ function ServicesIndexPage() {
                 <EnhancedMarketplaceCard key={service && service.slug || service && service.id} service={service} onRequestQuote={handleRequestQuote} />;
               ))}
       newVerifiedServicesQ22025 as any[]);
-  const by_category: Record < string, unknown[]> = {}
+  const by_category: Record < string;, unknown[]> = {}
   for (const c of categories) by_category[c] = [];
   // Normalize various category labels into our main buckets;
-  const category_aliases: Record < string, string> = {
+  const category_aliases: Record < string;, string> = {
     'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools';
   }
   for (const s of all) {
@@ -222,14 +222,14 @@ function ServicesIndexPage() {
 ;
   const handle_submit = async (values: QuoteFormValues) => {
     const res = await fetch ('/api / quote - request', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
+      method: 'POST';,
+      headers: { 'Content - Type': 'application / json' ;},
       body: JSON.stringify ({
-        service: values.service_title,
-        description: values.project_description,
-        timeline: { start: values.timeline_start, end: values.timeline_end },
-        budget_range: values.budget_range,
-        email: values.email})}),
+        service: values.service_title;,
+        description: values.project_description;,
+        timeline: { start: values.timeline_start;, end: values.timeline_end ;},
+        budget_range: values.budget_range;,
+        email: values.email;})}),
     // Check condition
 if ( {) {
   $2

@@ -36,8 +36,8 @@ const Page = () => {
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>"
 		</>
 	)
-import React from 'react',
-import SEO from '../components / SEO',
+import React from 'react',;
+import SEO from '../components / SEO',;
 export default /**
  * WebinarsPage - Function description;
  */

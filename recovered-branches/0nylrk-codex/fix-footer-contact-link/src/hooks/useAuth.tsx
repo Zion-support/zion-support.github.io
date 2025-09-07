@@ -29,8 +29,8 @@ pr-12325
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
-import { supabase } from "@/integrations/supabase/client",
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
@@ -77,8 +77,8 @@ pr-12325
   updatedAt?: string
 }
 export interface AuthContextType {
-import { AuthContext } from "@/context/auth/AuthContext",
-import type { UserDetails as AuthUserDetails } from "@/types/auth",
+import { AuthContext } from "@/context/auth/AuthContext",;
+import type { UserDetails as AuthUserDetails } from "@/types/auth",;
 // Define types for our context
 export interface UserDetails {
   updatedAt?: string;

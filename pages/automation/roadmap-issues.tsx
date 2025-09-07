@@ -4,9 +4,9 @@ import data from '../../data/roadmap-issues.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/roadmap-issues.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/roadmap-issues.json',
+import data from '../../data/roadmap-issues.json',;
 export default function RoadmapIssuesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

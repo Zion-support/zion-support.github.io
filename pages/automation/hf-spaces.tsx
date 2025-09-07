@@ -4,9 +4,9 @@ import data from '../../data/hf-spaces.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/hf-spaces.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/hf-spaces.json',
+import data from '../../data/hf-spaces.json',;
 export default function HfSpacesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

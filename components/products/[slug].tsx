@@ -54,20 +54,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='md:col-span-2 space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <img
-            src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug)}/1200/600`}
+            src={`https: //picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug);}/1200/600`}
             alt={item && item.name}
             className='w-full rounded-lg border border-gray-200 dark:border-gray-800'
 <div className='grid grid-cols-1 md: grid-cols-3 gap-6' />
         <div className='md:col-span-2 space-y-4' />
           <img;
-src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug)}/1200/600`}
+src={`https: //picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug);}/1200/600`}
             alt={item && item.nam}
 }
             className='w-full rounded-lg border border-gray-200 dark:border-gray-800';
           />;
           <div />;
             <h1 className='text-2xl font-semibold' />{item && item.name}</h1>;
-            <p className='opacity-80' />Category: {item && item.categor}
+            <p className='opacity-80' />Category: {item && item.categor;}
 }</p>;
           </div>;
           <p className='leading-relaxed' />{item && item.description}</p>;
@@ -81,7 +81,7 @@ src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slu
           <div className='text-sm opacity-70'>Daily Rate</div>;
           <div className='text-xl font-semibold'>${item && item.dailyRateUsd}/day</div>;
           <Link
-            href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name)}`}>;
+            href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name);}`}>;
             <a className='inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700'>;
               Request Quote;
             </a>;
@@ -97,17 +97,17 @@ src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slu
   )
 };export default EquipmentDetail;          <div>;
             <h1 className="text-2xl font-semibold">{item && item.name}</h1>;
-            <p className="opacity-80">Category: {item && item.category}</p>;
+            <p className="opacity-80">Category: {item && item.category;}</p>;
           </div>;
           <p className="leading-relaxed">{item && item.description}</p>;
           <div className="flex flex-wrap gap-2">;
-            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{item && item.category}</span>;
+            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark: bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{item && item.category;}</span>;
           </div>;
         </div>;
         <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">;
           <div className="text-sm opacity-70">Daily Rate</div>;
           <div className="text-xl font-semibold">${item && item.dailyRateUsd}/day</div>;
-          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name)}`}>;
+          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name);}`}>;
             <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>;
           </Link>;
           <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link>;
@@ -116,17 +116,17 @@ src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slu
     </EnhancedLayout>;
   );
             <h1 className="text-2xl font-semibold">{item.name}</h1>
-            <p className="opacity-80">Category: {item.category}</p>
+            <p className="opacity-80">Category: {item.category;}</p>
           </div>
           <p className="leading-relaxed">{item.description}</p>
           <div className="flex flex-wrap gap-2">
-            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{item.category}</span>
+            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark: bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{item.category;}</span>
           </div>
         </div>
         <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">
           <div className="text-sm opacity-70">Daily Rate</div>
           <div className="text-xl font-semibold">${item.dailyRateUsd}/day</div>
-          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item.name)}`}>
+          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item.name);}`}>
             <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
           </Link>
           <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link>
@@ -141,7 +141,6 @@ export default EquipmentDetail;
 
 import Head from 'next / head';
 import {use_router} from 'next / router';
-import Link from 'next/link';
 import EnhancedLayout from '@/components / layout / EnhancedLayout';
 import equipment from '@/data / equipment.json';
 const EquipmentDetail: NextPage = () => {
@@ -178,13 +177,13 @@ if ( {) {
       <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
         <div className='md:col - span - 2 space - y-4'>;
           <img;
-            src={`https://picsum.photos / seed/${encodeURIComponent (item.slug)}/1200 / 600`}
+            src={`https: //picsum.photos / seed/${encodeURIComponent (item.slug);}/1200 / 600`}
             alt={item.name}
             className='w - full rounded - lg border border - gray - 200 dark:border - gray - 800';
           />;
           <div>;
             <h1 className='text - 2xl font - semibold'>{item.name}</h1>;
-            <p className='opacity - 80'>Category: {item.category}</p>;
+            <p className='opacity - 80'>Category: {item.category;}</p>;
           </div>;
           <p className='leading - relaxed'>{item.description}</p>;
           <div className='flex flex - wrap gap - 2'>;
@@ -200,7 +199,7 @@ if ( {) {
           <div className='text-sm opacity-70' />Daily Rate</div>;
           <div className='text-xl font-semibold' />${item && item.dailyRateUsd}/day</div>;
           <Link;
-            href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name)}
+            href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name);}
 } />;
             <a className='inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700' />;
               Request Quote;
@@ -218,19 +217,19 @@ if ( {) {
 
 export default EquipmentDetail;          <div />;
             <h1 className=\"text-2xl font-semibold\" />{item && item.name}</h1>;"
-            <p className=\"opacity-80\" />Category: {item && item.categor}
+            <p className=\"opacity-80\" />Category: {item && item.categor;}
 }</p>;
           </div>;"
           <p className=\"leading-relaxed\" />{item && item.description}</p>;"
           <div className=\"flex flex-wrap gap-2\" />;"
-            <span className=\"text-xs px-2 py-1 rounded-full bg-gray-100 dark: bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700\" />{item && item.categor}
+            <span className=\"text-xs px-2 py-1 rounded-full bg-gray-100 dark: bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700\" />{item && item.categor;}
 }</span>;
           </div>;
         </div>;"
         <aside className=\"md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max\" />;"
           <div className=\"text-sm opacity-70\" />Daily Rate</div>;"
           <div className=\"text-xl font-semibold\" />${item && item.dailyRateUsd}/day</div>;
-          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name)}
+          <Link href={`/contact?subject=${encodeURIComponent('Equipment quote: ' + item && item.name);}
 } />;"
             <a className=\"inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700\" />Request Quote</a>;
           </Link>;"

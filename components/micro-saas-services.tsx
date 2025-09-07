@@ -5,7 +5,6 @@ import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
-import {
   Brain,
   Monitor,
   Search,
@@ -77,7 +76,7 @@ export default function MicroSaasServicesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
-          price: 19,
+          price: 19;,
           features: [
             '5 URLs',
             '5-min monitoring',
@@ -87,7 +86,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 49,
+          price: 49;,
           features: [
             '25 URLs',
             '1-min monitoring',
@@ -107,20 +106,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$29-299/month',
-      competitors: ['Jasper AI', 'Copy.ai', 'Writesonic'],
-      website: 'https://ai-content.ziontech.ai',
-      demo: 'https://demo.ai-content.ziontech.ai',
+      marketPrice: '$29-299/month';,
+      competitors: ['Jasper AI';, 'Copy.ai', 'Writesonic'],
+      website: 'https://ai-content.ziontech.ai';,
+      demo: 'https://demo.ai-content.ziontech.ai';,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      id: 'performance-monitor',
-      name: 'Website Performance Monitor',
-      description:
-        'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.',
-      icon: <Monitor className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
+      id: 'performance-monitor';,
+      name: 'Website Performance Monitor';,
+      description: 'Monitor your website performance in real-time with comprehensive metrics;, alerts, and optimization recommendations.',
+      icon: <Monitor className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';,
+      gradient: 'from-blue-400 to-cyan-500';,
       features: [
         'Real-time performance monitoring',
         'Core Web Vitals tracking',
@@ -139,7 +137,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 19,
+          price: 19;,
           features: [
             '5 URLs',
             '5-min monitoring',
@@ -149,7 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 49,
+          price: 49;,
           features: [
             '25 URLs',
             '1-min monitoring',
@@ -160,7 +158,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 149,
+          price: 149;,
           features: [
             'Unlimited URLs',
             'Real-time monitoring',
@@ -171,19 +169,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$19-149/month',
-      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest'],
-      website: 'https://performance.ziontech.ai',
-      demo: 'https://demo.performance.ziontech.ai',
+      marketPrice: '$19-149/month';,
+      competitors: ['Pingdom';, 'GTmetrix', 'WebPageTest'],
+      website: 'https://performance.ziontech.ai';,
+      demo: 'https://demo.performance.ziontech.ai';,
     },
     {
-      id: 'seo-analytics',
-      name: 'SEO Analytics Dashboard',
-      description:
-        'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
-      icon: <Search className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
+      id: 'seo-analytics';,
+      name: 'SEO Analytics Dashboard';,
+      description: 'Comprehensive SEO tracking;, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+      icon: <Search className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';,
+      gradient: 'from-green-400 to-emerald-500';,
       features: [
         'Keyword tracking & ranking',
         'Competitor analysis',
@@ -202,7 +199,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 39,
+          price: 39;,
           features: [
             '100 keywords',
             'Basic analysis',
@@ -212,7 +209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 89,
+          price: 89;,
           features: [
             '500 keywords',
             'Advanced analysis',
@@ -223,7 +220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 199,
+          price: 199;,
           features: [
             'Unlimited keywords',
             'Full SEO suite',
@@ -234,19 +231,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$39-199/month',
-      competitors: ['Ahrefs', 'SEMrush', 'Moz'],
-      website: 'https://seo.ziontech.ai',
-      demo: 'https://demo.seo.ziontech.ai',
+      marketPrice: '$39-199/month';,
+      competitors: ['Ahrefs';, 'SEMrush', 'Moz'],
+      website: 'https://seo.ziontech.ai';,
+      demo: 'https://demo.seo.ziontech.ai';,
     },
     {
-      id: 'api-rate-limiter',
-      name: 'API Rate Limiter',
-      description:
-        'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
-      icon: <Shield className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-red-500 to-orange-600',
-      gradient: 'from-red-400 to-orange-500',
+      id: 'api-rate-limiter';,
+      name: 'API Rate Limiter';,
+      description: 'Protect your APIs with intelligent rate limiting;, traffic management, and comprehensive analytics.',
+      icon: <Shield className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-red-500 to-orange-600';,
+      gradient: 'from-red-400 to-orange-500';,
       features: [
         'Intelligent rate limiting',
         'Traffic pattern analysis',
@@ -265,7 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 25,
+          price: 25;,
           features: [
             '10 rate limit rules',
             'Basic limiting',
@@ -275,7 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 79,
+          price: 79;,
           features: [
             '50 rate limit rules',
             'Advanced limiting',
@@ -286,7 +282,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 199,
+          price: 199;,
           features: [
             'Unlimited rules',
             'Enterprise security',
@@ -297,19 +293,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$25-199/month',
-      competitors: ['Kong', 'Tyk', 'AWS API Gateway'],
-      website: 'https://rate-limiter.ziontech.ai',
-      demo: 'https://demo.rate-limiter.ziontech.ai',
+      marketPrice: '$25-199/month';,
+      competitors: ['Kong';, 'Tyk', 'AWS API Gateway'],
+      website: 'https://rate-limiter.ziontech.ai';,
+      demo: 'https://demo.rate-limiter.ziontech.ai';,
     },
     {
-      id: 'email-marketing',
-      name: 'Email Marketing Automation',
-      description:
-        'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
-      icon: <Mail className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
+      id: 'email-marketing';,
+      name: 'Email Marketing Automation';,
+      description: 'Create engaging email campaigns;, automate customer journeys, and drive conversions with intelligent email marketing.',
+      icon: <Mail className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600';,
+      gradient: 'from-indigo-400 to-purple-500';,
       features: [
         'Drag & drop email builder',
         'Advanced automation workflows',
@@ -328,7 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 29,
+          price: 29;,
           features: [
             '1,000 subscribers',
             'Basic templates',
@@ -338,7 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 79,
+          price: 79;,
           features: [
             '10,000 subscribers',
             'Advanced templates',
@@ -349,7 +344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 199,
+          price: 199;,
           features: [
             'Unlimited subscribers',
             'Custom templates',
@@ -360,19 +355,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$29-199/month',
-      competitors: ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],
-      website: 'https://email.ziontech.ai',
-      demo: 'https://demo.email.ziontech.ai',
+      marketPrice: '$29-199/month';,
+      competitors: ['Mailchimp';, 'ConvertKit', 'ActiveCampaign'],
+      website: 'https://email.ziontech.ai';,
+      demo: 'https://demo.email.ziontech.ai';,
     },
     {
-      id: 'social-media-scheduler',
-      name: 'Social Media Scheduler',
-      description:
-        'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
-      icon: <Share2 className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500',
+      id: 'social-media-scheduler';,
+      name: 'Social Media Scheduler';,
+      description: 'Schedule;, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
+      icon: <Share2 className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600';,
+      gradient: 'from-pink-400 to-rose-500';,
       features: [
         'Multi-platform scheduling',
         'Content calendar management',
@@ -391,7 +385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 29,
+          price: 29;,
           features: [;
             '100 generations / month',
             'Basic templates',
@@ -400,7 +394,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 99,
+          price: 99;,
           features: [;
             '500 generations / month',
             'Premium templates',
@@ -420,23 +414,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
       marketPrice: '$19-149/month'
-      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']
+      competitors: ['Pingdom';, 'GTmetrix', 'WebPageTest']
       website: 'https://performance.ziontech.ai'
       demo: 'https://demo.performance.ziontech.ai'
-      demo: 'https://demo.ai-content.ziontech.ai'
+      demo: 'https://demo.ai-content.ziontech.ai';
     }
     }
   ];
     {
           price: 199
     {
-      id: 'seo-analytics',
-      name: 'SEO Analytics Dashboard',
-      description:
-        'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
-      icon: <Search className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
+      id: 'seo-analytics';,
+      name: 'SEO Analytics Dashboard';,
+      description: 'Comprehensive SEO tracking;, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+      icon: <Search className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';,
+      gradient: 'from-green-400 to-emerald-500';,
       features: [
         'Keyword tracking & ranking',
         'Competitor analysis',
@@ -455,7 +448,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 39,
+          price: 39;,
           features: [
             '100 keywords',
             'Basic analysis',
@@ -465,7 +458,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 89,
+          price: 89;,
           features: [
             '500 keywords',
             'Advanced analysis',
@@ -476,7 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 199,
+          price: 199;,
 origin/cursor/automate-test-improve-and-merge-code-2533
           features: [
             'Unlimited keywords',
@@ -488,19 +481,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$39-199/month',
-      competitors: ['Ahrefs', 'SEMrush', 'Moz'],
-      website: 'https://seo.ziontech.ai',
-      demo: 'https://demo.seo.ziontech.ai',
+      marketPrice: '$39-199/month';,
+      competitors: ['Ahrefs';, 'SEMrush', 'Moz'],
+      website: 'https://seo.ziontech.ai';,
+      demo: 'https://demo.seo.ziontech.ai';,
     },
     {
-      id: 'api-rate-limiter',
-      name: 'API Rate Limiter',
-      description:
-        'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
-      icon: <Shield className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-red-500 to-orange-600',
-      gradient: 'from-red-400 to-orange-500',
+      id: 'api-rate-limiter';,
+      name: 'API Rate Limiter';,
+      description: 'Protect your APIs with intelligent rate limiting;, traffic management, and comprehensive analytics.',
+      icon: <Shield className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-red-500 to-orange-600';,
+      gradient: 'from-red-400 to-orange-500';,
       features: [
         'Intelligent rate limiting',
         'Traffic pattern analysis',
@@ -519,7 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 25,
+          price: 25;,
           features: [
             '10 rate limit rules',
             'Basic limiting',
@@ -529,7 +521,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 79,
+          price: 79;,
           features: [
             '50 rate limit rules',
             'Advanced limiting',
@@ -540,7 +532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 199,
+          price: 199;,
           features: [
             'Unlimited rules',
             'Enterprise security',
@@ -551,19 +543,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$25-199/month',
-      competitors: ['Kong', 'Tyk', 'AWS API Gateway'],
-      website: 'https://rate-limiter.ziontech.ai',
-      demo: 'https://demo.rate-limiter.ziontech.ai',
+      marketPrice: '$25-199/month';,
+      competitors: ['Kong';, 'Tyk', 'AWS API Gateway'],
+      website: 'https://rate-limiter.ziontech.ai';,
+      demo: 'https://demo.rate-limiter.ziontech.ai';,
     },
     {
-      id: 'email-marketing',
-      name: 'Email Marketing Automation',
-      description:
-        'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
-      icon: <Mail className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
+      id: 'email-marketing';,
+      name: 'Email Marketing Automation';,
+      description: 'Create engaging email campaigns;, automate customer journeys, and drive conversions with intelligent email marketing.',
+      icon: <Mail className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600';,
+      gradient: 'from-indigo-400 to-purple-500';,
       features: [
         'Drag & drop email builder',
         'Advanced automation workflows',
@@ -582,7 +573,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 29,
+          price: 29;,
           features: [
             '1,000 subscribers',
             'Basic templates',
@@ -592,7 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 79,
+          price: 79;,
           features: [
             '10,000 subscribers',
             'Advanced templates',
@@ -608,28 +599,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
-    },  ];      demo: 'https://demo.social.ziontech.ai'
+    },  ];      demo: 'https://demo.social.ziontech.ai';
     }
   ];
   const marketInsights = [
     {
-      title: 'Performance Monitoring',
-      market_size: '$3.8B',
-      growth: '+18%',
+      title: 'Performance Monitoring';,
+      market_size: '$3.8B';,
+      growth: '+18%';,
     {
-      title: 'SEO Analytics',
-      market_size: '$2.1B',
-      growth: '+21%',
+      title: 'SEO Analytics';,
+      market_size: '$2.1B';,
+      growth: '+21%';,
     {
-      title: 'API Management',
-      market_size: '$4.2B',
-      growth: '+25%',
+      title: 'API Management';,
+      market_size: '$4.2B';,
+      growth: '+25%';,
     {
       description:;
         'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
-      icon: <Search className='w - 8 h - 8 text - white' />,
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      gradient: 'from - green - 400 to - emerald - 500',
+      icon: <Search className='w - 8 h - 8 text - white' />;,
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';,
+      gradient: 'from - green - 400 to - emerald - 500';,
       features: [;
         'Keyword tracking & ranking',
         'Competitor analysis',
@@ -645,7 +636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Technical SEO audits',
         'Link building campaigns',
         'Content optimization',
-          price: 199,
+          price: 199;,
           features: [
             'Unlimited subscribers',
             'Custom templates',
@@ -656,19 +647,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$29-199/month',
-      competitors: ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],
-      website: 'https://email.ziontech.ai',
-      demo: 'https://demo.email.ziontech.ai',
+      marketPrice: '$29-199/month';,
+      competitors: ['Mailchimp';, 'ConvertKit', 'ActiveCampaign'],
+      website: 'https://email.ziontech.ai';,
+      demo: 'https://demo.email.ziontech.ai';,
     },
     {
-      id: 'social-media-scheduler',
-      name: 'Social Media Scheduler',
-      description:
-        'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
-      icon: <Share2 className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500',
+      id: 'social-media-scheduler';,
+      name: 'Social Media Scheduler';,
+      description: 'Schedule;, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
+      icon: <Share2 className='w-8 h-8 text-white' />;,
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600';,
+      gradient: 'from-pink-400 to-rose-500';,
       features: [
         'Multi-platform scheduling',
         'Content calendar management',
@@ -688,7 +678,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       pricing: {
         starter: {
-          price: 19,
+          price: 19;,
           features: [
             '3 social accounts',
             'Basic scheduling',
@@ -698,7 +688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         professional: {
-          price: 49,
+          price: 49;,
           features: [
             '10 social accounts',
             'Advanced scheduling',
@@ -711,7 +701,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         enterprise: {
 
 
-          price: 129,
+          price: 129;,
           features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
             'Unlimited accounts',
@@ -724,77 +714,77 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const marketInsights = [;
     {;
-      title: 'AI Content Generation',;
-      marketSize: '$1 && 1.2B',;
-      growth: '+23%',;
+      title: 'AI Content Generation';,;
+      marketSize: '$1 && 1.2B';,;
+      growth: '+23%';,;
       description:;
         'Rapidly growing market with increasing demand for automated content creation',;
     },    {;
-      title: 'Performance Monitoring',;
-      marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
+      title: 'Performance Monitoring';,;
+      marketSize: '$3 && 3.8B';,;
+      growth: '+18%';,;
       description:;
         'Essential for modern web applications and user experience optimization',;
     },    {;
-      title: 'SEO Analytics',;
-      marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
+      title: 'SEO Analytics';,;
+      marketSize: '$2 && 2.1B';,;
+      growth: '+21%';,;
       description:;
         'Critical for digital marketing and search engine optimization',;
     },    {;
-      title: 'API Management',;
-      marketSize: '$4 && 4.2B',;
-      growth: '+25%',;
-      description: 'Growing demand for API security and traffic management',;
+      title: 'API Management';,;
+      marketSize: '$4 && 4.2B';,;
+      growth: '+25%';,;
+      description: 'Growing demand for API security and traffic management';,;
     },    {;
-      title: 'Email Marketing',;
-      marketSize: '$7 && 7.5B',;
-      growth: '+15%',;
+      title: 'Email Marketing';,;
+      marketSize: '$7 && 7.5B';,;
+      growth: '+15%';,;
       description:;
         'Mature market with strong automation and personalization trends',;
     },    {;
-      title: 'Social Media Management',;
-      marketSize: '$2 && 2.8B',;
-      growth: '+19%',;
+      title: 'Social Media Management';,;
+      marketSize: '$2 && 2.8B';,;
+      growth: '+19%';,;
       description:;
         'Increasing need for multi-platform social media coordination',;
     },  ];      description: 'Rapidly growing market with increasing demand for automated content creation';
     };
     {;
-      title: 'Performance Monitoring',;
-      marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
+      title: 'Performance Monitoring';,;
+      marketSize: '$3 && 3.8B';,;
+      growth: '+18%';,;
       description:;
         'Essential for modern web applications and user experience optimization',;
     },      description: 'Essential for modern web applications and user experience optimization';
     };
     {;
-      title: 'SEO Analytics',;
-      marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
+      title: 'SEO Analytics';,;
+      marketSize: '$2 && 2.1B';,;
+      growth: '+21%';,;
       description:;
         'Critical for digital marketing and search engine optimization',;
     },      description: 'Critical for digital marketing and search engine optimization';
     };
     {;
-      title: 'API Management',;
-      marketSize: '$4 && 4.2B',;
-      growth: '+25%',;
-      description: 'Growing demand for API security and traffic management',;
+      title: 'API Management';,;
+      marketSize: '$4 && 4.2B';,;
+      growth: '+25%';,;
+      description: 'Growing demand for API security and traffic management';,;
     },      description: 'Growing demand for API security and traffic management';
     };
     {;
-      title: 'Email Marketing',;
-      marketSize: '$7 && 7.5B',;
-      growth: '+15%',;
+      title: 'Email Marketing';,;
+      marketSize: '$7 && 7.5B';,;
+      growth: '+15%';,;
       description:;
         'Mature market with strong automation and personalization trends',;
     },      description: 'Mature market with strong automation and personalization trends';
     };
     {;
-      title: 'Social Media Management',;
-      marketSize: '$2 && 2.8B',;
-      growth: '+19%',;
+      title: 'Social Media Management';,;
+      marketSize: '$2 && 2.8B';,;
+      growth: '+19%';,;
       description:;
         'Increasing need for multi-platform social media coordination',;
     },      description: 'Increasing need for multi-platform social media coordination';
@@ -827,53 +817,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
       },
-      marketPrice: '$19-129/month',
-      competitors: ['Buffer', 'Hootsuite', 'Later'],
-      website: 'https://social.ziontech.ai',
-      demo: 'https://demo.social.ziontech.ai',
+      marketPrice: '$19-129/month';,
+      competitors: ['Buffer';, 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai';,
+      demo: 'https://demo.social.ziontech.ai';,
     },
   ];
   const marketInsights = [
     {
-      title: 'AI Content Generation',
-      marketSize: '$1.2B',
-      growth: '+23%',
-description:
-        'Rapidly growing market with increasing demand for automated content creation',
+      title: 'AI Content Generation';,
+      marketSize: '$1.2B';,
+      growth: '+23%';,
+description: 'Rapidly growing market with increasing demand for automated content creation';,
     },
     {
-      title: 'Performance Monitoring',
-      marketSize: '$3.8B',
-      growth: '+18%',
-description:
-        'Essential for modern web applications and user experience optimization',
+      title: 'Performance Monitoring';,
+      marketSize: '$3.8B';,
+      growth: '+18%';,
+description: 'Essential for modern web applications and user experience optimization';,
     },
     {
-      title: 'SEO Analytics',
-      marketSize: '$2.1B',
-      growth: '+21%',
-description:
-        'Critical for digital marketing and search engine optimization',
+      title: 'SEO Analytics';,
+      marketSize: '$2.1B';,
+      growth: '+21%';,
+description: 'Critical for digital marketing and search engine optimization';,
     },
     {
-      title: 'API Management',
-      marketSize: '$4.2B',
-      growth: '+25%',
-description: 'Growing demand for API security and traffic management',
+      title: 'API Management';,
+      marketSize: '$4.2B';,
+      growth: '+25%';,
+description: 'Growing demand for API security and traffic management';,
     },
     {
-      title: 'Email Marketing',
-      marketSize: '$7.5B',
-      growth: '+15%',
-description:
-        'Mature market with strong automation and personalization trends',
+      title: 'Email Marketing';,
+      marketSize: '$7.5B';,
+      growth: '+15%';,
+description: 'Mature market with strong automation and personalization trends';,
     },
     {
-      title: 'Social Media Management',
-      marketSize: '$2.8B',
-      growth: '+19%',
-description:
-        'Increasing need for multi-platform social media coordination',
+      title: 'Social Media Management';,
+      marketSize: '$2.8B';,
+      growth: '+19%';,
+description: 'Increasing need for multi-platform social media coordination';,
     },
   ];
   return (
@@ -937,7 +922,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={{ animation_delay: `${index * 0.1;}s` }}
               >;
                 <div className='p - 6'>;
                   <h3 className='text - xl font - bold text - white mb - 4'>;
@@ -1010,7 +995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
                 <div className='p-6'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {insight && insight.title}
@@ -1096,7 +1081,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;
                   <div className="flex items-center justify-center space-x-4 mb-4">;

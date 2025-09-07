@@ -33,11 +33,11 @@ import { useState } from 'react';
 import { useState } from 'react';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
-import { Draggable } from "@/lib/dnd-stub",
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
+import { Draggable } from "@/lib/dnd-stub",;
+import { formatDistanceToNow } from "date-fns",;
+import Link from "next/link",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent } from "@/components/ui/card",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -47,7 +47,7 @@ import {
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 import Image from 'next/image', // Import next/image

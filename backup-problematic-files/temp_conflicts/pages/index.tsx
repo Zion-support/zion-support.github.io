@@ -1,13 +1,13 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { ;
   ExternalLink;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',;
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 ;
 export default function HomePage() {;
   const [isVisible, setIsVisible] = useState(false),;
@@ -16,36 +16,36 @@ export default function HomePage() {;
   }, []),;
   const services = [;
     {;
-      title:"AI Business Intelligence",,
-  description:"Transform data into actionable insights with AI-powered analytics",;
-      color:"from-purple-500 to-pink-500",;
-      link:"https://ziontechgroup.com/ai-business-intelligence",;
-      price:"$499/month",;
-      features:["AI-powered dashboards", "Predictive analytics", "Real-time insights"];
+      title: "AI Business Intelligence";,,
+  description: "Transform data into actionable insights with AI-powered analytics";,;
+      color: "from-purple-500 to-pink-500";,;
+      link: "https://ziontechgroup.com/ai-business-intelligence";,;
+      price: "$499/month";,;
+      features: ["AI-powered dashboards";, "Predictive analytics", "Real-time insights"];
     },;
     {;
-      title:"Quantum Cybersecurity",,
-  description:"Future-proof security with quantum-resistant encryption and AI threat detection",;
-      color:"from-red-500 to-orange-500",;
-      link:"https://ziontechgroup.com/quantum-cybersecurity",;
-      price:"$799/month",;
-      features:["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"];
+      title: "Quantum Cybersecurity";,,
+  description: "Future-proof security with quantum-resistant encryption and AI threat detection";,;
+      color: "from-red-500 to-orange-500";,;
+      link: "https://ziontechgroup.com/quantum-cybersecurity";,;
+      price: "$799/month";,;
+      features: ["Quantum-resistant encryption";, "AI threat detection", "Zero-trust architecture"];
     },;
     {;
-      title:"AI Business Intelligence",;""
-      description:"Transform data into actionable insights with AI-powered analytics",;""
-      color:"from-purple-500 to-pink-500",;""
-      link:"https://ziontechgroup.com/ai-business-intelligence",;""
-      price:"$499/month",;"]"
-      features:["AI-powered dashboards", "Predictive analytics", "Real-time insights"];"
+      title: "AI Business Intelligence";,;""
+      description: "Transform data into actionable insights with AI-powered analytics";,;""
+      color: "from-purple-500 to-pink-500";,;""
+      link: "https://ziontechgroup.com/ai-business-intelligence";,;""
+      price: "$499/month";,;"]"
+      features: ["AI-powered dashboards";, "Predictive analytics", "Real-time insights"];"
     },;
     {;"
-      title:"Quantum Cybersecurity",;""
-      description:"Future-proof security with quantum-resistant encryption and AI threat detection",;""
-      color:"from-red-500 to-orange-500",;""
-      link:"https://ziontechgroup.com/quantum-cybersecurity",;""
-      price:"$799/month",;""
-      features:["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"];"
+      title: "Quantum Cybersecurity";,;""
+      description: "Future-proof security with quantum-resistant encryption and AI threat detection";,;""
+      color: "from-red-500 to-orange-500";,;""
+      link: "https://ziontechgroup.com/quantum-cybersecurity";,;""
+      price: "$799/month";,;""
+      features: ["Quantum-resistant encryption";, "AI threat detection", "Zero-trust architecture"];"
 pr-12325
     <UltraFuturisticBackground2029>;
 </UltraFuturisticBackground2029>
@@ -59,25 +59,25 @@ pr-12325
         <link rel="icon" href="/favicon.ico" />;"
 </link>"
         <meta property="og:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;"
-        <meta property="og:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;"
+        <meta property="og: description" content="Leading provider of revolutionary 2029 technology services including AI consciousness;, quantum computing, space mining, and advanced biotechnology." />;"
         <meta property="og:type" content="website" />;"
         <meta property="og:url" content="https://ziontechgroup.com" />;"
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;"
         <meta name="twitter:card" content="summary_large_image" />;"
         <meta name="twitter:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;"
-        <meta name="twitter:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;"
+        <meta name="twitter: description" content="Leading provider of revolutionary 2029 technology services including AI consciousness;, quantum computing, space mining, and advanced biotechnology." />;"
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />;"
         <meta name="theme-color" content="#8b5cf6" />;"
         <link rel="canonical" href="https://ziontechgroup.com" />;"
         <script type="application/ld+json">;"
 </script>
         </script>;
-      title:"AI Customer Experience",,
-  description:"Deliver personalized customer experiences with intelligent automation",;
-      color:"from-blue-500 to-cyan-500",;
-      link:"https://ziontechgroup.com/ai-customer-experience",;
-      price:"$599/month",;
-      features:["Chatbot automation", "Personalized recommendations", "Customer journey optimization"];
+      title: "AI Customer Experience";,,
+  description: "Deliver personalized customer experiences with intelligent automation";,;
+      color: "from-blue-500 to-cyan-500";,;
+      link: "https://ziontechgroup.com/ai-customer-experience";,;
+      price: "$599/month";,;
+      features: ["Chatbot automation";, "Personalized recommendations", "Customer journey optimization"];
     }
   ],;
 ;
@@ -86,20 +86,20 @@ pr-12325
 ;
   const features = [;
     {;
-      title:"Cutting-Edge Technology",,
-  description:"Leverage the latest advancements in AI, quantum computing, and cybersecurity",;
+      title: "Cutting-Edge Technology";,,
+  description: "Leverage the latest advancements in AI;, quantum computing, and cybersecurity",;
     },;
     {;
-      title:"Enterprise-Grade Security",,
-  description:"Bank-level security with SOC 2 compliance and regular penetration testing",;
+      title: "Enterprise-Grade Security";,,
+  description: "Bank-level security with SOC 2 compliance and regular penetration testing";,;
     },;
     {;
-      title:"Scalable Solutions",,
-  description:"Built to grow with your business, from startup to enterprise",;
+      title: "Scalable Solutions";,,
+  description: "Built to grow with your business;, from startup to enterprise",;
     },;
     {;
-      title:"Expert Support",,
-  description:"24/7 technical support with dedicated account managers",;
+      title: "Expert Support";,,
+  description: "24/7 technical support with dedicated account managers";,;
     }
   ],;
 ;
@@ -117,13 +117,13 @@ pr-12325
 </section>"
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />;"
 </div>"
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />;"
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image: linear-gradient(180deg;,white,rgba(255,255,255,0))]" />;"
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">;"
 </div>
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:isVisible ? 1 :0, y:isVisible ? 0 :30 }}
-            transition={{ duration:0.8 }}"
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: isVisible ? 1 :0;, y: isVisible ? 0 :30 ;}}
+            transition={{ duration: 0.8 ;}}"
             className="mb-8";"
           >;
 </motion>"
@@ -147,9 +147,9 @@ pr-12325
             </div>;
           </motion.div>;
           {/* Trust Indicators */}
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:isVisible ? 1 :0, y:isVisible ? 0 :20 }}
-            transition={{ duration:0.8, delay:0.2 }}"
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: isVisible ? 1 :0;, y: isVisible ? 0 :20 ;}}
+            transition={{ duration: 0.8;, delay: 0.2 ;}}"
             className="flex flex-wrap justify-center items-center gap-8 text-white/60 text-sm";"
 </motion>
             <span>Trusted by Fortune 500 companies</span>;
@@ -162,9 +162,9 @@ pr-12325
       </section>;"
       <section className="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">;"
         <div className="max-w-7xl mx-auto">;"
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}"
             className="text-center mb-16";"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;"
 </h2>
@@ -174,7 +174,7 @@ pr-12325
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
                 key={feature.title}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300";"
                 <div className="text-4xl mb-4">{feature.icon}</div>;""
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;""
@@ -211,10 +211,10 @@ pr-12325
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
             {/* Service Categories Grid */}"
                   key={category}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+                  viewport={{ once: true ;}}
                   className="group cursor-pointer";
                 >;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
@@ -239,10 +239,10 @@ pr-12325
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-purple-900/10"></div>;
           <div className="max-w-7xl mx-auto relative z-10">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
+              viewport={{ once: true ;}}
               className="grid grid-cols-1 md:grid-cols-3 gap-8";
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -258,48 +258,48 @@ pr-12325
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
                 {;
-                  icon:Rocket,;
-                  title:"Cutting-Edge Innovation",,
-  description:"We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",;
+                  icon: Rocket;,;
+                  title: "Cutting-Edge Innovation";,,
+  description: "We stay ahead of the curve;, constantly researching and implementing the latest technological breakthroughs.",;
                   color:"from-purple-500 to-pink-500";
                 },;
                 {;
-                  icon:Brain,;
-                  title:"AI-First Approach",,
-  description:"Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",;
+                  icon: Brain;,;
+                  title: "AI-First Approach";,,
+  description: "Every solution we create is built with artificial intelligence at its core;, ensuring maximum efficiency and intelligence.",;
                   color:"from-blue-500 to-cyan-500";
                 },;
                 {;
-                  icon:Atom,;
-                  title:"Quantum-Ready Solutions",,
-  description:"Our services are designed to leverage quantum computing capabilities as they become commercially available.",;
+                  icon: Atom;,;
+                  title: "Quantum-Ready Solutions";,,
+  description: "Our services are designed to leverage quantum computing capabilities as they become commercially available.";,;
                   color:"from-green-500 to-emerald-500";
                 },;
                 {;
-                  icon:Shield,;
-                  title:"Unbreakable Security",,
-  description:"Quantum internet protocol suite with unbreakable encryption and quantum network security.",;
+                  icon: Shield;,;
+                  title: "Unbreakable Security";,,
+  description: "Quantum internet protocol suite with unbreakable encryption and quantum network security.";,;
                   color:"from-indigo-500 to-blue-500";
                 },;
                 {;
-                  icon:Zap,;
-                  title:"Future-Ready Solutions",,
-  description:"Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",;
+                  icon: Zap;,;
+                  title: "Future-Ready Solutions";,,
+  description: "Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.";,;
                   color:"from-yellow-500 to-orange-500";
                 },;
                 {;
-                  icon:Star,;
-                  title:"Proven Results",,
-  description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",;
+                  icon: Star;,;
+                  title: "Proven Results";,,
+  description: "Our services deliver measurable ROI and transformative business outcomes for clients worldwide.";,;
                   color:"from-pink-500 to-rose-500";
                 }
               ].map((feature, index) => (;
                 <motion.div;
                   key={feature.title}
-                  initial={{ opacity:0, y:30 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+                  viewport={{ once: true ;}}
                   className="group cursor-pointer";
                 >;
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
@@ -320,13 +320,13 @@ pr-12325
               className="grid grid-cols-1 md:grid-cols-3 gap-8";"
 </div>`;
 pr-12325
-                    <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`;}>;
                       <feature.icon className="w-8 h-8 text-white" />;"
 </feature>
                     <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>;""
                     <p className="text-gray-300 leading-relaxed">{feature.description}</p>;"
           <div className="max-w-4xl mx-auto text-center">;"
-              viewport={{ once:true }}
+              viewport={{ once: true ;}}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">;"
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Future of Technology?</span>;"
               <p className="text-xl text-gray-300 mb-8">;"
@@ -351,8 +351,8 @@ pr-12325
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;"
                 key={stat.label}
-                initial={{ opacity:0, scale:0.8 }}
-                whileInView={{ opacity:1, scale:1 }}
+                initial={{ opacity: 0;, scale: 0.8 ;}}
+                whileInView={{ opacity: 1;, scale: 1 ;}}
                 className="text-center";"
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">;"
                   <span className="text-3xl">{stat.icon}</span>;"

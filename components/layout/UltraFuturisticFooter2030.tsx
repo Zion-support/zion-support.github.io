@@ -57,13 +57,12 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';,};  website: 'https://ziontechgroup.com';
 }
 const serviceCategories = [
   {
     title: '🚀 AI & Consciousness'
 
-import { motion } from 'framer-motion';
 
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
@@ -75,8 +74,8 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
-        name: 'AI Consciousness Evolution',
-  href: '/ai-consciousness-evolution-platform'
+        name: 'AI Consciousness Evolution';,
+  href: '/ai-consciousness-evolution-platform';
 }
      }
 }
@@ -88,105 +87,105 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
 
       {
-        name: 'Quantum Cloud Infrastructure'}
-  href: '/quantum-cloud-infrastructure'}
+        name: 'Quantum Cloud Infrastructure';}
+  href: '/quantum-cloud-infrastructure';}
       }
     ]
   },
   {
-    title: '🧬 Biotech & DNA Computing',
+    title: '🧬 Biotech & DNA Computing';,
   services: [
       {
-        name: 'DNA Computing Platform'}
-  href: '/biotech-dna-computing-platform'}
+        name: 'DNA Computing Platform';}
+  href: '/biotech-dna-computing-platform';}
       },
       {
-        name: 'Personalized Nutrition'}
-  href: '/biotech-personalized-nutrition'}
+        name: 'Personalized Nutrition';}
+  href: '/biotech-personalized-nutrition';}
       },
       {
-        name: 'Predictive Health Analytics'}
-  href: '/ai-predictive-health-analytics'}
+        name: 'Predictive Health Analytics';}
+  href: '/ai-predictive-health-analytics';}
       },
-        { name: 'Research Automation'}
-  href: '/advanced-research-automation'}
+        { name: 'Research Automation';}
+  href: '/advanced-research-automation';}
 }
 
     ]
   },
   {
-    title: '🏙️ Enterprise IT Solutions',
+    title: '🏙️ Enterprise IT Solutions';,
   services: [
-        { name: 'Autonomous DevOps'}
-  href: '/autonomous-devops-platform'}
+        { name: 'Autonomous DevOps';}
+  href: '/autonomous-devops-platform';}
 },
 
 {
-        name: 'Autonomous IT Operations'}
-  href: '/autonomous-it-operations-center'}
+        name: 'Autonomous IT Operations';}
+  href: '/autonomous-it-operations-center';}
       },
       {
-        name: 'AI Enterprise Security'}
-  href: '/ai-powered-enterprise-security'}
+        name: 'AI Enterprise Security';}
+  href: '/ai-powered-enterprise-security';}
       },
       {
-        name: 'Intelligent Data Governance'}
-  href: '/intelligent-data-governance'}
+        name: 'Intelligent Data Governance';}
+  href: '/intelligent-data-governance';}
       }
     ]
   },
   {
-    title: '🌌 Space & Metaverse Tech',
+    title: '🌌 Space & Metaverse Tech';,
   services: [
       {
-        name: 'Space Mining Automation'}
-  href: '/space-mining-automation-platform'}
+        name: 'Space Mining Automation';}
+  href: '/space-mining-automation-platform';}
       },
       {
-        name: 'Metaverse Digital Reality'}
-  href: '/metaverse-digital-reality-platform'}
+        name: 'Metaverse Digital Reality';}
+  href: '/metaverse-digital-reality-platform';}
       },
-        { name: 'Quantum Research Platform'}
-  href: '/quantum-research-platform'}
+        { name: 'Quantum Research Platform';}
+  href: '/quantum-research-platform';}
 },
 
-        { name: 'AI Research Assistant'}
-  href: '/ai-research-assistant'}
+        { name: 'AI Research Assistant';}
+  href: '/ai-research-assistant';}
 }
 
     ]
   },
   {
-    title: '🎯 2030 Innovative Micro SAAS',
+    title: '🎯 2030 Innovative Micro SAAS';,
   services: [
       {
-        name: 'AI Business Intelligence Suite 2030'}
-  href: '/ai-business-intelligence-suite-2030'}
+        name: 'AI Business Intelligence Suite 2030';}
+  href: '/ai-business-intelligence-suite-2030';}
       },
       {
         name: 'AI HR Management Suite 2030'
         href: '/ai-hr-management-suite-2030'
 
-        name: 'AI Customer Experience Platform 2030'}
-  href: '/ai-customer-experience-platform-2030'}
+        name: 'AI Customer Experience Platform 2030';}
+  href: '/ai-customer-experience-platform-2030';}
       },
       {
-        name: 'AI Marketing Automation Suite 2030'}
-  href: '/ai-marketing-automation-2030'}
+        name: 'AI Marketing Automation Suite 2030';}
+  href: '/ai-marketing-automation-2030';}
       },
       {
-        name: 'AI HR Management Suite 2030'}
-  href: '/ai-hr-management-suite-2030'}
+        name: 'AI HR Management Suite 2030';}
+  href: '/ai-hr-management-suite-2030';}
       }
     ]
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -199,7 +198,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {;
   Phone,;
   Mail,;
@@ -231,144 +229,144 @@ import {;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
 
 const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
+  website: 'https://ziontechgroup && ziontechgroup.com';,};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
 const serviceCategories = [;
   {;
-    title: '🚀 AI & Consciousness',;
+    title: '🚀 AI & Consciousness';,;
     services: [;
       {;
-        name: 'AI Consciousness Evolution',;
-        href: '/ai-consciousness-evolution-platform',;
+        name: 'AI Consciousness Evolution';,;
+        href: '/ai-consciousness-evolution-platform';,;
       },;
       {;
-        name: 'AI Emotional Intelligence',;
-        href: '/ai-emotion-intelligence-platform',;
+        name: 'AI Emotional Intelligence';,;
+        href: '/ai-emotion-intelligence-platform';,;
       },;
       {;
-        name: 'AI Creativity Orchestrator',;
-        href: '/ai-creativity-orchestrator',;
+        name: 'AI Creativity Orchestrator';,;
+        href: '/ai-creativity-orchestrator';,;
       },;
       {;
-        name: 'AI Autonomous Business Manager',;
-        href: '/ai-autonomous-business-manager',;
+        name: 'AI Autonomous Business Manager';,;
+        href: '/ai-autonomous-business-manager';,;
       },;
     ],;
   },;
-    title: '⚛️ Quantum & Emerging Tech',;
+    title: '⚛️ Quantum & Emerging Tech';,;
     services: [;
       {;
-        name: 'Quantum Internet Security',;
-        href: '/quantum-internet-security-gateway',;
+        name: 'Quantum Internet Security';,;
+        href: '/quantum-internet-security-gateway';,;
       },;
       {;
-        name: 'Quantum Learning Accelerator',;
-        href: '/quantum-learning-accelerator',;
+        name: 'Quantum Learning Accelerator';,;
+        href: '/quantum-learning-accelerator';,;
       },;
       {;
-        name: 'Quantum Financial Trading',;
-        href: '/quantum-financial-trading-platform',;
+        name: 'Quantum Financial Trading';,;
+        href: '/quantum-financial-trading-platform';,;
       },;
       {;
-        name: 'Quantum Cloud Infrastructure',;
-        href: '/quantum-cloud-infrastructure',;
+        name: 'Quantum Cloud Infrastructure';,;
+        href: '/quantum-cloud-infrastructure';,;
       },;
     ],;
   },;
   {;
-    title: '🧬 Biotech & DNA Computing',;
+    title: '🧬 Biotech & DNA Computing';,;
     services: [;
       {;
-        name: 'DNA Computing Platform',;
-        href: '/biotech-dna-computing-platform',;
+        name: 'DNA Computing Platform';,;
+        href: '/biotech-dna-computing-platform';,;
       },;
       {;
-        name: 'Personalized Nutrition',;
-        href: '/biotech-personalized-nutrition',;
+        name: 'Personalized Nutrition';,;
+        href: '/biotech-personalized-nutrition';,;
       },;
       {;
-        name: 'Predictive Health Analytics',;
-        href: '/ai-predictive-health-analytics',;
+        name: 'Predictive Health Analytics';,;
+        href: '/ai-predictive-health-analytics';,;
       },;
-      { name: 'Research Automation', href: '/advanced-research-automation' },;
+      { name: 'Research Automation';, href: '/advanced-research-automation' ;},;
     ],;
   },  {;
-    title: '🏙️ Enterprise IT Solutions',;
+    title: '🏙️ Enterprise IT Solutions';,;
     services: [;
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' },;
-      { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },;
-      { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },;
-      { name: 'Research Automation', href: '/advanced-research-automation' }
+      { name: 'Autonomous DevOps';, href: '/autonomous-devops-platform' ;},      { name: 'DNA Computing Platform';, href: '/biotech-dna-computing-platform' ;},;
+      { name: 'Personalized Nutrition';, href: '/biotech-personalized-nutrition' ;},;
+      { name: 'Predictive Health Analytics';, href: '/ai-predictive-health-analytics' ;},;
+      { name: 'Research Automation';, href: '/advanced-research-automation' ;}
     ];
   };
-    title: '🏙️ Enterprise IT Solutions',;
+    title: '🏙️ Enterprise IT Solutions';,;
     services: [;
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
+      { name: 'Autonomous DevOps';, href: '/autonomous-devops-platform' ;},;
       {;
-        name: 'Autonomous IT Operations',;
-        href: '/autonomous-it-operations-center',;
+        name: 'Autonomous IT Operations';,;
+        href: '/autonomous-it-operations-center';,;
       },;
       {;
-        name: 'AI Enterprise Security',;
-        href: '/ai-powered-enterprise-security',;
+        name: 'AI Enterprise Security';,;
+        href: '/ai-powered-enterprise-security';,;
       },;
       {;
-        name: 'Intelligent Data Governance',;
-        href: '/intelligent-data-governance',;
+        name: 'Intelligent Data Governance';,;
+        href: '/intelligent-data-governance';,;
       },;
     ],;
   },;
-    title: '🌌 Space & Metaverse Tech',;
+    title: '🌌 Space & Metaverse Tech';,;
     services: [;
       {;
-        name: 'Space Mining Automation',;
-        href: '/space-mining-automation-platform',;
+        name: 'Space Mining Automation';,;
+        href: '/space-mining-automation-platform';,;
       },;
       {;
-        name: 'Metaverse Digital Reality',;
-        href: '/metaverse-digital-reality-platform',;
+        name: 'Metaverse Digital Reality';,;
+        href: '/metaverse-digital-reality-platform';,;
       },;
-      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },;
-      { name: 'AI Research Assistant', href: '/ai-research-assistant' },;
+      { name: 'Quantum Research Platform';, href: '/quantum-research-platform' ;},;
+      { name: 'AI Research Assistant';, href: '/ai-research-assistant' ;},;
     ],;
   },;
   {;
-    title: '🎯 2030 Innovative Micro SAAS',;
+    title: '🎯 2030 Innovative Micro SAAS';,;
     services: [;
       {;
-        name: 'AI Business Intelligence Suite 2030',;
-        href: '/ai-business-intelligence-suite-2030',;
+        name: 'AI Business Intelligence Suite 2030';,;
+        href: '/ai-business-intelligence-suite-2030';,;
       },;
       {;
-        name: 'AI Customer Experience Platform 2030',;
-        href: '/ai-customer-experience-platform-2030',;
+        name: 'AI Customer Experience Platform 2030';,;
+        href: '/ai-customer-experience-platform-2030';,;
       },;
       {;
-        name: 'AI Marketing Automation Suite 2030',;
-        href: '/ai-marketing-automation-2030',;
+        name: 'AI Marketing Automation Suite 2030';,;
+        href: '/ai-marketing-automation-2030';,;
       },;
       {;
-        name: 'AI HR Management Suite 2030',;
-        href: '/ai-hr-management-suite-2030',;
+        name: 'AI HR Management Suite 2030';,;
+        href: '/ai-hr-management-suite-2030';,;
       },;
     ],;
-  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },;
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },;
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },;
-        name: 'AI Customer Experience Platform 2030',
-        href: '/ai-customer-experience-platform-2030',
+  },];      { name: 'AI Business Intelligence Suite 2030';, href: '/ai-business-intelligence-suite-2030' ;},;
+      { name: 'AI Customer Experience Platform 2030';, href: '/ai-customer-experience-platform-2030' ;},;
+      { name: 'AI Marketing Automation Suite 2030';, href: '/ai-marketing-automation-2030' ;},;
+        name: 'AI Customer Experience Platform 2030';,
+        href: '/ai-customer-experience-platform-2030';,
       },
       {
-        name: 'AI Marketing Automation Suite 2030',
-        href: '/ai-marketing-automation-2030',
+        name: 'AI Marketing Automation Suite 2030';,
+        href: '/ai-marketing-automation-2030';,
       },
       {
-        name: 'AI HR Management Suite 2030',
-        href: '/ai-hr-management-suite-2030',
+        name: 'AI HR Management Suite 2030';,
+        href: '/ai-hr-management-suite-2030';,
       },
     ],
   },
@@ -376,113 +374,113 @@ const serviceCategories = [;
 
 const quickLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-{ name: 'Contact', href: '/contact' },
+  { name: 'Home';, href: '/' ;},
+  { name: 'Services';, href: '/services' ;},
+  { name: 'Solutions';, href: '/solutions' ;},
+  { name: 'Pricing';, href: '/pricing' ;},
+  { name: 'Resources';, href: '/resources' ;},
+  { name: 'Case Studies';, href: '/case - studies' ;},
+  { name: 'Blog';, href: '/blog' ;},
+  { name: 'Case Studies';, href: '/case-studies' ;},
+  { name: 'Blog';, href: '/blog' ;},
+{ name: 'Contact';, href: '/contact' ;},
 ];
 
 const quickLinks = [
-    { name: 'Home'}
-  href: '/'}
+    { name: 'Home';}
+  href: '/';}
 },
 
-    { name: 'Services'}
-  href: '/services'}
+    { name: 'Services';}
+  href: '/services';}
 },
 
-    { name: 'Solutions'}
-  href: '/solutions'}
+    { name: 'Solutions';}
+  href: '/solutions';}
 },
 
-    { name: 'Pricing'}
-  href: '/pricing'}
+    { name: 'Pricing';}
+  href: '/pricing';}
 },
 
-    { name: 'Resources'}
-  href: '/resources'}
+    { name: 'Resources';}
+  href: '/resources';}
 },
 
-    { name: 'Case Studies'}
-  href: '/case-studies'}
+    { name: 'Case Studies';}
+  href: '/case-studies';}
 },
 
-    { name: 'Blog'}
-  href: '/blog'}
+    { name: 'Blog';}
+  href: '/blog';}
 },
 
-  { name: 'Contact'}
-  href: '/contact'}
+  { name: 'Contact';}
+  href: '/contact';}
 }
 
 ];
 
 const companyInfo = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Press', href: '/press' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' }
+  { name: 'About Us';, href: '/about' ;},
+  { name: 'Careers';, href: '/careers' ;},
+  { name: 'Press';, href: '/press' ;},
+  { name: 'Partners';, href: '/partners' ;},
+  { name: 'Support';, href: '/support' ;},
+  { name: 'Status';, href: '/status' ;}
 ];
-    { name: 'About Us'}
-  href: '/about'}
+    { name: 'About Us';}
+  href: '/about';}
 },
 
-    { name: 'Careers'}
-  href: '/careers'}
+    { name: 'Careers';}
+  href: '/careers';}
 },
 
-    { name: 'Press'}
-  href: '/press'}
+    { name: 'Press';}
+  href: '/press';}
 },
 
-    { name: 'Partners'}
-  href: '/partners'}
+    { name: 'Partners';}
+  href: '/partners';}
 },
 
-    { name: 'Support'}
-  href: '/support'}
+    { name: 'Support';}
+  href: '/support';}
 },
 
-  { name: 'Status'}
-  href: '/status'}
+  { name: 'Status';}
+  href: '/status';}
 }
 
-{ name: 'Status', href: '/status' },
+{ name: 'Status';, href: '/status' ;},
 ];
 
 const socialLinks = [
   {
-    name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup'}
-    icon: Linkedin}
+    name: 'LinkedIn';,
+  href: 'https://linkedin.com/company/ziontechgroup';}
+    icon: Linkedin;}
   },
-  { name: 'Twitter'}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
+  { name: 'Twitter';}
+  href: 'https://twitter.com/ziontechgroup';, icon: Twitter;}
 },
   {
-    name: 'Facebook',
-  href: 'https://facebook.com/ziontechgroup'}
-    icon: Facebook}
+    name: 'Facebook';,
+  href: 'https://facebook.com/ziontechgroup';}
+    icon: Facebook;}
   },
   {
-    name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup'}
-    icon: Instagram}
+    name: 'Instagram';,
+  href: 'https://instagram.com/ziontechgroup';}
+    icon: Instagram;}
   },
-  { name: 'YouTube'}
-  href: 'https://youtube.com/ziontechgroup', icon: Youtube}
+  { name: 'YouTube';}
+  href: 'https://youtube.com/ziontechgroup';, icon: Youtube;}
 },
-  { name: 'GitHub'}
-  href: 'https://github.com/ziontechgroup', icon: Github}
+  { name: 'GitHub';}
+  href: 'https://github.com/ziontechgroup';, icon: Github;}
 }
 ];
 
@@ -542,7 +540,7 @@ export default function UltraFuturisticFooter2030() {
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />;
                   <Phone className='w-4 h-4 text-purple-400' />;
                   <a;
-                    href={`tel: ${contactInfo.mobile}`}
+                    href={`tel: ${contactInfo.mobile;}`}
                     className='hover:text-purple-400 transition-colors' />
 
                     {contactInfo.mobile}
@@ -552,7 +550,7 @@ export default function UltraFuturisticFooter2030() {
                 <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Mail className='w-4 h-4 text-purple-400' />
                   <a;
-href={`mailto:${contactInfo.email}`}
+href={`mailto: ${contactInfo.email;}`}
                     className='hover:text-purple-400 transition-colors'
                    />
                     {contactInfo.email}
@@ -571,7 +569,7 @@ href={contactInfo.websit}
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                    />
-                    {contactInfo.website.replace('https://', '')}
+                    {contactInfo.website.replace('https: //';, '')}
 
                   </a>
                 </div>

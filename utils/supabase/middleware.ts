@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {;
   }
   return NextResponse.next();
 }
-import type { NextRequest } from 'next / server',
+import type { NextRequest } from 'next / server',;
 export /**
  * middleware - Function description
  */
@@ -50,8 +50,8 @@ export function middleware(request: NextRequest) {;
   matcher: ['/dashboard / dashboard/']}
 
 
-import { NextResponse } from 'next / server',
-import type { NextRequest } from 'next / server',
+import { NextResponse } from 'next / server',;
+import type { NextRequest } from 'next / server',;
 '
 import { NextResponse } from 'next / server',''
 import type { NextRequest } from 'next / server','

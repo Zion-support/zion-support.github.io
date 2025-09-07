@@ -58,7 +58,6 @@ const CardTitle = React.forwardRef<
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
       className,
-import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
 interface HTMLElement {
@@ -67,7 +66,7 @@ interface HTMLElement  {className: string;
   id: string;
   innerHTML: string;}
   textContent: string | null;}
-  style: { [key: string]: string }
+  style: { [key: string]: string ;}
 }
 
 interface HTMLDivElement extends HTMLElement  {tagName: 'DIV';}
@@ -191,14 +190,14 @@ const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring
 const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;"
   />))CardFooter.display_name = \"CardFooter\";
 
-interface CardProps  {children: React.ReactNode,class_name?: string,style?: React.CSSProperties,on_click?: () => void,hover?: boolean;}
+interface CardProps  {children: React.ReactNode;,class_name?: string,style?: React.CSSProperties,on_click?: () => void,hover?: boolean;}
 }
   return (className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none" />);}
     </div>);
 
 },
@@ -208,16 +207,16 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none" />);}
     </div>);
 CardContent.displayName = "CardContent";
       {/* Subtle background pattern */}"
-        <div className = \"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />)}
+        <div className = \"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />);}
     </div>
 },export default Card,export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent;}
 }
 "
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />;
 }"
     </div>)CardContent.displayName = \"CardContent\";
 
@@ -245,7 +244,7 @@ export {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
 
-const Card: React.FC<CardProps /> = ({export {Card,CardHeader,CardFooter,CardTitle,CardDescription,CardContent;}
+const Card: React.FC<CardProps /> = ({export {Card;,CardHeader,CardFooter,CardTitle,CardDescription,CardContent;}
 }
     </div>
   );

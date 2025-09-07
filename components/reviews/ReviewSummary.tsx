@@ -5,7 +5,7 @@ import React from 'react';
 import type { ReviewsSummary } from '../../types/reviews';
 </div> </div> </div>) }
 ;
-const ReviewSummary: React.FC < Props> = ({ summary }) => {
+const ReviewSummary: React.FC < Props> = ({ summary ;}) => {
   return (
     <div className='enhanced - card flex items - center justify - between'>import React from 'react';
 import type { ReviewsSummary } from '../../types / reviews';
@@ -36,9 +36,6 @@ import {Star} from 'lucide-react';
         </div>
         <div className="text-sm text-gray-600 mt-1">
           <span className="mr-3">{summary.totalReviews} reviews</span>
-import React from 'react';
-import type { ReviewsSummary } from '../../types/reviews';
-import StarRating from './StarRating';
 type Props = any;
 export default ReviewSummary;
       <div>
@@ -89,7 +86,7 @@ export default ReviewSummary;
 
 export default ReviewSummary;
   summary: ReviewsSummary;
-const ReviewSummary: React.FC < Props> = ({ summary }) => {
+const ReviewSummary: React.FC < Props> = ({ summary ;}) => {
   return (
     <div className='enhanced - card flex items - center justify - between'>;
       <div>;

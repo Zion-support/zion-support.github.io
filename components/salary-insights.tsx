@@ -19,23 +19,22 @@ type InsightResponse = {;
   maxHourlyUsd: number;
   confidence: number;
 
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = {
-  recommendedHourlyUsd: number,
-  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
+  recommendedHourlyUsd: number;,
+  gpt_recommendation?: string;}  recommendedHourlyUsd: number;,
 
-  recommendedMonthlyUsd: number,
-  medianHourlyUsd: number,
-  minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number,
+  recommendedMonthlyUsd: number;,
+  medianHourlyUsd: number;,
+  minHourlyUsd: number;,
+  maxHourlyUsd: number;,
+  confidence: number;,
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
-  trendMonthly: { label: string; value: number }[];
-  regionalComparison: { region: string; medianHourlyUsd: number }[];
+  trendMonthly: { label: string; value: number ;}[];
+  regionalComparison: { region: string; medianHourlyUsd: number ;}[];
   tags: string[];
   gptRecommendation?: string;
 };
@@ -74,7 +73,7 @@ setIsLoggedIn(!!user.data.user);
     try {
       const res = await fetch('/api/salary-insights', {
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' ;}
         body: JSON.stringify({
 roleTitle,
           skills: skills
@@ -130,7 +129,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   function saveInsight() {
 const payload = {
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString();,
       input: {
         roleTitle,
         skills,
@@ -139,7 +138,7 @@ const payload = {
         remote,
         employmentType,
       },
-      output: data,
+      output: data;,
     };
 origin/cursor/automate-test-improve-and-merge-code-2533
     (async () => {
@@ -169,8 +168,8 @@ function fetch_insights() {
     set_error (null);
     try {
       const res = await fetch ('/api / salary - insights', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
+        method: 'POST';,
+        headers: { 'Content - Type': 'application / json' ;},
         body: JSON.stringify ({
           role_title,
           skills: skills;
@@ -212,7 +211,7 @@ function fetch_insights() {
  */
 function save_insight() {
     const payload = {
-      created_at: new Date ().toISOString (),
+      created_at: new Date ().toISOString ();,
       input: {
         role_title,
         skills,
@@ -221,8 +220,8 @@ function save_insight() {
         remote,
         employment_type,
       },
-      output: data,
-    }    (async () => {    const payload = { created_at: new Date ().toISOString (), input: { role_title, skills, region, experience_level, remote, employment_type }, output: data },
+      output: data;,
+    }    (async () => {    const payload = { created_at: new Date ().toISOString ();, input: { role_title;, skills, region, experience_level, remote, employment_type }, output: data ;},
     (async () => {
       try {
         const { supabase } = await import ('../utils / supabase / client');
@@ -233,9 +232,9 @@ if ( {) {
 }
           // Attempt to save to Supabase if table exists;
           await supabase.from ('salary_insights').insert ({
-            user_id: user.data.user.id,
+            user_id: user.data.user.id;,
             payload,
-            user_id: user.data.user.id,
+            user_id: user.data.user.id;,
 payload,
 origin/cursor/automate-test-improve-and-merge-code-2533
           });
@@ -265,7 +264,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
+    if (!data) return [] as { label: string; value: number ;}[];    const min = data.minHourlyUsd;      } catch {}
         alert('Insight saved locally')
       } catch {}
       } catch {}
@@ -274,7 +273,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     })()
   }
   const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];
+    if (!data) return [] as { label: string; value: number ;}[];
 origin/cursor/automate-test-improve-and-merge-code-2533
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
@@ -294,12 +293,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if (return [] as { label: string) {
   $2
-} value: number }[];    const min = data.minHourlyUsd;      } catch {}
+} value: number ;}[];    const min = data.minHourlyUsd;      } catch {}
     })();
   }
   const donut_data = useMemo (() => {
     // Check condition
-if (return [] as { label: string, value: number }[], ) {
+if (return [] as { label: string;, value: number ;}[], ) {
   $2
 }
     const min = data.minHourlyUsd;
@@ -308,13 +307,13 @@ if (return [] as { label: string, value: number }[], ) {
     const lower = Math.max (0, median - min);
     const upper = Math.max (0, max - median);
     return [;
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 },
+      { label: 'Below Median';, value: lower || 1 ;},
+      { label: 'Median';, value: median || 1 ;},
+      { label: 'Above Median';, value: upper || 1 ;},
     ];  }, [data]);
 ;
   return (
-    <div>      { label: 'Above Median', value: upper || 1 }];
+    <div>      { label: 'Above Median';, value: upper || 1 ;}];
   }, [data]);
 ;
   return (
@@ -325,18 +324,18 @@ if (return [] as { label: string, value: number }[], ) {
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h2 className="font-medium mb-3">Filters</h2>
             <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>
-            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
+            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark: border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g.;, Senior AI Engineer" />
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>
-            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
+            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark: border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City;, Country" />
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-{ label: 'Above Median', value: upper || 1 },
+      { label: 'Below Median';, value: lower || 1 ;},
+      { label: 'Median';, value: median || 1 ;},
+{ label: 'Above Median';, value: upper || 1 ;},
     ];
   }, [data]);
   return (
@@ -555,8 +554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {data ? (;
                 <BarChart
                   data={data && data.regionalComparison.map(r => ({;
-                    label: r && r.region,;
-                    value: r && r.medianHourlyUsd,;
+                    label: r && r.region;,;
+                    value: r && r.medianHourlyUsd;,;
                   }))}
                 />;
               ) : (;
@@ -605,11 +604,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               ) : (;
-                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />              )}                <div className="flex flex-col items-center gap-3">;
-                  <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label, value: d && d.value })) as any} />;
+                <div className='h-40 animate-pulse bg-gray-100 dark: bg-gray-900 rounded' />              );}                <div className="flex flex-col items-center gap-3">;
+                  <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label;, value: d && d.value ;})) as any} />;
                   <div className="flex gap-2 flex-wrap justify-center text-xs">;
                     {donutData && donutData.map((d) => (;
-                      <span key={d && d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5">{d && d.label}</span>;
+                      <span key={d && d.label} className="rounded-full border border-gray-300 dark: border-gray-700 px-2 py-0 && 0.5">{d && d.label;}</span>;
                   </div>;
                 </div>;
               ) : (;
@@ -618,10 +617,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
                 <div className="flex flex-col items-center gap-3">
-                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label;, value: d.value ;})) as any} />
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
                     {donutData.map((d) => (
-                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+                      <span key={d.label} className="rounded-full border border-gray-300 dark: border-gray-700 px-2 py-0.5">{d.label;}</span>
                         key={d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5'
                       >
@@ -655,7 +654,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               )}
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
+              <p className="text-sm text-gray-700 dark: text-gray-300 whitespace-pre-wrap">{data.gptRecommendation;}</p>
             </div>
           )}
           {data && (
@@ -667,7 +666,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='font-medium mb-3'>Signals</h3>
               <div className='flex gap-2 flex-wrap'>
                 <span className='rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs'>
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr
+                  Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr
                 </span>
                 {data.tags.map(t => (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -678,17 +677,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
-                <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
+                <span className="rounded-full bg-gray-100 dark: bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd;} - ${data && data.maxHourlyUsd} / hr</span>;
                 {data && data.tags.map((t) => (;
-                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
+                  <span key={t} className="rounded-full bg-indigo-50 dark: bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t;}</span>;
               </div>;
             </div>;
           )}
   );
 }
                       donut_data.map ((d, i) => ({
-                        label: d.label,
-                        value: d.value,
+                        label: d.label;,
+                        value: d.value;,
                       })) as any;
                     }
                   />;
@@ -702,14 +701,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>                    ))}
                   </div>;
                 </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items-center gap-3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
+                <div className='h - 40 animate - pulse bg - gray - 100 dark: bg - gray - 900 rounded' />              );}                <div className="flex flex - col items-center gap-3">;
+                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label;, value: d.value ;})) as any} />;
                   <div className="flex gap - 2 flex - wrap justify-center text-xs">;
                     {donut_data.map ((d) => (
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px-2 py-0.5">{d.label}</span>;
+                      <span key={d.label} className="rounded - full border border - gray - 300 dark: border - gray - 700 px-2 py-0.5">{d.label;}</span>;
                   </div>;
                 </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
+                <div className='h - 40 animate - pulse bg - gray - 100 dark: bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />);}
             </div>;
           </div>;
           {data?.gpt_recommendation && (
@@ -720,7 +719,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>            </div>)}
           {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
               <h3 className="font-medium mb-2">GPT Recommendation</h3>;
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation}</p>;
+              <p className="text - sm text - gray - 700 dark: text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation;}</p>;
             </div>)}
           {data && (
 
@@ -731,7 +730,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='font - medium mb - 3'>Signals</h3>;
               <div className='flex gap - 2 flex - wrap'>;
                 <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
+                  Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr;
                 </span>;
                 {data.tags.map (t => (
                   <span;
@@ -742,9 +741,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
+                <span className="rounded - full bg - gray - 100 dark: bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd;} - ${data.maxHourlyUsd} / hr</span>;
                 {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t}</span>;
+                  <span key={t} className="rounded - full bg - indigo - 50 dark: bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t;}</span>;
               </div>;
             </div>)}
         </div>;

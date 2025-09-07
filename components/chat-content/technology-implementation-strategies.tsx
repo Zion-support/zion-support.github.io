@@ -76,7 +76,6 @@ pr-12243
   )
 }
 
-import React from 'react';
 
 export default function TechnologyImplementationStrategiesPage() {
   return (

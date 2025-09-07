@@ -1,16 +1,16 @@
-import Link from "next/link",;""
-import { useRouter } from "next/router",;""
-import { useState } from "react",;""
-import { cn } from "@/lib/utils",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { useTranslation } from "react-i18next",;""
-import { useFavorites } from "@/hooks/useFavorites",;""
-import { useCart } from "@/context/CartContext",;""
+import Link from "next/link";""
+import { useRouter } from "next/router";""
+import { useState } from "react";""
+import { cn } from "@/lib/utils";""
+import { useAuth } from "@/hooks/useAuth";""
+import { useTranslation } from "react-i18next";""
+import { useFavorites } from "@/hooks/useFavorites";""
+import { useCart } from "@/context/CartContext";""
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
-import { LanguageSelector } from '@/components/header/LanguageSelector',;
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
-import { LoginModal } from '@/components/auth/LoginModal',;
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
 ;
 interface MainNavigationProps {;
   isAdmin?:boolean,;
@@ -36,40 +36,40 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
   },;
   const baseLinks = [;
     {;
-      key:'home',;
-      href:'/',;
+      key: 'home';,;
+      href: '/';,;
       matches:(path:string) => path === '/';
-      key:'marketplace',;
-      href:'/marketplace',;
+      key: 'marketplace';,;
+      href: '/marketplace';,;
       matches:(path:string) => path.startsWith('/marketplace');
-      key:'categories',;
-      href:'/categories',;
+      key: 'categories';,;
+      href: '/categories';,;
       matches:(path:string) => path.startsWith('/categories');
-      key:'talent',;
-      href:'/talent',;
+      key: 'talent';,;
+      href: '/talent';,;
       matches:(path:string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-      key:'equipment',;
-      href:'/equipment',;
+      key: 'equipment';,;
+      href: '/equipment';,;
       matches:(path:string) => path.startsWith('/equipment');
-      key:'community',;
-      href:'/community',;
+      key: 'community';,;
+      href: '/community';,;
       matches:(path:string) => path.startsWith('/community') || path.startsWith('/forum');
     }]
   ],;
-  const links = baseLinks.map(link => ({ ...link, name:t(`nav.${link.key}`) })),;
+  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key;}`) })),;
   // Add authenticated-only links;
   if (isAuthenticated) {;
     links.push({;
-      key:'dashboard',;')
-      name:t('nav.dashboard'),;
-      href:'/dashboard',;
+      key: 'dashboard';,;')
+      name: t('nav.dashboard');,;
+      href: '/dashboard';,;
       matches:(path:string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
     }),;
   // Add admin-only links;
   if (isAdmin) {;
-      key:'analytics',;')
-      name:t('nav.analytics'),;
-      href:'/analytics',;
+      key: 'analytics';,;')
+      name: t('nav.analytics');,;
+      href: '/analytics';,;
       matches:(path:string) => path.startsWith('/analytics');
   return (;
     <>;
@@ -90,11 +90,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
           className={cn(;"
             "navbar-collapse",;""
             { "open":isMobileMenuOpen },;""
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout;""
+            "w-full md: flex md:w-auto";, // Handles visibility and desktop layout;""
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile;")
           )}
 </div>"
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}"
+          <ul className="navbar-nav flex flex-col md: flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */;}"
 </ul>"
               <li key={link.name} className="nav-item">;"
 </li>
@@ -132,7 +132,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(;
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;')
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary';,;')
                       router.pathname.startsWith('/cart');
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         :'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
@@ -199,27 +199,27 @@ return ;
 const baseLinks = [ {';';
   key: 'home';';';
 href: '/';';';
-matches: (path: string) => path === '/' 
+matches: (path: string) => path === '/' ;
 };';
 {';';
   key: 'marketplace';';';
 href: '/marketplace';';';
-matches: (path: string) => path.startsWith ('/marketplace') 
+matches: (path: string) => path.startsWith ('/marketplace') ;
 };';
 {';';
   key: 'categories';';';
 href: '/categories';';';
-matches: (path: string) => path.startsWith ('/categories') 
+matches: (path: string) => path.startsWith ('/categories') ;
 };';
 {';';
   key: 'talent';';';
 href: '/talent';';';
-matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') 
+matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') ;
 };';
 {';';
   key: 'equipment';';';
 href: '/equipment';';';
-matches: (path: string) => path.startsWith ('/equipment') 
+matches: (path: string) => path.startsWith ('/equipment') ;
 };';
 {';';
   key: 'community';';';

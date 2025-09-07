@@ -13,7 +13,7 @@ import {
   TableBody;
   TableCell;
   TableHead;
-  TableHeader;import React from "react",
+  TableHeader;import React from "react",;
 import {
 
   TableHeader;
@@ -36,8 +36,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,  TableRow} from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
 import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
   // Mock invoice data
 

@@ -1,26 +1,26 @@
 
-import React, { useState } from "react",;""
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;""
-import { CodeBlock } from "@/components/developers/CodeBlock",;""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import React, { useState } from "react";""
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";""
+import { CodeBlock } from "@/components/developers/CodeBlock";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 ;
 export function ApiReference() {;"
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;"
   // Sample endpoint data;
   const endpoints = [;
     {;
-      id:"get-jobs",;
-      method:"GET",;
-      path:"/api/jobs",,
-  description:"Retrieve a list of job postings with optional filtering",;
+      id: "get-jobs";,;
+      method: "GET";,;
+      path: "/api/jobs";,,
+  description: "Retrieve a list of job postings with optional filtering";,;
       parameters:[;
-        { name:"status", type:"string", description:"Filter by job status (open, closed, draft)" },;
-        { name:"category", type:"string", description:"Filter by job category" },;
-        { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;
-        { name:"offset", type:"integer", description:"Pagination offset (default:0)" }],;
+        { name: "status";, type: "string";, description: "Filter by job status (open;, closed, draft)" },;
+        { name: "category";, type: "string";, description: "Filter by job category" ;},;
+        { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;
+        { name: "offset";, type: "integer";, description: "Pagination offset (default:0)" ;}],;
       responses:{;
         "200":{,
-  description:"A list of jobs",;
+  description: "A list of jobs";,;
           example:`{;
   "jobs":[;
     {;
@@ -44,31 +44,31 @@ export function ApiReference() {;"
 }`;
         },;
         "401":{,
-  description:"Unauthorized",;
+  description: "Unauthorized";,;
           example:`{;
   "error":"invalid_token",;
   "message":"The provided API key is invalid or expired";
 }`;
         },;
         "429":{,
-  description:"Rate limit exceeded",;
+  description: "Rate limit exceeded";,;
           example:`{;
   "error":"rate_limit_exceeded",;
   "message":"Rate limit exceeded. Please try again in 60 seconds",;
   "retry_after":60;
     {;"
-      id:"get-jobs",;""
-      method:"GET",;""
-      path:"/api/jobs",;""
-      description:"Retrieve a list of job postings with optional filtering",;"
+      id: "get-jobs";,;""
+      method: "GET";,;""
+      path: "/api/jobs";,;""
+      description: "Retrieve a list of job postings with optional filtering";,;"
       parameters:[;"
-        { name:"status", type:"string", description:"Filter by job status (open, closed, draft)" },;""
-        { name:"category", type:"string", description:"Filter by job category" },;""
-        { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;"]"
-        { name:"offset", type:"integer", description:"Pagination offset (default:0)" }],;"
+        { name: "status";, type: "string";, description: "Filter by job status (open;, closed, draft)" },;""
+        { name: "category";, type: "string";, description: "Filter by job category" ;},;""
+        { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;"]"
+        { name: "offset";, type: "integer";, description: "Pagination offset (default:0)" ;}],;"
       responses:{;"
         "200":{;""
-          description:"A list of jobs",;"
+          description: "A list of jobs";,;"
           example:`{;"
   "jobs":[;"
       "id":"job-123",;""
@@ -91,11 +91,11 @@ export function ApiReference() {;"
 pr-12325
 }`;
         "401":{;""
-          description:"Unauthorized",;"`;
+          description: "Unauthorized";,;"`;
   "error":"invalid_token",;""
   "message":"The provided API key is invalid or expired";"`;
         "429":{;""
-          description:"Rate limit exceeded",;"`;
+          description: "Rate limit exceeded";,;"`;
   "error":"rate_limit_exceeded",;""
   "message":"Rate limit exceeded. Please try again in 60 seconds",;""
   "retry_after":60;"`;
@@ -106,20 +106,20 @@ pr-12325
   -H "Authorization:Bearer YOUR_API_KEY"`;
     },;
     {;
-      id:"post-jobs",;
-      method:"POST",;
-      path:"/api/jobs",,
-  description:"Create a new job posting",;
+      id: "post-jobs";,;
+      method: "POST";,;
+      path: "/api/jobs";,,
+  description: "Create a new job posting";,;
       parameters:[;
-        { name:"title", type:"string", required:true, description:"Job title" },;
-        { name:"description", type:"string", required:true, description:"Detailed job description" },;
-        { name:"category", type:"string", required:true, description:"Job category" },;
-        { name:"budget", type:"object", required:true, description:"Budget information with min, max, and currency" },;
-        { name:"skills", type:"array", description:"Array of required skills" },;
-        { name:"deadline", type:"string", description:"Application deadline (ISO date format)" }],;
+        { name: "title";, type: "string";, required: true;, description: "Job title" ;},;
+        { name: "description";, type: "string";, required: true;, description: "Detailed job description" ;},;
+        { name: "category";, type: "string";, required: true;, description: "Job category" ;},;
+        { name: "budget";, type: "object";, required: true;, description: "Budget information with min;, max, and currency" },;
+        { name: "skills";, type: "array";, description: "Array of required skills" ;},;
+        { name: "deadline";, type: "string";, description: "Application deadline (ISO date format)" ;}],;
       responses:{;
         "201":{,
-  description:"Job created successfully",;
+  description: "Job created successfully";,;
           example:`{;
   "id":"job-456",;
   "title":"UX Designer",;
@@ -135,7 +135,7 @@ pr-12325
 }`;
         },;
         "400":{,
-  description:"Bad request",;
+  description: "Bad request";,;
           example:`{;
   "error":"validation_error",;
   "message":"Invalid input",;
@@ -156,17 +156,17 @@ pr-12325
       requestExample: `curl -X GET \\;,
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\;"`;
   -H "Authorization:Bearer YOUR_API_KEY"`;"
-      id:"post-jobs",;""
-      method:"POST",;""
-      description:"Create a new job posting",;"
-        { name:"title", type:"string", required:true, description:"Job title" },;""
-        { name:"description", type:"string", required:true, description:"Detailed job description" },;""
-        { name:"category", type:"string", required:true, description:"Job category" },;""
-        { name:"budget", type:"object", required:true, description:"Budget information with min, max, and currency" },;""
-        { name:"skills", type:"array", description:"Array of required skills" },;"]"
-        { name:"deadline", type:"string", description:"Application deadline (ISO date format)" }],;"
+      id: "post-jobs";,;""
+      method: "POST";,;""
+      description: "Create a new job posting";,;"
+        { name: "title";, type: "string";, required: true;, description: "Job title" ;},;""
+        { name: "description";, type: "string";, required: true;, description: "Detailed job description" ;},;""
+        { name: "category";, type: "string";, required: true;, description: "Job category" ;},;""
+        { name: "budget";, type: "object";, required: true;, description: "Budget information with min;, max, and currency" },;""
+        { name: "skills";, type: "array";, description: "Array of required skills" ;},;"]"
+        { name: "deadline";, type: "string";, description: "Application deadline (ISO date format)" ;}],;"
         "201":{;""
-          description:"Job created successfully",;"`;
+          description: "Job created successfully";,;"`;
   "id":"job-456",;""
   "title":"UX Designer",;""
   "description":"Looking for a UX designer with 3+ years experience...",;""
@@ -175,7 +175,7 @@ pr-12325
     "max":5000,;""
   "created_at":"2023-05-15T10:12:00Z";"`;
         "400":{;""
-          description:"Bad request",;"`;
+          description: "Bad request";,;"`;
   "error":"validation_error",;""
   "message":"Invalid input",;""
   "details":[;"
@@ -193,21 +193,21 @@ pr-12325
     "deadline":"2023-07-01T00:00:00Z";""`;
   }'`;
     {;
-      id:"get-talent",;
-      method:"GET",;
-      path:"/api/talent",,
-  description:"Search for talent profiles with optional filtering",;
+      id: "get-talent";,;
+      method: "GET";,;
+      path: "/api/talent";,,
+  description: "Search for talent profiles with optional filtering";,;
       parameters:[;
-        { name:"skills", type:"string", description:"Comma-separated list of skills" },;
-        { name:"category", type:"string", description:"Filter by talent category" },;
-        { name:"rate_min", type:"integer", description:"Minimum hourly rate" },;
-        { name:"rate_max", type:"integer", description:"Maximum hourly rate" },;
-        { name:"availability", type:"string", description:"Availability type (full-time, part-time)" },;
-        { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;
-        { name:"offset", type:"integer", description:"Pagination offset (default:0)" }],;
+        { name: "skills";, type: "string";, description: "Comma-separated list of skills" ;},;
+        { name: "category";, type: "string";, description: "Filter by talent category" ;},;
+        { name: "rate_min";, type: "integer";, description: "Minimum hourly rate" ;},;
+        { name: "rate_max";, type: "integer";, description: "Maximum hourly rate" ;},;
+        { name: "availability";, type: "string";, description: "Availability type (full-time;, part-time)" },;
+        { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;
+        { name: "offset";, type: "integer";, description: "Pagination offset (default:0)" ;}],;
       responses:{;
         "200":{,
-  description:"A list of talent profiles",;
+  description: "A list of talent profiles";,;
           example:`{;
   "talent":[;
     {;
@@ -221,15 +221,15 @@ pr-12325
       "location":"Remote, US",;
       "bio":"Experienced full stack developer with a focus on React and Node.js...";
     },;
-      id:"get-talent",;""
-      path:"/api/talent",;""
-      description:"Search for talent profiles with optional filtering",;"
-        { name:"skills", type:"string", description:"Comma-separated list of skills" },;""
-        { name:"category", type:"string", description:"Filter by talent category" },;""
-        { name:"rate_min", type:"integer", description:"Minimum hourly rate" },;""
-        { name:"rate_max", type:"integer", description:"Maximum hourly rate" },;""
-        { name:"availability", type:"string", description:"Availability type (full-time, part-time)" },;""
-          description:"A list of talent profiles",;"`;
+      id: "get-talent";,;""
+      path: "/api/talent";,;""
+      description: "Search for talent profiles with optional filtering";,;"
+        { name: "skills";, type: "string";, description: "Comma-separated list of skills" ;},;""
+        { name: "category";, type: "string";, description: "Filter by talent category" ;},;""
+        { name: "rate_min";, type: "integer";, description: "Minimum hourly rate" ;},;""
+        { name: "rate_max";, type: "integer";, description: "Maximum hourly rate" ;},;""
+        { name: "availability";, type: "string";, description: "Availability type (full-time;, part-time)" },;""
+          description: "A list of talent profiles";,;"`;
   "talent":[;"
       "id":"talent-123",;""
       "full_name":"Jane Smith",;""
@@ -243,7 +243,7 @@ pr-12325
 pr-12325
     // More talent profiles...;
   "count":38,;""
-  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\;"`;
+  https: //api.zionai.com/v1/api/talent?skills=React;,Node.js&limit=10 \\;"`;
   ],;
   // Find the active endpoint data;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),;
@@ -374,7 +374,7 @@ export default ApiReference,
 };
 }
 };
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
+requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` ;
 };
 ] 
 }` 
@@ -387,7 +387,7 @@ requestExample: `curl -X POST \\ https://api.zionai.com/v1/api/jobs \\ //More ta
 }` 
 }
 };
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
+requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React;, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` ;
 }];
                           <span className="text-white">{response.description}</span>;"
                           code={response.example} ;"

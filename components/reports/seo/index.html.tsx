@@ -15,7 +15,7 @@ export default function Placeholder() {
           Reports • Seo • Index.html
         </h1>
         <p className='text-gray-600 mb-6'>
-          Auto-generated placeholder for missing route:{' '}
+          Auto-generated placeholder for missing route: {' ';}
           <code>/reports/seo/index.html</code>.
         </p>
         <Link href='/'>
@@ -43,8 +43,8 @@ export default function Placeholder() {
     </main>
   )
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 ;
@@ -91,7 +91,7 @@ export default function Placeholder() {export default function Placeholder() {re
           Reports • Seo • Index.html;
         </h1>;
         <p className='text-gray-600 mb-6' />;}
-          Auto-generated placeholder for missing route: {' }
+          Auto-generated placeholder for missing route: {' ;}
 }
           <code />/reports/seo/index.html</code>.;
         </p>;
@@ -113,7 +113,7 @@ export default function Placeholder() {export default function Placeholder() {re
     </main>;}
   )}}
     </main>;"
-  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })},"
+  )} catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})},"
 }<main className=\"min-h-screen p-8\" />;
 
 export default function Placeholder() {
@@ -128,7 +128,7 @@ export default function Placeholder() {
           Reports • Seo • Index.html;
         </h1>
         <p className='text-gray-600 mb-6' />}
-          Auto-generated placeholder for missing route: {' }
+          Auto-generated placeholder for missing route: {' ;}
 }
           <code />/reports/seo/index.html</code>.
         </p>
@@ -159,8 +159,8 @@ export default function Placeholder() {
     </main>
   )
   } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 });
   }
 }
@@ -179,8 +179,6 @@ export default function Placeholder() {
       </div>;
     </main>;
   )}}
-import Head from 'next / head';
-import Link from 'next / link';
 
 export default /**;
  * Placeholder - Function description;
@@ -205,7 +203,7 @@ function Placeholder() {
           Reports • Seo • Index.html;
         </h1>;
         <p className='text - gray - 600 mb - 6' />;}
-          Auto - generated placeholder for missing route: {' }
+          Auto - generated placeholder for missing route: {' ;}
 }
           <code />/reports / seo / index.html</code>.;
         </p>;
@@ -267,7 +265,7 @@ ursor/fix-website-loading-errors-and-merge-6662;}
     </main>;
   )}}
     </main>;"
-  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+  )} catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }</main>;
   )
     </main>);
@@ -336,8 +334,8 @@ export default function Placeholder() {
     </main>
   )
   } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 });
   }
 }

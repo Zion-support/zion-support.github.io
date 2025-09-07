@@ -1,27 +1,27 @@
 
-import { useState } from "react",;""
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { useToast } from "@/hooks/use-toast",;""
-import { useRouter } from 'next/router',;
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { GradientHeading } from "@/components/GradientHeading",;""
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",;""
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",;""
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",;""
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",;""
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",;""
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",;""
-import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal",;""
-import { QuoteFormData } from "@/types/quotes",;""
+import { useState } from "react";""
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useToast } from "@/hooks/use-toast";""
+import { useRouter } from 'next/router';
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent } from "@/components/ui/card";""
+import { GradientHeading } from "@/components/GradientHeading";""
+import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";""
+import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";""
+import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";""
+import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";""
+import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";""
+import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";""
+import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";""
+import { QuoteFormData } from "@/types/quotes";""
 import { Sparkles, Loader2 } from 'lucide-react';
-import { z } from "zod",;"
+import { z } from "zod";"
 ;"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",;"
 ;
 const serviceStepSchema = z.object({;)
-  serviceType:z.string().min(1),;
-  specificItem:z.object({ id:z.string() })}),;
+  serviceType: z.string().min(1);,;
+  specificItem: z.object({ id:z.string() ;})}),;
 export function QuoteRequestForm() {;
   const router = useRouter(),;
   const { toast } = useToast(),;"
@@ -40,13 +40,13 @@ export function QuoteRequestForm() {;
     switch (currentStep) {;
       case "service":{;
         const result = serviceStepSchema.safeParse({;
-          serviceType:formData.serviceType,;
-          specificItem:formData.specificItem}),;
+          serviceType: formData.serviceType;,;
+          specificItem: formData.specificItem;}),;
         if (!result.success) {;
           toast({;
-            title:"Service Required",,
-  description:"Please select a service before continuing.",;
-            variant:"destructive"}),;
+            title: "Service Required";,,
+  description: "Please select a service before continuing.";,;
+            variant: "destructive";}),;
           return,;
         }
         setCurrentStep("details"),;
@@ -88,22 +88,22 @@ export function QuoteRequestForm() {;
     ;
     try {;
       // In a real application, you would send the data to your backend;
-      logDebug("Submitting form data:", { data:formData }),;
+      logDebug("Submitting form data: ";, { data: formData ;}),;
       ;
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1500)),;
       ;
       toast({;
-        title:"Quote Request Submitted",,
-  description:"We've received your request and will get back to you soon."}),;
+        title: "Quote Request Submitted";,,
+  description: "We've received your request and will get back to you soon.";}),;
       ;
       // Redirect to confirmation page or homepage;
       router.push("/"),;
     } catch (error) {;
       toast({;
-        title:"Submission Failed",,
-  description:"There was an error submitting your request. Please try again.",;
-        variant:"destructive"}),;
+        title: "Submission Failed";,,
+  description: "There was an error submitting your request. Please try again.";,;
+        variant: "destructive";}),;
     } finally {;
       setIsSubmitting(false),;
     }
@@ -113,27 +113,27 @@ export function QuoteRequestForm() {;
     setAutoFillLoading(true),;
     try {;
       const res = await fetch("/api/openai/match", {;
-        method:"POST",;
-        headers:{ "Content-Type":"application/json" },;
-        body:JSON.stringify({ projectDescription:description })}),;
+        method: "POST";,;
+        headers: { "Content-Type":"application/json" ;},;
+        body: JSON.stringify({ projectDescription:description ;})}),;
       if (!res.ok) throw new Error("Request failed"),;
       const { category, itemId, timeline, budget } = await res.json(),;
       updateFormData({;
-        projectDescription:description,;
-        serviceType:category,;
-        serviceCategory:category,;
+        projectDescription: description;,;
+        serviceType: category;,;
+        serviceCategory: category;,;
         specificItem:itemId;
-          ? { id:itemId, title:"AI Selected Item", category } formData.specificItem,;
-        timeline:timeline || formData.timeline,;
-        budget:{ ...formData.budget, ...(budget || {}) }}),;
+          ? { id: itemId;, title: "AI Selected Item";, category } formData.specificItem,;
+        timeline: timeline || formData.timeline;,;
+        budget: { ...formData.budget;, ...(budget || {}) }}),;
       setCurrentStep("summary"),;
       setAutoFillOpen(false),;
     } catch (err) {;
-      logErrorToProduction("Auto-fill API error", err as Error, { component:'QuoteRequestForm', projectDescription:description }),;
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm';, projectDescription: description ;}),;
       toast({;
-        title:"Auto-fill Failed",,
-  description:"We couldn't process your request. Please try again.",;
-        variant:"destructive"}),;
+        title: "Auto-fill Failed";,,
+  description: "We couldn't process your request. Please try again.";,;
+        variant: "destructive";}),;
     } finally {;
       setAutoFillLoading(false),;
     }

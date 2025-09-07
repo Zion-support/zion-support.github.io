@@ -1,12 +1,12 @@
-import React from \"react\",
-import { Button } from \"@/components/ui/button\",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from \"@/components/ui/tooltip\",
-import { Card, CardContent } from \"@/components/ui/card\",
-import { Badge } from \"@/components/ui/badge\",
+import React from \"react\",;
+import { Button } from \"@/components/ui/button\",;
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from \"@/components/ui/tooltip\",;
+import { Card, CardContent } from \"@/components/ui/card\",;
+import { Badge } from \"@/components/ui/badge\",;
 import { Loader2, Info, ThumbsUp } from \"lucide-react\";
 import { PricingSuggestion } from \"@/services/pricingSuggestionService\";
-import { Loader2, Info, ThumbsUp } from \"lucide-react\",
-import { PricingSuggestion } from \"@/services/pricingSuggestionService\",
+import { Loader2, Info, ThumbsUp } from \"lucide-react\",;
+import { PricingSuggestion } from \"@/services/pricingSuggestionService\",;
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
     isLoading: boolean;

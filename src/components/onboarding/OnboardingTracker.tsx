@@ -40,9 +40,9 @@ import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } fro
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 
-import React from "react",
+import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
@@ -56,11 +56,11 @@ import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import React from "react",
+import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
+import { cn } from "@/lib/utils",;
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
 export interface OnboardingStep {
   id: string
   label: string

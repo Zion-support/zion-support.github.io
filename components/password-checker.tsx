@@ -13,11 +13,10 @@ import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, Alert
 
 
 export default function PasswordCheckerPage() {;
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function PasswordCheckerPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [password, setPassword] = useState('');
@@ -30,8 +29,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-import {
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 
 export default function PasswordCheckerPage() {;
@@ -50,7 +47,7 @@ export default function PasswordCheckerPage() {;
     numbers: false;
     symbols: false;
     noCommon: false;
-    noSequential: false
+    noSequential: false;
   });
   const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState('');
@@ -62,13 +59,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       resetAnalysis();
     }
   }, [password]);
-      length: pass.length >= 8,
-      uppercase: /[A-Z]/.test(pass),
-      lowercase: /[a-z]/.test(pass),
-      numbers: /\d/.test(pass),
-symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
-      noCommon: !isCommonPassword(pass),
-      noSequential: !hasSequentialChars(pass),
+      length: pass.length >= 8;,
+      uppercase: /[A-Z]/.test(pass);,
+      lowercase: /[a-z]/.test(pass);,
+      numbers: /\d/.test(pass);,
+symbols: /[!@#$%^&*()_+\-=\[\]{;};':"\\|,.<>\/?]/.test(pass),
+      noCommon: !isCommonPassword(pass);,
+      noSequential: !hasSequentialChars(pass);,
     };
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -136,7 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return sequences.some(seq => pass.toLowerCase().includes(seq));
   };
 
-  const generateSuggestions = (checks: any, pass: string) => {
+  const generateSuggestions = (checks: any;, pass: string) => {
     const suggestions: string[] = [];
 if (!checks.length)
       suggestions.push('Make your password at least 8 characters long');
@@ -192,13 +189,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-      length: false,
-      uppercase: false,
-      lowercase: false,
-      numbers: false,
-      symbols: false,
-      noCommon: false,
-noSequential: false,
+      length: false;,
+      uppercase: false;,
+      lowercase: false;,
+      numbers: false;,
+      symbols: false;,
+      noCommon: false;,
+noSequential: false;,
     });
     setSuggestions([]);
   };
@@ -656,8 +653,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
                     <div className='flex items-center justify-between mb-2'>
                       <span className='text-sm text-gray-300'>
-                        Password Strength:
-                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>
+                        Password Strength: </span>                      <span className={`text-lg font-bold ${strengthColor;}`}>
                         {strengthText} ({strength}/100)
                       </span>
                       <span className={`text-lg font-bold ${strengthColor}`}>
@@ -668,7 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div
 origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={{ width: `${strength;}%` }}
                       />
                     </div>
                   </div>
@@ -682,7 +678,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">;
                       <div
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
+                        style={{ width: `${strength;}%` }}
                       />;
                     </div>;
                   </div>;
@@ -819,7 +815,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div                    <div className="w - full bg - gray - 700 rounded - full h - 3">;
                       <div;
                         className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}
-                        style={{ width: `${strength}%` }}
+                        style={{ width: `${strength;}%` }}
                       />;
                     </div>;
                   </div>;

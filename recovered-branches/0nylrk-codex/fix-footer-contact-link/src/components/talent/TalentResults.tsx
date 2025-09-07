@@ -1,12 +1,12 @@
 
 
-import React from "react",
-import { TalentProfile } from "@/types/talent",
-import { ActiveFilters } from "@/components/talent/ActiveFilters",
+import React from "react",;
+import { TalentProfile } from "@/types/talent",;
+import { ActiveFilters } from "@/components/talent/ActiveFilters",;
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
-import { ResultsHeader } from "@/components/talent/ResultsHeader",
-import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
+import { ResultsHeader } from "@/components/talent/ResultsHeader",;
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],;
 
 
 

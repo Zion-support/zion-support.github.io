@@ -5,10 +5,10 @@ export default function PrivacySettingsPage() {
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 import React, { useEffect, useState } from 'react',;
 ;
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
   const [optOut, setOptOut] = useState(false),
@@ -156,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 ;
 export default /**
  * PrivacySettingsPage - Function description

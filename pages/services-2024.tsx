@@ -21,7 +21,7 @@ import {;
 } from 'lucide-react',;
 
 
-import React, { useState, useMemo } from 'react',
+import React, { useState, useMemo } from 'react',;
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, Users, TrendingUp;

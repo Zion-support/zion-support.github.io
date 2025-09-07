@@ -8,8 +8,8 @@ export function HeroSection() {
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading",
-import { Link } from "react-router-dom",
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Link } from "react-router-dom",;
 
 export function HeroSection() {
   return (

@@ -4,9 +4,9 @@ import data from '../../data/github-agent-repos.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/github-agent-repos.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/github-agent-repos.json',
+import data from '../../data/github-agent-repos.json',;
 export default function GithubAgentReposPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)

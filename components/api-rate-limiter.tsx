@@ -9,9 +9,9 @@
   AlertTriangle;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -27,15 +27,15 @@ export default function APIRateLimiterPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -46,14 +46,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
 
   CheckCircle,;
   AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 import {
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function APIRateLimiterPage() {;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
@@ -66,15 +64,15 @@ export default function APIRateLimiterPage() {;
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
 
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
+    { value: '10';, label: '10 requests';, description: 'Very strict' ;},
+    { value: '100';, label: '100 requests';, description: 'Standard' ;},
+    { value: '1000';, label: '1000 requests';, description: 'High volume' ;},
 
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;}
   ];
 
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;}
   ];
 
   const generateApiKey = () => {
@@ -82,20 +80,20 @@ export default function APIRateLimiterPage() {;
     setApiKey(key)
   }
   const timeWindows = [;
-    { value: '1s', label: '1 Second', description: 'Per second rate limiting' },;
-    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },;
-    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
-    { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
+    { value: '1s';, label: '1 Second';, description: 'Per second rate limiting' ;},;
+    { value: '1m';, label: '1 Minute';, description: 'Per minute rate limiting' ;},;
+    { value: '1h';, label: '1 Hour';, description: 'Per hour rate limiting' ;},;
+    { value: '1d';, label: '1 Day';, description: 'Per day rate limiting' ;},  ];    { value: '1d';, label: '1 Day';, description: 'Per day rate limiting' ;}
   ];
 
     setIsTesting(true);
   const timeWindows = null;
   ];
   const rateLimits = [
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-{ value: '10000', label: '10000 requests', description: 'Enterprise' },
+    { value: '10';, label: '10 requests';, description: 'Very strict' ;},
+    { value: '100';, label: '100 requests';, description: 'Standard' ;},
+    { value: '1000';, label: '1000 requests';, description: 'High volume' ;},
+{ value: '10000';, label: '10000 requests';, description: 'Enterprise' ;},
   ];
   const generateApiKey = () => {
     const key =
@@ -135,10 +133,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const limit = parseInt(rateLimit);
 ;
   const rate_limits = [;
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-    { value: '10000', label: '10000 requests', description: 'Enterprise' },
+    { value: '10';, label: '10 requests';, description: 'Very strict' ;},
+    { value: '100';, label: '100 requests';, description: 'Standard' ;},
+    { value: '1000';, label: '1000 requests';, description: 'High volume' ;},
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;},
   ];
 ;
   const generateApiKey = () =>: any {
@@ -153,7 +151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (|| !rate_limit || !time_window) return) {
   $2
 }
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;}
   ];
 ;
   const generateApiKey = () =>: any {
@@ -180,11 +178,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const status_code = is_allowed ? 200 : 429;
 ;
       results.push ({
-        request: i,
-        timestamp: new Date ().toLocaleTimeString (),
+        request: i;,
+        timestamp: new Date ().toLocaleTimeString ();,
         status,
         status_code,
-        response_time: Math.random () * 100 + 50,
+        response_time: Math.random () * 100 + 50;,
         headers: {
           'X - RateLimit - Limit': limit,
           'X - RateLimit - Remaining': Math.max (0, limit - i),
@@ -218,11 +216,11 @@ if (break) {
       const status_code = is_allowed ? 200 : 429;
 ;
       results.push ({
-        request: i,
-        timestamp: new Date ().toLocaleTimeString (),
+        request: i;,
+        timestamp: new Date ().toLocaleTimeString ();,
         status;
         status_code;
-        response_time: Math.random () * 100 + 50,
+        response_time: Math.random () * 100 + 50;,
         headers: {
           'X - RateLimit - Limit': limit;
           'X - RateLimit - Remaining': Math.max (0, limit - i);
@@ -509,7 +507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`p-3 rounded-lg border text-left transition-all ${
                           rateLimit === limit.value
                             ? 'border-green-500 bg-green-500/10 text-green-300'
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'
+                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white';
                         }`}
                       >
 <div className='font-medium'>{limit.label}</div>
@@ -531,7 +529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`p-3 rounded-lg border text-left transition-all ${
                           timeWindow === window.value
                             ? 'border-green-500 bg-green-500/10 text-green-300'
-                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'
+                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white';
                         }`}
                       >
 <div className='font-medium'>{window.label}</div>
@@ -765,11 +763,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <strong>Rate Limited:</strong> Request exceeded the;
                           limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
 
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
+                          <strong>Rate Limited: </strong> Request exceeded the limit of {rateLimit;} requests per {timeWindow}
                         </div>;
 
                         <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
+                          <strong>Rate Limited: </strong> Request exceeded the limit of {rateLimit;} requests per {timeWindow}
 <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
                           limit of {rateLimit} requests per {timeWindow}
@@ -896,7 +894,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
 // Make API request with rate limiting
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+const response = await axios.get(\`https: //api.zion.tech\${endpoint;}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
@@ -926,7 +924,7 @@ const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+const response = await axios.get(\`https: //api.zion.tech\${endpoint;}\`, {
   headers: {
 'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
@@ -957,7 +955,7 @@ const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+const response = await axios.get(\`https: //api.zion.tech\${endpoint;}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
@@ -994,18 +992,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {`import requests
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
-    f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+    f'https: //api.zion.tech{endpoint;}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
 response = requests.get(;
 
-    f'https://api.zion.tech{endpoint}';
+    f'https: //api.zion.tech{endpoint;}';
 
     headers=headers
 
 )
-print('Response:', response.json())
-print('Rate Limit Info:', {
+print('Response: ';, response.json())
+print('Rate Limit Info: ';, {
 
     'limit': response.headers.get('x-ratelimit-limit');
 
@@ -1037,11 +1035,11 @@ headers = {
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
-    f'https://api.zion.tech{endpoint}',
+    f'https: //api.zion.tech{endpoint;}',
     headers=headers
 )
-print('Response:', response.json())
-print('Rate Limit Info:', {
+print('Response: ';, response.json())
+print('Rate Limit Info: ';, {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1076,20 +1074,20 @@ headers = {;
     'Authorization': f'Bearer {api_key}',;
     'X-RateLimit-Limit': '${rateLimit}',;
     'X-RateLimit-Window': '${timeWindow}';
-print('Response:', response && response.json());
-print('Rate Limit Info:', {;
+print('Response: ';, response && response.json());
+print('Rate Limit Info: ';, {;
     'limit': response && response.headers.get('x-ratelimit-limit'),;
     'remaining': response && response.headers.get('x-ratelimit-remaining'),    'reset': response && response.headers.get('x-ratelimit-reset')    'limit': response && response.headers.get('x-ratelimit-limit');
     'remaining': response && response.headers.get('x-ratelimit-remaining');
     'reset': response && response.headers.get('x-ratelimit-reset');
 })`}
-    f'https://api.zion.tech{endpoint}';
+    f'https: //api.zion.tech{endpoint;}';
 
     headers=headers
 
 )
-print('Response:', response.json())
-print('Rate Limit Info:', {
+print('Response: ';, response.json())
+print('Rate Limit Info: ';, {
 
                 onClick={() =>;
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
@@ -1100,8 +1098,8 @@ headers = {;
     'Authorization': f'Bearer {api_key}',;
     'X-RateLimit-Limit': '${rateLimit}',;
     'X-RateLimit-Window': '${timeWindow}';
-print('Response:', response && response.json());
-print('Rate Limit Info:', {;
+print('Response: ';, response && response.json());
+print('Rate Limit Info: ';, {;
     'limit': response && response.headers.get('x-ratelimit-limit'),;
     'remaining': response && response.headers.get('x-ratelimit-remaining'),;
     'reset': response && response.headers.get('x-ratelimit-reset');
@@ -1159,11 +1157,11 @@ headers = {
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
-    f'https://api.zion.tech{endpoint}',
+    f'https: //api.zion.tech{endpoint;}',
     headers=headers
 )
-print('Response:', response.json())
-print('Rate Limit Info:', {
+print('Response: ';, response.json())
+print('Rate Limit Info: ';, {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')

@@ -182,8 +182,8 @@ export default function CommunityPage() {
       </div>
 
 }
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 import Head from 'next / head';

@@ -1,37 +1,37 @@
-import React from 'react',;
-import FocusLock from 'react-focus-lock',;
+import React from 'react';
+import FocusLock from 'react-focus-lock';
 import {;
   Dialog,;
   DialogContent,;
   DialogHeader,;
   DialogTitle} from '@/components/ui/dialog',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
   Form,;
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
   FormMessage} from '@/components/ui/form',;
-import { useForm, type Resolver } from 'react-hook-form',;
-import { yupResolver } from '@hookform/resolvers/yup',;
-import * as yup from 'yup',;
+import { useForm, type Resolver } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react';
-import api from '@/services/apiClient',;
-import { toast } from '@/hooks/use-toast',;
-import { useAuth } from '@/hooks/useAuth',;
-import { LoginModal } from '@/components/auth/LoginModal',;
+import api from '@/services/apiClient';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
 ;
 interface ContactPublisherModalProps {;
-  isOpen:boolean,;
-  onClose:() => void,;
-  publisherName:string,;
+  isOpen: boolean;,;
+  onClose: () => void;,;
+  publisherName: string;,;
   publisherEmail?:string,;
   productId?:string;
 }
 type FormValues = {;
-  subject:string,;
+  subject: string;,;
   message:string;
 },;
 const schema:yup.ObjectSchema<FormValues> = yup;
@@ -40,7 +40,7 @@ const schema:yup.ObjectSchema<FormValues> = yup;
 </string>
   const form = useForm<FormValues>({;
 )
-    resolver:yupResolver(schema) as Resolver<FormValues>,;
+    resolver: yupResolver(schema) as Resolver<FormValues>;,;
 
     <>;
     <Dialog open={isOpen} onOpenChange={onClose}>;
@@ -64,7 +64,7 @@ const schema:yup.ObjectSchema<FormValues> = yup;
             <div className="mb-4 text-zion-slate-light">;"
 </div>"
             <span className="block">Email:</span>;""
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;"
+            <a href={`mailto: ${publisherEmail;}`} className="text-zion-cyan hover:underline truncate block">;"
 </a>
             </a>;
           </div>;
@@ -74,7 +74,7 @@ const schema:yup.ObjectSchema<FormValues> = yup;
             <FormField;
               control={form.control}"
               name="subject";"
-              render={({ field } { field:any }) => (;
+              render={({ field } { field: any ;}) => (;
 
                 <FormItem>;
 

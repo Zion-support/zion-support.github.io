@@ -58,9 +58,9 @@ export function ResumeTab(): any ({;
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
 
-import React from 'react',
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { Button } from "@/components/ui/button",
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
 
 </void>"
     <div className="space-y-4">"
@@ -71,7 +71,7 @@ import { Button } from "@/components/ui/button",
           <Button;
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
-import React from 'react',
+import React from 'react',;
 import { ResumeSelector, ResumeOption } from "../resume-selector",""
 import { Button } from "@/components/ui/button",""
 pr-12325

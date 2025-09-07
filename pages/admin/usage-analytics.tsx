@@ -63,8 +63,8 @@ function Funnel({ data }: { data: Datum[] }) {
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
-import React, { useCallback, useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
+import React, { useCallback, useEffect, useMemo, useState } from 'react',;
+import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps  } from 'next';
 import { requireAdminRole  } from '../../utils/auth';
@@ -78,12 +78,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
-import React, { useCallback, useEffect, useMemo, useState } from 'react',
-import Head from 'next / head',
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-import { GetServerSideProps } from 'next',
-import { requireAdminRole } from '../../utils / auth',
-import DatePicker from 'react - datepicker',
+import React, { useCallback, useEffect, useMemo, useState } from 'react',;
+import Head from 'next / head',;
+import EnhancedLayout from '../../components / layout / EnhancedLayout',;
+import { GetServerSideProps } from 'next',;
+import { requireAdminRole } from '../../utils / auth',;
+import DatePicker from 'react - datepicker',;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole (ctx),
   // @ts - ignore;

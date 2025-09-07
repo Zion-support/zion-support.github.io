@@ -9,8 +9,8 @@ import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
 
 
-import { useRouter } from 'next/router',
-import { useEffect, useState } from 'react',
+import { useRouter } from 'next/router',;
+import { useEffect, useState } from 'react',;
 export default function WhitepaperPreview() {
   const router = useRouter(),
   const { id } = router.query,

@@ -1,52 +1,52 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 ;
 export default function Compliance() {;
   const complianceFrameworks = [;
     {;
-      id:'soc2',;
-      title:'SOC 2 Type II',;
-      icon:Shield,,
-  description:'Annual audits of security, availability, and confidentiality controls',;
+      id: 'soc2';,;
+      title: 'SOC 2 Type II';,;
+      icon: Shield;,,
+  description: 'Annual audits of security;, availability, and confidentiality controls',;
       details:[;
         'Independent third-party auditingSecurity controls assessment',;
         'Availability and processing integrityConfidentiality safeguards',;
         'Annual compliance reporting';']
       ];
     },;
-      id:'iso27001',;
-      title:'ISO 27001',;
-      icon:Scale,,
-  description:'International standard for information security management',;
+      id: 'iso27001';,;
+      title: 'ISO 27001';,;
+      icon: Scale;,,
+  description: 'International standard for information security management';,;
       details:[;
-      icon:Scale,;
-      description:'International standard for information security management',;
+      icon: Scale;,;
+      description: 'International standard for information security management';,;
 pr-12325
         'Information security management system (ISMS)Risk assessment and management',;
         'Security policy implementationContinuous improvement processes',;
         'Regular certification audits';']
-      id:'gdpr',;
-      title:'GDPR Compliance',;
-      icon:Globe,,
-  description:'European Union data protection regulation compliance',;
+      id: 'gdpr';,;
+      title: 'GDPR Compliance';,;
+      icon: Globe;,,
+  description: 'European Union data protection regulation compliance';,;
       details:[;
-      icon:Globe,;
-      description:'European Union data protection regulation compliance',;
+      icon: Globe;,;
+      description: 'European Union data protection regulation compliance';,;
 pr-12325
         'Data protection by design and defaultIndividual rights management',;
         'Data processing agreementsPrivacy impact assessments',;
         'Breach notification procedures';']
-      id:'hipaa',;
-      title:'HIPAA Compliance',;
-      icon:Users,,
-  description:'Healthcare information privacy and security standards',;
+      id: 'hipaa';,;
+      title: 'HIPAA Compliance';,;
+      icon: Users;,,
+  description: 'Healthcare information privacy and security standards';,;
       details:[;
-      icon:Users,;
-      description:'Healthcare information privacy and security standards',;
+      icon: Users;,;
+      description: 'Healthcare information privacy and security standards';,;
 pr-12325
         'Protected health information (PHI) safeguardsBusiness associate agreements',;
         'Access controls and audit logsWorkforce training programs',;
@@ -54,11 +54,11 @@ pr-12325
     }
   ],;
   const additionalCompliance = [;
-    { name:'PCI DSS', description:'Payment card industry data security standard' },;
-    { name:'CCPA', description:'California Consumer Privacy Act compliance' },;
-    { name:'FERPA', description:'Family Educational Rights and Privacy Act' },;
-    { name:'FISMA', description:'Federal Information Security Management Act' },;
-    { name:'FedRAMP', description:'Federal Risk and Authorization Management Program' }']
+    { name: 'PCI DSS';, description: 'Payment card industry data security standard' ;},;
+    { name: 'CCPA';, description: 'California Consumer Privacy Act compliance' ;},;
+    { name: 'FERPA';, description: 'Family Educational Rights and Privacy Act' ;},;
+    { name: 'FISMA';, description: 'Federal Information Security Management Act' ;},;
+    { name: 'FedRAMP';, description: 'Federal Risk and Authorization Management Program' ;}']
   return (;
     <>;
       <Head>;
@@ -78,9 +78,9 @@ pr-12325
 </section>"
           <div className="max-w-4xl mx-auto text-center">;"
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}"
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}"
               className="flex items-center justify-center mb-6";"
             >;
 </motion>"
@@ -88,12 +88,12 @@ pr-12325
 
             </motion.div>;
             <motion.h1;
-              transition={{ duration:0.8, delay:0.1 }}"
+              transition={{ duration: 0.8;, delay: 0.1 ;}}"
               className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6";"
 </motion>
             </motion.h1>;
             <motion.p;
-              transition={{ duration:0.8, delay:0.2 }}"
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
               className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed";"
             </motion.p>;
           </div>;
@@ -108,7 +108,7 @@ pr-12325
             {/* Main Compliance Frameworks */}"
             <div className="grid md:grid-cols-2 gap-8 mb-16">;"
                   key={framework.id}
-                  transition={{ duration:0.8, delay:index * 0.1 }}"
+                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}"
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300";"
                   <div className="flex items-center mb-6">;"
 </div>"
@@ -128,20 +128,20 @@ pr-12325
                   </ul>;
                 </motion.div>;)
               ))}
-              transition={{ duration:0.8, delay:0.5 }}"
+              transition={{ duration: 0.8;, delay: 0.5 ;}}"
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16";"
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Additional Compliance Standards</h3>;""
               <div className="grid md:grid-cols-3 gap-6">;"
                     key={standard.name}
-                    initial={{ opacity:0, scale:0.9 }}
-                    animate={{ opacity:1, scale:1 }}
-                    transition={{ duration:0.5, delay:index * 0.1 }}"
+                    initial={{ opacity: 0;, scale: 0.9 ;}}
+                    animate={{ opacity: 1;, scale: 1 ;}}
+                    transition={{ duration: 0.5;, delay: index * 0.1 ;}}"
                     className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10";"
                     <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />;"
                     <h4 className="text-white font-semibold mb-2">{standard.name}</h4>;""
                     <p className="text-gray-300 text-sm">{standard.description}</p>;"
             {/* Compliance Process */}
-              transition={{ duration:0.8, delay:0.6 }}"
+              transition={{ duration: 0.8;, delay: 0.6 ;}}"
               className="mb-16";"
               <h3 className="text-3xl font-bold text-white mb-6">Our Compliance Process</h3>;""
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">;"
@@ -165,7 +165,7 @@ pr-12325
                     <h4 className="text-white font-semibold mb-2">Monitoring</h4>;""
                     <p className="text-gray-300 text-sm">Continuous monitoring and improvement</p>;"
             {/* Data Protection Rights */}
-              transition={{ duration:0.8, delay:0.7 }}"
+              transition={{ duration: 0.8;, delay: 0.7 ;}}"
               <h3 className="text-3xl font-bold text-white mb-6">Your Data Protection Rights</h3>;""
                 <p className="text-gray-300 leading-relaxed mb-6">;"
                 </p>;"
@@ -180,7 +180,7 @@ pr-12325
                       <Shield className="w-5 h-5 text-cyan-400 mr-2" />;"
 
             {/* International Compliance */}
-              transition={{ duration:0.8, delay:0.8 }}"
+              transition={{ duration: 0.8;, delay: 0.8 ;}}"
               <h3 className="text-3xl font-bold text-white mb-6">Global Compliance Coverage</h3>;""
                 <div className="grid md:grid-cols-3 gap-8">;"
                     <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;"
@@ -191,7 +191,7 @@ pr-12325
                     <h4 className="text-white font-semibold mb-2">Asia-Pacific</h4>;""
                     <p className="text-gray-300 text-sm">PIPEDA, Privacy Act, PDPA</p>;"
             {/* Contact Compliance Team */}
-              transition={{ duration:0.8, delay:0.9 }}"
+              transition={{ duration: 0.8;, delay: 0.9 ;}}"
               className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-8 border border-purple-500/20";"
               <h3 className="text-3xl font-bold text-white mb-6 flex items-center">;"
 </h3>"

@@ -9,9 +9,6 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
 
 
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
 origin/cursor/automate-test-improve-and-merge-code-2533
   Rocket, Shield, Target, CheckCircle, ExternalLink;
@@ -61,7 +58,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum Computing': 'from-blue-500 to-cyan-600',;
       'Emerging Technology': 'from-green-500 to-emerald-600',;
       'Business Operations': 'from-orange-500 to-red-600',;
-      Cybersecurity: 'from-red-500 to-pink-600',;
+      Cybersecurity: 'from-red-500 to-pink-600';,;
       'Enterprise IT': 'from-indigo-500 to-purple-600',;
       'Healthcare & Biotechnology': 'from-emerald-500 to-teal-600',;
       'Financial Technology': 'from-yellow-500 to-orange-600',;
@@ -86,7 +83,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum Computing': <Atom className='w-5 h-5' />,;
       'Emerging Technology': <Rocket className='w-5 h-5' />,;
       'Business Operations': <Target className='w-5 h-5' />,;
-      Cybersecurity: <Shield className='w-5 h-5' />,;
+      Cybersecurity: <Shield className='w-5 h-5' />;,;
       'Enterprise IT': <Zap className='w-5 h-5' />,;
       'Healthcare & Biotechnology': <Brain className='w-5 h-5' />,;
       'Financial Technology': <TrendingUp className='w-5 h-5' />,;
@@ -119,7 +116,7 @@ const getCategoryColor = (
       'Quantum Computing': 'from-blue-500 to-cyan-600',
       'Emerging Technology': 'from-green-500 to-emerald-600',
       'Business Operations': 'from-orange-500 to-red-600',
-      Cybersecurity: 'from-red-500 to-pink-600',
+      Cybersecurity: 'from-red-500 to-pink-600';,
       'Enterprise IT': 'from-indigo-500 to-purple-600',
       'Healthcare & Biotechnology': 'from-emerald-500 to-teal-600',
       'Financial Technology': 'from-yellow-500 to-orange-600',
@@ -142,7 +139,7 @@ const getCategoryIcon = (
       'Quantum Computing': <Atom className='w-5 h-5' />,
       'Emerging Technology': <Rocket className='w-5 h-5' />,
       'Business Operations': <Target className='w-5 h-5' />,
-      Cybersecurity: <Shield className='w-5 h-5' />,
+      Cybersecurity: <Shield className='w-5 h-5' />;,
       'Enterprise IT': <Zap className='w-5 h-5' />,
       'Healthcare & Biotechnology': <Brain className='w-5 h-5' />,
       'Financial Technology': <TrendingUp className='w-5 h-5' />,
@@ -162,15 +159,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='container mx-auto px-4' />
         {/* Header */}
         <motion.div
-          className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className='text-center mb-16'          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
         <motion.div;
 className='text-center mb-16'
 
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6 ;}
 }
          />;
 <h2 className='text-5xl font-bold mb-6' />;
@@ -187,18 +184,18 @@ className='text-center mb-16'
         </motion.div>;
         {/* Search and Filters */}
         <motion&& motion.div
-          className='mb-12'          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className='mb-12'          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
           className='text-center mb-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6 ;}}
         >
 <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -215,9 +212,9 @@ className='text-center mb-16'
         {/* Search and Filters */}
 <motion.div
           className='mb-12'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.2 ;}}
         >
 <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
@@ -228,7 +225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     placeholder='Search services, features, or use cases...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e && e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'                  />              {/* Search */}
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'                  />              {/* Search */;}
               <div className="flex-1 max-w-md">;
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
@@ -250,11 +247,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'
 <motion.div;
           className='mb-12';
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6;, delay: 0.2 ;}}
 
          />
 <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6' />
@@ -372,11 +369,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
         {/* Results Count */}
         <motion.div;
-          className='mb - 8'          initial={{ opacity: 0 }}
+          className='mb - 8'          initial={{ opacity: 0 ;}}
           className="mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>;
+          initial={{ opacity: 0 ;}}
+          whileInView={{ opacity: 1 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.3 ;}}>;
           <p className='text-gray-400'>;
             Showing{' '}
             <span className='text-cyan-400 font-semibold'>;
@@ -390,7 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence mode='wait'>;
           {viewMode === 'grid' ? (;
             <motion&& motion.div
-              key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
+              key='grid'              initial={{ opacity: 0;, scale: 0 && 0.95 ;}}
 
         {/* Results Count */}
         <motion.div 
@@ -403,10 +400,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <motion.div;
 className='mb-8'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }
+          initial={{ opacity: 0 ;}}
+          whileInView={{ opacity: 1 ;}
 }
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6;, delay: 0.3 ;}}
         >
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
@@ -414,9 +411,9 @@ className='mb-8'
         </motion.div>
         >        <motion.div;
           className="mb - 8";
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0 ;}}
+          whileInView={{ opacity: 1 ;}}
+          transition={{ duration: 0.6;, delay: 0.3 ;}}
         >;
           <p className='text - gray - 400'>;
             Showing{' '}
@@ -433,10 +430,10 @@ className='mb-8'
         <AnimatePresence mode='wait'>;
           {view_mode === 'grid' ? (
             <motion.div;
-              key='grid'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              key='grid'              initial={{ opacity: 0;, scale: 0.95 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              exit={{ opacity: 0;, scale: 0.95 ;}}
+              transition={{ duration: 0.3 ;}}
 <p className='text-gray-400'>
             Showing{' '}
             <span className='text-cyan-400 font-semibold'>
@@ -460,12 +457,12 @@ className='mb-8'
 <AnimatePresence mode='wait' />;
           {viewMode === 'grid' ? (<motion.div;
               key='grid';}
-              initial={{ opacity: 0, scale: 0.95 }
+              initial={{ opacity: 0;, scale: 0.95 ;}
 }
-              animate={{ opacity: 1, scale: 1 }
+              animate={{ opacity: 1;, scale: 1 ;}
 }
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }
+              exit={{ opacity: 0;, scale: 0.95 ;}}
+              transition={{ duration: 0.3 ;}
 }
 
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -474,9 +471,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
@@ -486,7 +483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                        <div className="text-sm text-gray-400">ROI: {service.roi}</div>
+                        <div className="text-sm text-gray-400">ROI: {service.roi;}</div>
                       </div>
                     </div>
                     {/* Content */}
@@ -502,7 +499,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service && service.price}
                         </div>;
                         <div className='text-sm text-gray-400'>;
-                          ROI: {service && service.roi}
+                          ROI: {service && service.roi;}
                         </div>                      </div>;
                     </div>;
                     {/* Content */}
@@ -520,7 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                       <div className="text-right">;
                         <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;
-                        <div className="text-sm text-gray-400">ROI: {service && service.roi}</div>;
+                        <div className="text-sm text-gray-400">ROI: {service && service.roi;}</div>;
                       </div>;
                     </div>;
                     {/* Content */}
@@ -552,11 +549,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
-                  initial={{ opacity: 0, y: 20 }
+                  initial={{ opacity: 0;, y: 20 ;}
 }
-                  whileInView={{ opacity: 1, y: 0 }
+                  whileInView={{ opacity: 1;, y: 0 ;}
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
 
 className='group'
                  />
@@ -575,7 +572,7 @@ className='group'
                           {service.price}
                         </div>;
                         <div className='text-sm text-gray-400' />;
-                          ROI: {service.ro}
+                          ROI: {service.ro;}
 }
                         </div>;
                       </div>;
@@ -647,29 +644,29 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
             </motion.div>
           ) : (
             <motion.div
-              key='list'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              key='list'              initial={{ opacity: 0;, scale: 0.95 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              exit={{ opacity: 0;, scale: 0.95 ;}}
+              transition={{ duration: 0.3 ;}}
               className='space-y-4'            >              key="list"
               className='space-y-4'            >
 
 
 key='list'
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0;, scale: 0.95 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              exit={{ opacity: 0;, scale: 0.95 ;}}
+              transition={{ duration: 0.3 ;}}
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  whileInView={{ opacity: 1;, x: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -702,23 +699,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion && motion.div>;
           ) : (;
             <motion&& motion.div
-              key='list'              initial={{ opacity: 0, scale: 0 && 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.95 }}
-              transition={{ duration: 0 && 0.3 }}
+              key='list'              initial={{ opacity: 0;, scale: 0 && 0.95 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              exit={{ opacity: 0;, scale: 0 && 0.95 ;}}
+              transition={{ duration: 0 && 0.3 ;}}
               className='space-y-4'>              key="list";
-              initial={{ opacity: 0, scale: 0 && 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.95 }}
-              transition={{ duration: 0 && 0.3 }}
+              initial={{ opacity: 0;, scale: 0 && 0.95 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              exit={{ opacity: 0;, scale: 0 && 0.95 ;}}
+              transition={{ duration: 0 && 0.3 ;}}
               className='space-y-4'              className="space-y-4";
             >;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  whileInView={{ opacity: 1;, x: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className='group'>;
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>;
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>;
@@ -727,12 +724,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div
             <motion.div;
 key='list'
-              initial={{ opacity: 0, scale: 0.95 }
+              initial={{ opacity: 0;, scale: 0.95 ;}
 }
-              animate={{ opacity: 1, scale: 1 }
+              animate={{ opacity: 1;, scale: 1 ;}
 }
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }
+              exit={{ opacity: 0;, scale: 0.95 ;}}
+              transition={{ duration: 0.3 ;}
 }
 
 className='space-y-4'
@@ -740,11 +737,11 @@ className='space-y-4'
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
-                  initial={{ opacity: 0, x: -20 }
+                  initial={{ opacity: 0;, x: -20 ;}
 }
-                  whileInView={{ opacity: 1, x: 0 }
+                  whileInView={{ opacity: 1;, x: 0 ;}
 }
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
 
 className='group'
                  />
@@ -856,12 +853,12 @@ href={service.link}
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
-            className='text-center py-20'            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            className='text-center py-20'            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0 && 0.6 }}>;
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            transition={{ duration: 0 && 0.6 ;}}>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
               No services found;
             </h3>;
@@ -889,9 +886,9 @@ href={service.link}
         {/* No Results */}
         {filteredServices.length === 0 && (<motion.div;}
             className='text-center py-20';}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            transition={{ duration: 0.6 ;}
 }
 
            />
@@ -922,7 +919,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
         {/* CTA Section */}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
           className="mt-20 text-center"
           className="mt-20 text-center"
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -932,9 +929,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div
           className='mt-20 text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.8 ;}}>;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
 
@@ -944,11 +941,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div;
 className='mt-20 text-center'
 
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.8 ;}
 } />;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12' />;
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6' />;
@@ -990,15 +987,15 @@ className='mt-20 text-center'
         </AnimatePresence>;
         {/* No Results */}
         {filtered_services.length === 0 && (<motion.div;}
-            className='text - center py - 20'            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }
+            className='text - center py - 20'            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            transition={{ duration: 0.6 ;}
 }
            />          <motion.div;"
             className=\"text - center py - 20\";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            transition={{ duration: 0.6 ;}
 }
            />;
             <div className='text - 6xl mb - 4' />🔍</div>;
@@ -1016,7 +1013,7 @@ className='mt-20 text-center'
               Try adjusting your search terms or category filter to find what you're looking for.;
             <button;
               on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')}}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all');
 }"
               className=\"px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300\">
 
@@ -1025,12 +1022,12 @@ className='mt-20 text-center'
           </motion.div>)}
         {/* CTA Section */}
         <motion.div;
-          className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 }
+          className='mt - 20 text - center'          initial={{ opacity: 0;, coordinate_y: 20 ;}
 }
-          whileInView={{ opacity: 1, coordinate_y: 0 }
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}
 }
 
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6;, delay: 0.8 ;}}
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these revolutionary services
@@ -1112,13 +1109,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white';}
 }`"
 }> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white';}
 }`"
 }> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
   /* Results Count */}
@@ -1133,7 +1130,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</span>) )
 }</div> {}
   /* CTA */}"
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
+}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) );
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
@@ -1142,7 +1139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
 }</span>) )"
-}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
+}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) );
 }</motion.div>)"
 }</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
 }{"
@@ -1214,13 +1211,13 @@ export default Enhanced2027ServicesShowcase;
   () = /> setViewMode ('grid')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white';}
 }`"
 }> <Grid className=\"w-5 h-5\" /> </button> <button onClick= {}
   () = /> setViewMode ('list')}
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {}
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'}
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white';}
 }`"
 }> <List className=\"w-5 h-5\" /> </button> </div> </div> </div> </div> </motion.div> {}
   /* Results Count */}
@@ -1235,7 +1232,7 @@ export default Enhanced2027ServicesShowcase;
 }</span>) )
 }</div> {}
   /* CTA */}"
-}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) )
+}<Link  /> <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </motion.div>) );
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {}
   service.id}
@@ -1244,7 +1241,7 @@ export default Enhanced2027ServicesShowcase;
 }className=\"px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50\"  /> {}
   tag}
 }</span>) )"
-}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) )
+}</div> </div> > <span />Learn More</span> <ArrowRight className=\"w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform\" /> </a> </div> </div> </div> </motion.div>) );
 }</motion.div>)"
 }</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
 }{;}
@@ -1255,7 +1252,7 @@ export default Enhanced2027ServicesShowcase;  )
 export default Enhanced2027ServicesShowcase;
 
   /* CTA Section */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
+}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) ;
 };
 export default Enhanced2027ServicesShowcase;  )
 };

@@ -7,9 +7,9 @@ interface WorkspaceHeaderProps {;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { type Company } from "./CompanyDashboard",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
 import { Bell, Users, Settings } from 'lucide-react'
 
 interface WorkspaceHeaderProps {

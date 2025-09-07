@@ -70,15 +70,12 @@ MapPin;
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709';
 
   };
 
@@ -91,19 +88,18 @@ export default function UltraAdvancedHero2026() {
     metaverseDigitalRealityServices2026.length;
 
 const contactInfo = {
-    phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com'}
-    address: '364 E Main St STE 1008 Middletown DE 19709'}
+    phone: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';}
+    address: '364 E Main St STE 1008 Middletown DE 19709';}
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
 const containerVariants = {}
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
 import {motio}
 } from 'framer-motion';
 import Link from 'next / link';
-import {
   ArrowRight,
   Star,
   TrendingUp,
@@ -130,11 +126,9 @@ function UltraAdvancedHero2026() {
 ;
 
 const contact_info = {
-    phone: '+1 302 464 0950'}
-  email: 'kleber@ziontechgroup.com'}
-    address: '364 E Main St STE 1008 Middletown DE 19709'  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
-import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
-import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+    phone: '+1 302 464 0950';}
+  email: 'kleber@ziontechgroup.com';}
+    address: '364 E Main St STE 1008 Middletown DE 19709'  ;}import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 
 export default /**
  * UltraAdvancedHero2026 - Function description;
@@ -144,30 +138,30 @@ function UltraAdvancedHero2026() {
 ;
 
 const contact_info = {
-    phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com'}
-    address: '364 E Main St STE 1008 Middletown DE 19709'}
+    phone: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';}
+    address: '364 E Main St STE 1008 Middletown DE 19709';}
 };
 
 const container_variants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 },
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 }
+    hidden: { opacity: 0;, y: 30 ;}
     visible: {
       opacity: 1
       y: 0
       transition: {
-duration: 0.8,
+duration: 0.8;,
       },
     },
   };
@@ -233,26 +227,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div
             variants={itemVariants}
 
-        stagger_children: 0.1,
+        stagger_children: 0.1;,
       },
     },  }        stagger_children: 0.1;
       opacity: 1;
-transition: {
+transition: {;
 }
-staggerChildren: 0.1}
+staggerChildren: 0.1;}
       }
     }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 30}
+    hidden: { opacity: 0;, y: 30;}
 }
     visible: {
       opacity: 1;
 y: 0;
-transition: {
+transition: {;
 }
-duration: 0.8}
+duration: 0.8;}
       }
     }
   };
@@ -718,7 +712,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 6
             repeat: Infinity
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
@@ -730,21 +724,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
-            coordinate_y: [0, 20, 0],
-            rotate: [0, -5, 0],
+            coordinate_y: [0;, 20, 0],
+            rotate: [0;, -5, 0],
 
       {/* Floating Elements *}
 }
 <div className='absolute inset-0 pointer-events-none' />
         <motion.div;
 animate={{
-            coordinate_y: [0, 20, 0]}
-            rotate: [0, -5, 0]}
+            coordinate_y: [0;, 20, 0]}
+            rotate: [0;, -5, 0]}
           }}
           transition={{
             duration: 8;
 repeat: Infinity;
-ease: 'easeInOut'
+ease: 'easeInOut';
 }
           }
 }
@@ -753,7 +747,7 @@ ease: 'easeInOut'
           ⚛️;
         </motion.div>;
         <motion.div;
-          animate={{coordinate_y: [0, -15, 0],rotate: [0, 3, 0]}}
+          animate={{coordinate_y: [0;, -15, 0],rotate: [0;, 3, 0]}}
           transition={{duration: 7;
             repeat: Infinity;}
             ease: 'easeInOut';}
@@ -763,7 +757,7 @@ ease: 'easeInOut'
           🧠;
         </motion.div>;
         <motion.div;
-          animate={{coordinate_y: [0, 15, 0],rotate: [0, -3, 0]}}
+          animate={{coordinate_y: [0;, 15, 0],rotate: [0;, -3, 0]}}
           transition={{duration: 9;
             repeat: Infinity;}
             ease: 'easeInOut';}
@@ -772,34 +766,34 @@ ease: 'easeInOut'
           transition={{
             duration: 9;
 repeat: Infinity;
-ease: 'easeInOut'}
+ease: 'easeInOut';}
           }
 }
           className='absolute bottom-1/3 right-10 text-5xl opacity-20' />        <motion&& motion.div;
 animate={{ 
-            y: [0, -20, 0]}
-            rotate: [0, 5, 0]}
+            y: [0;, -20, 0]}
+            rotate: [0;, 5, 0]}
           }}
           transition={{
             duration: 9
             repeat: Infinity
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
-            y: [0, -20, 0]
-            rotate: [0, 5, 0]
+            y: [0;, -20, 0]
+            rotate: [0;, 5, 0]
           }}
           transition={{
             duration: 6
             repeat: Infinity
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
             duration: 6;
 repeat: Infinity;
-ease: 'easeInOut'}
+ease: 'easeInOut';}
           }
 }
           className='absolute top-20 right-20 text-6xl opacity-20'
@@ -808,26 +802,26 @@ ease: 'easeInOut'}
         </motion.div>
         <motion.div
           animate={{
-            y: [0, 20, 0]
+            y: [0;, 20, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
-            rotate: [0, -5, 0]
+            rotate: [0;, -5, 0]
           }}
           transition={{
             duration: 8
             repeat: Infinity
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
         <motion.div;
 animate={{
-            y: [0, 20, 0]}
-            rotate: [0, -5, 0]}
+            y: [0;, 20, 0]}
+            rotate: [0;, -5, 0]}
           }}
           transition={{
             duration: 8;
 repeat: Infinity;
-ease: 'easeInOut'}
+ease: 'easeInOut';}
           }
 }
           className='absolute bottom-20 left-20 text-6xl opacity-20'
@@ -836,26 +830,26 @@ ease: 'easeInOut'}
         </motion.div>
         <motion.div
           animate={{
-            y: [0, -15, 0]
+            y: [0;, -15, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
-            rotate: [0, 3, 0]
+            rotate: [0;, 3, 0]
           }}
           transition={{
             duration: 7
             repeat: Infinity
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
         <motion.div;
 animate={{
-            y: [0, -15, 0]}
-            rotate: [0, 3, 0]}
+            y: [0;, -15, 0]}
+            rotate: [0;, 3, 0]}
           }}
           transition={{
             duration: 7;
 repeat: Infinity;
-ease: 'easeInOut'}
+ease: 'easeInOut';}
           }
 }
           className='absolute top-1/3 left-10 text-5xl opacity-20'
@@ -864,9 +858,9 @@ ease: 'easeInOut'}
         </motion.div>
         <motion.div
           animate={{
-            y: [0, 15, 0]
+            y: [0;, 15, 0]
 origin/cursor/automate-test-improve-and-merge-code-2533
-            rotate: [0, -3, 0]
+            rotate: [0;, -3, 0]
           }}
           transition={{
             duration: 9
@@ -874,13 +868,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <motion.div;
 animate={{
-            y: [0, 15, 0]}
-            rotate: [0, -3, 0]}
+            y: [0;, 15, 0]}
+            rotate: [0;, -3, 0]}
           }}
           transition={{
             duration: 9;
 repeat: Infinity;
-ease: 'easeInOut'
+ease: 'easeInOut';
 }
           }
 }

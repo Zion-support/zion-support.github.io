@@ -1,15 +1,15 @@
 
 
-import { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
+import { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",;
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
-import { toast } from "sonner",
-import { JobApplication } from "@/types/jobs",
+import { toast } from "sonner",;
+import { JobApplication } from "@/types/jobs",;
 
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored

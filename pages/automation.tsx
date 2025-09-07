@@ -355,7 +355,7 @@ import {
   Check,;
   BarChart3,;
 } from 'lucide-react';
-import React from 'react',
+import React from 'react',;
 
 } from 'lucide-react';
 export default /**
@@ -472,7 +472,7 @@ export default function AutomationPage() {
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
 export default function AutomationPage() {

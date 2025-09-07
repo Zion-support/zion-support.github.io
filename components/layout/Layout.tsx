@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 import Head from 'next/head';
 main
 import React, { ReactNode } from 'react';
@@ -10,8 +9,6 @@ import Header from 'react'
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React, { ReactNode } from 'react';
-import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -43,14 +40,14 @@ function Layout() {
       <main>;
 
 
-  "./Footer"import Footer  from "react./Footer,;
+  "./Footer"import Footer  from "react./Footer;
 export default function Layout({ children }: LayoutProps) {;
   return (;
 
 
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
-  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+  )"; type: LayoutProps = { children: React.ReactNode;, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode;, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
     <div className="min-h-screen bg-white">;
 export default /**
@@ -73,20 +70,20 @@ export: default /**
  */
 function Layout() {
 ;
-  return: <div>{children}</div>;
+  return: <div>{children;}</div>;
 React from";
   "react""import Footer from './react';
-  "./Footer"import Footer  from "react./Footer,
+  "./Footer"import Footer  from "react./Footer;
 export default /**
  * Layout - Function description
  */
 function Layout() {
   return (
 <div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
-    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+    </div>)"; type: LayoutProps = { children: React.ReactNode;, } export default /**
  * Layout - Function description
  */
-function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode;, } export default /**
  * Layout - Function description
  */
 function Layout() { return <div>{children}</div> } " ;
@@ -113,15 +110,13 @@ export default function Layout({
     </div>
   );
 }
-import React, { ReactNode } from 'react';
-import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children ;}) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

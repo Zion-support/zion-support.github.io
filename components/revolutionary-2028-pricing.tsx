@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
-import {
   CheckCircle
   ArrowRight
   Star
@@ -78,7 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
  } from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
@@ -130,9 +129,6 @@ const pricingTiers = [
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 const contactInfo = {
 const pricingTiers = [
@@ -141,7 +137,7 @@ const pricingTiers = [
     popular: false
     color: 'from-blue-600 to-cyan-600'
     cta: 'Get Started'
-    href: '/contact'
+    href: '/contact';
   }
     name: 'Professional'
     price: '$999'
@@ -154,16 +150,16 @@ const pricingTiers = [
       'Basic analytics',
       'Mobile app access',
     ],
-    popular: false,
-    color: 'from-blue-600 to-cyan-600',
-    cta: 'Get Started',
-    href: '/contact',
+    popular: false;,
+    color: 'from-blue-600 to-cyan-600';,
+    cta: 'Get Started';,
+    href: '/contact';,
   },
   {
-    name: 'Professional',
-    price: '$999',
-    period: '/month',
-    description: 'Ideal for growing businesses and enterprises',
+    name: 'Professional';,
+    price: '$999';,
+    period: '/month';,
+    description: 'Ideal for growing businesses and enterprises';,
 origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
 'Advanced AI capabilities',
@@ -175,16 +171,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom integrations',
       'Training & onboarding',
     ],
-    popular: true,
-    color: 'from-purple-600 to-pink-600',
-    cta: 'Start Free Trial',
-    href: '/contact',
+    popular: true;,
+    color: 'from-purple-600 to-pink-600';,
+    cta: 'Start Free Trial';,
+    href: '/contact';,
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Tailored solutions for large organizations',
+    name: 'Enterprise';,
+    price: 'Custom';,
+    period: '';,
+    description: 'Tailored solutions for large organizations';,
     features: [
       'Custom AI development'
       'Dedicated support team'
@@ -202,46 +198,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     cta: 'Contact Sales'
     href: '/contact'
 const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com';
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
+  website: 'https://ziontechgroup && ziontechgroup.com';,  website: 'https://ziontechgroup && ziontechgroup.com';
 };
       'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
     ];
-    popular: false,
-    color: 'from - blue - 600 to - cyan - 600',
-    cta: 'Get Started',
-    name: 'Professional',
-    price: '$999',
-    period: '/month',
-    description: 'Ideal for growing businesses and enterprises',
+    popular: false;,
+    color: 'from - blue - 600 to - cyan - 600';,
+    cta: 'Get Started';,
+    name: 'Professional';,
+    price: '$999';,
+    period: '/month';,
+    description: 'Ideal for growing businesses and enterprises';,
     ];
-    popular: true,
-    color: 'from - purple - 600 to - pink - 600',
-    cta: 'Start Free Trial',
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Tailored solutions for large organizations',
+    popular: true;,
+    color: 'from - purple - 600 to - pink - 600';,
+    cta: 'Start Free Trial';,
+    name: 'Enterprise';,
+    price: 'Custom';,
+    period: '';,
+    description: 'Tailored solutions for large organizations';,
     ];
-    popular: false,
-    color: 'from - indigo - 600 to - purple - 600',
-    cta: 'Contact Sales',
+    popular: false;,
+    color: 'from - indigo - 600 to - purple - 600';,
+    cta: 'Contact Sales';,
     href: '/contact';
   }
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0;, 4)
   }
   {
     category: '🤖 AI & Machine Learning'
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0;, 4)
 const service_pricing = [;
   {
-    category: '🚀 2028 Futuristic Innovations',
-    services: futuristic2028Services.slice (0, 6),
+    category: '🚀 2028 Futuristic Innovations';,
+    services: futuristic2028Services.slice (0;, 6),
   },
   {
-    category: '🏙️ Smart City & Infrastructure',
+    category: '🏙️ Smart City & Infrastructure';,
     services: emergingTech2028Services;
       .filter (
         string =>;
@@ -250,27 +246,27 @@ const service_pricing = [;
       .slice (0, 4),
   },
   {
-    category: '⚛️ Quantum & Advanced Tech',
+    category: '⚛️ Quantum & Advanced Tech';,
     services: futuristic2028Services;
       .filter (string => s.category.includes ('Quantum'));
       .slice (0, 4),
   },
   {
-    category: '🤖 AI & Machine Learning',
+    category: '🤖 AI & Machine Learning';,
     services: emergingTech2028Services;
       .filter (string => s.category.includes ('AI'));
       .slice (0, 4),
   }, ];  {
-    category: '🏙️ Smart City & Infrastructure',
-    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
+    category: '🏙️ Smart City & Infrastructure';,
+    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0;, 4);
   }
   {
-    category: '⚛️ Quantum & Advanced Tech',
-    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
+    category: '⚛️ Quantum & Advanced Tech';,
+    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0;, 4);
   }
   {
-    category: '🤖 AI & Machine Learning',
-    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
+    category: '🤖 AI & Machine Learning';,
+    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0;, 4);
   }
   return (
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />
@@ -331,17 +327,17 @@ const service_pricing = [;
       'SLA guarantees',
       'On-premise deployment',
     ],
-    popular: false,
-    color: 'from-indigo-600 to-purple-600',
-    cta: 'Contact Sales',
-    href: '/contact',
+    popular: false;,
+    color: 'from-indigo-600 to-purple-600';,
+    cta: 'Contact Sales';,
+    href: '/contact';,
   },
 ];
 
 const servicePricing = [
   {
-    category: '🚀 2028 Futuristic Innovations',
-services: futuristic2028Services.slice(0, 6),
+    category: '🚀 2028 Futuristic Innovations';,
+services: futuristic2028Services.slice(0;, 6),
   },
   {
     category: '🏙️ Smart City & Infrastructure'
@@ -410,9 +406,9 @@ export default function Revolutionary2028Pricing() {
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='space-y-8'
           >
             <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm'>
@@ -499,7 +495,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               small and grow with us.;
             </p>;
           </div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map((tier, index) => (            </h2>;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map((tier;, index) => (            </h2>;
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
               Flexible pricing plans designed to scale with your business. Start small and grow with us.;
             </p>;
@@ -508,10 +504,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingTiers && pricingTiers.map((tier, index) => (;
               <motion&& motion.div
                 key={tier && tier.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
@@ -524,7 +520,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
 
 <div
-                  className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}
+                  className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover: border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`;}
                 >
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                   <div className='relative z-10'>
@@ -560,7 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <Link
                       href={tier && tier.href}
-                      className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
+                      className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover: opacity-90 transition-all duration-300 transform hover:scale-105`;}>;
                       {tier && tier.cta}
                     </Link>;
                   </div>;
@@ -601,10 +597,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </h4>;
                         <p className='text - purple - 300 mb - 4 text - sm'>;
                           {service.description}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0;, x: serviceIndex % 2 === 0 ? -30 : 30 ;}}
+                    whileInView={{ opacity: 1;, x: 0 ;}}
+                    transition={{ duration: 0 && 0.6;, delay: serviceIndex * 0 && 0.1 ;}}
+                    viewport={{ once: true ;}}
                           <Link
                             href={service.link}
                             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
@@ -628,7 +624,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>
                           </div>
                           <div className='text-sm text-purple-300'>
-                            <span className='font-medium'>Setup:</span>{' '}
+                            <span className='font-medium'>Setup: </span>{' ';}
                             {service.setupTime}
                           </div>
                         </div>
@@ -710,7 +706,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>;
                           </div>;
                           <div className='text - sm text - purple - 300'>;
-                            <span className='font - medium'>Setup:</span>{' '}
+                            <span className='font - medium'>Setup: </span>{' ';}
                             {service.setup_time}
                           </div>;
                         </div>;
@@ -728,10 +724,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>                          </div>                {category.services.map ((service, service_index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, coordinate_x: service_index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0;, coordinate_x: service_index % 2 === 0 ? -30 : 30 ;}}
+                    whileInView={{ opacity: 1;, coordinate_x: 0 ;}}
+                    transition={{ duration: 0.6;, delay: service_index * 0.1 ;}}
+                    viewport={{ once: true ;}}
                     className="group relative";
                   >;
                     <div className="relative p - 6 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -753,7 +749,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span className="text - purple - 300 text - sm">({service.reviews} reviews)</span>;
                           </div>;
                           <div className="text - sm text - purple - 300">;
-                            <span className="font - medium">Setup:</span> {service.setup_time}
+                            <span className="font - medium">Setup: </span> {service.setup_time;}
                           </div>;
                         </div>;
                         <div className="flex items - center justify - between">;
@@ -793,10 +789,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.6 ;}}
+              viewport={{ once: true ;}}
 
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -845,10 +841,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-3xl font-bold text-green-400">30%</div>;
               <div className="text-purple-300">Lower than Market</div>;
             </motion && motion.div>;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+              viewport={{ once: true ;}}
 
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -897,10 +893,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-3xl font-bold text-blue-400">100%</div>;
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion && motion.div>;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
+              viewport={{ once: true ;}}
 
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -938,10 +934,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -992,10 +988,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.6 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl';
             >;
               <Target className='w - 16 h - 16 text - green - 400 mx - auto mb - 6' />;
@@ -1018,10 +1014,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - purple - 300">Lower than Market</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl';
             >;
               <Shield className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6' />;
@@ -1044,10 +1040,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - blue - 300">Transparent Pricing</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.6;, delay: 0.4 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl';
             >;
               <Award className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6' />;
@@ -1077,10 +1073,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
                 Get Started;
               </span>;
               ?;

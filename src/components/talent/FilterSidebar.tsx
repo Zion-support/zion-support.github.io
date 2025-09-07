@@ -1,10 +1,10 @@
 import { Filter } from 'lucide-react'
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { SearchFilter } from "./filters/SearchFilter",;
+import { SortFilter } from "./filters/SortFilter",;
+import { SkillsFilter } from "./filters/SkillsFilter",;
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
+import { RegionFilter } from "./filters/RegionFilter",;
+import { ExperienceFilter } from "./filters/ExperienceFilter",;
 
 
 import { Filter } from 'lucide-react
@@ -88,8 +88,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant="ghost"
           size="sm"
 
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
+import { PriceFilter } from "./filters/PriceFilter",;
+import { FilterSidebarProps } from "@/types/filters",;
 
   clearFilters,;)
   isMobileFilterOpen,}: FilterSidebarProps) {;
@@ -135,8 +135,8 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
+import { PriceFilter } from "./filters/PriceFilter",;
+import { FilterSidebarProps } from "@/types/filters",;
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,

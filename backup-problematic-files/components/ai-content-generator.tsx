@@ -1,92 +1,92 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
 export default function AIContentGeneratorPage() {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-white" />,"
+      icon: <Brain className="w-8 h-8 text-white" />;,"
 "
-      icon: <Zap className="w-8 h-8 text-white" />,"
-      icon: <Shield className="w-8 h-8 text-white" />,"
-      icon: <BarChart3 className="w-8 h-8 text-white" />,"
+      icon: <Zap className="w-8 h-8 text-white" />;,"
+      icon: <Shield className="w-8 h-8 text-white" />;,"
+      icon: <BarChart3 className="w-8 h-8 text-white" />;,"
 </BarChart3>"
-      icon: <Users className="w-8 h-8 text-white" />,"
-      icon: <Clock className="w-8 h-8 text-white" />,"
+      icon: <Users className="w-8 h-8 text-white" />;,"
+      icon: <Clock className="w-8 h-8 text-white" />;,"
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small blogs',
+      name: 'Starter';,
+      price: '$29';,
+      period: '/month';,
+      description: 'Perfect for individuals and small blogs';,
       features: [
         '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
       ],
-      popular: false,
-      color: 'border-gray-600',
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+      popular: false;,
+      color: 'border-gray-600';,
+      buttonColor: 'bg-gray-600 hover:bg-gray-700';
     },
     {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      name: 'Professional';,
+      price: '$99';,
+      period: '/month';,
+      description: 'Ideal for growing businesses and agencies';,
       features: [
         '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
       ],
-      popular: true,
-      color: 'border-blue-500',
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+      popular: true;,
+      color: 'border-blue-500';,
+      buttonColor: 'bg-blue-600 hover:bg-blue-700';
     },
     {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations and enterprises',
+      name: 'Enterprise';,
+      price: '$299';,
+      period: '/month';,
+      description: 'For large organizations and enterprises';,
       features: [
         'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations',
         'SLA guarantee'
       ],
-      popular: false,
-      color: 'border-purple-600',
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+      popular: false;,
+      color: 'border-purple-600';,
+      buttonColor: 'bg-purple-600 hover:bg-purple-700';
     }
   ],;
   const useCases = [;
     {;
-      title: 'Blog Writing',,
-  description: 'Generate engaging blog posts, articles, and long-form content in minutes.',;
-      icon: '',;
+      title: 'Blog Writing';,,
+  description: 'Generate engaging blog posts;, articles, and long-form content in minutes.',;
+      icon: '';,;
       examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons'];
     },;
     {;
-      title: 'Marketing Copy',,
-  description: 'Create compelling ad copy, landing pages, and marketing materials.',;
-      icon: '',;
+      title: 'Marketing Copy';,,
+  description: 'Create compelling ad copy;, landing pages, and marketing materials.',;
+      icon: '';,;
       examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns'];
     },;
     {;
-      title: 'Social Media',,
-  description: 'Generate engaging social media posts, captions, and hashtag suggestions.',;
-      icon: '',;
+      title: 'Social Media';,,
+  description: 'Generate engaging social media posts;, captions, and hashtag suggestions.',;
+      icon: '';,;
       examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions'];
     },;
     {;
-      title: 'E-commerce',,
-  description: 'Write product descriptions, category pages, and promotional content.',;
-      icon: '',;
+      title: 'E-commerce';,,
+  description: 'Write product descriptions;, category pages, and promotional content.',;
+      icon: '';,;
       examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections'];
     }
   ],;
   const integrations = [;
-    { name: 'WordPress', icon: '', description: 'Direct plugin integration' },;
-    { name: 'Shopify', icon: '', description: 'E-commerce content automation' },;
-    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' },;
-    { name: 'Mailchimp', icon: '', description: 'Email campaign content' },;
-    { name: 'Slack', icon: '', description: 'Team collaboration' };
-    { name: 'Zapier', icon: '', description: '500+ app integrations' }
+    { name: 'WordPress';, icon: '';, description: 'Direct plugin integration' ;},;
+    { name: 'Shopify';, icon: '';, description: 'E-commerce content automation' ;},;
+    { name: 'HubSpot';, icon: '';, description: 'Marketing automation sync' ;},;
+    { name: 'Mailchimp';, icon: '';, description: 'Email campaign content' ;},;
+    { name: 'Slack';, icon: '';, description: 'Team collaboration' ;};
+    { name: 'Zapier';, icon: '';, description: '500+ app integrations' ;}
   ],
 
   return (
@@ -98,7 +98,7 @@ pr-12325
         <meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." />"
 </meta>"
         <meta property="og:title" content="AI Content Generator | Zion Tech Group" />"
-        <meta property="og:description" content="Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support." />"
+        <meta property="og: description" content="Advanced AI-powered content creation with real-time generation;, SEO optimization, and multi-language support." />"
         <meta name="twitter:card" content="summary_large_image" />"
 </meta>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">"
@@ -155,10 +155,10 @@ pr-12325
               <Card;
                 key={index}"
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1""
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+                style={{ animationDelay: `${(index * 0.1) + 0.2;}s` }}
                 <div className="relative">"
 </div>`;
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color;} shadow-xl`}>
                 <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">"
 </h3>
                 </h3>"
@@ -183,7 +183,7 @@ pr-12325
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
                 key={index}"`;
-                className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : } border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
+                className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : } border ${plan.color} hover: border-purple-500/50 transition-all duration-300`;}
 
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">"

@@ -5,7 +5,7 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedCard from '../../components/ui/EnhancedCard',;
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;

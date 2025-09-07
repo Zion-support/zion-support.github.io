@@ -1,12 +1,12 @@
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
-import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',
-import {MemoryRouter} from 'react-router-dom',
-import {CategoryCard} from '@/components/CategoryCard',
+import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
 
-import { render, screen } from '@testing-library/react',
-import { MemoryRouter } from 'react-router-dom',
-import { CategoryCard } from '@/components/CategoryCard',
+import { render, screen } from '@testing-library/react',;
+import { MemoryRouter } from 'react-router-dom',;
+import { CategoryCard } from '@/components/CategoryCard',;
 
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
@@ -15,9 +15,9 @@ import {CategoryCard} from '@/components/CategoryCard';
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
 import {CategoryCard} from '@/components/CategoryCard',;
-import {render, screen} from '@testing-library/react',
-import {MemoryRouter} from 'react-router-dom',
-import {CategoryCard} from '@/components/CategoryCard',
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
 pr-12325
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';

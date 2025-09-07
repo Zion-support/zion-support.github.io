@@ -190,8 +190,8 @@ export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
 import {
   Rocket, CheckCircle, ArrowRight, Brain, Atom,
   Shield, Zap, Users, Clock, Target, Star,
@@ -323,8 +323,8 @@ export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
 import {
   Rocket, CheckCircle, ArrowRight, Brain, Atom,
   Shield, Zap, Users, Clock, Target, Star,

@@ -1,15 +1,15 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -54,16 +54,16 @@ function NodeItem(): any ({;
     await navigator && navigator.clipboard.writeText(node && node.path)
 };
 export interface TreeNode {;
-  name: string,;
-  path: string,;
-  type: "folder" | "file",;
+  name: string;,;
+  path: string;,;
+  type: "folder" | "file";,;
   name: string
   path: string
   type: "folder" | "file"
 
-  name: string,
-  path: string,
-  type: "folder" | "file",;
+  name: string;,
+  path: string;,
+  type: "folder" | "file";,;
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -74,13 +74,12 @@ export interface TreeNode {;
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
-      body: JSON.stringify({ path: node.path })})
+      body: JSON.stringify({ path: node.path ;})})
   return (
     <div className='ml-2'>;
       <div className='flex items-center gap-2 py-1'>;
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
-import React, { useState } from 'react';
 
 export interface TreeNode {
   name: string;
@@ -95,10 +94,10 @@ const toggle = () => setOpen(v => !v;
 }
 
 export interface TreeNode {"
-  name: string,path: string,type: \"folder\" | \"file\",name: string;
+  name: string;,path: string;,type: \"folder\" | \"file\";,name: string;
   path: string;"
   type: \"folder\" | \"file\";"
-  name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
+  name: string;,path: string;,type: \"folder\" | \"file\";,exists?: boolean;
   children?: TreeNode[];}
 }
 }
@@ -108,7 +107,7 @@ const [open, setOpen]  = useState<boolean />(false)const hasChildren = Array && 
 const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
         // Expect an admin token in local storage, fall back to prompt;"
         \"x-admin-token\": localStorage.getItem(\"ADMIN_TOKEN\") |\"\"} as any;
-      body: JSON.stringify({ path: node.path }
+      body: JSON.stringify({ path: node.path ;}
 })return (<div className='ml-2' />;
       <div className='flex items-center gap-2 py-1' />;
         {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle' />;
@@ -121,11 +120,11 @@ export interface TreeNode {
 
 const clonePath = async () => ;
   const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {method: 'POST',exists?: boolean;}
+    await fetch(url, {method: 'POST';,exists?: boolean;}
   children?: TreeNode[];}
 }
 
-function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode;, depth: number;, onDeploy?: (path: string) => void;}
 }) {
   const [open, setOpen] = useState<boolean />(false);
 
@@ -135,7 +134,7 @@ const hasChildren = null;
         // Expect an admin token in local storage, fall back to prompt}
         'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || ''}
       } as any,
-      body: JSON.stringify({ path: node.path}
+      body: JSON.stringify({ path: node.path;}
 })
     })
 };
@@ -185,13 +184,13 @@ const toggle = () =>: any set_open (v => !v;}
   const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
 }
 "
-export interface TreeNode  {name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;}
+export interface TreeNode  {name: string;,path: string;,type: \"folder\" | \"file\";,exists?: boolean;}
   children?: TreeNode[];}
 }
 
-interface TreeProps  {nodes: TreeNode[],on_deploy?: (path: string) => void;}
+interface TreeProps  {nodes: TreeNode[];,on_deploy?: (path: string) => void;}
 }
-function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void}
+function NodeItem ({ node, depth, on_deploy }: { node: TreeNode;, depth: number;, on_deploy?: (path: string) => void;}
 }) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0;
 }
 const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
@@ -199,13 +198,13 @@ const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {awa
 
 const clone_path = async () => ;
   const url = `${window.location.origin}/api / dev / source - map`;
-    await fetch (url, {method: 'POST'}
-  headers: {'Content - Type': 'application / json',// Expect an admin token in local storage, fall back to prompt;}
-        'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || ''} as any,body: JSON.stringify ({ path: node.path}"
+    await fetch (url, {method: 'POST';}
+  headers: {'Content - Type': 'application / json';,// Expect an admin token in local storage, fall back to prompt;}
+        'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || ''} as any,body: JSON.stringify ({ path: node.path;}"
 })})}      headers: {\"Content - Type\": \"application / json\";}
         // Expect an admin token in local storage, fall back to prompt;}"
         \"x - admin - token\": local_storage.get_item (\"ADMIN_TOKEN\") || \"\"} as any;
-      body: JSON.stringify ({ path: node.path })}
+      body: JSON.stringify ({ path: node.path ;})}
 }
 
 const deploy = () =>: any on_deploy && on_deploy (node.path;

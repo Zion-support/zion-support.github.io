@@ -4,12 +4,12 @@ import data from '../../data/dao-leaderboard.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/dao-leaderboard.json',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import data from '../../data/dao-leaderboard.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/dao-leaderboard.json',
+import data from '../../data/dao-leaderboard.json',;
 
 
 export default function DaoLeaderboardPage() {
@@ -38,9 +38,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
+import EnhancedLayout from '../../components / layout / EnhancedLayout',;
 // @ts - ignore;
-import data from '../../data / dao - leaderboard.json',
+import data from '../../data / dao - leaderboard.json',;
 export default /**
  * DaoLeaderboardPage - Function description
  */

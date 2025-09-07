@@ -17,9 +17,9 @@ const benefits = [;
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
     icon: <Bot className="w - 8 h-8" />},
 
-import { GradientHeading } from "./GradientHeading",
-import { FeatureCard } from "./FeatureCard",
-import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
+import { GradientHeading } from "./GradientHeading",;
+import { FeatureCard } from "./FeatureCard",;
+import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
 
 const benefits = [
   {

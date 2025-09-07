@@ -4,10 +4,10 @@
   Check,
   ArrowRight,;
   Smartphone,;
-import React from 'react',
+import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
@@ -21,9 +21,6 @@ import {
   Smartphone;
 origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
@@ -32,8 +29,6 @@ export default function MDMPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
 export default function MDMPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
@@ -94,7 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service && service.trialDays;
                       ? `${service && service.trialDays}-day free trial • `;
                       : ''}
-                    Setup: {service && service.setupTime}
+                    Setup: {service && service.setupTime;}
                   </div>;
                 </div>;
               </div>;
@@ -124,7 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
 import Head from 'next / head';
-import {
   Phone,
   Mail,
   MapPin,
@@ -142,8 +136,6 @@ function MDMPage() {
 if (return null) {
   $2
 }import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import { extra_services } from '../data / extra - services';
 export default /**
  * MDMPage - Function description
  */
@@ -201,7 +193,7 @@ if (return null) {
                     {service.trial_days;
                       ? `${service.trial_days}-day free trial • `;
                       : ''}
-                    Setup: {service.setup_time}
+                    Setup: {service.setup_time;}
                   </div>;
                 </div>;
               </div>;
@@ -236,9 +228,6 @@ if (return null) {
         </div>;
       </div>;
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 

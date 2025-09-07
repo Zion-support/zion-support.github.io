@@ -1,18 +1,18 @@
 
 
 export function EnterpriseHero() {
-  return (import React from "react",
+  return (import React from "react",;
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",;
+import { GradientHeading } from "@/components/GradientHeading",;
 
 export function EnterpriseHero() {}
   return (import React from \"react\",}
 import { Button } from \"@/components/ui/button\";
 import { GradientHeading } from \"@/components/GradientHeading\";
-import { Button } from \"@/components/ui/button\",
-import { GradientHeading } from \"@/components/GradientHeading\",
+import { Button } from \"@/components/ui/button\",;
+import { GradientHeading } from \"@/components/GradientHeading\",;
 export function EnterpriseHero() {
   return (
 

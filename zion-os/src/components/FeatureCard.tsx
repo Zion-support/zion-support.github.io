@@ -1,10 +1,10 @@
 "use client",
-import Link from './next / link';,
-import { ReactNode  } from './react';,
+import Link from './next / link';,;
+import { ReactNode  } from './react';,;
 interface FeatureCardProps {
 "use client",""
-import Link from './next / link';,
-import { ReactNode  } from './react';,
+import Link from './next / link';,;
+import { ReactNode  } from './react';,;
 interface FeatureCardProps {
   // TODO: Implement
 }

@@ -1,12 +1,12 @@
 
 
-import React, { useState } from 'react',
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
-import Button from '../components/ui/Button';,
-import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';,
-import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';,
-import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';,
+import React, { useState } from 'react',;
+import Head from 'next/head';,;
+import Card from '../components/ui/Card';,;
+import Button from '../components/ui/Button';,;
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';,;
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';,;
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';,;
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 

@@ -1,17 +1,17 @@
-import { useEffect, useMemo, useState } from 'react',;
+import { useEffect, useMemo, useState } from 'react';
 ;
 export type QuoteRequest = {;
-  id:string,;
-  name:string,;
-  email:string,;
-  budget:string,;
-  timeline:string,,
-  description:string,;
-  talentSlug:string | null,;
-  aiSummary:string,;
-  aiType:string,;
-  status:'new' | 'in_review' | 'replied' | 'archived',;
-  createdAt:string,;
+  id: string;,;
+  name: string;,;
+  email: string;,;
+  budget: string;,;
+  timeline: string;,,
+  description: string;,;
+  talentSlug: string | null;,;
+  aiSummary: string;,;
+  aiType: string;,;
+  status: 'new' | 'in_review' | 'replied' | 'archived';,;
+  createdAt: string;,;
   updatedAt:string;
 },;
 export default function AdminQuotesPage() {;
@@ -48,16 +48,16 @@ export default function AdminQuotesPage() {;
     const header = ['idname','emailbudget','timelinetalentSlug','aiTypestatus','createdAt'],;
     const rows = filtered.map(r => [r.id,r.name,r.email,r.budget,r.timeline,r.talentSlug||,r.aiType,r.status,r.createdAt]),;`;
     const csv = [header.join(), ...rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join())].join('\n'),;
-    const blob = new Blob([csv], { type:'text/csv' }),;
+    const blob = new Blob([csv], { type: 'text/csv' ;}),;
     const url = URL.createObjectURL(blob),;
     const a = document.createElement('a'),;
     a.href = url,;
     a.download = 'quotes.csv',;
     a.click(),;
     URL.revokeObjectURL(url),;
-  const changeStatus = async (id:string, status:QuoteRequest['status']) => {;
-    await fetch('/api/requests/status', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ id, status }) }),;
-    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt:new Date().toISOString() } r)),;
+  const changeStatus = async (id: string;, status:QuoteRequest['status']) => {;
+    await fetch('/api/requests/status', { method: 'POST';, headers: { 'Content-Type':'application/json' ;}, body: JSON.stringify({ id;, status }) }),;
+    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt: new Date().toISOString() ;} r)),;
   return (;
     <div className="space-y-6">;"
 </div>"

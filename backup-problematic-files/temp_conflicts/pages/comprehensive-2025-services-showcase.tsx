@@ -1,14 +1,14 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,;
   Search, Filter, ArrowRight, Award, Target, Cpu, Database;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
 ;
 export default function Comprehensive2025ServicesShowcase() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
@@ -51,7 +51,7 @@ export default function Comprehensive2025ServicesShowcase() {;
 </div>
       <Head>;
 "
-        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />;"
+        <meta property="og: description" content="Explore our comprehensive collection of innovative micro SAAS services;, AI solutions, quantum technologies, and cutting-edge IT services." />;"
 </meta>"
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group, comprehensive services" />;"
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />;"
@@ -61,9 +61,9 @@ export default function Comprehensive2025ServicesShowcase() {;
 </section>"
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">;"
@@ -124,8 +124,8 @@ export default function Comprehensive2025ServicesShowcase() {;
             <AnimatePresence mode="wait">;"
 
                   key={service.id}
-                  exit={{ opacity:0, y:-30 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}"
+                  exit={{ opacity: 0;, y: -30 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}"
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";"
                     <div className="absolute top-4 right-4 z-10">;"
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">;"
@@ -182,8 +182,8 @@ export default function Comprehensive2025ServicesShowcase() {;
               <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>;"
                 onClick={() => {;
         <div className="max-w-4xl mx-auto text-center">;"
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl p-12 border border-blue-500/30";"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;"
 </h2>

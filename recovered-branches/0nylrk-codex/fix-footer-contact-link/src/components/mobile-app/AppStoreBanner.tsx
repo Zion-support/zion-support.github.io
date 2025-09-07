@@ -4,8 +4,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-import { X } from "lucide-react",
-import { useIsMobile } from "@/hooks/use-mobile",
+import { X } from "lucide-react",;
+import { useIsMobile } from "@/hooks/use-mobile",;
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),

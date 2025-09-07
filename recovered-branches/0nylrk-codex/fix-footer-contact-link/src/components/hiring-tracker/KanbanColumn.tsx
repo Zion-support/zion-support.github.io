@@ -1,11 +1,11 @@
 
 
-import { Droppable } from "react-beautiful-dnd",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Droppable } from "react-beautiful-dnd",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
   id,
   title,

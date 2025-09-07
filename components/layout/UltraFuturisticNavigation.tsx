@@ -50,7 +50,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
 
 
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
@@ -82,21 +82,21 @@ setIsScrolled(window.scrollY > 20)) => {
 
 const navigationItems = [
     {
-      name: 'Services',
+      name: 'Services';,
   href: '/services'
       hasDropdown: true;
 dropdownItems: [
 {
-          name: 'AI & Machine Learning',
-  href: '/services/ai-ml',
-          icon: Brain}
-          color: 'from-purple-500 to-pink-600'}
+          name: 'AI & Machine Learning';,
+  href: '/services/ai-ml';,
+          icon: Brain;}
+          color: 'from-purple-500 to-pink-600';}
         },
         {
-          name: 'Quantum Computing',
+          name: 'Quantum Computing';,
   href: '/services/quantum'
           icon: Atom;
-color: 'from-cyan-500 to-blue-600'
+color: 'from-cyan-500 to-blue-600';
 }
        }
 }
@@ -114,59 +114,59 @@ color: 'from-cyan-500 to-blue-600'
           name: 'IT Solutions'
           href: '/services/it-solutions'
           icon: Rocket
-          color: 'from-green-500 to-emerald-600'
+          color: 'from-green-500 to-emerald-600';
         }
         {
-    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
-        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+    { name: 'Pricing';, href: '/pricing' ;},  ];        { name: 'AI & Machine Learning';, href: '/services/ai-ml';, icon: Brain;, color: 'from-purple-500 to-pink-600' ;},
+        { name: 'Quantum Computing';, href: '/services/quantum';, icon: Atom;, color: 'from-cyan-500 to-blue-600' ;},
+        { name: 'Cybersecurity';, href: '/services/cybersecurity';, icon: Shield;, color: 'from-red-500 to-pink-600' ;},
+        { name: 'IT Solutions';, href: '/services/it-solutions';, icon: Rocket;, color: 'from-green-500 to-emerald-600' ;},
+        { name: 'View All Services';, href: '/services';, icon: Rocket;, color: 'from-gray-500 to-gray-600' ;}
       ]
     };
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' }
-    { name: 'Pricing', href: '/pricing' },  ];
+    { name: 'Solutions';, href: '/solutions' ;},
+    { name: 'About';, href: '/about' ;},
+    { name: 'Contact';, href: '/contact' ;},
+    { name: 'Pricing';, href: '/pricing' ;}
+    { name: 'Pricing';, href: '/pricing' ;},  ];
 
 
         {
 
-          name: 'View All Services',
-  href: '/services',
-          icon: Rocket}
-          color: 'from-gray-500 to-gray-600'}
+          name: 'View All Services';,
+  href: '/services';,
+          icon: Rocket;}
+          color: 'from-gray-500 to-gray-600';}
         }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Solutions';, href: '/solutions' ;},
+    { name: 'About';, href: '/about' ;},
+    { name: 'Contact';, href: '/contact' ;},
+    { name: 'Pricing';, href: '/pricing' ;},
 origin/cursor/automate-test-improve-and-merge-code-2533
-      { name: 'Solutions'}
-  href: '/solutions'}
+      { name: 'Solutions';}
+  href: '/solutions';}
 },
 
-      { name: 'About'}
-  href: '/about'}
+      { name: 'About';}
+  href: '/about';}
 },
 
-      { name: 'Contact'}
-  href: '/contact'}
+      { name: 'Contact';}
+  href: '/contact';}
 },
 
-      { name: 'Pricing'}
-  href: '/pricing'}
+      { name: 'Pricing';}
+  href: '/pricing';}
 }
 
   ];
 
 const contactInfo = {
-    mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com'}
-address: '364 E Main St STE 1008 Middletown DE 19709'}
+    mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';}
+address: '364 E Main St STE 1008 Middletown DE 19709';}
   };
 
     >
@@ -197,43 +197,43 @@ const [isScrolled, setIsScrolled] = useState(false);
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
-        { name: 'View All Services'}
-  href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600'}
+        { name: 'View All Services';}
+  href: '/services';, icon: Rocket;, color: 'from-gray-500 to-gray-600';}
 }
 
       ];
-    }  { name: 'Solutions'}
-  href: '/solutions'}
+    }  { name: 'Solutions';}
+  href: '/solutions';}
 },
-  { name: 'About'}
-  href: '/about'}
+  { name: 'About';}
+  href: '/about';}
 },
-  { name: 'Contact'}
-  href: '/contact'}
+  { name: 'Contact';}
+  href: '/contact';}
 },
-{ name: 'Pricing'}
-  href: '/pricing'}
+{ name: 'Pricing';}
+  href: '/pricing';}
 }
-      { name: 'Pricing'}
-  href: '/pricing'}
+      { name: 'Pricing';}
+  href: '/pricing';}
 }
-  ];name: 'View All Services',
-  href: '/services',icon: Rocket,color: 'from-gray-500 to-gray-600'}]},  { name: 'Solutions'}
-  href: '/solutions'}
+  ];name: 'View All Services';,
+  href: '/services';,icon: Rocket;,color: 'from-gray-500 to-gray-600';}]},  { name: 'Solutions';}
+  href: '/solutions';}
 },
-  { name: 'About'}
-  href: '/about'}
+  { name: 'About';}
+  href: '/about';}
 },
-  { name: 'Contact'}
-  href: '/contact'}
+  { name: 'Contact';}
+  href: '/contact';}
 },
-  { name: 'Pricing'}
-  href: '/pricing'}
+  { name: 'Pricing';}
+  href: '/pricing';}
 }
 ];
 
-const contactInfo = {mobile: '+1 302 464 0950'}
-  email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'}>;
+const contactInfo = {mobile: '+1 302 464 0950';}
+  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';}>;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
 
         <div className = 'flex items-center justify-between h-20' />          {/* Logo */} ;
@@ -246,10 +246,10 @@ const contactInfo = {mobile: '+1 302 464 0950'}
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />"
         <div className=\"flex items-center justify-between h-20\" />
           <motion.div;
-initial={{ opacity: 0, x: -20 }
+initial={{ opacity: 0;, x: -20 ;}
 }
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            animate={{ opacity: 1;, x: 0 ;}}
+            transition={{ duration: 0.6 ;}}
             className='flex items-center space-x-3'
 
 
@@ -276,8 +276,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex items-center justify-between h-20">;
           <motion&& motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0;, x: -20 ;}}
+            animate={{ opacity: 1;, x: 0 ;}}
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
             </div>
@@ -288,7 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
-            transition={{ duration: 0 && 0.6 }}
+            transition={{ duration: 0 && 0.6 ;}}
             className='flex items-center space-x-3'>;
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>;
               <Rocket className='w-7 h-7 text-white' />;
@@ -350,10 +350,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                          transition={{ duration: 0 && 0.2 }}
+                          initial={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}}
+                          animate={{ opacity: 1;, y: 0;, scale: 1 ;}}
+                          exit={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}}
+                          transition={{ duration: 0 && 0.2 ;}}
                           className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden'>;
                           <div className='p-4'>;
                             <div className='grid gap-3'>                              {item && item.dropdownItems?.map((dropdownItem, idx) => (;
@@ -368,7 +368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   href={dropdownItem && dropdownItem.href}
                                   className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item'>;
                                   <div
-                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>;
+                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item: scale-110 transition-transform duration-300`;}>;
                                     <dropdownItem && dropdownItem.icon className='w-5 h-5 text-white' />;
                                   </div>;
                                   <div>;
@@ -380,7 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                       <div className='text-xs text-gray-400'>;
                                         Explore our complete portfolio;
                                       </div>                                    )}                                >;
-                                  <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>;
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item: scale-110 transition-transform duration-300`;}>;
                                     <dropdownItem && dropdownItem.icon className="w-5 h-5 text-white" />;
                                   </div>;
                                   <div>;
@@ -394,15 +394,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
                     <AnimatePresence />;
                       {activeDropdown === item && item.name && (<motion&& motion.div;}
-                          initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }
+                          initial={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}
 }
 
-                          animate={{ opacity: 1, y: 0, scale: 1 }
+                          animate={{ opacity: 1;, y: 0;, scale: 1 ;}
 }
 
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          exit={{ opacity: 0;, y: 10;, scale: 0.95 ;}}
 
-                          transition={{ duration: 0.2 }
+                          transition={{ duration: 0.2 ;}
 }
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden' />
 
@@ -414,7 +414,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item' />
 
                                   <div;
-                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item: scale-110 transition-transform duration-300
+                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item: scale-110 transition-transform duration-300;
 } />
 
                                     <dropdownItem.icon className='w-5 h-5 text-white' />;
@@ -478,7 +478,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                                   className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item' />
 
                                   <div;
-                                    className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item: scale - 110 transition - transform duration - 300
+                                    className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item: scale - 110 transition - transform duration - 300;
 } />
 
                                     <dropdown_item.icon className='w - 5 h - 5 text - white' />;
@@ -493,7 +493,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
     </div>}
   );}
 }                                >;
-                                  <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item: scale - 110 transition - transform duration - 300
+                                  <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item: scale - 110 transition - transform duration - 300;
 } />
 "
                                     <dropdown_item.icon className=\"w - 5 h - 5 text - white\" />;
@@ -538,7 +538,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
               </div>;
             </div>;
             {/* CTA Button */}
-<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }
+<motion.div whileHover={{ scale: 1.05 ;}} whileTap={{ scale: 0.95 ;}
 } />;
               <Link;
                 href='/contact';
@@ -570,7 +570,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
               </div>
             </div>
             {/* CTA Button */}
-<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+<motion.div whileHover={{ scale: 1.05 ;}} whileTap={{ scale: 0.95 ;}}>
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'
@@ -616,22 +616,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0;, height: 0 ;}}
+            animate={{ opacity: 1;, height: 'auto' ;}}
+            exit={{ opacity: 0;, height: 0 ;}}
 
       {/* Mobile Menu *}
 }
       <AnimatePresence />;
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }
+            initial={{ opacity: 0;, height: 0 ;}
 }
-            animate={{ opacity: 1, height: 'auto' }
+            animate={{ opacity: 1;, height: 'auto' ;}
 }
 
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0;, height: 0 ;}}
 
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden'
            />
             <div className='px-4 py-6 space-y-4' />
@@ -660,20 +660,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       {activeDropdown === item && item.name && (;}
                         <motion&& motion.div;}
-transition={{ duration: 0.2 }}
+transition={{ duration: 0.2 ;}}
 
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.2 ;}}
                           className='ml-4 mt-2 space-y-2'
 
 className='ml-4 mt-2 space-y-2'
 origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           {item.dropdownItems?.map(dropdownItem => (
-                          transition={{ duration: 0 && 0.2 }}
+                          transition={{ duration: 0 && 0.2 ;}}
 className='ml-4 mt-2 space-y-2'
                          />
                           {item.dropdownItems?.map(dropdownItem => (}
-                          transition={{ duration: 0 && 0.2 }
+                          transition={{ duration: 0 && 0.2 ;}
 }
 
                           className='ml-4 mt-2 space-y-2'>;
@@ -688,7 +688,7 @@ className='ml-4 mt-2 space-y-2'
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center`}>;
                                 <dropdownItem && dropdownItem.icon className='w-4 h-4 text-white' />;
                               </div>;
-                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem && dropdownItem.name}                        >;
+                              <span className='text-gray-300 hover: text-white transition-colors'>                                {dropdownItem && dropdownItem.name;}                        >;
                           {item && item.dropdownItems?.map((dropdownItem) => (;
                             <Link
                               key={dropdownItem && dropdownItem.name}
@@ -716,7 +716,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   ) : (;
                     <Link
-                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
+                      className='block text-gray-300 hover: text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false);}
 
                       href={item.href}
 className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
@@ -832,12 +832,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Mobile Menu */}
       <AnimatePresence />;
         {is_open && (<motion.div;}
-            initial={{ opacity: 0, height: 0 }
+            initial={{ opacity: 0;, height: 0 ;}
 }
-            animate={{ opacity: 1, height: 'auto' }
+            animate={{ opacity: 1;, height: 'auto' ;}
 }
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }
+            exit={{ opacity: 0;, height: 0 ;}}
+            transition={{ duration: 0.3 ;}
 }
             className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 700 / 50 overflow - hidden' />
 
@@ -861,12 +861,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         />;
                       </button>;
                       {active_dropdown === item.name && (<motion.div;}
-                          initial={{ opacity: 0, coordinate_y: -10 }
+                          initial={{ opacity: 0;, coordinate_y: -10 ;}
 }
-                          animate={{ opacity: 1, coordinate_y: 0 }
+                          animate={{ opacity: 1;, coordinate_y: 0 ;}
 }
-                          exit={{ opacity: 0, coordinate_y: -10 }}
-                          transition={{ duration: 0.2 }
+                          exit={{ opacity: 0;, coordinate_y: -10 ;}}
+                          transition={{ duration: 0.2 ;}
 }
                           className='ml - 4 mt - 2 space - y-2' />
 
@@ -881,7 +881,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                                 <dropdown_item.icon className='w - 4 h - 4 text - white' />;
                               </div>;
-                              <span className='text - gray - 300 hover: text - white transition - colors' />                                {dropdown_item.nam}
+                              <span className='text - gray - 300 hover: text - white transition - colors' />                                {dropdown_item.nam;}
 }                        >;
                           {item.dropdown_items?.map ((dropdown_item) => (<Link;}
                               key={dropdown_item.name}
@@ -900,7 +900,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </motion.div>)}
                     </div>) : (<Link;
                       href={item.href}
-                      className='block text - gray - 300 hover: text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50'                      on_click={() = /> setIsOpen (false}"
+                      className='block text - gray - 300 hover: text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50'                      on_click={() = /> setIsOpen (false;}"
 }                      className=\"block text - gray - 300 hover:text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50\";
                       on_click={() => setIsOpen (false)}
                     >;

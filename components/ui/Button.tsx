@@ -14,12 +14,12 @@ interface ButtonProps {
 
 export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
 
-const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500'}
-  secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
+const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500';}
+  secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500';,outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
   }
 
-const sizeClasses = {sm: 'px-3 py-2 text-sm'}
-  md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg';}
+const sizeClasses = {sm: 'px-3 py-2 text-sm';}
+  md: 'px-4 py-2 text-base';,lg: 'px-6 py-3 text-lg';}
   }
 
 const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes} />;
@@ -48,7 +48,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement />  {
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps />(({className,variant = 'default',size = 'default',asChild = false,...props;}
     },ref;
   ) => {return (<button;
-        className={cn('inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',{'bg-primary text-primary-foreground hover: bg-primary/90':;
+        className={cn('inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';,{'bg-primary text-primary-foreground hover: bg-primary/90':;
               variant === 'default','bg-destructive text-destructive-foreground hover: bg-destructive/90':;
               variant === 'destructive','border border-input bg-background hover: bg-accent hover:text-accent-foreground':;
               variant === 'outline','bg-secondary text-secondary-foreground hover: bg-secondary/80':;
@@ -74,9 +74,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
 import React from "react";
 
-import React from 'react';
-import Link from 'next/link';
-import React from "react";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ButtonProps {
   children: React.ReactNode;
@@ -109,15 +106,15 @@ const Button: React.FC<ButtonProps> = ({;
   const baseClasses =;
     "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
   const variantClasses = {;
-    primary: "bg-blue-600 text-white hover:bg-blue-700",;
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",;
-    outline: "border border-gray-300 bg-transparent hover:bg-gray-50",;
-    ghost: "hover:bg-gray-100",;
+    primary: "bg-blue-600 text-white hover:bg-blue-700";,;
+    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300";,;
+    outline: "border border-gray-300 bg-transparent hover:bg-gray-50";,;
+    ghost: "hover:bg-gray-100";,;
   };
   const sizeClasses = {;
-    sm: "h-8 px-3 text-xs",;
-    md: "h-10 px-4 py-2",;
-    lg: "h-12 px-8 text-lg",;
+    sm: "h-8 px-3 text-xs";,;
+    md: "h-10 px-4 py-2";,;
+    lg: "h-12 px-8 text-lg";,;
   };
   class_name?: string;
       />;
@@ -142,16 +139,16 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
       type;
       ...props;
 }"
-const Button: React.FC<ButtonProps /> = ({ children,variant = \"primary\",size = \"md\",className = \"\",onClick,disabled = false,type = \"button\",asChild = false,...props;}
+const Button: React.FC<ButtonProps /> = ({ children;,variant = \"primary\",size = \"md\",className = \"\",onClick,disabled = false,type = \"button\",asChild = false,...props;}
    }) => {
 
 const baseClasses =;"
     \"inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\";
 }"
-const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\",secondary: \"bg-gray-200 text-gray-900 hover:bg-gray-300\",outline: \"border border-gray-300 bg-transparent hover:bg-gray-50\",ghost: \"hover:bg-gray-100}
+const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\";,secondary: \"bg-gray-200 text-gray-900 hover:bg-gray-300\";,outline: \"border border-gray-300 bg-transparent hover:bg-gray-50\";,ghost: \"hover:bg-gray-100;}
 }
 ;"
-  const sizeClasses = {sm: \"h-8 px-3 text-xs\",md: \"h-10 px-4 py-2\",lg: \"h-12 px-8 text-lg}
+  const sizeClasses = {sm: \"h-8 px-3 text-xs\";,md: \"h-10 px-4 py-2\";,lg: \"h-12 px-8 text-lg;}
 }class_name?: string;
   on_click?: () => void;
   disabled?: boolean;"
@@ -159,24 +156,24 @@ const variantClasses = {primary: \"bg-blue-600 text-white hover:bg-blue-700\",se
   as_child?: boolean;
 }
 "
-const Button: React.FC < ButtonProps> = ({ children,variant = \"primary\",size = \"md\",class_name = \"\",on_click,disabled = false,type = \"button\",...props;}
+const Button: React.FC < ButtonProps> = ({ children;,variant = \"primary\",size = \"md\",class_name = \"\",on_click,disabled = false,type = \"button\",...props;}
    }) => {
 
 const base_classes =;"
     \"inline - flex items - center justify - center rounded - md font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50\";
 "
-const variant_classes = {primary: \"bg - blue - 600 text - white hover:bg - blue - 700\",secondary: \"bg - gray - 200 text - gray - 900 hover:bg - gray - 300\",outline: \"border border - gray - 300 bg - transparent hover:bg - gray - 50\",ghost: \"hover:bg - gray - 100\";}"
+const variant_classes = {primary: \"bg - blue - 600 text - white hover:bg - blue - 700\";,secondary: \"bg - gray - 200 text - gray - 900 hover:bg - gray - 300\";,outline: \"border border - gray - 300 bg - transparent hover:bg - gray - 50\";,ghost: \"hover:bg - gray - 100\";}"
     ghost: \"hover:bg - gray - 100\";}
   }
 "
-const size_classes = {sm: \"h - 8 px - 3 text - xs\",md: \"h - 10 px - 4 py - 2\",lg: \"h - 12 px - 8 text - lg\";}"
+const size_classes = {sm: \"h - 8 px - 3 text - xs\";,md: \"h - 10 px - 4 py - 2\";,lg: \"h - 12 px - 8 text - lg\";}"
     lg: \"h - 12 px - 8 text - lg\";}
   }
 
 const classes  = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;// Check condition;
 if ( {) {$2;}
 }
-    return React.clone_element (children as React.ReactElement, {class_name: classes,on_click,disabled,type,...props;}
+    return React.clone_element (children as React.ReactElement, {class_name: classes;,on_click,disabled,type,...props;}
       disabled,type,...props;}
     })}
   return (<button;
@@ -195,14 +192,14 @@ if ( {) {$2;}
   const content = (
     <>
 const Button: React.FC<ButtonProps /> = ({primary:;
-      'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',secondary:;
-      'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',ghost:;
-      'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',outline:;}
+      'bg-blue-600 hover: bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0';,secondary:;
+      'bg-gray-800 hover: bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5';,ghost:;
+      'bg-transparent hover: bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5';,outline:;}
       'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5';}
   }
 
-const sizeClasses = {sm: 'px-4 py-2 text-sm'}
-  md: 'px-6 py-3 text-base',lg: 'px-8 py-4 text-lg';}
+const sizeClasses = {sm: 'px-4 py-2 text-sm';}
+  md: 'px-6 py-3 text-base';,lg: 'px-8 py-4 text-lg';}
   }
 
 const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;

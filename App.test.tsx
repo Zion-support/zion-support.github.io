@@ -21,10 +21,7 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 });
-import React from 'react';
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App from './App';
 
 describe('App', () => {
   it('renders without crashing', () => {

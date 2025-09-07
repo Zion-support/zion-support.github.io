@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../data/extra-services';
@@ -180,7 +180,7 @@ return undefined;
   }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const canonicalUrl = `https://ziontechgroup.com/${slug}`;
+  const canonicalUrl = `https: //ziontechgroup.com/${slug;}`;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -218,7 +218,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>;
                   </div>;
                   <div className='text-slate-400'>;
-                    {service && service.trialDays}-day free trial • Setup:{' '}
+                    {service && service.trialDays}-day free trial • Setup: {' ';}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -281,7 +281,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>;
                   </div>;
                   <div className='text - slate - 400'>;
-                    {service.trial_days}-day free trial • Setup:{' '}
+                    {service.trial_days}-day free trial • Setup: {' ';}
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -431,7 +431,7 @@ function normalizeSlug(): any (value: string): string {;
   const services = collectAllServices();
   const staticSlugs = new Set<string>();
   try {;
-    const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
+    const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true ;});
           }
     }
   } catch {}
@@ -484,11 +484,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const pages_dir = path.join (process.cwd (), 'pages');
   const static_slugs = new Set < string>();
   try {
-    const entries = fs.readdir_sync (pages_dir, { withFileTypes: true });
+    const entries = fs.readdir_sync (pages_dir, { withFileTypes: true ;});
           }
     }
   } catch {}
-      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true ;}),
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
   $2
@@ -502,7 +502,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // Exclude any slug that conflicts with an existing root page file
   try {
-const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+const entries = fs.readdirSync(pagesDir, { withFileTypes: true ;});
       }
     }
   } catch {}
@@ -513,37 +513,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     slug => !staticSlugs.has(slug)
   );
   return {
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
-    fallback: true,
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug ;} })),
+    fallback: true;,
   }
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} }
+  return { props: {;} }
 };
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
 
   return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
-    fallback: true
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug ;} })),
+    fallback: true;
   }
 }
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };}
+  return { props: {;} };}
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
   return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
-    fallback: true
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug ;} }))
+    fallback: true;
   }
 }
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 
-      const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
+      const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true ;}),;
     for (const entry of entries) {;
       if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
         const base = entry && entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
@@ -557,57 +557,57 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     slug => !staticSlugs && staticSlugs.has(slug);
   );
   return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
-    fallback: true,
+    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug ;} })),;
+    fallback: true;,
 }
 };
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} }
+  return { props: {;} }
 };
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
 
   return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
+    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug ;} })),;
     fallback: true;
   }
 };
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
-  return { props: {} }
+  return { props: {;} }
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));
 ;
   return {
-    paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),
-    fallback: true,
+    paths: uniqueNonConflicting.map (slug => ({ params: { slug ;} })),
+    fallback: true;,
   }
 }
 ;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {
   // No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
+  return { props: {;} }}
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
 ;
   return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
+    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug ;} })),
     fallback: true;
   }
 }
 ;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
+  return { props: {;} }
 }
-  return { props: {} }
+  return { props: {;} }
 }
 };
 ;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params ;}) => {
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };
+  return { props: {;} };
 };
 origin/cursor/automate-test-improve-and-merge-code-2533

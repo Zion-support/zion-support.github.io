@@ -1,7 +1,7 @@
 
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
 import { 
 
 
@@ -17,7 +17,7 @@ pr-12325
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select",
-import type { QuoteStatus } from "@/types/quotes",
+import type { QuoteStatus } from "@/types/quotes",;
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',

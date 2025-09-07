@@ -64,15 +64,15 @@ import {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -85,8 +85,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import Head from 'next / head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
@@ -105,8 +103,6 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
-import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -115,9 +111,9 @@ export default function ServicesShowcase2027() {;
   const [sortBy, setSortBy] = useState<string>('name');
   // Sort options
   const sortOptions = [
-    { value: 'name', label: 'Sort by Name' }
-    { value: 'price', label: 'Sort by Price' }
-    { value: 'roi', label: 'Sort by ROI' }
+    { value: 'name';, label: 'Sort by Name' ;}
+    { value: 'price';, label: 'Sort by Price' ;}
+    { value: 'roi';, label: 'Sort by ROI' ;}
   ];
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
@@ -187,11 +183,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   });
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'all';, name: 'All Services';, icon: '🚀';, count: allServices.length ;},
 {
-      id: 'AI Consciousness Evolution',
-      name: 'AI Consciousness',
-      icon: '🧠',
+      id: 'AI Consciousness Evolution';,
+      name: 'AI Consciousness';,
+      icon: '🧠';,
       count: allServices.filter(s => s.category.includes('AI Consciousness'))
         .length
     }
@@ -264,10 +260,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length },
+    { id: 'all';, name: 'All Prices';, count: allServices.length ;},
 {
-      id: 'low',
-      name: 'Under $1K/month',
+      id: 'low';,
+      name: 'Under $1K/month';,
       count: allServices.filter(
         s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000
       ).length
@@ -290,10 +286,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ];
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   return (
@@ -376,9 +372,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -591,10 +587,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {sorted_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                  initial={{ opacity: 0;, coordinate_y: 30;, scale: 0.9 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0;, scale: 1 ;}}
+                  transition={{ duration: 0.5;, delay: index * 0.1 ;}}
+                  exit={{ opacity: 0;, y: -30;, scale: 0.9 ;}}
 className='group'
                 >
                   <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>
@@ -674,11 +670,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                     <div className="mb-6 text-center">
-                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi;}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>
 <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
-                        ROI: {service.roi}
+                        ROI: {service.roi;}
                       </div>
                       <div className='text-gray-400 text-xs'>
                         Return on Investment
@@ -689,7 +685,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
-                        ROI: {service && service.roi}
+                        ROI: {service && service.roi;}
                       </div>;
                       <div className='text-gray-400 text-xs'>;
                         Return on Investment;
@@ -747,8 +743,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 ;}}
+              animate={{ opacity: 1 ;}}
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -912,7 +908,7 @@ href='/pricing'
                     {/* ROI */}
                     <div className='mb - 6 text - center'>;
                       <div className='text - green - 400 font - semibold text - lg'>;
-                        ROI: {service.roi}
+                        ROI: {service.roi;}
                       </div>;
                       <div className='text - gray - 400 text - xs'>;
                         Return on Investment;
@@ -958,8 +954,8 @@ href='/pricing'
           {/* No Results */}
           {sorted_services.length === 0 && (
             <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 ;}}
+              animate={{ opacity: 1 ;}}
               className='text - center py - 20';
             >;
               <div className='text - 6xl mb - 4'>🔍</div>;

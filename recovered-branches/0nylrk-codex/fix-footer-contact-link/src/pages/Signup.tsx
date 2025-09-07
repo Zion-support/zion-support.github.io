@@ -1,9 +1,9 @@
 
 
-import { Link, Navigate } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
+import { Link, Navigate } from "react-router-dom",;
+import { useForm, type UseFormReturn } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")

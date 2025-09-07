@@ -4,7 +4,7 @@ const STEPS = [
   { key: 'job', label: 'Job posted' }
   { key: 'invite', label: 'First invite sent' }
   { key: 'response', label: 'First response received' }
-import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedCard from '../../components/ui/EnhancedCard',;
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;

@@ -1,7 +1,7 @@
 
 
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';

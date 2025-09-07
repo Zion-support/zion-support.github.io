@@ -20,14 +20,14 @@ const Page = () => {
 export default Page;
 
 
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
@@ -49,9 +49,9 @@ export default function BlogPage() {
 
 }
 
-import React, { useState } from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
+import React, { useState } from 'react',;
+import Head from 'next / head',;
+import Layout from '../components / layout / Layout',;
 export default /**
  * BlogPage - Function description
  */
@@ -94,7 +94,7 @@ import Layout from '../components/layout/Layout';
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 

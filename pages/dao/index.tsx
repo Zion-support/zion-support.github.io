@@ -156,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 ;
 type Holder = { address: string, amount: string },
 type Metrics = {

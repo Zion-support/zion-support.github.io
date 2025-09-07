@@ -8,7 +8,7 @@ export default function CloudAutomationHub() {
   useEffect(() => {
 import { useEffect, useState } from 'react',;
 ;
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
@@ -68,7 +68,7 @@ export default function CloudAutomationHub(req, res) {
 
 }
 
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 ;
 export default /**
  * CloudAutomationHub - Function description

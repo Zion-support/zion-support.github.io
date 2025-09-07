@@ -1,6 +1,6 @@
 
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",;
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL') || '';
@@ -18,13 +18,13 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') |''
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
@@ -34,7 +34,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 
 interface QuoteDetails {
   description: string;
@@ -80,7 +80,7 @@ interface Service {
   title: string;
   category: string;"
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",""
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const openAIApiKey = Deno.env.get ('OPENAI_API_KEY');
 const supabase_url = Deno.env.get ('SUPABASE_URL') || ;

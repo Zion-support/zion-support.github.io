@@ -82,16 +82,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
-import Link from "next/link",
+import Link from "next/link",;
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button",;
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 
 interface ApplicationActionsProps {
   application: JobApplication,

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react",
+import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "./useAuth",
+import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
   profileCompleted: boolean;
   skillsAdded: boolean;

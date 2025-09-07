@@ -61,8 +61,6 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
   Search,;
   Phone,;
 } from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
   Star;
 CheckCircle,
@@ -90,15 +88,14 @@ Eye;
 Search}
 Phone;}
 } from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
 
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
-  website: 'https://ziontechgroup.com'}
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';}
+  website: 'https://ziontechgroup.com';}
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
@@ -106,22 +103,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 const contactInfo = null;
 visible: {
-  opacity: 1, transition: {}
-  staggerChildren: 0.1}
+  opacity: 1;, transition: {;}
+  staggerChildren: 0.1;}
 }
 }
-> <h2 className=\"text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6\"  /> Revolutionary Technology Services </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed\"  /> Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+> <h2 className=\"text-4xl md: text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6\"  /> Revolutionary Technology Services </h2> <p className=\"text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed\"  /> Discover our comprehensive suite of cutting-edge AI;, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
 }</div> </motion.div> {}
   /* Search and Filter */}"
 }<motion.div /> <Search className=\"absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400\" /> </div> {}
@@ -133,74 +129,74 @@ visible: {
   category.id }
 }initial= {
   {
-    id: 'ai-services',
-  title: '🧠 Revolutionary AI Services',
-    description: 'Next-generation AI consciousness and creativity',
-  icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-  services: aiEmergingTechServices.filter(s = /> s.category.includes('AI'))}
-gradient: 'from-violet-500/20 to-indigo-500/20'}
+    id: 'ai-services';,
+  title: '🧠 Revolutionary AI Services';,
+    description: 'Next-generation AI consciousness and creativity';,
+  icon: Brain;,
+    color: 'from-violet-500 to-purple-500';,
+  services: aiEmergingTechServices.filter(s = /> s.category.includes('AI'));}
+gradient: 'from-violet-500/20 to-indigo-500/20';}
   },
   {
-    id: 'quantum-tech',
-  title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing and beyond',
-  icon: Atom,
-    color: 'from-indigo-500 to-blue-500',
+    id: 'quantum-tech';,
+  title: '⚛️ Quantum & Emerging Tech';,
+    description: 'Quantum computing and beyond';,
+  icon: Atom;,
+    color: 'from-indigo-500 to-blue-500';,
   services: aiEmergingTechServices.filter(
       s => s.category.includes('Quantum') || s.category.includes('Blockchain')
     )}
-    gradient: 'from-indigo-500/20 to-cyan-500/20'}
+    gradient: 'from-indigo-500/20 to-cyan-500/20';}
   },
   {
-    id: 'enterprise-it',
-  title: '🏙️ Enterprise IT Solutions',
-    description: 'Autonomous operations and zero-trust security',
-  icon: Cpu,
-    color: 'from-blue-500 to-cyan-500',
+    id: 'enterprise-it';,
+  title: '🏙️ Enterprise IT Solutions';,
+    description: 'Autonomous operations and zero-trust security';,
+  icon: Cpu;,
+    color: 'from-blue-500 to-cyan-500';,
   services: realMarketServices.filter(
       s =>
         s.category.includes('Security') |
         s.category.includes('HR') |
         s.category.includes('Project')
     )}
-    gradient: 'from-blue-500/20 to-teal-500/20'}
+    gradient: 'from-blue-500/20 to-teal-500/20';}
   },
   {
-    id: 'business-automation',
-  title: '🛒 Business Automation',
-    description: 'Streamline business operations',
-  icon: ShoppingCart,
-    color: 'from-teal-500 to-emerald-500',
+    id: 'business-automation';,
+  title: '🛒 Business Automation';,
+    description: 'Streamline business operations';,
+  icon: ShoppingCart;,
+    color: 'from-teal-500 to-emerald-500';,
   services: realMarketServices.filter(
       s =>
         s.category.includes('E-commerce') |
         s.category.includes('Marketing') |
         s.category.includes('Finance')
     )}
-    gradient: 'from-teal-500/20 to-green-500/20'}
+    gradient: 'from-teal-500/20 to-green-500/20';}
   },
   {
-    id: 'robotics-automation',
-  title: '🤖 Robotics & Automation',
-    description: 'Intelligent automation solutions',
-  icon: Rocket,
-    color: 'from-green-500 to-yellow-500',
+    id: 'robotics-automation';,
+  title: '🤖 Robotics & Automation';,
+    description: 'Intelligent automation solutions';,
+  icon: Rocket;,
+    color: 'from-green-500 to-yellow-500';,
   services: aiEmergingTechServices.filter(
       s => s.category.includes('Robotics') || s.category.includes('Edge')
     )}
-    gradient: 'from-green-500/20 to-orange-500/20'}
+    gradient: 'from-green-500/20 to-orange-500/20';}
   },
   {
-    id: 'research-development',
-  title: '🔬 Research & Development',
-    description: 'Breakthrough technologies and innovations',
-  icon: Globe,
-    color: 'from-orange-500 to-red-500',
+    id: 'research-development';,
+  title: '🔬 Research & Development';,
+    description: 'Breakthrough technologies and innovations';,
+  icon: Globe;,
+    color: 'from-orange-500 to-red-500';,
   services: aiEmergingTechServices.filter(
       s => s.category.includes('Drug') || s.category.includes('Climate')
     )}
-    gradient: 'from-orange-500/20 to-pink-500/20'}
+    gradient: 'from-orange-500/20 to-pink-500/20';}
   }
 ];
 
@@ -224,12 +220,12 @@ const matchesSearch =
   });
 
 const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
@@ -263,15 +259,12 @@ import {;
   Search,;
   Phone,;
 } from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import { ;
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
 } from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 
 const serviceCategories = [
   Star,
@@ -307,20 +300,19 @@ import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
 } from 'lucide-react';
-import { realMarketServices } from '../../data / 2024 - real - market - services';
 import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';,
 }
 visible: {
-  opacity: 1, transition: {
+  opacity: 1;, transition: {
   stagger_children: 0.1;
 }
 ;
 }
-> <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) );
+> <h2 className="text - 4xl md: text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI;, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) );
 }</div> </motion.div> {
   /* Search and Filter */;
 }<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {
@@ -334,10 +326,10 @@ visible: {
 ;
 const service_categories = [;
   {
-    id: 'ai - services',
-    title: '🧠 Revolutionary AI Services',
-    description: 'Next - generation AI consciousness and creativity',
-    icon: Brain,
+    id: 'ai - services';,
+    title: '🧠 Revolutionary AI Services';,
+    description: 'Next - generation AI consciousness and creativity';,
+    icon: Brain;,
     visible: {
       opacity: 1
       transition: {
@@ -354,31 +346,31 @@ const service_categories = [;
                          service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 ;},;
     visible: {;
-      opacity: 1,;
+      opacity: 1;,;
       transition: {;
-        staggerChildren: 0 && 0.1,;
+        staggerChildren: 0 && 0.1;,;
       },;
     },  };
   const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+    hidden: { opacity: 0;, y: 20 ;},;
+    visible: { opacity: 1;, y: 0 ;},        staggerChildren: 0 && 0.1;
       }
     }
   }
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0;, y: 20 ;}
+    visible: { opacity: 1;, y: 0 ;}
   }
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0;, y: 20 ;},
+    visible: { opacity: 1;, y: 0 ;},
   const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 },;
+    hidden: { opacity: 0;, y: 20 ;},;
+    visible: { opacity: 1;, y: 0 ;},;
   };
-    hidden: { opacity: 0, y: 20 },
-visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0;, y: 20 ;},
+visible: { opacity: 1;, y: 0 ;},
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -386,19 +378,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */;}  };
       opacity: 1;
-transition: {}
-staggerChildren: 0.1}
+transition: {;}
+staggerChildren: 0.1;}
       }
     }
   };
 
 const itemVariants = {
 }
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 },
-visible: { opacity: 1, y: 0}
+visible: { opacity: 1;, y: 0;}
 }
   };
 
@@ -425,25 +417,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header *}
 }
 
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 },
-    visible: { opacity: 1, y: 0}
+    visible: { opacity: 1;, y: 0;}
 }
 
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 },
 
         {/* Header */}
 
         <motion.div;
-initial={{ opacity: 0, y: 20 }
+initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
 
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
@@ -454,26 +446,26 @@ initial={{ opacity: 0, y: 20 }
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
-        stagger_children: 0.1,
+        stagger_children: 0.1;,
       },
     },  }
 ;
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
+    hidden: { opacity: 0;, coordinate_y: 20 ;},
+    visible: { opacity: 1;, coordinate_y: 0 ;},        stagger_children: 0.1;
       }
     }
   }
 ;
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },
+    hidden: { opacity: 0;, coordinate_y: 20 ;},
+    visible: { opacity: 1;, coordinate_y: 0 ;},
   }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0;, y: 20 ;},
+    visible: { opacity: 1;, y: 0 ;},
   };
 
   return (
@@ -490,21 +482,21 @@ initial={{ opacity: 0, y: 20 }
       </div>;
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0;, y: 20 ;},
+    visible: { opacity: 1;, y: 0 ;},
 
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0;, y: 20 ;},
 
         {/* Header */}
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6 ;}}
+          viewport={{ once: true ;}}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -532,7 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {[
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 } />;
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6' />;
             Revolutionary Technology Services;
@@ -546,13 +538,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>;
             {[;
               {;
-                label: 'Total Services',;
-                value: allServices && allServices.length.toString(),;
-                icon: Rocket,;
+                label: 'Total Services';,;
+                value: allServices && allServices.length.toString();,;
+                icon: Rocket;,;
               },;
-              { label: 'Happy Customers', value: '50K+', icon: Users },;
-              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >;
+              { label: 'Happy Customers';, value: '50K+';, icon: Users ;},;
+              { label: 'Success Rate';, value: '99 && 99.9%';, icon: CheckCircle ;},;
+              { label: 'Global Reach';, value: '45+ Countries';, icon: Globe ;},            ].map((stat, index) => (        >;
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">;
             Revolutionary Technology Services;
           </h2>;
@@ -563,34 +555,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">;
             {[;
-              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },;
-              { label: 'Happy Customers', value: '50K+', icon: Users },;
-              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
-                label: 'Total Services',
-                value: allServices.length.toString(),
-                icon: Rocket,
+              { label: 'Total Services';, value: allServices && allServices.length.toString();, icon: Rocket ;},;
+              { label: 'Happy Customers';, value: '50K+';, icon: Users ;},;
+              { label: 'Success Rate';, value: '99 && 99.9%';, icon: CheckCircle ;},;
+                label: 'Total Services';,
+                value: allServices.length.toString();,
+                icon: Rocket;,
               },
-              { label: 'Happy Customers', value: '50K+', icon: Users },
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },
+              { label: 'Happy Customers';, value: '50K+';, icon: Users ;},
+              { label: 'Success Rate';, value: '99.9%';, icon: CheckCircle ;},
+              { label: 'Global Reach';, value: '45+ Countries';, icon: Globe ;},
 origin/cursor/automate-test-improve-and-merge-code-2533
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-        stagger_children: 0.1}}  }
+              { label: 'Global Reach';, value: '45+ Countries';, icon: Globe ;}
+        stagger_children: 0.1;}}  }
 
-const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const item_variants = {hidden: { opacity: 0;, coordinate_y: 20;}
+},visible: { opacity: 1;, coordinate_y: 0;}
 },        stagger_children: 0.1;
       }
     }
   }
 
-const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const item_variants = {hidden: { opacity: 0;, coordinate_y: 20;}
+},visible: { opacity: 1;, coordinate_y: 0;}
 }}
   }
 ;
-  const itemVariants = {hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+  const itemVariants = {hidden: { opacity: 0;, y: 20;}
+},visible: { opacity: 1;, y: 0;}
 },;
   return (<section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden' />;"
       {/* Animated Background */}return (<section className=\"py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden\" />;
@@ -602,18 +594,18 @@ const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
       </div>;"
       <div className=\"relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8\" />;
         {/* Header */}
-    hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+    hidden: { opacity: 0;, y: 20;}
+},visible: { opacity: 1;, y: 0;}
 }}
 
-const itemVariants = {hidden: { opacity: 0, y: 20}
+const itemVariants = {hidden: { opacity: 0;, y: 20;}
 },{/* Header */}<motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6 ;}}
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center mb-16'
@@ -631,21 +623,21 @@ designed to transform your business and propel you into the future.
             {[;
               {
 
-                label: 'Total Services',
-  value: allServices.length.toString()}
-                icon: Rocket}
+                label: 'Total Services';,
+  value: allServices.length.toString();}
+                icon: Rocket;}
               },
-              { label: 'Happy Customers'}
-  value: '50K+', icon: Users}
+              { label: 'Happy Customers';}
+  value: '50K+';, icon: Users;}
 },
-              { label: 'Success Rate'}
-  value: '99.9%', icon: CheckCircle}
+              { label: 'Success Rate';}
+  value: '99.9%';, icon: CheckCircle;}
 },
-              { label: 'Global Reach'}
-  value: '45+ Countries', icon: Globe}
+              { label: 'Global Reach';}
+  value: '45+ Countries';, icon: Globe;}
 },
-              { label: 'Global Reach'}
-  value: '45+ Countries', icon: Globe}
+              { label: 'Global Reach';}
+  value: '45+ Countries';, icon: Globe;}
 }
 
             ].map((stat, index) => (
@@ -653,12 +645,12 @@ designed to transform your business and propel you into the future.
             ].map((stat, index) = /> (;
               <motion&& motion.div;
 key={stat && stat.label}
-                initial={{ opacity: 0, scale: 0 && 0.8 }
+                initial={{ opacity: 0;, scale: 0 && 0.8 ;}
 }
-                whileInView={{ opacity: 1, scale: 1 }
+                whileInView={{ opacity: 1;, scale: 1 ;}
 }
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }
+                transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}
 }
                 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300' />;
                 <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -671,13 +663,13 @@ key={stat && stat.label}
                 <div className=\"text-2xl font-bold text-white\" />{stat && stat.value}</div>;"
                 <div className=\"text-sm text-gray-400\" />{stat && stat.label}</div>;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }
+                initial={{ opacity: 0;, scale: 0.8 ;}
 }
-                whileInView={{ opacity: 1, scale: 1 }
+                whileInView={{ opacity: 1;, scale: 1 ;}
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
 
-                viewport={{ once: true }}
+                viewport={{ once: true ;}}
 
 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
               >
@@ -698,10 +690,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
         {/* Search and Filter */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+          viewport={{ once: true ;}}
 
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -710,13 +702,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Search and Filter */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
 
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
 
 className='mb-12'
          />
@@ -771,12 +763,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
         {/* Service Categories */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
+          viewport={{ once: true ;}}
 className='mb-16'
         >
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -784,14 +776,14 @@ className='mb-16'
               <motion.div
                 key={category.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
 selectedCategory === category.id
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='mb-16'
@@ -800,17 +792,17 @@ className='mb-16'
             {serviceCategories.map((category, index) => (}
               <motion.div;}
 key={category.id}
-                initial={{ opacity: 0, y: 20 }
+                initial={{ opacity: 0;, y: 20 ;}
 }
-                whileInView={{ opacity: 1, y: 0 }
+                whileInView={{ opacity: 1;, y: 0 ;}
 }
-                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
 
 selectedCategory === category.id;
                     ? 'border-cyan-500 bg-cyan-500/10'
-                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'}
+                    : 'border-white/20 bg-white/5 hover: border-cyan-500/50 hover:bg-cyan-500/5';}
 }
                 }
 }
@@ -848,7 +840,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
 initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
 
@@ -908,22 +900,22 @@ variants={containerVariants}
         </motion.div>;
         {/* Search and Filter */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }
+          initial={{ opacity: 0;, coordinate_y: 20 ;}
 }
-          whileInView={{ opacity: 1, coordinate_y: 0 }
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}
 }
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6;, delay: 0.2 ;}}
         {/* Services Grid *}
 }
         <motion&& motion.div;
           variants={containerVariants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />          initial=\"hidden\";"
           whileInView=\"visible\";
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }"
           className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\";
           {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;}
@@ -931,7 +923,7 @@ variants={containerVariants}
               variants={itemVariants}
               className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105' />;
               {/* Popular Badge */}"
-              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular              className=\"group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105\">
+              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold' />                  Popular              className=\"group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105\">;
 }
               {/* Popular Badge *}
 }"
@@ -939,7 +931,7 @@ variants={containerVariants}
                 </div>;"
           initial=\"hidden\";"
           whileInView=\"visible\";}
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }"
           className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
 
@@ -1236,12 +1228,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Call to Action */}
         <motion&& motion.div;
-initial={{ opacity: 0, y: 20 }
+initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center mt-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1410,10 +1402,10 @@ href='/contact'
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.6 ;}}
+          viewport={{ once: true ;}}
           className='text - center mt - 20';
         >;
           <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;

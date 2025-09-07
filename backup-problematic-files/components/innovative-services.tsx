@@ -1,13 +1,13 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',;
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',;
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',;
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard',;
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All'),;
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
@@ -16,19 +16,19 @@ export default function InnovativeServicesPage() {;
   const [sortBy, setSortBy] = useState('innovation'),;
   const [showFilters, setShowFilters] = useState(false),;
   const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-1000', label: '$0 - $1,000' },;
-    { value: '1001-2000', label: '$1,001 - $2,000' },;
-    { value: '2001-3000', label: '$2,001 - $3,000' },;
-    { value: '3001-5000', label: '$3,001 - $5,000' },;
-    { value: '5001+', label: '$5,001+' }']
+    { value: 'All';, label: 'All Prices' ;},;
+    { value: '0-1000';, label: '$0 - $1;,000' },;
+    { value: '1001-2000';, label: '$1;,001 - $2,000' },;
+    { value: '2001-3000';, label: '$2;,001 - $3,000' },;
+    { value: '3001-5000';, label: '$3;,001 - $5,000' },;
+    { value: '5001+';, label: '$5;,001+' }']
   ],;
   const sortOptions = [;
-    { value: 'innovation', label: 'Innovation Level' },;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' }']
+    { value: 'innovation';, label: 'Innovation Level' ;},;
+    { value: 'price';, label: 'Price Low-High' ;},;
+    { value: 'popularity';, label: 'Most Popular' ;},;
+    { value: 'category';, label: 'Category' ;},;
+    { value: 'roi';, label: 'Highest ROI' ;}']
   // Filter and sort services;
   let filteredServices = innovativeMicroSaasServices,;
   // Category filter;
@@ -70,10 +70,10 @@ export default function InnovativeServicesPage() {;
   }),
 
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+    website: 'https://ziontechgroup.com;
   },
 
   const popularServices = getPopularInnovativeServices(),
@@ -88,7 +88,7 @@ export default function InnovativeServicesPage() {;
 </meta>"
         <meta name="keywords" content="quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services" />"
         <meta property="og:title" content="Innovative Micro SAAS Services - Zion Tech Group" />"
-        <meta property="og:description" content="Revolutionary quantum AI, blockchain, and autonomous systems. Breakthrough micro SAAS services with unprecedented innovation." />"
+        <meta property="og: description" content="Revolutionary quantum AI;, blockchain, and autonomous systems. Breakthrough micro SAAS services with unprecedented innovation." />"
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services" />"
         <meta property="og:type" content="website" />"
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />"
@@ -175,7 +175,7 @@ export default function InnovativeServicesPage() {;
                   <div className="text-6xl mb-4"></div>""
                   <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>""
                   <p className="text-gray-400">Try adjusting your search criteria or filters</p>"
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6';}>
                     <QuantumHolographicCard key={service.id} className="group">"
                       <div className="p-6">"
                         <div className="flex items-start justify-between mb-4">"
@@ -221,14 +221,14 @@ export default function InnovativeServicesPage() {;
                             <ArrowRight className="w-4 h-4 ml-2" />"
 
                           
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}"
+                            href={`mailto: ${contactInfo.email;}?subject=Inquiry about ${service.name}`}"
                             variant="secondary"""
                             className="px-4""
                             <Mail className="w-4 h-4" />"
 
                           
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">"
-                          <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>"
+                          <div>Contact: {contactInfo.mobile;} | {contactInfo.email}</div>"
                           <div className="mt-1">{contactInfo.website}</div>"
                     
           </section>;"
@@ -241,18 +241,18 @@ export default function InnovativeServicesPage() {;
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                   <Button;`;
-                    href={`tel:${contactInfo.mobile}`}"
+                    href={`tel: ${contactInfo.mobile;}`}"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg""
                     <Phone className="w-5 h-5 mr-2" />"
 
-                    href={`mailto:${contactInfo.email}`}"
+                    href={`mailto: ${contactInfo.email;}`}"
                     className="px-8 py-4 text-lg""
                     <Mail className="w-5 h-5 mr-2" />"
 
                   
                 <div className="mt-8 text-sm text-gray-400">"
-                  <div>Address: {contactInfo.address}</div>"
-                  <div className="mt-1">Website: {contactInfo.website}</div>"
+                  <div>Address: {contactInfo.address;}</div>"
+                  <div className="mt-1">Website: {contactInfo.website;}</div>"
               
           </section>
       

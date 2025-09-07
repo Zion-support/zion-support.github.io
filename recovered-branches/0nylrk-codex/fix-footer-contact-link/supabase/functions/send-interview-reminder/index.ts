@@ -1,8 +1,8 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",;
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2 ;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
     const { data: interviews, error } = await supabase
@@ -200,8 +200,8 @@ import { Resend } from "npm: resend@2.0.0",""
     if (interviews && interviews.length > 0) {
       for (const interview of interviews) {
         // Send email to client;
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,;
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-import {
   Rocket
   Brain
   Atom
@@ -44,7 +43,6 @@ import {
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
-import {
   Rocket,
   Brain,
   Atom,
@@ -104,83 +102,83 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const categories = [;
     {;
-      id: 'all',;
-      name: '🚀 All Services',;
-      icon: Rocket,;
-      count: allServices && allServices.length,;
-      color: 'from-violet-600 to-purple-600',;
+      id: 'all';,;
+      name: '🚀 All Services';,;
+      icon: Rocket;,;
+      count: allServices && allServices.length;,;
+      color: 'from-violet-600 to-purple-600';,;
     },;
     {;
-      id: 'cutting-edge',;
-      name: '⚡ Cutting-Edge',;
-      icon: Zap,;
-      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length,;
-      color: 'from-cyan-600 to-blue-600',;
+      id: 'cutting-edge';,;
+      name: '⚡ Cutting-Edge';,;
+      icon: Zap;,;
+      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length;,;
+      color: 'from-cyan-600 to-blue-600';,;
     },;
     {;
-      id: 'business',;
-      name: '🎯 Business Solutions',;
-      icon: Target,;
-      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length,;
-      color: 'from-green-600 to-emerald-600',;
+      id: 'business';,;
+      name: '🎯 Business Solutions';,;
+      icon: Target;,;
+      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length;,;
+      color: 'from-green-600 to-emerald-600';,;
     },;
     {;
-      id: 'ai-autonomous',;
-      name: '🤖 AI & Autonomous',;
-      icon: Brain,;
-      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length,;
-      color: 'from-emerald-600 to-teal-600',;
+      id: 'ai-autonomous';,;
+      name: '🤖 AI & Autonomous';,;
+      icon: Brain;,;
+      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length;,;
+      color: 'from-emerald-600 to-teal-600';,;
     },;
     {;
-      id: 'quantum-space',;
-      name: '⚛️ Quantum & Space',;
-      icon: Atom,;
-      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length,;
-      color: 'from-indigo-600 to-blue-600',;
+      id: 'quantum-space';,;
+      name: '⚛️ Quantum & Space';,;
+      icon: Atom;,;
+      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length;,;
+      color: 'from-indigo-600 to-blue-600';,;
     },;
     {;
-      id: 'ai',;
-      name: '🧠 AI & ML',;
-      icon: Brain,;
+      id: 'ai';,;
+      name: '🧠 AI & ML';,;
+      icon: Brain;,;
       count: allServices && allServices.filter(s =>;
         s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'));
       ).length,;
-      color: 'from-pink-600 to-rose-600',;
+      color: 'from-pink-600 to-rose-600';,;
     },;
     {;
-      id: 'quantum',;
-      name: '🔮 Quantum Tech',;
-      icon: Atom,;
+      id: 'quantum';,;
+      name: '🔮 Quantum Tech';,;
+      icon: Atom;,;
       count: allServices && allServices.filter(s =>;
         s && s.category.some(c => c && c.includes('Quantum'));
       ).length,;
-      color: 'from-purple-600 to-violet-600',;
+      color: 'from-purple-600 to-violet-600';,;
     },;
     {;
-      id: 'enterprise',;
-      name: '🏢 Enterprise',;
-      icon: Shield,;
+      id: 'enterprise';,;
+      name: '🏢 Enterprise';,;
+      icon: Shield;,;
       count: allServices && allServices.filter(s =>;
         s && s.category.some(c => c && c.includes('Enterprise'));
       ).length,;
-      color: 'from-blue-600 to-cyan-600',;
-    },    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' },;
-    { id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' },;
-    { id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },;
-    { id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },;
-    { id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },;
-    { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },;
-    { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },;
-    { id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
+      color: 'from-blue-600 to-cyan-600';,;
+    },    { id: 'all';, name: '🚀 All Services';, icon: Rocket;, count: allServices && allServices.length;, color: 'from-violet-600 to-purple-600' ;},;
+    { id: 'cutting-edge';, name: '⚡ Cutting-Edge';, icon: Zap;, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length;, color: 'from-cyan-600 to-blue-600' ;},;
+    { id: 'business';, name: '🎯 Business Solutions';, icon: Target;, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length;, color: 'from-green-600 to-emerald-600' ;},;
+    { id: 'ai-autonomous';, name: '🤖 AI & Autonomous';, icon: Brain;, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length;, color: 'from-emerald-600 to-teal-600' ;},;
+    { id: 'quantum-space';, name: '⚛️ Quantum & Space';, icon: Atom;, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length;, color: 'from-indigo-600 to-blue-600' ;},;
+    { id: 'ai';, name: '🧠 AI & ML';, icon: Brain;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length;, color: 'from-pink-600 to-rose-600' ;},;
+    { id: 'quantum';, name: '🔮 Quantum Tech';, icon: Atom;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length;, color: 'from-purple-600 to-violet-600' ;},;
+    { id: 'enterprise';, name: '🏢 Enterprise';, icon: Shield;, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length;, color: 'from-blue-600 to-cyan-600' ;}
   const priceRanges = [;
-    { id: 'all', name: 'All Prices', range: 'All' },;
-    { id: 'low', name: 'Under $5K', range: 'Under $5,000' },;
-    { id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' },;
-    { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },;
-    { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },;
+    { id: 'all';, name: 'All Prices';, range: 'All' ;},;
+    { id: 'low';, name: 'Under $5K';, range: 'Under $5;,000' },;
+    { id: 'medium';, name: '$5K - $15K';, range: '$5;,000 - $15,000' },;
+    { id: 'high';, name: '$15K - $30K';, range: '$15;,000 - $30,000' },;
+    { id: 'premium';, name: 'Over $30K';, range: 'Over $30;,000' },;
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
  } from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { cuttingEdge2028MicroSaas  } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028  } from '../data/2028-practical-business-solutions';
@@ -241,16 +239,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
       (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 ;},;
     visible: {;
-      opacity: 1,;
+      opacity: 1;,;
       transition: {;
-        staggerChildren: 0 && 0.1,;
+        staggerChildren: 0 && 0.1;,;
       },;
     },  };        staggerChildren: 0 && 0.1;
       }
     }
-        stagger_children: 0.1,
+        stagger_children: 0.1;,
       },
     },  }        stagger_children: 0.1;
       }
@@ -258,19 +256,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
+    hidden: { opacity: 0;, coordinate_y: 20 ;},
     visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
+      opacity: 1;,
+      coordinate_y: 0;,
+      transition: {;
       }
     }
   }
 ;
   const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
     <>;
       <Head>;
         <title>;
@@ -294,31 +292,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });
 
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0;, y: 20 ;},
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1;,
+      y: 0;,
       transition: {
-duration: 0.5,
+duration: 0.5;,
       },
     },
   };
 
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   return (
@@ -402,13 +400,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
         />      </Head>        {/* Open Graph */}
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
+        <meta property="og: description" content="Revolutionary 2029 technology services including AI Consciousness Evolution;, Quantum Time Manipulation, and autonomous AI systems." />;
         <meta property="og:url" content="https://ziontechgroup.com / 2029 - ultimate - services - showcase" />;
         <meta property="og:type" content="website" />;
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
-        <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
+        <meta name="twitter: description" content="Revolutionary 2029 technology services including AI Consciousness Evolution;, Quantum Time Manipulation, and autonomous AI systems." />;
       </Head>;
 
         />
@@ -425,9 +423,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='max-w-4xl mx-auto'
           >
             <div className='flex items-center justify-center space-x-2 mb-6'>
@@ -477,7 +475,7 @@ href='/pricing'
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
+                <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2">{allServices.length;}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
               <div className="text-center">
@@ -592,7 +590,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50';
                   }`}
 
 
@@ -625,7 +623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedPriceRange === range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-: 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+: 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50';
                   }`}
                 >
                   {range.name}
@@ -912,8 +910,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the future of technology with our revolutionary services.
@@ -936,10 +934,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
           >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?

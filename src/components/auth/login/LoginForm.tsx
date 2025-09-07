@@ -22,12 +22,12 @@ import Link from 'next/link';
 import { useState } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
-import { useAuth } from "@/context/auth/AuthProvider",
+import { useAuth } from "@/context/auth/AuthProvider",;
 
 import { useState } from 'react';
 import { use_router } from 'next / router';
@@ -161,8 +161,8 @@ pr-12325
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
 
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 
 import {
   Form,
@@ -171,8 +171,8 @@ import {
   FormItem,
   FormLabel,
 
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 import {
   Form,
   FormControl,
@@ -237,9 +237,9 @@ export function LoginForm() {
   const router = useRouter()
 
   FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import Link from "next/link",
-import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import Link from "next/link",;
+import { Checkbox } from "@/components/ui/checkbox",;
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -537,7 +537,7 @@ import {
   FormItem;
   FormLabel;
   FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert",
+import { Alert, AlertDescription } from "@/components/ui/alert",;
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
 // Form validation schema

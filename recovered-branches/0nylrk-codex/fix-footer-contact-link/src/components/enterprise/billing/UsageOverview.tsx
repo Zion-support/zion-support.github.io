@@ -1,11 +1,11 @@
 
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Progress } from "@/components/ui/progress",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
       used: 32,
       total: 100,
       percentage: 32

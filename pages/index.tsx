@@ -5,11 +5,11 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-import Link from 'next/link',
+import Link from 'next/link',;
 import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
 import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
+import ErrorBoundary from '../components/ErrorBoundary',;
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 
@@ -75,11 +75,11 @@ origin/cursor/analyze-improve-and-deploy-application-347d
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-import Link from 'next/link',
+import Link from 'next/link',;
 import Head from 'next/head';
 import { useState, useEffect, Suspense  } from 'react';
 import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
+import ErrorBoundary from '../components/ErrorBoundary',;
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 

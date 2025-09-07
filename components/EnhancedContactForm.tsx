@@ -11,13 +11,13 @@ const handleInputBlur = (name: keyof FormData) => {;
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {;
   errors && errors.email && (<motion && motion.p </motion && motion.p>) ;
 }</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) ) ;
-}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' 
-}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` 
+}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus: border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' ;
+}text-white placeholder-white/40 focus: outline-none focus:ring-2 focus:ring-cyan-400/20` ;
 }placeholder="Tell us about your project and requirements..." /> {;
   errors && errors.message && (<motion&& motion.p initial= {
 
   {
-  opacity: 0, y: -10
+  opacity: 0;, y: -10;
 }animate= {
   {
 import React, { useState } from 'react';
@@ -40,14 +40,14 @@ import Link from 'next/link';
 
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: '',
+    name: '';,
+    email: '';,
+    company: '';,
+    phone: '';,
+    service: '';,
+    budget: '';,
+    timeline: '';,
+    message: '';,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,51 +56,51 @@ const EnhancedContactForm: React.FC = () => {
 
   const services = [
     {
-      id: 'ai-development',
-      name: 'AI Development',
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500',
+      id: 'ai-development';,
+      name: 'AI Development';,
+      icon: Globe;,
+      color: 'from-purple-500 to-pink-500';,
     },
     {
-      id: 'cloud-architecture',
-      name: 'Cloud Architecture',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
+      id: 'cloud-architecture';,
+      name: 'Cloud Architecture';,
+      icon: Globe;,
+      color: 'from-blue-500 to-cyan-500';,
     },
     {
-      id: 'web-development',
-      name: 'Web Development',
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
+      id: 'web-development';,
+      name: 'Web Development';,
+      icon: Globe;,
+      color: 'from-green-500 to-emerald-500';,
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Globe,
-      color: 'from-red-500 to-orange-500',
+      id: 'cybersecurity';,
+      name: 'Cybersecurity';,
+      icon: Globe;,
+      color: 'from-red-500 to-orange-500';,
     },
     {
-      id: 'iot-platforms',
-      name: 'IoT Platforms',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
+      id: 'iot-platforms';,
+      name: 'IoT Platforms';,
+      icon: Globe;,
+      color: 'from-indigo-500 to-purple-500';,
     },
     {
-      id: 'digital-transformation',
-      name: 'Digital Transformation',
-      icon: Globe,
-      color: 'from-yellow-500 to-orange-500',
+      id: 'digital-transformation';,
+      name: 'Digital Transformation';,
+      icon: Globe;,
+      color: 'from-yellow-500 to-orange-500';,
     },
     {
-      id: 'custom',
-      name: 'Custom Solution',
-      icon: Globe,
-      color: 'from-gray-500 to-slate-500',
+      id: 'custom';,
+      name: 'Custom Solution';,
+      icon: Globe;,
+      color: 'from-gray-500 to-slate-500';,
     },
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   ];
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
+    const newErrors: FormErrors = {;}
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
     } else if (formData.name.trim().length < 2) {
@@ -134,7 +134,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       });
       setErrors({});
     } catch (error) {;
-      console && console.error('Error submitting form:', error);
+      console && console.error('Error submitting form: ';, error);
       showError('Submission FailedThere was an error sending your message. Please try again.');
     } finally {;
       setIsSubmitting(false);
@@ -150,14 +150,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: '',
+        name: '';,
+        email: '';,
+        company: '';,
+        phone: '';,
+        service: '';,
+        budget: '';,
+        timeline: '';,
+        message: '';,
       });
       setSelectedService('');
     }, 5000);
@@ -178,22 +178,22 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 ;},
     visible: {
-      opacity: 1,
+      opacity: 1;,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.1;,
+        delayChildren: 0.2;,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0;, y: 30 ;},
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
+      opacity: 1;,
+      y: 0;,
+      transition: { duration: 0.6 ;},
     },
   };
 
@@ -201,8 +201,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return (
       <motion&& motion.div
-        initial={{ opacity: 0, scale: 0 && 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0;, scale: 0 && 0.9 ;}}
+        animate={{ opacity: 1;, scale: 1 ;}}
         className="text-center py-12">;
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">;
           <CheckCircle className="w-10 h-10 text-green-400" />;
@@ -262,13 +262,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                  } text-white placeholder-white/40 focus: outline-none focus:ring-2 focus:ring-cyan-400/20`;}
                   placeholder="Enter your full name";
                 />;
                 {errors && errors.name && (;
                   <motion&& motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0;, y: -10 ;}}
+                    animate={{ opacity: 1;, y: 0 ;}}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2">;
                     <AlertCircle className="w-4 h-4" />;
                     {errors && errors.name}
@@ -285,13 +285,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                  } text-white placeholder-white/40 focus: outline-none focus:ring-2 focus:ring-cyan-400/20`;}
                   placeholder="Enter your email address";
                 />;
                 {errors && errors.email && (;
                   <motion&& motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0;, y: -10 ;}}
+                    animate={{ opacity: 1;, y: 0 ;}}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2">;
                     <AlertCircle className="w-4 h-4" />;
                     {errors && errors.email}
@@ -336,13 +336,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 value={formData && formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
-                } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                } text-white placeholder-white/40 focus: outline-none focus:ring-2 focus:ring-cyan-400/20`;}
                 placeholder="Tell us about your project and requirements...";
               />;
               {errors && errors.message && (;
                 <motion&& motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0;, y: -10 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
                   className="mt-2 text-sm text-red-400 flex items-center gap-2">;
                   <AlertCircle className="w-4 h-4" />;
                   {errors && errors.message}
@@ -354,7 +354,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
                 isSubmitting
                   ? 'bg-gray-600 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
+                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 hover:scale-105';
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
                 <>;
@@ -368,8 +368,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </>;
               )}
 }
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
@@ -381,7 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -621,17 +619,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         onClick={() => {
                           setFormData(prev => ({
                             ...prev,
-                            service: service.id,
+                            service: service.id;,
                           }));
                           setSelectedService(service.id);
                           if (errors.service) {
-                            setErrors(prev => ({ ...prev, service: '' }));
+                            setErrors(prev => ({ ...prev, service: '' ;}));
                           }
                         }}
                         className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${
                           selectedService === service.id
                             ? 'border-blue-500 bg-blue-50 text-blue-700'
-                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                            : 'border-gray-200 hover: border-gray-300 hover:bg-gray-50';
                         }`}
                       >
                         <div className="text-sm font-medium">

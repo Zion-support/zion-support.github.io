@@ -17,11 +17,11 @@ interface PricingSuggestionBoxProps {;
   onApplySuggestion: () => void;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
 import { Badge } from "@/components/ui/badge";
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -35,7 +35,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
-import { PricingSuggestion } from "@/services/pricingSuggestionService",
+import { PricingSuggestion } from "@/services/pricingSuggestionService",;
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,

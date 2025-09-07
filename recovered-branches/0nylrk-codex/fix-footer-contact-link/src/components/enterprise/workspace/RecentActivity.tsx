@@ -1,10 +1,10 @@
 
 
-import React from "react",
+import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",      id: "act-1",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",      id: "act-1",;
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",

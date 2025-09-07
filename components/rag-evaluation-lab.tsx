@@ -1,11 +1,11 @@
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
 			<SEO title;
-							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
+							{ title: 'Dashboards & Reports';, desc: 'Team dashboards;, API access, and exportable reports.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -22,7 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
               {
                 title: 'Grounding & Faithfulness'
-                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+                desc: 'Measure factual consistency;, citation quality, and hallucination rate.'
               }
               {
               <div
@@ -108,7 +108,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-              Market references:{' '}
+              Market references: {' ';}
               <a
                 className='underline hover:text-cyan-300'
                 href='https://humanloop.com'

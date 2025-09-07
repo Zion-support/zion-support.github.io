@@ -1,22 +1,22 @@
 
-import React, { useState } from "react",;""
-import { Button } from "@/components/ui/button",;""
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import React, { useState } from "react";""
+import { Button } from "@/components/ui/button";""
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
   TalentRateParams,;
   trackPricingSuggestion;
 } from "@/services/pricingSuggestionService",;""
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;""
-import { useAuth } from "@/hooks/useAuth",;""
+import { PricingSuggestionBox } from "./PricingSuggestionBox";""
+import { useAuth } from "@/hooks/useAuth";""
 import { Sparkles } from 'lucide-react';
 ;
 interface TalentRateRecommenderProps {;
-  skills:string[],;
-  yearsExperience:number,;
+  skills: string[];,;
+  yearsExperience: number;,;
   location?:string,;
-  onSuggestionApplied:(value:number) => void,;
+  onSuggestionApplied: (value:number) => void;,;
   rateType:"hourly" | "fixed";"
 }
 export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
@@ -34,7 +34,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;"
-      logErrorToProduction('Error generating rate suggestion:', { data:error }),;
+      logErrorToProduction('Error generating rate suggestion: ';, { data: error ;}),;
     } finally {;
       setIsLoading(false),;
   },;
@@ -46,11 +46,11 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       // Track this suggestion application;
       if (user && user.id) {;
         trackPricingSuggestion({;
-          userId:user.id,;
-          suggestionType:"talent",;"
-          suggestedMin:suggestion.minRate,;
-          suggestedMax:suggestion.maxRate,;
-          actualValue:suggestedRate,;
+          userId: user.id;,;
+          suggestionType: "talent";,;"
+          suggestedMin: suggestion.minRate;,;
+          suggestedMax: suggestion.maxRate;,;
+          actualValue: suggestedRate;,;
           accepted:true;)
         }),;
   return (;"

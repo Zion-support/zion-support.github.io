@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react',;
-import Image from 'next/image',;
-import { cn } from '@/lib/utils',;
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 ;
 interface OptimizedImageProps {;
-  src:string,;
-  alt:string,;
+  src: string;,;
+  alt: string;,;
   width?:number,;
   height?:number,;
   className?:string,;
@@ -46,9 +46,9 @@ export function OptimizedImage({;
 </defs>"
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;"
 </linearGradient>"
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />;"
+            <stop offset="0%" style="stop-color: #f3f4f6;,stop-opacity:1" />;"
 </stop>"
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />;"
+            <stop offset="100%" style="stop-color: #e5e7eb;,stop-opacity:1" />;"
 </stop>
           </linearGradient>;
         </defs>;"
@@ -101,7 +101,7 @@ export function OptimizedImage({;
         </div>;"
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />;"
     </div>;
-export function withImageOptimization<P extends { src:string, alt:string }>(;
+export function withImageOptimization<P extends { src: string;, alt: string ;}>(;
 
   Component:React.ComponentType<P>;
 
@@ -112,10 +112,10 @@ export function withImageOptimization<P extends { src:string, alt:string }>(;
 
 export function preloadImage(src:string):Promise<void> {;
 </void>
-export function getImageDimensions(src:string):Promise<{ width:number, height:number }> {;
+export function getImageDimensions(src: string):Promise<{ width:number;, height: number ;}> {;
   return new Promise((resolve, reject) => {;
     const img = new window.Image(),;
-    img.onload = () => resolve({ width:img.naturalWidth, height:img.naturalHeight }),;
+    img.onload = () => resolve({ width: img.naturalWidth;, height: img.naturalHeight ;}),;
     img.onerror = reject,;
     img.src = src,;
   }),;
@@ -127,12 +127,12 @@ export function getImageDimensions(src:string):Promise<{ width:number, height:nu
   //If it's already optimized or external,  return as-is if (originalSrc.startsWith ('http') || originalSrc.includes ('/ next/image') ) {;
   //For internal images, Next.js will handle optimization return originalSrc
 };';
-<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
+<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color: #f3f4f6;, stop-opacity: 1" /> <stop offset="100%" style="stop-color:#e5e7eb;, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 }` 
 };
   //For internal images, Next.js will handle optimization return originalSrc;
 };';`;
-<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
+<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color: #f3f4f6;, stop-opacity: 1" /> <stop offset="100%" style="stop-color:#e5e7eb;, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 </defs>
 pr-12325
 return (<div ref= {;

@@ -209,9 +209,9 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
 import Link from "next/link";
 import Image from "next/image";
 origin/cursor/automate-test-improve-and-merge-code-2533

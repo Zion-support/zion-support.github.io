@@ -1,13 +1,13 @@
 
 
-import React from "react",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { FraudFlag } from "@/types/fraud",
-import { SeverityDisplay } from "./SeverityDisplay",
+import React from "react",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { FraudFlag } from "@/types/fraud",;
+import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
-import { ActionButtons } from "./ActionButtons",
+import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",}) => {
   if (isLoading) {
     return (

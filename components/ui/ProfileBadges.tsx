@@ -29,7 +29,6 @@ export function ProfileBadges() {const labels = null;}
 
 }
 
-import React from 'react';
 
 import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';

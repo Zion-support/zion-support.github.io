@@ -196,21 +196,21 @@ pr-12325
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import type { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;
+import { TalentProfile } from "@/types/talent",;
+import type { UserProfile } from "@/types/auth",;
+import { cn } from "@/lib/utils",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { z } from "zod",;
+import { format, addDays } from "date-fns",;
 import { format, addDays } from "date-fns";
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -244,9 +244,9 @@ import { z } from 'zod'
 import { format, addDays } from 'date-fns'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { CalendarIcon } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useInterviews } from "@/hooks/useInterviews",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "@/components/ui/use-toast",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -271,7 +271,7 @@ import { format, addDays } from "date-fns",""
 import { CalendarIcon } from 'lucide-react
 import { toast } from "@/components/ui/use-toast",""
 import { useInterviews } from "@/hooks/useInterviews",""
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger',;
   // TODO: Implement
   talent: TalentProfile,)
   onClose: () => void,

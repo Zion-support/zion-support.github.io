@@ -12,7 +12,7 @@
             <FilePlus className="h-4 w-4" />
 
 
-import { Card, CardContent } from "@/components/ui/card",
+import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button";
 import { FilePlus } from 'lucide-react'
 import { EmptyResumeProps } from "./types";

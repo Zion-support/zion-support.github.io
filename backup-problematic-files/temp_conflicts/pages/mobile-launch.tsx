@@ -1,7 +1,7 @@
-import Head from 'next/head',;
-import { useEffect, useMemo, useState } from 'react',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import Link from 'next/link';
 ;
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string }) {;
@@ -78,13 +78,13 @@ function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string 
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` :(typeof window !== 'undefined' ? `${window.location.origin}/download` :'/download'),;
     const encoded = encodeURIComponent(target),;`;
-    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`,;
+    return `https: //chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded;}`,;
   async function handleSubmit(e:React.FormEvent) {;
     e.preventDefault(),;
     setStatus('loading'),;
     setError(),;
     try {;
-      const res = await fetch('/api/subscribe', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ email }) }),;
+      const res = await fetch('/api/subscribe', { method: 'POST';, headers: { 'Content-Type':'application/json' ;}, body: JSON.stringify({ email ;}) }),;
       if (!res.ok) throw new Error(await res.text()),;
       setStatus('success'),;
       setEmail(),;
@@ -111,7 +111,7 @@ function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string 
 </div>
           <div>;
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">Zion App</h1>;""
-            <p className="mt-3 text-base md:text-lg opacity-90">Hire from anywhere, AI-match instantly, and track milestones on the go.</p>;""
+            <p className="mt-3 text-base md: text-lg opacity-90">Hire from anywhere;, AI-match instantly, and track milestones on the go.</p>;""
             <div className="mt-6 flex flex-wrap items-center gap-3">;"
               <AppleBadge href={IOS_APP_URL} />;
 
@@ -151,7 +151,7 @@ function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string 
         <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>;""
         <div className="relative mt-4 overflow-hidden">;"
 </div>)"`;
-          <div className="flex transition-transform duration-700" style={{ transform:`translateX(-${idx * 100}%)`, width:`${testimonials.length * 100}%` }}>;"
+          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100;}%)`, width: `${testimonials.length * 100;}%` }}>;"
               <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">;"
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">;"
       <section className="mt-12 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;"

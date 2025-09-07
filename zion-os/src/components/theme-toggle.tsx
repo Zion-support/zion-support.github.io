@@ -5,8 +5,8 @@
         <button;
           onClick={() => setTheme("light")}
 "use client",
-import { use_theme  } from '@/components / theme - provider';,
-import { Moon, Sun, Monitor  } from './lucide-react';,
+import { use_theme  } from '@/components / theme - provider';,;
+import { Moon, Sun, Monitor  } from './lucide-react';,;
 export /**
  * ThemeToggle - Function description
  */

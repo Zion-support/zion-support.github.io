@@ -1,5 +1,5 @@
 import { useState  } from 'react';
-import { supabase } from \"@/integrations/supabase/client\",
+import { supabase } from \"@/integrations/supabase/client\",;
 import { toast } from \"@/hooks/use-toast\";
 import { TalentProfile } from \"@/types/talent\";
 import {useState} from 'react';
@@ -21,10 +21,10 @@ export interface HireRequestData {
   talent: {;
     id: string;}
     full_name: string;}
-import { useState } from 'react',
-import { supabase } from \"@/integrations/supabase/client\",
-import { toast } from \"@/hooks/use-toast\",
-import { TalentProfile } from \"@/types/talent\",
+import { useState } from 'react',;
+import { supabase } from \"@/integrations/supabase/client\",;
+import { toast } from \"@/hooks/use-toast\",;
+import { TalentProfile } from \"@/types/talent\",;
 export interface HireRequestData {
   talent: {
     id: string,

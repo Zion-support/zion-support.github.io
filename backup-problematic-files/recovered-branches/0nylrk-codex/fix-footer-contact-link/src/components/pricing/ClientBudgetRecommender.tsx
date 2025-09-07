@@ -1,23 +1,23 @@
 
-import React, { useState } from "react",;""
-import { Button } from "@/components/ui/button",;"
+import React, { useState } from "react";""
+import { Button } from "@/components/ui/button";"
 import { ;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
   ClientBudgetParams,;
   trackPricingSuggestion;"
 } from "@/services/pricingSuggestionService",;""
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { Sparkles } from "lucide-react",;"
+import { PricingSuggestionBox } from "./PricingSuggestionBox";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Sparkles } from "lucide-react";"
 ;
 interface ClientBudgetRecommenderProps {;
-  jobTitle:string,;
-  category:string,;
+  jobTitle: string;,;
+  category: string;,;
   timeline?:string,;
   scope?:string,;
   experienceLevel?:string,;
-  onSuggestionApplied:(minValue:number, maxValue:number) => void;
+  onSuggestionApplied: (minValue:number;, maxValue:number) => void;
 }
 export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({;
 )

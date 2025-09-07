@@ -64,8 +64,8 @@ import React from 'react';
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
 
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import Card from '../components/ui/Card',;
                   rel='noopener noreferrer'>;
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -141,8 +141,8 @@ function ITAssetDiscoveryAgentPage() {
           </a>;
         </div>;
       </div>;
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 origin/cursor/automate-test-improve-and-merge-code-2533

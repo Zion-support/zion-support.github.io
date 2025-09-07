@@ -1,6 +1,6 @@
 
 
-import type { UserProfile } from "@/types/auth",
+import type { UserProfile } from "@/types/auth",;
 
   id: string,
   email?: string | null;

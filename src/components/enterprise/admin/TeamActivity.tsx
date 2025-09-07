@@ -16,7 +16,7 @@ import { CalendarIcon, Search } from 'lucide-react'
   TableRow} from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import React from "react",
+import React from "react",;
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
@@ -26,10 +26,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 import { CalendarIcon, Search } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -212,7 +212,7 @@ export function TeamActivity() {;
 
 
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

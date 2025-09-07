@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { Draggable } from "react-beautiful-dnd",
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
-import { HireConfirmationModal } from "./HireConfirmationModal",
+import { useState } from "react",;
+import { Draggable } from "react-beautiful-dnd",;
+import { formatDistanceToNow } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
+import { toast } from "@/hooks/use-toast",;
+import { HireConfirmationModal } from "./HireConfirmationModal",;
   
 
   const handleSaveNotes = () => {

@@ -1,37 +1,37 @@
 
-import { GradientHeading } from "./GradientHeading",;""
-import { Link } from "react-router-dom",;""
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;"
+import { GradientHeading } from "./GradientHeading";""
+import { Link } from "react-router-dom";""
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";"
 ;
 const categories = [;
   {;
-    title:"Services",,
-  description:"On-demand IT support, consulting, development, and more",;
-    icon:<Briefcase className="w-10 h-10" />,;
-    link:"/services",;
-    color:"from-purple-500 to-indigo-600"},;
+    title: "Services";,,
+  description: "On-demand IT support;, consulting, development, and more",;
+    icon: <Briefcase className="w-10 h-10" />;,;
+    link: "/services";,;
+    color: "from-purple-500 to-indigo-600";},;
   {;
-    title:"Talents",,
-  description:"Connect with AI experts, developers, and tech specialists",;
-    icon:<Users className="w-10 h-10" />,;
-    link:"/talent",;
-    color:"from-cyan-500 to-blue-600"},;
+    title: "Talents";,,
+  description: "Connect with AI experts;, developers, and tech specialists",;
+    icon: <Users className="w-10 h-10" />;,;
+    link: "/talent";,;
+    color: "from-cyan-500 to-blue-600";},;
   {;
-    title:"Equipment",,
-  description:"Rent or buy specialized hardware, servers, and devices",;
-    icon:<HardDrive className="w-10 h-10" />,;
-    link:"/equipment",;
-    color:"from-amber-500 to-orange-600"},;
+    title: "Equipment";,,
+  description: "Rent or buy specialized hardware;, servers, and devices",;
+    icon: <HardDrive className="w-10 h-10" />;,;
+    link: "/equipment";,;
+    color: "from-amber-500 to-orange-600";},;
   {;
-    title:"Innovation",,
-  description:"Discover cutting-edge solutions and tech breakthroughs",;
-    icon:<Lightbulb className="w-10 h-10" />,;
-    link:"/category/innovation",;
-    color:"from-emerald-500 to-green-600"}],;
+    title: "Innovation";,,
+  description: "Discover cutting-edge solutions and tech breakthroughs";,;
+    icon: <Lightbulb className="w-10 h-10" />;,;
+    link: "/category/innovation";,;
+    color: "from-emerald-500 to-green-600";}],;
 ;
 const specialServices = [;
   {;
-    title:"IT Onsite Services",;
+    title: "IT Onsite Services";,;
     link:"/it-onsite-services";
   }
 ],;
@@ -50,13 +50,13 @@ export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
   {;"
-    title:"Services",;""
-    description:"On-demand IT support, consulting, development, and more",;""
-    icon:<Briefcase className="w-10 h-10" />,;"
+    title: "Services";,;""
+    description: "On-demand IT support;, consulting, development, and more",;""
+    icon: <Briefcase className="w-10 h-10" />;,;"
 "
-    icon:<Users className="w-10 h-10" />,;"
-    icon:<HardDrive className="w-10 h-10" />,;"
-    icon:<Lightbulb className="w-10 h-10" />,;"
+    icon: <Users className="w-10 h-10" />;,;"
+    icon: <HardDrive className="w-10 h-10" />;,;"
+    icon: <Lightbulb className="w-10 h-10" />;,;"
     <section className="py-20 bg-zion-blue">;"
 </section>"
       <div className="container mx-auto px-4">;"
@@ -77,7 +77,7 @@ pr-12325
             >;
 ]"
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">;"
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`;}>;
                   <div className="text-white">;"
                   </div>;
                 <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>;""
@@ -107,30 +107,30 @@ pr-12325
     </section>;
   );}
  const categories = [ {
-  title: "Services",
-  description: "On-demand IT support, consulting, development, and more";
+  title: "Services";,
+  description: "On-demand IT support;, consulting, development, and more";
 icon: <Briefcase className="w-10 h-10" />;
 link: "/services";
-color: "from-purple-500 to-indigo-600" 
+color: "from-purple-500 to-indigo-600" ;
 };
 {
-  title: "Talents",
-  description: "Connect with AI experts, developers, and tech specialists";
+  title: "Talents";,
+  description: "Connect with AI experts;, developers, and tech specialists";
 icon: <Users className="w-10 h-10" />;
 link: "/talent";
-color: "from-cyan-500 to-blue-600" 
+color: "from-cyan-500 to-blue-600" ;
 };
 {
-  title: "Equipment",
-  description: "Rent or buy specialized hardware, servers, and devices";
+  title: "Equipment";,
+  description: "Rent or buy specialized hardware;, servers, and devices";
 icon: <HardDrive className="w-10 h-10" />;
 link: "/equipment";
-color: "from-amber-500 to-orange-600" 
+color: "from-amber-500 to-orange-600" ;
 };
 {
   const specialServices = [ {
   title: "IT Onsite Services";
-link: "/it-onsite-services" 
+link: "/it-onsite-services" ;
 }];
 interface CategoriesSectionProps {
   showTitle?: boolean 

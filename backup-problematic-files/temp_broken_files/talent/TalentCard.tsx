@@ -1,19 +1,19 @@
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;""
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;""
+import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";""
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent, CardFooter } from "@/components/ui/card";""
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;""
-import { TalentProfile } from "@/types/talent",;""
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
+import { FavoriteButton } from "@/components/FavoriteButton";""
+import { TalentProfile } from "@/types/talent";""
+import { RatingStars } from '@/components/RatingStars';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useCart } from '@/context/CartContext';
 ;
 export interface TalentCardProps {;
-  talent:TalentProfile,;
-  onViewProfile:(id:string) => void,;
-  onRequestHire:(talent:TalentProfile) => void,;
+  talent: TalentProfile;,;
+  onViewProfile: (id:string) => void;,;
+  onRequestHire: (talent:TalentProfile) => void;,;
   isAuthenticated:boolean;
 }
 const TalentCardComponent = ({;
@@ -126,7 +126,7 @@ const TalentCardComponent = ({;
 }<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
 };
 "
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e: src/components/talent/TalentCard.tsx;
 }</div> </div>) ;"
 }$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire ) ";"}<Button ml-1 h-4 w-4" />  </div> </div> </div> ) ;""
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";""

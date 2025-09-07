@@ -1,7 +1,7 @@
 
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router',;
+import { useState, useEffect, useCallback, useMemo } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';

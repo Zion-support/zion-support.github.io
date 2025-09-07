@@ -1,10 +1,10 @@
 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-import React from 'react',
+import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
   if (!service) return null;
 
@@ -22,7 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Activity className="w-10 h-10" />{service && service.name}</h1>;
+            <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Activity className="w-10 h-10" />{service && service.name;}</h1>;
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service && service.tagline}</p>;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">;
@@ -39,7 +39,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service && service.price}<span className="text-slate-400 text-base">{service && service.period}</span></div>;
-                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime}</div>;
+                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime;}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
@@ -74,7 +74,7 @@ if (return null) {
       <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - emerald - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent flex items - center justify-center gap-3"><Activity className="w-10 h-10" />{service.name}</h1>;
+            <h1 className="text - 5xl md: text - 7xl font - bold bg - gradient - to - r from - emerald - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent flex items - center justify-center gap-3"><Activity className="w-10 h-10" />{service.name;}</h1>;
             <p className="mt - 4 text - xl text - slate - 300 max-w-3xl mx-auto">{service.tagline}</p>;
           </div>;
           <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-6 mb-12">;
@@ -90,7 +90,7 @@ if (return null) {
               <div className="flex items - end justify-between mb-3">;
                 <div>;
                   <div className="text - 3xl font-bold text-white">{service.price}<span className="text - slate-400 text-base">{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time;}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
@@ -113,7 +113,7 @@ if (return null) {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime;}</div>
                 </div>
               </div>
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>

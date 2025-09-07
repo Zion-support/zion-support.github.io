@@ -17,17 +17,17 @@ updated at: "2024 - 05 - 05";
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-import { Job } from "@/types/jobs",
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
-import { Job } from "@/types/jobs",
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
 
 
-import { Job } from "@/types/jobs",
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
-import { Job } from "@/types/jobs",
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
   {
     id: "job-1",

@@ -1,23 +1,23 @@
-import { useMemo, useState } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import { useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 ;
 interface FileData {;
-  name:string,;
-  type:string,;
-  size:number,;
-  base64:string, // data URL;
+  name: string;,;
+  type: string;,;
+  size: number;,;
+  base64: string;, // data URL;
 }
 interface OnboardingFormData {;
-  fullName:string,;
-  professionalTitle:string,;
+  fullName: string;,;
+  professionalTitle: string;,;
   profilePicture?:FileData | null,;
-  bio:string,;
-  projects:string,;
-  yearsOfExperience:string, // keep as string for input, convert on submit;
-  skills:string,;
-  tools:string,;
-  availability:'Full-time' | 'Part-time' | 'Project-based' | ,;
-  timezone:string,;
+  bio: string;,;
+  projects: string;,;
+  yearsOfExperience: string;, // keep as string for input, convert on submit;
+  skills: string;,;
+  tools: string;,;
+  availability: 'Full-time' | 'Part-time' | 'Project-based' | ;,;
+  timezone: string;,;
   hourlyRate?:string,;
   portfolioLinks?:string,;
   cvFile?:FileData | null;
@@ -26,14 +26,14 @@ const steps = [;
   'Skills & TechAvailability'] as const,;
 type StepKey = typeof steps[number],;
 const containerVariants = {;
-  initial:{ opacity:0, y:16 },;
-  animate:{ opacity:1, y:0 },;
-  exit:{ opacity:0, y:-16 }},;
+  initial: { opacity:0;, y: 16 ;},;
+  animate: { opacity:1;, y: 0 ;},;
+  exit: { opacity:0;, y: -16 ;}},;
 function useInitialFormState():OnboardingFormData {;
   return {;
     fullName:,;
     professionalTitle:,;
-    profilePicture:null,;
+    profilePicture: null;,;
     bio:,;
     projects:,;
     yearsOfExperience:,;
@@ -43,7 +43,7 @@ function useInitialFormState():OnboardingFormData {;
     timezone:,;
     hourlyRate:,;
     portfolioLinks:,;
-    cvFile:null},;
+    cvFile: null;},;
 async function fileToBase64(file:File):Promise<FileData> {;
 
     new Promise<string>((resolve, reject) => {;
@@ -54,7 +54,7 @@ async function fileToBase64(file:File):Promise<FileData> {;
     if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),;
   function prevStep() {;
     if (stepIndex > 0) setStepIndex(stepIndex - 1),;
-  function update<K extends keyof OnboardingFormData>(key:K, value:OnboardingFormData[K]) {;
+  function update<K extends keyof OnboardingFormData>(key: K;, value:OnboardingFormData[K]) {;
 
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;"
 </div>"
@@ -69,12 +69,12 @@ async function fileToBase64(file:File):Promise<FileData> {;
           <h1 className="text-2xl md:text-3xl font-semibold">Zion AI Marketplace:Talent Onboarding</h1>;""
           <p className="text-high-contrast-muted mt-1">Create your public profile in a few quick steps.</p>;"
         <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">;"
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width:`${progressPercent}%` }} />;"
+          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width: `${progressPercent;}%` }} />;"
           <div className="mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239,68,68,0.1)]">;"
         <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">;"
           <AnimatePresence mode="wait">;"
 "
-              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;"
+              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 ;}}>;"
 </motion>"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">;"
                   <FloatingInput;"
@@ -101,7 +101,7 @@ async function fileToBase64(file:File):Promise<FileData> {;
               </motion.div>;
             )}
             {currentStep === 'Experience' && (;
-              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;"
+              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 ;}}>;"
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;"
                   <FloatingTextarea;"
                     id="bio";""
@@ -124,7 +124,7 @@ async function fileToBase64(file:File):Promise<FileData> {;
                     onChange={(v) => update('yearsOfExperience', v)}
 
             {currentStep === 'Skills & Tech' && (;
-              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;"
+              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 ;}}>;"
                     id="skills";")"
                     label="Skills (comma-separated)";""
                     placeholder="e.g., Python, LLMs, Kubernetes";"
@@ -138,7 +138,7 @@ async function fileToBase64(file:File):Promise<FileData> {;
                     onChange={(v) => update('tools', v)}
 
             {currentStep === 'Availability' && (;
-              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration:0.3 }}>;"
+              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 ;}}>;"
                   <div>;
                     <label htmlFor="availability" className="block text-sm mb-2 text-high-contrast-secondary">Current Availability</label>;"
                     <select;"
@@ -166,7 +166,7 @@ async function fileToBase64(file:File):Promise<FileData> {;
 
                     id="portfolioLinks";""
                     label="Portfolio Links (optional)";""
-                    placeholder="e.g., https://github.com/you, https://your-site.com";""
+                    placeholder="e.g., https: //github.com/you;, https://your-site.com";""
                     value={formData.portfolioLinks || }
                     onChange={(v) => update('portfolioLinks', v)}
 
@@ -214,6 +214,6 @@ async function fileToBase64(file:File):Promise<FileData> {;
         accept={accept}"
         className="block w-full text-sm text-high-contrast-secondary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90";"
         onChange={async (e) => {;
-        <p className="mt-2 text-xs text-high-contrast-muted">Selected:{fileData.name} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>;""
+        <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name;} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>;""
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>;"
     </div>;"`;

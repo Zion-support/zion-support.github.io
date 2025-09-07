@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
+import { WebhooksManager } from "@/components/developers/WebhooksManager",;
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -33,8 +33,8 @@ interface TabDefinition {
   icon: LucideIcon
 export function DeveloperPortal() {
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";

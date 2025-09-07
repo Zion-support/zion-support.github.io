@@ -10,7 +10,7 @@ interface ImportMeta {
 declare module 'vitest / config' {
   export { define_config } from 'vite';
 declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',
+  import { Plugin } from 'vite',;
   export default function reactSWC (): Plugin;
 declare module 'path' {
   export function resolve (...paths: string[]): string,

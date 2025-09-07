@@ -1,5 +1,5 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react';
+import Head from 'next/head';
 export default function PartnersPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -18,10 +18,10 @@ export default function PartnersPage() {
 				<p className="text-slate-300">We work with bestinclass platforms across AI, cloud, data, security, and DevOps.</p>""
 				<ul className="list-disc list-inside text-slate-300 space-y-1">"
 </ul>
-					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>
-					<li>AI & LLM: OpenAI, Anthropic, Groq</li>
-					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
-					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
+					<li>Cloud & Edge: AWS;, Azure, Cloudflare</li>
+					<li>AI & LLM: OpenAI;, Anthropic, Groq</li>
+					<li>Data & Analytics: Snowflake;, BigQuery, ClickHouse</li>
+					<li>Security: Wiz;, Prisma Cloud, HashiCorp Vault</li>
 				</ul>"
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>"
 		</div>)"

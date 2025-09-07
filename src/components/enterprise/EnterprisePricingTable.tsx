@@ -10,8 +10,8 @@ TableBody,
   TableHead,
   TableHeader,
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
 import { Check, X } from 'lucide-react'
 
 import {
@@ -23,7 +23,7 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 
 
 
@@ -556,7 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
-import {  Table,  Table,
+import {  Table,  Table,;
   TableBody,
   TableCell,
   TableHead,

@@ -11,7 +11,7 @@
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 "use client",
-import { useState  } from './react';,
+import { useState  } from './react';,;
 interface PricingTier {
   name: string,
   price: string,

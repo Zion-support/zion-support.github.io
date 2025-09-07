@@ -52,7 +52,7 @@
 
 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
 

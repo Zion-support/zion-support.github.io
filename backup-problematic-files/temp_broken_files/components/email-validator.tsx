@@ -1,8 +1,8 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
 export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(),;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
@@ -45,11 +45,6 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState(),
   const [validationResults, setValidationResults] = useState<any[]>([]),
@@ -115,7 +110,7 @@ if (email.length > 254) {
     if (score >= 40) return 'text-orange-400';
     return 'text-red-400';
   const copyResults = () => {const resultsText = validationResults.map(result =>;)
-      `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`;
+      `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score;})`;
     ).join('\n');
     navigator.clipboard.writeText(resultsText);
   const clearResults = () => {setValidationResults([]);

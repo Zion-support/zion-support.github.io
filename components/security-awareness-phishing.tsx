@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
@@ -74,7 +74,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service && service.trialDays;
                       ? `${service && service.trialDays}-day free trial • `;
                       : ''}
-                    Setup: {service && service.setupTime}
+                    Setup: {service && service.setupTime;}
                   </div>;
                 </div>;
               </div>;
@@ -173,7 +173,7 @@ if (return null) {
                     {service.trial_days;
                       ? `${service.trial_days}-day free trial • `;
                       : ''}
-                    Setup: {service.setup_time}
+                    Setup: {service.setup_time;}
                   </div>;
                 </div>;
               </div>;

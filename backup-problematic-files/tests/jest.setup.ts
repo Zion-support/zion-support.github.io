@@ -1,6 +1,6 @@
 // Polyfill fetch and enable fetch mocks;
-import 'whatwg-fetch',;
-import fetchMock from 'jest-fetch-mock',;
+import 'whatwg-fetch';
+import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks(),;
 ;
 // Reset fetch mocks before each test to ensure isolation;
@@ -8,8 +8,8 @@ beforeEach(() => {;
   fetchMock.resetMocks(),;
 }),;
 // Jest-DOM matchers;
-import '@testing-library/jest-dom',;
-import { TextEncoder, TextDecoder } from 'util',;
+import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'util';
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
 global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
@@ -19,31 +19,31 @@ global.TextDecoder = TextDecoder,;
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321',;
+process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321';,;
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',;
 // Jest-axe matchers for accessibility;
-import { toHaveNoViolations } from 'jest-axe',;
+import { toHaveNoViolations } from 'jest-axe';
 expect.extend(toHaveNoViolations),;
 // Mock window.matchMedia for Jest;
 Object.defineProperty(window, 'matchMedia', {;
-  writable:true,;)
+  writable: true;,;)
   value: jest.fn().mockImplementation(query => ({;,)
-  matches:false, // Default to false (light theme);
-    media:query,;
-    onchange:null,;
-    addListener:jest.fn(), // deprecated;
-    removeListener:jest.fn(), // deprecated;
-    addEventListener:jest.fn(),;
-    removeEventListener:jest.fn(),;
-    dispatchEvent:jest.fn()}))}),;
+  matches: false;, // Default to false (light theme);
+    media: query;,;
+    onchange: null;,;
+    addListener: jest.fn();, // deprecated;
+    removeListener: jest.fn();, // deprecated;
+    addEventListener: jest.fn();,;
+    removeEventListener: jest.fn();,;
+    dispatchEvent: jest.fn();}))}),;
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
 // global.import = {;
 //   // @ts-expect-error;
 //   meta:{;
 //     env:{;
-//       VITE_SUPABASE_URL:'mock_supabase_url',;
-//       VITE_SUPABASE_ANON_KEY:'mock_supabase_anon_key',;
-//       MODE:'test',;
+//       VITE_SUPABASE_URL: 'mock_supabase_url';,;
+//       VITE_SUPABASE_ANON_KEY: 'mock_supabase_anon_key';,;
+//       MODE: 'test';,;
 //     },;
 //   },;
 // },;
@@ -52,16 +52,16 @@ jest.mock('@/integrations/supabase/client', () => ({;
   supabase: {;,
   auth:{;)
       onAuthStateChange: jest.fn(() => ({;,)
-  data:{ subscription:{ unsubscribe:jest.fn() } }})),;
+  data: { subscription:{ unsubscribe:jest.fn() ;} }})),;
       // Add any other specific methods from supabase.auth if they get called;
     },;
     // Add other top-level Supabase client methods if they get called;
-    // e.g., from:jest.fn(), rpc:jest.fn(), etc.;
+    // e.g., from: jest.fn();, rpc: jest.fn();, etc.;
     // For now, keeping it minimal.;
   }})),;
 // Mock Firebase/Firestore;
 jest.mock('firebase/app', () => ({;')
-  initializeApp:jest.fn(),;
+  initializeApp: jest.fn();,;
   // Add other app-level exports if needed, e.g., getApps, getApp;
 })),;
 jest.mock('firebase/firestore', () => {;
@@ -70,85 +70,85 @@ jest.mock('firebase/firestore', () => {;
   const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) => {;
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8,;
     return {;
-      path:actualPath,;
+      path: actualPath;,;
       doc: jest.fn((docId) => ({;,
-  id:docId,;
-        path:`${actualPath}/${docId}`,;)
-        get:jest.fn(() => Promise.resolve({ exists:() => false, data:() => undefined })),;
-        set:jest.fn(() => Promise.resolve()),;
-        update:jest.fn(() => Promise.resolve()),;
-        delete:jest.fn(() => Promise.resolve()),;
-        onSnapshot:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
-      getDocs:jest.fn(() => Promise.resolve({ docs:[] })),;
-      addDoc:jest.fn(() => Promise.resolve({ id:'mockedDocId' })),;
+  id: docId;,;
+        path: `${actualPath;}/${docId}`,;)
+        get: jest.fn(() => Promise.resolve({ exists:() => false;, data: () => undefined ;})),;
+        set: jest.fn(() => Promise.resolve());,;
+        update: jest.fn(() => Promise.resolve());,;
+        delete: jest.fn(() => Promise.resolve());,;
+        onSnapshot: jest.fn(() => jest.fn());, // Returns an unsubscribe function;
+      getDocs: jest.fn(() => Promise.resolve({ docs:[] ;})),;
+      addDoc: jest.fn(() => Promise.resolve({ id:'mockedDocId' ;})),;
   const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {;
     let basePath = ,;
     if (typeof firestoreInstanceOrCollectionRef.path === 'string') {;
       basePath = firestoreInstanceOrCollectionRef.path,;
     }
     const fullPath = [basePath, pathOrId, ...pathSegments].filter(Boolean).join('/'),;
-      id:pathSegments.length > 0 ? pathSegments[pathSegments.length-1] :pathOrId,;
-      path:fullPath,;
+      id: pathSegments.length > 0 ? pathSegments[pathSegments.length-1] :pathOrId;,;
+      path: fullPath;,;
     getFirestore:jest.fn(() => ({;)
       // For v8 style: db.collection('path');',
-  collection:mockCollection,;
+  collection: mockCollection;,;
       // For v8 style: db.doc('path/docId');',
-  doc:mockDoc,;
+  doc: mockDoc;,;
       // Add any other methods directly on db if used, e.g. batch, runTransaction;
-    // For v9 style:collection(db, 'path');
-    // For v9 style:doc(db, 'pathdocId');
-    getDoc:jest.fn(() => Promise.resolve({ exists:() => false, data:() => undefined })),;
-    setDoc:jest.fn(() => Promise.resolve()),;
-    updateDoc:jest.fn(() => Promise.resolve()),;
-    deleteDoc:jest.fn(() => Promise.resolve()),;
-    onSnapshot:jest.fn(() => jest.fn()), // Returns an unsubscribe function for document/query snapshots;
-    query:jest.fn((collectionRef, ...constraints) => ({ ref:collectionRef, constraints })),;
-    where:jest.fn((fieldPath, opStr, value) => ({ type:'where', fieldPath, opStr, value })),;
-    orderBy:jest.fn((fieldPath, directionStr) => ({ type:'orderBy', fieldPath, directionStr })),;
-    limit:jest.fn((count) => ({ type:'limit', count })),;
+    // For v9 style: collection(db;, 'path');
+    // For v9 style: doc(db;, 'pathdocId');
+    getDoc: jest.fn(() => Promise.resolve({ exists:() => false;, data: () => undefined ;})),;
+    setDoc: jest.fn(() => Promise.resolve());,;
+    updateDoc: jest.fn(() => Promise.resolve());,;
+    deleteDoc: jest.fn(() => Promise.resolve());,;
+    onSnapshot: jest.fn(() => jest.fn());, // Returns an unsubscribe function for document/query snapshots;
+    query: jest.fn((collectionRef;, ...constraints) => ({ ref: collectionRef;, constraints })),;
+    where: jest.fn((fieldPath;, opStr, value) => ({ type: 'where';, fieldPath, opStr, value })),;
+    orderBy: jest.fn((fieldPath;, directionStr) => ({ type: 'orderBy';, fieldPath, directionStr })),;
+    limit: jest.fn((count) => ({ type:'limit';, count })),;
     Timestamp: {;,
-  now:jest.fn(() => ({ toDate:() => new Date() })),;
-      fromDate:jest.fn((date) => ({ toDate:() => date }))},;
+  now: jest.fn(() => ({ toDate:() => new Date() ;})),;
+      fromDate: jest.fn((date) => ({ toDate:() => date ;}))},;
     // Add other Firestore exports your code uses;
 jest.mock('firebase/auth', () => ({;')
   getAuth:jest.fn(() => ({;
     // Mock Auth instance properties/methods if needed, e.g., currentUser;
-    currentUser:null,;)
-    onAuthStateChanged:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
-  createUserWithEmailAndPassword:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid', email:'mock@example.com' } })),;
-  signInWithEmailAndPassword:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid', email:'mock@example.com' } })),;
-  sendEmailVerification:jest.fn(() => Promise.resolve()),;
-  sendPasswordResetEmail:jest.fn(() => Promise.resolve()),;
-  signOut:jest.fn(() => Promise.resolve()),;
+    currentUser: null;,;)
+    onAuthStateChanged: jest.fn(() => jest.fn());, // Returns an unsubscribe function;
+  createUserWithEmailAndPassword: jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid';, email: 'mock@example.com' ;} })),;
+  signInWithEmailAndPassword: jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid';, email: 'mock@example.com' ;} })),;
+  sendEmailVerification: jest.fn(() => Promise.resolve());,;
+  sendPasswordResetEmail: jest.fn(() => Promise.resolve());,;
+  signOut: jest.fn(() => Promise.resolve());,;
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.);
   // For example:;
-  // GoogleAuthProvider:jest.fn(),;
-  // signInWithPopup:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' } }))})),;
+  // GoogleAuthProvider: jest.fn();,;
+  // signInWithPopup: jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' ;} }))})),;
 jest.mock('firebase/storage', () => ({;')
   getStorage:jest.fn(() => ({;
     // Mock Storage instance properties/methods if needed;)
-  ref:jest.fn((storageInstance, path) => ({;
+  ref: jest.fn((storageInstance;, path) => ({;
     // Mock StorageReference;)
-    name:path ? path.substring(path.lastIndexOf('/') + 1) :'mockfile.txt',;
-    fullPath:path || 'mock/full/path/mockfile.txt',;
+    name: path ? path.substring(path.lastIndexOf('/') + 1) :'mockfile.txt';,;
+    fullPath: path || 'mock/full/path/mockfile.txt';,;
     // Add methods like uploadBytes, getDownloadURL, delete, etc.;
-  uploadBytes:jest.fn((storageRef, data, metadata) => Promise.resolve({;
+  uploadBytes: jest.fn((storageRef;, data, metadata) => Promise.resolve({;
     // Mock UploadResult;
-    metadata:{ fullPath:storageRef.fullPath, ...metadata },;)
-    ref:storageRef})),;`;
-  getDownloadURL:jest.fn((storageRef) => Promise.resolve(`https://mockstorage.com/${storageRef.fullPath}`)),;
-  deleteObject:jest.fn(() => Promise.resolve()),;
+    metadata: { fullPath:storageRef.fullPath;, ...metadata },;)
+    ref: storageRef;})),;`;
+  getDownloadURL: jest.fn((storageRef) => Promise.resolve(`https://mockstorage.com/${storageRef.fullPath;}`)),;
+  deleteObject: jest.fn(() => Promise.resolve());,;
   // Add other Storage exports your code uses;
 // Mock axios;
 jest.mock('axios', () => ({;')
-  get:jest.fn(() => Promise.resolve({ data:{} })),;
-  post:jest.fn(() => Promise.resolve({ data:{} })),;
+  get: jest.fn(() => Promise.resolve({ data:{;} })),;
+  post: jest.fn(() => Promise.resolve({ data:{;} })),;
   // Add other axios methods if used (e.g., put, delete, request);
 // Mock ResizeObserver for Radix UI components and other libraries that might use it;
 global.ResizeObserver = jest.fn().mockImplementation(() => ({;)
-  observe:jest.fn(),;
-  unobserve:jest.fn(),;
-  disconnect:jest.fn()})),;
+  observe: jest.fn();,;
+  unobserve: jest.fn();,;
+  disconnect: jest.fn();})),;
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
@@ -170,7 +170,7 @@ if (typeof BroadcastChannel === 'undefined') {;
 if (typeof window.scrollTo === 'undefined') {;
   window.scrollTo = jest.fn(),;
 // Mock axios.create to return axios itself;
-import axios from 'axios',;
+import axios from 'axios';
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 // -----------------------------;
@@ -185,30 +185,30 @@ axios.create = jest.fn(() => axios),;
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.;
 // ---------------------------------------------------------------------------;"
 jest.mock('vitest', () => {;
-  const jestFn = (...args:unknown[]) => jest.fn(...(args as [])),;
+  const jestFn = (...args: unknown[]) => jest.fn(...(args as []));,;
   return {;`;
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi: {;,
-  fn:jestFn,;
-      spyOn:jest.spyOn.bind(jest),;
-      mock:jest.mock.bind(jest),;
-      clearAllMocks:jest.clearAllMocks,;
-      resetAllMocks:jest.resetAllMocks,;
-      restoreAllMocks:jest.restoreAllMocks,;
-      useFakeTimers:jest.useFakeTimers.bind(jest),;
-      useRealTimers:jest.useRealTimers.bind(jest),;
-      runAllTimers:jest.runAllTimers.bind(jest),;
-      advanceTimersByTime:jest.advanceTimersByTime.bind(jest),;`;
+  fn: jestFn;,;
+      spyOn: jest.spyOn.bind(jest);,;
+      mock: jest.mock.bind(jest);,;
+      clearAllMocks: jest.clearAllMocks;,;
+      resetAllMocks: jest.resetAllMocks;,;
+      restoreAllMocks: jest.restoreAllMocks;,;
+      useFakeTimers: jest.useFakeTimers.bind(jest);,;
+      useRealTimers: jest.useRealTimers.bind(jest);,;
+      runAllTimers: jest.runAllTimers.bind(jest);,;
+      advanceTimersByTime: jest.advanceTimersByTime.bind(jest);,;`;
       // Provide a simple implementation of `import.meta` mocking helpers;
       // frequently used in Vitest examples;`;
       // (no-op implementations because Jest already handles env vars via `process.env`).;
-      importActual:jest.requireActual,;
-      mockResolvedValue:<T = unknown>(value:T) => jest.fn().mockResolvedValue(value),;
+      importActual: jest.requireActual;,;
+      mockResolvedValue: <T = unknown>(value:T) => jest.fn().mockResolvedValue(value);,;
 
-      mockRejectedValue:<T = unknown>(value:T) => jest.fn().mockRejectedValue(value)},;
+      mockRejectedValue: <T = unknown>(value:T) => jest.fn().mockRejectedValue(value);},;
 
-    afterAll:global.afterAll} as unknown as Record<string unknown>,;
+    afterAll: global.afterAll;} as unknown as Record<string unknown>,;
 </string>`;
-  fn: jestFn, spyOn: jest.spyOn.bind (jest), mock: jest.mock.bind (jest), clearAllMocks: jest.clearAllMocks, resetAllMocks: jest.resetAllMocks, restoreAllMocks: jest.restoreAllMocks, useFakeTimers: jest.useFakeTimers.bind (jest), useRealTimers: jest.useRealTimers.bind (jest), runAllTimers: jest.runAllTimers.bind (jest), advanceTimersByTime: jest.advanceTimersByTime.bind (jest), //Provide a simple implementation of `import.meta` mocking helpers //frequently used in Vitest examples // (no-op implementations because Jest already handles env vars via `process.env`) . importActual: jest.requireActual, mockResolvedValue: <T = unknown> (value: T) => jest.fn () .mockResolvedValue (value), mockRejectedValue: <T = unknown> (value: T) => jest.fn () .mockRejectedValue (value) 
+  fn: jestFn;, spyOn: jest.spyOn.bind (jest);, mock: jest.mock.bind (jest);, clearAllMocks: jest.clearAllMocks;, resetAllMocks: jest.resetAllMocks;, restoreAllMocks: jest.restoreAllMocks;, useFakeTimers: jest.useFakeTimers.bind (jest);, useRealTimers: jest.useRealTimers.bind (jest);, runAllTimers: jest.runAllTimers.bind (jest);, advanceTimersByTime: jest.advanceTimersByTime.bind (jest);, //Provide a simple implementation of `import.meta` mocking helpers //frequently used in Vitest examples // (no-op implementations because Jest already handles env vars via `process.env`) . importActual: jest.requireActual;, mockResolvedValue: <T = unknown> (value: T) => jest.fn () .mockResolvedValue (value);, mockRejectedValue: <T = unknown> (value: T) => jest.fn () .mockRejectedValue (value) ;
 
 }as unknown as Record<string unknown> 

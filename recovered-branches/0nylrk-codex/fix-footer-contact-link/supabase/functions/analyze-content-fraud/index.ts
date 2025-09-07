@@ -1,12 +1,12 @@
 
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",;
 import {corsHeaders} from "../_shared/cors ;
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
-import { corsHeaders } from "../_shared/cors.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
+import { corsHeaders } from "../_shared/cors.ts",;
   content: string,
   contentType: string,
   flagId?: string  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
@@ -14,8 +14,8 @@ import { corsHeaders } from "../_shared/cors.ts",
     throw new Error("Missing required environment variables")
 ;
 
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,;
 import { cors_headers } from '../_shared / cors.ts';
 interface AnalyzeRequest {
   content: string;
@@ -170,8 +170,8 @@ const initializeServices = () => {
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {"
     throw new Error("Missing required environment variables")""
     throw new Error("Missing required environment variables")"
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,;
 import { cors_headers } from '../_shared / cors.ts';
   // TODO: Implement
   content_type: string,

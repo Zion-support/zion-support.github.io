@@ -35,8 +35,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </>
   )
-import React from 'react',
-import Head from 'next / head',
+import React from 'react',;
+import Head from 'next / head',;
 export default /**
  * TransportationLogisticsSolutions - Function description
  */

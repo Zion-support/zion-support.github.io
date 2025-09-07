@@ -4,7 +4,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-import React from 'react',
+import React from 'react',;
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function LegalPage() {

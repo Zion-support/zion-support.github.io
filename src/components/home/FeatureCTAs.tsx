@@ -241,11 +241,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       link: '/project-milestones'
     };
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import Link from "next/link",;
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
 import { cn } from "@/lib/utils";

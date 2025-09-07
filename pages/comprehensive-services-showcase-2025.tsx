@@ -54,8 +54,8 @@ const pricingRanges = [;
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
 
-import React, { useState } from 'react',
-import Head from 'next/head',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;

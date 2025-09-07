@@ -13,9 +13,9 @@ export const flagContent = async (
   contentExcerpt: string;
 
 
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
+import { supabase } from '@/integrations/supabase/client',;
+import { FraudSeverity, FraudFlag } from '@/types/fraud',;
+import { FlagResult } from './types',;
 /**
  * Flag content for review;
  */

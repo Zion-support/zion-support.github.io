@@ -2042,7 +2042,7 @@ pr-12325
     competitors: ['Asana', 'ClickUp', 'Notion'],
     techStack: ['Next.js', 'Prisma', 'PostgreSQL'],
 pr-12325
-      'Template JSON schemas, rules engine, import/export.',
+      'Template JSON schemas, rules engine, import/export.',;
     roi: 'Deliverables throughput +15–25%.',
     useCases: ['Client delivery', 'Editorial calendar', 'Sprints'],
     integrations: ['Google Calendar', 'Slack', 'Linear'],
@@ -3341,7 +3341,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     techStack: ['Next.js', 'Prisma', 'PostgreSQL'],
     realImplementation: true,
     implementationDetails:
-      'Template JSON schemas, rules engine, import/export.',
+      'Template JSON schemas, rules engine, import/export.',;
     roi: 'Deliverables throughput +15–25%.',
     useCases: ['Client delivery', 'Editorial calendar', 'Sprints'],
     integrations: ['Google Calendar', 'Slack', 'Linear'],

@@ -10,22 +10,22 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
   const navigate = useNavigate();
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
+import { useState, useEffect } from "react",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { TalentCard } from "@/components/talent/TalentCard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-import { toast } from "@/components/ui/use-toast",
-import { useNavigate } from "react-router-dom",
+import { toast } from "@/components/ui/use-toast",;
+import { useNavigate } from "react-router-dom",;
 export default function SavedTalentsPage() {
   const { user } = useAuth(),
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),

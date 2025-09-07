@@ -3,22 +3,21 @@ import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-import React from 'react';
 
 export default function FuturisticBackground() {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
-    this.state = { hasError: false,}
+    this.state = { hasError: false;,}
 };
   }
   static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+    return { hasError: true;,}
 };
   }
   componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
   }
   render() {
     if (this.state.hasError) {
@@ -41,7 +40,6 @@ export default function FuturisticBackground() {return (<div className='pointer-
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Animated gradient background */}
-import React from 'react';
 export default /**
  * FuturisticBackground - Function description
  */

@@ -34,7 +34,6 @@ pr-12243
     </EnhancedLayout>;
   );
 import EnhancedLayout from '../components / layout / EnhancedLayout';
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default /**
  * FeaturesPage - Function description
  */
@@ -76,7 +75,6 @@ pr-12243
   return (
 
 
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default function FeaturesPage() {;
   return (
 
@@ -98,7 +96,6 @@ export default function FeaturesPage() {_return (
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 
 export default function FeaturesPage() {

@@ -14,9 +14,6 @@ const ApiDevelopmentChat: NextPage = () => {
     <div>
       <Head>
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 const ApiDevelopmentChat: NextPage = () => {;
   return (
     <div>;
@@ -105,12 +102,6 @@ pr-12243
 export default ApiDevelopmentChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const ApiDevelopmentChat: NextPage = () => {
   return (

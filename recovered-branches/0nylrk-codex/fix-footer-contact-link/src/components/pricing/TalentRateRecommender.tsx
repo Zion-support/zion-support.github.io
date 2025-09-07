@@ -6,7 +6,7 @@ import {
   TalentRateParams;
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
@@ -79,8 +79,8 @@ pr-12325
       const params: TalentRateParams = {;
         skills;
       const result = await getTalentRateSuggestion(params);
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
   skills: string[],
   yearsExperience: number,
   location?: string,

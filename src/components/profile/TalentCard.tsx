@@ -169,11 +169,11 @@ import { TalentProfile } from '@/types/talent';
 
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",
-import { TalentProfile } from "@/types/talent",
+import Link from "next/link",;
+import { TalentProfile } from "@/types/talent",;
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 

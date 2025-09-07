@@ -14,11 +14,11 @@ import { Briefcase } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-import { useState } from "react",
-import { useRouter } from "next/router",
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useState } from "react",;
+import { useRouter } from "next/router",;
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'

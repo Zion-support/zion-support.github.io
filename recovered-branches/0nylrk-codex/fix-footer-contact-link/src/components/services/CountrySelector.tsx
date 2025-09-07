@@ -1,11 +1,11 @@
 
 
-import { useState, useEffect } from "react",
-import { Globe } from "lucide-react",
+import { useState, useEffect } from "react",;
+import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));

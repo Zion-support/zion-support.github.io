@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   Search, Filter, Star, Users, TrendingUp, ;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -10,32 +10,32 @@ import { ;
   Sparkles, Target, Award, Lightbulb, Eye,;
   Heart, Zap, Shield, Globe, Rocket, Star, Grid, List;
 } from 'lucide-react',;
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',;
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',;
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 ;
 // Import all the new 2025 service data;
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',;
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services',;
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',;
-import { additionalRealServices2025 } from '../data/2025-additional-real-services',;
-import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',;
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { additionalRealServices2025 } from '../data/2025-additional-real-services';
+import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services';
 // Import new innovative services;
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',;
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',;
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',;
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',;
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',;
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
 // Import our new innovative service categories;
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',;
-import { blockchainWeb3Services2025 } from '../data/2025-blockchain-web3-services',;
-import { cybersecurityQuantumServices2025 } from '../data/2025-cybersecurity-quantum-services',;
-import { spaceMetaverseServices2025 } from '../data/2025-space-metaverse-services',;
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { blockchainWeb3Services2025 } from '../data/2025-blockchain-web3-services';
+import { cybersecurityQuantumServices2025 } from '../data/2025-cybersecurity-quantum-services';
+import { spaceMetaverseServices2025 } from '../data/2025-space-metaverse-services';
 // Import existing services for comprehensive coverage;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',;
-import { quantumSpaceServices } from '../data/quantum-space-services',;
-import { enterpriseITServices } from '../data/enterprise-it-services',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = [;
   ...realMicroSaasServices2025,;
   ...innovativeAIServices2025,;
@@ -49,121 +49,121 @@ const allServices = [;
   ...spaceMetaverseServices2025;]
 ],;
 const contactInfo = {;
-  mobile:'+1 302 464 0950',;
-  email:'kleber@ziontechgroup.com',;
-  address:'364 E Main St STE 1008 Middletown DE 19709',;
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
   website:'https://ziontechgroup.com';
 },;
 const serviceCategories = [;
   {;
-    id:'ai-automation',,
-  description:'Revolutionary AI automation with consciousness and emotional intelligence',;
-    icon:Brain,;
-    color:'from-violet-500 to-purple-500',;']
-    services:[...advancedAIAutomationServices2025],;
+    id: 'ai-automation';,,
+  description: 'Revolutionary AI automation with consciousness and emotional intelligence';,;
+    icon: Brain;,;
+    color: 'from-violet-500 to-purple-500';,;']
+    services: [...advancedAIAutomationServices2025];,;
     gradient:'from-violet-500/20 to-indigo-500/20';
   },;
   {;
-    id:'blockchain-web3',,
-  description:'Decentralized solutions with quantum security and DeFi optimization',;
-    id:'blockchain-web3',;
-    description:'Decentralized solutions with quantum security and DeFi optimization',;
+    id: 'blockchain-web3';,,
+  description: 'Decentralized solutions with quantum security and DeFi optimization';,;
+    id: 'blockchain-web3';,;
+    description: 'Decentralized solutions with quantum security and DeFi optimization';,;
 pr-12325
-    icon:Shield,;
-    color:'from-indigo-500 to-blue-500',;
-    services:[...blockchainWeb3Services2025],;
+    icon: Shield;,;
+    color: 'from-indigo-500 to-blue-500';,;
+    services: [...blockchainWeb3Services2025];,;
     gradient:'from-indigo-500/20 to-cyan-500/20';
   },;
   {;
-    id:'cybersecurity-quantum',,
-  description:'Future-proof security with quantum-resistant encryption and AI threat hunting',;
-    id:'cybersecurity-quantum',;
-    description:'Future-proof security with quantum-resistant encryption and AI threat hunting',;
+    id: 'cybersecurity-quantum';,,
+  description: 'Future-proof security with quantum-resistant encryption and AI threat hunting';,;
+    id: 'cybersecurity-quantum';,;
+    description: 'Future-proof security with quantum-resistant encryption and AI threat hunting';,;
 pr-12325
-    icon:Lock,;
-    color:'from-blue-500 to-cyan-500',;
-    services:[...cybersecurityQuantumServices2025],;
+    icon: Lock;,;
+    color: 'from-blue-500 to-cyan-500';,;
+    services: [...cybersecurityQuantumServices2025];,;
     gradient:'from-blue-500/20 to-teal-500/20';
   },;
   {;
-    id:'space-metaverse',,
-  description:'Space technology, quantum communications, and immersive virtual worlds',;
-    id:'space-metaverse',;
-    description:'Space technology, quantum communications, and immersive virtual worlds',;
+    id: 'space-metaverse';,,
+  description: 'Space technology;, quantum communications, and immersive virtual worlds',;
+    id: 'space-metaverse';,;
+    description: 'Space technology;, quantum communications, and immersive virtual worlds',;
 pr-12325
-    icon:Rocket,;
-    color:'from-teal-500 to-emerald-500',;
-    services:[...spaceMetaverseServices2025],;
+    icon: Rocket;,;
+    color: 'from-teal-500 to-emerald-500';,;
+    services: [...spaceMetaverseServices2025];,;
     gradient:'from-teal-500/20 to-green-500/20';
   },;
   {;
-    id:'micro-saas',,
-  description:'Innovative solutions for every business need',;
-    id:'micro-saas',;
-    description:'Innovative solutions for every business need',;
+    id: 'micro-saas';,,
+  description: 'Innovative solutions for every business need';,;
+    id: 'micro-saas';,;
+    description: 'Innovative solutions for every business need';,;
 pr-12325
-    icon:Target,;
-    color:'from-green-500 to-yellow-500',;
-    services:[...realMicroSaasServices2025, ...enhancedRealMicroSaasServices],;
+    icon: Target;,;
+    color: 'from-green-500 to-yellow-500';,;
+    services: [...realMicroSaasServices2025;, ...enhancedRealMicroSaasServices],;
     gradient:'from-green-500/20 to-orange-500/20';
   },;
   {;
-    id:'financial-technology',,
-  description:'Innovative fintech, DeFi, and financial services',;
-    id:'financial-technology',;
-    description:'Innovative fintech, DeFi, and financial services',;
+    id: 'financial-technology';,,
+  description: 'Innovative fintech;, DeFi, and financial services',;
+    id: 'financial-technology';,;
+    description: 'Innovative fintech;, DeFi, and financial services',;
 pr-12325
-    icon:TrendingUp,;
-    color:'from-green-500 to-emerald-500',;
-    services:[...innovativeFinancialServices2025],;
+    icon: TrendingUp;,;
+    color: 'from-green-500 to-emerald-500';,;
+    services: [...innovativeFinancialServices2025];,;
     gradient:'from-green-500/20 to-emerald-500/20';
   },;
   {;
-    id:'healthcare-biotech',,
-  description:'AI-powered healthcare and biotechnology solutions',;
-    icon:Shield,;
-    color:'from-blue-500 to-indigo-500',;
-    services:[...innovativeHealthcareServices2025],;
+    id: 'healthcare-biotech';,,
+  description: 'AI-powered healthcare and biotechnology solutions';,;
+    icon: Shield;,;
+    color: 'from-blue-500 to-indigo-500';,;
+    services: [...innovativeHealthcareServices2025];,;
     gradient:'from-blue-500/20 to-indigo-500/20';
   },;
   {;
-    id:'education-technology',,
-  description:'AI-powered learning and educational innovation',;
-    icon:Brain,;
-    color:'from-purple-500 to-pink-500',;
-    services:[...innovativeEducationServices2025],;
+    id: 'education-technology';,,
+  description: 'AI-powered learning and educational innovation';,;
+    icon: Brain;,;
+    color: 'from-purple-500 to-pink-500';,;
+    services: [...innovativeEducationServices2025];,;
     gradient:'from-purple-500/20 to-pink-500/20';
   },;
   {;
-    id:'sustainability-green-tech',,
-  description:'Environmental technology and sustainability solutions',;
-    id:'healthcare-biotech',;
-    description:'AI-powered healthcare and biotechnology solutions',;
-    color:'from-blue-500 to-indigo-500',;
-    services:[...innovativeHealthcareServices2025],;
+    id: 'sustainability-green-tech';,,
+  description: 'Environmental technology and sustainability solutions';,;
+    id: 'healthcare-biotech';,;
+    description: 'AI-powered healthcare and biotechnology solutions';,;
+    color: 'from-blue-500 to-indigo-500';,;
+    services: [...innovativeHealthcareServices2025];,;
     gradient:'from-blue-500/20 to-indigo-500/20';
-    id:'education-technology',;
-    description:'AI-powered learning and educational innovation',;
-    color:'from-purple-500 to-pink-500',;
-    services:[...innovativeEducationServices2025],;
+    id: 'education-technology';,;
+    description: 'AI-powered learning and educational innovation';,;
+    color: 'from-purple-500 to-pink-500';,;
+    services: [...innovativeEducationServices2025];,;
     gradient:'from-purple-500/20 to-pink-500/20';
-    id:'sustainability-green-tech',;
-    description:'Environmental technology and sustainability solutions',;
+    id: 'sustainability-green-tech';,;
+    description: 'Environmental technology and sustainability solutions';,;
 pr-12325
-    icon:Globe,;
-    color:'from-emerald-500 to-teal-500',;
-    services:[...innovativeSustainabilityServices2025],;
+    icon: Globe;,;
+    color: 'from-emerald-500 to-teal-500';,;
+    services: [...innovativeSustainabilityServices2025];,;
     gradient:'from-emerald-500/20 to-teal-500/20';
   },;
   {;
-    id:'logistics-supply-chain',,
-  description:'Autonomous logistics and supply chain optimization',;
-    icon:Rocket,;
-    id:'logistics-supply-chain',;
-    description:'Autonomous logistics and supply chain optimization',;
+    id: 'logistics-supply-chain';,,
+  description: 'Autonomous logistics and supply chain optimization';,;
+    icon: Rocket;,;
+    id: 'logistics-supply-chain';,;
+    description: 'Autonomous logistics and supply chain optimization';,;
 pr-12325
-    color:'from-orange-500 to-red-500',;
-    services:[...innovativeLogisticsServices2025],;
+    color: 'from-orange-500 to-red-500';,;
+    services: [...innovativeLogisticsServices2025];,;
     gradient:'from-orange-500/20 to-red-500/20';
   }
 export default function UltimateFuturisticServicesShowcase2025() {;
@@ -202,7 +202,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 </meta>"
         <meta name="keywords" content="AI services, blockchain, cybersecurity, space technology, metaverse, micro SAAS, quantum computing, Web3, DeFi, NFT, virtual reality, quantum security" />;"
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />;"
-        <meta property="og:description" content="Discover the most innovative AI, blockchain, cybersecurity, space technology, and micro SAAS services of 2025." />;"
+        <meta property="og: description" content="Discover the most innovative AI;, blockchain, cybersecurity, space technology, and micro SAAS services of 2025." />;"
         <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;"
         <meta property="og:type" content="website" />;"
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;"
@@ -213,9 +213,9 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 </section>"
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;"
@@ -298,8 +298,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               <AnimatePresence>;
 
                     key={service.id}
-                    transition={{ duration:0.5, delay:index * 0.1 }}
-                    exit={{ opacity:0, y:-30 }}
+                    transition={{ duration: 0.5;, delay: index * 0.1 ;}}
+                    exit={{ opacity: 0;, y: -30 ;}}
 </motion>
                     <UltraFuturisticServiceCard;
                       service={service}
@@ -309,8 +309,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
                 ))}
         <div className="max-w-4xl mx-auto text-center">;"
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20";"
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">;"
 </h3>
@@ -318,13 +318,13 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             <p className="text-xl text-gray-300 mb-8">;"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
               <a;`;
-                href={`mailto:${contactInfo.email}`}"
+                href={`mailto: ${contactInfo.email;}`}"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl";"
 </a>"
                 <Mail className="w-5 h-5 mr-2" />;"
 
               </a>;
-                href={`tel:${contactInfo.mobile}`}"
+                href={`tel: ${contactInfo.mobile;}`}"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300";"
                 <Phone className="w-5 h-5 mr-2" />;"
 

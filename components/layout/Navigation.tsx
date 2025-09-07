@@ -29,17 +29,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Phone, Mail, MapPin, Globe, ChevronDown
 
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Brain, Cpu, Rocket;
   Phone, Mail, MapPin, Globe, ChevronDown}
 }
  } from 'lucide-react';
-import Link from 'next/link';
 
 const Navigation: React.FC = () => {
 
-import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -65,9 +60,9 @@ setIsScrolled(window.scrollY > 50)) => {
 
 const navigationItems = [
     {
-      name: 'Home',
-  href: '/'}
-icon: Home}
+      name: 'Home';,
+  href: '/';}
+icon: Home;}
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
@@ -101,74 +96,74 @@ import Link from 'next / link';import {
     return () => window.removeEventListener ('scroll', handle_scroll);
   const navigation_items = [;
     {
-      name: 'Home',
-      href: '/',
-      icon: Home,
+      name: 'Home';,
+      href: '/';,
+      icon: Home;,
     },    {      icon: Home;
     }
     {
-      name: 'Services',
-      href: '/services',
-      icon: Rocket,
+      name: 'Services';,
+      href: '/services';,
+      icon: Rocket;,
       dropdown: [;
         {
-          name: 'AI Services',
-          href: '/ai - services',
+          name: 'AI Services';,
+          href: '/ai - services';,
 {
-          name: 'AI Services',
-          href: '/ai-services',
+          name: 'AI Services';,
+          href: '/ai-services';,
 origin/cursor/automate-test-improve-and-merge-code-2533
-          icon: Brain,
-          description: 'Revolutionary AI solutions',
+          icon: Brain;,
+          description: 'Revolutionary AI solutions';,
         },
         {
     {
-      name: 'Services',
+      name: 'Services';,
   href: '/services'
       icon: Rocket;
 dropdown: [
 
 {
-          name: 'AI Services',
-  href: '/ai-services',
-          icon: Brain}
-          description: 'Revolutionary AI solutions'}
+          name: 'AI Services';,
+  href: '/ai-services';,
+          icon: Brain;}
+          description: 'Revolutionary AI solutions';}
         },
         {
 
-          name: 'IT Services',
+          name: 'IT Services';,
   href: '/it-services'
           icon: Cpu;}
-description: 'Enterprise IT solutions'}
+description: 'Enterprise IT solutions';}
         }
         {
-          name: 'Micro SaaS',
+          name: 'Micro SaaS';,
   href: '/micro-saas'
           icon: Rocket;
-description: 'Specialized software solutions'}
+description: 'Specialized software solutions';}
        }
 }
         {
-          name: 'Innovative Showcase',
-          href: '/innovative - services - showcase',
-          icon: Globe,
-          description: 'Cutting - edge technology',
+          name: 'Innovative Showcase';,
+          href: '/innovative - services - showcase';,
+          icon: Globe;,
+          description: 'Cutting - edge technology';,
           name: 'IT Services'
           href: '/it-services'
           icon: Cpu
-          description: 'Enterprise IT solutions'
+          description: 'Enterprise IT solutions';
         }
         {
           name: 'Micro SaaS'
           href: '/micro-saas'
           icon: Rocket
-          description: 'Specialized software solutions'
+          description: 'Specialized software solutions';
         }
         {
-          name: 'Innovative Showcase',
-          href: '/innovative-services-showcase',
-          icon: Globe,
-          description: 'Cutting-edge technology',
+          name: 'Innovative Showcase';,
+          href: '/innovative-services-showcase';,
+          icon: Globe;,
+          description: 'Cutting-edge technology';,
 origin/cursor/automate-test-improve-and-merge-code-2533
         },
       ],
@@ -176,42 +171,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Solutions'
       href: '/solutions'
-      icon: Cpu,    {
+      icon: Cpu;,    {
     }
     {
       name: 'Contact'
       href: '/contact'
-      icon: Phone
+      icon: Phone;
     }
-  href: '/innovative-services-showcase',
-          icon: Globe}
-          description: 'Cutting-edge technology'}
+  href: '/innovative-services-showcase';,
+          icon: Globe;}
+          description: 'Cutting-edge technology';}
         }
       ]
     },
     {
 
-      name: 'Solutions',
-  href: '/solutions'}
-      icon: Cpu}
+      name: 'Solutions';,
+  href: '/solutions';}
+      icon: Cpu;}
     },
     {
-      name: 'About',
-  href: '/about'}
-      icon: Globe}
+      name: 'About';,
+  href: '/about';}
+      icon: Globe;}
     },
     {
-      name: 'Contact',
-  href: '/contact'}
-      icon: Phone}
+      name: 'Contact';,
+  href: '/contact';}
+      icon: Phone;}
     }
   ];
 
 const contactInfo = {
-    mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'}
-  website: 'https://ziontechgroup.com'}
+    mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';}
+  website: 'https://ziontechgroup.com';}
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -220,9 +215,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Navigation Bar */}
       <motion&& motion.nav;
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0 && 0.5 }}
+        initial={{ y: -100 ;}}
+        animate={{ y: 0 ;}}
+        transition={{ duration: 0 && 0.5 ;}}
 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                     Z;
@@ -249,7 +244,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (;
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 ;}}
               className='flex items-center space-x-2'
             >
               <Link href='/' className='flex items-center space-x-2 group'>
@@ -291,7 +286,7 @@ isScrolled;
             {/* Logo */}
 
             <motion.div;
-whileHover={{ scale: 1.05 }
+whileHover={{ scale: 1.05 ;}
 }
               className='flex items-center space-x-2' />
 
@@ -333,17 +328,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <AnimatePresence />
                         {activeDropdown === item.name && (
                           <motion.div;}
-initial={{ opacity: 0, y: 10, scale: 0.95 }
+initial={{ opacity: 0;, y: 10;, scale: 0.95 ;}
 }
-                            animate={{ opacity: 1, y: 0, scale: 1 }
+                            animate={{ opacity: 1;, y: 0;, scale: 1 ;}
 }
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            exit={{ opacity: 0;, y: 10;, scale: 0.95 ;}}
+                            transition={{ duration: 0.2 ;}}
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
                           >
                             <div className='grid grid-cols-1 gap-3'>
-                            transition={{ duration: 0.2 }
+                            transition={{ duration: 0.2 ;}
 }
 
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
@@ -357,7 +352,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                                       <Icon className='w-5 h-5 text-cyan-400' />
                                     </div>
                                     <div />}
-                                      <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300' />}
+                                      <div className='text-white font-medium group-hover/item: text-cyan-400 transition-colors duration-300' />;}
                                         {dropdownItem.name}
                                       </div>
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
@@ -379,10 +374,10 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
                           <motion&& motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                            transition={{ duration: 0 && 0.2 }}
+                            initial={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}}
+                            animate={{ opacity: 1;, y: 0;, scale: 1 ;}}
+                            exit={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}}
+                            transition={{ duration: 0 && 0.2 ;}}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'>;
                             <div className='grid grid-cols-1 gap-3'>;
                               {item && item.dropdown.map(dropdownItem => {;
@@ -461,12 +456,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu Button */}
             <div className='lg:hidden' />;
               <motion&& motion.button;
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={{ scale: 0 && 0.95 ;}}
             {/* Mobile Menu Button *}
 }"
             <div className=\"lg:hidden\" />;
               <motion.button;
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 ;}}
                 onClick={() = /> setIsOpen(!isOpen}
 }
                 className='text-gray-300 hover:text-white transition-colors duration-300'>
@@ -474,7 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isOpen ? (<X className='w-6 h-6' />;}
                 ) : (<Menu className='w-6 h-6' />;}
                 )}              </motion && motion.button>              <motion&& motion.button;
-                whileTap={{ scale: 0 && 0.95 }
+                whileTap={{ scale: 0 && 0.95 ;}
 }
                             </div />;
                           </motion.div>;
@@ -501,11 +496,11 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={{ scale: 0 && 0.95 ;}}
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 ;}}
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300';
               >;
@@ -514,7 +509,7 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
                 ) : (;
                   <Menu className='w-6 h-6' />;
                 )}              </motion && motion.button>              <motion&& motion.button
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={{ scale: 0 && 0.95 ;}}
                             </div>
                           </motion.div>
                         )}
@@ -542,8 +537,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='hidden lg: block' />
               <motion.a;
 href='/contact'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
                />
                 Get Started;
@@ -566,7 +561,7 @@ href='/contact'
           <motion&& motion.div
 <div className='lg:hidden'>
               <motion.button
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 ;}}
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300'
               >
@@ -577,7 +572,7 @@ href='/contact'
 
 <div className='lg:hidden' />
               <motion.button;
-whileTap={{ scale: 0.95 }}
+whileTap={{ scale: 0.95 ;}}
                 onClick={() = /> setIsOpen(!isOpen}
 }
                 className='text-gray-300 hover:text-white transition-colors duration-300'>
@@ -596,15 +591,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Mobile Navigation */}
       <AnimatePresence />;
         {isOpen && (<motion.div;}
-            initial={{ opacity: 0, x: '100%' }
+            initial={{ opacity: 0;, x: '100%' ;}
 }
-            animate={{ opacity: 1, x: 0 }
+            animate={{ opacity: 1;, x: 0 ;}
 }
 
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0;, x: '100%' ;}}
 
 
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 className='fixed inset-0 z-40 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -617,7 +612,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
 origin/cursor/automate-test-improve-and-merge-code-2533
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 className='fixed inset-0 z-40 lg:hidden'
            />
             {/* Backdrop */}
@@ -630,11 +625,11 @@ className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             {/* Mobile Menu *}
 }
             <motion&& motion.div;
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              initial={{ x: '100%' ;}}
+              animate={{ x: 0 ;}}
+              exit={{ x: '100%' ;}}
 
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3 ;}}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -642,17 +637,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={{ scale: 0 && 0.95 ;}}
                     onClick={() => setIsOpen(false)}
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={{ scale: 0 && 0.95 ;}}
                     onClick={() => setIsOpen(false)}
 
-              exit={{ x: '100%' }}
+              exit={{ x: '100%' ;}}
 
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3 ;}}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
              />
               <div className='p-6' />
@@ -661,7 +656,7 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
 }
                 <div className='flex justify-end mb-6' />;
                   <motion&& motion.button;
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileTap={{ scale: 0 && 0.95 ;}}
 
                     onClick={() = /> setIsOpen(false)}
 
@@ -782,7 +777,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mt-6' />;
                   <motion.a;
                     href='/contact';
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.95 ;}}
                     onClick={() = /> setIsOpen(false}
 }
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'>
@@ -823,7 +818,7 @@ export default Navigation;
 <div className='mt-6'>
                   <motion.a
                     href='/contact'
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.95 ;}}
                     onClick={() => setIsOpen(false)}
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'
                   >

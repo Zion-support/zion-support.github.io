@@ -91,7 +91,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       if (typeof price === 'string') {;
         const match = price && price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp;

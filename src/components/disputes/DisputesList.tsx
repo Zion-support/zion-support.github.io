@@ -35,8 +35,8 @@ import { Dispute, DisputeStatus  } from '@/types / disputes';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -62,7 +62,7 @@ import Skeleton from "@/components / ui / skeleton";
 import { formatDistanceToNow  } from './date - fns';
 import Link from './next / link';
   TableRow} from "@/components/ui/table",
-import Skeleton from "@/components/ui/skeleton",
+import Skeleton from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
@@ -141,10 +141,10 @@ TableBody,
   TableHead,
   TableHeader,
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
 import {
         return 'outline'; // Changed from "success" to "outline";
       case 'closed':;
@@ -213,10 +213,10 @@ function DisputesList() {
       case "under_review":;
         return "secondary";
       case "resolved":;
-import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
+import Skeleton from "@/components/ui/skeleton",;
+import { formatDistanceToNow } from "date-fns",;
 import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",
+import Link from "next/link",;
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean

@@ -10,9 +10,9 @@
   Trash2;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -29,15 +29,15 @@ export default function URLShortenerPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -48,14 +48,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
 
   Settings,;
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 import {
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 
 export default function URLShortenerPage() {;
@@ -72,7 +70,7 @@ setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() |generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
+    const shortUrl = `https: //zion.tech/${alias;}`;
     const newShortUrl = {
       id: Date.now()
       longUrl: longUrl.trim()
@@ -80,7 +78,7 @@ setIsShortening(true);
       alias
       clicks: 0
       createdAt: new Date().toISOString()
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl);}`
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
     setShortenedUrls(prev => [newShortUrl, ...prev]);
@@ -99,7 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>
       prev.map(url =>
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
+        url.id === id ? { ...url, clicks: url.clicks + 1 ;} : url
       )
     );
   }
@@ -114,7 +112,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() |generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
+    const shortUrl = `https: //zion.tech/${alias;}`;
     const newShortUrl = {
       id: Date.now()
       longUrl: longUrl.trim()
@@ -122,7 +120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       alias;
       clicks: 0
       createdAt: new Date().toISOString()
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl);}`
     }
     
     setIsShortening(true);
@@ -131,12 +129,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     const alias = customAlias.trim() || generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
+    const shortUrl = `https: //zion.tech/${alias;}`;
     
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
-import {
   Link,
   Copy,
   BarChart3,
@@ -146,11 +143,11 @@ import {
   ExternalLink,
   QrCode,
     const newShortUrl = {
-      id: Date.now (),
-      long_url: long_url.trim (),
+      id: Date.now ();,
+      long_url: long_url.trim ();,
       short_url;
       alias;
-      clicks: 0,
+      clicks: 0;,
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {;
@@ -520,7 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </p>;
                           <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>;
                             <span>;
-                              Created:{' '}
+                              Created: {' ';}
                           {url.clicks}
                         </div>
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -559,7 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                               {new Date(url.createdAt).toLocaleDateString()}
                             </span>
-                            <span>Alias: {url.alias}</span>
+                            <span>Alias: {url.alias;}</span>
                           </div>
                         </div>
                       </div>

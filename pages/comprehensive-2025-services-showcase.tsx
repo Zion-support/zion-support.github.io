@@ -523,7 +523,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                 onClick={() => {
                   setSearchTerm('')
 
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react',;
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
@@ -531,7 +531,7 @@ import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
  } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Comprehensive2025ServicesShowcase() {

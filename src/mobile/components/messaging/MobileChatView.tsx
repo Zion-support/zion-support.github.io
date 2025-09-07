@@ -1,9 +1,9 @@
 id: string;
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useRouter  } from 'next/router';

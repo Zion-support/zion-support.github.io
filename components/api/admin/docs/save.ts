@@ -1,8 +1,8 @@
 
 const ts = new Date () .toISOString ()
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest;, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+    return res && res.status(405).json({ error: 'Method Not Allowed' ;});  }import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -14,31 +14,28 @@ const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true ;});
   }
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+export default function handler(req: NextApiRequest;, res: NextApiResponse) {
 const DOCS_DIR = null;
-    res.status(200).json({ ok: true, version: ts })
+    res.status(200).json({ ok: true;, version: ts ;})
 origin/cursor/automate-test-improve-and-merge-code-2533
   const token = req.headers['x-admin-token'] as string | undefined;
   
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
+    return res.status(403).json({ error: 'Forbidden' ;});
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+    return res.status(405).json({ error: 'Method Not Allowed' ;});
   }
 
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
-    res.status(200).json({ ok: true, version: ts })
+    res.status(200).json({ ok: true;, version: ts ;})
 
     const body = req.body;
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
@@ -47,14 +44,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
 
-res.status(200).json({ ok: true, version: ts });
+res.status(200).json({ ok: true;, version: ts ;});
 origin/cursor/automate-test-improve-and-merge-code-2533
-    res.status(200).json({ ok: true, version: ts });
+    res.status(200).json({ ok: true;, version: ts ;});
   } catch (e) {
-    res.status(500).json({ error: 'Failed to save content' });
+    res.status(500).json({ error: 'Failed to save content' ;});
   }
   } catch (e) {
-    res.status (500).json ({ error: 'Failed to save content' });
+    res.status (500).json ({ error: 'Failed to save content' ;});
   }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -4,13 +4,13 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -32,20 +32,20 @@ pr-12243
   };
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
-const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
-  sm: "text-sm px-3 py-2",;
-  md: "text-sm px-4 py-3",;
-  lg: "text-base px-5 py-3",;
+const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>;, string> = {;
+  sm: "text-sm px-3 py-2";,;
+  md: "text-sm px-4 py-3";,;
+  lg: "text-base px-5 py-3";,;
 };
 const variantStyles: Record<;
   NonNullable<EnhancedButtonProps["variant"]>,;
   string;
 > = {;
-  primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400",;
+  primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400";,;
   secondary:;
-    "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100",;
+    "bg-gray-100 hover: bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100";,;
   ghost:;
-    "bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100",;
+    "bg-transparent hover: bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100";,;
 };
 export default function EnhancedButton(): any ({;
   className,;
@@ -59,10 +59,10 @@ export default function EnhancedButton(): any ({;
       className={clsx(
 import React from 'react';
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}
+  static getDerivedStateFromError(error) {return { hasError: true ;}
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
@@ -82,14 +82,14 @@ export type EnhancedButtonProps =;"
 const baseStyles =;"
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
-const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> = {sm: \"text-sm px-3 py-2\",md: \"text-sm px-4 py-3\",lg: \"text-base px-5 py-3}
+const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />;, string> = {sm: \"text-sm px-3 py-2\";,md: \"text-sm px-4 py-3\";,lg: \"text-base px-5 py-3;}
 }
 
 const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps[\"variant\"] />,string;"
-> = {primary: \"bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400\",secondary:;"
-    \"bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100\",ghost:;}"
-    \"bg-transparent hover: bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100}
+> = {primary: \"bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400\";,secondary:;"
+    \"bg-gray-100 hover: bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100\";,ghost:;}"
+    \"bg-transparent hover: bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100;}
 }
 "
 export default function EnhancedButton(): any ({className,variant = \"primary\",size = \"md\",fullWidth,...props;}
@@ -103,12 +103,12 @@ export default function EnhancedButton(): any ({className,variant = \"primary\",
 
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
 
-const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />, string> = {sm: 'text-sm px-3 py-2'}
-  md: 'text-sm px-4 py-3',lg: 'text-base px-5 py-3';}
+const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />;, string> = {sm: 'text-sm px-3 py-2';}
+  md: 'text-sm px-4 py-3';,lg: 'text-base px-5 py-3';}
 }
 
-const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />, string> = {primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400'}
-  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100';}
+const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />;, string> = {primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400';}
+  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100';,ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100';}
 }
 
 export default function EnhancedButton() {return (<button;
@@ -131,13 +131,13 @@ export type EnhancedButtonProps =;"
 const base_styles =;"
   \"inline - flex items - center justify - center font - semibold rounded - md transition focus:outline - none focus:ring - 2 focus:ring - offset - 2 min - h-[44px]\";
 "
-const size_styles: Record < NonNullable < EnhancedButtonProps[\"size\"]>, string> = {sm: \"text - sm px - 3 py - 2\",md: \"text - sm px - 4 py - 3\",lg: \"text - base px - 5 py - 3\";}
+const size_styles: Record < NonNullable < EnhancedButtonProps[\"size\"]>;, string> = {sm: \"text - sm px - 3 py - 2\";,md: \"text - sm px - 4 py - 3\";,lg: \"text - base px - 5 py - 3\";}
 }
 
 const variant_styles: Record<;"
   NonNullable < EnhancedButtonProps[\"variant\"]>,string;"
-> = {primary: \"bg - blue - 600 hover:bg - blue - 700 text - white focus:ring - blue - 400\",secondary:;"
-    \"bg - gray - 100 hover:bg - gray - 200 text - gray - 900 focus:ring - gray - 300 dark:bg - gray - 800 dark:hover:bg - gray - 700 dark:text - gray - 100\",ghost:;}"
+> = {primary: \"bg - blue - 600 hover:bg - blue - 700 text - white focus:ring - blue - 400\";,secondary:;"
+    \"bg - gray - 100 hover: bg - gray - 200 text - gray - 900 focus:ring - gray - 300 dark:bg - gray - 800 dark:hover:bg - gray - 700 dark:text - gray - 100\";,ghost:;}"
     \"bg - transparent hover:bg - gray - 100 text - gray - 900 focus:ring - gray - 300 dark:hover:bg - gray - 800 dark:text - gray - 100\";}
 }
 
@@ -154,7 +154,7 @@ function EnhancedButton() {return (<button;}"
 )/>;
   )}
 
-const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
+const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    ;}) => {
 
 }
 return (<div className={className || '}
@@ -172,21 +172,21 @@ export default EnhancedButton;
 const baseStyles =;"
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
-const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> = {;"
-  sm: \"text-sm px-3 py-2\",;"
-  md: \"text-sm px-4 py-3\",;}"
-  lg: \"text-base px-5 py-3\"}
+const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />;, string> = {;"
+  sm: \"text-sm px-3 py-2\";,;"
+  md: \"text-sm px-4 py-3\";,;}"
+  lg: \"text-base px-5 py-3\";}
 };
 
 const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps[\"variant\"] />,;
   string;
 > = {;"
-  primary: \"bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400\",;
+  primary: \"bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400\";,;
   secondary:;"
-    \"bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100\",;
+    \"bg-gray-100 hover: bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100\";,;
   ghost:;}"
-    \"bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\"}
+    \"bg-transparent hover: bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\";}
 };
 
 export default function EnhancedButton(): any ({;
@@ -200,7 +200,6 @@ export default function EnhancedButton(): any ({;
   return (
     <button;
 className={clsx(
-import React from 'react';
 
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement /> & {
   variant?: 'primary' | 'secondary' | 'ghost';
@@ -210,16 +209,16 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement /
 
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
 
-const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />, string> = {
-  sm: 'text-sm px-3 py-2',
-  md: 'text-sm px-4 py-3'}
-  lg: 'text-base px-5 py-3'}
+const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />;, string> = {
+  sm: 'text-sm px-3 py-2';,
+  md: 'text-sm px-4 py-3';}
+  lg: 'text-base px-5 py-3';}
 };
 
-const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />, string> = {
-  primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400',
-  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100'}
-  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'}
+const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />;, string> = {
+  primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400';,
+  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100';}
+  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100';}
 };
 
 export default function EnhancedButton({
@@ -234,8 +233,6 @@ export type EnhancedButtonProps =
     fullWidth?: boolean;}
   }
 
-import React from 'react';
-import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   ...props
@@ -258,7 +255,6 @@ pr-12243
 
 pr-12243
 import React from './react';
-import clsx from './clsx';
 export type EnhancedButtonProps =;
   React.ButtonHTMLAttributes < HTMLButtonElement> & {
     variant?: "primary" | "secondary" | "ghost";
@@ -268,20 +264,20 @@ export type EnhancedButtonProps =;
 ;
 const base_styles =;
   "inline - flex items - center justify - center font - semibold rounded - md transition focus:outline - none focus:ring - 2 focus:ring - offset - 2 min - h-[44px]";
-const size_styles: Record < NonNullable < EnhancedButtonProps["size"]>, string> = {
-  sm: "text - sm px - 3 py - 2",
-  md: "text - sm px - 4 py - 3",
-  lg: "text - base px - 5 py - 3",
+const size_styles: Record < NonNullable < EnhancedButtonProps["size"]>;, string> = {
+  sm: "text - sm px - 3 py - 2";,
+  md: "text - sm px - 4 py - 3";,
+  lg: "text - base px - 5 py - 3";,
 }
 const variant_styles: Record<;
   NonNullable < EnhancedButtonProps["variant"]>,
 const baseStyles ="
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
-const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> = {"
+const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />;, string> = {"
   sm: \"text-sm px-3 py-2\"
-  md: \"text-sm px-4 py-3\"}"
-  lg: \"text-base px-5 py-3\"}
+  md: \"text-sm px-4 py-3\";}"
+  lg: \"text-base px-5 py-3\";}
 }
 
 const variantStyles: Record<"
@@ -292,7 +288,7 @@ const variantStyles: Record<"
   secondary:"
     \"bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100\"
   ghost:}"
-    \"bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\"}
+    \"bg-transparent hover: bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\";}
 }
 
 export default function EnhancedButton({
@@ -334,7 +330,7 @@ pr-12243
 );
 }
 
-const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
+const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    ;}) => {
 
 }
   return (}

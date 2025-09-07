@@ -16,7 +16,7 @@ const getIcon = (
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ToastProps {
   toast: Toast;
-onRemove: (id: string) => void,) => {
+onRemove: (id: string) => void;,) => {
   return $3;}
 }
 }
@@ -24,9 +24,7 @@ onRemove: (id: string) => void,) => {
 import React from 'react';
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
 
 }, [toast && toast.id, toast && toast.duration, onRemove]);
 
@@ -38,28 +36,28 @@ interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
-  id: string,
-  type: ToastType,
-  title: string,;
+  id: string;,
+  type: ToastType;,
+  title: string;,;
 
 export interface Toast {;
-  id: string,;
-  type: ToastType,;
-  title: string,;
+  id: string;,;
+  type: ToastType;,;
+  title: string;,;
   message?: string;
   duration?: number
 }
 interface ToastProps {
   toast: Toast
-  onRemove: (id: string) => void
+  onRemove: (id: string) => void;
 }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
+const ToastItem: React.FC<ToastProps> = ({ toast;, onRemove }) => {
 ) => {
   return $3;}
 }
-const ToastItem: React.FC<ToastProps /> = ({ toast, onRemove    }) => {
+const ToastItem: React.FC<ToastProps /> = ({ toast;, onRemove    }) => {
 
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -157,10 +155,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return 'bg-blue-500/10';
   return (
     <motion&& motion.div
-      initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
-      animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0 && 0.8 }}
-      exit={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
-      transition={{ duration: 0 && 0.3, ease: "easeInOut" }}
+      initial={{ opacity: 0;, x: 300;, scale: 0 && 0.8 ;}}
+      animate={{ opacity: isVisible ? 1 : 0;, x: isVisible ? 0 : 300;, scale: isVisible ? 1 : 0 && 0.8 ;}}
+      exit={{ opacity: 0;, x: 300;, scale: 0 && 0.8 ;}}
+      transition={{ duration: 0 && 0.3;, ease: "easeInOut" ;}}
       className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}>;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
@@ -209,9 +207,9 @@ setTimeout(() => onRemove(toast.id), 300);}
                   ? 'bg-yellow-400';}
                   : 'bg-blue-400';}
           }`}
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-}) = /> {transition={{ duration: toast && toast.duration || 5000, ease: 'linear' }
+          initial={{ width: '100%' ;}}
+          animate={{ width: '0%' ;}}
+}) = /> {transition={{ duration: toast && toast.duration || 5000;, ease: 'linear' ;}
 }
         />;
       </div>;
@@ -221,7 +219,7 @@ setTimeout(() => onRemove(toast.id), 300);}
 interface ToastContainerProps  {toasts: Toast[];
   onRemove: (id: string) => void;}
 }
-export const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts,onRemove   }) => {
+export const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts;,onRemove   }) => {
 
 return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
 "
@@ -240,9 +238,9 @@ return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transiti
             toast && toast.type === 'warning' ? 'bg-yellow-400' :;}
             'bg-blue-400';}
           }`}
-          initial={{ width: '100%' }}
+          initial={{ width: '100%' ;}}
 
-          animate={{ width: '0%' }}
+          animate={{ width: '0%' ;}}
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
@@ -253,11 +251,11 @@ return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transiti
 
 interface ToastContainerProps {
   toasts: Toast[]
-  onRemove: (id: string) => void
+  onRemove: (id: string) => void;
 }
-export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts;, onRemove }) => {
 
-          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+          transition={{ duration: toast && toast.duration || 5000;, ease: "linear" ;}}
         />;
       </div>;
     </motion && motion.div>;
@@ -274,9 +272,9 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 interface ToastContainerProps {
   toasts: Toast[]
-  onRemove: (id: string) => void
+  onRemove: (id: string) => void;
 }
-export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts;, onRemove }) => {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
@@ -285,7 +283,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
       </AnimatePresence>
 interface ToastContainerProps {;
-  toasts: Toast[],;
+  toasts: Toast[];,;
   onRemove: (id: string) => void;
 }
   return (
@@ -319,9 +317,9 @@ interface ToastContainerProps {;
             toast.type === 'warning' ? 'bg - yellow - 400' :;
             'bg - blue - 400';
           }`}
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-          transition={{ duration: toast.duration || 5000, ease: "linear" }}
+          initial={{ width: '100%' ;}}
+          animate={{ width: '0%' ;}}
+          transition={{ duration: toast.duration || 5000;, ease: "linear" ;}}
         />;
       </div>;
     </motion.div>);
@@ -340,7 +338,7 @@ export const useToast = (
  ;
   const [toasts, setToasts] = useState<Toast[] />([]);
 
-const addToast = (toast: Omit<Toast, 'id' />) => {
+const addToast = (toast: Omit<Toast;, 'id' />) => {
    ;
   const id = Math.random().toString(36).substr(2, 9);
 ) => {
@@ -359,25 +357,25 @@ const removeToast = (
 const showSuccess = () => {
   return $3;}
 }
-    addToast({ type: 'success', title, message });
+    addToast({ type: 'success';, title, message });
   }
 
 const showError = () => {
   return $3;}
 }
-    addToast({ type: 'error', title, message });
+    addToast({ type: 'error';, title, message });
   }
 
 const showInfo = () => {
   return $3;}
 }
-    addToast({ type: 'info', title, message });
+    addToast({ type: 'info';, title, message });
   }
 
 const showWarning = () => {
   return $3;}
 }
-    addToast({ type: 'warning', title, message });
+    addToast({ type: 'warning';, title, message });
   }
   return {
     toasts,

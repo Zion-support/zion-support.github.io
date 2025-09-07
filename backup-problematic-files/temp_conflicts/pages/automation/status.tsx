@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',;
+import { useEffect, useState } from 'react';
 ;
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?:string, ok?:boolean } | null>(null),;
@@ -13,7 +13,7 @@ export default function AutomationStatusPage() {;
 </div>"
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;""
         <div className="rounded-lg border p-4 text-sm">;"
-          <div>Health:{status.ok ? 'OK' :'Unknown'}</div>;
+          <div>Health: {status.ok ? 'OK' :'Unknown';}</div>;
           <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>;"
         </div>;"
         <div className="text-sm text-gray-500">No status available yet.</div>;"

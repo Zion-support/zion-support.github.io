@@ -18,19 +18,12 @@ pr-12243
             {[;
 
 pr-12243
-import React from 'react',
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
 
-import React from 'react',
-import SEO from '../components/SEO';
-import Link from 'next/link';
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
 			<SEO title;
-							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
+							{ title: 'Audit Room';, desc: 'Share evidence securely with auditors;, immutable logs.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -61,50 +54,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
               {
                 title: 'Controls Library'
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
               }
               {
                 title: 'Evidence Automation'
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.'
+                desc: 'Pull evidence from cloud;, CI, ticketing, security tools.'
               }
               {
                 title: 'Vendor Risk'
-                desc: 'Automated questionnaires, tracking, and remediation workflows.'
+                desc: 'Automated questionnaires;, tracking, and remediation workflows.'
               }
               {
                 title: 'Asset Inventory'
-                desc: 'Infrastructure and device inventory with configuration checks.'
+                desc: 'Infrastructure and device inventory with configuration checks.';
               }
               {
                 title: 'Workflow & Tasks'
-                desc: 'Assign remediation tasks, SLAs, and approvals.'
+                desc: 'Assign remediation tasks;, SLAs, and approvals.'
               }
               {
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
               {;
-                title: 'Controls Library',;
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',;
+                title: 'Controls Library';,;
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';,;
               },;
               {;
-                title: 'Evidence Automation',;
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',;
+                title: 'Evidence Automation';,;
+                desc: 'Pull evidence from cloud;, CI, ticketing, security tools.',;
               },;
               {;
-                title: 'Vendor Risk',;
-                desc: 'Automated questionnaires, tracking, and remediation workflows.',;
+                title: 'Vendor Risk';,;
+                desc: 'Automated questionnaires;, tracking, and remediation workflows.',;
               },;
               {;
-                title: 'Asset Inventory',;
-                desc: 'Infrastructure and device inventory with configuration checks.',;
+                title: 'Asset Inventory';,;
+                desc: 'Infrastructure and device inventory with configuration checks.';,;
               },;
               {;
-                title: 'Workflow & Tasks',;
-                desc: 'Assign remediation tasks, SLAs, and approvals.',;
+                title: 'Workflow & Tasks';,;
+                desc: 'Assign remediation tasks;, SLAs, and approvals.',;
               },;
               {;
-                title: 'Audit Room',;
+                title: 'Audit Room';,;
                 desc: 'Share evidence securely with auditors; immutable logs.',;
               },;
             ].map(f => (;
@@ -159,7 +152,7 @@ pr-12243
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-              Market references:{' '}
+              Market references: {' ';}
               <a
                 className='underline hover:text-cyan-300'
                 href='https://www.vanta.com/'
@@ -233,7 +226,7 @@ pr-12243
                 <p className='mt-4 text-3xl font-bold'>;
                   $290;
                   <span className='text-base font-normal text-gray-300'>;
-                title: 'Audit Room',
+                title: 'Audit Room';,
                 desc: 'Share evidence securely with auditors; immutable logs.',
               },
             ].map (function => (
@@ -286,7 +279,7 @@ pr-12243
               </div>;
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
-              Market references:{' '}
+              Market references: {' ';}
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://www.vanta.com/';

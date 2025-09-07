@@ -9,11 +9,11 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
   disputeId?: string;
   isTalent: boolean
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { Link } from 'react-router-dom',
-import { ShieldAlert } from "lucide-react",
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Link } from 'react-router-dom',;
+import { ShieldAlert } from "lucide-react",;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 
   onAddMilestone
 }: ProjectActionsProps) {
@@ -91,11 +91,11 @@ import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";""
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { Link } from 'react-router-dom',
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",""
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 interface ProjectActionsProps {
   // TODO: Implement
 }

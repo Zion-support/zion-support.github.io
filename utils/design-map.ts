@@ -382,9 +382,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'README && README.md':
         '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.',
       'theme/index && index.ts':
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
+        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",;
       'components/Button && Button.tsx':
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
+        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',;
     };
   }
   return {
@@ -478,7 +478,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
 </string>"
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
+        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',;
 
       "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }","
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
@@ -840,9 +840,9 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
       'README.md':
         '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.',
       'theme/index.ts':
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
+        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",;
       'components/Button.tsx':
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
+        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',;
     };
   }
   return {

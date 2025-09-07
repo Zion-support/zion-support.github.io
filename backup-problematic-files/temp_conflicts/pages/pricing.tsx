@@ -1,13 +1,13 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { ;
   Check, Star, Zap, Shield, Rocket, Brain, Atom, ;
   Users, Globe, Code, Server, Cpu, ArrowRight,;
   TrendingUp, Award, Clock, DollarSign;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 ;
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),;
@@ -15,52 +15,52 @@ export default function PricingPage() {;
 ;
   const pricingPlans = [;
     {;
-      id:'starter',;
-      name:'Starter',,
-  description:'Perfect for small businesses getting started with AI',;
-      monthlyPrice:997,;
-      annualPrice:9970,;
-      icon:Rocket,;
-      color:'from-blue-500 to-cyan-500',;
-      textColor:'text-blue-400',;
-      popular:false,;
+      id: 'starter';,;
+      name: 'Starter';,,
+  description: 'Perfect for small businesses getting started with AI';,;
+      monthlyPrice: 997;,;
+      annualPrice: 9970;,;
+      icon: Rocket;,;
+      color: 'from-blue-500 to-cyan-500';,;
+      textColor: 'text-blue-400';,;
+      popular: false;,;
       features:[;
         'AI Business Intelligence BasicUp to 5 team members',;
         'Basic analytics dashboardEmail support',;
         '14-day free trialStandard integrations';
       ],;
-      cta:'Start Free Trial',;
+      cta: 'Start Free Trial';,;
       ctaColor:'from-blue-500 to-cyan-600';
     },;
     {;
-      id:'professional',;
-      name:'Professional',,
-  description:'Advanced features for growing businesses',;
-      monthlyPrice:2497,;
-      annualPrice:24970,;
-      icon:Brain,;
-      color:'from-purple-500 to-pink-500',;
-      textColor:'text-purple-400',;
-      popular:true,;
+      id: 'professional';,;
+      name: 'Professional';,,
+  description: 'Advanced features for growing businesses';,;
+      monthlyPrice: 2497;,;
+      annualPrice: 24970;,;
+      icon: Brain;,;
+      color: 'from-purple-500 to-pink-500';,;
+      textColor: 'text-purple-400';,;
+      popular: true;,;
       features:[;
         'AI Business Intelligence ProAI Customer Experience',;
         'Up to 25 team membersAdvanced analytics & reporting',;
         'Priority support30-day free trial',;
         'Custom integrationsAdvanced AI models';
       ],;
-      cta:'Start Free Trial',;
+      cta: 'Start Free Trial';,;
       ctaColor:'from-purple-500 to-pink-600';
     },;
     {;
-      id:'enterprise',;
-      name:'Enterprise',,
-  description:'Full-scale solutions for large organizations',;
-      monthlyPrice:4997,;
-      annualPrice:49970,;
-      icon:Shield,;
-      color:'from-green-500 to-emerald-500',;
-      textColor:'text-green-400',;
-      popular:false,;
+      id: 'enterprise';,;
+      name: 'Enterprise';,,
+  description: 'Full-scale solutions for large organizations';,;
+      monthlyPrice: 4997;,;
+      annualPrice: 49970;,;
+      icon: Shield;,;
+      color: 'from-green-500 to-emerald-500';,;
+      textColor: 'text-green-400';,;
+      popular: false;,;
       features:[;
         'All Professional featuresQuantum Cybersecurity',;
         'Edge Computing OrchestrationUnlimited team members',;
@@ -68,19 +68,19 @@ export default function PricingPage() {;
         '60-day free trialWhite-label solutions',;
         'SLA guaranteesOn-premise deployment';
       ],;
-      cta:'Contact Sales',;
+      cta: 'Contact Sales';,;
       ctaColor:'from-green-500 to-emerald-600';
     },;
     {;
-      id:'custom',;
-      name:'Custom',,
-  description:'Tailored solutions for unique requirements',;
-      monthlyPrice:'Custom',;
-      annualPrice:'Custom',;
-      icon:Code,;
-      color:'from-orange-500 to-red-500',;
-      textColor:'text-orange-400',;
-      popular:false,;
+      id: 'custom';,;
+      name: 'Custom';,,
+  description: 'Tailored solutions for unique requirements';,;
+      monthlyPrice: 'Custom';,;
+      annualPrice: 'Custom';,;
+      icon: Code;,;
+      color: 'from-orange-500 to-red-500';,;
+      textColor: 'text-orange-400';,;
+      popular: false;,;
       features:[;
         'Fully customized solutionsSpace technology integration',;
         'Quantum computing accessDedicated development team',;
@@ -88,48 +88,48 @@ export default function PricingPage() {;
         'Exclusive featuresStrategic partnership',;
         'ROI optimizationFuture technology access';
       ],;
-      cta:'Get Custom Quote',;
+      cta: 'Get Custom Quote';,;
       ctaColor:'from-orange-500 to-red-600';
     }
   ],;
 ;
   const addOns = [;
     {;
-      name:'AI Consulting',,
-  description:'Strategic AI implementation guidance',;
-      monthlyPrice:997,;
-      annualPrice:9970,;
-      icon:Brain,;
+      name: 'AI Consulting';,,
+  description: 'Strategic AI implementation guidance';,;
+      monthlyPrice: 997;,;
+      annualPrice: 9970;,;
+      icon: Brain;,;
       color:'from-purple-500 to-pink-500';
     },;
     {;
-      name:'Quantum Computing',,
-  description:'Access to quantum computing resources',;
-      monthlyPrice:2997,;
-      annualPrice:29970,;
-      icon:Atom,;
+      name: 'Quantum Computing';,,
+  description: 'Access to quantum computing resources';,;
+      monthlyPrice: 2997;,;
+      annualPrice: 29970;,;
+      icon: Atom;,;
       color:'from-cyan-500 to-blue-500';
     },;
     {;
-      name:'Space Technology',,
-  description:'Space mining and satellite AI systems',;
-      monthlyPrice:7997,;
-      annualPrice:79970,;
-      icon:Rocket,;
+      name: 'Space Technology';,,
+  description: 'Space mining and satellite AI systems';,;
+      monthlyPrice: 7997;,;
+      annualPrice: 79970;,;
+      icon: Rocket;,;
       color:'from-indigo-500 to-purple-500';
     },;
     {;
-      name:'Custom Development',,
-  description:'Tailored AI solution development',;
-      monthlyPrice:4997,;
-      annualPrice:49970,;
-      icon:Code,;
+      name: 'Custom Development';,,
+  description: 'Tailored AI solution development';,;
+      monthlyPrice: 4997;,;
+      annualPrice: 49970;,;
+      icon: Code;,;
       color:'from-green-500 to-emerald-500';
     }
   ],;
 ;
   const savings = {;
-    monthly:0,;
+    monthly: 0;,;
     annual:20;
   },;
 ;
@@ -170,9 +170,9 @@ pr-12325
           <div className="max-w-7xl mx-auto px-6 relative z-10">;"
 </div>
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}"
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}"
               className="text-center";"
             >;
 </motion>"
@@ -223,9 +223,9 @@ pr-12325
           <div className="max-w-7xl mx-auto px-6">;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
                   key={plan.id}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}`;
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+                  viewport={{ once: true ;}}`;
                   className={`relative ${;"
                     plan.popular ? 'lg:scale-105' :;`;
 </motion>
@@ -262,8 +262,8 @@ pr-12325
                     </button>;
               ))}
         <section className="py-20 relative bg-gradient-to-r from-gray-900/50 to-gray-800/50">;"
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}"
+              transition={{ duration: 0.8 ;}}
+              viewport={{ once: true ;}}"
               className="text-center mb-16";"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;"
 </h2>
@@ -273,7 +273,7 @@ pr-12325
 ;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;"
                   key={addon.name}
-                  initial={{ opacity:0, y:20 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
                   className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-gray-600 transition-all duration-300";"
 </motion>`;
                   <div className={`w-12 h-12 bg-gradient-to-br ${addon.color} rounded-xl flex items-center justify-center mb-4`}>;

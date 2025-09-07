@@ -4,11 +4,11 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -29,7 +29,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
 
       .single(),
 
-      import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+      import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -171,7 +171,7 @@ serve(async (req) => {
 "
         status: 500}
 });"
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

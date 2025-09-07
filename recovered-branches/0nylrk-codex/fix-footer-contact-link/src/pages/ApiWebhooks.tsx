@@ -9,12 +9,12 @@ export function ApiWebhooks() {;
 
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
-  "data": {;import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+  "data": {;import React from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CodeBlock } from "@/components/developers/CodeBlock",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 
 export function ApiWebhooks() {
   // Sample webhook event payload

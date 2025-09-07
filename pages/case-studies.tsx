@@ -124,7 +124,7 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {

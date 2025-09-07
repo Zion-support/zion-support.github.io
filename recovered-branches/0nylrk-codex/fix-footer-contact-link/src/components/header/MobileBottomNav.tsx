@@ -5,12 +5,12 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 interface MobileBottomNavProps {;
   unreadCount?: number;
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
+import React from "react",;
+import { Link, useLocation } from "react-router-dom",;
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 import React from "react";""

@@ -1,40 +1,40 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { ;
   Brain, Rocket, Dna, Globe, TrendingUp, Shield, ;
   Wifi, Package, Bot, Lock, Car, Building2,;
   DollarSign, Monitor, Users, FileText, Search, Phone,;
   Star, CheckCircle, ArrowRight, ExternalLink;
 } from 'lucide-react',;
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',;
-import { emergingTechServices } from '../data/emerging-tech-services',;
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 ;
 export default function InnovativeServicesShowcase() {;
   const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],;
   const categories = [;
-    { name:'Quantum AI & Neuroscience', icon:Brain, color:'from-purple-600 to-pink-600' },;
-    { name:'Space Technology', icon:Rocket, color:'from-blue-600 to-indigo-600' },;
-    { name:'Biotech & AI', icon:Dna, color:'from-green-600 to-emerald-600' },;
-    { name:'Metaverse & AI', icon:Globe, color:'from-violet-600 to-purple-600' },;
-    { name:'Quantum Finance', icon:TrendingUp, color:'from-yellow-600 to-orange-600' },;
-    { name:'Quantum Cybersecurity', icon:Shield, color:'from-red-600 to-pink-600' },;
-    { name:'Quantum IoT', icon:Wifi, color:'from-blue-600 to-cyan-600' },;
-    { name:'Quantum Logistics', icon:Package, color:'from-green-600 to-blue-600' },;
-    { name:'Quantum Robotics', icon:Bot, color:'from-gray-600 to-slate-600' },;
-    { name:'Autonomous Vehicles', icon:Car, color:'from-blue-600 to-green-600' },;
-    { name:'Autonomous Manufacturing', icon:Building2, color:'from-gray-600 to-blue-600' },;
-    { name:'AI Sales & Marketing', icon:DollarSign, color:'from-green-600 to-yellow-600' },;
-    { name:'AI Content & Media', icon:Monitor, color:'from-purple-600 to-pink-600' },;
-    { name:'AI HR & Legal', icon:Users, color:'from-blue-600 to-indigo-600' },;
-    { name:'AI Research & Analytics', icon:Search, color:'from-green-600 to-blue-600' },;
-    { name:'AI Communication', icon:Phone, color:'from-blue-600 to-green-600' }']
+    { name: 'Quantum AI & Neuroscience';, icon: Brain;, color: 'from-purple-600 to-pink-600' ;},;
+    { name: 'Space Technology';, icon: Rocket;, color: 'from-blue-600 to-indigo-600' ;},;
+    { name: 'Biotech & AI';, icon: Dna;, color: 'from-green-600 to-emerald-600' ;},;
+    { name: 'Metaverse & AI';, icon: Globe;, color: 'from-violet-600 to-purple-600' ;},;
+    { name: 'Quantum Finance';, icon: TrendingUp;, color: 'from-yellow-600 to-orange-600' ;},;
+    { name: 'Quantum Cybersecurity';, icon: Shield;, color: 'from-red-600 to-pink-600' ;},;
+    { name: 'Quantum IoT';, icon: Wifi;, color: 'from-blue-600 to-cyan-600' ;},;
+    { name: 'Quantum Logistics';, icon: Package;, color: 'from-green-600 to-blue-600' ;},;
+    { name: 'Quantum Robotics';, icon: Bot;, color: 'from-gray-600 to-slate-600' ;},;
+    { name: 'Autonomous Vehicles';, icon: Car;, color: 'from-blue-600 to-green-600' ;},;
+    { name: 'Autonomous Manufacturing';, icon: Building2;, color: 'from-gray-600 to-blue-600' ;},;
+    { name: 'AI Sales & Marketing';, icon: DollarSign;, color: 'from-green-600 to-yellow-600' ;},;
+    { name: 'AI Content & Media';, icon: Monitor;, color: 'from-purple-600 to-pink-600' ;},;
+    { name: 'AI HR & Legal';, icon: Users;, color: 'from-blue-600 to-indigo-600' ;},;
+    { name: 'AI Research & Analytics';, icon: Search;, color: 'from-green-600 to-blue-600' ;},;
+    { name: 'AI Communication';, icon: Phone;, color: 'from-blue-600 to-green-600' ;}']
   ],;
   const contactInfo = {;
-    mobile:'+1 302 464 0950',;
-    email:'kleber@ziontechgroup.com',;
-    address:'364 E Main St STE 1008 Middletown DE 19709',;
+    mobile: '+1 302 464 0950';,;
+    email: 'kleber@ziontechgroup.com';,;
+    address: '364 E Main St STE 1008 Middletown DE 19709';,;
     website:'https://ziontechgroup.com';
   },;
   return (;
@@ -55,7 +55,7 @@ export default function InnovativeServicesShowcase() {;
         <link rel="icon" href="/favicon.ico" />;"
 </link>"
         <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />;"
-        <meta property="og:description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services." />;"
+        <meta property="og: description" content="Explore our most innovative and revolutionary AI;, quantum computing, and emerging technology services." />;"
         <meta property="og:type" content="website" />;"
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />;"
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;"
@@ -85,9 +85,9 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto text-center">;"
 </div>
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >;
 </motion>"
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">;"
@@ -120,7 +120,7 @@ export default function InnovativeServicesShowcase() {;
         </section>;"
         <section className="py-16 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;"
-              transition={{ duration:0.8, delay:0.2 }}"
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
               className="text-center mb-16";"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;"
 </h2>
@@ -129,12 +129,12 @@ export default function InnovativeServicesShowcase() {;
               </p>;
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">;"
                     key={category.name}
-                    initial={{ opacity:0, scale:0.8 }}
-                    animate={{ opacity:1, scale:1 }}
-                    transition={{ duration:0.5, delay:index * 0.1 }}"
+                    initial={{ opacity: 0;, scale: 0.8 ;}}
+                    animate={{ opacity: 1;, scale: 1 ;}}
+                    transition={{ duration: 0.5;, delay: index * 0.1 ;}}"
                     className="group cursor-pointer";"
 </motion>
-                    <div className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>;
+                    <div className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover: scale-105 group-hover:shadow-2xl`;}>;
                       <Icon className="w-8 h-8 mx-auto mb-3 text-white" />;"
                       <h3 className="text-sm font-semibold text-white leading-tight">;"
 </h3>
@@ -142,10 +142,10 @@ export default function InnovativeServicesShowcase() {;
                   </motion.div>;)
                 ),;
               })}
-              transition={{ duration:0.8, delay:0.4 }}"
+              transition={{ duration: 0.8;, delay: 0.4 ;}}"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                   key={service.id}
-                  transition={{ duration:0.6, delay:index * 0.1 }}"
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}"
                   className="group";"
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">;"
                     <div className="flex items-center justify-between mb-6">;"
@@ -188,7 +188,7 @@ export default function InnovativeServicesShowcase() {;
 
                       </button>;
               ))}
-              transition={{ duration:0.8, delay:0.6 }}"
+              transition={{ duration: 0.8;, delay: 0.6 ;}}"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;"
               <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">;"
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantages</h3>;""
@@ -219,7 +219,7 @@ export default function InnovativeServicesShowcase() {;
                       <p className="text-gray-300 text-sm">$1.5T market with 200% annual growth</p>;"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-4xl mx-auto text-center">;"
-              transition={{ duration:0.8, delay:0.8 }}
+              transition={{ duration: 0.8;, delay: 0.8 ;}}
               <p className="text-xl text-gray-300 mb-8">;"
               <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">;"
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"
@@ -241,7 +241,7 @@ export default function InnovativeServicesShowcase() {;
 
                   </a>;
                   <a;`;
-                    href={`tel:${contactInfo.mobile}`}"
+                    href={`tel: ${contactInfo.mobile;}`}"
                     className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2";"
                     <span>Call Now</span>;"
                     <Phone className="w-5 h-5" />;"

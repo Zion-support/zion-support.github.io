@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';,
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';,;
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../data/extra-services';

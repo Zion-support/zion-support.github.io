@@ -10,15 +10,15 @@ import React from 'react';
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -29,7 +29,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
 import Link from 'next/link';
 import {;
   Brain,;
@@ -41,7 +40,6 @@ import {;
   Linkedin,;
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-import React from 'react';
 import {
   Facebook,
   Twitter,
@@ -62,15 +60,15 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -81,9 +79,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import Link from 'next/link';
-import {;
   Brain,;
   Mail,;
   Phone,;
@@ -99,20 +94,18 @@ const EnhancedFooter: React.FC = () => {;
 
   const footerSections = [;
     {;
-      title: 'Services',;
+      title: 'Services';,;
       links: [;
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
-        { name: 'Space Technology', href: '/space-technology' },;
+        { name: 'AI Business Intelligence';, href: '/ai-business-intelligence' ;},;
+        { name: 'Quantum Cybersecurity';, href: '/quantum-cybersecurity' ;},;
+        { name: 'Edge Computing';, href: '/edge-computing-orchestration' ;},;
+        { name: 'Space Technology';, href: '/space-technology' ;},;
         {;
-          name: 'View All Services',;
-          href: '/comprehensive-2025-services-showcase',;
+          name: 'View All Services';,;
+          href: '/comprehensive-2025-services-showcase';,;
         },;
       ],;
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-import React from 'react',
-import Link from 'next/link';
+    },    {        { name: 'View All Services';, href: '/comprehensive-2025-services-showcase' ;}
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 const EnhancedFooter: React.FC = () => {
@@ -121,137 +114,137 @@ const EnhancedFooter: React.FC = () => {
     {
       title: 'Services'
       links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
-        { name: 'Space Technology', href: '/space-technology' },
+        { name: 'AI Business Intelligence';, href: '/ai-business-intelligence' ;},
+        { name: 'Quantum Cybersecurity';, href: '/quantum-cybersecurity' ;},
+        { name: 'Edge Computing';, href: '/edge-computing-orchestration' ;},
+        { name: 'Space Technology';, href: '/space-technology' ;},
 {
-          name: 'View All Services',
-          href: '/comprehensive-2025-services-showcase',
+          name: 'View All Services';,
+          href: '/comprehensive-2025-services-showcase';,
         },
       ],
     },
     {
-      title: 'Company',
+      title: 'Company';,
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Work', href: '/portfolio' },
-        { name: 'Blog & Insights', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-{ name: 'Contact', href: '/contact' },
+        { name: 'About Us';, href: '/about' ;},
+        { name: 'Our Work';, href: '/portfolio' ;},
+        { name: 'Blog & Insights';, href: '/blog' ;},
+        { name: 'Careers';, href: '/careers' ;},
+{ name: 'Contact';, href: '/contact' ;},
       ],
     },
     {
-      title: 'Resources',
+      title: 'Resources';,
       links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-{ name: 'Terms of Service', href: '/terms' },
+        { name: 'Documentation';, href: '/docs' ;},
+        { name: 'API Reference';, href: '/api' ;},
+        { name: 'Support Center';, href: '/support' ;},
+        { name: 'Privacy Policy';, href: '/privacy' ;},
+{ name: 'Terms of Service';, href: '/terms' ;},
       ],
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/services/ai-services' },
-      { name: 'IT Services', href: '/services/it-services' },
-      { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'AI Development', href: '/services/ai-development' },
+      { name: 'AI Services';, href: '/services/ai-services' ;},
+      { name: 'IT Services';, href: '/services/it-services' ;},
+      { name: 'Micro SaaS';, href: '/services/micro-saas' ;},
+      { name: 'Web Development';, href: '/services/web-development' ;},
+      { name: 'Cloud Services';, href: '/services/cloud-services' ;},
+      { name: 'AI Development';, href: '/services/ai-development' ;},
     ],
     solutions: [
-      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-      { name: 'Customer Support', href: '/solutions/customer-support' },
-      { name: 'Email Automation', href: '/solutions/email-automation' },
-      { name: 'Event Management', href: '/solutions/event-management' },
-      { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+      { name: 'AI Content Creation';, href: '/solutions/ai-content-creation' ;},
+      { name: 'Customer Support';, href: '/solutions/customer-support' ;},
+      { name: 'Email Automation';, href: '/solutions/email-automation' ;},
+      { name: 'Event Management';, href: '/solutions/event-management' ;},
+      { name: 'Project Management';, href: '/solutions/project-management' ;},
+      { name: 'Workflow Automation';, href: '/solutions/workflow-automation' ;},
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' },
+      { name: 'About Us';, href: '/about' ;},
+      { name: 'Careers';, href: '/careers' ;},
+      { name: 'Partners';, href: '/partners' ;},
+      { name: 'Contact';, href: '/contact' ;},
+      { name: 'Blog';, href: '/blog' ;},
     ],
     resources: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Pricing Guide', href: '/pricing-guide' },
-      { name: 'Search', href: '/search' },
-      { name: 'Sitemap', href: '/sitemap' },
+      { name: 'Help Center';, href: '/help' ;},
+      { name: 'Pricing Guide';, href: '/pricing-guide' ;},
+      { name: 'Search';, href: '/search' ;},
+      { name: 'Sitemap';, href: '/sitemap' ;},
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
+      { name: 'Privacy Policy';, href: '/privacy' ;},
+      { name: 'Terms of Service';, href: '/terms' ;},
+      { name: 'Cookie Policy';, href: '/cookies' ;},
     ],
   };
 
   const socialLinks = [
     {
-      name: 'Facebook',
-      icon: Facebook,
-      href: 'https://facebook.com/ziontechgroup',
+      name: 'Facebook';,
+      icon: Facebook;,
+      href: 'https://facebook.com/ziontechgroup';,
     },
     {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',
+      name: 'Twitter';,
+      icon: Twitter;,
+      href: 'https://twitter.com/ziontechgroup';,
     },
     {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',
+      name: 'LinkedIn';,
+      icon: Linkedin;,
+      href: 'https://linkedin.com/company/ziontechgroup';,
     },
     {
-      name: 'Instagram',
-      icon: Instagram,
-      href: 'https://instagram.com/ziontechgroup',
+      name: 'Instagram';,
+      icon: Instagram;,
+      href: 'https://instagram.com/ziontechgroup';,
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     },
   ];
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'GitHub';, href: 'https://github.com/Zion-Holdings';, icon: Github ;},
 {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/company/ziontechgroup',
-      icon: Linkedin,
+      name: 'LinkedIn';,
+      href: 'https://linkedin.com/company/ziontechgroup';,
+      icon: Linkedin;,
     },
     {
-      name: 'Twitter',
-      href: 'https://twitter.com/ziontechgroup',
-      icon: Twitter,
+      name: 'Twitter';,
+      href: 'https://twitter.com/ziontechgroup';,
+      icon: Twitter;,
     },
   ];
   const socialLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'GitHub';, href: 'https://github.com/Zion-Holdings';, icon: Github ;}
+    { name: 'GitHub';, href: 'https://github.com/Zion-Holdings';, icon: Github ;},
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
-      icon: Linkedin
+      icon: Linkedin;
     }
     {
 
 
   const socialLinks = [;
-    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+    { name: 'GitHub';, href: 'https://github && github.com/Zion-Holdings';, icon: Github ;},;
     {;
-      name: 'LinkedIn',;
-      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
-      icon: Linkedin,;
+      name: 'LinkedIn';,;
+      href: 'https://linkedin && linkedin.com/company/ziontechgroup';,;
+      icon: Linkedin;,;
     },;
     {;
-      name: 'Twitter',;
-      href: 'https://twitter && twitter.com/ziontechgroup',;
-      icon: Twitter,;
+      name: 'Twitter';,;
+      href: 'https://twitter && twitter.com/ziontechgroup';,;
+      icon: Twitter;,;
     },;
 
 
 
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'GitHub';, href: 'https://github.com/Zion-Holdings';, icon: Github ;},
 
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
@@ -273,9 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
-import Link from 'next/link';
 
-import {
   Brain,
   Mail,
   Phone,
@@ -541,7 +532,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
   const scrollToTop = () => {";
-    window && window.scrollTo({ top: 0, behavior: "smooth" });
+    window && window.scrollTo({ top: 0;, behavior: "smooth" ;});
                     </Link>;
                   </li>))}
               </ul>;
@@ -602,57 +593,57 @@ export default /**
 function EnhancedFooter() {
 ;
   const scrollToTop = () =>: any {";
-    window.scroll_to ({ top: 0, behavior: "smooth" });
+    window.scroll_to ({ top: 0;, behavior: "smooth" ;});
 }
   const current_year = new Date ().getFullYear ();
 }
-      { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
-      { name: "Customer Support", href: "/solutions/customer-support" },";
-      { name: "Email Automation", href: "/solutions/email-automation" },";
-      { name: "Event Management", href: "/solutions/event-management" },";
-      { name: "Project Management", href: "/solutions/project-management" },";
-      { name: "About Us", href: "/about" },";
-      { name: "Careers", href: "/careers" },";
-      { name: "Partners", href: "/partners" },";
-      { name: "Contact", href: "/contact" },";
-      { name: "Privacy Policy", href: "/privacy" },";
-      { name: "Terms of Service", href: "/terms" },";
-      { name: "Cookie Policy", href: "/cookies" }]}
+      { name: "AI Content Creation";, href: "/solutions/ai-content-creation" ;},";
+      { name: "Customer Support";, href: "/solutions/customer-support" ;},";
+      { name: "Email Automation";, href: "/solutions/email-automation" ;},";
+      { name: "Event Management";, href: "/solutions/event-management" ;},";
+      { name: "Project Management";, href: "/solutions/project-management" ;},";
+      { name: "About Us";, href: "/about" ;},";
+      { name: "Careers";, href: "/careers" ;},";
+      { name: "Partners";, href: "/partners" ;},";
+      { name: "Contact";, href: "/contact" ;},";
+      { name: "Privacy Policy";, href: "/privacy" ;},";
+      { name: "Terms of Service";, href: "/terms" ;},";
+      { name: "Cookie Policy";, href: "/cookies" ;}]}
   const socialLinks = [];
   const footer_links = {}, ";
-      { name: "IT Services", href: "/services / it - services" }, ";
-      { name: "Micro SaaS", href: "/services / micro - saas" }, ";
-      { name: "Web Development", href: "/services / web - development" }, ";
-      { name: "Cloud Services", href: "/services / cloud - services" }, ";
-      { name: "AI Development", href: "/services / ai - development" }],
-    solutions: [",
-      { name: "AI Content Creation", href: "/solutions / ai - content - creation" }, ";
-      { name: "Customer Support", href: "/solutions / customer - support" }, ";
-      { name: "Email Automation", href: "/solutions / email - automation" }, ";
-      { name: "Event Management", href: "/solutions / event - management" }, ";
-      { name: "Project Management", href: "/solutions / project - management" }, ";
-      { name: "Workflow Automation", href: "/solutions / workflow - automation" }],
-    company: [",
-      { name: "About Us", href: "/about" }, ";
-      { name: "Careers", href: "/careers" }, ";
-      { name: "Partners", href: "/partners" }, ";
-      { name: "Contact", href: "/contact" }, ";
-      { name: "Blog", href: "/blog" }],
-    resources: [",
-      { name: "Help Center", href: "/help" }, ";
-      { name: "Pricing Guide", href: "/pricing - guide" }, ";
-      { name: "Search", href: "/search" }, ";
-      { name: "Sitemap", href: "/sitemap" }],
-    legal: [",
-      { name: "Privacy Policy", href: "/privacy" }, ";
-      { name: "Terms of Service", href: "/terms" }, ";
-      { name: "Cookie Policy", href: "/cookies" }]}
+      { name: "IT Services";, href: "/services / it - services" ;}, ";
+      { name: "Micro SaaS";, href: "/services / micro - saas" ;}, ";
+      { name: "Web Development";, href: "/services / web - development" ;}, ";
+      { name: "Cloud Services";, href: "/services / cloud - services" ;}, ";
+      { name: "AI Development";, href: "/services / ai - development" ;}],
+    solutions: [";,
+      { name: "AI Content Creation";, href: "/solutions / ai - content - creation" ;}, ";
+      { name: "Customer Support";, href: "/solutions / customer - support" ;}, ";
+      { name: "Email Automation";, href: "/solutions / email - automation" ;}, ";
+      { name: "Event Management";, href: "/solutions / event - management" ;}, ";
+      { name: "Project Management";, href: "/solutions / project - management" ;}, ";
+      { name: "Workflow Automation";, href: "/solutions / workflow - automation" ;}],
+    company: [";,
+      { name: "About Us";, href: "/about" ;}, ";
+      { name: "Careers";, href: "/careers" ;}, ";
+      { name: "Partners";, href: "/partners" ;}, ";
+      { name: "Contact";, href: "/contact" ;}, ";
+      { name: "Blog";, href: "/blog" ;}],
+    resources: [";,
+      { name: "Help Center";, href: "/help" ;}, ";
+      { name: "Pricing Guide";, href: "/pricing - guide" ;}, ";
+      { name: "Search";, href: "/search" ;}, ";
+      { name: "Sitemap";, href: "/sitemap" ;}],
+    legal: [";,
+      { name: "Privacy Policy";, href: "/privacy" ;}, ";
+      { name: "Terms of Service";, href: "/terms" ;}, ";
+      { name: "Cookie Policy";, href: "/cookies" ;}]}
   const social_links = [];
 ;
   return (
     <footer className="bg - gray - 900 text - white">";
       <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,
+        <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 6 gap - 8">;,
           {/* comment */}";
           <div className="lg: col - span - 2">";
             <div className="flex items - center space - x-2 mb - 4">";
@@ -684,7 +675,7 @@ digital age.;
               {footer_links.services.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">;,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -697,7 +688,7 @@ digital age.;
               {footer_links.solutions.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">;,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -710,7 +701,7 @@ digital age.;
               {footer_links.company.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">;,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -747,7 +738,7 @@ company updates.;
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />";
               <buttontype="submit
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">;,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -757,7 +748,7 @@ company updates.;
               {footer_links.legal.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">;,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -808,7 +799,7 @@ company updates.;
 
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
-            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
+            <div className="text - gray - 400 text - sm mb - 4 md: mb - 0">;,
               © {current_year} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex items - center space - x-6">";

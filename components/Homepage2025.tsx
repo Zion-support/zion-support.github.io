@@ -5,10 +5,8 @@ import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-ser
 import { ;
   innovativeAIServicesEnhanced2025 ;
 } from '../data/2025-innovative-ai-services-enhanced';
-import { ;
   innovativeITServicesEnhanced2025 ;
 } from '../data/2025-innovative-it-services-enhanced';
-import { ;
   emergingTechServicesEnhanced2025 ;
 } from '../data/2025-emerging-tech-services-enhanced';
 import React, { useState, useEffect, Suspense } from 'react';
@@ -26,7 +24,7 @@ import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurit
 import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026  } from '../data/2026-emerging-tech-services';
-import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026',
+import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { ArrowRight, Star, Brain, Atom, Shield, Zap;
@@ -47,9 +45,6 @@ import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
 import {;
   ArrowRight,;
   Star,;
@@ -90,12 +85,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const scrollToSection = (sectionId: string) => {;
     const element = document && document.getElementById(sectionId),;
     if (element) {;
-      element && element.scrollIntoView({ behavior: 'smooth' });
+      element && element.scrollIntoView({ behavior: 'smooth' ;});
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);    }
   };
 
-  const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
+  const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' ;}),;
 
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
@@ -131,13 +126,10 @@ import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - 
 import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced';import { advancedAIAutomationServices } from '../data / 2026 - advanced - ai - automation - services';import {
   innovativeRealMicroSaasServices2025;
 } from '../data / 2025 - innovative - real - micro - saas - services';
-import {
   innovativeAIServicesEnhanced2025;
 } from '../data / 2025 - innovative - ai - services - enhanced';
-import {
   innovativeITServicesEnhanced2025;
 } from '../data / 2025 - innovative - it - services - enhanced';
-import {
   emergingTechServicesEnhanced2025;
 } from '../data / 2025 - emerging - tech - services - enhanced';
 import { quantumCybersecurityServices } from '../data / 2026 - quantum - cybersecurity - services';
@@ -147,7 +139,6 @@ import { emergingTechServices2026 } from '../data / 2026 - emerging - tech - ser
 import UltraFuturisticBackground2026 from './backgrounds / UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
 import Link from 'next / link';
-import {
   ArrowRight,
   Star,
   Brain,
@@ -177,12 +168,12 @@ interface Homepage2025Props { showInternalNav?: boolean }
 if ( {) {
   $2
 }
-      element.scrollIntoView ({ behavior: 'smooth' });
+      element.scrollIntoView ({ behavior: 'smooth' ;});
       setActiveSection (section_id);
       setIsMobileMenuOpen (false);    }
   }
 ;
-  const all_services = [      element.scrollIntoView ({ behavior: 'smooth' }),
+  const all_services = [      element.scrollIntoView ({ behavior: 'smooth' ;}),
       setActiveSection (section_id);
       setIsMobileMenuOpen (false);
     }
@@ -199,7 +190,7 @@ setCurrentServiceIndex(
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-element.scrollIntoView({ behavior: 'smooth' });
+element.scrollIntoView({ behavior: 'smooth' ;});
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
     }
@@ -229,7 +220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ...specializedITSolutions2026;
     ...emergingTechServices2026;
   ];
-      icon: Brain
+      icon: Brain;
     }
     ...emergingTechServices2026,
   ];
@@ -238,61 +229,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     .slice(0, 12);
 
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-{ id: 'contact', label: 'Contact', icon: '📞' },
+    { id: 'hero';, label: 'Home';, icon: '🏠' ;},
+    { id: 'services';, label: 'Micro SAAS';, icon: '🚀' ;},
+    { id: 'ai';, label: 'AI Services';, icon: '🧠' ;},
+    { id: 'automation';, label: 'AI Automation';, icon: '⚡' ;},
+    { id: 'quantum';, label: 'Quantum Security';, icon: '🔐' ;},
+    { id: 'it';, label: 'IT Solutions';, icon: '💻' ;},
+    { id: 'emerging';, label: 'Emerging Tech';, icon: '🌟' ;},
+{ id: 'contact';, label: 'Contact';, icon: '📞' ;},
   ];
   const features = [
     {
-title: 'AI-Powered Innovation',
-      description:
-        'Cutting-edge artificial intelligence solutions that transform business operations and drive growth',
-      icon: Brain,
+title: 'AI-Powered Innovation';,
+      description: 'Cutting-edge artificial intelligence solutions that transform business operations and drive growth';,
+      icon: Brain;,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      title: 'Quantum Computing',
-      description:
-        'Next-generation quantum solutions for complex problem-solving and advanced cryptography',
-      icon: Atom,
+      title: 'Quantum Computing';,
+      description: 'Next-generation quantum solutions for complex problem-solving and advanced cryptography';,
+      icon: Atom;,
     },
     {
-      title: 'Cybersecurity Excellence',
-      description:
-        'Enterprise-grade security solutions with AI-powered threat detection and response',
-      icon: Shield,
+      title: 'Cybersecurity Excellence';,
+      description: 'Enterprise-grade security solutions with AI-powered threat detection and response';,
+      icon: Shield;,
     },
     {
-      title: 'Process Automation',
+      title: 'Process Automation';,
       description:
         'Intelligent automation that streamlines operations and enhances productivity'
-      icon: Zap
+      icon: Zap;
     },  ];      title: "Process Automation"
       description: "Intelligent automation that streamlines operations and enhances productivity"
-      icon: Zap
+      icon: Zap;
     }
         'Intelligent automation that streamlines operations and enhances productivity',
-      icon: Zap,
+      icon: Zap;,
     },
   ];
 
   const itemVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-transition: { duration: 0.6 },
+    initial: { opacity: 0;, y: 20 ;},
+    animate: { opacity: 1;, y: 0 ;},
+transition: { duration: 0.6 ;},
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const staggerContainer = {
-    initial: {}
+    initial: {;}
     animate: {
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
@@ -307,8 +295,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
               <div className='flex justify-between items-center h-16'>;
                 <motion&& motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
 
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>;
@@ -322,8 +310,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
               <div className="flex justify-between items-center h-16">;
                 <motion&& motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
@@ -340,8 +328,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
                   className="flex items-center space-x-2"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
@@ -385,8 +373,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 {/* Contact Info */}
                 <motion&& motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0;, x: 20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
                 >;
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
@@ -433,9 +421,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
                   <motion&& motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial={{ opacity: 0;, height: 0 ;}}
+                    animate={{ opacity: 1;, height: 'auto' ;}}
+                    exit={{ opacity: 0;, height: 0 ;}}
 className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
@@ -447,7 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
-                              : 'text-gray-300 hover:bg-white/10'
+                              : 'text-gray-300 hover: bg-white/10';
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -483,26 +471,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='hero'
         className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>;
         <div className='text-center z-10 max-w-6xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
             className='text-center max-w-6xl mx-auto relative z-10'>;
             <motion&& motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0;, 10, 0] }}
+              transition={{ duration: 2;, repeat: Infinity ;}}
 
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
             className='text-center max-w-6xl mx-auto relative z-10'            className="text-center max-w-6xl mx-auto relative z-10">;
             <motion&& motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0;, 10, 0] }}
+              transition={{ duration: 2;, repeat: Infinity ;}}
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
-                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                initial={{ opacity: 0;, scale: 0 && 0.8 ;}}
                     >;
                       <span>{section.icon}</span>;
                       <span>{section.label}</span>;
@@ -510,8 +498,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 {/* Contact Info */}
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_x: 20 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
+                  initial={{ opacity: 0;, coordinate_x: 20 ;}}
+                  animate={{ opacity: 1;, coordinate_x: 0 ;}}
                   className='hidden md:flex items - center space - x-4';
                 >;
                   <a;
@@ -564,9 +552,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <AnimatePresence>;
                 {isMobileMenuOpen && (
                   <motion.div;
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial={{ opacity: 0;, height: 0 ;}}
+                    animate={{ opacity: 1;, height: 'auto' ;}}
+                    exit={{ opacity: 0;, height: 0 ;}}
                     className='lg:hidden border - t border - white / 10';
                   >;
                     <div className='py - 4 space - y-2'>;
@@ -616,13 +604,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16';
       >;
         <div className='text - center z - 10 max - w-6xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
             className='text - center max - w-6xl mx - auto relative z - 10'          >;
             <motion.div;
-              animate={{ coordinate_y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ coordinate_y: [0;, 10, 0] }}
+              transition={{ duration: 2;, repeat: Infinity ;}}
               {/* Enhanced CTA Section */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -637,22 +625,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-center z-10 max-w-6xl mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='text-center max-w-6xl mx-auto relative z-10'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0;, 10, 0] }}
+              transition={{ duration: 2;, repeat: Infinity ;}}
 className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0;, scale: 0.8 ;}}
+                animate={{ opacity: 1;, scale: 1 ;}}
+                transition={{ duration: 0.6;, delay: 0.2 ;}}
 
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
               >
@@ -735,12 +723,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Trust Indicators */}
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='flex items-center justify-center space-x-6 text-sm text-gray-400'
               >
                 <div className='flex items-center space-x-2'>
@@ -765,10 +753,10 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400'
         <div className='max-w-7xl mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -808,7 +796,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={index}
-                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}>;
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0;, y: 40 ;}}>;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Comprehensive Technology Solutions;
             </h2>;
@@ -820,15 +808,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 40 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>;
         <div className='max-w-6xl mx-auto'>;
           <motion&& motion.div
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">;
+            className='text-center mb-16'            initial={{ opacity: 0;, y: 40 ;}}      <section className="py-20 px-4">;
         <div className="max-w-6xl mx-auto">;
           <motion&& motion.div
             className="text-center mb-16"
@@ -837,11 +825,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0;, y: 40 ;}}
 
 
 
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{ y: -10;, scale: 1.02 ;}}
               >
 <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 <div className='relative'>
@@ -865,15 +853,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
+            className='text-center mb-16'            initial={{ opacity: 0;, y: 40 ;}}
 
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0;, y: 40 ;}}
 
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1;, y: 0 ;}}
                 key={index}
-                className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0, coordinate_y: 40 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0;, coordinate_y: 40 ;}}
+                whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                transition={{ duration: 0.6;, delay: index * 0.1 ;}}
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
@@ -881,13 +869,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
-            transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true }}>;
+              { title: "AI Business Intelligence";, description: "Transform data into actionable insights with AI-powered analytics";, icon: Brain;, gradient: "from-purple-500 to-pink-500";, link: "/comprehensive-services-showcase-2026" ;}
+              { title: "Cloud Infrastructure";, description: "Automate cloud infrastructure deployment and management";, icon: Cloud;, gradient: "from-cyan-500 to-blue-500";, link: "/comprehensive-services-showcase-2026" ;}
+              { title: "Cybersecurity Intelligence";, description: "Advanced threat detection and response with AI";, icon: Shield;, gradient: "from-red-500 to-orange-500";, link: "/comprehensive-services-showcase-2026" ;}
+              { title: "Data Engineering";, description: "Streamline data pipelines and analytics with AI";, icon: BarChart3;, gradient: "from-emerald-500 to-teal-500";, link: "/comprehensive-services-showcase-2026" ;}
+              { title: "Quantum Computing";, description: "Access quantum computing power through the cloud";, icon: Atom;, gradient: "from-indigo-500 to-purple-500";, link: "/comprehensive-services-showcase-2026" ;}
+            transition={{ duration: 0 && 0.6 ;}}
+            viewport={{ once: true ;}}>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Our Revolutionary 2026 Services;
             </h2>;
@@ -899,57 +887,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {[;
               {;
-                title: 'AI Business Intelligence',;
+                title: 'AI Business Intelligence';,;
                 description:;
                   'Transform data into actionable insights with AI-powered analytics',;
-                icon: Brain,;
-                gradient: 'from-purple-500 to-pink-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                icon: Brain;,;
+                gradient: 'from-purple-500 to-pink-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
               {;
-                title: 'Cloud Infrastructure',;
+                title: 'Cloud Infrastructure';,;
                 description:;
                   'Automate cloud infrastructure deployment and management',;
-                icon: Cloud,;
-                gradient: 'from-cyan-500 to-blue-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                icon: Cloud;,;
+                gradient: 'from-cyan-500 to-blue-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
               {;
-                title: 'Cybersecurity Intelligence',;
-                description: 'Advanced threat detection and response with AI',;
-                icon: Shield,;
-                gradient: 'from-red-500 to-orange-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                title: 'Cybersecurity Intelligence';,;
+                description: 'Advanced threat detection and response with AI';,;
+                icon: Shield;,;
+                gradient: 'from-red-500 to-orange-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
               {;
-                title: 'Data Engineering',;
-                description: 'Streamline data pipelines and analytics with AI',;
-                icon: BarChart3,;
-                gradient: 'from-emerald-500 to-teal-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                title: 'Data Engineering';,;
+                description: 'Streamline data pipelines and analytics with AI';,;
+                icon: BarChart3;,;
+                gradient: 'from-emerald-500 to-teal-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
               {;
-                title: 'Quantum Computing',;
-                description: 'Access quantum computing power through the cloud',;
-                icon: Atom,;
-                gradient: 'from-indigo-500 to-purple-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                title: 'Quantum Computing';,;
+                description: 'Access quantum computing power through the cloud';,;
+                icon: Atom;,;
+                gradient: 'from-indigo-500 to-purple-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
               {;
-                title: 'Blockchain Intelligence',;
+                title: 'Blockchain Intelligence';,;
                 description:;
                   'Intelligent blockchain analytics and DeFi optimization',;
-                icon: Lock,;
-                gradient: 'from-yellow-500 to-orange-500',;
-                link: '/comprehensive-services-showcase-2026',;
+                icon: Lock;,;
+                gradient: 'from-yellow-500 to-orange-500';,;
+                link: '/comprehensive-services-showcase-2026';,;
               },;
             ].map((service, index) => (;
               <motion&& motion.div
                 key={index}
-                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                whileHover={{ y: -10, scale: 1 && 1.02 }}
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'                initial={{ opacity: 0;, y: 40 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                whileHover={{ y: -10;, scale: 1 && 1.02 ;}}
                 onClick={() => (window && window.location.href = service && service.link)}              Our Revolutionary 2026 Services;
             </h2>;
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
@@ -958,21 +946,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {[;
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
+              { title: "AI Business Intelligence";, description: "Transform data into actionable insights with AI-powered analytics";, icon: Brain;, gradient: "from-purple-500 to-pink-500";, link: "/comprehensive-services-showcase-2026" ;},;
+              { title: "Cloud Infrastructure";, description: "Automate cloud infrastructure deployment and management";, icon: Cloud;, gradient: "from-cyan-500 to-blue-500";, link: "/comprehensive-services-showcase-2026" ;},;
+              { title: "Cybersecurity Intelligence";, description: "Advanced threat detection and response with AI";, icon: Shield;, gradient: "from-red-500 to-orange-500";, link: "/comprehensive-services-showcase-2026" ;},;
+              { title: "Data Engineering";, description: "Streamline data pipelines and analytics with AI";, icon: BarChart3;, gradient: "from-emerald-500 to-teal-500";, link: "/comprehensive-services-showcase-2026" ;},;
+              { title: "Quantum Computing";, description: "Access quantum computing power through the cloud";, icon: Atom;, gradient: "from-indigo-500 to-purple-500";, link: "/comprehensive-services-showcase-2026" ;},;
+              { title: "Blockchain Intelligence";, description: "Intelligent blockchain analytics and DeFi optimization";, icon: Lock;, gradient: "from-yellow-500 to-orange-500";, link: "/comprehensive-services-showcase-2026" ;}
             ].map((service, index) => (;
               <motion&& motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
             className='text-center mb-16'
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 40 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.6 ;}}
+            viewport={{ once: true ;}}
           >
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Our Revolutionary 2026 Services
@@ -990,7 +978,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   'Transform data into actionable insights with AI-powered analytics'
                 icon: Brain
                 gradient: 'from-purple-500 to-pink-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
               {
                 title: 'Cloud Infrastructure'
@@ -998,28 +986,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   'Automate cloud infrastructure deployment and management'
                 icon: Cloud
                 gradient: 'from-cyan-500 to-blue-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
               {
                 title: 'Cybersecurity Intelligence'
                 description: 'Advanced threat detection and response with AI'
                 icon: Shield
                 gradient: 'from-red-500 to-orange-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
               {
                 title: 'Data Engineering'
                 description: 'Streamline data pipelines and analytics with AI'
                 icon: BarChart3
                 gradient: 'from-emerald-500 to-teal-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
               {
                 title: 'Quantum Computing'
                 description: 'Access quantum computing power through the cloud'
                 icon: Atom
                 gradient: 'from-indigo-500 to-purple-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
               {
                 title: 'Blockchain Intelligence'
@@ -1027,21 +1015,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   'Intelligent blockchain analytics and DeFi optimization'
                 icon: Lock
                 gradient: 'from-yellow-500 to-orange-500'
-                link: '/comprehensive-services-showcase-2026'
+                link: '/comprehensive-services-showcase-2026';
               }
             ].map((service, index) => (
               <motion.div
                 key={index}
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                initial={{ opacity: 0;, y: 40 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+                whileHover={{ y: -10;, scale: 1.02 ;}}
 onClick={() => (window.location.href = service.link)}
               >
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover: opacity-10 transition-opacity duration-300`;}
                 />
                 <div className='relative p-6'>
                   <div
@@ -1068,7 +1056,7 @@ onClick={() => (window.location.href = service.link)}
           </div>
           {/* Call to Action for Services Showcase */}
           <motion.div
-            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+            className='text-center mt-16'            initial={{ opacity: 0;, y: 40 ;}}            className="text-center mt-16"
 
             ))}
           </div>
@@ -1076,12 +1064,12 @@ onClick={() => (window.location.href = service.link)}
           {/* Call to Action for Services Showcase */}
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
-            viewport={{ once: true }}>;
+            initial={{ opacity: 0;, y: 40 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.6;, delay: 0 && 0.3 ;}}
+            viewport={{ once: true ;}}>;
             <a
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1;, y: 0 ;}}
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
@@ -1129,10 +1117,10 @@ href='/comprehensive-services-showcase-2026'
         <div className='max-w-6xl mx-auto'>
           <motion.div
             className='text-center mb-16'
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 40 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.6 ;}}
+            viewport={{ once: true ;}}
           >
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
@@ -1180,10 +1168,10 @@ href='/comprehensive-services-showcase-2026'
           <motion.div
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.6;, delay: 0.2 ;}}
+            viewport={{ once: true ;}}
           >
               <a
                 href="mailto:kleber@ziontechgroup.com"
@@ -1197,10 +1185,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Email Us
               </a>
               <a
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-            viewport={{ once: true }}>;
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+            viewport={{ once: true ;}}>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'

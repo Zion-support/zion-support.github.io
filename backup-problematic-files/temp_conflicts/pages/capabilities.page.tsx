@@ -1,4 +1,4 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 ;
 const CAPABILITIES = [;]
 ],;

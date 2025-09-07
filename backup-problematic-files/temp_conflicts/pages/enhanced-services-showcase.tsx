@@ -1,6 +1,6 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
   DollarSign, Users, Clock, CheckCircle, ArrowRight,;
@@ -8,17 +8,17 @@ import { ;
   Grid, List, ChevronDown, ChevronUp, Sparkles,;
   Crown, Award, Target, Globe, Cpu, Database;
 } from 'lucide-react',;
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import { innovativeAIServices } from '../data/innovative-ai-services',;
-import { quantumSpaceServices } from '../data/quantum-space-services',;
-import { enterpriseITServices } from '../data/enterprise-it-services',;
-import { realMarketServices } from '../data/real-market-services',;
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025',;
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMarketServices } from '../data/real-market-services';
+import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 ;
 export default function EnhancedServicesShowcase() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
@@ -27,9 +27,9 @@ export default function EnhancedServicesShowcase() {;
   const [sortBy, setSortBy] = useState<string>('name'),;
 ;
   const contactInfo = {;
-    mobile:'+1 302 464 0950',;
-    email:'kleber@ziontechgroup.com',;
-    address:'364 E Main St STE 1008 Middletown DE 19709',;
+    mobile: '+1 302 464 0950';,;
+    email: 'kleber@ziontechgroup.com';,;
+    address: '364 E Main St STE 1008 Middletown DE 19709';,;
     website:'https://ziontechgroup.com';
   },;
 ;
@@ -47,21 +47,21 @@ export default function EnhancedServicesShowcase() {;
   ],;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'', count:allServices.length },;
-    { id:'next-gen-ai', name:'ArrowRight-Gen AI', icon:'', count:nextGenerationAIServices.length },;
-    { id:'cutting-edge-it', name:'Cutting-Edge IT', icon:'', count:cuttingEdgeITServices.length },;
-    { id:'innovative-saas', name:'Innovative SaaS', icon:'', count:innovativeMicroSaasV2Services.length },;
-    { id:'quantum-space', name:'Quantum & Space', icon:'', count:quantumSpaceServices.length },;
-    { id:'enterprise', name:'Enterprise IT', icon:'', count:enterpriseITServices.length }
+    { id: 'all';, name: 'All Services';, icon: '';, count: allServices.length ;},;
+    { id: 'next-gen-ai';, name: 'ArrowRight-Gen AI';, icon: '';, count: nextGenerationAIServices.length ;},;
+    { id: 'cutting-edge-it';, name: 'Cutting-Edge IT';, icon: '';, count: cuttingEdgeITServices.length ;},;
+    { id: 'innovative-saas';, name: 'Innovative SaaS';, icon: '';, count: innovativeMicroSaasV2Services.length ;},;
+    { id: 'quantum-space';, name: 'Quantum & Space';, icon: '';, count: quantumSpaceServices.length ;},;
+    { id: 'enterprise';, name: 'Enterprise IT';, icon: '';, count: enterpriseITServices.length ;}
   ],;
 ;
   const sortOptions = [;
-    { id:'name', name:'Name A-Z' },;
-    { id:'price-low', name:'Price Low to High' },;
-    { id:'price-high', name:'Price High to Low' },;
-    { id:'rating', name:'Rating' },;
-    { id:'customers', name:'Customer Count' },;
-    { id:'popularity', name:'Popularity' }
+    { id: 'name';, name: 'Name A-Z' ;},;
+    { id: 'price-low';, name: 'Price Low to High' ;},;
+    { id: 'price-high';, name: 'Price High to Low' ;},;
+    { id: 'rating';, name: 'Rating' ;},;
+    { id: 'customers';, name: 'Customer Count' ;},;
+    { id: 'popularity';, name: 'Popularity' ;}
   ],;
 ;
   // Filter and sort services;
@@ -109,23 +109,23 @@ export default function EnhancedServicesShowcase() {;
   }, [allServices, selectedCategory, searchTerm, sortBy]),;
 ;
   const containerVariants = {;
-    hidden:{ opacity:0 },;
+    hidden: { opacity:0 ;},;
     visible:{;
-      opacity:1,;
+      opacity: 1;,;
       transition:{;
-        staggerChildren:0.1,;
+        staggerChildren: 0.1;,;
         delayChildren:0.2;
       }
     }
   },;
 ;
   const itemVariants = {;
-    hidden:{ opacity:0, y:30 },;
+    hidden: { opacity:0;, y: 30 ;},;
     visible:{;
-      opacity:1,;
-      y:0,;
+      opacity: 1;,;
+      y: 0;,;
       transition:{;
-        duration:0.6,;
+        duration: 0.6;,;
         ease:"easeOut" as const;
       }
     }
@@ -133,21 +133,21 @@ export default function EnhancedServicesShowcase() {;
 ;
   const featuredServices = [;
     {;
-      title:' ArrowRight-Generation AI Services',,
-  description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
-      services:nextGenerationAIServices.slice(0, 3),;
+      title: ' ArrowRight-Generation AI Services';,,
+  description: 'Revolutionary AI platforms that push the boundaries of what\'s possible';,;
+      services: nextGenerationAIServices.slice(0;, 3),;
       color:'from-purple-500 to-pink-600';
     },;
     {;
-      title:' Cutting-Edge IT Infrastructure',,
-  description:'Advanced infrastructure solutions for the modern enterprise',;
-      services:cuttingEdgeITServices.slice(0, 3),;
+      title: ' Cutting-Edge IT Infrastructure';,,
+  description: 'Advanced infrastructure solutions for the modern enterprise';,;
+      services: cuttingEdgeITServices.slice(0;, 3),;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      title:' Innovative Micro SaaS Solutions',,
-  description:'Creative and practical SaaS tools for every business need',;
-      services:innovativeMicroSaasV2Services.slice(0, 3),;
+      title: ' Innovative Micro SaaS Solutions';,,
+  description: 'Creative and practical SaaS tools for every business need';,;
+      services: innovativeMicroSaasV2Services.slice(0;, 3),;
       color:'from-green-500 to-emerald-600';
     }
   ],;
@@ -177,9 +177,9 @@ pr-12325
 </section>"
           <div className="max-w-7xl mx-auto text-center">;"
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >;
 </motion>"
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;"
@@ -206,10 +206,10 @@ pr-12325
         </section>;"
         <section className="py-16 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;"
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
-              viewport={{ once:true }}"
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.6 ;}}
+              viewport={{ once: true ;}}"
               className="text-center mb-16";"
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">;"
 </h2>
@@ -218,7 +218,7 @@ pr-12325
               </p>;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;"
                   key={index}
-                  transition={{ duration:0.6, delay:index * 0.2 }}
+                  transition={{ duration: 0.6;, delay: index * 0.2 ;}}
                   className="relative";"
 </motion>
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>;
@@ -344,7 +344,7 @@ pr-12325
 
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-4xl mx-auto text-center">;"
-              viewport={{ once:true }}
+              viewport={{ once: true ;}}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;"
               <p className="text-xl text-gray-300 mb-8">;"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"

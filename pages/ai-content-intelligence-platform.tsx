@@ -3,8 +3,8 @@
     price: '$5,000'
     period: '/month'
     description: 'Ideal for growing businesses and marketing teams'
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 const contactInfo = null;

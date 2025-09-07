@@ -5,13 +5,13 @@ import {
   DialogContent;
   DialogDescription;
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -36,7 +36,7 @@ export function HireConfirmationModal({ ;
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const { user } = useAuth();import React, { useState } from 'react',
+  const { user } = useAuth();import React, { useState } from 'react',;
 import {
 
 import {
@@ -47,7 +47,7 @@ import {
   DialogContent;
   DialogDescription;
   DialogHeader;
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
   // TODO: Implement
 pr-12325
 }
@@ -56,15 +56,15 @@ pr-12325
   DialogDescription,
   DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth",
-import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication } from "@/types/jobs",;
 export interface HireConfirmationModalProps {
 
 

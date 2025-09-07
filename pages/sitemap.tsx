@@ -278,8 +278,8 @@ function SitemapPage() {
       value: 'kleber@ziontechgroup.com'
       action: 'mailto:kleber@ziontechgroup.com'
     }
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, Search, Rocket, FileText, Users, Mail, Map;

@@ -122,8 +122,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     text
     type: 'product', // Use a valid type from the SearchSuggestion interface
   }));};  ];
-import { ProductListing } from "@/types/listings",
-import { SearchSuggestion } from "@/types/search",
+import { ProductListing } from "@/types/listings",;
+import { SearchSuggestion } from "@/types/search",;
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {

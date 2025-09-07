@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]),
   const [userId, setUserId] = useState(""),
@@ -140,8 +140,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-import React, { useEffect, useState } from './react';,
-import EnhancedLayout from "../../components / layout / EnhancedLayout",
+import React, { useEffect, useState } from './react';,;
+import EnhancedLayout from "../../components / layout / EnhancedLayout",;
 export default /**
  * AdminTokens - Function description
  */

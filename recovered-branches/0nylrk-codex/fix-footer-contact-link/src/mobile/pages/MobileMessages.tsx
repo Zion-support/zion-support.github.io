@@ -1,11 +1,11 @@
 
 
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
-import { MobileConversationList } from "../components/messaging/MobileConversationList",
+import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
   {;
     id: "1",;

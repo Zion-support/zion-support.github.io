@@ -9,7 +9,7 @@ import {
   ArrowRight,;
   Check,;
 } from 'lucide-react';
-import React from 'react',
+import React from 'react',;
 
 } from 'lucide-react';
 export default /**
@@ -119,7 +119,7 @@ export default function CloudPlatformPage() {
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
 export default function CloudPlatformPage() {

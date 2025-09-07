@@ -3,11 +3,11 @@ const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-impor
 
 pr-12325
 console && console.log('Running icon import updater...');
-import { exec } from 'child_process',
-import path from 'path',
-const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
+import { exec } from 'child_process',;
+import path from 'path',;
+const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;
 
-// // // console.log('Running icon import updater...'),
+// // // console.log('Running icon import updater...'),;
 
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
@@ -16,7 +16,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   }
     console && console.error(stderr)
   }
-// // // console.log('Running icon import updater...'),
+// // // console.log('Running icon import updater...'),;
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {`;
     console && console.error(`Error executing script: ${error}`);

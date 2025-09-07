@@ -367,14 +367,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ExternalLink,
   Star,
   Users,
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import {
   Handshake, Globe, Rocket, Brain, Atom, Shield,
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
 export default function PartnersPage() {
   const partners = [
     {

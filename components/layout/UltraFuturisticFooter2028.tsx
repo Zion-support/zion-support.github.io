@@ -51,25 +51,24 @@ import {
 
 const serviceCategories = [
   {
-    title: '🚀 2028 Futuristic Innovations',
+    title: '🚀 2028 Futuristic Innovations';,
     services: [
-      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
-      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
-      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
-      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
+      { name: 'AI Climate Prediction Platform';, href: '/ai-climate-prediction-platform' ;},
+      { name: 'Quantum Cybersecurity Firewall';, href: '/quantum-cybersecurity-firewall' ;},
+      { name: 'Autonomous Drone Delivery Network';, href: '/autonomous-drone-delivery-network' ;},
+      { name: 'AI Healthcare Diagnosis Platform';, href: '/ai-healthcare-diagnosis-platform' ;}
     ]
   };
   {
-    title: '🏙️ Smart City & Infrastructure',
+    title: '🏙️ Smart City & Infrastructure';,
     services: [
-      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },
-      { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },
-      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' },
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
+      { name: 'Smart City Infrastructure Management';, href: '/smart-city-infrastructure-management' ;},
+      { name: 'IoT Energy Management System';, href: '/iot-energy-management-system' ;},
+      { name: 'Digital Twin Manufacturing Platform';, href: '/digital-twin-manufacturing-platform' ;},
+      { name: 'Autonomous Manufacturing AI';, href: '/autonomous-manufacturing-ai' ;}
     ]
   };
 import Link from 'next/link';
-import {
   Phone
   Mail
   MapPin
@@ -156,32 +155,32 @@ import {
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code;
 const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';, }  website: 'https://ziontechgroup.com';
 }
 ;
 const service_categories = [;
   {
     services: [;
-      { name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum - machine - learning - platform' },
-      { name: 'Quantum Internet Security Gateway', href: '/quantum - internet - security - gateway' },
-      { name: 'Quantum Internet Protocol', href: '/quantum - internet - protocol' }
+      { name: 'Quantum Financial Trading Platform';, href: '/quantum - financial - trading - platform' ;},
+      { name: 'Quantum Machine Learning Platform';, href: '/quantum - machine - learning - platform' ;},
+      { name: 'Quantum Internet Security Gateway';, href: '/quantum - internet - security - gateway' ;},
+      { name: 'Quantum Internet Protocol';, href: '/quantum - internet - protocol' ;}
     ];
   }
   {
-    title: '🤖 AI & Machine Learning',
+    title: '🤖 AI & Machine Learning';,
     services: [;
-      { name: 'AI Customer Service Automation', href: '/ai - customer - service - automation' },
-      { name: 'AI Education Platform', href: '/ai - education - platform' },
-      { name: 'AI Content Creation Suite', href: '/ai - content - creation - suite' },
-      { name: 'AI Legal Research Platform', href: '/ai - legal - research - platform' }
+      { name: 'AI Customer Service Automation';, href: '/ai - customer - service - automation' ;},
+      { name: 'AI Education Platform';, href: '/ai - education - platform' ;},
+      { name: 'AI Content Creation Suite';, href: '/ai - content - creation - suite' ;},
+      { name: 'AI Legal Research Platform';, href: '/ai - legal - research - platform' ;}
     ];
   }
 ];
-  { name: 'Security Center', href: '/security', icon: Shield }
+  { name: 'Security Center';, href: '/security';, icon: Shield ;}
 ];
 ];
 
@@ -189,21 +188,20 @@ const service_categories = [;
 
 const socialLinks = [;
   {;
-    name: 'LinkedIn',;
-    href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
-    icon: Users,;
+    name: 'LinkedIn';,;
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup';,;
+    icon: Users;,;
   },;
   {;
-    name: 'Twitter',;
-    href: 'https://twitter && twitter.com/ziontechgroup',;
-    icon: MessageCircle,;
+    name: 'Twitter';,;
+    href: 'https://twitter && twitter.com/ziontechgroup';,;
+    icon: MessageCircle;,;
   },;
-  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Video },;
-  { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Code },];
+  { name: 'YouTube';, href: 'https://youtube && youtube.com/@ziontechgroup';, icon: Video ;},;
+  { name: 'GitHub';, href: 'https://github && github.com/ziontechgroup';, icon: Code ;},];
 
 export default function UltraFuturisticFooter2028() {;
 import React from 'react';
-import Link from 'next/link';
 
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   Shield, Users, Briefcase, BookOpen, MessageCircle;
@@ -227,113 +225,113 @@ const contactInfo = null;
       }
 
       {
-        name: 'Autonomous Manufacturing AI'}
-  href: '/autonomous-manufacturing-ai'}
+        name: 'Autonomous Manufacturing AI';}
+  href: '/autonomous-manufacturing-ai';}
       }
     ]
   },
   {
-    title: '⚛️ Quantum & Advanced Tech',
+    title: '⚛️ Quantum & Advanced Tech';,
   services: [
       {
-        name: 'Quantum Financial Trading Platform'}
-  href: '/quantum-financial-trading-platform'}
+        name: 'Quantum Financial Trading Platform';}
+  href: '/quantum-financial-trading-platform';}
       },
       {
-        name: 'Quantum Machine Learning Platform'}
-  href: '/quantum-machine-learning-platform'}
+        name: 'Quantum Machine Learning Platform';}
+  href: '/quantum-machine-learning-platform';}
       },
       {
-        name: 'Quantum Internet Security Gateway'}
-  href: '/quantum-internet-security-gateway'}
+        name: 'Quantum Internet Security Gateway';}
+  href: '/quantum-internet-security-gateway';}
       },
-        { name: 'Quantum Internet Protocol'}
-  href: '/quantum-internet-protocol'}
+        { name: 'Quantum Internet Protocol';}
+  href: '/quantum-internet-protocol';}
 }
 
     ]
   },
   {
-    title: '🤖 AI & Machine Learning',
+    title: '🤖 AI & Machine Learning';,
   services: [
       {
-        name: 'AI Customer Service Automation'}
-  href: '/ai-customer-service-automation'}
+        name: 'AI Customer Service Automation';}
+  href: '/ai-customer-service-automation';}
       },
-        { name: 'AI Education Platform'}
-  href: '/ai-education-platform'}
+        { name: 'AI Education Platform';}
+  href: '/ai-education-platform';}
 },
 
-        { name: 'AI Content Creation Suite'}
-  href: '/ai-content-creation-suite'}
+        { name: 'AI Content Creation Suite';}
+  href: '/ai-content-creation-suite';}
 },
 
       {
-        name: 'AI Legal Research Platform'}
-  href: '/ai-legal-research-platform'}
+        name: 'AI Legal Research Platform';}
+  href: '/ai-legal-research-platform';}
       }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: 'About Us'}
-  href: '/about', icon: Users}
+  { name: 'About Us';}
+  href: '/about';, icon: Users;}
 },
-  { name: 'Case Studies'}
-  href: '/case-studies', icon: Briefcase}
+  { name: 'Case Studies';}
+  href: '/case-studies';, icon: Briefcase;}
 },
-  { name: 'Blog & Resources'}
-  href: '/blog', icon: BookOpen}
+  { name: 'Blog & Resources';}
+  href: '/blog';, icon: BookOpen;}
 },
-  { name: 'Careers'}
-  href: '/careers', icon: TrendingUp}
+  { name: 'Careers';}
+  href: '/careers';, icon: TrendingUp;}
 },
-  { name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
+  { name: 'Contact';}
+  href: '/contact';, icon: MessageCircle;}
 },
-{ name: 'Support'}
-  href: '/support', icon: ShieldCheck}
+{ name: 'Support';}
+  href: '/support';, icon: ShieldCheck;}
 }
 ];
 
 const resourceLinks = [
-  { name: 'Documentation'}
-  href: '/docs', icon: BookOpen}
+  { name: 'Documentation';}
+  href: '/docs';, icon: BookOpen;}
 },
-  { name: 'API Reference'}
-  href: '/api', icon: Cpu}
+  { name: 'API Reference';}
+  href: '/api';, icon: Cpu;}
 },
-  { name: 'Developer Tools'}
-  href: '/dev-tools', icon: Database}
+  { name: 'Developer Tools';}
+  href: '/dev-tools';, icon: Database;}
 },
-  { name: 'Mobile Apps'}
-  href: '/mobile', icon: Globe}
+  { name: 'Mobile Apps';}
+  href: '/mobile';, icon: Globe;}
 },
-  { name: 'Cloud Services'}
-  href: '/cloud', icon: Cloud}
+  { name: 'Cloud Services';}
+  href: '/cloud';, icon: Cloud;}
 },
-{ name: 'Security Center'}
-  href: '/security', icon: Shield}
+{ name: 'Security Center';}
+  href: '/security';, icon: Shield;}
 }
 ];
 
 const socialLinks = [
   {
-    name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup'}
-    icon: Users}
+    name: 'LinkedIn';,
+  href: 'https://linkedin.com/company/ziontechgroup';}
+    icon: Users;}
   },
   {
-    name: 'Twitter',
-  href: 'https://twitter.com/ziontechgroup'}
-    icon: MessageCircle}
+    name: 'Twitter';,
+  href: 'https://twitter.com/ziontechgroup';}
+    icon: MessageCircle;}
   },
-  { name: 'YouTube'}
-  href: 'https://youtube.com/@ziontechgroup', icon: Video}
+  { name: 'YouTube';}
+  href: 'https://youtube.com/@ziontechgroup';, icon: Video;}
 },
-  { name: 'GitHub'}
-  href: 'https://github.com/ziontechgroup', icon: Code}
+  { name: 'GitHub';}
+  href: 'https://github.com/ziontechgroup';, icon: Code;}
 }
 ];
 
@@ -483,7 +481,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Globe className='w-4 h-4 text-purple-400' />;
                 <a;
                   href={contactInfo && contactInfo.website}
-                  className='text-sm hover: text-white transition-colors' />                  {contactInfo && contactInfo.website}      {/* Main Footer Content *}
+                  className='text-sm hover: text-white transition-colors' />                  {contactInfo && contactInfo.website;}      {/* Main Footer Content *}
 }
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16\" />;"
         <div className=\"grid grid-cols-1 lg:grid-cols-4 gap-12\" />;

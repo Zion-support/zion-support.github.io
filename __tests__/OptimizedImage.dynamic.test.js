@@ -1,5 +1,4 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -16,7 +15,6 @@ describe('OptimizedImagedynamic', () => {
 
 
 
-import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 
 
     // Test content display
@@ -37,9 +35,7 @@ describe('OptimizedImagedynamic'
 });
 
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import OptimizedImage from '../components/OptimizedImage.dynamic';
 
 describe('OptimizedImage', () => {
@@ -70,8 +66,6 @@ describe('OptimizedImage', () => {
   test ('applies correct styling', () => {
     // Test styling;
 });
-import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 main
 
   test('displays correct content', () => {

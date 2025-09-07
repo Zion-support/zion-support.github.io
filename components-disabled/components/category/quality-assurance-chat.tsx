@@ -7,9 +7,6 @@ const QualityAssuranceChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const QualityAssuranceChat: NextPage = () => ;
   return (<div />;
@@ -108,26 +105,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 
 export default QualityAssuranceChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 const QualityAssuranceChat: NextPage = () => {
  ;
   return (

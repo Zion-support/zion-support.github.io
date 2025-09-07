@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+    { name: 'Pricing';, href: '/pricing-2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
   ];
   const company = [
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' }
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' }
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }
-    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;}
+    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;}
+    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;}
+    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;}
+    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
   ];
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
@@ -31,20 +31,20 @@ const EnhancedNavigation: React.FC = () => {;
   }, []);
 
   const services = [;
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },;
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },;
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },;
-    { name: 'Edge Computing', href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },;
-    { name: 'Space Technology', href: 'https://ziontechgroup && ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },;
-    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+    { name: 'All Solutions';, href: '/comprehensive-2025-services-showcase';, icon: Globe;, description: 'Complete collection of innovative solutions' ;},;
+    { name: 'AI Business Intelligence';, href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence';, icon: Brain;, description: 'AI-powered analytics and insights' ;},;
+    { name: 'Quantum Cybersecurity';, href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity';, icon: Shield;, description: 'Quantum-resistant security solutions' ;},;
+    { name: 'Edge Computing';, href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration';, icon: Cpu;, description: 'Edge orchestration and IoT management' ;},;
+    { name: 'Space Technology';, href: 'https://ziontechgroup && ziontechgroup.com/space-technology';, icon: Rocket;, description: 'Space exploration and satellite tech' ;},;
+    { name: 'Pricing';, href: '/pricing-2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
   ];
 
   const company = [;
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },;
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },;
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },;
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },;
-    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;},;
+    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;},;
+    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;},;
+    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;},;
+    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
   ];
 
   const toggleDropdown = (dropdown: string) => {;
@@ -77,9 +77,9 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (;
                 <motion&& motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0;, y: 10 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  exit={{ opacity: 0;, y: 10 ;}}
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
                 >
                   <div className="grid grid-cols-2 gap-4 px-6">
@@ -125,9 +125,9 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (;
                 <motion&& motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0;, y: 10 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  exit={{ opacity: 0;, y: 10 ;}}
                   className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="grid grid-cols-2 gap-4 px-6">;
                     {services && services.map((service) => (;
@@ -154,9 +154,9 @@ const EnhancedNavigation: React.FC = () => {;
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('company')}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0;, y: 10 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  exit={{ opacity: 0;, y: 10 ;}}
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6">;
                   <div className="space-y-2 px-6">;
                     {company && company.map((item) => (;
@@ -186,9 +186,9 @@ const EnhancedNavigation: React.FC = () => {;
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0;, height: 0 ;}}
+            animate={{ opacity: 1;, height: 'auto' ;}}
+            exit={{ opacity: 0;, height: 0 ;}}
             className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6">;
             <div className="px-6 space-y-6">;
               {/* Mobile Services */}
@@ -231,9 +231,6 @@ const EnhancedNavigation: React.FC = () => {;
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
-import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
 ;
 const EnhancedNavigation: React.FC = () => {
   const [is_open, setIsOpen] = useState (false);
@@ -250,20 +247,20 @@ const EnhancedNavigation: React.FC = () => {
   }, []);
 ;
   const services = [;
-    { name: 'All Solutions', href: '/comprehensive - 2025 - services - showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com / ai - business - intelligence', icon: Brain, description: 'AI - powered analytics and insights' },
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com / quantum - cybersecurity', icon: Shield, description: 'Quantum - resistant security solutions' },
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com / edge - computing - orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
-    { name: 'Space Technology', href: 'https://ziontechgroup.com / space - technology', icon: Rocket, description: 'Space exploration and satellite tech' },
-    { name: 'Pricing', href: '/pricing - 2025', icon: Award, description: 'Transparent pricing for all solutions' }
+    { name: 'All Solutions';, href: '/comprehensive - 2025 - services - showcase';, icon: Globe;, description: 'Complete collection of innovative solutions' ;},
+    { name: 'AI Business Intelligence';, href: 'https://ziontechgroup.com / ai - business - intelligence';, icon: Brain;, description: 'AI - powered analytics and insights' ;},
+    { name: 'Quantum Cybersecurity';, href: 'https://ziontechgroup.com / quantum - cybersecurity';, icon: Shield;, description: 'Quantum - resistant security solutions' ;},
+    { name: 'Edge Computing';, href: 'https://ziontechgroup.com / edge - computing - orchestration';, icon: Cpu;, description: 'Edge orchestration and IoT management' ;},
+    { name: 'Space Technology';, href: 'https://ziontechgroup.com / space - technology';, icon: Rocket;, description: 'Space exploration and satellite tech' ;},
+    { name: 'Pricing';, href: '/pricing - 2025';, icon: Award;, description: 'Transparent pricing for all solutions' ;}
   ];
 ;
   const company = [;
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
-    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+    { name: 'About Us';, href: '/about';, icon: Users;, description: 'Learn about our mission and team' ;},
+    { name: 'Our Work';, href: '/portfolio';, icon: Award;, description: 'See our latest projects and achievements' ;},
+    { name: 'Content Hub';, href: '/reports';, icon: BookOpen;, description: 'Access autonomous content and insights' ;},
+    { name: 'Blog & Insights';, href: '/blog';, icon: BookOpen;, description: 'Stay updated with industry trends' ;},
+    { name: 'Contact';, href: '/contact';, icon: Phone;, description: 'Get in touch with our experts' ;}
   ];
 ;
   const toggle_dropdown = (dropdown: string) =>: any {
@@ -305,9 +302,9 @@ const EnhancedNavigation: React.FC = () => {
               </button>;
               {active_dropdown === 'services' && (
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
+                  initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  exit={{ opacity: 0;, coordinate_y: 10 ;}}
                   className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
                   <div className="grid grid - cols - 2 gap-4 px-6">;
@@ -342,9 +339,9 @@ const EnhancedNavigation: React.FC = () => {
               </button>;
               {active_dropdown === 'company' && (
                 <motion.div;
-                  initial={{ opacity: 0, coordinate_y: 10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: 10 }}
+                  initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  exit={{ opacity: 0;, coordinate_y: 10 ;}}
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - xl shadow - 2xl border border - gray-200 py-6";
                 >;
                   <div className="space-y-2 px-6">;
@@ -385,9 +382,9 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Menu */}
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0;, height: 0 ;}}
+            animate={{ opacity: 1;, height: 'auto' ;}}
+            exit={{ opacity: 0;, height: 0 ;}}
             className="lg:hidden bg - white rounded - xl shadow - 2xl border border - gray - 200 mt-2 py-6";
           >;
             <div className="px-6 space-y-6">;

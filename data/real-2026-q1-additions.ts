@@ -839,7 +839,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'neural - quantum',
     contact_info: contact,
     real_implementation: true,
-    implementation_details: 'Schema importers, generators, UI',
+    implementation_details: 'Schema importers, generators, UI',;
     launch_date: '2026 - 02 - 12',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b

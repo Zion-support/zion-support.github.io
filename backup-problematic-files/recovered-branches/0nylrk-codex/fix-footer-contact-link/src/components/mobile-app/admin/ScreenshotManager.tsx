@@ -1,20 +1,20 @@
 
-import React, { useState, useRef } from "react",;""
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;""
-import { Button } from "@/components/ui/button",;""
-import { Upload, Trash2, Plus } from "lucide-react",;""
-import { AppPlatform } from "./MetadataManager",;""
-import { toast } from "sonner",;"
+import React, { useState, useRef } from "react";""
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
+import { Button } from "@/components/ui/button";""
+import { Upload, Trash2, Plus } from "lucide-react";""
+import { AppPlatform } from "./MetadataManager";""
+import { toast } from "sonner";"
 ;
 interface ScreenshotManagerProps {;
   platform:AppPlatform;
 }
 type Screenshot = {;
-  id:string,;
-  url:string,;
+  id: string;,;
+  url: string;,;
   file:File;
 },;
-export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;}) => {;
 
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
 
@@ -27,8 +27,8 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
       return,;
     const filesToAdd = imageFiles.slice(0, availableSlots),;
     const newScreenshots = filesToAdd.map(file => ({;)
-      id:Math.random().toString(36).substring(2, 9),;
-      url:URL.createObjectURL(file),;
+      id: Math.random().toString(36).substring(2;, 9),;
+      url: URL.createObjectURL(file);,;
       file;
     })),;
     setScreenshots(prev => [...prev, ...newScreenshots]),;

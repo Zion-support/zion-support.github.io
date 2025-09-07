@@ -3,22 +3,22 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 interface MainNavigationProps {;
-import { Link, useLocation } from "react-router-dom",
-import { cn } from "@/lib/utils",
+import { Link, useLocation } from "react-router-dom",;
+import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth",
+import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare } from "lucide-react",  const links = [
 import {Link, useLocation} from \"react-router-dom\";
 import {cn} from \"@/lib/utils\";
 import {useAuth} from \"@/hooks/useAuth\";
 import {MessageSquare} from \"lucide-react\";
 interface MainNavigationProps {;}
-import { Link, useLocation } from \"react-router-dom\",
-import { cn } from \"@/lib/utils\",
+import { Link, useLocation } from \"react-router-dom\",;
+import { cn } from \"@/lib/utils\",;
 import { useAuth } from \"@/hooks/useAuth\";
 import { MessageSquare } from \"lucide-react\";
-import { useAuth } from \"@/hooks/useAuth\",
+import { useAuth } from \"@/hooks/useAuth\",;
 import { MessageSquare } from \"lucide-react\",  const links = [
     {
       name: \"name\",

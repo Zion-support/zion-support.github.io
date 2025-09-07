@@ -11,7 +11,6 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-import React from 'react';
 
 
 function App() {

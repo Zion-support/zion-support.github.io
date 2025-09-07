@@ -1,14 +1,14 @@
 
-import React from "react",;""
-import { Heart } from "lucide-react",;""
-import { cn } from "@/lib/utils",;""
-import { useToast } from "@/hooks/use-toast",;"
+import React from "react";""
+import { Heart } from "lucide-react";""
+import { cn } from "@/lib/utils";""
+import { useToast } from "@/hooks/use-toast";"
 ;
 interface TalentCardSaveButtonProps {;
-  profileId:string,;
-  profileName:string,;
-  isSaved:boolean,;
-  onToggleSave?:(id:string, isSaved:boolean) => void,;
+  profileId: string;,;
+  profileName: string;,;
+  isSaved: boolean;,;
+  onToggleSave?:(id: string;, isSaved: boolean) => void;,;
   isAuthenticated:boolean;
 }
 export function TalentCardSaveButton({ ;
@@ -25,12 +25,12 @@ export function TalentCardSaveButton({ ;
     e.stopPropagation(),;
     if (!isAuthenticated) {;
       toast({;
-        title:"Authentication required",,
-  description:"Please log in to save talents to your favorites",;
+        title: "Authentication required";,,
+  description: "Please log in to save talents to your favorites";,;
         variant:"destructive";
       toast({;"
-        title:"Authentication required",;""
-        description:"Please log in to save talents to your favorites",;""
+        title: "Authentication required";,;""
+        description: "Please log in to save talents to your favorites";,;""
         variant:"destructive";")
 pr-12325
       }),;
@@ -41,13 +41,13 @@ pr-12325
     }
     ;
     toast({;
-      title:localIsSaved ? "Removed from favorites" :"Added to favorites",,
+      title: localIsSaved ? "Removed from favorites" :"Added to favorites";,,
   description:localIsSaved ;
         ? `${profileName} has been removed from your favorites` ;
         :`${profileName} has been added to your favorites`,;
       variant:"default";
     }),;
-      title:localIsSaved ? "Removed from favorites" :"Added to favorites",;"
+      title: localIsSaved ? "Removed from favorites" :"Added to favorites";,;"
       description:localIsSaved ;
         ? `${profileName} has been removed from your favorites` ;`;
         :`${profileName} has been added to your favorites`,;"

@@ -19,7 +19,6 @@ export default function UltraFuturisticBackground2029() {;
 
 
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface Particle {
   x: number;
@@ -85,22 +84,22 @@ for (let i = 0; i < particleCount; i++) {
         ] as Particle['type'];
 
 const colors = {
-          quantum: ['#00ffff', '#0080ff', '#0040ff'],
-          holographic: ['#8b5cf6', '#a855f7', '#c084fc'],
-          neural: ['#10b981', '#059669', '#047857'],
-          cyberpunk: ['#ec4899', '#f97316', '#f59e0b'],) => {
+          quantum: ['#00ffff';, '#0080ff', '#0040ff'],
+          holographic: ['#8b5cf6';, '#a855f7', '#c084fc'],
+          neural: ['#10b981';, '#059669', '#047857'],
+          cyberpunk: ['#ec4899';, '#f97316', '#f59e0b'],) => {
   return $3;}
 }
         };
 
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-          color: colors[type][Math.floor(Math.random() * colors[type].length)]}
+          x: Math.random() * canvas.width;,
+          y: Math.random() * canvas.height;,
+          vx: (Math.random() - 0.5) * 0.5;,
+          vy: (Math.random() - 0.5) * 0.5;,
+          size: Math.random() * 3 + 1;,
+          opacity: Math.random() * 0.8 + 0.2;,
+          color: colors[type][Math.floor(Math.random() * colors[type].length)];}
 type}
         });
       }
@@ -467,7 +466,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         transition={{
           duration: 8;
 repeat: Infinity;
-ease: 'easeInOut'}
+ease: 'easeInOut';}
 }
         }}
       {/* Canvas for particle effects *}
@@ -477,11 +476,11 @@ ease: 'easeInOut'}
         className='absolute inset-0 w-full h-full';
           transition={{duration: 4;}
             repeat: Infinity;}
-            ease: 'easeInOut',      {/* Canvas for particle effects */}
+            ease: 'easeInOut';,      {/* Canvas for particle effects */}
       <canvas;
         ref={canvasRef}
         className=\"absolute inset-0 w-full h-full\";
-        style={{ filter: 'blur(0.5px)' }
+        style={{ filter: 'blur(0.5px)' ;}
 }
       />;
       {/* Additional visual layers */}"
@@ -489,7 +488,7 @@ ease: 'easeInOut'}
         {/* Quantum field ripples */}
         <motion.div;"
           className=\"absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20\";
-        style={{ filter: 'blur(0 && 0.5px)' }
+        style={{ filter: 'blur(0 && 0.5px)' ;}
 }
       />;{/* Additional visual layers */}"
       <div className=\"absolute inset-0\" />;
@@ -499,7 +498,7 @@ ease: 'easeInOut'}
       <canvas;
         ref={canvas_ref}"
         className=\"absolute inset - 0 w-full h-full\";
-        style={{ filter: 'blur (0.5px)' }
+        style={{ filter: 'blur (0.5px)' ;}
 }
       />;
       {/* Additional visual layers */}"
@@ -507,8 +506,8 @@ ease: 'easeInOut'}
         {/* Quantum field ripples */}
         <motion.div;"
           className=\"absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20\";
-          animate={{scale: [1, 1 && 1.2, 1];}
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1];}
+          animate={{scale: [1;, 1 && 1.2, 1];}
+            opacity: [0 && 0.1;, 0 && 0.3, 0 && 0.1];}
           }}
           transition={{}}
         {/* Holographic matrix */}
@@ -516,7 +515,7 @@ ease: 'easeInOut'}
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20';
           animate={{transition={{duration: 5;}
             repeat: Infinity;}
-            ease: 'easeInOut'          }}
+            ease: 'easeInOut'          ;}}
         />;
         />;{/* Holographic matrix */}
         <motion&& motion.div;"
@@ -526,7 +525,7 @@ ease: 'easeInOut'}
         <motion.div;
           className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
           animate={{}}
-          transition={{duration: 5,repeat: Infinity}}
+          transition={{duration: 5;,repeat: Infinity;}}
         {/* Neural network nodes */}
         <motion&& motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
@@ -536,7 +535,7 @@ ease: 'easeInOut'}
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
           animate={{transition={{duration: 6;}
             repeat: Infinity;}
-            ease: 'easeInOut'          }}
+            ease: 'easeInOut'          ;}}
         {/* Neural network nodes */}
         <motion&& motion.div;"
           className=\"absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20\";
@@ -544,8 +543,8 @@ ease: 'easeInOut'}
         {/* Neural network nodes */}
         <motion.div;"
           className=\"absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20\";
-          animate={{scale: [1, 1 && 1.1, 1];}
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];}
+          animate={{scale: [1;, 1 && 1.1, 1];}
+            opacity: [0 && 0.2;, 0 && 0.4, 0 && 0.2];}
           }}
           transition={{}}
       {/* Floating orbs with glow effects */}
@@ -558,11 +557,11 @@ ease: 'easeInOut'}
         {[...Array(8)].map((_, i) => (<motion&& motion.div;}
             key={i}"
             className=\"absolute w-2 h-2 rounded-full bg-cyan-400\";
-            style={{scale: [1, 1.2, 1],opacity: [0.1, 0.3, 0.1]          }}
-          transition={{duration: 4,repeat: Infinity,ease: 'easeInOut'}}
-          transition={{duration: 4,repeat: Infinity}}
+            style={{scale: [1;, 1.2, 1],opacity: [0.1;, 0.3, 0.1]          }}
+          transition={{duration: 4;,repeat: Infinity;,ease: 'easeInOut';}}
+          transition={{duration: 4;,repeat: Infinity;}}
           transition={{}}
-          transition={{duration: 6,repeat: Infinity,duration: 8;
+          transition={{duration: 6;,repeat: Infinity;,duration: 8;
           repeat: Infinity;}
           ease: 'easeInOut';}
         }}
@@ -571,7 +570,7 @@ ease: 'easeInOut'}
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
-        style={{ filter: 'blur(0.5px)' }
+        style={{ filter: 'blur(0.5px)' ;}
 }
       />;
       {/* Additional visual layers */}
@@ -582,27 +581,27 @@ ease: 'easeInOut'}
 className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
 
-            scale: [1, 1.2, 1]}
-            opacity: [0.1, 0.3, 0.1]}
+            scale: [1;, 1.2, 1]}
+            opacity: [0.1;, 0.3, 0.1]}
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity}
-ease: 'easeInOut'}
+            duration: 4;,
+            repeat: Infinity;}
+ease: 'easeInOut';}
           }}
         />
 
         {/* Holographic matrix */}
         <motion.div;
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20';
-          animate={{scale: [1.2, 1, 1.2],opacity: [0.3, 0.1, 0.3]}}
-          transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}
+          animate={{scale: [1.2;, 1, 1.2],opacity: [0.3;, 0.1, 0.3]}}
+          transition={{duration: 5;,repeat: Infinity;,ease: 'easeInOut';}}
         />;
         {/* Neural network nodes */}
         <motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
-          animate={{scale: [1, 1.1, 1],opacity: [0.2, 0.4, 0.2]}}
-          transition={{duration: 6,repeat: Infinity,ease: 'easeInOut'}}
+          animate={{scale: [1;, 1.1, 1],opacity: [0.2;, 0.4, 0.2]}}
+          transition={{duration: 6;,repeat: Infinity;,ease: 'easeInOut';}}
         />;
       </div>;
       {/* Floating orbs with glow effects */}
@@ -619,34 +618,34 @@ ease: 'easeInOut'}
             key={i}
             className="absolute w-2 h-2 rounded-full bg-cyan-400"
             style={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
+            scale: [1;, 1.2, 1],
+            opacity: [0.1;, 0.3, 0.1],          }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 4;,
+            repeat: Infinity;,
+            ease: 'easeInOut';,
 
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
+            duration: 4;,
+            repeat: Infinity;,
 
           }}
           transition={{
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,
+            duration: 6;,
+            repeat: Infinity;,
           duration: 8
           repeat: Infinity
-          ease: 'easeInOut'
+          ease: 'easeInOut';
         }}
       />
 {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
-        style={{ filter: 'blur(0.5px)' }}
+        style={{ filter: 'blur(0.5px)' ;}}
       />
       {/* Additional visual layers */}
       <div className='absolute inset-0'>
@@ -654,11 +653,11 @@ ease: 'easeInOut'}
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
-            ease: 'easeInOut',      {/* Canvas for particle effects */}
+            ease: 'easeInOut';,      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
+        style={{ filter: 'blur(0.5px)' ;}}
       />
       {/* Additional visual layers */}
       <div className="absolute inset-0">
@@ -666,50 +665,50 @@ ease: 'easeInOut'}
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
           animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.1, 0.3, 0.1]
+            scale: [1;, 1.2, 1];
+            opacity: [0.1;, 0.3, 0.1]
             ease: 'easeInOut'
-            ease: 'easeInOut',
+            ease: 'easeInOut';,
 
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
+            duration: 4;,
+            repeat: Infinity;,
           }}
 
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1],
+            scale: [1;, 1.2, 1],
+            opacity: [0.1;, 0.3, 0.1],
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 4;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
         {/* Holographic matrix */}
         <motion.div
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.1, 0.3],
+            scale: [1.2;, 1, 1.2],
+            opacity: [0.3;, 0.1, 0.3],
           }}
           transition={{
-            duration: 5,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 5;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
         {/* Neural network nodes */}
         <motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
           animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2],
+            scale: [1;, 1.1, 1],
+            opacity: [0.2;, 0.4, 0.2],
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 6;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
       </div>
@@ -721,47 +720,47 @@ ease: 'easeInOut',
             className='absolute w-2 h-2 rounded-full bg-cyan-400'
             style={{
             style={{}
-              left: `${20 + i * 10}%`
-              top: `${30 + i * }
+              left: `${20 + i * 10;}%`
+              top: `${30 + i * ;}
 }%`
-              filter: 'blur(1px)',
-  boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
+              filter: 'blur(1px)';,
+  boxShadow: '0 0 20px rgba(0;, 255, 255, 0.6)'
             }}
             animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.2, 1],
+              y: [0;, -20, 0],
+              opacity: [0.3;, 0.8, 0.3],
+              scale: [1;, 1.2, 1],
 origin/cursor/automate-test-improve-and-merge-code-2533
-              opacity: [0.3, 0.8, 0.3]}
-              scale: [1, 1.2, 1]}
+              opacity: [0.3;, 0.8, 0.3]}
+              scale: [1;, 1.2, 1]}
             }}
 
-            duration: 4,
-            repeat: Infinity,
+            duration: 4;,
+            repeat: Infinity;,
 
             transition={{
               delay: i * 0.3
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-delay: i * 0.3,
+              duration: 3 + i * 0.5;,
+              repeat: Infinity;,
+              ease: 'easeInOut';,
+delay: i * 0.3;,
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-  delay: i * 0.3}
+              duration: 3 + i * 0.5;,
+              repeat: Infinity;,
+              ease: 'easeInOut';,
+  delay: i * 0.3;}
 }
             }}
-            animate={{y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],scale: [1, 1.2, 1]}}duration: 4,repeat: Infinity,transition={{delay: i * 0.3;}
-              duration: 3 + i * 0.5,repeat: Infinity,ease: 'easeInOut',
-  delay: i * 0.3}}
+            animate={{y: [0;, -20, 0],opacity: [0.3;, 0.8, 0.3],scale: [1;, 1.2, 1]}}duration: 4;,repeat: Infinity;,transition={{delay: i * 0.3;}
+              duration: 3 + i * 0.5;,repeat: Infinity;,ease: 'easeInOut';,
+  delay: i * 0.3;}}
           />;
         ))}
 }
   )
 }
-              delay: i * 0.3,            }}              delay: i * 0.3;
+              delay: i * 0.3;,            }}              delay: i * 0.3;
             }}
           />))}
       </div>;

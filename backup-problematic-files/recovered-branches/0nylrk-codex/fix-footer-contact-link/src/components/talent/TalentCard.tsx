@@ -1,16 +1,16 @@
 
-import { Button } from "@/components/ui/button",;""
-import { Card } from "@/components/ui/card",;""
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;""
-import { useNavigate } from "react-router-dom",;""
-import { TalentProfile } from "@/types/talent",;"
+import { Button } from "@/components/ui/button";""
+import { Card } from "@/components/ui/card";""
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";""
+import { useNavigate } from "react-router-dom";""
+import { TalentProfile } from "@/types/talent";"
 ;
 export interface TalentCardProps {;
-  talent:TalentProfile,;
-  onViewProfile:(id:string) => void,;
-  onRequestHire:(talent:TalentProfile) => void,;
-  isSaved:boolean,;
-  onToggleSave:(id:string, isSaved:boolean) => void,;
+  talent: TalentProfile;,;
+  onViewProfile: (id:string) => void;,;
+  onRequestHire: (talent:TalentProfile) => void;,;
+  isSaved: boolean;,;
+  onToggleSave: (id:string;, isSaved: boolean) => void;,;
   isAuthenticated:boolean;
 }
 export function TalentCard({;
@@ -40,7 +40,7 @@ export function TalentCard({;
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [],;
   return (;"
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;"
+    <Card className="overflow-hidden transition-all hover: shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile;}>;"
 "
       <div className="p-6">;"
 </div>"

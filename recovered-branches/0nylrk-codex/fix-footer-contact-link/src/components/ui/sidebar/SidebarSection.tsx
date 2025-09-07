@@ -5,8 +5,8 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   children?: React.ReactNode
 
-import React from "react",
-import { cn } from "@/lib/utils",
+import React from "react",;
+import { cn } from "@/lib/utils",;
 
   className?: string;import React from './react';
 import { cn  } from '@/lib / utils';

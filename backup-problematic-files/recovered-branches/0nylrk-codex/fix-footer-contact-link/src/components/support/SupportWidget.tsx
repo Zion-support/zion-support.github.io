@@ -1,10 +1,10 @@
 
-import React, { useState } from "react",;""
-import { Button } from "@/components/ui/button",;""
-import { ChatBotPanel } from "./ChatBotPanel",;""
-import { MessageSquare, Info, X } from "lucide-react",;""
-import { cn } from "@/lib/utils",;""
-import { useTheme } from "@/hooks/useTheme",;"
+import React, { useState } from "react";""
+import { Button } from "@/components/ui/button";""
+import { ChatBotPanel } from "./ChatBotPanel";""
+import { MessageSquare, Info, X } from "lucide-react";""
+import { cn } from "@/lib/utils";""
+import { useTheme } from "@/hooks/useTheme";"
 ;
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false),;
@@ -25,7 +25,7 @@ export function SupportWidget() {;
               ? "bg-zion-blue-dark border border-zion-blue-light" ;""
               :"bg-white border border-gray-200";")
           )}"
-          style={{ height:"600px", maxHeight:"80vh" }}"
+          style={{ height: "600px";, maxHeight: "80vh" ;}}"
         >;
 </div>"
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"

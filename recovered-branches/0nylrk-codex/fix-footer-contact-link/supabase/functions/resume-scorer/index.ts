@@ -1,7 +1,7 @@
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -80,8 +80,8 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
-import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -221,7 +221,7 @@ serve(async (req) => {
       .from("job_applications")"
       .select(`"
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",""
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

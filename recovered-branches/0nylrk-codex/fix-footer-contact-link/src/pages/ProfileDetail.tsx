@@ -11,19 +11,19 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
-import { useState, useEffect } from "react",
-import { useParams } from "react-router-dom",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
+import { useState, useEffect } from "react",;
+import { useParams } from "react-router-dom",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
 import { 
   MapPin;
   Clock;
@@ -42,7 +42,7 @@ export default function ProfileDetail() {
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.

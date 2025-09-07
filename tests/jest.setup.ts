@@ -1,15 +1,15 @@
 // Polyfill fetch and enable fetch mocks;
 
-import 'whatwg - fetch',
-import fetch_mock from 'jest - fetch - mock',
+import 'whatwg - fetch',;
+import fetch_mock from 'jest - fetch - mock',;
 fetch_mock.enable_mocks (),
 // Reset fetch mocks before each test to ensure isolation;
 before_each (() => {
   fetch_mock.reset_mocks ();
 }),
 // Jest - DOM matchers;
-import '@testing - library / jest - dom',
-import { TextEncoder, TextDecoder } from 'util',
+import '@testing - library / jest - dom',;
+import { TextEncoder, TextDecoder } from 'util',;
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
 global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
@@ -31,7 +31,7 @@ process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',
 // Jest - axe matchers for accessibility;
-import { toHaveNoViolations } from 'jest - axe',
+import { toHaveNoViolations } from 'jest - axe',;
 expect.extend (toHaveNoViolations),
 // Mock window.match_media for Jest;
 Object.define_property (window, 'match_media', {
@@ -232,7 +232,7 @@ if (typeof URL.revokeObjectURL === 'undefined') {;
 // Check condition;
   window.scroll_to = jest.fn ();
 // Mock axios.create to return axios itself;
-import axios from 'axios',
+import axios from 'axios',;
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
 // Polyfill for window.scroll_to;
@@ -277,7 +277,7 @@ jest.mock ('vitest', () => {
       // Provide a simple implementation of `import.meta` mocking helpers;
       // frequently used in Vitest examples;`;
       // (no - op implementations because Jest already handles env vars via `process.env`).;
-      import_actual: jest.require_actual,
+      import_actual: jest.require_actual,;
       mockResolvedValue: <T = unknown>(value: T) => jest.fn ().mockResolvedValue (value),
 
       mockRejectedValue: <T = unknown>(value: T) => jest.fn ().mockRejectedValue (value)},

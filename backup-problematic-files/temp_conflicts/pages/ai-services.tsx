@@ -1,64 +1,64 @@
-import React from 'react',;
-import { motion } from 'framer-motion',;
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react',;
-import SEO from '../components/SEO',;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 ;
 const aiServices = [;
   {;
-    title:'AI Consciousness Evolution',,
-  description:'Advanced AI systems with evolving consciousness and emotional intelligence',;
-    icon:<Brain className="w-8 h-8 text-cyan-400" />,;
-    href:'/ai-consciousness-evolution-2029',;
-    features:['Emotional IntelligenceConsciousness Development', 'Ethical AI Framework'];
+    title: 'AI Consciousness Evolution';,,
+  description: 'Advanced AI systems with evolving consciousness and emotional intelligence';,;
+    icon: <Brain className="w-8 h-8 text-cyan-400" />;,;
+    href: '/ai-consciousness-evolution-2029';,;
+    features: ['Emotional IntelligenceConsciousness Development';, 'Ethical AI Framework'];
   },;
   {;
-    title:'AI Autonomous Research',,
-  description:'Self-directed AI research assistants for breakthrough discoveries',;
-    icon:<Target className="w-8 h-8 text-purple-400" />,;
-    href:'/ai-autonomous-research-assistant',;
-    features:['Independent ResearchData Analysis', 'Hypothesis Generation'];
+    title: 'AI Autonomous Research';,,
+  description: 'Self-directed AI research assistants for breakthrough discoveries';,;
+    icon: <Target className="w-8 h-8 text-purple-400" />;,;
+    href: '/ai-autonomous-research-assistant';,;
+    features: ['Independent ResearchData Analysis';, 'Hypothesis Generation'];
   },;
   {;
-    title:'AI Predictive Maintenance',,
-  description:'Predictive analytics for industrial equipment and systems',;
-    icon:<Zap className="w-8 h-8 text-yellow-400" />,;
-    href:'/ai-predictive-maintenance-platform',;
-    features:['Equipment MonitoringFailure Prediction', 'Cost Optimization'];
+    title: 'AI Predictive Maintenance';,,
+  description: 'Predictive analytics for industrial equipment and systems';,;
+    icon: <Zap className="w-8 h-8 text-yellow-400" />;,;
+    href: '/ai-predictive-maintenance-platform';,;
+    features: ['Equipment MonitoringFailure Prediction';, 'Cost Optimization'];
   },;
   {;
-    title:'AI Content Personalization',,
-  description:'Dynamic content adaptation based on user behavior and preferences',;
-    icon:<Users className="w-8 h-8 text-green-400" />,;
-    href:'/ai-content-personalization-engine',;
-    features:['User ProfilingDynamic Content', 'Engagement Optimization'];
+    title: 'AI Content Personalization';,,
+  description: 'Dynamic content adaptation based on user behavior and preferences';,;
+    icon: <Users className="w-8 h-8 text-green-400" />;,;
+    href: '/ai-content-personalization-engine';,;
+    features: ['User ProfilingDynamic Content';, 'Engagement Optimization'];
   },;
   {;
-    title:'AI Autonomous Business Operations',,
-  description:'End-to-end automation of business processes and decision-making',;
-    icon:<Rocket className="w-8 h-8 text-blue-400" />,;
-    href:'/autonomous-business-operations-platform',;
-    features:['Process AutomationDecision Intelligence', 'Operational Efficiency'];
+    title: 'AI Autonomous Business Operations';,,
+  description: 'End-to-end automation of business processes and decision-making';,;
+    icon: <Rocket className="w-8 h-8 text-blue-400" />;,;
+    href: '/autonomous-business-operations-platform';,;
+    features: ['Process AutomationDecision Intelligence';, 'Operational Efficiency'];
   },;
   {;
-    title:'AI Ethics & Governance',,
-  description:'Framework for responsible AI development and deployment',;
-    icon:<Shield className="w-8 h-8 text-red-400" />,;
-    href:'/ai-ethics-governance-framework',;
-    features:['Ethical GuidelinesGovernance Framework', 'Compliance Monitoring'];
+    title: 'AI Ethics & Governance';,,
+  description: 'Framework for responsible AI development and deployment';,;
+    icon: <Shield className="w-8 h-8 text-red-400" />;,;
+    href: '/ai-ethics-governance-framework';,;
+    features: ['Ethical GuidelinesGovernance Framework';, 'Compliance Monitoring'];
   }
 ],;
 ;
 export default function AIServices() {;
   return (;
-    title:'AI Consciousness Evolution',;
-    description:'Advanced AI systems with evolving consciousness and emotional intelligence',;
-    icon:<Brain className="w-8 h-8 text-cyan-400" />,;"
+    title: 'AI Consciousness Evolution';,;
+    description: 'Advanced AI systems with evolving consciousness and emotional intelligence';,;
+    icon: <Brain className="w-8 h-8 text-cyan-400" />;,;"
 "
-    icon:<Target className="w-8 h-8 text-purple-400" />,;"
-    icon:<Zap className="w-8 h-8 text-yellow-400" />,;"
-    icon:<Users className="w-8 h-8 text-green-400" />,;"
-    icon:<Rocket className="w-8 h-8 text-blue-400" />,;"
-    icon:<Shield className="w-8 h-8 text-red-400" />,;"
+    icon: <Target className="w-8 h-8 text-purple-400" />;,;"
+    icon: <Zap className="w-8 h-8 text-yellow-400" />;,;"
+    icon: <Users className="w-8 h-8 text-green-400" />;,;"
+    icon: <Rocket className="w-8 h-8 text-blue-400" />;,;"
+    icon: <Shield className="w-8 h-8 text-red-400" />;,;"
 
 pr-12325
     <QuantumHolographicMatrixBackground intensity={1.5}>;
@@ -100,9 +100,9 @@ pr-12325
           <div className="max-w-7xl mx-auto">;"
 </div>
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.2 }}"
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
               className="text-center mb-16";"
             >;
 </motion>"
@@ -114,7 +114,7 @@ pr-12325
               </p>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                   key={service.title}
-                  transition={{ duration:0.6, delay:index * 0.1 }}"
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}"
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group";"
                   <div className="mb-6">;"
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">;"
@@ -130,19 +130,19 @@ pr-12325
                       </li>;
                   <motion.a;
                     href={service.href}
-                    whileHover={{ x:5 }}"
+                    whileHover={{ x: 5 ;}}"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors";"
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;"
 
                   </motion.a>;
               ))}
           <div className="max-w-4xl mx-auto text-center">;"
-              transition={{ duration:0.8, delay:0.4 }}
+              transition={{ duration: 0.8;, delay: 0.4 ;}}
               <p className="text-xl text-gray-400 mb-8">;"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
                 <motion.button;
-                  whileHover={{ scale:1.05 }}
-                  whileTap={{ scale:0.95 }}"
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300";"
 </motion>
                 </motion.button>;

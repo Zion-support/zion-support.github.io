@@ -1,5 +1,4 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 
 
 
@@ -10,9 +9,6 @@ import '@testing-library/jest-dom'
 import SEOOptimizerdynamic from '../components/SEOOptimizer && SEOOptimizer.dynamic'
 describe('SEOOptimizerdynamic'
   test('renders without crashing'
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
 import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'
 describe('SEOOptimizerdynamic'
   test('renders without crashing'
@@ -22,7 +18,6 @@ describe('SEOOptimizerdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
-import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
@@ -53,8 +48,6 @@ describe('SEOOptimizerdynamic', () => {
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
-import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 main
 
   test('displays correct content', () => {

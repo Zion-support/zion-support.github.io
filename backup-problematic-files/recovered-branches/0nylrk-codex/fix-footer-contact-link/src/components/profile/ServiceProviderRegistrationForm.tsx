@@ -1,14 +1,14 @@
 
-import React, { useState } from "react",;""
-import { useForm } from "react-hook-form",;""
-import { zodResolver } from "@hookform/resolvers/zod",;""
-import { z } from "zod",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Switch } from "@/components/ui/switch",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Separator } from "@/components/ui/separator",;"
+import React, { useState } from "react";""
+import { useForm } from "react-hook-form";""
+import { zodResolver } from "@hookform/resolvers/zod";""
+import { z } from "zod";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Switch } from "@/components/ui/switch";""
+import { Badge } from "@/components/ui/badge";""
+import { Separator } from "@/components/ui/separator";"
 import {;
   Form,;
   FormControl,;
@@ -17,30 +17,30 @@ import {;
   FormItem,;
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",;""
-import { toast } from "@/components/ui/use-toast",;""
-import { supabase } from "@/integrations/supabase/client",;""
-import { AspectRatio } from "@/components/ui/aspect-ratio",;""
-import { useAuth } from "@/hooks/useAuth",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react";""
+import { toast } from "@/components/ui/use-toast";""
+import { supabase } from "@/integrations/supabase/client";""
+import { AspectRatio } from "@/components/ui/aspect-ratio";""
+import { useAuth } from "@/hooks/useAuth";"
 ;
 // Define form schema;
 const serviceProfileSchema = z.object({;)"
-  name:z.string().min(2, "Name must be at least 2 characters long"),;""
-  title:z.string().min(5, "Business name/title is required"),;""
-  bio:z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;""
-  location:z.string().min(2, "Location is required"),;""
-  services:z.string().min(2, "Enter at least one service"),;"
-  hourlyRate:z.string().refine((val) => !isNaN(Number(val)), {;"
-    message:"Rate must be a number"}),;""
-  availability:z.enum(["available", "limited", "unavailable"]),;"
-  enhancedProfile:z.boolean().default(true),;"
-  website:z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),;"
+  name: z.string().min(2;, "Name must be at least 2 characters long"),;""
+  title: z.string().min(5;, "Business name/title is required"),;""
+  bio: z.string().min(50;, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;""
+  location: z.string().min(2;, "Location is required"),;""
+  services: z.string().min(2;, "Enter at least one service"),;"
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val));, {;"
+    message: "Rate must be a number";}),;""
+  availability: z.enum(["available";, "limited", "unavailable"]),;"
+  enhancedProfile: z.boolean().default(true);,;"
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();}),;"
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,;
 </typeof>
   const [serviceTags, setServiceTags] = useState<string[]>([]),;
 </string>
-  const [generatedContent, setGeneratedContent] = useState<{ summary:string, services:string[] } | null>(null),;
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string;, services: string[] ;} | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
   const form = useForm<ServiceFormValues>({;
 )
@@ -48,11 +48,11 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,;
 
     if (!formData.bio || formData.bio.length < 20) {;
       toast({;
-        title:"More information needed",,
-  description:"Please provide at least a detailed bio before generating enhanced content."}),;
+        title: "More information needed";,,
+  description: "Please provide at least a detailed bio before generating enhanced content.";}),;
       toast({;"
-        title:"More information needed",;")"
-        description:"Please provide at least a detailed bio before generating enhanced content."}),;"
+        title: "More information needed";,;")"
+        description: "Please provide at least a detailed bio before generating enhanced content.";}),;"
 pr-12325
       return,;
     }
@@ -62,33 +62,33 @@ pr-12325
       const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {;
         body: {;,
   providerData:{;
-            name:formData.name,;
-            title:formData.title,;
-            bio:formData.bio,;
-            services:serviceTags,;
+            name: formData.name;,;
+            title: formData.title;,;
+            bio: formData.bio;,;
+            services: serviceTags;,;
             location:formData.location;
         })
       }),;
       if (error) {;
         throw new Error(error.message),;
-      setGeneratedContent(data as { summary:string, services:string[] }),;
+      setGeneratedContent(data as { summary: string;, services: string[] ;}),;
       toast({;
-        title:"Enhanced Profile Generated",,
-  description:"AI has created a professional bio and suggested additional services for your profile."}),;
+        title: "Enhanced Profile Generated";,,
+  description: "AI has created a professional bio and suggested additional services for your profile.";}),;
       ;
     } catch (error:any) {;
-      console.error("Error generating enhanced profile:", error),;
+      console.error("Error generating enhanced profile: ";, error),;
       toast({;
-        title:"Generation failed",,
-  description:error.message || "There was an error generating your enhanced profile. Please try again.",;
-        variant:"destructive"}),;
-        title:"Enhanced Profile Generated",;")"
-        description:"AI has created a professional bio and suggested additional services for your profile."}),;"
+        title: "Generation failed";,,
+  description: error.message || "There was an error generating your enhanced profile. Please try again.";,;
+        variant: "destructive";}),;
+        title: "Enhanced Profile Generated";,;")"
+        description: "AI has created a professional bio and suggested additional services for your profile.";}),;"
     } catch (error:any) {;"
-      console.error("Error generating enhanced profile:", error),;"
-        title:"Generation failed",;""
-        description:error.message || "There was an error generating your enhanced profile. Please try again.",;")"
-        variant:"destructive"}),;"
+      console.error("Error generating enhanced profile: ";, error),;"
+        title: "Generation failed";,;""
+        description: error.message || "There was an error generating your enhanced profile. Please try again.";,;")"
+        variant: "destructive";}),;"
 pr-12325
     } finally {;
       setIsGenerating(false),;
@@ -107,14 +107,14 @@ pr-12325
   const onSubmit = async (values:ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
       toast({;
-        title:"Services required",,
-  description:"Please add at least one service to your profile.",;
-        variant:"destructive"}),;
+        title: "Services required";,,
+  description: "Please add at least one service to your profile.";,;
+        variant: "destructive";}),;
       return,;
     }
 ;
-        title:"Services required",;""
-        description:"Please add at least one service to your profile.",;")"
+        title: "Services required";,;""
+        description: "Please add at least one service to your profile.";,;")"
 pr-12325
     setIsSubmitting(true),;
       // For actual implementation with Supabase;
@@ -125,10 +125,10 @@ pr-12325
       let finalServices = serviceTags,;
       if (values.enhancedProfile && !generatedContent) {;
         try {;"
-          const { data:aiData } = await supabase.functions.invoke('service-profile-enhancer', {;
-                name:values.name,;
-                title:values.title,;
-                bio:values.bio,;
+          const { data: aiData ;} = await supabase.functions.invoke('service-profile-enhancer', {;
+                name: values.name;,;
+                title: values.title;,;
+                bio: values.bio;,;
                 location:values.location;
           if (aiData) {;
             finalSummary = (aiData as any).summary || values.bio,;
@@ -136,24 +136,24 @@ pr-12325
             const aiServices = (aiData as any).services || [],;
             finalServices = [...new Set([...serviceTags, ...aiServices])],;
         } catch (error) {;
-          console.error("Error enhancing profile:", error),;"
+          console.error("Error enhancing profile: ";, error),;"
           // Continue with submission even if enhancement fails;
       } else if (generatedContent) {;
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])],;
       // Get user email for notification;
-      const { data:userData } = await supabase.auth.getUser(),;
+      const { data: userData ;} = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
       // Create the service profile;
-      const { data:profileData, error } = await supabase;"
+      const { data: profileData;, error } = await supabase;"
         .from('profiles');
         .update({;
-          display_name:values.name,;
-          bio:finalSummary,;
-          user_type:"creator", // Set as service provider;"
-          profile_complete:true,;)
-          updated_at:new Date().toISOString(),;
-          headline:values.title,;
+          display_name: values.name;,;
+          bio: finalSummary;,;
+          user_type: "creator";, // Set as service provider;"
+          profile_complete: true;,;)
+          updated_at: new Date().toISOString();,;
+          headline: values.title;,;
           // Additional fields that might be in profiles table;
         });"
         .eq('id', user.id);
@@ -162,46 +162,46 @@ pr-12325
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
       /*;
-      const { error:serviceError } = await supabase;
+      const { error: serviceError ;} = await supabase;
         .from('service_profiles');
         .insert({;
-          user_id:user.id,;
-          services:finalServices,;)
-          hourly_rate:Number(values.hourlyRate),;
-          availability_status:values.availability,;
-          location:values.location,;
-          website:values.website || null}),;
+          user_id: user.id;,;
+          services: finalServices;,;)
+          hourly_rate: Number(values.hourlyRate);,;
+          availability_status: values.availability;,;
+          location: values.location;,;
+          website: values.website || null;}),;
       if (serviceError) throw serviceError,;
       */;
       // Send notification email if available;
       if (userEmail && values.enhancedProfile) {;
           await supabase.functions.invoke('send-email', {;
-  to:userEmail,;
-              subject:"Your Zion Service Profile Is Ready",;"
+  to: userEmail;,;
+              subject: "Your Zion Service Profile Is Ready";,;"
               html:`;"
-              <div style="font-family:Arial, sans-serif, max-width:600px, margin:0 auto,">;"
+              <div style="font-family: Arial;, sans-serif, max-width: 600px;, margin: 0 auto;,">;"
 </div>"
-                <h2 style="color:#6D28D9,">Service Profile Created!</h2>;"
+                <h2 style="color: #6D28D9;,">Service Profile Created!</h2>;"
                 <p>Your service provider profile has been successfully created and published.</p>;"
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
                 <p>You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin-top:30px, padding-top:20px, border-top:1px solid #eee,">;"
+                <div style="margin-top: 30px;, padding-top: 20px;, border-top: 1px solid #eee;,">;"
 </div>)"
-                  <p style="color:#666, font-size:12px,"> ${new Date().getFullYear()} Zion Marketplace</p>;"
+                  <p style="color: #666;, font-size: 12px;,"> ${new Date().getFullYear()} Zion Marketplace</p>;"
                 </div>;
               </div>;
               `;
             }
           }),;
         } catch (emailError) {;
-          console.error("Failed to send notification email:", emailError),;
+          console.error("Failed to send notification email: ";, emailError),;
           // Continue with submission even if email fails;
         }
       }
       ;
       toast({;
-        title:"Profile Created Successfully",,
-  description:"Your service provider profile has been published and is now visible in the directory."}),;
+        title: "Profile Created Successfully";,,
+  description: "Your service provider profile has been published and is now visible in the directory.";}),;
 ;
       // Redirect to service provider dashboard or profile page;
       setTimeout(() => {;
@@ -209,11 +209,11 @@ pr-12325
       }, 1500),;
       ;
     } catch (error:any) {;
-      console.error("Error creating profile:", error),;
+      console.error("Error creating profile: ";, error),;
       toast({;
-        title:"Error Creating Profile",,
-  description:error.message || "There was an error creating your profile. Please try again.",;
-        variant:"destructive"}),;
+        title: "Error Creating Profile";,,
+  description: error.message || "There was an error creating your profile. Please try again.";,;
+        variant: "destructive";}),;
     } finally {;
       setIsSubmitting(false),;
     }
@@ -449,15 +449,15 @@ pr-12325
 
           </form>;
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, "> $ {"
+  <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px;, padding-top: 20px;, border-top: 1px solid #eee;, "> <p style="color: #666;, font-size: 12px;, "> $ {"
   new Date () .getFullYear () 
 }Zion Marketplace</p> "
-max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className=" text-2xl text-white">Create Your Service Provider Profile <CardDescription className=" text-zion-slate"> Showcase your services and expertise to potential clients.   <FormItem> <FormLabel className=" text-zion-slate-light">Full Name <FormControl> <div className=" relative"> <UserRound className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div>  <FormMessage className=" text-red-400"/> )"
+max-w-4xl mx-auto p-4 md: p-6"> <Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className=" text-2xl text-white">Create Your Service Provider Profile <CardDescription className=" text-zion-slate"> Showcase your services and expertise to potential clients.   <FormItem> <FormLabel className=" text-zion-slate-light">Full Name <FormControl> <div className=" relative"> <UserRound className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div>  <FormMessage className=" text-red-400"/> )";
 }/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Business/Service Name <FormControl> <div className=" relative"> <Briefcase className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div>  <FormMessage className=" text-red-400"/> )""
 }/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Location <FormControl> <div className=" relative"> <MapPin className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div>  <FormMessage className=" text-red-400"/> )""
 }/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Website (optional)  <FormControl> <div className=" relative"> <Globe className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div>  <FormMessage className=" text-red-400"/> )""
 }/> </div> </div> /> ) : (<div className=" flex items-center justify-center h-full"> <UserRound className=" h-10 w-10 text-zion-slate opacity-50"/> </div>)""
-}</div> <label className=" flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className=" mr-2 h-4 w-4"/> <span>Upload Photo</span> <input /> </label> </div> <p className=" text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">About Your Services <FormControl> <Textarea  )""
+}</div> <label className=" flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover: bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className=" mr-2 h-4 w-4"/> <span>Upload Photo</span> <input /> </label> </div> <p className=" text-sm text-zion-slate"> For best results;, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">About Your Services <FormControl> <Textarea  )""
 }<FormField AI Profile Enhancement  <FormDescription className=" text-zion-slate-light"> Let AI help optimize your service description for better visibility and client engagement  </div> <FormControl> <Switch />  )"
 }/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {"
   generateEnhancedProfile;
@@ -476,7 +476,7 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 
 }/> <Badge key= {
   service;"
-}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {"
+}className=" bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {";
 }<button > <X className=" h-3 w-3"/> </button> ) )""
 }</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD)  <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div>  <FormDescription className=" text-zion-slate"> Your base hourly or project rate  <FormMessage className=" text-red-400"/> )""
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div>  <FormMessage className=" text-red-400"/> )"

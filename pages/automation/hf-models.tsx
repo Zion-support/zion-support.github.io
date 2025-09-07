@@ -4,9 +4,9 @@ import data from '../../data/hf-models.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/hf-models.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/hf-models.json',
+import data from '../../data/hf-models.json',;
 export default function HfModelsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

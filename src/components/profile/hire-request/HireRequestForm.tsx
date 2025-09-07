@@ -1,7 +1,7 @@
 import { Loader2 } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
+import { TalentProfile } from "@/types/talent",;
+import { PersonalInfoFields } from "./PersonalInfoFields",;
+import { ProjectDetailsField } from "./ProjectDetailsField",;
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -36,8 +36,8 @@ pr-12325
     email?: string;
 
 
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
+import { TimelineField } from "./TimelineField",;
+import { BudgetFields } from "./BudgetFields",;
 
 export interface HireRequestFormProps {
 import { TimelineField } from "./TimelineField",""

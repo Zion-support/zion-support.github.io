@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react',;
-import Head from 'next/head',;
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 ;
 export default function AutomationInsightsPage() {;
   const [intel, setIntel] = useState<any>(null),;
@@ -29,5 +29,5 @@ export default function AutomationInsightsPage() {;
       </section>;"
       <section id="talent" className="mb-8">;"
         <h2 className="font-medium">Talent Highlights</h2>;""
-          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>;"
+          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd;}</pre>;"
       </section>;

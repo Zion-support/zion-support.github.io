@@ -1,13 +1,13 @@
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;""
-import { AspectRatio } from "@/components/ui/aspect-ratio",;""
-import { Badge } from "@/components/ui/badge",;""
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";""
+import { AspectRatio } from "@/components/ui/aspect-ratio";""
+import { Badge } from "@/components/ui/badge";""
 import { Star } from 'lucide-react';
-import { cn } from "@/lib/utils",;"
+import { cn } from "@/lib/utils";"
 ;
 interface ProfileHeroProps {;
-  name:string,;
-  title:string,;
+  name: string;,;
+  title: string;,;
   avatarUrl?:string,;
   coverImageUrl?:string,;
   location?:string,;
@@ -53,7 +53,7 @@ export function ProfileHero({;
 
             <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">;"
               <div className="flex flex-wrap items-center gap-2 mb-1">;"
-                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>;"
+                <h1 className="text-2xl md: text-3xl font-bold text-white">{name;}</h1>;"
                 <Badge ;"
                   variant="outline" ;"
                   className={cn(;"
@@ -63,7 +63,7 @@ export function ProfileHero({;
                 >;
 
               </div>;"
-              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;""
+              <h2 className="text-lg md: text-xl text-zion-slate-light mb-1">{title;}</h2>;""
               <div className="flex flex-wrap items-center gap-3 mt-2">;"
                   <span className="text-sm text-zion-slate-light">{location}</span>;""
                   <div className="flex items-center gap-1">;"

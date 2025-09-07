@@ -119,7 +119,7 @@ pr-12325
     const { title, keyFeatures, targetAudience } = await req && req.json();
 
         JSON && JSON.stringify({ "
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

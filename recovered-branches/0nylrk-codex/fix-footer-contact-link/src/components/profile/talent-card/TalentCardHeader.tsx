@@ -4,8 +4,8 @@ import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
-import React from "react",
-import { BadgeCheck } from "lucide-react",
+import React from "react",;
+import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
@@ -15,8 +15,8 @@ interface TalentCardHeaderProps {
   availabilityType: string,;
   yearsExperience: number;
 }
-  availabilityType;import React from "react",
-import { BadgeCheck } from "lucide-react",
+  availabilityType;import React from "react",;
+import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
@@ -40,8 +40,8 @@ pr-12325
   yearsExperience: number;
 }
   availabilityType;
-import { TalentCardAvatar } from "./TalentCardAvatar",
-import { TalentCardAvailability } from "./TalentCardAvailability",
+import { TalentCardAvatar } from "./TalentCardAvatar",;
+import { TalentCardAvailability } from "./TalentCardAvailability",;
 
 export function TalentCardHeader(): any ({ ;
   fullName;

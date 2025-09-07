@@ -42,7 +42,7 @@
 
                   A leading financial services company serving millions of customers with banking, 
                   A leading financial services company serving millions of customers with banking,
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
         <meta name;

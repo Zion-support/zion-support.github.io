@@ -66,71 +66,70 @@ import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
 import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
 import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
-import { educationElearning2025 } from '../../data/education-elearning-2025';
 
     {
-      title: 'Cybersecurity & Security',
-  icon: Shield,
-      services: advancedCybersecurity2025,
-      gradient: 'from-red-600 via-orange-600 to-yellow-600'}
-  description: 'Advanced security solutions for the digital age'}
+      title: 'Cybersecurity & Security';,
+  icon: Shield;,
+      services: advancedCybersecurity2025;,
+      gradient: 'from-red-600 via-orange-600 to-yellow-600';}
+  description: 'Advanced security solutions for the digital age';}
     },
     {
-      title: 'Blockchain & Web3',
-  icon: Globe,
-      services: blockchainWeb32025,
-      gradient: 'from-green-600 via-teal-600 to-cyan-600'}
-  description: 'Next-generation blockchain and decentralized solutions'}
+      title: 'Blockchain & Web3';,
+  icon: Globe;,
+      services: blockchainWeb32025;,
+      gradient: 'from-green-600 via-teal-600 to-cyan-600';}
+  description: 'Next-generation blockchain and decentralized solutions';}
     },
     {
-      title: 'IoT & Edge Computing',
-  icon: Cloud,
-      services: iotEdgeComputing2025,
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600'}
-  description: 'Smart connected solutions for the Internet of Things'}
+      title: 'IoT & Edge Computing';,
+  icon: Cloud;,
+      services: iotEdgeComputing2025;,
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600';}
+  description: 'Smart connected solutions for the Internet of Things';}
     },
     {
-      title: 'Healthcare & Biotechnology',
-  icon: Target,
-      services: healthcareBiotech2025,
-      gradient: 'from-pink-600 via-rose-600 to-red-600'}
-  description: 'Innovative healthcare and biotech solutions'}
+      title: 'Healthcare & Biotechnology';,
+  icon: Target;,
+      services: healthcareBiotech2025;,
+      gradient: 'from-pink-600 via-rose-600 to-red-600';}
+  description: 'Innovative healthcare and biotech solutions';}
     },
     {
-      title: 'Fintech & Financial',
-  icon: DollarSign,
-      services: fintechFinancial2025,
-      gradient: 'from-emerald-600 via-green-600 to-teal-600'}
-  description: 'Revolutionary financial technology solutions'}
+      title: 'Fintech & Financial';,
+  icon: DollarSign;,
+      services: fintechFinancial2025;,
+      gradient: 'from-emerald-600 via-green-600 to-teal-600';}
+  description: 'Revolutionary financial technology solutions';}
     },
     {
-      title: 'Education & E-Learning',
-  icon: Award,
-      services: educationElearning2025,
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600'}
-  description: 'Advanced learning and educational technology'}
+      title: 'Education & E-Learning';,
+  icon: Award;,
+      services: educationElearning2025;,
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600';}
+  description: 'Advanced learning and educational technology';}
     }
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1;
-transition: {}
-staggerChildren: 0.1}
+transition: {;}
+staggerChildren: 0.1;}
       }
     }
   };
 
 const itemVariants = {}
-    hidden: { y: 20, opacity: 0}
+    hidden: { y: 20;, opacity: 0;}
 }
     visible: {
       y: 0;
 opacity: 1;
-transition: {}
-duration: 0.5}
+transition: {;}
+duration: 0.5;}
       }
     }
   };
@@ -167,16 +166,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
         {/* Header */}
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />        {/* Header */}
+      <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />        {/* Header */;}
 
         {/* Header *}
 }
 
         <motion.div;
-initial={{ opacity: 0, y: 30 }
+initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
           className='text-center mb-16'
 
 
@@ -185,7 +184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
-          transition={{ duration: 0.8 }
+          transition={{ duration: 0.8 ;}
 }
 
 className='text-center mb-16'
@@ -200,7 +199,7 @@ your business and drive success in the digital age.
           </p>
         </motion.div>
 
-          transition={{ duration: 0 && 0.8 }
+          transition={{ duration: 0 && 0.8 ;}
 }
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6' />;
@@ -222,10 +221,10 @@ your business and drive success in the digital age.
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='space-y-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="space-y-16";
           {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
             <motion&& motion.div
@@ -245,7 +244,7 @@ initial='hidden'
                   <p className='text-gray-400 text-lg'>                    {category && category.description}            >;
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="space-y-16"
           className='space-y-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -267,7 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {category.description}
                   <p className='text-gray-400 text-lg'>                    {category.description}
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
           className='space-y-16'
@@ -306,8 +305,8 @@ className='relative'
               </div>;
 
               {/* Services Grid */}
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
+              <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service;, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service;, serviceIndex) => (
 
 
 
@@ -316,20 +315,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    initial={{ opacity: 0;, scale: 0.9 ;}}
+                    whileInView={{ opacity: 1;, scale: 1 ;}}
+                    transition={{ duration: 0.5;, delay: serviceIndex * 0.1 ;}}
                   </p>;
                 </div>;
               </div>;
               {/* Services Grid */}
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>                {category.services.map ((service, service_index) => (              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6'>                {category.services.map ((service;, service_index) => (              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
                 {category.services.map ((service, service_index) => (
                   <motion.div;
                     key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: service_index * 0.1 }}
+                    initial={{ opacity: 0;, scale: 0.9 ;}}
+                    whileInView={{ opacity: 1;, scale: 1 ;}}
+                    transition={{ duration: 0.5;, delay: service_index * 0.1 ;}}
                     className='group relative bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 30 backdrop - blur - xl rounded - 2xl p - 6 border border - slate - 700 / 50 hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
                   >;
                     {/* Service Header */}
@@ -363,11 +362,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {category.services.map((service, serviceIndex) => (}
                   <motion.div;}
 key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }
+                    initial={{ opacity: 0;, scale: 0.9 ;}
 }
-                    whileInView={{ opacity: 1, scale: 1 }
+                    whileInView={{ opacity: 1;, scale: 1 ;}
 }
-                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    transition={{ duration: 0.5;, delay: serviceIndex * 0.1 ;}}
 
 className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
                    />
@@ -464,7 +463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>;
                       </div>;
                       <div className='text-xs text-gray-500 mt-1' />;
-                        Market position: {service.marketPositio}
+                        Market position: {service.marketPositio;}
 }
                       </div>;
                     </div>;
@@ -479,7 +478,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.roi}
                         </div>;
                         <div className='text-xs text-gray-500' />;
-                          Setup time: {service.setupTim}
+                          Setup time: {service.setupTim;}
 }
                         </div>;
                       </div>;
@@ -510,7 +509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                       </div>
                       <div className='text-xs text-gray-500 mt-1'>
-                        Market position: {service.marketPosition}
+                        Market position: {service.marketPosition;}
                       </div>
                     </div>
                     {/* ROI */}
@@ -524,7 +523,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.roi}
                         </div>
                         <div className='text-xs text-gray-500'>
-                          Setup time: {service.setupTime}
+                          Setup time: {service.setupTime;}
                         </div>
                       </div>
                     </div>
@@ -581,23 +580,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         {/* Call to Action */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
 
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8;, delay: 0.5 ;}}
 className='text-center mt-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
 
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-          transition={{ duration: 0.8, delay: 0.5 }
+          transition={{ duration: 0.8;, delay: 0.5 ;}
 }
 className='text-center mt-20'
          />

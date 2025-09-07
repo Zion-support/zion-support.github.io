@@ -3,9 +3,9 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
 
 interface HelpArticleListProps {
   categoryId: string,

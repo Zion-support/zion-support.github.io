@@ -24,8 +24,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,

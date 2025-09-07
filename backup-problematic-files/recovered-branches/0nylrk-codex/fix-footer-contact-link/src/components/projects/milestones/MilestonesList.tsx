@@ -1,27 +1,27 @@
 
-import React, { useState } from 'react',;
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MilestoneCard } from './MilestoneCard',;
-import { AddMilestoneForm } from './AddMilestoneForm',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
+import { useAuth } from '@/hooks/useAuth';
+import { MilestoneCard } from './MilestoneCard';
+import { AddMilestoneForm } from './AddMilestoneForm';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from '@/components/icons',;
-import { EmptyState } from '@/components/ui/empty-state',;
+import { Plus } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
 ;
 interface MilestonesListProps {;
-  milestones:Milestone[],;
-  activities:Record<string MilestoneActivity[]>,;
+  milestones: Milestone[];,;
+  activities: Record<string MilestoneActivity[]>;,;
 </string>
-  onCreateMilestone:(data:any) => Promise<Milestone | null>,;
+  onCreateMilestone: (data:any) => Promise<Milestone | null>;,;
 
-  onUpdateStatus:(id:string, status:MilestoneStatus, comment?:string) => Promise<boolean>,;
+  onUpdateStatus: (id:string;, status: MilestoneStatus;, comment?:string) => Promise<boolean>,;
 </boolean>
-  onDeleteMilestone:(id:string) => Promise<boolean>,;
-  onUploadDeliverable:(id:string, file:File) => Promise<any>,;
+  onDeleteMilestone: (id:string) => Promise<boolean>;,;
+  onUploadDeliverable: (id:string;, file: File) => Promise<any>;,;
 </any>
-  onApprove?:(id:string) => Promise<void>,;
+  onApprove?:(id: string) => Promise<void>;,;
 </void>
   onReject?:(id:string) => Promise<void>;
 export const MilestonesList:React.FC<MilestonesListProps> = ({;

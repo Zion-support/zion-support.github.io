@@ -29,7 +29,7 @@ export function useWebhooks() {;    return `${url}/functions/v1/webhook-manager`
     setError(null);
       setWebhooks(result.webhooks |[])
 
-    const env = (import.meta as any)?.env ?? process.env,
+    const env = (import.meta as any)?.env ?? process.env,;
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
   },

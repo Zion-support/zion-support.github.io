@@ -7,7 +7,6 @@ pr-12243
 ;
 import { useState } from 'react';
 
-import {useState} from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter   } from 'next/router';
@@ -17,14 +16,14 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {import { useState   } from 'react';
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants'
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools';
@@ -42,7 +41,7 @@ export default function ApplyGrantPage() {const router  = null;
 export default function ApplyGrantPage() {const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] =;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] =;
   useState('');
   const [teamInfo, setTeamInfo] = useState('');
   const [proposalSummary, setProposalSummary] = useState('');
@@ -61,25 +60,25 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default /**;
  * ApplyGrantPage - Function description;
  */;
 function ApplyGrantPage() {const router = use_router ()const [program, set_program] = useState<'grant' | 'incubator'>('grant')const [project_name, setProjectName] = useState ('')const [team_info, setTeamInfo] = useState ('')const [proposal_summary, setProposalSummary] = useState ('')const [timeline, set_timeline] = useState ('')const [budget_amount, setBudgetAmount] = useState < number>(0)const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState ('')const [region, set_region] = useState ('')const [sector, set_sector] = useState < string>('')const [loading, set_loading] = useState (false)const [error, set_error]  =;
   useState < string | null>(null)const save = async (submit: boolean) => {try {set_loading (true)set_error (null);
-  const resp = await fetch ('/api / grants', {method: 'POST'}
-  headers: { 'Content - Type': 'application / json'}
-},body: JSON.stringify ({program,project_name,team_info,proposal_summary,timeline,budget_amount: Number (budget_amount || 0),budget_currency,supporting_links: supporting_links;}
-            .split ('\n').map (string => s.trim ()).filter (Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit;}
+  const resp = await fetch ('/api / grants', {method: 'POST';}
+  headers: { 'Content - Type': 'application / json';}
+},body: JSON.stringify ({program;,project_name,team_info,proposal_summary,timeline,budget_amount: Number (budget_amount || 0);,budget_currency,supporting_links: supporting_links;}
+            .split ('\n').map (string => s.trim ()).filter (Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined;,submit;}
         })})const data = await resp.json ()if (throw new Error (data?.error || 'Failed')) {$2;}
 }
-      router.push (`/grants/${data.id}`)} catch (e: any) {set_error (e.message)} finally {} catch (e: any) {set_error (e.message}
+      router.push (`/grants/${data.id}`)} catch (e: any) {set_error (e.message);} finally {} catch (e: any) {set_error (e.message;}
 } finally {const save = async (submit: boolean) => {try {setLoading(true)setError(null);
-  const resp = await fetch('/api/grants', {method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-},body: JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
-            .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})};
-  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false}
-}          budgetAmount: Number(budgetAmount || 0),program;
+  const resp = await fetch('/api/grants', {method: 'POST';}
+  headers: { 'Content-Type': 'application/json';}
+},body: JSON && JSON.stringify({program;,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0);,budgetCurrency,supportingLinks: supportingLinks;}
+            .split('\n').map(s = > s && s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined;,submit})};
+  const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message);} finally {setLoading(false}
+}          budgetAmount: Number(budgetAmount || 0);,program;
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -90,7 +89,7 @@ const categories: GrantCategory[] = [
 
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,
 export default function ApplyGrantPage() {;}
 }
 import { useState  } from 'react';
@@ -118,7 +117,7 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,;
 
 export default function ApplyGrantPage() {;
 pr-12243
@@ -177,7 +176,6 @@ const [error, setError] = useState<string | null />(null);
 }
 import EnhancedLayout from '../../components / layout / EnhancedLayout';}
 import {use_router} from 'next / router';
-import type { GrantCategory } from '../../types / grants';
 ;
 
 const categories: GrantCategory[] = [;
@@ -187,7 +185,7 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,
 export default /**
  * ApplyGrantPage - Function description;
  */
@@ -231,8 +229,8 @@ const save = async (submit: boolean) => {
       set_loading (true);
       set_error (null),
       const resp = await fetch ('/api / grants', {
-        method: 'POST'}
-  headers: { 'Content - Type': 'application / json'}
+        method: 'POST';}
+  headers: { 'Content - Type': 'application / json';}
 },
         body: JSON.stringify ({
           program,
@@ -240,7 +238,7 @@ const save = async (submit: boolean) => {
           team_info,
           proposal_summary,
           timeline,
-          budget_amount: Number (budget_amount || 0),
+          budget_amount: Number (budget_amount || 0);,
           budget_currency,
           supporting_links: supporting_links;
             .split ('\n');
@@ -248,7 +246,7 @@ const save = async (submit: boolean) => {
             .filter (Boolean),
           pitchDeckUrl,
           region,
-          sector: (sector as any) || undefined}
+          sector: (sector as any) || undefined;}
           submit}
         })
       });
@@ -263,7 +261,7 @@ pr-12243
     } catch (e: any) {
       set_error (e.message);
     } finally {
-    } catch (e: any) {}
+    } catch (e: any) {;}
       set_error (e.message);}
     } finally {
 
@@ -273,8 +271,8 @@ pr-12243
       setError(null),;
 
 const resp = await fetch('/api/grants', {;
-        method: 'POST',;}
-        headers: { 'Content-Type': 'application/json'}
+        method: 'POST';,;}
+        headers: { 'Content-Type': 'application/json';}
 },;
         body: JSON && JSON.stringify({;
           program,;
@@ -282,7 +280,7 @@ const resp = await fetch('/api/grants', {;
           teamInfo,;
           proposalSummary,;
           timeline,;
-          budgetAmount: Number(budgetAmount || 0),;
+          budgetAmount: Number(budgetAmount || 0);,;
           budgetCurrency,;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -290,7 +288,7 @@ const resp = await fetch('/api/grants', {;
             .filter(Boolean),;
           pitchDeckUrl,;
           region,;
-          sector: (sector as any) || undefined,;}
+          sector: (sector as any) || undefined;,;}
           submit,;}
         }),;
       });
@@ -301,22 +299,22 @@ const data = await resp && resp.json();
     } catch (e: any) {;}
       setError(e && e.message);}
     } finally {;}
-      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0);,;
 
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
-          budgetAmount: Number(budgetAmount || 0),budgetCurrency;
-          budgetAmount: Number(budgetAmount || 0),
+          budgetAmount: Number(budgetAmount || 0);,budgetCurrency;
+          budgetAmount: Number(budgetAmount || 0);,
 pr-12243
           budgetCurrency;
           supportingLinks: supportingLinks;
-            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          budget_amount: Number (budget_amount || 0),budget_currency;
+            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          budget_amount: Number (budget_amount || 0);,budget_currency;
           supporting_links: supporting_links;
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
-          region;sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}}
+          region;sector: (sector as any) || undefined;,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message);} finally {setLoading(false)}}
     }
  
 }<textarea;
@@ -328,7 +326,7 @@ pr-12243
           region;
 
 pr-12243
-          sector: (sector as any) || undefined,;
+          sector: (sector as any) || undefined;,;
           submit})});
 
 const data = await resp && resp.json();
@@ -397,20 +395,20 @@ className='mt-1 w-full border rounded p-2'
           <label className=\"text-sm\" />Program;"
             <select className=\"mt-1 w-full border rounded p-2\" value={program} onChange={(e) = /> setProgram(e.target.value as any)}>;
 
-const _save = async (_submit: boolean) => {try {setLoading(true),setError(null);
-  const resp = await fetch('/api/grants', {method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-},body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
-            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async (submit: boolean) => {try {setLoading(true)setError(null;
+const _save = async (_submit: boolean) => {try {setLoading(true);,setError(null);
   const resp = await fetch('/api/grants', {method: 'POST';}
-        headers: { 'Content-Type': 'application/json'}
+  headers: { 'Content-Type': 'application/json';}
+},body: JSON.stringify({program;,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0);,budgetCurrency,supportingLinks: supportingLinks;}
+            .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined;,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async (submit: boolean) => {try {setLoading(true)setError(null;
+  const resp = await fetch('/api/grants', {method: 'POST';}
+        headers: { 'Content-Type': 'application/json';}
 }
-        body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;
+        body: JSON.stringify({program;,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0);,budgetCurrency,supportingLinks: supportingLinks;
             .split('\n').map(s => s.trim()).filter(Boolean)pitchDeckUrl;
           region;
           sector: (sector as any) |undefined;}
           submit;}
-        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message)} finally {setLoading(false)}
+        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message);} finally {setLoading(false)}
  
 };
   return (<EnhancedLayout />;
@@ -438,7 +436,7 @@ submit}
 const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');
       router.push(`/grants/${data.id}`);
-    } catch (e: any) {}
+    } catch (e: any) {;}
       setError(e.message);}
     } finally {}
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
@@ -456,7 +454,7 @@ submit}
 const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');
       router.push(`/grants/${data.id}`)
-    } catch (e: any) {}
+    } catch (e: any) {;}
       setError(e.message)}
     } finally {}
       setLoading(false)}

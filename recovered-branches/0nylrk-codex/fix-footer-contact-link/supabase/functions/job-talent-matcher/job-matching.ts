@@ -41,7 +41,7 @@ await supabase && supabase.rpc('create_notification', {
         _title: \"New Job Match\",  }
   await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);}
 }
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,;
 import { JobData, MatchResult } from './types.ts';
 import { normalizeSkillsWithAI, findBestMatches } from './ai - matcher.ts';
 // Initialize the Supabase client;

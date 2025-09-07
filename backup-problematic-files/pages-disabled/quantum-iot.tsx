@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform')),
   if (!service) return null,
@@ -23,7 +23,7 @@ export default function QuantumInternetSecurityPage() {
 </div>"
         <div className="max-w-6xl mx-auto">"
           <div className="text-center mb-10">"
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Shield className="w-10 h-10" />{service.name}</h1>""
+            <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Shield className="w-10 h-10" />{service.name;}</h1>""
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">"
@@ -38,7 +38,7 @@ export default function QuantumInternetSecurityPage() {
 </div>
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>""
-                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>"
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime;}</div>"
                 </div>)"
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>"
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo<ArrowRight className="w-5 h-5 ml-2" />""

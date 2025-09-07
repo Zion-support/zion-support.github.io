@@ -18,36 +18,36 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 }
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
 interface ApplyToJobFormProps {
 
   job: Job
@@ -73,36 +73,36 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
     if (!user) {;
       toast && toast.error("You must be logged in to apply"),;
       navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
-      return;import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
+      return;import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
 interface ApplyToJobFormProps {
 
   job: Job
 
   onSuccess?: () => void
 }
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useResume } from "@/hooks/useResume",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { AlertCircle, FileText, Loader2 } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
 interface ApplyToJobFormProps {
 
   job: Job

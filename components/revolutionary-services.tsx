@@ -2,15 +2,15 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -182,14 +182,10 @@ import {;
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
 
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Star, Calendar } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 export default function RevolutionaryServicesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -200,20 +196,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [showFilters, setShowFilters] = useState(false);
 
   const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-1000', label: '$0 - $1,000' },;
-    { value: '1001-2500', label: '$1,001 - $2,500' },;
-    { value: '2501-5000', label: '$2,501 - $5,000' },;
-    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
+    { value: 'All';, label: 'All Prices' ;},;
+    { value: '0-1000';, label: '$0 - $1;,000' },;
+    { value: '1001-2500';, label: '$1;,001 - $2,500' },;
+    { value: '2501-5000';, label: '$2;,501 - $5,000' },;
+    { value: '5001+';, label: '$5;,001+' },  ];    { value: '0-1000';, label: '$0 - $1;,000' };
+    { value: '1001-2500';, label: '$1;,001 - $2,500' };
+    { value: '2501-5000';, label: '$2;,501 - $5,000' };
+    { value: '5001+';, label: '$5;,001+' }
   const sortOptions = [;
-    { value: 'name', label: 'Name A-Z' },;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+    { value: 'name';, label: 'Name A-Z' ;},;
+    { value: 'price';, label: 'Price Low-High' ;},;
+    { value: 'popularity';, label: 'Most Popular' ;},;
+    { value: 'category';, label: 'Category' ;},;
+    { value: 'roi';, label: 'Highest ROI' ;},  ];    { value: 'roi';, label: 'Highest ROI' ;}
   ];
   // Price range filter;
   if (priceRange !== 'All') {;
@@ -234,19 +230,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
   }
-    { value: 'All', label: 'All Prices' },
-{ value: '0-1000', label: '$0 - $1,000' },
-    { value: '1001-2500', label: '$1,001 - $2,500' },
-    { value: '2501-5000', label: '$2,501 - $5,000' },
-    { value: '5001+', label: '$5,001+' },
+    { value: 'All';, label: 'All Prices' ;},
+{ value: '0-1000';, label: '$0 - $1;,000' },
+    { value: '1001-2500';, label: '$1;,001 - $2,500' },
+    { value: '2501-5000';, label: '$2;,501 - $5,000' },
+    { value: '5001+';, label: '$5;,001+' },
   ];
 
   const sortOptions = [
-    { value: 'name', label: 'Name A-Z' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-{ value: 'roi', label: 'Highest ROI' },
+    { value: 'name';, label: 'Name A-Z' ;},
+    { value: 'price';, label: 'Price Low-High' ;},
+    { value: 'popularity';, label: 'Most Popular' ;},
+    { value: 'category';, label: 'Category' ;},
+{ value: 'roi';, label: 'Highest ROI' ;},
   ];
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
@@ -297,15 +293,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';,  };    website: 'https://ziontechgroup.com';
   }
     }
   });
 ;
   const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 
 default:
@@ -313,24 +309,23 @@ default:
     }
   });
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   const popularServices = getPopularRevolutionaryServices();
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
-      name: 'Quantum AI & Cognitive Computing',
-description:
-        'Revolutionary quantum AI solutions with human-level reasoning capabilities',
-      icon: <Brain className='w-6 h-6' />,
+      name: 'Quantum AI & Cognitive Computing';,
+description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities';,
+      icon: <Brain className='w-6 h-6' />;,
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum AI & Cognitive Computing'
       ).length
-      color: 'from-purple-500 to-indigo-600'
+      color: 'from-purple-500 to-indigo-600';
     }
       name: 'Autonomous Manufacturing & Industry 4.0'
       description:
@@ -339,7 +334,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Autonomous Manufacturing & Industry 4.0'
       ).length
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-500 to-red-600';
     }
     {
       name: 'Quantum Blockchain & DeFi'
@@ -349,7 +344,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Blockchain & DeFi'
       ).length
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600';
     }
     {
       name: 'AI Biomedical Research & Drug Discovery'
@@ -359,7 +354,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'AI Biomedical Research & Drug Discovery'
       ).length
-      color: 'from-blue-500 to-indigo-600'
+      color: 'from-blue-500 to-indigo-600';
     }
     {
       name: 'Quantum Cybersecurity & Threat Detection'
@@ -369,7 +364,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Cybersecurity & Threat Detection'
       ).length
-      color: 'from-red-500 to-pink-600'
+      color: 'from-red-500 to-pink-600';
     }
     {
       name: 'Space Technology & Satellite Optimization'
@@ -379,7 +374,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Space Technology & Satellite Optimization'
       ).length
-      color: 'from-indigo-500 to-purple-600'
+      color: 'from-indigo-500 to-purple-600';
     }
     {
       name: 'AI Content Creation & Marketing'
@@ -388,7 +383,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'AI Content Creation & Marketing'
       ).length
-      color: 'from-teal-500 to-cyan-600'
+      color: 'from-teal-500 to-cyan-600';
     }
     {
       name: 'Quantum Computing as a Service'
@@ -397,7 +392,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Computing as a Service'
       ).length
-      color: 'from-violet-500 to-purple-600'
+      color: 'from-violet-500 to-purple-600';
     }
     {
       name: 'Autonomous Vehicles & Smart Transportation'
@@ -407,7 +402,7 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Autonomous Vehicles & Smart Transportation'
       ).length
-      color: 'from-emerald-500 to-green-600'
+      color: 'from-emerald-500 to-green-600';
     }
     {
       name: 'Smart Energy & Renewable Energy'
@@ -417,14 +412,14 @@ description:
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Smart Energy & Renewable Energy'
       ).length,
-      color: 'from-yellow-500 to-orange-600',
+      color: 'from-yellow-500 to-orange-600';,
     },
   ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   const containerVariants = {
-    hidden: { opacity: 0 }
-    website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
+    hidden: { opacity: 0 ;}
+    website: 'https://ziontechgroup.com';,  }    website: 'https://ziontechgroup.com';
   }
 ;
   const popular_services = getPopularRevolutionaryServices ();
@@ -432,119 +427,119 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Enhanced service categories with better descriptions;
   const enhanced_categories = [;
     {
-      name: 'Quantum AI & Cognitive Computing',
+      name: 'Quantum AI & Cognitive Computing';,
       description:;
         'Revolutionary quantum AI solutions with human - level reasoning capabilities',
-      icon: <Brain className='w - 6 h - 6' />,
+      icon: <Brain className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Quantum AI & Cognitive Computing').length,
-      color: 'from - purple - 500 to - indigo - 600',
+      color: 'from - purple - 500 to - indigo - 600';,
     },
-      name: 'Autonomous Manufacturing & Industry 4.0',
+      name: 'Autonomous Manufacturing & Industry 4.0';,
       description:;
         'Next - generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className='w - 6 h - 6' />,
+      icon: <Factory className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
-      color: 'from - orange - 500 to - red - 600',
+      color: 'from - orange - 500 to - red - 600';,
     },
     {
-      name: 'Quantum Blockchain & DeFi',
+      name: 'Quantum Blockchain & DeFi';,
       description:;
         'Quantum - secured blockchain platforms with infinite scalability',
-      icon: <Globe className='w - 6 h - 6' />,
+      icon: <Globe className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Quantum Blockchain & DeFi').length,
-      color: 'from - green - 500 to - emerald - 600',
+      color: 'from - green - 500 to - emerald - 600';,
     },
     {
-      name: 'AI Biomedical Research & Drug Discovery',
+      name: 'AI Biomedical Research & Drug Discovery';,
       description:;
         'AI - powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className='w - 6 h - 6' />,
+      icon: <FlaskIcon className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'AI Biomedical Research & Drug Discovery').length,
-      color: 'from - blue - 500 to - indigo - 600',
+      color: 'from - blue - 500 to - indigo - 600';,
     },
     {
-      name: 'Quantum Cybersecurity & Threat Detection',
+      name: 'Quantum Cybersecurity & Threat Detection';,
       description:;
         'Quantum - resistant cybersecurity with AI - powered threat detection',
-      icon: <ShieldCheck className='w - 6 h - 6' />,
+      icon: <ShieldCheck className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Quantum Cybersecurity & Threat Detection').length,
-      color: 'from - red - 500 to - pink - 600',
+      color: 'from - red - 500 to - pink - 600';,
     },
     {
-      name: 'Space Technology & Satellite Optimization',
+      name: 'Space Technology & Satellite Optimization';,
       description:;
         'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className='w - 6 h - 6' />,
+      icon: <Rocket className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Space Technology & Satellite Optimization').length,
-      color: 'from - indigo - 500 to - purple - 600',
+      color: 'from - indigo - 500 to - purple - 600';,
     },
     {
-      name: 'AI Content Creation & Marketing',
-      description: 'Quantum - powered content creation at infinite scale',
-      icon: <FileText className='w - 6 h - 6' />,
+      name: 'AI Content Creation & Marketing';,
+      description: 'Quantum - powered content creation at infinite scale';,
+      icon: <FileText className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'AI Content Creation & Marketing').length,
-      color: 'from - teal - 500 to - cyan - 600',
+      color: 'from - teal - 500 to - cyan - 600';,
     },
     {
-      name: 'Quantum Computing as a Service',
-      description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className='w - 6 h - 6' />,
+      name: 'Quantum Computing as a Service';,
+      description: 'Enterprise quantum computing with real quantum processors';,
+      icon: <Cpu className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Quantum Computing as a Service').length,
-      color: 'from - violet - 500 to - purple - 600',
+      color: 'from - violet - 500 to - purple - 600';,
     },
     {
-      name: 'Autonomous Vehicles & Smart Transportation',
+      name: 'Autonomous Vehicles & Smart Transportation';,
       description:;
         'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className='w - 6 h - 6' />,
+      icon: <CarIcon className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Autonomous Vehicles & Smart Transportation').length,
-      color: 'from - emerald - 500 to - green - 600',
+      color: 'from - emerald - 500 to - green - 600';,
     },
     {
-      name: 'Smart Energy & Renewable Energy',
+      name: 'Smart Energy & Renewable Energy';,
       description:;
         'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className='w - 6 h - 6' />,
+      icon: <LeafIcon className='w - 6 h - 6' />;,
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Smart Energy & Renewable Energy').length,
-      color: 'from - yellow - 500 to - orange - 600',
-    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w - 6 h - 6" />,
-      count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,
+      color: 'from - yellow - 500 to - orange - 600';,
+    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization';,
+      icon: <LeafIcon className="w - 6 h - 6" />;,
+      count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length;,
       color: 'from - yellow - 500 to - orange - 600';
     }
   const container_variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 ;},
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
+    hidden: { y: 20;, opacity: 0 ;}
     visible: {
       y: 0
       opacity: 1
       transition: {
-        duration: 0.5,
+        duration: 0.5;,
       },
     },
 
 
-duration: 0.5,
+duration: 0.5;,
       },
     },
   };
@@ -563,12 +558,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
+    hidden: { y: 20;, opacity: 0 ;},;
     visible: {;
-      y: 0,;
-      opacity: 1,;
+      y: 0;,;
+      opacity: 1;,;
       transition: {;
-        duration: 0 && 0.5,;
+        duration: 0 && 0.5;,;
       },;
     },;
   return (
@@ -618,9 +613,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='max-w-5xl mx-auto'>
               <motion.h1
                 className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8 ;}}
               >
 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
@@ -631,14 +626,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.2 ;}}
               >
               {/* Service Count Stats */}
               <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology,
                 and cutting-edge solutions that redefine what's possible.
@@ -647,14 +642,14 @@ Experience the future of technology with our revolutionary micro
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.4 ;}}
               >
               {/* CTA Buttons */}
               <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                className='flex flex-col sm: flex-row gap-4 justify-center items-center'                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
                   <div className="text-gray-400">Accuracy Rate</div>
@@ -671,7 +666,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
+                transition={{ duration: 0 && 0.8;, delay: 0 && 0.6 ;}}>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
                   <div className="text-gray-400">Accuracy Rate</div>;
@@ -713,9 +708,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Buttons */}
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.6 ;}}
               >
 <Button
                   variant='primary'
@@ -723,7 +718,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() =>
                     document
                       .getElementById('services-grid')
-                      ?.scrollIntoView({ behavior: 'smooth' })
+                      ?.scrollIntoView({ behavior: 'smooth' ;})
                   }
                   Explore Services
                   <ArrowRight className='ml-2 w-5 h-5' />
@@ -732,7 +727,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='futuristic'
                   size='lg'
                   onClick={() =>
-                    window.open('https://ziontechgroup.com/contact', '_blank')
+                    window.open('https: //ziontechgroup.com/contact';, '_blank')
                   }
                 >
                   Get Started
@@ -779,7 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
           <div className="container mx-auto px-4">
             <motion.div
-              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
+              whileInView='visible'              viewport={{ once: true ;}}        <section className="py-12">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
@@ -813,14 +808,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial='hidden'
               whileInView='visible'
 origin/cursor/automate-test-improve-and-merge-code-2533
-              viewport={{ once: true }}
+              viewport={{ once: true ;}}
             >
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
+                  whileHover={{ scale: 1 && 1.05 ;}}
+                  whileTap={{ scale: 0 && 0.95 ;}}>;
                   <UltraFuturisticCard
         {/* Popular Services Showcase */}
 
@@ -830,7 +825,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               className="text-center mb-12"
 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0;, y: 20 ;}}
 
               ))}
           <div className="container mx-auto px-4">
@@ -872,16 +867,16 @@ variant='quantum-advanced'
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-12'
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0;, y: 20 ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.6 ;}}
             >
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}                  Most Popular
+              whileInView='visible'              viewport={{ once: true ;}}                  Most Popular
                 </span>;
                 <br />;
                 <span className="text-white">Revolutionary Services</span>;
@@ -900,7 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setSelectedService(service)}
 
                   variants={item_variants}
-                  while_hover={{ coordinate_y: -10 }}
+                  while_hover={{ coordinate_y: -10 ;}}
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
@@ -921,13 +916,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={{ once: true ;}}
             >
               {popularServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -10 }}
+                  whileHover={{ y: -10 ;}}
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any}
@@ -985,12 +980,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
+              className='mb-8'              initial={{ opacity: 0;, y: 20 ;}}        <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0 && 0.6 ;}}>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
 <section id='services-grid' className='py-16'>
@@ -998,10 +993,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Filters and Controls */}
             <motion.div
               className='mb-8'
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.6 ;}}
             >
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 <div className='flex flex-wrap gap-4'>
@@ -1035,7 +1030,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              whileInView='visible'              viewport={{ once: true ;}}            <motion.div 
               className={viewMode === 'grid' 
 
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1075,18 +1070,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={{ once: true ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
+                  whileHover={{ y: -5 ;}}>;
                   <UltraFuturisticCard
                     variant={service && service.variant as any}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md: flex-row' : '';}`}
                     onClick={() => setSelectedService(service)}
                             <div
                               key={idx}
@@ -1201,15 +1196,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </h4>
                               <div className='space-y-1 text-sm text-gray-300'>
                                 <div>
-                                  <span className='text-gray-400'>ROI:</span>{' '}
+                                  <span className='text-gray-400'>ROI: </span>{' ';}
                                   {service.roi}
                                 </div>
                                 <div>
-                                  <span className='text-gray-400'>Market:</span>{' '}
+                                  <span className='text-gray-400'>Market: </span>{' ';}
                                   {service.marketSize}
                                 </div>
                                 <div>
-                                  <span className='text-gray-400'>Growth:</span>{' '}
+                                  <span className='text-gray-400'>Growth: </span>{' ';}
                                   {service.growthRate}
                                 </div>
                               </div>
@@ -1251,14 +1246,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence>;
           {selectedService && (;
             <motion&& motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 ;}}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             </motion.div>
             {filteredServices.length === 0 && (
 <motion.div
                 className='text-center py-16'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+                transition={{ duration: 0.6 ;}}
               >
 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1291,16 +1286,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence>
           {selectedService && (
             <motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 ;}}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
 
 
 
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0 ;}}
+              animate={{ opacity: 1 ;}}
+              exit={{ opacity: 0 ;}}
               onClick={() => setSelectedService(null)}
                             ))}
                           </div>;
@@ -1319,7 +1314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                               </div>
-                           onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
+                           onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank');}
                          >;
                            Contact Sales;
                            <Mail className="ml-2 w-4 h-4" />;
@@ -1332,9 +1327,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <motion.div
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
+                initial={{ scale: 0.9;, opacity: 0 ;}}
+                animate={{ scale: 1;, opacity: 1 ;}}
+                exit={{ scale: 0.9;, opacity: 0 ;}}
                 onClick={e => e.stopPropagation()}
               >
                 <div className='p-8'>
@@ -1385,19 +1380,17 @@ className='text-gray-400 hover:text-white text-2xl'
                           </h4>
                           <div className='text-sm text-gray-300 space-y-1'>
                             <div>
-                              <span className='text-gray-400'>ROI:</span>{' '}
+                              <span className='text-gray-400'>ROI: </span>{' ';}
                               {selectedService.roi}
                             </div>
                             <div>
                               <span className='text-gray-400'>
-                                Market Size:
-                              </span>{' '}
+                                Market Size: </span>{' ';}
                               {selectedService.marketSize}
                             </div>
                             <div>
                               <span className='text-gray-400'>
-                                Growth Rate:
-                              </span>{' '}
+                                Growth Rate: </span>{' ';}
                               {selectedService.growthRate}
                             </div>
                           </div>
@@ -1468,8 +1461,8 @@ className='text-gray-400 hover:text-white text-2xl'
 <div className='mt-8 pt-6 border-t border-gray-700'>
                     <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
                       <div className='text-sm text-gray-400'>
-                        <div>Setup Time: {selectedService.setupTime}</div>
-                        <div>Trial: {selectedService.trialDays} days</div>
+                        <div>Setup Time: {selectedService.setupTime;}</div>
+                        <div>Trial: {selectedService.trialDays;} days</div>
                       </div>
                       <div className='flex gap-4'>
                         <Button
@@ -1512,11 +1505,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0;, y: 20 ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
@@ -1531,7 +1524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='primary'
                   size='lg'
                   onClick={() =>;
-                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+                    window && window.open('https: //ziontechgroup && ziontechgroup.com/contact';, '_blank');
                   }
                 >;
                   Start Free Trial;
@@ -1541,7 +1534,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='futuristic'
                   size='lg'
                   onClick={() =>;
-                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+                    window && window.open('https: //ziontechgroup && ziontechgroup.com/contact';, '_blank');
                   }
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1551,7 +1544,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                  <Button
                    variant="primary"
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                   onClick={() => window.open('https: //ziontechgroup.com/contact_blank');}
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -1559,7 +1552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                  <Button
                    variant="futuristic"
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                   onClick={() => window.open('https: //ziontechgroup.com/contact_blank');}
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />
@@ -1617,8 +1610,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;
-                        <div > Setup Time: {selected_service.setup_time}</div>;
-                        <div > Trial: {selected_service.trial_days} days</div>;
+                        <div > Setup Time: {selected_service.setup_time;}</div>;
+                        <div > Trial: {selected_service.trial_days;} days</div>;
                       </div>;
                       <div className='flex gap - 4'>;
                         <Button;
@@ -1634,7 +1627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           variant='futuristic';
                           on_click={() =>;
                             window.open (
-                              'https://ziontechgroup.com / contact',
+                              'https: //ziontechgroup.com / contact';,
                               '_blank');
                           }
                         >;
@@ -1651,7 +1644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>;
                         <Button;
                           variant="futuristic";
-                          on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                          on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
                           >;
                           Contact Sales;
                           <Mail className="ml - 2 w - 4 h - 4" />;
@@ -1666,13 +1659,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className='py - 20'>;
           <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0;, coordinate_y: 20 ;}}        <section className="py - 20">;
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;
               className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Experience the Future?;
@@ -1686,7 +1679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='primary';
                   size='lg';
                   on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
+                    window.open ('https: //ziontechgroup.com / contact';, '_blank');
                   }
                 >;
                   Start Free Trial;
@@ -1696,7 +1689,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='futuristic';
                   size='lg';
                   on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
+                    window.open ('https: //ziontechgroup.com / contact';, '_blank');
                   }
                 >;
                   Schedule Demo;
@@ -1732,7 +1725,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <Button;
                   variant="primary";
                   size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                  on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
                   >;
                   Start Free Trial;
                   <Rocket className="ml - 2 w - 5 h - 5" />;
@@ -1740,7 +1733,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
                   variant="futuristic";
                   size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                  on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
                   >;
                   Schedule Demo;
                   <Calendar className="ml - 2 w - 5 h - 5" />;

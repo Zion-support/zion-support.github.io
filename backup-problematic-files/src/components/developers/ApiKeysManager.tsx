@@ -1,20 +1,20 @@
 
-import { useState } from "react",;""
+import { useState } from "react";""
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from "date-fns",;""
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;"
+import { format } from "date-fns";""
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";"
 ;"
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;""
-import { Input } from "@/components/ui/input",;""
-import { Checkbox } from "@/components/ui/checkbox",;""
-import { Label } from "@/components/ui/label",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;""
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;""
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;"
-import CodeBlock from "./CodeBlock",;"
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";""
+import { Input } from "@/components/ui/input";""
+import { Checkbox } from "@/components/ui/checkbox";""
+import { Label } from "@/components/ui/label";""
+import { Badge } from "@/components/ui/badge";""
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";""
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";""
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";"
+import CodeBlock from "./CodeBlock";"
 ;
 export function ApiKeysManager() {;
   const { ;
@@ -148,7 +148,7 @@ export function ApiKeysManager() {;
                     >;                      {scope}
 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;"
-                  <span>Created:{format(new Date(key.created_at), 'MMM d, yyyy')}</span>;
+                  <span>Created: {format(new Date(key.created_at);, 'MMM d, yyyy')}</span>;
                   <Popover>;
 
                     <PopoverTrigger className="flex items-center hover:text-zinc-300">;"
@@ -157,7 +157,7 @@ export function ApiKeysManager() {;
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">;"
                       <p className="text-sm mb-1">Last Used</p>;""
                       <p className="text-xs text-zinc-400">;"
-                    <span>Expires:{format(new Date(key.expires_at), 'MMM d, yyyy')}</span>;                  )}
+                    <span>Expires: {format(new Date(key.expires_at);, 'MMM d, yyyy')}</span>;                  )}
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;"
         <div className="text-xs text-zinc-500">;"
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>;"
@@ -194,7 +194,7 @@ setShowCreateDialog (false);
 //Toggle a scope selection const toggleScope = (scope: ApiKeyScope) => {";
   setSelectedScopes (prev => prev.includes (scope) ? prev.filter (s => s !== scope) -H "Authorization: Bearer $ {;
   key ";
-}" \\ -H "Content-Type: application/json"` 
+}" \\ -H "Content-Type: application/json"` ;
 };
 //Reset form when dialog closes const handleDialogClose = () => {";
   setKeyName ("");
@@ -203,7 +203,7 @@ setShowCreateDialog (false)
 };";
  return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {;
   key ";
-}"\\ -H " Content-Type: application/json"`
+}"\\ -H " Content-Type: application/json"`;
 };";
 //Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {;
 </string>"

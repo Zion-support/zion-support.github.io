@@ -84,7 +84,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -170,7 +169,6 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
@@ -195,71 +193,71 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const serviceCategories = [
   {
-    title: '🧠 AI & Consciousness 2030',
+    title: '🧠 AI & Consciousness 2030';,
   icon: BrainIcon;
-color: 'from-violet-600 via-purple-600 to-indigo-600',
+color: 'from-violet-600 via-purple-600 to-indigo-600';,
   description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
 
 ];
 
 ];
-    title: '⚛️ Quantum & Emerging Tech 2030',
-    icon: AtomIcon,
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
-    description: 'Quantum computing and beyond',
+    title: '⚛️ Quantum & Emerging Tech 2030';,
+    icon: AtomIcon;,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600';,
+    description: 'Quantum computing and beyond';,
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'Solutions', href: '/solutions', icon: Layers }
-  { name: 'Pricing', href: '/pricing', icon: DollarSign }
-  { name: 'Resources', href: '/resources', icon: BookOpen }
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
-  { name: 'Blog', href: '/blog', icon: MessageCircle }
+  { name: 'Home';, href: '/';, icon: Home ;}
+  { name: 'Services';, href: '/services';, icon: Briefcase ;}
+  { name: 'Solutions';, href: '/solutions';, icon: Layers ;}
+  { name: 'Pricing';, href: '/pricing';, icon: DollarSign ;}
+  { name: 'Resources';, href: '/resources';, icon: BookOpen ;}
+  { name: 'Case Studies';, href: '/case-studies';, icon: TrendingUp ;}
+  { name: 'Blog';, href: '/blog';, icon: MessageCircle ;}
 {
-        name: 'AI Consciousness Evolution Platform',
-  href: '/ai-consciousness-evolution-platform',
-        description: 'Develop genuine AI consciousness'}
-  price: '$19,999/month'}
+        name: 'AI Consciousness Evolution Platform';,
+  href: '/ai-consciousness-evolution-platform';,
+        description: 'Develop genuine AI consciousness';}
+  price: '$19;,999/month'}
       },
       {
-        name: 'AI Emotional Intelligence Platform',
+        name: 'AI Emotional Intelligence Platform';,
   href: '/ai-emotional-intelligence-platform'
-        description: 'Real-time emotion analysis and response',
-  price: '$3,999/month'}
+        description: 'Real-time emotion analysis and response';,
+  price: '$3;,999/month'}
 }
       }
       {name: 'AI Creativity Orchestrator';
         href: '/ai-creativity-orchestrator';
         description: 'Multi-model creativity fusion';}
-        price: '$5,999/month';}
+        price: '$5;,999/month';}
       }
-      {name: 'AI Autonomous Business Manager',
-  href: '/ai-autonomous-business-manager',description: 'Fully autonomous business operations'}
-  price: '$12,999/month'}]},{title: '⚛️ Quantum & Emerging Tech 2030',
-  icon: AtomIcon,color: 'from-indigo-600 via-blue-600 to-cyan-600'}
-  description: 'Quantum computing and beyond',services: [;}
-{name: 'Quantum Internet Security Gateway',
-  href: '/quantum-internet-security-gateway',description: 'Unbreakable quantum encryption'}
-  price: '$15,999/month'},{name: 'Biotech DNA Computing Platform';
+      {name: 'AI Autonomous Business Manager';,
+  href: '/ai-autonomous-business-manager';,description: 'Fully autonomous business operations';}
+  price: '$12;,999/month'}]},{title: '⚛️ Quantum & Emerging Tech 2030';,
+  icon: AtomIcon;,color: 'from-indigo-600 via-blue-600 to-cyan-600';}
+  description: 'Quantum computing and beyond';,services: [;}
+{name: 'Quantum Internet Security Gateway';,
+  href: '/quantum-internet-security-gateway';,description: 'Unbreakable quantum encryption';}
+  price: '$15;,999/month'},{name: 'Biotech DNA Computing Platform';
         href: '/biotech-dna-computing-platform';
         description: 'DNA-based computation';}
-        price: '$25,999/month';}
+        price: '$25;,999/month';}
       }
       {name: 'Neuromorphic Computing Platform';
         href: '/neuromorphic-computing-platform';
         description: 'Brain-inspired computing';}
         price: '$899/month';}
       }
-      {name: 'Photonic Computing Infrastructure',
-  href: '/photonic-computing-infrastructure',description: 'Light-speed computing'}
-  price: '$699/month'}]},{title: '🚀 Space & Metaverse 2030',
-  icon: Rocket,color: 'from-teal-600 via-emerald-600 to-green-600'}
-  description: 'Space exploration and digital reality',services: [;}
-{name: 'Space Mining Automation Platform',
-  href: '/space-mining-automation-platform',description: 'Automated asteroid mining'}
-  price: '$45,999/month'},{name: 'Metaverse Development Platform';
+      {name: 'Photonic Computing Infrastructure';,
+  href: '/photonic-computing-infrastructure';,description: 'Light-speed computing';}
+  price: '$699/month';}]},{title: '🚀 Space & Metaverse 2030';,
+  icon: Rocket;,color: 'from-teal-600 via-emerald-600 to-green-600';}
+  description: 'Space exploration and digital reality';,services: [;}
+{name: 'Space Mining Automation Platform';,
+  href: '/space-mining-automation-platform';,description: 'Automated asteroid mining';}
+  price: '$45;,999/month'},{name: 'Metaverse Development Platform';
         href: '/metaverse-development-platform';
         description: 'Build immersive virtual worlds';}
         price: '$499/month';}
@@ -269,16 +267,16 @@ const mainNavigation = [
         description: 'Immersive holographic events';}
         price: '$799/month';}
       }
-      {name: 'AI Predictive Health Analytics',
-  href: '/ai-predictive-health-analytics',description: 'Predictive health outcomes'}
-  price: '$7,999/month'}]},{title: '⚙️ Enterprise IT 2030',
-  icon: CpuIcon,color: 'from-blue-600 via-cyan-600 to-teal-600'}
-  description: 'Autonomous enterprise infrastructure',services: [;}
-{name: 'Autonomous DevOps Platform',
-  href: '/autonomous-devops-platform',description: 'Fully autonomous DevOps'}
-  price: '$799/month'},{name: 'Zero Trust Network Architecture';
+      {name: 'AI Predictive Health Analytics';,
+  href: '/ai-predictive-health-analytics';,description: 'Predictive health outcomes';}
+  price: '$7;,999/month'}]},{title: '⚙️ Enterprise IT 2030';,
+  icon: CpuIcon;,color: 'from-blue-600 via-cyan-600 to-teal-600';}
+  description: 'Autonomous enterprise infrastructure';,services: [;}
+{name: 'Autonomous DevOps Platform';,
+  href: '/autonomous-devops-platform';,description: 'Fully autonomous DevOps';}
+  price: '$799/month';},{name: 'Zero Trust Network Architecture';
         href: '/zero-trust-network-architecture';
-        description: 'Never trust, always verify';}
+        description: 'Never trust;, always verify';}
         price: '$599/month';}
       }
       {name: 'Edge Computing Orchestration';
@@ -286,14 +284,14 @@ const mainNavigation = [
         description: 'Distributed edge computing';}
         price: '$449/month';}
       }
-      {name: 'AI-Powered IT Operations Center',
-  href: '/ai-it-operations-center',description: 'Intelligent IT operations'}
-  price: '$699/month'}]},{title: '🎯 Business Solutions 2030',
-  icon: Target,color: 'from-green-600 via-yellow-600 to-orange-600'}
-  description: 'Practical business solutions with AI',services: [;}
-{name: 'AI Business Intelligence Suite',
-  href: '/ai-business-intelligence-suite',description: 'Intelligent business insights'}
-  price: '$299/month'},{name: 'AI Customer Success Automation';
+      {name: 'AI-Powered IT Operations Center';,
+  href: '/ai-it-operations-center';,description: 'Intelligent IT operations';}
+  price: '$699/month';}]},{title: '🎯 Business Solutions 2030';,
+  icon: Target;,color: 'from-green-600 via-yellow-600 to-orange-600';}
+  description: 'Practical business solutions with AI';,services: [;}
+{name: 'AI Business Intelligence Suite';,
+  href: '/ai-business-intelligence-suite';,description: 'Intelligent business insights';}
+  price: '$299/month';},{name: 'AI Customer Success Automation';
         href: '/ai-customer-success-automation';
         description: 'Automate customer success';}
         price: '$199/month';}
@@ -303,91 +301,91 @@ const mainNavigation = [
         description: 'End-to-end traceability';}
         price: '$399/month';}
       }
-      {name: 'AI Meeting Transcriber Pro',
-  href: '/ai-meeting-transcriber-pro',description: 'Professional transcription'}
-  price: '$149/month'}]},{title: '🔬 Research & Development 2030',
-  icon: Microscope,color: 'from-orange-600 via-red-600 to-pink-600'}
-  description: 'Breakthrough research solutions',services: [;}
-{name: 'Swarm Robotics Orchestration',
-  href: '/swarm-robotics-orchestration',description: 'Coordinate robot swarms'}
-  price: '$449/month'},{name: 'Brain-Computer Interface Platform';
+      {name: 'AI Meeting Transcriber Pro';,
+  href: '/ai-meeting-transcriber-pro';,description: 'Professional transcription';}
+  price: '$149/month';}]},{title: '🔬 Research & Development 2030';,
+  icon: Microscope;,color: 'from-orange-600 via-red-600 to-pink-600';}
+  description: 'Breakthrough research solutions';,services: [;}
+{name: 'Swarm Robotics Orchestration';,
+  href: '/swarm-robotics-orchestration';,description: 'Coordinate robot swarms';}
+  price: '$449/month';},{name: 'Brain-Computer Interface Platform';
         href: '/brain-computer-interface-platform';
         description: 'Direct neural interface';}
-        price: '$1,299/month';}
+        price: '$1;,299/month';}
       }
       {name: 'Quantum Machine Learning Platform';
         href: '/quantum-machine-learning-platform';
         description: 'Quantum-enhanced ML';}
-        price: '$2,999/month';}
+        price: '$2;,999/month';}
       }
 
       {
-        name: 'Synthetic Biology Automation Platform',
-  href: '/synthetic-biology-automation-platform',
-        description: 'Automate biology research'}
-  price: '$3,999/month'}
+        name: 'Synthetic Biology Automation Platform';,
+  href: '/synthetic-biology-automation-platform';,
+        description: 'Automate biology research';}
+  price: '$3;,999/month'}
       }
     ]
   }
 ];
 
 const mainNavigation = [
-  { name: 'Home'}
-  href: '/', icon: Home}
+  { name: 'Home';}
+  href: '/';, icon: Home;}
 },
-  { name: 'Services'}
-  href: '/services', icon: Briefcase}
+  { name: 'Services';}
+  href: '/services';, icon: Briefcase;}
 },
-  { name: 'Solutions'}
-  href: '/solutions', icon: Layers}
+  { name: 'Solutions';}
+  href: '/solutions';, icon: Layers;}
 },
-  { name: 'Pricing'}
-  href: '/pricing', icon: DollarSign}
+  { name: 'Pricing';}
+  href: '/pricing';, icon: DollarSign;}
 },
-  { name: 'Resources'}
-  href: '/resources', icon: BookOpen}
+  { name: 'Resources';}
+  href: '/resources';, icon: BookOpen;}
 },
-  { name: 'Case Studies'}
-  href: '/case-studies', icon: TrendingUp}
+  { name: 'Case Studies';}
+  href: '/case-studies';, icon: TrendingUp;}
 },
-  { name: 'Blog'}
-  href: '/blog', icon: MessageCircle}
+  { name: 'Blog';}
+  href: '/blog';, icon: MessageCircle;}
 },
-{ name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
+{ name: 'Contact';}
+  href: '/contact';, icon: MessageCircle;}
 }
 ];
 
 const companyLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-{ name: 'Status', href: '/status' },
-    { name: 'About Us'}
-  href: '/about'}
+  { name: 'About Us';, href: '/about' ;},
+  { name: 'Careers';, href: '/careers' ;},
+  { name: 'News';, href: '/news' ;},
+  { name: 'Partners';, href: '/partners' ;},
+  { name: 'Support';, href: '/support' ;},
+{ name: 'Status';, href: '/status' ;},
+    { name: 'About Us';}
+  href: '/about';}
 },
 
-    { name: 'Careers'}
-  href: '/careers'}
+    { name: 'Careers';}
+  href: '/careers';}
 },
 
-    { name: 'News'}
-  href: '/news'}
+    { name: 'News';}
+  href: '/news';}
 },
 
-    { name: 'Partners'}
-  href: '/partners'}
+    { name: 'Partners';}
+  href: '/partners';}
 },
 
-    { name: 'Support'}
-  href: '/support'}
+    { name: 'Support';}
+  href: '/support';}
 },
 
-  { name: 'Status'}
-  href: '/status'}
+  { name: 'Status';}
+  href: '/status';}
 }
 
 ];
@@ -447,7 +445,7 @@ const closeMenu = () => setIsOpen(false);
               <div className='flex items-center space-x-2' />
                 <Phone className='w-4 h-4 text-cyan-400' />
                 <a;
-href={`tel:${contactInfo.mobile}`}
+href={`tel: ${contactInfo.mobile;}`}
                   className='hover:text-cyan-400 transition-colors' />
 
                   {contactInfo.mobil}
@@ -457,7 +455,7 @@ href={`tel:${contactInfo.mobile}`}
               <div className='flex items-center space-x-2' />;
                 <Mail className='w-4 h-4 text-purple-400' />;
                 <a;
-                  href={`mailto: ${contactInfo.email}`}
+                  href={`mailto: ${contactInfo.email;}`}
                   className='hover:text-purple-400 transition-colors' />
 
                   {contactInfo.emai}
@@ -915,18 +913,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0;, x: '100%' ;}}
+            animate={{ opacity: 1;, x: 0 ;}}
       <AnimatePresence />;
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, x: '100%' }
+            initial={{ opacity: 0;, x: '100%' ;}
 }
-            animate={{ opacity: 1, x: 0 }
+            animate={{ opacity: 1;, x: 0 ;}
 }
 
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0;, x: '100%' ;}}
 
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 className='fixed inset-0 z-50 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -960,10 +958,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0;, coordinate_x: '100%' ;}}
+            animate={{ opacity: 1;, coordinate_x: 0 ;}}
+            exit={{ opacity: 0;, coordinate_x: '100%' ;}}
+            transition={{ duration: 0.3 ;}}
             className='fixed inset - 0 z - 50 lg:hidden';
           >;
             <div;

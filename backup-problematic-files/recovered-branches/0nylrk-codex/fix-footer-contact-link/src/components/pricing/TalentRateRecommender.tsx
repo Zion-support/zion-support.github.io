@@ -1,21 +1,21 @@
 
-import React, { useState } from "react",;""
-import { Button } from "@/components/ui/button",;"
+import React, { useState } from "react";""
+import { Button } from "@/components/ui/button";"
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
   TalentRateParams,;
   trackPricingSuggestion;"
 } from "@/services/pricingSuggestionService",;""
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { Sparkles } from "lucide-react",;"
+import { PricingSuggestionBox } from "./PricingSuggestionBox";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Sparkles } from "lucide-react";"
 ;
 interface TalentRateRecommenderProps {;
-  skills:string[],;
-  yearsExperience:number,;
+  skills: string[];,;
+  yearsExperience: number;,;
   location?:string,;
-  onSuggestionApplied:(value:number) => void,;"
+  onSuggestionApplied: (value:number) => void;,;"
   rateType:"hourly" | "fixed";"
 }
 export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
@@ -33,7 +33,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;"
-      console.error("Error generating rate suggestion:", error),;"
+      console.error("Error generating rate suggestion: ";, error),;"
     } finally {;
       setIsLoading(false),;
   },;
@@ -45,11 +45,11 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
-          userId:user.id,;
-          suggestionType:'talent',;
-          suggestedMin:suggestion.minRate,;
-          suggestedMax:suggestion.maxRate,;
-          actualValue:suggestedRate,;
+          userId: user.id;,;
+          suggestionType: 'talent';,;
+          suggestedMin: suggestion.minRate;,;
+          suggestedMax: suggestion.maxRate;,;
+          actualValue: suggestedRate;,;
           accepted:true;)
         }),;
   return (;

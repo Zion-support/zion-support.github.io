@@ -158,7 +158,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-import { BlogPost } from "@/types/blog",
+import { BlogPost } from "@/types/blog",;
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {

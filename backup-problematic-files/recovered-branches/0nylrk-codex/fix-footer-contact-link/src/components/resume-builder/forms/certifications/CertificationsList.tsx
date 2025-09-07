@@ -1,13 +1,13 @@
 
-import { Certification } from '@/types/resume',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react';
+import { format } from 'date-fns';
 ;
 interface CertificationsListProps {;
-  certifications:Certification[],;
-  onEdit:(cert:Certification) => void,;
+  certifications: Certification[];,;
+  onEdit: (cert:Certification) => void;,;
   onDelete:(id:string) => void;
 }
 export function CertificationsList({ certifications, onEdit, onDelete } CertificationsListProps) {;
@@ -61,6 +61,6 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
 }</>) 
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" />  <Button > <Trash2 className="h-4 w-4" />  </div> </div> <a href= {"
   cert.credential url;"
-}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential  </p>)"
+}target="blank" rel="noopener noreferrer" className="text-primary hover: underline" > View credential  </p>)";
 } ) ) 
 }</div>) "

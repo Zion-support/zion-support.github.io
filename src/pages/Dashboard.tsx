@@ -1,14 +1,14 @@
-import React from 'react',
-import dynamic from 'next/dynamic',
-import { useAuth } from "@/hooks/useAuth",
-import { useRequireAuth } from "@/hooks/useAuthGuard",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
+import React from 'react',;
+import dynamic from 'next/dynamic',;
+import { useAuth } from "@/hooks/useAuth",;
+import { useRequireAuth } from "@/hooks/useAuthGuard",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
 import { Badge } from "@/components/ui/badge";
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
 import { useGetOrdersQuery  } from '@/hooks/useOrders';
 import { useFavorites  } from '@/hooks/useFavorites';
-import { useToast } from "@/hooks/use-toast",
+import { useToast } from "@/hooks/use-toast",;
 import { EmptyState } from "@/components/ui/empty-state";
 import Link from 'next/link';
 // Lazy load heavy components to prevent router abort
@@ -110,19 +110,19 @@ const GuidedTour = dynamic(
     'talent'
   const roleForTour = null;
     userType === 'client' || userType === 'admin' ? 'client' : 'talent'
-import React from 'react',
-import dynamic from 'next/dynamic',
-import { useAuth } from "@/hooks/useAuth",
-import { useRequireAuth } from "@/hooks/useAuthGuard",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Badge } from "@/components/ui/badge",
+import React from 'react',;
+import dynamic from 'next/dynamic',;
+import { useAuth } from "@/hooks/useAuth",;
+import { useRequireAuth } from "@/hooks/useAuthGuard",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { Badge } from "@/components/ui/badge",;
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
-import { useGetOrdersQuery } from '@/hooks/useOrders',
-import { useFavorites } from '@/hooks/useFavorites',
-import { useToast } from "@/hooks/use-toast",
-import { EmptyState } from "@/components/ui/empty-state",
-import Link from 'next/link',
+import { useGetOrdersQuery } from '@/hooks/useOrders',;
+import { useFavorites } from '@/hooks/useFavorites',;
+import { useToast } from "@/hooks/use-toast",;
+import { EmptyState } from "@/components/ui/empty-state",;
+import Link from 'next/link',;
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
@@ -144,7 +144,7 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
   ssr: false}),
 
 // Lazy load notification functions
-const loadNotificationFunctions = () => import("@/utils/notifications"),
+const loadNotificationFunctions = () => import("@/utils/notifications"),;
 
 export default function Dashboard() {
   const { logout } = useAuth(),

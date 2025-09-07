@@ -1,11 +1,11 @@
 
 
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
-import type { UserProfile } from "@/types/auth",
-import { checkNewRegistration } from "@/utils/authUtils",
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',      }
     }, 0);
     }, 0),
@@ -177,7 +177,7 @@ import { checkNewRegistration } from "@/utils/authUtils";""
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",""
 import { checkNewRegistration } from "@/utils/authUtils",""
-import { useNavigate } from 'react-router-dom',
+import { useNavigate } from 'react-router-dom',;
 /**
  * Custom hook for auth event handling;
  */

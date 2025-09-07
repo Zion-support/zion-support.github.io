@@ -1,7 +1,7 @@
 
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
-import { createNotification } from './createNotification',
+import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',/**
  * Creates a hire request notification for admin and talent
  */
@@ -33,7 +33,7 @@ export async function createHireRequestNotifications({
     userId: talentId,
     title: `New Hire Request from ${requesterName}`,
     message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
-import { HireRequestNotificationParams } from './types',
+import { HireRequestNotificationParams } from './types',;
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 

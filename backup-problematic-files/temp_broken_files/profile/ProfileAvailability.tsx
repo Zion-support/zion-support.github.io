@@ -1,6 +1,6 @@
 
-import { Availability } from "@/types/profile",;""
-import { Badge } from "@/components/ui/badge",;""
+import { Availability } from "@/types/profile";""
+import { Badge } from "@/components/ui/badge";""
 import { Calendar, Clock, Check } from 'lucide-react';
 ;
 interface ProfileAvailabilityProps {;
@@ -27,14 +27,14 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
 </div>
         <Badge ;"
           variant="outline" ;")
-          className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
+          className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md: mb-0 w-fit`;}
         >;
 
         ;"
           <div className="flex items-center gap-2 text-zion-slate-light">;"
             <Calendar className="h-4 w-4" />;"
 
-            <span>Next available:{availability.nextAvailable}</span>;
+            <span>Next available: {availability.nextAvailable;}</span>;
           </div>;
       </div>;"
         <p className="text-zion-slate mb-4">{availability.message}</p>;""

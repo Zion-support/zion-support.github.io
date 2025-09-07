@@ -137,11 +137,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',
-import Layout from '../components / layout / Layout',
-import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services',
+import React from 'react',;
+import Head from 'next / head',;
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',;
+import Layout from '../components / layout / Layout',;
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services',;
 export default /**
  * AISalesAutomationPage - Function description
  */

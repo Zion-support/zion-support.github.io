@@ -34,7 +34,6 @@ export default function CaseStudiesPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
-import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 export default /**

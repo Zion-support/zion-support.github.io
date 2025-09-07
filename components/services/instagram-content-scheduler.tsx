@@ -99,8 +99,6 @@ export default ServicePage
 
 export default ServicePage;
 export default ServicePage;
-import type { NextPage } from 'next';
-import Head from 'next/head';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533

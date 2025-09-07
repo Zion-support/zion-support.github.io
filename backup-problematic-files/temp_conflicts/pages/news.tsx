@@ -1,25 +1,25 @@
-import React from 'react',;
+import React from 'react';
   const featuredNews = [;
     {;
-      title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;
-      excerpt:'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',;
-      author:'Press Team',;
-      date:'2025-01-15',;
-      author:'Dr. Kleber',;
-      featured:true,;
-      image:'/api/placeholder/600/400',;']
-      tags:['AI ConsciousnessBreakthrough', 'Innovation'],;
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';,;
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';,;
+      author: 'Press Team';,;
+      date: '2025-01-15';,;
+      author: 'Dr. Kleber';,;
+      featured: true;,;
+      image: '/api/placeholder/600/400';,;']
+      tags: ['AI ConsciousnessBreakthrough';, 'Innovation'],;
       readTime:'5 min read';
     },;
-      title:'Quantum Computing Breakthrough:Solving Complex Optimization Problems',;
-      excerpt:'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',;
-      author:'Research Team',;
-      date:'2025-01-12',;
-      category:'Research',;
-      readTime:'6 min read',;
-      image:'/news/quantum-breakthrough.jpg',;
-      tags:['Quantum ComputingResearch', 'Breakthrough'],;
-      icon:<Atom className="w-6 h-6" />,;"
+      title: 'Quantum Computing Breakthrough:Solving Complex Optimization Problems';,;
+      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';,;
+      author: 'Research Team';,;
+      date: '2025-01-12';,;
+      category: 'Research';,;
+      readTime: '6 min read';,;
+      image: '/news/quantum-breakthrough.jpg';,;
+      tags: ['Quantum ComputingResearch';, 'Breakthrough'],;
+      icon: <Atom className="w-6 h-6" />;,;"
 
     <UltraFuturisticBackground>;
 "
@@ -38,17 +38,17 @@ import React from 'react',;
 </section>"
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
               <motion.div;
-                initial={{ opacity:0, y:30 }}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8 }}
-                viewport={{ once:true }}"
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8 ;}}
+                viewport={{ once: true ;}}"
                 className="text-center mb-12";"
               >;
 </motion>"
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;"
 </h2>
                 </h2>;
-                transition={{ duration:0.8, delay:0.2 }}
+                transition={{ duration: 0.8;, delay: 0.2 ;}}
                 className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden";"
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">;"
 </div>"
@@ -108,8 +108,8 @@ import React from 'react',;
         {/* CTA Section */}"
         <section className="py-20 relative">;"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
-              initial={{ opacity:0, y:20 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden";"
                   <div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">;"
                     <Newspaper className="w-16 h-16 text-purple-400" />;"
@@ -132,14 +132,14 @@ import React from 'react',;
 
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;"
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.6, delay:0.2 }}"
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}"
               className="text-center mb-16";"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">;"
                 <Newspaper className="w-4 h-4 mr-2" />;"
         <section className="relative py-20 px-4">;"
           <div className="container mx-auto max-w-6xl">;"
-              transition={{ duration:0.8 }}"
+              transition={{ duration: 0.8 ;}}"
               className="text-center";"
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">;"
 </h1>
@@ -148,7 +148,7 @@ import React from 'react',;
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;"
         {/* Category Filter */}"
         <section className="py-10 px-4">;"
-              transition={{ duration:0.8, delay:0.2 }}"
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
               className="flex flex-wrap justify-center gap-4";"
 </motion>
                   key={category}`;
@@ -156,106 +156,106 @@ import React from 'react',;
                     category === "All News";""
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";""
                       :"bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";""
-import React, { useState } from 'react',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ;
   Search, Calendar, Clock, User, Tag, ;
   ArrowRight, ExternalLink, TrendingUp, ;
   BookOpen, Globe, Video;
 } from 'lucide-react',;
-import Link from 'next/link',;
+import Link from 'next/link';
 export default function News() {;
   const [searchTerm, setSearchTerm] = useState(),;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const categories = [;
-    { id:'all', name:'All News', count:24 },;
-    { id:'ai', name:'AI & Consciousness', count:8 },;
-    { id:'quantum', name:'Quantum Computing', count:6 },;
-    { id:'enterprise', name:'Enterprise IT', count:5 },;
-    { id:'research', name:'Research & Development', count:3 },;
-    { id:'industry', name:'Industry Insights', count:2 }']
+    { id: 'all';, name: 'All News';, count: 24 ;},;
+    { id: 'ai';, name: 'AI & Consciousness';, count: 8 ;},;
+    { id: 'quantum';, name: 'Quantum Computing';, count: 6 ;},;
+    { id: 'enterprise';, name: 'Enterprise IT';, count: 5 ;},;
+    { id: 'research';, name: 'Research & Development';, count: 3 ;},;
+    { id: 'industry';, name: 'Industry Insights';, count: 2 ;}']
   ],;
-      id:1,;
-      excerpt:'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',;
-      category:'ai',;
-      author:'Dr. Sarah Chen',;
-      date:'2024-01-15',;
-      readTime:'5 min read',;
-      image:'/images/news/ai-consciousness-launch.jpg',;
-      featured:true,;]
-      tags:['AI ConsciousnessPlatform Launch', 'Innovation'];
-      id:2,;
-      title:'Quantum Computing Breakthrough:Achieving 1000+ Qubit Stability',;
-      excerpt:'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',;
-      category:'quantum',;
-      author:'Prof. Michael Rodriguez',;
-      date:'2024-01-12',;
-      readTime:'7 min read',;
-      image:'/images/news/quantum-breakthrough.jpg',;
-      tags:['Quantum ComputingResearch', 'Breakthrough'];
+      id: 1;,;
+      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems;, enabling unprecedented levels of understanding and collaboration.',;
+      category: 'ai';,;
+      author: 'Dr. Sarah Chen';,;
+      date: '2024-01-15';,;
+      readTime: '5 min read';,;
+      image: '/images/news/ai-consciousness-launch.jpg';,;
+      featured: true;,;]
+      tags: ['AI ConsciousnessPlatform Launch';, 'Innovation'];
+      id: 2;,;
+      title: 'Quantum Computing Breakthrough:Achieving 1000+ Qubit Stability';,;
+      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability;, opening new possibilities for complex computational problems.',;
+      category: 'quantum';,;
+      author: 'Prof. Michael Rodriguez';,;
+      date: '2024-01-12';,;
+      readTime: '7 min read';,;
+      image: '/images/news/quantum-breakthrough.jpg';,;
+      tags: ['Quantum ComputingResearch';, 'Breakthrough'];
     }
   const latestNews = [;
-      id:3,;
-      title:'Enterprise AI Adoption:Trends and Best Practices for 2024',;
-      excerpt:'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.',;
-      category:'enterprise',;
-      author:'Jennifer Kim',;
-      date:'2024-01-10',;
-      readTime:'4 min read',;
-      image:'/images/news/enterprise-ai-trends.jpg',;']
-      tags:['Enterprise AIBest Practices', '2024 Trends'];
-      id:4,;
-      title:'The Future of Autonomous Business Systems',;
-      excerpt:'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.',;
-      category:'research',;
-      author:'Dr. Alex Thompson',;
-      date:'2024-01-08',;
-      image:'/images/news/autonomous-systems.jpg',;
-      tags:['Autonomous SystemsFuture of Work', 'Innovation'];
-      id:5,;
-      title:'Cybersecurity in the Age of AI:New Threats and Solutions',;
-      excerpt:'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.',;
-      author:'Marcus Johnson',;
-      date:'2024-01-05',;
-      image:'/images/news/ai-cybersecurity.jpg',;
-      tags:['CybersecurityAI Security', 'Digital Protection'];
-      id:6,;
-      title:'Quantum Machine Learning:Bridging Two Revolutionary Technologies',;
-      excerpt:'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',;
-      author:'Dr. Elena Petrova',;
-      date:'2024-01-03',;
-      readTime:'8 min read',;
-      image:'/images/news/quantum-ml.jpg',;
-      tags:['Quantum MLResearch', 'Technology Convergence'];
+      id: 3;,;
+      title: 'Enterprise AI Adoption:Trends and Best Practices for 2024';,;
+      excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.';,;
+      category: 'enterprise';,;
+      author: 'Jennifer Kim';,;
+      date: '2024-01-10';,;
+      readTime: '4 min read';,;
+      image: '/images/news/enterprise-ai-trends.jpg';,;']
+      tags: ['Enterprise AIBest Practices';, '2024 Trends'];
+      id: 4;,;
+      title: 'The Future of Autonomous Business Systems';,;
+      excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.';,;
+      category: 'research';,;
+      author: 'Dr. Alex Thompson';,;
+      date: '2024-01-08';,;
+      image: '/images/news/autonomous-systems.jpg';,;
+      tags: ['Autonomous SystemsFuture of Work';, 'Innovation'];
+      id: 5;,;
+      title: 'Cybersecurity in the Age of AI:New Threats and Solutions';,;
+      excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.';,;
+      author: 'Marcus Johnson';,;
+      date: '2024-01-05';,;
+      image: '/images/news/ai-cybersecurity.jpg';,;
+      tags: ['CybersecurityAI Security';, 'Digital Protection'];
+      id: 6;,;
+      title: 'Quantum Machine Learning:Bridging Two Revolutionary Technologies';,;
+      excerpt: 'Our research team explores the intersection of quantum computing and machine learning;, revealing exciting possibilities for the future.',;
+      author: 'Dr. Elena Petrova';,;
+      date: '2024-01-03';,;
+      readTime: '8 min read';,;
+      image: '/images/news/quantum-ml.jpg';,;
+      tags: ['Quantum MLResearch';, 'Technology Convergence'];
   const industryInsights = [;
-      id:7,;
-      title:'The Rise of Conscious AI:Ethical Considerations and Business Impact',;
-      excerpt:'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.',;
-      category:'industry',;
-      author:'Dr. Robert Chang',;
-      date:'2024-01-01',;
-      readTime:'6 min read',;']
-      tags:['AI EthicsBusiness Impact', 'Consciousness'];
-      id:8,;
-      title:'Micro-SaaS Revolution:How Small Teams Are Building Big Solutions',;
-      excerpt:'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.',;
-      author:'Lisa Wang',;
-      date:'2023-12-28',;
-      tags:['Micro-SaaSStartups', 'Software Industry'];
+      id: 7;,;
+      title: 'The Rise of Conscious AI:Ethical Considerations and Business Impact';,;
+      excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';,;
+      category: 'industry';,;
+      author: 'Dr. Robert Chang';,;
+      date: '2024-01-01';,;
+      readTime: '6 min read';,;']
+      tags: ['AI EthicsBusiness Impact';, 'Consciousness'];
+      id: 8;,;
+      title: 'Micro-SaaS Revolution:How Small Teams Are Building Big Solutions';,;
+      excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.';,;
+      author: 'Lisa Wang';,;
+      date: '2023-12-28';,;
+      tags: ['Micro-SaaSStartups';, 'Software Industry'];
   const upcomingEvents = [;
-      title:'AI Consciousness Summit 2024',;
-      type:'Conference',;
-      date:'2024-02-15',;
-      time:'9:00 AM - 6:00 PM',;
-      location:'San Francisco, CA',,
-  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+      title: 'AI Consciousness Summit 2024';,;
+      type: 'Conference';,;
+      date: '2024-02-15';,;
+      time: '9:00 AM - 6:00 PM';,;
+      location: 'San Francisco;, CA',,
+  description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';,;
       registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
-      title:'Quantum Computing Workshop',;
-      type:'Workshop',;
-      date:'2024-02-22',;
-      time:'1:00 PM - 5:00 PM',;
-      location:'Virtual',,
-  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+      title: 'Quantum Computing Workshop';,;
+      type: 'Workshop';,;
+      date: '2024-02-22';,;
+      time: '1:00 PM - 5:00 PM';,;
+      location: 'Virtual';,,
+  description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';,;
       registration:'https://ziontechgroup.com/events/quantum-workshop';
     }]
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {;
@@ -269,7 +269,7 @@ export default function News() {;
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12";"
           </motion.p>;
           {/* Search and Filter */}
-            transition={{ duration:0.8, delay:0.4 }}"
+            transition={{ duration: 0.8;, delay: 0.4 ;}}"
             className="max-w-4xl mx-auto";"
             <div className="relative mb-8">;"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;"
@@ -317,7 +317,7 @@ export default function News() {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
           <div className="grid lg:grid-cols-3 gap-8">;"
               <motion.article ;
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                transition={{ duration: 0.8;, delay: index * 0.1 ;}}
                 className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden";"
                 <div className="h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center">;"
 
@@ -354,7 +354,7 @@ export default function News() {;
                 <a href="#" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300">;"
                   <span>Read Insight</span>;"
 
-            viewport={{ once:true }}
+            viewport={{ once: true ;}}
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;"
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;"
                 type="email";""
@@ -424,10 +424,10 @@ export default function News() {;
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300";"
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;"
             <p className="text-sm text-gray-400 mt-4">;"
-              transition={{ duration:0.6, delay:0.6 }}"
+              transition={{ duration: 0.6;, delay: 0.6 ;}}"
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>;""
                   key={article.title}
-                  transition={{ duration:0.6, delay:0.1 * index }}"
+                  transition={{ duration: 0.6;, delay: 0.1 * index ;}}"
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300";"
                   <div className="flex items-center gap-4 mb-4">;"
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">;"
@@ -442,7 +442,7 @@ export default function News() {;
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">;"
 </p>"
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
-              transition={{ duration:0.6, delay:0.8 }}
+              transition={{ duration: 0.6;, delay: 0.8 ;}}
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>;""
               <p className="text-xl text-gray-400 mb-8">;"
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">;"
@@ -497,7 +497,7 @@ export default function News() {;
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;"
 </meta>"
         <meta property="og:title" content="News - Zion Tech Group" />;"
-        <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;"
+        <meta property="og: description" content="Latest company news;, partnerships, and technology insights." />;"
         <meta name="twitter:card" content="summary_large_image" />;"
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;"
         <main className="container mx-auto px-6 py-12">;"

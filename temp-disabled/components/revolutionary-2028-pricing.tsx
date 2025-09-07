@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
   Crown, Award, Target, Users, Clock, Globe2}
 }
  } from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';,
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';,;
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';

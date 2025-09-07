@@ -1,5 +1,5 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Stethoscope, Brain, Eye, Heart;

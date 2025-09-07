@@ -1,6 +1,6 @@
 
 
-import React from "react",
+import React from "react",;
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import {
@@ -28,8 +28,8 @@ pr-12325
   TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button",
-import { Check, X } from "lucide-react",
+import { Button } from "@/components/ui/button",;
+import { Check, X } from "lucide-react",;
 import {
   TableHeader;"
   TableRow} from "@/components/ui/table",""

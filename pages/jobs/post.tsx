@@ -11,10 +11,10 @@ const PostJob: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import { useState } from 'react',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
 
 
       <Head>;

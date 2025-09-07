@@ -85,12 +85,12 @@ class ErrorBoundary extends React.Component {
         <section className="py-16 px-4">;"
           <div className="max-w-4xl mx-auto">;"
               animate={{ opacity: 1, y: 0 }"
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEOOptimizer from '../components/SEOOptimizer',
-import AnalyticsTracker from '../components/AnalyticsTracker',
-import ErrorBoundary from '../components/ErrorBoundary',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEOOptimizer from '../components/SEOOptimizer',;
+import AnalyticsTracker from '../components/AnalyticsTracker',;
+import ErrorBoundary from '../components/ErrorBoundary',;
+import { motion } from 'framer-motion',;
   Shield, Lock, Eye, Database, Globe,
   User, Settings, AlertTriangle, CheckCircle, Mail;
 } from 'lucide-react',

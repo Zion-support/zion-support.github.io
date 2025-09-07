@@ -15,14 +15,14 @@ export interface BasicInfoFormProps {;
 }
 
 export function BasicInfoForm(): any ({;
-import React, { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { Card } from "@/components/ui/card",
-import { RateOptimizationSection } from "../RateOptimizationSection",
-import { basicInfoSchema, BasicInfoFormData } from "./schema",
+import React, { useState, useEffect } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Button } from "@/components/ui/button",;
+import { Form } from "@/components/ui/form",;
+import { Card } from "@/components/ui/card",;
+import { RateOptimizationSection } from "../RateOptimizationSection",;
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
@@ -31,8 +31,8 @@ export interface BasicInfoFormProps {
   initialData?: Partial<BasicInfoFormData>;
   skills?: string[];
   yearsExperience?: number;
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ContactFields } from "./ContactFields",
+import { PersonalInfoFields } from "./PersonalInfoFields",;
+import { ContactFields } from "./ContactFields",;
 export interface BasicInfoFormProps {
   resumeId?: string,
   initialData?: Partial<BasicInfoFormData>,

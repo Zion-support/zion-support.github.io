@@ -1,13 +1,13 @@
 
-import { useState } from "react",;""
-import { useForm } from "react-hook-form",;""
-import { zodResolver } from "@hookform/resolvers/zod",;""
-import { z } from "zod",;""
-import { LogIn, User, Eye, EyeOff } from "lucide-react",;"
+import { useState } from "react";""
+import { useForm } from "react-hook-form";""
+import { zodResolver } from "@hookform/resolvers/zod";""
+import { z } from "zod";""
+import { LogIn, User, Eye, EyeOff } from "lucide-react";"
 ;"
-import { useAuth } from "@/hooks/useAuth",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;"
+import { useAuth } from "@/hooks/useAuth";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";"
 import {;
   Form,;
   FormControl,;
@@ -15,12 +15,12 @@ import {;
   FormItem,;
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;""
-import { Link } from "react-router-dom",;"
+import { Link } from "react-router-dom";"
 ;
 // Form validation schema;
 const loginSchema = z.object({;)"
-  email:z.string().email("Please enter a valid email").min(1, "Email is required"),;""
-  password:z.string().min(6, "Password must be at least 6 characters")}),;"
+  email: z.string().email("Please enter a valid email").min(1;, "Email is required"),;""
+  password: z.string().min(6;, "Password must be at least 6 characters")}),;"
 type LoginFormValues = z.infer<typeof loginSchema>,;
 </typeof>
   const form = useForm<LoginFormValues>({;

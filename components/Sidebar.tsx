@@ -30,18 +30,18 @@ pr-12243
         <>
           {/* Backdrop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
           {/* Sidebar */}
           <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
+            initial={{ x: '-100%' ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: '-100%' ;}}
+            transition={{ type: 'tween';, duration: 0.3 ;}}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 
 pr-12243
@@ -81,9 +81,9 @@ pr-12243
                     </button>
                     {activeDropdown === title && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0;, height: 0 ;}}
+                        animate={{ opacity: 1;, height: 'auto' ;}}
+                        exit={{ opacity: 0;, height: 0 ;}}
                         className="ml-4 space-y-2 mt-2"
                       >
                         {links.map((link) => (
@@ -154,15 +154,15 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -195,7 +195,7 @@ import {
   ExternalLink;
 } from 'lucide-react';
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void
+  isOpen: boolean;, onClose: () => void;
 }
         : [...prev, title];
     );
@@ -208,13 +208,13 @@ interface SidebarProps {
         <>;
           {/* Backdrop */}
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+            initial={{ x: -300 ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
@@ -256,9 +256,9 @@ interface SidebarProps {
                 <div className="mt-4">;
                   <Link
                     href="/contact"
-                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors";
 }
-const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
+const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
 ;
   const handleDropdownToggle = (title: string) =>: any {
@@ -270,34 +270,34 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
   const navigation = {
     'Services': [;
-      { name: 'Web Development', href: '/services / web - development', icon: Code },
-      { name: 'Mobile Development', href: '/services / mobile - development', icon: Smartphone },
-      { name: 'Cloud Solutions', href: '/services / cloud - solutions', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services / cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services / performance', icon: Zap },
+      { name: 'Web Development';, href: '/services / web - development';, icon: Code ;},
+      { name: 'Mobile Development';, href: '/services / mobile - development';, icon: Smartphone ;},
+      { name: 'Cloud Solutions';, href: '/services / cloud - solutions';, icon: Cloud ;},
+      { name: 'Cybersecurity';, href: '/services / cybersecurity';, icon: Shield ;},
+      { name: 'Performance Optimization';, href: '/services / performance';, icon: Zap ;},
     ],
     'Solutions': [;
-      { name: 'Enterprise Solutions', href: '/solutions / enterprise', icon: Building2 },
-      { name: 'E - commerce Platforms', href: '/solutions / ecommerce', icon: ShoppingCart },
-      { name: 'Healthcare Technology', href: '/solutions / healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions / education', icon: GraduationCap },
+      { name: 'Enterprise Solutions';, href: '/solutions / enterprise';, icon: Building2 ;},
+      { name: 'E - commerce Platforms';, href: '/solutions / ecommerce';, icon: ShoppingCart ;},
+      { name: 'Healthcare Technology';, href: '/solutions / healthcare';, icon: Heart ;},
+      { name: 'Educational Platforms';, href: '/solutions / education';, icon: GraduationCap ;},
     ],
     'Industries': [;
-      { name: 'Manufacturing', href: '/industries / manufacturing', icon: Factory },
-      { name: 'Logistics', href: '/industries / logistics', icon: Truck },
-      { name: 'Finance', href: '/industries / finance', icon: CreditCard },
-      { name: 'Healthcare', href: '/industries / healthcare', icon: Heart },
-      { name: 'Education', href: '/industries / education', icon: GraduationCap },
+      { name: 'Manufacturing';, href: '/industries / manufacturing';, icon: Factory ;},
+      { name: 'Logistics';, href: '/industries / logistics';, icon: Truck ;},
+      { name: 'Finance';, href: '/industries / finance';, icon: CreditCard ;},
+      { name: 'Healthcare';, href: '/industries / healthcare';, icon: Heart ;},
+      { name: 'Education';, href: '/industries / education';, icon: GraduationCap ;},
     ],
   }
 ;
   const quick_links = [;
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case - studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About Us';, href: '/about' ;},
+    { name: 'Our Team';, href: '/team' ;},
+    { name: 'Case Studies';, href: '/case - studies' ;},
+    { name: 'Blog';, href: '/blog' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;},
   ];
 ;
   return (
@@ -306,17 +306,17 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         <>;
           {/* Backdrop */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
             on_click={on_close}
           />;
           <motion.div;
-            initial={{ coordinate_x: -300 }}
-            animate={{ coordinate_x: 0 }}
-            exit={{ coordinate_x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={{ coordinate_x: -300 ;}}
+            animate={{ coordinate_x: 0 ;}}
+            exit={{ coordinate_x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
             className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
             <div className="p - 6">;
               {/* Header */}
@@ -389,8 +389,6 @@ export default Sidebar;
 pr-12243
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
   X, 
   ChevronDown, 
   Home, 
@@ -407,25 +405,24 @@ import {
 
 const navigation = {
   'Services': [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Consulting', href: '/consulting' }
+    { name: 'AI Services';, href: '/ai-services' ;},
+    { name: 'IT Services';, href: '/it-services' ;},
+    { name: 'Micro SaaS';, href: '/micro-saas' ;},
+    { name: 'Consulting';, href: '/consulting' ;}
   ],
   'Solutions': [
-    { name: 'Enterprise', href: '/enterprise' },
-    { name: 'Startup', href: '/startup' },
-    { name: 'Industry', href: '/industries' }
+    { name: 'Enterprise';, href: '/enterprise' ;},
+    { name: 'Startup';, href: '/startup' ;},
+    { name: 'Industry';, href: '/industries' ;}
   ],
   'Company': [
-    { name: 'About', href: '/about' },
-    { name: 'Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'About';, href: '/about' ;},
+    { name: 'Team';, href: '/team' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;}
   ]
 };
 import React from 'react';
-import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 pr-12243
 
@@ -434,11 +431,11 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
   const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
-    { href: '/profile', label: 'Profile', icon: User },
-    { href: '/settings', label: 'Settings', icon: Settings },
+    { href: '/dashboard';, label: 'Dashboard';, icon: Home ;},
+    { href: '/profile';, label: 'Profile';, icon: User ;},
+    { href: '/settings';, label: 'Settings';, icon: Settings ;},
   ];
 
   return (

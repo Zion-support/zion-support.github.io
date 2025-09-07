@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import {;
   Brain, Star, Users, TrendingUp, Zap, Shield,;
   CheckCircle, Clock, Award, Target, Globe, Sparkles,;
@@ -9,9 +9,9 @@ import {;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
 } from 'lucide-react',;
 const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
   website: 'https://ziontechgroup.com';
 },;
 const features = [;
@@ -29,20 +29,20 @@ const integrations = [;
   'Fitness trackersMeditation apps';']
 const testimonials = [;
   {;
-    name: 'Dr. Sarah Chen',;
-    role: 'Clinical Psychologist',;
-    company: 'Mindful Wellness Center',;
-    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
-    rating: 5,;
+    name: 'Dr. Sarah Chen';,;
+    role: 'Clinical Psychologist';,;
+    company: 'Mindful Wellness Center';,;
+    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.';,;
+    rating: 5;,;
     avatar: ;
-    name: 'Michael Rodriguez',;
-    role: 'CEO',;
-    company: 'InnovateTech Solutions',;
-    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
-    name: 'Dr. Emily Watson',;
-    role: 'Research Director',;
-    company: 'Consciousness Research Institute',;
-    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
+    name: 'Michael Rodriguez';,;
+    role: 'CEO';,;
+    company: 'InnovateTech Solutions';,;
+    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.';,;
+    name: 'Dr. Emily Watson';,;
+    role: 'Research Director';,;
+    company: 'Consciousness Research Institute';,;
+    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.';,;
   }]
 ],
 
@@ -70,26 +70,26 @@ export default function AIConsciousnessEvolution2025() {
               key={i}"
               className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30""
               animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3]}}
+                x: [0;, 100, 0],
+                y: [0;, -100, 0],
+                opacity: [0.3;, 0.8, 0.3]}}
               transition={{;
-                duration: 8 + i * 2,;
-                repeat: Infinity,;
-                delay: i * 0.3}}
+                duration: 8 + i * 2;,;
+                repeat: Infinity;,;
+                delay: i * 0.3;}}
               style={{;
-                left: `${Math.random() * 100}%`,;`;
-                top: `${Math.random() * 100}%`}}
+                left: `${Math.random() * 100;}%`,;`;
+                top: `${Math.random() * 100;}%`}}
             />;
 </motion>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}"
+              initial={{ opacity: 0;, scale: 0.8 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6""
             >
 </motion>"
@@ -108,14 +108,14 @@ export default function AIConsciousnessEvolution2025() {
 </p>
             </p>"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
-                { label: 'Success Rate', value: '94%', icon: <Award className="w-8 h-8" /> },"
-                { label: 'Active Users', value: '12.5K+', icon: <Users className="w-8 h-8" /> },"
-                { label: 'Improvement', value: '300%', icon: <TrendingUp className="w-8 h-8" /> },"
-                { label: 'Satisfaction', value: '4.9/5', icon: <Star className="w-8 h-8" /> }"
+                { label: 'Success Rate';, value: '94%';, icon: <Award className="w-8 h-8" /> ;},"
+                { label: 'Active Users';, value: '12.5K+';, icon: <Users className="w-8 h-8" /> ;},"
+                { label: 'Improvement';, value: '300%';, icon: <TrendingUp className="w-8 h-8" /> ;},"
+                { label: 'Satisfaction';, value: '4.9/5';, icon: <Star className="w-8 h-8" /> ;}"
 
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}"
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  transition={{ duration: 0.8;, delay: 0.4 + index * 0.1 ;}}"
                   className="text-center""
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">"
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>""
@@ -124,17 +124,17 @@ export default function AIConsciousnessEvolution2025() {
             </div>;"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">"
               <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.6, delay: 0.6 }}"
+                initial={{ opacity: 0;, scale: 0.9 ;}}
+                transition={{ duration: 0.6;, delay: 0.6 ;}}"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105""
               </motion.button>
-                transition={{ duration: 0.6, delay: 0.8 }}"
+                transition={{ duration: 0.6;, delay: 0.8 ;}}"
                 className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200""
       <section className="py-20 bg-black">"
 </section>"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="text-center mb-16""
             <h2 className="text-4xl font-bold text-white mb-6">"
 </h2>"
@@ -142,7 +142,7 @@ export default function AIConsciousnessEvolution2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
                 key={feature}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                 className="group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">"
                   <Brain className="w-8 h-8 text-purple-400" />"
@@ -161,7 +161,7 @@ export default function AIConsciousnessEvolution2025() {
                 icon: <TrendingUp className="w-12 h-12" />"
 
                 key={step.step}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6;, delay: index * 0.2 ;}}
                 <div className="relative mb-8">"
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                     <div className="text-white font-bold text-2xl">{step.step}</div>"
@@ -177,7 +177,7 @@ export default function AIConsciousnessEvolution2025() {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>"
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">"
                 key={tech}
-                whileInView={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1;, scale: 1 ;}}
                 className="text-center group""
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">"
                   <Cpu className="w-10 h-10 text-purple-400" />"
@@ -197,7 +197,7 @@ export default function AIConsciousnessEvolution2025() {
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>"
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Evolution Path</span>"
                 key={plan.name}
-                viewport={{ once: true }}`;
+                viewport={{ once: true ;}}`;
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${;
                   plan.popular;"
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20';
@@ -229,21 +229,21 @@ export default function AIConsciousnessEvolution2025() {
       </section>;
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness?</span>"
             <p className="text-xl text-purple-200 mb-8">"
               <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">"
               </button>"
               <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200">"
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">"
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
+                { icon: <Phone className="w-6 h-6" />;, label: 'Call Us';, value: contactInfo.mobile ;},
 
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
+                { icon: <Mail className="w-6 h-6" />;, label: 'Email Us';, value: contactInfo.email ;},
 
-                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+                { icon: <MapPin className="w-6 h-6" />;, label: 'Visit Us';, value: contactInfo.address ;}
 
                   key={contact.label}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  transition={{ duration: 0.6;, delay: 0.4 + index * 0.1 ;}}
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">"
                   <div className="text-sm text-purple-300 mb-1">{contact.label}</div>""
                   <div className="text-white font-medium">{contact.value}</div>"

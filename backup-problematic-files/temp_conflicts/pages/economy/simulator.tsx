@@ -1,8 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import SimulatorForm from '../../components/economy/SimulatorForm',;
-import SimulatorCharts from '../../components/economy/SimulatorCharts',;
-import SimulatorExports from '../../components/economy/SimulatorExports',;
+import React, { useMemo, useRef, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import SimulatorForm from '../../components/economy/SimulatorForm';
+import SimulatorCharts from '../../components/economy/SimulatorCharts';
+import SimulatorExports from '../../components/economy/SimulatorExports';
 import {;
   SimulatorInputs,;
   simulateEconomy,;
@@ -37,11 +37,11 @@ export default function EconomySimulatorPage() {;
               <h3 className="font-semibold mb-2">Forecast Summary</h3>;""
               <ul className="text-sm space-y-1">;"
 </ul>
-                <li>Ending supply:{Math.round(series.summary.endingSupply).toLocaleString()}</li>;
-                <li>Ending treasury:{Math.round(series.summary.endingTreasury).toLocaleString()}</li>;
-                <li>Avg inflation:{series.summary.avgInflationPct.toFixed(2)}%</li>;
-                <li>Min inflation:{series.summary.minInflationPct.toFixed(2)}%</li>;
-                <li>Max inflation:{series.summary.maxInflationPct.toFixed(2)}%</li>;
+                <li>Ending supply: {Math.round(series.summary.endingSupply).toLocaleString();}</li>;
+                <li>Ending treasury: {Math.round(series.summary.endingTreasury).toLocaleString();}</li>;
+                <li>Avg inflation: {series.summary.avgInflationPct.toFixed(2);}%</li>;
+                <li>Min inflation: {series.summary.minInflationPct.toFixed(2);}%</li>;
+                <li>Max inflation: {series.summary.maxInflationPct.toFixed(2);}%</li>;
               </ul>;
               <label className="flex flex-col gap-2">;"
 </label>"

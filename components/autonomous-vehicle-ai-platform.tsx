@@ -5,10 +5,10 @@
   ArrowRight,
   Car,;
   Star,;
-import React from 'react',
+import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AutonomousVehicleAIPage() {
@@ -23,15 +23,10 @@ import {
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function AutonomousVehicleAIPage() {
 export default function AutonomousVehicleAIPage() {
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/autonomous-vehicle-ai-platform')
@@ -85,7 +80,7 @@ export default function AutonomousVehicleAIPage() {;
                     </span>
                   </div>
                   <div className='text-slate-400'>
-                    {service.trialDays}-day free trial • Setup:{' '}
+                    {service.trialDays}-day free trial • Setup: {' ';}
                     {service.setupTime}
                   </div>
                 </div>
@@ -178,7 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>;
                   </div>;
                   <div className='text - slate - 400'>;
-                    {service.trial_days}-day free trial • Setup:{' '}
+                    {service.trial_days}-day free trial • Setup: {' ';}
                     {service.setup_time}
                   </div>;
                 </div>;

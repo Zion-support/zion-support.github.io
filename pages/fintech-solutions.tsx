@@ -20,8 +20,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
-import React from 'react',
-import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * FintechSolutions - Function description
  */

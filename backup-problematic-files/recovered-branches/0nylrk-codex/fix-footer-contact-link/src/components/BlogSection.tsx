@@ -1,9 +1,9 @@
 
-import { GradientHeading } from "./GradientHeading",;""
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;""
-import { Button } from "./ui/button",;""
-import { Link } from "react-router-dom",;""
-import { BLOG_POSTS } from "@/data/blog-posts",;"
+import { GradientHeading } from "./GradientHeading";""
+import { Card, CardContent, CardFooter } from "@/components/ui/card";""
+import { Button } from "./ui/button";""
+import { Link } from "react-router-dom";""
+import { BLOG_POSTS } from "@/data/blog-posts";"
 ;
 // Get the 3 most recent blog posts;
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
@@ -62,7 +62,7 @@ export function BlogSection() {;
 </h3>"
 }</h3> <p className="text-zion-slate-light line-clamp-2" > {"
 </p>"
-}</p> p-6 pt-0"> <Button variant=" link"className=" text-zion-cyan p-0 hover:text-zion-purple" asChild > <Link to= {"
+}</p> p-6 pt-0"> <Button variant=" link"className=" text-zion-cyan p-0 hover: text-zion-purple" asChild > <Link to= {";
 
 }>Read More    ) ) 
 }</div> </div> </section>) "

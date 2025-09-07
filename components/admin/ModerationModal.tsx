@@ -5,13 +5,13 @@ export type ModerationModalProps = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
   onAction: (;
-    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    action: 'approve' | 'remove' | 'warn' | 'ban';,;
     adminNotes?: string;
   ) => Promise<void>;
 export default function ModerationModal(): any ({;
@@ -47,15 +47,15 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -66,7 +66,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
@@ -178,9 +177,9 @@ pr-12243
 
 pr-12243
 export type ModerationModalProps = {
-  flag: any | null,
-  onClose: () => void,
-  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
+  flag: any | null;,
+  onClose: () => void;,
+  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban';, adminNotes?: string) => Promise<void>
 };
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
@@ -213,7 +212,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
           <div>
             <div className="text-gray-500 mb-1">Preview</div>
-            <div className="border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet}</div>
+            <div className="border rounded p-3 bg-gray-50 dark: bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet;}</div>
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div className="p-3 border rounded">
@@ -250,7 +249,7 @@ pr-12243
 }
   on_close: () => void;
   on_action: (
-    action: 'approve' | 'remove' | 'warn' | 'ban',
+    action: 'approve' | 'remove' | 'warn' | 'ban';,
     admin_notes?: string) => Promise < void>;
 ;
 export default /**
@@ -374,12 +373,10 @@ pr-12243
 
   );
 
-import React, { useState } from 'react';
 export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
-import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: () => void;

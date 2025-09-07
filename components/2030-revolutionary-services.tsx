@@ -6,8 +6,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';import
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
 
 
@@ -39,24 +37,13 @@ import {;
   Mail,;
   MapPin,;
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
-import React from 'react',
+import React from 'react';
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
   };
 
   return (
@@ -170,17 +157,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           type='application / ld + json';
           dangerouslySetInnerHTML={{
               '@type': 'Organization',
-              name: 'Zion Tech Group',
+              name: 'Zion Tech Group';,
               description:;
                 'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
               },
               address: {
                 '@type': 'PostalAddress',
-                street_address: '364 E Main St STE 1008',
-                address_locality: 'Middletown',
-                address_region: 'DE',
-                postal_code: '19709',
-                address_country: 'US',
+                street_address: '364 E Main St STE 1008';,
+                address_locality: 'Middletown';,
+                address_region: 'DE';,
+                postal_code: '19709';,
+                address_country: 'US';,
               },
               "address": {
                 "@type": "PostalAddress"
@@ -190,13 +177,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 "postalCode": "19709"
                 "addressCountry": "US"
               }
-                streetAddress: '364 E Main St STE 1008',
-                addressLocality: 'Middletown',
-                addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
+                streetAddress: '364 E Main St STE 1008';,
+                addressLocality: 'Middletown';,
+                addressRegion: 'DE';,
+                postalCode: '19709';,
+                addressCountry: 'US';,
               },
-              sameAs: ['https://github.com/Zion-Holdings'],
+              sameAs: ['https://github.com/Zion-Holdings'];,
             }),
           }}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -211,13 +198,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
@@ -225,9 +212,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='mb-8'
           >
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6'>
@@ -239,9 +226,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8;, delay: 0.2 ;}}
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2030 Revolutionary
             </span>
@@ -259,9 +246,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'
           >
             Experience the next generation of revolutionary technology services.
@@ -271,9 +258,9 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
 
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8;, delay: 0.6 ;}}
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
@@ -316,10 +303,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 className='text-center mb-20'
           >
             <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -343,11 +330,11 @@ className='text-center mb-20'
               <motion.div
                 key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
+                whileHover={{ y: -5 ;}}
 className='group cursor-pointer'
               >
                 <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>
@@ -355,7 +342,7 @@ className='group cursor-pointer'
                   <div className='flex items-start justify-between mb-6'>
                     <div className='flex items-center space-x-4'>
                       <div
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300`;}
                       >
                         <span className='text-2xl'>{service.icon}</span>
                       </div>
@@ -512,27 +499,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Call to Action */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 
 
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0 && 0.8 ;}}>;
             <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business with;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
 
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with
@@ -587,10 +574,10 @@ className='text-center'
 <section className='py-24 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}}
           >
 <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business with
@@ -709,10 +696,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="py - 24 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}}
           >;
             <h2 className='text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business with;

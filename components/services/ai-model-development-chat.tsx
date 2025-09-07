@@ -33,9 +33,6 @@ export default AiModelDevelopmentChat;
 
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -96,12 +93,6 @@ pr-12243
 export default AiModelDevelopmentChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const AiModelDevelopmentChat: NextPage = () => {
   return (

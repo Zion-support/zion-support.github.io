@@ -1,7 +1,7 @@
 
 
 export function LoginCard() {}
-  return (import { Link } from \"react-router-dom\",
+  return (import { Link } from \"react-router-dom\",;
 export function LoginCard() {
 
 export function LoginCard() {

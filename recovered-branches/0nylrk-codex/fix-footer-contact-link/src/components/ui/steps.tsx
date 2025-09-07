@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react",;
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 interface StepProps {
@@ -7,8 +7,8 @@ interface StepProps {
   label: string
 
   description?: string;
-import { cn } from "@/lib/utils",
-import { CheckIcon } from "lucide-react",
+import { cn } from "@/lib/utils",;
+import { CheckIcon } from "lucide-react",;
 
 import React from "react";
 import {cn} from "@/lib/utils";

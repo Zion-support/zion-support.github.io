@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Label } from '@/components/ui/label',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from '@/hooks/use-toast',;
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { fireEvent } from '@/lib/analytics',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import { cn } from '@/lib/utils';
+import { fireEvent } from '@/lib/analytics';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = z.object({;)
-  name:z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),;
-  email:z.string().email('Please enter a valid email address').min(1, 'Email is required'),;
+  name: z.string().min(2;, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),;
+  email: z.string().email('Please enter a valid email address').min(1;, 'Email is required'),;
   password:z.string();
     .min(8, 'Password must be at least 8 characters');
     .regex(/[A-Z]/, 'Password must include at least one uppercase letter');
@@ -22,8 +22,8 @@ const signupSchema = z.object({;)
     .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),;
   confirmPassword:z.string();
 }).refine((data) => data.password === data.confirmPassword, {;
-  message:"Passwords don't match",;""
-  path:["confirmPassword"]}),;"
+  message: "Passwords don't match";,;""
+  path: ["confirmPassword"];}),;"
 ;
 type SignupFormData = z.infer<typeof signupSchema>,;
 </typeof>
@@ -31,7 +31,7 @@ type SignupFormData = z.infer<typeof signupSchema>,;
 
     trigger} = useForm<SignupFormData>({;
 
-    const timeouts:Record<string NodeJS.Timeout> = {},;
+    const timeouts: Record<string NodeJS.Timeout> = {;},;
 ;
     Object.keys(watchedFields).forEach((fieldName) => {;
       const typedFieldName = fieldName as keyof SignupFormData,;
@@ -39,8 +39,8 @@ type SignupFormData = z.infer<typeof signupSchema>,;
         setFieldStates(prev => ({;
           ...prev,;
           [fieldName]:{ ;
-            isValid:prev[fieldName]?.isValid ?? false,;
-            isValidating:true,;
+            isValid: prev[fieldName]?.isValid ?? false;,;
+            isValidating: true;,;
             error:prev[fieldName]?.error ?? null;          }
         })),;
 ;
@@ -51,8 +51,8 @@ type SignupFormData = z.infer<typeof signupSchema>,;
           setFieldStates(prev => ({;
             ...prev,;
             [fieldName]:{;
-              isValid:result,;
-              isValidating:false,;
+              isValid: result;,;
+              isValidating: false;,;
               error:error?.message || null;
             }
           })),;
@@ -107,7 +107,7 @@ type SignupFormData = z.infer<typeof signupSchema>,;
   },;
 ;
   const getPasswordStrength = (password:string) => {;
-    if (!password) return { strength:0, label:'' },;
+    if (!password) return { strength: 0;, label: '' ;},;
     ;
     let strength = 0,;
     const checks = [;
@@ -124,8 +124,8 @@ type SignupFormData = z.infer<typeof signupSchema>,;
     ;
     return {;
       strength,;
-      label:labels[strength - 1] || '',;
-      color:colors[strength - 1] || 'bg-gray-300',;
+      label: labels[strength - 1] || '';,;
+      color: colors[strength - 1] || 'bg-gray-300';,;
       percentage:(strength / 5) * 100;
     },;
   },;
@@ -139,13 +139,13 @@ type SignupFormData = z.infer<typeof signupSchema>,;
     try {;
       // Use AuthProvider's signup function;
       const result = await signUp(data.email, data.password, {;
-        name:data.name,;
+        name: data.name;,;
         displayName:data.name;
       }),;
 ;
       if (result.error) {;
-        logErrorToProduction('Signup error:', { data:result.error }),;
-        fireEvent('signup_error', { message:result.error }),;
+        logErrorToProduction('Signup error: ';, { data: result.error ;}),;
+        fireEvent('signup_error', { message: result.error ;}),;
         ;
         // Handle specific error cases with inline field errors;
         if (result.error.includes('already registered') || result.error.includes('already exists')) {;
@@ -172,7 +172,7 @@ type SignupFormData = z.infer<typeof signupSchema>,;
 ;
       // Success;
       toast({;
-        title:"Account Created Successfully!",,
+        title: "Account Created Successfully!";,,
   description:result.emailVerificationRequired ;
           ? "Please check your email to verify your account before logging in.";
           :"You can now log in to your account."}),;
@@ -180,21 +180,21 @@ type SignupFormData = z.infer<typeof signupSchema>,;
       reset(),;
       fireEvent('signup_success'),;
       onSuccess?.({;
-        email:data.email,;
-        emailVerificationRequired:result.emailVerificationRequired ?? false}),;
+        email: data.email;,;
+        emailVerificationRequired: result.emailVerificationRequired ?? false;}),;
 ;
     } catch (error:any) {;
-      logErrorToProduction('Unexpected signup error:', { data:error }),;
-      fireEvent('signup_error', { message:error.message || 'unexpected' }),;
+      logErrorToProduction('Unexpected signup error: ';, { data: error ;}),;
+      fireEvent('signup_error', { message: error.message || 'unexpected' ;}),;
       const errorMessage = 'An unexpected error occurred during signup. Please try again.',;
       ;
-      setError('root', { message:errorMessage }),;
+      setError('root', { message: errorMessage ;}),;
       onError?.(errorMessage),;
 ;
       toast({;
-        title:"Signup Failed",,
-  description:errorMessage,;
-        variant:"destructive"}),;
+        title: "Signup Failed";,,
+  description: errorMessage;,;
+        variant: "destructive";}),;
     } finally {;
       setIsSubmitting(false),;
     }
@@ -282,7 +282,7 @@ pr-12325
             <div className="w-full bg-gray-200 rounded-full h-2">;"
               <div ;)"
                 className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
-                style={{ width:`${passwordStrength.percentage}%` }}
+                style={{ width: `${passwordStrength.percentage;}%` }}
             <div className="text-xs text-gray-600 space-y-1">;"
               <div className="grid grid-cols-2 gap-1">;"
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' :'text-gray-400'}>;

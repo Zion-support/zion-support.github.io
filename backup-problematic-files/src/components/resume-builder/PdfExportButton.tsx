@@ -1,25 +1,25 @@
 
 
 }
-import React, { useState } from 'react',;
+import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams;
-import { Header } from '@/components/Header',;
-import { SEO } from '@/components/SEO',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
-import { toast } from 'sonner',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { toast } from 'sonner';
 export default function ProjectRoom() {;
   const router = useRouter(),;
-  const { projectId: rawProjectId } = router.query,;
+  const { projectId: rawProjectId ;} = router.query,;
   const projectId = typeof rawProjectId === 'string' ? rawProjectId : , // Ensure string, default to empty if not;
   const [activeTab, setActiveTab] = useState('chat'),;
   const [isInCall, setIsInCall] = useState(false),;
   const [callParticipants, setCallParticipants] = useState<Array<{;
-    id: string,;
-    name: string,;
+    id: string;,;
+    name: string;,;
     avatar?: string,;
     isMuted?: boolean,;
     isVideoEnabled?: boolean,;
@@ -27,10 +27,10 @@ export default function ProjectRoom() {;
     isHost?: boolean;
   }>>([;
     {;
-      id: 'user-1',;
-      name: 'You',;
-      isHost: true,;
-      isVideoEnabled: true,;
+      id: 'user-1';,;
+      name: 'You';,;
+      isHost: true;,;
+      isVideoEnabled: true;,;
       isMuted: false;
     }
   ]),
@@ -38,7 +38,7 @@ export default function ProjectRoom() {;
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
-      description: "Others can join with the project room link"
+      description: "Others can join with the project room link";
     }),
     // Switch to video tab if not already there
     if (activeTab !== 'video') {
@@ -49,15 +49,15 @@ export default function ProjectRoom() {;
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
-      description: "Call duration and participants will be logged"
+      description: "Call duration and participants will be logged";
     })
   },
   
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+      { id: 'user-2';, name: 'Alex Chen';, isVideoEnabled: true;, isMuted: false ;},
+      { id: 'user-3';, name: 'Taylor Kim';, isVideoEnabled: false;, isMuted: true ;},
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -78,9 +78,9 @@ export default function ProjectRoom() {;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+      { id: 'user-2';, name: 'Alex Chen';, isVideoEnabled: true;, isMuted: false ;},;
+      { id: 'user-3';, name: 'Taylor Kim';, isVideoEnabled: false;, isMuted: true ;},;
+      { id: 'user-4';, name: 'Jordan Smith';, isVideoEnabled: true;, isMuted: false;, isScreenSharing: true ;}
     ],;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
     if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {;
@@ -101,7 +101,7 @@ pr-12325
 </main>"
         <div className="flex justify-between items-center mb-6">"
 </div>"
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>""
+          <h1 className="text-3xl font-bold">Project Room: {projectId;}</h1>""
           <div className="flex gap-2">"
               <Button variant="destructive" className="flex items-center gap-2">"
                 <X className="h-4 w-4" />"

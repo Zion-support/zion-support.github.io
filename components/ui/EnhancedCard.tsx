@@ -14,7 +14,7 @@ export default function EnhancedCard(): any ({;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
 import React from 'react';
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode;, className?: string }) {
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
@@ -24,9 +24,8 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
 
-import React from 'react';
 
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode;, className?: string }) {
 export default function EnhancedCard({
   children;}
 className = \"\"}

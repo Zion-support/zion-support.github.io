@@ -1,12 +1,12 @@
 
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Leaf, Server, Cloud } from "lucide-react",
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Leaf, Server, Cloud } from "lucide-react",;
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
-import { Link } from "react-router-dom",
+import { Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",    {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."

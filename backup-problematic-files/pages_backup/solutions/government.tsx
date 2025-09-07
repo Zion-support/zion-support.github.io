@@ -5,107 +5,107 @@ import Layout from '../../components/Layout';';
 import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
   {}
-    icon: Shield,;
-    title: 'Cybersecurity & Compliance,',,
-  description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
+    icon: Shield;,;
+    title: 'Cybersecurity & Compliance;,',,
+  description: 'FISMA;, FedRAMP, and other government security standards compliance solutions.',;
   },;
-    icon: Users,;
-    title: 'Citizen Services,',,
-  description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
-  },;
-  {}
-    icon: FileText,;
-    title: 'Document Management,',,
-  description: 'Secure document management and workflow systems for government operations.'',;
+    icon: Users;,;
+    title: 'Citizen Services;,',,
+  description: 'Digital platforms for citizen engagement;, service delivery, and government transparency.',;
   },;
   {}
-    icon: Globe,;
-    title: 'Open Data Platforms,',,
-  description: 'Public data portals and open government initiatives for transparency and accountability.'',;
+    icon: FileText;,;
+    title: 'Document Management;,',,
+  description: 'Secure document management and workflow systems for government operations.'';,;
   },;
   {}
-    icon: Database,;
-    title: 'Data Analytics,',,
-  description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
-    title: 'Citizen Services,',;
-    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
-    icon: FileText,;
-    title: 'Document Management,',;
-    description: 'Secure document management and workflow systems for government operations.,;
-    icon: Globe,;
-    title: 'Open Data Platforms,',;
-    description: 'Public data portals and open government initiatives for transparency and accountability.,;
-    icon: Database,;
-    title: 'Data Analytics,',;
-    description: 'Government data analytics and business intelligence for informed decision making., import Layout from '../../components/Layout',;
+    icon: Globe;,;
+    title: 'Open Data Platforms;,',,
+  description: 'Public data portals and open government initiatives for transparency and accountability.'';,;
+  },;
+  {}
+    icon: Database;,;
+    title: 'Data Analytics;,',,
+  description: 'Government data analytics and business intelligence for informed decision making.'';, import Layout from '../../components/Layout';
+    title: 'Citizen Services;,',;
+    description: 'Digital platforms for citizen engagement;, service delivery, and government transparency.',;
+    icon: FileText;,;
+    title: 'Document Management;,',;
+    description: 'Secure document management and workflow systems for government operations.;,;
+    icon: Globe;,;
+    title: 'Open Data Platforms;,',;
+    description: 'Public data portals and open government initiatives for transparency and accountability.;,;
+    icon: Database;,;
+    title: 'Data Analytics;,',;
+    description: 'Government data analytics and business intelligence for informed decision making.;, import Layout from '../../components/Layout';
 pr-12325
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 const features = [
   {
-    icon: Building2,
-    title: 'Digital Government Services',
-    description: 'Citizen-facing digital services and online portals
+    icon: Building2;,
+    title: 'Digital Government Services';,
+    description: 'Citizen-facing digital services and online portals;
   },
-    icon: Shield,
-    title: 'Security & Compliance',
+    icon: Shield;,
+    title: 'Security & Compliance';,
     description: 'Government-grade security and regulatory compliance
-    icon: Users,
-    title: 'Citizen Engagement',
+    icon: Users;,
+    title: 'Citizen Engagement';,
     description: 'Platforms for citizen participation and feedback
-    icon: FileText,
-    title: 'Document Management',
+    icon: FileText;,
+    title: 'Document Management';,
     description: 'Secure document storage and management systems
-    icon: CheckCircle,
-    title: 'Workflow Automation',
+    icon: CheckCircle;,
+    title: 'Workflow Automation';,
     description: 'Automated government processes and approvals
-    icon: ArrowRight,
-    title: 'Data Analytics',
+    icon: ArrowRight;,
+    title: 'Data Analytics';,
     description: 'Government data analysis and reporting tools
   {;
-    icon: Building2,;
-    title: 'Digital Government Services',,
+    icon: Building2;,;
+    title: 'Digital Government Services';,,
   description: 'Citizen-facing digital services and online portals';
   },;
   {;
-    icon: Shield,;
-    title: 'Security & Compliance',,
+    icon: Shield;,;
+    title: 'Security & Compliance';,,
   description: 'Government-grade security and regulatory compliance';
   },;
   {;
-    icon: Users,;
-    title: 'Citizen Engagement',,
+    icon: Users;,;
+    title: 'Citizen Engagement';,,
   description: 'Platforms for citizen participation and feedback';
   },;
   {;
-    icon: FileText,;
-    title: 'Document Management',,
+    icon: FileText;,;
+    title: 'Document Management';,,
   description: 'Secure document storage and management systems';
   },;
   {;
-    icon: CheckCircle,;
-    title: 'Workflow Automation',,
+    icon: CheckCircle;,;
+    title: 'Workflow Automation';,,
   description: 'Automated government processes and approvals';
   },;
   {;
-    icon: ArrowRight,;
-    title: 'Data Analytics',,
+    icon: ArrowRight;,;
+    title: 'Data Analytics';,,
   description: 'Government data analysis and reporting tools';
   }
-    title: 'Digital Government Services',;
+    title: 'Digital Government Services';,;
     description: 'Citizen-facing digital services and online portals';
-    title: 'Security & Compliance',;
+    title: 'Security & Compliance';,;
     description: 'Government-grade security and regulatory compliance';
-    title: 'Citizen Engagement',;
+    title: 'Citizen Engagement';,;
     description: 'Platforms for citizen participation and feedback';
-    title: 'Document Management',;
+    title: 'Document Management';,;
     description: 'Secure document storage and management systems';
-    icon: CheckCircle,;
-    title: 'Workflow Automation',;
+    icon: CheckCircle;,;
+    title: 'Workflow Automation';,;
     description: 'Automated government processes and approvals';
-    icon: ArrowRight,;
-    title: 'Data Analytics',;
+    icon: ArrowRight;,;
+    title: 'Data Analytics';,;
     description: 'Government data analysis and reporting tools';
   }]
 pr-12325
@@ -134,7 +134,7 @@ export default function GovernmentSolutionsPage() {;
 </section>"
           <div className="container mx-auto px-4">";"
             <div className="max-w-4xl mx-auto text-center">";"
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Government,;"
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">";, Government,;"
 </h1>"
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";"
 </span>
@@ -143,11 +143,11 @@ export default function GovernmentSolutionsPage() {;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";"
 </p>
               </p>;"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",;"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover: bg-blue-700 transition-colors font-medium flex items-center justify-center">";,;"
                   <ArrowRight className="w-5 h-5 ml-2" />";"
 
                 </button>;"
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,;"
+                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">";, View Case Studies,;"
 </button>
                 </button>;
               </div>;
@@ -160,7 +160,7 @@ export default function GovernmentSolutionsPage() {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";"
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;
               {features && features.map((feature, index) => (,;
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -184,13 +184,13 @@ const benefits = [;
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-    icon: CheckCircle,;
-    title: 'Workflow Automation',,
+    icon: CheckCircle;,;
+    title: 'Workflow Automation';,,
   description: 'Automated government processes and approvals';
   },;
   {;
-    icon: ArrowRight,;
-    title: 'Data Analytics',,
+    icon: ArrowRight;,;
+    title: 'Data Analytics';,,
   description: 'Government data analysis and reporting tools';
   }
 ;];
@@ -268,14 +268,14 @@ const benefits = [;
   'Reduced operational costs',;
   'Increased government efficiency';
 ];
-    icon: CheckCircle,
-    title: 'Workflow Automation',
-    description: 'Automated government processes and approvals'
+    icon: CheckCircle;,
+    title: 'Workflow Automation';,
+    description: 'Automated government processes and approvals';
   },
   {
-    icon: ArrowRight,
-    title: 'Data Analytics',
-    description: 'Government data analysis and reporting tools'
+    icon: ArrowRight;,
+    title: 'Data Analytics';,
+    description: 'Government data analysis and reporting tools';
   }
 ;];
 const solutions = [;
@@ -296,7 +296,7 @@ export default function GovernmentSolutionsPage() {
       title="Government Solutions - Zion Tech Group"";
       description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms.""
             </div>;"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;"
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";"
                     <feature && feature.icon className="w-6 h-6 text-white" />";"

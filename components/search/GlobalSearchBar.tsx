@@ -2,21 +2,21 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}
+  static getDerivedStateFromError(error) {return { hasError: true ;}
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
@@ -59,24 +59,24 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
-    this.state = { hasError: false}
+    this.state = { hasError: false;}
 };
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true}
+    return { hasError: true;}
 };
   }
   
   componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
   }
   
   render() {
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
     }
-    controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
+    controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal;})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
    
 }
 
@@ -84,21 +84,21 @@ const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j =
     }
 
 const id = setTimeout(run, 150;
-  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal}
+  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal;}
 }),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
    ;
 }
 
 const id = setTimeout(run, 150;
-  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-}, body: JSON.stringify({ q: query }) }).catch(() => 
+  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST';}
+  headers: { 'Content-Type': 'application/json';}
+}, body: JSON.stringify({ q: query ;}) }).catch(() => 
 }),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}
 ;
   const startVoice = (if (typeof window === 'undefined');
   return;
 
-const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,import {;) => {
+const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;,import {;) => {
   return $3;}
 }
   useEffect, useMemo, useRef, useState   } from 'react';
@@ -109,11 +109,11 @@ export default function GlobalSearchBar() {export default function GlobalSearchB
   const controller = useRef<AbortController | null />(null;
   useEffect(() => {}
 if (!query) {setSuggestions([])return;      return;}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}
+  static getDerivedStateFromError(error) {return { hasError: true ;}
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true ;}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
   }
@@ -122,7 +122,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 export default function GlobalSearchBar() {useEffect(() => {
 if (!query) {setSuggestions([])return;      return;}
       setSuggestions([])return;}
-    }}controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
+    }}controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal;})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
    
 }
 
@@ -173,7 +173,7 @@ const rec = new Speech()rec.lang = 'en-US';
                 <button;
                   type='button';
                   onClick = {() = /> {setQuery(s)setOpen(false)router && router.push(`/search?q=${encodeURIComponent(s)}`)}}rec.start()}
-                  className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >   
+                  className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >   ;
 }rec && rec.start();
   return (<form onSubmit={onSubmit} className=\"relative w-full max-w-lg\" role=\"search\" />;
       <input;
@@ -224,8 +224,6 @@ export default function GlobalSearchBar() {const router = useRouter()const [quer
       return;      return;
       setSuggestions([]);
       return
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useRouter } from 'next/router';
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
@@ -244,15 +242,15 @@ const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j =
     }
 
 const id = setTimeout(run, 150;
-  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal}
+  return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal;}
 }),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
    ;
 }
 
 const id = setTimeout(run, 150;
-  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST'}
-  headers: { 'Content-Type': 'application/json'}
-}, body: JSON.stringify({ q: query }) }).catch(() => 
+  return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST';}
+  headers: { 'Content-Type': 'application/json';}
+}, body: JSON.stringify({ q: query ;}) }).catch(() => 
 }),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}
 ;
   const startVoice = (if (typeof window === 'undefined');
@@ -267,8 +265,8 @@ const Speech: any = (window as any).SpeechRecognition || (window as any).webkitS
     fetch('/api/telemetry/search', {method: 'POST';) => {
   return $3;}
 }
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ q: query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
+      headers: { 'Content-Type': 'application/json' ;}
+      body: JSON.stringify({ q: query ;})}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
   const startVoice = (if (typeof window === 'undefined');
@@ -276,11 +274,11 @@ const Speech: any = (window as any).SpeechRecognition || (window as any).webkitS
 
 const Speech: any =;
       (window as any).SpeechRecognition |;
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST',
-  headers: { 'Content-Type': 'application/json',) => {
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST';,
+  headers: { 'Content-Type': 'application/json';,) => {
   return $3;}
 }
-}, body: JSON.stringify({ q: query }) }).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
+}, body: JSON.stringify({ q: query ;}) }).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
   const startVoice = (if (typeof window === 'undefined');
@@ -291,11 +289,11 @@ const Speech: any =;
       (window as any).webkitSpeechRecognition;
 
 const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition;
-fetch('/api/telemetry/search', {method: 'POST',
-  headers: { 'Content-Type': 'application/json',) => {
+fetch('/api/telemetry/search', {method: 'POST';,
+  headers: { 'Content-Type': 'application/json';,) => {
   return $3;}
 }
-},body: JSON.stringify({ q: query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
+},body: JSON.stringify({ q: query ;})}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
   const startVoice = (if (typeof window === 'undefined');
@@ -353,7 +351,7 @@ const run = async () => {
       try {}
        ;}
   const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
-          signal: controller.current!.signal}
+          signal: controller.current!.signal;}
        }
 });
 
@@ -387,8 +385,8 @@ const onSubmit = (
       method: 'POST') => {
   return $3;}
 }
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ q: query })
+      headers: { 'Content-Type': 'application/json' ;}
+      body: JSON.stringify({ q: query ;})
     }).catch(() => 
 });
     router.push(`/search?q=${encodeURIComponent(query)}`);
@@ -400,11 +398,11 @@ const startVoice = (
 
 const Speech: any =
       (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST',
-  headers: { 'Content-Type': 'application/json',) => {
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST';,
+  headers: { 'Content-Type': 'application/json';,) => {
   return $3;}
 }
-}, body: JSON.stringify({ q: query }) }).catch(() => {})
+}, body: JSON.stringify({ q: query ;}) }).catch(() => {})
     router.push(`/search?q=${encodeURIComponent(query}
 }`);
     setOpen(false)
@@ -474,7 +472,7 @@ type='button'
                     setOpen(false);}
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+                  className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >    ;}
     rec.start()
   }
   };
@@ -482,7 +480,7 @@ type='button'
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
-                  className = 'w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >    }
+                  className = 'w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >    ;}
     rec.start(
 }
   ;"
@@ -504,7 +502,7 @@ type='button'
             {suggestions.map((s, i) => (<li key={i} />;
                 <button;"
                   type=\"button\";
-                  onClick={() = /> {setQuery(s)setOpen(false)className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >>
+                  onClick={() = /> {setQuery(s)setOpen(false)className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >>;
 }
                 >;}
                     router && router.push(`/search?q=${encodeURIComponent(s)}`)}}>;"
@@ -558,7 +556,7 @@ type=\"button\"
                   onClick={() = /> {;
                     setQuery(s);
                     setOpen(false);
-                  className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >
+                  className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-800'                >;
 }
                     router && router.push(`/search?q=${encodeURIComponent(s}
 }`);
@@ -663,9 +661,9 @@ const id = set_timeout (run, 150;
   const on_submit = (e?: React.FormEvent) =>: any {e?.prevent_default ()if ();}
   return) {$2;}
 }
-    fetch ('/api / telemetry / search', {method: 'POST'}
-  headers: { 'Content - Type': 'application / json'}
-},body: JSON.stringify ({ q: query })body: JSON.stringify ({ q: query })}).catch (() => {})router.push (`/search?q = ${encodeURIComponent (query)}`)set_open (false
+    fetch ('/api / telemetry / search', {method: 'POST';}
+  headers: { 'Content - Type': 'application / json';}
+},body: JSON.stringify ({ q: query ;})body: JSON.stringify ({ q: query ;})}).catch (() => {})router.push (`/search?q = ${encodeURIComponent (query)}`)set_open (false
 }
 ;
   const start_voice = () =>: any {// Check condition;}
@@ -676,9 +674,9 @@ const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition;
 if (return) {$2;}
-}    fetch ('/api / telemetry / search', { method: 'POST'}
-  headers: { 'Content - Type': 'application / json'}
-}, body: JSON.stringify ({ q: query }) }).catch (() => 
+}    fetch ('/api / telemetry / search', { method: 'POST';}
+  headers: { 'Content - Type': 'application / json';}
+}, body: JSON.stringify ({ q: query ;}) }).catch (() => 
 }),router.push (`/search?q = ${encodeURIComponent (query)}`)set_open (false)}
 ;
   const start_voice = () =>: any {// Check condition;}
@@ -689,7 +687,7 @@ const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;
 
-const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,// Check condition;
+const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;,// Check condition;
 if (return) {$2;}
 }
 
@@ -730,7 +728,7 @@ const rec = new Speech ()rec.lang = 'en - US';
                 <button;
                   type='button';
                   on_click = {() = /> {set_query (s)set_open (false)router.push (`/search?q=${encodeURIComponent (s)}`)}}
-                  className='w - full text - left px - 3 py - 2 hover: bg - gray - 50 dark:hover:bg - gray - 800'                >   
+                  className='w - full text - left px - 3 py - 2 hover: bg - gray - 50 dark:hover:bg - gray - 800'                >   ;
 }
     rec.start ();"
   return (<form on_submit={on_submit} className=\"relative w - full max - w-lg\" role=\"search\" />;

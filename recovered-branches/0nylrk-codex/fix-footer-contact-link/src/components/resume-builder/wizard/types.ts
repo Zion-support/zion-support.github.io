@@ -10,7 +10,7 @@ export interface NavigationButtonsProps {
   on_back?: () => void;
   on_next?: () => void;
 
-import { Resume } from "@/types/resume",
+import { Resume } from "@/types/resume",;
 
 import {Resume} from "@/types/resume";
   id: string;

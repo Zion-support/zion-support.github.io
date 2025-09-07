@@ -1,8 +1,8 @@
-import React from "react",
+import React from "react",;
 import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
-import HelpCenter from "@/components/support/HelpCenter",
-import { SEO } from "@/components/SEO",
+import HelpCenter from "@/components/support/HelpCenter",;
+import { SEO } from "@/components/SEO",;
 export default function HelpCenterPage() {
   return (
     <>

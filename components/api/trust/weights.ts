@@ -7,10 +7,9 @@ import {
 
 import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
   if (req.method;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import {
   getTrustWeights;
 setTrustWeights,}
 getDefaultWeights;}
@@ -20,12 +19,12 @@ export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
 ) {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
     const current = await getTrustWeights();
   }
 }
     const current = await getTrustWeights ();
-    return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
+    return res.status (200).json ({ current, defaults: getDefaultWeights () ;});  }
 export default async /**
  * handler - Function description
  */
@@ -35,7 +34,7 @@ if ( {) {
   $2
 }
     const current = await getTrustWeights ();
-    return res.status (200).json ({ current, defaults: getDefaultWeights () });
+    return res.status (200).json ({ current, defaults: getDefaultWeights () ;});
   }
   // Check condition
 if ( {) {
@@ -46,20 +45,20 @@ if ( {) {
     return res.status (200).json ({ updated });
   }
   res.set_header ('Allow', 'GET, PUT');
-  return res.status (405).json ({ error: 'Method not allowed' });    return res.status (200).json ({ updated });
+  return res.status (405).json ({ error: 'Method not allowed' ;});    return res.status (200).json ({ updated });
   }
   res.set_header ('AllowGET, PUT');
-  return res.status (405).json ({ error: 'Method not allowed' });
+  return res.status (405).json ({ error: 'Method not allowed' ;});
   if (req.method === 'GET') {
     const current = await getTrustWeights();
-    return res.status(200).json({ current, defaults: getDefaultWeights() });
+    return res.status(200).json({ current, defaults: getDefaultWeights() ;});
   }
   if (req.method === 'PUT') {
 
   if (req.method = == 'GET') {
    ;
   const current = await getTrustWeights();}
-    return res.status(200).json({ current, defaults: getDefaultWeights(),}
+    return res.status(200).json({ current, defaults: getDefaultWeights();,}
 });
   }
   if (req.method = == 'PUT') {}
@@ -69,9 +68,9 @@ if ( {) {
 return res.status(200).json({ updated });
   }
   res.setHeader('Allow', 'GET, PUT');
-  return res.status(405).json({ error: 'Method not allowed',}
+  return res.status(405).json({ error: 'Method not allowed';,}
 });
-  return res.status(405).json({ error: 'Method not allowed' }),
+  return res.status(405).json({ error: 'Method not allowed' ;}),
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 

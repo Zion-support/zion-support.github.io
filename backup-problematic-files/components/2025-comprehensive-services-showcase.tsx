@@ -1,17 +1,17 @@
-import React, { useState } from 'react',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import {;
   Brain, Building, Target, Cpu, Shield,;
   Check, Phone, Mail, MapPin,;
   TrendingUp, Zap, Globe;
 } from 'lucide-react',;
 // Import our new service data;
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',;
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',;
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',;
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',;
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',;
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
 const ComprehensiveServicesShowcase2025 = () => {;
   const [activeTab, setActiveTab] = useState('all'),;
 // Helper function to get service pricing;
@@ -44,13 +44,13 @@ const allServices = [;
   ...emergingTechnologyServices;]
 ],;
   const categories = [;
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },;"
+    { id: 'all';, name: 'All Services';, icon: <Target className="w-5 h-5" /> ;},;"
 "
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },;"
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },;"
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },;"
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },;"
-    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }"
+    { id: 'business-intelligence';, name: 'Business Intelligence';, icon: <TrendingUp className="w-5 h-5" /> ;},;"
+    { id: 'ai-automation';, name: 'AI Automation';, icon: <Brain className="w-5 h-5" /> ;},;"
+    { id: 'it-infrastructure';, name: 'IT Infrastructure';, icon: <Building className="w-5 h-5" /> ;},;"
+    { id: 'micro-saas';, name: 'Micro SAAS';, icon: <Zap className="w-5 h-5" /> ;},;"
+    { id: 'ai-services';, name: 'AI Services';, icon: <Cpu className="w-5 h-5" /> ;}"
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">;"
 </div>
       <SEO;"
@@ -63,9 +63,9 @@ const allServices = [;
         <div className="absolute inset-0 bg-black/20"></div>;""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;"
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}"
             className="text-center";"
           >;
 </motion>"
@@ -114,7 +114,7 @@ const allServices = [;
       <section className="py-16 bg-gray-50">;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                 key={service.id}
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}"
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";"
                 <div className="p-6 border-b border-gray-100">;"
                   <div className="flex items-start justify-between mb-4">;"
@@ -149,12 +149,12 @@ const allServices = [;
                       <span className="font-semibold text-gray-900">{service.targetAudience}</span>;"
                   <div className="flex flex-col gap-2">;"
                     <a;"`;
-                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+                      href={`mailto: ${(service as any).contact || 'kleber@ziontechgroup.com';}?subject=Inquiry about ${service.name}`}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2";"
 </a>"
 
                     </a>;
-                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                      href={`tel: ${(service as any).mobile || '+1 302 464 0950';}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2";"
 
             ))}
@@ -162,9 +162,9 @@ const allServices = [;
 
               <motion.div;"
                 key="grid";"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}"
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+                exit={{ opacity: 0 ;}}"
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
 </motion>
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";"
@@ -196,8 +196,8 @@ const allServices = [;
                           <span className="ml-1">{service.category}</span>;"
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;"
                         <div>;
-                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}"
-                          <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;"
+                          <span className="font-medium">Setup: </span> {getServiceSetupTime(service);}"
+                          <span className="font-medium">Trial: </span> {getServiceTrialDays(service);} days;"
                       <div className="flex items-center justify-between mb-4">"
                         <div className="text-sm">"
                           <span className="text-gray-500">Expected ROI:</span>""
@@ -234,20 +234,20 @@ const allServices = [;
             </h2>;"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
             </p>;
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}"
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.5 ;}}"
               className="text-center p-6";"
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Brain className="w-8 h-8 text-blue-600" />;"
 
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>;""
               <p className="text-gray-600">;"
-              transition={{ duration: 0.5, delay: 0.1 }}"
+              transition={{ duration: 0.5;, delay: 0.1 ;}}"
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Shield className="w-8 h-8 text-green-600" />;"
 
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>;""
-              transition={{ duration: 0.5, delay: 0.2 }}"
+              transition={{ duration: 0.5;, delay: 0.2 ;}}"
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Globe className="w-8 h-8 text-purple-600" />;"
 

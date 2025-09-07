@@ -9,7 +9,7 @@ type Props = { clientId: string },
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';

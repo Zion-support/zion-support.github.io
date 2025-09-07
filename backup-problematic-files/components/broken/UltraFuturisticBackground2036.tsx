@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react',;
+import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {;
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',;
   intensity?: 'low' | 'medium' | 'high';
@@ -13,42 +13,42 @@ export default function UltraFuturisticBackground2036({;
   const animationRef = useRef<number | undefined>(undefined),;
 </number>
     const particles: Array<{;,
-  x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
+  x: number;,;
+      y: number;,;
+      vx: number;,;
+      vy: number;,;
+      size: number;,;
+      color: string;,;
       type: 'quantum' | 'neon' | 'energy' | 'data';
     }> = [],;
     const colors = {;
-      quantum: ['#00ffff#0080ff#8000ff#ff0080'],;
-      neon: ['#00ff00#ff00ff#ffff00#00ffff'],;
-      energy: ['#ff6600#ff0066#6600ff#00ff66'],;
+      quantum: ['#00ffff#0080ff#8000ff#ff0080'];,;
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'];,;
+      energy: ['#ff6600#ff0066#6600ff#00ff66'];,;
       data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
     },;
     const intensityMultiplier = {;
-      low: 0.5,;
-      medium: 1,;
+      low: 0.5;,;
+      medium: 1;,;
       high: 1.5;
     const variantConfig = {;
-      default: { particleCount: 50, speed: 1, size: 2 },;
-      quantum: { particleCount: 80, speed: 1.5, size: 3 },;
-      space: { particleCount: 100, speed: 0.8, size: 2.5 },;
-      ai: { particleCount: 120, speed: 2, size: 1.5 },;
-      cyber: { particleCount: 90, speed: 1.8, size: 2.2 }
+      default: { particleCount: 50;, speed: 1;, size: 2 ;},;
+      quantum: { particleCount: 80;, speed: 1.5;, size: 3 ;},;
+      space: { particleCount: 100;, speed: 0.8;, size: 2.5 ;},;
+      ai: { particleCount: 120;, speed: 2;, size: 1.5 ;},;
+      cyber: { particleCount: 90;, speed: 1.8;, size: 2.2 ;}
     const config = variantConfig[variant],;
     const multiplier = intensityMultiplier[intensity],;
     // Initialize particles;
     for (let i = 0, i < config.particleCount * multiplier, i++) {;
       particles.push({;)
-        x: Math.random() * canvas.width,;
-        y: Math.random() * canvas.height,;
-        vx: (Math.random() - 0.5) * config.speed * multiplier,;
-        vy: (Math.random() - 0.5) * config.speed * multiplier,;
-        size: Math.random() * config.size * multiplier,;
-        opacity: Math.random() * 0.8 + 0.2,;
-        color: colors[variant][Math.floor(Math.random() * colors[variant].length)],;
+        x: Math.random() * canvas.width;,;
+        y: Math.random() * canvas.height;,;
+        vx: (Math.random() - 0.5) * config.speed * multiplier;,;
+        vy: (Math.random() - 0.5) * config.speed * multiplier;,;
+        size: Math.random() * config.size * multiplier;,;
+        opacity: Math.random() * 0.8 + 0.2;,;
+        color: colors[variant][Math.floor(Math.random() * colors[variant].length)];,;
         type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant;
       });
     const animate = () => {;
@@ -117,7 +117,7 @@ export default function UltraFuturisticBackground2036({;
       if (variant === 'space') {;
         drawSpaceElements(ctx, canvas, multiplier);
       animationRef.current = requestAnimationFrame(animate);
-    const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {;
+    const drawQuantumShapes = (ctx: CanvasRenderingContext2D;, canvas: HTMLCanvasElement;, multiplier: number) => {;
       const time = Date.now() * 0.001,;
       for (let i = 0, i < 3, i++) {;
         const x = canvas.width * (0.2 + i * 0.3),;
@@ -139,7 +139,7 @@ export default function UltraFuturisticBackground2036({;
         ctx.fillStyle = `rgba(0, 255, 255, ${0.6 * multiplier})`,;
         ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2),;
         ctx.restore();
-    const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {;
+    const drawDataStreams = (ctx: CanvasRenderingContext2D;, canvas: HTMLCanvasElement;, multiplier: number) => {;
       for (let i = 0, i < 5, i++) {;
         const x = canvas.width * (0.1 + i * 0.2),;
         const startY = canvas.height * 0.1,;
@@ -154,7 +154,7 @@ export default function UltraFuturisticBackground2036({;
         // Data packets;`;
         ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`,;
         ctx.fillRect(x - 3, streamY - 3, 6, 6),;
-    const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {;
+    const drawSpaceElements = (ctx: CanvasRenderingContext2D;, canvas: HTMLCanvasElement;, multiplier: number) => {;
       // Draw stars;
       for (let i = 0, i < 50 * multiplier, i++) {;
         const x = (i * 12345) % canvas.width,;
@@ -185,7 +185,7 @@ export default function UltraFuturisticBackground2036({;
       <canvas;
         ref={canvasRef}"
         className="w-full h-full"""
-        style={{ display: 'block' }}
+        style={{ display: 'block' ;}}
       />;
 </canvas>
       <div className="absolute inset-0 pointer-events-none">"
@@ -197,22 +197,22 @@ export default function UltraFuturisticBackground2036({;
                 key={i}"
                 className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent""
                 style={{`;
-                  left: `${(i + 1) * 12.5}%`,"
-                  transform: 'translateX(-50%)
+                  left: `${(i + 1) * 12.5;}%`,"
+                  transform: 'translateX(-50%);
                 }}
                 animate={{;
-                  opacity: [0.3, 0.8, 0.3]}}
+                  opacity: [0.3;, 0.8, 0.3]}}
                 transition={{;
-                  duration: 3,;
-                  repeat: Infinity,;
-                  delay: i * 0.5}}
+                  duration: 3;,;
+                  repeat: Infinity;,;
+                  delay: i * 0.5;}}
 </motion>
           </div>;
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent""
-                  top: `${(i + 1) * 16.67}%`}}
-                  opacity: [0.2, 0.6, 0.2]}}
-                  duration: 4,;
-                  delay: i * 0.8}}
+                  top: `${(i + 1) * 16.67;}%`}}
+                  opacity: [0.2;, 0.6, 0.2]}}
+                  duration: 4;,;
+                  delay: i * 0.8;}}
               />;
             ))}
           </div>;

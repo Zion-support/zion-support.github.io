@@ -18,7 +18,6 @@ import {
   Phone
   Mail
   MapPin;} from 'lucide-react';import {
-import { motion } from 'framer-motion';
 import {;
   Check,;
   Zap,;
@@ -37,11 +36,10 @@ import {;
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
-import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
 
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
@@ -56,7 +54,7 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
   Check,
   Zap,
@@ -76,27 +74,25 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   MapPin,;} from 'lucide-react';import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
 visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1
+  opacity: 1;, transition: {
+  staggerChildren: 0.1;
 }
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0
+  y: 20;, opacity: 0;
 }
 visible: {
-  y: 0, opacity: 1, transition: {
-  duration: 0.5
+  y: 0;, opacity: 1;, transition: {
+  duration: 0.5;
 }
 const pricingTiers = [
   {
@@ -111,7 +107,7 @@ const pricingTiers = [
     color: 'from-blue-500 to-cyan-500'
     cta: 'Start Free Trial'
     ctaLink: '/contact'
-    popular: false
+    popular: false;
   }
   {
     name: 'Professional'
@@ -125,7 +121,7 @@ const pricingTiers = [
     color: 'from-purple-500 to-pink-500'
     cta: 'Start Free Trial'
     ctaLink: '/contact'
-    popular: true
+    popular: true;
   }
   {
     name: 'Enterprise'
@@ -140,56 +136,54 @@ const pricingTiers = [
     color: 'from-green-500 to-emerald-500'
     cta: 'Contact Sales'
     ctaLink: '/contact'
-    popular: false
+    popular: false;
   }
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services'
     icon: <Brain className='w-8 h-8' />
-    services: cuttingEdgeAIServices2025.slice(0, 6)
+    services: cuttingEdgeAIServices2025.slice(0;, 6)
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-    description:
-      'Revolutionary AI platforms with consciousness and emotional intelligence'
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
   }
   {
     name: 'Quantum & Emerging Tech'
     icon: <Atom className='w-8 h-8' />
     color: 'from-purple-500 to-pink-500'
-    services: cuttingEdgeQuantumServices2025.slice(0, 6)
-    description:
-      'Breakthrough quantum computing and space technology solutions'
+    services: cuttingEdgeQuantumServices2025.slice(0;, 6)
+    description: 'Breakthrough quantum computing and space technology solutions';
   }
   {
-    name: 'Enterprise IT Solutions',
-    icon: <Shield className='w-8 h-8' />,
-    color: 'from-blue-500 to-cyan-500',
-    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6),
-    description: 'Advanced enterprise infrastructure and security solutions',
+    name: 'Enterprise IT Solutions';,
+    icon: <Shield className='w-8 h-8' />;,
+    color: 'from-blue-500 to-cyan-500';,
+    services: cuttingEdgeEnterpriseITServices2025.slice(0;, 6),
+    description: 'Advanced enterprise infrastructure and security solutions';,
   },
   {
-    name: 'Micro SAAS Solutions',
-    icon: <Rocket className='w-8 h-8' />,
-    color: 'from-teal-500 to-emerald-500',
-    services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
-    description: 'Innovative business solutions for modern enterprises',
+    name: 'Micro SAAS Solutions';,
+    icon: <Rocket className='w-8 h-8' />;,
+    color: 'from-teal-500 to-emerald-500';,
+    services: cuttingEdgeMicroSaasServices2025.slice(0;, 6),
+    description: 'Innovative business solutions for modern enterprises';,
   },
 ];
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
 visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1
+  opacity: 1;, transition: {
+  staggerChildren: 0.1;
 }
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0
+  y: 20;, opacity: 0;
 }
 visible: {
-  y: 0, opacity: 1, transition: {
-  duration: 0.5
+  y: 0;, opacity: 1;, transition: {
+  duration: 0.5;
 }
 const pricingTiers = [
   {
@@ -204,7 +198,7 @@ const pricingTiers = [
     color: 'from-blue-500 to-cyan-500'
     cta: 'Start Free Trial'
     ctaLink: '/contact'
-    popular: false
+    popular: false;
   }
   {
     name: 'Professional'
@@ -218,7 +212,7 @@ const pricingTiers = [
     color: 'from-purple-500 to-pink-500'
     cta: 'Start Free Trial'
     ctaLink: '/contact'
-    popular: true
+    popular: true;
   }
   {
     name: 'Enterprise'
@@ -233,77 +227,69 @@ const pricingTiers = [
     color: 'from-green-500 to-emerald-500'
     cta: 'Contact Sales'
     ctaLink: '/contact'
-    popular: false
+    popular: false;
   }
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services'
     icon: <Brain className='w-8 h-8' />
-    services: cuttingEdgeAIServices2025.slice(0, 6)
-    description:
-      'Revolutionary AI platforms with consciousness and emotional intelligence'
+    services: cuttingEdgeAIServices2025.slice(0;, 6)
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
   }
   {
     name: 'Quantum & Emerging Tech'
     icon: <Atom className='w-8 h-8' />
     color: 'from-purple-500 to-pink-500'
-    services: cuttingEdgeQuantumServices2025.slice(0, 6)
-    description:
-      'Breakthrough quantum computing and space technology solutions'
+    services: cuttingEdgeQuantumServices2025.slice(0;, 6)
+    description: 'Breakthrough quantum computing and space technology solutions';
   }
   {
     name: 'Enterprise IT Solutions'
     icon: <Shield className='w-8 h-8' />
     color: 'from-blue-500 to-cyan-500'
-    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6)
-    description: 'Advanced enterprise infrastructure and security solutions'
+    services: cuttingEdgeEnterpriseITServices2025.slice(0;, 6)
+    description: 'Advanced enterprise infrastructure and security solutions';
   }
   {
     name: 'Micro SAAS Solutions'
     icon: <Rocket className='w-8 h-8' />
     color: 'from-teal-500 to-emerald-500'
-    services: cuttingEdgeMicroSaasServices2025.slice(0, 6)
-    description: 'Innovative business solutions for modern enterprises'
+    services: cuttingEdgeMicroSaasServices2025.slice(0;, 6)
+    description: 'Innovative business solutions for modern enterprises';
   }
 ];
 
-import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
 
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 const stats = [
   {
-    number: '25+',
-    label: 'Cutting-Edge Services',
-    icon: Star,
-    color: 'text-cyan-400',
+    number: '25+';,
+    label: 'Cutting-Edge Services';,
+    icon: Star;,
+    color: 'text-cyan-400';,
   },
   {
-    number: '$500B+',
-    label: 'Market Coverage',
-    icon: TrendingUp,
-    color: 'text-purple-400',
+    number: '$500B+';,
+    label: 'Market Coverage';,
+    icon: TrendingUp;,
+    color: 'text-purple-400';,
   },
   {
-    number: '99.9%',
-    label: 'Success Rate',
-    icon: Award,
-    color: 'text-green-400',
+    number: '99.9%';,
+    label: 'Success Rate';,
+    icon: Award;,
+    color: 'text-green-400';,
   },
   {
-    number: '24/7',
-    label: 'Expert Support',
-    icon: Users,
-    color: 'text-pink-400',
+    number: '24/7';,
+    label: 'Expert Support';,
+    icon: Users;,
+    color: 'text-pink-400';,
   },
 ];
 
@@ -316,126 +302,126 @@ export default function CuttingEdgePricing2025() {;
 
 
 const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
+  website: 'https://ziontechgroup && ziontechgroup.com';,;
 };
 visible: {;
-  opacity: 1, transition: {;
+  opacity: 1;, transition: {;
   staggerChildren: 0 && 0.1 ;
 };
 const itemVariants = {;
   hidden: {;
-  y: 20, opacity: 0 ;
+  y: 20;, opacity: 0 ;
 };
 visible: {;
-  y: 0, opacity: 1, transition: {;
+  y: 0;, opacity: 1;, transition: {;
   duration: 0 && 0.5 ;
 };
 const pricingTiers = [;
   {;
-    name: 'Starter',;
-    price: 99,;
-    period: 'month',;
-    description: 'Perfect for small businesses and startups',;
+    name: 'Starter';,;
+    price: 99;,;
+    period: 'month';,;
+    description: 'Perfect for small businesses and startups';,;
     features: [;
       'Up to 5 team membersBasic AI content generationStandard supportCore integrationsBasic analyticsEmail support';
     ],;
-    icon: <Target className="w-6 h-6" />,;
-    color: 'from-blue-500 to-cyan-500',;
-    cta: 'Start Free Trial',;
-    ctaLink: '/contact',;
+    icon: <Target className="w-6 h-6" />;,;
+    color: 'from-blue-500 to-cyan-500';,;
+    cta: 'Start Free Trial';,;
+    ctaLink: '/contact';,;
     popular: false;
   };
   {;
-    name: 'Professional',;
-    price: 299,;
-    period: 'month',;
-    description: 'Ideal for growing businesses and teams',;
+    name: 'Professional';,;
+    price: 299;,;
+    period: 'month';,;
+    description: 'Ideal for growing businesses and teams';,;
     features: [;
       'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrationsAdvanced analyticsPhone & email supportCustom brandingAPI access';
     ],;
-    icon: <Zap className="w-6 h-6" />,;
-    color: 'from-purple-500 to-pink-500',;
-    cta: 'Start Free Trial',;
-    ctaLink: '/contact',;
+    icon: <Zap className="w-6 h-6" />;,;
+    color: 'from-purple-500 to-pink-500';,;
+    cta: 'Start Free Trial';,;
+    ctaLink: '/contact';,;
     popular: true;
   };
   {;
-    name: 'Enterprise',;
-    price: 999,;
-    period: 'month',;
-    description: 'For large organizations with complex needs',;
+    name: 'Enterprise';,;
+    price: 999;,;
+    period: 'month';,;
+    description: 'For large organizations with complex needs';,;
     features: [;
       'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
       'On-premise optionsCompliance certifications';
     ],;
-    icon: <Shield className="w-6 h-6" />,;
-    color: 'from-green-500 to-emerald-500',;
-    cta: 'Contact Sales',;
-    ctaLink: '/contact',;
+    icon: <Shield className="w-6 h-6" />;,;
+    color: 'from-green-500 to-emerald-500';,;
+    cta: 'Contact Sales';,;
+    ctaLink: '/contact';,;
     popular: false;
   }
 const serviceCategories = [;
   {;
-    name: 'AI & Consciousness Services',;
-    icon: <Brain className='w-8 h-8' />,;
-    services: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.slice(0, 6),;
+    name: 'AI & Consciousness Services';,;
+    icon: <Brain className='w-8 h-8' />;,;
+    services: cuttingEdgeAIServices2025 && cuttingEdgeAIServices2025.slice(0;, 6),;
     description:;
       'Revolutionary AI platforms with consciousness and emotional intelligence',;
   },;
   {;
-    name: 'Quantum & Emerging Tech',;
-    icon: <Atom className='w-8 h-8' />,;
-    color: 'from-purple-500 to-pink-500',;
-    services: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.slice(0, 6),;
+    name: 'Quantum & Emerging Tech';,;
+    icon: <Atom className='w-8 h-8' />;,;
+    color: 'from-purple-500 to-pink-500';,;
+    services: cuttingEdgeQuantumServices2025 && cuttingEdgeQuantumServices2025.slice(0;, 6),;
     description:;
       'Breakthrough quantum computing and space technology solutions',;
   },;
   {;
-    name: 'Enterprise IT Solutions',;
-    icon: <Shield className='w-8 h-8' />,;
-    color: 'from-blue-500 to-cyan-500',;
-    services: cuttingEdgeEnterpriseITServices2025 && cuttingEdgeEnterpriseITServices2025.slice(0, 6),;
-    description: 'Advanced enterprise infrastructure and security solutions',;
+    name: 'Enterprise IT Solutions';,;
+    icon: <Shield className='w-8 h-8' />;,;
+    color: 'from-blue-500 to-cyan-500';,;
+    services: cuttingEdgeEnterpriseITServices2025 && cuttingEdgeEnterpriseITServices2025.slice(0;, 6),;
+    description: 'Advanced enterprise infrastructure and security solutions';,;
   },;
   {;
-    name: 'Micro SAAS Solutions',;
-    icon: <Rocket className='w-8 h-8' />,;
-    color: 'from-teal-500 to-emerald-500',;
-    services: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.slice(0, 6),;
-    description: 'Innovative business solutions for modern enterprises',;
+    name: 'Micro SAAS Solutions';,;
+    icon: <Rocket className='w-8 h-8' />;,;
+    color: 'from-teal-500 to-emerald-500';,;
+    services: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.slice(0;, 6),;
+    description: 'Innovative business solutions for modern enterprises';,;
   },;
 ];
 const stats = [;
   {;
-    number: '25+',;
-    label: 'Cutting-Edge Services',;
-    icon: Star,;
-    color: 'text-cyan-400',;
+    number: '25+';,;
+    label: 'Cutting-Edge Services';,;
+    icon: Star;,;
+    color: 'text-cyan-400';,;
   },;
   {;
-    number: '$500B+',;
-    label: 'Market Coverage',;
-    icon: TrendingUp,;
-    color: 'text-purple-400',;
+    number: '$500B+';,;
+    label: 'Market Coverage';,;
+    icon: TrendingUp;,;
+    color: 'text-purple-400';,;
   },;
   {;
-    number: '99 && 99.9%',;
-    label: 'Success Rate',;
-    icon: Award,;
-    color: 'text-green-400',;
+    number: '99 && 99.9%';,;
+    label: 'Success Rate';,;
+    icon: Award;,;
+    color: 'text-green-400';,;
   },;
   {;
-    number: '24/7',;
-    label: 'Expert Support',;
-    icon: Users,;
-    color: 'text-pink-400',;
-  },];  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },;
-  { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },;
-  { number: '99 && 99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },;
-  { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+    number: '24/7';,;
+    label: 'Expert Support';,;
+    icon: Users;,;
+    color: 'text-pink-400';,;
+  },];  { number: '25+';, label: 'Cutting-Edge Services';, icon: Star;, color: 'text-cyan-400' ;},;
+  { number: '$500B+';, label: 'Market Coverage';, icon: TrendingUp;, color: 'text-purple-400' ;},;
+  { number: '99 && 99.9%';, label: 'Success Rate';, icon: Award;, color: 'text-green-400' ;},;
+  { number: '24/7';, label: 'Expert Support';, icon: Users;, color: 'text-pink-400' ;}
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
@@ -454,9 +440,9 @@ const stats = [;
 
 
               <motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                className='text-xl md: text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.4 ;}}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Pricing 2025
@@ -480,22 +466,22 @@ const stats = [;
       : allServices.filter(service => service.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20;, opacity: 0 ;},
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0;,
+      opacity: 1;,
       transition: {
-duration: 0.5,
+duration: 0.5;,
       },
     },
   };
@@ -529,16 +515,16 @@ duration: 0.5,
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 className='text-center'
             >
               <motion.h1
                 className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                initial={{ opacity: 0;, scale: 0.9 ;}}
+                animate={{ opacity: 1;, scale: 1 ;}}
+                transition={{ duration: 1;, delay: 0.2 ;}}
               >
                 Cutting-Edge
 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
@@ -548,9 +534,9 @@ className='text-center'
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.4 ;}}
               >
 Experience revolutionary technology at competitive prices. Our
                 cutting-edge services are designed to give you a competitive
@@ -558,7 +544,7 @@ Experience revolutionary technology at competitive prices. Our
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you
+                className='grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0;, y: 20 ;}}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
 {/* Hero Stats */}
@@ -568,56 +554,56 @@ Experience revolutionary technology at competitive prices. Our
   };
 
   const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
+    hidden: { y: 20;, opacity: 0 ;},;
     visible: {;
-      y: 0,;
-      opacity: 1,;
+      y: 0;,;
+      opacity: 1;,;
       transition: {;
-        duration: 0 && 0.5,;
+        duration: 0 && 0.5;,;
       },;
     },  };        duration: 0 && 0.5;
       }
     }
   }
 
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className='text-center'>;
               <motion&& motion.h1
                 className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
               <motion&& motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
+                animate={{ opacity: 1;, scale: 1 ;}}
+                transition={{ duration: 1;, delay: 0 && 0.2 ;}}>;
                 Cutting-Edge;
                 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
                   Pricing 2025;
                 </span>;
               </motion && motion.h1>;
               <motion&& motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
+                className='text-xl md: text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
                   Pricing 2025;
                 </span>;
               </motion && motion.h1>;
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}}>;
                 Experience revolutionary technology at competitive prices. Our;
                 cutting-edge services are designed to give you a competitive;
                 advantage while maintaining affordability and value.;
               </motion && motion.p>;
               {/* Hero Stats */}
               <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
+                className='grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0;, y: 20 ;}}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
               </motion && motion.p>;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0;, y: 20 ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: 0.6 ;}}
               >
                 {stats.map((stat, index) => (
 <div key={index} className='text-center'>
@@ -640,8 +626,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: 0 && 0.6 ;}}>;
                 {stats && stats.map((stat, index) => (;
                   <div key={index} className='text-center'>;
                     <div className='flex justify-center mb-2'>;
@@ -658,7 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <stat && stat.icon className={`w-5 h-5 ${stat && stat.color}`} />;
                       </div>;
                     </div>;
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat && stat.number}</div>;
+                    <div className="text-2xl md: text-3xl font-bold text-white mb-1">{stat && stat.number;}</div>;
                     <div className="text-sm text-white/70">{stat && stat.label}</div>;
                 ))}
         {/* Pricing Tiers Section */}
@@ -681,10 +667,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
+              viewport={{ once: true ;}}
                 Pricing Plans;
               </h2>;
               <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
@@ -693,7 +679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ensure your success.;
               </p>;
             </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers && pricingTiers.map((tier, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers && pricingTiers.map((tier;, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology ;
                 and world-class support to ensure your success.;
               </p>;
@@ -718,10 +704,10 @@ className='text-center mb-16'
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                  viewport={{ once: true ;}}
                   className={`relative group ${
                     tier.popular ? 'scale-105' : ''
                   }`}
@@ -821,10 +807,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
+              viewport={{ once: true ;}}
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              <buttonclassName="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -893,10 +879,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variants={containerVariants}
 initial='hidden'
               whileInView='visible'
-              viewport={{ once: true }}
+              viewport={{ once: true ;}}
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="hidden";
               whileInView="visible";
-              viewport={{ once: true }}
+              viewport={{ once: true ;}}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
@@ -969,7 +955,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      <span>Market: {service.marketSize}</span>
+                      <span>Market: {service.marketSize;}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
@@ -1002,7 +988,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                     {/* Market Info */}
                     <div className='flex items - center justify - between text - sm text - white / 60 mb - 4'>;
-                      <span > Market: {service.market_size}</span>;
+                      <span > Market: {service.market_size;}</span>;
                       <span className='text - cyan - 400'>{service.category}</span>;
                     </div>;
                     {/* Pricing */}
@@ -1017,7 +1003,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
-                    <div className='flex items - center justify - between'>                      <span > Market: {service.market_size}</span>;
+                    <div className='flex items - center justify - between'>                      <span > Market: {service.market_size;}</span>;
                       <span className="text - cyan - 400">{service.category}</span>;
                     </div>;
                     {/* Pricing */}
@@ -1087,10 +1073,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
+              viewport={{ once: true ;}}
             >
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -1115,7 +1101,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 cutting-edge technology solutions. Contact us today for a personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                  href={`tel:${contactInfo && contactInfo.mobile}`}
+                  href={`tel: ${contactInfo && contactInfo.mobile;}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Get Started?;
               </h2>;
@@ -1131,14 +1117,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>;
                 <a
                   <div className="text-white font-semibold">Phone</div>
-                  <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                  <a href={`tel: ${contactInfo.mobile;}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     {contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
                     <Mail className="w-6 h-6 text-cyan-400" />
-                  href={`tel:${contactInfo.mobile}`}
+                  href={`tel: ${contactInfo.mobile;}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'
                 >
                   <Phone className='mr-2 w-5 h-5' />
@@ -1153,7 +1139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-white font-semibold'>Phone</div>
                   <a
-                    href={`tel:${contactInfo.mobile}`}
+                    href={`tel: ${contactInfo.mobile;}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
                   >
                     {contactInfo.mobile}
@@ -1165,7 +1151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-white font-semibold'>Email</div>
                   <a
-                    href={`mailto:${contactInfo.email}`}
+                    href={`mailto: ${contactInfo.email;}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
                   >
                     {contactInfo.email}
@@ -1188,7 +1174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
 
-                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    href={`mailto: ${contactInfo && contactInfo.email;}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
                   </a>;
@@ -1202,7 +1188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {contactInfo && contactInfo.address}
                   </div>                </div>                  </div>;
                   <div className="text-white font-semibold">Phone</div>;
-                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                  <a href={`tel: ${contactInfo && contactInfo.mobile;}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
                     {contactInfo && contactInfo.mobile}
                   </a>;
                 </div>;
@@ -1211,7 +1197,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Mail className="w-6 h-6 text-cyan-400" />;
                   </div>;
                   <div className="text-white font-semibold">Email</div>;
-                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                  <a href={`mailto: ${contactInfo && contactInfo.email;}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
                     {contactInfo && contactInfo.email}
                   </a>;
                 </div>;
@@ -1280,10 +1266,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
           <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
+              viewport={{ once: true ;}}
             >;
               <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
                 Ready to Get Started?;
@@ -1302,7 +1288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowRight className='ml - 2 w - 5 h - 5' />;
                 </a>;
                 <a;
-                  href={`tel:${contact_info.mobile}`}
+                  href={`tel: ${contact_info.mobile;}`}
                   className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105';
                 >;
                   <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Get Started?;
@@ -1320,7 +1306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowRight className="ml - 2 w - 5 h - 5" />;
                 </a>;
                 <a;
-                  href={`tel:${contact_info.mobile}`}
+                  href={`tel: ${contact_info.mobile;}`}
                   className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
                 >;
                   <Phone className="mr - 2 w - 5 h - 5" />;
@@ -1335,7 +1321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <div className='text - white font - semibold'>Phone</div>;
                   <a;
-                    href={`tel:${contact_info.mobile}`}
+                    href={`tel: ${contact_info.mobile;}`}
                     className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
                   >;
                     {contact_info.mobile}
@@ -1347,7 +1333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <div className='text - white font - semibold'>Email</div>;
                   <a;
-                    href={`mailto:${contact_info.email}`}
+                    href={`mailto: ${contact_info.email;}`}
                     className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
                   >;
                     {contact_info.email}
@@ -1362,7 +1348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {contact_info.address}
                   </div>                </div>                  </div>;
                   <div className="text - white font - semibold">Phone</div>;
-                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                  <a href={`tel: ${contact_info.mobile;}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
                     {contact_info.mobile}
                   </a>;
                 </div>;
@@ -1371,7 +1357,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Mail className="w - 6 h - 6 text - cyan - 400" />;
                   </div>;
                   <div className="text - white font - semibold">Email</div>;
-                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
+                  <a href={`mailto: ${contact_info.email;}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
                     {contact_info.email}
                   </a>;
                 </div>;

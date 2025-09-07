@@ -13,12 +13,9 @@ export default function QuantumAICognitivePage() {;
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
-import React from 'react',
+import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {
 
@@ -62,11 +59,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime;}</div>
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
-              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>
+              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize;}, Growth: {service.growthRate;}</div>
               <Link href="/contact" variant="quantum" size="lg" className="w-full">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -99,7 +96,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit" > <div className="flex items - end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next / head';
-import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import {enhancedRealMicroSaasServices} from '../data / enhanced - real - micro - saas - services';
@@ -148,11 +144,11 @@ if ( {) {
               <div className="flex items - end justify-between mb-3">;
                 <div>;
                   <div className="text - 3xl font-bold text-white">{service.price}<span className="text - slate-400 text-base">{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time;}</div>;
                 </div>;
                 <div className="flex items - center text-yellow-400"><Star className="w - 4 h-4 mr-1" />{service.rating.to_fixed (1)}</div>;
               </div>;
-              <div className="text - slate - 300 text-sm mb-4">Market: {service.market_size}, Growth: {service.growth_rate}</div>;
+              <div className="text - slate - 300 text-sm mb-4">Market: {service.market_size;}, Growth: {service.growth_rate;}</div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">;
                 Start Free Trial;
                 <ArrowRight className="w - 5 h-5 ml-2" />;

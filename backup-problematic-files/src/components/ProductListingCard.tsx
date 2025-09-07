@@ -1,23 +1,23 @@
-import React, { useState } from 'react',;
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;""
-import { Button } from "@/components/ui/button",;""
-import { ProductListing } from "@/types/listings",;""
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";""
+import { Button } from "@/components/ui/button";""
+import { ProductListing } from "@/types/listings";""
 import { DollarSign } from 'lucide-react';
-import { RatingStars } from "@/components/RatingStars",;""
-import { FavoriteButton } from "@/components/FavoriteButton",;""
-import { useDispatch } from 'react-redux',;
-import type { AppDispatch } from '@/store',;
-import { addItem } from '@/store/cartSlice',;
-import { toast } from '@/hooks/use-toast',;
-import { useCurrency } from '@/hooks/useCurrency',;
+import { RatingStars } from "@/components/RatingStars";""
+import { FavoriteButton } from "@/components/FavoriteButton";""
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image', // Import next/image;
 ;
 interface ProductListingCardProps {;
-  listing:ProductListing,;
+  listing: ProductListing;,;
   view?:'grid' | 'list',;
-  onRequestQuote?:(id:string) => void,;
+  onRequestQuote?:(id: string) => void;,;
   detailBasePath?:string;
 }
 const ProductListingCardComponent = ({;
@@ -60,19 +60,19 @@ const ProductListingCardComponent = ({;
   const handleViewListing = () => {;
     // Debug logging for development;
     if (process.env.NODE_ENV === 'development') {;
-      logDebug('[ProductCard] Navigating to:', { path:`${detailBasePath}/${listing.id}` }),;
-      logDebug('[ProductCard] Listing ID:', { id:listing.id }),;
-      logDebug('[ProductCard] Listing Title:', { title:listing.title }),;
+      logDebug('[ProductCard] Navigating to: ';, { path: `${detailBasePath;}/${listing.id}` }),;
+      logDebug('[ProductCard] Listing ID: ';, { id: listing.id ;}),;
+      logDebug('[ProductCard] Listing Title: ';, { title: listing.title ;}),;
     // Validate listing ID exists before navigation;
     if (!listing.id) {;
-      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component:'ProductListingCard' }),;
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' ;}),;
       toast({;
-        title:"Navigation Error",,
-  description:"Product information is incomplete",;
-        variant:"destructive"}),;
-        title:"Navigation Error",;""
-        description:"Product information is incomplete",;")"
-        variant:"destructive"}),;"
+        title: "Navigation Error";,,
+  description: "Product information is incomplete";,;
+        variant: "destructive";}),;
+        title: "Navigation Error";,;""
+        description: "Product information is incomplete";,;")"
+        variant: "destructive";}),;"
 pr-12325
       return,;
     ;`;
@@ -81,7 +81,7 @@ pr-12325
 
     <div;"
       data-testid="equipment-link";""`;
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' :'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' :'flex-row';} cursor-pointer focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`;}
       onClick={handleViewListing}
       tabIndex={0}
       role="button";"
@@ -95,10 +95,10 @@ pr-12325
           <Image;
             src={imageSrc}            alt={listing.title}
             fill={true}"
-            style={{ objectFit:'cover' }}
+            style={{ objectFit: 'cover' ;}}
             onError={handleImageError}
             priority={false} // Assuming these are not LCP images;
-            sizes={isGrid ? "(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" :"192px"} // 192px is w-48;"
+            sizes={isGrid ? "(max-width: 768px) 100vw;, (max-width: 1200px) 50vw;, 33vw" :"192px"} // 192px is w-48;"
           />;
 "
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">;"
@@ -125,7 +125,7 @@ pr-12325
               <p className="text-primary font-semibold text-sm mb-1">;                {listing.uspHeadline}"
 </p>
               </p>;"
-            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">;"
+            <h3 className="font-semibold text-foreground mb-2 hover: text-primary transition-colors text-[clamp(1rem;,2.5vw,1.125rem)]">;"
 </h3>
             </h3>;
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">;            {listing.description}"
@@ -219,7 +219,7 @@ setImageError (true) ;
 }</Button> <Button onClick={;
   (e) => {;
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({;
-  id: listing.id,  title: listing.title, price: listing.price ?? 0 ;
+  id: listing.id;,  title: listing.title;, price: listing.price ?? 0 ;
 }) );';
 router.push ('/checkout') ;
 }

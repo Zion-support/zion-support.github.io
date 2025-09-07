@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'; // Changed from useNavigate
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 

@@ -1,18 +1,18 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
   }
 const features = [
 
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
+    return { hasError: true ;};
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
   }
   render() {
     if (this.state.hasError) {}
@@ -28,7 +28,7 @@ export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
+    'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
@@ -37,10 +37,10 @@ const features = [
 
 }
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
   }
   render() {
     if (this.state.hasError) {}
@@ -49,20 +49,17 @@ const features = [
     return this.props.children;
   }
 }
-import React from 'react';
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
+    'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
+    'Artifacts: HAR;, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
   ];
@@ -202,7 +199,7 @@ function BrowserAutomationCloudPage() {
   const features = [
   'Parallel Playwright / Puppeteer execution',
     'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
+    'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API'
   ];
@@ -294,9 +291,8 @@ function BrowserAutomationCloudPage() {
   </>),
 
 const features = ["
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API]
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR;, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API]
 	];
-import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
@@ -329,19 +325,19 @@ export default function BrowserAutomationCloudPage() {
   </>)}
 
 const features = [
-  'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
+  'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR;, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 ];
 
 import React from 'react';,import SEO from '../components/SEO';
 import { Check, ExternalLink  } from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {const features = [
-  'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];
+  'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR;, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];
 
 const features = [
   'Parallel Playwright/Puppeteer execution';
     'Queued jobs with retries and rate limits';
-    'Artifacts: HAR, traces, screenshots, videos';
+    'Artifacts: HAR;, traces, screenshots, videos';
     'Rotating proxies and geo targeting';
     'Webhook callbacks and REST API';
 
@@ -366,11 +362,9 @@ const features = null;
   </>)}
 }
 	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR;, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
-import React from 'react';,
-import SEO from '../components/SEO';
-import React from 'react';
+import React from 'react';;
 
 export default function BrowserAutomationCloudPage() {
 
@@ -378,13 +372,13 @@ export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
+    'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;']
 
     'Parallel Playwright/Puppeteer execution
     'Queued jobs with retries and rate limits
-    'Artifacts: HAR, traces, screenshots, videos
+    'Artifacts: HAR;, traces, screenshots, videos
     'Rotating proxies and geo targeting
     'Webhook callbacks and REST API]
   return (
@@ -436,7 +430,7 @@ export default function BrowserAutomationCloudPage() {
 const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
+    'Artifacts: HAR;, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
   ];

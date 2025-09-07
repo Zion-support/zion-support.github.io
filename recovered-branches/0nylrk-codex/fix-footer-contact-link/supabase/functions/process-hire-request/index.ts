@@ -1,5 +1,5 @@
 
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
 interface HireRequest {
@@ -175,8 +175,8 @@ import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;"
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*"""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,;
 import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

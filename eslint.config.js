@@ -8,9 +8,9 @@ import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+  baseDirectory: import.meta.dirname;,
+  recommendedConfig: js.configs.recommended;,
+  allConfig: js.configs.all;,
 });
 
 export default [
@@ -105,28 +105,28 @@ export default [
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{js;,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2020;,
       globals: {
         ...globals.browser,
         ...globals.node,
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
+        jest: 'readonly';,
+        describe: 'readonly';,
+        it: 'readonly';,
+        test: 'readonly';,
+        expect: 'readonly';,
+        beforeEach: 'readonly';,
+        afterEach: 'readonly';,
+        beforeAll: 'readonly';,
+        afterAll: 'readonly';,
       },
-      parser: typescriptParser,
+      parser: typescriptParser;,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: 'latest';,
+        sourceType: 'module';,
         ecmaFeatures: {
-          jsx: true,
+          jsx: true;,
         },
       },
     },
@@ -147,9 +147,9 @@ pr-12243
       'react/display-name': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' ;}],
       'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': ['warn', { allow: ['warn';, 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
@@ -157,52 +157,49 @@ pr-12243
     },
     settings: {
       react: {
-        version: 'detect',
+        version: 'detect';,
       },
     },
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js'];,
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
+        console: 'readonly';,
+        process: 'readonly';,
+        Buffer: 'readonly';,
+        __dirname: 'readonly';,
+        __filename: 'readonly';,
+        global: 'readonly';,
+        module: 'readonly';,
+        require: 'readonly';,
+        exports: 'readonly';,
       },
     },
     rules: {
       'no-console': 'off',
     },
   },
-import js from '@eslint/js';
-import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    ignores: ['**/*.d.ts'],
+    files: ['**/*.{js;,jsx,ts,tsx}'],
+    ignores: ['**/*.d.ts'];,
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
+      ecmaVersion: 2022;,
+      sourceType: 'module';,
       globals: {
         ...globals.browser,
         ...globals.node,
       },
-      parser: tsparser,
+      parser: tsparser;,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
+          jsx: true;,
         },
       },
     },
@@ -215,11 +212,11 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true ;},
       ],
       'no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_' }
+        { argsIgnorePattern: '^_' ;}
       ],
       // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
     },

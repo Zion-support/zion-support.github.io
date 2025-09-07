@@ -42,9 +42,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
 
-import { QuoteRequestSteps } from "../QuoteRequestForm",
+import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils",;
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }

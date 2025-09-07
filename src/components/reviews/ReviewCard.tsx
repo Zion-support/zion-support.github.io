@@ -1,8 +1,8 @@
 return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Review } from "@/types/reviews",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -79,15 +79,15 @@ pr-12325
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
 
-import {  Dialog,  Dialog,
+import {  Dialog,  Dialog,;
 
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
+import { useState } from "react",;
+import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import { Review } from "@/types/reviews",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
 import {
   Dialog,
 
@@ -98,13 +98,13 @@ import {
   DialogTitle,
 
 
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
+import { useState } from "react",;
+import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import { Review } from "@/types/reviews",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
 import {
   Dialog,
   DialogContent,
@@ -171,7 +171,7 @@ import { Review } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
-import {  Dialog,  Dialog,
+import {  Dialog,  Dialog,;
   DialogContent,
   DialogDescription,
   DialogFooter,

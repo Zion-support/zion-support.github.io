@@ -1,6 +1,6 @@
 import { useRouter  } from 'next/router';
-import useSWR from 'swr',
-import React, { useMemo, useState } from 'react',
+import useSWR from 'swr',;
+import React, { useMemo, useState } from 'react',;
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';

@@ -3,7 +3,7 @@ import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',;
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -26,9 +26,9 @@ serve(async (req) => {
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
+import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',;
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',;
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts
 

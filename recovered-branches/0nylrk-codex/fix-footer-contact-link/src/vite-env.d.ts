@@ -56,7 +56,7 @@ declare namespace React {type ReactNode = React.ReactNode;
 declare module 'vitest / config' {
   export { define_config } from 'vite';
 declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',
+  import { Plugin } from 'vite',;
   export default function reactSWC (): Plugin;
   export interface BadgeProps {
   // TODO: Implement

@@ -25,7 +25,7 @@ export default function QuantumSecureCloudInfrastructure() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   render() {
     if (this.state.hasError) {
@@ -35,9 +35,6 @@ class ErrorBoundary extends React.Component {
   }
 }
  import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {;
 	return (<ServiceLanding
 			title="Quantum-Secure Cloud Infrastructure"
@@ -53,8 +50,6 @@ export default function QuantumSecureCloudInfrastructure() {;
 		/>
 	)
 }
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components / SEO';
 export default /**
  * QuantumSecureCloudInfrastructure - Function description

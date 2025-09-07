@@ -16,7 +16,7 @@ const jobOpenings = [{
       "5+ years experience in AI/ML development"
       "Proficiency in Python, TensorFlow, PyTorch"
       "Experience with cloud platforms (AWS, Azure, GCP)"
-import Layout from '../components/Layout';    ],
+import Layout from '../components/Layout';    ],;
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {

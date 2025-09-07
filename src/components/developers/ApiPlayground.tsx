@@ -88,8 +88,8 @@ export function ApiPlayground({
       })
       const query = searchParams.toString()
       if (query) url += `?${query}` }
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
+import { Button } from "@/components/ui/button",;
+import CodeBlock from "./CodeBlock",;
 interface Param {
   name: string,
   type: string,

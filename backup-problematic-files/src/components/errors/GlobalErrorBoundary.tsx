@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorBoundaryState {;
   hasError: boolean;,
   error:Error | null;
@@ -20,7 +20,7 @@ interface ErrorBoundaryState {;
 interface ErrorBoundaryProps {;
   children:ReactNode;
   fallback?:ReactNode;
-  onError?:(error:Error, errorInfo:ErrorInfo) => void;
+  onError?:(error: Error;, errorInfo:ErrorInfo) => void;
   enableRetry?:boolean;
   maxRetries?:number;
   showReportButton?:boolean;
@@ -34,9 +34,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">;"
 </div>
           <motion.div;
-            initial={{ opacity:0, scale:0.95 }}
-            animate={{ opacity:1, scale:1 }}
-            transition={{ duration:0.3 }}
+            initial={{ opacity: 0;, scale: 0.95 ;}}
+            animate={{ opacity: 1;, scale: 1 ;}}
+            transition={{ duration: 0.3 ;}}
           >;
 </motion>"
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">;"
@@ -73,14 +73,14 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <Home className="h-4 w-4" />;"
 
                   <Button ;
-                    onClick={() => this.setState({ showDetails:!this.state.showDetails })}
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails ;})}
                     <Bug className="h-4 w-4" />;"
 
                 <AnimatePresence>;
 
-                      initial={{ opacity:0, height:0 }}"
-                      animate={{ opacity:1, height:'auto' }}
-                      exit={{ opacity:0, height:0 }}
+                      initial={{ opacity: 0;, height: 0 ;}}"
+                      animate={{ opacity: 1;, height: 'auto' ;}}
+                      exit={{ opacity: 0;, height: 0 ;}}
                       className="border-t pt-4";"
                       <div className="space-y-4">;"
                         <div>;
@@ -106,7 +106,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 
 export const withErrorBoundary = <P extends object>(;
 
-  Component:React.ComponentType<P>,;
+  Component: React.ComponentType<P>;,;
   errorBoundaryProps?:Omit<ErrorBoundaryProps 'children'>;
 
     <GlobalErrorBoundary {...errorBoundaryProps}>;
@@ -139,7 +139,7 @@ export const withErrorBoundary = <P extends object>(;
 }return null;
 }private getBuildInfo () {;
   return {';
-  version: process.env.NEXT PUBLIC APP VERSION || 'unknown',  environment: process.env.NODE ENV, buildTime: process.env.NEXT PUBLIC BUILD TIME || 'unknown' ;
+  version: process.env.NEXT PUBLIC APP VERSION || 'unknown';,  environment: process.env.NODE ENV;, buildTime: process.env.NEXT PUBLIC BUILD TIME || 'unknown' ;
 }';
 }private getErrorSeverity (error: Error) : 'low'| 'medium'| 'high'| 'critical' {';
   const message = error.message.toLowerCase () const stack = error.stack?.toLowerCase () || ''//Critical errors if (message.includes ('network') || message.includes ('fetch') ) {';
@@ -164,28 +164,28 @@ export const withErrorBoundary = <P extends object>(;
   return ;
 }const retryDelay = Math.pow (2, this.state.retryCount) * 1000 //Exponential backoff const timeout = setTimeout ( () => {;
   this.setState ({;
-  hasError: false, error: null, errorInfo: null, errorId: null,  retryCount: this.state.retryCount + 1, showDetails: false ;
+  hasError: false;, error: null;, errorInfo: null;, errorId: null;,  retryCount: this.state.retryCount + 1;, showDetails: false ;
 }) ;
 }, retryDelay) this.retryTimeouts.push (timeout) ;
 }private copyErrorDetails = async () => {;
   const errorDetails = {';
-  errorId: this.state.errorId, message: this.state.error?.message, stack: this.state.error?.stack, componentStack: this.state.errorInfo?.componentStack, timestamp: new Date () .toISOString (),  url: typeof window !== 'undefined'? window.location.href : 'unknown', userAgent: typeof window !== 'undefined'? navigator.userAgent : 'unknown' ;
+  errorId: this.state.errorId;, message: this.state.error?.message;, stack: this.state.error?.stack;, componentStack: this.state.errorInfo?.componentStack;, timestamp: new Date () .toISOString ();,  url: typeof window !== 'undefined'? window.location.href : 'unknown';, userAgent: typeof window !== 'undefined'? navigator.userAgent : 'unknown' ;
 }try {;
   await navigator.clipboard.writeText (JSON.stringify (errorDetails,  null, 2) ) //Could show a toast notification here ;
 }catch (err) {';
-  logErrorToProduction ('Failed to copy error details:', {;
+  logErrorToProduction ('Failed to copy error details: ';, {;
   data: err ;
 }) ;
 }
 }private reportError = async () => {;
   if (!this.state.error || !this.state.errorId) return try {';
   //Report to your error reporting service const response = await fetch ('/api/error-report',  {';
-  method: 'POST', headers: {';
+  method: 'POST';, headers: {';
   'Content-Type': 'application/json' 
 };
 body: JSON.stringify ({;
-  errorId: this.state.errorId, error: {;
-  message: this.state.error.message,  stack: this.state.error.stack, name: this.state.error.name 
+  errorId: this.state.errorId;, error: {;
+  message: this.state.error.message;,  stack: this.state.error.stack;, name: this.state.error.name ;
 };
 errorInfo: this.state.errorInfo;
 userFeedback: this.state.userFeedback;
@@ -196,7 +196,7 @@ timestamp: new Date () .toISOString () ;
   //Show success message ;
 }
 }catch (err) {';
-  logErrorToProduction ('Failed to report error:', {;
+  logErrorToProduction ('Failed to report error: ';, {;
   data: err ;
 }) ;
 }
@@ -210,11 +210,11 @@ timestamp: new Date () .toISOString () ;
   return this.props.fallback ;
 }const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;
   {;
-  opacity: 0, scale: 0.95 ;
+  opacity: 0;, scale: 0.95 ;
 }
 }animate= {;
   {;
-  opacity: 1, scale: 1 ;
+  opacity: 1;, scale: 1 ;
 }
 }transition= {;
   {;

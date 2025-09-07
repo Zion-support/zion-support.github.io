@@ -18,19 +18,19 @@ import Link from 'next/link';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Job, JobStatus } from "@/types/jobs",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
 import { Loader2, Edit, X, Eye } from 'lucide-react'
-import { format } from "date-fns",
+import { format } from "date-fns",;
 
 
-import Link from "next/link",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import Link from "next/link",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 interface JobsListProps {
   filter?: JobStatus,
   filter?: JobStatus;
@@ -47,7 +47,7 @@ import { Badge } from "@/components/ui/badge",""
 import { Loader2, Edit, X, Eye } from 'lucide-react
 import { format } from "date-fns",""
 import Link from "next/link",""
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger',;
 interface JobsListProps {
   // TODO: Implement
 }

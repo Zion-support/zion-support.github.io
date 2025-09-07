@@ -25,8 +25,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files))
     }
 
-import { AppPlatform } from "./MetadataManager",
-import { toast } from "sonner",
+import { AppPlatform } from "./MetadataManager",;
+import { toast } from "sonner",;
 interface ScreenshotManagerProps {
   platform: AppPlatform
 import React, { useState, useRef } from "react",;

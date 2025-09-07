@@ -1,18 +1,18 @@
 
-import { QuoteRequestSteps } from "../QuoteRequestForm",;""
+import { QuoteRequestSteps } from "../QuoteRequestForm";""
 import { CheckIcon } from 'lucide-react';
-import { cn } from "@/lib/utils",;"
+import { cn } from "@/lib/utils";"
 ;
 interface StepProgressProps {;
   currentStep:QuoteRequestSteps;
 }
 export function StepProgress({ currentStep } StepProgressProps) {;
-  const steps:{ id:QuoteRequestSteps, label:string }[] = [;"
-    { id:"service", label:"Service" },;""
-    { id:"details", label:"Details" },;""
-    { id:"timeline", label:"Timeline" },;""
-    { id:"budget", label:"Budget" },;""
-    { id:"summary", label:"Summary" }"]
+  const steps: { id:QuoteRequestSteps;, label: string ;}[] = [;"
+    { id: "service";, label: "Service" ;},;""
+    { id: "details";, label: "Details" ;},;""
+    { id: "timeline";, label: "Timeline" ;},;""
+    { id: "budget";, label: "Budget" ;},;""
+    { id: "summary";, label: "Summary" ;}"]
   ],;
   const getStepStatus = (stepId:QuoteRequestSteps) => {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
@@ -30,7 +30,7 @@ export function StepProgress({ currentStep } StepProgressProps) {;
         <div ;"
           className="absolute h-full bg-zion-purple transition-all duration-500";"
           style={{ ;)
-            width:`${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100;}%`;
       </div>;"
       <div className="flex justify-between relative">;"
             <div key={step.id} className="flex flex-col items-center relative">;"

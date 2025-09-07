@@ -20,8 +20,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
-import React from 'react',
-import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * RetailTechnologySolutions - Function description
  */

@@ -58,8 +58,8 @@ docsSearchSuggestions;
 } from '@/data / docsSearchData';
 
 
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { cn } from "@/lib/utils",;
 
 import {
  getDocsSearchPath,

@@ -9,39 +9,38 @@ pr-12325
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-      route: "/",
-      pathname: "/",
-      query: {},
-      asPath: "/",
+      route: "/";,
+      pathname: "/";,
+      query: {;},
+      asPath: "/";,
 
 // Jest setup file
-import '@testing-library/jest-dom';
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
+      route: '/';,
+      pathname: '/';,
+      query: {;},
+      asPath: '/';,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
+      push: jest.fn();,
+      pop: jest.fn();,
+      reload: jest.fn();,
+      back: jest.fn();,
+      prefetch: jest.fn();,
+      prefetch: jest.fn().mockResolvedValue(undefined);,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-      prefetch: jest.fn().mockResolvedValue(undefined),
+      prefetch: jest.fn().mockResolvedValue(undefined);,
 pr-12325
-      beforePopState: jest.fn(),
+      beforePopState: jest.fn();,
       events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
+        on: jest.fn();,
+        off: jest.fn();,
+        emit: jest.fn();,
       },
-      isFallback: false,
+      isFallback: false;,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 pr-12325
     };
@@ -59,8 +58,8 @@ jest.mock("next/image", () => {
 jest.mock("next/link", () => {
   const React = require("react");
   return {
-    _esModule: true,
-    default: ({ children, href, ...props }) => {
+    _esModule: true;,
+    default: ({ children;, href, ...props }) => {
       return React.createElement("a", { href, ...props }, children);
     },
   };
@@ -68,19 +67,19 @@ jest.mock("next/link", () => {
 
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
-  writable: true,
+  writable: true;,
   value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    matches: false;,
+    media: query;,
+    onchange: null;,
+    addListener: jest.fn();, // deprecated
+    removeListener: jest.fn();, // deprecated
 // Mock Next.js navigation
 jest.mock("next/navigation", () => ({
-      replace: jest.fn(),
-      prefetch: jest.fn(),
-      forward: jest.fn(),
-      refresh: jest.fn(),
+      replace: jest.fn();,
+      prefetch: jest.fn();,
+      forward: jest.fn();,
+      refresh: jest.fn();,
   useSearchParams() {
     return new URLSearchParams();
   usePathname() {
@@ -88,17 +87,17 @@ jest.mock("next/navigation", () => ({
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+  writable: true;,
   value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
+    matches: false;,
+    media: query;,
+    onchange: null;,
+    addListener: jest.fn();,
+    removeListener: jest.fn();,
 pr-12325
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    addEventListener: jest.fn();,
+    removeEventListener: jest.fn();,
+    dispatchEvent: jest.fn();,
   })),
 });
 
@@ -122,7 +121,7 @@ beforeEach(() => {
 main
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
-  __esModule: true,
+  __esModule: true;,
   default: (props) => {
     return <img {...props} />;
   },

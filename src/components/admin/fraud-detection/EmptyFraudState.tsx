@@ -35,8 +35,8 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react'
 
 

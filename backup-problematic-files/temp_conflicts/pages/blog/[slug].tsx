@@ -1,25 +1,25 @@
-import type { GetServerSideProps, NextPage } from 'next',;
-import Head from 'next/head',;
-import { useEffect, useMemo } from 'react',;
-import { BlogPost } from '@/utils/types/blog',;
-import { findPostBySlug, listPublishedPosts } from '@/utils/data/blogStore',;
-import PostContent from '@/components/blog/PostContent',;
-import ShareButtons from '@/components/blog/ShareButtons',;
-import SuggestedArticles from '@/components/blog/SuggestedArticles',;
-import CTASection from '@/components/blog/CTASection',;
-import LikeButton from '@/components/blog/LikeButton',;
+import type { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
+import { useEffect, useMemo } from 'react';
+import { BlogPost } from '@/utils/types/blog';
+import { findPostBySlug, listPublishedPosts } from '@/utils/data/blogStore';
+import PostContent from '@/components/blog/PostContent';
+import ShareButtons from '@/components/blog/ShareButtons';
+import SuggestedArticles from '@/components/blog/SuggestedArticles';
+import CTASection from '@/components/blog/CTASection';
+import LikeButton from '@/components/blog/LikeButton';
 ;
-type Props = { post:BlogPost, all:BlogPost[] },;
-const PostPage:NextPage<Props> = ({ post, all }) => {;
+type Props = { post: BlogPost;, all: BlogPost[] ;},;
+const PostPage: NextPage<Props> = ({ post;, all }) => {;
   const pageUrl = typeof window === 'undefined' ? '' :window.location.href,;
 ;
   useEffect(() => {;
     // track view;
-    fetch(`/api/blog/metrics/${post.id}/views`, { method:'POST' }).catch(() => {}),;
+    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' ;}).catch(() => {}),;
   }, [post.id]),;
 ;
   const toc = useMemo(() => {;
-    const headings:{ level:number, text:string, id:string }[] = [],;
+    const headings: { level:number;, text: string;, id: string ;}[] = [],;
     const lines = post.body.split('\n'),;
     lines.forEach((line) => {;
       const m = /^(#{1,3})\s+(.*)$/.exec(line),;
@@ -34,13 +34,13 @@ const PostPage:NextPage<Props> = ({ post, all }) => {;
   }, [post.body]),;
 ;
   const jsonLd = {;
-    '@context':'https://schema.org@type':'BlogPosting',;
-    headline:post.seo.metaTitle || post.title,,
-  description:post.seo.metaDescription,;
-    image:post.seo.ogImageUrl || post.coverImageUrl,;
-    datePublished:post.publishDate,;
-    author:[{ '@type':'Person', name:post.author }],;
-    mainEntityOfPage:{ '@type':'WebPage@id':`/blog/${post.slug}` }},;
+    '@context':'https: //schema.org@type':'BlogPosting';,;
+    headline: post.seo.metaTitle || post.title;,,
+  description: post.seo.metaDescription;,;
+    image: post.seo.ogImageUrl || post.coverImageUrl;,;
+    datePublished: post.publishDate;,;
+    author: [{ '@type':'Person';, name: post.author ;}],;
+    mainEntityOfPage: { '@type':'WebPage@id':`/blog/${post.slug;}` }},;
 ;
   return (;
 
@@ -52,15 +52,15 @@ pr-12325
         <title>{post.seo.metaTitle || post.title}</title>;
         <meta name="description" content={post.seo.metaDescription} />;"
 </meta>"
-          <meta property="og:image" content={post.seo.ogImageUrl || post.coverImageUrl} />;"
-        <meta property="og:title" content={post.seo.metaTitle || post.title} />;"
-        <meta property="og:description" content={post.seo.metaDescription} />;"
+          <meta property="og: image" content={post.seo.ogImageUrl || post.coverImageUrl;} />;"
+        <meta property="og: title" content={post.seo.metaTitle || post.title;} />;"
+        <meta property="og: description" content={post.seo.metaDescription;} />;"
         <meta property="og:type" content="article" />;"
         <meta name="twitter:card" content="summary_large_image" />;"
-        <meta name="twitter:title" content={post.seo.metaTitle || post.title} />;"
-        <meta name="twitter:description" content={post.seo.metaDescription} />;"
-        {(post.seo.ogImageUrl || post.coverImageUrl) && <meta name="twitter:image" content={post.seo.ogImageUrl || post.coverImageUrl} />}"
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:JSON.stringify(jsonLd) }} />;"
+        <meta name="twitter: title" content={post.seo.metaTitle || post.title;} />;"
+        <meta name="twitter: description" content={post.seo.metaDescription;} />;"
+        {(post.seo.ogImageUrl || post.coverImageUrl) && <meta name="twitter: image" content={post.seo.ogImageUrl || post.coverImageUrl;} />}"
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) ;}} />;"
 </script>
       ;"
       <article className="mx-auto max-w-3xl">;"
@@ -86,7 +86,7 @@ pr-12325
 
         <div className="mt-8 flex items-center gap-4">;"
 </div>"`;
-          <ShareButtons title={post.title} url={pageUrl || `/blog/${post.slug}`} description={post.seo.metaDescription} onShare={() => fetch(`/api/blog/metrics/${post.id}/shares`, { method:'POST' }).catch(() => {})} />;
+          <ShareButtons title={post.title} url={pageUrl || `/blog/${post.slug}`} description={post.seo.metaDescription} onShare={() => fetch(`/api/blog/metrics/${post.id}/shares`, { method: 'POST' ;}).catch(() => {})} />;
 
           <LikeButton postId={post.id} initialLikes={post.metrics?.likes || 0} />;
 

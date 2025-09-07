@@ -9,7 +9,7 @@ import {
   Check,;
   Eye,;
 } from 'lucide-react';
-import React from 'react',
+import React from 'react',;
 
 } from 'lucide-react';
 export default /**
@@ -122,7 +122,7 @@ export default function AnalyticsPage() {
   }
 }
   ],
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
 export default function AnalyticsPage() {

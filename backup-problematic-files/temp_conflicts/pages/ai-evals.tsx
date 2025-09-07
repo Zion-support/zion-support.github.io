@@ -1,15 +1,15 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',;
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
+import React from 'react';
+import Head from 'next/head';
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 ;
 export default function AIEvalsPage() {;
 	const contactInfo = {;
-		mobile:'+1 302 464 0950',;
-		email:'kleber@ziontechgroup.com',;
-		address:'364 E Main St STE 1008 Middletown DE 19709',;
+		mobile: '+1 302 464 0950';,;
+		email: 'kleber@ziontechgroup.com';,;
+		address: '364 E Main St STE 1008 Middletown DE 19709';,;
 		website:'https://ziontechgroup.com';
 	},;
 	const features = [;
@@ -62,9 +62,9 @@ export default function AIEvalsPage() {;
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>;""
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">;"
 </div>)"
-							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, )}`}>{contactInfo.mobile}</a></div>;`;
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>;""`;
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>;"
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel: ${contactInfo.mobile.replace(/[^+\d]/g;, )}`}>{contactInfo.mobile}</a></div>;`;
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto: ${contactInfo.email;}`}>{contactInfo.email}</a></div>;""`;
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address);}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>;"
 						<div className="text-center mt-6">;"
 							<Button href="/services" variant="outline" className="border-cyan-500 text-cyan-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" />;"
 			</section>;

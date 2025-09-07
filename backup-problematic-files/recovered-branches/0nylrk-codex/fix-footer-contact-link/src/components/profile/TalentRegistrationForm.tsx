@@ -1,13 +1,13 @@
-import React, { useState } from "react",;""
-import { useForm } from "react-hook-form",;""
-import { zodResolver } from "@hookform/resolvers/zod",;""
-import { z } from "zod",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Switch } from "@/components/ui/switch",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Separator } from "@/components/ui/separator",;"
+import React, { useState } from "react";""
+import { useForm } from "react-hook-form";""
+import { zodResolver } from "@hookform/resolvers/zod";""
+import { z } from "zod";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Switch } from "@/components/ui/switch";""
+import { Badge } from "@/components/ui/badge";""
+import { Separator } from "@/components/ui/separator";"
 import {;
   Form,;
   FormControl,;
@@ -16,24 +16,24 @@ import {;
   FormItem,;
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",;""
-import { toast } from "@/components/ui/use-toast",;""
-import { supabase } from "@/integrations/supabase/client",;""
-import { AspectRatio } from "@/components/ui/aspect-ratio",;""
-import { useAuth } from "@/hooks/useAuth",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react";""
+import { toast } from "@/components/ui/use-toast";""
+import { supabase } from "@/integrations/supabase/client";""
+import { AspectRatio } from "@/components/ui/aspect-ratio";""
+import { useAuth } from "@/hooks/useAuth";"
 ;
 // Define form schema;
 const talentProfileSchema = z.object({;)"
-  name:z.string().min(2, "Name must be at least 2 characters long"),;""
-  title:z.string().min(5, "Professional title is required"),;""
-  bio:z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;""
-  location:z.string().min(2, "Location is required"),;""
-  skills:z.string().min(2, "Enter at least one skill"),;"
-  hourlyRate:z.string().refine((val) => !isNaN(Number(val)), {;"
-    message:"Hourly rate must be a number"}),;""
-  availability:z.enum(["available", "limited", "unavailable"]),;"
-  enhancedProfile:z.boolean().default(true)}),;
+  name: z.string().min(2;, "Name must be at least 2 characters long"),;""
+  title: z.string().min(5;, "Professional title is required"),;""
+  bio: z.string().min(50;, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;""
+  location: z.string().min(2;, "Location is required"),;""
+  skills: z.string().min(2;, "Enter at least one skill"),;"
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val));, {;"
+    message: "Hourly rate must be a number";}),;""
+  availability: z.enum(["available";, "limited", "unavailable"]),;"
+  enhancedProfile: z.boolean().default(true);}),;
 type TalentFormValues = z.infer<typeof talentProfileSchema>,;
 </typeof>
   const [skillTags, setSkillTags] = useState<string[]>([]),;
@@ -47,11 +47,11 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,;
 
     if (!formData.bio || formData.bio.length < 20) {;
       toast({;
-        title:"More information needed",,
-  description:"Please provide at least a detailed bio before generating enhanced content."}),;
+        title: "More information needed";,,
+  description: "Please provide at least a detailed bio before generating enhanced content.";}),;
       toast({;"
-        title:"More information needed",;")"
-        description:"Please provide at least a detailed bio before generating enhanced content."}),;"
+        title: "More information needed";,;")"
+        description: "Please provide at least a detailed bio before generating enhanced content.";}),;"
 pr-12325
       return,;
     }
@@ -61,10 +61,10 @@ pr-12325
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
         body: {;,
   talentData:{;
-            name:formData.name,;
-            title:formData.title,;
-            bio:formData.bio,;
-            skills:skillTags,;
+            name: formData.name;,;
+            title: formData.title;,;
+            bio: formData.bio;,;
+            skills: skillTags;,;
             location:formData.location;
         })
       }),;
@@ -72,22 +72,22 @@ pr-12325
         throw new Error(error.message),;
       setGeneratedContent(data as EnhancedProfile),;
       toast({;
-        title:"Enhanced Profile Generated",,
-  description:"AI has created a professional bio and suggested additional skills for your profile."}),;
+        title: "Enhanced Profile Generated";,,
+  description: "AI has created a professional bio and suggested additional skills for your profile.";}),;
       ;
     } catch (error:any) {;
-      console.error("Error generating enhanced profile:", error),;
+      console.error("Error generating enhanced profile: ";, error),;
       toast({;
-        title:"Generation failed",,
-  description:error.message || "There was an error generating your enhanced profile. Please try again.",;
-        variant:"destructive"}),;
-        title:"Enhanced Profile Generated",;")"
-        description:"AI has created a professional bio and suggested additional skills for your profile."}),;"
+        title: "Generation failed";,,
+  description: error.message || "There was an error generating your enhanced profile. Please try again.";,;
+        variant: "destructive";}),;
+        title: "Enhanced Profile Generated";,;")"
+        description: "AI has created a professional bio and suggested additional skills for your profile.";}),;"
     } catch (error:any) {;"
-      console.error("Error generating enhanced profile:", error),;"
-        title:"Generation failed",;""
-        description:error.message || "There was an error generating your enhanced profile. Please try again.",;")"
-        variant:"destructive"}),;"
+      console.error("Error generating enhanced profile: ";, error),;"
+        title: "Generation failed";,;""
+        description: error.message || "There was an error generating your enhanced profile. Please try again.";,;")"
+        variant: "destructive";}),;"
 pr-12325
     } finally {;
       setIsGenerating(false),;
@@ -98,7 +98,7 @@ pr-12325
       form.setValue("bio", generatedContent.summary),;"
       // Extract all skills from categorized skills and properly type cast them;
       const allCategorizedSkills = generatedContent.categorizedSkills,;
-      const newSkills:string[] = [],;
+      const newSkills: string[] = [];,;
       // Safely extract and flatten skills from each category;
       Object.values(allCategorizedSkills).forEach(categorySkills => {;)
         if (Array.isArray(categorySkills)) {;
@@ -110,34 +110,34 @@ pr-12325
   // Get category color;
   const getCategoryColor = (category:CategoryType) => {;
     switch (category) {;
-      case 'programming':return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;
-      case 'devops':return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',;
-      case 'platforms':return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',;
-      case 'softSkills':return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;
-      case 'other':return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      case 'programming':return 'bg-blue-500/20 hover: bg-blue-500/30 text-blue-500';,;
+      case 'devops':return 'bg-green-500/20 hover: bg-green-500/30 text-green-500';,;
+      case 'platforms':return 'bg-amber-500/20 hover: bg-amber-500/30 text-amber-500';,;
+      case 'softSkills':return 'bg-purple-500/20 hover: bg-purple-500/30 text-purple-500';,;
+      case 'other':return 'bg-gray-500/20 hover: bg-gray-500/30 text-gray-500';,;
       default:return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
   // Send notification email;
-  const sendEnhancementNotification = async (userId:string, email:string) => {;
+  const sendEnhancementNotification = async (userId: string;, email:string) => {;
       await supabase.functions.invoke('send-email', {;
-  to:email,;
-          subject:"Your Zion Talent Profile Has Been Enhanced",;"
+  to: email;,;
+          subject: "Your Zion Talent Profile Has Been Enhanced";,;"
           html:`;"
-          <div style="font-family:Arial, sans-serif, max-width:600px, margin:0 auto,">;"
+          <div style="font-family: Arial;, sans-serif, max-width: 600px;, margin: 0 auto;,">;"
 </div>"
-            <h2 style="color:#6D28D9,">Profile Enhancement Complete</h2>;""
+            <h2 style="color: #6D28D9;,">Profile Enhancement Complete</h2>;""
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
             <p>You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin-top:30px, padding-top:20px, border-top:1px solid #eee,">;"
+            <div style="margin-top: 30px;, padding-top: 20px;, border-top: 1px solid #eee;,">;"
 </div>)"
-              <p style="color:#666, font-size:12px,"> ${new Date().getFullYear()} Zion Marketplace</p>;"
+              <p style="color: #666;, font-size: 12px;,"> ${new Date().getFullYear()} Zion Marketplace</p>;"
             </div>;
           </div>;
           `;
         }
       }),;
     } catch (error) {;
-      console.error("Failed to send notification email:", error),;
+      console.error("Failed to send notification email: ";, error),;
     }
   },;
 ;
@@ -145,9 +145,9 @@ pr-12325
   const onSubmit = async (values:TalentFormValues) => {;
     if (skillTags.length === 0) {;
       toast({;
-        title:"Skills required",,
-  description:"Please add at least one skill to your profile.",;
-        variant:"destructive"}),;
+        title: "Skills required";,,
+  description: "Please add at least one skill to your profile.";,;
+        variant: "destructive";}),;
       return,;
     }
 ;
@@ -165,13 +165,13 @@ pr-12325
       ;
       if (values.enhancedProfile && !generatedContent) {;
         try {;
-          const { data:aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;
+          const { data: aiData ;} = await supabase.functions.invoke('talent-profile-enhancer', {;
             body:{;
               talentData:{;
-                name:values.name,;
-                title:values.title,;
-                bio:values.bio,;
-                skills:skillTags,;
+                name: values.name;,;
+                title: values.title;,;
+                bio: values.bio;,;
+                skills: skillTags;,;
                 location:values.location;
               }
             }
@@ -181,7 +181,7 @@ pr-12325
             finalSummary = (aiData as EnhancedProfile).summary,;
             // Safely merge AI suggested skills with user-provided skills;
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills,;
-            const aiSkills:string[] = [],;
+            const aiSkills: string[] = [];,;
             ;
             // Extract skills from each category and ensure they're strings;
             Object.values(categorizedSkills).forEach(categorySkills => {;
@@ -198,7 +198,7 @@ pr-12325
             finalSkills = [...new Set([...skillTags, ...aiSkills])],;
           }
         } catch (error) {;
-          console.error("Error enhancing profile:", error),;
+          console.error("Error enhancing profile: ";, error),;
           // Continue with submission even if enhancement fails;
           finalSummary = "",;
         }
@@ -207,15 +207,15 @@ pr-12325
       }
 ;
       // Get user email for notification;
-      const { data:userData } = await supabase.auth.getUser(),;
+      const { data: userData ;} = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
 ;
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
         toast({;
-          title:"Profile Created Successfully",,
-  description:"Your talent profile has been published and is now visible in the directory."}),;
+          title: "Profile Created Successfully";,,
+  description: "Your talent profile has been published and is now visible in the directory.";}),;
         ;
         // Send notification email if we have user email;
         if (userEmail && values.enhancedProfile) {;
@@ -230,15 +230,15 @@ pr-12325
       const { error } = await supabase;
         .from('talent_profiles');
         .insert({;
-          user_id:user.id,;
-          name:values.name,;
-          title:values.title,;
-          bio:values.bio,;
-          summary:finalSummary,;
-          location:values.location,;
-          skills:finalSkills.map(name => ({ name, level:4 })), // Default skill level;
-          hourly_rate:Number(values.hourlyRate),;
-          availability_status:values.availability,;
+          user_id: user.id;,;
+          name: values.name;,;
+          title: values.title;,;
+          bio: values.bio;,;
+          summary: finalSummary;,;
+          location: values.location;,;
+          skills: finalSkills.map(name => ({ name;, level: 4 ;})), // Default skill level;
+          hourly_rate: Number(values.hourlyRate);,;
+          availability_status: values.availability;,;
           // Other fields would be handled here;
         }),;
 ;
@@ -246,11 +246,11 @@ pr-12325
       */;
 ;
     } catch (error:any) {;
-      console.error("Error creating profile:", error),;
+      console.error("Error creating profile: ";, error),;
       toast({;
-        title:"Error Creating Profile",,
-  description:error.message || "There was an error creating your profile. Please try again.",;
-        variant:"destructive"}),;
+        title: "Error Creating Profile";,,
+  description: error.message || "There was an error creating your profile. Please try again.";,;
+        variant: "destructive";}),;
       setIsSubmitting(false),;
     }
   },;
@@ -484,14 +484,14 @@ pr-12325
 
           </form>;
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, "> $ {"
+  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px;, padding-top: 20px;, border-top: 1px solid #eee;, "> <p style="color: #666;, font-size: 12px;, "> $ {"
   new Date () .getFullYear () 
 }Zion Marketplace</p> "
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers.   <Form {"
+return (<div className="max-w-4xl mx-auto p-4 md: p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers.   <Form {";
 }> <form onSubmit= {)
   form.handleSubmit (onSubmit) "
 }> <CardContent className="space-y-8"> {"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div>  <FormMessage className="text-red-400" /> )""
+}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div>  <FormMessage className="text-red-400" /> )"";
 }/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div>  <FormMessage className="text-red-400" /> )""
 }/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div>  <FormMessage className="text-red-400" /> )""
 }/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD)  <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div>  <FormMessage className="text-red-400" /> )"
@@ -501,7 +501,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   1/1;
 }> <img src= {
 }alt="Avatar preview" className="w-full h-full object-cover" /> ) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>)""
-}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <input type="file" accept="image/*" className="hidden" onChange= {"
+}</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover: bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <input type="file" accept="image/*" className="hidden" onChange= {";
 }/> </label> </div> <p className="text-sm text-zion-slate"> For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format. </p> </div> </div> <Separator className="bg-zion-blue-light/50" /> {"
   /* Bio Section */ "
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Professional Bio</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">About Yourself <FormControl> <Textarea  )"
@@ -511,7 +511,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }disabled= {
   isGenerating;
 }>  </div>) "
-  generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick= {"
+  generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover: bg-zion-purple-dark text-white" onClick= {";
 }> <Check className="mr-1 h-3 w-3" /> Apply  </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {"
 
 }</p> </div> {"
@@ -523,18 +523,18 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 } <div className="flex flex-wrap gap-1"> {"
   skills.map (skill => (<Badge key= {
   skill;"
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {"
+}className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none" > {";
 }) ) 
 }</div> </div>) ) 
 }</div> </div>) 
 }</div> </div>) "
 }</div> <Separator className="bg-zion-blue-light/50" /> {"
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {"
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Skills <div className="flex gap-2"> <FormControl> <Input />  <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick= {"
+}<div className="grid grid-cols-1 md: grid-cols-2 gap-8"> {";
+}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Skills & Expertise</h3> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Skills <div className="flex gap-2"> <FormControl> <Input />  <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white" onClick= {";
 }> Add  </div> <FormDescription className="text-zion-slate"> Press Enter or click Add to include a skill  <FormMessage className="text-red-400" /> )""
 }/> <div className="flex flex-wrap gap-2 mt-2"> {"
   skillTags.map (skill => (<Badge key= {
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" > {"
+}className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" > {";
 }<button className="rounded-full hover:bg-zion-purple-dark/20 p-0.5" > <X className="h-3 w-3" /> </button> ) )""
   skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>)"
 }</div> </div> {"

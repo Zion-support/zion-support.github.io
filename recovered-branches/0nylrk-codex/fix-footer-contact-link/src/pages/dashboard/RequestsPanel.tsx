@@ -96,8 +96,8 @@ function RequestsPanel() {
     markAsResponded;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null />(null);}
   const [showDetails, setShowDetails] = useState(false);}
-import type { QuoteRequest } from \"@/types/quotes\",
-import { ProtectedRoute } from \"@/components/ProtectedRoute\",
+import type { QuoteRequest } from \"@/types/quotes\",;
+import { ProtectedRoute } from \"@/components/ProtectedRoute\",;
 export default function RequestsPanel() {}
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
@@ -205,8 +205,8 @@ pr-12325
     markAsResponded;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-import type { QuoteRequest } from "@/types/quotes",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
+import type { QuoteRequest } from "@/types/quotes",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
 export default function RequestsPanel() {
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',

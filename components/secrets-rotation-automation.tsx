@@ -2,15 +2,15 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -29,9 +29,6 @@ import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 export default function SecretsRotationAutomationPage() {;
   const features = [;
     "Automated key and secret rotation",;
@@ -40,12 +37,9 @@ export default function SecretsRotationAutomationPage() {;
     "CI/CD integration (GitHub Actions, CircleCI)",;
     "Cloud KMS and Vault support",;
   ];
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 
 
 

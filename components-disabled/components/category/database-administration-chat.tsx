@@ -7,9 +7,6 @@ const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
@@ -108,26 +105,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 
 export default DatabaseAdministrationChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 const DatabaseAdministrationChat: NextPage = () => {
  ;
   return (

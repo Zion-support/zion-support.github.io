@@ -13,7 +13,7 @@ export interface ContractTemplate {  id: string;
 }
   created_at: string,
   updated_at: string
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
 export interface ContractTemplate {
   id: string,
   title: string,
@@ -55,7 +55,7 @@ export interface ContractTemplate {
 ;
 "
 pr-12325
-import { ContractFormValues } from \"@/components/contracts/components/ContractForm\",
+import { ContractFormValues } from \"@/components/contracts/components/ContractForm\",;
 export interface ContractTemplate {
   id: string,
   title: string,

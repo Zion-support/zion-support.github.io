@@ -1,16 +1,16 @@
 
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
-import { Loader2, ShieldCheck, Download } from "lucide-react",
+import { Loader2, ShieldCheck, Download } from "lucide-react",;
 import { toast } from "sonner",  isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
