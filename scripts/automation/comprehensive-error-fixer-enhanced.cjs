@@ -40,12 +40,16 @@ const glob = require('glob')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

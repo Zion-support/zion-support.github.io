@@ -24,12 +24,16 @@ const { execSync, spawn } = require("child_process");
 <<<<<<< HEAD
 const glob = require("glob");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 const glob = require("glob");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -68,11 +72,15 @@ class $1 {}
         "stdio": "pipe",
         "timeout": 60000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runTypeCheck() {}
   try {}"
   this.log("Running TypeScript type check...");
@@ -106,9 +114,13 @@ class $1 {}
         "stdio": "pipe",
         "timeout": 120000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runBuild() {}
   try {}
   this.log("Running build process...");
@@ -183,9 +195,13 @@ class $1 {}
         if (missingSemicolonRegex.test(content)) {}
   content = content.replace(missingSemicolonRegex, "$&;");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   fixImportIssues() {}
   this.log("Fixing import issues...");
     const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
@@ -196,9 +212,13 @@ class $1 {}
         let content = fs.readFileSync(fullPath", "utf8");
         let modified = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Fix broken import statements;
         const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^"]+)["]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {}
@@ -265,9 +285,13 @@ class $1 {}
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
@@ -282,9 +306,13 @@ class $1 {}
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
           this.fixCount++};
@@ -312,9 +340,13 @@ class $1 {}
   try {execSync(`npx ${dep} --version`, { "stdio": "pipe" })} catch (error) {  this.log(`Installing missing "dependency": ${dep  }`);execSync(`npm install --save-dev ${dep}`, { "cwd": this.projectRoot, "stdio": "pipe" }
 });this.log(`${dep} installed`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Check if other essential dependencies are available;
       const essentialDeps = ["@"types/react"", "@"types/react-dom"", "@"types/node""];
       for (const dep of essentialDeps) {}
@@ -367,9 +399,13 @@ class $1 {}
       }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
 =======
@@ -427,14 +463,19 @@ class $1 {}
       ;
       this.log("PM2 Error Prevention Automation completed")} catch (error) {  this.log(`Fatal error in "automation": ${error.message  }`, true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async run() {}
   this.log("Starting PM2 Error Prevention Automation...");
     try {}
   // Step "1": Install missing dependencies;
       await this.installMissingDependencies();
+<<<<<<< HEAD
 =======
 
   // Step "1": Install missing dependencies;"
@@ -447,6 +488,24 @@ class $1 {}
       // Step 7: Run lint;
       // Step 8: Run build;
       // Step 9: Run tests;
+=======
+      // Step 2: Fix common syntax errors;
+      this.fixCommonSyntaxErrors();
+      // Step 3: Fix import issues;
+      this.fixImportIssues();
+      // Step 4: Fix component issues;
+      this.fixComponentIssues();
+      // Step 5: Clean up build artifacts;
+      await this.cleanup();
+      // Step 6: Run type check;
+      const typeCheckPassed = await this.runTypeCheck();
+      // Step 7: Run lint;
+      const lintPassed = await this.runLint();
+      // Step 8: Run build;
+      const buildPassed = await this.runBuild();
+      // Step 9: Run tests;
+      const testsPassed = await this.runTests();
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Generate report;
 
   return files};
@@ -459,17 +518,25 @@ process.on("SIGINT", () => {}
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 process.on("SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");
   process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
 =======
@@ -483,12 +550,16 @@ process.on("SIGTERM", () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 });
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

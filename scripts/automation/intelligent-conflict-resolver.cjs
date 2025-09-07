@@ -110,6 +110,7 @@ class $1 {}
             break};
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
+  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
@@ -313,12 +314,17 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = IntelligentConflictResolver;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = IntelligentConflictResolver;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,10 +1,26 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+=======
+
+
+
+
+
+
+
+#!/usr/bin/env node
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 console.log('🔧 Fixing remaining syntax errors...');
 
+<<<<<<< HEAD
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
+=======
+// Function to fix hover syntax errors
+function fixHoverSyntax(filePath) {
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
@@ -54,7 +70,18 @@ function fixSyntaxErrors(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
       console.log(`✅ Fixed: ${filePath}`);
+=======
+
+
+
+
+
+
+
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return true;
     }
     
@@ -65,6 +92,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to find all service page files
 function findServicePages(dir) {
   const files = [];
@@ -87,19 +115,60 @@ function findServicePages(dir) {
         } else if (stat.isFile() && item === 'page.tsx') {
           files.push(fullPath);
         }
+=======
+// Function to find and fix all TypeScript/JSX files
+function fixAllFiles() {
+  const filesToCheck = [
+    'components/Footer.tsx',
+    'components/Header.tsx',
+    'components/layout/MainLayout.tsx',
+    'pages/about.tsx',
+    'pages/ai-services.tsx',
+    'pages/blog.tsx',
+    'pages/contact.tsx',
+    'pages/index.tsx',
+    'pages/privacy.tsx',
+    'pages/terms.tsx',
+    'pages/services.tsx',
+    'pages/pricing.tsx'
+  ];
+  
+  let totalFixed = 0;
+  
+  filesToCheck.forEach(file => {
+    const filePath = path.join(process.cwd(), file);
+    if (fs.existsSync(filePath)) {
+      if (fixHoverSyntax(filePath)) {
+        totalFixed++;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       }
     } catch (error) {
       // Skip directories that can't be read
     }
   }
+<<<<<<< HEAD
+=======
+});
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   
   scanDirectory(dir);
   return files;
 }
 
+
+
+
+
+
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('🚀 Starting syntax error resolution...');
+=======
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   
   // Find all service page files
   const servicePages = findServicePages('/workspace/app/services');
@@ -113,6 +182,7 @@ async function main() {
     }
   }
   
+<<<<<<< HEAD
   // Also fix the research page
   const researchPage = '/workspace/app/research/page.tsx';
   if (fs.existsSync(researchPage)) {
@@ -126,3 +196,15 @@ async function main() {
 }
 
 main().catch(console.error);
+=======
+} catch (error) {
+  console.error('❌ Error:', error.message);
+  process.exit(1);
+}
+
+}
+
+
+}}
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

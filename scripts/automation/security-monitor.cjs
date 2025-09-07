@@ -244,11 +244,14 @@ monitor.run().catch(console.error);
 const monitor = new SecurityMonitor();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 monitor.run().catch(console.error);
 <<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 monitor.run().catch(console.error);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

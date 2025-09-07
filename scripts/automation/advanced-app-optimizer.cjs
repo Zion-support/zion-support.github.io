@@ -386,6 +386,7 @@ export class PerformanceMonitor {}
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -400,6 +401,8 @@ export class PerformanceMonitor {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Log slow operations;
 
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
@@ -640,12 +643,16 @@ export function initWebVitals() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AdvancedAppOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AdvancedAppOptimizer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

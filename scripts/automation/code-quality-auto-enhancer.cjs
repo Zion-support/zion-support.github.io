@@ -11,9 +11,13 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class CodeQualityAutoEnhancer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -21,6 +25,7 @@ class CodeQualityAutoEnhancer {}
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.QUALITY_CHECK_INTERVAL) || 3600000; // 1 hour;
     this.autoEnhanceEnabled = process.env.AUTO_ENHANCE_ENABLED === 'true';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -35,6 +40,9 @@ class CodeQualityAutoEnhancer {}
     this.projectRoot = process.cwd();
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
@@ -43,11 +51,15 @@ class CodeQualityAutoEnhancer {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.enhancementsApplied = 0;
     this.qualityHistory = []};"
   log(message, level = 'INFO') {}
@@ -61,12 +73,16 @@ class CodeQualityAutoEnhancer {}
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
+<<<<<<< HEAD
 =======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     const checks = [{ "name": 'ESLint', "command": 'npm run lint' },]
       { "name": 'Prettier', "command": 'npm run format:check' },
       { "name": 'TypeScript', "command": 'npm run type-check' },
@@ -76,6 +92,7 @@ class CodeQualityAutoEnhancer {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     const results = {};
     let totalIssues = 0;
 =======
@@ -84,6 +101,12 @@ class CodeQualityAutoEnhancer {}
     let totalIssues = 0;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const results = {};
+    let totalIssues = 0;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const check of checks) {}
       try {}
 
@@ -98,11 +121,15 @@ class CodeQualityAutoEnhancer {}
     const lines = output.split('\n');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const line of lines) {}
       if (line.includes('error') || line.includes('warning') || line.includes('failed')) {}
         const match = line.match(/([^:]+):(\d+):(\d+)/);
@@ -118,11 +145,15 @@ class CodeQualityAutoEnhancer {}
     let enhancementsApplied = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const issue of issues) {}
         if (await this.applyEnhancement(issue)) {}
           enhancementsApplied++};
@@ -135,11 +166,15 @@ class CodeQualityAutoEnhancer {}
         const lines = content.split('\n');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Apply common ESLint fixes;
         const enhancements = [this.fixUnusedVariables.bind(this)]
           this.fixMissingSemicolons.bind(this),
@@ -151,6 +186,7 @@ class CodeQualityAutoEnhancer {}
 <<<<<<< HEAD
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
         let originalContent = content;
         let modifiedContent = content;
 =======
@@ -161,6 +197,12 @@ class CodeQualityAutoEnhancer {}
         let modifiedContent = content;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        let originalContent = content;
+        let modifiedContent = content;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         for (const enhancement of enhancements) {}
             const result = enhancement(lines, issue);
             if (result.modified) {}
@@ -184,12 +226,16 @@ class CodeQualityAutoEnhancer {}
         const content = fs.readFileSync(issue.file, 'utf8');
         const lines = content.split('\n');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Apply common TypeScript enhancements;
         const enhancements = [this.fixAnyType.bind(this)]
           this.fixMissingImports.bind(this),
@@ -200,6 +246,7 @@ class CodeQualityAutoEnhancer {}
 <<<<<<< HEAD
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
         let originalContent = content;
         let modifiedContent = content;
 =======
@@ -209,6 +256,12 @@ class CodeQualityAutoEnhancer {}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        let originalContent = content;
+        let modifiedContent = content;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         for (const enhancement of enhancements) {}
           try {}
             const result = enhancement(lines, issue);
@@ -234,11 +287,15 @@ class CodeQualityAutoEnhancer {}
       const uncoveredFiles = this.findUncoveredFiles();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       for (const file of uncoveredFiles) {}
         await this.generateTestFile(file)};
 
@@ -246,6 +303,7 @@ class CodeQualityAutoEnhancer {}
         const varName = varMatch[1];
         const lineIndex = issue.line - 1;
         const line = lines[lineIndex];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // Comment out unused variable;
@@ -263,6 +321,13 @@ class CodeQualityAutoEnhancer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+        // Comment out unused variable;
+        if (line.includes(varName)) {}
+          lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
+          
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           return {}
 
             "description": `Commented out unused variable ${varName}"
@@ -275,6 +340,7 @@ class CodeQualityAutoEnhancer {}
       const lineIndex = issue.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {}
         lines[lineIndex] = line + ';';
 =======
@@ -283,6 +349,12 @@ class CodeQualityAutoEnhancer {}
         lines[lineIndex] = line + ';';
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {}
+        lines[lineIndex] = line + ';';
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return {}
           "modified": true,
           "content": lines.join('\n'),
@@ -296,17 +368,25 @@ class CodeQualityAutoEnhancer {}
       if (importMatch) {}
         const importName = importMatch[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Find and remove unused import;
         for (let i = 0; i < lines.length; i++) {}
           if (lines[i].includes(`import ${importName}`) || lines[i].includes(`{ ${importName} }`)) {`}
             lines[i] = `// ${lines[i]} // eslint-disable-line no-unused-vars`;`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             return {}
               "modified": true,
               "content": lines.join('\n'),
@@ -321,6 +401,7 @@ class CodeQualityAutoEnhancer {}
       const lineIndex = issue.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (line.includes('console.')) {}
         lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;`
 =======
@@ -329,6 +410,12 @@ class CodeQualityAutoEnhancer {}
         lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;`
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      if (line.includes('console.')) {}
+        lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;`
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return {}
           "modified": true,
           "content": lines.join('\n'),
@@ -341,6 +428,7 @@ class CodeQualityAutoEnhancer {}
       const lineIndex = issue.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (line.includes('let ')) {}
         lines[lineIndex] = line.replace('let ', 'const ');
 =======
@@ -349,6 +437,12 @@ class CodeQualityAutoEnhancer {}
         lines[lineIndex] = line.replace('let ', 'const ');
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      if (line.includes('let ')) {}
+        lines[lineIndex] = line.replace('let ', 'const ');
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return {}
           "modified": true,
           "content": lines.join('\n'),
@@ -361,6 +455,7 @@ class CodeQualityAutoEnhancer {}
       const lineIndex = issue.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (line.includes('var ')) {}
         lines[lineIndex] = line.replace('var ', 'const ');
 =======
@@ -369,6 +464,12 @@ class CodeQualityAutoEnhancer {}
         lines[lineIndex] = line.replace('var ', 'const ');
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      if (line.includes('var ')) {}
+        lines[lineIndex] = line.replace('var ', 'const ');
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return {}
           "modified": true,
           "content": lines.join('\n'),
@@ -381,6 +482,7 @@ class CodeQualityAutoEnhancer {}
       const lineIndex = issue.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (line.endsWith(' ')) {}
         lines[lineIndex] = line.trimEnd();
 =======
@@ -389,6 +491,12 @@ class CodeQualityAutoEnhancer {}
         lines[lineIndex] = line.trimEnd();
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      if (line.endsWith(' ')) {}
+        lines[lineIndex] = line.trimEnd();
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return {}
           "modified": true,
           "content": lines.join('\n'),
@@ -400,9 +508,13 @@ class CodeQualityAutoEnhancer {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (line.includes('any') && issue.message.includes('any')) {}
       // Replace 'any' with more specific types;
       const fixedLine = line;
@@ -410,9 +522,13 @@ class CodeQualityAutoEnhancer {}
         .replace(/as any/g, 'as unknown');
         .replace(/<any>/g, '<unknown>');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
@@ -428,6 +544,7 @@ class CodeQualityAutoEnhancer {}
       if (importMatch) {}
         const moduleName = importMatch[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Add missing import at the top of the file;
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
 =======
@@ -436,6 +553,12 @@ class CodeQualityAutoEnhancer {}
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+        // Add missing import at the top of the file;
+        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Find the last import statement;
         let lastImportIndex = -1;
 =======
@@ -464,12 +587,16 @@ class CodeQualityAutoEnhancer {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (issue.message.includes('implicitly has an any type')) {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
@@ -478,11 +605,15 @@ class CodeQualityAutoEnhancer {}
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
             modified: true,"
@@ -492,11 +623,15 @@ class CodeQualityAutoEnhancer {}
         const typeName = propMatch[2];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         // Try to find and extend the interface;
 
             // Add the missing property;
@@ -504,9 +639,13 @@ class CodeQualityAutoEnhancer {}
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             return {}
               "modified": true,
               "content": lines.join('\n'),
@@ -520,18 +659,26 @@ class CodeQualityAutoEnhancer {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (issue.message.includes('Generic type') && issue.message.includes('requires')) {}
       // Add generic type parameters;
       const genericMatch = line.match(/(\w+<)([^>]*)(>)/);
       if (genericMatch && !genericMatch[2].trim()) {}
         const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${genericMatch[3]}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
           return {}
@@ -546,6 +693,7 @@ class CodeQualityAutoEnhancer {}
     const lineIndex = issue.line - 1;
     const line = lines[lineIndex];
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (issue.message.includes('Object is possibly undefined')) {}
       // Add optional chaining;
       const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
@@ -556,6 +704,13 @@ class CodeQualityAutoEnhancer {}
       const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    if (issue.message.includes('Object is possibly undefined')) {}
+      // Add optional chaining;
+      const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
@@ -574,11 +729,15 @@ class CodeQualityAutoEnhancer {}
     const sourceFiles = this.getAllSourceFiles();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const file of sourceFiles) {}
       const testFile = this.getTestFilePath(file);
       if (!fs.existsSync(testFile)) {}
@@ -592,18 +751,26 @@ class CodeQualityAutoEnhancer {}
       const testDir = path.dirname(testFile);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (!fs.existsSync(testDir)) {}
         fs.mkdirSync(testDir, { "recursive": true })};
       const fileName = path.basename(sourceFile, path.extname(sourceFile));
       const testContent = `import { render, screen } from '@testing-library/react';
 import ${fileName} from '../${path.relative(testDir, sourceFile)}';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 describe('${fileName}', () => {}
   test('renders without crashing', () => {}
 =======
@@ -618,6 +785,7 @@ describe('${fileName}', () => {}
 `;`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       fs.writeFileSync(testFile, testContent);
       this.log(`Generated test "file": ${testFile}`, 'INFO');
 =======
@@ -626,6 +794,12 @@ describe('${fileName}', () => {}
       this.log(`Generated test "file": ${testFile}`, 'INFO');
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      fs.writeFileSync(testFile, testContent);
+      this.log(`Generated test "file": ${testFile}`, 'INFO');
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return true} catch (error) {}
       this.log(`Failed to generate test "file": ${error.message}`, 'ERROR');
       return false};
@@ -634,16 +808,21 @@ describe('${fileName}', () => {}
     const sourceFiles = [];
     const srcDir = path.join(this.projectRoot, 'src');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (!fs.existsSync(srcDir)) {}
       return sourceFiles};
     const walkDir = (dir) => {}
       const files = fs.readdirSync(dir);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       for (const file of files) {}
@@ -689,29 +868,60 @@ describe('${fileName}', () => {}
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       for (const file of files) {}
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
+        
         if (stat.isDirectory()) {}
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {}
           sourceFiles.push(filePath)};
+<<<<<<< HEAD
     walkDir(srcDir);
 
+=======
+      };
+    };
+    
+    walkDir(srcDir);
+    return sourceFiles};
+  async runQualityEnhancement() {}
+    this.log('Starting code quality enhancement...');
+    
+    try {}
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Run quality checks;
       const checkResult = await this.runCodeQualityChecks();
+      
       if (checkResult.totalIssues === 0) {}
+<<<<<<< HEAD
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        this.log('No quality issues found - no enhancements needed', 'INFO');
+        return};
+      this.log(`Found ${checkResult.totalIssues} quality issues, applying enhancements...`, 'INFO');
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Apply enhancements;
       const allIssues = Object.values(checkResult.results);
         .filter(result => !result.success);
         .flatMap(result => result.issues);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       const enhancementsApplied = await this.applyCodeEnhancements(allIssues);
+      
       this.log(`Applied ${enhancementsApplied} enhancements out of ${allIssues.length} issues`, 'INFO');
+      
       // Run quality checks again to see if enhancements worked;
       const postCheckResult = await this.runCodeQualityChecks();
+<<<<<<< HEAD
 =======
       
 =======
@@ -725,6 +935,9 @@ describe('${fileName}', () => {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       const report = {}
 
         "initialIssues": checkResult.totalIssues,"
@@ -738,6 +951,7 @@ describe('${fileName}', () => {}
         };
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Save report;
       const reportPath = path.join(this.reportsDir, `quality-enhancement-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -748,6 +962,13 @@ describe('${fileName}', () => {}
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+      // Save report;
+      const reportPath = path.join(this.reportsDir, `quality-enhancement-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Update quality history;
       this.qualityHistory.push(report);
       if (this.qualityHistory.length > 50) {}
@@ -758,6 +979,7 @@ describe('${fileName}', () => {}
   async startEnhancer() {}
     this.log('Starting code quality auto-enhancer...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Run initial enhancement;
     await this.runQualityEnhancement();
 =======
@@ -766,12 +988,19 @@ describe('${fileName}', () => {}
     await this.runQualityEnhancement();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    // Run initial enhancement;
+    await this.runQualityEnhancement();
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Set up periodic enhancement;
     setInterval(async () => {}
       try {}
         await this.runQualityEnhancement()} catch (error) {}
         this.log(`Error in periodic "enhancement": ${error.message}`, 'ERROR')};
     }, this.checkInterval);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -794,6 +1023,9 @@ describe('${fileName}', () => {}
 
     }, this.checkInterval);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.log(`Code quality auto-enhancer started. Running every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
 
@@ -803,26 +1035,38 @@ if (require.main === module) {}
   const enhancer = new CodeQualityAutoEnhancer();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     enhancer.log('Shutting down code quality auto-enhancer...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on('SIGTERM', () => {}
     enhancer.log('Shutting down code quality auto-enhancer...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Start enhancer;
   enhancer.startEnhancer().catch(error => {})
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
@@ -834,12 +1078,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = CodeQualityAutoEnhancer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = CodeQualityAutoEnhancer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

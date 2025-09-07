@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -20,6 +21,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -34,11 +38,15 @@ class ErrorDetectionMonitor {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.errorHistory = [];
     this.lastCheck = null};"
   log(message, level = 'INFO') {}
@@ -99,9 +107,13 @@ class ErrorDetectionMonitor {}
       line.includes('error TS') || line.includes('"error": ');
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return errorLines.map(line => ({})
       type: 'typescript',
       "message": line.trim(),
@@ -112,9 +124,13 @@ class ErrorDetectionMonitor {}
       line.includes('error') || line.includes('"Error": ');
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return errorLines.map(line => ({})
       type: 'eslint',
       "message": line.trim(),
@@ -125,9 +141,13 @@ class ErrorDetectionMonitor {}
       line.includes('error') || line.includes('"Error": ') || line.includes('Failed');
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return errorLines.map(line => ({})
       type: 'build',
       "message": line.trim(),
@@ -138,9 +158,13 @@ class ErrorDetectionMonitor {}
       line.includes('vulnerability') || line.includes('VULNERABILITY');
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return errorLines.map(line => ({})
       "type": 'dependency',
       "message": line.trim(),
@@ -149,9 +173,13 @@ class ErrorDetectionMonitor {}
   async checkForErrors() {}
     this.log('Starting comprehensive error detection...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
@@ -162,6 +190,7 @@ class ErrorDetectionMonitor {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     const results = {};
     let totalErrors = 0;
 =======
@@ -170,6 +199,12 @@ class ErrorDetectionMonitor {}
     let totalErrors = 0;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const results = {};
+    let totalErrors = 0;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     for (const check of checks) {}
         const result = await check.check();
         results[check.name] = result;
@@ -184,6 +219,7 @@ class ErrorDetectionMonitor {}
       "exceeded": totalErrors > this.errorThreshold;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Save error report;
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
@@ -197,6 +233,13 @@ class ErrorDetectionMonitor {}
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    // Save error report;
+    const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Update error history;
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {}
@@ -205,6 +248,7 @@ class ErrorDetectionMonitor {}
 
     fs.writeFileSync(historyPath, JSON.stringify(this.errorHistory, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.lastCheck = new Date();
 =======
 
@@ -212,6 +256,11 @@ class ErrorDetectionMonitor {}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    this.lastCheck = new Date();
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (totalErrors > this.errorThreshold) {}
       this.log(`ERROR THRESHOLD "EXCEEDED": ${totalErrors} errors found ("threshold": ${this.errorThreshold})`, 'CRITICAL');
       this.triggerErrorAlert(errorReport)} else {}
@@ -220,9 +269,13 @@ class ErrorDetectionMonitor {}
   triggerErrorAlert(errorReport) {}
     this.log('Triggering error alert...', 'WARN');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Create alert file for other processes to detect;
     const alertPath = path.join(this.reportsDir, 'error-alert.json');
     fs.writeFileSync(alertPath, JSON.stringify({})
@@ -235,10 +288,14 @@ class ErrorDetectionMonitor {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Log critical error;
     const criticalLogPath = path.join(this.logsDir, 'critical-errors.log');
     const logEntry = `[${new Date().toISOString()}] "CRITICAL": ${errorReport.totalErrors} errors detected\n`;`
@@ -246,6 +303,7 @@ class ErrorDetectionMonitor {}
   async startMonitoring() {}
     this.log('Starting error detection monitor...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Run initial check;
     await this.checkForErrors();
 =======
@@ -254,12 +312,19 @@ class ErrorDetectionMonitor {}
     await this.checkForErrors();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    // Run initial check;
+    await this.checkForErrors();
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Set up periodic checking;
     setInterval(async () => {}
       try {}
         await this.checkForErrors()} catch (error) {}
         this.log(`Error in periodic "check": ${error.message}`, 'ERROR')};
     }, this.checkInterval);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -275,6 +340,9 @@ class ErrorDetectionMonitor {}
     }, this.checkInterval);
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
@@ -286,26 +354,38 @@ if (require.main === module) {}
   const monitor = new ErrorDetectionMonitor();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   process.on('SIGTERM', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Start monitoring;
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
@@ -317,12 +397,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorDetectionMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ErrorDetectionMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

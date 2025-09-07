@@ -23,11 +23,15 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class ErrorReportGenerator {}
       parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default};
 ;
@@ -46,9 +50,13 @@ class ErrorReportGenerator {}
   async run() {}
   this.log("Starting error report generation...");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     try {}
   await this.generateErrorReport();
       this.log("Error report generation completed.")} catch (error) {}
@@ -59,9 +67,13 @@ class ErrorReportGenerator {}
   async generateErrorReport() {}
   this.log("Generating comprehensive error report...");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     const report = {}
 =======
   log(message) {}"
@@ -113,11 +125,15 @@ class ErrorReportGenerator {}
 <<<<<<< HEAD
       report.recommendations = this.generateRecommendations(report);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Save report;
 <<<<<<< HEAD
       const timestamp = Date.now();
@@ -125,12 +141,16 @@ class ErrorReportGenerator {}
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`;`
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`;`"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       const dir = path.dirname(reportPath);
       if (!fs.existsSync(dir)) {}"
   fs.mkdirSync(dir, { "recursive": true })};"
@@ -148,12 +168,16 @@ const generator = new ErrorReportGenerator();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 generator.run().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 generator.run().catch(console.error);
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

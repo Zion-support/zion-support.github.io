@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 main
@@ -9,6 +10,8 @@ main
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -48,6 +51,7 @@ main
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 main();
@@ -61,12 +65,20 @@ main
 =======
 
 
+=======
+main();
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 
 
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+main();#!/usr/bin/env node;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 const fs = require('fs')
 const path = require('path')
@@ -98,5 +110,8 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
       log('info', 'Security "Recommendations")
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -48,6 +49,8 @@ class AutomationRunner {
       this.log(`${scriptName} failed: ${error.message}`);
     }
   }
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
   async runAllScripts() {
     this.log('Starting automation runner...');
@@ -83,9 +86,23 @@ class AutomationRunner {
   }
 }
 
+<<<<<<< HEAD
 if (require.main === module) {
   const runner = new AutomationRunner();
   runner.runAllScripts().catch(console.error);
 }
+=======
+	// Security;
+	ok = run('npm run "security": audit') && ok;
+
+	// Selected automations (best-effort);
+	run('node scripts/code-quality-checks.cjs || true');
+	run('node scripts/performance-monitor.cjs || true');
+	run('node scripts/security-audit.cjs || true');
+	run('node scripts/seo-optimizer.cjs || true');
+
+	if (!ok) {}
+		console.error('\nAutomation runner encountered failures. See logs above.');
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 module.exports = AutomationRunner;

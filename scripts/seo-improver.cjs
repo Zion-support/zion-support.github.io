@@ -2,7 +2,11 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const fs = require("child_process")
 const path = require("path")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -52,6 +56,7 @@ Allow: /contact"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -79,3 +84,9 @@ Allow: /contact"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

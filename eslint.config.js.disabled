@@ -213,4 +213,8 @@ export default [
       'no-console': 'off'
     }
   }
+<<<<<<< HEAD:eslint.config.js.disabled
 ];
+=======
+];
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js

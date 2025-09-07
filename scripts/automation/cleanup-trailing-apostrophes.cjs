@@ -11,9 +11,13 @@
 const fs = require("fs");
 const path = require("path");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 =======
 #!/usr/bin/env node;"
@@ -42,9 +46,13 @@ function cleanContent(content) {}
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   let out = lines.join("\n");
 =======
 "
@@ -59,6 +67,7 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -68,6 +77,9 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // In-line fixes across the whole file;
 
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
@@ -76,12 +88,16 @@ function cleanContent(content) {}
 <<<<<<< HEAD
     .replace(/>\s*"\s*</g, "><");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     .replace(/>\s*"\s*</g, "><");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   return out};
 function walk(dir, files = []) {}"
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {}
@@ -108,6 +124,7 @@ function $1() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
@@ -118,6 +135,9 @@ function $1() {}
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -136,12 +156,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   main()};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   main()};
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

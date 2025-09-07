@@ -20,12 +20,16 @@ const util = require("util")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -146,12 +146,16 @@ console.log(" Applied ${updatesApplied} smart updates")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(` Smart Dependency Manager "failed": "`)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(` Smart Dependency Manager "failed": "`)
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

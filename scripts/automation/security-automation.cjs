@@ -12,6 +12,7 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -22,6 +23,9 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, "../../");"
@@ -56,6 +60,7 @@ class $1 {}
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
@@ -67,6 +72,14 @@ class $1 {}
     
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -107,9 +120,13 @@ class $1 {}
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 =======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
@@ -148,14 +165,19 @@ class $1 {}
         this.projectRoot,security-reports",
         "npm-audit-report.json";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async runNpmAudit() {}
   this.log("Running npm audit...");
     try {}
   const result = await this.runCommand(npm audit --audit-level=moderate --json";)
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Parse the JSON output;
       const auditData = JSON.parse(result.stdout);
@@ -169,6 +191,12 @@ class $1 {}
       // Parse the JSON output;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      // Parse the JSON output;
+      const auditData = JSON.parse(result.stdout);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Check for vulnerabilities;
 <<<<<<< HEAD
       const vulnerabilities = auditData.metadata?.vulnerabilities || {};
@@ -177,11 +205,22 @@ class $1 {}
         0;
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";)
       );
 =======
 
       this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";)
+=======
+
+      this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";)
+      );
+
+      // Save detailed audit report;
+      const auditReportFile = path.join(;)
+        this.projectRoot,security-reports",
+        "npm-audit-report.json";
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       );
 =======
 "
@@ -193,10 +232,14 @@ class $1 {}
 
       fs.writeFileSync(auditReportFile, JSON.stringify(auditData, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return {}
   "success": totalVulnerabilities === 0,
 =======
@@ -232,17 +275,22 @@ this.log(`Found ${outdatedCount} outdated packages`);
     try {}
   const result = await this.runCommand("npm outdated --json");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       const outdatedReportFile = path.join(;)"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Parse the JSON output;
 <<<<<<< HEAD
       const outdatedData = JSON.parse(result.stdout);
       const outdatedCount = Object.keys(outdatedData).length;
 this.log(`Found ${outdatedCount} outdated packages");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -251,6 +299,9 @@ this.log(`Found ${outdatedCount} outdated packages");
       const outdatedCount = Object.keys(outdatedData).length;"`;
 this.log(`Found ${outdatedCount} outdated packages");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Save outdated packages report;
 
         "outdated-packages.json";"
@@ -262,9 +313,13 @@ fs.writeFileSync(;)
 <<<<<<< HEAD
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return {}
   "success": true,
         outdatedCount,
@@ -306,6 +361,7 @@ fs.writeFileSync(;)
   async runSecurityScan() {}
   this.log("Running comprehensive security scan...");
 <<<<<<< HEAD
+<<<<<<< HEAD
     const results = [];
 =======
 =======
@@ -315,6 +371,11 @@ fs.writeFileSync(;)
     const results = [];
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const results = [];
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Run npm audit;
     const auditResult = await this.runNpmAudit();
     results.push({})"
@@ -333,12 +394,16 @@ fs.writeFileSync(;)
       "timestamp": new Date().toISOString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return results};
   async generateSecurityReport(results) {}
   const report = {}"
@@ -369,9 +434,13 @@ fs.writeFileSync(;)
               "action": "Update outdated packages",
               "details": "Some packages have newer versions available",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Generate recommendations based on results;
     results.forEach(result => {})
   if (!result.success) {}
@@ -402,6 +471,7 @@ fs.writeFileSync(;)
       "details": "Run security scans weekly to maintain security posture"}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);
 =======
 
@@ -410,6 +480,11 @@ fs.writeFileSync(;)
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     return report};
   async run() {}"
   this.log("Starting security automation...");"
@@ -429,6 +504,7 @@ this.log("Security automation completed. "Status": ${report.status}");this.log("
   this.log(Security vulnerabilities detected. Check the report for details.",)
         "WARN";
 <<<<<<< HEAD
+<<<<<<< HEAD
   async run() {}
   this.log("Starting security automation...");
 =======
@@ -437,6 +513,12 @@ this.log("Security automation completed. "Status": ${report.status}");this.log("
   this.log("Starting security automation...");
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  async run() {}
+  this.log("Starting security automation...");
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Install dependencies first;
     const depsResult = await this.installDependencies();
     if (!depsResult) {}
@@ -447,6 +529,7 @@ this.log("Security automation completed. "Status": ${report.status}");this.log("
 ;
     // Run security scan;
     const scanResults = await this.runSecurityScan();
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Generate final report;
     const report = await this.generateSecurityReport(scanResults);
@@ -462,6 +545,13 @@ this.log(`Security automation completed. "Status": ${report.status}`);this.log(`
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    // Generate final report;
+    const report = await this.generateSecurityReport(scanResults);
+this.log(`Security automation completed. "Status": ${report.status}`);this.log(`Secure "checks": ${report.summary.secure}/${report.summary.total}`);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     if (report.status === "VULNERABILITIES_FOUND") {}
   this.log(Security vulnerabilities detected. Check the report for details.",)
         "WARN";
@@ -475,9 +565,13 @@ this.log(`Security automation completed. "Status": ${report.status}`);this.log(`
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 } else {}
   this.log("No security vulnerabilities found. System is secure.", "INFO")};
   };
@@ -499,12 +593,16 @@ security.run().catch(error => {})"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SecurityAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = SecurityAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

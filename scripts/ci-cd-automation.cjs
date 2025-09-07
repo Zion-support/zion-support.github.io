@@ -33,6 +33,7 @@ class CICDAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -55,6 +56,12 @@ class CICDAutomation {}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     this.report.steps.push({})
       timestamp,
       type,
@@ -176,12 +183,16 @@ if ( {})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = CICDAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = CICDAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

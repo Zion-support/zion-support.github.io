@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -20,6 +21,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -52,9 +56,13 @@ class QualityAssuranceMonitor {}
   async checkCodeQuality() {}
     this.log('Running quality assurance checks...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
@@ -90,6 +98,7 @@ class QualityAssuranceMonitor {}
   async run() {}
     this.log('Starting Quality Assurance Monitor...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       const issues = await this.checkCodeQuality();
 =======
@@ -98,6 +107,12 @@ class QualityAssuranceMonitor {}
       const issues = await this.checkCodeQuality();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+    try {}
+      const issues = await this.checkCodeQuality();
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
@@ -132,12 +147,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = QualityAssuranceMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = QualityAssuranceMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

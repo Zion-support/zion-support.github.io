@@ -7,6 +7,7 @@
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
+
 class ComprehensiveSyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
@@ -37,17 +38,25 @@ class ComprehensiveSyntaxErrorFixer {}
 
       let fixedContent = content;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Fix common syntax errors;
       const fixes = [// Fix malformed imports;]
 
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
@@ -58,13 +67,18 @@ class ComprehensiveSyntaxErrorFixer {}
   async run() {}
     await this.log('Starting comprehensive syntax error fixing...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -73,6 +87,9 @@ class ComprehensiveSyntaxErrorFixer {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     let fixedCount = 0;
     for (const file of filesToFix) {}
       const fullPath = path.join(this.projectRoot, file);
@@ -86,12 +103,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ComprehensiveSyntaxErrorFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComprehensiveSyntaxErrorFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

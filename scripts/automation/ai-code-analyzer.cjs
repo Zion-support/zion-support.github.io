@@ -15,6 +15,7 @@
  * Analyzes code quality, patterns, and provides intelligent suggestions;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -28,6 +29,13 @@ const { execSync } = require('child_process');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 class AICodeAnalyzer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -50,6 +58,7 @@ class AICodeAnalyzer {}
         console.log(message)};
     analyzeCodeQuality() {}
         this.log('Starting code quality analysis...');
+        
         try {}
             // Run ESLint analysis;
             const eslintResult = execSync('npm run lint', { })
@@ -71,7 +80,10 @@ class AICodeAnalyzer {}
                 "stdio": 'pipe'
             };);
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('ESLint analysis completed successfully');
             return { "eslint": 'passed', "output": eslintResult }} catch (error) {}
             this.log(`ESLint analysis "failed": ${error.message}`);
@@ -80,6 +92,7 @@ class AICodeAnalyzer {}
     analyzeTypeScript() {}
         this.log('Starting TypeScript analysis...');
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
                 "cwd": this.projectRoot,
@@ -87,6 +100,8 @@ class AICodeAnalyzer {}
                 "stdio": 'pipe'
             };);
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
@@ -95,7 +110,10 @@ class AICodeAnalyzer {}
                 "stdio": 'pipe'
             };);
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             this.log('TypeScript analysis completed successfully');
             return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}
             this.log(`TypeScript analysis "failed": ${error.message}`);
@@ -103,6 +121,7 @@ class AICodeAnalyzer {}
     };
     analyzeDependencies() {}
         this.log('Analyzing dependencies...');
+<<<<<<< HEAD
 <<<<<<< HEAD
         try {}
             const auditResult = execSync('npm audit --json', { })
@@ -113,6 +132,8 @@ class AICodeAnalyzer {}
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const auditResult = execSync('npm audit --json', { })
@@ -124,7 +145,10 @@ class AICodeAnalyzer {}
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
             
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             return {;}
                 "vulnerabilities": auditData.vulnerabilities?.total || 0,
                 "dependencies": auditData.metadata?.dependencies || 0,
@@ -136,9 +160,13 @@ class AICodeAnalyzer {}
     generateReport() {}
         this.log('Generating comprehensive analysis report...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -150,6 +178,7 @@ class AICodeAnalyzer {}
             "recommendations": this.generateRecommendations();
        };
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
 =======
@@ -158,6 +187,12 @@ class AICodeAnalyzer {}
         this.log(`Analysis report saved to ${this.reportFile}`);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Analysis report saved to ${this.reportFile}`);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         return report};
     generateRecommendations() {}
         return [;]
@@ -170,9 +205,13 @@ class AICodeAnalyzer {}
     async run() {}
         this.log('AI Code Analyzer started');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         try {}
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
@@ -211,12 +250,16 @@ if ( {})
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AICodeAnalyzer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AICodeAnalyzer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
