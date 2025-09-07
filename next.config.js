@@ -1,21 +1,9 @@
-<<<<<<< HEAD
+const bundleAnalyzer = require('@next/bundle-analyzer');
 
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  output: 'export',
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-/** @type {import ('next').NextConfig} */;
-const next_config = {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -77,4 +65,5 @@ const nextConfig = {
     ];
   },
 };
-export default nextConfig;
+
+module.exports = withBundleAnalyzer(nextConfig);
