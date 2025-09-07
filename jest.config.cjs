@@ -15,10 +15,17 @@ const customJestConfig = {
     '/.next/',
     '/dist/',
     '/build/',
-    '/out/'
+    '/out/',
+    '/components.disabled/',
+    '/components.disabled_full/',
+    '/src.disabled/',
+    '/src-disabled/',
+    '/tests.disabled/',
+    '/src_backup/',
+    '/src.disabled/'
   ],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
   },
   testTimeout: 30000,
   passWithNoTests: true

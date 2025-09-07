@@ -1,4 +1,5 @@
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   // Security configurations
   poweredByHeader: false,
@@ -39,16 +40,6 @@ const nextConfig = {
     ];
   },
   
-  // Environment variables
-  env: {
-    NODE_ENV: 'production',
-    NEXT_TELEMETRY_DISABLED: '1'
-  }
-};
-
-module.exports = nextConfig;
-/** @type {import('next').NextConfig} */
-const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,

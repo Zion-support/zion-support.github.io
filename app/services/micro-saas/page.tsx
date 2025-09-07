@@ -46,7 +46,7 @@ export default function ServicePage() {
             Contact Us
           </a>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
 }
