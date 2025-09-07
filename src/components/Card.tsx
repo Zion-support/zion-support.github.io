@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface CardProps {
-
+  children: React.ReactNode;
   title?: string;
   description?: string;
   className?: string;
@@ -16,7 +16,12 @@ const Card: React.FC<CardProps> = ({
   onClick 
 }) => {
   return (
-
+    <div 
+      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
+    <div
+      className={`bg-white rounded-lg shadow-md p-6 ${className}`}
+    <motion.div 
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer ${className}`}
       onClick={onClick}
     >
       {title && (
@@ -25,9 +30,10 @@ const Card: React.FC<CardProps> = ({
       {description && (
         <p className="text-gray-600 mb-4">{description}</p>
       )}
-
       {children}
     </div>
   );
 };
 
+export default Card;
+export default Card;
