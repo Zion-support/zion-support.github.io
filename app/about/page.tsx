@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -187,11 +188,242 @@ export default function AboutPage() {
             <a 
               href="/contact" 
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+=======
+import React from 'react';
+import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100">
+              Pioneering the Future of Technology Solutions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-600">
+                To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
+                <p className="text-gray-600">
+                  To be the leading provider of AI-powered technology solutions, transforming how businesses operate in the digital age.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+                <p className="text-gray-600">
+                  We deliver exceptional results through innovative solutions, expert guidance, and unwavering commitment to quality.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Globe className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Impact</h3>
+                <p className="text-gray-600">
+                  Creating positive change through technology that makes businesses more efficient, secure, and successful.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Story
+              </h2>
+            </div>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-600 mb-8">
+                Founded with a vision to revolutionize how businesses leverage technology, Zion Tech Group has grown from a small startup to a leading provider of AI-powered solutions. Our journey began with a simple belief: technology should empower, not complicate.
+              </p>
+              
+              <p className="text-xl text-gray-600 mb-8">
+                Over the years, we've helped hundreds of businesses across various industries transform their operations through innovative AI services, cloud solutions, and cybersecurity expertise. Our team of certified professionals brings together decades of experience in cutting-edge technologies.
+              </p>
+              
+              <p className="text-xl text-gray-600 mb-8">
+                Today, we continue to push the boundaries of what's possible, developing custom solutions that address real-world challenges and drive measurable results for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Values
+              </h2>
+              <p className="text-xl text-gray-600">
+                The principles that guide everything we do.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <CheckCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Integrity</h3>
+                <p className="text-gray-600">
+                  We maintain the highest ethical standards in all our interactions and business practices.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Star className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Innovation</h3>
+                <p className="text-gray-600">
+                  We continuously explore new technologies and approaches to deliver cutting-edge solutions.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Collaboration</h3>
+                <p className="text-gray-600">
+                  We work closely with our clients as partners, ensuring their success is our success.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Award className="h-6 w-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Excellence</h3>
+                <p className="text-gray-600">
+                  We strive for excellence in every project, delivering results that exceed expectations.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Globe className="h-6 w-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Responsibility</h3>
+                <p className="text-gray-600">
+                  We take responsibility for our impact on society and the environment.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="h-6 w-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Focus</h3>
+                <p className="text-gray-600">
+                  We maintain laser focus on delivering value and solving real business problems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Team
+              </h2>
+              <p className="text-xl text-gray-600">
+                Meet the experts behind our success.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-blue-400 to-blue-600 w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="h-16 w-16 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI Specialists</h3>
+                <p className="text-gray-600">Machine learning engineers and data scientists</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-green-400 to-green-600 w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Award className="h-16 w-16 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Architects</h3>
+                <p className="text-gray-600">Certified cloud solution architects</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Globe className="h-16 w-16 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Security Experts</h3>
+                <p className="text-gray-600">Cybersecurity and compliance specialists</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Work With Us?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            Let's discuss how we can help transform your business with our technology solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-10ab
             >
               Get In Touch
             </a>
             <a 
               href="/services" 
+<<<<<<< HEAD
               className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               View Our Services
@@ -209,3 +441,15 @@ export default function AboutPage() {
 }
 }
 >>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
+=======
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              View Services
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-10ab
