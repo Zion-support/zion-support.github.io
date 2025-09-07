@@ -527,7 +527,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-3ea5
     </div>
   );
 }
