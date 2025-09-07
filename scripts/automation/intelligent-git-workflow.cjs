@@ -1,20 +1,8 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Intelligent Git Workflow Automation;
  * Advanced Git automation with intelligent conflict resolution, auto-merge, and code review;
@@ -24,16 +12,6 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -308,32 +286,7 @@ class IntelligentGitWorkflow {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-<<<<<<< HEAD
-        if (line.startsWith('<<<<<<<')) {
-    inConflict = true,
-    conflictType = 'ours'
-          conflictType = 'theirs';
-    inConflict = false,
-    conflictType = ''
-  } else if (!inConflict) {
-          resolvedLines.push(line);
-        } else if (inConflict && conflictType === 'ours') {
-          // Keep our version for now (simple strategy)
-          resolvedLines.push(line);
-<<<<<<< HEAD
-;
-      // Write resolved content;
-      fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
-      // Add resolved file
-      execSync(`git add ${filePath}`, { stdio: 'inherit' });
-
-      console.log(`✅ Resolved conflict in ${filePath}`);
-
-      
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       // Write resolved content
       await fs.writeFile(file, resolvedLines.join('\n'));
       
@@ -341,23 +294,7 @@ class IntelligentGitWorkflow {
       await this.runGitCommand(`git add ${file}`);
       
       return { resolved: true, method: 'auto_merge' };
-<<<<<<< HEAD
-      
-;
-      // Write resolved content;
-      fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
-      // Add resolved file
-      execSync(`git add ${filePath}`, { stdio: 'inherit' });
-
-      console.log(`✅ Resolved conflict in ${filePath}`);
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -366,52 +303,8 @@ main
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  updateWorkflowData() {
-    this.workflowData.lastUpdated = new Date().toISOString();
-
-    // Update performance metrics
-    const now = new Date().toISOString();
-    this.workflowData.performance[now] = {
-      commits: this.workflowData.mergeHistory.filter(m => m.success).length,
-      conflicts: this.workflowData.conflictHistory.length,
-      merges: this.workflowData.mergeHistory.length,
-    };
-  }
-
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
-
-    // Log error for analysis
-    const errorLog = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-    };
-
-    const errorFile = path.join(
-      this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
-    );
-    let errors = [];
-
-    try {
-      if (fs.existsSync(errorFile)) {
-        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
-      }
-    } catch (e) {;
-      // Start fresh if file is corrupted;
-    } catch (e) {
-      // Start fresh if file is corrupted
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
   // TODO: Implement
       const workflow = {
@@ -522,49 +415,6 @@ main
         process.exit(0);
 
       process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  updateWorkflowData() {
-    this.workflowData.lastUpdated = new Date().toISOString();
-
-    // Update performance metrics
-    const now = new Date().toISOString();
-    this.workflowData.performance[now] = {
-      commits: this.workflowData.mergeHistory.filter(m => m.success).length,
-      conflicts: this.workflowData.conflictHistory.length,
-      merges: this.workflowData.mergeHistory.length,
-    };
-  }
-
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
-
-    // Log error for analysis
-    const errorLog = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-    };
-
-    const errorFile = path.join(
-      this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
-    );
-    let errors = [];
-
-    try {
-      if (fs.existsSync(errorFile)) {
-        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
-      }
-    } catch (e) {;
-      // Start fresh if file is corrupted;
-    } catch (e) {
-      // Start fresh if file is corrupted
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }
 
@@ -572,87 +422,17 @@ main
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
-<<<<<<< HEAD
-;
-// Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
-=======
 
 
     errors.push(errorLog);
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
       // Check for merge opportunities;
 
       // Update workflow data;
 
-<<<<<<< HEAD
-console.log('🔄 Starting Intelligent Git Workflow Automation...');
 
-class IntelligentGitWorkflow {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.config = {
-      autoCommi: t: process.env.AUTO_COMMIT === 'true',
-      autoMerg: e: process.env.AUTO_MERGE === 'intelligent',
-      conflictResolutio: n: process.env.CONFLICT_RESOLUTION === 'ai-powered',
-      branchStrateg: y: process.env.BRANCH_STRATEGY || 'smart',
-    };
-    this.workflowData = this.loadWorkflowData();
-  }
-
-  loadWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    try {
-      if (fs.existsSync(dataFile)) {
-        return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
-      }
-    } catch (error) {
-      console.log('📚 Creating new workflow data file...');
-    }
-    return {
-      lastCommi: t: null,
-      branchHistor: y: [],
-      mergeHistor: y: [],
-      conflictHistor: y: [],
-      performanc: e: {},
-    };
-  }
-
-  saveWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
-  }
-
-  async runWorkflow() {
-    console.log('🚀 Starting intelligent Git workflow...');
-
-    try {
-      // Check Git status
-      const status = await this.checkGitStatus();
-
-      if (status.hasChanges) {
-        console.log('📝 Changes detected, analyzing...');
-
-        // Analyze changes
-        const changes = await this.analyzeChanges();
-
-        // Determine if auto-commit should happen
-        if (this.shouldAutoCommit(changes)) {
-          await this.intelligentCommit(changes);
-ursor/automate-test-improve-and-merge-code-59d5
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         }
       }
 
@@ -662,8 +442,6 @@ ursor/automate-test-improve-and-merge-code-59d5
       }
 
       // Update workflow data
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.updateWorkflowData();
       this.saveWorkflowData();
 '
@@ -767,21 +545,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
   // TODO: Implement
 
-<<<<<<< HEAD
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
 
-        if (line.startsWith('<<<<<<<')) {
-          inConflict = true;
-          conflictType = 'ours';
-<<<<<<< HEAD
-        } else if (line.startsWith('')) {
-ursor/fix-lint-push-and-merge-to-main-28da
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           conflictType = 'theirs';
           inConflict = false;
           conflictType = ;
@@ -825,25 +589,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
     } catch (e) {
       // Start fresh if file is corrupted;
 
-<<<<<<< HEAD
-    errors.push(errorLog);
-    fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
-  }
-}
-
-<<<<<<< HEAD
-
-
       await fs.mkdir(path.join(this.projectRoot, 'logs')
-;
-// Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
-
-main
-=======
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -861,34 +607,8 @@ main
       this.log(' Git repository detected')
       this.log(' Intelligent Git Workflow is ready')`;
       this.log(` Git workflow initialization failed: ${error.message}`, 'ERROR'`)
-<<<<<<< HEAD
-      const userName = await this.runGitCommand('git config user.name').catch(() => ''
-      const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
-        await this.runGitCommand('git config user.name "AI Git Workflow")
-        await this.runGitCommand('git config user.email "ai-workflow@example.com")
-<<<<<<< HEAD
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
-        await this.runGitCommand('git config user.email "ai-workflow@example.com")
-
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
-ursor/automate-test-improve-and-merge-code-59d5
-
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);
-        await this.runGitCommand('git config user.email "ai-workflow@example.com")
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
       const userName = await this.runGitCommand('git config user.name').catch(() => 
       const userEmail = await this.runGitCommand('git config user.email').catch(() => 
         await this.runGitCommand('git config user.name "AI Git Workflow")""
         await this.runGitCommand('git config user.email "ai-workflow@example.com")""`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 

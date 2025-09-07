@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +8,6 @@ console.log('✅ Security audit completed');
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 
@@ -173,11 +163,7 @@ class SecurityAuditor {
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -251,86 +237,24 @@ const securityChecks = [
       return allSecure;
     }
   }
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the security auditor
-const auditor = new SecurityAuditor();
-<<<<<<< HEAD
-auditor.checkDependencies();
-auditor.checkEnvironmentVariables();
-const report = auditor.generateReport();
-
-fs.writeFileSync('security-audit-report.json', JSON.stringify(report, null, 2));
-console.log('Security audit completed');
-=======
 auditor.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
 
-<<<<<<< HEAD
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-// Run the auditor
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.run().catch(console.error);
-}
-
-module.exports = SecurityAuditor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
-=======
 ];
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 let passed = 0;
 let failed = 0;
@@ -362,9 +286,6 @@ securityChecks.forEach(check => {
   }
 });
 
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 console.log(`\n📊 Security Results:`);
 console.log(`✅ Passed: ${passed}`);
 console.log(`❌ Failed: ${failed}`);
@@ -380,4 +301,3 @@ if (criticalFailed > 0) {
   console.log('\n🎉 All security checks passed!');
   process.exit(0);
 }
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

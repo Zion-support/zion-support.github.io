@@ -235,4 +235,3 @@ export default function AIInventoryManagementPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09

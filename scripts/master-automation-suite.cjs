@@ -1,38 +1,13 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Master Automation Suite;
  * Orchestrates all automation scripts in a comprehensive workflow;
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const phases = [{
 
       }]
@@ -67,21 +42,7 @@ if (require.main === module) {
   masterSuite.runMasterSuite()
     .then(results => {)
 
-<<<<<<< HEAD
-module.exports = MasterAutomationSuite;
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

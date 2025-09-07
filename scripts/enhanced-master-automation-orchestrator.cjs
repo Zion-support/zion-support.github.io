@@ -1,14 +1,5 @@
 
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-main
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -19,19 +10,6 @@ main
     log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
     if (masterReport.recommendations.length > 0) {
 
-<<<<<<< HEAD
-// Run the enhanced orchestrator
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-
-main();
-
-
-#!/usr/bin/env node;
-main();#!/usr/bin/env node;
-
-main
-=======
 
 
 
@@ -39,9 +17,6 @@ main
 
 
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs')
 const path = require('path')

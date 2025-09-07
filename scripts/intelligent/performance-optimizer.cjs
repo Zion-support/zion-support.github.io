@@ -1,22 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/performance-optimizer.cjs
-
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/performance-optimizer.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/performance-optimizer.cjs
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/performance-optimizer.cjs
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/performance-optimizer.cjs
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/performance-optimizer.cjs
 const os = require('os')
 // console.log('⚡ Performance Optimizer starting...')
       console.log(' Performance Optimizer started successfully')
@@ -127,11 +112,4 @@ const os = require('os')
       console.error('Error saving "baseline")
       console.error('Error saving "analysis")
       console.error('Error saving deep "analysis")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/performance-optimizer.cjs
-=======
-<<<<<<< HEAD:scripts/intelligent/performance-optimizer.cjs
       console.error('Error loading optimization "history")
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      console.error('Error loading optimization "history")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/performance-optimizer.cjs

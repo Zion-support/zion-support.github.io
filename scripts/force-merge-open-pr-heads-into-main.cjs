@@ -2,12 +2,8 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -33,14 +29,12 @@ async function gh(path, method = 'GET') {}
       Authorization: `token ${token}`,`
       "Accept": 'application/vnd.github.v3+json',
       'User-Agent': 'force-merge-script'
-=======
 
 
 
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
   }
 });

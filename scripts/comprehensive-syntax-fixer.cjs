@@ -1,37 +1,11 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-syntax-fixer.cjs
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-syntax-fixer.cjs
     const logMessage = `[${timestamp}] ${message}\n`;
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     const logMessage = `[${timestamp}] ${message}\n`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runCommand(command, options = {}) {
     try {
-<<<<<<< HEAD
-      const { stdout, stderr } = await execAsync(command, {
-        cwd: process.cwd(),
-        timeout: 30000,
-        ...options
-      });
-      return { success: true, stdout, stderr };
-    } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
-      return {
-        success: false,
-        stdout: error.stdout || "",
-        stderr: error.stderr || error.message
-      };
-    }
-  }
-  // Check if file has merge conflicts
-=======
   // TODO: Implement
       const { stdout, stderr } = await execAsync(command, { )
         cwd: process.cwd(), 
@@ -48,42 +22,14 @@
       };
 
   // Check if file has merge conflicts;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   hasMergeConflicts(content) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-syntax-fixer.cjs
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-syntax-fixer.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
 
   }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  }
-  // Check if file has syntax errors
-=======
 
 
   // Check if file has syntax errors;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   hasSyntaxErrors(content) {
     // Check for common syntax error patterns;
     const syntaxErrorPatterns = ["
@@ -97,15 +43,6 @@
       /<<<<<</, // Git merge markers;
       /======/, // Git merge markers;]
     ];
-<<<<<<< HEAD
-    return syntaxErrorPatterns.some(pattern => pattern.test(content));
-  }
-  // Fix common syntax errors
-  fixSyntaxErrors(content) {
-    let fixed = content;
-<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-syntax-fixer.cjs
-    // Fix merge conflicts by keeping the HEAD version
-=======
     )
     return syntaxErrorPatterns.some(pattern => pattern.test(content));
 
@@ -177,32 +114,14 @@ class ComprehensiveSyntaxFixer {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
     this.errors = []
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
-=======
 
 
 
     fixed = fixed.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-syntax-fixer.cjs
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -342,10 +261,6 @@ class ComprehensiveSyntaxFixer {
         { pattern: /;\s*,/g, replacement: ';' },
         // Fix merge conflict markers
 
-<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-syntax-fixer.cjs
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       // Apply all fixes
       fixes.forEach(fix => {
         if (typeof fix.replacement === 'function') {
@@ -564,34 +479,6 @@ if (require.main === module) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-syntax-fixer.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
   fixFile(filePath) {
@@ -625,16 +512,7 @@ if (require.main === module) {
       {]
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
-=======
     specificFixes.forEach(fix => {)
 
     return content;
@@ -740,7 +618,6 @@ if (require.main === module) {
       console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]");"
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -752,47 +629,18 @@ class ComprehensiveSyntaxFixer {}
     this.processedFiles = 0;
   async fixAll() {}
     try {}
-<<<<<<< HEAD
-      console.log('📁 Scanning for files with syntax errors...');
-      // Get all JS/JSX/TS/TSX files;
-      const files = this.getAllFiles('.', ['.js', '.jsx', '.ts', '.tsx']);
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log(`Found ${files.length} files to process`);
       for (const file of files) {}
           this.processedFiles++;
           if (this.fixFile(file)) {}
             this.fixedFiles.push(file);
         } catch (error) {}
-<<<<<<< HEAD
-          this.errors.push({ file, error: error.message }
-});
-          console.error(`❌ Error processing ${file}: ${error.message}`);
-        };
-      };
-      this.generateReport();
-      console.log(`✅ Fixed ${this.fixedFiles.length} files out of ${this.processedFiles} processed`);
-    } catch (error) {}
-      console.error('❌ Comprehensive fix failed:', error);
-    };
-  };
-  getAllFiles(dir, extensions) {}
-    const files = [];
-    if (!fs.existsSync(dir)) {}
-      return files;
-    };
-    const items = fs.readdirSync(dir);
-    for (const item of items) {}
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-=======
           this.errors.push({ file, error: error.message })
 
   getAllFiles(dir, extensions) {}
     if (!fs.existsSync(dir)) {}
     for (const item of items) {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stat.isDirectory()) {}
         // Skip node_modules, .next, dist, etc.
 
@@ -807,31 +655,11 @@ class ComprehensiveSyntaxFixer {}
       // Fix common syntax errors;
       const fixes = []
         // Fix missing semicolons;
-<<<<<<< HEAD
-        { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
-        // Fix missing closing braces;
-        { pattern: /(\w+)\s*{\s*$/gm, replacement: '$1 {\n  // TODO: Implement\n}' },
-        // Fix unterminated strings;
-        { pattern: /(['"])([^'"]*?)\s*$/gm, replacement: '$1$2$1' },
-        // Fix merge conflict markers;
-        { pattern: /}
-        { pattern: /}
-        // Fix duplicate imports;
-        { pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];/g,
-          replacement: (match, p1, p2) => {}
-            const imports1 = p1.split(',').map(i => i.trim());
-            const imports2 = p2.split(',').map(i => i.trim());
-            const uniqueImports = [...new Set([...imports1, ...imports2])];
-            return `import { ${uniqueImports.join(', ')} } from 'lucide-react';`;`
-          };
-        },
-=======
 
         // Fix merge conflict markers;
         { pattern: /}
         // Fix duplicate imports;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Fix missing closing tags;
         { pattern: /<(\w+)[^>]*>[\s\S]*?$/gm, replacement: (match, tag) => {}`;
           if (!match.includes(`</${tag}>`)) {`}`;
@@ -840,37 +668,14 @@ class ComprehensiveSyntaxFixer {}
         // Fix extra content after closing tags;
         { pattern: /<\/\w+>\s*[^<\s][^<]*$/gm, replacement: (match) => {}
           const lines = match.split('\n');
-<<<<<<< HEAD
-          const lastTagIndex = lines.findIndex(line => line.includes('</'));
-          if (lastTagIndex >= 0) {}
-            return lines.slice(0, lastTagIndex + 1).join('\n');
-          };
-          return match;
-        }},
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Fix duplicate function declarations;
         { pattern: /export\s+default\s+function\s+\w+[\s\S]*?}\s*export\s+default\s+function\s+\w+/g,
           replacement: (match) => {}
             const parts = match.split('export default function');
             return 'export default function' + parts[1];
-<<<<<<< HEAD
-          };
-        },
-        // Fix missing commas in objects;
-        { pattern: /(\w+)\s*:\s*([^,}\n]+)\s*\n\s*(\w+)\s*:/g, replacement: '$1: $2,\n  $3:' },
-        // Fix missing closing parentheses;
-        { pattern: /\([^)]*$/gm, replacement: (match) => match + ')' },
-        // Fix missing closing brackets;
-        { pattern: /\[[^\]]*$/gm, replacement: (match) => match + ']' },
-        // Fix missing closing quotes;
-        { pattern: /(['"])[^'"]*$/gm, replacement: (match) => match + match[0] };
-      ];
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const fix of fixes) {}
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
         if (newContent !== fixedContent) {}
@@ -884,23 +689,4 @@ class ComprehensiveSyntaxFixer {}
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
       errorList: this.errors;
-<<<<<<< HEAD
-    };
-    const reportPath = 'syntax-fix-report.json';
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report saved to ${reportPath}`);
-  };
-};
-// Run if called directly;
-if (require.main === module) {}
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.fixAll().then(() => {}
-    console.log('🎉 Comprehensive syntax fixing completed!');
-    process.exit(0);
-  }
-});
-};
-module.exports = ComprehensiveSyntaxFixer;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
