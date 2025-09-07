@@ -2,15 +2,15 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -41,14 +41,8 @@ function ApiPerformanceTestingPage() {
     "SLO - aware latency reports",
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 export default function ApiPerformanceTestingPage() {;
   const features = [;
     "k6/Gatling-compatible test runner",;
@@ -57,12 +51,9 @@ export default function ApiPerformanceTestingPage() {;
     "CI checks and PR annotations",;
     "Synthetic traffic for staging",;
   ];
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
 
 
 

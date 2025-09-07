@@ -42,17 +42,16 @@ Rocket;
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1;
 transition: {
-        staggerChildren: 0.2}
-delayChildren: 0.1}
+        staggerChildren: 0.2;}
+delayChildren: 0.1;}
       }
     }
   };
@@ -61,50 +60,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
 const itemVariants = {
     hidden: {
-opacity: 0,
-      y: 50}
-      scale: 0.9}
+opacity: 0;,
+      y: 50;}
+      scale: 0.9;}
     },
     visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
+      opacity: 1;,
+      y: 0;,
+      scale: 1;,
       transition: {
         duration: 0.6
-        ease: 'easeOut' as const
+        ease: 'easeOut' as const;
       }
-    },  };        ease: "easeOut" as const
+    },  };        ease: "easeOut" as const;
       }
     }
   }
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 ;},
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1;,
+      transition: {;
     },  };
   const itemVariants = {;
     hidden: {;
-      opacity: 0,;
-      y: 50,;
-      scale: 0 && 0.9,;
+      opacity: 0;,;
+      y: 50;,;
+      scale: 0 && 0.9;,;
     },;
-    visible: {      opacity: 1,        delayChildren: 0 && 0.1;
+    visible: {      opacity: 1;,        delayChildren: 0 && 0.1;
       }
     }
   };
   const itemVariants = {;
     hidden: { ;
-      opacity: 0,;
-      y: 50,;
+      opacity: 0;,;
+      y: 50;,;
       scale: 0 && 0.9;
     };
     visible: { ;
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
+      opacity: 1;,;
+      y: 0;,;
+      scale: 1;,;
       transition: {;
-        duration: 0 && 0.6,;
-        ease: 'easeOut' as const,;
+        duration: 0 && 0.6;,;
+        ease: 'easeOut' as const;,;
       },;
     },  };        ease: "easeOut" as const;
       }
@@ -112,23 +111,23 @@ opacity: 0,
   };
   const cardVariants = {;
     hover: {;
-      y: -10,;
-      scale: 1 && 1.02,;
+      y: -10;,;
+      scale: 1 && 1.02;,;
       transition: {;
-        duration: 0 && 0.3,;
-        ease: 'easeOut' as const,;
+        duration: 0 && 0.3;,;
+        ease: 'easeOut' as const;,;
       },;
     },  };        ease: "easeOut" as const;
       }
     }
   };
-        duration: 0.6,
-ease: 'easeOut' as const,
+        duration: 0.6;,
+ease: 'easeOut' as const;,
       },
     },
 
-        duration: 0.6}
-ease: 'easeOut' as const}
+        duration: 0.6;}
+ease: 'easeOut' as const;}
       }
     }
   };
@@ -138,13 +137,13 @@ const cardVariants = {
       y: -10;
 scale: 1.02;
 transition: {
-        duration: 0.3}
-ease: 'easeOut' as const}
+        duration: 0.3;}
+ease: 'easeOut' as const;}
       }
     }
   };
 
-const renderServiceCard = (service: any, index: number) => (
+const renderServiceCard = (service: any;, index: number) => (
     <motion.div;
 key={service.id}
       variants={itemVariant}
@@ -224,7 +223,7 @@ className='group relative' />;
             <div className='grid grid-cols-1 gap-1' />
               {service.features;
                 .slice(0, 3)
-                .map((feature: string, idx: number) => (
+                .map((feature: string;, idx: number) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <div
                     key={idx}
@@ -254,7 +253,7 @@ key={id}
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
-            <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize}</span>          <div className="flex items-center justify-between">
+            <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize;}</span>          <div className="flex items-center justify-between">
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
               <div className="text-slate-400 text-sm">{service.period}</div>
@@ -262,8 +261,8 @@ key={id}
               <div className='text-slate-400 text-sm' />{service.period}</div>
             </div>
             <motion.button;
-whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }
+whileHover={{ scale: 1.05 ;}}
+              whileTap={{ scale: 0.95 ;}
 }
 className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25' />
 
@@ -276,8 +275,8 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               <div className='text-slate-400 text-sm'>{service.period}</div>
             </div>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 ;}}
+              whileTap={{ scale: 0.95 ;}}
 className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
             >
               <span>Learn More</span>
@@ -288,8 +287,8 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 <div className='mt-4 pt-4 border-t border-slate-700/50'>
             <div className='flex items-center justify-between text-xs text-slate-500'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-              <span>Market: {service.marketSize}</span>
-              <span>Growth: {service.growthRate}</span>
+              <span>Market: {service.marketSize;}</span>
+              <span>Growth: {service.growthRate;}</span>
             </div>
           </div>
         </div>
@@ -303,8 +302,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='mt-4 pt-4 border-t border-slate-700/50' />
             <div className='flex items-center justify-between text-xs text-slate-500' />
-              <span />Market: {service.marketSize}</span>
-              <span />Growth: {service.growthRate}</span>
+              <span />Market: {service.marketSize;}</span>
+              <span />Growth: {service.growthRate;}</span>
             </div>
           </div>
         </div>
@@ -323,19 +322,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Section header */}
 origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
         <motion.div;
-initial={{ opacity: 0, y: 30 }
+initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}
 }
 
 className='text-center mb-16'
@@ -388,9 +387,9 @@ the future of business.
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
       <div className='container mx-auto px-4 relative z-10' />;
         {/* Section header */}<motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
 
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
@@ -401,9 +400,9 @@ the future of business.
 
         {/* AI Services Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
           className='text-center mb-16'>;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -443,14 +442,14 @@ the future of business.
         </motion && motion.div>;
         {/* AI Services Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
 className='mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='flex items-center space-x-3 mb-8'>
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
 className='mb-20'
          />
           <div className='flex items-center space-x-3 mb-8' />
@@ -469,7 +468,7 @@ variants={containerVariant}
             {innovative2026AIServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-8">
@@ -491,7 +490,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </motion.div>
 
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.2 ;}
 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
@@ -519,24 +518,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
         </motion && motion.div>;{/* IT Infrastructure Section */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
 
         {/* IT Infrastructure Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
 
 
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='flex items-center space-x-3 mb-8'>
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='mb-20'
          />
           <div className='flex items-center space-x-3 mb-8' />
@@ -556,7 +555,7 @@ variants={containerVariant}
               renderServiceCard(service, index))}
           </motion.div>;
         </motion.div>;
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}
 }
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8' />;
@@ -567,9 +566,9 @@ variants={containerVariant}
           </div>;
         {/* Micro SAAS Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.6 ;}}
         >
 <div className='flex items-center space-x-3 mb-8'>
             <Zap className='w-6 h-6 text-pink-400' />
@@ -600,16 +599,16 @@ variants={containerVariant}
 
         {/* Micro SAAS Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.6 ;}}>;
           <div className='flex items-center space-x-3 mb-8'>;
         <motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0.8, delay: 0.6 }
+          transition={{ duration: 0.8;, delay: 0.6 ;}
 }
          />;
 <div className='flex items-center space-x-3 mb-8' />;
@@ -636,8 +635,8 @@ variants={containerVariant}
 
         {/* CTA Section */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
            />
             {innovative2026MicroSaasServices.map((service, index) =>}
@@ -648,11 +647,11 @@ variants={containerVariant}
 
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0.8, delay: 0.8 }
+          transition={{ duration: 0.8;, delay: 0.8 ;}
 }
 
 className='text-center mt-16'
@@ -672,10 +671,10 @@ advantage.
             </p>
             <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4' />
               <motion.button;
-whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8;, delay: 0.8 ;}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
@@ -687,8 +686,8 @@ whileHover={{ scale: 1.05 }}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -696,8 +695,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -708,8 +707,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Start Free Trial;
               </motion.button>
               <motion.button;
-whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }
+whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}
 }
 
 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
@@ -723,7 +722,7 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
     </section>
 
 
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.8 ;}}
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -743,7 +742,7 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
             <div className='grid grid - cols - 1 gap - 1'>;
               {service.features;
                 .slice (0, 3);
-                .map ((feature: string, idx: number) => (
+                .map ((feature: string;, idx: number) => (
                   <div;
                     key={idx}
                     className='flex items - center space - x-2 text - xs text - slate - 400';
@@ -755,7 +754,7 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
           {/* Price and CTA */}          <div className="mb - 4">;
             <h4 className="text - white font - semibold mb - 2 text - sm">Key Features:</h4>;
             <div className="grid grid - cols - 1 gap - 1">;
-              {service.features.slice (0, 3).map ((feature: string, idx: number) => (
+              {service.features.slice (0, 3).map ((feature: string;, idx: number) => (
                 <div key={idx} className="flex items - center space - x-2 text - xs text - slate - 400">;
                   <div className="w - 1.5 h - 1.5 bg - cyan - 500 rounded - full" />;
                   <span>{feature}</span>;
@@ -769,8 +768,8 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
               </div>;
               <div className='text - slate - 400 text - sm'>{service.period}</div>            </div>;
             <motion.button;
-              while_hover={{ scale: 1.05 }}
-              while_tap={{ scale: 0.95 }}
+              while_hover={{ scale: 1.05 ;}}
+              while_tap={{ scale: 0.95 ;}}
               className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
             >;
               <span > Learn More</span>;
@@ -778,13 +777,13 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
           </div>;
           {/* Market info */}
           <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50'>;
-            <div className='flex items - center justify - between text - xs text - slate - 500'>              <span > Market: {service.market_size}</span>          <div className="flex items - center justify - between">;
+            <div className='flex items - center justify - between text - xs text - slate - 500'>              <span > Market: {service.market_size;}</span>          <div className="flex items - center justify - between">;
             <div className="text - right">;
               <div className="text - 2xl font - bold text - white">{service.price}</div>;
               <div className="text - slate - 400 text - sm">{service.period}</div>;
             <motion.button;
-              while_hover={{ scale: 1.05 }}
-              while_tap={{ scale: 0.95 }}
+              while_hover={{ scale: 1.05 ;}}
+              while_tap={{ scale: 0.95 ;}}
               className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25';
             >;
               <span > Learn More</span>;
@@ -797,8 +796,8 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
           <div className='mt - 4 pt - 4 border - t border - slate - 700 / 50'>;
             <div className='flex items - center justify - between text - xs text - slate - 500'>          <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
             <div className="flex items - center justify - between text - xs text - slate - 500">;
-              <span > Market: {service.market_size}</span>;
-              <span > Growth: {service.growth_rate}</span>;
+              <span > Market: {service.market_size;}</span>;
+              <span > Growth: {service.growth_rate;}</span>;
             </div>;
           </div>;
         </div>;
@@ -815,9 +814,9 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
       <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - slate - 900 / 20 to - slate - 900 / 40" />;
       <div className="container mx - auto px - 4 relative z - 10">;
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
           className='text - center mb - 16';
         >;
           <div className='flex items - center justify - center space - x-2 mb - 4'>;
@@ -858,9 +857,9 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
         </motion.div>;
         {/* AI Services Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
           className='mb - 20';
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
@@ -892,9 +891,9 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
         </motion.div>;
         {/* IT Infrastructure Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
           className='mb - 20';
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
@@ -926,9 +925,9 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
         </motion.div>;
         {/* Micro SAAS Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.6 ;}}
         >;
           <div className='flex items - center space - x-3 mb - 8'>;
             <Zap className='w - 6 h - 6 text - pink - 400' />;
@@ -955,9 +954,9 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
         </motion.div>;
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.8 ;}}
           className='text - center mt - 16';
         >;
           <div className='bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8'>;
@@ -978,8 +977,8 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
 }
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={{ scale: 1.05 ;}}
+                while_tap={{ scale: 0.95 ;}}
                 className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25'              >        >;
           <div className="bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 8">;
             <h3 className="text - 2xl font - bold text - white mb - 4">;
@@ -990,15 +989,15 @@ className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 r
             </p>;
             <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={{ scale: 1.05 ;}}
+                while_tap={{ scale: 0.95 ;}}
                 className="bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 shadow - lg hover:shadow - cyan - 500 / 25";
               >;
                 Start Free Trial;
               </motion.button>;
               <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
+                while_hover={{ scale: 1.05 ;}}
+                while_tap={{ scale: 0.95 ;}}
                 className='border border - slate - 600 hover:border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50'              >                className="border border - slate - 600 hover: border - slate - 500 text - white px - 8 py - 3 rounded - lg font - medium transition - all duration - 300 hover:bg - slate - 800 / 50";
               >;
                 Schedule Demo;

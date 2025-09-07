@@ -1,5 +1,5 @@
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
 import { 
   BookOpen,
   Code, 
@@ -10,10 +10,10 @@ import {
   Webhook 
 } from "lucide-react",
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
+import { WebhooksManager } from "@/components/developers/WebhooksManager",;
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",;
 import { ApiLogs } from "@/components/developers/ApiLogs",interface TabDefinition {
   id: string;
   label: string;

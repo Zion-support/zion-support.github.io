@@ -276,7 +276,7 @@ export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = Rea
 };
 
 
-import React, { memo, useMemo, useCallback } from 'react',
+import React, { memo, useMemo, useCallback } from 'react',;
 ,
 // Higher-order component for performance optimization,
 export const withPerformanceOptimization = <P extends object>(,

@@ -67,8 +67,8 @@ pr-12325
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
-import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",
-import { Control } from "react-hook-form",
+import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
 import { 
 import React, { useState } from './react';''
 import { Control  } from './react - hook - form';'
@@ -101,9 +101,9 @@ import {
   FormControl, 
   FormMessage 
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
-import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",;
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
 
   return (
     <div className="space-y-4">

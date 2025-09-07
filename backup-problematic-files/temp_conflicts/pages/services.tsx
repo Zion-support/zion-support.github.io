@@ -1,21 +1,21 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ;
   Brain, Shield, Rocket, Cpu, Database, Atom, ;
   Users, Target, Star, Zap, Globe, TrendingUp,;
   CheckCircle, ArrowRight, ExternalLink, Sparkles;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 ;
 export default function ServicesPage() {;
   const mainServices = [;
     {;
-      icon:Brain,;
-      title:"AI Business Intelligence",,
-  description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",;
+      icon: Brain;,;
+      title: "AI Business Intelligence";,,
+  description: "Transform your data into actionable insights with our advanced AI-powered analytics platform.";,;
       features:[;
         "Real-time data processing",;
         "Predictive analytics",;
@@ -23,14 +23,14 @@ export default function ServicesPage() {;
         "Interactive dashboards",;
         "Automated reporting";
       ],;
-      price:"$499/month",;
-      color:"from-purple-500 to-pink-500",;
+      price: "$499/month";,;
+      color: "from-purple-500 to-pink-500";,;
       href:"/ai-business-intelligence";
     },;
     {;
-      icon:Shield,;
-      title:"Quantum Cybersecurity",,
-  description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",;
+      icon: Shield;,;
+      title: "Quantum Cybersecurity";,,
+  description: "Future-proof your security with quantum-resistant encryption and AI-powered threat detection.";,;
       features:[;
         "Quantum-resistant encryption",;
         "AI threat detection",;
@@ -38,14 +38,14 @@ export default function ServicesPage() {;
         "24/7 monitoring",;
         "Compliance ready";
       ],;
-      price:"$799/month",;
-      color:"from-red-500 to-orange-500",;
+      price: "$799/month";,;
+      color: "from-red-500 to-orange-500";,;
       href:"/quantum-cybersecurity";
     },;
     {;
-      icon:Users,;
-      title:"AI Customer Experience",,
-  description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",;
+      icon: Users;,;
+      title: "AI Customer Experience";,,
+  description: "Deliver personalized customer experiences at scale with intelligent automation and insights.";,;
       features:[;
         "Customer journey mapping",;
         "AI personalization",;
@@ -53,14 +53,14 @@ export default function ServicesPage() {;
         "Automated support",;
         "Behavioral insights";
       ],;
-      price:"$399/month",;
-      color:"from-green-500 to-teal-500",;
+      price: "$399/month";,;
+      color: "from-green-500 to-teal-500";,;
       href:"/ai-customer-experience";
     },;
     {;
-      icon:Database,;
-      title:"Edge Computing Orchestration",,
-  description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",;
+      icon: Database;,;
+      title: "Edge Computing Orchestration";,,
+  description: "Deploy and manage applications at the edge with intelligent orchestration and optimization.";,;
       features:[;
         "Edge node management",;
         "IoT device management",;
@@ -68,14 +68,14 @@ export default function ServicesPage() {;
         "Load balancing",;
         "Auto-scaling";
       ],;
-      price:"$349/month",;
-      color:"from-yellow-500 to-orange-500",;
+      price: "$349/month";,;
+      color: "from-yellow-500 to-orange-500";,;
       href:"/edge-computing-orchestration";
     },;
     {;
-      icon:Rocket,;
-      title:"Space Technology Innovation",,
-  description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",;
+      icon: Rocket;,;
+      title: "Space Technology Innovation";,,
+  description: "Accelerate space exploration with cutting-edge AI and quantum technology solutions.";,;
       features:[;
         "Satellite management",;
         "AI mission planning",;
@@ -83,14 +83,14 @@ export default function ServicesPage() {;
         "Resource optimization",;
         "Risk assessment";
       ],;
-      price:"$2,499/month",;
-      color:"from-violet-500 to-purple-500",;
+      price: "$2;,499/month",;
+      color: "from-violet-500 to-purple-500";,;
       href:"/space-technology";
     },;
     {;
-      icon:Atom,;
-      title:"Neural Interface Development",,
-  description:"Build the future of human-computer interaction with advanced neural interfaces.",;
+      icon: Atom;,;
+      title: "Neural Interface Development";,,
+  description: "Build the future of human-computer interaction with advanced neural interfaces.";,;
       features:[;
         "BCI development tools",;
         "Neural signal processing",;
@@ -98,11 +98,11 @@ export default function ServicesPage() {;
         "Real-time analysis",;
         "Custom algorithms";
       ],;
-      price:"$899/month",;
-      color:"from-pink-500 to-rose-500",;
+      price: "$899/month";,;
+      color: "from-pink-500 to-rose-500";,;
       href:"/neural-interface";
-      title:"AI Business Intelligence",;""
-      description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",;"
+      title: "AI Business Intelligence";,;""
+      description: "Transform your data into actionable insights with our advanced AI-powered analytics platform.";,;"
       features:[;"
         "Real-time data processing",;""
         "Predictive analytics",;""
@@ -110,91 +110,91 @@ export default function ServicesPage() {;
         "Interactive dashboards",;""
         "Automated reporting";"]
       ],;"
-      price:"$499/month",;""
-      color:"from-purple-500 to-pink-500",;""
+      price: "$499/month";,;""
+      color: "from-purple-500 to-pink-500";,;""
       href:"/ai-business-intelligence";"
     },;
-      icon:Shield,;"
-      title:"Quantum Cybersecurity",;""
-      description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",;"
+      icon: Shield;,;"
+      title: "Quantum Cybersecurity";,;""
+      description: "Future-proof your security with quantum-resistant encryption and AI-powered threat detection.";,;"
         "Quantum-resistant encryption",;""
         "AI threat detection",;""
         "Zero-trust architecture",;""
         "24/7 monitoring",;""
         "Compliance ready";"]
-      price:"$799/month",;""
-      color:"from-red-500 to-orange-500",;""
+      price: "$799/month";,;""
+      color: "from-red-500 to-orange-500";,;""
       href:"/quantum-cybersecurity";"
-      icon:Users,;"
-      title:"AI Customer Experience",;""
-      description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",;"
+      icon: Users;,;"
+      title: "AI Customer Experience";,;""
+      description: "Deliver personalized customer experiences at scale with intelligent automation and insights.";,;"
         "Customer journey mapping",;""
         "AI personalization",;""
         "Sentiment analysis",;""
         "Automated support",;""
         "Behavioral insights";"]
-      price:"$399/month",;""
-      color:"from-green-500 to-teal-500",;""
+      price: "$399/month";,;""
+      color: "from-green-500 to-teal-500";,;""
       href:"/ai-customer-experience";"
-      icon:Database,;"
-      title:"Edge Computing Orchestration",;""
-      description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",;"
+      icon: Database;,;"
+      title: "Edge Computing Orchestration";,;""
+      description: "Deploy and manage applications at the edge with intelligent orchestration and optimization.";,;"
         "Edge node management",;""
         "IoT device management",;""
         "Real-time monitoring",;""
         "Load balancing",;""
         "Auto-scaling";"]
-      price:"$349/month",;""
-      color:"from-yellow-500 to-orange-500",;""
+      price: "$349/month";,;""
+      color: "from-yellow-500 to-orange-500";,;""
       href:"/edge-computing-orchestration";"
-      icon:Rocket,;"
-      title:"Space Technology Innovation",;""
-      description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",;"
+      icon: Rocket;,;"
+      title: "Space Technology Innovation";,;""
+      description: "Accelerate space exploration with cutting-edge AI and quantum technology solutions.";,;"
         "Satellite management",;""
         "AI mission planning",;""
         "Quantum communication",;""
         "Resource optimization",;""
         "Risk assessment";"]
-      price:"$2,499/month",;""
-      color:"from-violet-500 to-purple-500",;""
+      price: "$2;,499/month",;""
+      color: "from-violet-500 to-purple-500";,;""
       href:"/space-technology";"
-      icon:Atom,;"
-      title:"Neural Interface Development",;""
-      description:"Build the future of human-computer interaction with advanced neural interfaces.",;"
+      icon: Atom;,;"
+      title: "Neural Interface Development";,;""
+      description: "Build the future of human-computer interaction with advanced neural interfaces.";,;"
         "BCI development tools",;""
         "Neural signal processing",;""
         "AI pattern recognition",;""
         "Real-time analysis",;""
         "Custom algorithms";"]
-      price:"$899/month",;""
-      color:"from-pink-500 to-rose-500",;""
+      price: "$899/month";,;""
+      color: "from-pink-500 to-rose-500";,;""
       href:"/neural-interface";"
 pr-12325
     }
   ],;
   const specializedServices = [;
     {;
-      title:"AI Autonomous Systems",,
-  description:"Build self-managing, self-optimizing systems that adapt and evolve",;
-      icon:Brain,;
+      title: "AI Autonomous Systems";,,
+  description: "Build self-managing;, self-optimizing systems that adapt and evolve",;
+      icon: Brain;,;
       color:"from-blue-500 to-cyan-500";
     },;
     {;
-      title:"Quantum Machine Learning",,
-  description:"Leverage quantum computing for unprecedented ML performance",;
-      icon:Atom,;
+      title: "Quantum Machine Learning";,,
+  description: "Leverage quantum computing for unprecedented ML performance";,;
+      icon: Atom;,;
       color:"from-purple-500 to-pink-500";
     },;
     {;
-      title:"AI-Powered DevOps",,
-  description:"Automate and optimize your development and deployment processes",;
-      icon:Cpu,;
+      title: "AI-Powered DevOps";,,
+  description: "Automate and optimize your development and deployment processes";,;
+      icon: Cpu;,;
       color:"from-green-500 to-emerald-500";
     },;
     {;
-      title:"Blockchain AI Integration",,
-  description:"Combine blockchain security with AI intelligence for next-gen applications",;
-      icon:Shield,;
+      title: "Blockchain AI Integration";,,
+  description: "Combine blockchain security with AI intelligence for next-gen applications";,;
+      icon: Shield;,;
       color:"from-orange-500 to-red-500";
     }
   ],;
@@ -213,19 +213,19 @@ pr-12325
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
     {;"
-      title:"AI Autonomous Systems",;""
-      description:"Build self-managing, self-optimizing systems that adapt and evolve",;"
-      icon:Brain,;"
+      title: "AI Autonomous Systems";,;""
+      description: "Build self-managing;, self-optimizing systems that adapt and evolve",;"
+      icon: Brain;,;"
       color:"from-blue-500 to-cyan-500";"
-      title:"Quantum Machine Learning",;""
-      description:"Leverage quantum computing for unprecedented ML performance",;"
+      title: "Quantum Machine Learning";,;""
+      description: "Leverage quantum computing for unprecedented ML performance";,;"
       color:"from-purple-500 to-pink-500";"
-      title:"AI-Powered DevOps",;""
-      description:"Automate and optimize your development and deployment processes",;"
-      icon:Cpu,;"
+      title: "AI-Powered DevOps";,;""
+      description: "Automate and optimize your development and deployment processes";,;"
+      icon: Cpu;,;"
       color:"from-green-500 to-emerald-500";"
-      title:"Blockchain AI Integration",;""
-      description:"Combine blockchain security with AI intelligence for next-gen applications",;"
+      title: "Blockchain AI Integration";,;""
+      description: "Combine blockchain security with AI intelligence for next-gen applications";,;"
       color:"from-orange-500 to-red-500";"
     }]
   const industries = [;"
@@ -246,7 +246,7 @@ pr-12325
         <meta name="description" content="Discover Zion Tech Group's comprehensive AI, quantum computing, and technology services. Transform your business with cutting-edge solutions." />;"
 </meta>"
         <meta property="og:title" content="Zion Tech Group Services" />;"
-        <meta property="og:description" content="AI, quantum computing, and technology solutions for modern businesses." />;"
+        <meta property="og: description" content="AI;, quantum computing, and technology solutions for modern businesses." />;"
         <meta name="keywords" content="AI services, quantum computing, technology solutions, business intelligence, cybersecurity" />;"
         <link rel="canonical" href="https://ziontechgroup.com/services" />;"
 </link>
@@ -255,9 +255,9 @@ pr-12325
 </section>"
         <div className="max-w-6xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;"
@@ -271,18 +271,18 @@ pr-12325
       </section>;"
       <section className="py-20 px-6">;"
         <div className="max-w-6xl mx-auto">;"
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="text-center mb-16";"
             <h2 className="text-4xl font-bold text-white mb-6">Core Technology Services</h2>;""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;"
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                 key={service.title}
-                transition={{ duration:0.8, delay:index * 0.1 }}
+                transition={{ duration: 0.8;, delay: index * 0.1 ;}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300 group";"
 </motion>
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`;}>;
 </div>"
                   <service.icon className="w-8 h-8 text-white" />;"
 </service>
@@ -322,8 +322,8 @@ pr-12325
       <section className="py-20 px-6 bg-slate-900/50">;"
             <h2 className="text-4xl font-bold text-white mb-6">Specialized Solutions</h2>;""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
-                initial={{ opacity:0, x:index % 2 === 0 ? -30 :30 }}
-                whileInView={{ opacity:1, x:0 }}
+                initial={{ opacity: 0;, x: index % 2 === 0 ? -30 :30 ;}}
+                whileInView={{ opacity: 1;, x: 0 ;}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300";"
 </motion>`;
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>;
@@ -335,8 +335,8 @@ pr-12325
             <h2 className="text-4xl font-bold text-white mb-6">Industries We Serve</h2>;""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;"
                 key={industry}
-                initial={{ opacity:0, y:20 }}
-                transition={{ duration:0.8, delay:index * 0.05 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                transition={{ duration: 0.8;, delay: index * 0.05 ;}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-slate-600/50 transition-all duration-300 group";"
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;"
                   <Star className="w-6 h-6 text-white" />;"
@@ -344,25 +344,25 @@ pr-12325
                 <h3 className="text-white font-semibold">{industry}</h3>;"
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>;""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;"
-              transition={{ duration:0.8, delay:0.1 }}
+              transition={{ duration: 0.8;, delay: 0.1 ;}}
               className="text-center";"
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;"
                 <Sparkles className="w-10 h-10 text-white" />;"
 
               <h3 className="text-2xl font-bold text-white mb-4">Cutting-Edge Technology</h3>;""
               <p className="text-slate-300 leading-relaxed">;"
-              transition={{ duration:0.8, delay:0.2 }}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;"
                 <Users className="w-10 h-10 text-white" />;"
 
               <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>;""
-              transition={{ duration:0.8, delay:0.3 }}
+              transition={{ duration: 0.8;, delay: 0.3 ;}}
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;"
                 <TrendingUp className="w-10 h-10 text-white" />;"
 
               <h3 className="text-2xl font-bold text-white mb-4">Proven Results</h3>;""
         <div className="max-w-4xl mx-auto text-center">;"
-            viewport={{ once:true }}
+            viewport={{ once: true ;}}
             <h2 className="text-4xl font-bold text-white mb-6">;"
 </h2>
             </h2>;"

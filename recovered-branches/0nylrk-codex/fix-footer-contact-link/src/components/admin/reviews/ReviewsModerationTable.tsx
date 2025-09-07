@@ -35,7 +35,7 @@ pr-12325
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import {
   TableHeader,"
   TableRow} from "@/components/ui/table",""
@@ -61,7 +61,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean

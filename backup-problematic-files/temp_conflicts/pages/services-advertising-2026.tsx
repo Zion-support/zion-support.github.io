@@ -1,6 +1,6 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, ;
   TrendingUp, Award, Clock, CheckCircle, ExternalLink,;
@@ -8,10 +8,10 @@ import { ;
   ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin,;
   DollarSign, Target as TargetIcon, BarChart3, Users as UsersIcon;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',;
-import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
+import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
 ;
 export default function ServicesAdvertising2026() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
@@ -22,7 +22,7 @@ export default function ServicesAdvertising2026() {;
 </div>
       <Head>;
 "
-        <meta property="og:description" content="Comprehensive advertising and marketing for our innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />;"
+        <meta property="og: description" content="Comprehensive advertising and marketing for our innovative micro SAAS services;, AI solutions, quantum technologies, and cutting-edge IT services." />;"
 </meta>"
         <meta name="keywords" content="micro SAAS advertising, AI services marketing, quantum computing services, cybersecurity solutions, edge computing, space technology, neural interfaces, Zion Tech Group, 2026 services" />;"
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising-2026" />;"
@@ -32,9 +32,9 @@ export default function ServicesAdvertising2026() {;
 </section>"
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">;"
@@ -73,8 +73,8 @@ export default function ServicesAdvertising2026() {;
       </section>;"
       <section className="px-6 py-16">;"
         <div className="max-w-7xl mx-auto">;"
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}"
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="text-center mb-16";"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;"
 </h2>
@@ -83,21 +83,21 @@ export default function ServicesAdvertising2026() {;
             </p>;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;"
-              initial={{ opacity:0, y:20 }}
-              transition={{ duration:0.6, delay:0.1 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              transition={{ duration: 0.6;, delay: 0.1 ;}}
               className="bg-white/5 rounded-2xl p-6 border border-white/10";"
               <h3 className="text-xl font-bold text-white mb-2">Market Size</h3>;""
               <p className="text-3xl font-bold text-cyan-400 mb-2">$500B+</p>;""
               <p className="text-white/60">Total addressable market across all service categories</p>;"
-              transition={{ duration:0.6, delay:0.2 }}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}
               <h3 className="text-xl font-bold text-white mb-2">Growth Rate</h3>;""
               <p className="text-3xl font-bold text-green-400 mb-2">300%+</p>;""
               <p className="text-white/60">Annual growth rate across all service categories</p>;"
-              transition={{ duration:0.6, delay:0.3 }}
+              transition={{ duration: 0.6;, delay: 0.3 ;}}
               <h3 className="text-xl font-bold text-white mb-2">Customer ROI</h3>;""
               <p className="text-3xl font-bold text-purple-400 mb-2">300%+</p>;""
               <p className="text-white/60">Average return on investment within 6 months</p>;"
-              transition={{ duration:0.6, delay:0.4 }}
+              transition={{ duration: 0.6;, delay: 0.4 ;}}
               <h3 className="text-xl font-bold text-white mb-2">Setup Time</h3>;""
               <p className="text-3xl font-bold text-orange-400 mb-2">1-4 weeks</p>;""
               <p className="text-white/60">Average implementation time for most services</p>;"
@@ -164,8 +164,8 @@ export default function ServicesAdvertising2026() {;
                       <h4 className="text-sm font-semibold text-white mb-2">Target Audience</h4>;""
                       <p className="text-xs text-white/70">{service.targetAudience}</p>;"
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">;"
-                      <span>Setup:{service.setupTime}</span>;
-                      <span>Rating:{service.rating}/5 ({service.reviews})</span>;
+                      <span>Setup: {service.setupTime;}</span>;
+                      <span>Rating: {service.rating;}/5 ({service.reviews})</span>;
                     <div className="flex gap-3">;"
                       <a;
                         href={service.link}"
@@ -185,7 +185,7 @@ export default function ServicesAdvertising2026() {;
               <p className="text-white/60">Try adjusting your search or filter criteria</p>;"
       <section className="px-6 py-20">;"
         <div className="max-w-4xl mx-auto text-center">;"
-            viewport={{ once:true }}
+            viewport={{ once: true ;}}
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"
               <div className="text-center">;"
@@ -208,15 +208,15 @@ export default function ServicesAdvertising2026() {;
       </section>;
       <AnimatePresence>;
 
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            exit={{ opacity:0 }}"
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6";")
             onClick={() => setSelectedService(null)}
 </motion>
-              initial={{ scale:0.9, opacity:0 }}
-              animate={{ scale:1, opacity:1 }}
-              exit={{ scale:0.9, opacity:0 }}"
+              initial={{ scale: 0.9;, opacity: 0 ;}}
+              animate={{ scale: 1;, opacity: 1 ;}}
+              exit={{ scale: 0.9;, opacity: 0 ;}}"
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";"
               onClick={(e) => e.stopPropagation()}
                   <div className="p-8">;"

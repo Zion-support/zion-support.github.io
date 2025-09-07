@@ -1,7 +1,7 @@
 import { useRouter  } from 'next/router';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import EnhancedCard from '../../components/ui/EnhancedCard',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
+import EnhancedLoading from '../../components/ui/EnhancedLoading',;
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';

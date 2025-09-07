@@ -7,9 +7,6 @@ const TechnicalWritingChat: NextPage = () => ;
   return (<div />;
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const TechnicalWritingChat: NextPage = () => ;
   return (<div />;
@@ -108,26 +105,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
   );
 
 export default TechnicalWritingChat;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 const TechnicalWritingChat: NextPage = () => {
  ;
   return (

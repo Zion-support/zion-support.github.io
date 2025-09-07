@@ -16,15 +16,15 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
+import React, { useState } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { toast } from "@/hooks/use-toast",;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { MessageTab } from "./MessageTab",;
 interface ApplyFormProps {
 
   job: Job
@@ -32,15 +32,15 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
+import React, { useState } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { toast } from "@/hooks/use-toast",;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { MessageTab } from "./MessageTab",;
 interface ApplyFormProps {
 
   job: Job
@@ -73,14 +73,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { toast } from "@/hooks/use-toast",;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { MessageTab } from "./MessageTab",;
 interface ApplyFormProps {
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),

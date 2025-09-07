@@ -1,24 +1,24 @@
 
-import React from "react",;""
-import { SearchSuggestion, SearchHighlight } from "@/types/search",;"
+import React from "react";""
+import { SearchSuggestion, SearchHighlight } from "@/types/search";"
 ;
 interface AutocompleteSuggestionsProps {;
-  suggestions:SearchSuggestion[],;
-  searchTerm:string,;
-  onSelectSuggestion:(suggestion:string) => void,;
+  suggestions: SearchSuggestion[];,;
+  searchTerm: string;,;
+  onSelectSuggestion: (suggestion:string) => void;,;
   visible:boolean;
 }
 // Helper function to highlight matching text;
-const highlightMatch = (text:string, searchTerm:string):SearchHighlight => {;
+const highlightMatch = (text: string;, searchTerm:string):SearchHighlight => {;
   if (!searchTerm || searchTerm.length === 0) {;"
-    return { before:, match:text, after: },;
+    return { before:, match: text;, after:  ;},;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
   const index = lowerText.indexOf(lowerSearchTerm),;
   if (index === -1) {;
   return {;
-    before:text.substring(0, index),;
-    match:text.substring(index, index + searchTerm.length),;
+    before: text.substring(0;, index),;
+    match: text.substring(index;, index + searchTerm.length),;
     after:text.substring(index + searchTerm.length);
   },;
 export function AutocompleteSuggestions({ ;

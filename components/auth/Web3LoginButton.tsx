@@ -1,7 +1,7 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
 }
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}
   render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }
@@ -12,8 +12,8 @@ import React, { useEffect, useState } from 'react';
 
 export default function Web3LoginButton() {;
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
-  ssr: false,;
-});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),;
+  ssr: false;,;
+});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false ;}),;
 async function resolveDisplayName(): any (addr: string): Promise<string | null> {;
   try {;
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
@@ -24,7 +24,7 @@ async function resolveDisplayName(): any (addr: string): Promise<string | null> 
 import dynamic from 'next/dynamic';
 
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {}
-  ssr: false,}
+  ssr: false;,}
 });
 async function resolveDisplayName(addr: string): Promise<string | null /> {
   try {}
@@ -85,7 +85,7 @@ const pref =;
     setDisplayWeb3(pref === 'true');  }, []);
       else setDisplayName(null);
     })();
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {;
+  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' ;}) => {;
     window && window.localStorage.setItem('zion-web3-user', JSON && JSON.stringify(u));
     setUser(u)
 };
@@ -119,9 +119,9 @@ const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
 try {
 origin/cursor/automate-test-improve-and-merge-code-2533
-      await fetch('/api/auth/logout', { method: 'POST' });
+      await fetch('/api/auth/logout', { method: 'POST' ;});
 try {}
-      await fetch('/api/auth/logout', { method: 'POST',}
+      await fetch('/api/auth/logout', { method: 'POST';,}
 });
     } catch {}
     setUser(null);
@@ -203,13 +203,13 @@ onClick={() = /> setOpen(true)}
       else setDisplayName(null)
     })()
   }, [user, displayWeb3]);
-  const onLoggedIn = (u: { address: string, chain: 'evm' | 'sol' }) => {
+  const onLoggedIn = (u: { address: string;, chain: 'evm' | 'sol' ;}) => {
     window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
     setUser(u)
   };
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
-    try { await fetch('/api/auth/logout', { method: 'POST' }) } catch {}
+    try { await fetch('/api/auth/logout', { method: 'POST' ;}) } catch {}
     setUser(null)
   };
   if (user) {
@@ -231,8 +231,8 @@ onClick={() = /> setOpen(true)}
 import dynamic from 'next / dynamic';
 ;
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
-  ssr: false,
-});const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false }),
+  ssr: false;,
+});const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false ;});
 async function resolveDisplayName (addr: string): Promise < string | null> {
   try {
     const r = await fetch (`/api / did / get?address=${encodeURIComponent (addr)}`);
@@ -261,7 +261,7 @@ export default /**
  */
 function Web3LoginButton() {
   const [open, set_open] = useState (false);
-  const [user, set_user] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [user, set_user] = useState<{ address: string;, chain: 'evm' | 'sol' ;} | null>(null),
   const [display_name, setDisplayName] = useState < string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
 ;
@@ -295,7 +295,7 @@ function Web3LoginButton() {
       else setDisplayName (null);
     })();
 ;
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) =>: any {
+  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' ;}) =>: any {
     window.local_storage.set_item ('zion - web3 - user', JSON.stringify (u));
     set_user (u);  }
 ;
@@ -306,7 +306,7 @@ function Web3LoginButton() {
   const disconnect = async () => {
     window.local_storage.remove_item ('zion - web3 - user');
     try {
-      await fetch ('/api / auth / logout', { method: 'POST' });
+      await fetch ('/api / auth / logout', { method: 'POST' ;});
     } catch {}
     set_user (null);
 ;

@@ -225,6 +225,43 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd };
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } });
     return true;
+<<<<<<< HEAD
+=======
+  }
+  listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',;
+const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
+const seed_company: CompanyRecord = {
+  id: 'cmp_acme',
+  name: 'Acme Corporation',
+  slug: 'acme',
+  logo_url: '/logo - acme.svg',
+  brand_color: '#4F46E5',
+  plan: {
+    tier: 'business',
+    seats_purchased: 25,
+    seats_used: 3,
+    usage_limits: {
+      monthlyJobPosts: 50,
+      budgetCapUsd: 10000}},
+  logoUrl: '/logo-acme.svg',;
+  brandColor: '#4F46E5',;
+  plan: {;
+    tier: 'business',;
+    seatsPurchased: 25,;
+    seatsUsed: 3,;
+    usageLimits: {;
+      monthlyJobPosts: 50,;
+      budgetCapUsd: 10000}},;
+  members: [;
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
+    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
+    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
+  activity: [;
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
+  invoices: [;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
 
   },
   listInvoices(companyId: string) {

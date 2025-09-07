@@ -1,9 +1,9 @@
 
 
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),;
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 

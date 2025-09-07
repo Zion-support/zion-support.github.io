@@ -15,10 +15,10 @@ import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useNavigate } from 'react-router-dom',
-import { CheckCircle2 } from 'lucide-react',
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+import { CheckCircle2 } from 'lucide-react',;
 export default function PaymentSuccess() {
   const navigate = useNavigate(),  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">

@@ -9,9 +9,9 @@ const Messages: NextPage = () => {
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import EmptyState from '../../components / ui / EmptyState',
+import type { NextPage } from 'next',;
+import Head from 'next / head',;
+import EmptyState from '../../components / ui / EmptyState',;
 const Messages: NextPage = () => {
   return (
     <div className="space - y-6 pb - 16">;

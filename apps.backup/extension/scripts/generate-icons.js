@@ -11,12 +11,11 @@ import sharp from 'sharp';
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import sharp from 'sharp';
 const root = new URL('.', import.meta.url).pathname;
 const svg_path = resolve(root, '../assets/zion.svg');
 const out_dir = resolve(root, '../public/icons');
 if (!existsSync(out_dir)) {
-  mkdirSync(out_dir, { recursive: true });
+  mkdirSync(out_dir, { recursive: true ;});
 }
 
 const sizes = [16, 32, 48, 128];

@@ -5,9 +5,9 @@ import Card from '../components/ui/Card';
 import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
     website: 'https://ziontechgroup.com';
   };
 
@@ -15,7 +15,7 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} f
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';
   }
   const features = [
 return (<UltraAdvancedFuturisticBackground> <Head> <title > Audit Log Vault | Zion Tech Group</title> </Head> <div className="min - h-screen pt - 24 pb - 16 px - 4" > <div className="max - w-6xl mx - auto" > <div className="text - center mb - 10" > <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - purple - 400 via - indigo - 400 to - pink - 400 bg - clip - text text - transparent flex items - center justify - center gap - 3" > <ShieldCheck className="w - 10 h - 10" /> Audit Log Vault </h1>) );
@@ -24,7 +24,6 @@ import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
-import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components / ui / card';
 export default /**
  * AuditLogVaultPage - Function description
@@ -32,9 +31,9 @@ export default /**
 function AuditLogVaultPage() {
   const contact_info = {
 export default function AuditLogVaultPage() {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
     website: 'https://ziontechgroup.com';
   }
 ;
@@ -91,9 +90,9 @@ export default function AuditLogVaultPage() {
                 <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
               </div>
               <div className="mt-6 space-y-3 text-sm">
-                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
-                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel: ${contactInfo.mobile.replace(/[^+\\d]/g;, '')}`} className="hover: underline">{contactInfo.mobile;}</a></div>
+                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto: ${contactInfo.email;}`} className="hover: underline">{contactInfo.email;}</a></div>
+                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address);}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address;}</a></div>
               </div>
             </Card>
           </div>

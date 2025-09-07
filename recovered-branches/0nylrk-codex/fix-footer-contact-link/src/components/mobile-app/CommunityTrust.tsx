@@ -1,9 +1,9 @@
 
-import React from "react",
-import { Star } from "lucide-react",
+import React from "react",;
+import { Star } from "lucide-react",;
 
-import React from "react",
-import { Star } from "lucide-react",
+import React from "react",;
+import { Star } from "lucide-react",;
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
@@ -12,8 +12,8 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
 import {Star} from "lucide-react";
-import React from "react",
-import { Star } from "lucide-react",
+import React from "react",;
+import { Star } from "lucide-react",;
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">

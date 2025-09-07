@@ -1,52 +1,52 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 ;
 export default function AIAutomationTrends2025Page() {;
   const trends = [;
     {;
-      id:'autonomous-decision-making',;
-      title:'Autonomous Decision Making',,
-  description:'AI systems that can make complex decisions without human intervention.',;
-      impact:'High',;
-      timeline:'2025-2026',;']
-      examples:['Financial trading algorithmsSupply chain optimization', 'Healthcare diagnostics'];
+      id: 'autonomous-decision-making';,;
+      title: 'Autonomous Decision Making';,,
+  description: 'AI systems that can make complex decisions without human intervention.';,;
+      impact: 'High';,;
+      timeline: '2025-2026';,;']
+      examples: ['Financial trading algorithmsSupply chain optimization';, 'Healthcare diagnostics'];
     },;
-      id:'edge-ai-computing',;
-      title:'Edge AI Computing',,
-  description:'AI processing moved closer to data sources for real-time decision making.',;
-      impact:'Medium',;
-      timeline:'2025-2027',;
-      examples:['IoT devicesAutonomous vehicles', 'Smart cities'];
-      id:'ai-powered-automation',;
-      title:'AI-Powered Automation',,
-  description:'Intelligent automation that learns and improves over time.',;
-      impact:'High',;
-      title:'AI-Powered Automation',;
-      description:'Intelligent automation that learns and improves over time.',;
+      id: 'edge-ai-computing';,;
+      title: 'Edge AI Computing';,,
+  description: 'AI processing moved closer to data sources for real-time decision making.';,;
+      impact: 'Medium';,;
+      timeline: '2025-2027';,;
+      examples: ['IoT devicesAutonomous vehicles';, 'Smart cities'];
+      id: 'ai-powered-automation';,;
+      title: 'AI-Powered Automation';,,
+  description: 'Intelligent automation that learns and improves over time.';,;
+      impact: 'High';,;
+      title: 'AI-Powered Automation';,;
+      description: 'Intelligent automation that learns and improves over time.';,;
 pr-12325
-      timeline:'2025-2026',;
-      examples:['Process automationCustomer service', 'Content generation'];
-      id:'human-ai-collaboration',;
-      title:'Human-AI Collaboration',,
-  description:'Enhanced collaboration between humans and AI systems.',;
-      impact:'Medium',;
-      title:'Human-AI Collaboration',;
-      description:'Enhanced collaboration between humans and AI systems.',;
+      timeline: '2025-2026';,;
+      examples: ['Process automationCustomer service';, 'Content generation'];
+      id: 'human-ai-collaboration';,;
+      title: 'Human-AI Collaboration';,,
+  description: 'Enhanced collaboration between humans and AI systems.';,;
+      impact: 'Medium';,;
+      title: 'Human-AI Collaboration';,;
+      description: 'Enhanced collaboration between humans and AI systems.';,;
 pr-12325
-      timeline:'2025-2028',;
-      examples:['Augmented decision makingCreative assistance', 'Problem solving'];
+      timeline: '2025-2028';,;
+      examples: ['Augmented decision makingCreative assistance';, 'Problem solving'];
     }
   ],;
   const industryApplications = [;
-      industry:'Manufacturing',;']
-      trends:['Predictive maintenanceQuality control automation', 'Supply chain optimization'],;
-      industry:'Healthcare',;
-      trends:['Diagnostic assistanceDrug discovery', 'Patient care automation'],;
-      industry:'Finance',;
-      trends:['Fraud detectionAlgorithmic trading', 'Risk assessment'],;
-      industry:'Retail',;
-      trends:['Personalized marketingInventory management', 'Customer service automation'],;
+      industry: 'Manufacturing';,;']
+      trends: ['Predictive maintenanceQuality control automation';, 'Supply chain optimization'],;
+      industry: 'Healthcare';,;
+      trends: ['Diagnostic assistanceDrug discovery';, 'Patient care automation'],;
+      industry: 'Finance';,;
+      trends: ['Fraud detectionAlgorithmic trading';, 'Risk assessment'],;
+      industry: 'Retail';,;
+      trends: ['Personalized marketingInventory management';, 'Customer service automation'],;
   return (;
     <>;
       <Head>;

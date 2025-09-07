@@ -25,20 +25,20 @@ const Enhanced2026ServicesShowcase = () => {
   TrendingUp,
   Globe,
   Cpu,
-      price: '$299',
-      period: '/month',
-      icon: Brain,
-      color: 'from - purple - 500 to - pink - 500',
-      category: 'AI & Analytics',
-      period: '/month',
-      icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
-      category: 'Security',
-      price: '$899',
-      period: '/month',
-      icon: Rocket,
-      color: 'from - yellow - 500 to - orange - 500',
-      category: 'Space Tech',
+      price: '$299';,
+      period: '/month';,
+      icon: Brain;,
+      color: 'from - purple - 500 to - pink - 500';,
+      category: 'AI & Analytics';,
+      period: '/month';,
+      icon: Shield;,
+      color: 'from - red - 500 to - orange - 500';,
+      category: 'Security';,
+      price: '$899';,
+      period: '/month';,
+      icon: Rocket;,
+      color: 'from - yellow - 500 to - orange - 500';,
+      category: 'Space Tech';,
 import {;
   ArrowRight,;
   Brain,;
@@ -54,19 +54,18 @@ import {;
   Cloud,;
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
-import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {;
   const featuredServices = [;
     {;
-      id: 'ai-business-intelligence-elite-2026',;
-      name: 'AI Business Intelligence Elite 2026',;
+      id: 'ai-business-intelligence-elite-2026';,;
+      name: 'AI Business Intelligence Elite 2026';,;
       description:;
-        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',;
-      price: '$299',;
-      period: '/month',;
-      icon: Brain,;
-      color: 'from-purple-500 to-pink-500',;
-      category: 'AI & Analytics',;
+        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299';,      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.';,;
+      price: '$299';,;
+      period: '/month';,;
+      icon: Brain;,;
+      color: 'from-purple-500 to-pink-500';,;
+      category: 'AI & Analytics';,;
       features: [;
         'Predictive Analytics',;
         'Real-time Insights',;
@@ -75,14 +74,14 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
     {;
-      id: 'autonomous-ai-agents-platform-2026',;
-      name: 'Autonomous AI Agents Platform 2026',;
+      id: 'autonomous-ai-agents-platform-2026';,;
+      name: 'Autonomous AI Agents Platform 2026';,;
       description:;
         'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',;
-      price: '$199',      period: '/month',;
-      icon: Zap,;
-      color: 'from-blue-500 to-cyan-500',;
-      category: 'AI & Automation',;
+      price: '$199';,      period: '/month';,;
+      icon: Zap;,;
+      color: 'from-blue-500 to-cyan-500';,;
+      category: 'AI & Automation';,;
       features: [;
         'Task Automation',;
         'Process Optimization',;
@@ -91,19 +90,19 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
     {;
-      id: 'quantum-cybersecurity-suite-2026',;
-      name: 'Quantum Cybersecurity Suite 2026',;
+      id: 'quantum-cybersecurity-suite-2026';,;
+      name: 'Quantum Cybersecurity Suite 2026';,;
       description:;
-        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture'];
+        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599';,      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture'];
     };
     {;
-      id: 'quantum-cybersecurity-suite-2026',;
-      name: 'Quantum Cybersecurity Suite 2026',;
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',;
-      period: '/month',;
-      icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-      category: 'Security',;
+      id: 'quantum-cybersecurity-suite-2026';,;
+      name: 'Quantum Cybersecurity Suite 2026';,;
+      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.';,;
+      period: '/month';,;
+      icon: Shield;,;
+      color: 'from-red-500 to-orange-500';,;
+      category: 'Security';,;
       features: [;
         'Quantum Encryption',;
         'Threat Detection',;
@@ -112,39 +111,39 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
     {;
-      id: 'neuromorphic-computing-platform-2026',;
-      name: 'Neuromorphic Computing Platform 2026',    {;
-      id: 'neuromorphic-computing-platform-2026',;
-      name: 'Neuromorphic Computing Platform 2026',;
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',;
-      price: '$1,499';
-      period: '/month',;
-      icon: Cpu,;
-      color: 'from-green-500 to-emerald-500',;
-      category: 'Emerging Tech',;
+      id: 'neuromorphic-computing-platform-2026';,;
+      name: 'Neuromorphic Computing Platform 2026';,    {;
+      id: 'neuromorphic-computing-platform-2026';,;
+      name: 'Neuromorphic Computing Platform 2026';,;
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.';,;
+      price: '$1;,499';
+      period: '/month';,;
+      icon: Cpu;,;
+      color: 'from-green-500 to-emerald-500';,;
+      category: 'Emerging Tech';,;
       features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing'];
     };
     {;
-      id: 'dna-computing-platform-2026',;
-      name: 'DNA Computing Platform 2026',;
-      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',;
-      price: '$2,999';
-      period: '/month',;
-      icon: Globe,;
-      color: 'from-indigo-500 to-purple-500',;
-      category: 'Emerging Tech',;
+      id: 'dna-computing-platform-2026';,;
+      name: 'DNA Computing Platform 2026';,;
+      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.';,;
+      price: '$2;,999';
+      period: '/month';,;
+      icon: Globe;,;
+      color: 'from-indigo-500 to-purple-500';,;
+      category: 'Emerging Tech';,;
       features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready'];
     };
     {;
-      id: 'space-debris-tracking-system',;
-      name: 'Space Debris Tracking System 2026',;
+      id: 'space-debris-tracking-system';,;
+      name: 'Space Debris Tracking System 2026';,;
       description:;
         'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',;
-      price: '$1,499',;
-      period: '/month',;
-      icon: Cpu,;
-      color: 'from-green-500 to-emerald-500',;
-      category: 'Emerging Tech',;
+      price: '$1;,499',;
+      period: '/month';,;
+      icon: Cpu;,;
+      color: 'from-green-500 to-emerald-500';,;
+      category: 'Emerging Tech';,;
       features: [;
         'Brain-like Processing',;
         'Low Power',;
@@ -153,15 +152,15 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
     {;
-      id: 'dna-computing-platform-2026',;
-      name: 'DNA Computing Platform 2026',;
+      id: 'dna-computing-platform-2026';,;
+      name: 'DNA Computing Platform 2026';,;
       description:;
         'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',;
-      price: '$2,999',;
-      period: '/month',;
-      icon: Globe,;
-      color: 'from-indigo-500 to-purple-500',;
-      category: 'Emerging Tech',;
+      price: '$2;,999',;
+      period: '/month';,;
+      icon: Globe;,;
+      color: 'from-indigo-500 to-purple-500';,;
+      category: 'Emerging Tech';,;
       features: [;
         'Molecular Processing',;
         'Exponential Speed',;
@@ -170,15 +169,15 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
     {;
-      id: 'space-debris-tracking-system',;
-      name: 'Space Debris Tracking System 2026',;
+      id: 'space-debris-tracking-system';,;
+      name: 'Space Debris Tracking System 2026';,;
       description:;
-        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',;
-      price: '$899',;
-      period: '/month',;
-      icon: Rocket,;
-      color: 'from-yellow-500 to-orange-500',;
-      category: 'Space Tech',;
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899';,      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.';,;
+      price: '$899';,;
+      period: '/month';,;
+      icon: Rocket;,;
+      color: 'from-yellow-500 to-orange-500';,;
+      category: 'Space Tech';,;
       features: [;
         'Real-time Tracking',;
         'Collision Prediction',;
@@ -191,18 +190,17 @@ const Enhanced2026ServicesShowcase = () => {;
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
-import Link from 'next/link';
 
 const Enhanced2026ServicesShowcase = null;
     {
-      id: 'autonomous-ai-agents-platform-2026',
+      id: 'autonomous-ai-agents-platform-2026';,
   name: 'Autonomous AI Agents Platform 2026'
-      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
-  price: '$199',
-      period: '/month',
-  icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-  category: 'AI & Automation',
+      description: 'Build;, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+  price: '$199';,
+      period: '/month';,
+  icon: Zap;,
+      color: 'from-blue-500 to-cyan-500';,
+  category: 'AI & Automation';,
 features: [
         'Task Automation',
         'Process Optimization',
@@ -211,14 +209,14 @@ features: [
       ]}
     },
     {
-      id: 'quantum-cybersecurity-suite-2026',
+      id: 'quantum-cybersecurity-suite-2026';,
   name: 'Quantum Cybersecurity Suite 2026'
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
-  price: '$599',
-      period: '/month',
-  icon: Shield,
-      color: 'from-red-500 to-orange-500',
-  category: 'Security',
+      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.';,
+  price: '$599';,
+      period: '/month';,
+  icon: Shield;,
+      color: 'from-red-500 to-orange-500';,
+  category: 'Security';,
 features: [
         'Quantum Encryption',
         'Threat Detection',
@@ -227,14 +225,14 @@ features: [
       ]}
     },
     {
-      id: 'neuromorphic-computing-platform-2026',
-  name: 'Neuromorphic Computing Platform 2026',
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
-  price: '$1,499',
-      period: '/month',
-  icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-  category: 'Emerging Tech',
+      id: 'neuromorphic-computing-platform-2026';,
+  name: 'Neuromorphic Computing Platform 2026';,
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.';,
+  price: '$1;,499',
+      period: '/month';,
+  icon: Cpu;,
+      color: 'from-green-500 to-emerald-500';,
+  category: 'Emerging Tech';,
       features: [
         'Brain-like Processing',
         'Low Power',
@@ -243,14 +241,14 @@ features: [
       ]}
     },
     {
-      id: 'dna-computing-platform-2026',
-  name: 'DNA Computing Platform 2026',
-      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-  price: '$2,999',
-      period: '/month',
-  icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
-  category: 'Emerging Tech',
+      id: 'dna-computing-platform-2026';,
+  name: 'DNA Computing Platform 2026';,
+      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.';,
+  price: '$2;,999',
+      period: '/month';,
+  icon: Globe;,
+      color: 'from-indigo-500 to-purple-500';,
+  category: 'Emerging Tech';,
       features: [
         'Molecular Processing',
         'Exponential Speed',
@@ -259,14 +257,14 @@ features: [
       ]}
     },
     {
-      id: 'space-debris-tracking-system',
-  name: 'Space Debris Tracking System 2026',
-      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
-  price: '$899',
-      period: '/month',
-  icon: Rocket,
-      color: 'from-yellow-500 to-orange-500',
-  category: 'Space Tech',
+      id: 'space-debris-tracking-system';,
+  name: 'Space Debris Tracking System 2026';,
+      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.';,
+  price: '$899';,
+      period: '/month';,
+  icon: Rocket;,
+      color: 'from-yellow-500 to-orange-500';,
+  category: 'Space Tech';,
 features: [
         'Real-time Tracking',
         'Collision Prediction',
@@ -278,34 +276,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const categories = [;
     {;
-      name: 'AI Services',;
-      count: '150+',;
-      icon: Brain,;
-      color: 'from-purple-500 to-pink-500',;
+      name: 'AI Services';,;
+      count: '150+';,;
+      icon: Brain;,;
+      color: 'from-purple-500 to-pink-500';,;
     },;
     {;
-      name: 'Quantum Tech',;
-      count: '75+',;
-      icon: Sparkles,;
-      color: 'from-blue-500 to-cyan-500',;
+      name: 'Quantum Tech';,;
+      count: '75+';,;
+      icon: Sparkles;,;
+      color: 'from-blue-500 to-cyan-500';,;
     },;
     {;
-      name: 'Emerging Tech',;
-      count: '100+',;
-      icon: Rocket,;
-      color: 'from-green-500 to-emerald-500',;
+      name: 'Emerging Tech';,;
+      count: '100+';,;
+      icon: Rocket;,;
+      color: 'from-green-500 to-emerald-500';,;
     },;
     {;
-      name: 'IT Solutions',;
-      count: '200+',;
-      icon: Cloud,;
-      color: 'from-yellow-500 to-orange-500',;
+      name: 'IT Solutions';,;
+      count: '200+';,;
+      icon: Cloud;,;
+      color: 'from-yellow-500 to-orange-500';,;
     },;
   ];
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
-    { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
+    { name: 'IT Solutions';, count: '200+';, icon: Cloud;, color: 'from-yellow-500 to-orange-500' ;}
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
@@ -320,14 +318,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
 const categories = [
-  {name: 'AI Services'}
-  count: '150+',icon: Brain,color: 'from-purple-500 to-pink-500'},{name: 'Quantum Tech'}
-  count: '75+',icon: Sparkles,color: 'from-blue-500 to-cyan-500'},{name: 'Emerging Tech'}
-  count: '100+',icon: Rocket,color: 'from-green-500 to-emerald-500'},{name: 'IT Solutions'}
-  count: '200+',icon: Cloud,color: 'from-yellow-500 to-orange-500'}];
+  {name: 'AI Services';}
+  count: '150+';,icon: Brain;,color: 'from-purple-500 to-pink-500';},{name: 'Quantum Tech';}
+  count: '75+';,icon: Sparkles;,color: 'from-blue-500 to-cyan-500';},{name: 'Emerging Tech';}
+  count: '100+';,icon: Rocket;,color: 'from-green-500 to-emerald-500';},{name: 'IT Solutions';}
+  count: '200+';,icon: Cloud;,color: 'from-yellow-500 to-orange-500';}];
   return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
-      {/* Background Effects */}{ name: 'IT Solutions'}
-  count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'}
+      {/* Background Effects */}{ name: 'IT Solutions';}
+  count: '200+';, icon: Cloud;, color: 'from-yellow-500 to-orange-500';}
 }
   ];
 
@@ -341,11 +339,11 @@ const categories = [
 
         {/* Section Header */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -354,7 +352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2026 Revolutionary Services
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center mb-16'
@@ -389,14 +387,14 @@ emerging technology services designed to transform your business;
           </p>;
         </motion && motion.div>;{/* Category Overview */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.1 ;}}
+          viewport={{ once: true ;}}
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
         >
@@ -413,28 +411,28 @@ emerging technology services designed to transform your business;
 ;
   const categories = [;
     {
-      name: 'AI Services',
-      count: '150+',
-      icon: Brain,
-      color: 'from - purple - 500 to - pink - 500',
+      name: 'AI Services';,
+      count: '150+';,
+      icon: Brain;,
+      color: 'from - purple - 500 to - pink - 500';,
     },
     {
-      name: 'Quantum Tech',
-      count: '75+',
-      icon: Sparkles,
-      color: 'from - blue - 500 to - cyan - 500',
+      name: 'Quantum Tech';,
+      count: '75+';,
+      icon: Sparkles;,
+      color: 'from - blue - 500 to - cyan - 500';,
     },
     {
-      name: 'Emerging Tech',
-      count: '100+',
-      icon: Rocket,
-      color: 'from - green - 500 to - emerald - 500',
+      name: 'Emerging Tech';,
+      count: '100+';,
+      icon: Rocket;,
+      color: 'from - green - 500 to - emerald - 500';,
     },
     {
-      name: 'IT Solutions',
-      count: '200+',
-      icon: Cloud,
-      color: 'from - yellow - 500 to - orange - 500',
+      name: 'IT Solutions';,
+      count: '200+';,
+      icon: Cloud;,
+      color: 'from - yellow - 500 to - orange - 500';,
     },
   ];
 ;
@@ -445,10 +443,10 @@ emerging technology services designed to transform your business;
       <div className='max - w-7xl mx - auto relative z - 10'>        {/* Section Header */}  ];
 ;
   const categories = [;
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from - blue - 500 to - cyan - 500' },
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from - green - 500 to - emerald - 500' },
-    { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from - yellow - 500 to - orange - 500' }
+    { name: 'AI Services';, count: '150+';, icon: Brain;, color: 'from - purple - 500 to - pink - 500' ;},
+    { name: 'Quantum Tech';, count: '75+';, icon: Sparkles;, color: 'from - blue - 500 to - cyan - 500' ;},
+    { name: 'Emerging Tech';, count: '100+';, icon: Rocket;, color: 'from - green - 500 to - emerald - 500' ;},
+    { name: 'IT Solutions';, count: '200+';, icon: Cloud;, color: 'from - yellow - 500 to - orange - 500' ;}
   ];
 ;
   return (
@@ -458,41 +456,41 @@ emerging technology services designed to transform your business;
       <div className="max - w-7xl mx - auto relative z - 10">;
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.6 ;}}
+          viewport={{ once: true ;}}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
          />
           {categories.map((category, index) => (}
             <motion.div;}
 key={category.name}
-              initial={{ opacity: 0, scale: 0.8 }
+              initial={{ opacity: 0;, scale: 0.8 ;}
 }
-              whileInView={{ opacity: 1, scale: 1 }
+              whileInView={{ opacity: 1;, scale: 1 ;}
 }
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              viewport={{ once: true }
+              transition={{ duration: 0.6;, delay: 0.2 + index * 0.1 ;}}
+              viewport={{ once: true ;}
 }
-              whileHover={{ scale: 1.05, y: -5 }
+              whileHover={{ scale: 1.05;, y: -5 ;}
 }
 
 className='group text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              whileInView={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1;, scale: 1 ;}}
              />
 
-              whileInView={{ opacity: 1, scale: 1 }
+              whileInView={{ opacity: 1;, scale: 1 ;}
 }
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
-              viewport={{ once: true }
+              transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 + index * 0 && 0.1 ;}}
+              viewport={{ once: true ;}
 }
-              whileHover={{ scale: 1 && 1.05, y: -5 }
+              whileHover={{ scale: 1 && 1.05;, y: -5 ;}
 }
               className='group text-center'>;
               <div
-                className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
+                className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}>;
                 <category && category.icon className='w-8 h-8 text-white' />;
               </div>;
               <h3 className='text-lg font-bold text-white mb-2'>;
@@ -501,17 +499,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-2xl font-bold text-cyan-400'>;
                 {category && category.count}
               </p>            </motion && motion.div>            >;
-              <div className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
+              <div className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}>;
                 <category && category.icon className="w-8 h-8 text-white" />;
               </div>;
               <h3 className="text-lg font-bold text-white mb-2">{category && category.name}</h3>;
               <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
             </motion && motion.div>;
-                className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+                className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}
               >
 
               <div;
-className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}
                />
                 <category.icon className='w-8 h-8 text-white' />
               </div>
@@ -533,10 +531,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, scale: 0.8;, y: 20 ;}}
+              whileInView={{ opacity: 1;, scale: 1;, y: 0 ;}}
+transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+              viewport={{ once: true ;}}
           ))}
         {/* Featured Services Grid */}
 
@@ -544,25 +542,25 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           {featuredServices.map((service, index) => (}
             <motion.div;}
 key={service.id}
-              initial={{ opacity: 0, scale: 0.8, y: 20 }
+              initial={{ opacity: 0;, scale: 0.8;, y: 20 ;}
 }
-              whileInView={{ opacity: 1, scale: 1, y: 0 }
+              whileInView={{ opacity: 1;, scale: 1;, y: 0 ;}
 }
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              viewport={{ once: true }
-}whileHover={{ scale: 1.02, y: -5 }
+transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+              viewport={{ once: true ;}
+}whileHover={{ scale: 1.02;, y: -5 ;}
 }
 className='group relative' />
 
               <div;
-                className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
+                className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500;
 }
                /></div>;
               <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300' />;
                 {/* Service Header */}
                 <div className='flex items-center space-x-3 mb-4'>
                   <div
-              <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500`;}></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                 {/* Service Header */}
                 <div className="flex items-center space-x-3 mb-4">
@@ -611,7 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-gray-400 text-sm' />{service && service.category}</p>                  </div>;
                 </div>;
                 {/* Features */}            >;
-              <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
+              <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500;
 } /></div>;"
               <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\" />;
                 {/* Service Header */}"
@@ -740,12 +738,12 @@ href={`/${service.id}`}
           ))}
         </div>;{/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.3 ;}}
+          viewport={{ once: true ;}}
 
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
@@ -757,7 +755,7 @@ href={`/${service.id}`}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
 
 className='text-center'
          />
@@ -772,9 +770,9 @@ services to achieve unprecedented growth and innovation.
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+                transition={{ duration: 0.2 ;}}
               >
                 <Link
                   href="/services"
@@ -783,9 +781,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Rocket className="w-5 h-5 mr-2" />
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />
               <motion.div;
-whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+                transition={{ duration: 0.2 ;}}
                />
                 <Link;
 href='/services'
@@ -797,9 +795,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2, delay: 0.1 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+                transition={{ duration: 0.2;, delay: 0.1 ;}}
               >
                 <Link
 export default Enhanced2026ServicesShowcase;  )
@@ -821,11 +819,11 @@ export default Enhanced2026ServicesShowcase;  );
 };
 
 export default Enhanced2026ServicesShowcase;
-              while_hover={{ scale: 1.05, coordinate_y: -5 }}
+              while_hover={{ scale: 1.05;, coordinate_y: -5 ;}}
               className='group text - center';
             >;
               <div;
-                className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`}
+                className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`;}
               >;
                 <category.icon className='w - 8 h - 8 text - white' />;
               </div>;
@@ -835,7 +833,7 @@ export default Enhanced2026ServicesShowcase;
               <p className='text - 2xl font - bold text - cyan - 400'>;
                 {category.count}
               </p>            </motion.div>            >;
-              <div className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`}>;
+              <div className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`;}>;
                 <category.icon className="w - 8 h - 8 text - white" />;
               </div>;
               <h3 className="text - lg font - bold text - white mb - 2">{category.name}</h3>;
@@ -843,19 +841,19 @@ export default Enhanced2026ServicesShowcase;
             </motion.div>))}
         </motion.div>;
         {/* Featured Services Grid */}
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>          {featured_services.map ((service, index) => (        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">;
+        <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16'>          {featured_services.map ((service;, index) => (        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16">;
           {featured_services.map ((service, index) => (
             <motion.div;
               key={service.id}
-              initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              while_hover={{ scale: 1.02, coordinate_y: -5 }}
+              initial={{ opacity: 0;, scale: 0.8;, coordinate_y: 20 ;}}
+              whileInView={{ opacity: 1;, scale: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+              viewport={{ once: true ;}}
+              while_hover={{ scale: 1.02;, coordinate_y: -5 ;}}
               className='group relative';
             >;
               <div;
-                className={`absolute inset - 0 bg - gradient - to - r ${service.color} opacity - 10 rounded - 2xl blur - xl group - hover:blur - 2xl transition - all duration - 500`}
+                className={`absolute inset - 0 bg - gradient - to - r ${service.color} opacity - 10 rounded - 2xl blur - xl group - hover: blur - 2xl transition - all duration - 500`;}
               ></div>;
               <div className='relative bg - black / 40 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - cyan - 500 / 40 transition - all duration - 300'>;
                 {/* Service Header */}
@@ -875,7 +873,7 @@ export default Enhanced2026ServicesShowcase;
                 <p className='text - gray - 300 text - sm mb - 4 leading - relaxed'>                  {service.description}
                 </p>;
                 {/* Features */}            >;
-              <div className={`absolute inset - 0 bg - gradient - to - r ${service.color} opacity - 10 rounded - 2xl blur - xl group - hover:blur - 2xl transition - all duration - 500`}></div>;
+              <div className={`absolute inset - 0 bg - gradient - to - r ${service.color} opacity - 10 rounded - 2xl blur - xl group - hover: blur - 2xl transition - all duration - 500`;}></div>;
               <div className="relative bg - black / 40 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - cyan - 500 / 40 transition - all duration - 300">;
                 {/* Service Header */}
                 <div className="flex items - center space - x-3 mb - 4">;
@@ -937,10 +935,10 @@ export default Enhanced2026ServicesShowcase;
         </div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.3 ;}}
+          viewport={{ once: true ;}}
           className='text - center';
         >;
           <div className='bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border border - cyan - 500 / 20 rounded - 2xl p - 8'>;
@@ -964,10 +962,10 @@ export default Enhanced2026ServicesShowcase;
                 </Link>
               </motion.div>
               <motion.div;
-whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }
+whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}
 }
-                transition={{ duration: 0.2, delay: 0.1 }}
+                transition={{ duration: 0.2;, delay: 0.1 ;}}
                />
                 <Link;
                   href='/contact';

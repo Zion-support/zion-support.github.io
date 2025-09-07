@@ -8,7 +8,7 @@ import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
 
 
 export default function MDMPage() {
@@ -150,10 +150,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import Layout from '../components / layout / Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
 ;
 export default /**
  * MDMPage - Function description

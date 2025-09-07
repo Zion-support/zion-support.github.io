@@ -54,7 +54,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
-import React from 'react',
+import React from 'react',;
 import Link from 'next/link';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'

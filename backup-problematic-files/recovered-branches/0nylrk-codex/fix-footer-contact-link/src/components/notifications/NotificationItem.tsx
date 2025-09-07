@@ -1,14 +1,14 @@
 
-import React from 'react',;
+import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons;
-import { Check, Trash2, ChevronRight } from '@/components/icons',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { formatDistanceToNow } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { useNavigate } from 'react-router-dom',;
-import { Notification, NotificationType } from '@/context/notifications',;
+import { Check, Trash2, ChevronRight } from '@/components/icons';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { formatDistanceToNow } from 'date-fns';
+import { cn } from '@/lib/utils';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useNavigate } from 'react-router-dom';
+import { Notification, NotificationType } from '@/context/notifications';
 ;
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
@@ -19,7 +19,7 @@ export const getTypeIcon = (type:NotificationType) => {;
       return <span className="text-zion-purple"></span>,;""
       return <span className="text-yellow-500"></span>,;""
       return <span className="text-gray-500"></span>;"
-  onMarkAsRead:(id:string) => Promise<void>,;
+  onMarkAsRead: (id:string) => Promise<void>;,;
 </void>
   onDismiss:(id:string) => Promise<void>;
 export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
@@ -79,8 +79,8 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
 
               <p>Dismiss</p>;
 onMarkAsRead: (id: string) => Promise<void>;
-onDismiss: (id: string) => Promise<void> 
-}export const NotificationItem: React.FC<NotificationItemProps> = ({
+onDismiss: (id: string) => Promise<void> ;
+}export const NotificationItem: React.FC<NotificationItemProps> = ({;
 }> <div className="flex items-start gap-2"> <div className="text-xl"> {"
 }</div> <div className="flex-1"> <div className="flex justify-between items-center mb-1"> </p> {"
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick= {"

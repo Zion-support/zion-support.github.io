@@ -10,20 +10,20 @@ export default function KnowledgeGraph({ report }: Props) {
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
-import fs from 'fs',
+import fs from 'fs';
 
 
-import fs from 'fs';,
+import fs from 'fs';;
 import path from 'path';
 import type { GetStaticProps } from 'next';
 
-interface Node { id: string, tokens: string[]}
+interface Node { id: string;, tokens: string[];}
 }
 
-interface Edge { source: string, target: string, weight: number, terms: string[]}
+interface Edge { source: string;, target: string;, weight: number;, terms: string[];}
 }
 
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[]
+interface Report { generatedAt: string;, nodes: Node[];, edges: Edge[];, topTerms: { term: string;, count: number ;}[]
 }
 
 type Props = any;
@@ -38,7 +38,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Top Terms</h2>;"
         <ul className=\"flex flex-wrap gap-2 text-sm\" />;"
-          {report && report.topTerms.map((t, i) => (<li key={i} className=\"px-2 py-1 rounded bg-gray-100 dark: bg-gray-800\" />{t && t.term} <span className=\"text-gray-500\" />({t && t.coun}
+          {report && report.topTerms.map((t, i) => (<li key={i} className=\"px-2 py-1 rounded bg-gray-100 dark: bg-gray-800\" />{t && t.term;} <span className=\"text-gray-500\" />({t && t.coun}
 })</span></li>;
           ))}
         </ul>;
@@ -46,9 +46,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section />;"
         <h2 className=\"font-semibold mb-2\" />Graph Stats</h2>;"
         <div className=\"grid sm:grid-cols-2 lg:grid-cols-4 gap-4\" />;"
-          <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Nodes</div><div className=\"text-2xl font-semibold\" />{report && report.nodes.lengt}
+          <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Nodes</div><div className=\"text-2xl font-semibold\" />{report && report.nodes.lengt;}
 }</div></div>;"
-          <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Edges</div><div className=\"text-2xl font-semibold\" />{report && report.edges.lengt}
+          <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Edges</div><div className=\"text-2xl font-semibold\" />{report && report.edges.lengt;}
 }</div></div>;
         </div>;
       </section>;
@@ -81,14 +81,14 @@ if (return <div > No knowledge graph yet.</div>) {
         <h2 className="font-semibold mb-2">Top Terms</h2>;
         <ul className="flex flex - wrap gap-2 text-sm">;
           {report.top_terms.map ((t, i) => (
-            <li key={i} className="px - 2 py - 1 rounded bg - gray - 100 dark:bg-gray-800">{t.term} <span className="text-gray-500">({t.count})</span></li>))}
+            <li key={i} className="px - 2 py - 1 rounded bg - gray - 100 dark: bg-gray-800">{t.term;} <span className="text-gray-500">({t.count})</span></li>))}
         </ul>;
       </section>;
       <section>;
         <h2 className="font-semibold mb-2">Graph Stats</h2>;
         <div className="grid sm:grid - cols - 2 lg:grid - cols-4 gap-4">;
-          <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Nodes</div><div className="text-2xl font-semibold">{report.nodes.length}</div></div>;
-          <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Edges</div><div className="text-2xl font-semibold">{report.edges.length}</div></div>;
+          <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Nodes</div><div className="text-2xl font-semibold">{report.nodes.length;}</div></div>;
+          <div className="p - 4 rounded - lg border border - gray - 200 dark: border-gray-800"><div className="text - xs text-gray-500">Edges</div><div className="text-2xl font-semibold">{report.edges.length;}</div></div>;
         </div>;
       </section>;
       <section>;

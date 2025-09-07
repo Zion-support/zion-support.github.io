@@ -12,8 +12,8 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
-import Link from 'next/link',
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import Link from 'next/link',;
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',;
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
@@ -45,9 +45,9 @@ export default function JobsListPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
-import { useEffect, useState } from 'react',
-import InteractiveSearch from '../../components/ui/InteractiveSearch',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',;
+import { useEffect, useState } from 'react',;
+import InteractiveSearch from '../../components/ui/InteractiveSearch',;
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),

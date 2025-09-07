@@ -7,7 +7,7 @@ pr-12325
 
   DialogHeader;
   DialogTitle;
-  DialogDescription;import React, { useState } from 'react',
+  DialogDescription;import React, { useState } from 'react',;
 import {
   DialogDescription;
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";""
@@ -18,7 +18,7 @@ import {useMessaging} from "@/context/MessagingContext";""
 import {TalentProfile} from "@/types/talent";""
 import {toast} from "@/components/ui/use-toast";""
 import {useNavigate} from "react-router-dom";""
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
   // TODO: Implement
 pr-12325
 import React, { useState } from 'react','
@@ -33,11 +33,11 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Textarea } from "@/components/ui/textarea",
-import { useMessaging } from "@/context/MessagingContext",
-import { TalentProfile } from "@/types/talent",
+import { Button } from "@/components/ui/button",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Textarea } from "@/components/ui/textarea",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { TalentProfile } from "@/types/talent",;
 
   jobTitle
 

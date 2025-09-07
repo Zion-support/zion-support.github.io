@@ -63,8 +63,8 @@ const contactInfo = {"
   email: "kleber@ziontechgroup.com",""
   address: "364 E Main St STE 1008 Middletown DE 19709""
 "
-import React from 'react',
-import SEO from '../components / SEO',
+import React from 'react',;
+import SEO from '../components / SEO',;
 export default /**
  * PressPage - Function description;
  */

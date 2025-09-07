@@ -1,6 +1,6 @@
 
 
-import { Button } from "./ui/button",
+import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
 export function SocialShareSection() {
@@ -18,8 +18,8 @@ export function SocialShareSection() {
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   }
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
-import { toast } from "./ui/use-toast",
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
+import { toast } from "./ui/use-toast",;
 export function SocialShareSection() {
   // Current URL and text to share
   const shareUrl = encodeURIComponent(window.location.href),

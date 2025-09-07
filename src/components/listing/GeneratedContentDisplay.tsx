@@ -22,11 +22,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
 import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 
 interface GeneratedContent {
   description: string,
@@ -92,8 +92,8 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";

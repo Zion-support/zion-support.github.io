@@ -1,32 +1,32 @@
-import React, { useState } from "react",;""
-import { MessageCircle } from "lucide-react",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Separator } from "@/components/ui/separator",;"
+import React, { useState } from "react";""
+import { MessageCircle } from "lucide-react";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Separator } from "@/components/ui/separator";"
 ;
 interface DiscussionPost {;
-  id:number,;
-  author:string,;
+  id: number;,;
+  author: string;,;
   avatar?:string,;
-  time:string,;
-  title:string,;
+  time: string;,;
+  title: string;,;
   body:string;
 }
 const initialPosts:DiscussionPost[] = [;
   {;
-    id:1,;"
-    author:"Anna Zhou",;""
-    time:"2h ago",;""
-    title:"What AI trends are you most excited for in 2025?",;""
-    body:"Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},;"
-    id:2,;"
-    author:"David Kim",;""
-    time:"50m ago",;""
-    title:"Quick tip:How to rank your Zion listing higher",;"]"
-    body:"Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;"
+    id: 1;,;"
+    author: "Anna Zhou";,;""
+    time: "2h ago";,;""
+    title: "What AI trends are you most excited for in 2025?";,;""
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?";},;"
+    id: 2;,;"
+    author: "David Kim";,;""
+    time: "50m ago";,;""
+    title: "Quick tip:How to rank your Zion listing higher";,;"]"
+    body: "Fill out every profile detail;, add strong tags, and post weekly! See results in a month."}],;"
 export const CommunityDiscussion:React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts),;
   const [showNew, setShowNew] = useState(false),;"
@@ -36,11 +36,11 @@ export const CommunityDiscussion:React.FC = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;
     setPosts([;
       {;)
-        id:Date.now(),;"
-        author:"You",;""
-        time:"Now",;"
-        title:newTitle,;
-        body:newBody},;]
+        id: Date.now();,;"
+        author: "You";,;""
+        time: "Now";,;"
+        title: newTitle;,;
+        body: newBody;},;]
       ...posts]),;"
     setNewTitle(""),;""
     setNewBody(""),;"
@@ -73,12 +73,12 @@ export const CommunityDiscussion:React.FC = () => {;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";""
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate";"
               value={newTitle}
-              onChange={(e:React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value);}
 
             <Textarea;"
               placeholder="What's on your mind?";""
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";              value={newBody}"
-              onChange={(e:React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value);}
             <div className="flex gap-3 justify-end">;"
                 variant="secondary";""
                 size="sm";""
@@ -123,13 +123,13 @@ author: string;
 avatar?: string;
 time: string;
 title: string;
-body: string 
+body: string ;
 }const initialPosts: DiscussionPost[] = [ {
   id: 1;
 author: "Anna Zhou";
 time: "2h ago";
 title: "What AI trends are you most excited for in 2025?";
-body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?" 
+body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?" ;
 };
 {
   id: 2;
@@ -140,7 +140,7 @@ setPosts ([ {
 author: "You";
 time: "Now";
 title: newTitle;
-body: newBody 
+body: newBody ;
 };
 ...posts]);
 setNewTitle ("");
@@ -156,7 +156,7 @@ setShowNew (false)
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;"
 pr-12325
-  (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) 
+  (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
 }/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel  <Button > Post  </div>  )"
 }  <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {"
 }</span> <span className="text-xs text-zion-slate-light"> {"

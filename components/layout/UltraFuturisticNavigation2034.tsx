@@ -110,7 +110,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -222,7 +221,6 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
@@ -253,10 +251,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Handshake, LifeBuoy, Activity;
     services: [;
       {
-        name: 'Quantum Machine Learning',
-        href: '/quantum - machine - learning - platform',
-        description: 'Harness quantum computing for ML',
-        price: '$1, 999 / month',
+        name: 'Quantum Machine Learning';,
+        href: '/quantum - machine - learning - platform';,
+        description: 'Harness quantum computing for ML';,
+        price: '$1;, 999 / month',
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
 }
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github}
@@ -266,103 +264,103 @@ const contactInfo = null;
 
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services',
+    title: '🧠 Revolutionary AI Services';,
   icon: BrainIcon;
-color: 'from-violet-600 via-purple-600 to-indigo-600',
+color: 'from-violet-600 via-purple-600 to-indigo-600';,
   description: 'Next-generation AI consciousness and creativity'
     services: [
 {
-        name: 'AI Business Intelligence Pro',
-        href: '/ai-business-intelligence-pro',
-        description: 'Transform data into actionable insights',
-        price: '$299/month',
+        name: 'AI Business Intelligence Pro';,
+        href: '/ai-business-intelligence-pro';,
+        description: 'Transform data into actionable insights';,
+        price: '$299/month';,
 origin/cursor/automate-test-improve-and-merge-code-2533
-  href: '/ai-business-intelligence-pro',
-        description: 'Transform data into actionable insights',}
-  price: '$299/month',}
+  href: '/ai-business-intelligence-pro';,
+        description: 'Transform data into actionable insights';,}
+  price: '$299/month';,}
       },
       {
-        name: 'Blockchain AI Platform',
-  href: '/blockchain - ai - platform',
-        description: 'Decentralized AI for the future',}
-  price: '$899 / month',}
+        name: 'Blockchain AI Platform';,
+  href: '/blockchain - ai - platform';,
+        description: 'Decentralized AI for the future';,}
+  price: '$899 / month';,}
       },
       {
-        name: 'Edge AI Computing',
-  href: '/edge - ai - computing - platform',
-        description: 'AI at the edge for real - time processing',}
-  price: '$599 / month',}
+        name: 'Edge AI Computing';,
+  href: '/edge - ai - computing - platform';,
+        description: 'AI at the edge for real - time processing';,}
+  price: '$599 / month';,}
       },
       {
       },
     ],
-  },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }
-      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' },
-      { name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' },
-      { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
+  },  {      { name: 'Quantum Machine Learning';, href: '/quantum - machine - learning - platform';, description: 'Harness quantum computing for ML';, price: '$1;, 999 / month' }
+      { name: 'Blockchain AI Platform';, href: '/blockchain - ai - platform';, description: 'Decentralized AI for the future';, price: '$899 / month' ;},
+      { name: 'Edge AI Computing';, href: '/edge - ai - computing - platform';, description: 'AI at the edge for real - time processing';, price: '$599 / month' ;},
+      { name: 'AI Climate Modeling';, href: '/ai - climate - modeling - platform';, description: 'Predict climate change with AI';, price: '$1;, 299 / month' }
     ];
   }
 
-    title: '🏙️ Enterprise IT Solutions',
-    icon: CpuIcon,
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-    description: 'Autonomous enterprise infrastructure',
-    title: '🛒 Business Automation',
-    icon: ShoppingCart,
-    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
-    description: 'Streamline business operations',
-    title: '🤖 Robotics & Automation',
-    icon: RocketIcon,
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
-    description: 'Intelligent automation solutions',
-    title: '🔬 Research & Development',
-    icon: MicroscopeIcon,
-    color: 'from - orange - 600 via - red - 600 to - pink - 600',
-    description: 'Breakthrough research solutions',
+    title: '🏙️ Enterprise IT Solutions';,
+    icon: CpuIcon;,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600';,
+    description: 'Autonomous enterprise infrastructure';,
+    title: '🛒 Business Automation';,
+    icon: ShoppingCart;,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600';,
+    description: 'Streamline business operations';,
+    title: '🤖 Robotics & Automation';,
+    icon: RocketIcon;,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600';,
+    description: 'Intelligent automation solutions';,
+    title: '🔬 Research & Development';,
+    icon: MicroscopeIcon;,
+    color: 'from - orange - 600 via - red - 600 to - pink - 600';,
+    description: 'Breakthrough research solutions';,
 
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'Solutions', href: '/solutions', icon: Target }
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }
-  { name: 'Resources', href: '/resources', icon: BookOpen }
-  { name: 'Case Studies', href: '/case-studies', icon: FileText }
-  { name: 'Blog', href: '/blog', icon: MessageCircle }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home';, href: '/';, icon: Home ;}
+  { name: 'Services';, href: '/services';, icon: Briefcase ;}
+  { name: 'Solutions';, href: '/solutions';, icon: Target ;}
+  { name: 'Pricing';, href: '/pricing-2034';, icon: DollarSign ;}
+  { name: 'Resources';, href: '/resources';, icon: BookOpen ;}
+  { name: 'Case Studies';, href: '/case-studies';, icon: FileText ;}
+  { name: 'Blog';, href: '/blog';, icon: MessageCircle ;}
+  { name: 'Contact';, href: '/contact';, icon: MessageCircle ;},];  { name: 'Contact';, href: '/contact';, icon: MessageCircle ;}
     ];
   }
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Target },
-  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case - studies', icon: FileText },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
+  { name: 'Home';, href: '/';, icon: Home ;},
+  { name: 'Services';, href: '/services';, icon: Briefcase ;},
+  { name: 'Solutions';, href: '/solutions';, icon: Target ;},
+  { name: 'Pricing';, href: '/pricing - 2034';, icon: DollarSign ;},
+  { name: 'Resources';, href: '/resources';, icon: BookOpen ;},
+  { name: 'Case Studies';, href: '/case - studies';, icon: FileText ;},
+  { name: 'Blog';, href: '/blog';, icon: MessageCircle ;},
 
-        name: 'AI Drug Discovery Platform',
-  href: '/ai-drug-discovery-platform',
-        description: 'Accelerate drug discovery with AI',}
-  price: '$3,999/month',}
+        name: 'AI Drug Discovery Platform';,
+  href: '/ai-drug-discovery-platform';,
+        description: 'Accelerate drug discovery with AI';,}
+  price: '$3;,999/month',}
       },
     ],
   },
   {
-    title: '⚛️ Quantum & Emerging Tech',
-  icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
-  description: 'Quantum computing and beyond',
+    title: '⚛️ Quantum & Emerging Tech';,
+  icon: AtomIcon;,
+    color: 'from-indigo-600 via-blue-600 to-cyan-600';,
+  description: 'Quantum computing and beyond';,
     services: [
 {
-        name: 'Quantum Machine Learning',
-  href: '/quantum-machine-learning-platform',
-        description: 'Harness quantum computing for ML',}
-  price: '$1,999/month',}
+        name: 'Quantum Machine Learning';,
+  href: '/quantum-machine-learning-platform';,
+        description: 'Harness quantum computing for ML';,}
+  price: '$1;,999/month',}
       },
       {
-        name: 'Blockchain AI Platform',
+        name: 'Blockchain AI Platform';,
   href: '/blockchain-ai-platform'
-        description: 'Decentralized AI for the future',
-  price: '$899/month'
+        description: 'Decentralized AI for the future';,
+  price: '$899/month';
 }
      ,}
 }
@@ -371,14 +369,14 @@ const quickLinks = [
         description: 'AI at the edge for real-time processing';}
         price: '$599/month';}
       }
-      {name: 'AI Climate Modeling',
-  href: '/ai-climate-modeling-platform',description: 'Predict climate change with AI',}
-  price: '$1,299/month',},],},{title: '🏙️ Enterprise IT Solutions',
-  icon: CpuIcon,color: 'from-blue-600 via-cyan-600 to-teal-600',}
-  description: 'Autonomous enterprise infrastructure',services: [;}
-{name: 'API Security & Monitoring',
-  href: '/api-security-monitoring-suite',description: 'Protect and monitor your APIs',}
-  price: '$399/month',},{name: 'Customer Success Automation';
+      {name: 'AI Climate Modeling';,
+  href: '/ai-climate-modeling-platform';,description: 'Predict climate change with AI';,}
+  price: '$1;,299/month',},],},{title: '🏙️ Enterprise IT Solutions';,
+  icon: CpuIcon;,color: 'from-blue-600 via-cyan-600 to-teal-600';,}
+  description: 'Autonomous enterprise infrastructure';,services: [;}
+{name: 'API Security & Monitoring';,
+  href: '/api-security-monitoring-suite';,description: 'Protect and monitor your APIs';,}
+  price: '$399/month';,},{name: 'Customer Success Automation';
         href: '/customer-success-automation';
         description: 'Automate customer success workflows';}
         price: '$199/month';}
@@ -388,14 +386,14 @@ const quickLinks = [
         description: 'Streamline HR processes with AI';}
         price: '$179/month';}
       }
-      {name: 'Project Management AI',
-  href: '/project-management-ai-platform',description: 'AI-powered project management',}
-  price: '$199/month',},],},{title: '🛒 Business Automation',
-  icon: ShoppingCart,color: 'from-teal-600 via-emerald-600 to-green-600',}
-  description: 'Streamline business operations',services: [;}
-{name: 'E-commerce Automation',
-  href: '/ecommerce-automation-platform',description: 'Automate your entire e-commerce operation',}
-  price: '$249/month',},{name: 'Marketing Automation Suite';
+      {name: 'Project Management AI';,
+  href: '/project-management-ai-platform';,description: 'AI-powered project management';,}
+  price: '$199/month';,},],},{title: '🛒 Business Automation';,
+  icon: ShoppingCart;,color: 'from-teal-600 via-emerald-600 to-green-600';,}
+  description: 'Streamline business operations';,services: [;}
+{name: 'E-commerce Automation';,
+  href: '/ecommerce-automation-platform';,description: 'Automate your entire e-commerce operation';,}
+  price: '$249/month';,},{name: 'Marketing Automation Suite';
         href: '/marketing-automation-suite';
         description: 'Automate your entire marketing operation';}
         price: '$279/month';}
@@ -405,14 +403,14 @@ const quickLinks = [
         description: 'Real-time financial insights';}
         price: '$349/month';}
       }
-      {name: 'Legal Document Automation',
-  href: '/legal-document-automation',description: 'Automate legal document creation',}
-  price: '$399/month',},],},{title: '🤖 Robotics & Automation',
-  icon: RocketIcon,color: 'from-green-600 via-yellow-600 to-orange-600',}
-  description: 'Intelligent automation solutions',services: [;}
-{name: 'Autonomous Robotics Platform',
-  href: '/autonomous-robotics-platform',description: 'Build and deploy intelligent robots',}
-  price: '$2,499/month',},{name: 'AI Content Generator Elite';
+      {name: 'Legal Document Automation';,
+  href: '/legal-document-automation';,description: 'Automate legal document creation';,}
+  price: '$399/month';,},],},{title: '🤖 Robotics & Automation';,
+  icon: RocketIcon;,color: 'from-green-600 via-yellow-600 to-orange-600';,}
+  description: 'Intelligent automation solutions';,services: [;}
+{name: 'Autonomous Robotics Platform';,
+  href: '/autonomous-robotics-platform';,description: 'Build and deploy intelligent robots';,}
+  price: '$2;,499/month',},{name: 'AI Content Generator Elite';
         href: '/ai-content-generator-elite';
         description: 'Professional AI content creation';}
         price: '$49/month';}
@@ -422,69 +420,69 @@ const quickLinks = [
         description: 'Policy and safety for LLM apps';}
         price: '$199/month';}
       }
-      {name: 'AI Business Intelligence',
-  href: '/ai-business-intelligence-suite',description: 'Intelligent business insights',}
-  price: '$299/month',},],},{title: '🔬 Research & Development',
-  icon: MicroscopeIcon,color: 'from-orange-600 via-red-600 to-pink-600',}
-  description: 'Breakthrough research solutions',services: [;}
-{name: 'Quantum DNA Computing',
-  href: '/quantum-dna-computing-platform',description: 'DNA-based quantum computation',}
-  price: '$35,999/month',},{name: 'Space Mining Automation';
+      {name: 'AI Business Intelligence';,
+  href: '/ai-business-intelligence-suite';,description: 'Intelligent business insights';,}
+  price: '$299/month';,},],},{title: '🔬 Research & Development';,
+  icon: MicroscopeIcon;,color: 'from-orange-600 via-red-600 to-pink-600';,}
+  description: 'Breakthrough research solutions';,services: [;}
+{name: 'Quantum DNA Computing';,
+  href: '/quantum-dna-computing-platform';,description: 'DNA-based quantum computation';,}
+  price: '$35;,999/month',},{name: 'Space Mining Automation';
         href: '/space-mining-automation-platform';
         description: 'Automated asteroid mining';}
-        price: '$45,999/month';}
+        price: '$45;,999/month';}
       }
       {name: 'Metaverse AI Development';
         href: '/metaverse-ai-development-platform';
         description: 'Build immersive virtual worlds';}
-        price: '$2,999/month';}
+        price: '$2;,999/month';}
       }
 
       {
-        name: 'Holographic Event Platform',
-  href: '/holographic-event-platform',
-        description: 'Immersive holographic experiences',}
-  price: '$2,999/month',}
+        name: 'Holographic Event Platform';,
+  href: '/holographic-event-platform';,
+        description: 'Immersive holographic experiences';,}
+  price: '$2;,999/month',}
       },
     ],
   },
 ];
 
 const quickLinks = [
-  { name: 'Home',}
-  href: '/', icon: Home,}
+  { name: 'Home';,}
+  href: '/';, icon: Home;,}
 },
-  { name: 'Services',}
-  href: '/services', icon: Briefcase,}
+  { name: 'Services';,}
+  href: '/services';, icon: Briefcase;,}
 },
-  { name: 'Solutions',}
-  href: '/solutions', icon: Target,}
+  { name: 'Solutions';,}
+  href: '/solutions';, icon: Target;,}
 },
-  { name: 'Pricing',}
-  href: '/pricing-2034', icon: DollarSign,}
+  { name: 'Pricing';,}
+  href: '/pricing-2034';, icon: DollarSign;,}
 },
-  { name: 'Resources',}
-  href: '/resources', icon: BookOpen,}
+  { name: 'Resources';,}
+  href: '/resources';, icon: BookOpen;,}
 },
-  { name: 'Case Studies',}
-  href: '/case-studies', icon: FileText,}
+  { name: 'Case Studies';,}
+  href: '/case-studies';, icon: FileText;,}
 },
-  { name: 'Blog',}
-  href: '/blog', icon: MessageCircle,}
+  { name: 'Blog';,}
+  href: '/blog';, icon: MessageCircle;,}
 },
-{ name: 'Contact',}
-  href: '/contact', icon: MessageCircle,}
+{ name: 'Contact';,}
+  href: '/contact';, icon: MessageCircle;,}
 },
 ];
 
 const companyLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Careers', href: '/careers', icon: Briefcase },
-  { name: 'News', href: '/news', icon: FileText },
-  { name: 'Partners', href: '/partners', icon: Handshake },
-  { name: 'Support', href: '/support', icon: LifeBuoy },
-  { name: 'Status', href: '/status', icon: Activity }
+  { name: 'About Us';, href: '/about';, icon: Users ;},
+  { name: 'Careers';, href: '/careers';, icon: Briefcase ;},
+  { name: 'News';, href: '/news';, icon: FileText ;},
+  { name: 'Partners';, href: '/partners';, icon: Handshake ;},
+  { name: 'Support';, href: '/support';, icon: LifeBuoy ;},
+  { name: 'Status';, href: '/status';, icon: Activity ;}
 ];
 
 
@@ -492,49 +490,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function UltraFuturisticNavigation2034() {;
 
 
-{ name: 'Status', href: '/status', icon: Activity },
-  { name: 'About Us',}
-  href: '/about', icon: Users,}
+{ name: 'Status';, href: '/status';, icon: Activity ;},
+  { name: 'About Us';,}
+  href: '/about';, icon: Users;,}
 },
-  { name: 'Careers',}
-  href: '/careers', icon: Briefcase,}
+  { name: 'Careers';,}
+  href: '/careers';, icon: Briefcase;,}
 },
-  { name: 'News',}
-  href: '/news', icon: FileText,}
+  { name: 'News';,}
+  href: '/news';, icon: FileText;,}
 },
-  { name: 'Partners',}
-  href: '/partners', icon: Handshake,}
+  { name: 'Partners';,}
+  href: '/partners';, icon: Handshake;,}
 },
-  { name: 'Support',}
-  href: '/support', icon: LifeBuoy,}
+  { name: 'Support';,}
+  href: '/support';, icon: LifeBuoy;,}
 },
 
-{ name: 'Status',}
-  href: '/status', icon: Activity,}
+{ name: 'Status';,}
+  href: '/status';, icon: Activity;,}
 },
 ];
 
 const socialLinks = [
   {
-    name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup',}
-    icon: Linkedin,}
+    name: 'LinkedIn';,
+  href: 'https://linkedin.com/company/ziontechgroup';,}
+    icon: Linkedin;,}
   },
-  { name: 'GitHub',}
-  href: 'https://github.com/Zion-Holdings', icon: Github,}
+  { name: 'GitHub';,}
+  href: 'https://github.com/Zion-Holdings';, icon: Github;,}
 },
   {
-    name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup',}
-    icon: Instagram,}
+    name: 'Instagram';,
+  href: 'https://instagram.com/ziontechgroup';,}
+    icon: Instagram;,}
   },
   {
-    name: 'YouTube',
-  href: 'https://youtube.com/@ziontechgroup',}
-    icon: Youtube,}
+    name: 'YouTube';,
+  href: 'https://youtube.com/@ziontechgroup';,}
+    icon: Youtube;,}
   },
-  { name: 'Twitter',}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter,}
+  { name: 'Twitter';,}
+  href: 'https://twitter.com/ziontechgroup';, icon: Twitter;,}
 },
 ];
 
@@ -567,41 +565,41 @@ const [isScrolled, setIsScrolled] = useState(false);
   const closeDropdown = () => {
     setActiveDropdown(null)
 const quickLinks = [;
-  { name: 'Home', href: '/', icon: Home },;
-  { name: 'Services', href: '/services', icon: Briefcase },;
-  { name: 'Solutions', href: '/solutions', icon: Target },;
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },;
-  { name: 'Resources', href: '/resources', icon: BookOpen },;
-  { name: 'Case Studies', href: '/case-studies', icon: FileText },;
-  { name: 'Blog', href: '/blog', icon: MessageCircle },;
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home';, href: '/';, icon: Home ;},;
+  { name: 'Services';, href: '/services';, icon: Briefcase ;},;
+  { name: 'Solutions';, href: '/solutions';, icon: Target ;},;
+  { name: 'Pricing';, href: '/pricing-2034';, icon: DollarSign ;},;
+  { name: 'Resources';, href: '/resources';, icon: BookOpen ;},;
+  { name: 'Case Studies';, href: '/case-studies';, icon: FileText ;},;
+  { name: 'Blog';, href: '/blog';, icon: MessageCircle ;},;
+  { name: 'Contact';, href: '/contact';, icon: MessageCircle ;},];  { name: 'Contact';, href: '/contact';, icon: MessageCircle ;}
 ];
 const companyLinks = [;
-  { name: 'About Us', href: '/about', icon: Users },;
-  { name: 'Careers', href: '/careers', icon: Briefcase },;
-  { name: 'News', href: '/news', icon: FileText },;
-  { name: 'Partners', href: '/partners', icon: Handshake },;
-  { name: 'Support', href: '/support', icon: LifeBuoy },;
-  { name: 'Status', href: '/status', icon: Activity },;
+  { name: 'About Us';, href: '/about';, icon: Users ;},;
+  { name: 'Careers';, href: '/careers';, icon: Briefcase ;},;
+  { name: 'News';, href: '/news';, icon: FileText ;},;
+  { name: 'Partners';, href: '/partners';, icon: Handshake ;},;
+  { name: 'Support';, href: '/support';, icon: LifeBuoy ;},;
+  { name: 'Status';, href: '/status';, icon: Activity ;},;
 ];
 const socialLinks = [;
   {;
-    name: 'LinkedIn',;
-    href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
-    icon: Linkedin,;
+    name: 'LinkedIn';,;
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup';,;
+    icon: Linkedin;,;
   },;
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+  { name: 'GitHub';, href: 'https://github && github.com/Zion-Holdings';, icon: Github ;},;
   {;
-    name: 'Instagram',;
-    href: 'https://instagram && instagram.com/ziontechgroup',;
-    icon: Instagram,;
+    name: 'Instagram';,;
+    href: 'https://instagram && instagram.com/ziontechgroup';,;
+    icon: Instagram;,;
   },;
   {;
-    name: 'YouTube',;
-    href: 'https://youtube && youtube.com/@ziontechgroup',;
-    icon: Youtube,;
+    name: 'YouTube';,;
+    href: 'https://youtube && youtube.com/@ziontechgroup';,;
+    icon: Youtube;,;
   },;
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
+  { name: 'Twitter';, href: 'https://twitter && twitter.com/ziontechgroup';, icon: Twitter ;},;
 ];
 const certifications = [;
   'ISO 27001 Certified',;
@@ -613,11 +611,11 @@ const certifications = [;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
 const socialLinks = [;
-  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
-  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
-  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
+  { name: 'LinkedIn';, href: 'https://linkedin && linkedin.com/company/ziontechgroup';, icon: Linkedin ;},;
+  { name: 'GitHub';, href: 'https://github && github.com/Zion-Holdings';, icon: Github ;},;
+  { name: 'Instagram';, href: 'https://instagram && instagram.com/ziontechgroup';, icon: Instagram ;},;
+  { name: 'YouTube';, href: 'https://youtube && youtube.com/@ziontechgroup';, icon: Youtube ;},;
+  { name: 'Twitter';, href: 'https://twitter && twitter.com/ziontechgroup';, icon: Twitter ;}
 ];
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -679,7 +677,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='flex items-center space-x-2' />
               <MapPin className='w-4 h-4 text-purple-400' />
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo.address}
+              <span className='hover: text-purple-400 transition-colors'>                {contactInfo.address;}
               </span>
             </div>
           </div>                {contactInfo.mobile}
@@ -739,7 +737,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div className='flex items-center space-x-2'>;
               <MapPin className='w-4 h-4 text-purple-400' />;
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
+              <span className='hover: text-purple-400 transition-colors'>                {contactInfo && contactInfo.address;}
               </span>;
             </div>;
           </div>                {contactInfo && contactInfo.mobile}
@@ -814,10 +812,10 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           <div className='flex items-center justify-between h-20' />;
             {/* Logo */}
             <motion.div;
-              initial={{ opacity: 0, x: -20 ,}
+              initial={{ opacity: 0;, x: -20 ;,}
 }
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              animate={{ opacity: 1;, x: 0 ;}}
+              transition={{ duration: 0.5 ;}}
 
 className='flex items-center space-x-3'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -845,9 +843,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0;, x: -20 ;}}
+              animate={{ opacity: 1;, x: 0 ;}}
+              transition={{ duration: 0.5 ;}}
               className="flex items-center space-x-3"
             >
               <div className="relative">
@@ -863,7 +861,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-              transition={{ duration: 0 && 0.5 }}
+              transition={{ duration: 0 && 0.5 ;}}
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
@@ -923,22 +921,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 const social_links = [;
   {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com / company / ziontechgroup',
-    icon: Linkedin,
+    name: 'LinkedIn';,
+    href: 'https://linkedin.com / company / ziontechgroup';,
+    icon: Linkedin;,
   },
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
+  { name: 'GitHub';, href: 'https://github.com / Zion - Holdings';, icon: Github ;},
   {
-    name: 'Instagram',
-    href: 'https://instagram.com / ziontechgroup',
-    icon: Instagram,
+    name: 'Instagram';,
+    href: 'https://instagram.com / ziontechgroup';,
+    icon: Instagram;,
   },
   {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
+    name: 'YouTube';,
+    href: 'https://youtube.com/@ziontechgroup';,
+    icon: Youtube;,
   },
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
+  { name: 'Twitter';, href: 'https://twitter.com / ziontechgroup';, icon: Twitter ;},
 ];
 ;
 const certifications = [;
@@ -952,11 +950,11 @@ const certifications = [;
   'AI Ethics Compliant', ];];
 ;
 const social_links = [;
-  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
+  { name: 'LinkedIn';, href: 'https://linkedin.com / company / ziontechgroup';, icon: Linkedin ;},
+  { name: 'GitHub';, href: 'https://github.com / Zion - Holdings';, icon: Github ;},
+  { name: 'Instagram';, href: 'https://instagram.com / ziontechgroup';, icon: Instagram ;},
+  { name: 'YouTube';, href: 'https://youtube.com/@ziontechgroup';, icon: Youtube ;},
+  { name: 'Twitter';, href: 'https://twitter.com / ziontechgroup';, icon: Twitter ;}
 ];
 ;
 const certifications = [;
@@ -1017,7 +1015,7 @@ function UltraFuturisticNavigation2034() {
             </div>;
             <div className='flex items - center space - x-2'>;
               <MapPin className='w - 4 h - 4 text - purple - 400' />;
-              <span className='hover:text - purple - 400 transition - colors'>                {contact_info.address}
+              <span className='hover: text - purple - 400 transition - colors'>                {contact_info.address;}
               </span>;
             </div>;
           </div>                {contact_info.mobile}
@@ -1073,9 +1071,9 @@ function UltraFuturisticNavigation2034() {
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="flex items - center justify - between h - 20">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0;, coordinate_x: -20 ;}}
+              animate={{ opacity: 1;, coordinate_x: 0 ;}}
+              transition={{ duration: 0.5 ;}}
               className='flex items - center space - x-3';
             >;
               <div className='relative'>;
@@ -1150,7 +1148,7 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
-                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
+                              className='block text - xs text - gray - 300 hover: text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */;}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
                   <span > Services</span>;
@@ -1304,15 +1302,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Mobile Menu */}
         <AnimatePresence />;
           {isOpen && (<motion&& motion.div;}
-              initial={{ opacity: 0, height: 0 ,}
+              initial={{ opacity: 0;, height: 0 ;,}
 }
-              animate={{ opacity: 1, height: 'auto' ,}
+              animate={{ opacity: 1;, height: 'auto' ;,}
 }
 
-              exit={{ opacity: 0, height: 0 }}
+              exit={{ opacity: 0;, height: 0 ;}}
 
 
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3 ;}}
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
              />
               <div className='px-4 py-6 space-y-4' />
@@ -1350,15 +1348,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence>;
           {is_open && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0;, height: 0 ;}}
+              animate={{ opacity: 1;, height: 'auto' ;}}
+              exit={{ opacity: 0;, height: 0 ;}}
+              transition={{ duration: 0.3 ;}}
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
             >;
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
+                          initial={{ opacity: 0;, height: 0 ;}}
+                          animate={{ opacity: 1;, height: 'auto' ;}}
+                          exit={{ opacity: 0;, height: 0 ;}}
                     className='border-b border-cyan-500/20 pb-4' />
 
                     <button;
@@ -1378,22 +1376,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <motion.div;
         <AnimatePresence />;
           {is_open && (<motion.div;}
-              initial={{ opacity: 0, height: 0 ,}
+              initial={{ opacity: 0;, height: 0 ;,}
 }
-              animate={{ opacity: 1, height: 'auto' ,}
+              animate={{ opacity: 1;, height: 'auto' ;,}
 }
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 ,}
+              exit={{ opacity: 0;, height: 0 ;}}
+              transition={{ duration: 0.3 ;,}
 }
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20' />
 
-                          initial={{ opacity: 0, height: 0 ,}
+                          initial={{ opacity: 0;, height: 0 ;,}
 }
-                          animate={{ opacity: 1, height: 'auto' ,}
+                          animate={{ opacity: 1;, height: 'auto' ;,}
 }
-                          exit={{ opacity: 0, height: 0 }}
+                          exit={{ opacity: 0;, height: 0 ;}}
 
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.2 ;}}
 
 className='mt-3 ml-4 space-y-2'
                         >

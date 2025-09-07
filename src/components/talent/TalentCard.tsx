@@ -1,8 +1,8 @@
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton",
+import { FavoriteButton } from "@/components/FavoriteButton",;
 
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
@@ -17,10 +17,10 @@ import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
+import { TalentProfile } from "@/types/talent",;
+import { RatingStars } from '@/components/RatingStars',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { useCart } from '@/context/CartContext',;
 
 export interface TalentCardProps {
 
@@ -55,9 +55,9 @@ import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 import { TalentProfile } from "@/types/talent",""
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
+import { RatingStars } from '@/components/RatingStars',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { useCart } from '@/context/CartContext',;
 export interface TalentCardProps {
   // TODO: Implement
 }

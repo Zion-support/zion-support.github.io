@@ -22,7 +22,7 @@ export default function AISalesIntelligencePlatform() {
       </div>
     </Layout>
   );
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
@@ -47,7 +47,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export default /**
  * AISalesIntelligencePlatform - Function description

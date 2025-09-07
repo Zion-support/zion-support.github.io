@@ -14,7 +14,7 @@
   Atom
   Sparkles
   Target;
-import React, { useState, useMemo } from 'react',
+import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 origin/cursor/automate-test-improve-and-merge-code-2533
   Search,
@@ -58,7 +58,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
   Sparkles,
   Target,;
 } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
@@ -154,31 +153,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
         {/* Navigation */}
         {/* Hero Section */}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
 default:
           return a.name.localeCompare(b.name);
       }
     });
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'all';, name: 'All Services';, icon: Globe;, count: allServices.length ;},
 {
-      id: 'AI',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
+      id: 'AI';,
+      name: 'AI & Machine Learning';,
+      icon: Brain;,
+      count: allServices.filter(s => s.category.includes('AI')).length;,
     },
     {
       id: 'Quantum'
       name: 'Quantum Computing'
       icon: Atom
-      count: allServices.filter(s => s.category.includes('Quantum')).length
+      count: allServices.filter(s => s.category.includes('Quantum')).length;
     }
     {
       id: 'Emerging'
       name: 'Emerging Technology'
       icon: Sparkles
-      count: allServices.filter(s => s.category.includes('Emerging')).length
+      count: allServices.filter(s => s.category.includes('Emerging')).length;
     }
     {
       id: 'IT'
@@ -192,7 +191,7 @@ default:
       id: 'Autonomous'
       name: 'Autonomous Systems'
       icon: Target
-      count: allServices.filter(s => s.category.includes('Autonomous')).length
+      count: allServices.filter(s => s.category.includes('Autonomous')).length;
     }
     {
       id: 'Cloud'
@@ -205,10 +204,10 @@ default:
   ];
 
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   
@@ -254,9 +253,9 @@ website: 'https://ziontechgroup.com',
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
@@ -424,9 +423,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
 className='group'
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
@@ -443,7 +442,7 @@ className='group'
                 {/* Sort By */}
 
                     {/* Service Title */}
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service.name;}
                     </h3>
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
@@ -454,15 +453,15 @@ className='group'
         {/* Services Grid */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service;, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className='group'>;
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}
@@ -480,9 +479,9 @@ className='group'
                         </span>;
                       )}
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                     {/* Service Header */}
                     <div className="flex items - start justify-between mb-4">;
                       <div className="text-4xl">{service.icon}</div>;
@@ -509,7 +508,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
 
                     {/* Service Title */}
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service && service.name;}
                     </h3>;
 
                     {/* Tagline */}
@@ -655,8 +654,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
@@ -680,8 +679,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
                         </span>;
                         <span className='text - gray - 400 text - sm'>;
                           ({service.reviews});
@@ -744,8 +743,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
                 className='text - center py - 16';
               >;
                 <div className='text - 6xl mb - 4'>🔍</div>;
@@ -766,9 +765,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px-6 lg:px-8">;
           <div className="max - w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
                 <a
                   href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
@@ -797,7 +796,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
                 <a
                   href="/contact"
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 ;}}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
             >
               <h2 className='text-3xl font-bold text-white mb-6'>

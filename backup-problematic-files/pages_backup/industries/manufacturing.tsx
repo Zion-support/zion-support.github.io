@@ -5,7 +5,7 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import {
-  // TODO: Implement
+  // TODO: Implement;
 }
   Settings,
   Brain,
@@ -24,25 +24,24 @@ const services = [;
   {}
 const services = [
   {
-    title: 'Smart Factory Solutions',
-    description: 'IoT-enabled manufacturing systems for intelligent production management.',
-    icon: Settings,
+    title: 'Smart Factory Solutions';,
+    description: 'IoT-enabled manufacturing systems for intelligent production management.';,
+    icon: Settings;,
     features: [;
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
-    title: 'Smart Factory Solutions,',,
-  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
-import Layout from '../../components/Layout';
+    title: 'Smart Factory Solutions;,',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.;,',;
 const services = [;
-    title: 'Smart Factory Solutions,',;
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+    title: 'Smart Factory Solutions;,',;
+    description: 'IoT-enabled manufacturing systems for intelligent production management.;,',;
 pr-12325
   {;
-    title: 'Smart Factory Solutions',,
-  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
-    icon: Settings,;
-    features: [,;
+    title: 'Smart Factory Solutions';,,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.';,;
+    icon: Settings;,;
+    features: [;,;
       'Real-time production monitoring,',;
       'Automated quality control',',;
       'Predictive maintenance',',;
@@ -50,12 +49,12 @@ pr-12325
     ];
   },;
   {}
-    title: 'Predictive Maintenance AI,',,
-  description: 'AI-powered systems to predict and prevent equipment failures.,',;
-    title: 'Predictive Maintenance AI,',;
-    description: 'AI-powered systems to predict and prevent equipment failures.,',;
+    title: 'Predictive Maintenance AI;,',,
+  description: 'AI-powered systems to predict and prevent equipment failures.;,',;
+    title: 'Predictive Maintenance AI;,',;
+    description: 'AI-powered systems to predict and prevent equipment failures.;,',;
 pr-12325
-    icon: Brain,;
+    icon: Brain;,;
       'Equipment health monitoring,',;
       'Failure prediction algorithms',',;
       'Maintenance scheduling',',;
@@ -63,13 +62,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'IoT Sensor Networks,',,
-  description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+    title: 'IoT Sensor Networks;,',,
+  description: 'Connected sensor systems for comprehensive factory monitoring.;,',;
       'Cost optimization;']
-    title: 'IoT Sensor Networks,',;
-    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+    title: 'IoT Sensor Networks;,',;
+    description: 'Connected sensor systems for comprehensive factory monitoring.;,',;
 pr-12325
-    icon: Cpu,;
+    icon: Cpu;,;
       'Environmental monitoring,',;
       'Equipment status tracking',',;
       'Data collection systems',',;
@@ -77,13 +76,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Quality Control Systems,',,
-  description: 'Automated quality assurance using computer vision and AI.,',;
+    title: 'Quality Control Systems;,',,
+  description: 'Automated quality assurance using computer vision and AI.;,',;
       'Real-time alerts;']
-    title: 'Quality Control Systems,',;
-    description: 'Automated quality assurance using computer vision and AI.,',;
+    title: 'Quality Control Systems;,',;
+    description: 'Automated quality assurance using computer vision and AI.;,',;
 pr-12325
-    icon: Shield,;
+    icon: Shield;,;
       'Visual inspection systems,',;
       'Defect detection algorithms',',;
       'Quality metrics tracking',',;
@@ -91,13 +90,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Supply Chain Optimization,',,
-  description: 'AI-driven supply chain management for improved efficiency.,',;
+    title: 'Supply Chain Optimization;,',,
+  description: 'AI-driven supply chain management for improved efficiency.;,',;
       'Automated reporting;']
-    title: 'Supply Chain Optimization,',;
-    description: 'AI-driven supply chain management for improved efficiency.,',;
+    title: 'Supply Chain Optimization;,',;
+    description: 'AI-driven supply chain management for improved efficiency.;,',;
 pr-12325
-    icon: BarChart3,;
+    icon: BarChart3;,;
       'Demand forecasting,',;
       'Inventory optimization',',;
       'Supplier management',',;
@@ -105,63 +104,63 @@ pr-12325
     ];
   },;
   {}
-    title: 'Digital Twin Technology,',,
-  description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+    title: 'Digital Twin Technology;,',,
+  description: 'Virtual replicas of physical manufacturing systems for simulation.;,',;
       'Logistics coordination;']
-    title: 'Digital Twin Technology,',;
-    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+    title: 'Digital Twin Technology;,',;
+    description: 'Virtual replicas of physical manufacturing systems for simulation.;,',;
 pr-12325
-    icon: Database,;
+    icon: Database;,;
       '3D factory modeling,',;
       'Process simulation',',;
       'Performance optimization',',;
       'Scenario planning;']
 
 import { Settings, 
-    title: 'Smart Factory Solutions,',
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',']
+    title: 'Smart Factory Solutions;,',
+    description: 'IoT-enabled manufacturing systems for intelligent production management.;,',']
 ;];
 const benefits = [;
   {}
-    title: 'Increased Efficiency,',,
-  description: 'Automated processes and AI optimization improve production efficiency.,',;
+    title: 'Increased Efficiency;,',,
+  description: 'Automated processes and AI optimization improve production efficiency.;,',;
     icon: Activity;
 ];
 const benefits = [;
   {;
-    title: 'Increased Efficiency',,
-  description: 'Automated processes and AI optimization improve production efficiency.',;
+    title: 'Increased Efficiency';,,
+  description: 'Automated processes and AI optimization improve production efficiency.';,;
     icon: Activity;
   },;
   {}
-    title: 'Reduced Downtime,',,
-  description: 'Predictive maintenance prevents unexpected equipment failures.,',;
-    icon: Wrench,;
+    title: 'Reduced Downtime;,',,
+  description: 'Predictive maintenance prevents unexpected equipment failures.;,',;
+    icon: Wrench;,;
   },;
   {}
-    title: 'Better Quality,',,
-  description: 'Automated quality control ensures consistent product quality.,',;
-    icon: Shield,;
+    title: 'Better Quality;,',,
+  description: 'Automated quality control ensures consistent product quality.;,',;
+    icon: Shield;,;
   },;
   {}
-    title: 'Cost Savings,',,
-  description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
-    icon: BarChart3,;
+    title: 'Cost Savings;,',,
+  description: 'Optimized operations and reduced waste lower manufacturing costs.;,',;
+    icon: BarChart3;,;
   }
 ;];
-    title: 'Increased Efficiency,',;
-    description: 'Automated processes and AI optimization improve production efficiency.,',;
+    title: 'Increased Efficiency;,',;
+    description: 'Automated processes and AI optimization improve production efficiency.;,',;
     icon: Activity;
 ]
-    title: 'Increased Efficiency',;
-    description: 'Automated processes and AI optimization improve production efficiency.',;
-    title: 'Reduced Downtime,',;
-    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
-    icon: Wrench,;
-    title: 'Better Quality,',;
-    description: 'Automated quality control ensures consistent product quality.,',;
-    title: 'Cost Savings,',;
-    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    title: 'Increased Efficiency';,;
+    description: 'Automated processes and AI optimization improve production efficiency.';,;
+    title: 'Reduced Downtime;,',;
+    description: 'Predictive maintenance prevents unexpected equipment failures.;,',;
+    icon: Wrench;,;
+    title: 'Better Quality;,',;
+    description: 'Automated quality control ensures consistent product quality.;,',;
+    title: 'Cost Savings;,',;
+    description: 'Optimized operations and reduced waste lower manufacturing costs.;,',;
 
 pr-12325
 export default function ManufacturingPage() {;
@@ -183,14 +182,14 @@ export default function ManufacturingPage() {;
           <div className="container mx-auto px-4 relative z-10">";"
 </div>
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}"
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}"
               className="text-center max-w-4xl mx-auto"">;"
 </motion>"
               <div className="flex items-center justify-center mb-6">";"
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";"
-                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,;"
+                <h1 className="text-5xl md: text-6xl font-bold">";, Manufacturing,;"
 </h1>"
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";"
 </span>
@@ -199,9 +198,9 @@ export default function ManufacturingPage() {;
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";"
 </p>
               </p>;"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;"
                 ;"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,;"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";, View Manufacturing Case Studies,;"
 
                 ;
               </div>;
@@ -237,7 +236,7 @@ export default function ManufacturingPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
                 <motion.div;
                   key={service.title}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
 
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";"
@@ -265,7 +264,7 @@ export default function ManufacturingPage() {;
             </div>,
         <section className="py-20 bg-gray-50">""
           <div className="container mx-auto px-4">";"
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 ;}}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -293,9 +292,9 @@ export default function ManufacturingPage() {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className="text-center""
                 >;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
@@ -315,9 +314,9 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -332,7 +331,7 @@ export default function ManufacturingPage() {;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center max-w-4xl mx-auto">;
               <div className="flex items-center justify-center mb-6">;
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />;
@@ -362,18 +361,18 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Manufacturing Technology Services,;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Manufacturing Technology Services,;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive Industry 4 && 4.0 solutions designed for modern manufacturing operations, ;
                 from small workshops to large industrial facilities.;
               </p>;
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -389,9 +388,9 @@ export default function ManufacturingPage() {;
               {services && services.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
                     <service && service.icon className="w-6 h-6 text-white" />";
@@ -435,18 +434,18 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Manufacturing Solutions?,;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Manufacturing Solutions?,;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our manufacturing technology solutions deliver measurable improvements in efficiency, ;
                 quality, and cost reduction.,;
               </p>;
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;
               {benefits && benefits.map((benefit, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -462,9 +461,9 @@ export default function ManufacturingPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className="text-center"">;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <benefit && benefit.icon className="w-8 h-8 text-white" />";
@@ -489,19 +488,19 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Manufacturing?,;
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}>,;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">";, Ready to Transform Manufacturing?,;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our manufacturing technology experts help you implement Industry 4 && 4.0 solutions;
                 that improve efficiency and reduce costs.;
               </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
                   Start Your Manufacturing Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -539,7 +538,7 @@ pr-12325
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
                   key={benefit.title}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}"
                   className="text-center"""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";"
                     <benefit.icon className="w-8 h-8 text-white" />";"
@@ -567,16 +566,16 @@ pr-12325
 
         <section className="py-20 bg-white">";"
               className="text-center mb-16"">;"
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Manufacturing Technology Services,;"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Manufacturing Technology Services,;"
             </motion && motion.div>;"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;"
                 <motion&& motion.div}),"
               className="text-center mb-16">;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                   key={service && service.title}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}"
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}"
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;"
                     <service && service.icon className="w-6 h-6 text-white" />";"
                   </div>,;"
@@ -595,8 +594,8 @@ pr-12325
                   </ul>,;
             </div>,;
         <section className="py-20 bg-gray-50">";"
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Manufacturing Solutions?,;"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Manufacturing Solutions?,;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
                   key={benefit && benefit.title}
                   className="text-center"">;"
@@ -604,9 +603,9 @@ pr-12325
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit && benefit.title}</h3>";""
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">";"
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Manufacturing?,;"
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;"
+              transition={{ duration: 0 && 0.8 ;}}>,;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">";, Ready to Transform Manufacturing?,;"
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;"
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"

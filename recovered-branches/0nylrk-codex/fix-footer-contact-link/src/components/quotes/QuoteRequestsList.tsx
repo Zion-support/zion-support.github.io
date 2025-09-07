@@ -1,9 +1,9 @@
 
-import React from "react",
-import { QuoteRequestCard } from "./QuoteRequestCard",
+import React from "react",;
+import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-import { EmptyStateCard } from "./EmptyStateCard",
+import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",}) => {
   if (isLoading) {
     return (

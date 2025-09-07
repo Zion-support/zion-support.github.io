@@ -708,10 +708,10 @@ import {
   FormItem;
   FormLabel;
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useAuth } from "@/hooks/useAuth",
+import { toast } from "@/components/ui/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Define form schema

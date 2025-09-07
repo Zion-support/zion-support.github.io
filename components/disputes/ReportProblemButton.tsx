@@ -1,5 +1,5 @@
 import Link from 'next/link';
-export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = null;
 export default function ReportProblemButton({
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -171,8 +171,7 @@ const query = new URLSearchParams({;}
   );
 }
 pr-12243
-import Link from 'next/link';
-export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
   });
 
@@ -190,7 +189,6 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
     </Link>
 
 pr-12243
-import Link from './next / link';
 ;
 
 export default /**

@@ -20,7 +20,7 @@ import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
 
 
 export default function EnterpriseITPage() {
@@ -127,10 +127,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import Layout from '../components / layout / Layout',;
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
 ;
 export default /**
  * EnterpriseITPage - Function description

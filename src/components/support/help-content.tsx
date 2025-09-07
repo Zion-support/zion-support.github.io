@@ -74,7 +74,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         id: "talent-profile",
         title: "Setting up a talent profile",
-        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
+        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",;
         lastUpdated: "2023-10-15",
         tags: ["profile", "talent"]
       },
@@ -317,7 +317,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         id: 'talent - profile',
         title: 'Setting up a talent profile',
         content:;
-          'Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\n_completeness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.',
+          'Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\n_completeness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.',;
         last_updated: '2023 - 10 - 15',
         tags: ['profile', 'talent'],
       },
@@ -397,7 +397,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 id: 'dispute - prevention',
         title: 'Tips for preventing disputes',
         content:;
-          "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\n_by following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
+          "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\n_by following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
         last_updated: '2023 - 12 - 05',
         tags: ['prevention', 'best practices', 'communication'],
       },

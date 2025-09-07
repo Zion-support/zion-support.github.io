@@ -1,6 +1,6 @@
 
 
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react',;
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';

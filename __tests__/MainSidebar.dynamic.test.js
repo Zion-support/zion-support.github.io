@@ -1,5 +1,4 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -23,9 +22,7 @@ describe('MainSidebardynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainSidebardynamic from "./components/MainSidebar.dynamic"; describe("MainSidebardynamic",() => { test("renders without crashing",() => { render(<MainSidebardynamic />); expect(screen.getByTestId("mainsidebar.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainSidebardynamic />)}); test("handles user interactions",() => { render(<MainSidebardynamic />)}); test("applies correct styling",() => { render(<MainSidebardynamic />)})});''"
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import MainSidebar from '../components/MainSidebar.dynamic';
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -55,8 +52,6 @@ describe ('MainSidebar', () => {
   test ('displays navigation items', () => {
     // Test navigation items;
 });
-import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
 main
 
   test('displays correct content', () => {

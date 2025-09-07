@@ -57,7 +57,6 @@ import {
   Github,
 
 
-import {
   Menu,
   ChevronDown,
   X,
@@ -120,12 +119,11 @@ import {
 
 
 
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import {
   Menu;
 ChevronDown,
 X;
@@ -193,15 +191,15 @@ interface NavigationItem {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -212,11 +210,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
 
-import {
   Menu,
   ChevronDown,
   X,
@@ -279,7 +274,6 @@ import {
 
 
 
-import {
   Menu,
   ChevronDown,
   X,
@@ -393,7 +387,7 @@ const navigationItems: NavigationItem[] = [
 
     name: 'Home & Core'
     href: '/'
-    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
+    icon: <Home className='w-5 h-5' />;,    description: 'Main pages and core information'
     category: 'core'
     color: 'from-emerald-500 to-cyan-500'
     children: [
@@ -406,129 +400,129 @@ const navigationItems: NavigationItem[] = [
 }
 const navigation_items: NavigationItem[] = [;
   {
-    name: 'Home & Core',
-    href: '/',
-    icon: <Home className='w - 5 h - 5' />,    description: 'Main pages and core information',
-    category: 'core',
-    color: 'from - emerald - 500 to - cyan - 500',
+    name: 'Home & Core';,
+    href: '/';,
+    icon: <Home className='w - 5 h - 5' />;,    description: 'Main pages and core information';,
+    category: 'core';,
+    color: 'from - emerald - 500 to - cyan - 500';,
     children: [;
-      {    icon: <Home className="w - 5 h - 5" />,
-    description: 'Main pages and core information',
-    category: 'core',
-    color: 'from - emerald - 500 to - cyan - 500',
+      {    icon: <Home className="w - 5 h - 5" />;,
+    description: 'Main pages and core information';,
+    category: 'core';,
+    color: 'from - emerald - 500 to - cyan - 500';,
     children: [;
       {
-        name: 'Home',
-        href: '/',
-        description: 'Main homepage',
-        icon: <Home className='w - 4 h - 4' />,
-        color: 'from - emerald - 500 to - cyan - 500',
-        featured: true,
+        name: 'Home';,
+        href: '/';,
+        description: 'Main homepage';,
+        icon: <Home className='w - 4 h - 4' />;,
+        color: 'from - emerald - 500 to - cyan - 500';,
+        featured: true;,
       },
       {
-        name: 'About Us',
-        href: '/about',
-        description: 'Company information and mission',
-        icon: <Info className='w - 4 h - 4' />,
-        color: 'from - blue - 500 to - cyan - 500',
+        name: 'About Us';,
+        href: '/about';,
+        description: 'Company information and mission';,
+        icon: <Info className='w - 4 h - 4' />;,
+        color: 'from - blue - 500 to - cyan - 500';,
       },
       {
-        name: 'Contact',
-        href: '/contact',
-        description: 'Get in touch with our team',
-        icon: <Mail className='w - 4 h - 4' />,
-        color: 'from - purple - 500 to - pink - 500',
+        name: 'Contact';,
+        href: '/contact';,
+        description: 'Get in touch with our team';,
+        icon: <Mail className='w - 4 h - 4' />;,
+        color: 'from - purple - 500 to - pink - 500';,
       },
       {
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our leadership team',
-        icon: <Users className='w - 4 h - 4' />,
-        color: 'from - orange - 500 to - red - 500',
+        name: 'Team';,
+        href: '/team';,
+        description: 'Meet our leadership team';,
+        icon: <Users className='w - 4 h - 4' />;,
+        color: 'from - orange - 500 to - red - 500';,
       },
     ],
   },
   {
-    name: 'Advanced Solutions',
-    href: '/solutions',
-    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
-    category: 'solutions',
-    color: 'from-blue-500 to-cyan-500',
+    name: 'Advanced Solutions';,
+    href: '/solutions';,
+    icon: <Rocket className='w-5 h-5' />;,    description: 'Cutting-edge technology solutions';,
+    category: 'solutions';,
+    color: 'from-blue-500 to-cyan-500';,
     children: [
       {
 
-    description: 'Cutting-edge technology solutions',
-    category: 'solutions',
-    color: 'from-blue-500 to-cyan-500',
+    description: 'Cutting-edge technology solutions';,
+    category: 'solutions';,
+    color: 'from-blue-500 to-cyan-500';,
     children: [
 
-    description: 'Knowledge base and insights',
-    category: 'resources',
-    color: 'from-orange-500 to-red-500',
+    description: 'Knowledge base and insights';,
+    category: 'resources';,
+    color: 'from-orange-500 to-red-500';,
     children: [
 
-    description: 'Company information and support',
-    category: 'company',
-    color: 'from-gray-500 to-slate-500',
+    description: 'Company information and support';,
+    category: 'company';,
+    color: 'from-gray-500 to-slate-500';,
     children: [
       {
-        href: '/about',
-        description: 'Our story and mission',
-        icon: <Info className='w-4 h-4' />,
-        featured: true,
+        href: '/about';,
+        description: 'Our story and mission';,
+        icon: <Info className='w-4 h-4' />;,
+        featured: true;,
       },
       {
-        name: 'Careers',
-        href: '/careers',
-        description: 'Join our team',
-        icon: <Users className='w-4 h-4' />,
-        color: 'from-green-500 to-emerald-500',
+        name: 'Careers';,
+        href: '/careers';,
+        description: 'Join our team';,
+        icon: <Users className='w-4 h-4' />;,
+        color: 'from-green-500 to-emerald-500';,
       },
       {
-        name: 'Support',
-        href: '/support',
-        description: 'Get help and support',
-        icon: <MessageCircle className='w-4 h-4' />,
-        color: 'from-blue-500 to-cyan-500',
+        name: 'Support';,
+        href: '/support';,
+        description: 'Get help and support';,
+        icon: <MessageCircle className='w-4 h-4' />;,
+        color: 'from-blue-500 to-cyan-500';,
       },
       {
-        name: 'Privacy Policy',
-        href: '/privacy',
-        description: 'Privacy and data protection',
-        icon: <Shield className='w-4 h-4' />,
-        color: 'from-red-500 to-pink-500',
+        name: 'Privacy Policy';,
+        href: '/privacy';,
+        description: 'Privacy and data protection';,
+        icon: <Shield className='w-4 h-4' />;,
+        color: 'from-red-500 to-pink-500';,
       },
     ],
-  },];        icon: <Shield className="w-4 h-4" />,
+  },];        icon: <Shield className="w-4 h-4" />;,
         color: 'from-red-500 to-pink-500'
-    name: 'AI & Technology Services',
-    href: '/services',
-    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
-        href: '/',
-        description: 'Main homepage',
-        icon: <Home className="w - 4 h - 4" />,
-        color: 'from - emerald - 500 to - cyan - 500',
+    name: 'AI & Technology Services';,
+    href: '/services';,
+    icon: <Brain className='w - 5 h - 5' />;,    description: 'Advanced AI and technology solutions';,        name: 'Home';,
+        href: '/';,
+        description: 'Main homepage';,
+        icon: <Home className="w - 4 h - 4" />;,
+        color: 'from - emerald - 500 to - cyan - 500';,
         featured: true;
       }
       {
-        name: 'About Us',
-        href: '/about',
-        description: 'Company information and mission',
-        icon: <Info className="w - 4 h - 4" />,
+        name: 'About Us';,
+        href: '/about';,
+        description: 'Company information and mission';,
+        icon: <Info className="w - 4 h - 4" />;,
         color: 'from - blue - 500 to - cyan - 500';
       }
       {
-        name: 'Contact',
-        href: '/contact',
-        description: 'Get in touch with our team',
-        icon: <Mail className="w - 4 h - 4" />,
+        name: 'Contact';,
+        href: '/contact';,
+        description: 'Get in touch with our team';,
+        icon: <Mail className="w - 4 h - 4" />;,
         color: 'from - purple - 500 to - pink - 500';
       }
       {
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our leadership team',
-        icon: <Users className="w - 4 h - 4" />,
+        name: 'Team';,
+        href: '/team';,
+        description: 'Meet our leadership team';,
+        icon: <Users className="w - 4 h - 4" />;,
         color: 'from - orange - 500 to - red - 500';
       }
     ];
@@ -649,23 +643,23 @@ onClick={() = /> handleDropdownToggle(item.name)}
                 </button>;
                 <AnimatePresence />;
                   {activeDropdown === item.name && (<motion.div;}
-                      initial={{ opacity: 0, y: 10 }
+                      initial={{ opacity: 0;, y: 10 ;}
 }
-                      animate={{ opacity: 1, y: 0 }
+                      animate={{ opacity: 1;, y: 0 ;}
 }
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      exit={{ opacity: 0;, y: 10 ;}}
+                      transition={{ duration: 0.2 ;}}
 
 className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
-                      transition={{ duration: 0 && 0.2 }}
+                      transition={{ duration: 0 && 0.2 ;}}
                      />
                       <div className='space-y-4' />
                         {item.children?.map(child => (}
-                      transition={{ duration: 0 && 0.2 }
+                      transition={{ duration: 0 && 0.2 ;}
 }
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
                       <div className='space-y-4' />;
@@ -718,7 +712,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='hidden lg: flex lg:items-center lg:space-x-4' />
             <div className='flex items-center space-x-4 text-sm text-gray-400' />
               <a;
-href={`tel:${contactInfo.mobile}`}
+href={`tel: ${contactInfo.mobile;}`}
                 className='flex items-center space-x-1 hover:text-white transition-colors'
               >
                 <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
@@ -726,7 +720,7 @@ href={`tel:${contactInfo.mobile}`}
             </div>
             <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
+              <a href={`tel: ${contactInfo.mobile;}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
 
               </a>
@@ -797,18 +791,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            initial={{ opacity: 0;, height: 0 ;}}
+            animate={{ opacity: 1;, height: 'auto' ;}}
       <AnimatePresence />;
         {isOpen && (<motion&& motion.div;}
-            initial={{ opacity: 0, height: 0 }
+            initial={{ opacity: 0;, height: 0 ;}
 }
-            animate={{ opacity: 1, height: 'auto' }
+            animate={{ opacity: 1;, height: 'auto' ;}
 }
 
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0;, height: 0 ;}}
 
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -840,7 +834,7 @@ onClick={() = /> handleDropdownToggle(item && item.name}
             <div className="px-2 pt-2 pb-3 space-y-1">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name}>;
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
@@ -878,15 +872,15 @@ onClick={() = /> handleDropdownToggle(item && item.name)}
       {/* Mobile Navigation */}
       <AnimatePresence />;
         {is_open && (<motion.div;}
-            initial={{ opacity: 0, height: 0 }
+            initial={{ opacity: 0;, height: 0 ;}
 }
-            animate={{ opacity: 1, height: 'auto' }
+            animate={{ opacity: 1;, height: 'auto' ;}
 }
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0;, height: 0 ;}}
 
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 ;}}
 
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.2 ;}}
                         className='ml-4 mt-2 space-y-1'
 
 className='ml-4 mt-2 space-y-1'
@@ -927,13 +921,13 @@ key={child.name}
                 <div className="px-3 py-2 text-sm text-gray-400">
                   <div className="flex items-center space-x-2 mb-2">
                     <Phone className="w-4 h-4" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors">
+                    <a href={`tel: ${contactInfo.mobile;}`} className="hover:text-white transition-colors">
                       {contactInfo.mobile}
                     </a>
                   </div>
                   <div className="flex items-center space-x-2 mb-2">
                     <Mail className="w-4 h-4" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                    <a href={`mailto: ${contactInfo.email;}`} className="hover:text-white transition-colors">
                       {contactInfo.email}
                     </a>
                   </div>
@@ -948,7 +942,7 @@ key={child.name}
                   </div>;
                   <div className="flex items-center space-x-2 mb-2">;
                     <Mail className="w-4 h-4" />;
-                    <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-white transition-colors">;
+                    <a href={`mailto: ${contactInfo && contactInfo.email;}`} className="hover:text-white transition-colors">;
                       {contactInfo && contactInfo.email}
                     </a>;
                   </div>;
@@ -986,7 +980,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex items-center space-x-2 mb-2' />;
                     <Phone className='w-4 h-4' />;
                     <a;
-                      href={`tel: ${contactInfo.mobile}`}
+                      href={`tel: ${contactInfo.mobile;}`}
                       className='hover:text-white transition-colors' />
 
                       {contactInfo.mobil}
@@ -996,7 +990,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex items-center space-x-2 mb-2' />;
                     <Mail className='w-4 h-4' />;
                     <a;
-                      href={`mailto: ${contactInfo.email}`}
+                      href={`mailto: ${contactInfo.email;}`}
                       className='hover:text-white transition-colors' />
 
                       {contactInfo.email}

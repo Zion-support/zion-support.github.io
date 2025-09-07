@@ -383,12 +383,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEOOptimizer from '../components/SEOOptimizer',
-import AnalyticsTracker from '../components/AnalyticsTracker',
-import ErrorBoundary from '../components/ErrorBoundary',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEOOptimizer from '../components/SEOOptimizer',;
+import AnalyticsTracker from '../components/AnalyticsTracker',;
+import ErrorBoundary from '../components/ErrorBoundary',;
+import { motion } from 'framer-motion',;
 import {
   Shield, Lock, Eye, Database, Globe,
   User, Settings, AlertTriangle, CheckCircle, Mail

@@ -17,8 +17,8 @@ export default function ResourcesPage() {
 import React from 'react';
 import SEO from '../components/SEO';
 
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react',;
+import SEO from '../components/SEO',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';

@@ -1,24 +1,24 @@
 "use client",;"
 ;"
-import { useState } from "react",;"
+import { useState } from "react";"
 ;
 interface AIService {;
-  id:string,;
-  name:string,,
-  description:string,;
-  technicalSpecs:string[],;
-  useCases:string[],;
-  pricing:string,;
-  startingPrice:number,;
-  contactLink:string,;
-  icon:string,;
-  features:string[],;
+  id: string;,;
+  name: string;,,
+  description: string;,;
+  technicalSpecs: string[];,;
+  useCases: string[];,;
+  pricing: string;,;
+  startingPrice: number;,;
+  contactLink: string;,;
+  icon: string;,;
+  features: string[];,;
   integration:string[];}
 const aiServices:AIService[] = [;
   {;
-    id:"zion-gpt-enterprise",;
-    name:"ZionGPT Enterprise",,
-  description:"Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",;
+    id: "zion-gpt-enterprise";,;
+    name: "ZionGPT Enterprise";,,
+  description: "Enterprise-grade AI assistant with custom knowledge base integration;, advanced reasoning, and compliance features.",;
     technicalSpecs:[;
       "GPT-4/Claude-3 integration",;
       "Custom fine-tuning capabilities",;
@@ -27,9 +27,9 @@ const aiServices:AIService[] = [;
       "Real-time learning from feedback",;
       "Advanced prompt engineering";
   {;"
-    id:"zion-gpt-enterprise",;""
-    name:"ZionGPT Enterprise",;""
-    description:"Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",;"
+    id: "zion-gpt-enterprise";,;""
+    name: "ZionGPT Enterprise";,;""
+    description: "Enterprise-grade AI assistant with custom knowledge base integration;, advanced reasoning, and compliance features.",;"
     technicalSpecs:[;"
       "GPT-4/Claude-3 integration",;""
       "Custom fine-tuning capabilities",;""
@@ -47,9 +47,9 @@ pr-12325
       "Research and data analysis",;""
       "Training and onboarding";"]
     ],;"
-    pricing:"Starting at $499/month",;"
-    startingPrice:499,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry",;"
+    pricing: "Starting at $499/month";,;"
+    startingPrice: 499;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry";,;"
     features:[;"
       "Custom knowledge base training",;""
       "Multi-language support (100+ languages)",;""
@@ -69,9 +69,9 @@ pr-12325
     ];
   },;
   {;
-    id:"ai-content-generation",;
-    name:"AI Content Generation Suite",,
-  description:"Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",;
+    id: "ai-content-generation";,;
+    name: "AI Content Generation Suite";,,
+  description: "Comprehensive content creation platform for marketing;, documentation, and creative writing with brand voice consistency.",;
     technicalSpecs:[;
       "Multi-model AI integration",;
       "Brand voice training",;
@@ -88,9 +88,9 @@ pr-12325
       "Social media content",;
       "Technical documentation";
     ],;
-    pricing:"Starting at $199/month",;
-    startingPrice:199,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",;
+    pricing: "Starting at $199/month";,;
+    startingPrice: 199;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry";,;
     features:[;
       "AI-powered content creation",;
       "Brand voice consistency",;
@@ -111,9 +111,9 @@ pr-12325
     ];
   },;
   {;
-    id:"ai-data-analytics",;
-    name:"AI-Powered Business Intelligence",,
-  description:"Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",;
+    id: "ai-data-analytics";,;
+    name: "AI-Powered Business Intelligence";,,
+  description: "Advanced analytics platform with predictive modeling;, natural language queries, and automated insights generation.",;
     technicalSpecs:[;
       "Machine learning models",;
       "Real-time data processing",;
@@ -130,9 +130,9 @@ pr-12325
       "Market trend analysis",;
       "Operational efficiency";
     ],;
-    pricing:"Starting at $599/month",;
-    startingPrice:599,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",;
+    pricing: "Starting at $599/month";,;
+    startingPrice: 599;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry";,;
     features:[;
       "Predictive analytics",;
       "Natural language queries",;
@@ -153,9 +153,9 @@ pr-12325
     ];
   },;
   {;
-    id:"ai-automation",;
-    name:"AI Process Automation",,
-  description:"Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",;
+    id: "ai-automation";,;
+    name: "AI Process Automation";,,
+  description: "Intelligent automation platform for business processes;, workflows, and repetitive tasks with learning capabilities.",;
     technicalSpecs:[;
       "RPA with AI enhancement",;
       "Process mining",;
@@ -172,9 +172,9 @@ pr-12325
       "Quality control",;
       "Compliance monitoring";
     ],;
-    pricing:"Starting at $399/month",;
-    startingPrice:399,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",;
+    pricing: "Starting at $399/month";,;
+    startingPrice: 399;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry";,;
     features:[;
       "Process mining and discovery",;
       "Workflow automation",;
@@ -193,9 +193,9 @@ pr-12325
       "Email platforms",;
       "Cloud services";
     ];
-    id:"ai-content-generation",;""
-    name:"AI Content Generation Suite",;""
-    description:"Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",;"
+    id: "ai-content-generation";,;""
+    name: "AI Content Generation Suite";,;""
+    description: "Comprehensive content creation platform for marketing;, documentation, and creative writing with brand voice consistency.",;"
       "Multi-model AI integration",;""
       "Brand voice training",;""
       "SEO optimization",;""
@@ -208,9 +208,9 @@ pr-12325
       "Email marketing",;""
       "Social media content",;""
       "Technical documentation";"]
-    pricing:"Starting at $199/month",;"
-    startingPrice:199,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",;"
+    pricing: "Starting at $199/month";,;"
+    startingPrice: 199;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry";,;"
       "AI-powered content creation",;""
       "Brand voice consistency",;""
       "SEO optimization tools",;""
@@ -225,9 +225,9 @@ pr-12325
       "Social media platforms",;""
       "CMS systems",;""
       "Marketing automation tools";"]
-    id:"ai-data-analytics",;""
-    name:"AI-Powered Business Intelligence",;""
-    description:"Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",;"
+    id: "ai-data-analytics";,;""
+    name: "AI-Powered Business Intelligence";,;""
+    description: "Advanced analytics platform with predictive modeling;, natural language queries, and automated insights generation.",;"
       "Machine learning models",;""
       "Real-time data processing",;""
       "Predictive analytics",;""
@@ -240,9 +240,9 @@ pr-12325
       "Performance optimization",;""
       "Market trend analysis",;""
       "Operational efficiency";"]
-    pricing:"Starting at $599/month",;"
-    startingPrice:599,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",;"
+    pricing: "Starting at $599/month";,;"
+    startingPrice: 599;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry";,;"
       "Real-time dashboards",;""
       "Data visualization",;""
       "Custom ML models",;""
@@ -254,9 +254,9 @@ pr-12325
       "CRM systems",;""
       "ERP systems",;""
       "Cloud data warehouses";"]
-    id:"ai-automation",;""
-    name:"AI Process Automation",;""
-    description:"Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",;"
+    id: "ai-automation";,;""
+    name: "AI Process Automation";,;""
+    description: "Intelligent automation platform for business processes;, workflows, and repetitive tasks with learning capabilities.",;"
       "RPA with AI enhancement",;""
       "Process mining",;""
       "Workflow automation",;""
@@ -269,9 +269,9 @@ pr-12325
       "Report generation",;""
       "Quality control",;""
       "Compliance monitoring";"]
-    pricing:"Starting at $399/month",;"
-    startingPrice:399,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",;"
+    pricing: "Starting at $399/month";,;"
+    startingPrice: 399;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry";,;"
       "Process mining and discovery",;""
       "Learning and optimization",;""
       "Integration capabilities",;""
@@ -324,7 +324,7 @@ export default function AISolutionsPage() {;
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold";"
 </a>
               </a>;
-                href={`https://ziontechgroup.com/services/${service.id}`}"
+                href={`https: //ziontechgroup.com/services/${service.id;}`}"
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline";"
       <div className="space-y-6">;"
         <h2 className="text-3xl font-bold text-center">AI Capabilities Overview</h2>;""
@@ -382,5 +382,5 @@ export default function AISolutionsPage() {;
   `https://ziontechgroup.com/services/$ {
   service.id;`;
 }` "
-}className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline" > Learn More </a> </div> </div>) )"
+}className="w-full block text-center text-blue-400 hover: text-blue-300 text-sm underline" > Learn More </a> </div> </div>) )";
 }</div> {"`;

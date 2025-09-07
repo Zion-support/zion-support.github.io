@@ -1,8 +1,8 @@
 } from 'lucide-react';
 
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
@@ -33,28 +33,26 @@ export default function WebsitePerformanceMonitorPage() {
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
     {
-icon: <Monitor className='w-8 h-8 text-white' />,
-      title: 'Real-Time Monitoring',
+icon: <Monitor className='w-8 h-8 text-white' />;,
+      title: 'Real-Time Monitoring';,
       description:
         '24/7 monitoring of your website performance with instant alerts and notifications.'
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
+      gradient: 'from-blue-400 to-cyan-500';
     }
     {
       icon: <Gauge className='w-8 h-8 text-white' />
       title: 'Performance Metrics'
-      description:
-        'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.'
+      description: 'Comprehensive metrics including Core Web Vitals;, page load times, and user experience scores.'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
+      gradient: 'from-green-400 to-emerald-500';
     }
     {
       icon: <AlertTriangle className='w-8 h-8 text-white' />
       title: 'Issue Detection'
-      description:
-        'Automatically detect and alert on performance issues, downtime, and bottlenecks.'
+      description: 'Automatically detect and alert on performance issues;, downtime, and bottlenecks.'
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
+      gradient: 'from-orange-400 to-red-500';
     }
     {
       icon: <TrendingUp className='w-8 h-8 text-white' />
@@ -62,51 +60,45 @@ icon: <Monitor className='w-8 h-8 text-white' />,
       description:
         'AI-powered recommendations to improve your website speed and user experience.'
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
+      gradient: 'from-purple-400 to-indigo-500';
     }
   ];
   const metrics = [
     {
       name: 'Core Web Vitals'
-      description:
-        'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
-      icon: '⚡',
-      color: 'text-blue-400',
+      description: 'LCP;, FID, and CLS metrics that directly impact user experience and SEO rankings.',
+      icon: '⚡';,
+      color: 'text-blue-400';,
     },
     {
-      name: 'Page Load Time',
-      description:
-        'Comprehensive analysis of page load performance across different devices and locations.',
-      icon: '🚀',
-      color: 'text-green-400',
+      name: 'Page Load Time';,
+      description: 'Comprehensive analysis of page load performance across different devices and locations.';,
+      icon: '🚀';,
+      color: 'text-green-400';,
     },
     {
-      name: 'Uptime Monitoring',
-      description:
-        '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
-      icon: '🔄',
-      color: 'text-purple-400',
+      name: 'Uptime Monitoring';,
+      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.';,
+      icon: '🔄';,
+      color: 'text-purple-400';,
     },
     {
-      name: 'Mobile Performance',
-      description:
-        'Mobile-first performance testing and optimization recommendations.',
-      icon: '📱',
-      color: 'text-orange-400',
+      name: 'Mobile Performance';,
+      description: 'Mobile-first performance testing and optimization recommendations.';,
+      icon: '📱';,
+      color: 'text-orange-400';,
     },
     {
-      name: 'SEO Impact',
-      description:
-        'Performance metrics that directly affect your search engine rankings and visibility.',
-      icon: '🔍',
-      color: 'text-cyan-400',
+      name: 'SEO Impact';,
+      description: 'Performance metrics that directly affect your search engine rankings and visibility.';,
+      icon: '🔍';,
+      color: 'text-cyan-400';,
     },
     {
-      name: 'User Experience',
-      description:
-        'Real user experience metrics and conversion impact analysis.',
-      icon: '👥',
-      color: 'text-pink-400',
+      name: 'User Experience';,
+      description: 'Real user experience metrics and conversion impact analysis.';,
+      icon: '👥';,
+      color: 'text-pink-400';,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
@@ -124,13 +116,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Basic reporting',
         'Core Web Vitals tracking',
       ],
-      popular: false,
+      popular: false;,
     },
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses and e-commerce sites',
+      name: 'Professional';,
+      price: '$79';,
+      period: '/month';,
+      description: 'Ideal for growing businesses and e-commerce sites';,
       features: [
         '25 websites monitored'
         'Advanced performance metrics'
@@ -141,11 +133,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'API access'
         'Team collaboration'
       ]
-      popular: true
+      popular: true;
     },    {
       name: 'Enterprise'
       price: '$199'
-      period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
+      period: '/month';,        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
 
@@ -155,43 +147,43 @@ export default function WebsitePerformanceMonitorPage() {;
 
     };
     {;
-      name: 'Page Load Time',;
-      description: 'Comprehensive analysis of page load performance across different devices and locations.',;
-      icon: '🚀',;
+      name: 'Page Load Time';,;
+      description: 'Comprehensive analysis of page load performance across different devices and locations.';,;
+      icon: '🚀';,;
       color: 'text-green-400';
     };
     {;
-      name: 'Uptime Monitoring',;
-      description: '99 && 99.9% uptime monitoring with instant alerts for any downtime or performance issues.',;
-      icon: '🔄',;
+      name: 'Uptime Monitoring';,;
+      description: '99 && 99.9% uptime monitoring with instant alerts for any downtime or performance issues.';,;
+      icon: '🔄';,;
       color: 'text-purple-400';
     };
     {;
-      name: 'Mobile Performance',;
-      description: 'Mobile-first performance testing and optimization recommendations.',;
-      icon: '📱',;
+      name: 'Mobile Performance';,;
+      description: 'Mobile-first performance testing and optimization recommendations.';,;
+      icon: '📱';,;
       color: 'text-orange-400';
     };
     {;
-      name: 'SEO Impact',;
-      description: 'Performance metrics that directly affect your search engine rankings and visibility.',;
-      icon: '🔍',;
+      name: 'SEO Impact';,;
+      description: 'Performance metrics that directly affect your search engine rankings and visibility.';,;
+      icon: '🔍';,;
       color: 'text-cyan-400';
     };
     {;
-      name: 'User Experience',;
-      description: 'Real user experience metrics and conversion impact analysis.',;
-      icon: '👥',;
+      name: 'User Experience';,;
+      description: 'Real user experience metrics and conversion impact analysis.';,;
+      icon: '👥';,;
       color: 'text-pink-400';
     }
   ];
 
   const pricing = [;
     {;
-      name: 'Starter',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for small websites and blogs',;
+      name: 'Starter';,;
+      price: '$29';,;
+      period: '/month';,;
+      description: 'Perfect for small websites and blogs';,;
       features: [;
         '5 websites monitored',;
         'Basic performance metrics',;
@@ -200,20 +192,20 @@ export default function WebsitePerformanceMonitorPage() {;
         'Basic reporting',;
         'Core Web Vitals tracking',;
       ],;
-      popular: false,;
+      popular: false;,;
     },    {        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking';
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small websites and blogs',
+      name: 'Starter';,
+      price: '$29';,
+      period: '/month';,
+      description: 'Perfect for small websites and blogs';,
       ];
       popular: false;
     };
-      name: 'Professional',;
-      price: '$79',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and e-commerce sites',;
+      name: 'Professional';,;
+      price: '$79';,;
+      period: '/month';,;
+      description: 'Ideal for growing businesses and e-commerce sites';,;
       features: [;
         '25 websites monitored',;
         'Advanced performance metrics',;
@@ -224,17 +216,17 @@ export default function WebsitePerformanceMonitorPage() {;
         'API access',;
         'Team collaboration',;
       ],;
-      popular: true,;
+      popular: true;,;
     },    {;
-      name: 'Enterprise',;
-      price: '$199',;
-      period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration';
+      name: 'Enterprise';,;
+      price: '$199';,;
+      period: '/month';,        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration';
       ];
       popular: true;
     };
-      name: 'Enterprise',;
-      price: '$199',;
-      period: '/month',;
+      name: 'Enterprise';,;
+      price: '$199';,;
+      period: '/month';,;
       description:;
         'For large organizations with critical performance requirements',;
       features: [;
@@ -247,7 +239,7 @@ export default function WebsitePerformanceMonitorPage() {;
         'SLA guarantees',;
         'On-premise options',;
       ],;
-      popular: false,;
+      popular: false;,;
     },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options';
 '25 websites monitored',
         'Advanced performance metrics',
@@ -258,13 +250,13 @@ export default function WebsitePerformanceMonitorPage() {;
         'API access',
         'Team collaboration',
       ],
-      popular: true,
+      popular: true;,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
+      name: 'Enterprise';,
+      price: '$199';,
+      period: '/month';,
       description:
         'For large organizations with critical performance requirements'
       features: [
@@ -277,20 +269,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'SLA guarantees'
         'On-premise options'
       ]
-      popular: false
+      popular: false;
     },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ];
-      popular: false
+      popular: false;
     }
 
-      description: 'For large organizations with critical performance requirements',
+      description: 'For large organizations with critical performance requirements';,
       features: [
         'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ];
       popular: false;
     }
-description:
-        'For large organizations with critical performance requirements',
+description: 'For large organizations with critical performance requirements';,
       features: [
         'Unlimited websites',
         'Enterprise-grade monitoring',
@@ -301,7 +292,7 @@ description:
         'SLA guarantees',
         'On-premise options',
       ],
-      popular: false,
+      popular: false;,
     },
   ];
 
@@ -323,12 +314,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Simulate website analysis;
     setTimeout(() => {;
       setAnalysisResults({;
-        url: 'https://example && example.com',;
-        overallScore: 87,;
-        lcp: '2 && 2.1s',;
-        fid: '45ms',;
-        cls: '0 && 0.08',;
-        loadTime: '1 && 1.8s',;
+        url: 'https://example && example.com';,;
+        overallScore: 87;,;
+        lcp: '2 && 2.1s';,;
+        fid: '45ms';,;
+        cls: '0 && 0.08';,;
+        loadTime: '1 && 1.8s';,;
         recommendations: [;
           'Optimize images and implement lazy loading',;
           'Minimize render-blocking resources',;
@@ -378,7 +369,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
               onClick={handleAnalyzeWebsite}
               size='lg'
-              className='bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'              disabled={isAnalyzing}>;
+              className='bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'              disabled={isAnalyzing;}>;
               {isAnalyzing ? (;
                 <>;
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  Analyzing...;
@@ -507,17 +498,17 @@ href='#pricing'
               <Card
                 key={index}
                 className='card-hover group border-gradient-blue'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}
                     >
                       {feature.icon}
                     </div>
                     <div
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;}
                     />
                   </div>
                   <div className='flex-1'>
@@ -554,7 +545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
                       {feature.icon}
                     </div>;
-                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
+                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover: opacity - 20 transition - opacity duration - 300 blur - sm`;} />;
                   </div>;
                   <div className="flex - 1">;
                     <h3 className="text - 2xl font - bold mb - 4 text - white">;
@@ -592,7 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
                 <div className='text-4xl mb-4'>{metric && metric.icon}</div>;
                 <h3 className={`text-xl font-bold mb-3 ${metric && metric.color}`}>;
                   {metric && metric.name}
@@ -831,7 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
                 className="card - hover border - gradient - blue text - center";
-                style={{ animation_delay: `${index * 0.1}s` }}
+                style={{ animation_delay: `${index * 0.1;}s` }}
               >;
                 <div className="text - 4xl mb - 4">{metric.icon}</div>;
                 <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>{metric.name}</h3>;
@@ -1010,7 +1001,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
@@ -1051,7 +1042,7 @@ href='/contact'
                     </li>
                   ))}
                 </ul>
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
@@ -1071,11 +1062,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
               </Card>
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}>;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
                   size="lg";
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
                 >;
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />;

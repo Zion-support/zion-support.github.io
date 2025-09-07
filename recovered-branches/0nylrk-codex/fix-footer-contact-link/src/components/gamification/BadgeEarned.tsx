@@ -5,8 +5,8 @@ import { getBadgeMeta, BadgeKey } from './badge_config';
 interface BadgeEarnedProps {
   badge: BadgeKey
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+import React from "react",;
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
@@ -19,8 +19,8 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   size = 44;
 
   badge: BadgeKey
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+import React from "react",;
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 
 interface BadgeEarnedProps {
 interface BadgeEarnedProps {

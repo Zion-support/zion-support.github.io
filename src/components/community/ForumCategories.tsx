@@ -6,7 +6,7 @@
     adminOnly: false
     icon: "Briefcase"
   }
-import { ForumCategoryInfo } from "@/types/community",
+import { ForumCategoryInfo } from "@/types/community",;
   {
     id: "project-help"
     name: "Project Help"

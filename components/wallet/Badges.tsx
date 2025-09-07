@@ -11,37 +11,36 @@ import React from 'react';
 label: string;
 
 ;
-import React from 'react';
 
 export type Badge = any;id: string;
 label: string;
 
 export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;}
-threshold: number, //token balance threshold;}
+threshold: number;, //token balance threshold;}
 }
 
 const BADGES: Badge[] = [;
-  { id: 'starter'}
-  label: 'Starter', threshold: 50}
-},{ id: 'rising'}
-  label: 'Rising Star', threshold: 200}
-},{ id: 'pro'}
-  label: 'Pro', threshold: 500}
-},{ id: 'elite'}
-  label: 'Elite', threshold: 1000}
+  { id: 'starter';}
+  label: 'Starter';, threshold: 50;}
+},{ id: 'rising';}
+  label: 'Rising Star';, threshold: 200;}
+},{ id: 'pro';}
+  label: 'Pro';, threshold: 500;}
+},{ id: 'elite';}
+  label: 'Elite';, threshold: 1000;}
 }];
 
-export type Badge = {id: string,label: string,threshold: number, // token balance threshold;}
+export type Badge = {id: string;,label: string;,threshold: number;, // token balance threshold;}
 }
 
 const BADGES: Badge[] = [;"
-  { id: \"starter\", label: \"Starter\", threshold: 50}"
-},{ id: \"rising\", label: \"Rising Star\", threshold: 200}"
-},{ id: \"pro\", label: \"Pro\", threshold: 500}"
-},{ id: \"elite\", label: \"Elite\", threshold: 1000}
-}],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
+  { id: \"starter\";, label: \"Starter\";, threshold: 50;}"
+},{ id: \"rising\";, label: \"Rising Star\";, threshold: 200;}"
+},{ id: \"pro\";, label: \"Pro\";, threshold: 500;}"
+},{ id: \"elite\";, label: \"Elite\";, threshold: 1000;}
+}],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null;,id: string;
 label: string;}
-threshold: number, //token balance threshold;}
+threshold: number;, //token balance threshold;}
 }
   return (<div className='flex gap - 2 items - center flex - wrap' />;
       {BADGES.map (boolean => (        <span;}
@@ -49,7 +48,7 @@ threshold: number, //token balance threshold;}
           className={`px - 3 py - 1 rounded - full text - xs border ${balance  />= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';}
 }
-              : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
+              : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null;,
 
   for ;
   const b of BADGES) {
@@ -60,11 +59,11 @@ if (current = b) {}
 
  ;
   return current;
-export default function Badges(): any ({ balance }: { balance: number }) {;
+export default function Badges(): any ({ balance }: { balance: number ;}) {;
   const active = currentBadge(balance);
   return (
 
-export default function Badges({ balance }: { balance: number}
+export default function Badges({ balance }: { balance: number;}
 }) {
   const active = currentBadge(balance);
   return (
@@ -85,7 +84,7 @@ key={b.id}
       ))}
       {active && (;
         <span className='ml-2 text-xs text-green-600'>;
-          Current: {active && active.label}
+          Current: {active && active.label;}
         </span>;
       )}
       )}
@@ -114,9 +113,9 @@ function Badges() {
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
 
-export default function Badges({ balance }: { balance: number }) {;
+export default function Badges({ balance }: { balance: number ;}) {;
 
-export default function Badges({ balance }: { balance: number }) {
+export default function Badges({ balance }: { balance: number ;}) {
   const active = currentBadge(balance);
 
   return (
@@ -124,7 +123,7 @@ export default function Badges({ balance }: { balance: number }) {
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
 
-export default function Badges({ balance }: { balance: number }) {
+export default function Badges({ balance }: { balance: number ;}) {
   const active = currentBadge(balance);
   return (
 <div className='flex gap-2 items-center flex-wrap'>
@@ -153,10 +152,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <span className='ml-2 text-xs text-green-600' />
 }
-          Current: {active.labe}
+          Current: {active.labe;}
 }
 <span className='ml-2 text-xs text-green-600'>
-          Current: {active.label}
+          Current: {active.label;}
         </span>
         </span>;
       )}

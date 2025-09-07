@@ -4,12 +4,12 @@ import data from '../../data/stackexchange-insights.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/stackexchange-insights.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/stackexchange-insights.json',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import data from '../../data/stackexchange-insights.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/stackexchange-insights.json',
+import data from '../../data/stackexchange-insights.json',;
 
 
 export default function StackExchangeInsightsPage() {

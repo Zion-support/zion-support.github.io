@@ -26,10 +26,10 @@ import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 import {useJobs} from "@/hooks/useJobs";
 import {JobSchemaType} from './validation';
-import React, { useState, useEffect, useCallback } from 'react',
-import { useNavigate } from 'react-router-dom',
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
+import React, { useState, useEffect, useCallback } from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
 import { Button } from "@/components/ui/button",  const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
@@ -43,19 +43,19 @@ export /**
  * JobPostingForm - Function description
 import {useJobs} from "@/hooks/useJobs";""
 import {JobSchemaType} from './validation';
-import React, { useState, useEffect, useCallback } from 'react',
-import { useNavigate } from 'react-router-dom',
+import React, { useState, useEffect, useCallback } from 'react',;
+import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",""
 import { Input } from "@/components/ui/input",""
 import { Label } from "@/components/ui/label",""
 import { Button } from "@/components/ui/button",""
 import { Form } from "@/components/ui/form",""
-import { useJobForm } from './useJobForm',
-import { BasicInfoFields } from './BasicInfoFields',
-import { DateFields } from './DateFields',
-import { DescriptionFields } from './DescriptionFields',
+import { useJobForm } from './useJobForm',;
+import { BasicInfoFields } from './BasicInfoFields',;
+import { DateFields } from './DateFields',;
+import { DescriptionFields } from './DescriptionFields',;
 import { useJobs } from "@/hooks/useJobs",""
-import { JobSchemaType } from './validation',
+import { JobSchemaType } from './validation',;
 interface JobPostingFormProps {
   // TODO: Implement
 }

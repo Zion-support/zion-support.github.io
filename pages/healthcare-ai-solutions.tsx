@@ -20,8 +20,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-import React from 'react',
-import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * HealthcareAISolutions - Function description
  */

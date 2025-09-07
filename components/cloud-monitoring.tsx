@@ -2,13 +2,13 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -47,9 +47,8 @@ export default function CloudMonitoringPage() {
 
 export default function CloudMonitoringPage() {
   const features = [
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
+import Head from 'next/head';
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
@@ -60,15 +59,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:
         'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
+      gradient: 'from-green-400 to-emerald-500';
     }
     {
       icon: <BarChart3 className='w-8 h-8 text-white' />
       title: 'Advanced Analytics'
-      description:
-        'Deep insights into performance metrics, resource utilization, and business intelligence.'
+      description: 'Deep insights into performance metrics;, resource utilization, and business intelligence.'
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
+      gradient: 'from-blue-400 to-cyan-500';
     }
     {
       icon: <AlertTriangle className='w-8 h-8 text-white' />
@@ -76,31 +74,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:
         'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.'
       color: 'bg-gradient-to-br from-red-500 to-pink-600'
-      gradient: 'from-red-400 to-pink-500'
+      gradient: 'from-red-400 to-pink-500';
     }
     {
       icon: <Database className='w-8 h-8 text-white' />
       title: 'Multi-Cloud Support'
-      description:
-        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.'
+      description: 'Monitor AWS;, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.'
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
+      gradient: 'from-purple-400 to-indigo-500';
     }
     {
       icon: <Shield className='w-8 h-8 text-white' />
       title: 'Security Monitoring'
-      description:
-        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.'
+      description: 'Comprehensive security monitoring with threat detection;, compliance reporting, and audit trails.'
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
-      gradient: 'from-yellow-400 to-orange-500'
+      gradient: 'from-yellow-400 to-orange-500';
     }
     {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Auto-scaling'
-      description:
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500',
+      description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.';,
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600';,
+      gradient: 'from-teal-400 to-blue-500';,
     },;
   ];
 
@@ -149,9 +144,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Audit Trails'
       ]
     },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails'];
     }
-      icon: <Activity className='w-8 h-8 text-white' />,
+      icon: <Activity className='w-8 h-8 text-white' />;,
   ];
 
 
@@ -182,16 +177,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Community support',
         'Mobile app access',
       ],
-      popular: false,
-      color: 'border-gray-600',
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',
+      popular: false;,
+      color: 'border-gray-600';,
+      buttonColor: 'bg-gray-600 hover:bg-gray-700';,
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      name: 'Professional';,
+      price: '$199';,
+      period: '/month';,
+      description: 'Ideal for growing businesses';,
       features: [
 'Up to 100 servers',
         'Advanced monitoring',
@@ -202,20 +197,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'API access',
         'Team collaboration',
       ],
-      popular: true,
-      color: 'border-blue-500',
-      buttonColor: 'bg-blue-600 hover:bg-blue-700',
+      popular: true;,
+      color: 'border-blue-500';,
+      buttonColor: 'bg-blue-600 hover:bg-blue-700';,
     },
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Enterprise',
-      price: '$599',
-      period: '/month',
-      description: 'For large organizations',
+      name: 'Enterprise';,
+      price: '$599';,
+      period: '/month';,
+      description: 'For large organizations';,
 ;
   const use_cases = [;
     {
-      title: 'DevOps Teams',
+      title: 'DevOps Teams';,
       description:;
         'Monitor CI / CD pipelines, deployment success rates, and infrastructure health.',
       benefits: [;
@@ -229,28 +224,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'SLA guarantee',
         'On-premise option',
       ],
-      popular: false,
-      color: 'border-purple-600',
-      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+      popular: false;,
+      color: 'border-purple-600';,
+      buttonColor: 'bg-purple-600 hover:bg-purple-700';,
     },
   ];
 
   const integrations = [
-    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
-    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
-    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
-    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
-    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
-{ name: 'Jira', icon: '📋', description: 'Issue tracking' },
+    { name: 'AWS';, icon: '☁️';, description: 'CloudWatch integration' ;},
+    { name: 'Azure';, icon: '🔷';, description: 'Monitor integration' ;},
+    { name: 'GCP';, icon: '☁️';, description: 'Stackdriver integration' ;},
+    { name: 'Docker';, icon: '🐳';, description: 'Container monitoring' ;},
+    { name: 'Kubernetes';, icon: '☸️';, description: 'K8s native support' ;},
+    { name: 'Slack';, icon: '💬';, description: 'Team notifications' ;},
+    { name: 'PagerDuty';, icon: '🚨';, description: 'Incident management' ;},
+{ name: 'Jira';, icon: '📋';, description: 'Issue tracking' ;},
   ];
   const useCases = [
     {
-      title: 'DevOps Teams',
-description:
-        'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
-      icon: '🔄',
+      title: 'DevOps Teams';,
+description: 'Monitor CI/CD pipelines;, deployment success rates, and infrastructure health.',
+      icon: '🔄';,
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Faster deployments',
@@ -260,13 +254,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
-      title: 'SaaS Companies',
+      title: 'SaaS Companies';,
       description:;
         'Track user experience, application performance, and business metrics.',
       benefits: [;
-      description:
-        'Track user experience, application performance, and business metrics.',
-      icon: '💼',
+      description: 'Track user experience;, application performance, and business metrics.',
+      icon: '💼';,
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
         'User satisfaction',
@@ -276,14 +269,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
-      title: 'E - commerce',
+      title: 'E - commerce';,
       description:;
         'Monitor website performance, payment processing, and inventory systems.',
       benefits: [;
-      title: 'E-commerce',
-      description:
-        'Monitor website performance, payment processing, and inventory systems.',
-      icon: '🛒',
+      title: 'E-commerce';,
+      description: 'Monitor website performance;, payment processing, and inventory systems.',
+      icon: '🛒';,
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Higher conversion',
@@ -293,13 +285,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
-      title: 'Financial Services',
+      title: 'Financial Services';,
       description:;
         'Ensure compliance, security, and 24 / 7 availability of critical systems.',
       benefits: [;
-      description:
-        'Ensure compliance, security, and 24/7 availability of critical systems.',
-      icon: '💰',
+      description: 'Ensure compliance;, security, and 24/7 availability of critical systems.',
+      icon: '💰';,
       benefits: [
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Regulatory compliance',
@@ -436,10 +427,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2;}s` }}>;
                 <div className='relative'>;
                   <div
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color;} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
                 </div>;
@@ -452,10 +443,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
-                style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
+                style={{ animation_delay: `${(index * 0.1) + 0.2;}s` }}
               >;
                 <div className="relative">;
-                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
+                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover: scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color;} shadow - xl`}>;
                     {feature.icon}
                   </div>;
                 </div>;
@@ -463,7 +454,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {feature.title}
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color;} shadow-xl`}
                   >
                     {feature.icon}
                   </div>
@@ -647,7 +638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs;
             </p>;
           </div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan;, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -673,7 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
-                className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
+                className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover: border-green-500/50 transition-all duration-300`;}
               >
                 {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>

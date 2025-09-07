@@ -1,21 +1,21 @@
 
-import { useState, useEffect } from "react",;""
-import { format } from "date-fns",;""
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;""
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;"
+import { useState, useEffect } from "react";""
+import { format } from "date-fns";""
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";""
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";"
 ;"
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;""
-import { Input } from "@/components/ui/input",;""
-import { Checkbox } from "@/components/ui/checkbox",;""
-import { Label } from "@/components/ui/label",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Switch } from "@/components/ui/switch",;""
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;""
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;""
-import { ScrollArea } from "@/components/ui/scroll-area",;""
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";""
+import { Input } from "@/components/ui/input";""
+import { Checkbox } from "@/components/ui/checkbox";""
+import { Label } from "@/components/ui/label";""
+import { Badge } from "@/components/ui/badge";""
+import { Switch } from "@/components/ui/switch";""
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";""
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";""
+import { ScrollArea } from "@/components/ui/scroll-area";""
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"
 ;
 export function WebhooksManager() {;
   const {;
@@ -153,8 +153,8 @@ export function WebhooksManager() {;
                     >;                      {event}
 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;"
-                  <span>Created:{format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
-                    <span>Last triggered:{format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;                  )}
+                  <span>Created: {format(new Date(webhook.created_at);, 'MMM d, yyyy')}</span>;
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at);, 'MMM d, yyyy HH: mm');}</span>;                  )}
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;"
         <div className="text-xs text-zinc-500">;"
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>;"
@@ -231,7 +231,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="flex items-center space-x-2"> <Checkbox id= {"
 }/> <Label htmlFor= {
   event.value;)"
-}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" >  </div>) )"
+}className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70" >  </div>) )";
 }</div> </div> </div> <DialogFooter> 
 
 }> Cancel  <Button onClick= {
@@ -257,7 +257,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="mr-2"/> Delete    </div> </div> <Badge key= {"
 )
 }) ) "
-}</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {"
+}</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {";
 }</span> {
   webhook.last triggered at && (<span>Last triggered: {
 </span>)

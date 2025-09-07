@@ -1,10 +1,10 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme",
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { useTheme } from "@/hooks/useTheme",;
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Moon, Sun, Check } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
+import { Moon, Sun, Check } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
 
 interface Language {
 

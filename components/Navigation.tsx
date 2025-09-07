@@ -22,11 +22,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home';, href: '/' ;},
+    { name: 'Services';, href: '#services' ;},
+    { name: 'About';, href: '#about' ;},
+    { name: 'Portfolio';, href: '#portfolio' ;},
+    { name: 'Contact';, href: '#contact' ;},
   ];
 
 
@@ -59,9 +59,9 @@ const Navigation = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={{ opacity: 0;, y: -10 ;}}
+                          animate={{ opacity: 1;, y: 0 ;}}
+                          exit={{ opacity: 0;, y: -10 ;}}
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                         >
                           {item.dropdown.map((dropdownItem) => (
@@ -116,9 +116,9 @@ const Navigation = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0;, height: 0 ;}}
+              animate={{ opacity: 1;, height: 'auto' ;}}
+              exit={{ opacity: 0;, height: 0 ;}}
               className="md:hidden border-t border-gray-800"
             >
               <div className="py-4 space-y-2">
@@ -185,7 +185,6 @@ pr-12243
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import {
 origin/automation-improvements-final
 
 
@@ -227,68 +226,68 @@ export default function Navigation() {;
     {
       name: "Blockchain"
       href: "/blockchain"
-      description: "Smart Contracts, DeFi, NFTs"
+      description: "Smart Contracts;, DeFi, NFTs"
       icon: Building
   const mobileMenuVariants = {
     closed: {
-      opacity: 0,
-      height: 0,
+      opacity: 0;,
+      height: 0;,
       transition: {
-        duration: 0.3,
-        ease: 'easeInOut'
+        duration: 0.3;,
+        ease: 'easeInOut';
       }
     },
     open: {
-      opacity: 1,
-      height: 'auto',
+      opacity: 1;,
+      height: 'auto';,
       transition: {
-        duration: 0.3,
-        ease: 'easeInOut',
-        staggerChildren: 0.1
+        duration: 0.3;,
+        ease: 'easeInOut';,
+        staggerChildren: 0.1;
       }
     }
   };
 
   const mobileItemVariants = {
     closed: {
-      opacity: 0,
-      x: -20,
+      opacity: 0;,
+      x: -20;,
       transition: {
-        duration: 0.2
+        duration: 0.2;
       }
     },
     open: {
-      opacity: 1,
-      x: 0,
+      opacity: 1;,
+      x: 0;,
       transition: {
-        duration: 0.2
+        duration: 0.2;
       }
     }
     {
       name: "Cybersecurity"
       href: "/cybersecurity"
-      description: "Security Audits, Compliance"
-      icon: Shield
+      description: "Security Audits;, Compliance"
+      icon: Shield;
     }
   ];
     {
       name: "Startup Solutions"
       href: "/startup"
       description: "Scalable startup platforms"
-      icon: Zap
+      icon: Zap;
     }
     {
     {
       name: "Training"
       href: "/training"
-      description: "Professional development"
+      description: "Professional development";
     }
     {
       name: "Events"
       href: "/events"
-      description: "Webinars and conferences"
+      description: "Webinars and conferences";
     }
-    { name: "News", href: "/news", description: "Industry news and updates" }
+    { name: "News";, href: "/news";, description: "Industry news and updates" ;}
   ];
   return (
     <>;
@@ -334,9 +333,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0;, y: 10 ;}}
+                      animate={{ opacity: 1;, y: 0 ;}}
+                      exit={{ opacity: 0;, y: 10 ;}}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -365,9 +364,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isServicesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -391,9 +390,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0;, y: 10 ;}}
+                      animate={{ opacity: 1;, y: 0 ;}}
+                      exit={{ opacity: 0;, y: 10 ;}}
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -441,9 +440,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isSolutionsOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -467,9 +466,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0;, y: 10 ;}}
+                      animate={{ opacity: 1;, y: 0 ;}}
+                      exit={{ opacity: 0;, y: 10 ;}}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -504,9 +503,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (;
                     <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0;, y: 10 ;}}
+                      animate={{ opacity: 1;, y: 0 ;}}
+                      exit={{ opacity: 0;, y: 10 ;}}
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -582,9 +581,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (;
               <motion&& motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0;, height: 0 ;}}
+                animate={{ opacity: 1;, height: "auto" ;}}
+                exit={{ opacity: 0;, height: 0 ;}}
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <Link
@@ -710,9 +709,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isIndustriesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -748,9 +747,9 @@ export default function Navigation() {;
                 <AnimatePresence>;
                   {isResourcesOpen && (
                     <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      initial={{ opacity: 0;, coordinate_y: 10 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      exit={{ opacity: 0;, coordinate_y: 10 ;}}
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -816,9 +815,9 @@ export default function Navigation() {;
           <AnimatePresence>;
             {isMenuOpen && (
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0;, height: 0 ;}}
+                animate={{ opacity: 1;, height: "auto" ;}}
+                exit={{ opacity: 0;, height: 0 ;}}
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -939,9 +938,6 @@ export default function Navigation() {;
       />;
     </>);
 }
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { 
   Menu, 
   X, 
 } from 'lucide-react';
@@ -982,9 +978,9 @@ const Navigation = () => {
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={{ opacity: 0;, y: -10 ;}}
+                          animate={{ opacity: 1;, y: 0 ;}}
+                          exit={{ opacity: 0;, y: -10 ;}}
                           className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
                         >
                           {item.dropdown.map((dropdownItem) => (
@@ -1039,9 +1035,9 @@ const Navigation = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0;, height: 0 ;}}
+              animate={{ opacity: 1;, height: 'auto' ;}}
+              exit={{ opacity: 0;, height: 0 ;}}
               className="md:hidden border-t border-gray-800"
             >
               <div className="py-4 space-y-2">
@@ -1099,8 +1095,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
-import React, { useState } from 'react';
-import Link from 'next/link';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1116,17 +1110,17 @@ const Navigation: React.FC = () => {
           ? 'bg-white/95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ y: -100 ;}}
+      animate={{ y: 0 ;}}
+      transition={{ duration: 0.6 ;}}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.div
             className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.05 ;}}
+            transition={{ duration: 0.2 ;}}
           >
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
@@ -1147,22 +1141,22 @@ const Navigation: React.FC = () => {
                 className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
                   scrolled ? 'text-gray-700' : 'text-white'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+                initial={{ opacity: 0;, y: -20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.3;, delay: index * 0.1 ;}}
               >
                 {item.name}
               </motion.a>
             ))}
             <motion.button
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 flex items-center gap-2 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.5 }}
+              whileHover={{ scale: 1.05 ;}}
+              whileTap={{ scale: 0.95 ;}}
+              initial={{ opacity: 0;, scale: 0.8 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
+              transition={{ duration: 0.3;, delay: 0.5 ;}}
             >
               Get Started
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1173,16 +1167,16 @@ const Navigation: React.FC = () => {
           <motion.button
             className="md:hidden p-2 rounded-lg transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.95 ;}}
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
                 <motion.div
                   key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ rotate: -90;, opacity: 0 ;}}
+                  animate={{ rotate: 0;, opacity: 1 ;}}
+                  exit={{ rotate: 90;, opacity: 0 ;}}
+                  transition={{ duration: 0.2 ;}}
                 >
                   <X className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
@@ -1191,10 +1185,10 @@ const Navigation: React.FC = () => {
               ) : (
                 <motion.div
                   key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ rotate: 90;, opacity: 0 ;}}
+                  animate={{ rotate: 0;, opacity: 1 ;}}
+                  exit={{ rotate: -90;, opacity: 0 ;}}
+                  transition={{ duration: 0.2 ;}}
                 >
                   <Menu className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
@@ -1231,7 +1225,7 @@ pr-12243
                     key={item.name}
                     href={item.href}
                     className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-200 hover:bg-gray-100 ${
-                      scrolled ? 'text-gray-700' : 'text-white hover:bg-white/10'
+                      scrolled ? 'text-gray-700' : 'text-white hover: bg-white/10';
                     }`}
                     variants={mobileItemVariants}
                     onClick={() => setIsOpen(false)}
@@ -1242,7 +1236,7 @@ pr-12243
                 <motion.button
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group mt-4"
                   variants={mobileItemVariants}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 ;}}
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -1,8 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
 ;
 export default function Custom404() {;
   const quickLinks = [;
@@ -19,9 +19,9 @@ export default function Custom404() {;
       ;"
       <div className="max-w-4xl mx-auto text-center">;"
         <motion.div;
-          initial={{ opacity:0, scale:0.8 }}
-          animate={{ opacity:1, scale:1 }}
-          transition={{ duration:0.6 }}"
+          initial={{ opacity: 0;, scale: 0.8 ;}}
+          animate={{ opacity: 1;, scale: 1 ;}}
+          transition={{ duration: 0.6 ;}}"
           className="mb-8";"
         >;
 </motion>"
@@ -41,16 +41,16 @@ export default function Custom404() {;
           </p>;
         </motion.div>;
         {/* Quick Navigation */}
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6, delay:0.2 }}"
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.2 ;}}"
           className="mb-12";"
           <h3 className="text-xl font-semibold text-white mb-6">;"
 </h3>
           </h3>;"
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl mx-auto">;"
                 key={link.href}
-                transition={{ duration:0.4, delay:0.3 + index * 0.1 }}
+                transition={{ duration: 0.4;, delay: 0.3 + index * 0.1 ;}}
 </motion>
                 <Link;
                   href={link.href}"
@@ -63,16 +63,16 @@ export default function Custom404() {;
             ))}
           </div>;
         {/* Popular Services Section */}
-          transition={{ duration:0.6, delay:0.4 }}"
+          transition={{ duration: 0.6;, delay: 0.4 ;}}"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">;"
                 key={service.href}
-                transition={{ duration:0.4, delay:0.5 + index * 0.1 }}
+                transition={{ duration: 0.4;, delay: 0.5 + index * 0.1 ;}}
                   href={service.href}"
                   className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-cyan-400/30 transition-all duration-300";"
                   <h4 className="font-semibold text-white mb-2">{service.label}</h4>;""
                   <p className="text-sm text-white/60">{service.desc}</p>;"
         {/* Action Buttons */}
-          transition={{ duration:0.6, delay:0.6 }}"
+          transition={{ duration: 0.6;, delay: 0.6 ;}}"
           className="flex flex-col sm:flex-row gap-4 justify-center";"
           <Link;"
             href="/";""
@@ -84,7 +84,7 @@ export default function Custom404() {;
             <Map className="w-5 h-5" />;"
 
         {/* Help Section */}
-          transition={{ duration:0.6, delay:0.8 }}"
+          transition={{ duration: 0.6;, delay: 0.8 ;}}"
           className="mt-12 pt-8 border-t border-white/10";"
           <p className="text-white/60 mb-4">;"
           </p>;"

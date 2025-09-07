@@ -18,7 +18,6 @@ ursor/automate-test-improve-and-merge-code-2480;
     // Add interaction tests based on component functionality})});
   it('renders without crashing'    // Add interaction tests based on component functionality})})
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 
 describe('Page', () => {;
   it('renders without crashing', () => {;}

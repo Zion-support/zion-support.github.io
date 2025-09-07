@@ -1,10 +1,10 @@
 
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",;
 import {processJobMatching, storeMatchResults} from "./job-matching ;
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-import { processJobMatching, storeMatchResults } from "./job-matching.ts",
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -147,8 +147,8 @@ const corsHeaders = {;"
         status: 500, "
         headers: { ...corsHeaders, "Content-Type": "application/json" }""
 pr-12325
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,;
 import { processJobMatching, storeMatchResults } from './job - matching.ts';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*";

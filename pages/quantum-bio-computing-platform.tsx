@@ -60,8 +60,8 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
     </UltraFuturisticBackground>;
   );
 
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Head from 'next/head',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
 export default function QuantumBioComputingPlatformPage() {
 	return (
 		<UltraFuturisticBackground>

@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Server, Clock, MapPin } from "lucide-react",;
 
 interface ServiceDetailsProps {
   country: string
@@ -18,8 +18,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Server, Clock, MapPin } from "lucide-react",;
 
 // Component to show service details for the selected country;
 export /**

@@ -1,10 +1,10 @@
-import fs from 'fs',;
-import path from 'path',;
+import fs from 'fs';
+import path from 'path';
 ;
-type Outdated = { name:string, current:string, latest:string, type:'dependency' | 'devDependency' },;
+type Outdated = { name: string;, current: string;, latest: string;, type: 'dependency' | 'devDependency' ;},;
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datadep-radar.json'),;
-  let outdated:Outdated[] = [],;
+  let outdated: Outdated[] = [];,;
   let generatedAt = ,;
   try {;
     const raw = fs.readFileSync(file, 'utf-8'),;
@@ -12,9 +12,9 @@ export async function getServerSideProps() {;
     outdated = json.outdated || [],;
     generatedAt = json.generatedAt || ,;
   } catch {}
-  return { props:{ outdated, generatedAt } },;
+  return { props: { outdated;, generatedAt } },;
 }
-export default function DepRadarPage({ outdated, generatedAt } { outdated:Outdated[], generatedAt:string }) {;
+export default function DepRadarPage({ outdated, generatedAt } { outdated: Outdated[];, generatedAt: string ;}) {;
   return (;
     <div className="space-y-6">;"
 </div>"

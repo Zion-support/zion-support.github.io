@@ -12,7 +12,6 @@ import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
@@ -23,23 +22,13 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
   Brain,
   Rocket,
 } from 'lucide-react';import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 
 
 
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link';
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
@@ -50,18 +39,18 @@ export default function Revolutionary2026ServicesShowcase() {
   const featuredAIServices = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
+    hidden: { opacity: 0;, y: 20 ;}
     visible: {
       opacity: 1
       y: 0
@@ -78,33 +67,33 @@ export default function Revolutionary2026ServicesShowcase() {;
 const featuredAIServices = null;
 
 const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1;
-transition: {
+transition: {;
 }
-staggerChildren: 0.1}
+staggerChildren: 0.1;}
       }
     }
   };
 
 
-duration: 0.6,
+duration: 0.6;,
       },
     },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 }
     visible: {
       opacity: 1;
 y: 0;
-transition: {
+transition: {;
 }
-duration: 0.6}
+duration: 0.6;}
       }
     }
   };
@@ -143,17 +132,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <motion.div;
         <motion&& motion.div;
-initial={{ opacity: 0, y: 30 }
+initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center mb-20'
@@ -347,10 +336,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 initial='hidden'
           whileInView='visible'
 
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
                 key={service.id}
                 variants={item_variants}
-                className='group relative'          viewport={{ once: true }}
+                className='group relative'          viewport={{ once: true ;}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -363,7 +352,7 @@ initial='hidden'
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
           className='mb-20'
@@ -511,7 +500,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 variants={containerVariants}
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
           className='mb-20'
          />
@@ -528,7 +517,7 @@ initial='hidden'
               </p>
             </div>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service;, index) => (
               <motion.div
                 key={service.id}
 
@@ -543,7 +532,7 @@ key={service.id}
           variants={containerVariants}
                 key={service.id}
                 variants={item_variants}
-                className='group relative'          viewport={{ once: true }}
+                className='group relative'          viewport={{ once: true ;}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -700,7 +689,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 initial='hidden'
           whileInView='visible'
 
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
 
                       </span>;
                       <span className='text - gray - 400 text - sm'>;
@@ -750,7 +739,7 @@ initial='hidden'
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='mb - 20';
         >;
           <div className='flex items - center space - x-3 mb - 12'>;
@@ -766,7 +755,7 @@ initial='hidden'
               </p>;
             </div>;
           </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service, index) => (
+          <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service;, index) => (
               <motion.div;
 
         {/* Metaverse & Digital Reality Services Section */}
@@ -774,7 +763,7 @@ initial='hidden'
           variants={containerVariants}
                 key={service.id}
                 variants={item_variants}
-                className='group relative'          viewport={{ once: true }}
+                className='group relative'          viewport={{ once: true ;}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -787,7 +776,7 @@ initial='hidden'
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
           className='mb-20'
@@ -938,18 +927,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Call to Action Section */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}}
 className='text-center'
         >
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center'
@@ -1091,10 +1080,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
         {/* Call to Action Section */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          viewport={{ once: true ;}}
           className='text - center';
           <div className='bg - gradient - to - r from - purple - 900 / 40 via - pink - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
             <h3 className='text - 4xl font - bold text - white mb - 6'>;

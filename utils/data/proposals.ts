@@ -134,4 +134,48 @@ export function updateArtifacts(
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
+<<<<<<< HEAD
+=======
+}
+import fs from 'fs',;
+import path from 'path',;
+import { v4 as uuidv4 } from 'uuid',;
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',
+export type ProposalMeta = {
+  id: string,
+  created_at: string,
+  updated_at: string,
+  title: string,
+  target_institution: string,
+  type: string,
+  regional_scope: string,
+  budgetOrResolution: string,
+  supporting_multiverses: string[],
+  languages: string[],
+  status: ProposalStatus,
+  artifacts: {
+    markdown_path?: string,
+    json_path?: string,
+    pdf_path?: string,
+    ipfs_cid?: string,
+    ensRecordHash?: string,
+    signature?: string;
+  }
+},
+export type ProposalPayload = {
+  title: string,
+  target_institution: string,
+  type: string,
+  regional_scope: string,
+  budgetOrResolution: string,
+  supporting_multiverses: string[],
+  content_markdown: string,
+  language?: string,
+    } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+},;
+export type ProposalPayload = {
+  title: string;,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5b47
 

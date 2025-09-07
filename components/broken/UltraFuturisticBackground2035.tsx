@@ -11,10 +11,9 @@ interface UltraFuturisticBackground2035Props {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode}
+  children: React.ReactNode;}
 }
 }
 
@@ -51,7 +50,6 @@ export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
 function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
@@ -72,7 +70,7 @@ if (return) {}
 const prefersReducedMotion = window.match_media (
       '(prefers - reduced - motion: reduce)').matches;
 
-const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
+const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;,
    ;
   const ctx = canvas.get_context ('2d');
     // Check condition;
@@ -169,13 +167,13 @@ const particleCount = prefersReducedMotion;
         : isSmallScreen;
           ? 60;
           : 150;
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      type: 'quantum' | 'hologram' | 'neon' | 'energy',
-      life: number,
+      vx: number;,
+      vy: number;,
+      size: number;,
+      opacity: number;,
+      color: string;,
+      type: 'quantum' | 'hologram' | 'neon' | 'energy';,
+      life: number;,
     // Get color based on particle type;
     const getColorForType = (type: string) => {;
       switch (type) {;
@@ -190,15 +188,15 @@ const particleCount = prefersReducedMotion;
 const maxLife = Math.random() * 200 + 100;
 
         particles.push({
-          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
-          y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
-          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
-          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
-          size: Math.random() * (isSmallScreen ? 2 : 3) + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-          color: getColorForType(type),
+          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1);,
+          y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1);,
+          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6;,
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6;,
+          size: Math.random() * (isSmallScreen ? 2 : 3) + 1;,
+          opacity: Math.random() * 0.5 + 0.1;,
+          color: getColorForType(type);,
 type,
-          life: maxLife,
+          life: maxLife;,
           maxLife,) => {
   return $3;}
 }
@@ -465,7 +463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 8;
 repeat: Infinity;}
-ease: 'easeInOut'}
+ease: 'easeInOut';}
           }}
         {/* Holographic grid effect */}
         <div className='absolute inset-0 opacity-20'>;
@@ -486,7 +484,7 @@ className='h-full w-full'
               backgroundImage: `
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `}
-              backgroundSize: '50px 50px'}
+              backgroundSize: '50px 50px';}
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
@@ -501,7 +499,7 @@ className='h-full w-full'
         <canvas
           ref={canvasRef}
 
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' ;}}
 
 
           />
@@ -514,35 +512,35 @@ className='h-full w-full'
 
 className='absolute inset-0 w-full h-full'
 origin/cursor/automate-test-improve-and-merge-code-2533
-          style={{ filter: 'blur(0.5px)' }}
+          style={{ filter: 'blur(0.5px)' ;}}
 
         />
 
         {/* Floating neon orbs */}
           animate={{
-            rotate: [0, 180, 360],          }}
+            rotate: [0;, 180, 360],          }}
           transition={{
           animate={{
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
-            rotate: [0, 180, 360]
+            scale: [1;, 1 && 1.2, 1]
+            opacity: [0 && 0.2;, 0 && 0.4, 0 && 0.2]
+            rotate: [0;, 180, 360]
           transition={{
             duration: 6
             repeat: Infinity
-            ease: 'easeInOut'
+            ease: 'easeInOut';
           }}
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
           animate={{
-            scale: [1, 1 && 1.3, 1]
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
-            rotate: [360, 180, 0]
+            scale: [1;, 1 && 1.3, 1]
+            opacity: [0 && 0.2;, 0 && 0.5, 0 && 0.2]
+            rotate: [360;, 180, 0]
           }}
           transition={{
 
             duration: 8
             repeat: Infinity
 
-            ease: 'easeInOut',            ease: 'easeInOut'
+            ease: 'easeInOut';,            ease: 'easeInOut'
         <motion.div
         {/* Floating neon orbs *,}
 }
@@ -550,31 +548,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
 className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],}
-            rotate: [0, 180, 360],}
+            scale: [1;, 1.2, 1],
+            opacity: [0.2;, 0.4, 0.2],}
+            rotate: [0;, 180, 360],}
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            duration: 6;,
+            repeat: Infinity;,}
+ease: 'easeInOut';,}
           }}
         />
 
         <motion.div;
 className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],}
-            rotate: [360, 180, 0],}
+            scale: [1;, 1.3, 1],
+            opacity: [0.2;, 0.5, 0.2],}
+            rotate: [360;, 180, 0],}
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 8;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
 origin/cursor/automate-test-improve-and-merge-code-2533
-            repeat: Infinity,}
-ease: 'easeInOut',}
+            repeat: Infinity;,}
+ease: 'easeInOut';,}
           }}
 
         />;
@@ -584,65 +582,65 @@ ease: 'easeInOut',}
           <motion&& motion.div
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
             animate={{
-              opacity: [0, 0.3, 0],            }}
+              opacity: [0;, 0.3, 0],            }}
             transition={{
               duration: 4
               repeat: Infinity
-              ease: 'easeInOut',          <motion.div
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
+              ease: 'easeInOut';,          <motion.div
+              y: [-100;, 100, -100],
+              opacity: [0;, 0 && 0.3, 0],            }}
             transition={{
-              duration: 4,
-              repeat: Infinity,
+              duration: 4;,
+              repeat: Infinity;,
 
 <div className='absolute inset-0 overflow-hidden' />
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
             animate={{
-              y: [-100, 100, -100],}
-              opacity: [0, 0.3, 0],}
+              y: [-100;, 100, -100],}
+              opacity: [0;, 0.3, 0],}
             }}
             transition={{
-              duration: 4,
-              repeat: Infinity,
+              duration: 4;,
+              repeat: Infinity;,
             transition={{
               duration: 6
               repeat: Infinity
-              ease: 'easeInOut',            }}
+              ease: 'easeInOut';,            }}
             }}
             transition={{
               duration: 6
               repeat: Infinity
-              ease: 'easeInOut',              ease: 'easeInOut'
+              ease: 'easeInOut';,              ease: 'easeInOut'
 
 <div className='absolute inset-0 overflow-hidden'>
           <motion.div
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
             animate={{
-              y: [-100, 100, -100],
-              opacity: [0, 0.3, 0],
+              y: [-100;, 100, -100],
+              opacity: [0;, 0.3, 0],
             }}
             transition={{
-              duration: 4,
-              repeat: Infinity,
-ease: 'easeInOut',
-              repeat: Infinity,}
-ease: 'easeInOut',}
+              duration: 4;,
+              repeat: Infinity;,
+ease: 'easeInOut';,
+              repeat: Infinity;,}
+ease: 'easeInOut';,}
             }}
           />
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
             animate={{
-              y: [100, -100, 100],}
-              opacity: [0, 0.3, 0],}
+              y: [100;, -100, 100],}
+              opacity: [0;, 0.3, 0],}
             }}
             transition={{
-              duration: 6,
-              repeat: Infinity,
-ease: 'easeInOut',
+              duration: 6;,
+              repeat: Infinity;,
+ease: 'easeInOut';,
 origin/cursor/automate-test-improve-and-merge-code-2533
-              repeat: Infinity,}
-ease: 'easeInOut',}
+              repeat: Infinity;,}
+ease: 'easeInOut';,}
             }}
           />
         </div>

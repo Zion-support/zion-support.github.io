@@ -1,8 +1,8 @@
-import { GradientHeading } from "@/components/GradientHeading",
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+import { GradientHeading } from "@/components/GradientHeading",;
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",;
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
-import { GradientHeading } from "@/components/GradientHeading",
+import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
 }
 

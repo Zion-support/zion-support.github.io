@@ -1,25 +1,25 @@
 "use client",;"
 ;"
-import { useState } from "react",;"
+import { useState } from "react";"
 ;
 interface MicroSAASService {;
-  id:string,;
-  name:string,,
-  description:string,;
-  targetMarket:string[],;
-  features:string[],;
-  pricing:string,;
-  startingPrice:number,;
-  contactLink:string,;
-  icon:string,;
-  benefits:string[],;
-  integrations:string[],;
+  id: string;,;
+  name: string;,,
+  description: string;,;
+  targetMarket: string[];,;
+  features: string[];,;
+  pricing: string;,;
+  startingPrice: number;,;
+  contactLink: string;,;
+  icon: string;,;
+  benefits: string[];,;
+  integrations: string[];,;
   deployment:string;}
 const microSAASServices:MicroSAASService[] = [;
   {;
-    id:"marketplace-platform-pro",;
-    name:"Digital Marketplace Platform Pro",,
-  description:"White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;
+    id: "marketplace-platform-pro";,;
+    name: "Digital Marketplace Platform Pro";,,
+  description: "White-label marketplace solution for jobs;, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;
     targetMarket:[;
       "Job boards and recruitment",;
       "Freelance platforms",;
@@ -28,9 +28,9 @@ const microSAASServices:MicroSAASService[] = [;
       "Educational platforms",;
       "Healthcare services";
   {;"
-    id:"marketplace-platform-pro",;""
-    name:"Digital Marketplace Platform Pro",;""
-    description:"White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;"
+    id: "marketplace-platform-pro";,;""
+    name: "Digital Marketplace Platform Pro";,;""
+    description: "White-label marketplace solution for jobs;, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;"
     targetMarket:[;"
       "Job boards and recruitment",;""
       "Freelance platforms",;""
@@ -52,9 +52,9 @@ pr-12325
       "Multi-language support",;""
       "API access and webhooks";"]
     ],;"
-    pricing:"Starting at $1,499/month",;"
-    startingPrice:1499,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry",;"
+    pricing: "Starting at $1;,499/month",;"
+    startingPrice: 1499;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry";,;"
     benefits:[;"
       "Reduce time to market by 80%",;""
       "Lower development costs by 60%",;""
@@ -72,9 +72,9 @@ pr-12325
     deployment:"Cloud-hosted with white-label options";"
   },;
   {;
-    id:"token-economy-platform",;
-    name:"Token Economy Platform",,
-  description:"Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",;
+    id: "token-economy-platform";,;
+    name: "Token Economy Platform";,,
+  description: "Complete token system with rewards;, governance, and economic incentives for community engagement and loyalty programs.",;
     targetMarket:[;
       "Gaming platforms",;
       "Community platforms",;
@@ -95,9 +95,9 @@ pr-12325
       "Compliance tools",;
       "API and SDK access";
     ],;
-    pricing:"Starting at $999/month",;
-    startingPrice:999,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry",;
+    pricing: "Starting at $999/month";,;
+    startingPrice: 999;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry";,;
     benefits:[;
       "Increase user engagement by 300%",;
       "Reduce churn by 40%",;
@@ -117,9 +117,9 @@ pr-12325
     deployment:"Multi-cloud with blockchain integration";
   },;
   {;
-    id:"kyc-aml-enterprise",;
-    name:"KYC/AML Verification Enterprise",,
-  description:"Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",;
+    id: "kyc-aml-enterprise";,;
+    name: "KYC/AML Verification Enterprise";,,
+  description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.";,;
     targetMarket:[;
       "Financial institutions",;
       "Cryptocurrency exchanges",;
@@ -140,9 +140,9 @@ pr-12325
       "Custom compliance rules",;
       "Real-time monitoring";
     ],;
-    pricing:"Starting at $499/month",;
-    startingPrice:499,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry",;
+    pricing: "Starting at $499/month";,;
+    startingPrice: 499;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry";,;
     benefits:[;
       "Reduce compliance costs by 50%",;
       "Improve verification accuracy by 95%",;
@@ -162,9 +162,9 @@ pr-12325
     deployment:"Enterprise-grade cloud with on-premise options";
   },;
   {;
-    id:"dao-governance-platform",;
-    name:"DAO Governance Platform",,
-  description:"Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;
+    id: "dao-governance-platform";,;
+    name: "DAO Governance Platform";,,
+  description: "Complete DAO platform with proposal creation;, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;
     targetMarket:[;
       "DeFi protocols",;
       "NFT communities",;
@@ -185,9 +185,9 @@ pr-12325
       "Compliance reporting",;
       "Mobile governance app";
     ],;
-    pricing:"Starting at $799/month",;
-    startingPrice:799,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry",;
+    pricing: "Starting at $799/month";,;
+    startingPrice: 799;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry";,;
     benefits:[;
       "Streamline governance processes",;
       "Increase community participation",;
@@ -207,9 +207,9 @@ pr-12325
     deployment:"Blockchain-native with cloud management";
   },;
   {;
-    id:"ai-learning-platform",;
-    name:"AI-Powered Learning Platform",,
-  description:"Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",;
+    id: "ai-learning-platform";,;
+    name: "AI-Powered Learning Platform";,,
+  description: "Comprehensive learning management system with AI-powered content creation;, assessment, and personalized learning paths.",;
     targetMarket:[;
       "Educational institutions",;
       "Corporate training",;
@@ -230,9 +230,9 @@ pr-12325
       "Gamification elements",;
       "Multi-language support";
     ],;
-    pricing:"Starting at $599/month",;
-    startingPrice:599,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry",;
+    pricing: "Starting at $599/month";,;
+    startingPrice: 599;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry";,;
     benefits:[;
       "Reduce content creation time by 70%",;
       "Improve learning outcomes by 40%",;
@@ -252,9 +252,9 @@ pr-12325
     deployment:"Cloud-hosted with offline capabilities";
   },;
   {;
-    id:"incubator-grants-platform",;
-    name:"Incubator & Grants Management Platform",,
-  description:"Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",;
+    id: "incubator-grants-platform";,;
+    name: "Incubator & Grants Management Platform";,,
+  description: "Platform for managing startup incubators;, grant programs, and funding distribution with transparent governance and impact measurement.",;
     targetMarket:[;
       "Startup incubators",;
       "Government agencies",;
@@ -275,9 +275,9 @@ pr-12325
       "Performance dashboards",;
       "API access";
     ],;
-    pricing:"Starting at $1,199/month",;
-    startingPrice:1199,;
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry",;
+    pricing: "Starting at $1;,199/month",;
+    startingPrice: 1199;,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry";,;
     benefits:[;
       "Streamline application processes",;
       "Improve decision-making transparency",;
@@ -295,9 +295,9 @@ pr-12325
       "Government databases";
     ],;
     deployment:"Enterprise cloud with compliance features";
-    id:"token-economy-platform",;""
-    name:"Token Economy Platform",;""
-    description:"Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",;"
+    id: "token-economy-platform";,;""
+    name: "Token Economy Platform";,;""
+    description: "Complete token system with rewards;, governance, and economic incentives for community engagement and loyalty programs.",;"
       "Gaming platforms",;""
       "Community platforms",;""
       "Loyalty programs",;""
@@ -312,9 +312,9 @@ pr-12325
       "Wallet integration",;""
       "Compliance tools",;""
       "API and SDK access";"]
-    pricing:"Starting at $999/month",;"
-    startingPrice:999,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry",;"
+    pricing: "Starting at $999/month";,;"
+    startingPrice: 999;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry";,;"
       "Increase user engagement by 300%",;""
       "Reduce churn by 40%",;""
       "Monetize community activities",;""
@@ -328,9 +328,9 @@ pr-12325
       "WordPress, Webflow",;""
       "Mobile apps (iOS/Android)";"]
     deployment:"Multi-cloud with blockchain integration";"
-    id:"kyc-aml-enterprise",;""
-    name:"KYC/AML Verification Enterprise",;""
-    description:"Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",;"
+    id: "kyc-aml-enterprise";,;""
+    name: "KYC/AML Verification Enterprise";,;""
+    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.";,;"
       "Financial institutions",;""
       "Cryptocurrency exchanges",;""
       "Real estate platforms",;""
@@ -347,9 +347,9 @@ pr-12325
       "Audit trails",;""
       "Custom compliance rules",;""
       "Real-time monitoring";"]
-    pricing:"Starting at $499/month",;"
-    startingPrice:499,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry",;"
+    pricing: "Starting at $499/month";,;"
+    startingPrice: 499;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry";,;"
       "Reduce compliance costs by 50%",;""
       "Improve verification accuracy by 95%",;""
       "Faster customer onboarding",;""
@@ -363,9 +363,9 @@ pr-12325
       "Government databases",;""
       "Third-party verification services";"]
     deployment:"Enterprise-grade cloud with on-premise options";"
-    id:"dao-governance-platform",;""
-    name:"DAO Governance Platform",;""
-    description:"Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;"
+    id: "dao-governance-platform";,;""
+    name: "DAO Governance Platform";,;""
+    description: "Complete DAO platform with proposal creation;, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;"
       "DeFi protocols",;""
       "NFT communities",;""
       "Investment DAOs",;""
@@ -381,9 +381,9 @@ pr-12325
       "Custom governance rules",;""
       "Multi-signature support",;""
       "Mobile governance app";"]
-    pricing:"Starting at $799/month",;"
-    startingPrice:799,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry",;"
+    pricing: "Starting at $799/month";,;"
+    startingPrice: 799;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry";,;"
       "Streamline governance processes",;""
       "Increase community participation",;""
       "Transparent decision-making",;""
@@ -395,9 +395,9 @@ pr-12325
       "Gnosis Safe",;""
       "DeFi protocols";"]
     deployment:"Blockchain-native with cloud management";"
-    id:"ai-learning-platform",;""
-    name:"AI-Powered Learning Platform",;""
-    description:"Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",;"
+    id: "ai-learning-platform";,;""
+    name: "AI-Powered Learning Platform";,;""
+    description: "Comprehensive learning management system with AI-powered content creation;, assessment, and personalized learning paths.",;"
       "Educational institutions",;""
       "Corporate training",;""
       "Online course creators",;""
@@ -414,9 +414,9 @@ pr-12325
       "Collaborative learning tools",;""
       "Gamification elements",;""
       "Multi-language support";"]
-    pricing:"Starting at $599/month",;"
-    startingPrice:599,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry",;"
+    pricing: "Starting at $599/month";,;"
+    startingPrice: 599;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry";,;"
       "Reduce content creation time by 70%",;""
       "Improve learning outcomes by 40%",;""
       "Personalized learning experience",;""
@@ -429,9 +429,9 @@ pr-12325
       "Analytics tools",;""
       "Social learning platforms";"]
     deployment:"Cloud-hosted with offline capabilities";"
-    id:"incubator-grants-platform",;""
-    name:"Incubator & Grants Management Platform",;""
-    description:"Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",;"
+    id: "incubator-grants-platform";,;""
+    name: "Incubator & Grants Management Platform";,;""
+    description: "Platform for managing startup incubators;, grant programs, and funding distribution with transparent governance and impact measurement.",;"
       "Startup incubators",;""
       "Government agencies",;""
       "Non-profit organizations",;""
@@ -447,9 +447,9 @@ pr-12325
       "Stakeholder communication",;""
       "Performance dashboards",;""
       "API access";"]
-    pricing:"Starting at $1,199/month",;"
-    startingPrice:1199,;"
-    contactLink:"mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry",;"
+    pricing: "Starting at $1;,199/month",;"
+    startingPrice: 1199;,;"
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry";,;"
       "Streamline application processes",;""
       "Improve decision-making transparency",;""
       "Reduce administrative overhead",;""
@@ -506,7 +506,7 @@ export default function MicroSAASPage() {;
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold";"
 </a>
               </a>;
-                href={`https://ziontechgroup.com/services/${service.id}`}"
+                href={`https: //ziontechgroup.com/services/${service.id;}`}"
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline";"
       <div className="space-y-6">;"
         <h2 className="text-3xl font-bold text-center">SAAS Capabilities Overview</h2>;""
@@ -567,7 +567,7 @@ export default function MicroSAASPage() {;
   `https://ziontechgroup.com/services/$ {
   service.id;`;
 }` "
-}className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline" > Learn More </a> </div> </div>) )"
+}className="w-full block text-center text-blue-400 hover: text-blue-300 text-sm underline" > Learn More </a> </div> </div>) )";
 }</div> {"
 }<div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10"> <h2 className="text-3xl font-bold">Ready to Accelerate Your Business?</h2> <p className="text-xl opacity-80 max-w-2xl mx-auto"> Let's discuss how our micro SAAS solutions can transform your business operations;
 reduce costs, and provide competitive advantages. Get in touch for a personalized consultation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=Micro%20SAAS%20Consultation" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg" > Schedule SAAS Consultation </a> <a href="tel:+13024640950" className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg" > Call: +1 302 464 0950 </a> </div> </div> {""`;

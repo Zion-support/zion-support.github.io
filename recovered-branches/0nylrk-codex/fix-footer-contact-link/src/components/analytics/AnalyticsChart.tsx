@@ -47,10 +47,10 @@ export function AnalyticsChart({
   timeRange = '7d';
   onTimeRangeChange
 }: AnalyticsChartProps) {
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { useState } from "react",
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type);import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { useState } from "react",;
 
 interface AnalyticsChartProps {
   title: string,
@@ -153,7 +153,7 @@ export function AnalyticsChart(): any ({ ;
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
 import { useState } from "react","
   // TODO: Implement

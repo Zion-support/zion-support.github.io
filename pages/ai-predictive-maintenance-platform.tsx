@@ -11,7 +11,7 @@ export default function AIPredictiveMaintenancePlatform() {
 export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding',
+import ServiceLanding from '../components/sections/ServiceLanding',;
 
 
 
@@ -19,8 +19,8 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 
 }
 
-import React from 'react',
-import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * AIPredictiveMaintenancePlatform - Function description
  */

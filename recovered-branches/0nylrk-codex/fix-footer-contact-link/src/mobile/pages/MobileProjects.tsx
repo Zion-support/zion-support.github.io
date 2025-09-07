@@ -1,10 +1,10 @@
 
 
-import React from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
-import { BottomNavigation } from "../components/common/BottomNavigation",
+import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
   {;
     id: "milestone-1",;

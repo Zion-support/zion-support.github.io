@@ -31,8 +31,8 @@ import { Star } from 'lucide-react';
     totalRevenue: 850.0
     pendingRevenue: 200.0
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
 

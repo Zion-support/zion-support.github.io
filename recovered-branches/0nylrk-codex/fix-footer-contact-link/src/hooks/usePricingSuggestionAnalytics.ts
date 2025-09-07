@@ -14,7 +14,7 @@ import { supabase } from '@/integrations / supabase / client';interface PricingS
     actual_value?: number;
     accepted: boolean;import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -42,7 +42,7 @@ interface PricingSuggestionAnalytics {
     accepted: boolean;
 
 
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",""
 import {supabase} from "@/integrations/supabase/client";""
 import { supabase } from "@/integrations/supabase/client","

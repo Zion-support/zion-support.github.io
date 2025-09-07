@@ -1,15 +1,15 @@
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import { Button } from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Button } from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
 ;
 export default function AuditLogVaultPage() {;
   const contactInfo = {;
-    mobile:'+1 302 464 0950',;
-    email:'kleber@ziontechgroup.com',;
-    address:'364 E Main St STE 1008 Middletown DE 19709',;
+    mobile: '+1 302 464 0950';,;
+    email: 'kleber@ziontechgroup.com';,;
+    address: '364 E Main St STE 1008 Middletown DE 19709';,;
     website:'https://ziontechgroup.com';
   },;
   const features = [;
@@ -58,8 +58,8 @@ export default function AuditLogVaultPage() {;
 
               <div className="mt-6 space-y-3 text-sm">;"
 </div>)"
-                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, )}`} className="hover:underline">{contactInfo.mobile}</a></div>;""`;
-                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>;""`;
-                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>;"
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel: ${contactInfo.mobile.replace(/[^+\\d]/g;, )}`} className="hover: underline">{contactInfo.mobile;}</a></div>;""`;
+                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto: ${contactInfo.email;}`} className="hover: underline">{contactInfo.email;}</a></div>;""`;
+                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address);}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address;}</a></div>;"
               </div>;
     ;"`;

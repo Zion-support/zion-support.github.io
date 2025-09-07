@@ -1,15 +1,15 @@
-import { cn } from "@/lib/utils",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Button } from "@/components/ui/button",;""
+import { cn } from "@/lib/utils";""
+import { Badge } from "@/components/ui/badge";""
+import { Button } from "@/components/ui/button";""
 import { StarIcon } from 'lucide-react';
 import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
 ;
 interface ListingScoreCardProps {;
-  title:string,,
-  description:string,;
+  title: string;,,
+  description: string;,;
   image?:string,;
-  category:string,;
+  category: string;,;
   tags?:string[],;
   author?:string,;
   authorImage?:string,;
@@ -35,7 +35,7 @@ export function ListingScoreCard({ ;
   const [authorImageError, setAuthorImageError] = useState(false),;
   return (;
     <div className={cn(;
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",;"
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group";,;"
     )}>;
 </div>"
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}"
@@ -59,7 +59,7 @@ export function ListingScoreCard({ ;
                 <span className="font-medium mr-1">AI Match:</span>;"
                 <span>{aiScore}%</span>;
               </div>;
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;""
+        <h3 className="text-xl font-bold mb-2 text-white group-hover: text-zion-purple transition-colors">{title;}</h3>;""
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;""
           <div className="flex items-center gap-1 mb-4">;"
             <div className="flex">;"
@@ -111,7 +111,7 @@ import {;
   Image from 'next/image',  //Import next/image import React, {;
   useState ';
 }from 'react', //Import useState interface ListingScoreCardProps {;
-  title: string,
+  title: string;,
   description: string;
 image?: string;
 category: string;
@@ -159,7 +159,7 @@ pr-12325
 }className="object-cover transition-transform duration-300 group-hover:scale-105" onError= {;")
   () => setMainImageError (true) ;
 "
-}sizes=" (max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" //General sizes /> </div>) ;""
+}sizes=" (max-width: 768px) 100vw;, (max-width: 1200px) 50vw;, 33vw" //General sizes /> </div>) ;""
   (!image || mainImageError) && (//Fallback if no image or error <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center" > <span className="text-zion-slate-light text-sm" >No Image</span> </div>) ";""
 }<div className="flex flex-col p-4 flex-grow" > <div className="mb-2 flex items-center justify-between" > <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30" > {;"
 } {";""

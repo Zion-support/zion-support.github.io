@@ -10,7 +10,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   defaultKind = 'general'
   userHeaders
 
-import { useState } from 'react';
 
 export type FeedbackContext = any;
     onClose(true)
@@ -49,9 +48,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoading(false);
     onClose(true);
 
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
+        method: 'POST';,
+        headers: { 'Content-Type': 'application/json';, ...(userHeaders || {}) };
+        body: JSON.stringify({ rating;, comment, kind, context: defaultContext || {;} })})
     } catch {}
     setLoading(false);
     onClose(true)
@@ -81,13 +80,13 @@ const [loading, setLoading] = useState(false);
     setLoading(true);
     try {
       await fetch('/api/feedback', {}
-        method: 'POST'}
-headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
+        method: 'POST';}
+headers: { 'Content-Type': 'application/json';, ...(userHeaders || {}) },
         body: JSON.stringify({
           rating;
 comment}
 kind;}
-context: defaultContext |{}
+context: defaultContext |{;}
         })
      
 });
@@ -175,7 +174,7 @@ export default function FeedbackModal ({is_open,on_close,default_context,default
   on_close;
   default_context;}
   default_kind = 'general';}
-  user_headers}: {is_open: boolean,on_close: (submitted: boolean) => void,default_context?: FeedbackContext;
+  user_headers}: {is_open: boolean;,on_close: (submitted: boolean) => void;,default_context?: FeedbackContext;
   default_kind?: 'general' | 'bug' | 'feature';}
   user_headers?: Record < string, string>;}
 }) {const [rating, set_rating] = useState < number>(0)const [hover, set_hover] = useState < number>(0)const [kind, set_kind] = useState<'general' | 'bug' | 'feature'>(default_kind)const [comment, set_comment] = useState ('')const [loading, set_loading]  = useState (false)// Check condition;}
@@ -186,8 +185,8 @@ if (return null) {$2;}
  */;
 function submit() {if (return on_close (false)) {$2;}
 }
-    set_loading (true)try {await fetch ('/api / feedback', {method: 'POST'}
-  headers: { 'Content - Type': 'application / json', ...(user_headers || {}) },body: JSON.stringify ({rating,comment,kind,context: default_context || }
+    set_loading (true)try {await fetch ('/api / feedback', {method: 'POST';}
+  headers: { 'Content - Type': 'application / json';, ...(user_headers || {}) },body: JSON.stringify ({rating;,comment,kind,context: default_context || ;}
 }})})set_loading (false)on_close (true)}
   return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40' />;
       <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4' />;

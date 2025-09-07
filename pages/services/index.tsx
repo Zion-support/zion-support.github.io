@@ -144,9 +144,9 @@ interface Service {;
 ;
 // Define a unified service interface;
 interface Service {;
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';

@@ -15,12 +15,12 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
-import { useState, useEffect } from "react",
-import { useTranslation } from 'react-i18next',
+import { useState, useEffect } from "react",;
+import { useTranslation } from 'react-i18next',;
 
   useEffect(() => {
     async function checkHealth() {
@@ -31,15 +31,15 @@ setAuthServiceAvailable(res.ok);
 import { useState, useEffect } from "react";
 import { useTranslation  } from 'react-i18next';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link',
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources } from "@/components/partners/PartnerResources",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import Link from 'next/link',;
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
+import { PartnerResources } from "@/components/partners/PartnerResources",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useRouter } from 'next/router',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -66,18 +66,18 @@ import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { useTranslation  } from 'react-i18next';
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
-import { useState, useEffect } from "react",
-import { useTranslation } from 'react-i18next',
-import Link from 'next/link',
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useState, useEffect } from "react",;
+import { useTranslation } from 'react-i18next',;
+import Link from 'next/link',;
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
+import { PartnerResources } from "@/components/partners/PartnerResources",;
 
   const router = null;
         logErrorToProduction('Partner login auth health check failed', {

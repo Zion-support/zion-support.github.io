@@ -1,47 +1,47 @@
-import React, { useState, useEffect } from 'react',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Badge } from '@/components/ui/badge',;
-import { Button } from '@/components/ui/button',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 ;
 interface HealthData {;
-  status:'healthy' | 'warning' | 'critical',;
-  timestamp:string,;
-  uptime:number,;
-  version:string,;
-  environment:string,;
+  status: 'healthy' | 'warning' | 'critical';,;
+  timestamp: string;,;
+  uptime: number;,;
+  version: string;,;
+  environment: string;,;
   metrics: {;,
-  errorRate:number,;
-    criticalErrors:number,;
-    responseTime:number,;
+  errorRate: number;,;
+    criticalErrors: number;,;
+    responseTime: number;,;
     memoryUsage:number;
   },;
   health: {;,
-  status:string,;
-    score:number,;
-    issues:string[],;
+  status: string;,;
+    score: number;,;
+    issues: string[];,;
     recommendations:string[];
   errors: {;,
   summary:{;
-      total:number,;
-      critical:number,;
-      high:number,;
-      medium:number,;
+      total: number;,;
+      critical: number;,;
+      high: number;,;
+      medium: number;,;
       low:number;
     },;
     topErrors:Array<{;
-      patternId:string,,
-  description:string,;
+      patternId: string;,,
+  description: string;,;
     topErrors: Array<{;,
-  patternId:string,;
-      description:string,;
+  patternId: string;,;
+      description: string;,;
 pr-12325
-      occurrences:number,;
-      severity:string,;
+      occurrences: number;,;
+      severity: string;,;
       solution?:string;
     }>,;
-    byCategory:{ [category:string]:number },;
+    byCategory: { [category:string]:number ;},;
 }
 const HealthDashboard:React.FC = () => {;
   const [healthData, setHealthData] = useState<HealthData | null>(null),;
@@ -65,7 +65,7 @@ const HealthDashboard:React.FC = () => {;
           <div className="flex items-center text-red-600">;"
             <XCircle className="w-5 h-5 mr-2" />;"
 
-            <span>Failed to load health data:{error}</span>;
+            <span>Failed to load health data: {error;}</span>;
           <Button onClick={fetchHealthData} className="mt-4">;"
 
     <div className="space-y-6">;"

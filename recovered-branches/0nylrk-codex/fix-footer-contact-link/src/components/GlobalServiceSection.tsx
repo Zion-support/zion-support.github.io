@@ -2,17 +2,17 @@
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
-import { GradientHeading } from "./GradientHeading",
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
-import { Button } from "./ui/button",import { GradientHeading } from "./GradientHeading",
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
-import { Button } from "./ui/button",
+import { GradientHeading } from "./GradientHeading",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
+import { Button } from "./ui/button",import { GradientHeading } from "./GradientHeading",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
+import { Button } from "./ui/button",;
 
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
-import { GradientHeading } from "./GradientHeading",
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
-import { Button } from "./ui/button",
+import { GradientHeading } from "./GradientHeading",;
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
+import { Button } from "./ui/button",;
   {
     title: "Servers"
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"

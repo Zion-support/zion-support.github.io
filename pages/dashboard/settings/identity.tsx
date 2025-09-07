@@ -72,7 +72,7 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
 import { ProfileBadges } from '../../../components/ui/ProfileBadges';

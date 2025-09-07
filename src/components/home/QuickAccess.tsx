@@ -628,8 +628,8 @@ export default QuickAccess;
 export default QuickAccess }
 export default QuickAccess;
 
-import React from "react",
-import Link from "next/link",
+import React from "react",;
+import Link from "next/link",;
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'

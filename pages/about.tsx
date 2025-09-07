@@ -192,10 +192,8 @@ export default function AboutPage() {
         </div>
       </div>
     </MainLayout>
-import Layout from '../components/Layout';
-import Layout from '../components/Layout';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+  );
+}
 import { 
   Brain,
 Brain,

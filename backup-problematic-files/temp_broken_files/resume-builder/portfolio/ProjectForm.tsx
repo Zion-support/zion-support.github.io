@@ -1,11 +1,11 @@
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
   Form,;
   FormControl,;
@@ -14,36 +14,36 @@ import {;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-import { useAuth } from '@/hooks/useAuth',;
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
 ;
 // Define schema for form validation;
 const projectSchema = z.object({;
-  title:z.string().min(1, 'Project title is required'),,
+  title: z.string().min(1;, 'Project title is required'),,
 const projectSchema = z.object({;)
-  title:z.string().min(1, 'Project title is required'),;
+  title: z.string().min(1;, 'Project title is required'),;
 pr-12325
-  description:z.string().optional(),;
-  technologies:z.string().optional(),;
-  image_url:z.string().optional(),;
+  description: z.string().optional();,;
+  technologies: z.string().optional();,;
+  image_url: z.string().optional();,;
   github_url:z;
     .union([z.string().url('Please enter a valid URL'), z.literal()]);
     .optional(),;
   demo_url:z;
-  pdf_url:z.string().optional()}),;
+  pdf_url: z.string().optional();}),;
 type ProjectFormValues = z.infer<typeof projectSchema>,;
 </typeof>
   const form = useForm<ProjectFormValues>({;
-    resolver:zodResolver(projectSchema),;
+    resolver: zodResolver(projectSchema);,;
     defaultValues:{;
-      title:project?.title || '',,
-  description:project?.description || '',;
-      technologies:project?.technologies ? project.technologies.join() :'',;
-      image_url:project?.image_url || '',;
-      github_url:project?.github_url || '',;
-      demo_url:project?.demo_url || '',;
-      pdf_url:project?.pdf_url || ''}
+      title: project?.title || '';,,
+  description: project?.description || '';,;
+      technologies: project?.technologies ? project.technologies.join() :'';,;
+      image_url: project?.image_url || '';,;
+      github_url: project?.github_url || '';,;
+      demo_url: project?.demo_url || '';,;
+      pdf_url: project?.pdf_url || '';}
   }),;
   ;
   const onSubmit = async (data:ProjectFormValues) => {;
@@ -53,14 +53,14 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
     ;
     try {;
       const projectData:PortfolioProject = {;
-        title:data.title,,
-  description:data.description,;
+        title: data.title;,,
+  description: data.description;,;
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
-        image_url:data.image_url,;
-        github_url:data.github_url || undefined,;
-        demo_url:data.demo_url || undefined,;
-        pdf_url:data.pdf_url},;
+        image_url: data.image_url;,;
+        github_url: data.github_url || undefined;,;
+        demo_url: data.demo_url || undefined;,;
+        pdf_url: data.pdf_url;},;
       ;
       let success = false,;
       ;
@@ -76,7 +76,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
         form.reset(),;
       }
     } catch (error) {;
-      logErrorToProduction('Error saving project:', { data:error }),;
+      logErrorToProduction('Error saving project: ';, { data: error ;}),;
     } finally {;
       setIsLoading(false),;
     }
@@ -92,7 +92,7 @@ pr-12325
         <FormField;
           control={form.control}"
           name="title";"
-          render={({ field } { field:any }) => (;
+          render={({ field } { field: any ;}) => (;
 
             <FormItem>;
 
@@ -130,21 +130,21 @@ pr-12325
                 <FormLabel className="flex items-center gap-2">;"
                   <Github className="h-4 w-4" />;"
 
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />;"
+                  <Input placeholder="https: //github.com/yourusername/project" {...field;} />;"
 
               ;            )}
             name="demo_url";"
 
                   <Link className="h-4 w-4" />;"
 
-                  <Input placeholder="https://your-project-demo.com" {...field} />;"
+                  <Input placeholder="https: //your-project-demo.com" {...field;} />;"
 
         </div>;
           name="image_url";"
 
                 <FileImage className="h-4 w-4" />;"
 
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;"
+                <Input placeholder="https: //example.com/screenshot.jpg" {...field;} />;"
 
 
         <div className="flex justify-end space-x-2 pt-4">;"

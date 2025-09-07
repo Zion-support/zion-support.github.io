@@ -1,6 +1,6 @@
-import { useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
+import { useState } from "react",;
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
+import { Input } from "@/components/ui/input",;
 import { Card } from "@/components/ui/card",  const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item,

@@ -1,7 +1,7 @@
 
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import React from 'react',;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button";
 import { Download  } from 'lucide-react';
 import { Resume } from "@/types/resume";
@@ -15,15 +15,15 @@ export function ResumePreviewCard({
   onDownload
   isLoading
 }: ResumePreviewCardProps) {
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react',
+import { Button } from "@/components/ui/button",;
+import { Download } from 'lucide-react',;
 import { Resume } from "@/types/resume",  return (  return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
         <div className="flex justify-between items-start mb-2">;
           <div>;
 
-import React from 'react',
+import React from 'react',;
 import { Card, CardContent } from "@/components/ui/card",""
 import { Badge } from "@/components/ui/badge",""
 import { Button } from "@/components/ui/button";""
@@ -41,7 +41,7 @@ export function ResumePreviewCard({
   isLoading;)
 }: ResumePreviewCardProps) {"
 import { Button } from "@/components/ui/button",""
-import { Download } from 'lucide-react',
+import { Download } from 'lucide-react',;
 import { Resume } from "@/types/resume","
   // TODO: Implement
   resume: Resume,

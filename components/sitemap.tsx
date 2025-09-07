@@ -39,30 +39,30 @@ export default function SitemapPage() {
 
 
   const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
+    { name: "Home";, href: "/" ;}
+    { name: "Services";, href: "/services" ;}
     {
       name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
+      href: "/comprehensive-services-showcase-2025";
     }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
+    { name: "Pricing";, href: "/pricing" ;}
+    { name: "Market Pricing";, href: "/market-pricing" ;}
+    { name: "Services Advertising";, href: "/services-advertising" ;}
+    { name: "Resources";, href: "/resources" ;}
+    { name: "Support";, href: "/support" ;}
+    { name: "Contact";, href: "/contact" ;}
 
 pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -71,22 +71,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from "react";
-import Head from "next/head";
 export default function SitemapPage() {;
   const links = [;
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
+    { name: "Home";, href: "/" ;},;
+    { name: "Services";, href: "/services" ;},;
     {;
-      name: "All Services Showcase",;
-      href: "/comprehensive-services-showcase-2025",;
+      name: "All Services Showcase";,;
+      href: "/comprehensive-services-showcase-2025";,;
     },;
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
+    { name: "Pricing";, href: "/pricing" ;},;
+    { name: "Market Pricing";, href: "/market-pricing" ;},;
+    { name: "Services Advertising";, href: "/services-advertising" ;},;
+    { name: "Resources";, href: "/resources" ;},;
+    { name: "Support";, href: "/support" ;},;
+    { name: "Contact";, href: "/contact" ;},;
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -118,18 +116,18 @@ export default function SitemapPage() {;
   );
 pr-12243
   const links = [;
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
+    { name: "Home";, href: "/" ;},;
+    { name: "Services";, href: "/services" ;},;
     {;
-      name: "All Services Showcase",;
-      href: "/comprehensive-services-showcase-2025",;
+      name: "All Services Showcase";,;
+      href: "/comprehensive-services-showcase-2025";,;
     },;
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
+    { name: "Pricing";, href: "/pricing" ;},;
+    { name: "Market Pricing";, href: "/market-pricing" ;},;
+    { name: "Services Advertising";, href: "/services-advertising" ;},;
+    { name: "Resources";, href: "/resources" ;},;
+    { name: "Support";, href: "/support" ;},;
+    { name: "Contact";, href: "/contact" ;},;
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -162,15 +160,15 @@ pr-12243
 }
 
 	const links = [
-		{ name: 'Home', href: '/' },
-		{ name: 'Services', href: '/services' },
-		{ name: 'All Services Showcase', href: '/comprehensive-services-showcase-2025' },
-		{ name: 'Pricing', href: '/pricing' },
-		{ name: 'Market Pricing', href: '/market-pricing' },
-		{ name: 'Services Advertising', href: '/services-advertising' },
-		{ name: 'Resources', href: '/resources' },
-		{ name: 'Support', href: '/support' },
-		{ name: 'Contact', href: '/contact' }
+		{ name: 'Home';, href: '/' ;},
+		{ name: 'Services';, href: '/services' ;},
+		{ name: 'All Services Showcase';, href: '/comprehensive-services-showcase-2025' ;},
+		{ name: 'Pricing';, href: '/pricing' ;},
+		{ name: 'Market Pricing';, href: '/market-pricing' ;},
+		{ name: 'Services Advertising';, href: '/services-advertising' ;},
+		{ name: 'Resources';, href: '/resources' ;},
+		{ name: 'Support';, href: '/support' ;},
+		{ name: 'Contact';, href: '/contact' ;}
 	];
 import React from 'react';
 import Head from 'next/head';
@@ -205,52 +203,48 @@ export default /**
  */
 function SitemapPage() {
   const links = [;
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Home";, href: "/" ;},
+    { name: "Services";, href: "/services" ;},
     {
 
-      name: "All Services Showcase",
-      href: "/comprehensive - services - showcase - 2025",
+      name: "All Services Showcase";,
+      href: "/comprehensive - services - showcase - 2025";,
     },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market - pricing" },
-    { name: "Services Advertising", href: "/services - advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },
-import React from 'react';
-import Head from 'next/head';
-import React from "react";
-import Head from "next/head";
+    { name: "Pricing";, href: "/pricing" ;},
+    { name: "Market Pricing";, href: "/market - pricing" ;},
+    { name: "Services Advertising";, href: "/services - advertising" ;},
+    { name: "Resources";, href: "/resources" ;},
+    { name: "Support";, href: "/support" ;},
+    { name: "Contact";, href: "/contact" ;},
 
 export default function SitemapPage() {
 
   const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
+    { name: "Home";, href: "/" ;}
+    { name: "Services";, href: "/services" ;}
     {
       name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
+      href: "/comprehensive-services-showcase-2025";
     }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
+    { name: "Pricing";, href: "/pricing" ;}
+    { name: "Market Pricing";, href: "/market-pricing" ;}
+    { name: "Services Advertising";, href: "/services-advertising" ;}
+    { name: "Resources";, href: "/resources" ;}
+    { name: "Support";, href: "/support" ;}
+    { name: "Contact";, href: "/contact" ;}
   const links = [;
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
+    { name: "Home";, href: "/" ;},;
+    { name: "Services";, href: "/services" ;},;
     {;
-      name: "All Services Showcase",;
-      href: "/comprehensive-services-showcase-2025",;
+      name: "All Services Showcase";,;
+      href: "/comprehensive-services-showcase-2025";,;
     },;
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
+    { name: "Pricing";, href: "/pricing" ;},;
+    { name: "Market Pricing";, href: "/market-pricing" ;},;
+    { name: "Services Advertising";, href: "/services-advertising" ;},;
+    { name: "Resources";, href: "/resources" ;},;
+    { name: "Support";, href: "/support" ;},;
+    { name: "Contact";, href: "/contact" ;},;
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -315,25 +309,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-import React from './react';
-import Head from './next / head';
 export default /**
  * SitemapPage - Function description
  */
 function SitemapPage() {
   const links = [;
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Home";, href: "/" ;},
+    { name: "Services";, href: "/services" ;},
     {
-      name: "All Services Showcase",
-      href: "/comprehensive - services - showcase - 2025",
+      name: "All Services Showcase";,
+      href: "/comprehensive - services - showcase - 2025";,
     },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market - pricing" },
-    { name: "Services Advertising", href: "/services - advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },;
+    { name: "Pricing";, href: "/pricing" ;},
+    { name: "Market Pricing";, href: "/market - pricing" ;},
+    { name: "Services Advertising";, href: "/services - advertising" ;},
+    { name: "Resources";, href: "/resources" ;},
+    { name: "Support";, href: "/support" ;},
+    { name: "Contact";, href: "/contact" ;},;
 pr-12243
   ];
   return (
@@ -364,18 +356,18 @@ pr-12243
       </div>;
     </div>);
   const links = [;
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Home";, href: "/" ;},
+    { name: "Services";, href: "/services" ;},
     {
-      name: "All Services Showcase",
-      href: "/comprehensive - services - showcase - 2025",
+      name: "All Services Showcase";,
+      href: "/comprehensive - services - showcase - 2025";,
     },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market - pricing" },
-    { name: "Services Advertising", href: "/services - advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },
+    { name: "Pricing";, href: "/pricing" ;},
+    { name: "Market Pricing";, href: "/market - pricing" ;},
+    { name: "Services Advertising";, href: "/services - advertising" ;},
+    { name: "Resources";, href: "/resources" ;},
+    { name: "Support";, href: "/support" ;},
+    { name: "Contact";, href: "/contact" ;},
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;

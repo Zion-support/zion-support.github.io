@@ -1,20 +1,20 @@
 
-import React, { useState, useEffect } from "react",;""
-import { useParams, useNavigate } from "react-router-dom",;""
-import { useDisputes } from "@/hooks/useDisputes",;""
-import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;""
-import { Button } from "@/components/ui/button",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Separator } from "@/components/ui/separator",;""
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;""
-import { format, formatDistanceToNow } from "date-fns",;""
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;""
-import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { toast } from "sonner",;"
+import React, { useState, useEffect } from "react";""
+import { useParams, useNavigate } from "react-router-dom";""
+import { useDisputes } from "@/hooks/useDisputes";""
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes";""
+import { Button } from "@/components/ui/button";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Badge } from "@/components/ui/badge";""
+import { Separator } from "@/components/ui/separator";""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
+import { format, formatDistanceToNow } from "date-fns";""
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";""
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";""
+import { useAuth } from "@/hooks/useAuth";""
+import { toast } from "sonner";"
 ;
 export function DisputeDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
@@ -85,14 +85,14 @@ export function DisputeDetail() {;
                     <p>{dispute.project?.title || "Unknown Project"}</p>;""
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>;"
                       <h3 className="font-medium">Related Milestone</h3>;""
-                      <p className="text-sm">Milestone ID:{dispute.milestone_id}</p>;"
+                      <p className="text-sm">Milestone ID: {dispute.milestone_id;}</p>;"
                     <h3 className="font-medium">Timeline</h3>;""
                     <ul className="space-y-2 mt-2">;"
 </ul>"
                       <li className="flex gap-2 items-center">;"
 </li>"
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1;""
-                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;"
+                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h: mm a");}</span>;"
                       </li>;"
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2;"
                           <span>Under review</span>;
@@ -178,13 +178,13 @@ export function DisputeDetail() {;
                         <div className="space-y-4">;"
                             placeholder="Enter resolution summary...";"
                             value={resolution.summary}
-                            onChange={(e) => setResolution({ ...resolution, summary:e.target.value })}
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value ;})}
                           <div className="grid grid-cols-2 gap-4">;"
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>;"
                               <select ;"
                                 className="w-full p-2 border rounded";"
                                 value={resolution.resolution_type}
-                                onChange={(e) => setResolution({ ...resolution, resolution_type:e.target.value })}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value ;})}
 </select>"
                                 <option value="client_favor">In Client's Favor</option>;
                                 <option value="talent_favor">In Talent's Favor</option>;
@@ -244,10 +244,10 @@ return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 a
   () => navigate ("/dashboard/disputes")""
 }className="mt-4" > Back to Disputes  </div>)"
 }</p> </div> Start Review ) "
-}</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved <AlertDescription> {"
+}</div> </div> <Alert className="bg-green-50 border-green-200 dark: bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved <AlertDescription> {";
 
 } ) "
-}<div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className="lg:col-span-2">  <TabsContent value="overview" className="space-y-6"> <Card> <CardHeader> <CardTitle>Dispute Details <CardDescription>Information about this dispute case  <CardContent className="space-y-4"> <div> <h3 className="font-medium">Reason</h3> <p> {"
+}<div className="grid grid-cols-1 lg: grid-cols-3 gap-6"> <div className="lg:col-span-2">  <TabsContent value="overview" className="space-y-6"> <Card> <CardHeader> <CardTitle>Dispute Details <CardDescription>Information about this dispute case  <CardContent className="space-y-4"> <div> <h3 className="font-medium">Reason</h3> <p> {";
 }</p> </div> <div> <h3 className="font-medium">Description</h3> <p className="whitespace-pre-wrap"> {"
 }</p> </div> <div> </div> {"
   dispute.milestone id && (<div> <h3 className="font-medium">Related Milestone</h3> <p className="text-sm">Milestone ID: {"
@@ -290,7 +290,7 @@ return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 a
 }<div> <h3 className="font-medium mb-2">Admin Notes</h3> <div className="space-y-4 max-h-[300px] overflow-y-auto p-2"> {"
   messages .filter (msg => msg.is admin note) .map ( (msg) => (<div key= {
   msg.id;"
-}className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900"> <div className="flex items-center justify-between mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {"
+}className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark: bg-yellow-900/20 dark:border-yellow-900"> <div className="flex items-center justify-between mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {";
 }</span> </div> <span className="text-xs opacity-70"> {"
 }</span> </div> <p className="whitespace-pre-wrap text-sm"> {"
 }</p> </div>) ) "

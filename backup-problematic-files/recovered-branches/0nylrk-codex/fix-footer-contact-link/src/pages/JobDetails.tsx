@@ -1,19 +1,19 @@
 
-import React, { useState, useEffect } from 'react',;
-import { useParams, useNavigate } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Badge } from '@/components/ui/badge',;
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
-import { formatDistanceToNow } from 'date-fns',;
-import { toast } from 'sonner',;
-import { useAuth } from '@/hooks/useAuth',;
-import useJobDetails from '@/hooks/useJobDetails',;
-import { ApplyToJobModal } from '@/components/messaging/job-application',;
-import { SEO } from '@/components/SEO',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons';
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 ;
 export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
@@ -83,7 +83,7 @@ export default function JobDetails() {;
                     <div className="flex items-center text-muted-foreground">;"
                       <Calendar className="mr-2 h-4 w-4" />;"
 
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix:true })}</span>;
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true ;})}</span>;
                   <Badge>{job.category};
               ;"
               <CardContent className="space-y-6">;"
@@ -120,15 +120,15 @@ export default function JobDetails() {;
 
         <ApplyToJobModal;
           job={{;
-            id:job.id,;
-            title:job.title,,
-  description:job.description,;
-            company_name:job.company_name || "Company",;
-            title:job.title,;
-            description:job.description,;"
-            company_name:job.company_name || "Company",;"
+            id: job.id;,;
+            title: job.title;,,
+  description: job.description;,;
+            company_name: job.company_name || "Company";,;
+            title: job.title;,;
+            description: job.description;,;"
+            company_name: job.company_name || "Company";,;"
 pr-12325
-            budget:job.budget,;
+            budget: job.budget;,;
             client_id:job.client_id;
           }}
           isOpen={isApplyModalOpen}
@@ -141,7 +141,7 @@ if (error || !job) {"
 )
 }>View All Jobs </div> <Footer /> </>) 
 
-}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button >  Back to Jobs  </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {"
+}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button >  Back to Jobs  </div> <div className="grid grid-cols-1 lg: grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {";
 } </div>  <CardContent className="space-y-6" > <div> </div> </div> <div> ) )"
 }</div> </div>   </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {""
   !isOwnJob && (<Button className="w-full mt-4" onClick= {"

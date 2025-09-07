@@ -7,11 +7,11 @@ const corsHeaders = {
   preview_text: string;
   body: string;
 
-import { Resend } from "npm: resend@2.0.0",
+import { Resend } from "npm: resend@2.0.0",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Resend } from "npm: resend@2.0.0",
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { Resend } from "npm: resend@2.0.0",;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",

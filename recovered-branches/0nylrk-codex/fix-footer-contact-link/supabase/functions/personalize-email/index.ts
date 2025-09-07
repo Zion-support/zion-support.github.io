@@ -1,12 +1,12 @@
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {}
   \"Access-Control-Allow-Origin\": \"*\"}
-  \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}import \"https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts\",
+  \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}import \"https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts\",;
 import {serve} from \"https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get(\"OPENAI_API_KEY\");
 
@@ -16,8 +16,8 @@ const corsHeaders = {}
 const corsHeaders = {}
   \"Access-Control-Allow-Origin\": \"*\"}
   \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}
-import \"https: //deno.land/x/xhr@0.1.0/mod.ts\",
-import { serve } from \"https: //deno.land/std@0.190.0/http/server.ts\",
+import \"https: //deno.land/x/xhr@0.1.0/mod.ts\",;
+import { serve } from \"https: //deno.land/std@0.190.0/http/server.ts\",;
 const openAIApiKey = Deno.env.get(\"OPENAI_API_KEY\"),
 
 const corsHeaders = {}

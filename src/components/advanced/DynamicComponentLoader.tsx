@@ -556,7 +556,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
+//   () => import('recharts').then(module => ({ default: module.LineChart })),;
     />
   );
 }
@@ -567,7 +567,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
 
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
+//   () => import('recharts').then(module => ({ default: module.LineChart })),;
 
 //   {
 //     loadingComponent: () => (
@@ -631,7 +631,7 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
-  import_fn,
+  import_fn,;
   fallback,
   error_fallback,
   loading_component,
@@ -793,7 +793,7 @@ if ( {) {
 }
 // HOC for creating dynamic components easily;
 export const createDynamicComponent = <T extends ComponentType < any>>(
-  import_fn: (, ) => Promise<{ default: T }>,
+  import_fn: (, ) => Promise<{ default: T }>,;
   options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {
   return (props: React.ComponentProps < T> & { children?: React.ReactNode }, ) => (
     <DynamicComponentLoader;
@@ -805,9 +805,9 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (
-//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
+//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),;
 
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),;
 
 
 //   {
@@ -820,7 +820,7 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //   }
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
-//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
+//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),;
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;

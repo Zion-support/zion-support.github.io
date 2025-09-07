@@ -1,10 +1,10 @@
 
 
-import { DynamicListingPage } from "@/components/DynamicListingPage",
-import { ProductListing } from "@/types/listings",
-import { AppLayout } from "@/layout/AppLayout",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { Button } from "@/components/ui/button",
+import { DynamicListingPage } from "@/components/DynamicListingPage",;
+import { ProductListing } from "@/types/listings",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 // Sample service listings
@@ -18,7 +18,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 5000
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
-import { Link } from "react-router-dom",
+import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",    author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"

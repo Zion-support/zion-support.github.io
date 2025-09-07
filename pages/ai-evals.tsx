@@ -14,7 +14,7 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 
 
 
@@ -24,8 +24,8 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 export default function AIEvalsPage() {
@@ -100,10 +100,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',;
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 export default /**
  * AIEvalsPage - Function description

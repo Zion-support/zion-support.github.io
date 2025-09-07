@@ -15,19 +15,19 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios',;
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios',;
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios',;
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios',;
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
@@ -325,7 +325,7 @@ function ApiGettingStarted() {`;
   -H "Authorization: Bearer YOUR_API_KEY"`,""`;
 const quickStartJs = `import axios from 'axios';
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {`;
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios',;
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {,`;
   Authorization: \`Bearer \${API_KEY}\`;

@@ -66,7 +66,7 @@ function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing'
       contactInfo
     }
-        'OpenAPI/GraphQL import and live mock server',
+        'OpenAPI/GraphQL import and live mock server',;
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
         'Dynamic data generators and scenario templates',
         'Snapshot diffs and changelog with approvals',
@@ -135,7 +135,7 @@ export default function ApiMockContractTestingPage(req, res) {
         'Spin up OpenAPI / GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
       price: 'Starting at $69 / month',
       features: [;
-        'OpenAPI / GraphQL import and live mock server',
+        'OpenAPI / GraphQL import and live mock server',;
         'Contract tests gated in CI (GitHub / GitLab / Bitbucket)',
         'Dynamic data generators and scenario templates',
         'Snapshot diffs and changelog with approvals',
@@ -148,7 +148,7 @@ export default function ApiMockContractTestingPage(req, res) {
   const tiers = [;
     },  ];
 ;
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
   const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533

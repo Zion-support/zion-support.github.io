@@ -70,7 +70,6 @@ pr-12243
   )
 }
 
-import React from 'react';
 
 export default function AutoUpdatePage5() {
   return (

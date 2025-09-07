@@ -15,12 +15,12 @@ export default function FavoritesPage() {;
       if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
   }, []);
   }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
+  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug));,
   return { favorites, remove }
 }
 
 import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head',
+import Head from 'next/head';
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
   const storageKey = null;

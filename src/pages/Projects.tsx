@@ -9,13 +9,13 @@ import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import React from "react",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
+import React from "react",;
+import { useProjects } from "@/hooks/useProjects",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import Link from "next/link",;
 
 
 import { Clock, Briefcase } from 'lucide-react'

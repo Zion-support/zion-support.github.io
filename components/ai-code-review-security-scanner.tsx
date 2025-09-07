@@ -15,7 +15,6 @@ import {
   Award,;
 } from 'lucide-react';
 
-import {
   Brain,
   Shield,
   Code,
@@ -32,7 +31,7 @@ import {
   Award,;
 } from 'lucide-react';
 
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Brain, Shield, Code, CheckCircle, Zap;
@@ -41,7 +40,6 @@ import { Brain, Shield, Code, CheckCircle, Zap;
  } from 'lucide-react';
 const AICodeReviewSecurityScanner = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import {
   Brain
   Shield
   Code
@@ -75,8 +73,8 @@ import {
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
       <SEO
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
         description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
@@ -85,9 +83,9 @@ import {
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 className='text-center'
             >
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8'>
@@ -108,16 +106,16 @@ className='text-center'
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center'
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'
                 >
                   Schedule Demo
@@ -150,9 +148,9 @@ className='text-center'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -169,45 +167,39 @@ className='text-center mb-16'
                 {
                   icon: <Code className='w-8 h-8' />
                   title: 'Multi-Language Support'
-                  description:
-                    'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
+                  description: 'Support for Python;, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
                 }
                 {
                   icon: <Shield className='w-8 h-8' />
                   title: 'AI-Powered Vulnerability Detection'
-                  description:
-                    'Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks.'
+                  description: 'Advanced machine learning algorithms that detect security vulnerabilities;, code smells, and potential security risks.'
                 }
                 {
                   icon: <Eye className='w-8 h-8' />
                   title: 'Automated Code Review'
-                  description:
-                    'Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks.'
+                  description: 'Intelligent code analysis with detailed feedback;, improvement suggestions, and automated quality checks.'
                 }
                 {
                   icon: <Lock className='w-8 h-8' />
                   title: 'Security Best Practices'
-                  description:
-                    'Enforce security standards, compliance requirements, and industry best practices automatically.'
+                  description: 'Enforce security standards;, compliance requirements, and industry best practices automatically.'
                 }
                 {
                   icon: <BarChart3 className='w-8 h-8' />
                   title: 'Performance Analytics'
-                  description:
-                    'Comprehensive metrics and insights to track code quality improvements and security posture over time.'
+                  description: 'Comprehensive metrics and insights to track code quality improvements and security posture over time.';
                 }
                 {
                   icon: <Globe className='w-8 h-8' />
                   title: 'Integration & APIs'
-                  description:
-                    'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.',
+                  description: 'Seamless integration with GitHub;, GitLab, Bitbucket, and CI/CD pipelines with custom API access.',
                 },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}
 className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>
@@ -241,8 +233,8 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
 
         {/* Pricing Section */}
         <section className="py-20">
@@ -251,9 +243,9 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -269,10 +261,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Starter",
-                  price: "$299",
-                  period: "/month",
-                  description: "Perfect for small development teams and startups",
+                  name: "Starter";,
+                  price: "$299";,
+                  period: "/month";,
+                  description: "Perfect for small development teams and startups";,
                   features: [
                     "Up to 10 developers";
                     "Basic security scanning";
@@ -282,7 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     "Basic reporting"
                   ];
 
-                  popular: false
+                  popular: false;
                 }
                     'Up to 10 developers',
                     'Basic security scanning',
@@ -291,14 +283,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Standard security rules',
                     'Basic reporting',
                   ],
-                  popular: false,
+                  popular: false;,
                 },
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {
-                  name: 'Professional',
-                  price: '$799',
-                  period: '/month',
-                  description: 'Ideal for growing development teams',
+                  name: 'Professional';,
+                  price: '$799';,
+                  period: '/month';,
+                  description: 'Ideal for growing development teams';,
                   features: [
                     'Up to 50 developers',
                     'Advanced security scanning',
@@ -309,14 +301,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'CI/CD integration',
                     'Team collaboration tools',
                   ],
-                  popular: true,
+                  popular: true;,
                 },
                 {
-                  name: 'Enterprise',
-                  price: '$1,999',
-                  period: '/month',
-                  description:
-                    'For large organizations with complex security needs',
+                  name: 'Enterprise';,
+                  price: '$1;,999',
+                  period: '/month';,
+                  description: 'For large organizations with complex security needs';,
                   features: [
                     'Unlimited developers'
                     'Enterprise security scanning'
@@ -341,9 +332,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid md:grid-cols-3 gap-8'>;
               {[;
                 {;
-                  name: 'Starter',;
-                  price: '$299',;
-                  period: '/month',;
+                  name: 'Starter';,;
+                  price: '$299';,;
+                  period: '/month';,;
                   description:;
                     'Perfect for small development teams and startups',;
                   features: [;
@@ -354,13 +345,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Standard security rules',;
                     'Basic reporting',;
                   ],;
-                  popular: false,;
+                  popular: false;,;
                 },;
                 {;
-                  name: 'Professional',;
-                  price: '$799',;
-                  period: '/month',;
-                  description: 'Ideal for growing development teams',;
+                  name: 'Professional';,;
+                  price: '$799';,;
+                  period: '/month';,;
+                  description: 'Ideal for growing development teams';,;
                   features: [;
                     'Up to 50 developers',;
                     'Advanced security scanning',;
@@ -371,12 +362,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'CI/CD integration',;
                     'Team collaboration tools',;
                   ],;
-                  popular: true,;
+                  popular: true;,;
                 },;
                 {;
-                  name: 'Enterprise',;
-                  price: '$1,999',;
-                  period: '/month',;
+                  name: 'Enterprise';,;
+                  price: '$1;,999',;
+                  period: '/month';,;
                   description:;
                     'For large organizations with complex security needs',;
                   features: [;
@@ -390,7 +381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Custom integrations',;
                     'SLA guarantees',;
                   ],;
-                  popular: false,;
+                  popular: false;,;
                 },              ].map((plan, index) => (                    "Unlimited developers";
                     "Enterprise security scanning";
                     "On - premise deployment";
@@ -409,15 +400,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Custom integrations',
                     'SLA guarantees',
                   ],
-                  popular: false,
+                  popular: false;,
                 },
               ].map((plan, index) => (
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                   }`}
 
@@ -434,9 +425,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, coordinate_y: 20 ;}}
+                  whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}
                   className={`relative bg - white / 5 backdrop - blur - xl border rounded - 2xl p - 8 ${
                     plan.popular;
                       ? 'border - purple - 500 bg - gradient - to - br from - purple - 500 / 10 to - blue - 500 / 10'                      : 'border - white / 10';
@@ -504,13 +495,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </ul>
 
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 ;}}
+                    whileTap={{ scale: 0.95 ;}}
                   </ul>;
 
                   <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}
+                    whileHover={{ scale: 1 && 1.05 ;}}
+                    whileTap={{ scale: 0 && 0.95 ;}}
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan && plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -518,8 +509,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Why Choose Our AI Code Security Platform?;
               </h2>;
@@ -533,39 +524,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='space-y-8'>;
                 {[;
                   {;
-                    icon: <Shield className='w-8 h-8' />,;
-                    title: 'Reduce Security Vulnerabilities by 85%',;
+                    icon: <Shield className='w-8 h-8' />;,;
+                    title: 'Reduce Security Vulnerabilities by 85%';,;
                     description:;
                       'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.',;
                   },;
                   {;
-                    icon: <Zap className='w-8 h-8' />,;
-                    title: 'Speed Up Code Review Process by 70%',;
+                    icon: <Zap className='w-8 h-8' />;,;
+                    title: 'Speed Up Code Review Process by 70%';,;
                     description:;
                       'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.',;
                   },;
                   {;
-                    icon: <TrendingUp className='w-8 h-8' />,;
-                    title: 'Improve Code Quality & Maintainability',;
+                    icon: <TrendingUp className='w-8 h-8' />;,;
+                    title: 'Improve Code Quality & Maintainability';,;
                     description:;
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.',;
-                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,;
-                    title: "Improve Code Quality & Maintainability",;
+                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />;,;
+                    title: "Improve Code Quality & Maintainability";,;
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
 <section className='py-20 bg-white/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
                   }
                   <motion&& motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    initial={{ opacity: 0;, x: -20 ;}}
+                    whileInView={{ opacity: 1;, x: 0 ;}}
+                    transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
                     className='flex items-start'>;
                     <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>;
                       {benefit && benefit.icon}
@@ -594,27 +585,24 @@ className='text-center mb-16'
                   {
                     icon: <Shield className='w-8 h-8' />
                     title: 'Reduce Security Vulnerabilities by 85%'
-                    description:
-                      'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.'
+                    description: 'Our AI algorithms detect security issues that traditional scanners miss;, significantly reducing your attack surface.'
                   }
                   {
                     icon: <Zap className='w-8 h-8' />
                     title: 'Speed Up Code Review Process by 70%'
-                    description:
-                      'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.'
+                    description: 'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.';
                   }
                   {
                     icon: <TrendingUp className='w-8 h-8' />
                     title: 'Improve Code Quality & Maintainability'
-                    description:
-                      'AI-powered insights help maintain consistent code standards and improve overall codebase health.',
+                    description: 'AI-powered insights help maintain consistent code standards and improve overall codebase health.';,
                   },
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={{ opacity: 0;, x: -20 ;}}
+                    whileInView={{ opacity: 1;, x: 0 ;}}
+                    transition={{ duration: 0.8;, delay: index * 0.1 ;}}
 className='flex items-start'
                   >
                     <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
@@ -635,27 +623,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {
                     icon: <CheckCircle className='w-8 h-8' />
                     title: 'Ensure Compliance with Security Standards'
-                    description:
-                      'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.'
+                    description: 'Meet SOC2;, ISO27001, and other compliance requirements with automated security testing and reporting.'
                   }
                   {
                     icon: <Users className='w-8 h-8' />
                     title: 'Reduce Technical Debt & Bugs'
-                    description:
-                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.'
+                    description: 'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.';
                   }
                   {
                     icon: <Star className='w-8 h-8' />
                     title: 'Enable Faster Development Cycles'
-                    description:
-                      'Confident code deployment with automated security validation accelerates your development and release processes.',
+                    description: 'Confident code deployment with automated security validation accelerates your development and release processes.';,
                   },
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={{ opacity: 0;, x: 20 ;}}
+                    whileInView={{ opacity: 1;, x: 0 ;}}
+                    transition={{ duration: 0.8;, delay: index * 0.1 ;}}
 className='flex items-start'
                   >
                     <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
@@ -677,9 +662,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Use Cases Section */}
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
                       {benefit.icon}
                     </div>
@@ -699,9 +684,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Use Cases Section */}
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
@@ -710,9 +695,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
                     </div>
                   </motion.div>
                 ))}
@@ -732,32 +717,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               <div className='space-y-8'>;
                   {;
-                    icon: <CheckCircle className='w-8 h-8' />,;
-                    title: 'Ensure Compliance with Security Standards',;
+                    icon: <CheckCircle className='w-8 h-8' />;,;
+                    title: 'Ensure Compliance with Security Standards';,;
                     description:;
                       'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.',;
                   },;
                   {;
-                    icon: <Users className='w-8 h-8' />,;
-                    title: 'Reduce Technical Debt & Bugs',;
+                    icon: <Users className='w-8 h-8' />;,;
+                    title: 'Reduce Technical Debt & Bugs';,;
                     description:;
                       'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.',;
                   },;
                   {;
-                    icon: <Star className='w-8 h-8' />,;
-                    title: 'Enable Faster Development Cycles',;
+                    icon: <Star className='w-8 h-8' />;,;
+                    title: 'Enable Faster Development Cycles';,;
                     description:;
                       'Confident code deployment with automated security validation accelerates your development and release processes.',;
-                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,;
-                    title: "Enable Faster Development Cycles",;
+                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />;,;
+                    title: "Enable Faster Development Cycles";,;
                     description: "Confident code deployment with automated security validation accelerates your development and release processes.";
 
                   }
                   <motion&& motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    initial={{ opacity: 0;, x: 20 ;}}
+                    whileInView={{ opacity: 1;, x: 0 ;}}
+                    transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
                     className='flex items-start'>;
                     <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>;
                       {benefit && benefit.icon}
@@ -776,9 +761,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </motion && motion.div>;
                     key={index}
-                    initial={{ opacity: 0, coordinate_x: 20 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={{ opacity: 0;, coordinate_x: 20 ;}}
+                    whileInView={{ opacity: 1;, coordinate_x: 0 ;}}
+                    transition={{ duration: 0.8;, delay: index * 0.1 ;}}
               </div>;
             </div>;
           </div>;
@@ -786,15 +771,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Use Cases Section */}
         <section className='py - 20'>;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
               className='text - center mb - 16'        <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
               className='text - center mb - 16';
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Trusted by Development Teams Worldwide;
@@ -838,8 +823,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 "Startups & Enterprises";
                 <motion&& motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Users className="w-6 h-6" />
                   </div>
@@ -854,9 +839,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ].map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}
 className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300'
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
@@ -873,9 +858,9 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
 
 
                 </motion.div>
@@ -900,8 +885,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of development teams who trust our AI-powered platform to protect their applications
@@ -909,8 +894,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
@@ -926,8 +911,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'
                 >
                   Start Free Trial
@@ -935,8 +920,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -962,8 +947,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Users className="w-6 h-6" />
                   </div>
@@ -971,9 +956,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-16 bg-white/5'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >
 <h3 className='text-2xl font-bold text-white mb-6'>
                 Get in Touch
@@ -1030,9 +1015,9 @@ export default AICodeReviewSecurityScanner;
                 "Startups & Enterprises";
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, coordinate_y: 20 ;}}
+                  whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.8;, delay: index * 0.1 ;}}
                   className='bg - white / 5 backdrop - blur - xl border border - white / 10 rounded - xl p - 6 text - center hover:bg - white / 10 transition - all duration - 300';
                 >;
                   <div className='w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4'>;
@@ -1052,9 +1037,9 @@ export default AICodeReviewSecurityScanner;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20">;
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Secure Your Code?;
@@ -1066,16 +1051,16 @@ export default AICodeReviewSecurityScanner;
               </p>;
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={{ scale: 1.05 ;}}
+                  while_tap={{ scale: 0.95 ;}}
                   className='px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items - center justify - center';
                 >;
                   Start Free Trial;
                   <ArrowRight className='ml - 2 w - 5 h - 5' />;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={{ scale: 1.05 ;}}
+                  while_tap={{ scale: 0.95 ;}}
                   className='px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition - all duration - 300'                >;
                   Contact Sales;
                 </motion.button>;
@@ -1087,16 +1072,16 @@ export default AICodeReviewSecurityScanner;
               </p>;
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={{ scale: 1.05 ;}}
+                  while_tap={{ scale: 0.95 ;}}
                   className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items - center justify - center";
                 >;
                   Start Free Trial;
                   <ArrowRight className="ml - 2 w - 5 h - 5" />;
                 </motion.button>;
                 <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_hover={{ scale: 1.05 ;}}
+                  while_tap={{ scale: 0.95 ;}}
                   className="px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition - all duration - 300";
                 >;
                   Contact Sales;
@@ -1117,9 +1102,9 @@ export default AICodeReviewSecurityScanner;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 16 bg - white / 5">;
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >;
               <h3 className='text - 2xl font - bold text - white mb - 6'>;
                 Get in Touch;

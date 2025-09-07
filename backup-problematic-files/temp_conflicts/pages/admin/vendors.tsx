@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react',;
-import type { Vendor } from '../../utils/vendor-types',;
+import { useEffect, useState } from 'react';
+import type { Vendor } from '../../utils/vendor-types';
 ;
 export default function AdminVendorsPage() {;
   const [vendors, setVendors] = useState<Vendor[]>([]),;
@@ -13,7 +13,7 @@ export default function AdminVendorsPage() {;
                 {v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}""
                 {v.suspended && <span className="text-xs px-2 py-0.5 rounded bg-red-100 text-red-700">Suspended</span>}"
               </div>;"
-              <div className="text-xs text-gray-500">Team:{v.teamSize || 0}</div>;"
+              <div className="text-xs text-gray-500">Team: {v.teamSize || 0;}</div>;"
             <div className="flex items-center gap-2 text-sm">;"
               <button onClick={() => call(v.verified ? 'revoke' :'approve', v.id)} className="px-3 py-1 rounded border">{v.verified ? 'Revoke' :'Approve'}</button>;
               <button onClick={() => call(v.suspended ? 'unsuspend' :'suspend', v.id)} className="px-3 py-1 rounded border">{v.suspended ? 'Unsuspend' :'Suspend'}</button>;

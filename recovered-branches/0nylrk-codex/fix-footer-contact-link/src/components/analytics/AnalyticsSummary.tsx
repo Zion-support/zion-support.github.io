@@ -1,11 +1,11 @@
 
 
-import { Card, CardContent } from "@/components/ui/card",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
+import { Card, CardContent } from "@/components/ui/card",;
+import { useQuery } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
-import { Skeleton } from "@/components/ui/skeleton",
+import { Skeleton } from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')

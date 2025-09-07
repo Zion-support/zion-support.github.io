@@ -9,17 +9,14 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-import Head from 'next/head';
 
 
 
 import { useEffect, useState  } from 'react';
-import Head from 'next/head',
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-import { useEffect, useState  } from 'react';
-import Head from 'next/head';,
+import Head from 'next/head';;
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any />(null);
 
@@ -30,7 +27,7 @@ const [talentMd, setTalentMd] = useState<string />('');
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
 return (<div /> <Head /><title  /> Automation Insights — Zion</title></Head>) );
 }</ul> </div> </div>);
-}</section>) : (<pre className=\"mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800\"  /> {}
+}</section>) : (<pre className=\"mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark: bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800\"  /> {;}
   talent_md;}
 }</pre>);
 }</section> </div>) import { useEffect, useState } from 'react';
@@ -70,7 +67,7 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
         <h2 className="font - medium">Talent Highlights</h2>;
         {!talent_md ? (
           <div className="text - sm text - gray - 500">Loading…</div>) : (
-          <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md}</pre>)}
+          <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark: bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md;}</pre>)}
       </section>;
     </div>);
           <div className="text-sm text-gray-500">Loading…</div>
@@ -111,7 +108,7 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
             <div className=\"mt-4\" />;"
               <h3 className=\"font-medium\" />Top Languages</h3>;"
               <ul className=\"list-disc list-inside\" />;
-                {intel.insights.topLanguages.map((l: any) => (<li key={l.lang} />{l.lang}: {l.coun}
+                {intel.insights.topLanguages.map((l: any) => (<li key={l.lang;} />{l.lang}: {l.coun}
 }</li>;
                 ))}
               </ul>;
@@ -122,7 +119,7 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
       <section id=\"talent\" className=\"mb-8\" />;"
         <h2 className=\"font-medium\" />Talent Highlights</h2>;"
         {!talentMd ? (<div className=\"text-sm text-gray-500\" />Loading…</div>;}"
-        ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\" />{talentM}
+        ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\" />{talentM;}
 }</pre>;
         )}
 

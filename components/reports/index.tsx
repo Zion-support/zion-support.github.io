@@ -28,17 +28,17 @@ pr-12243
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
             agents.          </p>export default function ReportsIndex() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;}"
       <main className=\"container mx-auto px-4 py-12 max-w-7xl\" />;}"
         {/* Header */}<div className=\"mt-12 text-center\" />;"
         {/* Back to Home */}<div className=\"mt-12 text-center\" />;"
-        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }
         <ContentCategorizer />;"
-        {/* Back to Home */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Back to Home */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }"
         <div className=\"mb-8\" />;"
           <h1 className=\"text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\" />;
@@ -114,14 +114,14 @@ pr-12243
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
         <ContentCategorizer />;
         {/* Back to Home */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
         <div className="mt-12 text-center">
@@ -151,8 +151,6 @@ pr-12243
 href='/'"
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200' />            ← Back to home        <div className=\"mt-12 text-center\" />;"
           <Link href=\"/\" className=\"inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200\" />;
-import Link from 'next / link';
-import ContentCategorizer from '../../components / ContentCategorizer';
 
 export default /**;
  * ReportsIndex - Function description;
@@ -210,10 +208,10 @@ function ReportsIndex() {
           <Link href=\"/\" className=\"inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200\" />;
   )})}"
         <div className=\"mt-12 text-center\" />;"
-        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }
         <ContentCategorizer />;"
-        {/* Back to Home */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Back to Home */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }"
         <div className=\"mb-8\" />;"
           <h1 className=\"text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\" />;
@@ -249,8 +247,8 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="container mx-auto px-4 py-12 max-w-7xl">
         {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
         <div className="mb-8">
@@ -268,7 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 export default function ReportsIndex() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;}"
       <main className=\"container mx-auto px-4 py-12 max-w-7xl\" />;}"
-        {/* Header */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Header */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }"
         <div className=\"mb-8\" />;"
           <h1 className=\"text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\" />;
@@ -293,18 +291,18 @@ export default function ReportsIndex() {return (<div className=\"min-h-screen bg
 }
 pr-12243
         {/* Content Categorizer Component */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
 <div className='mt-12 text-center' />;
           <Link;
             href='/';
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200';"
            />            ← Back to home        <div className=\"mt-12 text-center\" />;
   )}"
-        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Content Categorizer Component */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }
         <ContentCategorizer />;"
-        {/* Back to Home */  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+        {/* Back to Home */  } catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }"
         <div className=\"mt-12 text-center\" />;"
           <Link href=\"/\" className=\"inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200\" />>
@@ -331,15 +329,15 @@ pr-12243
           <Link href=\"/\" className=\"inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200\" />
         {/* Content Categorizer Component */ }
 } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 });
   }
 }
         <ContentCategorizer />;
         {/* Back to Home */  } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 });
   }
 }
@@ -381,13 +379,13 @@ pr-12243
         </div>;
       </main>;
     </div>;"
-  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+  )} catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
 }</div>)}</div>
 }
   );
   } catch (error) {"
-    console.error(\"Error:\", error);}"
-    return res.status(500).json({ error: \"Internal server error\"}
+    console.error(\"Error: \";, error);}"
+    return res.status(500).json({ error: \"Internal server error\";}
 });
   }
 }

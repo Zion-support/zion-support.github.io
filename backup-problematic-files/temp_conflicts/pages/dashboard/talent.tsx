@@ -1,15 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react",;""
-import { supabase } from "../../utils/supabase/client",;""
-import { AnimatePresence, motion } from "framer-motion",;"
+import React, { useEffect, useMemo, useState } from "react";""
+import { supabase } from "../../utils/supabase/client";""
+import { AnimatePresence, motion } from "framer-motion";"
 ;
 type JobSuggestion = {;
-  id:string,;"
+  id: string;,;"
   match_type?:"job_for_talent" | string,;"
-  job_id:string,;
-  job_title:string,;
+  job_id: string;,;
+  job_title: string;,;
   client_name?:string,;
   client_id?:string,;
-  talent_id:string,;
+  talent_id: string;,;
   summary?:string,;
   skills?:string[],;
   budget_min?:number | null,;
@@ -38,10 +38,10 @@ export default function TalentDashboardSuggestedJobs() {;
 
             <motion.div;
               key={s.id}
-              initial={{ opacity:0, y:10 }}
-              animate={{ opacity:1, y:0 }}
-              exit={{ opacity:0, y:10 }}
-              transition={{ duration:0.2 }}
+              initial={{ opacity: 0;, y: 10 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              exit={{ opacity: 0;, y: 10 ;}}
+              transition={{ duration: 0.2 ;}}
               className={`relative rounded-2xl border bg-white p-4 shadow-sm hover:shadow-md ${;"
                 highlightNew && (s.status || "new") === "new";""
                   ? "border-emerald-200 ring-1 ring-emerald-200";""

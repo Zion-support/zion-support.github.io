@@ -67,9 +67,9 @@ pr-12325
     {
       id: 'talent-directory',
       title: 'Talent Directory',
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import Link from "next/link",;
+import { GradientHeading } from "./GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from "./ui/button";
 import { fireEvent } from '@/lib/analytics';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
@@ -325,11 +325,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "./ui/button",
-import { fireEvent } from '@/lib/analytics',
+import Link from "next/link",;
+import { GradientHeading } from "./GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Button } from "./ui/button",;
+import { fireEvent } from '@/lib/analytics',;
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
 export function FeaturesGuideSection() {

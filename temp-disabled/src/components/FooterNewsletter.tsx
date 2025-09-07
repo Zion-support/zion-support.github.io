@@ -164,12 +164,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         value={email}
         onChange={e => setEmail(e.target.value)}
         autoComplete='email'        required
-import React, { useState, useRef } from 'react',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { useToast } from '@/hooks/use-toast',
+import React, { useState, useRef } from 'react',;
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import { useToast } from '@/hooks/use-toast',;
 import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger',;
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState(''),
   const [honeypot, setHoneypot] = useState(''),

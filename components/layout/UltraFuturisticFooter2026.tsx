@@ -29,10 +29,9 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
 
-import { motion } from 'framer-motion';
 
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;}
@@ -43,65 +42,65 @@ const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
 origin/cursor/automate-test-improve-and-merge-code-2533
 {
-  name: 'AI Predictive Enterprise Analytics',
-  href: '/ai-predictive-enterprise-analytics'}
+  name: 'AI Predictive Enterprise Analytics';,
+  href: '/ai-predictive-enterprise-analytics';}
 }
 }
-{name: 'AI Autonomous Customer Success'}
+{name: 'AI Autonomous Customer Success';}
   href: '/ai-autonomous-customer-success';}
 }
-{name: 'AI Autonomous Marketing Orchestrator'}
+{name: 'AI Autonomous Marketing Orchestrator';}
   href: '/ai-autonomous-marketing-orchestrator';}
 }
 {
-  title: 'Cybersecurity & Quantum', services: [ {
-  name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform'
+  title: 'Cybersecurity & Quantum';, services: [ {
+  name: 'Quantum Encryption Platform';, href: '/quantum-encryption-platform';
 }
 {
-  name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter'
+  name: 'AI Autonomous Threat Hunter';, href: '/ai-autonomous-threat-hunter';
 }
 {
-  name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security'
+  name: 'Quantum Zero Trust Security';, href: '/quantum-zero-trust-security';
 }
 {
-  name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner'
+  name: 'AI Autonomous Vulnerability Scanner';, href: '/ai-autonomous-vulnerability-scanner';
 }
 {
-  name: 'Quantum Secure Communication', href: '/quantum-secure-communication'
+  name: 'Quantum Secure Communication';, href: '/quantum-secure-communication';
 }]
 }
 {
-  title: 'Fintech & Blockchain', services: [ {
-  name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform'
+  title: 'Fintech & Blockchain';, services: [ {
+  name: 'Quantum Financial Trading Platform';, href: '/quantum-financial-trading-platform';
 }
 {
-  name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management'
+  name: 'AI Autonomous Wealth Management';, href: '/ai-autonomous-wealth-management';
 }
 {
-  name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance'
+  name: 'Quantum Blockchain Finance';, href: '/quantum-blockchain-finance';
 }
 {
-  name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform'
+  name: 'AI Autonomous Insurance Platform';, href: '/ai-autonomous-insurance-platform';
 }
 {
-  name: 'Quantum Payment Processing', href: '/quantum-payment-processing'
+  name: 'Quantum Payment Processing';, href: '/quantum-payment-processing';
 }]
 }
 {
-  title: 'Healthcare & Biotech', services: [ {
-  name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics'
+  title: 'Healthcare & Biotech';, services: [ {
+  name: 'AI Autonomous Medical Diagnostics';, href: '/ai-autonomous-medical-diagnostics';
 }
 {
-  name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform'
+  name: 'Quantum Drug Discovery Platform';, href: '/quantum-drug-discovery-platform';
 }
 {
-  name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care'
+  name: 'AI Autonomous Patient Care';, href: '/ai-autonomous-patient-care';
 }
 {
-  name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis'
+  name: 'Quantum Genomic Analysis';, href: '/quantum-genomic-analysis';
 }
 {
-  name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials'
+  name: 'AI Autonomous Clinical Trials';, href: '/ai-autonomous-clinical-trials';
 }]
 }];
 {
@@ -112,23 +111,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
         name: 'AI Autonomous Business Processor'
-        href: '/ai-autonomous-business-processor'
+        href: '/ai-autonomous-business-processor';
       }
       {
         name: 'AI Predictive Enterprise Analytics'
-        href: '/ai-predictive-enterprise-analytics'
+        href: '/ai-predictive-enterprise-analytics';
       }
       {
         name: 'AI Autonomous Customer Success'
-        href: '/ai-autonomous-customer-success'
+        href: '/ai-autonomous-customer-success';
       }
       {
         name: 'AI Autonomous Marketing Orchestrator'
-        href: '/ai-autonomous-marketing-orchestrator'
+        href: '/ai-autonomous-marketing-orchestrator';
       }
       {
         name: 'AI Autonomous Sales Intelligence'
-        href: '/ai-autonomous-sales-intelligence'
+        href: '/ai-autonomous-sales-intelligence';
       }
     ]
   }
@@ -137,23 +136,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
         name: 'Quantum Encryption Platform'
-        href: '/quantum-encryption-platform'
+        href: '/quantum-encryption-platform';
       }
       {
         name: 'AI Autonomous Threat Hunter'
-        href: '/ai-autonomous-threat-hunter'
+        href: '/ai-autonomous-threat-hunter';
       }
       {
         name: 'Quantum Zero Trust Security'
-        href: '/quantum-zero-trust-security'
+        href: '/quantum-zero-trust-security';
       }
       {
         name: 'AI Autonomous Vulnerability Scanner'
-        href: '/ai-autonomous-vulnerability-scanner'
+        href: '/ai-autonomous-vulnerability-scanner';
       }
       {
         name: 'Quantum Secure Communication'
-        href: '/quantum-secure-communication'
+        href: '/quantum-secure-communication';
       }
     ]
   }
@@ -162,23 +161,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
         name: 'Quantum Financial Trading Platform'
-        href: '/quantum-financial-trading-platform'
+        href: '/quantum-financial-trading-platform';
       }
       {
         name: 'AI Autonomous Wealth Management'
-        href: '/ai-autonomous-wealth-management'
+        href: '/ai-autonomous-wealth-management';
       }
       {
         name: 'Quantum Blockchain Finance'
-        href: '/quantum-blockchain-finance'
+        href: '/quantum-blockchain-finance';
       }
       {
         name: 'AI Autonomous Insurance Platform'
-        href: '/ai-autonomous-insurance-platform'
+        href: '/ai-autonomous-insurance-platform';
       }
       {
         name: 'Quantum Payment Processing'
-        href: '/quantum-payment-processing'
+        href: '/quantum-payment-processing';
       }
     ]
   }
@@ -187,59 +186,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
         name: 'AI Autonomous Medical Diagnostics'
-        href: '/ai-autonomous-medical-diagnostics'
+        href: '/ai-autonomous-medical-diagnostics';
       }
       {
         name: 'Quantum Drug Discovery Platform'
-        href: '/quantum-drug-discovery-platform'
+        href: '/quantum-drug-discovery-platform';
       }
       {
         name: 'AI Autonomous Patient Care'
-        href: '/ai-autonomous-patient-care'
+        href: '/ai-autonomous-patient-care';
       }
-      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
+      { name: 'Quantum Genomic Analysis';, href: '/quantum-genomic-analysis' ;}
       {
 const serviceCategories = [
   {
     title: 'AI & Automation'
     services: [
-      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' }
-      { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' }
-      { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success' }
-      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' }
-      { name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence' }
+      { name: 'AI Autonomous Business Processor';, href: '/ai-autonomous-business-processor' ;}
+      { name: 'AI Predictive Enterprise Analytics';, href: '/ai-predictive-enterprise-analytics' ;}
+      { name: 'AI Autonomous Customer Success';, href: '/ai-autonomous-customer-success' ;}
+      { name: 'AI Autonomous Marketing Orchestrator';, href: '/ai-autonomous-marketing-orchestrator' ;}
+      { name: 'AI Autonomous Sales Intelligence';, href: '/ai-autonomous-sales-intelligence' ;}
     ]
   }
   {
     title: 'Cybersecurity & Quantum'
     services: [
-      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform' }
-      { name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter' }
-      { name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security' }
-      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' }
-      { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
+      { name: 'Quantum Encryption Platform';, href: '/quantum-encryption-platform' ;}
+      { name: 'AI Autonomous Threat Hunter';, href: '/ai-autonomous-threat-hunter' ;}
+      { name: 'Quantum Zero Trust Security';, href: '/quantum-zero-trust-security' ;}
+      { name: 'AI Autonomous Vulnerability Scanner';, href: '/ai-autonomous-vulnerability-scanner' ;}
+      { name: 'Quantum Secure Communication';, href: '/quantum-secure-communication' ;}
     ]
   }
   {
     title: 'Fintech & Blockchain'
     services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' }
-      { name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management' }
-      { name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance' }
-      { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' }
-      { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
+      { name: 'Quantum Financial Trading Platform';, href: '/quantum-financial-trading-platform' ;}
+      { name: 'AI Autonomous Wealth Management';, href: '/ai-autonomous-wealth-management' ;}
+      { name: 'Quantum Blockchain Finance';, href: '/quantum-blockchain-finance' ;}
+      { name: 'AI Autonomous Insurance Platform';, href: '/ai-autonomous-insurance-platform' ;}
+      { name: 'Quantum Payment Processing';, href: '/quantum-payment-processing' ;}
     ]
   }
   {
     title: 'Healthcare & Biotech'
     services: [
-      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics' }
-      { name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform' }
-      { name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care' }
-      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
-      { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
+      { name: 'AI Autonomous Medical Diagnostics';, href: '/ai-autonomous-medical-diagnostics' ;}
+      { name: 'Quantum Drug Discovery Platform';, href: '/quantum-drug-discovery-platform' ;}
+      { name: 'AI Autonomous Patient Care';, href: '/ai-autonomous-patient-care' ;}
+      { name: 'Quantum Genomic Analysis';, href: '/quantum-genomic-analysis' ;}
+      { name: 'AI Autonomous Clinical Trials';, href: '/ai-autonomous-clinical-trials' ;}
     ]
-import {
   Phone,
   Mail,
   MapPin,
@@ -264,74 +262,74 @@ import {
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
 const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';,
 }
 {
-  name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics';
+  name: 'AI Predictive Enterprise Analytics';, href: '/ai - predictive - enterprise - analytics';
 }
 {
-  name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success';
+  name: 'AI Autonomous Customer Success';, href: '/ai - autonomous - customer - success';
 }
 {
-  name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator';
+  name: 'AI Autonomous Marketing Orchestrator';, href: '/ai - autonomous - marketing - orchestrator';
 }
 {
-  name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence';
-{name: 'AI Autonomous Sales Intelligence'}
+  name: 'AI Autonomous Sales Intelligence';, href: '/ai - autonomous - sales - intelligence';
+{name: 'AI Autonomous Sales Intelligence';}
   href: '/ai-autonomous-sales-intelligence';}
 }];
 }
-{title: 'Cybersecurity & Quantum',
-  services: [ {name: 'Quantum Encryption Platform'}
+{title: 'Cybersecurity & Quantum';,
+  services: [ {name: 'Quantum Encryption Platform';}
   href: '/quantum-encryption-platform';}
 }
-{name: 'AI Autonomous Threat Hunter'}
+{name: 'AI Autonomous Threat Hunter';}
   href: '/ai-autonomous-threat-hunter';}
 }
-{name: 'Quantum Zero Trust Security'}
+{name: 'Quantum Zero Trust Security';}
   href: '/quantum-zero-trust-security';}
 }
-{name: 'AI Autonomous Vulnerability Scanner'}
+{name: 'AI Autonomous Vulnerability Scanner';}
   href: '/ai-autonomous-vulnerability-scanner';}
 }
-{name: 'Quantum Secure Communication'}
+{name: 'Quantum Secure Communication';}
   href: '/quantum-secure-communication';}
 }];
 }
-{title: 'Fintech & Blockchain',
-  services: [ {name: 'Quantum Financial Trading Platform'}
+{title: 'Fintech & Blockchain';,
+  services: [ {name: 'Quantum Financial Trading Platform';}
   href: '/quantum-financial-trading-platform';}
 }
-{name: 'AI Autonomous Wealth Management'}
+{name: 'AI Autonomous Wealth Management';}
   href: '/ai-autonomous-wealth-management';}
 }
-{name: 'Quantum Blockchain Finance'}
+{name: 'Quantum Blockchain Finance';}
   href: '/quantum-blockchain-finance';}
 }
-{name: 'AI Autonomous Insurance Platform'}
+{name: 'AI Autonomous Insurance Platform';}
   href: '/ai-autonomous-insurance-platform';}
 }
-{name: 'Quantum Payment Processing'}
+{name: 'Quantum Payment Processing';}
   href: '/quantum-payment-processing';}
 }];
 }
-{title: 'Healthcare & Biotech',
-  services: [ {name: 'AI Autonomous Medical Diagnostics'}
+{title: 'Healthcare & Biotech';,
+  services: [ {name: 'AI Autonomous Medical Diagnostics';}
   href: '/ai-autonomous-medical-diagnostics';}
 }
-{name: 'Quantum Drug Discovery Platform'}
+{name: 'Quantum Drug Discovery Platform';}
   href: '/quantum-drug-discovery-platform';}
 }
-{name: 'AI Autonomous Patient Care'}
+{name: 'AI Autonomous Patient Care';}
   href: '/ai-autonomous-patient-care';}
 }
-{name: 'Quantum Genomic Analysis'}
+{name: 'Quantum Genomic Analysis';}
   href: '/quantum-genomic-analysis';}
 }
-{name: 'AI Autonomous Clinical Trials'}
+{name: 'AI Autonomous Clinical Trials';}
   href: '/ai-autonomous-clinical-trials';}
 }];
 }];
@@ -355,8 +353,8 @@ const contact_info = {
       }
     ];
   }
-        name: 'AI Autonomous Clinical Trials',
-        href: '/ai-autonomous-clinical-trials',
+        name: 'AI Autonomous Clinical Trials';,
+        href: '/ai-autonomous-clinical-trials';,
       },
     ],
   },
@@ -409,14 +407,14 @@ const contact_info = {
       {name: 'AI Autonomous Patient Care';}
         href: '/ai-autonomous-patient-care';}
       }
-      { name: 'Quantum Genomic Analysis'}
-  href: '/quantum-genomic-analysis'}
+      { name: 'Quantum Genomic Analysis';}
+  href: '/quantum-genomic-analysis';}
 }
 
       {
 
-        name: 'AI Autonomous Clinical Trials'}
-  href: '/ai-autonomous-clinical-trials'}
+        name: 'AI Autonomous Clinical Trials';}
+  href: '/ai-autonomous-clinical-trials';}
       }
     ]
   }
@@ -424,128 +422,128 @@ const contact_info = {
 
 const companyLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'About Us', href: '/about' },
-  { name: 'Leadership Team', href: '/leadership' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News & Press', href: '/news' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Investors', href: '/investors' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'About Us';, href: '/about' ;},
+  { name: 'Leadership Team';, href: '/leadership' ;},
+  { name: 'Careers';, href: '/careers' ;},
+  { name: 'News & Press';, href: '/news' ;},
+  { name: 'Partners';, href: '/partners' ;},
+  { name: 'Investors';, href: '/investors' ;},
+  { name: 'Contact Us';, href: '/contact' ;},
 const resourceLinks = [
-  { name: 'Locations', href: '/locations' }, ];  { name: 'Locations', href: '/locations' }
+  { name: 'Locations';, href: '/locations' ;}, ];  { name: 'Locations';, href: '/locations' ;}
 ];
 ;
 const resource_links = [;
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api - documentation' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Support Center', href: '/support' },
-  { name: 'Training & Certification', href: '/training' },
-  { name: 'Community Forum', href: '/community' },
-          <div className='lg:col-span-2'>            <motion && motion.div      {/* Background Effects */}
+  { name: 'Documentation';, href: '/docs' ;},
+  { name: 'API Reference';, href: '/api - documentation' ;},
+  { name: 'Case Studies';, href: '/case - studies' ;},
+  { name: 'Blog & News';, href: '/blog' ;},
+  { name: 'Support Center';, href: '/support' ;},
+  { name: 'Training & Certification';, href: '/training' ;},
+  { name: 'Community Forum';, href: '/community' ;},
+          <div className='lg: col-span-2'>            <motion && motion.div      {/* Background Effects */;}
       <div className="absolute inset-0 overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
       </div>;
-{ name: 'Locations', href: '/locations' },
+{ name: 'Locations';, href: '/locations' ;},
 ];
 const resourceLinks = [
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-documentation' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Support Center', href: '/support' },
-  { name: 'Training & Certification', href: '/training' },
-  { name: 'Community Forum', href: '/community' },
-{ name: 'Developer Resources', href: '/developer-resources' },
-    { name: 'About Us'}
-  href: '/about'}
+  { name: 'Documentation';, href: '/docs' ;},
+  { name: 'API Reference';, href: '/api-documentation' ;},
+  { name: 'Case Studies';, href: '/case-studies' ;},
+  { name: 'Blog & News';, href: '/blog' ;},
+  { name: 'Support Center';, href: '/support' ;},
+  { name: 'Training & Certification';, href: '/training' ;},
+  { name: 'Community Forum';, href: '/community' ;},
+{ name: 'Developer Resources';, href: '/developer-resources' ;},
+    { name: 'About Us';}
+  href: '/about';}
 },
 
-    { name: 'Leadership Team'}
-  href: '/leadership'}
+    { name: 'Leadership Team';}
+  href: '/leadership';}
 },
 
-    { name: 'Careers'}
-  href: '/careers'}
+    { name: 'Careers';}
+  href: '/careers';}
 },
 
-    { name: 'News & Press'}
-  href: '/news'}
+    { name: 'News & Press';}
+  href: '/news';}
 },
 
-    { name: 'Partners'}
-  href: '/partners'}
+    { name: 'Partners';}
+  href: '/partners';}
 },
 
-    { name: 'Investors'}
-  href: '/investors'}
+    { name: 'Investors';}
+  href: '/investors';}
 },
 
-    { name: 'Contact Us'}
-  href: '/contact'}
+    { name: 'Contact Us';}
+  href: '/contact';}
 },
 
-  { name: 'Locations'}
-  href: '/locations'}
+  { name: 'Locations';}
+  href: '/locations';}
 }
 
 ];
 
 const resourceLinks = [
-    { name: 'Documentation'}
-  href: '/docs'}
+    { name: 'Documentation';}
+  href: '/docs';}
 },
 
-    { name: 'API Reference'}
-  href: '/api-documentation'}
+    { name: 'API Reference';}
+  href: '/api-documentation';}
 },
 
-    { name: 'Case Studies'}
-  href: '/case-studies'}
+    { name: 'Case Studies';}
+  href: '/case-studies';}
 },
 
-    { name: 'Blog & News'}
-  href: '/blog'}
+    { name: 'Blog & News';}
+  href: '/blog';}
 },
 
-    { name: 'Support Center'}
-  href: '/support'}
+    { name: 'Support Center';}
+  href: '/support';}
 },
 
-    { name: 'Training & Certification'}
-  href: '/training'}
+    { name: 'Training & Certification';}
+  href: '/training';}
 },
 
-    { name: 'Community Forum'}
-  href: '/community'}
+    { name: 'Community Forum';}
+  href: '/community';}
 },
 
-  { name: 'Developer Resources'}
-  href: '/developer-resources'}
+  { name: 'Developer Resources';}
+  href: '/developer-resources';}
 }
 
 ];
 
 const socialLinks = [
-  { name: 'Facebook'}
-  href: '#', icon: Facebook}
+  { name: 'Facebook';}
+  href: '#';, icon: Facebook;}
 },
-  { name: 'Twitter'}
-  href: '#', icon: Twitter}
+  { name: 'Twitter';}
+  href: '#';, icon: Twitter;}
 },
-  { name: 'LinkedIn'}
-  href: '#', icon: Linkedin}
+  { name: 'LinkedIn';}
+  href: '#';, icon: Linkedin;}
 },
-  { name: 'Instagram'}
-  href: '#', icon: Instagram}
+  { name: 'Instagram';}
+  href: '#';, icon: Instagram;}
 },
-  { name: 'YouTube'}
-  href: '#', icon: Youtube}
+  { name: 'YouTube';}
+  href: '#';, icon: Youtube;}
 },
-{ name: 'GitHub'}
-  href: '#', icon: Github}
+{ name: 'GitHub';}
+  href: '#';, icon: Github;}
 }
 ];
 
@@ -562,13 +560,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
           <div className='lg:col-span-2'>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.6 ;}}
             >
 <div className='flex items-center mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
@@ -580,10 +578,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='lg:col-span-2' />
             <motion.div;
-initial={{ opacity: 0, y: 20 }
+initial={{ opacity: 0;, y: 20 ;}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.6 ;}
 }
              />
 <div className='flex items-center mb-6' />
@@ -655,19 +653,19 @@ solutions. Transforming businesses with cutting-edge technology.
           </div>;{/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
                       href={service.href}
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
                     >;
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
-              initial={{ opacity: 0, y: 20 }
+              initial={{ opacity: 0;, y: 20 ;}
 }
 
-              whileInView={{ opacity: 1, y: 0 }
+              whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6;, delay: index * 0.1 ;}}
              />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
                 {category.title === 'AI & Automation' && (
@@ -709,15 +707,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Company Links *}
 }
           <motion&& motion.div;
-        <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12' />          {/* Company Links */}{/* Company Links *}
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12' />          {/* Company Links */;}{/* Company Links *}
 }<motion.div;
           {/* Company Links */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
-            transition={{ duration: 0.6, delay: 0.2 }
+            transition={{ duration: 0.6;, delay: 0.2 ;}
 }
 
            />
@@ -751,12 +749,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Resources */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
                     href={link.href}
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6;, delay: 0.3 ;}}
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
             <ul className='space-y-2' />
@@ -771,13 +769,13 @@ href={link.href}
           {/* Resources *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
 
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-            transition={{ duration: 0.6, delay: 0.3 }
+            transition={{ duration: 0.6;, delay: 0.3 ;}
 }
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
@@ -795,9 +793,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Social Media */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.6;, delay: 0.4 ;}}
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
             <ul className='space-y-2' />
@@ -812,13 +810,13 @@ href={link.href}
           {/* Social Media *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
 
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-            transition={{ duration: 0.6, delay: 0.4 }
+            transition={{ duration: 0.6;, delay: 0.4 ;}
 }
            />
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
@@ -850,17 +848,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;))}
         {/* Newsletter Signup */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.5 ;}}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
 
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
 
-          transition={{ duration: 0.6, delay: 0.5 }
+          transition={{ duration: 0.6;, delay: 0.5 ;}
 }
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
          />
@@ -932,19 +930,19 @@ type='email'
         </motion.div />;
         {/* Bottom Bar */}
         <motion.div;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+          initial={{ opacity: 0 ;}}
+          whileInView={{ opacity: 1 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.6 ;}}
           className='border-t border-gray-800 pt-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center'>;
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6;, delay: 0.6 ;}}
 
-          whileInView={{ opacity: 1 }
+          whileInView={{ opacity: 1 ;}
 }
 
-          transition={{ duration: 0.6, delay: 0.6 }
+          transition={{ duration: 0.6;, delay: 0.6 ;}
 }
 className='border-t border-gray-800 pt-8'
          />

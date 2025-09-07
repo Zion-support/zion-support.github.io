@@ -1,8 +1,8 @@
 
 
-import React, { useState } from 'react',
-import Head from 'next/head';,
-import Card from '../components/ui/Card';,
+import React, { useState } from 'react',;
+import Head from 'next/head';,;
+import Card from '../components/ui/Card';,;
 import Button from '../components/ui/Button';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 

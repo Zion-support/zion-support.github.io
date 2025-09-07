@@ -27,9 +27,9 @@ import {
   Zap
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import React from 'react',
-import Head from 'next / head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next / head',;
+import { motion } from 'framer-motion',;
 import {
   Newspaper,
   Calendar,
@@ -232,7 +232,7 @@ export default function NewsPage() {
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               initial={{ opacity: 0, y: 30 }}
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Newspaper;
@@ -488,10 +488,10 @@ import { motion } from 'framer-motion',;
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react',
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import {
   Newspaper, Globe, Award, Users, Rocket, Brain,
   ArrowRight, ExternalLink, Calendar, Tag, Star

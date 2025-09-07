@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 
 
-import React from 'react';,
+import React from 'react';;
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 
@@ -18,12 +18,12 @@ export type EmptyStateProps = {
   title: string;
 
   description?: string;}
-  primaryAction?: { label: string; href: string}
-}secondaryAction?: { label: string; href: string }
+  primaryAction?: { label: string; href: string;}
+}secondaryAction?: { label: string; href: string ;}
 }
 
-export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { label: string; href: string}
-}secondaryAction?: { label: string; href: string }
+export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { label: string; href: string;}
+}secondaryAction?: { label: string; href: string ;}
 }
 
 interface EmptyStateProps {
@@ -31,7 +31,7 @@ interface EmptyStateProps {
 }
 }
 
-const EmptyState: React.FC<EmptyStateProps /> = ({ className   }
+const EmptyState: React.FC<EmptyStateProps /> = ({ className   ;}
 }) => {
 
 }
@@ -43,12 +43,9 @@ return (<div className='w-full border border-dashed border-gray-300 dark:border-
         <p className='text-sm opacity-80 max-w-prose' />{description}</p>;
       )}
 
-import React from 'react';
-import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = {
-  primary_action?: { label: string; href: string }
-  secondary_action?: { label: string; href: string }
+  primary_action?: { label: string; href: string ;}
+  secondary_action?: { label: string; href: string ;}
 }
 ;
 export default /**
@@ -68,11 +65,11 @@ function EmptyState() {
               <a>;
                 <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
 
-  title: string,;
-  title: string,
+  title: string;,;
+  title: string;,
   description?: string;
   icon?: React.ReactNode;
-  secondaryAction?: { label: string, href: string }
+  secondaryAction?: { label: string;, href: string ;}
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;

@@ -535,8 +535,8 @@ origin/automation-improvements-final
 
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
-import React from 'react',
-import SEO from '../components / SEO',
+import React from 'react',;
+import SEO from '../components / SEO',;
 export default /**
  * WebinarsPage - Function description
  */

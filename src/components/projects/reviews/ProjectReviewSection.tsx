@@ -43,10 +43,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReviewsList } from "@/components/reviews/ReviewsList",;
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
 import { useReviews } from "@/hooks/useReviews";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {

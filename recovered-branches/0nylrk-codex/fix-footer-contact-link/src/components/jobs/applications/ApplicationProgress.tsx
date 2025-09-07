@@ -1,7 +1,7 @@
 
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
+import { ApplicationStatus } from "@/types/jobs",;
+import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
@@ -12,7 +12,7 @@ export function ApplicationProgress({
   status
   className
 }: ApplicationProgressProps) {
-import { CheckCircle2, Circle, CircleDot } from "lucide-react",
+import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
 import { cn } from "@/lib/utils",  // Define the progress value based on status
 
   const getProgressValue = () => {

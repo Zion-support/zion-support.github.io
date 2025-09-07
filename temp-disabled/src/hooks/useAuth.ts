@@ -42,7 +42,7 @@ const mockUser: User = {id: '1', email,name, role: 'user';
 })localStorage.setItem('zion_user', JSON.stringify(mockUser))localStorage.setItem('authToken', 'dummy-token')return mockUser;
   }return {user: authState.user, loading: authState.isLoading,login, logout,register, isAuthenticated: authState.isAuthenticated,isLoading: authState.isLoading, isAdmin: authState.user?.role === 'admin';
   }}
-import { useState, useEffect } from "react"; interface User { id: string email: string, name: string," role: "user" | "admin" | "moderator", userType?: string, displayName?: string, avatarUrl? string,;,
+import { useState, useEffect } from "react"; interface User { id: string email: string, name: string," role: "user" | "admin" | "moderator", userType?: string, displayName?: string, avatarUrl? string,;,;
 } interface AuthState { user: User | null, isAuthenticated: boolean, isLoading boolean,;,
 } export function useAuth() { const [authState, setAuthState] = useState<AuthState>({ user: null, isAuthenticated: false, isLoading: true",;,
 }); useEffect(() => { // comment;,

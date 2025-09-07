@@ -1,6 +1,6 @@
-import { useState } from "react",;""
+import { useState } from "react";""
 import { Menu } from 'lucide-react';
-import Link from "next/link",;"
+import Link from "next/link";"
 ;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false),;
@@ -19,7 +19,7 @@ export function EnterpriseStickyNav() {;
             <Menu className="h-6 w-6" />;"
 
           </button>;"
-          <ul className={`${open ? "flex" :"hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;"
+          <ul className={`${open ? "flex" :"hidden"} flex-col gap-4 md: flex md:flex-row md:gap-8 w-full md:w-auto`;}>;"
 </ul>
             <li>;
 </li>"

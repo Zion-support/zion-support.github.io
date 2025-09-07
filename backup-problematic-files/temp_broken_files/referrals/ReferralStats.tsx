@@ -1,45 +1,45 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",;""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";""
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 ;
 interface ReferralStatsProps {;
-  stats:ReferralStatsType,;
+  stats: ReferralStatsType;,;
   isLoading:boolean;
 }
 export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
   const statCards = [;
     {;
-      title:"Total Referrals",;
-      value:stats.totalReferrals,;
-      icon:<Share className="h-5 w-5 text-muted-foreground" />,,
-  description:"People you've invited"},;
+      title: "Total Referrals";,;
+      value: stats.totalReferrals;,;
+      icon: <Share className="h-5 w-5 text-muted-foreground" />;,,
+  description: "People you've invited";},;
     {;
-      title:"Completed",;
-      value:stats.completedReferrals,;
-      icon:<Star className="h-5 w-5 text-muted-foreground" />,,
-  description:"Signed up & completed onboarding"},;
+      title: "Completed";,;
+      value: stats.completedReferrals;,;
+      icon: <Star className="h-5 w-5 text-muted-foreground" />;,,
+  description: "Signed up & completed onboarding";},;
     {;
-      title:"Pending",;
-      value:stats.pendingReferrals,;
-      icon:<TrendingUp className="h-5 w-5 text-muted-foreground" />,,
-  description:"Not yet completed onboarding"},;
+      title: "Pending";,;
+      value: stats.pendingReferrals;,;
+      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />;,,
+  description: "Not yet completed onboarding";},;
     {;
-      title:"Total Rewards",;
-      value:stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` :"-",;
-      icon:<Award className="h-5 w-5 text-muted-foreground" />,,
-  description:"Credits earned from referrals"}],;
+      title: "Total Rewards";,;
+      value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2);}` :"-",;
+      icon: <Award className="h-5 w-5 text-muted-foreground" />;,,
+  description: "Credits earned from referrals";}],;
 ;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
-      title:"Total Referrals",;"
-      value:stats.totalReferrals,;"
-      icon:<Share className="h-5 w-5 text-muted-foreground" />,;"
+      title: "Total Referrals";,;"
+      value: stats.totalReferrals;,;"
+      icon: <Share className="h-5 w-5 text-muted-foreground" />;,;"
 "
-      icon:<Star className="h-5 w-5 text-muted-foreground" />,;"
-      icon:<TrendingUp className="h-5 w-5 text-muted-foreground" />,;"
-      icon:<Award className="h-5 w-5 text-muted-foreground" />,;"
+      icon: <Star className="h-5 w-5 text-muted-foreground" />;,;"
+      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />;,;"
+      icon: <Award className="h-5 w-5 text-muted-foreground" />;,;"
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;"
 </div>
 pr-12325
@@ -53,7 +53,7 @@ pr-12325
                 <p className="text-xs text-muted-foreground">{card.description}</p>;"
               </>;            )}
     </div>;"
-  icon: <Award className="h-5 w-5 text-muted-foreground" />;";"description: "Credits earned from referrals","
+  icon: <Award className="h-5 w-5 text-muted-foreground" />;";"description: "Credits earned from referrals";,"
 
 } ) ) ;"
 }</div>) ;"}'""

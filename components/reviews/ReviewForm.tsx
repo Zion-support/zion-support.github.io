@@ -9,15 +9,15 @@ pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -34,14 +34,14 @@ class ErrorBoundary extends React.Component {
 };
 
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
-  projectId: string,;
-  fromRole: 'client' | 'talent',;
-  fromId: string,;
-  rating: number,;
-  text: string,;
+  projectId: string;,;
+  fromRole: 'client' | 'talent';,;
+  fromId: string;,;
+  rating: number;,;
+  text: string;,;
   categories?: {;
     communication?: number;
     qualityOfWork?: number;
@@ -52,13 +52,12 @@ export type ReviewFormValues = {;
 };
 
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;
 
-const ReviewForm: React.FC<Props> = ({ initial }) => {;
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {;
 import React, { useState } from 'react';
-import StarRating from './StarRating';
 export type ReviewFormValues = any;
-const ReviewForm: React.FC<Props> = ({ initial }) => {
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -76,8 +75,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 type Props = {
-  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
-const ReviewForm: React.FC < Props> = ({ initial }) => {
+  initial: Pick < ReviewFormValues;, 'project_id' | 'from_role' | 'from_id'>;
+const ReviewForm: React.FC < Props> = ({ initial ;}) => {
   const [rating, set_rating] = useState (0);
   const [text, set_text] = useState ('');
   const [anonymous, set_anonymous] = useState (false);
@@ -97,23 +96,23 @@ function handle_submit() {
     set_message (null),
     try {
       const res = await fetch ('/api / reviews / submit', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
+        method: 'POST';,
+        headers: { 'Content - Type': 'application / json' ;},
         body: JSON.stringify ({
-          project_id: initial.project_id,
-          from_role: initial.from_role,
-          from_id: initial.from_id,
+          project_id: initial.project_id;,
+          from_role: initial.from_role;,
+          from_id: initial.from_id;,
           rating,
           text,
           anonymous,
 
       const res = await fetch('/api/reviews/submit', {
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' ;}
         body: JSON.stringify({
-          projectId: initial.projectId,
-          fromRole: initial.fromRole,
-          fromId: initial.fromId,
+          projectId: initial.projectId;,
+          fromRole: initial.fromRole;,
+          fromId: initial.fromId;,
 rating,
           text,
           anonymous,

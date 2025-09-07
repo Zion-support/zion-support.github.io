@@ -15,9 +15,9 @@ pr-12325
 
       if (!isAuthenticated || !userDetails && userDetails.id) {
 
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
 import { toast } from "@/hooks/use-toast";
 import { useAuthStatus } from "@/hooks/talent";
 export function useSavedTalents() {
@@ -25,8 +25,8 @@ export function useSavedTalents() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-import { toast } from "@/hooks/use-toast",
-import { useAuthStatus } from "@/hooks/talent",
+import { toast } from "@/hooks/use-toast",;
+import { useAuthStatus } from "@/hooks/talent",;
 export function useSavedTalents() {
   const { isAuthenticated, userDetails } = useAuthStatus(),
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),

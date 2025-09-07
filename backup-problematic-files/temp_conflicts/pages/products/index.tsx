@@ -1,340 +1,340 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 ;
 const ProductsPage:NextPage = () => {;
   const products = [;
     // AI & Automation Tools;
     {;
-      category:"AI & Automation Tools",;"
+      category: "AI & Automation Tools";,;"
       products:[;
         {;
-          name:"ZionAI Analytics Platform",,
-  description:"Enterprise-grade AI-powered analytics platform for real-time business intelligence and predictive insights.",;
-          features:["Real-time data processing", "AI-powered forecasting", "Custom dashboards", "API integration", "Multi-tenant support"],;
-          pricing:"$299/month",;
-          link:"https://ziontechgroup.com/products/ai-analytics",;
+          name: "ZionAI Analytics Platform";,,
+  description: "Enterprise-grade AI-powered analytics platform for real-time business intelligence and predictive insights.";,;
+          features: ["Real-time data processing";, "AI-powered forecasting", "Custom dashboards", "API integration", "Multi-tenant support"],;
+          pricing: "$299/month";,;
+          link: "https://ziontechgroup.com/products/ai-analytics";,;
           type:"SAAS Platform";
         },;
         {;
-          name:"SmartBot Builder",,
-  description:"No-code chatbot development platform with advanced NLP capabilities and multi-channel deployment.",;
-          features:["Visual bot builder", "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training"],;
-          pricing:"$99/month",;
-          link:"https://ziontechgroup.com/products/smartbot-builder",;
+          name: "SmartBot Builder";,,
+  description: "No-code chatbot development platform with advanced NLP capabilities and multi-channel deployment.";,;
+          features: ["Visual bot builder";, "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training"],;
+          pricing: "$99/month";,;
+          link: "https://ziontechgroup.com/products/smartbot-builder";,;
           type:"SAAS Tool";
         },;
         {;
-          name:"AutoML Studio",,
-  description:"Automated machine learning platform for building and deploying ML models without coding expertise.",;
-          features:["Drag-and-drop interface", "Auto-model selection", "One-click deployment", "Performance monitoring", "Model versioning"],;
-          pricing:"$199/month",;
-          link:"https://ziontechgroup.com/products/automl-studio",;
+          name: "AutoML Studio";,,
+  description: "Automated machine learning platform for building and deploying ML models without coding expertise.";,;
+          features: ["Drag-and-drop interface";, "Auto-model selection", "One-click deployment", "Performance monitoring", "Model versioning"],;
+          pricing: "$199/month";,;
+          link: "https://ziontechgroup.com/products/automl-studio";,;
           type:"SAAS Platform";
         {;"
-          name:"ZionAI Analytics Platform",;""
-          description:"Enterprise-grade AI-powered analytics platform for real-time business intelligence and predictive insights.",;"]"
-          features:["Real-time data processing", "AI-powered forecasting", "Custom dashboards", "API integration", "Multi-tenant support"],;""
-          pricing:"$299/month",;""
-          link:"https://ziontechgroup.com/products/ai-analytics",;""
+          name: "ZionAI Analytics Platform";,;""
+          description: "Enterprise-grade AI-powered analytics platform for real-time business intelligence and predictive insights.";,;"]"
+          features: ["Real-time data processing";, "AI-powered forecasting", "Custom dashboards", "API integration", "Multi-tenant support"],;""
+          pricing: "$299/month";,;""
+          link: "https://ziontechgroup.com/products/ai-analytics";,;""
           type:"SAAS Platform";"
         },;
-          name:"SmartBot Builder",;""
-          description:"No-code chatbot development platform with advanced NLP capabilities and multi-channel deployment.",;""
-          features:["Visual bot builder", "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training"],;""
-          pricing:"$99/month",;""
-          link:"https://ziontechgroup.com/products/smartbot-builder",;""
+          name: "SmartBot Builder";,;""
+          description: "No-code chatbot development platform with advanced NLP capabilities and multi-channel deployment.";,;""
+          features: ["Visual bot builder";, "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training"],;""
+          pricing: "$99/month";,;""
+          link: "https://ziontechgroup.com/products/smartbot-builder";,;""
           type:"SAAS Tool";"
-          name:"AutoML Studio",;""
-          description:"Automated machine learning platform for building and deploying ML models without coding expertise.",;""
-          features:["Drag-and-drop interface", "Auto-model selection", "One-click deployment", "Performance monitoring", "Model versioning"],;""
-          pricing:"$199/month",;""
-          link:"https://ziontechgroup.com/products/automl-studio",;""
+          name: "AutoML Studio";,;""
+          description: "Automated machine learning platform for building and deploying ML models without coding expertise.";,;""
+          features: ["Drag-and-drop interface";, "Auto-model selection", "One-click deployment", "Performance monitoring", "Model versioning"],;""
+          pricing: "$199/month";,;""
+          link: "https://ziontechgroup.com/products/automl-studio";,;""
 pr-12325
         }
       ];
     // Cloud & Infrastructure Solutions;
     {;
-      category:"Cloud & Infrastructure Solutions",;
+      category: "Cloud & Infrastructure Solutions";,;
       products:[;
         {;
-          name:"CloudCost Optimizer",,
-  description:"Intelligent cloud cost management and optimization platform for multi-cloud environments.",;
-          features:["Cost tracking", "Resource optimization", "Budget alerts", "Multi-cloud support", "ROI analysis"],;
-          pricing:"$149/month",;
-          link:"https://ziontechgroup.com/products/cloudcost-optimizer",;
+          name: "CloudCost Optimizer";,,
+  description: "Intelligent cloud cost management and optimization platform for multi-cloud environments.";,;
+          features: ["Cost tracking";, "Resource optimization", "Budget alerts", "Multi-cloud support", "ROI analysis"],;
+          pricing: "$149/month";,;
+          link: "https://ziontechgroup.com/products/cloudcost-optimizer";,;
           type:"SAAS Tool";
         },;
         {;
-          name:"DevOps Pipeline Manager",,
-  description:"Comprehensive CI/CD pipeline management platform with automated testing and deployment.",;
-          features:["Pipeline automation", "Git integration", "Testing automation", "Deployment tracking", "Performance metrics"],;
-          pricing:"$179/month",;
-          link:"https://ziontechgroup.com/products/devops-pipeline",;
+          name: "DevOps Pipeline Manager";,,
+  description: "Comprehensive CI/CD pipeline management platform with automated testing and deployment.";,;
+          features: ["Pipeline automation";, "Git integration", "Testing automation", "Deployment tracking", "Performance metrics"],;
+          pricing: "$179/month";,;
+          link: "https://ziontechgroup.com/products/devops-pipeline";,;
           type:"SAAS Platform";
         },;
         {;
-          name:"InfraGuard Security",,
-  description:"Cloud infrastructure security monitoring and threat detection platform.",;
-          features:["Real-time monitoring", "Threat detection", "Compliance reporting", "Security scoring", "Incident response"],;
-          pricing:"$249/month",;
-          link:"https://ziontechgroup.com/products/infraguard",;
+          name: "InfraGuard Security";,,
+  description: "Cloud infrastructure security monitoring and threat detection platform.";,;
+          features: ["Real-time monitoring";, "Threat detection", "Compliance reporting", "Security scoring", "Incident response"],;
+          pricing: "$249/month";,;
+          link: "https://ziontechgroup.com/products/infraguard";,;
           type:"SAAS Security";
         }
       ];
     },;
     // Data & Analytics Products;
     {;
-      category:"Data & Analytics Products",;
+      category: "Data & Analytics Products";,;
       products:[;
         {;
-          name:"DataFlow Pipeline",,
-  description:"Enterprise data pipeline orchestration platform for ETL processes and real-time streaming.",;
-          features:["Visual pipeline builder", "Real-time processing", "Data quality checks", "Scalable architecture", "Monitoring dashboard"],;
-          pricing:"$399/month",;
-          link:"https://ziontechgroup.com/products/dataflow-pipeline",;
+          name: "DataFlow Pipeline";,,
+  description: "Enterprise data pipeline orchestration platform for ETL processes and real-time streaming.";,;
+          features: ["Visual pipeline builder";, "Real-time processing", "Data quality checks", "Scalable architecture", "Monitoring dashboard"],;
+          pricing: "$399/month";,;
+          link: "https://ziontechgroup.com/products/dataflow-pipeline";,;
           type:"SAAS Platform";
         },;
         {;
-          name:"InsightHub BI",,
-  description:"Business intelligence platform with interactive dashboards and advanced analytics capabilities.",;
-          features:["Interactive dashboards", "Data visualization", "Report automation", "KPI tracking", "Mobile access"],;
-          pricing:"$199/month",;
-          link:"https://ziontechgroup.com/products/insighthub-bi",;
+          name: "InsightHub BI";,,
+  description: "Business intelligence platform with interactive dashboards and advanced analytics capabilities.";,;
+          features: ["Interactive dashboards";, "Data visualization", "Report automation", "KPI tracking", "Mobile access"],;
+          pricing: "$199/month";,;
+          link: "https://ziontechgroup.com/products/insighthub-bi";,;
           type:"SAAS BI Tool";
         },;
         {;
-          name:"DataVault Manager",,
-  description:"Secure data warehouse management platform with advanced security and compliance features.",;
-          features:["Data encryption", "Access controls", "Audit logging", "Compliance reporting", "Backup automation"],;
-          pricing:"$299/month",;
-          link:"https://ziontechgroup.com/products/datavault-manager",;
+          name: "DataVault Manager";,,
+  description: "Secure data warehouse management platform with advanced security and compliance features.";,;
+          features: ["Data encryption";, "Access controls", "Audit logging", "Compliance reporting", "Backup automation"],;
+          pricing: "$299/month";,;
+          link: "https://ziontechgroup.com/products/datavault-manager";,;
           type:"SAAS Platform";
         }
       ];
     },;
     // Web & Mobile Development Tools;
     {;
-      category:"Web & Mobile Development Tools",;
+      category: "Web & Mobile Development Tools";,;
       products:[;
         {;
-          name:"AppBuilder Pro",,
-  description:"Low-code mobile app development platform for creating native and cross-platform applications.",;
-          features:["Visual app builder", "Cross-platform support", "Template library", "API integration", "App store deployment"],;
-          pricing:"$129/month",;
-          link:"https://ziontechgroup.com/products/appbuilder-pro",;
+          name: "AppBuilder Pro";,,
+  description: "Low-code mobile app development platform for creating native and cross-platform applications.";,;
+          features: ["Visual app builder";, "Cross-platform support", "Template library", "API integration", "App store deployment"],;
+          pricing: "$129/month";,;
+          link: "https://ziontechgroup.com/products/appbuilder-pro";,;
           type:"SAAS Development Tool";
         },;
         {;
-          name:"WebFlow Accelerator",,
-  description:"Rapid web application development platform with pre-built components and templates.",;
-          features:["Component library", "Template marketplace", "Drag-and-drop builder", "Responsive design", "SEO optimization"],;
-          pricing:"$89/month",;
-          link:"https://ziontechgroup.com/products/webflow-accelerator",;
+          name: "WebFlow Accelerator";,,
+  description: "Rapid web application development platform with pre-built components and templates.";,;
+          features: ["Component library";, "Template marketplace", "Drag-and-drop builder", "Responsive design", "SEO optimization"],;
+          pricing: "$89/month";,;
+          link: "https://ziontechgroup.com/products/webflow-accelerator";,;
           type:"SAAS Development Tool";
         },;
         {;
-          name:"API Gateway Pro",,
-  description:"Enterprise API management platform with security, monitoring, and developer portal features.",;
-          features:["API security", "Rate limiting", "Analytics dashboard", "Developer portal", "Documentation tools"],;
-          pricing:"$159/month",;
-          link:"https://ziontechgroup.com/products/api-gateway",;
+          name: "API Gateway Pro";,,
+  description: "Enterprise API management platform with security;, monitoring, and developer portal features.",;
+          features: ["API security";, "Rate limiting", "Analytics dashboard", "Developer portal", "Documentation tools"],;
+          pricing: "$159/month";,;
+          link: "https://ziontechgroup.com/products/api-gateway";,;
           type:"SAAS Platform";
         }
       ];
     },;
     // Security & Compliance Tools;
     {;
-      category:"Security & Compliance Tools",;
+      category: "Security & Compliance Tools";,;
       products:[;
         {;
-          name:"SecureScan Pro",,
-  description:"Automated security scanning and vulnerability assessment platform for applications and infrastructure.",;
-          features:["Automated scanning", "Vulnerability database", "Compliance reporting", "Remediation guidance", "Integration APIs"],;
-          pricing:"$199/month",;
-          link:"https://ziontechgroup.com/products/securescan-pro",;
+          name: "SecureScan Pro";,,
+  description: "Automated security scanning and vulnerability assessment platform for applications and infrastructure.";,;
+          features: ["Automated scanning";, "Vulnerability database", "Compliance reporting", "Remediation guidance", "Integration APIs"],;
+          pricing: "$199/month";,;
+          link: "https://ziontechgroup.com/products/securescan-pro";,;
           type:"SAAS Security Tool";
         },;
         {;
-          name:"Compliance Manager",,
-  description:"Comprehensive compliance management platform for GDPR, SOC 2, HIPAA, and other standards.",;
-          features:["Compliance tracking", "Audit preparation", "Policy management", "Risk assessment", "Reporting tools"],;
-          pricing:"$299/month",;
-          link:"https://ziontechgroup.com/products/compliance-manager",;
+          name: "Compliance Manager";,,
+  description: "Comprehensive compliance management platform for GDPR;, SOC 2, HIPAA, and other standards.",;
+          features: ["Compliance tracking";, "Audit preparation", "Policy management", "Risk assessment", "Reporting tools"],;
+          pricing: "$299/month";,;
+          link: "https://ziontechgroup.com/products/compliance-manager";,;
           type:"SAAS Compliance Tool";
         },;
         {;
-          name:"IdentityGuard",,
-  description:"Advanced identity and access management platform with multi-factor authentication and SSO.",;
-          features:["Multi-factor auth", "Single sign-on", "Role-based access", "Audit logging", "Integration APIs"],;
-          pricing:"$179/month",;
-          link:"https://ziontechgroup.com/products/identityguard",;
+          name: "IdentityGuard";,,
+  description: "Advanced identity and access management platform with multi-factor authentication and SSO.";,;
+          features: ["Multi-factor auth";, "Single sign-on", "Role-based access", "Audit logging", "Integration APIs"],;
+          pricing: "$179/month";,;
+          link: "https://ziontechgroup.com/products/identityguard";,;
           type:"SAAS Security Platform";
         }
       ];
     },;
     // Blockchain & Emerging Tech;
     {;
-      category:"Blockchain & Emerging Tech",;
+      category: "Blockchain & Emerging Tech";,;
       products:[;
         {;
-          name:"Blockchain Studio",,
-  description:"Comprehensive blockchain development platform for creating DApps and smart contracts.",;
-          features:["Smart contract builder", "DApp templates", "Blockchain integration", "Testing tools", "Deployment automation"],;
-          pricing:"$399/month",;
-          link:"https://ziontechgroup.com/products/blockchain-studio",;
+          name: "Blockchain Studio";,,
+  description: "Comprehensive blockchain development platform for creating DApps and smart contracts.";,;
+          features: ["Smart contract builder";, "DApp templates", "Blockchain integration", "Testing tools", "Deployment automation"],;
+          pricing: "$399/month";,;
+          link: "https://ziontechgroup.com/products/blockchain-studio";,;
           type:"SAAS Development Platform";
         },;
         {;
-          name:"IoT Platform Pro",,
-  description:"Enterprise IoT platform for managing connected devices and collecting sensor data.",;
-          features:["Device management", "Data collection", "Real-time monitoring", "Analytics dashboard", "Alert system"],;
-          pricing:"$249/month",;
-          link:"https://ziontechgroup.com/products/iot-platform",;
+          name: "IoT Platform Pro";,,
+  description: "Enterprise IoT platform for managing connected devices and collecting sensor data.";,;
+          features: ["Device management";, "Data collection", "Real-time monitoring", "Analytics dashboard", "Alert system"],;
+          pricing: "$249/month";,;
+          link: "https://ziontechgroup.com/products/iot-platform";,;
           type:"SAAS IoT Platform";
         },;
         {;
-          name:"AR/VR Creator",,
-  description:"Platform for building immersive augmented and virtual reality experiences.",;
-          features:["3D model library", "Interactive builder", "Multi-platform support", "Performance optimization", "Analytics tools"],;
-          pricing:"$299/month",;
-          link:"https://ziontechgroup.com/products/ar-vr-creator",;
+          name: "AR/VR Creator";,,
+  description: "Platform for building immersive augmented and virtual reality experiences.";,;
+          features: ["3D model library";, "Interactive builder", "Multi-platform support", "Performance optimization", "Analytics tools"],;
+          pricing: "$299/month";,;
+          link: "https://ziontechgroup.com/products/ar-vr-creator";,;
           type:"SAAS Development Tool";
         }
       ];
     },;
     // Business & Productivity Tools;
     {;
-      category:"Business & Productivity Tools",;
+      category: "Business & Productivity Tools";,;
       products:[;
         {;
-          name:"ProjectFlow Manager",,
-  description:"Advanced project management platform with AI-powered insights and team collaboration features.",;
-          features:["Task management", "Team collaboration", "AI insights", "Resource planning", "Progress tracking"],;
-          pricing:"$79/month",;
-          link:"https://ziontechgroup.com/products/projectflow-manager",;
+          name: "ProjectFlow Manager";,,
+  description: "Advanced project management platform with AI-powered insights and team collaboration features.";,;
+          features: ["Task management";, "Team collaboration", "AI insights", "Resource planning", "Progress tracking"],;
+          pricing: "$79/month";,;
+          link: "https://ziontechgroup.com/products/projectflow-manager";,;
           type:"SAAS Project Management";
         },;
         {;
-          name:"Customer360 CRM",,
-  description:"Comprehensive customer relationship management platform with AI-powered analytics.",;
-          features:["Contact management", "Sales tracking", "Marketing automation", "AI insights", "Integration APIs"],;
-          pricing:"$149/month",;
-          link:"https://ziontechgroup.com/products/customer360-crm",;
+          name: "Customer360 CRM";,,
+  description: "Comprehensive customer relationship management platform with AI-powered analytics.";,;
+          features: ["Contact management";, "Sales tracking", "Marketing automation", "AI insights", "Integration APIs"],;
+          pricing: "$149/month";,;
+          link: "https://ziontechgroup.com/products/customer360-crm";,;
           type:"SAAS CRM Platform";
         },;
         {;
-          name:"Workflow Automation Hub",,
-  description:"No-code workflow automation platform for business process optimization.",;
-          features:["Visual workflow builder", "Integration connectors", "Automation templates", "Analytics dashboard", "Custom triggers"],;
-          pricing:"$119/month",;
-          link:"https://ziontechgroup.com/products/workflow-automation",;
+          name: "Workflow Automation Hub";,,
+  description: "No-code workflow automation platform for business process optimization.";,;
+          features: ["Visual workflow builder";, "Integration connectors", "Automation templates", "Analytics dashboard", "Custom triggers"],;
+          pricing: "$119/month";,;
+          link: "https://ziontechgroup.com/products/workflow-automation";,;
           type:"SAAS Automation Tool";
         }
       ];
     }
-      category:"Cloud & Infrastructure Solutions",;"
-          name:"CloudCost Optimizer",;""
-          description:"Intelligent cloud cost management and optimization platform for multi-cloud environments.",;"]"
-          features:["Cost tracking", "Resource optimization", "Budget alerts", "Multi-cloud support", "ROI analysis"],;""
-          pricing:"$149/month",;""
-          link:"https://ziontechgroup.com/products/cloudcost-optimizer",;""
-          name:"DevOps Pipeline Manager",;""
-          description:"Comprehensive CI/CD pipeline management platform with automated testing and deployment.",;""
-          features:["Pipeline automation", "Git integration", "Testing automation", "Deployment tracking", "Performance metrics"],;""
-          pricing:"$179/month",;""
-          link:"https://ziontechgroup.com/products/devops-pipeline",;""
-          name:"InfraGuard Security",;""
-          description:"Cloud infrastructure security monitoring and threat detection platform.",;""
-          features:["Real-time monitoring", "Threat detection", "Compliance reporting", "Security scoring", "Incident response"],;""
-          pricing:"$249/month",;""
-          link:"https://ziontechgroup.com/products/infraguard",;""
+      category: "Cloud & Infrastructure Solutions";,;"
+          name: "CloudCost Optimizer";,;""
+          description: "Intelligent cloud cost management and optimization platform for multi-cloud environments.";,;"]"
+          features: ["Cost tracking";, "Resource optimization", "Budget alerts", "Multi-cloud support", "ROI analysis"],;""
+          pricing: "$149/month";,;""
+          link: "https://ziontechgroup.com/products/cloudcost-optimizer";,;""
+          name: "DevOps Pipeline Manager";,;""
+          description: "Comprehensive CI/CD pipeline management platform with automated testing and deployment.";,;""
+          features: ["Pipeline automation";, "Git integration", "Testing automation", "Deployment tracking", "Performance metrics"],;""
+          pricing: "$179/month";,;""
+          link: "https://ziontechgroup.com/products/devops-pipeline";,;""
+          name: "InfraGuard Security";,;""
+          description: "Cloud infrastructure security monitoring and threat detection platform.";,;""
+          features: ["Real-time monitoring";, "Threat detection", "Compliance reporting", "Security scoring", "Incident response"],;""
+          pricing: "$249/month";,;""
+          link: "https://ziontechgroup.com/products/infraguard";,;""
           type:"SAAS Security";"
     // Data & Analytics Products;
-      category:"Data & Analytics Products",;"
-          name:"DataFlow Pipeline",;""
-          description:"Enterprise data pipeline orchestration platform for ETL processes and real-time streaming.",;"]"
-          features:["Visual pipeline builder", "Real-time processing", "Data quality checks", "Scalable architecture", "Monitoring dashboard"],;""
-          pricing:"$399/month",;""
-          link:"https://ziontechgroup.com/products/dataflow-pipeline",;""
-          name:"InsightHub BI",;""
-          description:"Business intelligence platform with interactive dashboards and advanced analytics capabilities.",;""
-          features:["Interactive dashboards", "Data visualization", "Report automation", "KPI tracking", "Mobile access"],;""
-          link:"https://ziontechgroup.com/products/insighthub-bi",;""
+      category: "Data & Analytics Products";,;"
+          name: "DataFlow Pipeline";,;""
+          description: "Enterprise data pipeline orchestration platform for ETL processes and real-time streaming.";,;"]"
+          features: ["Visual pipeline builder";, "Real-time processing", "Data quality checks", "Scalable architecture", "Monitoring dashboard"],;""
+          pricing: "$399/month";,;""
+          link: "https://ziontechgroup.com/products/dataflow-pipeline";,;""
+          name: "InsightHub BI";,;""
+          description: "Business intelligence platform with interactive dashboards and advanced analytics capabilities.";,;""
+          features: ["Interactive dashboards";, "Data visualization", "Report automation", "KPI tracking", "Mobile access"],;""
+          link: "https://ziontechgroup.com/products/insighthub-bi";,;""
           type:"SAAS BI Tool";"
-          name:"DataVault Manager",;""
-          description:"Secure data warehouse management platform with advanced security and compliance features.",;""
-          features:["Data encryption", "Access controls", "Audit logging", "Compliance reporting", "Backup automation"],;""
-          link:"https://ziontechgroup.com/products/datavault-manager",;""
+          name: "DataVault Manager";,;""
+          description: "Secure data warehouse management platform with advanced security and compliance features.";,;""
+          features: ["Data encryption";, "Access controls", "Audit logging", "Compliance reporting", "Backup automation"],;""
+          link: "https://ziontechgroup.com/products/datavault-manager";,;""
     // Web & Mobile Development Tools;
-      category:"Web & Mobile Development Tools",;"
-          name:"AppBuilder Pro",;""
-          description:"Low-code mobile app development platform for creating native and cross-platform applications.",;"]"
-          features:["Visual app builder", "Cross-platform support", "Template library", "API integration", "App store deployment"],;""
-          pricing:"$129/month",;""
-          link:"https://ziontechgroup.com/products/appbuilder-pro",;""
+      category: "Web & Mobile Development Tools";,;"
+          name: "AppBuilder Pro";,;""
+          description: "Low-code mobile app development platform for creating native and cross-platform applications.";,;"]"
+          features: ["Visual app builder";, "Cross-platform support", "Template library", "API integration", "App store deployment"],;""
+          pricing: "$129/month";,;""
+          link: "https://ziontechgroup.com/products/appbuilder-pro";,;""
           type:"SAAS Development Tool";"
-          name:"WebFlow Accelerator",;""
-          description:"Rapid web application development platform with pre-built components and templates.",;""
-          features:["Component library", "Template marketplace", "Drag-and-drop builder", "Responsive design", "SEO optimization"],;""
-          pricing:"$89/month",;""
-          link:"https://ziontechgroup.com/products/webflow-accelerator",;""
-          name:"API Gateway Pro",;""
-          description:"Enterprise API management platform with security, monitoring, and developer portal features.",;""
-          features:["API security", "Rate limiting", "Analytics dashboard", "Developer portal", "Documentation tools"],;""
-          pricing:"$159/month",;""
-          link:"https://ziontechgroup.com/products/api-gateway",;""
+          name: "WebFlow Accelerator";,;""
+          description: "Rapid web application development platform with pre-built components and templates.";,;""
+          features: ["Component library";, "Template marketplace", "Drag-and-drop builder", "Responsive design", "SEO optimization"],;""
+          pricing: "$89/month";,;""
+          link: "https://ziontechgroup.com/products/webflow-accelerator";,;""
+          name: "API Gateway Pro";,;""
+          description: "Enterprise API management platform with security;, monitoring, and developer portal features.",;""
+          features: ["API security";, "Rate limiting", "Analytics dashboard", "Developer portal", "Documentation tools"],;""
+          pricing: "$159/month";,;""
+          link: "https://ziontechgroup.com/products/api-gateway";,;""
     // Security & Compliance Tools;
-      category:"Security & Compliance Tools",;"
-          name:"SecureScan Pro",;""
-          description:"Automated security scanning and vulnerability assessment platform for applications and infrastructure.",;"]"
-          features:["Automated scanning", "Vulnerability database", "Compliance reporting", "Remediation guidance", "Integration APIs"],;""
-          link:"https://ziontechgroup.com/products/securescan-pro",;""
+      category: "Security & Compliance Tools";,;"
+          name: "SecureScan Pro";,;""
+          description: "Automated security scanning and vulnerability assessment platform for applications and infrastructure.";,;"]"
+          features: ["Automated scanning";, "Vulnerability database", "Compliance reporting", "Remediation guidance", "Integration APIs"],;""
+          link: "https://ziontechgroup.com/products/securescan-pro";,;""
           type:"SAAS Security Tool";"
-          name:"Compliance Manager",;""
-          description:"Comprehensive compliance management platform for GDPR, SOC 2, HIPAA, and other standards.",;""
-          features:["Compliance tracking", "Audit preparation", "Policy management", "Risk assessment", "Reporting tools"],;""
-          link:"https://ziontechgroup.com/products/compliance-manager",;""
+          name: "Compliance Manager";,;""
+          description: "Comprehensive compliance management platform for GDPR;, SOC 2, HIPAA, and other standards.",;""
+          features: ["Compliance tracking";, "Audit preparation", "Policy management", "Risk assessment", "Reporting tools"],;""
+          link: "https://ziontechgroup.com/products/compliance-manager";,;""
           type:"SAAS Compliance Tool";"
-          name:"IdentityGuard",;""
-          description:"Advanced identity and access management platform with multi-factor authentication and SSO.",;""
-          features:["Multi-factor auth", "Single sign-on", "Role-based access", "Audit logging", "Integration APIs"],;""
-          link:"https://ziontechgroup.com/products/identityguard",;""
+          name: "IdentityGuard";,;""
+          description: "Advanced identity and access management platform with multi-factor authentication and SSO.";,;""
+          features: ["Multi-factor auth";, "Single sign-on", "Role-based access", "Audit logging", "Integration APIs"],;""
+          link: "https://ziontechgroup.com/products/identityguard";,;""
           type:"SAAS Security Platform";"
     // Blockchain & Emerging Tech;
-      category:"Blockchain & Emerging Tech",;"
-          name:"Blockchain Studio",;""
-          description:"Comprehensive blockchain development platform for creating DApps and smart contracts.",;"]"
-          features:["Smart contract builder", "DApp templates", "Blockchain integration", "Testing tools", "Deployment automation"],;""
-          link:"https://ziontechgroup.com/products/blockchain-studio",;""
+      category: "Blockchain & Emerging Tech";,;"
+          name: "Blockchain Studio";,;""
+          description: "Comprehensive blockchain development platform for creating DApps and smart contracts.";,;"]"
+          features: ["Smart contract builder";, "DApp templates", "Blockchain integration", "Testing tools", "Deployment automation"],;""
+          link: "https://ziontechgroup.com/products/blockchain-studio";,;""
           type:"SAAS Development Platform";"
-          name:"IoT Platform Pro",;""
-          description:"Enterprise IoT platform for managing connected devices and collecting sensor data.",;""
-          features:["Device management", "Data collection", "Real-time monitoring", "Analytics dashboard", "Alert system"],;""
-          link:"https://ziontechgroup.com/products/iot-platform",;""
+          name: "IoT Platform Pro";,;""
+          description: "Enterprise IoT platform for managing connected devices and collecting sensor data.";,;""
+          features: ["Device management";, "Data collection", "Real-time monitoring", "Analytics dashboard", "Alert system"],;""
+          link: "https://ziontechgroup.com/products/iot-platform";,;""
           type:"SAAS IoT Platform";"
-          name:"AR/VR Creator",;""
-          description:"Platform for building immersive augmented and virtual reality experiences.",;""
-          features:["3D model library", "Interactive builder", "Multi-platform support", "Performance optimization", "Analytics tools"],;""
-          link:"https://ziontechgroup.com/products/ar-vr-creator",;""
+          name: "AR/VR Creator";,;""
+          description: "Platform for building immersive augmented and virtual reality experiences.";,;""
+          features: ["3D model library";, "Interactive builder", "Multi-platform support", "Performance optimization", "Analytics tools"],;""
+          link: "https://ziontechgroup.com/products/ar-vr-creator";,;""
     // Business & Productivity Tools;
-      category:"Business & Productivity Tools",;"
-          name:"ProjectFlow Manager",;""
-          description:"Advanced project management platform with AI-powered insights and team collaboration features.",;"]"
-          features:["Task management", "Team collaboration", "AI insights", "Resource planning", "Progress tracking"],;""
-          pricing:"$79/month",;""
-          link:"https://ziontechgroup.com/products/projectflow-manager",;""
+      category: "Business & Productivity Tools";,;"
+          name: "ProjectFlow Manager";,;""
+          description: "Advanced project management platform with AI-powered insights and team collaboration features.";,;"]"
+          features: ["Task management";, "Team collaboration", "AI insights", "Resource planning", "Progress tracking"],;""
+          pricing: "$79/month";,;""
+          link: "https://ziontechgroup.com/products/projectflow-manager";,;""
           type:"SAAS Project Management";"
-          name:"Customer360 CRM",;""
-          description:"Comprehensive customer relationship management platform with AI-powered analytics.",;""
-          features:["Contact management", "Sales tracking", "Marketing automation", "AI insights", "Integration APIs"],;""
-          link:"https://ziontechgroup.com/products/customer360-crm",;""
+          name: "Customer360 CRM";,;""
+          description: "Comprehensive customer relationship management platform with AI-powered analytics.";,;""
+          features: ["Contact management";, "Sales tracking", "Marketing automation", "AI insights", "Integration APIs"],;""
+          link: "https://ziontechgroup.com/products/customer360-crm";,;""
           type:"SAAS CRM Platform";"
-          name:"Workflow Automation Hub",;""
-          description:"No-code workflow automation platform for business process optimization.",;""
-          features:["Visual workflow builder", "Integration connectors", "Automation templates", "Analytics dashboard", "Custom triggers"],;""
-          pricing:"$119/month",;""
-          link:"https://ziontechgroup.com/products/workflow-automation",;""
+          name: "Workflow Automation Hub";,;""
+          description: "No-code workflow automation platform for business process optimization.";,;""
+          features: ["Visual workflow builder";, "Integration connectors", "Automation templates", "Analytics dashboard", "Custom triggers"],;""
+          pricing: "$119/month";,;""
+          link: "https://ziontechgroup.com/products/workflow-automation";,;""
           type:"SAAS Automation Tool";"
 pr-12325
   ],;

@@ -74,7 +74,7 @@ pr-12243
           </Link>;
       </div>;value={filters && filters.status || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, status: e && e.target.value || undefined}
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined;}
 }))GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
 
 const categories: GrantCategory[] = [;
@@ -108,22 +108,17 @@ const statuses: GrantStatus[] = [;
   'Approved',;
   'Rejected',;
 import { useEffect, useState  } from 'react';
-import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useEffect, useState} from 'react';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type {
   GrantApplication,
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
 origin/cursor/automate-test-improve-and-merge-code-2533
-import type {
   GrantApplication
   GrantCategory
   GrantStatus;
@@ -168,16 +163,16 @@ export default function GrantsPage() {export default function GrantsPage() {cons
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];,
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 pr-12243
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
 
-export default function GrantsPage() {const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({})useEffect(() => {}
-const params = new URLSearchParams()if (filters.sector) params.set('sector', filters.sector)if (filters.status) params.set('status', filters.status)if (filters.region) params.set('region', filters.region)if (filters.program) params.set('program', filters.program)fetch(`/api/grants?${params.toString()}`)const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])const [filters, setFilters]  =;}
+export default function GrantsPage() {const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];,export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({})useEffect(() => {}
+const params = new URLSearchParams()if (filters.sector) params.set('sector', filters.sector)if (filters.status) params.set('status', filters.status)if (filters.region) params.set('region', filters.region)if (filters.program) params.set('program', filters.program)fetch(`/api/grants?${params.toString()}`)const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];,export default function GrantsPage() {const [items, setItems] = useState<GrantApplication[] />([])const [filters, setFilters]  =;}
   useState<{ sector?: string, status?: string, region?: string, program?: string }>({};
   useEffect(() => ;
   const params = new URLSearchParams()if (filters && filters.sector) params && params.set('sector', filters && filters.sector)if (filters && filters.status) params && params.set('status', filters && filters.status)if (filters && filters.region) params && params.set('region', filters && filters.region)if (filters && filters.program) params && params.set('program', filters && filters.program)fetch(`/api/grants?${params && params.toString()}`).then(r => r && r.json()).then(d => setItems(d && d.items || [])).catch(() => setItems([]))}, [filters];
@@ -202,9 +197,9 @@ const params = new URLSearchParams()if (filters.sector) params.set('sector', fil
     if (filters.region) params.set('region', filters.region);}
     if (filters.program) params.set('program', filters.program);}
     fetch(`/api/grants?${params.toString()}`)
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,;
 
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];,;
 
 export default function GrantsPage() {;
 
@@ -263,7 +258,7 @@ className='border rounded p-2'
           value={filters.sector |'}
 }
           onChange={e = />}
-            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+            setFilters(f => ({ ...f, sector: e.target.value |undefined ;}))
           }
         >
           <option value='' />All Sectors</option>
@@ -278,7 +273,7 @@ className='border rounded p-2'
           value={filters.status |'}
 }
           onChange={e = />}
-            setFilters(f => ({ ...f, status: e.target.value |undefined}
+            setFilters(f => ({ ...f, status: e.target.value |undefined;}
 }))
 export default /**
  * GrantsPage - Function description;
@@ -334,15 +329,15 @@ pr-12243
           placeholder='Region'
           value={filters.region |''}
           onChange={e =>
-            setFilters(f => ({ ...f, region: e.target.value |undefined }))
+            setFilters(f => ({ ...f, region: e.target.value |undefined ;}))
 
           value={filters && filters.region || ''}
           onChange={e =>;
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined ;}));
 
           value={filters.region |''}
           onChange={e =>
-            setFilters(f => ({ ...f, region: e.target.value |undefined }))
+            setFilters(f => ({ ...f, region: e.target.value |undefined ;}))
 pr-12243
           }
         />
@@ -354,7 +349,7 @@ pr-12243
           className='border rounded p - 2';
           value={filters.sector || ''}
           on_change={e =>;
-            set_filters (function => ({ ...f, sector: e.target.value || undefined }));
+            set_filters (function => ({ ...f, sector: e.target.value || undefined ;}));
 pr-12243
           }
       <div className='grid md:grid-cols-4 gap-4 mb-6' />;
@@ -362,7 +357,7 @@ pr-12243
           className='border rounded p-2';
           value={filters.sector |''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, sector: e.target.value |undefined })
+            setFilters(f => ({ ...f, sector: e.target.value |undefined ;})
 }
         >;
           <option value='' />All Sectors</option>;
@@ -375,7 +370,7 @@ pr-12243
           className='border rounded p-2';
           value={filters.status |''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, status: e.target.value |undefined}
+            setFilters(f => ({ ...f, status: e.target.value |undefined;}
 }))export default /**;
  * GrantsPage - Function description;
  */;
@@ -393,7 +388,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           </Link>;
       </div>;value={filters && filters.status || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, status: e && e.target.value || undefined })
+            setFilters(f => ({ ...f, status: e && e.target.value || undefined ;})
 }
         >;
           <option value='' />All Stages</option>;
@@ -407,10 +402,10 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           placeholder='Region';
           value={filters && filters.region || ''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined }))value={filters.region |'}
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined ;}))value={filters.region |'}
 }
           onChange={e =>;}
-            setFilters(f => ({ ...f, region: e.target.value |undefined })
+            setFilters(f => ({ ...f, region: e.target.value |undefined ;})
 }
         />;
         <select;
@@ -430,7 +425,7 @@ className='border rounded p-2'
 
           value={filters && filters.region || ''}
           onChange={e = />;}
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined}
+            setFilters(f => ({ ...f, region: e && e.target.value || undefined;}
 }));
 
           }
@@ -443,9 +438,9 @@ className='border rounded p-2'
           className='border rounded p - 2';
           value={filters.sector || ''}
           on_change={e = />;}
-            set_filters (function => ({ ...f, sector: e.target.value || undefined })
+            set_filters (function => ({ ...f, sector: e.target.value || undefined ;})
 }
-            set_filters (function => ({ ...f, sector: e.target.value || undefined}
+            set_filters (function => ({ ...f, sector: e.target.value || undefined;}
 }));
           }
         >;
@@ -478,7 +473,7 @@ className='border rounded p-2'
           className='border rounded p - 2';
           value={filters.program || ''}
           on_change={e = />;}
-            set_filters (function => ({ ...f, program: e.target.value || undefined })
+            set_filters (function => ({ ...f, program: e.target.value || undefined ;})
 }
         >;
           <option value='' />All Programs</option>;
@@ -505,7 +500,7 @@ className='border rounded p-2'
 pr-12243
           value={filters.program |''}
           onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
+            setFilters(f => ({ ...f, program: e.target.value |undefined ;}))
           }
         >
           <option value=''>All Programs</option>
@@ -544,7 +539,7 @@ className='border rounded p-2'
 }
           value={filters && filters.program || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, program: e.target.value |undefined })
+            setFilters(f => ({ ...f, program: e.target.value |undefined ;})
 }
         >;
           <option value='' />All Programs</option>;
@@ -600,7 +595,7 @@ pr-12243
               <div className='flex gap - 2 items - center' />;
                 {g.program === 'incubator' && (value={filters && filters.program || ''}
           onChange={e =>;}
-            setFilters(f => ({ ...f, program: e && e.target.value || undefined })
+            setFilters(f => ({ ...f, program: e && e.target.value || undefined ;})
 }
         >;
           <option value='' />All Programs</option>;
@@ -671,7 +666,7 @@ pr-12243
               {g && g.proposalSummary}
             </p>;
             <div className='mt-3 text-sm text-gray-600 dark:text-gray-400' />;
-              Budget: {g && g.budgetAmount} {g && g.budgetCurrenc}
+              Budget: {g && g.budgetAmount;} {g && g.budgetCurrenc}
 }
             </div>;
           </div>;
@@ -721,7 +716,7 @@ pr-12243
               {g.proposal_summary}
             </p>;
             <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400' />;
-              Budget: {g.budget_amount} {g.budget_currenc}
+              Budget: {g.budget_amount;} {g.budget_currenc}
 }
             </div>;
           </div>))}

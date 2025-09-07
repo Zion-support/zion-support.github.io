@@ -1,23 +1,23 @@
 
-import React from "react",;""
+import React from "react";""
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;"
+import { Button } from "@/components/ui/button";"
 ;"
-import { HireNowCTA } from "./HireNowCTA",;""
-import { ProfileHero } from "./ProfileHero",;""
-import { ProfileSkills } from "./ProfileSkills",;""
-import { ProfileExperience } from "./ProfileExperience",;""
-import { ProfileProjects } from "./ProfileProjects",;""
-import { ProfileAvailability } from "./ProfileAvailability",;""
-import { ProfileContact } from "./ProfileContact",;""
-import { ProfileRatings } from "./ProfileRatings",;""
-import { TalentProfile as TalentProfileType } from "@/types/talent",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { Availability } from "@/types/profile",;"
+import { HireNowCTA } from "./HireNowCTA";""
+import { ProfileHero } from "./ProfileHero";""
+import { ProfileSkills } from "./ProfileSkills";""
+import { ProfileExperience } from "./ProfileExperience";""
+import { ProfileProjects } from "./ProfileProjects";""
+import { ProfileAvailability } from "./ProfileAvailability";""
+import { ProfileContact } from "./ProfileContact";""
+import { ProfileRatings } from "./ProfileRatings";""
+import { TalentProfile as TalentProfileType } from "@/types/talent";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Availability } from "@/types/profile";"
 ;
 interface TalentProfileProps {;
-  profile:TalentProfileType,;
-  onRequestHire:() => void,;
+  profile: TalentProfileType;,;
+  onRequestHire: () => void;,;
   onMessageTalent?:() => void;
 }
 export function TalentProfile({ ;
@@ -30,20 +30,20 @@ export function TalentProfile({ ;
   const availability: Availability = {;,"
   status:profile.availability_type === 'full_time' ? 'available' :;
             profile.availability_type === 'part_time' ? 'limited' :'unavailable',;
-    message:`${profile.professional_title} with ${profile.years_experience} years of experience`;
+    message: `${profile.professional_title;} with ${profile.years_experience} years of experience`;
   },;
   // Create proper skills array for ProfileSkills component;
   const skillsArray = profile.skills?.map(skill => ({;
-    name:skill,;
+    name: skill;,;
     level:3 // Default level since we don't have this data;')
   })) || [],;
   // Create proper projects array for ProfileProjects component;
   const projectsArray = profile.key_projects?.map((proj, i) => ({;`;
-    id:`project-${i}`,;
-    title:proj.title,,
-  description:proj.description,;
-    title:proj.title,;
-    description:proj.description,;)
+    id: `project-${i;}`,;
+    title: proj.title;,,
+  description: proj.description;,;
+    title: proj.title;,;
+    description: proj.description;,;)
 pr-12325
     date:new Date().toISOString() // Default date since we don't have this data;
   return (;
@@ -143,7 +143,7 @@ level: 3 //Default level since we don't have this data ;
 id: `project-$ {;
   i ;
 }`;
-title: proj.title,
+title: proj.title;,
   description: proj.description;';
 date: new Date () .toISOString () //Default date since we don't have this data ;
 }) ) || [];

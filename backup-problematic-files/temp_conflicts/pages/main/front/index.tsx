@@ -1,17 +1,17 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react',;
-import { motion, useScroll, useSpring } from 'framer-motion',;
-import { useEffect, useState } from 'react',;
+import Head from 'next/head';
+import Link from 'next/link';
+import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
 ;
 export default function MainFrontIndex() {;
   const { scrollYProgress } = useScroll(),;
-  const progressX = useSpring(scrollYProgress, { stiffness:90, damping:20, mass:0.2 }),;
+  const progressX = useSpring(scrollYProgress, { stiffness: 90;, damping: 20;, mass: 0.2 ;}),;
   const [showToTop, setShowToTop] = useState(false),;
   const [mobileOpen, setMobileOpen] = useState(false),;
   useEffect(() => {;
     const onScroll = () => setShowToTop(window.scrollY > 400),;
-    window.addEventListener('scroll', onScroll, { passive:true } as any),;
+    window.addEventListener('scroll', onScroll, { passive: true ;} as any),;
     onScroll(),;
     return () => window.removeEventListener('scroll', onScroll),;
   }, []),;
@@ -20,14 +20,14 @@ export default function MainFrontIndex() {;
 </div>
       <Head>;
 "
-        <meta property="og:description" content="Explore the features, capabilities, and benefits behind our autonomous cloud automations." />;"
+        <meta property="og: description" content="Explore the features;, capabilities, and benefits behind our autonomous cloud automations." />;"
 </meta>"
         <meta name="twitter:card" content="summary_large_image" />;"
         <meta property="og:type" content="website" />;"
         <meta property="og:image" content="/og-image.png" />;"
 </meta>
       ;"
-      <motion.div style={{ scaleX:progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />;"
+      <motion.div style={{ scaleX: progressX ;}} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />;"
 </motion>"
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">;"
 </div>"
@@ -35,9 +35,9 @@ export default function MainFrontIndex() {;
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />;"
         <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />;"
 </div>)"
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />;"
+        <div className="absolute inset-0 opacity-[0.08] [background: radial-gradient(circle_at_center;,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size: 100%_100%;,3rem_3rem,3rem_3rem] animate-grid" />;"
         <div className="absolute inset-0 opacity-[0.06] hex-grid" />;"
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">;"
+        <div className="absolute inset-0 [mask-image: radial-gradient(ellipse_at_center;,white,transparent_70%)]">;"
           <div className="twinkle-field absolute inset-0" />;"
         </div>;"
         <div className="absolute inset-0 bg-aurora opacity-[0.18]" />;"
@@ -47,7 +47,7 @@ export default function MainFrontIndex() {;
           <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]" />;"
         <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines" />;"
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]" />;"
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />;"
+        <div className="pointer-events-none absolute inset-0 opacity-20 [background: repeating-linear-gradient(0deg;,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image: radial-gradient(ellipse_at_center;,black,transparent_65%)]" />;"
         <div className="absolute inset-0 beams-layer beams-45" />;"
         <div className="absolute inset-0 beams-layer beams--45" />;"
         <div className="pointer-events-none absolute inset-0 beams opacity-[0.06]" />;"
@@ -77,24 +77,24 @@ export default function MainFrontIndex() {;
           <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>;"
         </nav>;
           <motion.div;
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            exit={{ opacity:0 }}"
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}"
             className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur";"
             onClick={() => setMobileOpen(false)}
 </motion>
-              initial={{ y:-20, opacity:0 }}
-              animate={{ y:0, opacity:1 }}
-              transition={{ duration:0.2 }}"
+              initial={{ y: -20;, opacity: 0 ;}}
+              animate={{ y: 0;, opacity: 1 ;}}
+              transition={{ duration: 0.2 ;}}"
               className="mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl";"
               onClick={(e) => e.stopPropagation()}
               <div className="mb-4 flex items-center justify-between">;"
                 <div className="text-lg font-semibold">Navigate</div>;""
                 <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-xs">Close</button>;"
               <div className="grid grid-cols-2 gap-3 text-sm">;"
-                    <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>;"
+                    <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string;}</a>;"
                     <Link key={label as string} href={href as string}>;
-                      <a onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>;"
+                      <a onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string;}</a>;"
               <div className="mt-4 flex justify-end">;"
                 <Link href="/automation"><a onClick={() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a>;"
               </div>;
@@ -103,9 +103,9 @@ export default function MainFrontIndex() {;
       </header>;"
       <div role="main" className="relative z-10">;"
         <motion.section;
-          initial={{ opacity:0, y:20 }}
-          animate={{ opacity:1, y:0 }}
-          transition={{ duration:0.6 }}"
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6 ;}}"
           className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24";"
         >;
           <div className="text-center">;"
@@ -120,7 +120,7 @@ export default function MainFrontIndex() {;
               <a href="#feature-map" className="hover:text-white">Feature Map</a>;"
             </p>;"
             <div className="mt-8 flex flex-wrap justify-center gap-3">;"
-              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a>;""
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover: shadow-[0_0_40px_rgba(34;,211,238,0.6)] transition-shadow">Explore Automations</a>;""
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Cloud Automations</a>;"
             <div className="mx-auto mt-6 max-w-5xl text-left">;"
               <div className="mb-2 text-xs uppercase tracking-wide text-white/60">Cloud Automations (live)</div>;""
@@ -139,17 +139,17 @@ export default function MainFrontIndex() {;
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}"
                     </span>;
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">;"
-                  <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>;"
+                  <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">{label as string;}</a>;"
         </motion.section>;
                  {/* Showcase */}
          <motion.section;"
            id="showcase";"
-           initial={{ opacity:0, y:24 }}
-           whileInView={{ opacity:1, y:0 }}
-           viewport={{ once:true, amount:0.2 }}
-           transition={{ duration:0.5 }}"
+           initial={{ opacity: 0;, y: 24 ;}}
+           whileInView={{ opacity: 1;, y: 0 ;}}
+           viewport={{ once: true;, amount: 0.2 ;}}
+           transition={{ duration: 0.5 ;}}"
            className="mx-auto max-w-7xl px-6 pb-14";"
-           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase:Features, Capabilities, Benefits</h2>;""
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Showcase: Features;, Capabilities, Benefits</h2>;""
            <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p>;""
            <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;"
             <Link href="#features">;"
@@ -317,9 +317,9 @@ export default function MainFrontIndex() {;
                     <Icon className="h-5 w-5 text-cyan-300" />;"
                     <h3 className="text-lg font-semibold">{title}</h3>;"
                   <p className="mt-1 text-sm text-white/75">{desc}</p>;"
-        {/* AUTO-GENERATED:FRONT_ADS_START */}"
+        {/* AUTO-GENERATED: FRONT_ADS_START */;}"
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl">;"
-            <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,2.5rem_2.5rem,2.5rem_2.5rem] animate-grid" />;"
+            <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08] [background: radial-gradient(circle_at_center;,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size: 100%_100%;,2.5rem_2.5rem,2.5rem_2.5rem] animate-grid" />;"
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore Zion Systems</h2>;""
             <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Discover key features, capabilities, and benefits. Each card links to a dedicated page or live hub.</p>;""
             <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;"
@@ -381,7 +381,7 @@ export default function MainFrontIndex() {;
                   <div className="mt-1 text-sm text-white/75">{item.desc}</div>;"
                 <Link key={item.label} href={item.href as string}>;
                   <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;"
-        {/* AUTO:catalog injection for automated advertising */}
+        {/* AUTO: catalog injection for automated advertising */;}
         {/* AUTO:FRONT_INDEX_DIRECTORY_START */;
 <section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">;"
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>;"
@@ -501,7 +501,7 @@ export default function MainFrontIndex() {;
             <div className="mt-6 flex flex-wrap justify-center gap-3">;"
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a>;""
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a>;"
-        {/* AUTO-GENERATED:FRONT_FUTURIZER_START */}
+        {/* AUTO-GENERATED: FRONT_FUTURIZER_START */;}
         <section id="front-futurizer" className="mx-auto max-w-7xl px-6 pb-20">;"
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick portal to the most impactful areas across Zion. Every tile and list item links to a live hub, report, or doc.</p>;""
           <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-3">;"
@@ -578,7 +578,7 @@ export default function MainFrontIndex() {;
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />;"
                     <h3 className="text-base font-semibold">{b.label}</h3>;"
                   <p className="mt-1 text-sm text-white/75">{b.desc}</p>;"
-        {/* AUTO-GENERATED:FRONT_ADS_START */}
+        {/* AUTO-GENERATED: FRONT_ADS_START */;}
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">;"
             <Link href="/.netlify/functions/frontpage-advertiser"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Frontpage Advertiser</div><div className="mt-1 text-sm text-white/75">Refreshes front promos automatically</div></a>;""
             <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts</div></a>;""
@@ -609,7 +609,7 @@ export default function MainFrontIndex() {;
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">;"
                 <div className="text-base font-semibold text-white">{tool.title}</div>;"
         <button;"
-          onClick={() => window.scrollTo({ top:0, behavior:'smooth' })}
+          onClick={() => window.scrollTo({ top: 0;, behavior: 'smooth' ;})}
 </button>
         </button>;
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">;"

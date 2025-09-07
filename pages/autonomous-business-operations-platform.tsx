@@ -103,10 +103,10 @@ import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Bot, Brain, Cpu, Zap, Shield, Globe, 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import {
   Bot, Brain, Cpu, Zap, Shield, Globe,
   Rocket, Target, TrendingUp, Users, CheckCircle,

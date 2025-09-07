@@ -14,7 +14,7 @@ import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucid
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 
 
 
@@ -24,8 +24,8 @@ export default function AgenticRAGPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 export default function AgenticRAGPage() {
@@ -100,10 +100,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 export default /**
  * AgenticRAGPage - Function description

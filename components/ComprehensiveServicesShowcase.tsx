@@ -68,12 +68,10 @@ import {;
   Award,;
   Target,;
 } from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 origin/cursor/automate-test-improve-and-merge-code-2533
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),
@@ -81,7 +79,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   const allServices = null;
   ];
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
+    { id: 'all';, name: 'All Services';, icon: '🚀';, count: allServices.length ;}
     {
       id: 'AI & Machine Learning'
       name: 'AI & ML'
@@ -93,19 +91,19 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       id: 'Healthcare AI'
       name: 'Healthcare'
       icon: '🏥'
-      count: allServices.filter(s => s.category === 'Healthcare AI').length
+      count: allServices.filter(s => s.category === 'Healthcare AI').length;
     }
     {
       id: 'Fintech AI'
       name: 'Fintech'
       icon: '💰'
-      count: allServices.filter(s => s.category === 'Fintech AI').length
+      count: allServices.filter(s => s.category === 'Fintech AI').length;
     }
     {
       id: 'Cybersecurity'
       name: 'Security'
       icon: '🛡️'
-      count: allServices.filter(s => s.category === 'Cybersecurity').length
+      count: allServices.filter(s => s.category === 'Cybersecurity').length;
     }
     {
       id: 'IoT & Smart Cities'
@@ -118,19 +116,19 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       id: 'Blockchain & DeFi'
       name: 'Blockchain'
       icon: '🔗'
-      count: allServices.filter(s => s.category === 'Blockchain & DeFi').length
+      count: allServices.filter(s => s.category === 'Blockchain & DeFi').length;
     }
     {
       id: 'Quantum Computing'
       name: 'Quantum'
       icon: '⚛️'
-      count: allServices.filter(s => s.category === 'Quantum Computing').length
+      count: allServices.filter(s => s.category === 'Quantum Computing').length;
     }
     {
       id: 'Space Technology'
       name: 'Space Tech'
       icon: '🚀'
-      count: allServices.filter(s => s.category === 'Space Technology').length
+      count: allServices.filter(s => s.category === 'Space Technology').length;
     }
     {
       id: 'Autonomous Systems'
@@ -143,37 +141,37 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       id: 'AR/VR & Metaverse'
       name: 'AR/VR'
       icon: '🥽'
-      count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length
+      count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length;
     }
     {
       id: '5G/6G Networks'
       name: '5G/6G'
       icon: '📡'
-      count: allServices.filter(s => s.category === '5G/6G Networks').length
+      count: allServices.filter(s => s.category === '5G/6G Networks').length;
     }
     {
       id: 'Biotechnology AI'
       name: 'Biotech'
       icon: '🧬'
-      count: allServices.filter(s => s.category === 'Biotechnology AI').length
+      count: allServices.filter(s => s.category === 'Biotechnology AI').length;
     }
     {
       id: 'Renewable Energy'
       name: 'Energy'
       icon: '⚡'
-      count: allServices.filter(s => s.category === 'Renewable Energy').length
+      count: allServices.filter(s => s.category === 'Renewable Energy').length;
     }
     {
       id: 'Edge Computing'
       name: 'Edge'
       icon: '🌐'
-      count: allServices.filter(s => s.category === 'Edge Computing').length
+      count: allServices.filter(s => s.category === 'Edge Computing').length;
     }
     {
       id: 'Quantum Internet'
       name: 'Q-Internet'
       icon: '🌍'
-      count: allServices.filter(s => s.category === 'Quantum Internet').length
+      count: allServices.filter(s => s.category === 'Quantum Internet').length;
     }
     {
       id: 'Neuromorphic Computing'
@@ -181,22 +179,22 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       icon: '🧠'
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
         .length
-    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length }
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length }
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length }
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length }
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length }
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length }
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length }
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length }
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length }
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+    },  ];    { id: 'AI & Machine Learning';, name: 'AI & ML';, icon: '🧠';, count: allServices.filter(s => s.category === 'AI & Machine Learning').length ;}
+    { id: 'Healthcare AI';, name: 'Healthcare';, icon: '🏥';, count: allServices.filter(s => s.category === 'Healthcare AI').length ;}
+    { id: 'Fintech AI';, name: 'Fintech';, icon: '💰';, count: allServices.filter(s => s.category === 'Fintech AI').length ;}
+    { id: 'Cybersecurity';, name: 'Security';, icon: '🛡️';, count: allServices.filter(s => s.category === 'Cybersecurity').length ;}
+    { id: 'IoT & Smart Cities';, name: 'Smart Cities';, icon: '🏙️';, count: allServices.filter(s => s.category === 'IoT & Smart Cities').length ;}
+    { id: 'Blockchain & DeFi';, name: 'Blockchain';, icon: '🔗';, count: allServices.filter(s => s.category === 'Blockchain & DeFi').length ;}
+    { id: 'Quantum Computing';, name: 'Quantum';, icon: '⚛️';, count: allServices.filter(s => s.category === 'Quantum Computing').length ;}
+    { id: 'Space Technology';, name: 'Space Tech';, icon: '🚀';, count: allServices.filter(s => s.category === 'Space Technology').length ;}
+    { id: 'Autonomous Systems';, name: 'Autonomous';, icon: '🤖';, count: allServices.filter(s => s.category === 'Autonomous Systems').length ;}
+    { id: 'AR/VR & Metaverse';, name: 'AR/VR';, icon: '🥽';, count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length ;}
+    { id: '5G/6G Networks';, name: '5G/6G';, icon: '📡';, count: allServices.filter(s => s.category === '5G/6G Networks').length ;}
+    { id: 'Biotechnology AI';, name: 'Biotech';, icon: '🧬';, count: allServices.filter(s => s.category === 'Biotechnology AI').length ;}
+    { id: 'Renewable Energy';, name: 'Energy';, icon: '⚡';, count: allServices.filter(s => s.category === 'Renewable Energy').length ;}
+    { id: 'Edge Computing';, name: 'Edge';, icon: '🌐';, count: allServices.filter(s => s.category === 'Edge Computing').length ;}
+    { id: 'Quantum Internet';, name: 'Q-Internet';, icon: '🌍';, count: allServices.filter(s => s.category === 'Quantum Internet').length ;}
+    { id: 'Neuromorphic Computing';, name: 'Neuro';, icon: '🧠';, count: allServices.filter(s => s.category === 'Neuromorphic Computing').length ;}
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -257,10 +255,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
         {/* Header */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -435,10 +433,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Search and Filters */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
 
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -498,7 +496,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-lg transition-all ${
 viewMode === 'list'
                       ? 'bg-blue-600 text-white'
-                      : 'text-white/60 hover:text-white'
+                      : 'text-white/60 hover: text-white';
                   }`}
                 >
                   <List className='w-5 h-5' />
@@ -517,10 +515,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Category Filter */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
 className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
@@ -557,10 +555,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  exit={{ opacity: 0;, y: -30 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
         {/* Services Display */}
@@ -582,10 +580,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filtered_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  exit={{ opacity: 0, coordinate_y: -30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  exit={{ opacity: 0;, coordinate_y: -30 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -736,10 +734,10 @@ target='_blank'
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, x: -30 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
+                  exit={{ opacity: 0;, x: 30 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
                       )}
@@ -966,8 +964,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
 className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -995,10 +993,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* Contact CTA */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}}
 
 className='mt-20 text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533

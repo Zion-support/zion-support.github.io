@@ -32,10 +32,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
 
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [
 
 
@@ -43,10 +43,10 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [
   {
     id: "project-1",

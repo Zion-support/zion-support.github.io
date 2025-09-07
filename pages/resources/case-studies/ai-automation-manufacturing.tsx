@@ -275,9 +275,9 @@ export default function ResourceCaseStudyPage(req, res) {
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
+import React from 'react',;
+import Head from 'next / head',;
+import Link from 'next / link',;
 export default /**
  * ResourceCaseStudyPage - Function description
  */

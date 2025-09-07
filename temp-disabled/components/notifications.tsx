@@ -73,7 +73,7 @@ import dynamic from 'next / dynamic';
 ;
 
 const NotificationCenter = dynamic (
-  () => import ('../components / notifications / NotificationCenter'),
+  () => import ('../components / notifications / NotificationCenter'),;
   {
     ssr: false}
  ,}

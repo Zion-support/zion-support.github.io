@@ -1,5 +1,5 @@
 
-import React from "react",;"
+import React from "react";"
 import { ;
   Dialog,;
   DialogContent, ;
@@ -7,17 +7,17 @@ import { ;
   DialogTitle, ;
   DialogDescription ;"
 } from "@/components/ui/dialog",;""
-import { Button } from "@/components/ui/button",;""
+import { Button } from "@/components/ui/button";""
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Separator } from "@/components/ui/separator",;""
-import { QuoteStatusBadge } from "./QuoteStatusBadge",;""
-import type { QuoteRequest } from "@/types/quotes",;""
-import { format } from "date-fns",;"
+import { Card, CardContent } from "@/components/ui/card";""
+import { Separator } from "@/components/ui/separator";""
+import { QuoteStatusBadge } from "./QuoteStatusBadge";""
+import type { QuoteRequest } from "@/types/quotes";""
+import { format } from "date-fns";"
 ;
 interface QuoteDetailsProps {;
-  quote:QuoteRequest | null,;
-  isOpen:boolean,;
+  quote: QuoteRequest | null;,;
+  isOpen: boolean;,;
   onClose:() => void;
 }
 export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
@@ -64,10 +64,10 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;""
                   <Calendar className="h-4 w-4 text-gray-500" />;"
 
-                  <span>Start date:{formatDate(quote.start_date)}</span>;
+                  <span>Start date: {formatDate(quote.start_date);}</span>;
                   <Clock className="h-4 w-4 text-gray-500" />;"
 
-                  <span>Timeline:{quote.timeline}</span>;
+                  <span>Timeline: {quote.timeline;}</span>;
         <Card className="mt-6">;"
             <h3 className="text-lg font-medium mb-3">Project Details</h3>;""
             <p className="mb-4">{quote.project_summary}</p>;"

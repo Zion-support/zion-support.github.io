@@ -62,7 +62,7 @@ serve(async (req: Request) => {
     return new Response(      {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -256,7 +256,7 @@ serve(async (req: Request) => {
     console && console.error(error);
       JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });"
 
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;""
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;"

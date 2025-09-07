@@ -1,9 +1,9 @@
 
 
-import React from "react",
+import React from "react",;
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card",
+import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",        "Post jobs and receive AI-matched applicants";
       ]
 };

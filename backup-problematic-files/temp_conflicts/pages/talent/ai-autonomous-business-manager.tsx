@@ -1,8 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SmartHeader from '../../components/SmartHeader',;
-import SmartFooter from '../../components/SmartFooter',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SmartHeader from '../../components/SmartHeader';
+import SmartFooter from '../../components/SmartFooter';
 ;
 export default function AIAutonomousBusinessManager() {;
   return (;

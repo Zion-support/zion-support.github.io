@@ -3,12 +3,12 @@
 interface CreateWebhookRequest {
   name: string;
   url: string;
-  eventTypes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+  eventTypes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 
 interface CreateWebhookRequest {
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",""
@@ -22,7 +22,7 @@ interface CreateWebhookRequest {
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",""
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;""
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';''
@@ -115,7 +115,7 @@ serve(async (req) => {
   // Handle CORS for browser requests;"
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
-import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,;
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
   // TODO: Implement
   event_types: string[],

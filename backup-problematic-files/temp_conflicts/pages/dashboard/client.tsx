@@ -1,15 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react",;""
-import { supabase } from "../../utils/supabase/client",;""
-import { AnimatePresence, motion } from "framer-motion",;"
+import React, { useEffect, useMemo, useState } from "react";""
+import { supabase } from "../../utils/supabase/client";""
+import { AnimatePresence, motion } from "framer-motion";"
 ;
 type TalentSuggestion = {;
-  id:string,;"
+  id: string;,;"
   match_type?:"talent_for_job" | string,;"
-  job_id:string,;
-  job_title:string,;
-  client_id:string,;
-  talent_id:string,;
-  talent_name:string,;
+  job_id: string;,;
+  job_title: string;,;
+  client_id: string;,;
+  talent_id: string;,;
+  talent_name: string;,;
   talent_title?:string,;
   talent_photo_url?:string,;
   summary?:string,;
@@ -20,8 +20,8 @@ type TalentSuggestion = {;
   created_at?:string;
 },;
 interface JobGroup {;
-  jobId:string,;
-  jobTitle:string,;
+  jobId: string;,;
+  jobTitle: string;,;
   suggestions:TalentSuggestion[];
 }
 const SUGGESTION_TABLE_ENV =;"
@@ -108,10 +108,10 @@ const badge = (;"
 
                   <motion.div;
                     key={s.id}
-                    initial={{ opacity:0, y:10 }}
-                    animate={{ opacity:1, y:0 }}
-                    exit={{ opacity:0, y:10 }}
-                    transition={{ duration:0.2 }}"
+                    initial={{ opacity: 0;, y: 10 ;}}
+                    animate={{ opacity: 1;, y: 0 ;}}
+                    exit={{ opacity: 0;, y: 10 ;}}
+                    transition={{ duration: 0.2 ;}}"
                     className="relative min-w-[18rem] max-w-xs flex-1 rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm ring-1 ring-transparent hover:shadow-md";"
 </motion>"
                     <div className="absolute right-3 top-3">{badge}</div>;""

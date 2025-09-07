@@ -37,10 +37,10 @@ expYear: 2026;}
 isDefault: false}
     }
   ];
-import React from \"react\",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",
-import { Button } from \"@/components/ui/button\",
-import { CreditCard, Plus, Trash } from \"lucide-react\",
+import React from \"react\",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",;
+import { Button } from \"@/components/ui/button\",;
+import { CreditCard, Plus, Trash } from \"lucide-react\",;
     {
       id: \"pm-2\",
       type: \"credit_card\",
@@ -153,10 +153,10 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: false
     }
   ];
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { CreditCard, Plus, Trash } from "lucide-react",
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { CreditCard, Plus, Trash } from "lucide-react",;
 
     {
       id: "pm-2",

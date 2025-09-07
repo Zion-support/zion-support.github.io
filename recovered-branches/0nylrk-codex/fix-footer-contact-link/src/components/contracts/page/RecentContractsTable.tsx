@@ -7,7 +7,7 @@
   isSmartContract: boolean
 }
 
-interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",
+interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",;
 interface Contract {
 
 

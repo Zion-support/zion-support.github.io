@@ -36,9 +36,8 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
   DollarSign,
   BarChart3,
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import Head from 'next/head';
   TrendingUp,
   Star,
@@ -55,12 +54,9 @@ import Head from 'next/head';
   Target as TargetIcon,
   Award,;
 } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
-import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 export default function MarketPricing2026() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -103,25 +99,25 @@ const matchesCategory =
       id: 'all'
       name: 'All Categories'
       icon: BarChart3
-      count: allServices.length
+      count: allServices.length;
     }
     {
       id: 'AI'
       name: 'AI & Machine Learning'
       icon: Brain
-      count: allServices.filter(s => s.category.includes('AI')).length
+      count: allServices.filter(s => s.category.includes('AI')).length;
     }
     {
       id: 'Quantum'
       name: 'Quantum Computing'
       icon: Atom
-      count: allServices.filter(s => s.category.includes('Quantum')).length
+      count: allServices.filter(s => s.category.includes('Quantum')).length;
     }
     {
       id: 'Emerging'
       name: 'Emerging Technology'
       icon: Sparkles
-      count: allServices.filter(s => s.category.includes('Emerging')).length
+      count: allServices.filter(s => s.category.includes('Emerging')).length;
     }
     {
       id: 'IT'
@@ -135,7 +131,7 @@ const matchesCategory =
       id: 'Autonomous'
       name: 'Autonomous Systems'
       icon: Target
-      count: allServices.filter(s => s.category.includes('Autonomous')).length
+      count: allServices.filter(s => s.category.includes('Autonomous')).length;
     }
     {
       id: 'Cloud'
@@ -148,33 +144,33 @@ const matchesCategory =
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All price ranges' },
+    { id: 'all';, name: 'All Prices';, range: 'All price ranges' ;},
 {
-      id: 'budget',
-      name: 'Budget ($0 - $5K)',
-      range: 'Affordable solutions for startups and small businesses',
+      id: 'budget';,
+      name: 'Budget ($0 - $5K)';,
+      range: 'Affordable solutions for startups and small businesses';,
     },
     {
       id: 'mid'
       name: 'Mid-Range ($5K - $15K)'
-      range: 'Professional solutions for growing companies'
+      range: 'Professional solutions for growing companies';
     }
     {
-      id: 'premium',
-      name: 'Premium ($15K+)',
-      range: 'Enterprise-grade solutions for large organizations',
+      id: 'premium';,
+      name: 'Premium ($15K+)';,
+      range: 'Enterprise-grade solutions for large organizations';,
     },
   ];
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   // Calculate pricing statistics
   const pricingStats = {
-    totalServices: allServices.length,
+    totalServices: allServices.length;,
 averagePrice:
       allServices.reduce(
         (sum, service) =>
@@ -191,8 +187,7 @@ averagePrice:
       (sum, service) => sum + service.customers
       0
     )
-    averageRating:
-      allServices.reduce((sum, service) => sum + service.rating, 0) /
+    averageRating: allServices.reduce((sum;, service) => sum + service.rating, 0) /
       allServices.length
 origin/cursor/automate-test-improve-and-merge-code-2533
     >
@@ -219,8 +214,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / market - pricing - 2026" />;
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -261,9 +256,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
@@ -416,9 +411,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
             >;
               <h1 className='text - 5xl md:text - 7xl font - bold mb - 6'>;
                 <span className='bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent'>;
@@ -571,16 +566,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <motion.div
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
         {/* Market Analysis Section */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
             </motion.div>
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
@@ -588,7 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing
                 in the rapidly evolving technology landscape
             </motion.div>
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className='text-center mb-12'>;
               <h2 className='text-4xl font-bold text-white mb-4'>;
                 Market Analysis & Competitive Positioning;
@@ -606,18 +601,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 in the rapidly evolving technology landscape;
             </motion && motion.div>;
 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
               <motion&& motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
 
 
 
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 ;}}
 className='text-center mb-12'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -632,10 +627,10 @@ className='text-center mb-12'
             {/* Market Insights Grid */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.1 ;}}
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -654,10 +649,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.2 ;}}
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -675,10 +670,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.3 ;}}
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -700,8 +695,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
 
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;
                 <div className='text - 4xl mb - 4'>📊</div>;
@@ -727,10 +722,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.2 ;}}
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;
                 <div className='text - 4xl mb - 4'>🎯</div>;
@@ -755,10 +750,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>;
               <motion.div;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.3 ;}}
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;
                 <div className='text - 4xl mb - 4'>🚀</div>;
@@ -790,16 +785,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
 <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
             >
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
               <p className="text-xl text-gray-300">
@@ -821,7 +816,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className='text-center mb-12'>;
               <h2 className='text-4xl font-bold text-white mb-4'>;
                 Service Pricing & Features;
@@ -829,7 +824,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-xl text-gray-300'>                {filteredServices && filteredServices.length} services found matching your criteria;
               </p>;
             </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (              className="text-center mb-12";
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service;, index) => (              className="text-center mb-12";
             >;
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>;
               <p className="text-xl text-gray-300">;
@@ -839,9 +834,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -861,7 +856,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
                     {/* Service Title */}
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service.name;}
                     </h3>
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
@@ -885,7 +880,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text - xl text - gray - 300'>                {filtered_services.length} services found matching your criteria;
               </p>;
             </motion.div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {filtered_services.map ((service, index) => (              className="text - center mb - 12";
+            <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {filtered_services.map ((service;, index) => (              className="text - center mb - 12";
             >;
               <h2 className="text - 4xl font - bold text - white mb - 4">Service Pricing & Features</h2>;
               <p className="text - xl text - gray - 300">;
@@ -895,9 +890,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filtered_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className='group';
                 >;
                   <div className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105'>;
@@ -1000,7 +995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
 
                     {/* Service Title */}
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service && service.name;}
                     </h3>;
 
                     {/* Tagline */}
@@ -1177,8 +1172,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -1201,8 +1196,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
             )}
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
@@ -1315,8 +1310,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
                 className='text - center py - 16';
               >;
                 <div className='text - 6xl mb - 4'>🔍</div>;
@@ -1337,10 +1332,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >

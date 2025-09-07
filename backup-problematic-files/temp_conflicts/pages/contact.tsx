@@ -1,9 +1,9 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { Mail, Phone, MapPin, Clock } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 ;
 export default function ContactPage() {;
   const [formData, setFormData] = React.useState({;
@@ -15,7 +15,7 @@ export default function ContactPage() {;
   const handleSubmit = (e:React.FormEvent) => {;
     e.preventDefault(),;
     // Handle form submission;
-    // // // console.log('Form submitted:', formData),;
+    // // // console.log('Form submitted: ';, formData),;
   },;
   const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
 
@@ -34,9 +34,9 @@ export default function ContactPage() {;
         <div className="max-w-7xl mx-auto text-center">;"
 </div>
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;"
@@ -52,9 +52,9 @@ export default function ContactPage() {;
         <div className="max-w-6xl mx-auto">;"
 </div>"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">;"
-              initial={{ opacity:0, x:-30 }}
-              animate={{ opacity:1, x:0 }}
-              transition={{ duration:0.8 }}"
+              initial={{ opacity: 0;, x: -30 ;}}
+              animate={{ opacity: 1;, x: 0 ;}}
+              transition={{ duration: 0.8 ;}}"
               className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-8 backdrop-blur-xl";"
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>;""
               <form onSubmit={handleSubmit} className="space-y-6">;"
@@ -101,8 +101,8 @@ export default function ContactPage() {;
                 </button>;
               </form>;
             {/* Contact Information */}
-              initial={{ opacity:0, x:30 }}
-              transition={{ duration:0.8, delay:0.2 }}"
+              initial={{ opacity: 0;, x: 30 ;}}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}"
               className="space-y-8";"
 </motion>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>;""

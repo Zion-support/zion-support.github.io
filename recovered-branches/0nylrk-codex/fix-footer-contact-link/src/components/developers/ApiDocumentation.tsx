@@ -2,15 +2,15 @@
 
 export function ApiDocumentation() {
   return (
-import { useState } from "react",
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
+import { useState } from "react",;
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
+import { Badge } from "@/components/ui/badge",;
+import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() {
   return (
 

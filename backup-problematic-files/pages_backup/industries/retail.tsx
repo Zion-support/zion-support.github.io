@@ -5,7 +5,7 @@ import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users
 import React from 'react';
 import Link from 'next/link';';
 import {
-  // TODO: Implement
+  // TODO: Implement;
 }
   ShoppingCart,
   Brain,
@@ -23,25 +23,24 @@ const services = [;
   {}
 const services = [
   {
-    title: 'E-commerce Platforms',
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.',
-    icon: Globe,
+    title: 'E-commerce Platforms';,
+    description: 'Custom e-commerce solutions with advanced features and seamless user experience.';,
+    icon: Globe;,
     features: [;
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
-    title: 'E-commerce Platforms,',,
-  description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
-import Layout from '../../components/Layout';
+    title: 'E-commerce Platforms;,',,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.;,',;
 const services = [;
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
+    title: 'E-commerce Platforms;,',;
+    description: 'Custom e-commerce solutions with advanced features and seamless user experience.;,',;
 pr-12325
   {;
-    title: 'E-commerce Platforms',,
-  description: 'Custom e-commerce solutions with advanced features and seamless user experience.',;
-    icon: Globe,;
-    features: [,;
+    title: 'E-commerce Platforms';,,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.';,;
+    icon: Globe;,;
+    features: [;,;
       'Custom storefront development,',;
       'Payment gateway integration',',;
       'Inventory management',',;
@@ -49,12 +48,12 @@ pr-12325
     ];
   },;
   {}
-    title: 'Inventory Management AI,',,
-  description: 'AI-powered inventory optimization and demand forecasting systems.,',;
-    title: 'Inventory Management AI,',;
-    description: 'AI-powered inventory optimization and demand forecasting systems.,',;
+    title: 'Inventory Management AI;,',,
+  description: 'AI-powered inventory optimization and demand forecasting systems.;,',;
+    title: 'Inventory Management AI;,',;
+    description: 'AI-powered inventory optimization and demand forecasting systems.;,',;
 pr-12325
-    icon: Brain,;
+    icon: Brain;,;
       'Demand forecasting,',;
       'Stock optimization',',;
       'Automated reordering',',;
@@ -62,13 +61,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Customer Analytics,',,
-  description: 'Advanced analytics to understand customer behavior and preferences.,',;
+    title: 'Customer Analytics;,',,
+  description: 'Advanced analytics to understand customer behavior and preferences.;,',;
       'Waste reduction;']
-    title: 'Customer Analytics,',;
-    description: 'Advanced analytics to understand customer behavior and preferences.,',;
+    title: 'Customer Analytics;,',;
+    description: 'Advanced analytics to understand customer behavior and preferences.;,',;
 pr-12325
-    icon: BarChart3,;
+    icon: BarChart3;,;
       'Customer segmentation,',;
       'Purchase pattern analysis',',;
       'Personalization engines',',;
@@ -76,13 +75,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Personalized Recommendations,',,
-  description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
+    title: 'Personalized Recommendations;,',,
+  description: 'AI-driven product recommendation systems for enhanced customer experience.;,',;
       'Lifetime value prediction;']
-    title: 'Personalized Recommendations,',;
-    description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
+    title: 'Personalized Recommendations;,',;
+    description: 'AI-driven product recommendation systems for enhanced customer experience.;,',;
 pr-12325
-    icon: Users,;
+    icon: Users;,;
       'Machine learning algorithms,',;
       'Real-time recommendations',',;
       'Cross-selling optimization',',;
@@ -90,13 +89,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Supply Chain Optimization,',,
-  description: 'End-to-end supply chain management with AI optimization.,',;
+    title: 'Supply Chain Optimization;,',,
+  description: 'End-to-end supply chain management with AI optimization.;,',;
       'A/B testing frameworks;']
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain management with AI optimization.,',;
+    title: 'Supply Chain Optimization;,',;
+    description: 'End-to-end supply chain management with AI optimization.;,',;
 pr-12325
-    icon: Package,;
+    icon: Package;,;
       'Supplier management,',;
       'Logistics optimization',',;
       'Demand planning',',;
@@ -104,13 +103,13 @@ pr-12325
     ];
   },;
   {}
-    title: 'Omnichannel Solutions,',,
-  description: 'Seamless integration across all sales channels and touchpoints.,',;
+    title: 'Omnichannel Solutions;,',,
+  description: 'Seamless integration across all sales channels and touchpoints.;,',;
       'Cost reduction;']
-    title: 'Omnichannel Solutions,',;
-    description: 'Seamless integration across all sales channels and touchpoints.,',;
+    title: 'Omnichannel Solutions;,',;
+    description: 'Seamless integration across all sales channels and touchpoints.;,',;
 pr-12325
-    icon: Smartphone,;
+    icon: Smartphone;,;
       'Unified customer experience,',;
       'Cross-channel inventory',',;
       'Mobile commerce',',;
@@ -118,43 +117,43 @@ pr-12325
 ;];
 const benefits = [;
   {}
-    title: 'Increased Sales,',,
-  description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
+    title: 'Increased Sales;,',,
+  description: 'Personalized experiences and optimized inventory drive higher conversion rates.;,',;
     icon: ShoppingCart;
 ];
 const benefits = [;
   {;
-    title: 'Increased Sales',,
-  description: 'Personalized experiences and optimized inventory drive higher conversion rates.',;
+    title: 'Increased Sales';,,
+  description: 'Personalized experiences and optimized inventory drive higher conversion rates.';,;
     icon: ShoppingCart;
   },;
   {}
-    title: 'Better Customer Experience,',,
-  description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
-    icon: Users,;
+    title: 'Better Customer Experience;,',,
+  description: 'Seamless omnichannel experiences keep customers engaged and satisfied.;,',;
+    icon: Users;,;
   },;
   {}
-    title: 'Reduced Costs,',,
-  description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
-    icon: BarChart3,;
+    title: 'Reduced Costs;,',,
+  description: 'Optimized inventory and supply chain reduce operational costs significantly.;,',;
+    icon: BarChart3;,;
   },;
   {}
-    title: 'Data-Driven Insights,',,
-  description: 'Advanced analytics provide actionable insights for business growth.,',;
-    title: 'Increased Sales,',;
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
+    title: 'Data-Driven Insights;,',,
+  description: 'Advanced analytics provide actionable insights for business growth.;,',;
+    title: 'Increased Sales;,',;
+    description: 'Personalized experiences and optimized inventory drive higher conversion rates.;,',;
     icon: ShoppingCart;]
-    title: 'Increased Sales',;
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.',;
+    title: 'Increased Sales';,;
+    description: 'Personalized experiences and optimized inventory drive higher conversion rates.';,;
     icon: ShoppingCart;
-    title: 'Better Customer Experience,',;
-    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
-    title: 'Reduced Costs,',;
-    description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
-    title: 'Data-Driven Insights,',;
-    description: 'Advanced analytics provide actionable insights for business growth.,',;
+    title: 'Better Customer Experience;,',;
+    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.;,',;
+    title: 'Reduced Costs;,',;
+    description: 'Optimized inventory and supply chain reduce operational costs significantly.;,',;
+    title: 'Data-Driven Insights;,',;
+    description: 'Advanced analytics provide actionable insights for business growth.;,',;
 pr-12325
-    icon: Database,;
+    icon: Database;,;
   }]
 export default function RetailPage() {;
   return ()
@@ -175,14 +174,14 @@ export default function RetailPage() {;
           <div className="container mx-auto px-4 relative z-10">";"
 </div>
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}"
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}"
               className="text-center max-w-4xl mx-auto"">;"
 </motion>"
               <div className="flex items-center justify-center mb-6">";"
                 <ShoppingCart className="w-12 h-12 text-purple-400 mr-4" />";"
-                <h1 className="text-5xl md: text-6xl font-bold">", Retail,;"
+                <h1 className="text-5xl md: text-6xl font-bold">";, Retail,;"
 </h1>"
                   <span className="block bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">";"
 </span>
@@ -193,10 +192,10 @@ export default function RetailPage() {;
                 Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics, ;
                 and omnichannel solutions that drive sales and customer satisfaction.;
               </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
                   Get Retail Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", View Retail Case Studies,;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";, View Retail Case Studies,;
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -219,9 +218,9 @@ export default function RetailPage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center max-w-4xl mx-auto">;
               <div className="flex items-center justify-center mb-6">;
                 <ShoppingCart className="w-12 h-12 text-purple-400 mr-4" />;
@@ -251,15 +250,15 @@ export default function RetailPage() {;
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Retail Technology Services;
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Retail Technology Services,;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Retail Technology Services,;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive retail technology solutions designed for modern businesses, ;
@@ -279,9 +278,9 @@ export default function RetailPage() {;
               {services.map((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -290,7 +289,7 @@ export default function RetailPage() {;
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -306,9 +305,9 @@ export default function RetailPage() {;
               {services && services.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
                     <service && service.icon className="w-6 h-6 text-white" />";
@@ -369,15 +368,15 @@ export default function RetailPage() {;
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Retail Solutions?;
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Retail Solutions?,;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Retail Solutions?,;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our retail technology solutions deliver measurable improvements in sales, ;
@@ -398,7 +397,7 @@ export default function RetailPage() {;
                 <motion.div
                   key={benefit.title}
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;
               {benefits && benefits.map((benefit, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -414,9 +413,9 @@ export default function RetailPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
                   className="text-center"">;
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <benefit && benefit.icon className="w-8 h-8 text-white" />";
@@ -447,22 +446,22 @@ export default function RetailPage() {;
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Retail?,;
+              transition={{ duration: 0 && 0.8 ;}}>,;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">";, Ready to Transform Retail?,;
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let our retail technology experts help you implement solutions that drive sales;
                 and enhance customer experience.;
               </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
                   Start Your Retail Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -496,9 +495,9 @@ export default function RetailPage() {;
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";"
 </p>
               </p>;"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;"
                 ;"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", View Retail Case Studies,;"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";, View Retail Case Studies,;"
 pr-12325
 
                 ;
@@ -530,12 +529,12 @@ pr-12325
         </section>;"
         <section className="py-20 bg-white">";"
           <div className="container mx-auto px-4">";"
-              animate={{ opacity: 1, y: 0 }}"
+              animate={{ opacity: 1;, y: 0 ;}}"
               className="text-center mb-16"""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
 </h2>"
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Retail Technology Services,;"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Retail Technology Services,;"
 </h2>
               </h2>;"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";"
@@ -545,7 +544,7 @@ pr-12325
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
                 <motion.div;
                   key={service.title}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}"
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";"
                     <service.icon className="w-6 h-6 text-white" />";"
@@ -553,7 +552,7 @@ pr-12325
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"""
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>""
             </motion && motion.div>;"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;"
                 <motion&& motion.div}),"
               className="text-center mb-16">;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;"
@@ -561,7 +560,7 @@ pr-12325
               </p>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                   key={service && service.title}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}"
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}"
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;"
                     <service && service.icon className="w-6 h-6 text-white" />";"
                   </div>,;"
@@ -593,10 +592,10 @@ pr-12325
         </section>
             </div>,;
         <section className="py-20 bg-gray-50">";"
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Retail Solutions?,;"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Retail Solutions?,;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
                   key={benefit.title}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
                   key={benefit && benefit.title}
                   className="text-center"">;"
@@ -609,9 +608,9 @@ pr-12325
           <div className="container mx-auto px-4 text-center">";"
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";"
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Retail?,;"
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">";, Ready to Transform Retail?,;"
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";"
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;"
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;"
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">"

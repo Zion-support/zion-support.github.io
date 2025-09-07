@@ -62,7 +62,6 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
 
-import {
   Star,
   TrendingUp,
   Users,
@@ -116,8 +115,6 @@ import {
   Play as PlayIcon,
 } from 'lucide-react';
 
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, ;
   Brain as BrainIcon,
@@ -125,10 +122,10 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 } from 'lucide-react';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
   CheckCircle, ArrowRight, Search, Filter;
@@ -149,45 +146,43 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 export default function UltimateFuturisticServicesShowcase2025() {;
   Brain as BrainIcon, Play as PlayIcon
  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = null;
 visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1
+  opacity: 1;, transition: {
+  staggerChildren: 0.1;
 }
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0
+  y: 20;, opacity: 0;
 }
 visible: {
-  y: 0, opacity: 1, transition: {
+  y: 0;, opacity: 1;, transition: {
   duration: 0.5
 ];
 const stats = [
   {
-    number: '15+',
-    label: 'Revolutionary Services',
-    icon: Star,
-    color: 'text-cyan-400',
+    number: '15+';,
+    label: 'Revolutionary Services';,
+    icon: Star;,
+    color: 'text-cyan-400';,
   },
   {
-    number: '1000%+',
-    label: 'Average ROI',
-    icon: TrendingUp,
-    color: 'text-purple-400',
+    number: '1000%+';,
+    label: 'Average ROI';,
+    icon: TrendingUp;,
+    color: 'text-purple-400';,
   },
   {
-    number: '99.9%',
-    label: 'Success Rate',
-    icon: Award,
-    color: 'text-green-400',
+    number: '99.9%';,
+    label: 'Success Rate';,
+    icon: Award;,
+    color: 'text-green-400';,
   },
   {
-    number: '24/7',
-    label: 'Expert Support',
-    icon: Clock,
-    color: 'text-pink-400',
+    number: '24/7';,
+    label: 'Expert Support';,
+    icon: Clock;,
+    color: 'text-pink-400';,
   },
 ];
 
@@ -247,7 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />
+        <meta property="og: description" content="Discover our revolutionary futuristic services including AI consciousness;, quantum computing, space technology, and breakthrough innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
@@ -278,22 +273,22 @@ default:
     }
   });
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20;, opacity: 0 ;},
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0;,
+      opacity: 1;,
       transition: {
-duration: 0.5,
+duration: 0.5;,
       },
     },
   };
@@ -335,9 +330,9 @@ duration: 0.5,
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >
 <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -359,9 +354,9 @@ duration: 0.5,
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0;, scale: 0.8 ;}}
+                  animate={{ opacity: 1;, scale: 1 ;}}
+                  transition={{ duration: 0.5;, delay: index * 0.1 ;}}
             </div>;
           </motion && motion.div>;
         </div>;
@@ -539,7 +534,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6';}
       {/* Services Grid */}
 <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -584,7 +579,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variants={container_variants}
             initial="hidden";
             animate="visible";
-            className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
+            className={view_mode === 'grid' ? 'grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6';}
             {sorted_services.map ((service, index) => (
               <motion.div;
 
@@ -599,7 +594,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
 viewMode === 'grid'
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
+                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: border-purple-500/50 transition-all duration-300';
                 }`}
               >
                 {/* Popular Badge */}
@@ -757,7 +752,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-sm'>
                     <div className='text-gray-300 mb-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      <span className='font-semibold text-white'>ROI:</span>{' '}
+                      <span className='font-semibold text-white'>ROI: </span>{' ';}
                       {service && service.roi}
                     </div>;
                     <div className='text-gray-300'>;
@@ -766,17 +761,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>{' '}
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
-                      <span className="font-semibold text-white">ROI: </span> {service.roi}
+                      <span className="font-semibold text-white">ROI: </span> {service.roi;}
                     </div>
                     <div className="text-gray-300">
-                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
+                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize;}
                       {service && service.marketSize}                    </div>                <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">;
                   <div className="text-sm">;
                     <div className="text-gray-300 mb-2">;
-                      <span className="font-semibold text-white">ROI: </span> {service && service.roi}
+                      <span className="font-semibold text-white">ROI: </span> {service && service.roi;}
                     </div>;
                     <div className="text-gray-300">;
-                      <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
+                      <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize;}
                   </div>;
                 </div>;
                     href={service.link}
@@ -816,21 +811,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center justify-center space-x-4 mt-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
-                        href={`tel:${contactInfo && contactInfo.mobile}`}
+                        href={`tel: ${contactInfo && contactInfo.mobile;}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
                         <Phone className='w-4 h-4 mr-1' />;
                         {contactInfo && contactInfo.mobile}
                       </a>;
                       <a
-                        href={`mailto:${contactInfo && contactInfo.email}`}
+                        href={`mailto: ${contactInfo && contactInfo.email;}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
                         <Mail className='w-4 h-4 mr-1' />                        {contactInfo && contactInfo.email}                    <p>Contact us for custom pricing and implementation</p>;
                     <div className="flex items-center justify-center space-x-4 mt-2">;
-                      <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                      <a href={`tel: ${contactInfo && contactInfo.mobile;}`} className="flex items-center text-purple-400 hover:text-purple-300">;
                         <Phone className="w-4 h-4 mr-1" />;
                         {contactInfo && contactInfo.mobile}
                       </a>;
-                      <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                      <a href={`mailto: ${contactInfo && contactInfo.email;}`} className="flex items-center text-purple-400 hover:text-purple-300">;
                         <Mail className="w-4 h-4 mr-1" />;
                         {contactInfo && contactInfo.email}
                       </a>;
@@ -838,7 +833,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </motion && motion.div>;
-                        href={`mailto:${contactInfo.email}`}
+                        href={`mailto: ${contactInfo.email;}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'
                       >
                         <Mail className='w-4 h-4 mr-1' />
@@ -888,20 +883,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
           >
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Experience the Future?;
             </h2>;
@@ -991,7 +986,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20'>;
                   <div className='text - sm'>;
                     <div className='text - gray - 300 mb - 2'>;
-                      <span className='font - semibold text - white'>ROI:</span>{' '}
+                      <span className='font - semibold text - white'>ROI: </span>{' ';}
                       {service.roi}
                     </div>;
                     <div className='text - gray - 300'>;
@@ -1001,10 +996,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20">;
                   <div className="text - sm">;
                     <div className="text - gray - 300 mb - 2">;
-                      <span className="font - semibold text - white">ROI: </span> {service.roi}
+                      <span className="font - semibold text - white">ROI: </span> {service.roi;}
                     </div>;
                     <div className="text - gray - 300">;
-                      <span className="font - semibold text - white">Market Size: </span> {service.market_size}
+                      <span className="font - semibold text - white">Market Size: </span> {service.market_size;}
                   </div>;
                 </div>;
                 {/* Action Buttons */}
@@ -1036,23 +1031,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p > Contact us for custom pricing and implementation</p>;
                     <div className='flex items - center justify - center space - x-4 mt - 2'>;
                       <a;
-                        href={`tel:${contact_info.mobile}`}
+                        href={`tel: ${contact_info.mobile;}`}
                         className='flex items - center text - purple - 400 hover:text - purple - 300';
                       >;
                         <Phone className='w - 4 h - 4 mr - 1' />;
                         {contact_info.mobile}
                       </a>;
                       <a;
-                        href={`mailto:${contact_info.email}`}
+                        href={`mailto: ${contact_info.email;}`}
                         className='flex items - center text - purple - 400 hover:text - purple - 300';
                       >;
                         <Mail className='w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
                     <div className="flex items - center justify - center space - x-4 mt - 2">;
-                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+                      <a href={`tel: ${contact_info.mobile;}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
                         <Phone className="w - 4 h - 4 mr - 1" />;
                         {contact_info.mobile}
                       </a>;
-                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+                      <a href={`mailto: ${contact_info.email;}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
                         <Mail className="w - 4 h - 4 mr - 1" />;
                         {contact_info.email}
                       </a>;
@@ -1093,10 +1088,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;
         <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
           >;
             <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
               Ready to Experience the Future?;

@@ -1,13 +1,13 @@
 
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react';
-import { PdfExportButton } from '../PdfExportButton',;
-import { Resume } from '@/types/resume',;
-import { useState } from 'react',;
-import { useIsMobile } from '@/hooks/use-mobile',;
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume';
+import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 ;
 interface PreviewHeaderProps {;
-  resume:Resume,;
+  resume: Resume;,;
   onBack:() => void;}
 export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
@@ -24,9 +24,9 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         .print-section, .print-section * {;
           visibility:visible;
         .print-section {;
-          position:absolute,;
-          left:0,;
-          top:0,;
+          position: absolute;,;
+          left: 0;,;
+          top: 0;,;
           width:100%;
         .no-print {;
           display:none !important;

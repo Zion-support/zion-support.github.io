@@ -11,9 +11,9 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
 
-import { GetServerSideProps } from 'next',
-import { useState } from 'react',
-import { read_json } from '../../utils / fs_db',
+import { GetServerSideProps } from 'next',;
+import { useState } from 'react',;
+import { read_json } from '../../utils / fs_db',;
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = read_json < any[]>('support / requests.json', []),
   return { props: { initial_requests: requests } }

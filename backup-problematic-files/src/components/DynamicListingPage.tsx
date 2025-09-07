@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react",;""
-import { useRouter } from 'next/router',;
-import { GradientHeading } from "@/components/GradientHeading",;""
-import { ProductListingCard } from "@/components/ProductListingCard",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+import { useState, useEffect } from "react";""
+import { useRouter } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading";""
+import { ProductListingCard } from "@/components/ProductListingCard";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {;
   Select,;
   SelectValue,;
   SelectTrigger,;
   SelectContent,;
   SelectItem} from "@/components/ui/select",;""
-import { Checkbox } from "@/components/ui/checkbox",;""
-import Skeleton from "react-loading-skeleton",;""
-import "react-loading-skeleton/dist/skeleton.css",;""
-import { Slider } from "@/components/ui/slider",;""
-import { ProductListing, ListingView } from "@/types/listings",;""
+import { Checkbox } from "@/components/ui/checkbox";""
+import Skeleton from "react-loading-skeleton";""
+import "react-loading-skeleton/dist/skeleton.css";""
+import { Slider } from "@/components/ui/slider";""
+import { ProductListing, ListingView } from "@/types/listings";""
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;""
-import { captureException } from "@/utils/sentry",;"
+import { toast } from "@/hooks/use-toast";""
+import { captureException } from "@/utils/sentry";"
 ;
 interface PriceRange {;
-  min:number,;
+  min: number;,;
   max:number;
 }
 interface DynamicListingPageProps {;
-  title:string,,
-  description:string,;
-  categorySlug:string,;
-  listings:ProductListing[],;
-  categoryFilters:{ label:string, value:string }[],;
+  title: string;,,
+  description: string;,;
+  categorySlug: string;,;
+  listings: ProductListing[];,;
+  categoryFilters: { label:string;, value: string ;}[],;
   initialPrice?:PriceRange,;
   /**;
    * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
@@ -39,9 +39,9 @@ export function DynamicListingPage({;
   title,;
   description,;
   categorySlug,;
-  listings:allListings,;
+  listings: allListings;,;
   categoryFilters,;
-  initialPrice = { min:0, max:10000 },;)"
+  initialPrice = { min: 0;, max: 10000 ;},;)"
   detailBasePath = "/marketplace/listing"} DynamicListingPageProps) {;"
   const router = useRouter(),;"
   const [searchQuery, setSearchQuery] = useState(""),;"
@@ -64,7 +64,7 @@ export function DynamicListingPage({;
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,;
     setCurrentPriceFilter([min, max]),;
   },;
-  let filteredListings:ProductListing[] = [],;
+  let filteredListings: ProductListing[] = [];,;
   try {;
     filteredListings = allListings.filter((listing) => {;
       const matchesSearch =;
@@ -121,7 +121,7 @@ export function DynamicListingPage({;
             new Date(a.createdAt).getTime();
   } catch (error) {;
     captureException(error),;"
-    logErrorToProduction('Listing filter error:', { data:error }),;
+    logErrorToProduction('Listing filter error: ';, { data: error ;}),;
   const handleRequestQuote = (listingId:string) => {;
     setIsLoading(true),;
     const listing = allListings.find((item) => item.id === listingId),;
@@ -129,20 +129,20 @@ export function DynamicListingPage({;
       setIsLoading(false),;
       if (listing) {;
         toast({;
-          title:"Quote Requested",,
-  description:`Your quote request for ${listing.title} has been sent.`}),;
+          title: "Quote Requested";,,
+  description: `Your quote request for ${listing.title;} has been sent.`}),;
 ;
-          title:"Quote Requested",;")`;
-          description:`Your quote request for ${listing.title} has been sent.`}),;
+          title: "Quote Requested";,;")`;
+          description: `Your quote request for ${listing.title;} has been sent.`}),;
 pr-12325
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
-          serviceType:categorySlug,;
+          serviceType: categorySlug;,;
           specificItem: {;,
-  id:listing.id,;
-            title:listing.title,;
-            category:listing.category,;
-            image:listing.images?.[0]}},;
+  id: listing.id;,;
+            title: listing.title;,;
+            category: listing.category;,;
+            image: listing.images?.[0];}},;
         ;"
         if (typeof window !== 'undefined') {;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData)),;
@@ -186,7 +186,7 @@ pr-12325
                     </div>;
                   <Select;
                     value={selectedBrand}
-                    onValueChange={(value:string) => setSelectedBrand(value)}
+                    onValueChange={(value: string) => setSelectedBrand(value);}
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;"
                       <SelectValue placeholder="Select Brand" />;"
 
@@ -323,12 +323,12 @@ interface PriceRange {;
   min: number;
 max: number ;
 }interface DynamicListingPageProps {;
-  title: string,
+  title: string;,
   description: string;
 categorySlug: string;
 listings: ProductListing[];
 categoryFilters: {;
-  label: string, value: string ;
+  label: string;, value: string ;
 }[];
 initialPrice?: PriceRange;
 }const toggleCategory = (category: string) => {;

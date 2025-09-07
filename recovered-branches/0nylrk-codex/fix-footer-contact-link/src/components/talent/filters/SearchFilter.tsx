@@ -2,9 +2,9 @@ import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
 export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
-import { Input } from "@/components/ui/input",
-import { SearchIcon } from "lucide-react",
-import { SearchFilterProps } from "@/types/filters",
+import { Input } from "@/components/ui/input",;
+import { SearchIcon } from "lucide-react",;
+import { SearchFilterProps } from "@/types/filters",;
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";

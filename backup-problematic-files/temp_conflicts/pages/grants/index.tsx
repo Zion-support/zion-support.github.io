@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react',;
-import Link from 'next/link',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants',;
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 ;
-const categories:GrantCategory[] = ['Ecosystem ToolsTalent Development', 'Regional ExpansionResearch Grants'],;
-const statuses:GrantStatus[] = ['DraftSubmitted', 'Under ReviewApproved', 'Rejected'],;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent Development';, 'Regional ExpansionResearch Grants'],;
+const statuses: GrantStatus[] = ['DraftSubmitted';, 'Under ReviewApproved', 'Rejected'],;
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]),;
 
@@ -33,17 +33,17 @@ export default function GrantsPage() {;
       </div>;"
       <div className="grid md:grid-cols-4 gap-4 mb-6">;"
 </div>)"
-        <select className="border rounded p-2" value={filters.sector || } onChange={(e) => setFilters((f) => ({ ...f, sector:e.target.value || undefined }))}>;
+        <select className="border rounded p-2" value={filters.sector || } onChange={(e) => setFilters((f) => ({ ...f, sector: e.target.value || undefined ;}))}>;
 </select>
           <option value="">All Sectors</option>;"
             <option key={c} value={c}>{c}</option>;
         </select>;"
-        <select className="border rounded p-2" value={filters.status || } onChange={(e) => setFilters((f) => ({ ...f, status:e.target.value || undefined }))}>;
+        <select className="border rounded p-2" value={filters.status || } onChange={(e) => setFilters((f) => ({ ...f, status: e.target.value || undefined ;}))}>;
           <option value="">All Stages</option>;"
             <option key={s} value={s}>{s}</option>;
-        <input className="border rounded p-2" placeholder="Region" value={filters.region || } onChange={(e) => setFilters((f) => ({ ...f, region:e.target.value || undefined }))} />;
+        <input className="border rounded p-2" placeholder="Region" value={filters.region || } onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined ;}))} />;
 </input>
-        <select className="border rounded p-2" value={filters.program || } onChange={(e) => setFilters((f) => ({ ...f, program:e.target.value || undefined }))}>;
+        <select className="border rounded p-2" value={filters.program || } onChange={(e) => setFilters((f) => ({ ...f, program: e.target.value || undefined ;}))}>;
           <option value="">All Programs</option>;""
           <option value="grant">Grant</option>;""
           <option value="incubator">Incubator</option>;"
@@ -58,8 +58,8 @@ export default function GrantsPage() {;
               <div className="flex gap-2 items-center">;"
                 {g.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}""
                 {g.status === 'Approved' && <span className="px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700">Grant Winner</span>}""
-                <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{g.status}</span>;"
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">{g.proposalSummary}</p>;""
-            <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">Budget:{g.budgetAmount} {g.budgetCurrency}</div>;"
+                <span className="px-2 py-1 text-xs rounded bg-gray-100 dark: bg-gray-800">{g.status;}</span>;"
+            <p className="mt-2 text-sm text-gray-700 dark: text-gray-300 line-clamp-3">{g.proposalSummary;}</p>;""
+            <div className="mt-3 text-sm text-gray-600 dark: text-gray-400">Budget:{g.budgetAmount;} {g.budgetCurrency}</div>;"
         {items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div>}"
     ;"`;

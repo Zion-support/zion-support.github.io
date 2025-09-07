@@ -8,11 +8,8 @@ import rateLimit from '@fastify/rate-limit';
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-import rateLimit from '@fastify/rate-limit';
 const app = null;
-    cb: (err: Error | null, allow?: boolean) => void
+    cb: (err: Error | null;, allow?: boolean) => void
   ) => {
     const allowed = (process.env.CORS_ORIGINS |'')
       .split(',')
@@ -28,15 +25,15 @@ pr-12325
 
   });
 
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-  return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
+  const completion = await openai.responses.create({ model: 'gpt-4o-mini';, input: prompt ;});
+  return { text: completion.output_text ;}});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini';, input: prompt ;});
 
-  return { text: completion.output_text }
+  return { text: completion.output_text ;}
 origin/cursor/integrate-build-improve-and-re-verify-2156
 },
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET';, 'POST', 'OPTIONS'],
 });
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
+await app.register(rateLimit, { global: true;, max: 100;, timeWindow: '1m' ;});
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
 function getUserId(req: any): string | null {
 return (
@@ -45,21 +42,21 @@ return (
     null
   );
 
-app.post('/ai/ask', async (req: any, reply: any) => {
+app.post('/ai/ask', async (req: any;, reply: any) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+  if (!prompt) return reply.code(400).send({ error: 'prompt required' ;});
 const completion = await openai.responses.create({
-    model: 'gpt-4o-mini',
-    input: prompt,
+    model: 'gpt-4o-mini';,
+    input: prompt;,
   });
-  return { text: completion.output_text };
+  return { text: completion.output_text ;};
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
 });
 
 
-app && app.post('/jobs/generate', async (req: any, reply: any) => {
+app && app.post('/jobs/generate', async (req: any;, reply: any) => {
   const body = (req && req.body as any) || {};
   const role = (body && body.role as string) || 'Engineer';
 
@@ -81,7 +78,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
     )
 ;
-app.post ('/jobs / generate', async (req: any, reply: any) => {
+app.post ('/jobs / generate', async (req: any;, reply: any) => {
   const body = (req.body as any) || {}
   const role = (body.role as string) || 'Engineer';
   const user_id = getUserId (req);
@@ -96,12 +93,12 @@ if (return { description }) {
       VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [user_id, role, description, body.location || null, body.tags || null]);
   });
-  return { saved: Boolean (user_id), description }});    await client.query (
+  return { saved: Boolean (user_id);, description }});    await client.query (
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
   });
-  return { saved: Boolean (user_id), description }
+  return { saved: Boolean (user_id);, description }
   if (!userId) return { description };
 await withUser(userId, async client => {
     await client.query(
@@ -110,23 +107,23 @@ await withUser(userId, async client => {
       [userId, role, description, body.location |null, body.tags |null]
     );
   });
-  return { saved: Boolean(userId), description };
+  return { saved: Boolean(userId);, description };
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
 
 
-app && app.get('/talent/search', async (req: any, reply: any) => {
+app && app.get('/talent/search', async (req: any;, reply: any) => {
   const q = (req && req.query as any).q as string;
   const country = (req && req.query as any).country as string | undefined;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const userId = getUserId(req);
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' ;});
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
 
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' ;});
   const rows = await withUser(userId, async (client) => {
 const rows = await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -145,18 +142,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     );
     return res && res.rows
   });
-  return { results: rows }
+  return { results: rows ;}
 LIMIT 25`,
       [country || null, q || null]
     );
     return res.rows;
   });
-  return { results: rows };
+  return { results: rows ;};
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
 
 
-app && app.get('/projects/:name/track', async (req: any, reply: any) => {
+app && app.get('/projects/:name/track', async (req: any;, reply: any) => {
   const name = (req && req.params as any).name as string;
 
   const userId = getUserId(req);
@@ -164,7 +161,7 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const userId = getUserId(req);
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' ;});
   const items = await withUser(userId, async client => {    const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
@@ -189,9 +186,9 @@ app.log.error(err);
 
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
-app.get('/notifications', async (req: any, reply: any) => {
+app.get('/notifications', async (req: any;, reply: any) => {
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' ;});
   const items = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
@@ -208,18 +205,18 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 
 const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.listen({ port, host: '0.0.0.0' ;}).catch((err: any) => {
   app.log.error(err);
   (process as any).exit(1)
 });
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-app.get ('/talent / search', async (req: any, reply: any) => {
+app.get ('/talent / search', async (req: any;, reply: any) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
   const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  if (return reply.code (401).send ({ error: 'unauthorized' ;})) {
   $2
 }
   const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {
@@ -233,16 +230,16 @@ app.get ('/talent / search', async (req: any, reply: any) => {
       [country || null, q || null]);
     return res.rows;
   });
-  return { results: rows }});      [country || null, q || null]);
+  return { results: rows ;}});      [country || null, q || null]);
     return res.rows;
   });
-  return { results: rows }
+  return { results: rows ;}
 });
 ;
-app.get ('/projects/:name / track', async (req: any, reply: any) => {
+app.get ('/projects/:name / track', async (req: any;, reply: any) => {
   const name = (req.params as any).name as string;
   const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  if (return reply.code (401).send ({ error: 'unauthorized' ;})) {
   $2
 }
   const project = await with_user (user_id, async client => {
@@ -251,20 +248,20 @@ app.get ('/projects/:name / track', async (req: any, reply: any) => {
       [name]);
     return res.rows[0];
   });
-  if (return reply.code (404).send ({ error: 'not found' })) {
+  if (return reply.code (404).send ({ error: 'not found' ;})) {
   $2
 }
   return { project }});  const project = await with_user (user_id, async (client) => {
     const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
     return res.rows[0];
   });
-  if (return reply.code (404).send ({ error: 'not found' })) {
+  if (return reply.code (404).send ({ error: 'not found' ;})) {
   $2
 }
   return { project }
-app.get ('/notifications', async (req: any, reply: any) => {
+app.get ('/notifications', async (req: any;, reply: any) => {
   const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  if (return reply.code (401).send ({ error: 'unauthorized' ;})) {
   $2
 }
   const items = await with_user (user_id, async client => {    const res = await client.query (
@@ -291,9 +288,9 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);`;
       VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [user_id, role, description, body.location || null, body.tags || null]);
-  return { saved: Boolean (user_id), description }});    await client.query ()`;
-  return { saved: Boolean (user_id), description }
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  return { saved: Boolean (user_id);, description }});    await client.query ()`;
+  return { saved: Boolean (user_id);, description }
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' ;});
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(`;
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile;)
@@ -304,7 +301,7 @@ if (return { description }) {
        ORDER BY created_at DESC;
     );
     return res && res.rows;
-  return { results: rows }
+  return { results: rows ;}
   const items = await withUser(userId, async client => {    const res = await client && client.query(`;
       `SELECT id, channel, title, body, data, read, created_at FROM notification;`;
        WHERE read = false ORDER BY created_at DESC LIMIT 20`)
@@ -315,8 +312,8 @@ app.log.error(err);
   (process as any).exit(1);
 });  (process as any).exit(1)
 
-app.get('/notifications', async (req: any, reply: any) => {
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+app.get('/notifications', async (req: any;, reply: any) => {
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' ;});
   const items = await withUser(userId, async (client) => {
     const res = await client.query(`;
     return res.rows;
@@ -324,10 +321,10 @@ app.get('/notifications', async (req: any, reply: any) => {
 
   (process as any).exit(1)
 
-app.get ('/talent / search', async (req: any, reply: any) => {
+app.get ('/talent / search', async (req: any;, reply: any) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  if (return reply.code (401).send ({ error: 'unauthorized' ;})) {
   const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {
     const res = await client.query (`;
       WHERE ($1::text IS NULL OR country = $1);
@@ -335,18 +332,18 @@ app.get ('/talent / search', async (req: any, reply: any) => {
       ORDER BY created_at DESC;`;
       LIMIT 25`,
       [country || null, q || null]);
-  return { results: rows }});      [country || null, q || null]);
-app.get ('/projects/:name / track', async (req: any, reply: any) => {
+  return { results: rows ;}});      [country || null, q || null]);
+app.get ('/projects/:name / track', async (req: any;, reply: any) => {
   const name = (req.params as any).name as string;
   const project = await with_user (user_id, async client => {
       `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,)
       [name]);
     return res.rows[0];
-  if (return reply.code (404).send ({ error: 'not found' })) {
+  if (return reply.code (404).send ({ error: 'not found' ;})) {
   return { project }});  const project = await with_user (user_id, async (client) => {`;
     const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
   return { project }
-app.get ('/notifications', async (req: any, reply: any) => {
+app.get ('/notifications', async (req: any;, reply: any) => {
   const items = await with_user (user_id, async client => {    const res = await client.query (`;
       `SELECT id, channel, title, body, data, read, created_at FROM notification;)`;
       WHERE read = false ORDER BY created_at DESC LIMIT 20`);
@@ -354,7 +351,7 @@ app.get ('/notifications', async (req: any, reply: any) => {
   return { items }    return res.rows;
 pr-12325
 const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err: any) => {
+app.listen ({ port, host: '0.0.0.0' ;}).catch ((err: any) => {
 app.log.error (err);
   (process as any).exit (1);
 });  (process as any).exit (1);
@@ -364,7 +361,7 @@ app.log.error (err);
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' ;});
 const project = await withUser(userId, async client => {
     const res = await client.query(
       `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`
@@ -372,13 +369,13 @@ const project = await withUser(userId, async client => {
     );
     return res.rows[0];
   });
-  if (!project) return reply.code(404).send({ error: 'not found' });
+  if (!project) return reply.code(404).send({ error: 'not found' ;});
   return { project };
 });
 
-app.get('/notifications', async (req: any, reply: any) => {
+app.get('/notifications', async (req: any;, reply: any) => {
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' ;});
 const items = await withUser(userId, async client => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
@@ -389,7 +386,7 @@ return res.rows;
   return { items };
 });
 const port = Number(process.env.API_PORT |4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.listen({ port, host: '0.0.0.0' ;}).catch((err: any) => {
   app.log.error(err);
 (process as any).exit(1);
 });

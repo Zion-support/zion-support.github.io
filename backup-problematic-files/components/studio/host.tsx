@@ -1,11 +1,11 @@
-import React, { useState } from 'react',;
+import React, { useState } from 'react';
 type PersonaConfig = {;
-  voice: 'Visionary' | 'Grounded' | 'Technical',;
-  language: string,;
+  voice: 'Visionary' | 'Grounded' | 'Technical';,;
+  language: string;,;
   cloneStyleText?: string;
 },;
 export default function StudioHostPage() {;
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary';, language: 'English' ;}),;
 
   const [episode, setEpisode] = useState<any>(null),;
 </any>
@@ -22,17 +22,17 @@ export default function StudioHostPage() {;
             <select;"
               className="mt-1 w-full border rounded p-2""
               value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any ;})}
 </select>"
               <option value="Visionary">Visionary</option>""
               <option value="Grounded">Grounded</option>""
               <option value="Technical">Technical</option>"
             </select>
             <label className="block text-sm font-medium">Language</label>""
-            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />"
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value ;})} />"
 </input>
             <label className="block text-sm font-medium">Clone Style (optional)</label>""
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || } onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || } onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value ;})} />
 </textarea>
       </section>
 
@@ -52,7 +52,7 @@ export default function StudioHostPage() {;
         <section className="space-y-4">"
           <h2 className="text-xl font-semibold">Episode Draft</h2>""
           <div className="border rounded p-4 space-y-3">"
-            <p className="text-sm text-gray-600">ID: {episode.id}</p>""
+            <p className="text-sm text-gray-600">ID: {episode.id;}</p>""
             <h3 className="text-lg font-bold">{episode.title}</h3>"
               <h4 className="font-semibold">Questions</h4>""
               <ol className="list-decimal list-inside space-y-1">"

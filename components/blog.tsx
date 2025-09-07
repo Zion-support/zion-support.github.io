@@ -1,8 +1,6 @@
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function BlogPage() {
   return (
@@ -53,7 +51,6 @@ export default function BlogPage() {
       </div>
     </UltraFuturisticBackground>;
   );
-import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 export default /**

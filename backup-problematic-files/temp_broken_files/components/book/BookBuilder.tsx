@@ -6,18 +6,15 @@ import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } fro
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
-const initialProject: BookProject = {,
+const initialProject: BookProject = {;,
   meta: {
-    title: 'Zion OS: Building the Civilization Protocol,
+    title: 'Zion OS: Building the Civilization Protocol;,
   subtitle: 'AI. Talent. Trust.
-    author: 'Founder Name,
-  isbn: 
-    publisher: 'Zion Tech Solutions'}
+    author: 'Founder Name;,
+  isbn: publisher: 'Zion Tech Solutions';}
   chapters: defaultChapters
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
 import { buildPrintableHtml  } from '../../utils/export/buildHtml';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
-import { defaultChapters } from '../../utils/book/defaultOutline';
 const initialProject: BookProject;
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
   visuals: {
@@ -26,8 +23,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
     uiScreens: []
     quoteCallouts: [
 {
-        text: 'The marketplace is the new operating system.',
-        attribution: 'Founder',
+        text: 'The marketplace is the new operating system.';,
+        attribution: 'Founder';,
       },
     ],
   },
@@ -74,16 +71,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
     setBusy(true)
     try {
       const res = await fetch('/api/book/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST';,
+        headers: { 'Content-Type': 'application/json' ;},
 body: JSON.stringify({
-          meta: project.meta,
-          chapters: project.chapters,
+          meta: project.meta;,
+          chapters: project.chapters;,
         }),
       });
       const data = await res.json();
       if (data?.chapters) {
-        setProject(p => ({ ...p, chapters: data.chapters }));
+        setProject(p => ({ ...p, chapters: data.chapters ;}));
       }
     } finally {
       setBusy(false);
@@ -94,9 +91,9 @@ body: JSON.stringify({
     try {
       const html = buildPrintableHtml(project)
       const res = await fetch('/api/book/export/pdf', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ html, pageSize }),
+        method: 'POST';,
+        headers: { 'Content-Type': 'application/json' ;},
+body: JSON.stringify({ html;, pageSize }),
       });
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
@@ -113,9 +110,9 @@ URL.revokeObjectURL(url);
     setBusy(true)
     try {
       const res = await fetch('/api/book/export/epub', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ project }),
+        method: 'POST';,
+        headers: { 'Content-Type': 'application/json' ;},
+body: JSON.stringify({ project ;}),
       });
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
@@ -130,7 +127,7 @@ URL.revokeObjectURL(url);
   }
 
   async function onUploadImages(
-    files: FileList | null,
+    files: FileList | null;,
     target: keyof VisualAsset[]
   ) {
     if (!files) return;
@@ -191,11 +188,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
             <BookOpen className='w-4 h-4' /> Cover & Branding
   chapters: defaultChapters;,
   visuals: {
-    timelineImages: [],
+    timelineImages: [];,
   daoVoteCharts: []
-    uiScreens: [],
+    uiScreens: [];,
   quoteCallouts: []
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}}
+      { text: 'The marketplace is the new operating system.';, attribution: 'Founder' ;}]}}
 function fileToBase64(file: File): Promise<string> {
 </string>
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">"
@@ -247,7 +244,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 onChange={e =>
                   setProject({
                     ...project,
-                    meta: { ...project.meta, title: e.target.value },
+                    meta: { ...project.meta;, title: e.target.value ;},
                   })
                 }
               />
@@ -260,7 +257,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 onChange={e =>
                   setProject({
                     ...project,
-                    meta: { ...project.meta, subtitle: e.target.value },
+                    meta: { ...project.meta;, subtitle: e.target.value ;},
                   })
                 }
               />
@@ -273,7 +270,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 onChange={e =>
                   setProject({
                     ...project,
-                    meta: { ...project.meta, author: e.target.value },
+                    meta: { ...project.meta;, author: e.target.value ;},
                   })
                 }
               />
@@ -290,7 +287,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 onChange={e =>
                   setProject({
                     ...project,
-                    meta: { ...project.meta, isbn: e.target.value },
+                    meta: { ...project.meta;, isbn: e.target.value ;},
                   })
                 }
               />
@@ -371,7 +368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {project.chapters.map((ch, idx) => (
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta;, isbn: e.target.value ;} })}
           <div className="space-y-3">"
             <label className="block">"
 </label>"
@@ -392,8 +389,8 @@ pr-12325
 className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                 value={ch.content}
                 onChange={(e) => {
-                  const chapters: BookChapter[] = [...project.chapters],
-                  chapters[idx] = { ...chapters[idx], content: e.target.value },
+                  const chapters: BookChapter[] = [...project.chapters];,
+                  chapters[idx] = { ...chapters[idx], content: e.target.value ;},
                   setProject({ ...project, chapters })                }}
             <div key={idx} className='border rounded-lg p-4 space-y-2'>
               <div className='font-medium'>{ch.title}</div>
@@ -402,7 +399,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                 value={ch.content}
                 onChange={e => {
                   const chapters: BookChapter[] = [...project.chapters];
-                  chapters[idx] = { ...chapters[idx], content: e.target.value };
+                  chapters[idx] = { ...chapters[idx], content: e.target.value ;};
                   setProject({ ...project, chapters });
                 }}
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
@@ -426,11 +423,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   const quoteCallouts = [...project.visuals.quoteCallouts];
                   quoteCallouts[i] = {
                     ...quoteCallouts[i],
-                    text: e.target.value,
+                    text: e.target.value;,
                   };
                   setProject({
                     ...project,
-                    visuals: { ...project.visuals, quoteCallouts },
+                    visuals: { ...project.visuals;, quoteCallouts },
                   });
                 }}
               />
@@ -438,7 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
-                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value ;},
               <input
                 className='border rounded px-2 py-1'
                 value={q.attribution ?? ''}
@@ -446,15 +443,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   const quoteCallouts = [...project.visuals.quoteCallouts];
                   quoteCallouts[i] = {
                     ...quoteCallouts[i],
-                    attribution: e.target.value,
+                    attribution: e.target.value;,
                   };
                   setProject({
                     ...project,
-                    visuals: { ...project.visuals, quoteCallouts },
+                    visuals: { ...project.visuals;, quoteCallouts },
                   });
                 }}
                 placeholder='Attribution'
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
+                  setProject({ ...project, visuals: { ...project.visuals;, quoteCallouts } })
                 }}
                 placeholder="Attribution"
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx

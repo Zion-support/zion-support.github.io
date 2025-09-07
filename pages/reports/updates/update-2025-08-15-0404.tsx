@@ -101,7 +101,7 @@ export default function Update202508150404() {;
 
 
 import Head from 'next / head';
-import React from 'react',
+import React from 'react',;
 export default /**
  * Update202508150404 - Function description
  */

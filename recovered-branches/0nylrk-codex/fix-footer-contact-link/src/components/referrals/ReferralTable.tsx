@@ -1,10 +1,10 @@
 
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Referral, ReferralStatus } from "@/types/referrals",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 import { formatDate } from "@/utils/referralUtils",      case "expired":
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:

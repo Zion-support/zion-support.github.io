@@ -1,16 +1,16 @@
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { ModeToggle } from '@/components/ModeToggle',;
-import { useTranslation } from 'react-i18next',;
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useTranslation } from 'react-i18next';
 ;
 export interface MobileMenuProps {;
   unreadCount?:number,;
-  onClose:() => void,;
-  openLoginModal:(returnToPath:string) => void, // Added from plan;
+  onClose: () => void;,;
+  openLoginModal: (returnToPath:string) => void;, // Added from plan;
 }
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
 // These are routes that should trigger the login modal if accessed while unauthenticated.;
@@ -33,39 +33,39 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
   const { t } = useTranslation(),;
   const baseItems = [;
     {;
-      key:'home',;
-      href:'/',;
-      icon:Home,;
-      matches:(path:string) => path === '/'},;
-      key:'explore',;
-      href:'/talent',;
-      icon:Search,;
+      key: 'home';,;
+      href: '/';,;
+      icon: Home;,;
+      matches: (path:string) => path === '/';},;
+      key: 'explore';,;
+      href: '/talent';,;
+      icon: Search;,;
       matches:(path:string) =>;
         path.startsWith('/talent') ||;
         path.startsWith('/categories') ||;
         path.startsWith('/marketplace')},;
-      key:'community',;
-      href:'/community',;
-      icon:MessageCircle,;
+      key: 'community';,;
+      href: '/community';,;
+      icon: MessageCircle;,;
         path.startsWith('/community') || path.startsWith('/forum')},;
-      key:'post_job',;
-      href:'/post-job',;
-      icon:BriefcaseIcon,;
-      matches:(path:string) => path.startsWith('/post-job'),;
-      authRequired:true},;
-      key:'messages',;
-      href:'/messages',;
-      icon:MessageSquare,;
+      key: 'post_job';,;
+      href: '/post-job';,;
+      icon: BriefcaseIcon;,;
+      matches: (path:string) => path.startsWith('/post-job');,;
+      authRequired: true;},;
+      key: 'messages';,;
+      href: '/messages';,;
+      icon: MessageSquare;,;
         path.startsWith('/messages') || path.startsWith('/inbox'),;
-      badge:unreadCount,;
-      key:'dashboard',;
-      href:'/dashboard',;
-      icon:User,;
-      matches:(path:string) => path.startsWith('/dashboard'),;']
-      authRequired:true}],;
+      badge: unreadCount;,;
+      key: 'dashboard';,;
+      href: '/dashboard';,;
+      icon: User;,;
+      matches: (path:string) => path.startsWith('/dashboard');,;']
+      authRequired: true;}],;
   const navItems = baseItems.map((item) => ({;
     ...item,;)
-    name:item.key === 'explore' ? t('general.explore') :t(`nav.${item.key}`)})),;
+    name: item.key === 'explore' ? t('general.explore') :t(`nav.${item.key;}`)})),;
   // Filter items based on auth status;
   const visibleItems = navItems.filter(;)
     (item) => !item.authRequired || (item.authRequired && isAuthenticated)),;
@@ -92,10 +92,10 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
             href={item.href}
             aria-label={item.name}
             className={cn(;"
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;')
+              'flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary';,;')
               item.matches(router.pathname);
                 ? 'bg-primary/20 text-primary border-l-4 border-primary';
-                :'text-foreground hover:bg-primary/10 hover:text-primary')}
+                :'text-foreground hover: bg-primary/10 hover:text-primary');}
             onClick={(e) => {;
 
             <div className="relative mr-4">;"
@@ -113,13 +113,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
     </div>;
   ),; '/messages', //Already marked as authRequired '/dashboard', //Already marked as authRequired //Add any specific sub-routes if necessary ];
 const baseItems = [ {';
-  key: 'home', href: '/',  icon: Home, matches: (path: string) => path === '/' 
+  key: 'home';, href: '/';,  icon: Home;, matches: (path: string) => path === '/' ;
 };
 {';
-  key: 'explore', href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace') 
+  key: 'explore';, href: '/talent';,  icon: Search;, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace') ;
 };
 {';
-  key: 'community', href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') 
+  key: 'community';, href: '/community';,  icon: MessageCircle;, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') ;
 };
 > <X className="h-5 w-5" /> </Button> </div> <Link key= {;
   item.name ;
@@ -128,7 +128,7 @@ const baseItems = [ {';
 }aria-label= {;
   item.name ;
 }className= {';
-  cn ('flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',  item.matches (router.pathname) ? 'bg-primary/20 text-primary border-l-4 border-primary' //It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility. //Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay. ;
+  cn ('flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary';,  item.matches (router.pathname) ? 'bg-primary/20 text-primary border-l-4 border-primary' //It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility. //Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay. ;
 }onClose (), //Close mobile menu on any click ;
 }
 }> {';

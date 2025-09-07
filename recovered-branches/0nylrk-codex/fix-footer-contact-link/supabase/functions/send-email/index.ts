@@ -1,5 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",;
 import {Resend} from "npm: resend@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Resend} from "npm: resend@2.0.0";
 const corsHeaders = {
@@ -14,7 +14,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-  try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+  try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",

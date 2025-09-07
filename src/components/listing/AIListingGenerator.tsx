@@ -116,15 +116,15 @@ if ( {) {
       }
 
       setGeneratedContent((data as any)?.generated || null)
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { supabase } from "@/integrations/supabase/client",;
+import { AIListingForm } from "./AIListingForm",;
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
       })

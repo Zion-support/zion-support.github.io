@@ -2,8 +2,8 @@ import React from 'react';
 
 
 export default function ZionTechGroupPage() {;
-import Head from 'next/head',
-import Link from 'next/link',
+import Head from 'next/head',;
+import Link from 'next/link',;
 import {
   Brain, Zap, Target, BarChart3, Users, TrendingUp,
   MessageSquare, Mail, Phone, MapPin, ArrowRight,
@@ -109,7 +109,7 @@ export default function ZionTechGroupPage() {
         <title>;
           About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems;
         </title>;
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
 import { Brain, Zap, Target, BarChart3, Users, TrendingUp;

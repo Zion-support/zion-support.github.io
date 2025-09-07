@@ -1,7 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Button from '../components/ui/Button',
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 import {GetStaticPaths, GetStaticProps} from 'next';
@@ -16,31 +17,32 @@ const service = useMemo(() => {
   if (!slug) return undefined;
   const all: any[] = ([] as any[])
       .concat(
-        enhancedRealMicroSaasServices as any
-        extraServices as any
-        additionalEnhancedServices as any
-        innovativeAIServices as any
-        quantumSpaceServices as any
-        enterpriseITServices as any
-        newRealServices as any
-        marketReadyServices as any
-        realMarketServices as any
-        new2025Services as any
-        newRealInnovations as any
-        emergingTechnologyServices as any
-        comprehensiveITSolutions as any
-        marketValidatedServices as any
-        curatedMarketServices as any
-        cuttingEdgeITServices as any
-        nextGenerationAIServices as any
-        nextGenAIServices as any
-        industryRealServices as any
-        professionalServices as any
-        realEnterpriseServices2025 as any
-        augmentedServicesBatch3 as any
-        real2025Q3Additions as any
-        realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
         enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any,
+        enhancedRealMicroSaasServices as any
         extraServices as any,
         additionalEnhancedServices as any,
         innovativeAIServices as any,

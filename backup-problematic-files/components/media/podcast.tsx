@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react',;
-import Link from 'next/link',;
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 type EpisodeListItem = {;
-  id: string,;
-  title: string,;
-  inviteeName: string,;
-  createdAt: string,;
-  summary: string,;
+  id: string;,;
+  title: string;,;
+  inviteeName: string;,;
+  createdAt: string;,;
+  summary: string;,;
   audio?: {;
     mp3Url?: string,;
     wavUrl?: string,;
@@ -32,7 +32,7 @@ export default function PodcastIndexPage() {;
 </li>"
               <div>
                 <h2 className="text-xl font-semibold">{ep.title}</h2>""
-                <p className="text-sm text-gray-500">Guest: {ep.inviteeName}  {new Date(ep.createdAt).toLocaleString()}</p>""
+                <p className="text-sm text-gray-500">Guest: {ep.inviteeName;}  {new Date(ep.createdAt).toLocaleString()}</p>""
                 {ep.summary && <p className="mt-2 text-gray-700">{ep.summary}</p>}"
               <div className="flex gap-3">"
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>"

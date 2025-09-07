@@ -2,12 +2,12 @@ import React, { useState, useEffect } from \"react\";
 import {X, ArrowRight} from \"lucide-react\";
 import {Link} from \"react-router-dom\";
 import {useIsMobile} from \"@/hooks/use-mobile\";
-import React, { useState, useEffect } from \"react\",
-import { X, ArrowRight } from \"lucide-react\",
+import React, { useState, useEffect } from \"react\",;
+import { X, ArrowRight } from \"lucide-react\",;
 import { Link } from \"react-router-dom\";
 import { useIsMobile } from \"@/hooks/use-mobile\";
-import { Link } from \"react-router-dom\",
-import { useIsMobile } from \"@/hooks/use-mobile\",
+import { Link } from \"react-router-dom\",;
+import { useIsMobile } from \"@/hooks/use-mobile\",;
   appName?: string;
 import React, { useState, useEffect } from './react';
 import { X, ArrowRight } from './lucide-react';

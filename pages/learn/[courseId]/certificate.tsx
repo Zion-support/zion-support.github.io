@@ -24,8 +24,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-import { use_router } from 'next / router',
-import CertificatePreview from '../../../components / learn / CertificatePreview',
+import { use_router } from 'next / router',;
+import CertificatePreview from '../../../components / learn / CertificatePreview',;
 export default /**
  * CertificatePage - Function description
  */

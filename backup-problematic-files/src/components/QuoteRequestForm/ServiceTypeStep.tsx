@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react",;""
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;""
-import { Input } from "@/components/ui/input",;""
-import { Card } from "@/components/ui/card",;""
+import { useEffect, useState } from "react";""
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";""
+import { Input } from "@/components/ui/input";""
+import { Card } from "@/components/ui/card";""
 import { Search } from 'lucide-react';
-import { ListingScoreCard } from "@/components/ListingScoreCard",;""
-import { captureException } from "@/utils/sentry",;""
-import Skeleton from "@/components/ui/skeleton",;""
-import { useDebounce } from "@/hooks/useDebounce",;""
-import { useIsMounted } from "@/hooks/useIsMounted",;""
-import { z } from "zod",;""
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import { ListingScoreCard } from "@/components/ListingScoreCard";""
+import { captureException } from "@/utils/sentry";""
+import Skeleton from "@/components/ui/skeleton";""
+import { useDebounce } from "@/hooks/useDebounce";""
+import { useIsMounted } from "@/hooks/useIsMounted";""
+import { z } from "zod";""
+import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = z.object({;)
-  id:z.string(),;
-  title:z.string(),;
-  category:z.string(),;
-  image:z.string().optional()}),;
+  id: z.string();,;
+  title: z.string();,;
+  category: z.string();,;
+  image: z.string().optional();}),;
 ;
 const listingsSchema = z.array(listingSchema),;
 interface ServiceTypeStepProps {;
-  formData:QuoteFormData,;
+  formData: QuoteFormData;,;
   updateFormData:(data:Partial<QuoteFormData>) => void;
 
   const [listings, setListings] = useState<ListingItem[]>([]),;
@@ -40,7 +40,7 @@ interface ServiceTypeStepProps {;
         } catch (err) {;
           if (attempt === maxRetries - 1) {;
             if (process.env.NODE_ENV === 'development') {;
-              logErrorToProduction('Failed to load services:', { data:err }),;
+              logErrorToProduction('Failed to load services: ';, { data: err ;}),;
             } else {;
               captureException(err),;
               setListings([]),;
@@ -52,11 +52,11 @@ interface ServiceTypeStepProps {;
     fetchServices(),;
   }, [formData.serviceType, debouncedQuery, isMounted]),;
   const handleTypeSelect = (type:ServiceType) => {;
-    updateFormData({ serviceType:type }),;
+    updateFormData({ serviceType: type ;}),;
   const handleItemSelect = (item:ListingItem) => {;
     updateFormData({ ;
-      specificItem:item,;
-      serviceCategory:item.category,;)
+      specificItem: item;,;
+      serviceCategory: item.category;,;)
       serviceType:item.category.toLowerCase() as ServiceType;
     }),;
   const sourceListings = listings,;
@@ -131,7 +131,7 @@ interface ServiceTypeStepProps {;
               <div className="text-center py-8 text-zion-slate-light">;"
               </div>;            )}
 updateFormData: (data: Partial<QuoteFormData>) => void ;
-return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>  <Card > <h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>  <Card > <h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>  </div> </div> {";""
+return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md: grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions;, consulting, development</p>  <Card > <h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>  <Card > <h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>  </div> </div> {";""
   formData.serviceType && (<div className="space-y-4"> <h3 className="text-xl font-semibold text-white">Select a specific {;"
 }</h3> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" /> <Input placeholder= {;"
 }className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple" /> </div> {";""

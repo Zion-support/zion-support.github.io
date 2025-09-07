@@ -12,8 +12,8 @@ interface StatusBadgeProps {;
 }
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Badge } from "@/components/ui/badge",
+import { ApplicationStatus } from "@/types/jobs",;
+import { Badge } from "@/components/ui/badge",;
 interface StatusBadgeProps {
   status: ApplicationStatus
 }
@@ -61,8 +61,8 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
       return <Badge variant="outline">Viewed</Badge>;
     case "shortlisted":;
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Badge } from "@/components/ui/badge",
+import { ApplicationStatus } from "@/types/jobs",;
+import { Badge } from "@/components/ui/badge",;
 interface StatusBadgeProps {
   status: ApplicationStatus
 }

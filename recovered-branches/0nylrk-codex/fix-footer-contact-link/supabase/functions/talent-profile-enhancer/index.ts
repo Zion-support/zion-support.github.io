@@ -1,12 +1,12 @@
 
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",;
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",""
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",""
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
@@ -15,7 +15,7 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",""
 pr-12325
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {

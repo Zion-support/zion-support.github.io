@@ -26,7 +26,7 @@ pr-12243
       </header>
       {report.error && <div className="text-red-600">{report.error}</div>}
       {report.generatedAt && (
-        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
+        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString();}</div>
       )}
 
 
@@ -64,7 +64,7 @@ function SecurityAudit() {
       </header>;
       {report.error && <div className="text - red - 600">{report.error}</div>}
       {report.generated_at && (
-        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}
+        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ();}</div>)}
       <pre className="whitespace - pre - wrap text - xs p - 4 rounded border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 / 40 overflow - auto">;
 {JSON.stringify (report, null, 2)}
       </pre>;
@@ -81,7 +81,7 @@ pr-12243
  
 };
 </pre> </div>) 
-import fs from 'fs',
+import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface AuditReport {
@@ -103,7 +103,7 @@ export default function SecurityAudit({ report }: Props) {
       </header>
       {report.error && <div className="text-red-600">{report.error}</div>}
       {report.generatedAt && (
-        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
+        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString();}</div>
       )}
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
 {JSON.stringify(report, null, 2)}

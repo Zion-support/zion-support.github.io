@@ -145,8 +145,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 }
-import React from 'react',
-import SEO from '../components / SEO',
+import React from 'react',;
+import SEO from '../components / SEO',;
 export default /**
  * PressPage - Function description
  */

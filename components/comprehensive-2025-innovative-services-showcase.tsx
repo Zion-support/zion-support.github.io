@@ -45,7 +45,6 @@ import { Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Lock, Palette, Factory, Database, Cloud;
   Cpu, Eye, Target, Users, BarChart3
  } from 'lucide-react';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 const Comprehensive2025InnovativeServicesShowcase: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
         title='2025 Innovative Services Showcase | Zion Tech Group'
@@ -70,16 +69,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
         </div>
         <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
             className='space-y-6'>        ;
         <div className="text-center max-w-6xl mx-auto relative z-10">;
           <motion&& motion.div
 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
             className='space-y-6'            className="space-y-6">;
     <Layout>
       <SEO 
@@ -107,58 +106,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-center max-w-6xl mx-auto relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='space-y-6'
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Enhanced Company Badge */}
             <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
-      name: 'AI & Marketing',
-      icon: Brain,
-      color: 'from - purple - 500 to - pink - 500',
+              initial={{ opacity: 0;, scale: 0 && 0.8 ;}}
+      name: 'AI & Marketing';,
+      icon: Brain;,
+      color: 'from - purple - 500 to - pink - 500';,
     },
     {
-      name: 'Quantum & Finance',
-      icon: Atom,
-      color: 'from - cyan - 500 to - blue - 500',
+      name: 'Quantum & Finance';,
+      icon: Atom;,
+      color: 'from - cyan - 500 to - blue - 500';,
     },
     {
-      name: 'Space Technology',
-      icon: Rocket,
-      color: 'from - indigo - 500 to - purple - 500',
+      name: 'Space Technology';,
+      icon: Rocket;,
+      color: 'from - indigo - 500 to - purple - 500';,
     },
     {
-      name: 'Metaverse & AI',
-      icon: Globe,
-      color: 'from - green - 500 to - teal - 500',
+      name: 'Metaverse & AI';,
+      icon: Globe;,
+      color: 'from - green - 500 to - teal - 500';,
     },
     {
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
+      name: 'Cybersecurity';,
+      icon: Shield;,
+      color: 'from - red - 500 to - orange - 500';,
     },
     {
-      name: 'Supply Chain & AI',
-      icon: Factory,
-      color: 'from - yellow - 500 to - orange - 500',
+      name: 'Supply Chain & AI';,
+      icon: Factory;,
+      color: 'from - yellow - 500 to - orange - 500';,
     },
     {
-      name: 'Quantum & Healthcare',
-      icon: Cpu,
-      color: 'from - violet - 500 to - purple - 500',
+      name: 'Quantum & Healthcare';,
+      icon: Cpu;,
+      color: 'from - violet - 500 to - purple - 500';,
     },
     {
-      name: 'AI & Creativity',
-      icon: Palette,
-      color: 'from - pink - 500 to - rose - 500',
+      name: 'AI & Creativity';,
+      icon: Palette;,
+      color: 'from - pink - 500 to - rose - 500';,
     },
     {
-      name: 'AI & Robotics',
-      icon: Database,
-      color: 'from - emerald - 500 to - green - 500',
+      name: 'AI & Robotics';,
+      icon: Database;,
+      color: 'from - emerald - 500 to - green - 500';,
     },  ];
 ;
   const getCategoryIcon = (category: string) =>: any {
@@ -173,15 +172,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout>;
       <SEO;
         title='2025 Innovative Services Showcase | Zion Tech Group';
-        description='Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    { name: 'AI & Marketing', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
-    { name: 'Quantum & Finance', icon: Atom, color: 'from - cyan - 500 to - blue - 500' },
-    { name: 'Space Technology', icon: Rocket, color: 'from - indigo - 500 to - purple - 500' },
-    { name: 'Metaverse & AI', icon: Globe, color: 'from - green - 500 to - teal - 500' },
-    { name: 'Cybersecurity', icon: Shield, color: 'from - red - 500 to - orange - 500' },
-    { name: 'Supply Chain & AI', icon: Factory, color: 'from - yellow - 500 to - orange - 500' },
-    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from - violet - 500 to - purple - 500' },
-    { name: 'AI & Creativity', icon: Palette, color: 'from - pink - 500 to - rose - 500' },
-    { name: 'AI & Robotics', icon: Database, color: 'from - emerald - 500 to - green - 500' }
+        description='Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    { name: 'AI & Marketing';, icon: Brain;, color: 'from - purple - 500 to - pink - 500' ;},
+    { name: 'Quantum & Finance';, icon: Atom;, color: 'from - cyan - 500 to - blue - 500' ;},
+    { name: 'Space Technology';, icon: Rocket;, color: 'from - indigo - 500 to - purple - 500' ;},
+    { name: 'Metaverse & AI';, icon: Globe;, color: 'from - green - 500 to - teal - 500' ;},
+    { name: 'Cybersecurity';, icon: Shield;, color: 'from - red - 500 to - orange - 500' ;},
+    { name: 'Supply Chain & AI';, icon: Factory;, color: 'from - yellow - 500 to - orange - 500' ;},
+    { name: 'Quantum & Healthcare';, icon: Cpu;, color: 'from - violet - 500 to - purple - 500' ;},
+    { name: 'AI & Creativity';, icon: Palette;, color: 'from - pink - 500 to - rose - 500' ;},
+    { name: 'AI & Robotics';, icon: Database;, color: 'from - emerald - 500 to - green - 500' ;}
   const getCategoryIcon = (category: string) =>: any {
     const cat = categories.find (c => c.name === category);
     return cat ? cat.icon : Star;    return cat ? cat.icon : Star;
@@ -217,23 +216,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='absolute top - 1/3 right - 1/4 w - 20 h - 20 border border - green - 400 / 20 transform rotate - 12 animate - pulse delay - 1500'></div>;
         </div>;
         <div className='text - center max - w-6xl mx - auto relative z - 10'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, coordinate_y: 20 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
             className='space - y-6'          >;
         <div className="text - center max - w-6xl mx-auto relative z-10">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, coordinate_y: 20 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
             className='space - y-6'            className="space-y-6";
           >;
             {/* Enhanced Company Badge */}
             <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0;, scale: 0.8 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
 
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -246,7 +245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Pioneering the future with cutting-edge micro SAAS services
               quantum computing solutions, and autonomous AI platforms
             </p>
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+              transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
               <Star className='w-5 h-5' />;
               <span>Innovation Leader 2025</span>;
@@ -259,7 +258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               quantum computing solutions, and autonomous AI platforms;
             </p>;
 
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6;, delay: 0.2 ;}}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
               <Star className="w-5 h-5" />
@@ -276,10 +275,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Enhanced Stats */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
 
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -310,7 +309,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
                 </div>              </div>            >
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8;, delay: 0.4 ;}}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
@@ -344,10 +343,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -380,7 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
 
                   <div
-                    className={`p-8 rounded-2xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
+                    className={`p-8 rounded-2xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`;}>;
                     <div className='text-center'>;
                       <div
                         className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category && category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>;
@@ -417,9 +416,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             {/* Enhanced Stats */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.4 ;}}
               className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto';
             >;
               <div className='p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - cyan - 400 / 20'>;
@@ -476,15 +475,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to-purple-500 / 5"></div>;
         <div className="max - w-7xl mx-auto relative z-10">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            initial={{ opacity: 0;, coordinate_y: 20 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
       {/* Featured Services */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
             className='text - center mb - 16';
           >;
             <h2 className='text - 5xl md:text - 6xl font - bold mb - 8 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
@@ -500,13 +499,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               const IconComponent = category.icon;
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                  viewport={{ once: true ;}}
                   className="group relative"
                 >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`;}>
                     <div className="text-center">
                       <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>
                         <IconComponent className="w-8 h-8 text-white" />
@@ -535,10 +534,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
 
 className='text-center mb-16'
           >
@@ -579,10 +578,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       )}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
             className='text-center mb-16'
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
@@ -688,10 +687,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}
 
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -733,10 +732,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               return (
                 <motion&& motion.div
                   key={service && service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.05 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  whileInView={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.05 ;}}
+                  viewport={{ once: true ;}}
           </div>;
         </div>;
       </section>;
@@ -758,9 +757,9 @@ export default Comprehensive2025InnovativeServicesShowcase;
               </a>
             </div>
 <div className='text-sm text-gray-400'>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Address: 364 E Main St STE 1008;, Middletown DE 19709</p>
               <p>
-                Website:{' '}
+                Website: {' ';}
                 <a
                   href='https://ziontechgroup.com'
                   className='text-cyan-400 hover:text-cyan-300'

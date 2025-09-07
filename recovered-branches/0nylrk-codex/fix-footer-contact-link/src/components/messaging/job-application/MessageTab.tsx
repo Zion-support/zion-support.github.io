@@ -16,8 +16,8 @@ export function MessageTab(): any ({;
           id="message"
           value={message}
 
-          onChange={(e) => setMessage(e && e.target.value)}import React from 'react',
-import { Textarea } from "@/components/ui/textarea",
+          onChange={(e) => setMessage(e && e.target.value)}import React from 'react',;
+import { Textarea } from "@/components/ui/textarea",;
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 export interface MessageTabProps {
@@ -32,8 +32,8 @@ export function MessageTab({
   proposalLink
   setProposalLink
 }: MessageTabProps) {
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
 export interface MessageTabProps {
   message: string,
   setMessage: (message: string) => void,

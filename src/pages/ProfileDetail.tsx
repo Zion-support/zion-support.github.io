@@ -6,15 +6,15 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { useState, useEffect } from "react",;
+import { useRouter } from "next/router",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 

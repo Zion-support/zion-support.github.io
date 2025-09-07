@@ -32,8 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
 
-import React, { useEffect, useState } from "react",
-import Tree, { TreeNode } from "../../components/ui/Tree",
+import React, { useEffect, useState } from "react",;
+import Tree, { TreeNode } from "../../components/ui/Tree",;
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string   } catch (error) {

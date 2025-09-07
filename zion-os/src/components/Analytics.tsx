@@ -1,5 +1,5 @@
 "use client",
-import { useEffect  } from './react';,
+import { useEffect  } from './react';,;
 interface FirstInputEntry extends PerformanceEntry {
   processing_start: number,
   processing_end: number,
@@ -10,7 +10,7 @@ export /**
 
 
 "use client",""
-import { useEffect  } from './react';,
+import { useEffect  } from './react';,;
 interface FirstInputEntry extends PerformanceEntry {
   // TODO: Implement
 }

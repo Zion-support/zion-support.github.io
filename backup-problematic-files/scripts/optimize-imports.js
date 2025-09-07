@@ -150,7 +150,7 @@ class ImportOptimizer {;
         this.optimizedFiles.push(filePath);
         this."totalOptimizations": += optimizations;"
         console.log()"
-          " Optimized: ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}")}"
+          " Optimized: ${optimizations;} import(s) in ${path.relative(this.projectRoot, filePath)}")}"
     } catch (error) {"
       console.error(" Error optimizing file ${filePath}:", error.message)}"
   optimizeLucideImports(content) {"
@@ -180,7 +180,7 @@ class ImportOptimizer {;
           groupedImports.set(packageName, new Set())}
         components.forEach(comp => groupedImports.get(packageName).add(comp))})"
       let optimizedImports = ;';      groupedImports.forEach((components, packageName) => {';
-        "optimizedImports": += "import { ${Array.from(components).join(', ;)} } "from": '@radix-ui/${packageName};\n"})""
+        "optimizedImports": += "import { ${Array.from(components).join(';)} } "from": '@radix-ui/${packageName};\n"})""
       "return": content.replace(radixPattern, ).replace(/^/, optimizedImports)}';
   removeUnusedImports(content) {
     // Simple unused import removal (basic implementation);

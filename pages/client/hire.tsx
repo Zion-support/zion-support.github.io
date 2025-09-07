@@ -49,8 +49,8 @@ import {useState} from 'react';
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
+import { useState } from "react",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
 import { useState } from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
 

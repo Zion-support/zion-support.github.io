@@ -1,7 +1,7 @@
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -22,8 +22,8 @@ serve(async (req) => {
     const { content, enhancementType, context, instructions } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
-      throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+      throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -190,7 +190,7 @@ serve(async (req) => {
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";"`;
         userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;"
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",""
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

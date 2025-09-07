@@ -18,7 +18,7 @@ pr-12325
     globals: true}});
 
 import {define_config} from 'vitest / config';
-import path from 'node: path',
+import path from 'node: path',;
 export default define_config ({
   resolve: {
     alias: {

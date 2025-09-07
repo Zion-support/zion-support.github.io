@@ -1,13 +1,13 @@
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;""
-import { Button } from "@/components/ui/button",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;""
-import { CountryPricing } from "@/data/onsiteServicePricing",;"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";""
+import { Button } from "@/components/ui/button";""
+import { Badge } from "@/components/ui/badge";""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";""
+import { CountryPricing } from "@/data/onsiteServicePricing";"
 ;
 interface CountryServiceCardProps {;
-  country:CountryPricing,;
-  onSelect:(country:CountryPricing) => void,;
+  country: CountryPricing;,;
+  onSelect: (country:CountryPricing) => void;,;
   isPopular?:boolean;
 }
 export function CountryServiceCard({ country, onSelect, isPopular } CountryServiceCardProps) {;
@@ -39,7 +39,7 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
           <div className="flex items-start">;"
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
 
-            <span>Typical response time:{getResponseTime(country.country)}</span>;
+            <span>Typical response time: {getResponseTime(country.country);}</span>;
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
 
             <span>Service available in major cities</span>;

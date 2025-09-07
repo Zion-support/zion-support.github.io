@@ -5,13 +5,13 @@ import {;
   CarouselItem,;
   CarouselNext,;
   CarouselPrevious} from "@/components/ui/carousel",;""
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;""
-import { Avatar } from "@/components/ui/avatar",;""
-import { Button } from "@/components/ui/button",;""
+import { Card, CardContent, CardFooter } from "@/components/ui/card";""
+import { Avatar } from "@/components/ui/avatar";""
+import { Button } from "@/components/ui/button";""
 import { Quote } from 'lucide-react';
-import Link from "next/link",;""
-import Image from "next/image",;""
-import { CASE_STUDIES } from "@/data/case-studies",;"
+import Link from "next/link";""
+import Image from "next/image";""
+import { CASE_STUDIES } from "@/data/case-studies";"
 ;
 const testimonials = CASE_STUDIES,;
 export function TestimonialCarousel() {;
@@ -30,8 +30,8 @@ export function TestimonialCarousel() {;
 </div>
           <Carousel;
             opts={{;"
-              align:"start",;"
-              loop:true}}"
+              align: "start";,;"
+              loop: true;}}"
             className="w-full";"
           >;
 

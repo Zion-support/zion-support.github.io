@@ -220,8 +220,8 @@ const benefits = [;
 
 export default function AIAutomationServices() {;
 
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';

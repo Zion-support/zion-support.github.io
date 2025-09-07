@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react",;""
-import { useRouter } from "next/router",;""
-import { supabase } from "../../../utils/supabase/client",;""
-import HiringBoard from "../../../components/hiring/HiringBoard",;""
-import TalentCard from "../../../components/hiring/TalentCard",;""
-import Filters from "../../../components/hiring/Filters",;""
-import type { ApplicationFilters, CandidateStatus, JobApplication } from "../../../utils/types/hiring",;"
+import React, { useEffect, useMemo, useState } from "react";""
+import { useRouter } from "next/router";""
+import { supabase } from "../../../utils/supabase/client";""
+import HiringBoard from "../../../components/hiring/HiringBoard";""
+import TalentCard from "../../../components/hiring/TalentCard";""
+import Filters from "../../../components/hiring/Filters";""
+import type { ApplicationFilters, CandidateStatus, JobApplication } from "../../../utils/types/hiring";"
 import {;
   fetchJobApplications,;
   updateApplicationNotes,;"
@@ -14,7 +14,7 @@ function useToast() {;
   const [message, setMessage] = useState<string | null>(null),;
 </string>"
   const [type, setType] = useState<"success" | "error" | "info">("info"),;""
-  const show = (msg:string, t:"success" | "error" | "info" = "info") => {;"
+  const show = (msg: string;, t:"success" | "error" | "info" = "info") => {;"
     setMessage(msg),;
     setType(t),;
     setTimeout(() => setMessage(null), 2500),;
@@ -28,7 +28,7 @@ function useToast() {;
 </div>
     </div>;)"
   const [jobId, setJobId] = useState<string>(""),;"
-  const [filters, setFilters] = useState<ApplicationFilters>({ status:"all" }),;"
+  const [filters, setFilters] = useState<ApplicationFilters>({ status: "all" ;}),;"
 
   const [applications, setApplications] = useState<JobApplication[]>([]),;
 "
@@ -91,11 +91,11 @@ function useToast() {;
 </input>"
             <div className="ml-2 inline-flex rounded-md border border-gray-300 p-1">;"
               <button;"`;
-                className={`px-3 py-1 text-sm rounded ${view === "board" ? "bg-gray-200 dark:bg-gray-700" :""}`}""
+                className={`px-3 py-1 text-sm rounded ${view === "board" ? "bg-gray-200 dark: bg-gray-700" :"";}`}""
                 onClick={() => setView("board")}"
 </button>
               </button>;
-                className={`px-3 py-1 text-sm rounded ${view === "list" ? "bg-gray-200 dark:bg-gray-700" :""}`}""
+                className={`px-3 py-1 text-sm rounded ${view === "list" ? "bg-gray-200 dark: bg-gray-700" :"";}`}""
                 onClick={() => setView("list")}"
             </div>;
         </div>;"

@@ -22,8 +22,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   createLocalTracks,;
   VideoPresets,;
 } from 'livekit-client';
-import ParticipantTile from './ParticipantTile';
-import Controls from './Controls';
   Room;
 RoomEvent,
 RemoteParticipant;
@@ -41,7 +39,7 @@ export type StartMode = 'video' | 'audio';
   token: string;
   startMode: StartMode;
 
-  onLeave?: (durationSec: number) => void,
+  onLeave?: (durationSec: number) => void;,
 };
 
 export default function CallRoom(): any ({;
@@ -89,7 +87,6 @@ onLeave}
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
-import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
 
@@ -144,23 +141,23 @@ let localTracks: any[] = [];
     if (startMode === 'video') {
 
 localTracks = await createLocalTracks({
-        audio: true,
-        video: VideoPresets.h720,
+        audio: true;,
+        video: VideoPresets.h720;,
 origin/cursor/automate-test-improve-and-merge-code-2533
-        audio: true,}
-        video: VideoPresets.h720,}
+        audio: true;,}
+        video: VideoPresets.h720;,}
       });
     } else {;}
-      localTracks = await createLocalTracks({ audio: true, video: false,}
+      localTracks = await createLocalTracks({ audio: true;, video: false;,}
 });
     }
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
-      localTracks = await createLocalTracks({ audio: true, video: false });
+      localTracks = await createLocalTracks({ audio: true;, video: false ;});
     }
     await r && r.connect(serverUrl, token, {;
-      autoSubscribe: true}),;
+      autoSubscribe: true;}),;
     // publish local tracks;
     for (const t of localTracks) {;
       await r && r.localParticipant.publishTrack(t);
@@ -171,12 +168,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const handleLeave = () => {
     if (room) {
     await r.connect(serverUrl, token, {
-      autoSubscribe: true
+      autoSubscribe: true;
     });
     // publish local tracks
 
     await r.connect(serverUrl, token, {
-      autoSubscribe: true}
+      autoSubscribe: true;}
    ,}
 });
     // publish local tracks;
@@ -255,8 +252,6 @@ const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - conne
   createLocalTracks,
   VideoPresets,
 } from 'livekit - client';
-import ParticipantTile from './ParticipantTile';
-import Controls from './Controls';
 ;
 export type StartMode = 'video' | 'audio';
 ;
@@ -279,17 +274,16 @@ function CallRoom() {
   const [participants, set_participants] = useState<;
     Array < RemoteParticipant | LocalParticipant>;
   >([]);  const [connected_at, setConnectedAt] = useState < number | null>(null);import ParticipantTile from './ParticipantTile';
-import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 ;
 type Props = {
-  project_id: string,
-  user_id: string,
-  display_name: string,
-  room_name: string,
-  server_url: string,
-  token: string,
-  start_mode: StartMode,
+  project_id: string;,
+  user_id: string;,
+  display_name: string;,
+  room_name: string;,
+  server_url: string;,
+  token: string;,
+  start_mode: StartMode;,
   on_leave?: (duration_sec: number) => void;
 }
 ;
@@ -317,14 +311,14 @@ if ( {) {
   $2
 }
       local_tracks = await createLocalTracks ({
-        audio: true,
-        video: VideoPresets.h720,
+        audio: true;,
+        video: VideoPresets.h720;,
       });
     } else {
-      local_tracks = await createLocalTracks ({ audio: true, video: false });
+      local_tracks = await createLocalTracks ({ audio: true;, video: false ;});
     }
     await r.connect (server_url, token, {
-      auto_subscribe: true,
+      auto_subscribe: true;,
     });
 ;
     // publish local tracks;
@@ -332,10 +326,10 @@ if ( {) {
     setConnectedAt (Date.now ());
     rebuild (r);
     // eslint - disable - next - line react - hooks / exhaustive - deps  }, [server_url, token, start_mode]);    } else {
-      local_tracks = await createLocalTracks ({ audio: true, video: false });
+      local_tracks = await createLocalTracks ({ audio: true;, video: false ;});
     }
     await r.connect (server_url, token, {
-      auto_subscribe: true}),
+      auto_subscribe: true;}),
     // publish local tracks;
     for (const t of local_tracks) {
       await r.local_participant.publish_track (t);
@@ -356,7 +350,7 @@ if (return) {
       r.local_participant,
       ...Array.from (r.participants.values ()),
     ];
-    set_participants (list);  }    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant, ...Array.from (r.participants.values ())];
+    set_participants (list);  }    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant;, ...Array.from (r.participants.values ())];
     set_participants (list);
   }
 ;
@@ -414,7 +408,7 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
     <div className='min - h-screen bg - gray - 950 text - gray - 100 flex flex - col'>;
       <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
         <div>;
-          <h2 className='text - lg font - semibold'>Project Room: {project_id}</h2>;
+          <h2 className='text - lg font - semibold'>Project Room: {project_id;}</h2>;
           <p className='text - xs text - gray - 400'>Room {room_name}</p>;
         </div>;
         <Controls room={room} on_leave={handle_leave} accent='cyan' />      </div>;
@@ -437,7 +431,7 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col' />
       <div className='p-4 flex items-center justify-between border-b border-gray-800' />
         <div />
-          <h2 className='text-lg font-semibold' />Project Room: {projectId}</h2>
+          <h2 className='text-lg font-semibold' />Project Room: {projectId;}</h2>
           <p className='text-xs text-gray-400' />Room {roomName}</p>
         </div>
         <Controls room={room} onLeave={handleLeave} accent='cyan' />

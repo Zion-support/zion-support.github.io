@@ -37,11 +37,11 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";"
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();"
-import React from 'react',
+import React from 'react',;
 pr-12325
-import { useTranslation } from 'react-i18next',
-import { Button } from '@/components/ui/button',
-import { Globe } from 'lucide-react',
+import { useTranslation } from 'react-i18next',;
+import { Button } from '@/components/ui/button',;
+import { Globe } from 'lucide-react',;
 import React from 'react',''
 import { useTranslation } from 'react-i18next',''
 import { Button } from '@/components/ui/button',''
@@ -52,7 +52,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 
 
   DropdownMenuItem,'
@@ -202,7 +202,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
   // TODO: Implement
 }
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 export function LanguageSelector() {
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
   return (

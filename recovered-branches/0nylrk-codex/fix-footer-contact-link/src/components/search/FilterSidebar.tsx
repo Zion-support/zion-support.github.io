@@ -1,11 +1,11 @@
 
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
-import { Filter, X, Star } from "lucide-react",
+import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",  filters: {;
     selectedProductTypes: string[],;
     selectedLocations: string[],;

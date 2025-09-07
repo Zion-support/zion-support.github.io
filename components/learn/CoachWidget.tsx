@@ -1,4 +1,4 @@
-        body: JSON.stringify({ prompt: input })
+        body: JSON.stringify({ prompt: input ;})
       });
       const data = await resp.json();
       setReply(data.text |'');
@@ -36,9 +36,9 @@ function ask() {
     set_loading (true);
     try {
       const resp = await fetch ('/api / learn / coach', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ prompt: input }),
+        method: 'POST';,
+        headers: { 'Content - Type': 'application / json' ;},
+        body: JSON.stringify ({ prompt: input ;}),
       });
       const data = await resp.json ();
       set_reply (data.text || '');
@@ -61,7 +61,6 @@ function ask() {
           placeholder='Ask for help...';
 
 
-import React, { useState } from 'react';
 
 export default function CoachWidget() {
   const [input, setInput] = useState('');

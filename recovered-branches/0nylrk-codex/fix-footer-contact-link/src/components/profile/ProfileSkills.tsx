@@ -1,9 +1,9 @@
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
+import { Badge } from "@/components/ui/badge",;
+import { ProfileSkill } from "@/types/profile",;
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
+import { Badge } from "@/components/ui/badge",;
+import { ProfileSkill } from "@/types/profile",;
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }

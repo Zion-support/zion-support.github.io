@@ -59,54 +59,48 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
   };
 
   const features = [
     {
-      icon: Brain,
-      title: 'Real-time Emotion Detection',
-description:
-        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
-      color: 'from-violet-500 to-purple-600',
+      icon: Brain;,
+      title: 'Real-time Emotion Detection';,
+description: 'Advanced AI algorithms that detect emotions from facial expressions;, voice tone, and text in real-time',
+      color: 'from-violet-500 to-purple-600';,
     },
     {
-      icon: Heart,
-      title: 'Emotional Response Generation',
-      description:
-        'Intelligent system that generates contextually appropriate emotional responses',
-      color: 'from-pink-500 to-rose-600',
+      icon: Heart;,
+      title: 'Emotional Response Generation';,
+      description: 'Intelligent system that generates contextually appropriate emotional responses';,
+      color: 'from-pink-500 to-rose-600';,
     },
     {
-      icon: Eye,
-      title: 'Multi-modal Emotion Analysis',
-      description:
-        'Combines visual, auditory, and textual data for comprehensive emotion understanding',
-      color: 'from-blue-500 to-cyan-600',
+      icon: Eye;,
+      title: 'Multi-modal Emotion Analysis';,
+      description: 'Combines visual;, auditory, and textual data for comprehensive emotion understanding',
+      color: 'from-blue-500 to-cyan-600';,
     },
     {
-      icon: MessageCircle,
-      title: 'Emotional Intelligence Training',
-      description:
-        'AI-powered training modules to improve emotional intelligence skills',
-      color: 'from-green-500 to-emerald-600',
+      icon: MessageCircle;,
+      title: 'Emotional Intelligence Training';,
+      description: 'AI-powered training modules to improve emotional intelligence skills';,
+      color: 'from-green-500 to-emerald-600';,
     },
     {
-      icon: TrendingUp,
-      title: 'Sentiment Optimization',
-      description:
-        'Optimizes communication and content based on emotional context',
-      color: 'from-orange-500 to-red-600',
+      icon: TrendingUp;,
+      title: 'Sentiment Optimization';,
+      description: 'Optimizes communication and content based on emotional context';,
+      color: 'from-orange-500 to-red-600';,
     },
     {
-      icon: Shield,
-      title: 'Emotional Health Monitoring',
-      description:
-        'Tracks emotional patterns and provides insights for mental health support',
-      color: 'from-indigo-500 to-purple-600',
+      icon: Shield;,
+      title: 'Emotional Health Monitoring';,
+      description: 'Tracks emotional patterns and provides insights for mental health support';,
+      color: 'from-indigo-500 to-purple-600';,
     },
   ];
 
@@ -122,56 +116,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
  } from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';,  };    website: 'https://ziontechgroup.com';
   }
   const features = [
     {
       icon: Brain
       title: 'Real-time Emotion Detection'
-      description:
-        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time'
-      color: 'from-violet-500 to-purple-600'
+      description: 'Advanced AI algorithms that detect emotions from facial expressions;, voice tone, and text in real-time'
+      color: 'from-violet-500 to-purple-600';
     }
       icon: Heart
       title: 'Emotional Response Generation'
       description:
         'Intelligent system that generates contextually appropriate emotional responses'
-      color: 'from-pink-500 to-rose-600'
+      color: 'from-pink-500 to-rose-600';
     }
     {
       icon: Eye
       title: 'Multi-modal Emotion Analysis'
-      description:
-        'Combines visual, auditory, and textual data for comprehensive emotion understanding'
-      color: 'from-blue-500 to-cyan-600'
+      description: 'Combines visual;, auditory, and textual data for comprehensive emotion understanding'
+      color: 'from-blue-500 to-cyan-600';
     }
     {
       icon: MessageCircle
       title: 'Emotional Intelligence Training'
       description:
         'AI-powered training modules to improve emotional intelligence skills'
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600';
     }
     {
       icon: TrendingUp
       title: 'Sentiment Optimization'
       description:
         'Optimizes communication and content based on emotional context'
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-500 to-red-600';
     }
     {
       icon: Shield
       title: 'Emotional Health Monitoring'
       description:
         'Tracks emotional patterns and provides insights for mental health support'
-      color: 'from-indigo-500 to-purple-600'
+      color: 'from-indigo-500 to-purple-600';
     }
   ];
   const benefits = [
@@ -186,49 +176,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const useCases = [
     {
-      title: 'Customer Service Automation',
-description:
-        'AI agents that understand customer emotions and respond appropriately',
-      icon: Users,
-      color: 'from-blue-500 to-cyan-600',
+      title: 'Customer Service Automation';,
+description: 'AI agents that understand customer emotions and respond appropriately';,
+      icon: Users;,
+      color: 'from-blue-500 to-cyan-600';,
     },
     {
-      title: 'Mental Health Applications',
-      description: 'Emotional support and monitoring for mental health care',
-      icon: Heart,
-color: 'from-pink-500 to-rose-600',
+      title: 'Mental Health Applications';,
+      description: 'Emotional support and monitoring for mental health care';,
+      icon: Heart;,
+color: 'from-pink-500 to-rose-600';,
     },
     {
-      title: 'Educational Platforms',
-      description: 'Personalized learning experiences based on emotional state',
-      icon: Brain,
-color: 'from-green-500 to-emerald-600',
+      title: 'Educational Platforms';,
+      description: 'Personalized learning experiences based on emotional state';,
+      icon: Brain;,
+color: 'from-green-500 to-emerald-600';,
     },
     {
-      title: 'Marketing Optimization',
-      description: 'Campaign optimization based on emotional response analysis',
-      icon: TrendingUp,
-color: 'from-orange-500 to-red-600',
+      title: 'Marketing Optimization';,
+      description: 'Campaign optimization based on emotional response analysis';,
+      icon: TrendingUp;,
+color: 'from-orange-500 to-red-600';,
     },
     {
-      title: 'HR and Recruitment',
-      description: 'Emotional intelligence assessment and team building',
-      icon: Users,
-color: 'from-purple-500 to-indigo-600',
+      title: 'HR and Recruitment';,
+      description: 'Emotional intelligence assessment and team building';,
+      icon: Users;,
+color: 'from-purple-500 to-indigo-600';,
     },
     {
-      title: 'Healthcare Diagnostics',
-      description: 'Emotional state monitoring for healthcare professionals',
-      icon: Shield,
-color: 'from-teal-500 to-cyan-600',
+      title: 'Healthcare Diagnostics';,
+      description: 'Emotional state monitoring for healthcare professionals';,
+      icon: Shield;,
+color: 'from-teal-500 to-cyan-600';,
     },
   ];
   const pricing = {
     basic: {
-name: 'Starter',
-      price: '$1,999',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+name: 'Starter';,
+      price: '$1;,999',
+      period: '/month';,
+      description: 'Perfect for small teams and startups';,
       features: [
         'Up to 1,000 emotional interactions/month',
         'Basic emotion detection (5 emotions)',
@@ -236,13 +225,13 @@ name: 'Starter',
         'Standard API access',
         'Basic analytics dashboard',
       ],
-      popular: false,
+      popular: false;,
     },
     professional: {
-      name: 'Professional',
-      price: '$3,999',
-period: '/month',
-      description: 'Ideal for growing businesses',
+      name: 'Professional';,
+      price: '$3;,999',
+period: '/month';,
+      description: 'Ideal for growing businesses';,
       features: [
         'Up to 10,000 emotional interactions/month',
         'Advanced emotion detection (15+ emotions)',
@@ -252,13 +241,13 @@ period: '/month',
         'Custom emotion models',
         'Multi-language support',
       ],
-      popular: true,
+      popular: true;,
     },
     enterprise: {
-      name: 'Enterprise',
-      price: '$7,999',
-      period: '/month',
-      description: 'For large organizations with custom needs',
+      name: 'Enterprise';,
+      price: '$7;,999',
+      period: '/month';,
+      description: 'For large organizations with custom needs';,
       features: [
         'Unlimited emotional interactions'
         'Custom emotion detection models'
@@ -269,7 +258,7 @@ period: '/month',
         'On-premise deployment'
         'Custom training and consulting'
       ]
-      popular: false
+      popular: false;
     },  };        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
@@ -279,45 +268,45 @@ period: '/month',
 
     };
     {;
-      title: 'Mental Health Applications',;
-      description: 'Emotional support and monitoring for mental health care',;
-      icon: Heart,;
-      color: 'from-pink-500 to-rose-600',;
+      title: 'Mental Health Applications';,;
+      description: 'Emotional support and monitoring for mental health care';,;
+      icon: Heart;,;
+      color: 'from-pink-500 to-rose-600';,;
     },      color: 'from-pink-500 to-rose-600';
     };
     {;
-      title: 'Educational Platforms',;
-      description: 'Personalized learning experiences based on emotional state',;
-      icon: Brain,;
-      color: 'from-green-500 to-emerald-600',;
+      title: 'Educational Platforms';,;
+      description: 'Personalized learning experiences based on emotional state';,;
+      icon: Brain;,;
+      color: 'from-green-500 to-emerald-600';,;
     },      color: 'from-green-500 to-emerald-600';
     };
     {;
-      title: 'Marketing Optimization',;
-      description: 'Campaign optimization based on emotional response analysis',;
-      icon: TrendingUp,;
-      color: 'from-orange-500 to-red-600',;
+      title: 'Marketing Optimization';,;
+      description: 'Campaign optimization based on emotional response analysis';,;
+      icon: TrendingUp;,;
+      color: 'from-orange-500 to-red-600';,;
     },      color: 'from-orange-500 to-red-600';
     };
     {;
-      title: 'HR and Recruitment',;
-      description: 'Emotional intelligence assessment and team building',;
-      icon: Users,;
-      color: 'from-purple-500 to-indigo-600',;
+      title: 'HR and Recruitment';,;
+      description: 'Emotional intelligence assessment and team building';,;
+      icon: Users;,;
+      color: 'from-purple-500 to-indigo-600';,;
     },      color: 'from-purple-500 to-indigo-600';
     };
     {;
-      title: 'Healthcare Diagnostics',;
-      description: 'Emotional state monitoring for healthcare professionals',;
-      icon: Shield,;
-      color: 'from-teal-500 to-cyan-600',;
+      title: 'Healthcare Diagnostics';,;
+      description: 'Emotional state monitoring for healthcare professionals';,;
+      icon: Shield;,;
+      color: 'from-teal-500 to-cyan-600';,;
     },      color: 'from-teal-500 to-cyan-600';
     }
   ];
 
 
       ];
-      popular: false
+      popular: false;
     }
   return (
     <>;
@@ -333,7 +322,7 @@ period: '/month',
         'On-premise deployment',
         'Custom training and consulting',
       ],
-      popular: false,
+      popular: false;,
     },
   };
 
@@ -353,9 +342,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta
           property='og:title'
           content='AI Emotional Intelligence Platform 2029'
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
             className='mb-16'            className="mb-16";
           >;
         />
@@ -401,15 +390,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
 className='mb-16'
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Badge */}
             <motion&& motion.div
-              initial={{ opacity: 0, scale: 0 && 0.8 }}
+              initial={{ opacity: 0;, scale: 0 && 0.8 ;}}
   return (
     <>;
       <Head>;
@@ -464,14 +453,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           href='https://ziontechgroup.com / ai - emotional - intelligence - platform - 2029';
         />      </Head>        {/* Open Graph */}
         <meta property="og:title" content="AI Emotional Intelligence Platform 2029" />;
-        <meta property="og:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real - time." />;
+        <meta property="og: description" content="Revolutionary AI platform that reads;, understands, and responds to human emotions in real - time." />;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com / ai - emotional - intelligence - platform - 2029" />;
         <meta property="og:image" content="https://ziontechgroup.com / og - image.jpg" />;
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content="AI Emotional Intelligence Platform 2029" />;
-        <meta name="twitter:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real - time." />;
+        <meta name="twitter: description" content="Revolutionary AI platform that reads;, understands, and responds to human emotions in real - time." />;
         <meta name="twitter:image" content="https://ziontechgroup.com / twitter - image.jpg" />;
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
@@ -483,32 +472,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='relative min - h-screen flex items - center justify - center overflow - hidden pt - 32'>;
         <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
         <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0;, coordinate_y: 50 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 1 ;}}
             className='mb - 16'          >      <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 32">;
         <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0;, coordinate_y: 50 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 1 ;}}
             className='mb - 16'            className="mb - 16";
           >;
             {/* Badge */}
             <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0;, scale: 0.8 ;}}
+              animate={{ opacity: 1;, scale: 1 ;}}
             >
               <Brain className="w-4 h-4 mr-2" />
                2029 Revolutionary AI Technology
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}
 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'
             >
               <Brain className='w-4 h-4 mr-2' />
               🚀 2029 Revolutionary AI Technology
 origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              transition={{ duration: 0 && 0.8;, delay: 0 && 0.2 ;}}
               className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'>;
               <Brain className='w-4 h-4 mr-2' />              🚀 2029 Revolutionary AI Technology              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8";
             >;
@@ -518,10 +507,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Main Heading */}
             <motion&& motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
 
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 1;, delay: 0.3 ;}}
 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -530,7 +519,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 1;, delay: 0.3 ;}}
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -541,7 +530,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className='text-white'>Platform</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.h1>
-              transition={{ duration: 1, delay: 0 && 0.3 }}
+              transition={{ duration: 1;, delay: 0 && 0.3 ;}}
               className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 AI Emotional Intelligence;
@@ -560,9 +549,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Subheading */}
             <motion&& motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0 && 0.5 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 1;, delay: 0 && 0.5 ;}}
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Revolutionary AI platform that reads, understands, and responds to;
               human emotions in real-time across all communication channels.;
@@ -571,7 +560,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.;
             </motion && motion.p>;
 
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1;, delay: 0.5 ;}}
 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
             >
               Revolutionary AI platform that reads, understands, and responds to
@@ -581,10 +570,10 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* CTA Buttons */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
 
-              transition={{ duration: 1, delay: 0.7 }}
+              transition={{ duration: 1;, delay: 0.7 ;}}
 className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -630,10 +619,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Key Stats */}
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
 
-              transition={{ duration: 1, delay: 0.9 }}
+              transition={{ duration: 1;, delay: 0.9 ;}}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -666,7 +655,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   $8.2B
                 </div>
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
-              transition={{ duration: 1, delay: 0.9 }}
+              transition={{ duration: 1;, delay: 0.9 ;}}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="text-center">
@@ -706,10 +695,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -756,7 +745,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               systems.;
             </p>;
           </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (          >;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature;, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>;
             </h2>;
@@ -768,10 +757,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 50 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
 
 
               >
@@ -836,10 +825,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -883,7 +872,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               team collaboration, and business outcomes.;
             </p>;
           </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits && benefits.map((benefit, index) => (          >;
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>            {benefits && benefits.map((benefit;, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>;
             </h2>;
@@ -892,10 +881,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, x: index % 2 === 0 ? -50 : 50 ;}}
+                whileInView={{ opacity: 1;, x: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
                 <span className='text-white text-lg'>{benefit}</span>              </motion.div>
 
               </motion.div>
@@ -928,10 +917,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -976,7 +965,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               industries with emotional intelligence.;
             </p>;
           </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase, index) => (          >;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase;, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>;
             </h2>;
@@ -988,10 +977,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 50 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
 
 
               >
@@ -1056,10 +1045,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1103,7 +1092,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               needs.;
             </p>;
           </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object && Object.entries(pricing).map(([key, plan], index) => (          >;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>            {Object && Object.entries(pricing).map(([key;, plan], index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>;
             </h2>;
@@ -1112,10 +1101,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
                 key={key}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 50 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                viewport={{ once: true ;}}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 transform hover:scale-105 ${
                   plan && plan.popular
                     ? 'border-purple-500 bg-gradient-to-b from-purple-500/10 to-purple-600/5'
@@ -1171,10 +1160,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 50 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1246,10 +1235,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to - purple - 900 / 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 50 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, coordinate_y: 50 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 1 ;}}
+            viewport={{ once: true ;}}
             className='text - center mb - 16';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -1267,10 +1256,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8;, delay: 0 && 0.1 ;}}
+              viewport={{ once: true ;}}
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Call Us</h3>;
@@ -1288,10 +1277,10 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
 
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8;, delay: 0 && 0.2 ;}}
+              viewport={{ once: true ;}}
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Email Us</h3>;
@@ -1309,10 +1298,10 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
 
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8;, delay: 0 && 0.3 ;}}
+              viewport={{ once: true ;}}
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <MapPin className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Visit Us</h3>;
@@ -1331,10 +1320,10 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
           </div>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}}
+            viewport={{ once: true ;}}
 
           >
             <Link
@@ -1357,10 +1346,10 @@ export default AIEmotionalIntelligencePlatform2029;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.1 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <Phone className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1371,10 +1360,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <h3 className="text - xl font - bold text - white mb - 2">Call Us</h3>;
               <p className="text - gray - 300">{contact_info.mobile}</p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <Mail className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1385,10 +1374,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <h3 className="text - xl font - bold text - white mb - 2">Email Us</h3>;
               <p className="text - gray - 300">{contact_info.email}</p>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.3 ;}}
+              viewport={{ once: true ;}}
               className='text - center p - 6 rounded - 2xl bg - gradient - to - b from - white / 5 to - white / 10 border border - white / 10';
             >;
               <MapPin className='w - 12 h - 12 text - purple - 400 mx - auto mb - 4' />;
@@ -1400,10 +1389,10 @@ export default AIEmotionalIntelligencePlatform2029;
               <p className="text - gray - 300">{contact_info.address}</p>;
           </div>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8;, delay: 0.4 ;}}
+            viewport={{ once: true ;}}
 ;
 
 };

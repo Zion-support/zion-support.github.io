@@ -54,9 +54,6 @@
 import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
-import {motion, AnimatePresence} from 'framer-motion';
-import Link from 'next / link';
-import {
   ArrowRight,
   Play,
   TrendingUp,
@@ -133,7 +130,7 @@ import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
 import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-infrastructure-v2';
 // Import enhanced components;
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';,
+import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';;
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
@@ -150,7 +147,7 @@ const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
 
 const [selectedCategory, setSelectedCategory] = useState('all');
 }
-const [mousePosition, setMousePosition] = useState({ x: 0, y: 0}
+const [mousePosition, setMousePosition] = useState({ x: 0;, y: 0;}
 });
 
 const [hoveredService, setHoveredService] = useState<string | null />(null);
@@ -167,7 +164,7 @@ const interval = setInterval(() => {}
     }, 8000);
     // Track mouse movement for parallax effects;
 const handleMouseMove = (
-      setMousePosition({ x: e.clientX, y: e.clientY,) => {
+      setMousePosition({ x: e.clientX;, y: e.clientY;,) => {
   return $3;}
 }
 });
@@ -210,7 +207,7 @@ const Homepage2047: React.FC = () => {
   const [is_visible, setIsVisible] = useState (false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
   const [selected_category, setSelectedCategory] = useState ('all');
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 });
+  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0;, coordinate_y: 0 ;});
   const [hovered_service, setHoveredService] = useState < string | null>(null);
   const [consciousness_level, setConsciousnessLevel] = useState (0.5);
   const [scroll_y, setScrollY] = useState (0);
@@ -225,7 +222,7 @@ const Homepage2047: React.FC = () => {
 ;
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {
-      setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
+      setMousePosition ({ coordinate_x: e.client_x;, coordinate_y: e.client_y ;});
     }
 ;
     // Animate consciousness level;
@@ -249,7 +246,7 @@ const Homepage2047: React.FC = () => {
 ;
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {
-      setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
+      setMousePosition ({ coordinate_x: e.client_x;, coordinate_y: e.client_y ;});
     }
 ;
     // Animate consciousness level;
@@ -303,10 +300,10 @@ return allInnovativeServices.filter(
 
 const categories = [
     {
-      id: 'all',
+      id: 'all';,
   name: 'All Services'
       icon: SparklesIcon;
-color: 'from-purple-500 to-pink-500',
+color: 'from-purple-500 to-pink-500';,
   count: allInnovativeServices.length;
    ,) => {
   return $3;}
@@ -373,43 +370,43 @@ const features = [
 
 const stats = [
     {}
-      number: `${allInnovativeServices.lengt}
+      number: `${allInnovativeServices.lengt;}
 }+`,
-      label: 'Innovative Services',
-  icon: Star
+      label: 'Innovative Services';,
+  icon: Star;
     },
-    { number: '99.99%'}
-  label: 'Uptime Guarantee', icon: TrendingUp}
+    { number: '99.99%';}
+  label: 'Uptime Guarantee';, icon: TrendingUp;}
 },
-    { number: '24/7'}
-  label: 'AI Intelligence Available', icon: Brain}
+    { number: '24/7';}
+  label: 'AI Intelligence Available';, icon: Brain;}
 },
-    { number: '300+'}
-  label: 'Countries Served', icon: Globe}
+    { number: '300+';}
+  label: 'Countries Served';, icon: Globe;}
 }
   ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0;, y: 60 ;},
+    animate: { opacity: 1;, y: 0 ;},
 
 
 
 const fadeInUp = {}
-    initial: { opacity: 0, y: 60}
+    initial: { opacity: 0;, y: 60;}
 },
-    animate: { opacity: 1, y: 0}
+    animate: { opacity: 1;, y: 0;}
 },
 
-transition: { duration: 0.6}
+transition: { duration: 0.6;}
 }
   };
 
 const staggerContainer = {
     animate: {
-      transition: {}
-staggerChildren: 0.1}
+      transition: {;}
+staggerChildren: 0.1;}
       }
     }
   }
@@ -423,97 +420,97 @@ staggerChildren: 0.1}
     );
   const categories = [;
     {;
-      id: 'all',;
-      name: 'All Services',;
-      icon: SparklesIcon,;
-      color: 'from-purple-500 to-pink-500',;
-      count: allInnovativeServices && allInnovativeServices.length,;
+      id: 'all';,;
+      name: 'All Services';,;
+      icon: SparklesIcon;,;
+      color: 'from-purple-500 to-pink-500';,;
+      count: allInnovativeServices && allInnovativeServices.length;,;
     },;
     {;
-      id: 'ai',;
-      name: 'AI & Autonomous',;
-      icon: BrainIcon,;
-      color: 'from-cyan-500 to-blue-500',;
-      count: innovative2025AIAutonomousEcosystemV2 && innovative2025AIAutonomousEcosystemV2.length,;
+      id: 'ai';,;
+      name: 'AI & Autonomous';,;
+      icon: BrainIcon;,;
+      color: 'from-cyan-500 to-blue-500';,;
+      count: innovative2025AIAutonomousEcosystemV2 && innovative2025AIAutonomousEcosystemV2.length;,;
     },;
     {;
-      id: 'quantum',;
-      name: 'Quantum & Emerging',;
-      icon: AtomIcon,;
-      color: 'from-blue-500 to-indigo-500',;
-      count: emergingTechBreakthroughs2025V4 && emergingTechBreakthroughs2025V4.length,;
+      id: 'quantum';,;
+      name: 'Quantum & Emerging';,;
+      icon: AtomIcon;,;
+      color: 'from-blue-500 to-indigo-500';,;
+      count: emergingTechBreakthroughs2025V4 && emergingTechBreakthroughs2025V4.length;,;
     },;
     {;
-      id: 'it',;
-      name: 'IT Infrastructure',;
-      icon: Cpu,;
-      color: 'from-emerald-500 to-teal-500',;
-      count: innovative2025ITInfrastructureV2 && innovative2025ITInfrastructureV2.length,;
+      id: 'it';,;
+      name: 'IT Infrastructure';,;
+      icon: Cpu;,;
+      color: 'from-emerald-500 to-teal-500';,;
+      count: innovative2025ITInfrastructureV2 && innovative2025ITInfrastructureV2.length;,;
     },;
   ];
   const features = [;
     {;
-      icon: Brain,;
-      title: 'AI Autonomous Ecosystem 2025',;
-      description: 'Revolutionary autonomous AI solutions',;
-      href: '/2025-innovative-services-showcase-v2',;
-      color: 'from-purple-500 to-pink-500',;
+      icon: Brain;,;
+      title: 'AI Autonomous Ecosystem 2025';,;
+      description: 'Revolutionary autonomous AI solutions';,;
+      href: '/2025-innovative-services-showcase-v2';,;
+      color: 'from-purple-500 to-pink-500';,;
     },;
     {;
-      icon: Atom,;
-      title: 'Quantum AI Neural Networks 2025',;
-      description: 'Quantum-powered AI with consciousness',;
-      href: '/quantum-ai-neural-network-fusion-platform-2025',;
-      color: 'from-blue-500 to-cyan-500',;
+      icon: Atom;,;
+      title: 'Quantum AI Neural Networks 2025';,;
+      description: 'Quantum-powered AI with consciousness';,;
+      href: '/quantum-ai-neural-network-fusion-platform-2025';,;
+      color: 'from-blue-500 to-cyan-500';,;
     },;
     {;
-      icon: Shield,;
-      title: 'Quantum Cybersecurity Intelligence 2025',;
-      description: 'Quantum-resistant security with AI',;
-      href: '/quantum-cybersecurity-intelligence-platform-2025',;
-      color: 'from-red-500 to-orange-500',;
+      icon: Shield;,;
+      title: 'Quantum Cybersecurity Intelligence 2025';,;
+      description: 'Quantum-resistant security with AI';,;
+      href: '/quantum-cybersecurity-intelligence-platform-2025';,;
+      color: 'from-red-500 to-orange-500';,;
     },;
     {;
-      icon: Rocket,;
-      title: 'Space Resource Intelligence 2025',;
-      description: 'AI-powered space resource discovery',;
-      href: '/space-resource-intelligence-platform-2025',;
-      color: 'from-indigo-500 to-purple-500',;
+      icon: Rocket;,;
+      title: 'Space Resource Intelligence 2025';,;
+      description: 'AI-powered space resource discovery';,;
+      href: '/space-resource-intelligence-platform-2025';,;
+      color: 'from-indigo-500 to-purple-500';,;
     },;
     {;
-      icon: Cpu,;
-      title: 'Autonomous DevOps Intelligence 2025',;
-      description: 'AI-powered DevOps optimization',;
-      href: '/autonomous-devops-intelligence-platform-2025',;
-      color: 'from-emerald-500 to-teal-500',;
+      icon: Cpu;,;
+      title: 'Autonomous DevOps Intelligence 2025';,;
+      description: 'AI-powered DevOps optimization';,;
+      href: '/autonomous-devops-intelligence-platform-2025';,;
+      color: 'from-emerald-500 to-teal-500';,;
     },;
     {;
-      icon: Database,;
-      title: 'Edge Computing Orchestration 2025',;
-      description: 'Edge computing optimization platform',;
-      href: '/edge-computing-orchestration-platform-2025',;
-      color: 'from-yellow-500 to-orange-500',;
+      icon: Database;,;
+      title: 'Edge Computing Orchestration 2025';,;
+      description: 'Edge computing optimization platform';,;
+      href: '/edge-computing-orchestration-platform-2025';,;
+      color: 'from-yellow-500 to-orange-500';,;
     },;
   ];
   const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 }
+    initial: { opacity: 0;, y: 60 ;},;
+    animate: { opacity: 1;, y: 0 ;},;
+    transition: { duration: 0 && 0.6 ;},  };    transition: { duration: 0 && 0.6 ;}
   };
   const staggerContainer = {;
     animate: {;
       transition: {;
-        staggerChildren: 0 && 0.1,;
+        staggerChildren: 0 && 0.1;,;
       },;
     },;
   };
-transition: { duration: 0.6 },
+transition: { duration: 0.6 ;},
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
@@ -535,20 +532,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center' />;
             {/* Left Content */}
             <motion.div;
-              initial={{ opacity: 0, x: -50 }
+              initial={{ opacity: 0;, x: -50 ;}
 }
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }
+              animate={{ opacity: 1;, x: 0 ;}}
+              transition={{ duration: 1 ;}
 }
 className='space-y-8' />
 
               <div className='space-y-6' />;
                 <motion.div;
-                  initial={{ opacity: 0, y: 20 }
+                  initial={{ opacity: 0;, y: 20 ;}
 }
-                  animate={{ opacity: 1, y: 0 }
+                  animate={{ opacity: 1;, y: 0 ;}
 }
-                  transition={{ duration: 0.8, delay: 0.2 }
+                  transition={{ duration: 0.8;, delay: 0.2 ;}
 }
 
 className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
@@ -569,7 +566,7 @@ className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
         <div className='max-w-7xl mx-auto w-full'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">;
+          <div className='grid grid-cols-1 lg: grid-cols-2 gap-16 items-center'>            {/* Left Content */;}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">;
         <div className="max-w-7xl mx-auto w-full">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
                 >
@@ -589,9 +586,9 @@ className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                 </h1>
       
   const fadeInUp = {
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
+    initial: { opacity: 0;, coordinate_y: 60 ;},
+    animate: { opacity: 1;, coordinate_y: 0 ;},
+    transition: { duration: 0.6 ;},  }    transition: { duration: 0.6 ;}
   }
 
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">;
@@ -633,10 +630,10 @@ of technology.
 origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Buttons */}
               <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
 
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='flex flex-col sm:flex-row gap-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -645,13 +642,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {/* CTA Buttons */}
               <motion&& motion.div;
-                initial={{ opacity: 0, y: 20 }
+                initial={{ opacity: 0;, y: 20 ;}
 }
 
-                animate={{ opacity: 1, y: 0 }
+                animate={{ opacity: 1;, y: 0 ;}
 }
 
-                transition={{ duration: 0.8, delay: 0.4 }
+                transition={{ duration: 0.8;, delay: 0.4 ;}
 }
 className='flex flex-col sm:flex-row gap-4'
                />
@@ -749,39 +746,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
             {/* Right Content - Featured Service */}
             <motion&& motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0;, x: 50 ;}}
+              animate={{ opacity: 1;, x: 0 ;}}
             <motion&& motion.div;
-              initial={{ opacity: 0, x: 50 }
+              initial={{ opacity: 0;, x: 50 ;}
 }
 
-              animate={{ opacity: 1, x: 0 }
+              animate={{ opacity: 1;, x: 0 ;}
 }
 
 
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 1;, delay: 0.3 ;}}
 className='relative'
             >
               <AnimatePresence mode='wait'>
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
+                  initial={{ opacity: 0;, scale: 0 && 0.9 ;}}
+                  animate={{ opacity: 1;, scale: 1 ;}}
+              transition={{ duration: 1;, delay: 0.3 ;}}
 className='relative'
              />
               <AnimatePresence mode='wait' />
                 <motion.div;
 key={currentServiceInde}
 }
-                  initial={{ opacity: 0, scale: 0 && 0.9 }
+                  initial={{ opacity: 0;, scale: 0 && 0.9 ;}
 }
-                  animate={{ opacity: 1, scale: 1 }
+                  animate={{ opacity: 1;, scale: 1 ;}
 }
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  exit={{ opacity: 0;, scale: 0.9 ;}}
 
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5 ;}}
                   className='relative'
 
 
@@ -814,12 +811,12 @@ className='relative'
 
                   key={currentServiceInde}
 }
-                  initial={{ opacity: 0, scale: 0 && 0.9 }
+                  initial={{ opacity: 0;, scale: 0 && 0.9 ;}
 }
-                  animate={{ opacity: 1, scale: 1 }
+                  animate={{ opacity: 1;, scale: 1 ;}
 }
-                  exit={{ opacity: 0, scale: 0 && 0.9 }}
-                  transition={{ duration: 0 && 0.5 }
+                  exit={{ opacity: 0;, scale: 0 && 0.9 ;}}
+                  transition={{ duration: 0 && 0.5 ;}
 }
                   className='relative'>;
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm' />;
@@ -919,9 +916,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative py-20 px-4 sm:px-6 lg:px-8' />;
         <div className='max-w-7xl mx-auto' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
                   className='relative' />
 
@@ -1009,19 +1006,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Services Overview */}
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8' />;"
         <div className='max - w-7xl mx - auto' />          <motion.div      <section className=\"relative py - 20 px - 4 sm:px - 6 lg:px - 8\" />;"
         <div className=\"max - w-7xl mx - auto\" />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -1032,9 +1029,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
 
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
 
-            transition={{ duration: 0.8 }
+            transition={{ duration: 0.8 ;}
 }
 className='text-center mb-16'
            />
@@ -1053,7 +1050,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-            transition={{ duration: 0 && 0.8 }
+            transition={{ duration: 0 && 0.8 ;}
 }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -1073,10 +1070,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 initial='initial'
             whileInView='animate'
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
             {categories && categories.map((category, index) => (;
               <motion&& motion.div
@@ -1101,10 +1098,10 @@ initial='initial'
             variants={stagger_container}
             initial='initial';
             whileInView='animate';
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
             className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'          >            initial="initial";
             whileInView="animate";
-            viewport={{ once: true }}
+            viewport={{ once: true ;}}
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
             {categories.map ((category, index) => (
               <motion.div;
@@ -1118,7 +1115,7 @@ initial='initial'
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-            viewport={{ once: true }
+            viewport={{ once: true ;}
 }
 
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'
@@ -1177,9 +1174,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative py-20 px-4 sm:px-6 lg:px-8' />;
         <div className='max-w-7xl mx-auto' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
                     category.id === 'all';
                       ? '/2025 - innovative - services - showcase - v2';
@@ -1223,16 +1220,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-7xl mx - auto' />          <motion.div      <section className=\"relative py - 20 px - 4 sm:px - 6 lg:px - 8\" />;"
         <div className=\"max - w-7xl mx - auto\" />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
 
-            viewport={{ once: true }}
-
-
+            viewport={{ once: true ;}}
 
 
-            transition={{ duration: 0.8 }}
+
+
+            transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -1247,10 +1244,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1260,7 +1257,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Discover our most revolutionary and cutting-edge technology solutions
               solutions
 origin/cursor/automate-test-improve-and-merge-code-2533
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 ;}}
 className='text-center mb-16'
            />
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
@@ -1272,7 +1269,7 @@ solutions;
             </p>
           </motion.div>
 
-            transition={{ duration: 0 && 0.8 }
+            transition={{ duration: 0 && 0.8 ;}
 }
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -1293,8 +1290,8 @@ solutions;
 
 initial='initial'
             whileInView='animate'
-            viewport={{ once: true }}
-            viewport={{ once: true }
+            viewport={{ once: true ;}}
+            viewport={{ once: true ;}
 }
 
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1348,16 +1345,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </motion && motion.div>;{/* View All Services CTA */}
           <motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
 
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8;, delay: 0.2 ;}}
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            transition={{ duration: 0 && 0.8;, delay: 0 && 0.2 ;}}
             className='text-center mt-16'>;
             <Link
               href='/2025-innovative-services-showcase-v2'
@@ -1370,14 +1367,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <span>View All {allInnovativeServices.length}+ Services</span>
 
-            viewport={{ once: true }
+            viewport={{ once: true ;}
 }
 
-            transition={{ duration: 0.8, delay: 0.2 }
+            transition={{ duration: 0.8;, delay: 0.2 ;}
 }
 className='text-center mt-16'
            />
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }
+            transition={{ duration: 0 && 0.8;, delay: 0 && 0.2 ;}
 }
             className='text-center mt-16'>;
             <Link;
@@ -1408,12 +1405,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center' />          <motion && motion.div      <section className=\"relative py-20 px-4 sm:px-6 lg:px-8\" />;"
         <div className=\"max-w-4xl mx-auto text-center\" />;
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1;, y: 0 ;}}
 
-            viewport={{ once: true }}
-            transition={{ duration: 0 && 0.8 }}>;
+            viewport={{ once: true ;}}
+            transition={{ duration: 0 && 0.8 ;}}>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;
@@ -1440,11 +1437,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                 Get Started Today;
               </Link>;
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 ;}}
           >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
-            transition={{ duration: 0.8 }
+            transition={{ duration: 0.8 ;}
 }
            />
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
@@ -1499,12 +1496,12 @@ export default Homepage2047;
           </motion.div>;
           {/* View All Services CTA */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            viewport={{ once: true ;}
 }
-            transition={{ duration: 0.8, delay: 0.2 }
+            transition={{ duration: 0.8;, delay: 0.2 ;}
 }
             className='text - center mt - 16' />
 
@@ -1531,11 +1528,11 @@ export default Homepage2047;
         <div className='max - w-4xl mx - auto text - center' />          <motion.div      <section className=\"relative py - 20 px - 4 sm:px - 6 lg:px - 8\" />;"
         <div className=\"max - w-4xl mx - auto text - center\" />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            viewport={{ once: true ;}}
+            transition={{ duration: 0.8 ;}
 }
            />;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6' />;

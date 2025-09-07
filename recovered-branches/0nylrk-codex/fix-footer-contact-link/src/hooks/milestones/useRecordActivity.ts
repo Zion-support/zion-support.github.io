@@ -1,9 +1,9 @@
 
 
 export const useRecordActivity = () => {;
-  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { MilestoneActivity } from './types',
+  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { MilestoneActivity } from './types',;
 export const useRecordActivity = () => {
   const { user } = useAuth();
 
@@ -17,9 +17,9 @@ export const useRecordActivity = () => {
     previousStatus: string | null;,
   newStatus: string;
 import {MilestoneActivity} from './types';')
-import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { MilestoneActivity } from './types',
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { MilestoneActivity } from './types',;
   const { user } = useAuth(),
 
   

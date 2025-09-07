@@ -43,7 +43,7 @@
                   A large healthcare network serving multiple communities with hospitals, 
                   A large healthcare network serving multiple communities with hospitals,
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
         <meta name;

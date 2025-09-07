@@ -659,8 +659,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "sonner",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast && toast.success("Legal draft generated successfully!")} else {;

@@ -279,7 +279,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
 
-import { ProfileData } from "@/types/profile",
+import { ProfileData } from "@/types/profile",;
 export const MOCK_PROFILES: Record<string ProfileData> = {
   "service-provider-1": {
     id: "service-provider-1",

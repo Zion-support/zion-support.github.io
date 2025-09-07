@@ -4,9 +4,9 @@ import data from '../../data/github-contributors.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/github-contributors.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/github-contributors.json',
+import data from '../../data/github-contributors.json',;
 export default function GithubContributorsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

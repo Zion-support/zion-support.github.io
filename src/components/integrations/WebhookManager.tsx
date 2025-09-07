@@ -67,7 +67,7 @@ export function WebhookManager() {;
     if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {;
       toast && toast.error('This event is already added');
       return;
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {

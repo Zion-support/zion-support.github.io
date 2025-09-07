@@ -1,7 +1,7 @@
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",                        ? "bg-slate-200 text-slate-800"
                         : entry.rank === 3
                           ? "bg-amber-200 text-amber-800"

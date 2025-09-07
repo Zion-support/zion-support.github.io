@@ -44,12 +44,12 @@ export function TemplateManager(): any ({;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
 
-import { useState } from "react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { ContractTemplate } from "@/types/contracts",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { TemplateList } from "./TemplateList",
+import { useState } from "react",;
+import { useContractTemplates } from "@/hooks/useContractTemplates",;
+import { ContractTemplate } from "@/types/contracts",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { TemplateList } from "./TemplateList",;
 import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(template) => {;
                 setSelectedTemplate(template);
                 setMode("save");

@@ -1,9 +1,9 @@
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
+import React from 'react',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
@@ -99,8 +99,8 @@ pr-12325
   // Generate a formatted date for display
   const postedDate = new Date();
 
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
+import { formatDistanceToNow } from "date-fns",;
+import { JobMatch } from "@/types/jobs",;
 interface JobMatchProps {
   const handleViewDetails = () => {
     if (onViewDetails) {

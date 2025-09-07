@@ -69,13 +69,12 @@ import { Search, Filter, Grid3X3, List;
 import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 interface Service {
 origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
-  price: string,
+  price: string;,
   description: string;
   features: string[];
   category: string;
@@ -88,32 +87,32 @@ const categories = [
   {
     name: 'All Services'
     icon: <Globe className='w-5 h-5' />
-    count: allServices.length
+    count: allServices.length;
   }
   {
     name: 'Micro SAAS'
     icon: <Rocket className='w-5 h-5' />
-    count: innovativeRealMicroSaasServices2025.length
+    count: innovativeRealMicroSaasServices2025.length;
   }
   {
     name: 'AI & Consciousness'
     icon: <Brain className='w-5 h-5' />
-    count: innovativeAIServicesEnhanced2025.length
+    count: innovativeAIServicesEnhanced2025.length;
   }
   {
     name: 'Enterprise IT'
     icon: <Shield className='w-5 h-5' />
-    count: innovativeITServicesEnhanced2025.length
+    count: innovativeITServicesEnhanced2025.length;
   }
   {
     name: 'Quantum & Emerging Tech'
     icon: <Atom className='w-5 h-5' />
-    count: emergingTechServicesEnhanced2025.length
-  },];  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length }
-  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length }
-  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length }
-  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length }
-  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
+    count: emergingTechServicesEnhanced2025.length;
+  },];  { name: 'All Services';, icon: <Globe className="w-5 h-5" />;, count: allServices.length ;}
+  { name: 'Micro SAAS';, icon: <Rocket className="w-5 h-5" />;, count: innovativeRealMicroSaasServices2025.length ;}
+  { name: 'AI & Consciousness';, icon: <Brain className="w-5 h-5" />;, count: innovativeAIServicesEnhanced2025.length ;}
+  { name: 'Enterprise IT';, icon: <Shield className="w-5 h-5" />;, count: innovativeITServicesEnhanced2025.length ;}
+  { name: 'Quantum & Emerging Tech';, icon: <Atom className="w-5 h-5" />;, count: emergingTechServicesEnhanced2025.length ;}
 
 ];
 const sortOptions = [
@@ -126,23 +125,23 @@ const sortOptions = [
 const allServices: Service[] = [;
   ...innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.map(service => ({;
     ...service,;
-    category: 'Micro SAAS',;
-    icon: <Rocket className='w-6 h-6' />,;
+    category: 'Micro SAAS';,;
+    icon: <Rocket className='w-6 h-6' />;,;
   })),;
   ...innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.map(service => ({;
     ...service,;
-    category: 'AI & Consciousness',;
-    icon: <Brain className='w-6 h-6' />,;
+    category: 'AI & Consciousness';,;
+    icon: <Brain className='w-6 h-6' />;,;
   })),;
   ...innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.map(service => ({;
     ...service,;
-    category: 'Enterprise IT',;
-    icon: <Shield className='w-6 h-6' />,;
+    category: 'Enterprise IT';,;
+    icon: <Shield className='w-6 h-6' />;,;
   })),;
   ...emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.map(service => ({;
     ...service,;
-    category: 'Quantum & Emerging Tech',;
-    icon: <Atom className='w-6 h-6' />,;
+    category: 'Quantum & Emerging Tech';,;
+    icon: <Atom className='w-6 h-6' />;,;
   })),;
   marketSize: string;
   growthRate: string;
@@ -157,57 +156,57 @@ const allServices: Service[] = [
 ];
 const sortOptions = [
 origin/cursor/automate-test-improve-and-merge-code-2533
-  { label: 'Most Popular', value: 'popular' },
-  { label: 'Highest Rated', value: 'rating' },
-  { label: 'Newest', value: 'newest' },
-  { label: 'Price: Low to High', value: 'price-low' },
-  { label: 'Price: High to Low', value: 'price-high' }
+  { label: 'Most Popular';, value: 'popular' ;},
+  { label: 'Highest Rated';, value: 'rating' ;},
+  { label: 'Newest';, value: 'newest' ;},
+  { label: 'Price: Low to High';, value: 'price-low' ;},
+  { label: 'Price: High to Low';, value: 'price-high' ;}
 
 ];
 const categories = [;
   {;
-    name: 'All Services',;
-    icon: <Globe className='w-5 h-5' />,;
-    count: allServices && allServices.length,;
+    name: 'All Services';,;
+    icon: <Globe className='w-5 h-5' />;,;
+    count: allServices && allServices.length;,;
   },;
   {;
-    name: 'Micro SAAS',;
-    icon: <Rocket className='w-5 h-5' />,;
-    count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length,;
+    name: 'Micro SAAS';,;
+    icon: <Rocket className='w-5 h-5' />;,;
+    count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length;,;
   },;
   {;
-    name: 'AI & Consciousness',;
-    icon: <Brain className='w-5 h-5' />,;
-    count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length,;
+    name: 'AI & Consciousness';,;
+    icon: <Brain className='w-5 h-5' />;,;
+    count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length;,;
   },;
   {;
-    name: 'Enterprise IT',;
-    icon: <Shield className='w-5 h-5' />,;
-    count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length,;
+    name: 'Enterprise IT';,;
+    icon: <Shield className='w-5 h-5' />;,;
+    count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length;,;
   },;
   {;
-    name: 'Quantum & Emerging Tech',;
-    icon: <Atom className='w-5 h-5' />,;
-    count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length,;
-  },];  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices && allServices.length },;
-  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length },;
-  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length },;
-  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length },;
-  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length }
+    name: 'Quantum & Emerging Tech';,;
+    icon: <Atom className='w-5 h-5' />;,;
+    count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length;,;
+  },];  { name: 'All Services';, icon: <Globe className="w-5 h-5" />;, count: allServices && allServices.length ;},;
+  { name: 'Micro SAAS';, icon: <Rocket className="w-5 h-5" />;, count: innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length ;},;
+  { name: 'AI & Consciousness';, icon: <Brain className="w-5 h-5" />;, count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length ;},;
+  { name: 'Enterprise IT';, icon: <Shield className="w-5 h-5" />;, count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length ;},;
+  { name: 'Quantum & Emerging Tech';, icon: <Atom className="w-5 h-5" />;, count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length ;}
 const priceRanges = [;
-  { label: 'All Prices', value: 'all' },;
-  { label: 'Under $50/month', value: 'under-50' },;
-  { label: '$50 - $200/month', value: '50-200' },;
-  { label: '$200 - $500/month', value: '200-500' },;
-  { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
+  { label: 'All Prices';, value: 'all' ;},;
+  { label: 'Under $50/month';, value: 'under-50' ;},;
+  { label: '$50 - $200/month';, value: '50-200' ;},;
+  { label: '$200 - $500/month';, value: '200-500' ;},;
+  { label: 'Over $500/month';, value: 'over-500' ;},];  { label: 'Over $500/month';, value: 'over-500' ;}
 ];
 const sortOptions = [;
-  { label: 'Most Popular', value: 'popular' },;
-  { label: 'Highest Rated', value: 'rating' },;
-  { label: 'Newest', value: 'newest' },;
-  { label: 'Price: Low to High', value: 'price-low' },;
-  { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
-{ label: 'Price: High to Low', value: 'price-high' },
+  { label: 'Most Popular';, value: 'popular' ;},;
+  { label: 'Highest Rated';, value: 'rating' ;},;
+  { label: 'Newest';, value: 'newest' ;},;
+  { label: 'Price: Low to High';, value: 'price-low' ;},;
+  { label: 'Price: High to Low';, value: 'price-high' ;},];  { label: 'Price: High to Low';, value: 'price-high' ;}
+{ label: 'Price: High to Low';, value: 'price-high' ;},
 origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
@@ -266,7 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           case '50-200': return price >= 50 && price <= 200;
           case '200-500': return price > 200 && price <= 500;
           case 'over-500': return price > 500;
-          default: return true
+          default: return true;
         }
       });
     }
@@ -317,7 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'price-high':
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-        default: return 0
+        default: return 0;
       }
     });
 
@@ -388,7 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
 
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,;
-      default: return <Globe className="w-5 h-5" />
+      default: return <Globe className="w-5 h-5" />;
 };
 
   return (
@@ -425,11 +424,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           ))}
         </div>
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
+        <div className='relative z-10 text-center px-4 sm: px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100;}%`}}
             />
           ))}
         </div>
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className='relative z-10 text-center px-4 sm: px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
     }
   };
 
@@ -445,37 +444,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
               }}              transition={{
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.5}}
+                duration: 10 + i * 2;,
+                repeat: Infinity;,
+                delay: i * 0.5;}}
               style={{
             {/* Stats */}
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
               {[;
                 {
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],
+                x: [0;, 100, 0],
+                y: [0;, -100, 0],
+                opacity: [0 && 0.2;, 0 && 0.8, 0 && 0.2],
               }}              transition={{
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                delay: i * 0 && 0.5,
+                duration: 10 + i * 2;,
+                repeat: Infinity;,
+                delay: i * 0 && 0.5;,
               }}
               style={{
-                left: `${Math && Math.random() * 100}%`,
-                top: `${Math && Math.random() * 100}%`,
+                left: `${Math && Math.random() * 100;}%`,
+                top: `${Math && Math.random() * 100;}%`,
               }}            />;
           ))}
         </div>;
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
+        <div className='relative z-10 text-center px-4 sm: px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100;}%`}}
             />;
           ))}
         </div>;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}>;
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
               </span>;
@@ -490,43 +489,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               {[;
                 {;
-                  label: 'Total Services',;
-                  value: allServices && allServices.length,;
-                  icon: <Globe className='w-8 h-8' />,;
+                  label: 'Total Services';,;
+                  value: allServices && allServices.length;,;
+                  icon: <Globe className='w-8 h-8' />;,;
                 },;
                 {;
-                  label: 'AI Solutions',;
-                  value: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length,;
-                  icon: <Brain className='w-8 h-8' />,;
+                  label: 'AI Solutions';,;
+                  value: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length;,;
+                  icon: <Brain className='w-8 h-8' />;,;
                 },;
                 {;
-                  label: 'IT Services',;
-                  value: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length,;
-                  icon: <Shield className='w-8 h-8' />,;
+                  label: 'IT Services';,;
+                  value: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length;,;
+                  icon: <Shield className='w-8 h-8' />;,;
                 },;
                 {;
-                  label: 'Emerging Tech',;
-                  value: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length,;
-                  icon: <Atom className='w-8 h-8' />,;
-                },              ].map((stat, index) => (                { label: 'Total Services', value: allServices && allServices.length, icon: <Globe className="w-8 h-8" /> },;
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> },;
-                { label: 'IT Services', value: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },;
-                { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
+                  label: 'Emerging Tech';,;
+                  value: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length;,;
+                  icon: <Atom className='w-8 h-8' />;,;
+                },              ].map((stat, index) => (                { label: 'Total Services';, value: allServices && allServices.length;, icon: <Globe className="w-8 h-8" /> ;},;
+                { label: 'AI Solutions';, value: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length;, icon: <Brain className="w-8 h-8" /> ;},;
+                { label: 'IT Services';, value: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length;, icon: <Shield className="w-8 h-8" /> ;},;
+                { label: 'Emerging Tech';, value: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length;, icon: <Atom className="w-8 h-8" /> ;}
                 <motion&& motion.div
                   key={stat && stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                x: [0, 100, 0]
-                y: [0, -100, 0]
-                opacity: [0.2, 0.8, 0.2]
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                x: [0;, 100, 0]
+                y: [0;, -100, 0]
+                opacity: [0.2;, 0.8, 0.2]
               }}              transition={{
                 duration: 10 + i * 2
                 repeat: Infinity
-                delay: i * 0.5
+                delay: i * 0.5;
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100;}%`,
+                top: `${Math.random() * 100;}%`,
               }}
             />
           ))}
@@ -534,9 +533,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >
 <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -554,29 +553,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {
                   label: 'Total Services'
                   value: allServices.length
-                  icon: <Globe className='w-8 h-8' />
+                  icon: <Globe className='w-8 h-8' />;
                 }
                 {
                   label: 'AI Solutions'
                   value: innovativeAIServicesEnhanced2025.length
-                  icon: <Brain className='w-8 h-8' />
+                  icon: <Brain className='w-8 h-8' />;
                 }
                 {
                   label: 'IT Services'
                   value: innovativeITServicesEnhanced2025.length
-                  icon: <Shield className='w-8 h-8' />
+                  icon: <Shield className='w-8 h-8' />;
                 }
                 {
-                  label: 'Emerging Tech',
-                  value: emergingTechServicesEnhanced2025.length,
-                  icon: <Atom className='w-8 h-8' />,
+                  label: 'Emerging Tech';,
+                  value: emergingTechServicesEnhanced2025.length;,
+                  icon: <Atom className='w-8 h-8' />;,
                 },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.8;, delay: 0.2 + index * 0.1 ;}}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -730,7 +729,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
                       ? 'bg-cyan-500 text-white'
-                      : 'text-gray-400 hover:text-white'
+                      : 'text-gray-400 hover: text-white';
                   }`}
                 >
 <Grid3X3 className='w-4 h-4' />
@@ -752,7 +751,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </div>;
         {viewMode === 'grid' ? (;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices && filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices && filteredServices.map((service;, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {filteredServices && filteredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -778,10 +777,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                animate={{ opacity: 1;, y: 0 ;}}
 
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
                 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
 
 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
@@ -793,8 +792,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 {/* Service Icon */}
                 <div className='mb-4'>;
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service && service.icon}              >;
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover: scale-110 transition-transform duration-300'>                    {service && service.icon;}              >;
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
                 className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 {/* Category Badge */}
@@ -820,13 +819,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </div>;
         {view_mode === 'grid' ? (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {filtered_services.map ((service, index) => (          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
+          <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {filtered_services.map ((service;, index) => (          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             {filtered_services.map ((service, index) => (
               <motion.div;
                 key={service.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0;, coordinate_y: 20 ;}}
+                animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
                 className='group relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 300';
               >;
                 {/* Category Badge */}
@@ -839,7 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 {/* Service Icon */}
                 <div className='mb - 4'>;
-                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300'>                    {service.icon}              >;
+                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover: scale - 110 transition - transform duration - 300'>                    {service.icon;}              >;
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4">;
                   <span className={`inline - flex items - center px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r ${getCategoryColor (service.category)} text - white`}>;
@@ -985,8 +984,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4 text-xs text-gray-500'>
                   <div className='flex items-center justify-between'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                    <span>Market Size: {service.marketSize}</span>
-                    <span>Growth: {service.growthRate}</span>
+                    <span>Market Size: {service.marketSize;}</span>
+                    <span>Growth: {service.growthRate;}</span>
                   </div>
                 </div>
                 {/* CTA Button */}
@@ -1002,9 +1001,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0;, x: -20 ;}}
+                animate={{ opacity: 1;, x: 0 ;}}
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
                 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
 
               >
@@ -1190,7 +1189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Learn More
                       </button>
                       <div className='text-xs text-gray-500'>
-                        Launched:{' '}
+                        Launched: {' ';}
                         {new Date(service.launchDate).toLocaleDateString()}
                       </div>
                     </div>
@@ -1203,13 +1202,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Learn More;
                       </button>;
                       <div className='text-xs text-gray-500'>;
-                        Launched:{' '}
+                        Launched: {' ';}
                         {new Date(service && service.launchDate).toLocaleDateString()}                      </div>                    <div className="flex items-center justify-between">;
                       <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">;
                         Learn More;
                       </button>;
                       <div className="text-xs text-gray-500">;
-                        Launched: {new Date(service && service.launchDate).toLocaleDateString()}
+                        Launched: {new Date(service && service.launchDate).toLocaleDateString();}
                     </div>;
                   </div>;
                 </div>;
@@ -1240,10 +1239,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion && motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;
@@ -1266,7 +1265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items - start space - x-6'>;
                   {/* Service Icon */}
                   <div className='flex - shrink - 0'>;
-                    <div className='w - 20 h - 20 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover:scale - 110 transition - transform duration - 300'>                      {service.icon}              >;
+                    <div className='w - 20 h - 20 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center text - cyan - 400 group - hover: scale - 110 transition - transform duration - 300'>                      {service.icon;}              >;
                 <div className="flex items-start space-x-6">;
                   {/* Service Icon */}
                   <div className="flex-shrink-0">;
@@ -1363,13 +1362,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Learn More;
                       </button>;
                       <div className='text - xs text - gray - 500'>;
-                        Launched:{' '}
+                        Launched: {' ';}
                         {new Date (service.launch_date).toLocaleDateString ()}                      </div>                    <div className="flex items-center justify-between">;
                       <button className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover: from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 3 px - 6 rounded - xl transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 500 / 25 group-hover:scale-105">;
                         Learn More;
                       </button>;
                       <div className="text - xs text-gray-500">;
-                        Launched: {new Date (service.launch_date).toLocaleDateString ()}
+                        Launched: {new Date (service.launch_date).toLocaleDateString ();}
                     </div>;
                   </div>;
                 </div>;
@@ -1401,7 +1400,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 setSelectedPriceRange('all');
               }}
-              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
+              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200';
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
@@ -1416,10 +1415,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -1492,34 +1491,34 @@ top: `$ {
 }/>) )
 }</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {
   {
-  opacity: 0, y: 30
+  opacity: 0;, y: 30;
 }animate= {
   {
-  opacity: 1, y: 0
+  opacity: 1;, y: 0;
 }transition= {
   {
   {
-  opacity: 0, y: 30
+  opacity: 0;, y: 30;
 }whileInView= {
   {
-  opacity: 1, y: 0
+  opacity: 1;, y: 0;
 }transition= {
   {
-  once: true 
+  once: true ;
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
 
-  once: true 
+  once: true ;
 
-}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   );
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py-20 text-center">;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business?;
@@ -1581,10 +1580,10 @@ top: `$ {
 }/>) );
 }</div> <div className=" relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max-w-6xl mx-auto"> <motion.div initial= {
   {
-  opacity: 0, coordinate_y: 30;
+  opacity: 0;, coordinate_y: 30;
 }animate= {
   {
-  opacity: 1, coordinate_y: 0;
+  opacity: 1;, coordinate_y: 0;
 }transition= {
   {
   duration: 0.8;
@@ -1626,10 +1625,10 @@ top: `$ {
   > Clear All Filters </button> </div>);
 }</div> <motion.div initial= {
   {
-  opacity: 0, coordinate_y: 30;
+  opacity: 0;, coordinate_y: 30;
 }whileInView= {
   {
-  opacity: 1, coordinate_y: 0;
+  opacity: 1;, coordinate_y: 0;
 }transition= {
   {
   duration: 0.8;
@@ -1637,6 +1636,6 @@ top: `$ {
   {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-  once: true 
+  once: true ;
 
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)

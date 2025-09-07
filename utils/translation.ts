@@ -44,7 +44,7 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
 
-import i18n from './i18n',
+import i18n from './i18n',;
 export type TranslationMap = Record < string string | undefined>,
 export function getWithFallback (map: TranslationMap, preferred: string): string | undefined {
   return map[preferred] || map[preferred.split ('-')[0]] || map['en'] || map['en - US'];

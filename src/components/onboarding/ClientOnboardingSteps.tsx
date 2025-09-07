@@ -16,7 +16,7 @@ function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
 
-import React from "react",
+import React from "react",;
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
   const steps: OnboardingStep[] = [

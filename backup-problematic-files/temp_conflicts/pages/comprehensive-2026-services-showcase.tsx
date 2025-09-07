@@ -1,16 +1,16 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, ;
   TrendingUp, Award, Clock, CheckCircle, ExternalLink,;
   Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,;
   ChevronRight, Search, Filter, Grid, List;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',;
-import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
+import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
 ;
 export default function Comprehensive2026ServicesShowcase() {;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
@@ -22,7 +22,7 @@ export default function Comprehensive2026ServicesShowcase() {;
 </div>
       <Head>;
 "
-        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services for 2026." />;"
+        <meta property="og: description" content="Explore our comprehensive collection of innovative micro SAAS services;, AI solutions, quantum technologies, and cutting-edge IT services for 2026." />;"
 </meta>"
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group, 2026 services" />;"
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />;"
@@ -32,9 +32,9 @@ export default function Comprehensive2026ServicesShowcase() {;
 </section>"
         <div className="max-w-7xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">;"
@@ -95,7 +95,7 @@ export default function Comprehensive2026ServicesShowcase() {;
             variants={containerVariants}"
             initial="hidden";""
             animate="visible";""
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' :'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' :'space-y-6';}
 </motion>
             <AnimatePresence mode="wait">;"
 
@@ -139,8 +139,8 @@ export default function Comprehensive2026ServicesShowcase() {;
                       <h4 className="text-sm font-semibold text-white mb-2">Target Audience</h4>;""
                       <p className="text-xs text-white/70">{service.targetAudience}</p>;"
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">;"
-                      <span>Setup:{service.setupTime}</span>;
-                      <span>Rating:{service.rating}/5 ({service.reviews} reviews)</span>;
+                      <span>Setup: {service.setupTime;}</span>;
+                      <span>Rating: {service.rating;}/5 ({service.reviews} reviews)</span>;
                     <div className="flex gap-3">;"
                       <a;
                         href={service.link}"
@@ -161,14 +161,14 @@ export default function Comprehensive2026ServicesShowcase() {;
       </section>;
       <AnimatePresence>;
 
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            exit={{ opacity:0 }}"
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6";")
             onClick={() => setSelectedService(null)}
-              initial={{ scale:0.9, opacity:0 }}
-              animate={{ scale:1, opacity:1 }}
-              exit={{ scale:0.9, opacity:0 }}"
+              initial={{ scale: 0.9;, opacity: 0 ;}}
+              animate={{ scale: 1;, opacity: 1 ;}}
+              exit={{ scale: 0.9;, opacity: 0 ;}}"
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";"
               onClick={(e) => e.stopPropagation()}
                   <div className="p-8">;"

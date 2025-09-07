@@ -28,16 +28,16 @@ interface Performance {
 interface PerformanceEntry {
 
 interface PerformanceData {;
-  domContentLoaded: number,;
-  loadComplete: number,;
-  totalLoadTime: number,;
-  firstPaint: number,;
-  firstContentfulPaint: number,;
-  resourceCount: number,;
+  domContentLoaded: number;,;
+  loadComplete: number;,;
+  totalLoadTime: number;,;
+  firstPaint: number;,;
+  firstContentfulPaint: number;,;
+  resourceCount: number;,;
   memory: {;
-    used: number,;
-    total: number,;
-    limit: number,;
+    used: number;,;
+    total: number;,;
+    limit: number;,;
   } | null;
 import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
@@ -66,49 +66,49 @@ export default function PerformanceMonitor({ onPerformanceData }: PerformanceMon
 declare global {;
   interface Window {;
 
-    performance: Performance,;
+    performance: Performance;,;
   }
 
   interface Performance {;
-    getEntriesByType(type: string): PerformanceEntry[],;
+    getEntriesByType(type: string): PerformanceEntry[];,;
     memory?: {;
-      usedJSHeapSize: number, totalJSHeapSize: number,;
-      jsHeapSizeLimit: number,;
+      usedJSHeapSize: number;, totalJSHeapSize: number;,;
+      jsHeapSizeLimit: number;,;
     };
   }
 
   interface PerformanceEntry {;
-    name: string, startTime: number,;
-    duration: number,;
+    name: string;, startTime: number;,;
+    duration: number;,;
   }
 
   interface PerformanceNavigationTiming extends PerformanceEntry {;
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,;
-    loadEventStart: number, loadEventEnd: number,;
-    fetchStart: number,;
+    domContentLoadedEventStart: number;, domContentLoadedEventEnd: number;,;
+    loadEventStart: number;, loadEventEnd: number;,;
+    fetchStart: number;,;
   }
 
 // Define Performance types if not available;
 interface PerformanceEntry {;
-  name: string,;
-  entryType: string,;
-  startTime: number,;
-  duration: number,;
+  name: string;,;
+  entryType: string;,;
+  startTime: number;,;
+  duration: number;,;
 }
 
 interface Performance {;
-  getEntriesByType(type: string): PerformanceEntry[],;
+  getEntriesByType(type: string): PerformanceEntry[];,;
 }
 
 interface PerformanceNavigationTiming extends PerformanceEntry {;
-  loadEventEnd: number,;
-  loadEventStart: number,;
-  domContentLoadedEventEnd: number,;
-  domContentLoadedEventStart: number,;
-  responseEnd: number,;
-  responseStart: number,;
-  requestStart: number,;
-  navigationStart: number,;
+  loadEventEnd: number;,;
+  loadEventStart: number;,;
+  domContentLoadedEventEnd: number;,;
+  domContentLoadedEventStart: number;,;
+  responseEnd: number;,;
+  responseStart: number;,;
+  requestStart: number;,;
+  navigationStart: number;,;
 }
 
 // Define Performance types if not available;
@@ -152,7 +152,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect(() => {
 // Only run on client side
     if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
@@ -162,10 +162,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       
       const performanceData = null;
         // Memory usage (if available)
-        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize;
-          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize;
-          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize;
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize;
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
         } : null
       };
 
@@ -184,10 +184,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length
 // Memory usage (if available)
 ursor/fix-syntax-push-and-merge-to-main-7db5
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
       }
       if (onPerformanceData) {
         onPerformanceData(performanceData);
@@ -195,7 +195,7 @@ ursor/fix-syntax-push-and-merge-to-main-7db5
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
          
-        console.log('Performance Metrics:', performanceData);
+        console.log('Performance Metrics: ';, performanceData);
       }
     }
     // Measure performance after page load
@@ -208,7 +208,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [onPerformanceData]);
   return null;
 }
-const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect (() => {
 // Only run on client side;
     // Check condition
@@ -221,19 +221,19 @@ if (return) {
       const paint_entries = window.performance.getEntriesByType ('paint');
       const performance_data = {
         // Navigation timing;
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        load_complete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetch_start,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
+        load_complete: navigation.loadEventEnd - navigation.loadEventStart;,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetch_start;,
         // Paint timing;
-        first_paint: paint_entries.find (entry => entry.name === 'first - paint')?.start_time || 0,
-        firstContentfulPaint: paint_entries.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0,
+        first_paint: paint_entries.find (entry => entry.name === 'first - paint')?.start_time || 0;,
+        firstContentfulPaint: paint_entries.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0;,
         // Resource timing;
-        resource_count: window.performance.getEntriesByType ('resource').length,
+        resource_count: window.performance.getEntriesByType ('resource').length;,
 // Memory usage (if available);
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit;
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit;
       },
       // Check condition
 if ( {) {
@@ -247,7 +247,7 @@ if ( {) {
   $2
 }
         // eslint - disable - next - line no - console;
-        console.log ('Performance Metrics:', performance_data);
+        console.log ('Performance Metrics: ';, performance_data);
       }
     }
 ;
@@ -279,11 +279,11 @@ interface PerformanceMetrics {fcp?: number;
 }));
 }
             break;
-          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
+          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart ;}));'            break;'        }});
 });
     // Observe different types of performance entries;
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
-      observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
+      observer && observer.observe({ entryTypes: ['paint';, 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
@@ -295,13 +295,13 @@ interface PerformanceMetrics {fcp?: number;
     return 'Poor;
 };';
   return (
-    <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
+    <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp;, { good: 1800;, poor: 3000 ;})}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800;, poor: 3000 ;})})</span>;
           </div>;
         )}
           </div>;
         )}
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect(() => {
     // Only run on client side
     if (typeof window === 'undefined' || typeof performance === 'undefined') {
@@ -316,20 +316,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       entries.forEach((entry) => {
         switch (entry.entryType) {
           case 'paint': if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime ;}))
             }
             break
-          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
+          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime ;}))
             break
-          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime ;}))
             break
           case 'layout-shift': if (!(entry as any).hadRecentInput) {
               setMetrics(prev => ({
-                ...prev, cls: (prev.cls || 0) + (entry as any).value
+                ...prev, cls: (prev.cls || 0) + (entry as any).value;
               }))
             }
             break
-          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }))
+          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart ;}))
             break
         }
       })
@@ -362,20 +362,19 @@ pr-12325
       const firstContentfulPaint = paintEntries.find(entry => entry.name.includes('first-contentful-paint'))?.startTime || 0;
 
       const data: PerformanceData = {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart;,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;,
         firstPaint,
         firstContentfulPaint,
-        resourceCount: resources.length,
+        resourceCount: resources.length;,
         memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize,
-          total: (window.performance as any).memory.totalJSHeapSize,
-          limit: (window.performance as any).memory.jsHeapSizeLimit
+          used: (window.performance as any).memory.usedJSHeapSize;,
+          total: (window.performance as any).memory.totalJSHeapSize;,
+          limit: (window.performance as any).memory.jsHeapSizeLimit;
         } : null
       };
 pr-12243
-import React, { useEffect, useState } from 'react';
 pr-12325
 
       setPerformanceData(data);
@@ -400,11 +399,11 @@ const PerformanceMonitor: React.FC = () => {
         
         if (navigationEntry) {
           setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;,
+            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
+            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0;
           });
-      const metrics: PerformanceMetrics = {};
+      const metrics: PerformanceMetrics = {;};
 
       // Monitor Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((list) => {
@@ -414,8 +413,8 @@ const PerformanceMonitor: React.FC = () => {
             // Send to analytics in production
             if (process.env.NODE_ENV === 'production') {
               // gtag('event', 'web_vitals', {
-              //   name: 'LCP',
-              //   value: Math.round(entry.startTime),
+              //   name: 'LCP';,
+              //   value: Math.round(entry.startTime);,
               //   event_category: 'Web Vitals'
               // });
             }
@@ -424,7 +423,7 @@ const PerformanceMonitor: React.FC = () => {
       });
       
       try {
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ;});
       } catch (e) {
         // Fallback for browsers that don't support LCP
       }
@@ -437,8 +436,8 @@ const PerformanceMonitor: React.FC = () => {
             metrics.fid = fid;
             if (process.env.NODE_ENV === 'production') {
               // gtag('event', 'web_vitals', {
-              //   name: 'FID',
-              //   value: Math.round(fid),
+              //   name: 'FID';,
+              //   value: Math.round(fid);,
               //   event_category: 'Web Vitals'
               // });
             }
@@ -447,11 +446,11 @@ origin/cursor/analyze-improve-and-deploy-application-347d
         }
       });
 
-      observer.observe({ entryTypes: ['navigation'] });
+      observer.observe({ entryTypes: ['navigation'] ;});
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
+        console.log('Performance Metrics: ';, performanceData);
       }
     };
 
@@ -479,19 +478,19 @@ if (typeof window ===, undefined
         switch (entry.entryType) {
 case 'paint'
   ': if (entry.name === 'first-contentful-paint
-  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))'            }
+  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime ;}))'            }
             break
           case
-  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }))'            break'          case
-  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime ;}))'            break'          case
+  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime ;}))
   break'          case'
   'layout-shift': if (!(entry as any).hadRecentInput) {
-  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value'
+  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value';
               }))
             }
             break
           case
-  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }))
+  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart ;}))
   break'        }})'
     })
 
@@ -513,12 +512,12 @@ observer.observe({ entryTypes: [
   }, [])
 
   if (!isVisible) return null
-  const getScoreColor = (value: number, thresholds: { good: number poor: number }) => {
+  const getScoreColor = (value: number;, thresholds: { good: number poor: number ;}) => {
     if (value <= thresholds.good) return 'text-green-600'
     if (value <= thresholds.poor) return 'text-yellow-600'
     return 'text-red-600'
   }
-  const getScoreText = (value: number, thresholds: { good: number poor: number }) => {
+  const getScoreText = (value: number;, thresholds: { good: number poor: number ;}) => {
     if (value <= thresholds.good) return 'Good'
     if (value <= thresholds.poor) return 'Needs Improvement'
     return 'Poor'
@@ -531,8 +530,8 @@ observer.observe({ entryTypes: [
         {metrics.fcp && (
           <div className="flex justify-between">
             <span className="text-gray-600">FCP: </span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+            <span className={getScoreColor(metrics.fcp, { good: 1800;, poor: 3000 ;})}>
+              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800;, poor: 3000 ;})})
             </span>
           </div>
         )}
@@ -540,8 +539,8 @@ observer.observe({ entryTypes: [
         {metrics.lcp && (
           <div className="flex justify-between">
             <span className="text-gray-600">LCP: </span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+            <span className={getScoreColor(metrics.lcp, { good: 2500;, poor: 4000 ;})}>
+              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500;, poor: 4000 ;})})
             </span>
           </div>
         )}
@@ -549,8 +548,8 @@ observer.observe({ entryTypes: [
         {metrics.fid && (
           <div className="flex justify-between">
             <span className="text-gray-600">FID: </span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+            <span className={getScoreColor(metrics.fid, { good: 100;, poor: 300 ;})}>
+              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100;, poor: 300 ;})})
             </span>
           </div>
         )}
@@ -558,8 +557,8 @@ observer.observe({ entryTypes: [
         {metrics.cls && (
           <div className="flex justify-between">
             <span className="text-gray-600">CLS: </span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
+            <span className={getScoreColor(metrics.cls, { good: 0.1;, poor: 0.25 ;})}>
+              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1;, poor: 0.25 ;})})
             </span>
           </div>
         )}
@@ -567,8 +566,8 @@ observer.observe({ entryTypes: [
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span className="text-gray-600">TTFB: </span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+            <span className={getScoreColor(metrics.ttfb, { good: 800;, poor: 1800 ;})}>
+              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800;, poor: 1800 ;})})
             </span>
           </div>
         )}
@@ -583,7 +582,7 @@ observer.observe({ entryTypes: [
         </button>
       </div>
     </div>
-  const getScoreColor = (value: number, thresholds: { good: number poor: number }) => {
+  const getScoreColor = (value: number;, thresholds: { good: number poor: number ;}) => {
 if (value <= thresholds.good) return 'text-green-600'
   
    if (value <= thresholds.poor) return
@@ -591,7 +590,7 @@ if (value <= thresholds.good) return 'text-green-600'
    return
   'text-red-600'
  }''
-  const getScoreText = (value: number, thresholds: { good: number poor: number }) => {
+  const getScoreText = (value: number;, thresholds: { good: number poor: number ;}) => {
     if (value <= thresholds.good) return
   'Good'
    if (value <= thresholds.poor) return
@@ -600,27 +599,27 @@ if (value <= thresholds.good) return 'text-green-600'
   'Poor'
  }''
   return (
-    <div className='fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs'>'      <h3 className='text-sm font-semibold mb-3 text-gray-900'>Performance Metrics</h3>'      '      <div className='space-y-2 text-xs'>'        {metrics.fcp && ('          <div className='flex justify-between'>'            <span className='text-gray-600'>FCP: </span>'            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>'              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})</span>
+    <div className='fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs'>'      <h3 className='text-sm font-semibold mb-3 text-gray-900'>Performance Metrics</h3>'      '      <div className='space-y-2 text-xs'>'        {metrics.fcp && ('          <div className='flex justify-between'>'            <span className='text-gray-600'>FCP: </span>'            <span className={getScoreColor(metrics.fcp;, { good: 1800;, poor: 3000 ;})}>'              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800;, poor: 3000 ;})})</span>
           </div>
         )}
 
         {metrics.lcp && (
-<div className='flex justify-between'>'            <span className='text-gray-600'>LCP: </span>'            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>'              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})</span>'
+<div className='flex justify-between'>'            <span className='text-gray-600'>LCP: </span>'            <span className={getScoreColor(metrics.lcp;, { good: 2500;, poor: 4000 ;})}>'              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500;, poor: 4000 ;})})</span>'
           </div>
         )}
 
         {metrics.fid && (
-<div className='flex justify-between'>'            <span className='text-gray-600'>FID: </span>'            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>'              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})</span>'
+<div className='flex justify-between'>'            <span className='text-gray-600'>FID: </span>'            <span className={getScoreColor(metrics.fid;, { good: 100;, poor: 300 ;})}>'              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100;, poor: 300 ;})})</span>'
           </div>
         )}
 
         {metrics.cls && (
-<div className='flex justify-between'>'            <span className='text-gray-600'>CLS: </span>'            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>'              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})</span>'
+<div className='flex justify-between'>'            <span className='text-gray-600'>CLS: </span>'            <span className={getScoreColor(metrics.cls;, { good: 0.1;, poor: 0.25 ;})}>'              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1;, poor: 0.25 ;})})</span>'
           </div>
         )}
 
         {metrics.ttfb && (
-<div className='flex justify-between'>'            <span className='text-gray-600'>TTFB: </span>'            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>'              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})</span>'
+<div className='flex justify-between'>'            <span className='text-gray-600'>TTFB: </span>'            <span className={getScoreColor(metrics.ttfb;, { good: 800;, poor: 1800 ;})}>'              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800;, poor: 1800 ;})})</span>'
           </div>
         )}
       </div>
@@ -636,7 +635,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 if (return null) {
   $2
 }
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) =>: any {
+  const getScoreColor = (value: number;, thresholds: { good: number; poor: number ;}) =>: any {
 // Check condition
 if (return 'text - green - 600) {
   $2
@@ -647,7 +646,7 @@ if (return 'text - yellow - 600) {
 }
     return 'text - red - 600;
 }';
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>: any {
+  const getScoreText = (value: number;, thresholds: { good: number; poor: number ;}) =>: any {
     // Check condition
 if (return 'Good) {
   $2
@@ -659,19 +658,19 @@ if (return 'Needs Improvement) {
     return 'Poor;
 }';
   return (
-    <div className="fixed bottom - 4 left - 4 bg - white shadow - lg rounded - lg p - 4 border z - 50 max - w-xs>      <h3 className="text - sm font - semibold mb - 3 text - gray - 900">Performance Metrics</h3>"      "      <div className="space - y-2 text - xs>        {metrics.fcp && ("          <div className="flex justify - between>            <span className="text - gray - 600">FCP: </span>"            <span className={getScoreColor (metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math.round (metrics.fcp)}ms ({getScoreText (metrics.fcp, { good: 1800, poor: 3000 })})</span>;
+    <div className="fixed bottom - 4 left - 4 bg - white shadow - lg rounded - lg p - 4 border z - 50 max - w-xs>      <h3 className="text - sm font - semibold mb - 3 text - gray - 900">Performance Metrics</h3>"      "      <div className="space - y-2 text - xs>        {metrics.fcp && ("          <div className="flex justify - between>            <span className="text - gray - 600">FCP: </span>"            <span className={getScoreColor (metrics.fcp;, { good: 1800;, poor: 3000 ;})}>"              {Math.round (metrics.fcp)}ms ({getScoreText (metrics.fcp, { good: 1800;, poor: 3000 ;})})</span>;
           </div>)}
         {metrics.lcp && (
-<div className="flex justify - between>            <span className="text - gray - 600">LCP: </span>"            <span className={getScoreColor (metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math.round (metrics.lcp)}ms ({getScoreText (metrics.lcp, { good: 2500, poor: 4000 })})</span>;
+<div className="flex justify - between>            <span className="text - gray - 600">LCP: </span>"            <span className={getScoreColor (metrics.lcp;, { good: 2500;, poor: 4000 ;})}>"              {Math.round (metrics.lcp)}ms ({getScoreText (metrics.lcp, { good: 2500;, poor: 4000 ;})})</span>;
           </div>)}
         {metrics.fid && (
-<div className="flex justify - between>            <span className="text - gray - 600">FID: </span>"            <span className={getScoreColor (metrics.fid, { good: 100, poor: 300 })}>"              {Math.round (metrics.fid)}ms ({getScoreText (metrics.fid, { good: 100, poor: 300 })})</span>;
+<div className="flex justify - between>            <span className="text - gray - 600">FID: </span>"            <span className={getScoreColor (metrics.fid;, { good: 100;, poor: 300 ;})}>"              {Math.round (metrics.fid)}ms ({getScoreText (metrics.fid, { good: 100;, poor: 300 ;})})</span>;
           </div>)}
         {metrics.cls && (
-<div className="flex justify - between>            <span className="text - gray - 600">CLS: </span>"            <span className={getScoreColor (metrics.cls, { good: 0.1, poor: 0.25 })}>"              {metrics.cls.to_fixed (3)} ({getScoreText (metrics.cls, { good: 0.1, poor: 0.25 })})</span>;
+<div className="flex justify - between>            <span className="text - gray - 600">CLS: </span>"            <span className={getScoreColor (metrics.cls;, { good: 0.1;, poor: 0.25 ;})}>"              {metrics.cls.to_fixed (3)} ({getScoreText (metrics.cls, { good: 0.1;, poor: 0.25 ;})})</span>;
           </div>)}
         {metrics.ttfb && (
-<div className="flex justify - between>            <span className="text - gray - 600">TTFB: </span>"            <span className={getScoreColor (metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math.round (metrics.ttfb)}ms ({getScoreText (metrics.ttfb, { good: 800, poor: 1800 })})</span>;
+<div className="flex justify - between>            <span className="text - gray - 600">TTFB: </span>"            <span className={getScoreColor (metrics.ttfb;, { good: 800;, poor: 1800 ;})}>"              {Math.round (metrics.ttfb)}ms ({getScoreText (metrics.ttfb, { good: 800;, poor: 1800 ;})})</span>;
           </div>)}
       </div>;
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
@@ -693,15 +692,15 @@ pr-12243
         metrics.cls = clsValue;
         if (process.env.NODE_ENV === 'production') {
           // gtag('event', 'web_vitals', {
-          //   name: 'CLS',
-          //   value: Math.round(clsValue * 1000),
+          //   name: 'CLS';,
+          //   value: Math.round(clsValue * 1000);,
           //   event_category: 'Web Vitals'
           // });
         }
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] ;});
       } catch (e) {
         // Fallback for browsers that don't support CLS
       }
@@ -716,7 +715,7 @@ pr-12243
       });
 
       try {
-        fcpObserver.observe({ entryTypes: ['paint'] });
+        fcpObserver.observe({ entryTypes: ['paint'] ;});
       } catch (e) {
         // Fallback for browsers that don't support FCP
       }
@@ -745,13 +744,13 @@ pr-12325
 
   return (
     <div className="performance-monitor fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white text-xs p-2 rounded font-mono">
-      <div>DOM Load: {performanceData.domContentLoaded.toFixed(2)}ms</div>
-      <div>Total Load: {performanceData.totalLoadTime.toFixed(2)}ms</div>
-      <div>First Paint: {performanceData.firstPaint.toFixed(2)}ms</div>
-      <div>FCP: {performanceData.firstContentfulPaint.toFixed(2)}ms</div>
-      <div>Resources: {performanceData.resourceCount}</div>
+      <div>DOM Load: {performanceData.domContentLoaded.toFixed(2);}ms</div>
+      <div>Total Load: {performanceData.totalLoadTime.toFixed(2);}ms</div>
+      <div>First Paint: {performanceData.firstPaint.toFixed(2);}ms</div>
+      <div>FCP: {performanceData.firstContentfulPaint.toFixed(2);}ms</div>
+      <div>Resources: {performanceData.resourceCount;}</div>
       {performanceData.memory && (
-        <div>Memory: {(performanceData.memory.used / 1024 / 1024).toFixed(1)}MB</div>
+        <div>Memory: {(performanceData.memory.used / 1024 / 1024).toFixed(1);}MB</div>
       )}
     </div>
   );

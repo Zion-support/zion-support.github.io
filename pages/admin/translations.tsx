@@ -1,6 +1,6 @@
 
 
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
+const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),;
 import dynamic from 'next/dynamic';
 const TranslationPreview = null;
 origin/cursor/automate-test-improve-and-merge-code-2533

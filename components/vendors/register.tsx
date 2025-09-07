@@ -24,13 +24,12 @@ export default function VendorRegisterPage() {;
             .split()
             .map(s => s.trim())
             .filter(Boolean);
-          caseStudies: []})})
+          caseStudies: [];})})
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
  */
@@ -50,22 +49,22 @@ function on_submit() {
     const payload = Object.from_entries (form_data.entries ()),
     try {
       const res = await fetch ('/api / vendors / register', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
+        method: 'POST';,
+        headers: { 'Content - Type': 'application / json' ;},
         body: JSON.stringify ({
-          slug: String (payload.slug),
-          name: String (payload.name),
+          slug: String (payload.slug);,
+          name: String (payload.name);,
           services_offered: String (payload.services_offered || '');
             .split (', ');
             .map (string => s.trim ());
             .filter (Boolean),
-          team_size: Number (payload.team_size || 0),
-          about: String (payload.about || ''),
+          team_size: Number (payload.team_size || 0);,
+          about: String (payload.about || '');,
           verification_docs: String (payload.verification_docs || '');
             .split (', ');
             .map (string => s.trim ());
             .filter (Boolean),
-          case_studies: [],
+          case_studies: [];,
         }),
       });
       const data = await res.json ();
@@ -84,7 +83,7 @@ function on_submit() {
             .split()
             .map(s => s.trim())
             .filter(Boolean);
-          caseStudies: []})})
+          caseStudies: [];})})
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
@@ -102,8 +101,8 @@ const [message, setMessage] = useState<string | null />(null),
     e.preventDefault();
     setLoading(true);
     setMessage(null);
-          slug: String(payload.slug),
-          name: String(payload.name),
+          slug: String(payload.slug);,
+          name: String(payload.name);,
           servicesOffered: String(payload.servicesOffered || '')
 .split(',')
             .map(s => s.trim())
@@ -114,7 +113,7 @@ const [message, setMessage] = useState<string | null />(null),
             .split(',')
             .map(s => s.trim())
             .filter(Boolean)}
-          caseStudies: []}
+          caseStudies: [];}
         })
      ,
 });
@@ -123,7 +122,7 @@ const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
       form.reset();
-    } catch (err: any) {}
+    } catch (err: any) {;}
       setMessage(err.message);}
     } finally {
       setLoading(false);
@@ -135,7 +134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false)
       setLoading(false);}
       form.reset()}
-    } catch (err: any) {}
+    } catch (err: any) {;}
       setMessage(err.message)}
     } finally {}
       setLoading(false)}
@@ -223,13 +222,13 @@ name='verificationDocs'
 
   return (            .map(s => s && s.trim());
             .filter(Boolean);
-          teamSize: Number(payload && payload.teamSize || 0),;
-          about: String(payload && payload.about || ''),;
+          teamSize: Number(payload && payload.teamSize || 0);,;
+          about: String(payload && payload.about || '');,;
           verificationDocs: String(payload && payload.verificationDocs || '');
             .split();
             .map(s => s && s.trim());
             .filter(Boolean);
-          caseStudies: []})}),;
+          caseStudies: [];})}),;
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
       setMessage('Application submitted. Await approval.');

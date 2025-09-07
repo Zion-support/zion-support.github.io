@@ -123,7 +123,7 @@ import {
   TableRow,;
 } from './ui/table';
 
-import { GradientHeading } from "./GradientHeading",
+import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react'
                   </TableHead>
@@ -190,10 +190,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   </TableRow>
 
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
+import { GradientHeading } from "./GradientHeading",;
+import { Button } from "./ui/button",;
 import { CheckCircle2 } from 'lucide-react'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 
 export function ComparisonSection() {
   return (

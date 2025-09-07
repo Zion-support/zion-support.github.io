@@ -29,7 +29,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
 interface FraudTabContentProps {
   tabValue: string;
 
-import React from "react",
+import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 interface FraudTabContentProps {

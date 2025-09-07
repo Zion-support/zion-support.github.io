@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react",;""
-import { useParams, useNavigate, Link } from "react-router-dom",;""
-import { format } from "date-fns",;""
-import { useAuth } from "@/hooks/useAuth",;""
-import { useProjects } from "@/hooks/useProjects",;""
-import { AppHeader } from "@/layout/AppHeader",;""
-import { Footer } from "@/components/Footer",;""
-import { SEO } from "@/components/SEO",;""
-import { ProtectedRoute } from "@/components/ProtectedRoute",;""
-import { Project, ProjectStatus } from "@/types/projects",;""
-import { Button } from "@/components/ui/button",;"
+import { useState, useEffect } from "react";""
+import { useParams, useNavigate, Link } from "react-router-dom";""
+import { format } from "date-fns";""
+import { useAuth } from "@/hooks/useAuth";""
+import { useProjects } from "@/hooks/useProjects";""
+import { AppHeader } from "@/layout/AppHeader";""
+import { Footer } from "@/components/Footer";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import { Project, ProjectStatus } from "@/types/projects";""
+import { Button } from "@/components/ui/button";"
 import {;
   Card,;
   CardContent,;
@@ -29,12 +29,12 @@ import {;
   AlertDialogHeader,;
   AlertDialogTitle,;"
   AlertDialogTrigger} from "@/components/ui/alert-dialog",;""
-import { Avatar } from "@/components/ui/avatar",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { toast } from "@/hooks/use-toast",;""
-import { supabase } from "@/integrations/supabase/client",;""
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",;"
+import { Avatar } from "@/components/ui/avatar";""
+import { Badge } from "@/components/ui/badge";""
+import { Textarea } from "@/components/ui/textarea";""
+import { toast } from "@/hooks/use-toast";""
+import { supabase } from "@/integrations/supabase/client";""
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";"
   AlertCircle,;
   Calendar,;
   CheckCircle2,;
@@ -75,9 +75,9 @@ function ProjectDetailsContent() {;
         fetchProjectNotes(projectId),;
       } else {;
         toast({;
-          title:"Project not found",,
-  description:"The requested project could not be found.",;
-          variant:"destructive"}),;
+          title: "Project not found";,,
+  description: "The requested project could not be found.";,;
+          variant: "destructive";}),;
         navigate("/dashboard"),;
       }
       ;
@@ -93,16 +93,16 @@ function ProjectDetailsContent() {;
         .from("project_notes");
         .select(`;
           *,;
-          created_by_profile:profiles!user_id(display_name, avatar_url);
+          created_by_profile: profiles!user_id(display_name;, avatar_url);
         `);
         .eq("project_id", projectId);
-        .order("created_at", { ascending:false }),;
+        .order("created_at", { ascending: false ;}),;
       ;
       if (error) throw error,;
       ;
       setNotes(data || []),;
     } catch (err) {;
-      console.error("Error fetching project notes:", err),;
+      console.error("Error fetching project notes: ";, err),;
     }
   },;
   ;
@@ -115,9 +115,9 @@ function ProjectDetailsContent() {;
       const { data, error } = await supabase;
         .from("project_notes");
         .insert({;
-          project_id:project.id,;
-          user_id:user.id,;
-          content:newNote});
+          project_id: project.id;,;
+          user_id: user.id;,;
+          content: newNote;});
         .select(),;
       ;
       if (error) throw error,;
@@ -127,14 +127,14 @@ function ProjectDetailsContent() {;
       setNewNote(""),;
       ;
       toast({;
-        title:"Note added",,
-  description:"Your note has been added to the project."}),;
+        title: "Note added";,,
+  description: "Your note has been added to the project.";}),;
     } catch (err:any) {;
-      console.error("Error adding note:", err),;
+      console.error("Error adding note: ";, err),;
       toast({;
-        title:"Failed to add note",,
-  description:err.message || "An error occurred while adding your note.",;
-        variant:"destructive"}),;
+        title: "Failed to add note";,,
+  description: err.message || "An error occurred while adding your note.";,;
+        variant: "destructive";}),;
     } finally {;
       setIsSubmittingNote(false),;
     }
@@ -148,13 +148,13 @@ function ProjectDetailsContent() {;
     if (success) {;
       setProject({;
         ...project,;
-        status:newStatus}),;
+        status: newStatus;}),;
       ;
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
-          title:"Offer Accepted! ",,
-  description:"The project is now in progress. Congratulations!"}),;
+          title: "Offer Accepted! ";,,
+  description: "The project is now in progress. Congratulations!";}),;
       }
     }
   },;
@@ -213,7 +213,7 @@ pr-12325
 
     <>;
       <SEO ;"
-        title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
+        title={`Project: ${project.job?.title || 'Project Details';} | Zion AI Marketplace`} ;
         description="View and manage your project details and collaboration.";"
       />;
 
@@ -450,13 +450,13 @@ case "changes requested": return <Badge variant="secondary">Changes Requested;""
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress;""
 case "completed": return <Badge variant="default">Completed;""
 case "canceled": return <Badge variant="destructive">Canceled;""
-default: return <Badge variant="outline"> {"
+default: return <Badge variant="outline"> {";
 
 } "
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick= {')
   () => navigate ("/dashboard")"
 }> Return to Dashboard    </div>) "
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer   <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer? <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project.   <AlertDialogFooter> <AlertDialogCancel>Cancel <AlertDialogAction onClick= {""
+}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md: flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer   <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer? <AlertDialogDescription> By accepting this offer;, you agree to the project terms and timeline. This will initiate the contract and start the project.   <AlertDialogFooter> <AlertDialogCancel>Cancel <AlertDialogAction onClick= {""
   () => handleStatusChange (" offer accepted")"
 }> Accept Offer      </>) "
 }<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed   <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed? <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved.   <AlertDialogFooter> <AlertDialogCancel>Cancel <AlertDialogAction onClick= {""
@@ -485,7 +485,7 @@ default: return <Badge variant="outline"> {"
 }disabled= {)
   !newNote.trim () || isSubmittingNote;
 }>  </div>) "
-}</div>      </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants  <CardContent> <img src= {"
+}</div>      </div> <div className=" order-1 lg: order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants  <CardContent> <img src= {";
 }/>) : (<User className=" h-6 w-6"/>)"
 
 } <div> onClick= {

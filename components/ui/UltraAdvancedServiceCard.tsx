@@ -17,7 +17,6 @@ import {
   Globe,;} from 'lucide-react';
 
 
-import {
   ArrowRight
   ExternalLink
   Star
@@ -67,9 +66,7 @@ import {;
 
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
-import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;}
   Rocket, Dna, DollarSign, Lock, Globe;}
   } from 'lucide-react';
@@ -102,38 +99,38 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
 
   service: {
       
-    id: string,
-    name: string,
-    tagline: string,
-    price: string,
-    period: string,
-    description: string,
-    features: string[],
-    popular: boolean,
-    icon: string,
-    color: string,
-    textColor: string,
-    link: string,
-    marketPosition: string,
-    targetAudience: string,
-    trialDays: number,
-    setupTime: string,
-    category: string,
-    realService: boolean,
-    technology: string[],
-    integrations: string[],
-    useCases: string[],
-    roi: string,
-    competitors: string[],
-    marketSize: string,
-    growthRate: string,
-    variant: string,
+    id: string;,
+    name: string;,
+    tagline: string;,
+    price: string;,
+    period: string;,
+    description: string;,
+    features: string[];,
+    popular: boolean;,
+    icon: string;,
+    color: string;,
+    textColor: string;,
+    link: string;,
+    marketPosition: string;,
+    targetAudience: string;,
+    trialDays: number;,
+    setupTime: string;,
+    category: string;,
+    realService: boolean;,
+    technology: string[];,
+    integrations: string[];,
+    useCases: string[];,
+    roi: string;,
+    competitors: string[];,
+    marketSize: string;,
+    growthRate: string;,
+    variant: string;,
     contactInfo: {
-      mobile: string,
-      email: string,
-      address: string,
+      mobile: string;,
+      email: string;,
+      address: string;,
 
-      website: string
+      website: string;
     }
     realImplementation: boolean
     implementationDetails: string
@@ -172,7 +169,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   }
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   ;}
 }) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -186,7 +183,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ s
     return <Zap className="w-4 h-4" />
   }
 }
-const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {;
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service ;}) => {;
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const getCategoryIcon = (category: string) => {;
@@ -204,18 +201,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       return <Globe className='w-4 h-4' />;
     return <Zap className='w-4 h-4' />;  };
   const containerVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {      opacity: 1,;
-      y: 0,;
+    hidden: { opacity: 0;, y: 20 ;},;
+    visible: {      opacity: 1;,;
+      y: 0;,;
       transition: {;
-        duration: 0 && 0.6,;
-        ease: 'easeOut' as const,;
+        duration: 0 && 0.6;,;
+        ease: 'easeOut' as const;,;
       },;
     },    hover: {;
-      y: -10,;
+      y: -10;,;
       transition: {;
-        duration: 0 && 0.3,;
-        ease: 'easeOut' as const,;
+        duration: 0 && 0.3;,;
+        ease: 'easeOut' as const;,;
       },;
     },  };
       }
@@ -225,7 +222,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 const [isHovered, setIsHovered] = useState(false);
 
           isHovered ? 'opacity-100' : 'opacity-50';
-        ease: 'ease_out' as const,
+        ease: 'ease_out' as const;,
       },
     },
       {/* Glow Effect */}
@@ -244,8 +241,8 @@ const [isHovered, setIsHovered] = useState(false);
           is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
         style={{
-          background: `linear - gradient (135deg, ${service.color})`,
-          transform: is_hovered ? 'scale (1.05)' : 'scale (1)',
+          background: `linear - gradient (135deg;, ${service.color})`,
+          transform: is_hovered ? 'scale (1.05)' : 'scale (1)';,
         }}
       />;
       {/* Main Card */}
@@ -272,35 +269,35 @@ const getCategoryIcon = null;
 };
 
 const containerVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 },
 visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1;,
+      y: 0;,
       transition: {
-        duration: 0.6}
-ease: 'easeOut' as const}
+        duration: 0.6;}
+ease: 'easeOut' as const;}
       }
     },
     hover: {
       y: -10;
 transition: {
-        duration: 0.3}
-ease: 'easeOut' as const}
+        duration: 0.3;}
+ease: 'easeOut' as const;}
       }
     }
   };
 
 const contentVariants = {}
-    hidden: { opacity: 0, height: 0}
+    hidden: { opacity: 0;, height: 0;}
 },
 visible: {
-      opacity: 1,
-      height: 'auto',
+      opacity: 1;,
+      height: 'auto';,
       transition: {
 origin/cursor/automate-test-improve-and-merge-code-2533
-        duration: 0.5,
-        ease: 'easeOut' as const,
+        duration: 0.5;,
+        ease: 'easeOut' as const;,
       },
     },
   };
@@ -309,8 +306,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       onHoverStart={() => setIsHovered(true)}
 origin/cursor/automate-test-improve-and-merge-code-2533
   transition: {
-        duration: 0.5}
-        ease: 'easeOut' as const}
+        duration: 0.5;}
+        ease: 'easeOut' as const;}
       }
     }
   };
@@ -323,13 +320,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div;
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';}
         }`}
-        style={{background: `linear-gradient(135deg, ${service.color})`;
+        style={{background: `linear-gradient(135deg;, ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)';
         }}
       />;
       {/* Main Card */}
       <div;
-    hidden: { opacity: 0, height: 0}
+    hidden: { opacity: 0;, height: 0;}
 },<div;
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';}
         }`}
@@ -373,8 +370,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
               <motion.div
         style={{;
-          background: `linear-gradient(135deg, ${service && service.color})`;
-          transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)'}}
+          background: `linear-gradient(135deg;, ${service && service.color})`;
+          transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)';}}
       />;
 
       {/* Main Card */}
@@ -401,7 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {service && service.popular && (;
               <motion&& motion.div
-                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1 && 1.1, 1] }}          {/* Header */}
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1;, 1 && 1.1, 1] }}          {/* Header */}
           <div className="flex items-start justify-between mb-4">;
             <div className="flex items-center space-x-3">;
               <div className="text-3xl">{service && service.icon}</div>;
@@ -430,8 +427,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div;
 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'}
 }
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }
+                animate={{ scale: [1;, 1.1, 1] }}
+                transition={{ duration: 2;, repeat: Infinity ;}
 }
                />;
                 POPULAR;
@@ -451,8 +448,8 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
           <div className="grid grid-cols-2 gap-3 mb-4">
 
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
-                animate={{ scale: [1, 1 && 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}>;
+                animate={{ scale: [1;, 1 && 1.1, 1] }}
+                transition={{ duration: 2;, repeat: Infinity ;}}>;
                 POPULAR;
               </motion && motion.div>;
             )}
@@ -734,7 +731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
-              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 }}          <div className="flex space-x-3 mt-6">;
+              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 ;}}          <div className="flex space-x-3 mt-6">;
             <motion&& motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 {/* Contact Info */}
@@ -758,8 +755,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>)}
           </AnimatePresence>;
           {/* Action Buttons */}
-              whileHover={{ scale: 1 && 1.02 }}
-              whileTap={{ scale: 0 && 0.98 }}
+              whileHover={{ scale: 1 && 1.02 ;}}
+              whileTap={{ scale: 0 && 0.98 ;}}
               onClick={() => window && window.open(service && service.link, '_blank')}
             >;
               <span>Learn More</span>;
@@ -783,8 +780,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex space-x-3 mt-6' />
             <motion.button;
 className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }
+              whileHover={{ scale: 1.02 ;}}
+              whileTap={{ scale: 0.98 ;}
 }
               onClick={() = /> window.open(service.link, '_blank')}
             >
@@ -797,19 +794,19 @@ className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'}
+                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black';}
 }
               }`}
-              whileHover={{ scale: 1 && 1.02 }}
-              whileTap={{ scale: 0 && 0.98 }}
+              whileHover={{ scale: 1 && 1.02 ;}}
+              whileTap={{ scale: 0 && 0.98 ;}}
               onClick={() = /> setIsExpanded(!isExpanded}
 }
             >;
               {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}
           <motion.div;
 className='flex justify-center mt-4';
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            animate={{ rotate: isExpanded ? 180 : 0 ;}}
+            transition={{ duration: 0.3 ;}}
 
            />
             <ArrowRight className='w-5 h-5 text-gray-400' />
@@ -835,8 +832,8 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 };
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0 && 0.3 }}
+            animate={{ rotate: isExpanded ? 180 : 0 ;}}
+            transition={{ duration: 0 && 0.3 ;}}
           >;
             <ArrowRight className="w-5 h-5 text-gray-400" />;
         </div>;
@@ -851,11 +848,11 @@ export default UltraAdvancedServiceCard;
 
           <div className='flex space - x-3 mt - 6'>;
             <motion.button;
-              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover: from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 ;}}          <div className="flex space - x-3 mt - 6">;
             <motion.button;
               className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
-              while_hover={{ scale: 1.02 }}
-              while_tap={{ scale: 0.98 }}
+              while_hover={{ scale: 1.02 ;}}
+              while_tap={{ scale: 0.98 ;}}
               on_click={() => window.open (service.link, '_blank')}
             >;
               <span > Learn More</span>;
@@ -865,15 +862,15 @@ export default UltraAdvancedServiceCard;
               className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${
                 is_expanded;
                   ? 'border - gray - 600 text - gray - 400';
-                  : 'border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black'              }`}            </motion.button>;
+                  : 'border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black'              ;}`}            </motion.button>;
             <motion.button;
               className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${
                 is_expanded;
                   ? 'border - gray - 600 text - gray - 400';
                   : 'border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black';
               }`}
-              while_hover={{ scale: 1.02 }}
-              while_tap={{ scale: 0.98 }}
+              while_hover={{ scale: 1.02 ;}}
+              while_tap={{ scale: 0.98 ;}}
               on_click={() => setIsExpanded (!is_expanded)}
             >;
               {is_expanded ? 'Show Less' : 'Details'}
@@ -882,8 +879,8 @@ export default UltraAdvancedServiceCard;
           {/* Expand / Collapse Indicator */}
           <motion.div;
             className='flex justify - center mt - 4';
-            animate={{ rotate: is_expanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            animate={{ rotate: is_expanded ? 180 : 0 ;}}
+            transition={{ duration: 0.3 ;}}
           >;
             <ArrowRight className='w - 5 h - 5 text - gray - 400' />          </motion.div>;
         </div>;

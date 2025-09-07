@@ -4,9 +4,9 @@ import data from '../../data/agentic-news.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/agentic-news.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;
-import data from '../../data/agentic-news.json',
+import data from '../../data/agentic-news.json',;
 export default function AgenticNewsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

@@ -27,7 +27,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 );
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 import CertificatePreview from '../../components/learn/CertificatePreview'
 export default function Certifications() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]),

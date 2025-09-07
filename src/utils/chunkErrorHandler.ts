@@ -109,8 +109,8 @@ if (return false) {
 
       'ChunkLoadError',
       'Loading chunk',
-      'Failed to fetch dynamically imported module',
-      'Failed to import',
+      'Failed to fetch dynamically imported module',;
+      'Failed to import',;
       'chunk-',
       'vendors-',
     ];

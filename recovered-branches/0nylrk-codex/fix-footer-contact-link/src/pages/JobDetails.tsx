@@ -4,7 +4,7 @@ import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
+  const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string }
 
@@ -24,22 +24,22 @@ export default function JobDetails() {;
 
 
 
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react',;
 pr-12325
-import { useParams, useNavigate } from 'react-router-dom',
-import { Header } from '@/components/Header',
-import { Footer } from '@/components/Footer',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',
-import { formatDistanceToNow } from 'date-fns',
-import { toast } from 'sonner',
-import { useAuth } from '@/hooks/useAuth',
-import useJobDetails from '@/hooks/useJobDetails',
-import { ApplyToJobModal } from '@/components/messaging/job-application',
-import { SEO } from '@/components/SEO',
-import { useWhitelabel } from '@/context/WhitelabelContext',
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   // Cast to specify the expected route param type since useParams may be untyped;

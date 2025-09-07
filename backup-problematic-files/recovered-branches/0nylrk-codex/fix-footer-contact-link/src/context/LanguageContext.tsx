@@ -1,12 +1,12 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
-import { useTranslation } from 'react-i18next',;
-import { supabase } from '../integrations/supabase/client',;
-import { toast } from '../components/ui/use-toast',;
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
+import { supabase } from '../integrations/supabase/client';
+import { toast } from '../components/ui/use-toast';
 ;
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
 export type LanguageContextType = {;
-  currentLanguage:SupportedLanguage,;
-  changeLanguage:(lang:SupportedLanguage) => Promise<void>,;
+  currentLanguage: SupportedLanguage;,;
+  changeLanguage: (lang:SupportedLanguage) => Promise<void>;,;
 </void>
 export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
 
@@ -45,14 +45,14 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
         try {;
           const { error } = await supabase;
             .from('profiles');
-            .update({ preferred_language:currentLanguage });
+            .update({ preferred_language: currentLanguage ;});
             .eq('id', user.id),;
             ;
           if (error) {;
-            console.error('Error updating language preference:', error),;
+            console.error('Error updating language preference: ';, error),;
           }
         } catch (err) {;
-          console.error('Error syncing language with profile:', err),;
+          console.error('Error syncing language with profile: ';, err),;
         }
       }
     },;
@@ -71,22 +71,22 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
       // Get language name for toast;
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,;
       toast({,
-  description:t('language.language_changed', { language:langName });
+  description: t('language.language_changed';, { language: langName ;});
       }),;
       ;
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
         const { error } = await supabase;
           .from('profiles');
-          .update({ preferred_language:lang });
+          .update({ preferred_language: lang ;});
           .eq('id', user.id),;
           ;
         if (error) {;
-          console.error('Error updating language preference:', error),;
+          console.error('Error updating language preference: ';, error),;
         }
       }
     } catch (err) {;
-      console.error('Error changing language:', err),;
+      console.error('Error changing language: ';, err),;
     }
   },;
   ;
@@ -104,8 +104,8 @@ pr-12325
 
     </LanguageContext.Provider>;)
   ),;},
- const defaultLanguageContext: LanguageContextType = {,
-  currentLanguage: 'en', changeLanguage: async () => {
+ const defaultLanguageContext: LanguageContextType = {;,
+  currentLanguage: 'en';, changeLanguage: async () => {;
 };
 isRTL: false;
 const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18n.language?.substring (0, 2) as SupportedLanguage) || 'en');

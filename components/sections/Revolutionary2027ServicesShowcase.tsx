@@ -51,21 +51,21 @@ const Revolutionary2027ServicesShowcase = () => {
     {
 
 
-      icon: Brain,
-      color: 'from - purple - 600 to - indigo - 700',
-      category: 'Quantum AI & Neuroscience',
+      icon: Brain;,
+      color: 'from - purple - 600 to - indigo - 700';,
+      category: 'Quantum AI & Neuroscience';,
 
-      icon: Brain,
-      color: 'from - purple - 600 to - indigo - 700',
-      category: 'Quantum AI & Neuroscience',
-      growthRate: '300% annual growth'
+      icon: Brain;,
+      color: 'from - purple - 600 to - indigo - 700';,
+      category: 'Quantum AI & Neuroscience';,
+      growthRate: '300% annual growth';
     }
     {
       id: 'autonomous-space-mining-ai'
       name: 'Autonomous Space Mining AI'
       description:
         'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.'
-      price: '$15,999'
+      price: '$15;,999'
       period: '/month'
       icon: Rocket
       color: 'from-blue-600 to-cyan-700'
@@ -77,14 +77,14 @@ const Revolutionary2027ServicesShowcase = () => {
         'Mission planning automation'
       ]
       marketSize: '$3.8T space economy'
-      growthRate: '400% annual growth'
+      growthRate: '400% annual growth';
     }
     {
       id: 'dna-computing-platform'
       name: 'DNA Computing Platform'
       description:
         'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.'
-      price: '$7,999'
+      price: '$7;,999'
       period: '/month'
       icon: TestTube
       color: 'from-green-600 to-emerald-700'
@@ -96,14 +96,14 @@ const Revolutionary2027ServicesShowcase = () => {
         'Algorithm library (100+ algorithms)'
       ]
       marketSize: '$2.1T biotechnology market'
-      growthRate: '250% annual growth'
+      growthRate: '250% annual growth';
     }
     {
       id: 'holographic-metaverse-platform'
       name: 'Holographic Metaverse Platform'
       description:
         'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.'
-      price: '$3,999'
+      price: '$3;,999'
       period: '/month'
       icon: Globe
       color: 'from-pink-600 to-rose-700'
@@ -115,14 +115,14 @@ const Revolutionary2027ServicesShowcase = () => {
         'AI-powered content generation'
       ]
       marketSize: '$800B metaverse market'
-      growthRate: '350% annual growth'
+      growthRate: '350% annual growth';
     }
     {
       id: 'autonomous-healthcare-ai'
       name: 'Autonomous Healthcare AI'
       description:
         'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.'
-      price: '$5,999'
+      price: '$5;,999'
       period: '/month'
       icon: Microscope
       color: 'from-red-600 to-orange-700'
@@ -134,14 +134,14 @@ const Revolutionary2027ServicesShowcase = () => {
         'Predictive health analytics'
       ]
       marketSize: '$4.1T healthcare market'
-      growthRate: '280% annual growth'
+      growthRate: '280% annual growth';
     }
     {
       id: 'quantum-internet-security-gateway'
       name: 'Quantum Internet Security Gateway'
       description:
         'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.'
-      price: '$8,999'
+      price: '$8;,999'
       period: '/month'
       icon: Lock
       color: 'from-indigo-600 to-purple-700'
@@ -153,7 +153,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Zero-trust architecture'
       ]
       marketSize: '$500B cybersecurity market'
-      growthRate: '500% annual growth'
+      growthRate: '500% annual growth';
     }
   ];
   const categories = [
@@ -161,79 +161,78 @@ const Revolutionary2027ServicesShowcase = () => {
       name: 'Quantum AI Services'
       count: '25+'
       icon: Atom
-      color: 'from-purple-500 to-indigo-600'
+      color: 'from-purple-500 to-indigo-600';
     }
     {
       name: 'Space Technology'
       count: '15+'
       icon: Satellite
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600';
     }
     {
       name: 'Biotechnology'
       count: '20+'
       icon: TestTube
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600';
     }
     {
       name: 'Emerging Tech'
       count: '30+'
       icon: Sparkles
-      color: 'from-pink-500 to-rose-600'
-    },  ];    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' }
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' }
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' }
-    { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
+      color: 'from-pink-500 to-rose-600';
+    },  ];    { name: 'Quantum AI Services';, count: '25+';, icon: Atom;, color: 'from-purple-500 to-indigo-600' ;}
+    { name: 'Space Technology';, count: '15+';, icon: Satellite;, color: 'from-blue-500 to-cyan-600' ;}
+    { name: 'Biotechnology';, count: '20+';, icon: TestTube;, color: 'from-green-500 to-emerald-600' ;}
+    { name: 'Emerging Tech';, count: '30+';, icon: Sparkles;, color: 'from-pink-500 to-rose-600' ;}
 
 
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';
-import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 ;}
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
+staggerChildren: 0.1;,
       },
     },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
+    hidden: { opacity: 0;, y: 20 ;}
     visible: {
       opacity: 1
       y: 0
       transition: {
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 ;},;
     visible: {;
-      opacity: 1,;
+      opacity: 1;,;
       transition: {;
-        staggerChildren: 0 && 0.1,;
+        staggerChildren: 0 && 0.1;,;
       },;
     },  };        staggerChildren: 0 && 0.1;
 
 const Revolutionary2027ServicesShowcase = null;
 
 const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1;
-transition: {
+transition: {;
 }
-staggerChildren: 0.1}
+staggerChildren: 0.1;}
       }
     }
   };
 
 const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 }
     visible: {
       opacity: 1;
@@ -246,12 +245,12 @@ transition: {
 
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
-        duration: 0.6,
-ease: 'easeOut' as const,
+        duration: 0.6;,
+ease: 'easeOut' as const;,
       },
     },
-        duration: 0.6}
-ease: 'easeOut' as const}
+        duration: 0.6;}
+ease: 'easeOut' as const;}
       }
     }
   };
@@ -268,10 +267,10 @@ ease: 'easeOut' as const}
         {/* Section Header */}
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center mb-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -281,11 +280,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               2027 Revolutionary Services
 
         <motion.div;
-initial={{ opacity: 0, y: 20 }
+initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}
 }
 
 className='text-center mb-20'
@@ -326,10 +325,10 @@ business with solutions that were once science fiction.
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
           {categories && categories.map((category, index) => (;
             <motion&& motion.div
@@ -337,7 +336,7 @@ initial='hidden'
               variants={itemVariants}
               className='relative group'>;
               <div
-                className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
+                className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`;}>;
                 <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>;
                   <category && category.icon className='w-8 h-8 text-white' />;
                 </div>;
@@ -347,7 +346,7 @@ initial='hidden'
                 <p className='text-2xl font-bold text-white'>;
                   {category && category.count}
                 </p>              </div>            >;
-              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}>;
+              <div className={`bg-gradient-to-br ${category && category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`;}>;
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm">;
                   <category && category.icon className="w-8 h-8 text-white" />;
                 </div>;
@@ -360,10 +359,10 @@ initial='hidden'
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
           {featuredServices && featuredServices.map((service, index) => (;
             <motion&& motion.div
@@ -376,9 +375,9 @@ initial='hidden'
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
@@ -390,7 +389,7 @@ key={category.name}
 className='relative group'
             >
               <div
-                className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`}
+                className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl`;}
               >
                 <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm'>
                   <category.icon className='w-8 h-8 text-white' />
@@ -410,7 +409,7 @@ className='relative group'
           variants={containerVariants}
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -422,7 +421,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                 {/* Service Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40`;}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
       features: [;
@@ -431,140 +430,140 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Emotional intelligence modeling',
         'Real - time brain - computer interface',
       ],
-      market_size: '$15B research market',
-      growth_rate: '300% annual growth',
+      market_size: '$15B research market';,
+      growth_rate: '300% annual growth';,
     },
     {
-      id: 'autonomous - space - mining - ai',
-      name: 'Autonomous Space Mining AI',
+      id: 'autonomous - space - mining - ai';,
+      name: 'Autonomous Space Mining AI';,
       description:;
         'AI - powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.',
-      price: '$15, 999',
-      period: '/month',
-      icon: Rocket,
-      color: 'from - blue - 600 to - cyan - 700',
-      category: 'Space Technology & AI',
+      price: '$15;, 999',
+      period: '/month';,
+      icon: Rocket;,
+      color: 'from - blue - 600 to - cyan - 700';,
+      category: 'Space Technology & AI';,
       features: [;
         'Autonomous mining operations',
         'Resource detection algorithms',
         'Risk assessment AI',
         'Mission planning automation',
       ],
-      market_size: '$3.8T space economy',
-      growth_rate: '400% annual growth',
+      market_size: '$3.8T space economy';,
+      growth_rate: '400% annual growth';,
     },
     {
-      id: 'dna - computing - platform',
-      name: 'DNA Computing Platform',
+      id: 'dna - computing - platform';,
+      name: 'DNA Computing Platform';,
       description:;
         'Molecular computing for complex problem solving - use DNA - based computation to solve problems exponentially faster than traditional computers.',
-      price: '$7, 999',
-      period: '/month',
-      icon: TestTube,
-      color: 'from - green - 600 to - emerald - 700',
-      category: 'Biotechnology & Computing',
+      price: '$7;, 999',
+      period: '/month';,
+      icon: TestTube;,
+      color: 'from - green - 600 to - emerald - 700';,
+      category: 'Biotechnology & Computing';,
       features: [;
         'DNA - based computation',
         'Molecular algorithm optimization',
         'Real - time molecular analysis',
         'Algorithm library (100+ algorithms)',
       ],
-      market_size: '$2.1T biotechnology market',
-      growth_rate: '250% annual growth',
+      market_size: '$2.1T biotechnology market';,
+      growth_rate: '250% annual growth';,
     },
     {
-      id: 'holographic - metaverse - platform',
-      name: 'Holographic Metaverse Platform',
+      id: 'holographic - metaverse - platform';,
+      name: 'Holographic Metaverse Platform';,
       description:;
         'Create immersive 3D holographic experiences - build next - generation virtual worlds with realistic holographic projections.',
-      price: '$3, 999',
-      period: '/month',
-      icon: Globe,
-      color: 'from - pink - 600 to - rose - 700',
-      category: 'Metaverse & Holographics',
+      price: '$3;, 999',
+      period: '/month';,
+      icon: Globe;,
+      color: 'from - pink - 600 to - rose - 700';,
+      category: 'Metaverse & Holographics';,
       features: [;
         '3D holographic rendering',
         'Real - time 3D modeling',
         'Holographic projection systems',
         'AI - powered content generation',
       ],
-      market_size: '$800B metaverse market',
-      growth_rate: '350% annual growth',
+      market_size: '$800B metaverse market';,
+      growth_rate: '350% annual growth';,
     },
     {
-      id: 'autonomous - healthcare - ai',
-      name: 'Autonomous Healthcare AI',
+      id: 'autonomous - healthcare - ai';,
+      name: 'Autonomous Healthcare AI';,
       description:;
         'Self - learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.',
-      price: '$5, 999',
-      period: '/month',
-      icon: Microscope,
-      color: 'from - red - 600 to - orange - 700',
-      category: 'Healthcare & AI',
+      price: '$5;, 999',
+      period: '/month';,
+      icon: Microscope;,
+      color: 'from - red - 600 to - orange - 700';,
+      category: 'Healthcare & AI';,
       features: [;
         'Autonomous diagnosis',
         'Treatment recommendation AI',
         'Continuous learning algorithms',
         'Predictive health analytics',
       ],
-      market_size: '$4.1T healthcare market',
-      growth_rate: '280% annual growth',
+      market_size: '$4.1T healthcare market';,
+      growth_rate: '280% annual growth';,
     },
     {
-      id: 'quantum - internet - security - gateway',
-      name: 'Quantum Internet Security Gateway',
+      id: 'quantum - internet - security - gateway';,
+      name: 'Quantum Internet Security Gateway';,
       description:;
         'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum - resistant algorithms.',
-      price: '$8, 999',
-      period: '/month',
-      icon: Lock,
-      color: 'from - indigo - 600 to - purple - 700',
-      category: 'Quantum Security',
+      price: '$8;, 999',
+      period: '/month';,
+      icon: Lock;,
+      color: 'from - indigo - 600 to - purple - 700';,
+      category: 'Quantum Security';,
       features: [;
         'Quantum key distribution',
         'Unbreakable encryption',
         'Real - time threat detection',
         'Zero - trust architecture',
       ],
-      market_size: '$500B cybersecurity market',
-      growth_rate: '500% annual growth',
+      market_size: '$500B cybersecurity market';,
+      growth_rate: '500% annual growth';,
     },
   ];
 ;
   const categories = [;
     {
-      name: 'Quantum AI Services',
-      count: '25+',
-      icon: Atom,
-      color: 'from - purple - 500 to - indigo - 600',
+      name: 'Quantum AI Services';,
+      count: '25+';,
+      icon: Atom;,
+      color: 'from - purple - 500 to - indigo - 600';,
     },
     {
-      name: 'Space Technology',
-      count: '15+',
-      icon: Satellite,
-      color: 'from - blue - 500 to - cyan - 600',
+      name: 'Space Technology';,
+      count: '15+';,
+      icon: Satellite;,
+      color: 'from - blue - 500 to - cyan - 600';,
     },
     {
-      name: 'Biotechnology',
-      count: '20+',
-      icon: TestTube,
-      color: 'from - green - 500 to - emerald - 600',
+      name: 'Biotechnology';,
+      count: '20+';,
+      icon: TestTube;,
+      color: 'from - green - 500 to - emerald - 600';,
     },
     {
-      name: 'Emerging Tech',
-      count: '30+',
-      icon: Sparkles,
-      color: 'from - pink - 500 to - rose - 600',
-    },  ];    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from - purple - 500 to - indigo - 600' },
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from - blue - 500 to - cyan - 600' },
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from - green - 500 to - emerald - 600' },
-    { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from - pink - 500 to - rose - 600' }
+      name: 'Emerging Tech';,
+      count: '30+';,
+      icon: Sparkles;,
+      color: 'from - pink - 500 to - rose - 600';,
+    },  ];    { name: 'Quantum AI Services';, count: '25+';, icon: Atom;, color: 'from - purple - 500 to - indigo - 600' ;},
+    { name: 'Space Technology';, count: '15+';, icon: Satellite;, color: 'from - blue - 500 to - cyan - 600' ;},
+    { name: 'Biotechnology';, count: '20+';, icon: TestTube;, color: 'from - green - 500 to - emerald - 600' ;},
+    { name: 'Emerging Tech';, count: '30+';, icon: Sparkles;, color: 'from - pink - 500 to - rose - 600' ;}
   const container_variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 ;},
     visible: {
-      opacity: 1,
+      opacity: 1;,
       transition: {
-        stagger_children: 0.1,
+        stagger_children: 0.1;,
       },
     },  }        stagger_children: 0.1;
       }
@@ -572,13 +571,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
+    hidden: { opacity: 0;, coordinate_y: 20 ;},
     visible: {
-      opacity: 1,
-      coordinate_y: 0,
+      opacity: 1;,
+      coordinate_y: 0;,
       transition: {
-        duration: 0.6,
-        ease: 'ease_out' as const,
+        duration: 0.6;,
+        ease: 'ease_out' as const;,
       },
     },
   return (
@@ -592,10 +591,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (0, 255, 255, 0.1), transparent_50%)]"></div>;
       <div className="max - w-7xl mx - auto relative z - 10">;
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          viewport={{ once: true ;}}
           className='text - center mb - 20';
         >;
           <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 8'>;
@@ -622,10 +621,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={container_variants}
           initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'        >          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
           {categories.map ((category, index) => (
             <motion.div;
@@ -636,7 +635,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='relative group' />
 
               <div;
-                className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl
+                className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-center transform transition-all duration-300 group-hover: shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl;
 } />
 
                 <div className='w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/20 rounded-full backdrop-blur-sm' />;
@@ -657,7 +656,7 @@ className='relative group' />
           variants={containerVariants}
 initial='hidden';
           whileInView='visible';
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
@@ -674,7 +673,7 @@ className='group relative'
                 {/* Service Icon *}
 }
                 <div;
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40;
 } />
 
                   <service.icon className='w-8 h-8 text-white' />;
@@ -689,7 +688,7 @@ className='group relative'
                   {/* Features */}            >;
               <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 h - full transform transition - all duration - 500 group - hover:shadow - xl hover:shadow - cyan - 500 / 30 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 20">;
                 {/* Service Icon */}
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}>;
+                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover: shadow - lg hover:shadow - cyan - 400 / 40`;}>;
                   <service.icon className="w - 8 h - 8 text - white" />;
                 </div>;
                 {/* Service Content */}
@@ -711,7 +710,7 @@ className='group relative'
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>
                 {/* Service Icon */}
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover: shadow-lg hover:shadow-cyan-400/40`;}
                 >
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
@@ -737,7 +736,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
-                      <span>Market: {service.marketSize}</span>
+                      <span>Market: {service.marketSize;}</span>
                       <span className='text-green-400'>
                       </span>                    </div>
                   </div>
@@ -745,7 +744,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='pt-4 flex items-center justify-between'>
                     <div className='text-3xl font-bold text-white'>                  <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
-                      <span>Market: {service.marketSize}</span>
+                      <span>Market: {service.marketSize;}</span>
                     ))}
                   </div>
 
@@ -753,11 +752,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Market Info */}
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
-                      <span>Market: {service.marketSize}</span>
+                      <span>Market: {service.marketSize;}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
 <div className='pt-4 border-t border-gray-700/50' />
                     <div className='flex justify-between items-center text-sm text-gray-400' />
-                      <span />Market: {service.marketSize}</span>
+                      <span />Market: {service.marketSize;}</span>
                       <span className='text-green-400' />
 
                         ↑ {service.growthRate}
@@ -780,7 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50' />;
                     <div className='flex justify-between items-center text-sm text-gray-400' />;
-                      <span />Market: {service.marketSiz}
+                      <span />Market: {service.marketSiz;}
 }</span>;
                       <span className='text-green-400' />;
                       </span>                    </div>;
@@ -789,14 +788,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='pt-4 flex items-center justify-between' />;"
                     <div className='text-3xl font-bold text-white' />                  <div className=\"pt-4 border-t border-gray-700/50\" />;"
                     <div className=\"flex justify-between items-center text-sm text-gray-400\" />;
-                      <span />Market: {service.marketSiz}
+                      <span />Market: {service.marketSiz;}
 }</span>;
                     ))}
                   </div>;
                   {/* Market Info */}"
                   <div className=\"pt-4 border-t border-gray-700/50\" />;"
                     <div className=\"flex justify-between items-center text-sm text-gray-400\" />;
-                      <span />Market: {service.marketSiz}
+                      <span />Market: {service.marketSiz;}
 }</span>;"
                       <span className=\"text-green-400\" />↑ {service.growthRate}</span>;
                         ↑ {service.growthRate}
@@ -815,7 +814,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;{/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50' />;
                     <div className='flex justify-between items-center text-sm text-gray-400' />;
-                      <span />Market: {service && service.marketSiz}
+                      <span />Market: {service && service.marketSiz;}
 }</span>;
                       <span className='text-green-400' />;
                         ↑ {service && service.growthRate}
@@ -888,13 +887,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         {/* Call to Action */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
+          initial={{ opacity: 0;, y: 20 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}}
 
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -950,7 +949,7 @@ href='https://ziontechgroup.com/contact'
                   {/* Market Info */}
                   <div className='pt - 4 border - t border - gray - 700 / 50'>;
                     <div className='flex justify - between items - center text - sm text - gray - 400'>;
-                      <span > Market: {service.market_size}</span>;
+                      <span > Market: {service.market_size;}</span>;
                       <span className='text - green - 400'>;
                         ↑ {service.growth_rate}
                       </span>                    </div>;
@@ -959,7 +958,7 @@ href='https://ziontechgroup.com/contact'
                   <div className='pt - 4 flex items - center justify - between'>;
                     <div className='text - 3xl font - bold text - white'>                  <div className="pt - 4 border - t border - gray - 700 / 50">;
                     <div className="flex justify - between items - center text - sm text - gray - 400">;
-                      <span > Market: {service.market_size}</span>;
+                      <span > Market: {service.market_size;}</span>;
                       <span className="text - green - 400">↑ {service.growth_rate}</span>;
                   </div>;
                   {/* Price and CTA */}
@@ -994,10 +993,10 @@ href='https://ziontechgroup.com/contact'
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
+          viewport={{ once: true ;}}
           className='text - center';
         >;
           <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;

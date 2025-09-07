@@ -250,19 +250,19 @@ pr-12325
                       </div>;
                     </div>;
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Slider } from "@/components/ui/slider",;
+import { Switch } from "@/components/ui/switch",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 
 import { X, Filter } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label",
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
+import { Label } from "@/components/ui/label",;
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
 import { Label } from "@/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {

@@ -50,11 +50,11 @@ interface DescriptionFieldsProps {;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
-import React from 'react',
-import { Control } from 'react-hook-form',
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { JobSchemaType } from './validation',
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
 interface DescriptionFieldsProps {
   control: Control<JobSchemaType>,
   handleEditorChange: (content: string) => void,
@@ -414,11 +414,11 @@ import { Textarea } from "@/components/ui/textarea";"
             <FormControl>;
 
               <Textarea;"
-import React from 'react',
-import { Control } from 'react-hook-form',
+import React from 'react',;
+import { Control } from 'react-hook-form',;
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",""
 import { Textarea } from "@/components/ui/textarea",""
-import { JobSchemaType } from './validation',
+import { JobSchemaType } from './validation',;
   // TODO: Implement
   control: Control<JobSchemaType>,
 

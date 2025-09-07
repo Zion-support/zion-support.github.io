@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from 'react',
-import { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { useState, useEffect } from 'react',;
+import { useState, useEffect } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,7 +17,7 @@ import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends 
 
   errorMessage?: string
 
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react',;
 
 
 import { useState, useEffect } from 'react',''
@@ -27,8 +27,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",""
 import { Badge } from "@/components/ui/badge",""
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",""
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
+import { supabase } from '@/integrations/supabase/client',;
+import { ModelConfig } from '@/utils/zion-gpt',;
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations/supabase/client',''
 import { ModelConfig } from '@/utils/zion-gpt',''

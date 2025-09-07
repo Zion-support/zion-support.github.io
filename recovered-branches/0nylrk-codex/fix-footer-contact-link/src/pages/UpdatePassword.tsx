@@ -27,13 +27,13 @@ const updatePasswordSchema = z;
 type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
-import { useState, useEffect } from "react",
-import { useNavigate, useLocation } from "react-router-dom",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
+import { useState, useEffect } from "react",;
+import { useNavigate, useLocation } from "react-router-dom",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { LockKeyhole } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -43,12 +43,12 @@ import {
   FormItem;
   FormLabel;
   FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { Header } from "@/components/Header",
+import { toast } from "@/hooks/use-toast",;
+import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
 import { cleanupAuthState } from "@/utils/authUtils";
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 import {
   Form,
   FormControl,
@@ -56,9 +56,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
+import { toast } from "@/hooks/use-toast",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
 import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -550,13 +550,13 @@ if ( {) {
     path: [\"confirmPassword\"]}),;
 type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema />;
 export default function UpdatePassword() {;}
-import { useState, useEffect } from \"react\",
-import { useNavigate, useLocation } from \"react-router-dom\",
-import { zodResolver } from \"@hookform/resolvers/zod\",
-import { useForm } from \"react-hook-form\",
-import { z } from \"zod\",
-import { LockKeyhole } from \"lucide-react\",
-import { supabase } from \"@/integrations/supabase/client\",
+import { useState, useEffect } from \"react\",;
+import { useNavigate, useLocation } from \"react-router-dom\",;
+import { zodResolver } from \"@hookform/resolvers/zod\",;
+import { useForm } from \"react-hook-form\",;
+import { z } from \"zod\",;
+import { LockKeyhole } from \"lucide-react\",;
+import { supabase } from \"@/integrations/supabase/client\",;
 import { Button } from \"@/components/ui/button\";
 import { Input } from \"@/components/ui/input\";
 import {
@@ -566,12 +566,12 @@ import {
   FormItem;}
   FormLabel;}
   FormMessage} from \"@/components/ui/form\",
-import { toast } from \"@/hooks/use-toast\",
-import { Header } from \"@/components/Header\",
+import { toast } from \"@/hooks/use-toast\",;
+import { Header } from \"@/components/Header\",;
 import { Footer } from \"@/components/Footer\";
 import { cleanupAuthState } from \"@/utils/authUtils\";
-import { Button } from \"@/components/ui/button\",
-import { Input } from \"@/components/ui/input\",
+import { Button } from \"@/components/ui/button\",;
+import { Input } from \"@/components/ui/input\",;
 import {
   Form,
   FormControl,
@@ -579,9 +579,9 @@ import {
   FormItem,}
   FormLabel,}
   FormMessage} from \"@/components/ui/form\",
-import { toast } from \"@/hooks/use-toast\",
-import { Header } from \"@/components/Header\",
-import { Footer } from \"@/components/Footer\",
+import { toast } from \"@/hooks/use-toast\",;
+import { Header } from \"@/components/Header\",;
+import { Footer } from \"@/components/Footer\",;
 import { cleanupAuthState } from \"@/utils/authUtils\",  // Initialize react-hook-form;
 const form = useForm<UpdatePasswordFormValues />({
     resolver: zodResolver(updatePasswordSchema)

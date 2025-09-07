@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";""
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";""
 import { toast } from "@/hooks/use-toast";""
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";""
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";""
 import { logIssue } from "@/utils/logIssue";""
@@ -30,7 +30,7 @@ export function ModeToggle() {;
     try {;
       // Determine the new theme we are switching TO;"
       const newTheme = isDarkMode ? "light" :"dark",;"
-      logInfo(`Theme toggle:${resolvedTheme}  ${newTheme}`),;
+      logInfo(`Theme toggle: ${resolvedTheme;}  ${newTheme}`),;
       // Apply the new theme via ThemeProvider;
       toggleTheme(),;
       // Show user feedback with a developer-centric message;"
@@ -38,11 +38,11 @@ export function ModeToggle() {;
       const title = messages[Math.floor(Math.random() * messages.length)];
       toast({;
         title,,
-  description:`Theme changed to ${newTheme} mode successfully`}),;
+  description: `Theme changed to ${newTheme;} mode successfully`}),;
 ;
       // Accessibility announcement for screen readers;
         title,;)`;
-        description:`Theme changed to ${newTheme} mode successfully`}),;
+        description: `Theme changed to ${newTheme;} mode successfully`}),;
       // Accessibility announcement for screen readers;`;
 pr-12325
       const announcement = `Theme switched to ${newTheme} mode`,;
@@ -58,16 +58,16 @@ pr-12325
         document.body.removeChild(liveRegion),;
       }, 1000),;
     } catch (error) {;
-      logErrorToProduction('Theme toggle error:', { data:error }),;
-      logIssue('Theme switch failed', { error, currentTheme:theme, resolvedTheme }),;
+      logErrorToProduction('Theme toggle error: ';, { data: error ;}),;
+      logIssue('Theme switch failed', { error, currentTheme: theme;, resolvedTheme }),;
       toast({;
-        title:"Theme switch failed",,
-  description:"Unable to change theme. Please try again.",;
-        variant:"destructive"}),;
+        title: "Theme switch failed";,,
+  description: "Unable to change theme. Please try again.";,;
+        variant: "destructive";}),;
     }
-        title:"Theme switch failed",;""
-        description:"Unable to change theme. Please try again.",;")"
-        variant:"destructive"}),;"
+        title: "Theme switch failed";,;""
+        description: "Unable to change theme. Please try again.";,;")"
+        variant: "destructive";}),;"
 pr-12325
   },;
   if (!isClient) {;
@@ -92,7 +92,7 @@ pr-12325
 
             onClick={handleToggle}
             aria-pressed={isDarkMode}"`;
-            aria-label={`Toggle theme. Current theme:${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' :'dark'} mode.`}`;
+            aria-label={`Toggle theme. Current theme: ${resolvedTheme;}. Click to switch to ${isDarkMode ? 'light' :'dark'} mode.`}`;
             title={`Switch to ${isDarkMode ? 'light' :'dark'} mode`}
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground;""
             data-testid="theme-toggle";"
@@ -104,14 +104,14 @@ pr-12325
               isDarkMode ;"
                 ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50' ;
                 :'bg-slate-600 dark:bg-slate-400';`;
-            } opacity-70 group-hover:opacity-100`} />;
+            } opacity-70 group-hover: opacity-100`;} />;
 </div>
             <span className="sr-only">;"
 </span>
             </span>;
         <TooltipContent>;
           <div className="text-center">;"
-            <p className="text-sm font-medium">Theme:{resolvedTheme}</p>;""
+            <p className="text-sm font-medium">Theme: {resolvedTheme;}</p>;""
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' :'dark'} mode</p>;
               <p className="text-xs opacity-60 mt-1">Following system preference</p>;"
           </div>;

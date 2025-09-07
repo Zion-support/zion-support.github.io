@@ -41,7 +41,7 @@
 
 
                   The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
-import React from 'react',
+import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
         <meta name;

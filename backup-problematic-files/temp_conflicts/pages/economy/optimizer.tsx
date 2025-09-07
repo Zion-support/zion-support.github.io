@@ -1,11 +1,11 @@
-import fs from 'fs',;
-import path from 'path',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import fs from 'fs';
+import path from 'path';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 ;
 export async function getStaticProps() {;
   const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),;
-  let latest:string | null = null,;
-  let top:any[] = [],;
+  let latest: string | null = null;,;
+  let top: any[] = [];,;
   if (fs.existsSync(dir)) {;
     const latestPath = path.join(dir, 'latest.json'),;
     if (fs.existsSync(latestPath)) {;
@@ -15,7 +15,7 @@ export async function getStaticProps() {;
       const p = path.join(dir, `${latest}.json`),;
       if (fs.existsSync(p)) {;
         try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
-  return { props:{ latest, top } },;
+  return { props: { latest;, top } },;
 export default function OptimizerPage({ latest, top } any) {;
   return (;
     <EnhancedLayout>;
@@ -23,7 +23,7 @@ export default function OptimizerPage({ latest, top } any) {;
       <div className="space-y-6">;"
 </div>"
         <h1 className="text-2xl font-semibold">Economy Optimizer</h1>;""
-          <div className="text-sm opacity-80">Latest:{latest}</div>;""
+          <div className="text-sm opacity-80">Latest: {latest;}</div>;""
           <div className="text-sm opacity-80">No optimizer runs yet.</div>;""
           <div className="overflow-x-auto">;"
             <table className="w-full text-sm">;"

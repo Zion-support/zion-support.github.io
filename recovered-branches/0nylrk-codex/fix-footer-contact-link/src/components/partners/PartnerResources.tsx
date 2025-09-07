@@ -1,21 +1,21 @@
 
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",    {
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
       description: 'How to properly use our brand assets in your content'
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",
-import { Button } from \"@/components/ui/button\",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\",;
+import { Button } from \"@/components/ui/button\",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from \"lucide-react\";
 import { toast } from \"@/hooks/use-toast\";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from \"lucide-react\",
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from \"lucide-react\",;
 import { toast } from \"@/hooks/use-toast\",    {
       id: \"id\",
     title: 'Brand Guidelines',

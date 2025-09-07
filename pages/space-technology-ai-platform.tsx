@@ -1,5 +1,5 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
@@ -8,15 +8,15 @@ import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import {
   Satellite, ArrowRight, CheckCircle, Star, TrendingUp,
   Globe, Zap, Shield, Users, Rocket,
   Phone, Mail, MapPin, Brain, Sparkles
 } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',;
 export default function SpaceTechnologyAIPlatform() {
 
   const contactInfo = {

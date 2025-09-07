@@ -6,9 +6,9 @@ import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;}
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network}
  } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';,
-import EnhancedFooter from '../components/EnhancedFooter';,
-import EnhancedContactForm from '../components/EnhancedContactForm';,
+import EnhancedNavigation from '../components/EnhancedNavigation';,;
+import EnhancedFooter from '../components/EnhancedFooter';,;
+import EnhancedContactForm from '../components/EnhancedContactForm';,;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 
 import EnhancedFooter from '../components/EnhancedFooter';

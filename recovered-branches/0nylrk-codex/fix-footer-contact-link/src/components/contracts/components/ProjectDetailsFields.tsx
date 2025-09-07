@@ -1,5 +1,5 @@
 
-import { format } from "date-fns",
+import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 
@@ -19,8 +19,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-import { CalendarIcon } from "lucide-react",
-import { UseFormReturn } from "react-hook-form",
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
 import { 
 
 import { format } from "date-fns",""
@@ -59,12 +59,12 @@ pr-12325
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Calendar } from "@/components/ui/calendar",
-import { ContractFormValues } from "./ContractForm",
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm",;
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 import { format } from "date-fns",;

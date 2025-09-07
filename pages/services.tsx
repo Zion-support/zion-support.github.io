@@ -655,7 +655,7 @@ export default function Services() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
-import Link from 'next/link',
+import Link from 'next/link',;
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';

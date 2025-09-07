@@ -23,12 +23,12 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
     switch (status) {
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Loader2, MessageSquare, ExternalLink } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
@@ -70,11 +70,11 @@ function MyApplications() {}
 ;
   const getStatusBadge = (status: ApplicationStatus) =>: any {
 
-import { Link } from "react-router-dom",
-import { ApplicationStatus } from "@/types/jobs",
+import { Link } from "react-router-dom",;
+import { ApplicationStatus } from "@/types/jobs",;
   const getStatusBadge = (status: ApplicationStatus) =>: any {}
-import { Link } from \"react-router-dom\",
-import { ApplicationStatus } from \"@/types/jobs\",
+import { Link } from \"react-router-dom\",;
+import { ApplicationStatus } from \"@/types/jobs\",;
 export function MyApplications() {}
   const { applications, isLoading, error } = useJobApplications(),
   const getStatusBadge = (

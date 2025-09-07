@@ -1,10 +1,10 @@
 
 interface ApplicationRowProps {
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
+import { TableRow, TableCell } from "@/components/ui/table",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { StatusBadge } from "./StatusBadge",;
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 import Image from 'next/image', // Import next/image

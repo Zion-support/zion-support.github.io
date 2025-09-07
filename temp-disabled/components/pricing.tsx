@@ -10,8 +10,8 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 Shield, Zap, Rocket, Brain, Atom, Globe, Target;}
   ArrowRight, Phone, Mail, MapPin, ExternalLink}
  } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';,
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';,
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';,;
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';,;
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
 export default function PricingPage() {

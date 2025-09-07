@@ -1,6 +1,6 @@
 interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
+  title: string;, description: string
+  url: string;, type: 'service' | 'page' | 'category'
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -12,8 +12,8 @@ interface SearchResult {
 }
 const SearchBar: React.FC = () => {
 interface SearchResult {;
-  title: string, description: string,;
-  url: string, type: 'service' | 'page' | 'category',;
+  title: string;, description: string;,;
+  url: string;, type: 'service' | 'page' | 'category';,;
 }
 
 const SearchBar: React.FC = () => {
@@ -27,40 +27,40 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
+      title: 'Micro SaaS Products';,
+      description: 'Innovative software solutions including Cloud Cost Guard;, API Rate Limiter, and more',
+      url: '/micro-saas';,
+      type: 'category';,
     },
     {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
+      title: 'AI Services';,
+      description: 'Advanced AI solutions including Computer Vision;, Fraud Detection, and more',
+      url: '/ai-services';,
+      type: 'category';,
     },
     {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category',
+      title: 'IT Services';,
+      description: 'Comprehensive IT solutions including Cloud Migration;, Cybersecurity, and more',
+      url: '/it-services';,
+      type: 'category';,
     },
     {
-      title: 'Cloud Cost Guard',
-      description: 'FinOps Assistant for anomaly detection and cost optimization',
-      url: '/services',
-      type: 'service',
+      title: 'Cloud Cost Guard';,
+      description: 'FinOps Assistant for anomaly detection and cost optimization';,
+      url: '/services';,
+      type: 'service';,
     },
     {
-      title: 'Contact Us',
-      description: 'Get in touch with our experts for consultation and quotes',
-      url: '/contact',
-      type: 'page',
+      title: 'Contact Us';,
+      description: 'Get in touch with our experts for consultation and quotes';,
+      url: '/contact';,
+      type: 'page';,
     },
     {
-      title: 'Pricing',
-      description: 'View our transparent pricing for all services',
-      url: '/pricing',
-      type: 'page',
+      title: 'Pricing';,
+      description: 'View our transparent pricing for all services';,
+      url: '/pricing';,
+      type: 'page';,
     },
   ];
 
@@ -193,13 +193,12 @@ const SearchBar: React.FC = () => {
 
 export default SearchBar;
 interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
+  title: string;, description: string
+  url: string;, type: 'service' | 'page' | 'category'
 pr-12243
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import Link from 'next/link';
 origin/cursor/analyze-improve-and-deploy-application-0a01
 
 interface SearchBarProps {
@@ -224,13 +223,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
       url: '/contact'
-      type: 'page'
+      type: 'page';
     }
     {
       title: 'Pricing'
       description: 'View our transparent pricing for all services'
       url: '/pricing'
-      type: 'page'
+      type: 'page';
     }
   ];
     );
@@ -368,7 +367,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               className={`block px-4 py-3 transition-colors border-b border-white/10 last:border-b-0 ${
                 index === selectedIndex 
                   ? 'bg-blue-600/30 ring-2 ring-blue-500' 
-                  : 'hover:bg-slate-700/50'
+                  : 'hover: bg-slate-700/50';
               }`}
               role="option"
               aria-selected={index === selectedIndex}

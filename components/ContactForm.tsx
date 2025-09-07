@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 interface FormData {
@@ -16,12 +15,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: '';,
+    email: '';,
+    company: '';,
+    phone: '';,
+    service: '';,
+    message: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,16 +44,16 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        name: '';,
+        email: '';,
+        company: '';,
+        phone: '';,
+        service: '';,
+        message: '';
       });
     } catch {
       setSubmitStatus('error');
-    message: '',
+    message: '';,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -77,7 +76,7 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form: ', error);
+      console.error('Error submitting form: ';, error);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } finally {
       setIsSubmitting(false);

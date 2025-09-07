@@ -1,15 +1,15 @@
-import fs from 'fs',;
-import path from 'path',;
-import type { GetStaticProps } from 'next',;
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
 interface Report {;
-  generatedAt: string,;
-  commits: { last7d: number, last30d: number },;
-  changes: { last7dFiles: string[] },;
-  largestFiles: { file: string, bytes: number }[],;
-  stalePages: { file: string, lastCommitAt: string }[];
+  generatedAt: string;,;
+  commits: { last7d: number;, last30d: number ;},;
+  changes: { last7dFiles: string[] ;},;
+  largestFiles: { file: string;, bytes: number ;}[],;
+  stalePages: { file: string;, lastCommitAt: string ;}[];
 }
 ;
-type Props = { report: Report | null },;
+type Props = { report: Report | null ;},;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
 
   if (!report) return <div>No report yet. Check back soon.</div>,
@@ -20,10 +20,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         <h1 className="text-3xl font-bold">Repo Health</h1>""
         <p className="text-gray-600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>"
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">"
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report.commits.last7d}</div></div>""
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report.commits.last30d}</div></div>""
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report.changes.last7dFiles.length}</div></div>""
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file || }</div></div>
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report.commits.last7d;}</div></div>""
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report.commits.last30d;}</div></div>""
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report.changes.last7dFiles.length;}</div></div>""
+        <div className="p-4 rounded-lg border border-gray-200 dark: border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file || ;}</div></div>
       </div>
       <section>
 </section>

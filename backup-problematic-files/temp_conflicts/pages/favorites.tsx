@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { TALENT_PROFILES } from '../data/talent',;
+import { useEffect, useMemo, useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { TALENT_PROFILES } from '../data/talent';
 ;
 function useFavorites() {;
   const storageKey = 'zion_favorites',;
@@ -33,11 +33,11 @@ function useFavorites() {;
             <div key={t.slug} className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">;"
               <div className="flex items-center justify-between">;"
                   <div className="font-medium">{t.name}</div>;""
-                  <div className="text-sm text-gray-600 dark:text-gray-300">{t.title}</div>;"
+                  <div className="text-sm text-gray-600 dark: text-gray-300">{t.title;}</div>;"
                 <button onClick={() => remove(t.slug)} className="text-xs text-pink-600 border border-pink-600 rounded px-2 py-1">Remove</button>;"
               <div className="mt-3 text-xs text-gray-500">{t.location}</div>;""
               <div className="mt-3 flex flex-wrap gap-2">;"
-                  <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>;"
+                  <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark: bg-gray-900 border border-gray-200 dark:border-gray-800">{s;}</span>;"
               <div className="mt-4 flex items-center justify-between text-sm">;"
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>;""
                 <div className="flex items-center gap-3">;"

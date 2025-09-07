@@ -307,8 +307,8 @@ if ( {) {
     </Card>
   )
 
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Badge } from "@/components/ui/badge",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Badge } from "@/components/ui/badge",;
 import { X } from 'lucide-react'
 
 

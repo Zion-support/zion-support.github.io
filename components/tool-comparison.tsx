@@ -5,7 +5,6 @@ import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
-import {
   Search,
   Filter,
   TrendingUp,
@@ -78,15 +77,15 @@ function ToolComparisonPage() {
         'Reliable'
         'Great support'
       ]
-      cons: ['Can get expensive', 'Limited customization']
+      cons: ['Can get expensive';, 'Limited customization']
       website: 'https://zapier.com'
       icon: <Zap className='w-6 h-6' />
-      color: 'text-orange-400'
+      color: 'text-orange-400';
     },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']
       cons: ['Can get expensiveLimited customization']
       website: 'https://zapier.com'
       icon: <Zap className="w-6 h-6" />
-      color: 'text-orange-400'
+      color: 'text-orange-400';
     }
       name: 'Notion'
       category: 'Productivity'
@@ -100,52 +99,52 @@ function ToolComparisonPage() {
         'Great templates'
         'Free tier'
       ]
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming']
+      cons: ['Learning curve';, 'Limited offline access', 'Can be overwhelming']
       website: 'https://notion.so'
       icon: <Globe className='w-6 h-6' />
-      color: 'text-gray-400'
+      color: 'text-gray-400';
     },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier']
       cons: ['Learning curveLimited offline accessCan be overwhelming']
       website: 'https://notion.so'
       icon: <Globe className="w-6 h-6" />
-      color: 'text-gray-400'
+      color: 'text-gray-400';
     }
       name: 'Stripe'
       category: 'Payments'
       pricing: '2.9% + 30¢ per transaction'
       rating: 4.9
       users: '1M+'
-      bestFor: 'Online businesses, SaaS companies, e-commerce'
+      bestFor: 'Online businesses;, SaaS companies, e-commerce'
       pros: [
         'Developer-friendly'
         'Global reach'
         'Excellent docs'
         'Reliable'
       ]
-      name: 'ChatGPT',
-      category: 'AI Assistant',
-      pricing: 'Free - $20/month',
-      rating: 4.8,
-      users: '100M+',
-      bestFor: 'Content creators, developers, researchers',
+      name: 'ChatGPT';,
+      category: 'AI Assistant';,
+      pricing: 'Free - $20/month';,
+      rating: 4.8;,
+      users: '100M+';,
+      bestFor: 'Content creators;, developers, researchers',
 pros: [
         'Powerful capabilities',
         'Easy to use',
         'Regular updates',
         'Good free tier',
       ],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
-      website: 'https://chat.openai.com',
-      icon: <Brain className='w-6 h-6' />,
-      color: 'text-green-400',
+      cons: ['Sometimes inaccurate';, 'Limited context', 'Privacy concerns'],
+      website: 'https://chat.openai.com';,
+      icon: <Brain className='w-6 h-6' />;,
+      color: 'text-green-400';,
     },
     {
-      name: 'Midjourney',
-      category: 'AI Art',
-      pricing: '$10 - $30/month',
-      rating: 4.7,
-      users: '1M+',
-      bestFor: 'Designers, marketers, content creators',
+      name: 'Midjourney';,
+      category: 'AI Art';,
+      pricing: '$10 - $30/month';,
+      rating: 4.7;,
+      users: '1M+';,
+      bestFor: 'Designers;, marketers, content creators',
 pros: [
         'High-quality output',
         'Creative control',
@@ -157,72 +156,72 @@ pros: [
         'Limited customization',
         'Monthly subscription',
       ],
-      website: 'https://midjourney.com',
-      icon: <Zap className='w-6 h-6' />,
-      color: 'text-purple-400',
+      website: 'https://midjourney.com';,
+      icon: <Zap className='w-6 h-6' />;,
+      color: 'text-purple-400';,
     },
     {
-      name: 'Jasper',
-      category: 'AI Writing',
-      pricing: '$39 - $125/month',
-      rating: 4.6,
-      users: '100K+',
-      bestFor: 'Marketing teams, content creators, businesses',
+      name: 'Jasper';,
+      category: 'AI Writing';,
+      pricing: '$39 - $125/month';,
+      rating: 4.6;,
+      users: '100K+';,
+      bestFor: 'Marketing teams;, content creators, businesses',
 pros: [
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
         'Team features',
       ],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      website: 'https://jasper.ai',
-      icon: <Brain className='w-6 h-6' />,
-      color: 'text-blue-400',
+      cons: ['Expensive';, 'Limited free trial', 'Can be repetitive'],
+      website: 'https://jasper.ai';,
+      icon: <Brain className='w-6 h-6' />;,
+      color: 'text-blue-400';,
     },
     // SaaS Tools
     {
-      name: 'Zapier',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      bestFor: 'Businesses looking to automate workflows',
+      name: 'Zapier';,
+      category: 'Automation';,
+      pricing: 'Free - $19.99/month';,
+      rating: 4.8;,
+      users: '2M+';,
+      bestFor: 'Businesses looking to automate workflows';,
 pros: [
         'Easy to use',
         'Extensive integrations',
         'Reliable',
         'Great support',
       ],
-      cons: ['Can get expensive', 'Limited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className='w-6 h-6' />,
-      color: 'text-orange-400',
+      cons: ['Can get expensive';, 'Limited customization'],
+      website: 'https://zapier.com';,
+      icon: <Zap className='w-6 h-6' />;,
+      color: 'text-orange-400';,
     },
     {
-      name: 'Notion',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      bestFor: 'Teams that need flexible workspace',
+      name: 'Notion';,
+      category: 'Productivity';,
+      pricing: 'Free - $8/month';,
+      rating: 4.7;,
+      users: '20M+';,
+      bestFor: 'Teams that need flexible workspace';,
 pros: [
         'Highly flexible',
         'Beautiful interface',
         'Great templates',
         'Free tier',
       ],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className='w-6 h-6' />,
-      color: 'text-gray-400',
+      cons: ['Learning curve';, 'Limited offline access', 'Can be overwhelming'],
+      website: 'https://notion.so';,
+      icon: <Globe className='w-6 h-6' />;,
+      color: 'text-gray-400';,
     },
     {
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-      bestFor: 'Online businesses, SaaS companies, e-commerce',
+      name: 'Stripe';,
+      category: 'Payments';,
+      pricing: '2.9% + 30¢ per transaction';,
+      rating: 4.9;,
+      users: '1M+';,
+      bestFor: 'Online businesses;, SaaS companies, e-commerce',
 pros: [
         'Developer-friendly',
         'Global reach',
@@ -235,18 +234,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Complex for beginners',
         'Strict requirements',
       ],
-      website: 'https://stripe.com',
-      icon: <DollarSign className='w-6 h-6' />,
-      color: 'text-blue-400',
+      website: 'https://stripe.com';,
+      icon: <DollarSign className='w-6 h-6' />;,
+      color: 'text-blue-400';,
     },
     // Startup Tools
     {
-      name: 'HubSpot',
-      category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      bestFor: 'B2B startups, SaaS companies, marketing teams',
+      name: 'HubSpot';,
+      category: 'Marketing & Sales';,
+      pricing: 'Free - $45/month';,
+      rating: 4.7;,
+      users: '135K+';,
+      bestFor: 'B2B startups;, SaaS companies, marketing teams',
 pros: [
         'Free tier',
         'All-in-one solution',
@@ -258,30 +257,30 @@ pros: [
         'Complex for small teams',
         'Limited customization',
       ],
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className='w-6 h-6' />,
-      color: 'text-orange-400',
+      website: 'https://hubspot.com';,
+      icon: <TrendingUp className='w-6 h-6' />;,
+      color: 'text-orange-400';,
     },
     {
-      name: 'Mailchimp',
-      category: 'Email Marketing',
-      pricing: 'Free - $59/month',
-      rating: 4.5,
-      users: '12M+',
-      bestFor: 'E-commerce, content creators, small businesses',
-pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
-      website: 'https://mailchimp.com',
-      icon: <Users className='w-6 h-6' />,
-      color: 'text-yellow-400',
+      name: 'Mailchimp';,
+      category: 'Email Marketing';,
+      pricing: 'Free - $59/month';,
+      rating: 4.5;,
+      users: '12M+';,
+      bestFor: 'E-commerce;, content creators, small businesses',
+pros: ['Free tier';, 'Easy to use', 'Good templates', 'Affordable'],
+      cons: ['Limited free features';, 'Basic automation', 'Can be expensive'],
+      website: 'https://mailchimp.com';,
+      icon: <Users className='w-6 h-6' />;,
+      color: 'text-yellow-400';,
     },
     {
-      name: 'Calendly',
-      category: 'Productivity',
-      pricing: 'Free - $12/month',
-      rating: 4.8,
-      users: '10M+',
-      bestFor: 'Sales teams, consultants, remote teams',
+      name: 'Calendly';,
+      category: 'Productivity';,
+      pricing: 'Free - $12/month';,
+      rating: 4.8;,
+      users: '10M+';,
+      bestFor: 'Sales teams;, consultants, remote teams',
 pros: [
         'Free tier',
         'Easy integration',
@@ -294,80 +293,80 @@ pros: [
         'Can be expensive'
       ]
       icon: <Globe className='w-6 h-6' />
-      website: 'https://chat.openai.com',
-      icon: <Brain className="w - 6 h - 6" />,
+      website: 'https://chat.openai.com';,
+      icon: <Brain className="w - 6 h - 6" />;,
       color: 'text - green - 400';
     }
     {
-      name: 'Midjourney',
-      category: 'AI Art',
-      pricing: '$10 - $30 / month',
-      rating: 4.7,
-      users: '1M+',
-      website: 'https://midjourney.com',
-      icon: <Zap className="w - 6 h - 6" />,
+      name: 'Midjourney';,
+      category: 'AI Art';,
+      pricing: '$10 - $30 / month';,
+      rating: 4.7;,
+      users: '1M+';,
+      website: 'https://midjourney.com';,
+      icon: <Zap className="w - 6 h - 6" />;,
       color: 'text - purple - 400';
     }
     {
-      name: 'Jasper',
-      category: 'AI Writing',
-      pricing: '$39 - $125 / month',
-      rating: 4.6,
-      users: '100K+',
-      website: 'https://jasper.ai',
-      icon: <Brain className="w - 6 h - 6" />,
+      name: 'Jasper';,
+      category: 'AI Writing';,
+      pricing: '$39 - $125 / month';,
+      rating: 4.6;,
+      users: '100K+';,
+      website: 'https://jasper.ai';,
+      icon: <Brain className="w - 6 h - 6" />;,
       color: 'text - blue - 400';
     }
     // SaaS Tools;
     {
-      name: 'Zapier',
-      category: 'Automation',
-      pricing: 'Free - $19.99 / month',
-      rating: 4.8,
-      users: '2M+',
-      name: 'Notion',
-      category: 'Productivity',
-      pricing: 'Free - $8 / month',
-      rating: 4.7,
-      users: '20M+',
-      website: 'https://stripe.com',
-      icon: <DollarSign className="w - 6 h - 6" />,
+      name: 'Zapier';,
+      category: 'Automation';,
+      pricing: 'Free - $19.99 / month';,
+      rating: 4.8;,
+      users: '2M+';,
+      name: 'Notion';,
+      category: 'Productivity';,
+      pricing: 'Free - $8 / month';,
+      rating: 4.7;,
+      users: '20M+';,
+      website: 'https://stripe.com';,
+      icon: <DollarSign className="w - 6 h - 6" />;,
       color: 'text - blue - 400';
     }
     // Startup Tools;
     {
-      name: 'HubSpot',
-      category: 'Marketing & Sales',
-      pricing: 'Free - $45 / month',
-      rating: 4.7,
-      users: '135K+',
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className="w - 6 h - 6" />,
+      name: 'HubSpot';,
+      category: 'Marketing & Sales';,
+      pricing: 'Free - $45 / month';,
+      rating: 4.7;,
+      users: '135K+';,
+      website: 'https://hubspot.com';,
+      icon: <TrendingUp className="w - 6 h - 6" />;,
       color: 'text - orange - 400';
     }
     {
-      name: 'Mailchimp',
-      category: 'Email Marketing',
-      pricing: 'Free - $59 / month',
-      rating: 4.5,
-      users: '12M+',
-      website: 'https://mailchimp.com',
-      icon: <Users className="w - 6 h - 6" />,
+      name: 'Mailchimp';,
+      category: 'Email Marketing';,
+      pricing: 'Free - $59 / month';,
+      rating: 4.5;,
+      users: '12M+';,
+      website: 'https://mailchimp.com';,
+      icon: <Users className="w - 6 h - 6" />;,
       color: 'text - yellow - 400';
     }
     {
-      name: 'Calendly',
-      category: 'Productivity',
-      pricing: 'Free - $12 / month',
-      rating: 4.8,
-      users: '10M+',
+      name: 'Calendly';,
+      category: 'Productivity';,
+      pricing: 'Free - $12 / month';,
+      rating: 4.8;,
+      users: '10M+';,
         'Limited free features',
         'Basic customization',
         'Can be expensive',
       ],
-      website: 'https://calendly.com',
-      icon: <Globe className='w-6 h-6' />,
-      color: 'text-blue-400',
+      website: 'https://calendly.com';,
+      icon: <Globe className='w-6 h-6' />;,
+      color: 'text-blue-400';,
     },
   ];
 
@@ -403,36 +402,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const allTools = [;
     // AI Tools;
     {;
-      name: 'ChatGPT',;
-      category: 'AI Assistant',;
-      pricing: 'Free - $20/month',;
-      rating: 4 && 4.8,;
-      users: '100M+',;
-      bestFor: 'Content creators, developers, researchers',;
+      name: 'ChatGPT';,;
+      category: 'AI Assistant';,;
+      pricing: 'Free - $20/month';,;
+      rating: 4 && 4.8;,;
+      users: '100M+';,;
+      bestFor: 'Content creators;, developers, researchers',;
       pros: [;
         'Powerful capabilities',;
         'Easy to use',;
         'Regular updates',;
         'Good free tier',;
       ],;
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],;
-      website: 'https://chat && chat.openai.com',;
-      icon: <Brain className='w-6 h-6' />,;
-      color: 'text-green-400',;
-    },    {      bestFor: 'Content creators, developers, researchers';
-      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],;
-      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],;
-      website: 'https://chat && chat.openai.com',;
-      icon: <Brain className="w-6 h-6" />,;
+      cons: ['Sometimes inaccurate';, 'Limited context', 'Privacy concerns'],;
+      website: 'https://chat && chat.openai.com';,;
+      icon: <Brain className='w-6 h-6' />;,;
+      color: 'text-green-400';,;
+    },    {      bestFor: 'Content creators;, developers, researchers';
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'];,;
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'];,;
+      website: 'https://chat && chat.openai.com';,;
+      icon: <Brain className="w-6 h-6" />;,;
       color: 'text-green-400';
     };
     {;
-      name: 'Midjourney',;
-      category: 'AI Art',;
-      pricing: '$10 - $30/month',;
-      rating: 4 && 4.7,;
-      users: '1M+',;
-      bestFor: 'Designers, marketers, content creators',;
+      name: 'Midjourney';,;
+      category: 'AI Art';,;
+      pricing: '$10 - $30/month';,;
+      rating: 4 && 4.7;,;
+      users: '1M+';,;
+      bestFor: 'Designers;, marketers, content creators',;
       pros: [;
         'High-quality output',;
         'Creative control',;
@@ -444,92 +443,92 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Limited customization',;
         'Monthly subscription',;
       ],;
-      website: 'https://midjourney && midjourney.com',;
-      icon: <Zap className='w-6 h-6' />,;
-      color: 'text-purple-400',;
-    },    {      bestFor: 'Designers, marketers, content creators';
-      pros: ['High-quality outputCreative controlCommercial rightsActive community'],;
-      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],;
-      website: 'https://midjourney && midjourney.com',;
-      icon: <Zap className="w-6 h-6" />,;
+      website: 'https://midjourney && midjourney.com';,;
+      icon: <Zap className='w-6 h-6' />;,;
+      color: 'text-purple-400';,;
+    },    {      bestFor: 'Designers;, marketers, content creators';
+      pros: ['High-quality outputCreative controlCommercial rightsActive community'];,;
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription'];,;
+      website: 'https://midjourney && midjourney.com';,;
+      icon: <Zap className="w-6 h-6" />;,;
       color: 'text-purple-400';
     };
     {;
-      name: 'Jasper',;
-      category: 'AI Writing',;
-      pricing: '$39 - $125/month',;
-      rating: 4 && 4.6,;
-      users: '100K+',;
-      bestFor: 'Marketing teams, content creators, businesses',;
+      name: 'Jasper';,;
+      category: 'AI Writing';,;
+      pricing: '$39 - $125/month';,;
+      rating: 4 && 4.6;,;
+      users: '100K+';,;
+      bestFor: 'Marketing teams;, content creators, businesses',;
       pros: [;
         'Specialized for marketing',;
         'Brand voice training',;
         'SEO optimization',;
         'Team features',;
       ],;
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],;
-      website: 'https://jasper && jasper.ai',;
-      icon: <Brain className='w-6 h-6' />,;
-      color: 'text-blue-400',;
-    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
-      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],;
-      cons: ['ExpensiveLimited free trialCan be repetitive'],;
-      website: 'https://jasper && jasper.ai',;
-      icon: <Brain className="w-6 h-6" />,;
+      cons: ['Expensive';, 'Limited free trial', 'Can be repetitive'],;
+      website: 'https://jasper && jasper.ai';,;
+      icon: <Brain className='w-6 h-6' />;,;
+      color: 'text-blue-400';,;
+    },    // SaaS Tools      bestFor: 'Marketing teams;, content creators, businesses';
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'];,;
+      cons: ['ExpensiveLimited free trialCan be repetitive'];,;
+      website: 'https://jasper && jasper.ai';,;
+      icon: <Brain className="w-6 h-6" />;,;
       color: 'text-blue-400';
     };
     // SaaS Tools;
     {;
-      name: 'Zapier',;
-      category: 'Automation',;
-      pricing: 'Free - $19 && 19.99/month',;
-      rating: 4 && 4.8,;
-      users: '2M+',;
-      bestFor: 'Businesses looking to automate workflows',;
+      name: 'Zapier';,;
+      category: 'Automation';,;
+      pricing: 'Free - $19 && 19.99/month';,;
+      rating: 4 && 4.8;,;
+      users: '2M+';,;
+      bestFor: 'Businesses looking to automate workflows';,;
       pros: [;
         'Easy to use',;
         'Extensive integrations',;
         'Reliable',;
         'Great support',;
       ],;
-      cons: ['Can get expensive', 'Limited customization'],;
-      website: 'https://zapier && zapier.com',;
-      icon: <Zap className='w-6 h-6' />,;
-      color: 'text-orange-400',;
-    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support'],;
-      cons: ['Can get expensiveLimited customization'],;
-      website: 'https://zapier && zapier.com',;
-      icon: <Zap className="w-6 h-6" />,;
+      cons: ['Can get expensive';, 'Limited customization'],;
+      website: 'https://zapier && zapier.com';,;
+      icon: <Zap className='w-6 h-6' />;,;
+      color: 'text-orange-400';,;
+    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support'];,;
+      cons: ['Can get expensiveLimited customization'];,;
+      website: 'https://zapier && zapier.com';,;
+      icon: <Zap className="w-6 h-6" />;,;
       color: 'text-orange-400';
     };
-      name: 'Notion',;
-      category: 'Productivity',;
-      pricing: 'Free - $8/month',;
-      rating: 4 && 4.7,;
-      users: '20M+',;
-      bestFor: 'Teams that need flexible workspace',;
+      name: 'Notion';,;
+      category: 'Productivity';,;
+      pricing: 'Free - $8/month';,;
+      rating: 4 && 4.7;,;
+      users: '20M+';,;
+      bestFor: 'Teams that need flexible workspace';,;
       pros: [;
         'Highly flexible',;
         'Beautiful interface',;
         'Great templates',;
         'Free tier',;
       ],;
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],;
-      website: 'https://notion && notion.so',;
-      icon: <Globe className='w-6 h-6' />,;
-      color: 'text-gray-400',;
-    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],;
-      cons: ['Learning curveLimited offline accessCan be overwhelming'],;
-      website: 'https://notion && notion.so',;
-      icon: <Globe className="w-6 h-6" />,;
+      cons: ['Learning curve';, 'Limited offline access', 'Can be overwhelming'],;
+      website: 'https://notion && notion.so';,;
+      icon: <Globe className='w-6 h-6' />;,;
+      color: 'text-gray-400';,;
+    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'];,;
+      cons: ['Learning curveLimited offline accessCan be overwhelming'];,;
+      website: 'https://notion && notion.so';,;
+      icon: <Globe className="w-6 h-6" />;,;
       color: 'text-gray-400';
     };
-      name: 'Stripe',;
-      category: 'Payments',;
-      pricing: '2 && 2.9% + 30¢ per transaction',;
-      rating: 4 && 4.9,;
-      users: '1M+',;
-      bestFor: 'Online businesses, SaaS companies, e-commerce',;
+      name: 'Stripe';,;
+      category: 'Payments';,;
+      pricing: '2 && 2.9% + 30¢ per transaction';,;
+      rating: 4 && 4.9;,;
+      users: '1M+';,;
+      bestFor: 'Online businesses;, SaaS companies, e-commerce',;
       pros: [;
         'Developer-friendly',;
         'Global reach',;
@@ -541,24 +540,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Complex for beginners',;
         'Strict requirements',;
       ],;
-      website: 'https://stripe && stripe.com',;
-      icon: <DollarSign className='w-6 h-6' />,;
-      color: 'text-blue-400',;
-    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],;
-      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],;
-      website: 'https://stripe && stripe.com',;
-      icon: <DollarSign className="w-6 h-6" />,;
+      website: 'https://stripe && stripe.com';,;
+      icon: <DollarSign className='w-6 h-6' />;,;
+      color: 'text-blue-400';,;
+    },    // Startup Tools      bestFor: 'Online businesses;, SaaS companies, e-commerce';
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'];,;
+      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'];,;
+      website: 'https://stripe && stripe.com';,;
+      icon: <DollarSign className="w-6 h-6" />;,;
       color: 'text-blue-400';
     };
     // Startup Tools;
     {;
-      name: 'HubSpot',;
-      category: 'Marketing & Sales',;
-      pricing: 'Free - $45/month',;
-      rating: 4 && 4.7,;
-      users: '135K+',;
-      bestFor: 'B2B startups, SaaS companies, marketing teams',;
+      name: 'HubSpot';,;
+      category: 'Marketing & Sales';,;
+      pricing: 'Free - $45/month';,;
+      rating: 4 && 4.7;,;
+      users: '135K+';,;
+      bestFor: 'B2B startups;, SaaS companies, marketing teams',;
       pros: [;
         'Free tier',;
         'All-in-one solution',;
@@ -570,42 +569,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Complex for small teams',;
         'Limited customization',;
       ],;
-      website: 'https://hubspot && hubspot.com',;
-      icon: <TrendingUp className='w-6 h-6' />,;
-      color: 'text-orange-400',;
-    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],;
-      cons: ['Can get expensiveComplex for small teamsLimited customization'],;
-      website: 'https://hubspot && hubspot.com',;
-      icon: <TrendingUp className="w-6 h-6" />,;
+      website: 'https://hubspot && hubspot.com';,;
+      icon: <TrendingUp className='w-6 h-6' />;,;
+      color: 'text-orange-400';,;
+    },    {      bestFor: 'B2B startups;, SaaS companies, marketing teams';
+      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'];,;
+      cons: ['Can get expensiveComplex for small teamsLimited customization'];,;
+      website: 'https://hubspot && hubspot.com';,;
+      icon: <TrendingUp className="w-6 h-6" />;,;
       color: 'text-orange-400';
     };
     {;
-      name: 'Mailchimp',;
-      category: 'Email Marketing',;
-      pricing: 'Free - $59/month',;
-      rating: 4 && 4.5,;
-      users: '12M+',;
-      bestFor: 'E-commerce, content creators, small businesses',;
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],;
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],;
-      website: 'https://mailchimp && mailchimp.com',;
-      icon: <Users className='w-6 h-6' />,;
-      color: 'text-yellow-400',;
-    },    {      bestFor: 'E-commerce, content creators, small businesses';
-      pros: ['Free tierEasy to useGood templatesAffordable'],;
-      cons: ['Limited free featuresBasic automationCan be expensive'],;
-      website: 'https://mailchimp && mailchimp.com',;
-      icon: <Users className="w-6 h-6" />,;
+      name: 'Mailchimp';,;
+      category: 'Email Marketing';,;
+      pricing: 'Free - $59/month';,;
+      rating: 4 && 4.5;,;
+      users: '12M+';,;
+      bestFor: 'E-commerce;, content creators, small businesses',;
+      pros: ['Free tier';, 'Easy to use', 'Good templates', 'Affordable'],;
+      cons: ['Limited free features';, 'Basic automation', 'Can be expensive'],;
+      website: 'https://mailchimp && mailchimp.com';,;
+      icon: <Users className='w-6 h-6' />;,;
+      color: 'text-yellow-400';,;
+    },    {      bestFor: 'E-commerce;, content creators, small businesses';
+      pros: ['Free tierEasy to useGood templatesAffordable'];,;
+      cons: ['Limited free featuresBasic automationCan be expensive'];,;
+      website: 'https://mailchimp && mailchimp.com';,;
+      icon: <Users className="w-6 h-6" />;,;
       color: 'text-yellow-400';
     };
     {;
-      name: 'Calendly',;
-      category: 'Productivity',;
-      pricing: 'Free - $12/month',;
-      rating: 4 && 4.8,;
-      users: '10M+',;
-      bestFor: 'Sales teams, consultants, remote teams',;
+      name: 'Calendly';,;
+      category: 'Productivity';,;
+      pricing: 'Free - $12/month';,;
+      rating: 4 && 4.8;,;
+      users: '10M+';,;
+      bestFor: 'Sales teams;, consultants, remote teams',;
       pros: [;
         'Free tier',;
         'Easy integration',;
@@ -617,8 +616,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Basic customization',;
         'Can be expensive',;
       ],;
-      icon: <Globe className='w-6 h-6' />,;
-      color: 'text-blue-400',;
+      icon: <Globe className='w-6 h-6' />;,;
+      color: 'text-blue-400';,;
     },;
   ];
   const categories = [;
@@ -727,7 +726,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Expert Advice
@@ -758,7 +757,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
@@ -1078,7 +1077,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div
                   <span

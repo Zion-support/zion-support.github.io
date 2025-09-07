@@ -208,7 +208,7 @@ export default function AILegalContractAnalyzerPage() {
 
 import React from 'react'
 import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',;
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 

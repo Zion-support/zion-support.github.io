@@ -1,13 +1,13 @@
 class ErrorBoundary extends React.Component {
-  // TODO: Implement
+  // TODO: Implement;
 }
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -23,28 +23,28 @@ import {Eye,, Shield,, Lock,, AlertTriangle} from 'lucide-react';
 export default function CybersecurityPage() {;
   const securityServices = [;
     {}
-      title: "Security Assessment",",
-  description: "Comprehensive security evaluation of your systems",";
-      icon: Eye,;
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
+      title: "Security Assessment";,",
+  description: "Comprehensive security evaluation of your systems";,";
+      icon: Eye;,;
+      features: ["Vulnerability Scanning";, "Penetration Testing", "Risk Analysis"]";
     },;
     {}
-      title: "Threat Protection",",
-  description: "Advanced threat detection and prevention systems",";
-      icon: Shield,;
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
+      title: "Threat Protection";,",
+  description: "Advanced threat detection and prevention systems";,";
+      icon: Shield;,;
+      features: ["Real-time Monitoring";, "AI-Powered Detection", "Incident Response"]";
     },;
     {}
-      title: "Data Encryption",",
-  description: "End-to-end encryption for sensitive data",";
-      icon: Lock,;
-      features: ["Data at Rest", "Data in Transit", "Key Management"]";
+      title: "Data Encryption";,",
+  description: "End-to-end encryption for sensitive data";,";
+      icon: Lock;,;
+      features: ["Data at Rest";, "Data in Transit", "Key Management"]";
     },;
     {}
-      title: "Compliance",",
-  description: "Ensure compliance with industry standards",";
-      icon: AlertTriangle,;
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
+      title: "Compliance";,",
+  description: "Ensure compliance with industry standards";,";
+      icon: AlertTriangle;,;
+      features: ["GDPR";, "HIPAA", "SOC 2", "ISO 27001"]";
     }
 ;  ];
   return (
@@ -60,28 +60,28 @@ pr-12325
           <div className="container mx-auto px-4">";"
 </div>
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}"
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}"
               className="text-center"">;"
 </motion>"
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cybersecurity Services,;"
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">";, Cybersecurity Services,;"
 </h1>
               </h1>;"
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;"
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";,;"
 </p>
               </p>;
             </motion && motion.div>;
           </div>;
         </section>;"
         <section className="py-20">";"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;"
                   <motion&& motion.div)
                     key={index}"
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"""
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
+                    whileInView={{ opacity: 1;, y: 0 ;}}
+                    transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                    viewport={{ once: true ;}}>,;
                     <div className="text-red-600 mb-4">";"
                       <IconComponent className="w-10 h-10" />";"
 
@@ -104,21 +104,20 @@ pr-12325
             </div>,;
         <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">";"
           <div className="container mx-auto px-4 text-center">";"
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Secure Your Business Today,;"
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">";, Secure Your Business Today,;"
 </h2>
             </h2>;"
             <p className="text-xl mb-8 max-w-2xl mx-auto">";"
             <motion&& motion.a;"
               href="/contact""""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"","
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"";,"
+              whileHover={{ scale: 1 && 1.05 ;}}>,;
               <ArrowRight className="w-5 h-5 ml-2" />";"
 
             </motion && motion.a>;
         </section>;
       </div>;
     </Layout>;
-import Layout from '../../components/Layout';
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -126,35 +125,33 @@ import Layout from '../../components/Layout';
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
 export default function CybersecurityPage() {;
   const securityServices = [;
     {}
-      title: "Security Assessment",",
-  description: "Comprehensive security evaluation of your systems",";
-      icon: Eye,;
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
+      title: "Security Assessment";,",
+  description: "Comprehensive security evaluation of your systems";,";
+      icon: Eye;,;
+      features: ["Vulnerability Scanning";, "Penetration Testing", "Risk Analysis"]";
     },;
     {}
-      title: "Threat Protection",",
-  description: "Advanced threat detection and prevention systems",";
-      icon: Shield,;
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
+      title: "Threat Protection";,",
+  description: "Advanced threat detection and prevention systems";,";
+      icon: Shield;,;
+      features: ["Real-time Monitoring";, "AI-Powered Detection", "Incident Response"]";
     },;
     {}
-      title: "Data Encryption",",
-  description: "End-to-end encryption for sensitive data",";
-      icon: Lock,;
-      features: ["Data at Rest", "Data in Transit", "Key Management"]";
+      title: "Data Encryption";,",
+  description: "End-to-end encryption for sensitive data";,";
+      icon: Lock;,;
+      features: ["Data at Rest";, "Data in Transit", "Key Management"]";
     },;
     {}
-      title: "Compliance",",
-  description: "Ensure compliance with industry standards",";
-      icon: AlertTriangle,;
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
+      title: "Compliance";,",
+  description: "Ensure compliance with industry standards";,";
+      icon: AlertTriangle;,;
+      features: ["GDPR";, "HIPAA", "SOC 2", "ISO 27001"]";
     }
 ;  ];
   return (
@@ -166,9 +163,9 @@ export default function CybersecurityPage() {;
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8 ;}}
               className="text-center"">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cybersecurity Services;
@@ -190,10 +187,10 @@ export default function CybersecurityPage() {;
                   <motion&& motion.div)
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
+                    initial={{ opacity: 0;, y: 30 ;}}
+                    whileInView={{ opacity: 1;, y: 0 ;}}
+                    transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
+                    viewport={{ once: true ;}}>,;
                     <div className="text-red-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -229,7 +226,7 @@ export default function CybersecurityPage() {;
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
-              whileHover={{ scale: 1 && 1.05 }}>,;
+              whileHover={{ scale: 1 && 1.05 ;}}>,;
               Get Security Assessment;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;
@@ -237,37 +234,32 @@ export default function CybersecurityPage() {;
         </section>;
       </div>;
     </Layout>;
-import Layout from '../../components/Layout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
 export default function CybersecurityPage() {
   const securityServices = [;
     {}
-      title: "Security Assessment","
-      description: "Comprehensive security evaluation of your systems","
-      icon: Eye,
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]"
+      title: "Security Assessment";,"
+      description: "Comprehensive security evaluation of your systems";,"
+      icon: Eye;,
+      features: ["Vulnerability Scanning";, "Penetration Testing", "Risk Analysis"]"
     },
     {}
-      title: "Threat Protection","
-      description: "Advanced threat detection and prevention systems","
-      icon: Shield,
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]"
+      title: "Threat Protection";,"
+      description: "Advanced threat detection and prevention systems";,"
+      icon: Shield;,
+      features: ["Real-time Monitoring";, "AI-Powered Detection", "Incident Response"]"
     },
     {}
-      title: "Data Encryption","
-      description: "End-to-end encryption for sensitive data","
-      icon: Lock,
-      features: ["Data at Rest", "Data in Transit", "Key Management"]"
+      title: "Data Encryption";,"
+      description: "End-to-end encryption for sensitive data";,"
+      icon: Lock;,
+      features: ["Data at Rest";, "Data in Transit", "Key Management"]"
     },
     {}
-      title: "Compliance","
-      description: "Ensure compliance with industry standards","
-      icon: AlertTriangle,
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]"
+      title: "Compliance";,"
+      description: "Ensure compliance with industry standards";,"
+      icon: AlertTriangle;,
+      features: ["GDPR";, "HIPAA", "SOC 2", "ISO 27001"]"
     }
 ;  ];
   return (;
@@ -296,13 +288,13 @@ pr-12325
     >;
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">""
             <motion.div;
-              transition={{ duration: 0.8 }}"
+              transition={{ duration: 0.8 ;}}"
               className="text-center"""
             </motion.div>;
         <section className="py-20">""
                   <motion.div);
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.8;, delay: index * 0.1 ;}}
+                    viewport={{ once: true ;}}
                   >,
 
                     </h3>,"
@@ -316,7 +308,7 @@ pr-12325
             <motion.a;"
               href="/contact"";""
               className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 ;}}
 
             </motion.a>;
     ;"
@@ -346,7 +338,7 @@ pr-12325
           <div className="max-w-7xl mx-auto">;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0;, y: 20 ;}}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">"
                   </h3>"
                   <p className="text-gray-600">"

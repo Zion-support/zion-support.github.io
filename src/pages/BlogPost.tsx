@@ -1,5 +1,5 @@
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
+import type { BlogPost as BlogPostType } from "@/types/blog",;
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -8,16 +8,16 @@ import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
 
 import { BLOG_POSTS } from "@/data/blog-posts"
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
+import Link from 'next/link',;
+import { SEO } from "@/components/SEO",;
+import JsonLd from "@/components/JsonLd",;
+import { Button } from "@/components/ui/button",;
+import ImageWithRetry from '@/components/ui/ImageWithRetry',;
 import {
   ArrowLeft
   Calendar
@@ -52,14 +52,14 @@ import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import ReactMarkdown from 'react-markdown',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import type { BlogPost as BlogPostType } from "@/types/blog",;
+import { Separator } from "@/components/ui/separator",;
+import ReactMarkdown from 'react-markdown',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { BLOG_POSTS } from "@/data/blog-posts",;
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',;
+import { fetchWithRetry } from '@/utils/fetchWithRetry',;
 
 
 export default function BlogPost() {

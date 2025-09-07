@@ -19,12 +19,12 @@ export const useUpdateMilestone = () => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
 
-import { useState } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from 'sonner',
-import { Milestone, MilestoneStatus } from './types',
-import { useRecordActivity } from './useRecordActivity',
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from 'sonner',;
+import { Milestone, MilestoneStatus } from './types',;
+import { useRecordActivity } from './useRecordActivity',;
 '
 import { useState } from 'react',''
 import { supabase } from '@/integrations/supabase/client',''

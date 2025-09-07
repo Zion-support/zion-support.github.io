@@ -1,16 +1,16 @@
 
 
-import { useState, useEffect } from "react",
-import { Link, useNavigate, useParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import PostForm from "@/components/community/PostForm",
-import { useToast } from "@/hooks/use-toast",
+import { useState, useEffect } from "react",;
+import { Link, useNavigate, useParams } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import PostForm from "@/components/community/PostForm",;
+import { useToast } from "@/hooks/use-toast",;
 import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
-import { ForumPost, ForumCategory } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
+import { ForumPost, ForumCategory } from "@/types/community",;
+import { useAuth } from "@/hooks/useAuth",;
 interface PostFormValues {
 
   title: string

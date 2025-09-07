@@ -1,26 +1,26 @@
 
-import React, { useState } from "react",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Button } from "@/components/ui/button",;""
-import { Badge } from "@/components/ui/badge",;""
+import React, { useState } from "react";""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Button } from "@/components/ui/button";""
+import { Badge } from "@/components/ui/badge";""
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";"
 ;
 interface BrowseItem {;
-  id:string,;
-  title:string,;
-  subtitle:string,,
-  description:string,;
+  id: string;,;
+  title: string;,;
+  subtitle: string;,,
+  description: string;,;
   location?:string,;
-  badges:string[],;
+  badges: string[];,;
   price?:string,;
   image?:string,;
   match?:number,;
   timePosted?:string;
 }
 interface BrowseCardsProps {;
-  items:BrowseItem[],;"
-  type:"jobs" | "talents",;"
+  items: BrowseItem[];,;"
+  type: "jobs" | "talents";,;"
   onViewDetails:(id:string) => void;
 export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
   const [savedItems, setSavedItems] = useState<string[]>([]),;
@@ -92,7 +92,7 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
  interface BrowseItem {;
   id: string;
 title: string;
-subtitle: string,
+subtitle: string;,
   description: string;
 location?: string;
 badges: string[];

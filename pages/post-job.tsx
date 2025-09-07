@@ -183,8 +183,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 }
-import { useState } from 'react',
-import { use_router } from 'next / router',
+import { useState } from 'react',;
+import { use_router } from 'next / router',;
 export default /**
  * PostJobPage - Function description
  */

@@ -1,27 +1,27 @@
 
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { Badge } from "@/components/ui/badge",;""
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;""
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Badge } from "@/components/ui/badge";""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css',;
+import './video-call.css';
 ;
 interface Participant {;
-  id:string,;
-  name:string,;
+  id: string;,;
+  name: string;,;
   avatar?:string,;
   isMuted?:boolean,;
   isVideoEnabled?:boolean,;
   isScreenSharing?:boolean,;
   isHost?:boolean;}
 interface VideoCallRoomProps {;
-  roomId:string,;
+  roomId: string;,;
   participants?:Participant[],;
   onLeave?:() => void,;
-  onToggleMute?:(isMuted:boolean) => void,;
-  onToggleVideo?:(isEnabled:boolean) => void,;
-  onToggleScreenShare?:(isSharing:boolean) => void,;
+  onToggleMute?:(isMuted: boolean) => void;,;
+  onToggleVideo?:(isEnabled: boolean) => void;,;
+  onToggleScreenShare?:(isSharing: boolean) => void;,;
   className?:string;
 }
 export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
@@ -152,7 +152,7 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) 
 };
 '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e: src/components/video/VideoCallRoom.tsx;
 } <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"} <Button > <Phone className="rotate-135" />  </div>  ) ;"
 } <Button > {;
   isAudioOnly ? <VolumeX /> : <Volume2 /> ";"

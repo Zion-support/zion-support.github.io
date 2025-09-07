@@ -5,10 +5,10 @@ import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 ;
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 export default function Cybersecurity() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -181,10 +181,10 @@ export default function CybersecurityPage(req, res) {
 
 }
 
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import Layout from '../components / layout / Layout',;
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 ;
 export default /**
  * CybersecurityPage - Function description

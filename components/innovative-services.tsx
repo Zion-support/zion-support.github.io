@@ -95,23 +95,16 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-origin/cursor/automate-test-improve-and-merge-code-2533
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+origin/cursor/automate-test-improve-and-merge-code-2533
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-import {
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -128,10 +121,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
 
-    { value: '1001-2000', label: '$1,001 - $2,000' };
-    { value: '2001-3000', label: '$2,001 - $3,000' };
-    { value: '3001-5000', label: '$3,001 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
+    { value: '1001-2000';, label: '$1;,001 - $2,000' };
+    { value: '2001-3000';, label: '$2;,001 - $3,000' };
+    { value: '3001-5000';, label: '$3;,001 - $5,000' };
+    { value: '5001+';, label: '$5;,001+' }
 
   Check,
   Star,
@@ -219,12 +212,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -249,22 +236,22 @@ export default function InnovativeServicesPage() {;
   const [showFilters, setShowFilters] = useState(false);
 
   const priceRanges = [
-    { value: 'All', label: 'All Prices' }
-    { value: '0-1000', label: '$0 - $1,000' }
-    { value: '1001-2000', label: '$1,001 - $2,000' }
-    { value: '2001-3000', label: '$2,001 - $3,000' }
-    { value: '3001-5000', label: '$3,001 - $5,000' }
-    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }
-    { value: '1001-2000', label: '$1,001 - $2,000' }
-    { value: '2001-3000', label: '$2,001 - $3,000' }
-    { value: '3001-5000', label: '$3,001 - $5,000' }
-    { value: '5001+', label: '$5,001+' }
+    { value: 'All';, label: 'All Prices' ;}
+    { value: '0-1000';, label: '$0 - $1;,000' }
+    { value: '1001-2000';, label: '$1;,001 - $2,000' }
+    { value: '2001-3000';, label: '$2;,001 - $3,000' }
+    { value: '3001-5000';, label: '$3;,001 - $5,000' }
+    { value: '5001+';, label: '$5;,001+' },  ];    { value: '0-1000';, label: '$0 - $1;,000' }
+    { value: '1001-2000';, label: '$1;,001 - $2,000' }
+    { value: '2001-3000';, label: '$2;,001 - $3,000' }
+    { value: '3001-5000';, label: '$3;,001 - $5,000' }
+    { value: '5001+';, label: '$5;,001+' }
   const sortOptions = [
-    { value: 'innovation', label: 'Innovation Level' }
-    { value: 'price', label: 'Price Low-High' }
-    { value: 'popularity', label: 'Most Popular' }
-    { value: 'category', label: 'Category' }
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+    { value: 'innovation';, label: 'Innovation Level' ;}
+    { value: 'price';, label: 'Price Low-High' ;}
+    { value: 'popularity';, label: 'Most Popular' ;}
+    { value: 'category';, label: 'Category' ;}
+    { value: 'roi';, label: 'Highest ROI' ;},  ];    { value: 'roi';, label: 'Highest ROI' ;}
 
   ];
   }
@@ -277,20 +264,20 @@ export default function InnovativeServicesPage() {;
     filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max);
   }
-    { value: 'All', label: 'All Prices' },
-{ value: '0-1000', label: '$0 - $1,000' },
-    { value: '1001-2000', label: '$1,001 - $2,000' },
-    { value: '2001-3000', label: '$2,001 - $3,000' },
-    { value: '3001-5000', label: '$3,001 - $5,000' },
-    { value: '5001+', label: '$5,001+' },
+    { value: 'All';, label: 'All Prices' ;},
+{ value: '0-1000';, label: '$0 - $1;,000' },
+    { value: '1001-2000';, label: '$1;,001 - $2,000' },
+    { value: '2001-3000';, label: '$2;,001 - $3,000' },
+    { value: '3001-5000';, label: '$3;,001 - $5,000' },
+    { value: '5001+';, label: '$5;,001+' },
   ];
 
   const sortOptions = [
-    { value: 'innovation', label: 'Innovation Level' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-{ value: 'roi', label: 'Highest ROI' },
+    { value: 'innovation';, label: 'Innovation Level' ;},
+    { value: 'price';, label: 'Price Low-High' ;},
+    { value: 'popularity';, label: 'Most Popular' ;},
+    { value: 'category';, label: 'Category' ;},
+{ value: 'roi';, label: 'Highest ROI' ;},
   ];
   // Filter and sort services
   let filteredServices = innovativeMicroSaasServices;
@@ -393,7 +380,7 @@ if ( {) {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';,  };    website: 'https://ziontechgroup.com';
   }
 
   // Search filter;
@@ -426,7 +413,7 @@ if ( {) {
       }
       default: {;
         // Innovation level sorting;
-        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 };
+        const innovationOrder = { Breakthrough: 3;, Advanced: 2;, Standard: 1 ;};
         const aLevel = a && a.innovationLevel.split(' - ')[0];
         const bLevel = b && b.innovationLevel.split(' - ')[0];
         return (
@@ -446,7 +433,7 @@ return bRoi - aRoi;
       }
       default: {
         // Innovation level sorting
-        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 }
+        const innovationOrder = { Breakthrough: 3;, Advanced: 2;, Standard: 1 ;}
         const aLevel = a.innovationLevel.split(' - ')[0];
         const bLevel = b.innovationLevel.split(' - ')[0];
         return (
@@ -457,10 +444,10 @@ return bRoi - aRoi;
     }
   });
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
+    mobile: '+1 302 464 0950';,
+    email: 'kleber@ziontechgroup.com';,
+    address: '364 E Main St STE 1008 Middletown DE 19709';,
+website: 'https://ziontechgroup.com';,
 origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
@@ -686,7 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`px-3 py-2 rounded-lg transition-all ${
 viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
-                            : 'text-gray-400 hover:text-white'
+                            : 'text-gray-400 hover: text-white';
                         }`}
                       >
                         <List className='w-5 h-5' />
@@ -909,15 +896,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <ArrowRight className="w-4 h-4 ml-2" />;
                           </Button>;
                           <Button
-                            href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+                            href={`mailto: ${contactInfo && contactInfo.email;}?subject=Inquiry about ${service && service.name}`}
                             variant="secondary"
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>;
-                            Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}
+                            Contact: {contactInfo && contactInfo.mobile;} | {contactInfo && contactInfo.email}
                           </div>;
                           <div className='mt-1'>{contactInfo && contactInfo.website}</div>                        </div>                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">;
-                          <div>Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}</div>;
+                          <div>Contact: {contactInfo && contactInfo.mobile;} | {contactInfo && contactInfo.email}</div>;
                           <div className="mt-1">{contactInfo && contactInfo.website}</div>;
                         </div>;
                       </div>;
@@ -936,7 +923,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <ArrowRight className='w-4 h-4 ml-2' />
                           </Button>
                           <Button
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                            href={`mailto: ${contactInfo.email;}?subject=Inquiry about ${service.name}`}
                             variant='secondary'
                             className='px-4'
                           >
@@ -946,7 +933,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {/* Contact Info */}
 <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>
                           <div>
-                            Contact: {contactInfo.mobile} | {contactInfo.email}
+                            Contact: {contactInfo.mobile;} | {contactInfo.email}
                           </div>
                           <div className='mt-1'>{contactInfo.website}</div>
                         </div>
@@ -989,10 +976,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
-                    <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
+                    <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile;}
                   </Button>;
                   <Button
-                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    href={`mailto: ${contactInfo && contactInfo.email;}`}
                     variant='secondary'
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1007,22 +994,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                   <Button
-                    href={`tel:${contactInfo && contactInfo.mobile}`}
+                    href={`tel: ${contactInfo && contactInfo.mobile;}`}
                     variant="primary"
                     <Mail className="w-5 h-5 mr-2" />
                     Email Us
                   </Button>
                 </div>
                 <div className="mt-8 text-sm text-gray-400">
-                  <div>Address: {contactInfo.address}</div>
-                  <div className="mt-1">Website: {contactInfo.website}</div>
+                  <div>Address: {contactInfo.address;}</div>
+                  <div className="mt-1">Website: {contactInfo.website;}</div>
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
                   >
                     <Phone className='w-5 h-5 mr-2' />
-                    Call Now: {contactInfo.mobile}
+                    Call Now: {contactInfo.mobile;}
                   </Button>
                   <Button
-                    href={`mailto:${contactInfo.email}`}
+                    href={`mailto: ${contactInfo.email;}`}
 variant='secondary'
                     className='px-8 py-4 text-lg'
                   >
@@ -1031,8 +1018,8 @@ variant='secondary'
                   </Button>
                 </div>
                 <div className='mt-8 text-sm text-gray-400'>
-                  <div>Address: {contactInfo.address}</div>
-                  <div className='mt-1'>Website: {contactInfo.website}</div>
+                  <div>Address: {contactInfo.address;}</div>
+                  <div className='mt-1'>Website: {contactInfo.website;}</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </EnhancedFuturisticCard>
@@ -1048,15 +1035,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>;
                 </div>;
                 <div className='mt-8 text-sm text-gray-400'>;
-                  <div>Address: {contactInfo && contactInfo.address}</div>;
-                  <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>                </div>                  >;
+                  <div>Address: {contactInfo && contactInfo.address;}</div>;
+                  <div className='mt-1'>Website: {contactInfo && contactInfo.website;}</div>                </div>                  >;
                     <Mail className="w-5 h-5 mr-2" />;
                     Email Us;
                   </Button>;
                 </div>;
                 <div className="mt-8 text-sm text-gray-400">;
-                  <div>Address: {contactInfo && contactInfo.address}</div>;
-                  <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
+                  <div>Address: {contactInfo && contactInfo.address;}</div>;
+                  <div className="mt-1">Website: {contactInfo && contactInfo.website;}</div>;
                         <p className='text - gray - 300 mb - 4 font - medium'>;
                           {service.tagline}
                         </p>;
@@ -1179,7 +1166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <ArrowRight className='w - 4 h - 4 ml - 2' />;
                           </Button>;
                           <Button;
-                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                            href={`mailto: ${contact_info.email;}?subject = Inquiry about ${service.name}`}
                             variant='secondary';
                             className='px - 4';
                           >;
@@ -1194,7 +1181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <ArrowRight className="w - 4 h - 4 ml - 2" />;
                           </Button>;
                           <Button;
-                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                            href={`mailto: ${contact_info.email;}?subject = Inquiry about ${service.name}`}
                             variant="secondary";
                             className="px - 4";
                           >;
@@ -1204,10 +1191,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {/* Contact Info */}
                         <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
                           <div>;
-                            Contact: {contact_info.mobile} | {contact_info.email}
+                            Contact: {contact_info.mobile;} | {contact_info.email}
                           </div>;
                           <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
-                          <div > Contact: {contact_info.mobile} | {contact_info.email}</div>;
+                          <div > Contact: {contact_info.mobile;} | {contact_info.email}</div>;
                           <div className="mt - 1">{contact_info.website}</div>;
                         </div>;
                       </div>;
@@ -1229,14 +1216,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                   <Button;
-                    href={`tel:${contact_info.mobile}`}
+                    href={`tel: ${contact_info.mobile;}`}
                     variant='primary';
                     className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg';
                   >;
-                    <Phone className='w - 5 h - 5 mr - 2' />                    Call Now: {contact_info.mobile}
+                    <Phone className='w - 5 h - 5 mr - 2' />                    Call Now: {contact_info.mobile;}
                   </Button>;
                   <Button;
-                    href={`mailto:${contact_info.email}`}
+                    href={`mailto: ${contact_info.email;}`}
                     variant='secondary';
                     className='px - 8 py - 4 text - lg'                  Ready to Lead the Future?;
                 </h2>;
@@ -1246,15 +1233,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                   <Button;
-                    href={`tel:${contact_info.mobile}`}
+                    href={`tel: ${contact_info.mobile;}`}
                     variant="primary";
                     className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg";
                   >;
                     <Phone className="w - 5 h - 5 mr - 2" />;
-                    Call Now: {contact_info.mobile}
+                    Call Now: {contact_info.mobile;}
                   </Button>;
                   <Button;
-                    href={`mailto:${contact_info.email}`}
+                    href={`mailto: ${contact_info.email;}`}
                     variant='secondary';
                     className='px - 8 py - 4 text - lg';
                   >;
@@ -1263,15 +1250,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>;
                 </div>;
                 <div className='mt - 8 text - sm text - gray - 400'>;
-                  <div > Address: {contact_info.address}</div>;
-                  <div className='mt - 1'>Website: {contact_info.website}</div>                </div>                  >;
+                  <div > Address: {contact_info.address;}</div>;
+                  <div className='mt - 1'>Website: {contact_info.website;}</div>                </div>                  >;
                     <Mail className="w - 5 h - 5 mr - 2" />;
                     Email Us;
                   </Button>;
                 </div>;
                 <div className="mt - 8 text - sm text - gray - 400">;
-                  <div > Address: {contact_info.address}</div>;
-                  <div className="mt - 1">Website: {contact_info.website}</div>;
+                  <div > Address: {contact_info.address;}</div>;
+                  <div className="mt - 1">Website: {contact_info.website;}</div>;
 
                 </div>;
               </EnhancedFuturisticCard>;

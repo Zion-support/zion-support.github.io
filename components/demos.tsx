@@ -16,13 +16,13 @@ import {
 
 
 
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',
-import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
-import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 export default function DemosPage() {
@@ -33,40 +33,36 @@ export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
-      id: 'email-validator',
-      title: 'Email Validator Pro',
-description:
-        'Advanced email validation with domain checking and deliverability scoring',
-      icon: <Mail className='w-6 h-6' />,
-      color: 'from-blue-500 to-cyan-600',
-      component: <EmailValidatorDemo />,
+      id: 'email-validator';,
+      title: 'Email Validator Pro';,
+description: 'Advanced email validation with domain checking and deliverability scoring';,
+      icon: <Mail className='w-6 h-6' />;,
+      color: 'from-blue-500 to-cyan-600';,
+      component: <EmailValidatorDemo />;,
     },
     {
-      id: 'password-strength',
-      title: 'Password Strength Analyzer',
-      description:
-        'Comprehensive password security analysis with entropy calculation',
-      icon: <Lock className='w-6 h-6' />,
-      color: 'from-green-500 to-emerald-600',
-      component: <PasswordStrengthDemo />,
+      id: 'password-strength';,
+      title: 'Password Strength Analyzer';,
+      description: 'Comprehensive password security analysis with entropy calculation';,
+      icon: <Lock className='w-6 h-6' />;,
+      color: 'from-green-500 to-emerald-600';,
+      component: <PasswordStrengthDemo />;,
     },
     {
-      id: 'url-shortener',
-      title: 'Smart URL Shortener',
-      description:
-        'Professional URL shortening with analytics and custom codes',
-      icon: <Link className='w-6 h-6' />,
-      color: 'from-purple-500 to-pink-600',
-      component: <UrlShortenerDemo />,
+      id: 'url-shortener';,
+      title: 'Smart URL Shortener';,
+      description: 'Professional URL shortening with analytics and custom codes';,
+      icon: <Link className='w-6 h-6' />;,
+      color: 'from-purple-500 to-pink-600';,
+      component: <UrlShortenerDemo />;,
     },
     {
-      id: 'text-analyzer',
-      title: 'Text Analysis Suite',
-      description:
-        'Advanced text analysis with readability and sentiment analysis',
-      icon: <FileText className='w-6 h-6' />,
-      color: 'from-orange-500 to-red-600',
-      component: <TextAnalyzerDemo />,
+      id: 'text-analyzer';,
+      title: 'Text Analysis Suite';,
+      description: 'Advanced text analysis with readability and sentiment analysis';,
+      icon: <FileText className='w-6 h-6' />;,
+      color: 'from-orange-500 to-red-600';,
+      component: <TextAnalyzerDemo />;,
     },
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
@@ -150,7 +146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               functionality;
             </p>;
           </div>;
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
               >
                 <Code className='w-5 h-5 mr-2' />
                 View All Services
@@ -160,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -218,7 +214,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover: scale-110 transition-transform duration-300`;}>;
                   {demo && demo.icon}
                 </div>;
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
@@ -251,7 +247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >
 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover: scale-110 transition-transform duration-300`;}
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {demo.icon}

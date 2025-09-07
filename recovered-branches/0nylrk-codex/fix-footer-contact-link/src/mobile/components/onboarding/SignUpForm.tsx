@@ -1,10 +1,10 @@
 
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { useNavigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { useNavigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
@@ -28,8 +28,8 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
-import { AlertCircle } from "lucide-react",
-import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle } from "lucide-react",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
 
   const [formData, setFormData] = useState({"
     email: ""","

@@ -2,16 +2,16 @@
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
-  level:'info',;
+  level: 'info';,;
   format:winston.format.combine(;)
     winston.format.timestamp(),;
-    winston.format.errors({ stack:true }),;
+    winston.format.errors({ stack: true ;}),;
     winston.format.json();
   ),;
-  defaultMeta:{ service:'automation-script' },;
+  defaultMeta: { service:'automation-script' ;},;
   transports:[;
-    new winston.transports.File({ filename:'logs/error.log', level:'error' }),;
-    new winston.transports.File({ filename:'logs/combined.log' });']
+    new winston.transports.File({ filename: 'logs/error.log';, level: 'error' ;}),;
+    new winston.transports.File({ filename: 'logs/combined.log' ;});']
   ];
 }),;
 if (process.env.NODE_ENV !== 'production') {;
@@ -34,7 +34,7 @@ class AggressiveSyntaxFixer {;
         try {;
             // Get all TypeScript and JavaScript files;
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {;
-                ignore:['node_modules/**.next/**', 'dist/**build/**'];')
+                ignore: ['node_modules/**.next/**';, 'dist/**build/**'];')
 ;`;
             this.log(` Found ${files.length} files to check`),;
             for (const file of files) {;
@@ -43,11 +43,11 @@ class AggressiveSyntaxFixer {;
             if (this.errors.length > 0) {;`;
                 this.log(`  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
             return {;
-                fixedFiles:this.fixedFiles,;
+                fixedFiles: this.fixedFiles;,;
                 errors:this.errors;
             },;
         } catch (error) {;`;
-            this.log(` Error fixing syntax:${error.message}`),;
+            this.log(` Error fixing syntax: ${error.message;}`),;
             throw error,;
     async fixFile(filePath) {;
             const fullPath = path.join(this.projectRoot, filePath),;
@@ -58,9 +58,9 @@ class AggressiveSyntaxFixer {;
                 const fixedContent = this.createValidFile(filePath),;
                 fs.writeFileSync(fullPath, fixedContent),;
                 this.fixedFiles.push(filePath),;`;
-                this.log(` Fixed:${filePath}`),;
+                this.log(` Fixed: ${filePath;}`),;
         } catch (error) {;
-            this.errors.push({ file:filePath, error:error.message }),;`;
+            this.errors.push({ file: filePath;, error: error.message ;}),;`;
             this.log(` Error fixing ${filePath} ${error.message}`),;
     hasSyntaxErrors(content) {;
         // Check for various syntax error patterns;
@@ -91,7 +91,7 @@ class AggressiveSyntaxFixer {;
         // Convert invalid characters to valid ones;
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
         if (ext === '.tsx' || ext === '.jsx') {;`;
-            return `import React from 'react',;
+            return `import React from 'react';
 default function ${validFileName}() {;
   return (;
     <div>;

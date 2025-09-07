@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-import React from 'react',
+import React from 'react',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

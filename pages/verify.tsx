@@ -1,6 +1,6 @@
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
-import React, { useEffect, useMemo, useState } from 'react',
+import React, { useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head';
 import { getBadgeLabels  } from '../utils/kyc';
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';

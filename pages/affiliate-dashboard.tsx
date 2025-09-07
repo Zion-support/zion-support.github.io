@@ -227,7 +227,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 
 }
 
-import { useEffect, useMemo, useState } from 'react',
+import { useEffect, useMemo, useState } from 'react',;
 ;
 function getRefCode (): string {
   // Check condition

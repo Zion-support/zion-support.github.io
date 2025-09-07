@@ -163,7 +163,7 @@ export default function ContractBuilderPage(req, res) {
                 paymentSchedule  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-import React, { useEffect, useMemo, useState } from 'react',
+import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
 type PaymentType = any;

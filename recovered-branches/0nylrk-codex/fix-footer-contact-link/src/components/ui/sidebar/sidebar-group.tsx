@@ -2,11 +2,11 @@ import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
+import React, { forwardRef } from "react",;
+import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",  title?: string;
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;

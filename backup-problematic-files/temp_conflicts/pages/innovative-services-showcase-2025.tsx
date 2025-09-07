@@ -1,6 +1,6 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { ;
   Search, Filter, Star, CheckCircle, ArrowRight, ;
   Brain, Atom, Shield, Rocket, Target, Microscope,;
@@ -8,129 +8,129 @@ import { ;
   Zap, Globe, Cpu, Database, Lock, Cloud,;
   Stethoscope, GraduationCap, Leaf, Truck;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
+import Layout from '../components/layout/Layout';
 ;
 // Import all the new 2025 innovative service data;
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',;
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',;
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',;
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',;
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',;
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
 // Import existing services for comprehensive coverage;
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',;
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services',;
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',;
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 const contactInfo = {;
-  mobile:'+1 302 464 0950',;
-  email:'kleber@ziontechgroup.com',;
-  address:'364 E Main St STE 1008 Middletown DE 19709',;
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
   website:'https://ziontechgroup.com';
 },;
 const serviceCategories = [;
   {;
-    id:'financial-technology',,
-  description:'Innovative fintech, DeFi, and financial services',;
-    icon:TrendingUp,;
-    color:'from-green-500 to-emerald-500',;']
-    services:[...innovativeFinancialServices2025],;
-    gradient:'from-green-500/20 to-emerald-500/20',;
+    id: 'financial-technology';,,
+  description: 'Innovative fintech;, DeFi, and financial services',;
+    icon: TrendingUp;,;
+    color: 'from-green-500 to-emerald-500';,;']
+    services: [...innovativeFinancialServices2025];,;
+    gradient: 'from-green-500/20 to-emerald-500/20';,;
     badge:'New';
   },;
   {;
-    id:'healthcare-biotech',,
-  description:'AI-powered healthcare and biotechnology solutions',;
-    id:'healthcare-biotech',;
-    description:'AI-powered healthcare and biotechnology solutions',;
+    id: 'healthcare-biotech';,,
+  description: 'AI-powered healthcare and biotechnology solutions';,;
+    id: 'healthcare-biotech';,;
+    description: 'AI-powered healthcare and biotechnology solutions';,;
 pr-12325
-    icon:Stethoscope,;
-    color:'from-blue-500 to-indigo-500',;
-    services:[...innovativeHealthcareServices2025],;
-    gradient:'from-blue-500/20 to-indigo-500/20',;
+    icon: Stethoscope;,;
+    color: 'from-blue-500 to-indigo-500';,;
+    services: [...innovativeHealthcareServices2025];,;
+    gradient: 'from-blue-500/20 to-indigo-500/20';,;
     badge:'Hot';
   },;
   {;
-    id:'education-technology',,
-  description:'AI-powered learning and educational innovation',;
-    id:'education-technology',;
-    description:'AI-powered learning and educational innovation',;
+    id: 'education-technology';,,
+  description: 'AI-powered learning and educational innovation';,;
+    id: 'education-technology';,;
+    description: 'AI-powered learning and educational innovation';,;
 pr-12325
-    icon:GraduationCap,;
-    color:'from-purple-500 to-pink-500',;
-    services:[...innovativeEducationServices2025],;
-    gradient:'from-purple-500/20 to-pink-500/20',;
+    icon: GraduationCap;,;
+    color: 'from-purple-500 to-pink-500';,;
+    services: [...innovativeEducationServices2025];,;
+    gradient: 'from-purple-500/20 to-pink-500/20';,;
     badge:'Innovative';
   },;
   {;
-    id:'sustainability-green-tech',,
-  description:'Environmental technology and sustainability solutions',;
-    id:'sustainability-green-tech',;
-    description:'Environmental technology and sustainability solutions',;
+    id: 'sustainability-green-tech';,,
+  description: 'Environmental technology and sustainability solutions';,;
+    id: 'sustainability-green-tech';,;
+    description: 'Environmental technology and sustainability solutions';,;
 pr-12325
-    icon:Leaf,;
-    color:'from-emerald-500 to-teal-500',;
-    services:[...innovativeSustainabilityServices2025],;
-    gradient:'from-emerald-500/20 to-teal-500/20',;
+    icon: Leaf;,;
+    color: 'from-emerald-500 to-teal-500';,;
+    services: [...innovativeSustainabilityServices2025];,;
+    gradient: 'from-emerald-500/20 to-teal-500/20';,;
     badge:'Eco-Friendly';
   },;
   {;
-    id:'logistics-supply-chain',,
-  description:'Autonomous logistics and supply chain optimization',;
-    id:'logistics-supply-chain',;
-    description:'Autonomous logistics and supply chain optimization',;
+    id: 'logistics-supply-chain';,,
+  description: 'Autonomous logistics and supply chain optimization';,;
+    id: 'logistics-supply-chain';,;
+    description: 'Autonomous logistics and supply chain optimization';,;
 pr-12325
-    icon:Truck,;
-    color:'from-orange-500 to-red-500',;
-    services:[...innovativeLogisticsServices2025],;
-    gradient:'from-orange-500/20 to-red-500/20',;
+    icon: Truck;,;
+    color: 'from-orange-500 to-red-500';,;
+    services: [...innovativeLogisticsServices2025];,;
+    gradient: 'from-orange-500/20 to-red-500/20';,;
     badge:'Autonomous';
   },;
   {;
-    id:'ai-consciousness',,
-  description:'Revolutionary AI consciousness and emotional intelligence platforms',;
-    id:'ai-consciousness',;
-    description:'Revolutionary AI consciousness and emotional intelligence platforms',;
+    id: 'ai-consciousness';,,
+  description: 'Revolutionary AI consciousness and emotional intelligence platforms';,;
+    id: 'ai-consciousness';,;
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms';,;
 pr-12325
-    icon:Brain,;
-    color:'from-violet-500 to-purple-500',;
-    services:[...innovativeAIServices2025],;
-    gradient:'from-violet-500/20 to-indigo-500/20',;
+    icon: Brain;,;
+    color: 'from-violet-500 to-purple-500';,;
+    services: [...innovativeAIServices2025];,;
+    gradient: 'from-violet-500/20 to-indigo-500/20';,;
     badge:'Revolutionary';
   },;
   {;
-    id:'quantum-emerging',,
-  description:'Quantum computing, DNA computing, and beyond',;
-    id:'quantum-emerging',;
-    description:'Quantum computing, DNA computing, and beyond',;
+    id: 'quantum-emerging';,,
+  description: 'Quantum computing;, DNA computing, and beyond',;
+    id: 'quantum-emerging';,;
+    description: 'Quantum computing;, DNA computing, and beyond',;
 pr-12325
-    icon:Atom,;
-    color:'from-indigo-500 to-blue-500',;
-    services:[...emergingTechServices2025],;
-    gradient:'from-indigo-500/20 to-cyan-500/20',;
+    icon: Atom;,;
+    color: 'from-indigo-500 to-blue-500';,;
+    services: [...emergingTechServices2025];,;
+    gradient: 'from-indigo-500/20 to-cyan-500/20';,;
     badge:'Quantum';
   },;
   {;
-    id:'enterprise-it',,
-  description:'Autonomous operations and zero-trust security',;
-    id:'enterprise-it',;
-    description:'Autonomous operations and zero-trust security',;
+    id: 'enterprise-it';,,
+  description: 'Autonomous operations and zero-trust security';,;
+    id: 'enterprise-it';,;
+    description: 'Autonomous operations and zero-trust security';,;
 pr-12325
-    icon:Shield,;
-    color:'from-blue-500 to-cyan-500',;
-    services:[...innovativeITServices2025],;
-    gradient:'from-blue-500/20 to-teal-500/20',;
+    icon: Shield;,;
+    color: 'from-blue-500 to-cyan-500';,;
+    services: [...innovativeITServices2025];,;
+    gradient: 'from-blue-500/20 to-teal-500/20';,;
     badge:'Enterprise';
   },;
   {;
-    id:'micro-saas',,
-  description:'Innovative solutions for every business need',;
-    id:'micro-saas',;
-    description:'Innovative solutions for every business need',;
+    id: 'micro-saas';,,
+  description: 'Innovative solutions for every business need';,;
+    id: 'micro-saas';,;
+    description: 'Innovative solutions for every business need';,;
 pr-12325
-    icon:Target,;
-    color:'from-teal-500 to-green-500',;
-    services:[...realMicroSaasServices2025],;
-    gradient:'from-teal-500/20 to-green-500/20',;
+    icon: Target;,;
+    color: 'from-teal-500 to-green-500';,;
+    services: [...realMicroSaasServices2025];,;
+    gradient: 'from-teal-500/20 to-green-500/20';,;
     badge:'Popular';
   }
 ],;
@@ -183,9 +183,9 @@ export default function InnovativeServicesShowcase2025() {;
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;"
 </div>
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}"
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}"
             className="mb-8";"
           >;
 </motion>"
@@ -206,7 +206,7 @@ export default function InnovativeServicesShowcase2025() {;
             </p>;
           </motion.div>;
           {/* Stats */}
-            transition={{ duration:0.8, delay:0.2 }}"
+            transition={{ duration: 0.8;, delay: 0.2 ;}}"
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto";"
             <div className="text-center">;"
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">;"
@@ -250,9 +250,9 @@ export default function InnovativeServicesShowcase2025() {;
       <section className="py-20 bg-slate-900">;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                 key={service.id}
-                whileInView={{ opacity:1, y:0 }}
-                transition={{ duration:0.8, delay:index * 0.1 }}
-                viewport={{ once:true }}"
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0.8;, delay: index * 0.1 ;}}
+                viewport={{ once: true ;}}"
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105";"
                 <div className="mb-6">;"
                   <div className="flex items-center justify-between mb-4">;"
@@ -290,39 +290,39 @@ export default function InnovativeServicesShowcase2025() {;
                     className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300";"
 </a>
                   </a>;
-                    href={`mailto:${service.contact.email}`}"
+                    href={`mailto: ${service.contact.email;}`}"
                     className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300";"
 </a>"
                     <Mail className="w-5 h-5" />;"
 
             ))}
-              initial={{ opacity:0 }}
-              animate={{ opacity:1 }}"
+              initial={{ opacity: 0 ;}}
+              animate={{ opacity: 1 ;}}"
               className="text-center py-20";"
               <div className="text-gray-400 text-xl mb-4">No services found</div>;""
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>;"
           )}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;"
-            transition={{ duration:0.8 }}
+            transition={{ duration: 0.8 ;}}
             className="text-center mb-16";"
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;"
 </h2>
             </h2>;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;"
-              transition={{ duration:0.8, delay:0.1 }}
+              transition={{ duration: 0.8;, delay: 0.1 ;}}
               className="text-center";"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;"
                 <Phone className="w-8 h-8 text-white" />;"
 
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;""
               <p className="text-gray-300">{contactInfo.mobile}</p>;"
-              transition={{ duration:0.8, delay:0.2 }}
+              transition={{ duration: 0.8;, delay: 0.2 ;}}
                 <Mail className="w-8 h-8 text-white" />;"
 
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;""
               <p className="text-gray-300">{contactInfo.email}</p>;"
-              transition={{ duration:0.8, delay:0.3 }}
+              transition={{ duration: 0.8;, delay: 0.3 ;}}
                 <MapPin className="w-8 h-8 text-white" />;"
 
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;""

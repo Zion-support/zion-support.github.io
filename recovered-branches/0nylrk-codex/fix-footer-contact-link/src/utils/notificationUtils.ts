@@ -2,7 +2,7 @@
 
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-import { supabase } from "@/integrations/supabase/client",
+import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
 

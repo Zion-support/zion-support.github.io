@@ -15,14 +15,14 @@ import { format  } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
-import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { format } from 'date-fns',
-import { toast } from "sonner",
-import { useNavigate } from 'react-router-dom',
-import { jobSchema, JobSchemaType } from './validation',
-import { useAuth } from "@/hooks/useAuth",
+import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { format } from 'date-fns',;
+import { toast } from "sonner",;
+import { useNavigate } from 'react-router-dom',;
+import { jobSchema, JobSchemaType } from './validation',;
+import { useAuth } from "@/hooks/useAuth",;
 
 export interface JobPostingProps {
   job_id?: string;
@@ -88,13 +88,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 "
-import { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
+import { useState, useEffect } from 'react',;
+import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",""
-import { format } from 'date-fns',
+import { format } from 'date-fns',;
 import { toast } from "sonner",""
-import { useNavigate } from 'react-router-dom',
-import { jobSchema, JobSchemaType } from './validation',
+import { useNavigate } from 'react-router-dom',;
+import { jobSchema, JobSchemaType } from './validation',;
 import { useAuth } from "@/hooks/useAuth","
 export interface JobPostingProps {
   // TODO: Implement

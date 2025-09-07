@@ -1,8 +1,8 @@
-import { useState } from "react",
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useToast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react",;
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useToast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
 
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useContractTemplates() {
@@ -11,8 +11,8 @@ export function useContractTemplates() {
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-import { ContractTemplate } from "@/types/contracts",
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+import { ContractTemplate } from "@/types/contracts",;
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
 export function useContractTemplates() {
 
 import { useState } from "react",""

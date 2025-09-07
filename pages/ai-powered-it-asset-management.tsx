@@ -122,9 +122,9 @@ import React from 'react';
 const AIPoweredITAssetManagement = () => {
   const features = [
 import React from 'react';
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
 

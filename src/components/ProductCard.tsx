@@ -226,7 +226,7 @@ import { Tooltip;
 import { useDispatch  } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem  } from '@/store/cartSlice';
-import Image from 'next/image',
+import Image from 'next/image',;
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useRouter  } from 'next/router';

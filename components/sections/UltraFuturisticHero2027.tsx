@@ -18,7 +18,6 @@ import {
   CheckCircle,;} from 'lucide-react';
 
 
-import {
   Rocket
   Brain
   Atom
@@ -43,8 +42,8 @@ export default function UltraFuturisticHero2027() {
   Star, TrendingUp, Users, CheckCircle
 export default function UltraFuturisticHero2027() {
   const features = [
-import React from 'react',
-import React from 'react';,
+import React from 'react';
+import React from 'react';;
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -68,72 +67,69 @@ export default function UltraFuturisticHero2027() {const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
       icon: Shield
       text: 'Enterprise Security'
-      color: 'from-red-400 to-orange-400'
+      color: 'from-red-400 to-orange-400';
     }
       icon: Shield;
-text: 'Enterprise Security',
-  color: 'from-red-400 to-orange-400'
+text: 'Enterprise Security';,
+  color: 'from-red-400 to-orange-400';
 }
    }
 }
   ];
-      icon: Shield,text: 'Enterprise Security',
-  color: 'from-red-400 to-orange-400'}];return this.props.children;
+      icon: Shield;,text: 'Enterprise Security';,
+  color: 'from-red-400 to-orange-400';}];return this.props.children;
   }
 }
-import React from 'react';
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-      color: 'from-red-400 to-orange-400',;
+      color: 'from-red-400 to-orange-400';,;
     }
 ];
 
 const stats = [
     {
-      icon: Brain,
-      text: 'AI Consciousness Evolution'}
-  color: 'from - purple - 400 to - pink - 400'}
+      icon: Brain;,
+      text: 'AI Consciousness Evolution';}
+  color: 'from - purple - 400 to - pink - 400';}
     },
     {
-      icon: Atom,
-      text: 'Quantum Computing'}
-  color: 'from - blue - 400 to - cyan - 400'}
+      icon: Atom;,
+      text: 'Quantum Computing';}
+  color: 'from - blue - 400 to - cyan - 400';}
     },
     {
-      icon: Globe,
-      text: 'Digital Reality'}
-  color: 'from - green - 400 to - emerald - 400'}
+      icon: Globe;,
+      text: 'Digital Reality';}
+  color: 'from - green - 400 to - emerald - 400';}
     },
     {
-      icon: Shield,
-      text: 'Enterprise Security'}
-  color: 'from - red - 400 to - orange - 400'}
+      icon: Shield;,
+      text: 'Enterprise Security';}
+  color: 'from - red - 400 to - orange - 400';}
     }
   ];
 ;
   const stats = [;
   const stats = [
     {
-      number: '1000+',
-      label: 'Happy Customers',
-      icon: Users,
-      color: 'text - cyan - 400',
+      number: '1000+';,
+      label: 'Happy Customers';,
+      icon: Users;,
+      color: 'text - cyan - 400';,
     },
     {
-      number: '4.9★',
-      label: 'Average Rating',
-      icon: Star,
-      color: 'text - purple - 400',
+      number: '4.9★';,
+      label: 'Average Rating';,
+      icon: Star;,
+      color: 'text - purple - 400';,
     },
     {
-      number: '99.9%',
-      label: 'Uptime SLA',
-      icon: CheckCircle,
-      color: 'text - green - 400',
+      number: '99.9%';,
+      label: 'Uptime SLA';,
+      icon: CheckCircle;,
+      color: 'text - green - 400';,
     },
-    { number: '24 / 7', label: 'Support', icon: Zap, color: 'text - pink - 400' },
+    { number: '24 / 7';, label: 'Support';, icon: Zap;, color: 'text - pink - 400' ;},
   ];
 ;
   ];
@@ -148,18 +144,18 @@ const stats = [
         {/* Floating Orbs */}
         <motion.div;
           className='absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl';
-          animate={{y: [0, -20, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3]}}
-          transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}}
+          animate={{y: [0;, -20, 0],scale: [1;, 1.2, 1],opacity: [0.3;, 0.6, 0.3]}}
+          transition={{duration: 8;,repeat: Infinity;,ease: 'easeInOut';}}
         />;
         <motion.div;
           className='absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl';
-          animate={{y: [0, 20, 0],scale: [1, 1.3, 1],opacity: [0.2, 0.5, 0.2]}}
-          transition={{duration: 10,repeat: Infinity,ease: 'easeInOut'}}
+          animate={{y: [0;, 20, 0],scale: [1;, 1.3, 1],opacity: [0.2;, 0.5, 0.2]}}
+          transition={{duration: 10;,repeat: Infinity;,ease: 'easeInOut';}}
         />;
         <motion.div;
 className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl';
-          animate={{y: [0, -30, 0],scale: [1, 1.1, 1],opacity: [0.4, 0.7, 0.4]}}
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut'}}
+          animate={{y: [0;, -30, 0],scale: [1;, 1.1, 1],opacity: [0.4;, 0.7, 0.4]}}
+          transition={{duration: 12;,repeat: Infinity;,ease: 'easeInOut';}}
         />;
         {/* Grid Pattern */}
 
@@ -179,8 +175,8 @@ className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500
           {/* Main Heading */}
 
 
-            duration: 12,
-            repeat: Infinity,
+            duration: 12;,
+            repeat: Infinity;,
 
   return (
     <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
@@ -190,41 +186,41 @@ className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500
         <motion.div
           className='absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl'
           animate={{
-            y: [0, -20, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
+            y: [0;, -20, 0],
+            scale: [1;, 1.2, 1],
+            opacity: [0.3;, 0.6, 0.3],
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 8;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
 
         <motion.div
           className='absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl'
           animate={{
-            y: [0, 20, 0],
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
+            y: [0;, 20, 0],
+            scale: [1;, 1.3, 1],
+            opacity: [0.2;, 0.5, 0.2],
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 10;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
         <motion.div
 className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
           animate={{
-            y: [0, -30, 0],
-            scale: [1, 1.1, 1],
-            opacity: [0.4, 0.7, 0.4],
+            y: [0;, -30, 0],
+            scale: [1;, 1.1, 1],
+            opacity: [0.4;, 0.7, 0.4],
           }}
           transition={{
-            duration: 12,
-            repeat: Infinity,
-ease: 'easeInOut',
+            duration: 12;,
+            repeat: Infinity;,
+ease: 'easeInOut';,
           }}
         />
         {/* Grid Pattern */}
@@ -235,9 +231,9 @@ ease: 'easeInOut',
           {/* Main Heading */}
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -267,10 +263,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Main Heading *}
 }
           <motion.div;
-initial={{ opacity: 0, y: 30 }
+initial={{ opacity: 0;, y: 30 ;}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}
 }
 
 className='mb-8'
@@ -291,11 +287,11 @@ className='mb-8'
 "
         {/* Grid Pattern */}          className=\"absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl\";
           animate={{;
-            y: [0, -30, 0];
+            y: [0;, -30, 0];
 
-            scale: [1, 1 && 1.1, 1];
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut'}"
+            scale: [1;, 1 && 1.1, 1];
+            opacity: [0 && 0.4;, 0 && 0.7, 0 && 0.4];
+          transition={{duration: 12;,repeat: Infinity;,ease: 'easeInOut';}"
   ease: \"easeInOut\";}
           }}
         />;"
@@ -304,11 +300,11 @@ className='mb-8'
           <motion&& motion.div;
           {/* Subtitle */}
           <motion.p;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
-            animate={{ opacity: 1, y: 0 }
+            animate={{ opacity: 1;, y: 0 ;}
 }
-            transition={{ duration: 0.8, delay: 0.2 }
+            transition={{ duration: 0.8;, delay: 0.2 ;}
 }
 className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed' />
 
@@ -318,11 +314,11 @@ className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto
           </motion.p>;
           {/* CTA Buttons */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
-            animate={{ opacity: 1, y: 0 }
+            animate={{ opacity: 1;, y: 0 ;}
 }
-            transition={{ duration: 0.8, delay: 0.4 }
+            transition={{ duration: 0.8;, delay: 0.4 ;}
 }
 className='flex flex-col sm:flex-row gap-6 justify-center mb-16' />
 
@@ -351,18 +347,18 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16' />
       </div>;<div className=\"max-w-7xl mx-auto relative z-10\" />;"
         <div className=\"text-center\" />;
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
 
-            animate={{ opacity: 1, y: 0 }
+            animate={{ opacity: 1;, y: 0 ;}
 }
 
       <div className="max-w-7xl mx-auto relative z-10">;
         <div className="text-center">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
             className='mb-8'>;
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -390,13 +386,13 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16' />
 
           {/* Subtitle */}
           <motion&& motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
 
           {/* CTA Buttons */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
             <Link
               href="/2027-services-showcase"
 
@@ -410,22 +406,22 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16' />
               href="/contact"
           {/* Features Grid */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
 
 
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8;, delay: 0.6 ;}}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            transition={{ duration: 0.8, delay: 0.6 }
+            transition={{ duration: 0.8;, delay: 0.6 ;}
 }
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
            />
             {features.map((feature, index) => (
               <motion.div;
-opacity: [0.4, 0.7, 0.4];
-          transition={{duration: 12,repeat: Infinity,ease: 'easeInOut'}"
+opacity: [0.4;, 0.7, 0.4];
+          transition={{duration: 12;,repeat: Infinity;,ease: 'easeInOut';}"
   ease: \"easeInOut\";}
           }}
         />;
@@ -438,20 +434,20 @@ opacity: [0.4, 0.7, 0.4];
       <div className=\"max - w-7xl mx - auto relative z - 10\" />;"
         <div className=\"text - center\" />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
             className='mb - 8' />
 
                 key={feature.tex}
 }
-                initial={{ opacity: 0, scale: 0.8 }
+                initial={{ opacity: 0;, scale: 0.8 ;}
 }
-                animate={{ opacity: 1, scale: 1 }
+                animate={{ opacity: 1;, scale: 1 ;}
 }
 
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                transition={{ duration: 0.5;, delay: 0.8 + index * 0.1 ;}}
                 className='group'
 
 
@@ -464,7 +460,7 @@ className='group'
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30' />
                   <div;
-className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}
                    />
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
@@ -484,21 +480,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           {/* Stats */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
 
-            transition={{ duration: 0.8, delay: 1.0 }}
+            transition={{ duration: 0.8;, delay: 1.0 ;}}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 30 }
+            initial={{ opacity: 0;, y: 30 ;}
 }
 
-            animate={{ opacity: 1, y: 0 }
+            animate={{ opacity: 1;, y: 0 ;}
 }
 
-            transition={{ duration: 0.8, delay: 1.0 }
+            transition={{ duration: 0.8;, delay: 1.0 ;}
 }
 className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
            />
@@ -508,15 +504,15 @@ className='group' />
 
                 <div className='bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30' />;}
                   <div;}
-                    className={`w - 16 h - 16 bg - gradient - to - r ${feature.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300
+                    className={`w - 16 h - 16 bg - gradient - to - r ${feature.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300;
 } />
 
                     <feature.icon className='w - 8 h - 8 text - white' />;
                   </div>;
-                  <h3 className='text - white font - semibold text - center group - hover: text - cyan - 400 transition - colors duration - 300' />                    {feature.tex}
+                  <h3 className='text - white font - semibold text - center group - hover: text - cyan - 400 transition - colors duration - 300' />                    {feature.tex;}
 }              >;"
                 <div className=\"bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30\" />;
-                  <div className={`w - 16 h - 16 bg - gradient - to - r ${feature.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300
+                  <div className={`w - 16 h - 16 bg - gradient - to - r ${feature.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300;
 } />
 "
                     <feature.icon className=\"w - 8 h - 8 text - white\" />;
@@ -529,23 +525,23 @@ className='group' />
           </motion.div>;
           {/* Stats */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            animate={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8;, delay: 1.0 ;}}
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'          >            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16";
           >;
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                initial={{ opacity: 0;, scale: 0.8 ;}}
+                animate={{ opacity: 1;, scale: 1 ;}}
+                transition={{ duration: 0.5;, delay: 1.2 + index * 0.1 ;}}
                 className='text - center group';
               >;
                 <div;
-                  className={`text - 4xl md:text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color}`}
+                  className={`text - 4xl md: text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color;}`}
                 >;
               >
                 <div
-                  className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
+                  className={`text-4xl md: text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color;}`}
                 >
                   {stat.number}
                 </div>;
@@ -559,26 +555,26 @@ className='group' />
 
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
-            initial={{ opacity: 0, coordinate_y: 30 }
+            initial={{ opacity: 0;, coordinate_y: 30 ;}
 }
-            animate={{ opacity: 1, coordinate_y: 0 }
+            animate={{ opacity: 1;, coordinate_y: 0 ;}
 }
-            transition={{ duration: 0.8, delay: 1.0 }}"
+            transition={{ duration: 0.8;, delay: 1.0 ;}}"
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'           />            className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16\">
 
                 key={stat.labe}
 }
-                initial={{ opacity: 0, scale: 0.8 }
+                initial={{ opacity: 0;, scale: 0.8 ;}
 }
-                animate={{ opacity: 1, scale: 1 }
+                animate={{ opacity: 1;, scale: 1 ;}
 }
 
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                transition={{ duration: 0.5;, delay: 1.2 + index * 0.1 ;}}
 
 className='text-center group'
               >
                 <div;
-className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`} />
+className={`text-4xl md: text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color;}`} />
 
                   {stat.number}
 
@@ -588,7 +584,7 @@ className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shad
                 </div>
                 <div className='flex justify-center mt-2'>
                   <stat.icon
-                    className={`w-5 h-5 ${stat.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+                    className={`w-5 h-5 ${stat.color} group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}
                   />
                 </div>
               </motion.div>
@@ -596,10 +592,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           {/* Trust Indicators */}
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
 
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.8;, delay: 1.4 ;}}
 className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -613,7 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className='flex justify-center mt-2' />;
                   <stat.icon;
-                    className={`w-5 h-5 ${stat.color} group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+                    className={`w-5 h-5 ${stat.color} group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`;}
 
                   />
                 </div>
@@ -623,13 +619,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Trust Indicators *}
 }
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
 
-            animate={{ opacity: 1, y: 0 }
+            animate={{ opacity: 1;, y: 0 ;}
 }
 
-            transition={{ duration: 0.8, delay: 1.4 }
+            transition={{ duration: 0.8;, delay: 1.4 ;}
 }
 className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
            />
@@ -643,7 +639,7 @@ className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-
                 'Research Labs'
                 'Government'
               ].map((trust, index) => (                <motion.div          >
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.8;, delay: 1.4 ;}}
             className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto"
           >
             <h3 className="text-2xl font-bold text-white mb-6">
@@ -659,10 +655,10 @@ className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={trust}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0;, x: -20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
 
-            transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
+            transition={{ duration: 0 && 0.8;, delay: 1 && 1.4 ;}}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
               Trusted by Industry Leaders;
@@ -682,7 +678,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion&& motion.div
 
 
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
+                  transition={{ duration: 0.5;, delay: 1.6 + index * 0.1 ;}}
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -695,12 +691,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ].map((trust, index) => (}
                 <motion.div;}
 key={trust}
-                  initial={{ opacity: 0, x: -20 }
+                  initial={{ opacity: 0;, x: -20 ;}
 }
-                  animate={{ opacity: 1, x: 0 }
+                  animate={{ opacity: 1;, x: 0 ;}
 }
 
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
+                  transition={{ duration: 0.5;, delay: 1.6 + index * 0.1 ;}}
 className='text-center'
                  />
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3' />
@@ -716,18 +712,18 @@ className='text-center'
   )}
                 </div>;"
                 <div className=\"flex justify - center mt - 2\" />;
-                  <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300
+                  <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover: shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300;
 } />;
                 </div>;
               </motion.div>))}
           </motion.div>;
           {/* Trust Indicators */}
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }
+            initial={{ opacity: 0;, coordinate_y: 20 ;}
 }
-            animate={{ opacity: 1, coordinate_y: 0 }
+            animate={{ opacity: 1;, coordinate_y: 0 ;}
 }
-            transition={{ duration: 0.8, delay: 1.4 }
+            transition={{ duration: 0.8;, delay: 1.4 ;}
 }
             className='bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 8 max - w-4xl mx - auto' />
 
@@ -743,11 +739,11 @@ className='text-center'
             <div className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 6\" />;}
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map ((trust, index) => (<motion.div;}
                   key={trust}
-                  initial={{ opacity: 0, coordinate_x: -20 }
+                  initial={{ opacity: 0;, coordinate_x: -20 ;}
 }
-                  animate={{ opacity: 1, coordinate_x: 0 }
+                  animate={{ opacity: 1;, coordinate_x: 0 ;}
 }
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }
+                  transition={{ duration: 0.5;, delay: 1.6 + index * 0.1 ;}
 }
                   className='text - center' />
 

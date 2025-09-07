@@ -42,7 +42,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   FaNetworkWired
   FaRobot
   FaSearch;
-import {
   SiNextdotjs
   SiReact
   SiTypescript
@@ -75,7 +74,6 @@ interface Service {;
   FaNetworkWired,
   FaRobot,
   FaSearch,
-import {
   SiNextdotjs,
   SiReact,
   SiTypescript,
@@ -112,10 +110,10 @@ interface Service {
   description: string
   icon: React.ReactNode
 
-    enterprise: number
+    enterprise: number;
   },
   technologies: string[];
-  benefits: string[]
+  benefits: string[];
 }
 
 interface ServiceCategory {
@@ -124,14 +122,14 @@ interface ServiceCategory {
   description: string;
   icon: React.ReactNode;
 origin/cursor/automate-test-improve-and-merge-code-2533
-  color: string
+  color: string;
 }
 
-  color: string;  id: string,
-  name: string,
-  description: string,
-  icon: React.ReactNode,
-  color: string
+  color: string;  id: string;,
+  name: string;,
+  description: string;,
+  icon: React.ReactNode;,
+  color: string;
 }
 
 
@@ -143,82 +141,82 @@ const serviceCategories: ServiceCategory[] = [
     description:
       'Cutting-edge artificial intelligence and machine learning solutions'
     icon: <FaBrain className='w-8 h-8' />
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500';
   },  {
     id: 'cloud'
     name: 'Cloud & DevOps'
     description: 'Scalable cloud infrastructure and development operations'
     icon: <FaCloud className='w-8 h-8' />
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500';
   },  {
     id: 'security'
     name: 'Cybersecurity'
     description: 'Advanced security solutions for modern threats'
     icon: <FaShieldAlt className='w-8 h-8' />
-    color: 'from-red-500 to-orange-500'
+    color: 'from-red-500 to-orange-500';
   },  {
     id: 'data'
     name: 'Data & Analytics'
     description: 'Comprehensive data management and analytics platforms'
     icon: <FaDatabase className='w-8 h-8' />
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500';
   },  {
     id: 'iot'
     name: 'IoT & Edge Computing'
     description: 'Internet of Things and edge computing solutions'
     icon: <FaNetworkWired className='w-8 h-8' />
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500';
   },  {
     id: 'automation'
     name: 'Process Automation'
     description: 'Intelligent automation for business processes'
     icon: <FaRobot className='w-8 h-8' />
-    color: 'from-yellow-500 to-orange-500'
+    color: 'from-yellow-500 to-orange-500';
   },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
     icon: <FaBrain className="w-8 h-8" />
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500';
   }
     id: 'cloud'
     name: 'Cloud & DevOps'
     description: 'Scalable cloud infrastructure and development operations'
     icon: <FaCloud className='w-8 h-8' />
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500';
   },    icon: <FaCloud className="w-8 h-8" />
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500';
   }
   {
     id: 'security'
     name: 'Cybersecurity'
     description: 'Advanced security solutions for modern threats'
     icon: <FaShieldAlt className='w-8 h-8' />
-    color: 'from-red-500 to-orange-500'
+    color: 'from-red-500 to-orange-500';
   },    icon: <FaShieldAlt className="w-8 h-8" />
-    color: 'from-red-500 to-orange-500'
+    color: 'from-red-500 to-orange-500';
   }
   {
     id: 'data'
     name: 'Data & Analytics'
     description: 'Comprehensive data management and analytics platforms'
     icon: <FaDatabase className='w-8 h-8' />
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500';
   },    icon: <FaDatabase className="w-8 h-8" />
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500';
   }
   {
     id: 'iot'
     name: 'IoT & Edge Computing'
     description: 'Internet of Things and edge computing solutions'
     icon: <FaNetworkWired className='w-8 h-8' />
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500';
   },    icon: <FaNetworkWired className="w-8 h-8" />
-    color: 'from-indigo-500 to-purple-500'
+    color: 'from-indigo-500 to-purple-500';
   }
   {
     id: 'automation'
     name: 'Process Automation'
     description: 'Intelligent automation for business processes'
     icon: <FaRobot className='w-8 h-8' />
-    color: 'from-yellow-500 to-orange-500'
+    color: 'from-yellow-500 to-orange-500';
   },    icon: <FaRobot className="w-8 h-8" />
     id: 'ai-ml';
     name: 'AI & Machine Learning';
@@ -229,48 +227,47 @@ export default EnhancedServicesShowcase2025;
 const services: Service[] = [
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
-    id: 'ai-automation-suite',
-    title: 'AI-Powered Automation Suite',
-description:
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
-    icon: <FaRobot className='w-6 h-6' />,
-    category: 'automation',
+    id: 'ai-automation-suite';,
+    title: 'AI-Powered Automation Suite';,
+description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization';,
+    icon: <FaRobot className='w-6 h-6' />;,
+    category: 'automation';,
     features: [
 
   {
-    id: 'security',
-    name: 'Cybersecurity',
-    description: 'Advanced security solutions for modern threats',
+    id: 'security';,
+    name: 'Cybersecurity';,
+    description: 'Advanced security solutions for modern threats';,
   {
-    id: 'data',
-    name: 'Data & Analytics',
-    description: 'Comprehensive data management and analytics platforms',
+    id: 'data';,
+    name: 'Data & Analytics';,
+    description: 'Comprehensive data management and analytics platforms';,
   {
-    id: 'iot',
-    name: 'IoT & Edge Computing',
-    description: 'Internet of Things and edge computing solutions',
+    id: 'iot';,
+    name: 'IoT & Edge Computing';,
+    description: 'Internet of Things and edge computing solutions';,
   {
-    id: 'automation',
-    name: 'Process Automation',
-    description: 'Intelligent automation for business processes',
-      starter: 299,
-      professional: 799,
-      enterprise: 1999
+    id: 'automation';,
+    name: 'Process Automation';,
+    description: 'Intelligent automation for business processes';,
+      starter: 299;,
+      professional: 799;,
+      enterprise: 1999;
     
     },
-      starter: 999,
-      professional: 2499,
-      enterprise: 4999
+      starter: 999;,
+      professional: 2499;,
+      enterprise: 4999;
     
     },
-      starter: 399,
-      professional: 999,
-      enterprise: 2499
+      starter: 399;,
+      professional: 999;,
+      enterprise: 2499;
     
     },
-      starter: 299,
-      professional: 799,
-      enterprise: 1999
+      starter: 299;,
+      professional: 799;,
+      enterprise: 1999;
     
     },
 
@@ -283,9 +280,9 @@ description:
       'Multi-platform integration'
     ]
     pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
+      starter: 299;,
+      professional: 799;,
+      enterprise: 1999;,
     },
     technologies: [
       'TensorFlow',
@@ -303,12 +300,11 @@ description:
     ],
   },
   {
-    id: 'quantum-computing-platform',
-    title: 'Quantum Computing Platform',
-    description:
-      'Next-generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w-6 h-6' />,
-    category: 'ai-ml',
+    id: 'quantum-computing-platform';,
+    title: 'Quantum Computing Platform';,
+    description: 'Next-generation quantum computing solutions for complex problem solving';,
+    icon: <FaBrain className='w-6 h-6' />;,
+    category: 'ai-ml';,
     features: [
       'Quantum algorithm optimization',
       'Hybrid classical-quantum computing',
@@ -318,11 +314,11 @@ description:
       'API access to quantum hardware',
     ],
     pricing: {
-      starter: 999,
-      professional: 2499,
-      enterprise: 4999,
+      starter: 999;,
+      professional: 2499;,
+      enterprise: 4999;,
     },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+    technologies: ['Qiskit';, 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
     benefits: [
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -331,12 +327,11 @@ description:
     ],
   },
   {
-    id: 'edge-ai-platform',
-    title: 'Edge AI Computing Platform',
-    description:
-      'Distributed artificial intelligence at the edge for real-time processing',
-    icon: <FaNetworkWired className='w-6 h-6' />,
-    category: 'iot',
+    id: 'edge-ai-platform';,
+    title: 'Edge AI Computing Platform';,
+    description: 'Distributed artificial intelligence at the edge for real-time processing';,
+    icon: <FaNetworkWired className='w-6 h-6' />;,
+    category: 'iot';,
     features: [
       'Edge device optimization',
       'Real-time AI inference',
@@ -346,9 +341,9 @@ description:
       'Edge-to-cloud synchronization',
     ],
     pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
+      starter: 199;,
+      professional: 599;,
+      enterprise: 1499;,
     },
     technologies: [
       'TensorFlow Lite',
@@ -365,12 +360,11 @@ description:
     ],
   },
   {
-    id: 'quantum-cybersecurity',
-    title: 'Quantum Cybersecurity Suite',
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography',
-    icon: <FaShieldAlt className='w-6 h-6' />,
-    category: 'security',
+    id: 'quantum-cybersecurity';,
+    title: 'Quantum Cybersecurity Suite';,
+    description: 'Advanced security solutions leveraging quantum-resistant cryptography';,
+    icon: <FaShieldAlt className='w-6 h-6' />;,
+    category: 'security';,
     features: [
       'Post-quantum cryptography',
       'Quantum key distribution',
@@ -380,11 +374,11 @@ description:
       'Real-time monitoring',
     ],
     pricing: {
-      starter: 399,
-      professional: 999,
-      enterprise: 2499,
+      starter: 399;,
+      professional: 999;,
+      enterprise: 2499;,
     },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+    technologies: ['NIST PQC';, 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
@@ -393,12 +387,11 @@ description:
     ],
   },
   {
-    id: 'data-fabric-platform',
-    title: 'Intelligent Data Fabric Platform',
-    description:
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w-6 h-6' />,
-    category: 'data',
+    id: 'data-fabric-platform';,
+    title: 'Intelligent Data Fabric Platform';,
+    description: 'Unified data management and analytics across all sources and formats';,
+    icon: <FaDatabase className='w-6 h-6' />;,
+    category: 'data';,
     features: [
       'Unified data access',
       'Real-time analytics',
@@ -408,9 +401,9 @@ description:
       'Data lineage tracking',
     ],
     pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
+      starter: 299;,
+      professional: 799;,
+      enterprise: 1999;,
     },
     technologies: [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -424,10 +417,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Reduced integration costs',
     ],
   },  {
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
+    id: 'cloud - native - platform';,
+    title: 'Cloud - Native Development Platform';,
+    description: 'Modern cloud - native development and deployment platform';,
+    icon: <FaCloud className='w - 6 h - 6' />;,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];
     benefits: [
       'Unified data view',
@@ -438,25 +431,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
+    id: 'cloud-native-platform';,
+    title: 'Cloud-Native Development Platform';,
+    description: 'Modern cloud-native development and deployment platform';,
   }
   {
 
   {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
+    id: 'cloud-native-platform';,
+    title: 'Cloud-Native Development Platform';,
+    description: 'Modern cloud-native development and deployment platform';,
 
 ];
 const services: Service[] = [;
   {;
-    id: 'ai-automation-suite',;
-    title: 'AI-Powered Automation Suite',;
+    id: 'ai-automation-suite';,;
+    title: 'AI-Powered Automation Suite';,;
     description:;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',;
-    icon: <FaRobot className='w-6 h-6' />,;
+    icon: <FaRobot className='w-6 h-6' />;,;
     features: [;
       'Intelligent workflow automation',;
       'Natural language processing',;
@@ -466,9 +459,9 @@ const services: Service[] = [;
       'Multi-platform integration',;
     ],;
     pricing: {;
-      starter: 299,;
-      professional: 799,;
-      enterprise: 1999,;
+      starter: 299;,;
+      professional: 799;,;
+      enterprise: 1999;,;
     },;
     technologies: [;
       'TensorFlow',;
@@ -486,12 +479,12 @@ const services: Service[] = [;
     ],;
   },;
   {;
-    id: 'quantum-computing-platform',;
-    title: 'Quantum Computing Platform',;
+    id: 'quantum-computing-platform';,;
+    title: 'Quantum Computing Platform';,;
     description:;
       'Next-generation quantum computing solutions for complex problem solving',;
-    icon: <FaBrain className='w-6 h-6' />,;
-    category: 'ai-ml',;
+    icon: <FaBrain className='w-6 h-6' />;,;
+    category: 'ai-ml';,;
     features: [;
       'Quantum algorithm optimization',;
       'Hybrid classical-quantum computing',;
@@ -501,11 +494,11 @@ const services: Service[] = [;
       'API access to quantum hardware',;
     ],;
     pricing: {;
-      starter: 999,;
-      professional: 2499,;
-      enterprise: 4999,;
+      starter: 999;,;
+      professional: 2499;,;
+      enterprise: 4999;,;
     },;
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],;
+    technologies: ['Qiskit';, 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],;
     benefits: [;
       'Solve previously impossible problems',;
       'Exponential speed improvements',;
@@ -514,12 +507,12 @@ const services: Service[] = [;
     ],;
   },;
   {;
-    id: 'edge-ai-platform',;
-    title: 'Edge AI Computing Platform',;
+    id: 'edge-ai-platform';,;
+    title: 'Edge AI Computing Platform';,;
     description:;
       'Distributed artificial intelligence at the edge for real-time processing',;
-    icon: <FaNetworkWired className='w-6 h-6' />,;
-    category: 'iot',;
+    icon: <FaNetworkWired className='w-6 h-6' />;,;
+    category: 'iot';,;
     features: [;
       'Edge device optimization',;
       'Real-time AI inference',;
@@ -529,9 +522,9 @@ const services: Service[] = [;
       'Edge-to-cloud synchronization',;
     ],;
     pricing: {;
-      starter: 199,;
-      professional: 599,;
-      enterprise: 1499,;
+      starter: 199;,;
+      professional: 599;,;
+      enterprise: 1499;,;
     },;
     technologies: [;
       'TensorFlow Lite',;
@@ -548,12 +541,12 @@ const services: Service[] = [;
     ],;
   },;
   {;
-    id: 'quantum-cybersecurity',;
-    title: 'Quantum Cybersecurity Suite',;
+    id: 'quantum-cybersecurity';,;
+    title: 'Quantum Cybersecurity Suite';,;
     description:;
       'Advanced security solutions leveraging quantum-resistant cryptography',;
-    icon: <FaShieldAlt className='w-6 h-6' />,;
-    category: 'security',;
+    icon: <FaShieldAlt className='w-6 h-6' />;,;
+    category: 'security';,;
     features: [;
       'Post-quantum cryptography',;
       'Quantum key distribution',;
@@ -563,11 +556,11 @@ const services: Service[] = [;
       'Real-time monitoring',;
     ],;
     pricing: {;
-      starter: 399,;
-      professional: 999,;
-      enterprise: 2499,;
+      starter: 399;,;
+      professional: 999;,;
+      enterprise: 2499;,;
     },;
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],;
+    technologies: ['NIST PQC';, 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],;
     benefits: [;
       'Future-proof security',;
       'Quantum-resistant encryption',;
@@ -576,12 +569,12 @@ const services: Service[] = [;
     ],;
   },;
   {;
-    id: 'data-fabric-platform',;
-    title: 'Intelligent Data Fabric Platform',;
+    id: 'data-fabric-platform';,;
+    title: 'Intelligent Data Fabric Platform';,;
     description:;
       'Unified data management and analytics across all sources and formats',;
-    icon: <FaDatabase className='w-6 h-6' />,;
-    category: 'data',;
+    icon: <FaDatabase className='w-6 h-6' />;,;
+    category: 'data';,;
     features: [;
       'Unified data access',;
       'Real-time analytics',;
@@ -591,9 +584,9 @@ const services: Service[] = [;
       'Data lineage tracking',;
     ],;
     pricing: {;
-      starter: 299,;
-      professional: 799,;
-      enterprise: 1999,;
+      starter: 299;,;
+      professional: 799;,;
+      enterprise: 1999;,;
     },;
     technologies: [;
       'Apache Kafka',;
@@ -609,17 +602,17 @@ const services: Service[] = [;
       'Reduced integration costs',;
     ],;
   },  {;
-    id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
-    icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
+    id: 'cloud-native-platform';,;
+    title: 'Cloud-Native Development Platform';,;
+    description: 'Modern cloud-native development and deployment platform';,;
+    icon: <FaCloud className='w-6 h-6' />;,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
     ];
   };
   {;
-    id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
-    icon: <FaCloud className='w-6 h-6' />,;
+    id: 'cloud-native-platform';,;
+    title: 'Cloud-Native Development Platform';,;
+    description: 'Modern cloud-native development and deployment platform';,;
+    icon: <FaCloud className='w-6 h-6' />;,;
     features: [;
       'Kubernetes orchestration',;
       'Microservices architecture',;
@@ -629,9 +622,9 @@ const services: Service[] = [;
       'DevOps automation',;
     ],;
     pricing: {;
-      starter: 199,;
-      professional: 599,;
-      enterprise: 1499,;
+      starter: 199;,;
+      professional: 599;,;
+      enterprise: 1499;,;
     },;
     technologies: [;
       'Kubernetes',;
@@ -651,8 +644,8 @@ const services: Service[] = [;
     ];
   }
 
-icon: <FaCloud className='w-6 h-6' />,
-    category: 'cloud',
+icon: <FaCloud className='w-6 h-6' />;,
+    category: 'cloud';,
     features: [
       'Kubernetes orchestration',
       'Microservices architecture',
@@ -662,9 +655,9 @@ icon: <FaCloud className='w-6 h-6' />,
       'DevOps automation',
     ],
     pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
+      starter: 199;,
+      professional: 599;,
+      enterprise: 1499;,
     },
     technologies: [
       'TensorFlow'
@@ -731,9 +724,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>;
       {/* Header */}
       <div className='container mx-auto px-4 py-16'>        <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
           className='text-center mb-16'      }
     })
   return (
@@ -744,17 +737,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='container mx-auto px-4 py-16'>
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
       {/* Header */}
       <div className="container mx - auto px - 4 py - 16">;
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          transition={{ duration: 0 && 0.8 }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          animate={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
           className='text-center mb-16'>;
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
             2025 Services Showcase;
@@ -785,10 +778,10 @@ className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Search and Filters */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
 
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -822,9 +815,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
         {/* Search and Filters */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0;, coordinate_y: 20 ;}}
+          animate={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.2 ;}}
           className='mb - 12';
         >;
           <div className='flex flex - col md:flex - row gap - 4 items - center justify - center'>;
@@ -888,9 +881,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Category Tabs */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
 className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-4'>
@@ -939,23 +932,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
         {/* Services Grid */}
         <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0;, y: 20 ;}}
+          animate={{ opacity: 1;, y: 0 ;}}
 
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8;, delay: 0.6 ;}}
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-              whileHover={{ y: -5, scale: 1 && 1.02 }}
+              initial={{ opacity: 0;, y: 20 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+              whileHover={{ y: -5;, scale: 1 && 1.02 ;}}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+              whileHover={{ y: -5;, scale: 1.02 ;}}
 className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => handleServiceSelect(service)}
@@ -974,9 +967,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ?.name;
                     }
               key={service.id}
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   </p>;
                 </div>;
               </div>;
@@ -1035,7 +1028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     /month;
                   </span>;
                 </div>;
-                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>                  Learn More                  ${service && service.pricing.starter}
+                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300'>                  Learn More                  ${service && service.pricing.starter;}
                   <span className="text-sm text-gray-400 font-normal">/month</span>;
                 </div>;
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
@@ -1050,8 +1043,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
 className='text-center py-16'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -1068,9 +1061,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AnimatePresence>;
         {selectedService && (;
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             onClick={closeModal}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
@@ -1078,9 +1071,9 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
 
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9;, opacity: 0 ;}}
+              animate={{ scale: 1;, opacity: 1 ;}}
+              exit={{ scale: 0.9;, opacity: 0 ;}}
 className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={e => e.stopPropagation()}
@@ -1305,7 +1298,7 @@ export default EnhancedServicesShowcase2025;  );
 };
 
 export default EnhancedServicesShowcase2025;
-              while_hover={{ coordinate_y: -5, scale: 1.02 }}
+              while_hover={{ coordinate_y: -5;, scale: 1.02 ;}}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
             >;
@@ -1368,7 +1361,7 @@ export default EnhancedServicesShowcase2025;
                     /month;
                   </span>;
                 </div>;
-                <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>                  Learn More                  ${service.pricing.starter}
+                <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>                  Learn More                  ${service.pricing.starter;}
                   <span className="text - sm text - gray - 400 font - normal">/month</span>;
                 </div>;
                 <button className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">;
@@ -1380,8 +1373,8 @@ export default EnhancedServicesShowcase2025;
         {/* No Results */}
         {filtered_services.length === 0 && (
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
             className='text - center py - 16';
           >;
             <div className='text - 6xl mb - 4'>🔍</div>;
@@ -1400,16 +1393,16 @@ export default EnhancedServicesShowcase2025;
       <AnimatePresence>;
         {selected_service && (
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_modal}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4";
             on_click={close_modal}
           >;
             <motion.div;
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9;, opacity: 0 ;}}
+              animate={{ scale: 1;, opacity: 1 ;}}
+              exit={{ scale: 0.9;, opacity: 0 ;}}
               className='bg - gray - 900 border border - white / 20 rounded - 2xl p - 8 max - w-4xl w - full max - h-[90vh] overflow - y-auto';
               on_click={e => e.stop_propagation ()}
             >;

@@ -1,25 +1,25 @@
-import React, { useState } from "react",;""
-import { useToast } from "@/hooks/use-toast",;""
-import { Button } from "@/components/ui/button",;""
-import { Input } from "@/components/ui/input",;""
-import { Textarea } from "@/components/ui/textarea",;""
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
-import { Skeleton } from "@/components/ui/skeleton",;""
-import { Sparkles, ArrowRight } from "@/components/icons",;""
-import { supabase } from "@/integrations/supabase/client",;""
-import { Badge } from "@/components/ui/badge",;"
+import React, { useState } from "react";""
+import { useToast } from "@/hooks/use-toast";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { Textarea } from "@/components/ui/textarea";""
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Skeleton } from "@/components/ui/skeleton";""
+import { Sparkles, ArrowRight } from "@/components/icons";""
+import { supabase } from "@/integrations/supabase/client";""
+import { Badge } from "@/components/ui/badge";"
 ;
 interface GeneratedContent {,
-  description:string,;
-  tags:string[],;
+  description: string;,;
+  tags: string[];,;
   suggestedPrice: {;,
-  min:number,;
+  min: number;,;
     max:number;
   },;
   keyPoints:string[];
 }
 interface AIListingGeneratorProps {;
-  onApplyGenerated?:(content:GeneratedContent) => void,;
+  onApplyGenerated?:(content: GeneratedContent) => void;,;
   initialValues?:{;
     title?:string,;
     category?:string,;
@@ -33,7 +33,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;"
   const [isLoading, setIsLoading] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
-  const handleInputChange = (e:{ target:{ value:string } }, field:string) => {;
+  const handleInputChange = (e: { target:{ value:string ;} }, field:string) => {;
     switch(field) {;"
       case 'title':;
         setTitle(e.target.value),;
@@ -48,11 +48,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
-        title:"Missing required fields",,
-  description:"Please provide at least a title and category.",;
+        title: "Missing required fields";,,
+  description: "Please provide at least a title and category.";,;
         variant:"destructive";
-        title:"Missing required fields",;""
-        description:"Please provide at least a title and category.",;""
+        title: "Missing required fields";,;""
+        description: "Please provide at least a title and category.";,;""
         variant:"destructive";")
 pr-12325
       }),;
@@ -60,30 +60,30 @@ pr-12325
     setIsLoading(true),;
     try {;"
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
-        body:{ title, category, keyFeatures, targetAudience })
+        body: { title;, category, keyFeatures, targetAudience })
       if (error) {;
         throw new Error(error.message),;
       if (data.error) {;
         throw new Error(data.error),;
       setGeneratedContent(data.generated),;
       toast({;
-        title:"Content Generated",,
+        title: "Content Generated";,,
   description:"AI has created optimized listing content for you.";
       }),;
     } catch (error) {;
-      console.error("Error generating content:", error),;
+      console.error("Error generating content: ";, error),;
       toast({;
-        title:"Generation Failed",,
-  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+        title: "Generation Failed";,,
+  description: error instanceof Error ? error.message :"Failed to generate content. Please try again.";,;
         variant:"destructive";
       }),;
-        title:"Content Generated",;""
+        title: "Content Generated";,;""
         description:"AI has created optimized listing content for you.";")
     } catch (error) {;"
-      console.error("Error generating content:", error),;"
+      console.error("Error generating content: ";, error),;"
       toast({;"
-        title:"Generation Failed",;""
-        description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;""
+        title: "Generation Failed";,;""
+        description: error instanceof Error ? error.message :"Failed to generate content. Please try again.";,;""
 pr-12325
     } finally {;
       setIsLoading(false),;
@@ -91,7 +91,7 @@ pr-12325
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
-        title:"Content Applied",,
+        title: "Content Applied";,,
   description:"The generated content has been applied to your listing.";
       }),;
     }
@@ -100,7 +100,7 @@ pr-12325
   return (;
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        title:"Content Applied",;""
+        title: "Content Applied";,;""
         description:"The generated content has been applied to your listing.";")
   return (;"
     <div className="space-y-6">;"

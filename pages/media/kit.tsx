@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState  } from 'react';
-import Head from 'next/head',
+import Head from 'next/head',;
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';

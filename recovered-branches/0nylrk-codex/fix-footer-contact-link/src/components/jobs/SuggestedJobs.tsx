@@ -1,13 +1,13 @@
 
 
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from "lucide-react",
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+import { useAuth } from "@/hooks/useAuth",;
+import { Loader2 } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",    isLoading,
+import { JobMatchesCard } from "./JobMatchesCard",;
+import { NoJobsCard } from "./NoJobsCard",    isLoading,;
 
 
 import { useAuth } from "@/hooks/useAuth",""

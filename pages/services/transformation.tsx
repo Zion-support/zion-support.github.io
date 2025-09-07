@@ -128,14 +128,14 @@ function DigitalTransformationPage() {
   CheckCircle,
   Star,
   Clock,
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import {
   Rocket, Zap, Shield, Cpu, Database, Users,
   ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
 } from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
+import EnhancedNavigation from '../../components/EnhancedNavigation',;
+import EnhancedFooter from '../../components/EnhancedFooter',;
 export default function DigitalTransformationPage() {
   const services = [
     {

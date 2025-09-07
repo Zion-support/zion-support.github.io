@@ -1,6 +1,6 @@
 
-import React from "react",;""
-import { format } from "date-fns",;"
+import React from "react";""
+import { format } from "date-fns";"
 import { ;
   Card,;
   CardContent, ;
@@ -8,16 +8,16 @@ import { ;
   CardTitle, ;
   CardDescription;"
 } from "@/components/ui/card",;""
-import { Button } from "@/components/ui/button",;""
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;""
+import { Button } from "@/components/ui/button";""
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";""
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes",;"
+import type { QuoteRequest } from "@/types/quotes";"
 ;
 type QuoteRequestCardProps = {;
-  quote:QuoteRequest,;
-  onViewDetails:(quote:QuoteRequest) => void,;
-  onMarkAsResponded?:(id:string) => void,;
-  onToggleArchive:(id:string, isArchived:boolean) => void;
+  quote: QuoteRequest;,;
+  onViewDetails: (quote:QuoteRequest) => void;,;
+  onMarkAsResponded?:(id: string) => void;,;
+  onToggleArchive: (id:string;, isArchived:boolean) => void;
 },;
 export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
 "
@@ -41,7 +41,7 @@ export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;"
           <CalendarIcon className="h-4 w-4" />;"
 
-          <span>Timeline:{quote.timeline}</span>;
+          <span>Timeline: {quote.timeline;}</span>;
         <div className="flex justify-between items-center mt-4">;"
           <Button;"
             variant="outline";""
@@ -79,7 +79,7 @@ CardDescription type QuoteRequestCardProps = {;
   quote: QuoteRequest;
 onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded?: (id: string) => void;
-onToggleArchive: (id: string, isArchived: boolean) => void 
+onToggleArchive: (id: string;, isArchived: boolean) => void ;
 };
 quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
 }) => {;

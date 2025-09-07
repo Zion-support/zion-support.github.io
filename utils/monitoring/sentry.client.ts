@@ -20,7 +20,7 @@ if (typeof window !== 'undefined') {Sentry.init({;
   enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 import * as Sentry from '@sentry/react',;
 import * as Sentry from '@sentry/react';
-import * as Sentry from '@sentry / react',
+import * as Sentry from '@sentry / react',;
 // Check condition;
 if ( {) {
   $2;

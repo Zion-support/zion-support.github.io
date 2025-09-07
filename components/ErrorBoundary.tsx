@@ -10,90 +10,86 @@ interface Props {;
   children: ReactNode;
   level?: string;
   fallback?: ReactNode;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error;, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 interface State {
   hasError: boolean;
   error?: Error;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface State {
   hasError: boolean;
   error?: Error;
 interface Props {
-  children: ReactNode,
+  children: ReactNode;,
   level?: string;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
+  onError?: (error: Error;, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    return { hasError: true, error };
-    return { hasError: true, error }
+    return { hasError: true;, error };
+    return { hasError: true;, error }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    return { hasError: true, error };
-    return { hasError: true, error }
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
+    return { hasError: true;, error };
+    return { hasError: true;, error }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
 origin/automation-improvements-final
-    return { hasError: true, error };
-    return { hasError: true, error }
+    return { hasError: true;, error };
+    return { hasError: true;, error }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);    this.setState({
 ursor/integrate-build-improve-and-re-verify-8f7d
     // Log the error to console or error reporting service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error: ';, error, errorInfo);
     
     this.setState({
 origin/automation-improvements-final
@@ -104,7 +100,7 @@ origin/automation-improvements-final
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error: ';, error, errorInfo);
     }
       error
 }
@@ -112,25 +108,25 @@ origin/automation-improvements-final
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false,
+    hasError: false;,
   };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-    hasError: false
+    return { hasError: true;, error };
+    hasError: false;
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true;, error }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ';, error, errorInfo);
     
     this.setState({
       error,
@@ -144,9 +140,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    console && console.error('Error caught by boundary:', error, errorInfo);    this && this.setState({;
+      console.error('Production error: ';, error, errorInfo);
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {;
+    console && console.error('Error caught by boundary: ';, error, errorInfo);    this && this.setState({;
       error,;
       errorInfo;
     });
@@ -155,7 +151,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
       this && this.props.onError(error, errorInfo);
     }
     // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo);
+    // Example: logErrorToService(error;, errorInfo);
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -163,7 +159,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     if (process.env.NODE_ENV === 'development') {
        
 origin/cursor/automate-test-improve-and-merge-code-2533
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error: ';, error, errorInfo);
     }
   }
       // Fallback UI
@@ -203,30 +199,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}                </div>
               </details>
             )}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 
 
@@ -234,7 +230,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });    }
+      (window as any).Sentry.captureException(error, { extra: errorInfo ;});    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -244,12 +240,12 @@ class ErrorBoundary extends Component<Props, State> {
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
+      console.error('Production error: ';, error, errorInfo);
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error details:', error);
-      console.error('Error info:', errorInfo);
+      console.error('Error details: ';, error);
+      console.error('Error info: ';, errorInfo);
     }
   }
 
@@ -263,14 +259,14 @@ class ErrorBoundary extends Component<Props, State> {
               <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+  public componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ';, error, errorInfo);
 
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
+        description: error.message;,
+        fatal: false;,
       });
     }
   }
@@ -344,58 +340,58 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 export default class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
+    hasError: false;
   };
   public static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
+    return { hasError: true ;};
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);
+  public componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
+    console.error('Uncaught error: ';, error, errorInfo);
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error;, errorInfo: ErrorInfo) {
     // Only log to console in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error: ';, error, errorInfo);
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 
 
@@ -426,21 +422,21 @@ export default class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
-                onClick={() => this.setState({ hasError: false })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+                onClick={() => this.setState({ hasError: false ;})  } catch (error) {
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
               <button 
-                onClick={() => this.setState({ hasError: false })} 
+                onClick={() => this.setState({ hasError: false ;})} 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
@@ -466,16 +462,16 @@ export default class ErrorBoundary extends Component<Props, State> {
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
                 </pre>
@@ -483,13 +479,13 @@ export default class ErrorBoundary extends Component<Props, State> {
             )}
           </div>;
     // Log the error to an error reporting service;
-    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console && console.error('ErrorBoundary caught an error: ';, error, errorInfo);
     this && this.setState({ error, errorInfo });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   public render() {
@@ -500,16 +496,16 @@ export default class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
             <button
               onClick={() => window.location.reload()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
               className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
@@ -537,22 +533,22 @@ pr-12243
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
-    this && this.state = { hasError: false };
+    this && this.state = { hasError: false ;};
 
 }
-  handleRetry = () => {this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  handleRetry = () => {this.setState({ hasError: false;, error: undefined;, errorInfo: undefined ;});
 }
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
               <AlertTriangle className="w-8 h-8 text-red-400" />;
-            <details style={{ margin_top: '20px', text_align: 'left' }}>;
+            <details style={{ margin_top: '20px';, text_align: 'left' ;}}>;
               <summary > Error Details (Development)</summary>;
               <pre style={{
-                background_color: '#f5f5f5',
-                padding: '10px',
-                border_radius: '4px',
-                overflow: 'auto',
+                background_color: '#f5f5f5';,
+                padding: '10px';,
+                border_radius: '4px';,
+                overflow: 'auto';,
                 font_size: '12px';
               }}>;
                 {this.state.error.to_string ()}
@@ -567,17 +563,17 @@ class ErrorBoundary extends Component<Props, State> {;
 class ErrorBoundary extends Component < Props, State> {
   constructor (props: Props) {
     super (props);
-    this.state = { has_error: false }
+    this.state = { has_error: false ;}
 }
   static getDerivedStateFromError (error: Error): State {
-    return { has_error: true, error }
+    return { has_error: true;, error }
 }
-  componentDidCatch (error: Error, error_info: ErrorInfo) {
-    console.error ('ErrorBoundary caught an error:', error, error_info);
+  componentDidCatch (error: Error;, error_info: ErrorInfo) {
+    console.error ('ErrorBoundary caught an error: ';, error, error_info);
     this.set_state ({ error, error_info });
 }
   handle_retry = () => {
-    this.set_state ({ has_error: false, error: undefined, error_info: undefined });
+    this.set_state ({ has_error: false;, error: undefined;, error_info: undefined ;});
 }
   render () {
     // Check condition
@@ -652,45 +648,45 @@ if ( {) {
         </div>
       );
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
     return this.props.children;
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
 main

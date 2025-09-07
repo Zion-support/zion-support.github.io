@@ -19,9 +19,9 @@ const categories = [;
     link: "/services",
     color: "from - purple - 500 to - indigo - 600"},
 
-import { GradientHeading } from "./GradientHeading",
-import { Link } from "react-router-dom",
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
 const categories = [
   {

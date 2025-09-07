@@ -1,13 +1,13 @@
 
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { CalendarIcon, Loader2 } from 'lucide-react';
-import { format } from 'date-fns',;
+import { format } from 'date-fns';
 ;
-import { Button } from '@/components/ui/button',;
-import { Calendar } from '@/components/ui/calendar',;
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {;
   Form,;
   FormControl,;
@@ -15,30 +15,30 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
   Popover,;
   PopoverContent,;
   PopoverTrigger} from '@/components/ui/popover',;
-import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
+import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 ;
 const formSchema = z.object({;
-  title:z.string().min(1, 'Title is required'),,
+  title: z.string().min(1;, 'Title is required'),,
 const formSchema = z.object({;)
-  title:z.string().min(1, 'Title is required'),;
+  title: z.string().min(1;, 'Title is required'),;
 pr-12325
-  description:z.string().optional(),;
-  due_date:z.date().optional(),;
-  amount:z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
+  description: z.string().optional();,;
+  due_date: z.date().optional();,;
+  amount: z.coerce.number().min(0;, 'Amount must be greater than or equal to 0')}),;
 type MilestoneFormValues = z.infer<typeof formSchema>,;
 </typeof>
   const form = useForm<MilestoneFormValues>({;
-    resolver:zodResolver(formSchema),;
+    resolver: zodResolver(formSchema);,;
     defaultValues:{;
-      title:'',,
-  description:'',;
-      amount:0}}),;
+      title: '';,,
+  description: '';,;
+      amount: 0;}}),;
 ;
   const handleSubmit = (values:MilestoneFormValues) => {;
     onSubmit(values),;
@@ -51,10 +51,10 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
       const milestone = milestones[0],;
       if (milestone) {;
         onSubmit({;
-          title:milestone.title,,
-  description:milestone.description,;
-          due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-          amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+          title: milestone.title;,,
+  description: milestone.description;,;
+          due_date: milestone.dueDate ? new Date(milestone.dueDate) :undefined;,;
+          amount: milestone.estimatedHours * 10;, // Convert hours to a default payment amount;
         }),;
         return,;
       }
@@ -63,20 +63,20 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
     // If there are multiple milestones, submit them one by one;
     milestones.forEach(milestone => {;
       onSubmit({;
-        title:milestone.title,,
-  description:milestone.description,;
-        due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-        amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+        title: milestone.title;,,
+  description: milestone.description;,;
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) :undefined;,;
+        amount: milestone.estimatedHours * 10;, // Convert hours to a default payment amount;
       }),;
     }),;
   },;
 ;
   const handleAddMilestone = (milestone:GeneratedMilestone) => {;
     onSubmit({;
-      title:milestone.title,,
-  description:milestone.description,;
-      due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
-      amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+      title: milestone.title;,,
+  description: milestone.description;,;
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) :undefined;,;
+      amount: milestone.estimatedHours * 10;, // Convert hours to a default payment amount;
     }),;
   },;
 ;
@@ -104,7 +104,7 @@ pr-12325
           <FormField;
             control={form.control}"
             name="title";"
-            render={({ field } { field:any }) => (;
+            render={({ field } { field: any ;}) => (;
 
               <FormItem>;
 

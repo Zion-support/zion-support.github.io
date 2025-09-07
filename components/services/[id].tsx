@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail';,
+import ServiceDetail from '../../components/sections/ServiceDetail';;
 import Button from '../../components/ui/Button';
 
 export default function ServiceDetailPage() {
@@ -91,7 +91,7 @@ const service = getServiceById(id);
           property='og:title'
           content={`${service.name} | Zion Tech Group`}
         />
-        <meta property='og:description' content={service.description} />
+        <meta property='og: description' content={service.description;} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <div className='min-h-screen bg-black'>
@@ -208,7 +208,6 @@ import {use_router} from 'next / router';
 import {getServiceById} from '../../data / micro - saas - services';
 import ServiceDetail from '../../components / sections / ServiceDetail';
 import Button from '../../components / ui / Button';
-import {ArrowLeft, ExternalLink} from 'lucide-react';
 export default /**
  * ServiceDetailPage - Function description
  */
@@ -280,7 +279,7 @@ property='og: title'
           content={`${service.name} | Zion Tech Group
 }
         />;
-        <meta property='og: description' content={service.descriptio}
+        <meta property='og: description' content={service.descriptio;}
 } />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;

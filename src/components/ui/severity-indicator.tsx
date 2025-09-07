@@ -1,8 +1,8 @@
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 
 
-import React from "react",
-import { cn } from "@/lib/utils",
+import React from "react",;
+import { cn } from "@/lib/utils",;
 import React from "react";
 import { cn } from "@/lib/utils";
 origin/cursor/automate-test-improve-and-merge-code-2533

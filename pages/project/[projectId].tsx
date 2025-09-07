@@ -93,7 +93,7 @@ export default function ProjectPage() {
     if (json.ok) {
       setProject(json.project)
 
-import { useEffect, useState } from "react",
+import { useEffect, useState } from "react",;
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {

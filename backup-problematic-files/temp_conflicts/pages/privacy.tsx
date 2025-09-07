@@ -1,25 +1,25 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { ;
   Shield, Eye, Lock, Database, Users, Globe,;
   CheckCircle, AlertTriangle, Info;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 ;
 export default function PrivacyPage() {;
   const lastUpdated = 'January 15, 2025',;
   const sections = [;
     {;
-      title:'Information We Collect',;
-      icon:<Database className="w-6 h-6" />,;"
+      title: 'Information We Collect';,;
+      icon: <Database className="w-6 h-6" />;,;"
 "
-      icon:<Users className="w-6 h-6" />,;"
-      icon:<Globe className="w-6 h-6" />,;"
-      icon:<Lock className="w-6 h-6" />,;"
-      icon:<CheckCircle className="w-6 h-6" />,;"
-      icon:<Info className="w-6 h-6" />,;"
+      icon: <Users className="w-6 h-6" />;,;"
+      icon: <Globe className="w-6 h-6" />;,;"
+      icon: <Lock className="w-6 h-6" />;,;"
+      icon: <CheckCircle className="w-6 h-6" />;,;"
+      icon: <Info className="w-6 h-6" />;,;"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;"
 </div>
       <Head>;
@@ -33,9 +33,9 @@ export default function PrivacyPage() {;
 </section>"
         <div className="max-w-6xl mx-auto text-center">;"
           <motion.div;
-            initial={{ opacity:0, y:30 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity: 0;, y: 30 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
           >;
 </motion>"
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">;"
@@ -50,15 +50,15 @@ export default function PrivacyPage() {;
 </p>
             </p>;"
             <div className="mt-8 text-gray-300">;"
-              <p>Last updated:{lastUpdated}</p>;
+              <p>Last updated: {lastUpdated;}</p>;
             </div>;
           </motion.div>;
       </section>;"
       <section className="py-20 px-6">;"
         <div className="max-w-4xl mx-auto">;"
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}"
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}"
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50";"
             <h2 className="text-3xl font-bold text-white mb-6">Our Commitment to Privacy</h2>;""
             <p className="text-gray-300 leading-relaxed mb-6">;"
@@ -71,7 +71,7 @@ export default function PrivacyPage() {;
         <div className="max-w-6xl mx-auto">;"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                 key={section.title}
-                transition={{ duration:0.6, delay:index * 0.1 }}
+                transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300";"
                 <div className="flex items-center space-x-3 mb-4">;"
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">;"
@@ -101,7 +101,7 @@ export default function PrivacyPage() {;
                 <Shield className="w-6 h-6 text-green-400 mr-3" />;"
 
         <div className="max-w-4xl mx-auto text-center">;"
-            viewport={{ once:true }}
+            viewport={{ once: true ;}}
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>;""
             <p className="text-xl text-gray-300 mb-8">;"
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">;"
@@ -111,7 +111,7 @@ export default function PrivacyPage() {;
                   <div className="space-y-3 text-gray-300">;"
                     <p><strong>Email:</strong> privacy@ziontechgroup.com</p>;
                     <p><strong>Phone:</strong> +1 302 464 0950</p>;
-                    <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>;
+                    <p><strong>Address: </strong> 364 E Main St STE 1008;, Middletown DE 19709</p>;
                   <h3 className="text-xl font-bold text-white mb-4">Your Rights</h3>;""
                   <div className="space-y-2 text-gray-300 text-sm">;"
       </section>;

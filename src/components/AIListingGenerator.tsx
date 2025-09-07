@@ -289,7 +289,7 @@ import {
 } from '@/components/ui/card'
 import Skeleton from '@/components/ui/skeleton'
 import { Sparkles, ArrowRight } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
+import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {

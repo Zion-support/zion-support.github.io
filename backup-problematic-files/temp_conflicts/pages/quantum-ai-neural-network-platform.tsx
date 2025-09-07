@@ -1,7 +1,7 @@
-import React from 'react',;
-import { motion } from 'framer-motion',;
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',;
-import SEO from '../components/SEO',;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
+import SEO from '../components/SEO';
 ;
 const QuantumAINeuralNetworkPlatform:React.FC = () => {;
   const features = [;
@@ -23,8 +23,8 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
     "Faster convergence rates",;""
     "Quantum-secure AI operations";"]
   const pricing = {;"
-    starter:"$999/month",;""
-    professional:"$1,999/month",;""
+    starter: "$999/month";,;""
+    professional: "$1;,999/month",;""
     enterprise:"Custom pricing";"
   },;
   return (;"
@@ -42,9 +42,9 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>;""
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}"
+            initial={{ opacity: 0;, y: 20 ;}}
+            animate={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}"
             className="text-center";"
           >;
 </motion>"
@@ -63,8 +63,8 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
             </p>;"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
               <motion.button;
-                whileHover={{ scale:1.05 }}
-                whileTap={{ scale:0.95 }}"
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25";"
 </motion>
               </motion.button>;
@@ -73,8 +73,8 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
       </section>;"
       <section className="py-20 bg-gray-900/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
-            whileInView={{ opacity:1, y:0 }}
-            viewport={{ once:true }}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            viewport={{ once: true ;}}
             className="text-center mb-16";"
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;"
 </h2>
@@ -84,7 +84,7 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                 key={index}
-                transition={{ duration:0.5, delay:index * 0.1 }}"
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}"
                 className="bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300";"
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;"
                   <Check className="w-6 h-6 text-white" />;"
@@ -99,7 +99,7 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
                 <h3 className="text-xl font-semibold mb-2">{benefit}</h3>;"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;"
                 key={plan}
-                transition={{ duration:0.5, delay:index * 0.1 }}
+                transition={{ duration: 0.5;, delay: index * 0.1 ;}}
                 className={`bg-gray-800/50 border rounded-xl p-8 ${;"
                   plan === 'professional' ;
                     ? 'border-blue-500/50 bg-blue-900/20' ;
@@ -109,7 +109,7 @@ const QuantumAINeuralNetworkPlatform:React.FC = () => {;
                 <div className="text-4xl font-bold mb-6">{price}</div>;"
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300";"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
-            transition={{ duration:0.8 }}
+            transition={{ duration: 0.8 ;}}
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">;"
       </section>;
     </div>;"`;

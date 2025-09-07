@@ -24,15 +24,15 @@ function ApiDocumentation() {
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
 
-import { useState } from "react",
+import { useState } from "react",;
 import { BookOpen, Terminal } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
-import { logInfo } from '@/utils/productionLogger',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { Badge } from "@/components/ui/badge",;
+import CodeBlock from "./CodeBlock",;
+import { logInfo } from '@/utils/productionLogger',;
 interface EndpointParam {
   name: string,
   type: string,
@@ -1737,7 +1737,7 @@ function verifyWebhookSignature(payload, signature, secret) {
               </p>
               
               <CodeBlock
-                code={`import crypto from 'crypto',
+                code={`import crypto from 'crypto',;
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),

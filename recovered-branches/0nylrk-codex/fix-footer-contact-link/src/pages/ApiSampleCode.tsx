@@ -32,7 +32,7 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",""
 import { CodeBlock } from "@/components/developers/CodeBlock",""
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
   // JavaScript example with Axios;`;
-import axios from 'axios',
+import axios from 'axios',;
   // JavaScript example with Axios;`;
   const jsAxiosExample = `// Using Axios with JavaScript;
 // Configure Axios with the base URL and headers;
@@ -787,7 +787,7 @@ BASE_URL = 'https://api.zionai.com / v1';
         print(f"Error: {e}")`;"
   // Node.js example with fetch;`;
   const nodeFetchExample = `// Using node-fetch with Node.js;"
-import fetch from 'node-fetch',
+import fetch from 'node-fetch',;
 const API_KEY = 'YOUR_API_KEY',
 const BASE_URL = 'https: //api.zionai.com/v1
 // Helper to handle API requests;

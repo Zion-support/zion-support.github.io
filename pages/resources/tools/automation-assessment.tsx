@@ -49,9 +49,9 @@ export default function ToolPage(req, res) {
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
-import React, { useState } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
+import React, { useState } from 'react',;
+import Head from 'next / head',;
+import Link from 'next / link',;
 export default /**
  * ToolPage - Function description
  */

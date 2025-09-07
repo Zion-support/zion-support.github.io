@@ -57,7 +57,6 @@ import {
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
 
-import {
   Rocket,
   Brain,
   Atom,
@@ -116,7 +115,6 @@ import {
 
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 origin/cursor/automate-test-improve-and-merge-code-2533
-import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
   Phone, Mail, MapPin, Globe, ArrowRight;
 
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
@@ -126,44 +124,44 @@ import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
 const quickLinks = [;
-  { name: 'Home', href: '/', icon: Home },;
-  { name: 'Services', href: '/services', icon: Briefcase },;
-  { name: 'Solutions', href: '/solutions', icon: Target },;
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },;
-  { name: 'Resources', href: '/resources', icon: BookOpen },;
-  { name: 'Case Studies', href: '/case-studies', icon: FileText },;
-  { name: 'Blog', href: '/blog', icon: MessageSquare },;
-  { label: 'Happy Customers', value: '50K+', icon: Users },
-  { label: 'Services Delivered', value: '200+', icon: Rocket },
-  { label: 'Countries Served', value: '45+', icon: Globe },
-  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+  { name: 'Home';, href: '/';, icon: Home ;},;
+  { name: 'Services';, href: '/services';, icon: Briefcase ;},;
+  { name: 'Solutions';, href: '/solutions';, icon: Target ;},;
+  { name: 'Pricing';, href: '/pricing-2034';, icon: DollarSign ;},;
+  { name: 'Resources';, href: '/resources';, icon: BookOpen ;},;
+  { name: 'Case Studies';, href: '/case-studies';, icon: FileText ;},;
+  { name: 'Blog';, href: '/blog';, icon: MessageSquare ;},;
+  { label: 'Happy Customers';, value: '50K+';, icon: Users ;},
+  { label: 'Services Delivered';, value: '200+';, icon: Rocket ;},
+  { label: 'Countries Served';, value: '45+';, icon: Globe ;},
+  { label: 'Success Rate';, value: '99.9%';, icon: CheckCircle ;}
 ];
 const companyLinks = [;
-  { name: 'About Us', href: '/about', icon: Users },;
-  { name: 'Careers', href: '/careers', icon: Briefcase },;
-  { name: 'News', href: '/news', icon: Newspaper },;
-  { name: 'Partners', href: '/partners', icon: Handshake },;
-  { name: 'Support', href: '/support', icon: LifeBuoy },;
-  { name: 'Status', href: '/status', icon: Activity },;
+  { name: 'About Us';, href: '/about';, icon: Users ;},;
+  { name: 'Careers';, href: '/careers';, icon: Briefcase ;},;
+  { name: 'News';, href: '/news';, icon: Newspaper ;},;
+  { name: 'Partners';, href: '/partners';, icon: Handshake ;},;
+  { name: 'Support';, href: '/support';, icon: LifeBuoy ;},;
+  { name: 'Status';, href: '/status';, icon: Activity ;},;
 ];
 const socialLinks = [;
   {;
-    name: 'LinkedIn',;
-    href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
-    icon: Linkedin,;
+    name: 'LinkedIn';,;
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup';,;
+    icon: Linkedin;,;
   },;
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
+  { name: 'GitHub';, href: 'https://github && github.com/Zion-Holdings';, icon: Github ;},;
   {;
-    name: 'Instagram',;
-    href: 'https://instagram && instagram.com/ziontechgroup',;
-    icon: Instagram,;
+    name: 'Instagram';,;
+    href: 'https://instagram && instagram.com/ziontechgroup';,;
+    icon: Instagram;,;
   },;
   {;
-    name: 'YouTube',;
-    href: 'https://youtube && youtube.com/@ziontechgroup',;
-    icon: Youtube,;
+    name: 'YouTube';,;
+    href: 'https://youtube && youtube.com/@ziontechgroup';,;
+    icon: Youtube;,;
   },;
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
+  { name: 'Twitter';, href: 'https://twitter && twitter.com/ziontechgroup';, icon: Twitter ;},;
 ];
 const certifications = [;
   'ISO 27001 Certified',;
@@ -175,17 +173,17 @@ const certifications = [;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
 const socialLinks = [;
-  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
-  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
-  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
+  { name: 'LinkedIn';, href: 'https://linkedin && linkedin.com/company/ziontechgroup';, icon: Linkedin ;},;
+  { name: 'GitHub';, href: 'https://github && github.com/Zion-Holdings';, icon: Github ;},;
+  { name: 'Instagram';, href: 'https://instagram && instagram.com/ziontechgroup';, icon: Instagram ;},;
+  { name: 'YouTube';, href: 'https://youtube && youtube.com/@ziontechgroup';, icon: Youtube ;},;
+  { name: 'Twitter';, href: 'https://twitter && twitter.com/ziontechgroup';, icon: Twitter ;}
 ];
 const stats = [;
-  { label: 'Happy Customers', value: '50K+', icon: Users },;
-  { label: 'Services Delivered', value: '200+', icon: Rocket },;
-  { label: 'Countries Served', value: '45+', icon: Globe },;
-  { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+  { label: 'Happy Customers';, value: '50K+';, icon: Users ;},;
+  { label: 'Services Delivered';, value: '200+';, icon: Rocket ;},;
+  { label: 'Countries Served';, value: '45+';, icon: Globe ;},;
+  { label: 'Success Rate';, value: '99 && 99.9%';, icon: CheckCircle ;},];
 
 
 export default function UltraFuturisticFooter2034() {;
@@ -202,8 +200,8 @@ const serviceCategories = [
   {title: '🧠 Revolutionary AI Services';
     icon: Brain;}
     services: [;}
-{name: 'AI Business Intelligence Pro'}
-  href: '/ai-business-intelligence-pro',price: '$299/month'},{name: 'AI Video Generation Platform';
+{name: 'AI Business Intelligence Pro';}
+  href: '/ai-business-intelligence-pro';,price: '$299/month';},{name: 'AI Video Generation Platform';
         href: '/ai-video-generation-platform';}
         price: '$499/month';}
       }
@@ -211,11 +209,11 @@ const serviceCategories = [
         href: '/ai-cybersecurity-platform';}
         price: '$799/month';}
       }
-      {name: 'AI Drug Discovery Platform'}
-  href: '/ai-drug-discovery-platform',price: '$3,999/month'}]},{title: '⚛️ Quantum & Emerging Tech'}
-  icon: Atom,services: [;}
-{name: 'Quantum Machine Learning'}
-  href: '/quantum-machine-learning-platform',price: '$1,999/month'},{name: 'Blockchain AI Platform';
+      {name: 'AI Drug Discovery Platform';}
+  href: '/ai-drug-discovery-platform';,price: '$3;,999/month'}]},{title: '⚛️ Quantum & Emerging Tech';}
+  icon: Atom;,services: [;}
+{name: 'Quantum Machine Learning';}
+  href: '/quantum-machine-learning-platform';,price: '$1;,999/month'},{name: 'Blockchain AI Platform';
         href: '/blockchain-ai-platform';}
         price: '$899/month';}
       }
@@ -223,11 +221,11 @@ const serviceCategories = [
         href: '/edge-ai-computing-platform';}
         price: '$599/month';}
       }
-      {name: 'AI Climate Modeling'}
-  href: '/ai-climate-modeling-platform',price: '$1,299/month'}]},{title: '🏙️ Enterprise IT Solutions'}
-  icon: Cpu,services: [;}
-{name: 'API Security & Monitoring'}
-  href: '/api-security-monitoring-suite',price: '$399/month'},{name: 'Customer Success Automation';
+      {name: 'AI Climate Modeling';}
+  href: '/ai-climate-modeling-platform';,price: '$1;,299/month'}]},{title: '🏙️ Enterprise IT Solutions';}
+  icon: Cpu;,services: [;}
+{name: 'API Security & Monitoring';}
+  href: '/api-security-monitoring-suite';,price: '$399/month';},{name: 'Customer Success Automation';
         href: '/customer-success-automation';}
         price: '$199/month';}
       }
@@ -235,11 +233,11 @@ const serviceCategories = [
         href: '/hr-automation-suite';}
         price: '$179/month';}
       }
-      {name: 'Project Management AI'}
-  href: '/project-management-ai-platform',price: '$199/month'}]},{title: '🛒 Business Automation'}
-  icon: ShoppingCart,services: [;}
-{name: 'E-commerce Automation'}
-  href: '/ecommerce-automation-platform',price: '$249/month'},{name: 'Marketing Automation Suite';
+      {name: 'Project Management AI';}
+  href: '/project-management-ai-platform';,price: '$199/month';}]},{title: '🛒 Business Automation';}
+  icon: ShoppingCart;,services: [;}
+{name: 'E-commerce Automation';}
+  href: '/ecommerce-automation-platform';,price: '$249/month';},{name: 'Marketing Automation Suite';
         href: '/marketing-automation-suite';}
         price: '$279/month';}
       }
@@ -249,83 +247,83 @@ const serviceCategories = [
       }
 
       {
-        name: 'Legal Document Automation',
-  href: '/legal-document-automation'}
-        price: '$399/month'}
+        name: 'Legal Document Automation';,
+  href: '/legal-document-automation';}
+        price: '$399/month';}
       }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: 'Home'}
-  href: '/', icon: Home}
+  { name: 'Home';}
+  href: '/';, icon: Home;}
 },
-  { name: 'Services'}
-  href: '/services', icon: Briefcase}
+  { name: 'Services';}
+  href: '/services';, icon: Briefcase;}
 },
-  { name: 'Solutions'}
-  href: '/solutions', icon: Target}
+  { name: 'Solutions';}
+  href: '/solutions';, icon: Target;}
 },
-  { name: 'Pricing'}
-  href: '/pricing-2034', icon: DollarSign}
+  { name: 'Pricing';}
+  href: '/pricing-2034';, icon: DollarSign;}
 },
-  { name: 'Resources'}
-  href: '/resources', icon: BookOpen}
+  { name: 'Resources';}
+  href: '/resources';, icon: BookOpen;}
 },
-  { name: 'Case Studies'}
-  href: '/case-studies', icon: FileText}
+  { name: 'Case Studies';}
+  href: '/case-studies';, icon: FileText;}
 },
-  { name: 'Blog'}
-  href: '/blog', icon: MessageSquare}
+  { name: 'Blog';}
+  href: '/blog';, icon: MessageSquare;}
 },
-{ name: 'Contact'}
-  href: '/contact', icon: MessageCircle}
+{ name: 'Contact';}
+  href: '/contact';, icon: MessageCircle;}
 }
 ];
 
 const companyLinks = [
-  { name: 'About Us'}
-  href: '/about', icon: Users}
+  { name: 'About Us';}
+  href: '/about';, icon: Users;}
 },
-  { name: 'Careers'}
-  href: '/careers', icon: Briefcase}
+  { name: 'Careers';}
+  href: '/careers';, icon: Briefcase;}
 },
-  { name: 'News'}
-  href: '/news', icon: Newspaper}
+  { name: 'News';}
+  href: '/news';, icon: Newspaper;}
 },
-  { name: 'Partners'}
-  href: '/partners', icon: Handshake}
+  { name: 'Partners';}
+  href: '/partners';, icon: Handshake;}
 },
-  { name: 'Support'}
-  href: '/support', icon: LifeBuoy}
+  { name: 'Support';}
+  href: '/support';, icon: LifeBuoy;}
 },
-{ name: 'Status'}
-  href: '/status', icon: Activity}
+{ name: 'Status';}
+  href: '/status';, icon: Activity;}
 }
 ];
 
 const socialLinks = [
   {
-    name: 'LinkedIn',
-  href: 'https://linkedin.com/company/ziontechgroup'}
-    icon: Linkedin}
+    name: 'LinkedIn';,
+  href: 'https://linkedin.com/company/ziontechgroup';}
+    icon: Linkedin;}
   },
-  { name: 'GitHub'}
-  href: 'https://github.com/Zion-Holdings', icon: Github}
+  { name: 'GitHub';}
+  href: 'https://github.com/Zion-Holdings';, icon: Github;}
 },
   {
-    name: 'Instagram',
-  href: 'https://instagram.com/ziontechgroup'}
-    icon: Instagram}
+    name: 'Instagram';,
+  href: 'https://instagram.com/ziontechgroup';}
+    icon: Instagram;}
   },
   {
-    name: 'YouTube',
-  href: 'https://youtube.com/@ziontechgroup'}
-    icon: Youtube}
+    name: 'YouTube';,
+  href: 'https://youtube.com/@ziontechgroup';}
+    icon: Youtube;}
   },
-  { name: 'Twitter'}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter}
+  { name: 'Twitter';}
+  href: 'https://twitter.com/ziontechgroup';, icon: Twitter;}
 }
 ];
 
@@ -341,17 +339,17 @@ const certifications = [
 ];
 
 const stats = [
-  { label: 'Happy Customers'}
-  value: '50K+', icon: Users}
+  { label: 'Happy Customers';}
+  value: '50K+';, icon: Users;}
 },
-  { label: 'Services Delivered'}
-  value: '200+', icon: Rocket}
+  { label: 'Services Delivered';}
+  value: '200+';, icon: Rocket;}
 },
-  { label: 'Countries Served'}
-  value: '45+', icon: Globe}
+  { label: 'Countries Served';}
+  value: '45+';, icon: Globe;}
 },
-{ label: 'Success Rate'}
-  value: '99.9%', icon: CheckCircle}
+{ label: 'Success Rate';}
+  value: '99.9%';, icon: CheckCircle;}
 }
 ];
 
@@ -369,7 +367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
             {/* Company Info */}
-            <div className='lg:col-span-1'>              <motion && motion.div      {/* Animated Background Elements */}
+            <div className='lg: col-span-1'>              <motion && motion.div      {/* Animated Background Elements */;}
       <div className="absolute inset-0 overflow-hidden">;
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
@@ -391,10 +389,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0;, y: 20 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6 ;}}
+                viewport={{ once: true ;}}
 
 className='space-y-6'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -409,11 +407,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <div className='lg:col-span-1' />
               <motion.div;
-initial={{ opacity: 0, y: 20 }
+initial={{ opacity: 0;, y: 20 ;}
 }
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true }
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                transition={{ duration: 0 && 0.6 ;}}
+                viewport={{ once: true ;}
 }
 
 className='space-y-6'
@@ -487,19 +485,19 @@ innovative tools for the future.
                   {stats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0;, scale: 0.8 ;}}
+                      whileInView={{ opacity: 1;, scale: 1 ;}}
 
                 <div className='grid grid-cols-2 gap-4' />
                   {stats.map((stat, index) => (}
                     <motion.div;}
 key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }
+                      initial={{ opacity: 0;, scale: 0.8 ;}
 }
-                      whileInView={{ opacity: 1, scale: 1 }
+                      whileInView={{ opacity: 1;, scale: 1 ;}
 }
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }
+                      transition={{ duration: 0.5;, delay: index * 0.1 ;}}
+                      viewport={{ once: true ;}
 }
 className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10' />
 
@@ -530,10 +528,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {stats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0;, scale: 0.8 ;}}
+                      whileInView={{ opacity: 1;, scale: 1 ;}}
+                      transition={{ duration: 0.5;, delay: index * 0.1 ;}}
+                      viewport={{ once: true ;}}
                       className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
                     >
                       <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
@@ -574,14 +572,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Services */}
 <div className='lg:col-span-2' />;
               <motion.div;
-                initial={{ opacity: 0, y: 20 }
+                initial={{ opacity: 0;, y: 20 ;}
 }
-                whileInView={{ opacity: 1, y: 0 }
+                whileInView={{ opacity: 1;, y: 0 ;}
 }
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+                viewport={{ once: true ;}}
 
-                viewport={{ once: true }
+                viewport={{ once: true ;}
 }
 
 className='space-y-8'
@@ -594,10 +592,10 @@ className='space-y-8'
                     <motion.div
                       key={category.title}
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                      viewport={{ once: true }}
+                      initial={{ opacity: 0;, x: -20 ;}}
+                      whileInView={{ opacity: 1;, x: 0 ;}}
+                      transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
+                      viewport={{ once: true ;}}
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
@@ -606,12 +604,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {serviceCategories.map((category, index) => (}
                     <motion.div;}
 key={category.title}
-                      initial={{ opacity: 0, x: -20 }
+                      initial={{ opacity: 0;, x: -20 ;}
 }
-                      whileInView={{ opacity: 1, x: 0 }
+                      whileInView={{ opacity: 1;, x: 0 ;}
 }
-                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                      viewport={{ once: true }}
+                      transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
+                      viewport={{ once: true ;}}
 
 className='space-y-4'
                      />
@@ -634,7 +632,7 @@ className='space-y-4'
                             </span>;
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors' />;
                               {service.price}
-                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service.price}{service.pric}
+                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service.price;}{service.pric}
 }</span>;
                           </Link>;
                       className='space-y-4'>;
@@ -652,7 +650,7 @@ className='space-y-4'
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm' />;
                               {service && service.name}
                             </span>;
-                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric}
+                            <span className='text-xs text-gray-500 group-hover: text-cyan-400 transition-colors' />                              {service && service.pric;}
 }                    >;"
                       <div className=\"flex items-center space-x-2\" />;"
                         <category && category.icon className=\"w-5 h-5 text-cyan-400\" />;"
@@ -699,12 +697,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }"
             <div className='lg:col-span-1' />              <motion && motion.div            <div className=\"lg:col-span-1\" />;
               <motion&& motion.div;
-                initial={{ opacity: 0, y: 20 }
+                initial={{ opacity: 0;, y: 20 ;}
 }
-                whileInView={{ opacity: 1, y: 0 }
+                whileInView={{ opacity: 1;, y: 0 ;}
 }
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
+                viewport={{ once: true ;}}
 
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -717,7 +715,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link
                         key={link.name}
 
-                viewport={{ once: true }}
+                viewport={{ once: true ;}}
 
 className='space-y-8'
                />
@@ -845,14 +843,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
           {/* Certifications */}
           <motion&& motion.div;
-            initial={{ opacity: 0, y: 20 }
+            initial={{ opacity: 0;, y: 20 ;}
 }
-            whileInView={{ opacity: 1, y: 0 }
+            whileInView={{ opacity: 1;, y: 0 ;}
 }
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.6;, delay: 0 && 0.6 ;}}
+            viewport={{ once: true ;}}
 
-            viewport={{ once: true }
+            viewport={{ once: true ;}
 }
 
 className='mt-16 pt-8 border-t border-white/10'
@@ -865,19 +863,19 @@ className='mt-16 pt-8 border-t border-white/10'
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={cert}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0;, scale: 0 && 0.8 ;}}
+                  whileInView={{ opacity: 1;, scale: 1 ;}}
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4' />
               {certifications.map((cert, index) => (}
                 <motion.div;}
 key={cert}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }
+                  initial={{ opacity: 0;, scale: 0 && 0.8 ;}
 }
-                  whileInView={{ opacity: 1, scale: 1 }
+                  whileInView={{ opacity: 1;, scale: 1 ;}
 }
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0 && 0.5;, delay: index * 0 && 0.1 ;}}
 
-                  viewport={{ once: true }}
+                  viewport={{ once: true ;}}
                   </span>                </motion.div>
 
                 </motion.div>

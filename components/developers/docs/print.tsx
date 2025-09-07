@@ -2,20 +2,20 @@
 
   return {
     props: {
-      docs: content as DocsContent,
+      docs: content as DocsContent;,
     },
   }}import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
-  id: string,
-  title: string,
+  id: string;,
+  title: string;,
   html?: string;
-  code?: { language?: string, content: string }[];
+  code?: { language?: string, content: string ;}[];
 }
 ;
 type DocsContent = {
-  title: string,
+  title: string;,
   sections: Section[];
 }
 ;
@@ -27,28 +27,27 @@ type PageProps = {
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent
+      docs: content as DocsContent;
     }
   };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = {
   id: string
   title: string
   html?: string;
-  code?: { language?: string, content: string }[]
+  code?: { language?: string, content: string ;}[]
 }
 type DocsContent = {
   title: string
-  sections: Section[]
+  sections: Section[];
 }
 type PageProps = {
-  docs: DocsContent
+  docs: DocsContent;
 }
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent}}
+      docs: content as DocsContent;}}
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -56,7 +55,7 @@ export default function PrintDocs({ docs }: PageProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   render() {
     if (this.state.hasError) {
@@ -68,29 +67,26 @@ class ErrorBoundary extends React.Component {
  export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
-      docs: content as DocsContent,;
+      docs: content as DocsContent;,;
     },;
   };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content ;
 export type Section = {;
-  id: string,;
-  title: string,;
+  id: string;,;
+  title: string;,;
   html?: string;
-  code?: { language?: string, content: string }[];
+  code?: { language?: string, content: string ;}[];
 };
 type DocsContent = {;
-  title: string,;
+  title: string;,;
   sections: Section[];
 };
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
-      docs: content as DocsContent}}
+      docs: content as DocsContent;}}
     return () => clearTimeout(id);
 import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
 
 export type Section = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -102,7 +98,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {docs && docs.sections.map(s => (;
           <section key={s && s.id}>;
             <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
-            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html ;}} />}
             {s && s.code &&;
               s && s.code.map((c, i) => (;
                 <pre
@@ -125,7 +121,7 @@ export default function PrintDocs({ docs }: PageProps) {
       <div className='space-y-8' />;
         {docs && docs.sections.map(s => (<section key={s && s.id} />;
             <h2 className='text-2xl font-semibold mb-2' />{s && s.title}</h2>;
-            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html ;}} /
 }
             {s && s.code &&;
 
@@ -147,7 +143,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className=\"space-y-8\" />;
         {docs && docs.sections.map((s) => (<section key={s && s.id} />;"
             <h2 className=\"text-2xl font-semibold mb-2\" />{s && s.title}</h2>;
-            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html ;}} /
 }"
             {s && s.code && s && s.code.map((c, i) = /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\" />{c && c.content}</pre>;
             ))}
@@ -162,7 +158,7 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
       <div className='space - y-8' />;
         {docs.sections.map (string => (<section key={s.id} />;
             <h2 className='text - 2xl font - semibold mb - 2' />{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} /
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html ;}} /
 }
             {s.code &&;}
               s.code.map ((c, i) = /> (<pre;}
@@ -176,7 +172,7 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
       <div className=\"space - y-8\" />;
         {docs.sections.map ((s) => (<section key={s.id} />;"
             <h2 className=\"text - 2xl font - semibold mb - 2\" />{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} /
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html ;}} /
 }"
             {s.code && s.code.map ((c, i) = /> (<pre key={i} className=\"mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap\" />{c.content}</pre>))}
           </section>))}

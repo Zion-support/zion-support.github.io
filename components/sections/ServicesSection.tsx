@@ -12,7 +12,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 'use client';
-import {
   Brain,
   Cloud,
   RefreshCw,
@@ -43,30 +42,30 @@ const ServicesSection: React.FC = () => {
  ;
   const services = [
   {
-      icon: Brain,
-      title: 'AI Development',
+      icon: Brain;,
+      title: 'AI Development';,
     {
-      icon: Wifi,
-      title: 'IoT Platforms',
-      description: 'Connected device solutions and IoT platform development.',
+      icon: Wifi;,
+      title: 'IoT Platforms';,
+      description: 'Connected device solutions and IoT platform development.';,
     {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions.',
+      icon: BarChart3;,
+      title: 'Data Analytics';,
+      description: 'Advanced analytics and business intelligence solutions.';,
       features: [;
         'Big Data Processing',
         'Real - time Dashboards',
         'Predictive Modeling',
         'Data Visualization',
       ],
-      color: 'from - teal - 500 to - blue - 500',
-      href: '/services / data - analytics',
-    },  ];      features: ['Big Data ProcessingReal - time DashboardsPredictive ModelingData Visualization'],
-      color: 'from - teal - 500 to - blue - 500',
+      color: 'from - teal - 500 to - blue - 500';,
+      href: '/services / data - analytics';,
+    },  ];      features: ['Big Data ProcessingReal - time DashboardsPredictive ModelingData Visualization'];,
+      color: 'from - teal - 500 to - blue - 500';,
       href: '/services / data - analytics';
     }
   const container_variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 ;},
 
 
 import {;
@@ -89,8 +88,8 @@ import {;
 const ServicesSection: React.FC = () => {;
   const services = [;
     {;
-      icon: Brain,;
-      title: 'AI Development',;
+      icon: Brain;,;
+      title: 'AI Development';,;
       description:;
         'Custom AI solutions and machine learning models tailored to your business needs.',;
       features: [;
@@ -99,29 +98,29 @@ const ServicesSection: React.FC = () => {;
         'Computer Vision',;
         'Predictive Analytics',;
       ],;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500',;
+      color: 'from-blue-500 to-cyan-500';,;
+      href: '/services/ai-development';,      color: 'from-blue-500 to-cyan-500';,;
       href: '/services/ai-development';
     };
     {;
-      icon: Cloud,;
-      title: 'Cloud Architecture',;
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',;
-      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],;
-      color: 'from-purple-500 to-pink-500',;
+      icon: Cloud;,;
+      title: 'Cloud Architecture';,;
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.';,;
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'];,;
+      color: 'from-purple-500 to-pink-500';,;
       href: '/services/cloud-architecture';
     };
     {;
-      icon: RefreshCw,;
-      title: 'Digital Transformation',;
-      description: 'End-to-end digital transformation services to modernize your business.',;
-      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],;
-      color: 'from-green-500 to-emerald-500',;
-      href: '/services/digital-transformation',;
+      icon: RefreshCw;,;
+      title: 'Digital Transformation';,;
+      description: 'End-to-end digital transformation services to modernize your business.';,;
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'];,;
+      color: 'from-green-500 to-emerald-500';,;
+      href: '/services/digital-transformation';,;
     },;
     {;
-      icon: Cloud,;
-      title: 'Cloud Architecture',;
+      icon: Cloud;,;
+      title: 'Cloud Architecture';,;
       description:;
         'Scalable cloud solutions and infrastructure design for modern applications.',;
       features: [;
@@ -130,12 +129,12 @@ const ServicesSection: React.FC = () => {;
         'Serverless Architecture',;
         'DevOps Automation',;
       ],;
-      color: 'from-purple-500 to-pink-500',;
-      href: '/services/cloud-architecture',;
+      color: 'from-purple-500 to-pink-500';,;
+      href: '/services/cloud-architecture';,;
     },;
     {;
-      icon: RefreshCw,;
-      title: 'Digital Transformation',;
+      icon: RefreshCw;,;
+      title: 'Digital Transformation';,;
       description:;
         'End-to-end digital transformation services to modernize your business.',;
       features: [;
@@ -144,38 +143,38 @@ const ServicesSection: React.FC = () => {;
         'Change Management',;
         'Digital Strategy',;
       ],;
-      color: 'from-green-500 to-emerald-500',;
-      href: '/services/digital-transformation',;
+      color: 'from-green-500 to-emerald-500';,;
+      href: '/services/digital-transformation';,;
     },    {;
-      icon: Wifi,;
-      title: 'IoT Platforms',;
-      description: 'Connected device solutions and IoT platform development.',      href: '/services/digital-transformation';
+      icon: Wifi;,;
+      title: 'IoT Platforms';,;
+      description: 'Connected device solutions and IoT platform development.';,      href: '/services/digital-transformation';
     };
     {;
-      icon: Wifi,;
-      title: 'IoT Platforms',;
-      description: 'Connected device solutions and IoT platform development.',;
+      icon: Wifi;,;
+      title: 'IoT Platforms';,;
+      description: 'Connected device solutions and IoT platform development.';,;
       features: [;
         'Sensor Networks',;
         'Real-time Monitoring',;
         'Data Analytics',;
         'Edge Computing',;
       ],;
-      color: 'from-orange-500 to-red-500',;
-      href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500',;
+      color: 'from-orange-500 to-red-500';,;
+      href: '/services/iot-platforms';,      color: 'from-orange-500 to-red-500';,;
       href: '/services/iot-platforms';
     };
     {;
-      icon: Shield,;
-      title: 'Blockchain Solutions',;
-      description: 'Decentralized technology platforms and smart contract development.',;
-      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],;
-      color: 'from-indigo-500 to-purple-500',;
-      href: '/services/blockchain-solutions',;
+      icon: Shield;,;
+      title: 'Blockchain Solutions';,;
+      description: 'Decentralized technology platforms and smart contract development.';,;
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'];,;
+      color: 'from-indigo-500 to-purple-500';,;
+      href: '/services/blockchain-solutions';,;
     },;
     {;
-      icon: Shield,;
-      title: 'Blockchain Solutions',;
+      icon: Shield;,;
+      title: 'Blockchain Solutions';,;
       description:;
         'Decentralized technology platforms and smart contract development.',;
       features: [;
@@ -184,102 +183,99 @@ const ServicesSection: React.FC = () => {;
         'NFT Platforms',;
         'Supply Chain Solutions',;
       ],;
-      color: 'from-indigo-500 to-purple-500',;
-      href: '/services/blockchain-solutions',;
+      color: 'from-indigo-500 to-purple-500';,;
+      href: '/services/blockchain-solutions';,;
     },    {;
-      icon: BarChart3,;
-      title: 'Data Analytics',;
-      description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions';
+      icon: BarChart3;,;
+      title: 'Data Analytics';,;
+      description: 'Advanced analytics and business intelligence solutions.';,      href: '/services/blockchain-solutions';
     };
     {;
-      icon: BarChart3,;
-      title: 'Data Analytics',;
-      description: 'Advanced analytics and business intelligence solutions.',;
+      icon: BarChart3;,;
+      title: 'Data Analytics';,;
+      description: 'Advanced analytics and business intelligence solutions.';,;
       features: [;
         'Big Data Processing',;
         'Real-time Dashboards',;
         'Predictive Modeling',;
         'Data Visualization',;
       ],;
-      color: 'from-teal-500 to-blue-500',;
-      href: '/services/data-analytics',;
-    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],;
-      color: 'from-teal-500 to-blue-500',;
+      color: 'from-teal-500 to-blue-500';,;
+      href: '/services/data-analytics';,;
+    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'];,;
+      color: 'from-teal-500 to-blue-500';,;
       href: '/services/data-analytics';
     }
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 ;},;
     visible: {;
-      opacity: 1,;
+      opacity: 1;,;
       transition: {;
-        staggerChildren: 0 && 0.1,;
+        staggerChildren: 0 && 0.1;,;
       },;
     },  };
   const cardVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+    hidden: { opacity: 0;, y: 20 ;},;
+    visible: { opacity: 1;, y: 0 ;},        staggerChildren: 0 && 0.1;
       }
     }
   const cardVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 },;
+    hidden: { opacity: 0;, y: 20 ;},;
+    visible: { opacity: 1;, y: 0 ;},;
   };
 description:
-  description:
-        'Custom AI solutions and machine learning models tailored to your business needs.',
+  description: 'Custom AI solutions and machine learning models tailored to your business needs.';,
       features: [
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics'
       ],
-      color: 'from-blue-500 to-cyan-500'}
-  href: '/services/ai-development'}
+      color: 'from-blue-500 to-cyan-500';}
+  href: '/services/ai-development';}
     },
     {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-  description:
-        'Scalable cloud solutions and infrastructure design for modern applications.',
+      icon: Cloud;,
+      title: 'Cloud Architecture';,
+  description: 'Scalable cloud solutions and infrastructure design for modern applications.';,
       features: [
         'AWS/Azure/GCP',
         'Microservices',
         'Serverless Architecture',
         'DevOps Automation'
       ],
-      color: 'from-purple-500 to-pink-500'}
-  href: '/services/cloud-architecture'}
+      color: 'from-purple-500 to-pink-500';}
+  href: '/services/cloud-architecture';}
     },
     {
-      icon: RefreshCw,
-      title: 'Digital Transformation',
-  description:
-        'End-to-end digital transformation services to modernize your business.',
+      icon: RefreshCw;,
+      title: 'Digital Transformation';,
+  description: 'End-to-end digital transformation services to modernize your business.';,
       features: [
         'Process Automation',
         'Legacy System Migration',
         'Change Management',
         'Digital Strategy'
       ],
-      color: 'from-green-500 to-emerald-500'}
-  href: '/services/digital-transformation'}
+      color: 'from-green-500 to-emerald-500';}
+  href: '/services/digital-transformation';}
     },
     {
-      icon: Wifi,
-      title: 'IoT Platforms',
-  description: 'Connected device solutions and IoT platform development.',
+      icon: Wifi;,
+      title: 'IoT Platforms';,
+  description: 'Connected device solutions and IoT platform development.';,
 features: [
         'Sensor Networks',
         'Real-time Monitoring',
         'Data Analytics',
         'Edge Computing'
       ],
-      color: 'from-orange-500 to-red-500'}
-  href: '/services/iot-platforms'}
+      color: 'from-orange-500 to-red-500';}
+  href: '/services/iot-platforms';}
     },
     {
-      icon: Shield,
-      title: 'Blockchain Solutions',
+      icon: Shield;,
+      title: 'Blockchain Solutions';,
   description:
         'Scalable cloud solutions and infrastructure design for modern applications.'
       features: [
@@ -288,39 +284,39 @@ features: [
         'NFT Platforms',
         'Supply Chain Solutions'
       ],
-      color: 'from-indigo-500 to-purple-500'}
-  href: '/services/blockchain-solutions'}
+      color: 'from-indigo-500 to-purple-500';}
+  href: '/services/blockchain-solutions';}
     },
     {
-      icon: BarChart3,
-      title: 'Data Analytics',
-  description: 'Advanced analytics and business intelligence solutions.',
+      icon: BarChart3;,
+      title: 'Data Analytics';,
+  description: 'Advanced analytics and business intelligence solutions.';,
 features: [
         'Big Data Processing',
         'Real-time Dashboards',
         'Predictive Modeling',
         'Data Visualization'
       ],
-      color: 'from-teal-500 to-blue-500'}
-  href: '/services/data-analytics'}
+      color: 'from-teal-500 to-blue-500';}
+  href: '/services/data-analytics';}
     }
   ];
 
 const containerVariants = {}
-    hidden: { opacity: 0}
+    hidden: { opacity: 0;}
 }
     visible: {
       opacity: 1;
-transition: {}
-staggerChildren: 0.1}
+transition: {;}
+staggerChildren: 0.1;}
       }
     }
   };
 
 const cardVariants = {}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 },
-visible: { opacity: 1, y: 0}
+visible: { opacity: 1;, y: 0;}
 }
   };
 
@@ -350,76 +346,76 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  ;
 }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const card_variants = {hidden: { opacity: 0;, coordinate_y: 20;}
+},visible: { opacity: 1;, coordinate_y: 0;}
 }}
   }
 ;
-  const cardVariants = {hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+  const cardVariants = {hidden: { opacity: 0;, y: 20;}
+},visible: { opacity: 1;, y: 0;}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;
       {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
       {/* Background Elements */}
-    hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+    hidden: { opacity: 0;, y: 20;}
+},visible: { opacity: 1;, y: 0;}
 }}
 
-const cardVariants = {hidden: { opacity: 0, y: 20}
+const cardVariants = {hidden: { opacity: 0;, y: 20;}
 },{/* Section Header */}<motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}
 } />;
           <motion.div;
-        stagger_children: 0.1}}  }
+        stagger_children: 0.1;}}  }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const card_variants = {hidden: { opacity: 0;, coordinate_y: 20;}
+},visible: { opacity: 1;, coordinate_y: 0;}
 },        stagger_children: 0.1;
       }
     }
   }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
-},visible: { opacity: 1, coordinate_y: 0}
+const card_variants = {hidden: { opacity: 0;, coordinate_y: 20;}
+},visible: { opacity: 1;, coordinate_y: 0;}
 }}
-    hidden: { opacity: 0, y: 20}
+    hidden: { opacity: 0;, y: 20;}
 }}
 ;
-  const cardVariants = {hidden: { opacity: 0, y: 20}
-},visible: { opacity: 1, y: 0}
+  const cardVariants = {hidden: { opacity: 0;, y: 20;}
+},visible: { opacity: 1;, y: 0;}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;"
       {/* Background Elements */}return (<section className=\"py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden\" />;
       {/* Background Elements */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          viewport={{ once: true ;}}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0;, scale: 0.8 ;}}
+            whileInView={{ opacity: 1;, scale: 1 ;}}
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center mb-16'
          />
           <motion.div;
-initial={{ opacity: 0, scale: 0.8 }
+initial={{ opacity: 0;, scale: 0.8 ;}
 }
-            whileInView={{ opacity: 1, scale: 1 }
+            whileInView={{ opacity: 1;, scale: 1 ;}
 }
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }
+            transition={{ duration: 0.6;, delay: 0.2 ;}}
+            viewport={{ once: true ;}
 }
 
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
@@ -471,17 +467,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 initial='hidden'
           whileInView='visible'
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true ;}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
           {services && services.map((service, index) => (;
             <motion&& motion.div
               key={service && service.title}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
-          viewport={{ once: true }
+              whileHover={{ y: -10 ;}}
+          viewport={{ once: true ;}
 }
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
@@ -490,7 +486,7 @@ initial='hidden'
             <motion.div;}
 key={service.title}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10 ;}}
 className='group relative'
             >
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>
@@ -501,9 +497,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div;
                 {/* Content */}
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover: opacity-5 transition-opacity duration-300`;} />
                 {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`;}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 </h3>;
@@ -512,9 +508,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Features */}            >;
               <div className="relative h - full bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 800 rounded - 2xl p - 8 hover:border - gray - 700 transition - all duration - 300 overflow - hidden">;
                 {/* Background Gradient */}
-                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover:opacity - 5 transition - opacity duration - 300`} />;
+                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover: opacity - 5 transition - opacity duration - 300`;} />;
                 {/* Icon */}
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
+                <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover: scale - 110 transition - transform duration - 300`;}>;
                   <service.icon className="w - 8 h - 8 text - white" />;
                 </div>;
                 {/* Content */}
@@ -597,12 +593,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         {/* Bottom CTA */}
         <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }
+          initial={{ opacity: 0;, y: 30 ;}
 }
-          whileInView={{ opacity: 1, y: 0 }
+          whileInView={{ opacity: 1;, y: 0 ;}
 }
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0 && 0.8;, delay: 0 && 0.4 ;}}
+          viewport={{ once: true ;}}
 
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -610,7 +606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
-          viewport={{ once: true }
+          viewport={{ once: true ;}
 }
 
 className='text-center'
@@ -669,10 +665,10 @@ export default ServicesSection;
         </motion.div>;
         {/* Bottom CTA */}
         <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0;, coordinate_y: 30 ;}}
+          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+          transition={{ duration: 0.8;, delay: 0.4 ;}}
+          viewport={{ once: true ;}}
           className='text - center';
         >;
           <div className='bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border border - blue - 500 / 30 rounded - 2xl p - 8 max - w-2xl mx - auto'>;

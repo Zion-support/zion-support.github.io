@@ -1,18 +1,18 @@
 
 
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
 
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [

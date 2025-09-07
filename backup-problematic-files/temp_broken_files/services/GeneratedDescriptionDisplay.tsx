@@ -1,13 +1,13 @@
 
-import React, { useState } from "react",;""
-import { useToast } from "@/hooks/use-toast",;""
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;""
-import { Textarea } from "@/components/ui/textarea",;""
+import React, { useState } from "react";""
+import { useToast } from "@/hooks/use-toast";""
+import { Button } from "@/components/ui/button";""
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";""
+import { Textarea } from "@/components/ui/textarea";""
 import { Check, Pencil } from 'lucide-react';
 ;
 interface GeneratedDescriptionDisplayProps {,
-  description:string,;
+  description: string;,;
   onSave:(editedDescription:string) => void;
 }
 export function GeneratedDescriptionDisplay({ ;
@@ -21,9 +21,9 @@ export function GeneratedDescriptionDisplay({ ;
     onSave(editedDescription),;
     setIsEditing(false),;
     toast({;
-      title:"Description Saved",,
+      title: "Description Saved";,,
   description:"Your edited description has been saved.";
-      title:"Description Saved",;""
+      title: "Description Saved";,;""
       description:"Your edited description has been saved.";")
 pr-12325
     }),;

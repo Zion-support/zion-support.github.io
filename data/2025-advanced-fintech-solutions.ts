@@ -12,11 +12,11 @@ export interface AdvancedFintechSolution2025 {
 ;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
-    id: 'ai - powered - credit - risk - assessment',
-    name: 'AI - Powered Credit Risk Assessment',
-    tagline: 'Intelligent credit scoring with alternative data analysis',
-    price: '$1, 199',
-    period: '/month',
+    id: 'ai - powered - credit - risk - assessment';,
+    name: 'AI - Powered Credit Risk Assessment';,
+    tagline: 'Intelligent credit scoring with alternative data analysis';,
+    price: '$1;, 199',
+    period: '/month';,
     description:;
       'Advanced AI - powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
     features: [;
@@ -34,14 +34,13 @@ pr-12325
       'Performance analytics',
       'Regulatory compliance',
     ],
-    popular: true,
+    popular: true;,
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
     price: '$699'
     period: '/month'
-    description:
-      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
     features: [
       'Regulatory monitoring'
       'Automated reporting'
@@ -61,8 +60,7 @@ pr-12325
     link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'
     marketPosition:
       'Leading RegTech platform with comprehensive compliance automation'
-    targetAudience:
-      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies'
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies'
     trialDays: 14
     setupTime: '7-10 days'
     category: 'Fintech'
@@ -77,7 +75,7 @@ pr-12325
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'
     ]
     roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize']
     marketSize: '$15B RegTech market'
     growthRate: '40% annual growth'
     variant: 'fintech'
@@ -85,20 +83,18 @@ pr-12325
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
     realImplementation: true
-    implementationDetails:
-    icon: '💳',
+    implementationDetails: icon: '💳';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-    id: 'regtech-compliance-automation-platform,
+    id: 'regtech-compliance-automation-platform;,
   name: 'RegTech Compliance Automation Platform
-    tagline: 'Automated regulatory compliance and reporting,
+    tagline: 'Automated regulatory compliance and reporting;,
   price: '$699
-    period: '/month,
-  description:
-      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.
+    period: '/month;,
+  description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.
     features: [
       'Regulatory monitoring
       'Automated reporting
@@ -113,16 +109,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     popular: false;,
   icon: '📋
-    color: 'from-gray-600 via-slate-600 to-zinc-600,
+    color: 'from-gray-600 via-slate-600 to-zinc-600;,
   textColor: 'text-gray-400
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform,
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform;,
   marketPosition:
       'Leading RegTech platform with comprehensive compliance automation
-    targetAudience:
-      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies
     trialDays: 14;,
   setupTime: '7-10 days
-    category: 'Fintech,
+    category: 'Fintech;,
   realService: true;
     technology: [
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML]
@@ -130,31 +125,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms]
     useCases: [
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training]
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.,
-  competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
-    marketSize: '$15B RegTech market,
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.;,
+  competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize']
+    marketSize: '$15B RegTech market;,
   growthRate: '40% annual growth
-    variant: 'fintech,
+    variant: 'fintech;,
   contactInfo: {
-      mobile: '+1 302 464 0950,
+      mobile: '+1 302 464 0950;,
   email: 'kleber@ziontechgroup.com
-      address: '364 E Main St STE 1008 Middletown DE 19709,
-  website: 'https://ziontechgroup.com
+      address: '364 E Main St STE 1008 Middletown DE 19709;,
+  website: 'https://ziontechgroup.com;
     }
     realImplementation: true;,
   implementationDetails:
 pr-12325
-    color: 'from - green - 600 via - emerald - 600 to - teal - 600',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
+    color: 'from - green - 600 via - emerald - 600 to - teal - 600';,
+    text_color: 'text - green - 400';,
+    link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment';,
     market_position:;
       'Leading AI - powered credit risk assessment with alternative data analysis',
     target_audience:;
       'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',
-    trial_days: 30,
-    setup_time: '15 - 20 days',
-    category: 'Fintech',
-    real_service: true,
+    trial_days: 30;,
+    setup_time: '15 - 20 days';,
+    category: 'Fintech';,
+    real_service: true;,
     technology: [;
       'Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI / ML',
     ],
@@ -170,25 +165,25 @@ pr-12325
     use_cases: [;
       'Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance',']
 pr-12325
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
-    market_size: '$35B credit scoring market',
-    growth_rate: '25% annual growth',
-    variant: 'ai - finance - enterprise',
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],
+    market_size: '$35B credit scoring market';,
+    growth_rate: '25% annual growth';,
+    variant: 'ai - finance - enterprise';,
     contact_info: {
 
-      mobile: '+1 302 464 0950',
-    contact_info: {,
-  mobile: '+1 302 464 0950',
+      mobile: '+1 302 464 0950';,
+    contact_info: {;,
+  mobile: '+1 302 464 0950';,
 pr-12325
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup && ziontechgroup.com';,
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;
       'Production - ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
-    launch_date: '2025 - 01 - 22',
+    launch_date: '2025 - 01 - 22';,
       'Alternative data analysis',''
       'Machine learning models',''
       'Real - time scoring',''
@@ -200,12 +195,12 @@ pr-12325
       'Performance analytics',''
       'Regulatory compliance','
     ],
-    popular: true,'
-    id: 'regtech-compliance-automation-platform'','
+    popular: true;,'
+    id: 'regtech-compliance-automation-platform'';,'
   name: 'RegTech Compliance Automation Platform'''
-    tagline: 'Automated regulatory compliance and reporting'','
+    tagline: 'Automated regulatory compliance and reporting'';,'
   price: '$699'''
-    period: '/month'',
+    period: '/month'';,
   description:'
       'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.''
     features: ['
@@ -222,16 +217,16 @@ pr-12325
     ]
     popular: false;,'
   icon: '📋'''
-    color: 'from-gray-600 via-slate-600 to-zinc-600'','
+    color: 'from-gray-600 via-slate-600 to-zinc-600'';,'
   textColor: 'text-gray-400'''
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'',
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'';,
   marketPosition:'
       'Leading RegTech platform with comprehensive compliance automation''
     targetAudience:'
       'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies''
     trialDays: 14;,'
   setupTime: '7-10 days'''
-    category: 'Fintech'',
+    category: 'Fintech'';,
   realService: true;
     technology: ['
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'']
@@ -244,30 +239,30 @@ pr-12325
     useCases: ['
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'']
     ]'
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'','
-  competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']''
-    marketSize: '$15B RegTech market'','
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'';,'
+  competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize']''
+    marketSize: '$15B RegTech market'';,'
   growthRate: '40% annual growth'''
-    variant: 'fintech'',
+    variant: 'fintech'';,
   contactInfo: {'
-      mobile: '+1 302 464 0950'','
+      mobile: '+1 302 464 0950'';,'
   email: 'kleber@ziontechgroup.com'''
-      address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
+      address: '364 E Main St STE 1008 Middletown DE 19709'';,'
+  website: 'https://ziontechgroup.com'';
     }
     realImplementation: true;,
   implementationDetails:'
-    color: 'from - green - 600 via - emerald - 600 to - teal - 600',''
-    text_color: 'text - green - 400',''
-    link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment','
+    color: 'from - green - 600 via - emerald - 600 to - teal - 600';,''
+    text_color: 'text - green - 400';,''
+    link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment';,'
     market_position:;'
       'Leading AI - powered credit risk assessment with alternative data analysis','
     target_audience:;'
       'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies','
-    trial_days: 30,'
-    setup_time: '15 - 20 days',''
-    category: 'Fintech','
-    real_service: true,
+    trial_days: 30;,'
+    setup_time: '15 - 20 days';,''
+    category: 'Fintech';,'
+    real_service: true;,
     technology: [;'
       'Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI / ML',']
     ],
@@ -277,24 +272,24 @@ pr-12325
     use_cases: [;'
       'Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance',']
     ],'
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',''
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],''
-    market_size: '$35B credit scoring market',''
-    growth_rate: '25% annual growth',''
-    variant: 'ai - finance - enterprise','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,''
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],''
+    market_size: '$35B credit scoring market';,''
+    growth_rate: '25% annual growth';,''
+    variant: 'ai - finance - enterprise';,'
+    contact_info: {;,'
+  mobile: '+1 302 464 0950';,''
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,''
+      website: 'https://ziontechgroup && ziontechgroup.com';,'
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;'
       'Production - ready AI credit risk platform with advanced ML models and comprehensive compliance features.',''
-    launch_date: '2025 - 01 - 22','
-    customers: 67,
+    launch_date: '2025 - 01 - 22';,'
+    customers: 67;,
 
-    rating: 4 && 4.8,
+    rating: 4 && 4.8;,
     reviews: 45;
   },
   {
@@ -302,11 +297,11 @@ pr-12325
       'Cross-border payments',
       'Real-time settlement',
       'Multi-currency support',
-    id: 'blockchain - payment - processing - platform',
-    name: 'Blockchain Payment Processing Platform',
-    tagline: 'Secure cross - border payments with blockchain technology',
-    price: '$899',
-    period: '/month',
+    id: 'blockchain - payment - processing - platform';,
+    name: 'Blockchain Payment Processing Platform';,
+    tagline: 'Secure cross - border payments with blockchain technology';,
+    price: '$899';,
+    period: '/month';,
     description:;
       'Advanced blockchain - based payment processing platform that enables fast, secure, and cost - effective cross - border transactions with real - time settlement.',
     features: [;
@@ -327,20 +322,20 @@ pr-12325
       'Regulatory reporting',
       'Cost optimization',
     ],
-    popular: true,
-    icon: '⛓️',
+    popular: true;,
+    icon: '⛓️';,
 
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / blockchain - payment - processing - platform',
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600';,
+    text_color: 'text - blue - 400';,
+    link: 'https://ziontechgroup.com / blockchain - payment - processing - platform';,
     market_position:;
       'Leading blockchain payment platform with real - time cross - border capabilities',
     target_audience:;
       'Banks, Payment processors, E - commerce platforms, International businesses, Fintech companies',
-    trial_days: 21,
-    setup_time: '10 - 15 days',
-    category: 'Fintech',
-    real_service: true,
+    trial_days: 21;,
+    setup_time: '10 - 15 days';,
+    category: 'Fintech';,
+    real_service: true;,
     technology: [;
       'Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger',
     ],
@@ -350,25 +345,25 @@ pr-12325
     use_cases: [;
       'Cross - border payments, International transfers, B2B payments, Remittances, Trade finance',
     ],
-    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.',
-    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],
-    market_size: '$28B blockchain payments market',
-    growth_rate: '55% annual growth',
-    variant: 'blockchain - futuristic',
+    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.';,
+    competitors: ['Ripple;, Stellar, Circle, Coinbase, Binance'],
+    market_size: '$28B blockchain payments market';,
+    growth_rate: '55% annual growth';,
+    variant: 'blockchain - futuristic';,
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950';,
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup && ziontechgroup.com';,
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;
-    icon: '⛓️',
+    icon: '⛓️';,
 pr-12325
       'Production - ready blockchain payment platform with enterprise - grade security and compliance features.',
-    launch_date: '2025 - 01 - 28',
+    launch_date: '2025 - 01 - 28';,
 
   {'
       'Smart contracts',''
@@ -379,29 +374,29 @@ pr-12325
       'Regulatory reporting',''
       'Cost optimization','
     ],
-    popular: true,'
-    icon: '⛓️',''
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
+    popular: true;,'
+    icon: '⛓️';,''
+      mobile: '+1 302 464 0950';,''
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,''
+      website: 'https://ziontechgroup && ziontechgroup.com';,'
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;'
       'Production - ready blockchain payment platform with enterprise - grade security and compliance features.',''
-    launch_date: '2025 - 01 - 28','
-    customers: 89,
+    launch_date: '2025 - 01 - 28';,'
+    customers: 89;,
 
-    rating: 4 && 4.7,
+    rating: 4 && 4.7;,
     reviews: 56;
   },
   {
 
-    id: 'quantum - financial - modeling - platform',
-    name: 'Quantum Financial Modeling Platform',
-    tagline: 'Quantum computing for advanced financial modeling',
-    price: '$2, 499',
-    period: '/month',
+    id: 'quantum - financial - modeling - platform';,
+    name: 'Quantum Financial Modeling Platform';,
+    tagline: 'Quantum computing for advanced financial modeling';,
+    price: '$2;, 499',
+    period: '/month';,
     description:;
       'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
     features: [;
@@ -419,20 +414,20 @@ pr-12325
       'Custom models',
       'Performance analytics',
     ],
-    popular: false,
-    icon: '⚛️',
+    popular: false;,
+    icon: '⚛️';,
 
-    color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / quantum - financial - modeling - platform',
+    color: 'from - purple - 600 via - violet - 600 to - indigo - 600';,
+    text_color: 'text - purple - 400';,
+    link: 'https://ziontechgroup.com / quantum - financial - modeling - platform';,
     market_position:;
       'Leading quantum financial modeling platform with advanced optimization capabilities',
     target_audience:;
       'Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',
-    trial_days: 45,
-    setup_time: '20 - 30 days',
-    category: 'Fintech',
-    real_service: true,
+    trial_days: 45;,
+    setup_time: '20 - 30 days';,
+    category: 'Fintech';,
+    real_service: true;,
     technology: [;
       'Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms',
     ],
@@ -442,28 +437,28 @@ pr-12325
     use_cases: [;
       'Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research',
     ],
-    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.',
+    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.';,
     competitors: [;
       'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti',
     ],
-    market_size: '$8B quantum computing market',
-    growth_rate: '65% annual growth',
-    variant: 'quantum - financial',
+    market_size: '$8B quantum computing market';,
+    growth_rate: '65% annual growth';,
+    variant: 'quantum - financial';,
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950';,
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup && ziontechgroup.com';,
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;
-    popular: false,
-    icon: '⚛️',
+    popular: false;,
+    icon: '⚛️';,
 pr-12325
       'Production - ready quantum financial platform with advanced algorithms and enterprise integration.',
-    launch_date: '2025 - 02 - 03',
+    launch_date: '2025 - 02 - 03';,
 
   {'
       'Quantum algorithms',''
@@ -477,29 +472,29 @@ pr-12325
       'Custom models',''
       'Performance analytics','
     ],
-    popular: false,'
-    icon: '⚛️',''
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
+    popular: false;,'
+    icon: '⚛️';,''
+      mobile: '+1 302 464 0950';,''
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,''
+      website: 'https://ziontechgroup && ziontechgroup.com';,'
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;'
       'Production - ready quantum financial platform with advanced algorithms and enterprise integration.',''
-    launch_date: '2025 - 02 - 03','
-    customers: 23,
+    launch_date: '2025 - 02 - 03';,'
+    customers: 23;,
 
-    rating: 4 && 4.9,
+    rating: 4 && 4.9;,
     reviews: 18;
   },
   {
 
-    id: 'ai - powered - insurance - underwriting',
-    name: 'AI - Powered Insurance Underwriting',
-    tagline: 'Intelligent insurance risk assessment and pricing',
-    price: '$799',
-    period: '/month',
+    id: 'ai - powered - insurance - underwriting';,
+    name: 'AI - Powered Insurance Underwriting';,
+    tagline: 'Intelligent insurance risk assessment and pricing';,
+    price: '$799';,
+    period: '/month';,
     description:;
       'Advanced AI - powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
     features: [;
@@ -517,20 +512,20 @@ pr-12325
       'API integration',
       'Performance analytics',
     ],
-    popular: true,
-    icon: '🛡️',
+    popular: true;,
+    icon: '🛡️';,
 
-    color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
-    text_color: 'text - orange - 400',
-    link: 'https://ziontechgroup.com / ai - powered - insurance - underwriting',
+    color: 'from - orange - 600 via - amber - 600 to - yellow - 600';,
+    text_color: 'text - orange - 400';,
+    link: 'https://ziontechgroup.com / ai - powered - insurance - underwriting';,
     market_position:;
       'Leading AI - powered insurance underwriting with advanced risk assessment',
     target_audience:;
       'Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',
-    trial_days: 21,
-    setup_time: '10 - 15 days',
-    category: 'Fintech',
-    real_service: true,
+    trial_days: 21;,
+    setup_time: '10 - 15 days';,
+    category: 'Fintech';,
+    real_service: true;,
     technology: [;
       'Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI / ML',
     ],
@@ -540,29 +535,29 @@ pr-12325
     use_cases: [;
       'Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation',
     ],
-    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',
+    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.';,
     competitors: [;
       'Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics',
     ],
-    market_size: '$20B insurtech market',
-    growth_rate: '30% annual growth',
-    variant: 'ai - finance - enterprise',
+    market_size: '$20B insurtech market';,
+    growth_rate: '30% annual growth';,
+    variant: 'ai - finance - enterprise';,
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950';,
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup && ziontechgroup.com';,
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;
       'Policy optimization',
       'Customer segmentation',
-    icon: '🛡️',
+    icon: '🛡️';,
 pr-12325
       'Production - ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',
-    launch_date: '2025 - 02 - 08',
+    launch_date: '2025 - 02 - 08';,
 
   {'
       'AI risk assessment',''
@@ -576,29 +571,29 @@ pr-12325
       'API integration',''
       'Performance analytics','
     ],
-    popular: true,'
-    icon: '🛡️',''
-      mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
+    popular: true;,'
+    icon: '🛡️';,''
+      mobile: '+1 302 464 0950';,''
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,''
+      website: 'https://ziontechgroup && ziontechgroup.com';,'
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;'
       'Production - ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',''
-    launch_date: '2025 - 02 - 08','
-    customers: 134,
+    launch_date: '2025 - 02 - 08';,'
+    customers: 134;,
 
-    rating: 4 && 4.6,
+    rating: 4 && 4.6;,
     reviews: 78;
   },
   {
 
-    id: 'regtech - compliance - automation - platform',
-    name: 'RegTech Compliance Automation Platform',
-    tagline: 'Automated regulatory compliance and reporting',
-    price: '$699',
-    period: '/month',
+    id: 'regtech - compliance - automation - platform';,
+    name: 'RegTech Compliance Automation Platform';,
+    tagline: 'Automated regulatory compliance and reporting';,
+    price: '$699';,
+    period: '/month';,
     description:;
       'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real - time updates and AI - powered insights.',
     features: [;
@@ -616,35 +611,35 @@ pr-12325
       'Real - time updates',
       'Performance analytics',
     ],
-    popular: false,
-    icon: '📋',
+    popular: false;,
+    icon: '📋';,
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
-    launchDate: '2025-02-12',
-    customers: 89,
-    rating: 4.5,
-    reviews: 52,
+    launchDate: '2025-02-12';,
+    customers: 89;,
+    rating: 4.5;,
+    reviews: 52;,
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-    color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
-    text_color: 'text - gray - 400',
-    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
+    color: 'from - gray - 600 via - slate - 600 to - zinc - 600';,
+    text_color: 'text - gray - 400';,
+    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform';,
     market_position:;
       'Leading RegTech platform with comprehensive compliance automation',
     target_audience:;
       'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
-    trial_days: 14,
-    setup_time: '7 - 10 days',
-    category: 'Fintech',
-    real_service: true,
+    trial_days: 14;,
+    setup_time: '7 - 10 days';,
+    category: 'Fintech';,
+    real_service: true;,
     technology: [;
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI / ML',
     ],
@@ -655,52 +650,51 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training',
     ],
       'Real - time updates',
-    icon: '📋',
+    icon: '📋';,
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
-    launchDate: '2025-02-12',
-    rating: 4.5,
-    reviews: 52,
+    launchDate: '2025-02-12';,
+    rating: 4.5;,
+    reviews: 52;,
   },;
 ];      mobile: '+1 302 464 0950';',
   email: 'kleber@ziontechgroup.com';
 
-    color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
-    text_color: 'text - gray - 400',
-    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
+    color: 'from - gray - 600 via - slate - 600 to - zinc - 600';,
+    text_color: 'text - gray - 400';,
+    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform';,
       'Leading RegTech platform with comprehensive compliance automation',
       'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
-    trial_days: 14,
-    setup_time: '7 - 10 days',
+    trial_days: 14;,
+    setup_time: '7 - 10 days';,
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI / ML',']
       'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms',']
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training',']
 pr-12325
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.',
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
-    market_size: '$15B RegTech market',
-    growth_rate: '40% annual growth',
-    variant: 'fintech',
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';,
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],
+    market_size: '$15B RegTech market';,
+    growth_rate: '40% annual growth';,
+    variant: 'fintech';,
     contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      mobile: '+1 302 464 0950';,
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup && ziontechgroup.com';,
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;
       'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
-    launch_date: '2025 - 02 - 12',
-    customers: 89,
-    rating: 4 && 4.5,
-    reviews: 52,
+    launch_date: '2025 - 02 - 12';,
+    customers: 89;,
+    rating: 4 && 4.5;,
+    reviews: 52;,
   },
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
     price: '$699'
     period: '/month'
-    description:
-      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
     features: [
       'Regulatory monitoring'
       'Automated reporting'
@@ -720,8 +714,7 @@ pr-12325
     link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'
     marketPosition:
       'Leading RegTech platform with comprehensive compliance automation'
-    targetAudience:
-      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies'
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies'
     trialDays: 14
     setupTime: '7-10 days'
     category: 'Fintech'
@@ -736,7 +729,7 @@ pr-12325
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'
     ]
     roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize']
     marketSize: '$15B RegTech market'
     growthRate: '40% annual growth'
     variant: 'fintech'
@@ -744,7 +737,7 @@ pr-12325
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
     realImplementation: true
     implementationDetails:
@@ -752,17 +745,17 @@ pr-12325
     launchDate: '2025-02-12'
     customers: 89
     rating: 4.5
-    reviews: 52
+    reviews: 52;
   }
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
-    launchDate: '2025-02-12',
-    customers: 89,
-    rating: 4.5,
-    reviews: 52,
+    launchDate: '2025-02-12';,
+    customers: 89;,
+    rating: 4.5;,
+    reviews: 52;,
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -798,14 +791,14 @@ export interface AdvancedFintechSolution2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string
+    website: string;
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number
+  reviews: number;
 }
 
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
@@ -813,7 +806,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     id: 'ai-powered-credit-risk-assessment';
     name: 'AI-Powered Credit Risk Assessment';
     tagline: 'Intelligent credit scoring with alternative data analysis';
-    price: '$1,199',
+    price: '$1;,199',
     period: '/month';
     description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';
     features: [
@@ -826,16 +819,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment';
     marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis';
-    targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',
+    targetAudience: 'Banks;, Credit unions, Fintech companies, Lending platforms, Insurance companies',
     trialDays: 30;
     setupTime: '15-20 days';
     category: 'Fintech';
     realService: true;
-    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],
-    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
-    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],
+    technology: ['Machine Learning;, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],
+    integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
+    useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],
     roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],
     marketSize: '$35B credit scoring market';
     growthRate: '25% annual growth';
     variant: 'ai-finance-enterprise';
@@ -843,14 +836,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true;
     implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.';
     launchDate: '2025-01-22';
     customers: 67;
     rating: 4.8;
-    reviews: 45
+    reviews: 45;
   },
   {
     id: 'blockchain-payment-processing-platform';
@@ -858,7 +851,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     tagline: 'Secure cross-border payments with blockchain technology';
     price: '$899';
     period: '/month';
-    description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',
+    description: 'Advanced blockchain-based payment processing platform that enables fast;, secure, and cost-effective cross-border transactions with real-time settlement.',
     features: [
       'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud prevention';
       'Regulatory reportingCost optimization'
@@ -869,16 +862,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/blockchain-payment-processing-platform';
     marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities';
-    targetAudience: 'Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',
+    targetAudience: 'Banks;, Payment processors, E-commerce platforms, International businesses, Fintech companies',
     trialDays: 21;
     setupTime: '10-15 days';
     category: 'Fintech';
     realService: true;
-    technology: ['Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],
-    integrations: ['Banking systems, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],
-    useCases: ['Cross-border payments, International transfers, B2B payments, Remittances, Trade finance'],
+    technology: ['Blockchain;, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],
+    integrations: ['Banking systems;, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],
+    useCases: ['Cross-border payments;, International transfers, B2B payments, Remittances, Trade finance'],
     roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.';
-    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],
+    competitors: ['Ripple;, Stellar, Circle, Coinbase, Binance'],
     marketSize: '$28B blockchain payments market';
     growthRate: '55% annual growth';
     variant: 'blockchain-futuristic';
@@ -886,20 +879,20 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true;
     implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.';
     launchDate: '2025-01-28';
     customers: 89;
     rating: 4.7;
-    reviews: 56
+    reviews: 56;
   },
   {
     id: 'quantum-financial-modeling-platform';
     name: 'Quantum Financial Modeling Platform';
     tagline: 'Quantum computing for advanced financial modeling';
-    price: '$2,499',
+    price: '$2;,499',
     period: '/month';
     description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.';
     features: [
@@ -912,16 +905,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/quantum-financial-modeling-platform';
     marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities';
-    targetAudience: 'Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',
+    targetAudience: 'Investment banks;, Hedge funds, Asset managers, Insurance companies, Research institutions',
     trialDays: 45;
     setupTime: '20-30 days';
     category: 'Fintech';
     realService: true;
-    technology: ['Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],
-    integrations: ['Trading platforms, Risk management systems, Data providers, Analytics tools, Reporting systems'],
-    useCases: ['Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research'],
+    technology: ['Quantum Computing;, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],
+    integrations: ['Trading platforms;, Risk management systems, Data providers, Analytics tools, Reporting systems'],
+    useCases: ['Portfolio optimization;, Risk modeling, Option pricing, Asset allocation, Financial research'],
     roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.';
-    competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
+    competitors: ['IBM Quantum;, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
     marketSize: '$8B quantum computing market';
     growthRate: '65% annual growth';
     variant: 'quantum-financial';
@@ -929,14 +922,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true;
     implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.';
     launchDate: '2025-02-03';
     customers: 23;
     rating: 4.9;
-    reviews: 18
+    reviews: 18;
   },
   {
     id: 'ai-powered-insurance-underwriting';
@@ -944,7 +937,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     tagline: 'Intelligent insurance risk assessment and pricing';
     price: '$799';
     period: '/month';
-    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
+    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk;, determine pricing, and automate the underwriting process.',
     features: [
       'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance tools';
       'API integrationPerformance analytics'
@@ -955,16 +948,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting';
     marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment';
-    targetAudience: 'Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',
+    targetAudience: 'Insurance companies;, Reinsurers, Brokers, Agents, Insurtech companies',
     trialDays: 21;
     setupTime: '10-15 days';
     category: 'Fintech';
     realService: true;
-    technology: ['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],
-    integrations: ['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],
-    useCases: ['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],
+    technology: ['Machine Learning;, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],
+    integrations: ['Policy management systems;, Claims systems, CRM platforms, Data providers, Compliance tools'],
+    useCases: ['Risk assessment;, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],
     roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.';
-    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
+    competitors: ['Lemonade;, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
     marketSize: '$20B insurtech market';
     growthRate: '30% annual growth';
     variant: 'ai-finance-enterprise';
@@ -972,14 +965,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true;
     implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.';
     launchDate: '2025-02-08';
     customers: 134;
     rating: 4.6;
-    reviews: 78
+    reviews: 78;
   },
   {
     id: 'regtech-compliance-automation-platform';
@@ -987,7 +980,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     tagline: 'Automated regulatory compliance and reporting';
     price: '$699';
     period: '/month';
-    description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
     features: [
       'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integration';
       'Real-time updatesPerformance analytics'
@@ -998,16 +991,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     textColor: 'text-gray-400';
     link: 'https://ziontechgroup.com/regtech-compliance-automation-platform';
     marketPosition: 'Leading RegTech platform with comprehensive compliance automation';
-    targetAudience: 'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies',
     trialDays: 14;
     setupTime: '7-10 days';
     category: 'Fintech';
     realService: true;
-    technology: ['RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],
-    integrations: ['Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'],
-    useCases: ['Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'],
+    technology: ['RegTech;, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],
+    integrations: ['Core systems;, Regulatory databases, Reporting tools, Audit systems, Training platforms'],
+    useCases: ['Regulatory compliance;, Automated reporting, Risk monitoring, Policy management, Training'],
     roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],
     marketSize: '$15B RegTech market';
     growthRate: '40% annual growth';
     variant: 'fintech';
@@ -1015,7 +1008,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
@@ -1024,7 +1017,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 89;
 
 
-    rating: 4 && 4.5,
+    rating: 4 && 4.5;,
     rating: 4.5;
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 52
@@ -1033,10 +1026,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
-    launch_date: '2025 - 02 - 12',
-    rating: 4 && 4.5,
+    launch_date: '2025 - 02 - 12';,
+    rating: 4 && 4.5;,
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.
-    launchDate: '2025-02-12,
+    launchDate: '2025-02-12;,
 
   {'
       'Regulatory monitoring',''
@@ -1050,31 +1043,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time updates',''
       'Performance analytics','
     ],
-    popular: false,'
-    icon: '📋',''
+    popular: false;,'
+    icon: '📋';,''
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',''
-    launchDate: '2025-02-12','
-    customers: 89,
-    rating: 4.5,
-    reviews: 52,
+    launchDate: '2025-02-12';,'
+    customers: 89;,
+    rating: 4.5;,
+    reviews: 52;,
   },;'
 ];      mobile: '+1 302 464 0950';','
   email: 'kleber@ziontechgroup.com';''
-      address: '364 E Main St STE 1008 Middletown DE 19709'','
-  website: 'https://ziontechgroup.com''
+      address: '364 E Main St STE 1008 Middletown DE 19709'';,'
+  website: 'https://ziontechgroup.com'';
     }
 '
-    color: 'from - gray - 600 via - slate - 600 to - zinc - 600',''
-    text_color: 'text - gray - 400',''
-    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform','
+    color: 'from - gray - 600 via - slate - 600 to - zinc - 600';,''
+    text_color: 'text - gray - 400';,''
+    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform';,'
     market_position:;'
       'Leading RegTech platform with comprehensive compliance automation','
     target_audience:;'
       'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies','
-    trial_days: 14,'
-    setup_time: '7 - 10 days',''
-    category: 'Fintech','
-    real_service: true,
+    trial_days: 14;,'
+    setup_time: '7 - 10 days';,''
+    category: 'Fintech';,'
+    real_service: true;,
     technology: [;'
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI / ML',']
     ],
@@ -1084,30 +1077,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;'
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training',']
     ],'
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.',''
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],''
-    market_size: '$15B RegTech market',''
-    growth_rate: '40% annual growth',''
-    variant: 'fintech','
-    contact_info: {,'
-  mobile: '+1 302 464 0950',''
-      email: 'kleber@ziontechgroup && ziontechgroup.com',''
-      address: '364 E Main St STE 1008 Middletown DE 19709',''
-      website: 'https://ziontechgroup && ziontechgroup.com','
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';,''
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],''
+    market_size: '$15B RegTech market';,''
+    growth_rate: '40% annual growth';,''
+    variant: 'fintech';,'
+    contact_info: {;,'
+  mobile: '+1 302 464 0950';,''
+      email: 'kleber@ziontechgroup && ziontechgroup.com';,''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,''
+      website: 'https://ziontechgroup && ziontechgroup.com';,'
     },
-    real_implementation: true,
+    real_implementation: true;,
     implementation_details:;'
       'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',''
-    launch_date: '2025 - 02 - 12','
-    customers: 89,
-    rating: 4 && 4.5,
-    reviews: 52,
+    launch_date: '2025 - 02 - 12';,'
+    customers: 89;,
+    rating: 4 && 4.5;,
+    reviews: 52;,
   },'
-    id: 'regtech-compliance-automation-platform'','
+    id: 'regtech-compliance-automation-platform'';,'
   name: 'RegTech Compliance Automation Platform'''
-    tagline: 'Automated regulatory compliance and reporting'','
+    tagline: 'Automated regulatory compliance and reporting'';,'
   price: '$699'''
-    period: '/month'',
+    period: '/month'';,
   description:'
       'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.''
     features: ['
@@ -1124,16 +1117,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     popular: false;,'
   icon: '📋'''
-    color: 'from-gray-600 via-slate-600 to-zinc-600'','
+    color: 'from-gray-600 via-slate-600 to-zinc-600'';,'
   textColor: 'text-gray-400'''
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'',
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'';,
   marketPosition:'
       'Leading RegTech platform with comprehensive compliance automation''
     targetAudience:'
       'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies''
     trialDays: 14;,'
   setupTime: '7-10 days'''
-    category: 'Fintech'',
+    category: 'Fintech'';,
   realService: true;
     technology: ['
       'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'']
@@ -1146,14 +1139,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['
       'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'']
     ]'
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'','
-  competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']''
-    marketSize: '$15B RegTech market'','
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'';,'
+  competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize']''
+    marketSize: '$15B RegTech market'';,'
   growthRate: '40% annual growth'''
-    variant: 'fintech'',
+    variant: 'fintech'';,
   contactInfo: {'
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'''
-    launchDate: '2025-02-12'',
+    launchDate: '2025-02-12'';,
   customers: 89;
     rating: 4.5;,
   reviews: 52;
@@ -1162,98 +1155,97 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2025-02-12';',
 
 pr-12325
-import { ServiceVariant } from '../types/service-variants',;
   customers: 89;
 '
-import { ServiceVariant } from '../types/service-variants',;'
+import { ServiceVariant } from '../types/service-variants';'
 
 export interface AdvancedFintechSolution2025 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
+  id: string;,;
+  name: string;,;
+  tagline: string;,;
+  price: string;,;
+  period: string;,;
+  description: string;,;
+  features: string[];,;
+  popular: boolean;,;
+  icon: string;,;
+  color: string;,;
+  textColor: string;,;
+  link: string;,;
+  marketPosition: string;,;
+  targetAudience: string;,;
+  trialDays: number;,;
+  setupTime: string;,;
+  category: string;,;
+  realService: boolean;,;
+  technology: string[];,;
+  integrations: string[];,;
+  useCases: string[];,;
+  roi: string;,;
+  competitors: string[];,;
+  marketSize: string;,;
+  growthRate: string;,;
+  variant: ServiceVariant;,;
   contactInfo: {;
-    mobile: string,;
+    mobile: string;,;
   contactInfo: {;,
-  mobile: string,;
-    email: string,;
-    address: string,;}
+  mobile: string;,;
+    email: string;,;
+    address: string;,;}
     website: string;}
   },;
   contactInfo: {;,
-  mobile: string,;
-    email: string,;
-    address: string,;
+  mobile: string;,;
+    email: string;,;
+    address: string;,;
     website: string;
 pr-12325
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
+  realImplementation: boolean;,;
+  implementationDetails: string;,;
+  launchDate: string;,;
+  customers: number;,;
+  rating: number;,;
   reviews: number;
 }
 pr-12325
 ;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {;
-    id: 'ai-powered-credit-risk-assessment',;
-    name: 'AI-Powered Credit Risk Assessment',;
-    tagline: 'Intelligent credit scoring with alternative data analysis',;
-    price: '$1,199',;
-    period: '/month',;
-    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;
+    id: 'ai-powered-credit-risk-assessment';,;
+    name: 'AI-Powered Credit Risk Assessment';,;
+    tagline: 'Intelligent credit scoring with alternative data analysis';,;
+    price: '$1;,199',;
+    period: '/month';,;
+    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';,;
     features: [;
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;
       'Performance analyticsRegulatory compliance';
       'Performance analyticsRegulatory compliance';']
 pr-12325
     ],;
-    popular: true,;
-    icon: '💳',;
-    color: 'from-green-600 via-emerald-600 to-teal-600',;
-    textColor: 'text-green-400',;
-    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',;
-    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',;
-    targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',;
-    trialDays: 30,;
-    setupTime: '15-20 days',;
-    category: 'Fintech',;
-    realService: true,;
-    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;
-    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;
-    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],;
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',;
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],;
-    marketSize: '$35B credit scoring market',;
-    growthRate: '25% annual growth',;
-    variant: 'ai-finance-enterprise',;
+    popular: true;,;
+    icon: '💳';,;
+    color: 'from-green-600 via-emerald-600 to-teal-600';,;
+    textColor: 'text-green-400';,;
+    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment';,;
+    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis';,;
+    targetAudience: 'Banks;, Credit unions, Fintech companies, Lending platforms, Insurance companies',;
+    trialDays: 30;,;
+    setupTime: '15-20 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
+    technology: ['Machine Learning;, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;
+    integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;
+    useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],;
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,;
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],;
+    marketSize: '$35B credit scoring market';,;
+    growthRate: '25% annual growth';,;
+    variant: 'ai-finance-enterprise';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
@@ -1262,7 +1254,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launch_date: '2025 - 02 - 12';
     customers: 89;
-    rating: 4.5,
+    rating: 4.5;,
     reviews: 52;
   }
   }
@@ -1278,42 +1270,41 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
   {;'
-    id: 'ai-powered-credit-risk-assessment',;''
-    name: 'AI-Powered Credit Risk Assessment',;''
-    tagline: 'Intelligent credit scoring with alternative data analysis',;''
-    price: '$1,199',;''
-    period: '/month',;''
-    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;'
+    id: 'ai-powered-credit-risk-assessment';,;''
+    name: 'AI-Powered Credit Risk Assessment';,;''
+    tagline: 'Intelligent credit scoring with alternative data analysis';,;''
+    price: '$1;,199',;''
+    period: '/month';,;''
+    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';,;'
     features: [;'
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;''
       'Performance analyticsRegulatory compliance';']
     ],;
 
-    popular: true,;'
-    icon: '💳',;''
-    color: 'from-green-600 via-emerald-600 to-teal-600',;''
-    textColor: 'text-green-400',;''
-    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',;''
-    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',;''
-    targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',;'
-    trialDays: 30,;'
-    setupTime: '15-20 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;''
-    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;''
-    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],;''
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',;''
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],;''
-    marketSize: '$35B credit scoring market',;''
-    growthRate: '25% annual growth',;''
-    variant: 'ai-finance-enterprise',;'
+    popular: true;,;'
+    icon: '💳';,;''
+    color: 'from-green-600 via-emerald-600 to-teal-600';,;''
+    textColor: 'text-green-400';,;''
+    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment';,;''
+    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis';,;''
+    targetAudience: 'Banks;, Credit unions, Fintech companies, Lending platforms, Insurance companies',;'
+    trialDays: 30;,;'
+    setupTime: '15-20 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['Machine Learning;, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;''
+    integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;''
+    useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],;''
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,;''
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],;''
+    marketSize: '$35B credit scoring market';,;''
+    growthRate: '25% annual growth';,;''
+    variant: 'ai-finance-enterprise';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     }
     real_implementation: true;,'
@@ -1321,7 +1312,7 @@ import { ServiceVariant } from '../types/service-variants',;
     launch_date: '2025 - 02 - 12';',
   customers: 89;
 
-    rating: 4.5,
+    rating: 4.5;,
     reviews: 52;
   }
 
@@ -1333,455 +1324,454 @@ import { ServiceVariant } from '../types/service-variants',;
   }
 
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface AdvancedFintechSolution2025 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
+  id: string;,;
+  name: string;,;
+  tagline: string;,;
+  price: string;,;
+  period: string;,;
+  description: string;,;
+  features: string[];,;
+  popular: boolean;,;
+  icon: string;,;
+  color: string;,;
+  textColor: string;,;
+  link: string;,;
+  marketPosition: string;,;
+  targetAudience: string;,;
+  trialDays: number;,;
+  setupTime: string;,;
+  category: string;,;
+  realService: boolean;,;
+  technology: string[];,;
+  integrations: string[];,;
+  useCases: string[];,;
+  roi: string;,;
+  competitors: string[];,;
+  marketSize: string;,;
+  growthRate: string;,;
+  variant: ServiceVariant;,;
   contactInfo: {;
-    mobile: string,;
+    mobile: string;,;
   contactInfo: {;,
-  mobile: string,;
-    email: string,;
-    address: string,;
+  mobile: string;,;
+    email: string;,;
+    address: string;,;
     website: string;
   },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
+  realImplementation: boolean;,;
+  implementationDetails: string;,;
+  launchDate: string;,;
+  customers: number;,;
+  rating: number;,;
   reviews: number;
 }
 ;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {;
-    id: 'ai-powered-credit-risk-assessment',;
-    name: 'AI-Powered Credit Risk Assessment',;
-    tagline: 'Intelligent credit scoring with alternative data analysis',;
-    price: '$1,199',;
-    period: '/month',;
-    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;
+    id: 'ai-powered-credit-risk-assessment';,;
+    name: 'AI-Powered Credit Risk Assessment';,;
+    tagline: 'Intelligent credit scoring with alternative data analysis';,;
+    price: '$1;,199',;
+    period: '/month';,;
+    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';,;
     features: [;
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;
       'Performance analyticsRegulatory compliance';
     ],;
-    popular: true,;
-    icon: '💳',;
-    color: 'from-green-600 via-emerald-600 to-teal-600',;
-    textColor: 'text-green-400',;
-    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',;
-    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',;
-    targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',;
-    trialDays: 30,;
-    setupTime: '15-20 days',;
-    category: 'Fintech',;
-    realService: true,;
-    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;
-    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;
-    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],;
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',;
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],;
-    marketSize: '$35B credit scoring market',;
-    growthRate: '25% annual growth',;
-    variant: 'ai-finance-enterprise',;
+    popular: true;,;
+    icon: '💳';,;
+    color: 'from-green-600 via-emerald-600 to-teal-600';,;
+    textColor: 'text-green-400';,;
+    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment';,;
+    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis';,;
+    targetAudience: 'Banks;, Credit unions, Fintech companies, Lending platforms, Insurance companies',;
+    trialDays: 30;,;
+    setupTime: '15-20 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
+    technology: ['Machine Learning;, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;
+    integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;
+    useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],;
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,;
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],;
+    marketSize: '$35B credit scoring market';,;
+    growthRate: '25% annual growth';,;
+    variant: 'ai-finance-enterprise';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     },;
-  mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+  mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     real_implementation: true;,
   implementation_details: 'Production - ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launch_date: '2025 - 02 - 12';',
 ];
 pr-12325
-    realImplementation: true,;
-    implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',;
-    launchDate: '2025-01-22',;
+    realImplementation: true;,;
+    implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.';,;
+    launchDate: '2025-01-22';,;
   {;'
-    id: 'ai-powered-credit-risk-assessment',;''
-    name: 'AI-Powered Credit Risk Assessment',;''
-    tagline: 'Intelligent credit scoring with alternative data analysis',;''
-    price: '$1,199',;''
-    period: '/month',;''
-    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',;'
+    id: 'ai-powered-credit-risk-assessment';,;''
+    name: 'AI-Powered Credit Risk Assessment';,;''
+    tagline: 'Intelligent credit scoring with alternative data analysis';,;''
+    price: '$1;,199',;''
+    period: '/month';,;''
+    description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';,;'
     features: [;'
       'Alternative data analysisMachine learning modelsReal-time scoringRisk predictionFraud detectionCompliance reportingAPI integrationCustom scoring models',;''
       'Performance analyticsRegulatory compliance';']
     ],;
-    popular: true,;'
-    icon: '💳',;''
-    color: 'from-green-600 via-emerald-600 to-teal-600',;''
-    textColor: 'text-green-400',;''
-    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',;''
-    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',;''
-    targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',;'
-    trialDays: 30,;'
-    setupTime: '15-20 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;''
-    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;''
-    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],;''
-    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',;''
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],;''
-    marketSize: '$35B credit scoring market',;''
-    growthRate: '25% annual growth',;''
-    variant: 'ai-finance-enterprise',;'
+    popular: true;,;'
+    icon: '💳';,;''
+    color: 'from-green-600 via-emerald-600 to-teal-600';,;''
+    textColor: 'text-green-400';,;''
+    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment';,;''
+    marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis';,;''
+    targetAudience: 'Banks;, Credit unions, Fintech companies, Lending platforms, Insurance companies',;'
+    trialDays: 30;,;'
+    setupTime: '15-20 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['Machine Learning;, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],;''
+    integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],;''
+    useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],;''
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';,;''
+    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],;''
+    marketSize: '$35B credit scoring market';,;''
+    growthRate: '25% annual growth';,;''
+    variant: 'ai-finance-enterprise';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     },;
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',;''
-    launchDate: '2025-01-22',;'
-    customers: 67,;
-    rating: 4.8,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.';,;''
+    launchDate: '2025-01-22';,;'
+    customers: 67;,;
+    rating: 4.8;,;
     reviews: 45;
   },;
   {;
 pr-12325
-    id: 'blockchain-payment-processing-platform',;
-    name: 'Blockchain Payment Processing Platform',;
-    tagline: 'Secure cross-border payments with blockchain technology',;
-    price: '$899',;
-    period: '/month',;
-    description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',;
+    id: 'blockchain-payment-processing-platform';,;
+    name: 'Blockchain Payment Processing Platform';,;
+    tagline: 'Secure cross-border payments with blockchain technology';,;
+    price: '$899';,;
+    period: '/month';,;
+    description: 'Advanced blockchain-based payment processing platform that enables fast;, secure, and cost-effective cross-border transactions with real-time settlement.',;
     features: [;
       'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud prevention',;
       'Regulatory reportingCost optimization';
     ],;
-    popular: true,;
-    description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',;
+    popular: true;,;
+    description: 'Advanced blockchain-based payment processing platform that enables fast;, secure, and cost-effective cross-border transactions with real-time settlement.',;
       'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud prevention',;
       'Regulatory reportingCost optimization';']
 pr-12325
-    icon: '⛓️',;
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/blockchain-payment-processing-platform',;
-    marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities',;
-    targetAudience: 'Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',;
-    trialDays: 21,;
-    setupTime: '10-15 days',;
-    category: 'Fintech',;
-    realService: true,;
+    icon: '⛓️';,;
+    color: 'from-blue-600 via-cyan-600 to-teal-600';,;
+    textColor: 'text-blue-400';,;
+    link: 'https://ziontechgroup.com/blockchain-payment-processing-platform';,;
+    marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities';,;
+    targetAudience: 'Banks;, Payment processors, E-commerce platforms, International businesses, Fintech companies',;
+    trialDays: 21;,;
+    setupTime: '10-15 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
 pr-12325
-    technology: ['Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],;
-    integrations: ['Banking systems, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],;
-    useCases: ['Cross-border payments, International transfers, B2B payments, Remittances, Trade finance'],;
-    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.',;
-    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],;
-    marketSize: '$28B blockchain payments market',;
-    growthRate: '55% annual growth',;
-    variant: 'blockchain-futuristic',;
+    technology: ['Blockchain;, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],;
+    integrations: ['Banking systems;, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],;
+    useCases: ['Cross-border payments;, International transfers, B2B payments, Remittances, Trade finance'],;
+    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.';,;
+    competitors: ['Ripple;, Stellar, Circle, Coinbase, Binance'],;
+    marketSize: '$28B blockchain payments market';,;
+    growthRate: '55% annual growth';,;
+    variant: 'blockchain-futuristic';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     },;
-    realImplementation: true,;
+    realImplementation: true;,;
 pr-12325
-    implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.',;
-    launchDate: '2025-01-28',;
+    implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.';,;
+    launchDate: '2025-01-28';,;
   {;'
-    id: 'blockchain-payment-processing-platform',;''
-    name: 'Blockchain Payment Processing Platform',;''
-    tagline: 'Secure cross-border payments with blockchain technology',;''
-    price: '$899',;''
-    period: '/month',;''
-    description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',;'
+    id: 'blockchain-payment-processing-platform';,;''
+    name: 'Blockchain Payment Processing Platform';,;''
+    tagline: 'Secure cross-border payments with blockchain technology';,;''
+    price: '$899';,;''
+    period: '/month';,;''
+    description: 'Advanced blockchain-based payment processing platform that enables fast;, secure, and cost-effective cross-border transactions with real-time settlement.',;'
     features: [;'
       'Cross-border paymentsReal-time settlementMulti-currency supportSmart contractsCompliance toolsAPI integrationTransaction monitoringFraud prevention',;''
       'Regulatory reportingCost optimization';']
     ],;
-    popular: true,;'
-    icon: '⛓️',;''
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;''
-    textColor: 'text-blue-400',;''
-    link: 'https://ziontechgroup.com/blockchain-payment-processing-platform',;''
-    marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities',;''
-    targetAudience: 'Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',;'
-    trialDays: 21,;'
-    setupTime: '10-15 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],;''
-    integrations: ['Banking systems, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],;''
-    useCases: ['Cross-border payments, International transfers, B2B payments, Remittances, Trade finance'],;''
-    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.',;''
-    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],;''
-    marketSize: '$28B blockchain payments market',;''
-    growthRate: '55% annual growth',;''
-    variant: 'blockchain-futuristic',;'
+    popular: true;,;'
+    icon: '⛓️';,;''
+    color: 'from-blue-600 via-cyan-600 to-teal-600';,;''
+    textColor: 'text-blue-400';,;''
+    link: 'https://ziontechgroup.com/blockchain-payment-processing-platform';,;''
+    marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities';,;''
+    targetAudience: 'Banks;, Payment processors, E-commerce platforms, International businesses, Fintech companies',;'
+    trialDays: 21;,;'
+    setupTime: '10-15 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['Blockchain;, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],;''
+    integrations: ['Banking systems;, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],;''
+    useCases: ['Cross-border payments;, International transfers, B2B payments, Remittances, Trade finance'],;''
+    roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.';,;''
+    competitors: ['Ripple;, Stellar, Circle, Coinbase, Binance'],;''
+    marketSize: '$28B blockchain payments market';,;''
+    growthRate: '55% annual growth';,;''
+    variant: 'blockchain-futuristic';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     },;
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.',;''
-    launchDate: '2025-01-28',;'
-    customers: 89,;
-    rating: 4.7,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.';,;''
+    launchDate: '2025-01-28';,;'
+    customers: 89;,;
+    rating: 4.7;,;
     reviews: 56;
   },;
   {;
 pr-12325
-    id: 'quantum-financial-modeling-platform',;
-    name: 'Quantum Financial Modeling Platform',;
-    tagline: 'Quantum computing for advanced financial modeling',;
-    price: '$2,499',;
-    period: '/month',;
-    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',;
+    id: 'quantum-financial-modeling-platform';,;
+    name: 'Quantum Financial Modeling Platform';,;
+    tagline: 'Quantum computing for advanced financial modeling';,;
+    price: '$2;,499',;
+    period: '/month';,;
+    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.';,;
     features: [;
       'Quantum algorithmsPortfolio optimizationRisk modelingOption pricingMonte Carlo simulationQuantum machine learningReal-time calculationsAPI access',;
       'Custom modelsPerformance analytics';
     ],;
-    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',;
+    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.';,;
       'Quantum algorithmsPortfolio optimizationRisk modelingOption pricingMonte Carlo simulationQuantum machine learningReal-time calculationsAPI access',;
       'Custom modelsPerformance analytics';']
 pr-12325
-    popular: false,;
-    icon: '⚛️',;
-    color: 'from-purple-600 via-violet-600 to-indigo-600',;
-    textColor: 'text-purple-400',;
-    link: 'https://ziontechgroup.com/quantum-financial-modeling-platform',;
-    marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities',;
-    targetAudience: 'Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',;
-    trialDays: 45,;
-    setupTime: '20-30 days',;
-    category: 'Fintech',;
-    realService: true,;
+    popular: false;,;
+    icon: '⚛️';,;
+    color: 'from-purple-600 via-violet-600 to-indigo-600';,;
+    textColor: 'text-purple-400';,;
+    link: 'https://ziontechgroup.com/quantum-financial-modeling-platform';,;
+    marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities';,;
+    targetAudience: 'Investment banks;, Hedge funds, Asset managers, Insurance companies, Research institutions',;
+    trialDays: 45;,;
+    setupTime: '20-30 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
 pr-12325
-    technology: ['Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],;
-    integrations: ['Trading platforms, Risk management systems, Data providers, Analytics tools, Reporting systems'],;
-    useCases: ['Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research'],;
-    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.',;
-    competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],;
-    marketSize: '$8B quantum computing market',;
-    growthRate: '65% annual growth',;
-    variant: 'quantum-financial',;
+    technology: ['Quantum Computing;, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],;
+    integrations: ['Trading platforms;, Risk management systems, Data providers, Analytics tools, Reporting systems'],;
+    useCases: ['Portfolio optimization;, Risk modeling, Option pricing, Asset allocation, Financial research'],;
+    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.';,;
+    competitors: ['IBM Quantum;, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],;
+    marketSize: '$8B quantum computing market';,;
+    growthRate: '65% annual growth';,;
+    variant: 'quantum-financial';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     },;
-    realImplementation: true,;
+    realImplementation: true;,;
 pr-12325
-    implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.',;
-    launchDate: '2025-02-03',;
+    implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.';,;
+    launchDate: '2025-02-03';,;
   {;'
-    id: 'quantum-financial-modeling-platform',;''
-    name: 'Quantum Financial Modeling Platform',;''
-    tagline: 'Quantum computing for advanced financial modeling',;''
-    price: '$2,499',;''
-    period: '/month',;''
-    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',;'
+    id: 'quantum-financial-modeling-platform';,;''
+    name: 'Quantum Financial Modeling Platform';,;''
+    tagline: 'Quantum computing for advanced financial modeling';,;''
+    price: '$2;,499',;''
+    period: '/month';,;''
+    description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.';,;'
     features: [;'
       'Quantum algorithmsPortfolio optimizationRisk modelingOption pricingMonte Carlo simulationQuantum machine learningReal-time calculationsAPI access',;''
       'Custom modelsPerformance analytics';']
     ],;
-    popular: false,;'
-    icon: '⚛️',;''
-    color: 'from-purple-600 via-violet-600 to-indigo-600',;''
-    textColor: 'text-purple-400',;''
-    link: 'https://ziontechgroup.com/quantum-financial-modeling-platform',;''
-    marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities',;''
-    targetAudience: 'Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',;'
-    trialDays: 45,;'
-    setupTime: '20-30 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],;''
-    integrations: ['Trading platforms, Risk management systems, Data providers, Analytics tools, Reporting systems'],;''
-    useCases: ['Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research'],;''
-    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.',;''
-    competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],;''
-    marketSize: '$8B quantum computing market',;''
-    growthRate: '65% annual growth',;''
-    variant: 'quantum-financial',;'
+    popular: false;,;'
+    icon: '⚛️';,;''
+    color: 'from-purple-600 via-violet-600 to-indigo-600';,;''
+    textColor: 'text-purple-400';,;''
+    link: 'https://ziontechgroup.com/quantum-financial-modeling-platform';,;''
+    marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities';,;''
+    targetAudience: 'Investment banks;, Hedge funds, Asset managers, Insurance companies, Research institutions',;'
+    trialDays: 45;,;'
+    setupTime: '20-30 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['Quantum Computing;, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],;''
+    integrations: ['Trading platforms;, Risk management systems, Data providers, Analytics tools, Reporting systems'],;''
+    useCases: ['Portfolio optimization;, Risk modeling, Option pricing, Asset allocation, Financial research'],;''
+    roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.';,;''
+    competitors: ['IBM Quantum;, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],;''
+    marketSize: '$8B quantum computing market';,;''
+    growthRate: '65% annual growth';,;''
+    variant: 'quantum-financial';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     },;
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.',;''
-    launchDate: '2025-02-03',;'
-    customers: 23,;
-    rating: 4.9,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.';,;''
+    launchDate: '2025-02-03';,;'
+    customers: 23;,;
+    rating: 4.9;,;
     reviews: 18;
   },;
   {;
 pr-12325
-    id: 'ai-powered-insurance-underwriting',;
-    name: 'AI-Powered Insurance Underwriting',;
-    tagline: 'Intelligent insurance risk assessment and pricing',;
-    price: '$799',;
-    period: '/month',;
-    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',;
+    id: 'ai-powered-insurance-underwriting';,;
+    name: 'AI-Powered Insurance Underwriting';,;
+    tagline: 'Intelligent insurance risk assessment and pricing';,;
+    price: '$799';,;
+    period: '/month';,;
+    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk;, determine pricing, and automate the underwriting process.',;
     features: [;
       'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance tools',;
       'API integrationPerformance analytics';
     ],;
-    popular: true,;
-    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',;
+    popular: true;,;
+    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk;, determine pricing, and automate the underwriting process.',;
       'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance tools',;
       'API integrationPerformance analytics';']
 pr-12325
-    icon: '🛡️',;
-    color: 'from-orange-600 via-amber-600 to-yellow-600',;
-    textColor: 'text-orange-400',;
-    link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting',;
-    marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment',;
-    targetAudience: 'Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',;
-    trialDays: 21,;
-    setupTime: '10-15 days',;
-    category: 'Fintech',;
-    realService: true,;
+    icon: '🛡️';,;
+    color: 'from-orange-600 via-amber-600 to-yellow-600';,;
+    textColor: 'text-orange-400';,;
+    link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting';,;
+    marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment';,;
+    targetAudience: 'Insurance companies;, Reinsurers, Brokers, Agents, Insurtech companies',;
+    trialDays: 21;,;
+    setupTime: '10-15 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
 pr-12325
-    technology: ['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],;
-    integrations: ['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],;
-    useCases: ['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],;
-    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',;
-    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],;
-    marketSize: '$20B insurtech market',;
-    growthRate: '30% annual growth',;
-    variant: 'ai-finance-enterprise',;
+    technology: ['Machine Learning;, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],;
+    integrations: ['Policy management systems;, Claims systems, CRM platforms, Data providers, Compliance tools'],;
+    useCases: ['Risk assessment;, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],;
+    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.';,;
+    competitors: ['Lemonade;, Root Insurance, Tractable, Shift Technology, Cape Analytics'],;
+    marketSize: '$20B insurtech market';,;
+    growthRate: '30% annual growth';,;
+    variant: 'ai-finance-enterprise';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     },;
-    realImplementation: true,;
+    realImplementation: true;,;
 pr-12325
-    implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',;
-    launchDate: '2025-02-08',;
+    implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.';,;
+    launchDate: '2025-02-08';,;
   {;'
-    id: 'ai-powered-insurance-underwriting',;''
-    name: 'AI-Powered Insurance Underwriting',;''
-    tagline: 'Intelligent insurance risk assessment and pricing',;''
-    price: '$799',;''
-    period: '/month',;''
-    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',;'
+    id: 'ai-powered-insurance-underwriting';,;''
+    name: 'AI-Powered Insurance Underwriting';,;''
+    tagline: 'Intelligent insurance risk assessment and pricing';,;''
+    price: '$799';,;''
+    period: '/month';,;''
+    description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk;, determine pricing, and automate the underwriting process.',;'
     features: [;'
       'AI risk assessmentAutomated underwritingPredictive modelingClaims predictionFraud detectionPolicy optimizationCustomer segmentationCompliance tools',;''
       'API integrationPerformance analytics';']
     ],;
-    popular: true,;'
-    icon: '🛡️',;''
-    color: 'from-orange-600 via-amber-600 to-yellow-600',;''
-    textColor: 'text-orange-400',;''
-    link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting',;''
-    marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment',;''
-    targetAudience: 'Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',;'
-    trialDays: 21,;'
-    setupTime: '10-15 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],;''
-    integrations: ['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],;''
-    useCases: ['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],;''
-    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',;''
-    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],;''
-    marketSize: '$20B insurtech market',;''
-    growthRate: '30% annual growth',;''
-    variant: 'ai-finance-enterprise',;'
+    popular: true;,;'
+    icon: '🛡️';,;''
+    color: 'from-orange-600 via-amber-600 to-yellow-600';,;''
+    textColor: 'text-orange-400';,;''
+    link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting';,;''
+    marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment';,;''
+    targetAudience: 'Insurance companies;, Reinsurers, Brokers, Agents, Insurtech companies',;'
+    trialDays: 21;,;'
+    setupTime: '10-15 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['Machine Learning;, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],;''
+    integrations: ['Policy management systems;, Claims systems, CRM platforms, Data providers, Compliance tools'],;''
+    useCases: ['Risk assessment;, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],;''
+    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.';,;''
+    competitors: ['Lemonade;, Root Insurance, Tractable, Shift Technology, Cape Analytics'],;''
+    marketSize: '$20B insurtech market';,;''
+    growthRate: '30% annual growth';,;''
+    variant: 'ai-finance-enterprise';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     },;
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',;''
-    launchDate: '2025-02-08',;'
-    customers: 134,;
-    rating: 4.6,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.';,;''
+    launchDate: '2025-02-08';,;'
+    customers: 134;,;
+    rating: 4.6;,;
     reviews: 78;
   },;
   {;
 pr-12325
-    id: 'regtech-compliance-automation-platform',;
-    name: 'RegTech Compliance Automation Platform',;
-    tagline: 'Automated regulatory compliance and reporting',;
-    price: '$699',;
-    period: '/month',;
-    description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;
+    id: 'regtech-compliance-automation-platform';,;
+    name: 'RegTech Compliance Automation Platform';,;
+    tagline: 'Automated regulatory compliance and reporting';,;
+    price: '$699';,;
+    period: '/month';,;
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;
     features: [;
       'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integration',;
       'Real-time updatesPerformance analytics';
     ],;
-    popular: false,;
-    description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;
+    popular: false;,;
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;
       'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integration',;
       'Real-time updatesPerformance analytics';']
 pr-12325
-    icon: '📋',;
-    color: 'from-gray-600 via-slate-600 to-zinc-600',;
-    textColor: 'text-gray-400',;
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform',;
-    marketPosition: 'Leading RegTech platform with comprehensive compliance automation',;
-    targetAudience: 'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',;
-    trialDays: 14,;
-    setupTime: '7-10 days',;
-    category: 'Fintech',;
-    realService: true,;
+    icon: '📋';,;
+    color: 'from-gray-600 via-slate-600 to-zinc-600';,;
+    textColor: 'text-gray-400';,;
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform';,;
+    marketPosition: 'Leading RegTech platform with comprehensive compliance automation';,;
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies',;
+    trialDays: 14;,;
+    setupTime: '7-10 days';,;
+    category: 'Fintech';,;
+    realService: true;,;
 pr-12325
-    technology: ['RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],;
-    integrations: ['Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'],;
-    useCases: ['Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'],;
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.',;
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],;
-    marketSize: '$15B RegTech market',;
-    growthRate: '40% annual growth',;
-    variant: 'fintech',;
+    technology: ['RegTech;, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],;
+    integrations: ['Core systems;, Regulatory databases, Reporting tools, Audit systems, Training platforms'],;
+    useCases: ['Regulatory compliance;, Automated reporting, Risk monitoring, Policy management, Training'],;
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';,;
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],;
+    marketSize: '$15B RegTech market';,;
+    growthRate: '40% annual growth';,;
+    variant: 'fintech';,;
     contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      mobile: '+1 302 464 0950';,;
+      email: 'kleber@ziontechgroup.com';,;
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;
       website: 'https://ziontechgroup.com';
     },;
-    realImplementation: true,;
-    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',;
-    launchDate: '2025-02-12',;
-    customers: 89,;
+    realImplementation: true;,;
+    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';,;
+    launchDate: '2025-02-12';,;
+    customers: 89;,;
     rating: 4.5;
     reviews: 52;
   }
@@ -1789,49 +1779,49 @@ pr-12325
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
-    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',;
-    launchDate: '2025-02-12',;
+    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';,;
+    launchDate: '2025-02-12';,;
 pr-12325
   {;'
-    id: 'regtech-compliance-automation-platform',;''
-    name: 'RegTech Compliance Automation Platform',;''
-    tagline: 'Automated regulatory compliance and reporting',;''
-    price: '$699',;''
-    period: '/month',;''
-    description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;'
+    id: 'regtech-compliance-automation-platform';,;''
+    name: 'RegTech Compliance Automation Platform';,;''
+    tagline: 'Automated regulatory compliance and reporting';,;''
+    price: '$699';,;''
+    period: '/month';,;''
+    description: 'Advanced RegTech platform that automates regulatory compliance;, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',;'
     features: [;'
       'Regulatory monitoringAutomated reportingCompliance trackingRisk assessmentAudit trailsPolicy managementTraining modulesAPI integration',;''
       'Real-time updatesPerformance analytics';']
     ],;
-    popular: false,;'
-    icon: '📋',;''
-    color: 'from-gray-600 via-slate-600 to-zinc-600',;''
-    textColor: 'text-gray-400',;''
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform',;''
-    marketPosition: 'Leading RegTech platform with comprehensive compliance automation',;''
-    targetAudience: 'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',;'
-    trialDays: 14,;'
-    setupTime: '7-10 days',;''
-    category: 'Fintech',;'
-    realService: true,;'
-    technology: ['RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],;''
-    integrations: ['Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'],;''
-    useCases: ['Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'],;''
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.',;''
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],;''
-    marketSize: '$15B RegTech market',;''
-    growthRate: '40% annual growth',;''
-    variant: 'fintech',;'
+    popular: false;,;'
+    icon: '📋';,;''
+    color: 'from-gray-600 via-slate-600 to-zinc-600';,;''
+    textColor: 'text-gray-400';,;''
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform';,;''
+    marketPosition: 'Leading RegTech platform with comprehensive compliance automation';,;''
+    targetAudience: 'Banks;, Credit unions, Investment firms, Insurance companies, Fintech companies',;'
+    trialDays: 14;,;'
+    setupTime: '7-10 days';,;''
+    category: 'Fintech';,;'
+    realService: true;,;'
+    technology: ['RegTech;, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],;''
+    integrations: ['Core systems;, Regulatory databases, Reporting tools, Audit systems, Training platforms'],;''
+    useCases: ['Regulatory compliance;, Automated reporting, Risk monitoring, Policy management, Training'],;''
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';,;''
+    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],;''
+    marketSize: '$15B RegTech market';,;''
+    growthRate: '40% annual growth';,;''
+    variant: 'fintech';,;'
     contactInfo: {;,'
-  mobile: '+1 302 464 0950',;''
-      email: 'kleber@ziontechgroup.com',;''
-      address: '364 E Main St STE 1008 Middletown DE 19709',;''
+  mobile: '+1 302 464 0950';,;''
+      email: 'kleber@ziontechgroup.com';,;''
+      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
       website: 'https://ziontechgroup.com';'
     },;
-    realImplementation: true,;'
-    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',;''
-    launchDate: '2025-02-12',;'
-    customers: 89,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';,;''
+    launchDate: '2025-02-12';,;'
+    customers: 89;,;
     rating: 4.5;,
   reviews: 52;
   }

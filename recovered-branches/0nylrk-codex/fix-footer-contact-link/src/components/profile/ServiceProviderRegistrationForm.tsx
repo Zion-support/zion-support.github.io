@@ -31,14 +31,14 @@ const serviceProfileSchema = z && z.object({;
 type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {;
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Switch } from "@/components/ui/switch",;
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -48,8 +48,8 @@ import {
   FormField;
   FormItem;
   FormLabel;
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
 import {
   Form,
   FormControl,
@@ -58,14 +58,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),;
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),

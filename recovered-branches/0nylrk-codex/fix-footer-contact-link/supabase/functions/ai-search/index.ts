@@ -83,7 +83,7 @@ pr-12325
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }")
 });
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",""

@@ -6,18 +6,18 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import React from "react",
-import { Brain, Clock, Award, Zap } from "lucide-react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import React from "react",;
+import { Brain, Clock, Award, Zap } from "lucide-react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 
 import React from \"react\";
 import {Brain, Clock, Award, Zap} from \"lucide-react\";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from \"@/components/ui/card\";
 import {Brain, Clock, Award, Zap} from \"lucide-react\";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from \"@/components/ui/card\";
-import React from \"react\",
-import { Brain, Clock, Award, Zap } from \"lucide-react\",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from \"@/components/ui/card\",
+import React from \"react\",;
+import { Brain, Clock, Award, Zap } from \"lucide-react\",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from \"@/components/ui/card\",;
 const features = [
   {
     icon: <Brain className=\"h-10 w-10 text-zion-cyan\" />

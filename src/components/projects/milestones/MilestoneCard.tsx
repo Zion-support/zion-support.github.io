@@ -1,7 +1,7 @@
 
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button";
 import { format  } from 'date-fns';
 import React from 'react'
@@ -165,15 +165,15 @@ import { Button  } from '@/components / ui / button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { format } from 'date-fns',
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { format } from 'date-fns',;
 import { Check, ArrowDown, X } from 'lucide-react'
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 interface MilestoneCardProps {
   id: string,
   // TODO: Implement
@@ -200,14 +200,14 @@ import { Button  } from '@/components/ui/ button';
   // TODO: Implement
   id: string,
   project_id: string,
-import React from 'react',
+import React from 'react',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
 import { Badge } from "@/components/ui/badge",""
 import { Button } from "@/components/ui/button",""
-import { format } from 'date-fns',
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+import { format } from 'date-fns',;
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
   // TODO: Implement
 pr-12325
   projectId: string,

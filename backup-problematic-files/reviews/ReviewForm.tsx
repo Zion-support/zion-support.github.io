@@ -3,15 +3,15 @@
 }</button> </form>)
 }
 type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
 };import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
-  projectId: string,
-  fromRole: 'client' | 'talent',
-  fromId: string,
-  rating: number,
-  text: string,
+  projectId: string;,
+  fromRole: 'client' | 'talent';,
+  fromId: string;,
+  rating: number;,
+  text: string;,
   categories?: {;
     communication?: number;
     qualityOfWork?: number;
@@ -21,12 +21,12 @@ export type ReviewFormValues = {
   anonymous?: boolean
 }
 type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 
 pr-12325
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
 
-const ReviewForm: React.FC<Props> = ({ initial }) => {
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {
 
       return <div>Something went wrong.</div>;
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
@@ -34,15 +34,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 }</button> </form>) 
 };
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
 };import React, { useState } from 'react';
-import StarRating from './StarRating';
 export type ReviewFormValues = {;
-  projectId: string,;
-  fromRole: 'client' | 'talent',;
-  fromId: string,;
-  rating: number,;
-  text: string,;
+  projectId: string;,;
+  fromRole: 'client' | 'talent';,;
+  fromId: string;,;
+  rating: number;,;
+  text: string;,;
   categories?: {;
     communication?: number;
     qualityOfWork?: number;
@@ -55,9 +54,9 @@ type Props = {;
 }</button> </form>) ;
 
 pr-12325
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;
 
-const ReviewForm: React.FC<Props> = ({ initial }) => {;
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {;
 
   const [communication, setCommunication] = useState<number | undefined>();
 </number>

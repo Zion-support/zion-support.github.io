@@ -21,7 +21,7 @@ pr-12325
   DialogDescription;
   DialogOverlay
 } from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
+import { DisputeForm } from "./DisputeForm",;
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
@@ -37,7 +37,7 @@ interface RaiseDisputeButtonProps {
   className?: string;
 }
 
-import { useNavigate } from "react-router-dom",
+import { useNavigate } from "react-router-dom",;
 import { ShieldAlert } from "lucide-react",  milestoneId, 
   variant = "outline", 
   size,

@@ -1,9 +1,9 @@
 
 
-import React from "react",
+import React from "react",;
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { Drawer } from "@/components/ui/drawer",
+import { Drawer } from "@/components/ui/drawer",;
 import { FilterSidebar } from "@/components/talent/FilterSidebar",  filterProps
 }: MobileFilterDrawerProps) {
   return (
