@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,10 +95,14 @@ import InteractiveElementsdynamic from '../components/InteractiveElements.dynami
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('InteractiveElementsdynamic', () => {
 =======
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import InteractiveElements from '../components/InteractiveElements';
 
 describe('InteractiveElements', () => {
->>>>>>> origin/main
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
@@ -114,6 +119,7 @@ describe('InteractiveElements', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe("InteractiveElementsdynamic",() => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling",() => { render(<InteractiveElementsdynamic />)})});''"
 <<<<<<< HEAD
@@ -179,3 +185,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

@@ -8,12 +8,20 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+<<<<<<< HEAD
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+=======
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "maxNodeModuleJsDepth": 0,
+    "skipDefaultLibCheck": true,
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "esModuleInterop": true,
     "module": "ESNext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -25,7 +33,49 @@
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "strictNullChecks": true
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
+    "allowImportingTsExtensions": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   },
   "include": [
     "next-env.d.ts",

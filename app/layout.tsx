@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
@@ -119,3 +120,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+};
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

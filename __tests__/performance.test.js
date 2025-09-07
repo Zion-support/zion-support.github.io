@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> pr/11282
 });'
@@ -620,6 +621,8 @@ describe('performance', () => {
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -640,6 +643,7 @@ test.describe('Performance Tests', () => {
         usedJSHeapSize: performance.memory?.usedJSHeapSize || 0,
       };
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -859,3 +863,8 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+    expect(metrics.usedJSHeapSize).toBeLessThan(50000000);
+  });
+});
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +102,14 @@ import Header.dynamic from '../components/Header.dynamic';
 
 describe('Header.dynamic', () => {
 >>>>>>> pr/11282
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Header from '../components/Header';
+
+describe('Header', () => {
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   test('renders without crashing', () => {
     render(<Header.dynamic />);
     expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
@@ -119,6 +128,7 @@ describe('Header.dynamic', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Headerdynamic from "./components/Header.dynamic"; describe("Headerdynamic",() => { test("renders without crashing",() => { render(<Headerdynamic />); expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Headerdynamic />)}); test("handles user interactions",() => { render(<Headerdynamic />)}); test("applies correct styling",() => { render(<Headerdynamic />)})});''"
 <<<<<<< HEAD
@@ -182,3 +192,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

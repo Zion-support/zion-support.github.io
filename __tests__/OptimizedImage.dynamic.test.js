@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
 <<<<<<< HEAD
 
@@ -71,39 +72,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-<<<<<<< HEAD
-import OptimizedImagedynamic from '../components/OptimizedImage.dynamic';
-
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import OptimizedImagedynamic from "../components/OptimizedImage.dynamic";
-
-describe("OptimizedImagedynamic", () => {
-  test("renders without crashing", () => {
-    render(<OptimizedImagedynamic />);
-    expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument();
-=======
 import OptimizedImage from '../components/OptimizedImage';
 
 describe('OptimizedImage', () => {
   test('renders without crashing', () => {
     render(<OptimizedImage />);
     expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
->>>>>>> origin/main
   });
-
-});
-
-<<<<<<< HEAD
-
-
-
-
-
   test('displays correct content', () => {
     render(<OptimizedImage />);
     // Add specific content tests based on component
@@ -117,6 +97,7 @@ describe('OptimizedImage', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage.dynamic"; describe("OptimizedImagedynamic",() => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling",() => { render(<OptimizedImagedynamic />)})});''"
 =======
@@ -261,3 +242,5 @@ origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

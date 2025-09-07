@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,10 +93,14 @@ import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('ErrorBoundarydynamic', () => {
 =======
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import ErrorBoundary from '../components/ErrorBoundary';
 
 describe('ErrorBoundary', () => {
->>>>>>> origin/main
   test('renders without crashing', () => {
     expect(true).toBe(true);
   });
@@ -112,6 +117,7 @@ describe('ErrorBoundary', () => {
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ErrorBoundarydynamic from "./components/ErrorBoundary.dynamic"; describe("ErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<ErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<ErrorBoundarydynamic />)})});''"
 <<<<<<< HEAD
@@ -177,3 +183,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

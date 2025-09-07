@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -6,6 +6,7 @@ const path = require('path');
 class ExecuteAllScripts {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.candidateScripts = [
       'comprehensive-automation-suite.cjs',
       'automation-runner.cjs',
@@ -124,6 +125,8 @@ runAll().catch(console.error);
 class ExecuteAllScripts {
   constructor() {
     this.projectRoot = process.cwd();
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     this.scripts = [
       'comprehensive-automation-suite.cjs',
       'automation-runner.cjs',
@@ -183,6 +186,7 @@ if (require.main === module) {
 }
 
 module.exports = ExecuteAllScripts;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
 
@@ -197,3 +201,5 @@ executor.run().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da

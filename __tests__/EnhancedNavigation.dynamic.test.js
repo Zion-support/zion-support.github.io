@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
@@ -22,6 +23,8 @@ describe('EnhancedNavigationdynamic', () => {
 =======
 =======
 >>>>>>> pr/11282
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -31,17 +34,7 @@ describe('EnhancedNavigation.dynamic.test', () => {
 <<<<<<< HEAD
     render(<EnhancedNavigation />);
     expect(screen.getByTestId('enhancednavigation')).toBeInTheDocument();
->>>>>>> origin/main
   });
-
-});
-
-});
-
-import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
-
-});
-});
   test('displays correct content', () => {
     render(<EnhancedNavigation />);
     // Add specific content tests based on component
@@ -55,6 +48,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe("EnhancedNavigationdynamic",() => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic />)}); test("applies correct styling",() => { render(<EnhancedNavigationdynamic />)})});''"
 
@@ -133,3 +127,5 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
