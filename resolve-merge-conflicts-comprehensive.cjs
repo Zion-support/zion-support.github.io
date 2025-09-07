@@ -10,6 +10,35 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
+<<<<<<< HEAD
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+    if (!content.includes('') && !content.includes('>>>>>>>')) {
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+      return false; // No conflicts in this file
+    }
+    
+    console.log(`Resolving conflicts in: ${filePath}`);
+    
+    // Split content by conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictBuffer = [];
+    let conflictType = null; // 'ours' or 'theirs'
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('')) {
+<<<<<<< HEAD
+        inConflict = true;
+        conflictType = 'ours';
+        conflictBuffer = [];
+        continue;
+      } else if (line.startsWith('')) {
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         conflictType = 'theirs';
         continue;
       } else if (line.startsWith('>>>>>>>')) {

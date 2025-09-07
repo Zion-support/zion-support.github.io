@@ -8,29 +8,26 @@ console.log('🚀 Comprehensive Merge Conflict Resolver');
 console.log('==');
 
 console.log('==');
-console.log('=====================================');
-main
+
+console.log('==');
 
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
-    .replace(/}
 
 
 
 
 
 
-    .replace(/[a-f0-9]+/g, '');
+
+    .replace(/
 }
+
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
-
-main
 
 
 // Function to fix common syntax errors
@@ -117,7 +114,7 @@ function processFile(filePath) {
 
 
 
-main
+
 
             files.push(fullPath);
           }
@@ -138,7 +135,6 @@ main
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
-
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -162,7 +158,6 @@ main
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
-main
 
 
 // Main execution

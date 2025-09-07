@@ -1,6 +1,74 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+# List of files with merge conflicts
+files=(
+  "app/services/mobile-development/page.tsx"
+  "app/services/ai-invoice-generator/page.tsx"
+  "app/services/email-automation-suite/page.tsx"
+  "app/services/project-management/page.tsx"
+  "app/services/automated-workflow-builder/page.tsx"
+  "app/services/vulnerability-scanner/page.tsx"
+  "app/services/customer-support-automation/page.tsx"
+  "app/services/ai-content-writer/page.tsx"
+  "app/services/expense-tracker/page.tsx"
+  "app/services/page.tsx"
+  "app/services/ai-social-media-scheduler/page.tsx"
+  "app/services/ai-analytics-platform/page.tsx"
+  "app/services/ai-testing-automation/page.tsx"
+  "app/services/automation-solutions/page.tsx"
+  "app/services/ai-email-optimizer/page.tsx"
+  "app/services/ai-project-management-suite/page.tsx"
+  "app/services/ai-documentation-generator/page.tsx"
+  "app/services/crm-platform/page.tsx"
+  "app/services/ai-financial-analyzer/page.tsx"
+  "app/services/email-campaign-manager/page.tsx"
+  "app/services/ai-data-analysis/page.tsx"
+  "app/services/ai-predictive-analytics/page.tsx"
+  "app/services/ai-financial-analytics/page.tsx"
+  "app/services/real-time-data-processing/page.tsx"
+  "app/services/ai-customer-support-automation/page.tsx"
+  "app/services/industry-solutions/healthcare/page.tsx"
+  "app/services/industry-solutions/finance/page.tsx"
+  "app/services/lead-generation-tool/page.tsx"
+  "app/services/social-media-scheduler/page.tsx"
+  "app/services/ai-chatbot/page.tsx"
+  "app/services/ci-cd-pipeline-builder/page.tsx"
+  "app/services/invoice-automation/page.tsx"
+  "app/services/ai-healthcare-analytics/page.tsx"
+  "app/services/ai-hr-management/page.tsx"
+  "app/services/crm-solution/page.tsx"
+  "app/services/helpdesk-platform/page.tsx"
+  "app/services/ecommerce-platform/page.tsx"
+  "app/services/api-testing-suite/page.tsx"
+  "app/services/team-collaboration-hub/page.tsx"
+  "app/services/digital-transformation/page.tsx"
+  "app/services/ai-video-generator/page.tsx"
+  "app/services/website-analyzer/page.tsx"
+  "app/services/ai-fintech-solutions/page.tsx"
+  "app/services/analytics-dashboard/page.tsx"
+  "app/services/cloud-services/page.tsx"
+  "app/services/ai-inventory-management/page.tsx"
+  "app/services/project-management-suite/page.tsx"
+  "app/services/social-media-management/page.tsx"
+  "app/services/email-automation/page.tsx"
+  "app/services/seo-analyzer/page.tsx"
+  "app/services/micro-saas/page.tsx"
+  "app/services/ai-chatbot-builder/page.tsx"
+)
 
+# Resolve conflicts by accepting our version (HEAD) for each file
+for file in "${files[@]}"; do
+  if [ -f "$file" ]; then
+    echo "Resolving conflicts in $file..."
+    git checkout --ours "$file"
+  fi
+done
+
+echo "All service file conflicts resolved!"
+=======
+
+=======
 echo "Starting conflict resolution..."
 
 # First, let's merge main into our branch
@@ -33,6 +101,8 @@ git add .
 
 echo "Conflict resolution completed. Checking status..."
 git status
+
+=======
 # Script to automatically resolve merge conflicts by choosing main branch version
 echo "Resolving merge conflicts by choosing main branch version..."
 
@@ -52,5 +122,4 @@ done
 
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-main
-
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

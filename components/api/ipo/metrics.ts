@@ -30,7 +30,6 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
   res.status (200).json (data);
 }
 
-}
 
 ursor/fix-website-loading-errors-and-merge-6662
 

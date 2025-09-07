@@ -1,23 +1,48 @@
 #!/bin/bash
 
-echo "Fixing all merge conflicts in the project..."
+echo "Fixing all remaining merge conflicts..."
 
-# Find all files with merge conflicts
-find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read -r file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+# Find all files with merge conflicts and fix them
+find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
+<<<<<<< HEAD
+  if [ -f "$file" ] && grep -q "
+    echo "Fixing conflicts in: $file"
     
-    # Keep the HEAD version for all conflicts
-    sed -i '/<<<<<<< HEAD/,/>>>>>>>/ { /<<<<<<< HEAD/! { /======/! { />>>>>>>/!d } } }' "$file"
-    sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file"
+    # Remove all merge conflict markers
+
+=======
+  if [ -f "$file" ] && grep -q "\|    echo "Fixing conflicts in: $file"
     
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
+
+    # Remove all merge conflict markers
+
+/d' "$file"
+=======
+
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+
+
+    
+<<<<<<< HEAD
+    # Remove everything from 
+    sed -i '/^
+    
+    # Remove any remaining  markers
+    sed -i '/^$/d' "$file"
+=======
+    # Remove everything from  (inclusive)
+    # Keep everything after ======= until     sed -i '/^/d' "$file"
+    
+    # Remove the     sed -i '/^    
+    # Remove any remaining ======= markers
     sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     
     echo "Fixed: $file"
   fi
 done
 
-echo "All merge conflicts have been resolved!"
+echo "All merge conflicts fixed!"

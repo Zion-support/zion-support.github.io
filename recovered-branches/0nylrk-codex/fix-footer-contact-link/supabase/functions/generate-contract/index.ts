@@ -22,7 +22,7 @@ serve(async (req) => {
 
   try {
 
-=======;
+;
   try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;

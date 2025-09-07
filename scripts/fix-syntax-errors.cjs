@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+/**
+ * Syntax Error Fixer;
+ * Automatically fixes common syntax errors in the codebase;
+ */
 
-
-
-main
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 
   }
 
@@ -27,6 +33,10 @@ main
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
+
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -34,7 +44,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔧 Syntax Error Fixer');
-console.log('=====================');
+console.log('');
 
 class SyntaxErrorFixer {
   constructor() {
@@ -78,107 +88,39 @@ class SyntaxErrorFixer {
         }
       }
       
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+<<<<<<< HEAD
+
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       return false;
     }
   }
 
-
-
-
-
-    
-    // Fix common JSX issues
-    content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
-    
-    // Fix missing commas in objects
-    content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
-    
-    // Fix missing commas in arrays
-    content = content.replace(/([^,])\n\s*]/g, '$1,\n]');
-    
-    return content;
-  }
-
-  async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath);
-    
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        await this.fixDirectory(filePath);
-      } else if (file.match(/\.(tsx?|jsx?)$/)) {
-        this.fixFile(filePath);
+<<<<<<< HEAD
+  fixCommonErrors(content) {
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith("'")) {
+        return match + "'";
       }
-    }
-  }
-
-  generateReport() {
-    const report = {
-      "timestamp": new Date().toISOString(),
-      "fixes": this.fixes,
-      "errors": this.errors,
-      "success": this.errors.length === 0
-   };
-
-    const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
-    const logDir = path.dirname(reportPath;);
+      return match;
+    });
     
-    if () {
-      fs.mkdirSync(logDir, { "recursive": true })}
+    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith('"')) {
+        return match + '"';
+      }
+      return match;
+    });
     
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
-    ) {
-      fs.mkdirSync(logDir, { "recursive": true })}
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
     
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
-    this.log(`📄 Report saved "to": ${reportPath}`);
-    
-    return report}
+    // Fix merge conflict markers
+    content = content.replace(/
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
-  async run() {
-    this.log('🚀 Starting syntax error fixing...');
-    
-    try {
-      await this.fixDirectory('components');
-      await this.fixDirectory('pages');
-      await this.fixDirectory('lib');
-      
-      if ( {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report) {
-     {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report}} catch (error) {
-      this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
-      throw error}
-  }
-}
-
-if (require.main === module) {
-  const fixer = new SyntaxErrorFixer();
-  fixer.run().catch(error => {
-    console.error('Syntax fixing failed:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = SyntaxErrorFixer;
-
-  log(message, level = 'INFO')
-    this.log(' Starting syntax error fixing...')
-      this.log('Running ESLint auto-fix...')
-      execSync('npm run "lint": fix', { "stdio"})
-      execSync('npm run type-check', { "stdio"})
-      execSync('npm run format', { "stdio"})
-      this.log(` Syntax fixing "failed"`)
-      this.log(`� Syntax error fixing "failed"`)
   async fixESLintErrors() {
     this.log('🔍 Running ESLint with auto-fix...');
     
@@ -208,6 +150,8 @@ module.exports = SyntaxErrorFixer;
     }
   }
 
+<<<<<<< HEAD
+=======
   async fixImportIssues() {
     this.log('🔍 Checking for import issues...');
     
@@ -334,4 +278,4 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

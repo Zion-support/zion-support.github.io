@@ -13,6 +13,8 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Custom Development**: Tailored software solutions for unique business needs
 
 ## 🛠️ Technology Stack
+<<<<<<< HEAD
+=======
 
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
@@ -70,6 +72,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - E-commerce Solutions
 
 ## 🚀 Getting Started
+
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
 
 ## 🚀 Features
@@ -84,6 +87,7 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Error Boundaries** - Graceful error handling
 
 ## 🛠️ Tech Stack
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 - **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS, Custom CSS
@@ -95,9 +99,12 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
+<<<<<<< HEAD
 
-main
 
+=======
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 1. Clone the repository:
 ```bash
@@ -105,20 +112,32 @@ git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
+<<<<<<< HEAD
+- Node.js 18+
+- npm or yarn
+=======
 
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 2. Install dependencies:
 ```bash
 npm install
 ```
+
+<<<<<<< HEAD
+=======
+=======
 - Node.js 18+
 - npm or yarn
-main
-
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
+
+<<<<<<< HEAD
+=======
 
 4. Open your browser and navigate to `http://localhost:3000`
 
@@ -129,7 +148,8 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready for deployment.
-
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 1. Clone the repository:
 
 ```bash
@@ -157,25 +177,16 @@ npm run dev
 npm run build
 npm start
 ```
-main
 
+<<<<<<< HEAD
 
-## 📁 Project Structure
-
-```
-4. Open your browser and navigate to `http://localhost:3000`
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory, ready for deployment.
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ## 📁 Project Structure
 
 ```
+<<<<<<< HEAD
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -192,7 +203,88 @@ The built files will be in the `dist` directory, ready for deployment.
 └── package.json         # Dependencies and scripts
 ```
 
-main
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx      # Enhanced button component
+│   ├── Card.tsx        # Card component
+│   ├── Footer.tsx      # Footer component
+│   ├── Header.tsx      # Header with navigation
+│   ├── LoadingSpinner.tsx # Loading indicators
+│   ├── SEOHead.tsx     # SEO meta tags
+│   ├── ServiceCard.tsx # Service display cards
+│   ├── Toast.tsx       # Notification system
+│   └── layout/
+│       └── Sidebar.tsx # Sidebar navigation
+├── contexts/           # React contexts
+│   └── ToastContext.tsx # Global toast management
+├── pages/              # Page components
+│   ├── About.tsx       # About page
+│   ├── Contact.tsx     # Contact form
+│   ├── Home.tsx        # Homepage
+│   ├── Pricing.tsx     # Pricing plans
+│   └── Services.tsx    # Services showcase
+├── App.tsx             # Main app component
+├── main.tsx           # Application entry point
+└── index.css          # Global styles
+```
+
+## 🎨 Components
+
+### Button Component
+Enhanced button with multiple variants and loading states:
+- `primary` - Gradient blue to purple
+- `secondary` - Glass morphism effect
+- `outline` - Border only
+- `ghost` - Minimal styling
+- `danger` - Red styling for destructive actions
+
+### Toast Notifications
+Global notification system with context:
+- Success, Error, Warning, Info types
+- Auto-dismiss with customizable duration
+- Smooth animations and transitions
+
+### Service Cards
+Interactive service display cards with:
+- Hover effects and animations
+- Feature lists with bullet points
+- Icon support
+- Responsive design
+
+=======
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
+=======
+
+=======
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ## 🔧 Available Scripts
 
@@ -200,12 +292,34 @@ main
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+<<<<<<< HEAD
+- `npm run lint:fix` - Fix ESLint errors
+
+## 🎨 Design System
+
+
+The project uses a consistent design system with:
+
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
+=======
+
 ### Frontend
 - **React 18.2.0** - Modern React with concurrent features
 - **TypeScript 5.6.3** - Type-safe JavaScript development
 - **Vite 5.4.19** - Next-generation build tool
 - **Tailwind CSS 3.4.17** - Utility-first CSS framework
 - **Framer Motion 10.16.4** - Animation library
+=======
 ### Color Palette
 
 - **Primary**: Zion Purple (`#8B5CF6`)
@@ -233,13 +347,50 @@ The website is built with a mobile-first approach:
 - **Mobile**: Stacked layouts with touch-friendly interactions
 - **Tablet**: Adjusted grid layouts for medium screens
 - **Desktop**: Full-featured layouts with hover effects and advanced navigation
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ### UI Components
 - **Radix UI** - Accessible component primitives
 - **Lucide React** - Beautiful icon library
 - **React Hook Form** - Performant forms with validation
 - **Zod** - TypeScript-first schema validation
+
+<<<<<<< HEAD
+### State Management & Data
+- **Redux Toolkit** - Modern Redux with best practices
+- **React Query** - Server state management
+- **React Router DOM** - Client-side routing
+
+### Performance & Monitoring
+- **Performance Observer API** - Real-time performance monitoring
+- **Intersection Observer** - Efficient lazy loading
+- **Service Worker** - Advanced caching and offline support
+
+## 📱 Features
+
+### Core Services
+- **AI & Machine Learning Solutions**
+- **Quantum Computing Platform**
+- **Cybersecurity Services**
+- **Cloud Infrastructure**
+- **Digital Transformation**
+- **Micro SaaS Solutions**
+
+### Advanced Capabilities
+- **Autonomous Business Operations**
+- **AI-Powered Analytics**
+- **Quantum Neural Networks**
+- **Predictive Maintenance**
+- **Real-time Monitoring**
+- **Intelligent Automation**
+
+### User Experience
+- **Responsive Design** - Works perfectly on all devices
+- **Dark/Light Mode** - User preference support
+- **Internationalization** - Multi-language support ready
+- **Progressive Enhancement** - Works without JavaScript
+- **Accessibility First** - Inclusive design principles
+=======
 
 ### Main Navigation
 
@@ -256,9 +407,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 - Organized into logical sections (Services, Solutions, Company, Resources, Support)
 - Social media links and contact information
 - Newsletter signup and trust indicators
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📱 Features
+
 
 ### Frontend Framework
 
@@ -283,7 +434,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 - **Lazy Loading** - Components loaded on demand
 - **Image Optimization** - Next.js image optimization
 - **Code Splitting** - Automatic bundle splitting
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ## 🚀 Getting Started
 
@@ -324,6 +475,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
    # or
    yarn build
    ```
+
+<<<<<<< HEAD
+### Available Scripts
+=======
 
 ### Build for Production
 
@@ -427,7 +582,7 @@ npm start
 - Configure analytics and monitoring
 
 ## 📜 Available Scripts
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -540,7 +695,6 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - **Older Versions**: Progressive enhancement
 
 ## 📈 Analytics & Monitoring
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
 ### Performance Monitoring
 - **Core Web Vitals**: Real-time tracking
@@ -548,16 +702,44 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 - **Error Tracking**: Sentry integration
 - **Analytics**: Google Analytics 4
 
+<<<<<<< HEAD
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+=======
+
 ### User Behavior
 - **Page Views**: Navigation tracking
 - **User Engagement**: Interaction metrics
 - **Conversion Tracking**: Goal completion
 - **A/B Testing**: Experiment framework
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
 ## ♿ Accessibility
 
 
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 - `npm run type-check` - Run TypeScript checks
 
 ## 🌐 Deployment
@@ -606,82 +788,19 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
-- `npm run lint:fix` - Fix ESLint errors
 
-## 🎨 Design System
-
-The project uses a consistent design system with:
-
-- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
-- **Typography**: Inter font family with responsive sizing
-- **Spacing**: Consistent spacing scale using Tailwind's spacing system
-- **Components**: Reusable components with consistent styling
-
-## 📱 Responsive Design
-
-- **Mobile**: Optimized for mobile devices (320px+)
-- **Tablet**: Responsive design for tablet screens (768px+)
-- **Desktop**: Full desktop experience (1024px+)
-- **Large Screens**: Optimized for large displays (1280px+)
-
-## 🔍 SEO Features
-
-- Meta tags for all pages
-- Open Graph tags for social sharing
-- Structured data markup
-- Semantic HTML structure
-- Optimized images and assets
-- Fast loading times
-
-## ♿ Accessibility
-
-- WCAG 2.1 AA compliant
-- Proper ARIA labels
-- Keyboard navigation support
-- Screen reader friendly
-- High contrast support
-- Focus management
-
-## 🚀 Performance
-
-- Next.js optimization features
-- Image optimization
-- Code splitting
-- Lazy loading
-- Bundle analysis
-- Performance monitoring
-main
+<<<<<<< HEAD
 
 
 ## 🤝 Contributing
 
-### Build Process
-1. **Code Quality**: ESLint and TypeScript checking
-2. **Testing**: Unit and integration tests
-3. **Build**: Production-optimized bundles
-4. **Deploy**: Automated deployment pipeline
-
-### Hosting Options
-- **Vercel**: Recommended for React apps
-- **Netlify**: Static site hosting
-- **AWS S3**: Cloud hosting
-- **GitHub Pages**: Free hosting
-
-## 🤝 Contributing
-
-### Development Guidelines
-- **Code Style**: ESLint and Prettier configuration
-- **Type Safety**: Full TypeScript coverage
-- **Testing**: Jest and React Testing Library
-- **Accessibility**: WCAG compliance checking
-
-### Pull Request Process
 1. Fork the repository
-2. Create feature branch
-3. Make changes with tests
-4. Submit pull request
-5. Code review and approval
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ### Development Workflow
 
 1. Create a feature branch
@@ -704,35 +823,22 @@ For technical support or questions about the website:
 - **Email**: contact@ziontechgroup.com
 - **Documentation**: Check the `/docs` section
 - **Issues**: Use the GitHub issues page
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-# Zion Tech Group - AI-Powered Technology Solutions
 
-## 🚀 Overview
+## 📞 Contact
 
-Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
 
-## ✨ Features
+## 🙏 Acknowledgments
 
-- **AI-Powered Solutions**: Advanced AI services and automation
-- **Blockchain Technology**: Web3 and decentralized solutions
-- **IT Services**: Comprehensive IT infrastructure and support
-- **Micro SaaS**: Scalable software-as-a-service solutions
-- **Mobile Development**: Cross-platform mobile applications
-- **Cloud Services**: Cloud migration and optimization
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express
-- **Database**: PostgreSQL, MongoDB
-- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express, Fastify
-- **Database**: MongoDB, PostgreSQL
-
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 - **Cloud**: AWS, Azure, Google Cloud
 - **AI/ML**: OpenAI, TensorFlow, PyTorch
 - **DevOps**: Docker, Kubernetes, PM2
@@ -1273,6 +1379,9 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
+=======
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 - `npm run lint:fix` - Fix ESLint errors
 
 ## 🎨 Design System
@@ -1320,6 +1429,7 @@ The project uses a consistent design system with:
 
 ## 🤝 Contributing
 
+<<<<<<< HEAD
 1. Fork the repository
 - All contributors and supporters
 
@@ -1360,6 +1470,58 @@ Built with ❤️ by the Zion Tech Group team
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+=======
+
+### Build Process
+1. **Code Quality**: ESLint and TypeScript checking
+2. **Testing**: Unit and integration tests
+3. **Build**: Production-optimized bundles
+4. **Deploy**: Automated deployment pipeline
+
+### Hosting Options
+- **Vercel**: Recommended for React apps
+- **Netlify**: Static site hosting
+- **AWS S3**: Cloud hosting
+- **GitHub Pages**: Free hosting
+
+## 🤝 Contributing
+
+### Development Guidelines
+- **Code Style**: ESLint and Prettier configuration
+- **Type Safety**: Full TypeScript coverage
+- **Testing**: Jest and React Testing Library
+- **Accessibility**: WCAG compliance checking
+
+### Pull Request Process
+1. Fork the repository
+2. Create feature branch
+3. Make changes with tests
+4. Submit pull request
+5. Code review and approval
+=======
+### Development Workflow
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+5. Code review and approval
+
+### Code Standards
+
+- Follow React best practices
+- Use TypeScript for type safety
+- Maintain consistent styling with Tailwind CSS
+- Write meaningful component names and props
+
+## 📞 Support and Contact
+
+For technical support or questions about the website:
+
+- **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ## 📄 License
 
@@ -1495,6 +1657,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+<<<<<<< HEAD
 ## 📞 Contact
 
 - **Website**: [Zion Tech Group](https://zion.app)
@@ -1507,6 +1670,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Tailwind CSS for the utility-first CSS framework
 - Lucide React for the beautiful icons
 - All contributors and supporters
+=======
+# Zion Tech Group - AI-Powered Technology Solutions
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ---
 
@@ -1518,7 +1684,116 @@ Built with ❤️ by the Zion Tech Group team
 
 ## 📄 License
 
+<<<<<<< HEAD
 This project is proprietary software owned by Zion Tech Group.
+=======
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+=======
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+- **Cloud**: AWS, Azure, Google Cloud
+- **AI/ML**: OpenAI, TensorFlow, PyTorch
+- **DevOps**: Docker, Kubernetes, PM2
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Zion-Holdings/zion.app.git
+
+# Navigate to the project directory
+cd zion.app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 🚀 Quick Start
+
+```bash
+# Development
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm run start
+
+# Run tests
+npm run test
+
+# Lint and fix
+npm run lint:fix
+```
+
+## 📁 Project Structure
+
+```
+zion.app/
+├── src/                    # Source code
+│   ├── components/         # React components
+│   ├── pages/             # Application pages
+│   ├── styles/            # CSS and styling
+│   └── utils/             # Utility functions
+├── public/                # Static assets
+├── docs/                  # Documentation
+├── tests/                 # Test files
+├── automation/            # Automation scripts
+└── deployment/            # Deployment configurations
+```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run test` - Run tests
+- `npm run lint` - Run linting
+- `npm run lint:fix` - Fix linting issues
+- `npm run type-check` - Run TypeScript type checking
+
+## 🌐 Services
+
+### AI Solutions
+- AI-Powered Business Intelligence
+- Machine Learning Model Development
+- Natural Language Processing
+- Computer Vision Solutions
+- Predictive Analytics
+
+### Cloud Services
+- Cloud Migration and Strategy
+- Infrastructure as Code
+- Container Orchestration
+- Serverless Architecture
+- Multi-Cloud Solutions
+
+### Cybersecurity
+- Security Audits and Assessments
+- Compliance Management
+- Threat Detection and Response
+- Identity and Access Management
+- Data Protection
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 
 ## 📞 Contact
 

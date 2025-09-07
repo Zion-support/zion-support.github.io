@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+import React from 'react';
+=======
 import React from 'react';
 
 interface SetupProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
+=======
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -43,11 +53,12 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React from 'react';
 
-interface SetupProps {
-  // Add props here as needed
-}
 
 export default function Setup({ }: SetupProps) {
   return (
@@ -57,16 +68,3 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
-main
-
-import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
-import { afterEach, vi } from 'vitest'
-
-// Ensure React Testing Library cleans up and mocks are restored between tests
-afterEach(() => {
-  cleanup()
-  vi.restoreAllMocks()
-})
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
-

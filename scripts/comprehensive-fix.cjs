@@ -24,11 +24,15 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
 
 
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
 
 
-    content = content.replace(/[^\n]+\n?/g, '');
+    content = content.replace(/
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

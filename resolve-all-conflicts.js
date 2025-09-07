@@ -32,21 +32,33 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
+<<<<<<< HEAD
         if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+
+        if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             return false; // No conflicts to resolve
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
         
         // Remove any remaining conflict markers
-        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
-        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
         
+=======
+
+        content = content.replace(/\n([\s\S]*?)        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/=======\n?/g, '');
+        content = content.replace(/        
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -68,6 +80,10 @@ function getConflictFiles() {
     } catch (error) {
         // If git command fails, use grep to find files with conflict markers
         try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
             return result.trim().split('\n').filter(file => file.length > 0);
         } catch (e) {

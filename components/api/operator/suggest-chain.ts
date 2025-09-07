@@ -19,7 +19,6 @@ export default async function handler(
 
   if (req.method !== 'POST')
 
-  const stake = Number(stakeUsd || 0);
 
 
 

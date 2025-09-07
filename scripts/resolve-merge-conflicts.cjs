@@ -1,7 +1,6 @@
 
 
 
-
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -17,7 +16,7 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 
-
+    if (!content.includes('
 
 
 
@@ -68,7 +67,7 @@ function findConflictedFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 
-
+          if (content.includes('
 
 
 

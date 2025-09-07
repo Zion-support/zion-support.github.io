@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -33,6 +34,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },

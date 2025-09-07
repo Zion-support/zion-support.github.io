@@ -8,8 +8,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const: Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

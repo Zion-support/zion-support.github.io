@@ -1,4 +1,18 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T23:47:16.060Z",
+  "summary": {
+    "totalFiles": 0,
+    "resolved": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "resolvedFiles": [],
+  "failedFiles": [],
+  "skippedFiles": []
+}
+=======
+
   "timestamp": "2025-09-06T08:36:47.152Z",
   "totalFilesProcessed": 2367,
   "fixedFiles": 2367,
@@ -2374,4 +2388,4 @@
   ],
   "errorList": []
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
