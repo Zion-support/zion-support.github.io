@@ -1,11 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export default function Home() {
+export default function Services() {
   const services = [
     {
       title: "AI Services",
-      href: "/services/ai-services",
       description: "Revolutionary AI solutions that transform your business operations and drive unprecedented growth.",
       icon: "🤖",
       bullets: [
@@ -17,7 +16,6 @@ export default function Home() {
     },
     {
       title: "IT Services",
-      href: "/services/it-services",
       description: "Comprehensive IT solutions designed to modernize your infrastructure and optimize performance.",
       icon: "💻",
       bullets: [
@@ -29,7 +27,6 @@ export default function Home() {
     },
     {
       title: "Micro SaaS",
-      href: "/services/micro-saas",
       description: "Scalable software-as-a-service solutions that grow with your business needs.",
       icon: "🚀",
       bullets: [
@@ -41,7 +38,6 @@ export default function Home() {
     },
     {
       title: "Cybersecurity",
-      href: "/services/cybersecurity",
       description: "Advanced security solutions to protect your digital assets and ensure compliance.",
       icon: "🔒",
       bullets: [
@@ -53,7 +49,6 @@ export default function Home() {
     },
     {
       title: "Cloud Solutions",
-      href: "/services/cloud-solutions",
       description: "Enterprise-grade cloud infrastructure and migration services for optimal performance.",
       icon: "☁️",
       bullets: [
@@ -65,7 +60,6 @@ export default function Home() {
     },
     {
       title: "Blockchain",
-      href: "/services/blockchain",
       description: "Cutting-edge blockchain solutions for secure, transparent, and decentralized applications.",
       icon: "⛓️",
       bullets: [
@@ -83,63 +77,17 @@ export default function Home() {
       <section className="relative py-20 px-4 text-center">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Welcome to Zion Tech
+            Our Services
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Your trusted partner for AI and IT solutions. We help businesses transform through
-            cutting-edge technology and innovative solutions.
+            Comprehensive technology solutions to help your business thrive in the digital age.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-flex items-center"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/about"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
-              Learn More
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-white">
+      {/* Services Grid */}
+      <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Projects Completed</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive technology solutions to help your business thrive in the digital age.
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
@@ -156,7 +104,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={service.href} className="text-blue-600 hover:text-blue-700 font-semibold">
+                <Link to="/contact" className="text-blue-600 hover:text-blue-700 font-semibold">
                   Learn More →
                 </Link>
               </div>
@@ -168,19 +116,19 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help you achieve your goals with our technology solutions.
+            Let's discuss how our services can help you achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Started Today
+              Contact Us Today
             </Link>
             <Link
-              href="/about"
+              to="/about"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Learn More About Us
