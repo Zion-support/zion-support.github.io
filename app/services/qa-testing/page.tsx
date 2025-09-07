@@ -1,42 +1,59 @@
-export const metadata = {
-  title: 'QA Testing | Zion Tech Group',
-  description: 'Professional quality assurance testing services.',
-  keywords: 'qa-testing, services, business, technology'
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Qa Testing | Zion Tech Group',
+  description: 'Professional qa testing services for your business needs.',
+  keywords: 'qa testing, services, business, technology'
 }
+
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            QA Testing
+            Qa Testing
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional quality assurance testing services.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional qa testing services for your business needs.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
             <p className="text-gray-300">
-              Tailored qa-testing solutions designed for your specific business requirements.
+              High-performance solutions that deliver results quickly and consistently.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
             <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+              Seamlessly integrate with your existing systems and workflows.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">
-              Round-the-clock support to ensure your qa-testing solutions run smoothly.
+              Grow with your business with our flexible and scalable platform.
             </p>
           </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our qa testing services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>

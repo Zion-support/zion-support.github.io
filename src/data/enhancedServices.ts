@@ -1,7 +1,19 @@
-<<<<<<< HEAD
-=======
-// TypeScript file;
-export const placeholder = 'placeholder';
-;
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-export const placeholder = 'placeholder';
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  features: string[];
+}
+
+export const enhancedServices: Service[] = [
+  {
+    id: 'ai-chatbot',
+    name: 'AI Chatbot',
+    description: 'Intelligent chatbot solution',
+    category: 'AI',
+    price: 99,
+    features: ['Natural Language Processing', 'Multi-language Support', 'Custom Training']
+  }
+];

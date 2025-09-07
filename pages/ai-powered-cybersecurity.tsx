@@ -1,173 +1,47 @@
-import React from 'react',
 import React from 'react';
 import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+
 export default function AIPoweredCybersecurityPage() {
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';
-
-import ServiceLanding from '../components/sections/ServiceLanding',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredCybersecurityPage() {
-
-';
-
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredCybersecurityPage() {}
-	return (
-		<>
-			<Head>
-				<title>AI-Powered Cybersecurity Platform | Zion Tech Group</title>
-				<meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />"
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-cybersecurity" />
-			</Head>
-			<ServiceLanding"
-				title="AI-Powered Cybersecurity Platform""
-				description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR.""
-				subtitle="Fewer alerts, faster response"
-				pricePerMonthUSD={3999}"
-				implementationWeeks="2-6 weeks""
-				roiNote="Reduce alert fatigue by 80% and mean time to contain by 70%"
-				features={[";
-					"Anomaly detection and adversary behavior modeling";"
-					"Automated playbooks and SOAR actions";"
-					"Deception tokens and breach canaries";"
-					"Zero-trust policy recommendations";"
-					"Ransomware early detection and isolation";"
-					"Compliance evidence and audit-ready reports"
-				]}"
-				industries={["Financial Services", "Healthcare", "SaaS", "Public Sector", "Critical Infrastructure"]}"
-				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"
-			/>
-		</>
-	)
-}
-
   return (
-
-export default function AIPoweredCybersecurityPage() {}
-  return (;
-
-    <>;
-      <Head>;
-        <title > AI - Powered Cybersecurity Platform | Zion Tech Group</title>;
-        <meta;'
-          name='description';'
-          content='Autonomous threat detection, real - time response, and zero - trust enforcement with AI.';
-        />;
-        <link;'
-          rel='canonical';'
-          href='https://ziontechgroup.com / ai - powered - cybersecurity';
-        />;
-      </Head>;
-      <ServiceLanding;'
-        title='AI - Powered Cybersecurity Platform';'
-        description='Detect, prioritize, and remediate threats automatically. LLM - powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR.';'
-        subtitle='Fewer alerts, faster response';
-        pricePerMonthUSD={3999}'
-        implementation_weeks='2 - 6 weeks';'
-        roi_note='Reduce alert fatigue by 80% and mean time to contain by 70%';
-        features={[;'
-          'Anomaly detection and adversary behavior modeling','
-          'Automated playbooks and SOAR actions','
-          'Deception tokens and breach canaries','
-          'Zero - trust policy recommendations','
-          'Ransomware early detection and isolation','
-          'Compliance evidence and audit - ready reports',
-        ]}
-        industries={[;'
-          'Financial Services','
-          'Healthcare','
-          'SaaS','
-          'Public Sector','
-          'Critical Infrastructure',
-        ]}
-
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
-export default function AIPoweredCybersecurityPage() {
-	return (
-		<>
-			<Head>
-				<title>AI-Powered Cybersecurity Platform | Zion Tech Group</title>
-				<meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-cybersecurity" />
-			</Head>
-			<ServiceLanding
-				title="AI-Powered Cybersecurity Platform"
-				description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
-				subtitle="Fewer alerts, faster response"
-				pricePerMonthUSD={3999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>AI-Powered Cybersecurity | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered cybersecurity solutions." />
+      </Head>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI-Powered Cybersecurity
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered cybersecurity solutions for your business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Threat Detection</h3>
+            <p className="text-gray-300">
+              AI-powered threat detection and analysis.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Automated Response</h3>
+            <p className="text-gray-300">
+              Automated incident response and mitigation.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Behavioral Analytics</h3>
+            <p className="text-gray-300">
+              Advanced behavioral analytics for security.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-				implementationWeeks="2-6 weeks"
-				roiNote="Reduce alert fatigue by 80% and mean time to contain by 70%"
-				features={[
-					"Anomaly detection and adversary behavior modeling",
-					"Automated playbooks and SOAR actions",
-					"Deception tokens and breach canaries",
-					"Zero-trust policy recommendations",
-					"Ransomware early detection and isolation",
-					"Compliance evidence and audit-ready reports"
-				]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				industries={["Financial Services", "Healthcare", "SaaS", "Public Sector", "Critical Infrastructure"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"
-			/>
-		</>
-	)
-				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity";
-			/>;
-		</>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-        canonical='https: //ziontechgroup.com / ai - powered - cybersecurity';
-      />;
-    </>);
-;
-
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIPoweredCybersecurityPage() {
-
-'"
-

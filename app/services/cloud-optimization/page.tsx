@@ -1,175 +1,61 @@
-export const metadata = {
-  title: "Cloud Optimization | Zion Tech Group",
-  description:
-    "Maximize cloud performance and minimize costs with our AI-powered cloud optimization services for AWS, Azure, and Google Cloud.",
-};
+import React from 'react'
+import { Metadata } from 'next'
 
-export default function CloudOptimizationPage() {
+export const metadata: Metadata = {
+  title: 'Cloud Optimization | Zion Tech Group',
+  description: 'Professional cloud optimization services for your business needs.',
+  keywords: 'cloud optimization, services, business, technology'
+}
+
+export default function ServicePage() {
   return (
-    <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
-        Cloud Optimization Services
-      </h1>
-      <p style={{ marginTop: 8, color: "#374151" }}>
-        Maximize cloud performance, minimize costs, and ensure scalability with
-        our AI-powered cloud optimization solutions.
-      </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cloud Optimization
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional cloud optimization services for your business needs.
+          </p>
+        </div>
 
-      <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
-        <Item
-          title="Cost Optimization"
-          details={[
-            "AI-powered cost analysis and optimization recommendations",
-            "Right-sizing instances and auto-scaling configuration",
-            "Reserved instance planning and spot instance utilization",
-            "Cost anomaly detection and budget alerts",
-          ]}
-        />
-        <Item
-          title="Performance Optimization"
-          details={[
-            "Application performance monitoring and optimization",
-            "Database tuning and query optimization",
-            "CDN configuration and content delivery optimization",
-            "Load balancing and traffic management",
-          ]}
-        />
-        <Item
-          title="Security & Compliance"
-          details={[
-            "Cloud security posture assessment and hardening",
-            "Identity and access management (IAM) optimization",
-            "Data encryption and key management",
-            "Compliance auditing (SOC2, HIPAA, PCI-DSS)",
-          ]}
-        />
-        <Item
-          title="Migration & Modernization"
-          details={[
-            "Legacy application migration to cloud",
-            "Containerization and microservices architecture",
-            "Serverless architecture implementation",
-            "Multi-cloud and hybrid cloud strategies",
-          ]}
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our cloud optimization services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
       </div>
-
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {}
-  return ("
-    <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h3 style={{ fontWeight: 700 }}>{title}</h3>"
-      <ul style={{ paddingLeft: 18, color: "#4b5563" }}>
-        {details.map((d) => ("
-          <li key={d} style={{ listStyle: "disc" }}>
-            {d}
-          </li>
-        ))}
-      </ul>
     </div>
-  );
+  )
 }
-
-function Pricing() {}
-  return (
-    <div;
-      style={{}
-        marginTop: 20,"
-        display: "grid",
-        gap: 12,"
-        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-      }}
-    >
-      <Plan"
-        name="Cloud Audit""
-        price="$2,500/month"
-        features={["
-          "Monthly cost analysis","
-          "Performance assessment","
-          "Security review","
-          "Optimization recommendations","
-          "Email support",
-        ]}
-      />
-      <Plan"
-        name="Cloud Management""
-        price="$5,500/month"
-        features={["
-          "Continuous optimization","
-          "24/7 monitoring","
-          "Automated scaling","
-          "Security management","
-          "Priority support","
-          "Monthly reports",
-        ]}
-      />
-      <Plan"
-        name="Cloud Transformation""
-        price="$15,000/month"
-        features={["
-          "Full cloud migration","
-          "Architecture redesign","
-          "Custom solutions","
-          "Dedicated team","
-          "White-label options","
-          "SLA guarantee",
-        ]}
-      />
-    </div>
-  );
-}
-
-function Plan({}
-  name,
-  price,
-  features,
-}: {}
-  name: string;
-  price: string;
-  features: string[];
-}) {}
-  return ("
-    <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h4 style={{ fontWeight: 700 }}>{name}</h4>
-      <div;
-        style={{"
-          color: "#111827",
-          fontWeight: 800,
-          marginTop: 4,
-          fontSize: 18,
-        }}
-      >
-        {price}
-      </div>"
-      <ul style={{ paddingLeft: 18, color: "#4b5563", marginTop: 8 }}>
-        {features.map((f) => ("
-          <li key={f} style={{ listStyle: "disc" }}>
-            {f}
-          </li>
-        ))}
-      </ul>
-      <a"
-        href="mailto:kleber@ziontechgroup.com"
-        style={{"
-          display: "inline-block",
-          marginTop: 12,"
-          padding: "8px 16px","
-          backgroundColor: "#3b82f6","
-          color: "white","
-          textDecoration: "none",
-          borderRadius: 6,
-        }}
-      >
-        Email Us;
-      </a>
-
-    </div>
-  );
-}
-"

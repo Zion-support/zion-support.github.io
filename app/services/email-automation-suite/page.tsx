@@ -1,225 +1,61 @@
-export const metadata = {
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Email Automation Suite | Zion Tech Group',
-  description: 'Comprehensive email automation suite for businesses.',
-  keywords: 'email-automation-suite, services, business, technology'
+  description: 'Professional email automation suite services for your business needs.',
+  keywords: 'email automation suite, services, business, technology'
 }
+
 export default function ServicePage() {
   return (
-export const metadata = {
-  title: "Email Automation Suite | Zion Tech Group",
-  description:
-    "Advanced email marketing automation platform. Create, send, and track personalized email campaigns with AI-powered optimization.",
-
-};
-
-export default function EmailAutomationSuitePage() {
-  return (
-
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Email Automation Suite
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive email automation suite for businesses.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional email automation suite services for your business needs.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
             <p className="text-gray-300">
-              Tailored email-automation-suite solutions designed for your specific business requirements.
+              High-performance solutions that deliver results quickly and consistently.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
             <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+              Seamlessly integrate with your existing systems and workflows.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">
-              Round-the-clock support to ensure your email-automation-suite solutions run smoothly.
+              Grow with your business with our flexible and scalable platform.
             </p>
           </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our email automation suite services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>
   )
 }
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <FeatureCard
-          title="Campaign Management"
-          details={[
-            'Drag-and-drop email builder',
-            'Template library',
-            'A/B testing tools',
-            'Send time optimization',
-            'Multi-channel campaigns',
-          ]}
-        />
-        <FeatureCard
-          title="AI Automation"
-          details={[
-            'Behavioral trigger automation',
-            'Personalization engine',
-            'Content optimization',
-            'Send frequency optimization',
-            'Predictive analytics',
-          ]}
-        />
-        <FeatureCard
-          title="Analytics & Insights"
-          details={[
-            'Real-time campaign tracking',
-            'Advanced segmentation',
-            'ROI analysis',
-            'Customer journey mapping',
-            'Performance recommendations',
-            "Performance recommendations",
-
-          ]}
-        />
-      </div>
-
-      <PricingSection />
-
-      <div className="mt-16 bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your Email Marketing?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Transform your email marketing with AI-powered automation and personalization.
-          Perfect for e-commerce, SaaS, and marketing teams.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-sky-600 text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-sky-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-
-        </div>
-      </div>
-    </div>
-  );
-}
-            <span className="text-sky-500 mr-2">•</span> {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function PricingSection() {}
-  return ("
-    <div className="mb-12">"
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-        Pricing Plans;
-      </h2>"
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingPlan"
-          name="Starter""
-          price="$29/mo"
-          features={["
-            "Up to 5,000 subscribers","
-            "10,000 emails/month","
-            "Basic automation","
-            "Email support","
-            "Standard templates",
-          ]}
-        />
-        <PricingPlan"
-          name="Professional""
-          price="$99/mo"
-          features={["
-            "Up to 25,000 subscribers","
-            "100,000 emails/month","
-            "Advanced automation","
-            "Priority support","
-          ]}
-        />
-        <PricingPlan
-          name="Professional"
-          price="$99/mo"
-          features={[
-            'Up to 25,000 subscribers',
-            '100,000 emails/month',
-            'Advanced automation',
-            'Priority support',
-            'AI-powered optimization',
-          ]}
-          featured={true}
-        />
-            "AI-powered optimization",
-          ]}
-          featured={true}
-        />
-        <PricingPlan"
-          name="Enterprise""
-          price="$299/mo"
-          features={["
-            "Unlimited subscribers","
-            "Unlimited emails","
-            "Custom automation workflows","
-            "White-label solution","
-            "Dedicated account manager",
-
-          ]}
-        />
-      </div>
-    </div>
-  );
-}
-
-function PricingPlan({
-
-  name,
-  price,
-  features,
-  featured = false,
-}: {
-
-  name: string;
-  price: string;
-  features: string[];
-  featured?: boolean;
-}) {}
-  return (
-    <div;
-      className={`border rounded-xl p-6 ${}
-        featured"
-          ? "border-sky-500 bg-sky-50 shadow-lg""
-          : "border-gray-200 bg-white shadow-sm"`
-      }`}
-    >"
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>"
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map((feature, index) => ("
-          <li key={index} className="flex items-center">"
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-
-            <span className="text-sky-500 mr-2">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-

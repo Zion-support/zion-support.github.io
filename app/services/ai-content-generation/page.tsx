@@ -1,8 +1,11 @@
-export const metadata = {
-  title: 'AI Content Generation & Marketing | Zion Tech Group',
-  description:
-    'Scale your content marketing with AI-powered content generation, SEO optimization, and automated marketing campaigns that drive engagement and conversions.',
-};
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Content Generation | Zion Tech Group',
+  description: 'Professional ai content generation services for your business needs.',
+  keywords: 'ai content generation, services, business, technology'
+}
 
 export default function ServicePage() {
   return (
@@ -10,167 +13,49 @@ export default function ServicePage() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Content Generation Platform
+            Ai Content Generation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your content marketing with our revolutionary AI platform that generates 
-            high-quality articles, marketing copy, social media posts, and more. 10x faster than traditional writing.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai content generation services for your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-            >
-              Get Started
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
-            </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-400 transition-colors"
-            >
-              View All Services
-            </Link>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-6">
-              Key Features
-            </h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">🤖</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">AI-Powered Writing</h3>
-                  <p className="text-gray-300">Advanced AI that understands context, tone, and brand voice to create compelling content.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">📝</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Multiple Content Types</h3>
-                  <p className="text-gray-300">Blog posts, articles, social media content, email campaigns, and marketing copy.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">🎯</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">SEO Optimization</h3>
-                  <p className="text-gray-300">Automatically optimize content for search engines with keyword integration and meta descriptions.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">⚡</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">10x Faster</h3>
-                  <p className="text-gray-300">Generate high-quality content in minutes instead of hours or days.</p>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-6">
-              Benefits
-            </h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">📈</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Scale Content Production</h3>
-                  <p className="text-gray-300">Produce more content without increasing your team size or budget.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">💰</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Cost Effective</h3>
-                  <p className="text-gray-300">Reduce content creation costs by up to 80% while maintaining quality.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">🎨</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Brand Consistency</h3>
-                  <p className="text-gray-300">Maintain consistent brand voice and messaging across all content.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-2xl">🔄</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">Automated Workflows</h3>
-                  <p className="text-gray-300">Set up automated content generation and publishing workflows.</p>
-                </div>
-              </div>
-            </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
           </div>
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
-            Ready to Transform Your Content Strategy?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI Content Generation Platform can revolutionize your content marketing.
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai content generation services can transform your business.
           </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-          >
-            Contact Us Today
-            <ArrowRightIcon className="h-5 w-5 ml-2" />
-          </Link>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>
-  );
-
+  )
 }
-          color: "#1f2937",
-
-          marginBottom: 8,
-        }}
-      >
-        {name}
-      </h4>
-      <div;
-        style={{"
-          color: "#111827",
-
-          fontWeight: 800,
-          fontSize: 24,
-          marginBottom: 16,
-        }}
-      >
-        {price}
-      </div>"
-      <ul style={{ paddingLeft: 18, color: "#4b5563", marginBottom: 20 }}>
-        {features.map((f) => ("
-          <li key={f} style={{ listStyle: "disc", marginBottom: 6 }}>
-
-            {f}
-          </li>
-        ))}
-      </ul>
-      <a"
-        href="mailto:kleber@ziontechgroup.com?subject=AI Content Generation Services Inquiry"
-        style={{"
-          display: "inline-block","
-          width: "100%","
-          textAlign: "center","
-          padding: "12px 16px","
-          backgroundColor: "#3b82f6","
-          color: "white","
-          textDecoration: "none",
-
-          borderRadius: 8,
-          fontWeight: 600,
-        }}
-      >
-        Get Started;
-      </a>
-    </div>
-  );
-}
-"
-

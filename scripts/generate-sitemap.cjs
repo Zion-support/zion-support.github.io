@@ -3,21 +3,39 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🗺️  Generating sitemap...');
-console.log('✅ Sitemap generation completed');
 
-<<<<<<< HEAD
-fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
-console.log('Sitemap generated successfully');
-=======
-module.exports = {};
+// Generate a simple sitemap
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>`;
 
-#!/usr/bin/env node
-=======
+// Ensure public directory exists
+const publicDir = path.join(process.cwd(), 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
 
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+// Write sitemap to public directory
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+console.log('✅ Sitemap generated successfully');
 
 /**
  * Generate sitemap.xml for better SEO;

@@ -1,67 +1,47 @@
-
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
 
-import type { NextPage } from 'next',
-
-import type { NextPage } from 'next','
-
-import Head from 'next/head',
-const BlockchainSolutions: NextPage = () => {}
+export default function BlockchainSolutionsPage() {
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
-        <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainSolutions page" />
+        <title>Blockchain Solutions | Zion Tech Group</title>
+        <meta name="description" content="Professional blockchain solutions solutions for your business." />
       </Head>
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const BlockchainSolutions: NextPage;
-
-      <main>
-        <h1>BlockchainSolutions</h1>
-        <p>This page is under construction.</p>
-      </main>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Blockchain Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional blockchain solutions solutions for your business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300">
+              Professional solutions for your business needs.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300">
+              Advanced technology solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300">
+              Scalable and reliable solutions.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-  ),
-};
-
-;
-
-      <main>;
-        <h1>BlockchainSolutions</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-
-export default BlockchainSolutions;
-
-'
-
-import Head from 'next / head';
-      <main>;
-        <h1 > BlockchainSolutions</h1>;
-        <p > This page is under construction.</p>;
-      </main>;
-    </div>),
+  );
 }
-;
-export default BlockchainSolutions;
-;
-
-export default BlockchainSolutions;
-  ),
-};
-
-export default BlockchainSolutions;
-  )
-}
-export default BlockchainSolutions;
-
-},
-export default BlockchainSolutions,
-

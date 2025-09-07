@@ -1,69 +1,61 @@
-export const metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'AI-powered social media scheduling and management.',
-  keywords: 'ai-social-media-scheduler, services, business, technology'
+import React from 'react'
+import { Metadata } from 'next'
 
-export const metadata = {
-  title: "AI Social Media Scheduler | Zion Tech Group",
-  description:
-    "Intelligent social media scheduling tool with AI-powered content optimization, hashtag suggestions, and optimal posting times for maximum engagement.",
-  keywords:
-    "AI social media scheduler, social media automation, content optimization, hashtag suggestions, social media management, AI posting",
-};
-
-interface FeatureProps {
-  title: string;
-  description: string;
-  icon: string;
-
+export const metadata: Metadata = {
+  title: 'Ai Social Media Scheduler | Zion Tech Group',
+  description: 'Professional ai social media scheduler services for your business needs.',
+  keywords: 'ai social media scheduler, services, business, technology'
 }
+
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Social Media Scheduler
+            Ai Social Media Scheduler
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered social media scheduling and management.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai social media scheduler services for your business needs.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
             <p className="text-gray-300">
-              Tailored ai-social-media-scheduler solutions designed for your specific business requirements.
+              High-performance solutions that deliver results quickly and consistently.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
             <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
+              Seamlessly integrate with your existing systems and workflows.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">
-              Round-the-clock support to ensure your ai-social-media-scheduler solutions run smoothly.
+              Grow with your business with our flexible and scalable platform.
             </p>
           </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai social media scheduler services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>
   )
 }
-
-        </div>
-        <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-      </section>
-    </div>
-  );
-}
-

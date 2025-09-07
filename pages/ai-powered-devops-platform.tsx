@@ -1,167 +1,47 @@
-import React from 'react',
 import React from 'react';
 import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+
 export default function AIPoweredDevOpsPlatformPage() {
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';
-
-import ServiceLanding from '../components/sections/ServiceLanding',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
-
-';
-
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {}
-	return (
-		<>
-			<Head>
-				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />"
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
-			</Head>
-			<ServiceLanding"
-				title="AI-Powered DevOps Platform""
-				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration.""
-				subtitle="Ship faster with higher reliability"
-				pricePerMonthUSD={2499}"
-				implementationWeeks="2-4 weeks""
-				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-				features={[";
-					"Autonomous CI/CD optimization and caching";"
-					"Flaky test detection and auto quarantine";"
-					"Change-risk scoring before deploy";"
-					"Automated canary and feature flags";"
-					"Rollback orchestration with blast radius limits";"
-					"Incident prediction, runbooks, and guardrails"
-				]}"
-				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}"
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
-			/>
-		</>
-	)
-}
-
   return (
-
-export default function AIPoweredDevOpsPlatformPage() {}
-  return (;
-
-    <>;
-      <Head>;
-        <title > AI - Powered DevOps Platform | Zion Tech Group</title>;
-        <meta;'
-          name='description';'
-          content='Intelligent CI / CD, test acceleration, incident prevention, and release automation powered by AI.';
-        />;
-        <link;'
-          rel='canonical';'
-          href='https://ziontechgroup.com / ai - powered - devops - platform';
-        />;
-      </Head>;
-      <ServiceLanding;'
-        title='AI - Powered DevOps Platform';'
-        description='Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change - risk prediction, incident prevention, and automated release orchestration.';'
-        subtitle='Ship faster with higher reliability';
-        pricePerMonthUSD={2499}'
-        implementation_weeks='2 - 4 weeks';'
-        roi_note='Cut MTTR by 40% and increase deployment frequency 3 - 5x';
-        features={[;'
-          'Autonomous CI / CD optimization and caching','
-          'Flaky test detection and auto quarantine','
-          'Change - risk scoring before deploy','
-          'Automated canary and feature flags','
-          'Rollback orchestration with blast radius limits','
-          'Incident prediction, runbooks, and guardrails',
-        ]}
-
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
-export default function AIPoweredDevOpsPlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
-			</Head>
-			<ServiceLanding
-				title="AI-Powered DevOps Platform"
-				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
-				subtitle="Ship faster with higher reliability"
-				pricePerMonthUSD={2499  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>AI-Powered DevOps Platform | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered DevOps platform solutions." />
+      </Head>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI-Powered DevOps Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Advanced AI-powered DevOps platform solutions for your business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Automated Deployment</h3>
+            <p className="text-gray-300">
+              AI-powered automated deployment and scaling.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Intelligent Monitoring</h3>
+            <p className="text-gray-300">
+              Smart monitoring and alerting systems.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Predictive Analytics</h3>
+            <p className="text-gray-300">
+              Predictive analytics for DevOps optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-				implementationWeeks="2-4 weeks"
-				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-				features={[
-					"Autonomous CI/CD optimization and caching",
-					"Flaky test detection and auto quarantine",
-					"Change-risk scoring before deploy",
-					"Automated canary and feature flags",
-					"Rollback orchestration with blast radius limits",
-					"Incident prediction, runbooks, and guardrails"
-				]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
-			/>
-		</>
-	)
-				canonical="https: //ziontechgroup.com/ai-powered-devops-platform";
-			/>;
-		</>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-        industries={['SaaS', 'E - commerce', 'Fintech', 'Media', 'Enterprise IT']}
-        canonical='https: //ziontechgroup.com / ai - powered - devops - platform';
-      />;
-    </>);
-;
-
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIPoweredDevOpsPlatformPage() {
-
-'"
-
