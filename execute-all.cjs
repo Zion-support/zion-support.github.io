@@ -8,7 +8,9 @@ class ExecuteAllScripts {
       'comprehensive-automation-suite.cjs',
       'automation-runner.cjs',
       'comprehensive-improvements.cjs',
-      'final-automation-suite.cjs'
+      'final-automation-suite.cjs',
+      'enhanced-automation-suite.cjs',
+      'monitoring-maintenance-suite.cjs'
     ];
   }
 

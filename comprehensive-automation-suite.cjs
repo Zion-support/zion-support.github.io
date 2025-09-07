@@ -436,6 +436,81 @@ class ComprehensiveAutomationSuite {
     return recommendations;
   }
 
+  async runTests() {
+    const startTime = Date.now();
+    this.log('🧪 Running comprehensive test suite...');
+
+    try {
+      // Run Jest tests
+      execSync('npm test', { stdio: 'pipe' });
+      this.results.testing = { success: true, duration: Date.now() - startTime, errors: [], warnings: [] };
+      this.log('✅ All tests passed successfully', 'SUCCESS');
+    } catch (error) {
+      this.results.testing = { success: false, duration: Date.now() - startTime, errors: [error.message], warnings: [] };
+      this.log(`❌ Tests failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async generateDocumentation() {
+    const startTime = Date.now();
+    this.log('📚 Generating comprehensive documentation...');
+
+    try {
+      // Generate API documentation
+      if (fs.existsSync('src/api')) {
+        execSync('npx typedoc src/api --out docs/api', { stdio: 'pipe' });
+      }
+
+      // Generate component documentation
+      if (fs.existsSync('src/components')) {
+        execSync('npx storybook build --output-dir docs/storybook', { stdio: 'pipe' });
+      }
+
+      // Generate README with project info
+      const readmeContent = `# Zion Tech Group Website
+
+## Overview
+Modern technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+
+## Features
+- Responsive design with modern UI/UX
+- SEO optimized
+- Accessibility compliant
+- Performance optimized
+- Comprehensive testing suite
+
+## Getting Started
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
+
+## Testing
+\`\`\`bash
+npm test
+\`\`\`
+
+## Building
+\`\`\`bash
+npm run build
+\`\`\`
+
+## Deployment
+\`\`\`bash
+npm run deploy
+\`\`\`
+`;
+
+      fs.writeFileSync('README.md', readmeContent);
+
+      this.results.documentation = { success: true, duration: Date.now() - startTime, errors: [], warnings: [] };
+      this.log('✅ Documentation generated successfully', 'SUCCESS');
+    } catch (error) {
+      this.results.documentation = { success: false, duration: Date.now() - startTime, errors: [error.message], warnings: [] };
+      this.log(`❌ Documentation generation failed: ${error.message}`, 'ERROR');
+    }
+  }
+
 
   async run() {
     console.log('🚀 Running Comprehensive Automation Suite...');
@@ -448,6 +523,8 @@ class ComprehensiveAutomationSuite {
       await this.optimizeSEO();
       await this.improveAccessibility();
       await this.optimizePerformance();
+      await this.runTests();
+      await this.generateDocumentation();
       await this.deployChanges();
       
       this.generateDetailedReport();

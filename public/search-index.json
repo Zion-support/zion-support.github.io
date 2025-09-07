@@ -1,65 +1,50 @@
-<<<<<<< HEAD
 {
+  "generated": "2025-09-07T08:48:37.470Z",
   "pages": [
     {
       "title": "Home",
       "url": "/",
-      "content": "Zion Holdings - Technology Solutions"
+      "description": "Zion Tech Group - Leading technology solutions provider",
+      "keywords": [
+        "home",
+        "technology",
+        "solutions",
+        "zion"
+      ]
+    },
+    {
+      "title": "About Us",
+      "url": "/about",
+      "description": "Learn about Zion Tech Group and our mission",
+      "keywords": [
+        "about",
+        "company",
+        "mission",
+        "team"
+      ]
     },
     {
       "title": "Services",
       "url": "/services",
-      "content": "Our comprehensive technology services"
+      "description": "Our comprehensive technology services",
+      "keywords": [
+        "services",
+        "technology",
+        "consulting",
+        "development"
+      ]
     },
     {
-      "title": "About",
-      "url": "/about",
-      "content": "About Zion Holdings"
+      "title": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with Zion Tech Group",
+      "keywords": [
+        "contact",
+        "support",
+        "help",
+        "inquiry"
+      ]
     }
   ],
-  "generated": "2025-09-06T20:25:06.960Z"
+  "totalPages": 4
 }
-=======
-[
-  {
-    "title": "Home",
-    "url": "/",
-    "content": "Zion Tech Group - Leading technology solutions provider",
-    "keywords": [
-      "home",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "About",
-    "url": "/about",
-    "content": "Learn about Zion Tech Group and our mission",
-    "keywords": [
-      "about",
-      "company",
-      "mission"
-    ]
-  },
-  {
-    "title": "Services",
-    "url": "/services",
-    "content": "Our comprehensive technology services",
-    "keywords": [
-      "services",
-      "technology",
-      "solutions"
-    ]
-  },
-  {
-    "title": "Contact",
-    "url": "/contact",
-    "content": "Get in touch with Zion Tech Group",
-    "keywords": [
-      "contact",
-      "reach",
-      "support"
-    ]
-  }
-]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
