@@ -28,9 +28,9 @@ describe('AppMinimal', () => {
     // Add content tests here
   });
 
-=======
-  it('displays correct content', () => {
+  it('handles user interactions', () => {
     render(<AppMinimal />);
+    // Add interaction tests here
   });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   it('handles user interactions', () => {
