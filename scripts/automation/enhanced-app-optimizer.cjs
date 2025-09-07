@@ -1,35 +1,27 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class EnhancedAppOptimizer {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'enhanced-app-optimizer.log');
-    this.ensureDirectories();
-    this.results = {}
-      "timestamp": new Date().toISOString(),
-      "optimizations": [],
-      "performance": {},
-      "security": {},
-      "seo": {},
-      "accessibility": {};
-    }};
-  ensureDirectories() {}
-    const dirs = ['automation/logs', 'scripts/automation/reports'];
+
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
+
       if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
+        fs.mkdirSync(dirPath, { "recursive": true })};"
+    })};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(}
+
+    const timestamp = new Date().toISOString(})
 });
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
@@ -40,11 +32,10 @@ class EnhancedAppOptimizer {}
   async optimizePerformance() {}
     this.log('Starting performance optimization...');
     const optimizations = [];
-
     try {}
       // Analyze bundle size;
       const bundleAnalysis = execSync('npm run "build": analyze', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -83,7 +74,6 @@ class EnhancedAppOptimizer {}
   async optimizeSEO() {}
     this.log('Starting SEO optimization...');
     const seoOptimizations = [];
-
     // Generate sitemap;
     try {}
       const sitemapContent = this.generateSitemap(;);
@@ -118,11 +108,10 @@ class EnhancedAppOptimizer {}
   async optimizeSecurity() {}
     this.log('Starting security optimization...');
     const securityOptimizations = [];
-
     // Run security audit;
     try {}
       execSync('npm audit --audit-level=moderate', { })
-        "cwd": this.projectRoot, 
+        "cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -158,16 +147,20 @@ class EnhancedAppOptimizer {}
   async optimizeAccessibility() {}
     this.log('Starting accessibility optimization...');
     const accessibilityOptimizations = [];
-
     // Check for alt text in images;
     try {}
       const pagesDir = path.join(this.projectRoot, 'pages';);
       const componentsDir = path.join(this.projectRoot, 'components';);
+
+        const imageFiles = this.findImageFiles(publicDir) {}
+        const imageFiles = this.findImageFiles(publicDir})
+
+        const pages = this.findPageFiles(pagesDir) {}
+        const pages = this.findPageFiles(pagesDir})
+
       let imageCount = ;0;
       let altTextCount = ;0;
-
       [pagesDir, componentsDir].forEach(dir => {})
-        if () {}
           const files = this.findReactFiles(dir) {}
     ) {}
           const files = this.findReactFiles(dir}
@@ -180,11 +173,10 @@ class EnhancedAppOptimizer {}
             altTextCount += altTexts.length})};
       }
 });
-
       accessibilityOptimizations.push({ })
-        "type": 'alt-text-check', 
-        "status": 'completed', 
-        "images": imageCount, 
+        "type": 'alt-text-check',
+        "status": 'completed',
+        "images": imageCount,
         "altTexts": altTextCount,
         "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -196,11 +188,9 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)};
@@ -213,11 +203,9 @@ class EnhancedAppOptimizer {}
   findPageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {}
         files.push(fullPath)};
@@ -230,11 +218,9 @@ class EnhancedAppOptimizer {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-    
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-      
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -261,13 +247,10 @@ class EnhancedAppOptimizer {}
       '/privacy',
       '/terms'
     ];
-
     const baseUrl = '"https": //ziontechgroup.com;';
     const currentDate = new Date().toISOString(;);
-
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\;n;';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
     pages.forEach(page => {})
       sitemap += '  <url>\n';
       sitemap += `    <loc>${baseUrl}${page}</loc>\n`;`
@@ -276,13 +259,11 @@ class EnhancedAppOptimizer {}
       sitemap += '    <priority>0.8</priority>\n';
       sitemap += '  </url>\n'}
 });
-
     sitemap += '</urlset>';
     return sitemap};
   generateRobotsTxt() {}
     return "User-"agent": *;
 Allow: /
-
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
@@ -298,12 +279,10 @@ Disallow: /private/"};
       await this.optimizeSEO();
       await this.optimizeSecurity();
       await this.optimizeAccessibility();
-
       // Save results;
       const reportFile = path.join(this.projectRoot, 'automation', 'logs', 'enhanced-app-optimizer-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Optimization report saved to ${reportFile}`);
-
       this.log('Enhanced App Optimizer completed successfully!');
       return this.results} catch(error) {}
       this.log(`Enhanced App Optimizer "failed": ${error.message}`, 'ERROR');
@@ -317,3 +296,7 @@ if ( {})
   optimizer.run().catch(console.error)};
 
 module.exports = EnhancedAppOptimizer;
+
+module.exports = EnhancedAppOptimizer;
+          const files = this.findReactFiles(dir})
+

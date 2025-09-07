@@ -6,28 +6,11 @@ echo "Fixing all remaining merge conflicts..."
 find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
   if [ -f "$file" ] && grep -q "
     echo "Fixing conflicts in: $file"
-    
-    # Remove all merge conflict markers
 
-    sed -i '/^/,/^/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
->>>>>>> main
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
-    
-    # Remove everything from 
+
     sed -i '/^
-    
     # Remove any remaining  markers
     sed -i '/^$/d' "$file"
-    
     echo "Fixed: $file"
   fi
 done

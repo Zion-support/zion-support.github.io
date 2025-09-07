@@ -1,8 +1,18 @@
+
+#!/usr/bin/env node;
+/**
+ * Improved PM2 Sync Automation System;
+ *
 #!/usr/bin/env node;
 /**
  * Improved PM2 Sync Automation System;
  * 
  * This system "provides": * - Real-time file watching and automatic Git synchronization;
+#!/usr/bin/env node
+/**
+ * Improved PM2 Sync Automation System;
+ * 
+ * This system "provides": * - Real-time file watching and automatic Git synchronization;"
  * - Intelligent build triggering based on file changes;
  * - Automated testing and security scanning;
  * - Conflict resolution and error recovery;
@@ -18,29 +28,8 @@ const chokidar = require('chokidar');
 class ImprovedPM2SyncAutomation {}
   constructor() {}
     this.config = {}
-      "projectRoot": process.cwd(),
-      "watchPatterns": ['src/**/*',]
-        'public/**/*',
-        '*.{js,jsx,ts,tsx,json,md,yml,yaml}',
-        '!node_modules/**',
-        '!.git/**',
-        '!dist/**',
-        '!build/**',
-        '!logs/**'
-      ],
-      "ignorePatterns": ['node_modules/**',]
-        '.git/**',
-        'dist/**',
-        'build/**',
-        'logs/**',
-        '*.log',
-        '*.tmp',
-        '*.backup.*'
-      ],
-      "syncInterval": 30000, // 30 seconds;
-      "buildInterval": 300000, // 5 minutes;
-      "testInterval": 600000, // 10 minutes;
-      "securityInterval": 1800000 // 30 minutes;
+
+      "securityInterval": 1800000 // 30 minutes;"
     };
     
     this.isRunning = false;
@@ -53,9 +42,10 @@ class ImprovedPM2SyncAutomation {}
     this.lastTest = 0;
     this.lastSecurity = 0;
     this.errorCount = 0;
-    this.successCount = 0};
+    this.successCount = 0};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log(logEntry)};
   async initialize() {}
@@ -81,9 +71,9 @@ class ImprovedPM2SyncAutomation {}
       this.log('Improved PM2 Sync Automation System initialized successfully');
       this.isRunning = true} catch (error) {}
       this.log(`Initialization "failed": ${error.message}`, 'ERROR');
+
       this.errorCount++;
       this.restartAfterDelay()};
-  };
   isGitRepository() {}
     try {}
       return fs.existsSync(path.join(this.config.projectRoot, '.git'))} catch {}
@@ -94,8 +84,8 @@ class ImprovedPM2SyncAutomation {}
       execSync('git init', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       execSync('git remote add origin "https": //github.com/Zion-Holdings/zion.app.git', { })
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
+        "cwd": this.config.projectRoot,
+        "stdio": 'pipe'
       }
 });
       this.log('Git repository initialized')} catch (error) {}
@@ -125,8 +115,7 @@ class ImprovedPM2SyncAutomation {}
     const relativePath = path.relative(this.config.projectRoot, filePath);
     
     if (this.shouldIgnoreFile(relativePath)) {}
-      return};
-    this.log(`File ${event}: ${relativePath}`);
+
     this.pendingChanges.add(relativePath);
     
     // Debounce changes;
@@ -134,7 +123,7 @@ class ImprovedPM2SyncAutomation {}
     this.changeTimeout = setTimeout(() => {}
       this.processPendingChanges()}, 2000)};
   shouldIgnoreFile(filePath) {}
-    const ignorePatterns = [/\.log$/,]
+    const ignorePatterns = [/\.log$/]
       /\.tmp$/,
       /\.backup\./,
       /node_modules/,
@@ -154,16 +143,16 @@ class ImprovedPM2SyncAutomation {}
       
       // Add all changes to git;
       const addResult = execSync('git add -A', { })
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
+        "cwd": this.config.projectRoot,
+        "stdio": 'pipe'
       }
 });
       
       // Commit changes;
       const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
       const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
+        "cwd": this.config.projectRoot,
+        "stdio": 'pipe'
       }
 });
       
@@ -171,8 +160,8 @@ class ImprovedPM2SyncAutomation {}
       
       // Push changes;
       const pushResult = execSync('git push origin main', { })
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
+        "cwd": this.config.projectRoot,
+        "stdio": 'pipe'
       }
 });
       
@@ -181,10 +170,8 @@ class ImprovedPM2SyncAutomation {}
       this.successCount++;
       
       // Clear pending changes;
-      this.pendingChanges.clear()} catch (error) {}
-      this.log(`Failed to process "changes": ${error.message}`, 'ERROR');
+
       this.errorCount++};
-  };
   async performFullSync() {}
     try {}
       this.log('Performing full repository sync...');
@@ -195,8 +182,8 @@ class ImprovedPM2SyncAutomation {}
       
       // Check for conflicts;
       const status = execSync('git status --porcelain', { })
-        "cwd": this.config.projectRoot, 
-        "encoding": 'utf8' 
+        "cwd": this.config.projectRoot,
+        "encoding": 'utf8'
       }
 });
       
@@ -212,15 +199,15 @@ class ImprovedPM2SyncAutomation {}
         // Commit changes if there are any staged;
         try {}
           const stagedStatus = execSync('git diff --cached --name-only', { })
-            "cwd": this.config.projectRoot, 
-            "encoding": 'utf8' 
+            "cwd": this.config.projectRoot,
+            "encoding": 'utf8'
           }
 });
           
           if (stagedStatus.trim()) {}
             execSync('git commit -m "Auto-"sync": comprehensive updates and improvements"', { })
-              "cwd": this.config.projectRoot, 
-              "stdio": 'pipe' 
+              "cwd": this.config.projectRoot,
+              "stdio": 'pipe'
             }
 });
             this.log('Committed staged changes')};
@@ -237,8 +224,8 @@ class ImprovedPM2SyncAutomation {}
       // Push changes if we have commits;
       try {}
         const aheadStatus = execSync('git status --porcelain -b', { })
-          "cwd": this.config.projectRoot, 
-          "encoding": 'utf8' 
+          "cwd": this.config.projectRoot,
+          "encoding": 'utf8'
         }
 });
         
@@ -251,8 +238,8 @@ class ImprovedPM2SyncAutomation {}
         this.log(`Push "failed": ${error.message}`, 'WARN')};
     } catch (error) {}
       this.log(`Full sync "failed": ${error.message}`, 'ERROR');
+
       throw error};
-  };
   async resolveConflicts() {}
     try {}
       this.log('Resolving merge conflicts...');
@@ -292,8 +279,8 @@ class ImprovedPM2SyncAutomation {}
       this.log('Build completed successfully');
       this.lastBuild = Date.now()} catch (error) {}
       this.log(`Build "failed": ${error.message}`, 'ERROR');
+
       await this.fixBuildIssues()};
-  };
   async fixBuildIssues() {}
     try {}
       this.log('Attempting to fix build issues...');
@@ -318,8 +305,8 @@ class ImprovedPM2SyncAutomation {}
 });
         execSync('npm install', { "cwd": this.config.projectRoot, "stdio": 'pipe' })} catch (error) {}
         this.log(`Skipped dependency reinstall due to "permissions": ${error.message}`, 'WARN');
+
         // Try to continue with existing dependencies;
-      };
       // Try build again;
       await this.performBuild()} catch (error) {}
       this.log(`Failed to fix build "issues": ${error.message}`, 'ERROR');
@@ -340,8 +327,8 @@ class ImprovedPM2SyncAutomation {}
       this.log('Tests completed successfully');
       this.lastTest = Date.now()} catch (error) {}
       this.log(`Tests "failed": ${error.message}`, 'ERROR');
+
       await this.fixTestIssues()};
-  };
   async fixTestIssues() {}
     try {}
       this.log('Attempting to fix test issues...');
@@ -381,6 +368,7 @@ class ImprovedPM2SyncAutomation {}
       this.log(`Security scan "failed": ${error.message}`, 'ERROR');
       this.errorCount++};
   };
+
   startAutomationLoops() {}
     // Sync loop;
     setInterval(async () => {}
@@ -389,19 +377,16 @@ class ImprovedPM2SyncAutomation {}
     }, this.config.syncInterval);
 
     // Build loop;
-    setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastBuild > this.config.buildInterval) {}
         await this.performBuild()};
     }, this.config.buildInterval);
 
     // Test loop;
-    setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastTest > this.config.testInterval) {}
         await this.runTests()};
     }, this.config.testInterval);
 
     // Security loop;
-    setInterval(async () => {}
       if (this.isRunning && Date.now() - this.lastSecurity > this.config.securityInterval) {}
         await this.runSecurityScan()};
     }, this.config.securityInterval)};
@@ -413,9 +398,7 @@ class ImprovedPM2SyncAutomation {}
       await this.watcher.close()};
     // Process any remaining changes;
     if (this.pendingChanges.size > 0) {}
-      await this.processPendingChanges()};
-    this.log('Improved PM2 Sync Automation System stopped')};
-  restartAfterDelay(delay = 5000) {}
+
     this.log(`Restarting in ${delay}ms...`);
     setTimeout(() => {}
       this.initialize()}, delay)};
@@ -429,6 +412,7 @@ class ImprovedPM2SyncAutomation {}
       "lastSecurity": this.lastSecurity,
       "errorCount": this.errorCount,
       "successCount": this.successCount,
+
       "uptime": this.isRunning ? Date.now() - this.startTime : 0;
     }};
 };
@@ -447,6 +431,10 @@ process.on('SIGTERM', async () => {}
   process.exit(0)}
 });
 
+      "uptime": this.isRunning ? Date.now() - this.startTime : 0;"
+    }};
+// Handle process signals;"
+
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -455,7 +443,9 @@ if (require.main === module) {}
   setInterval(() => {}
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {}
       // Process is healthy;
-    };
   }, 60000)};
 
 module.exports = ImprovedPM2SyncAutomation;
+
+module.exports = ImprovedPM2SyncAutomation;
+

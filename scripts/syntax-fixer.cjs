@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -11,3 +12,4 @@ const util = require("util")
     await this.log(" Starting syntax error fixing...")
 
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+

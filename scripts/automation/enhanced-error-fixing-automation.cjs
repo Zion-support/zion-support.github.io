@@ -1,8 +1,9 @@
 
 #!/usr/bin/env node;
+
 const fs = require("fs")
 const path = require("path")
-console.log("" Starting Enhanced Error Fixing Automation System...")
+console.log( Starting Enhanced Error Fixing Automation System...")
   "AUTOMATION_INTERVAL"
   "MAX_RETRIES"
   "LOG_LEVEL": process.env.LOG_LEVEL || "info"
@@ -10,8 +11,8 @@ console.log("" Starting Enhanced Error Fixing Automation System...")
   "ENABLE_TYPE_CHECK": process.env.ENABLE_TYPE_CHECK !== "false"
   "ENABLE_LINT_FIX": process.env.ENABLE_LINT_FIX !== "false"
   console.log("� Starting error fixing cycle at ${this.startTime.toISOString()}"
-      // Create logs directory if it doesn"
-      console.log(` Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.``)
+      // Create logs directory if it doesn
+      console.log(` Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.``)"
   console.error(" Enhanced error fixing "failed": ")
   const logsDir = path.join(process.cwd(), "automation", "logs"
   fs.mkdirSync(logsDir, { "recursive"})
@@ -40,9 +41,9 @@ console.log("" Starting Enhanced Error Fixing Automation System...")
           "fix": "TypeScript error fix"
   console.warn(⚠  Could not fix TypeScript error in ${error.file}:")
     const moduleName = error.message.match(/Cannot find module "([^"]+)"
-        new RegExp(import.*from\\s+[""]${moduleName}[""], "g"),import {   } from "${moduleName}"
-const { execSync, spawn } = require("child_process")
-const glob = require(`glob``)
+        new RegExp(import.*from\\s+[]${moduleName}[], "g"),import {   } from "${moduleName}"
+const { execSync, spawn } = require("child_process")"
+const glob = require(`glob``)"
     this.logFile = path.join(this.projectRoot, "error-reports", "error-fixer-report-${Date.now()}.json"
     if (!fs.existsSync(path.join(this.projectRoot, "error-reports")
   fs.mkdirSync(path.join(this.projectRoot, "error-reports"), { "recursive"}
@@ -88,10 +89,8 @@ export default function"
   console.log(`" Fixing React hooks errors..."`)
   let content = fs.readFileSync(file, "utf8")
           /useEffect\(\s*\(\)\s*=>\s*\{/g,useEffect(() => {"}
-        content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>")
-  console.warn(⚠  Could not fix React hooks in ${file}:")
-  console.log(" Fixing JSX errors...")
-  let content = fs.readFileSync(file, "utf8")
+        content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>")"
+</any>"
           /<([A-Z][a-zA-Z]*)\s+([^>]*)\/>/g,<$1 $2 />"
         content = content.replace(/className=/g, "className=")
         content = content.replace(/onClick=/g, "onClick=")
@@ -112,7 +111,7 @@ export default function"
         content = content.replace(/;\s*}/g, "}")
   console.log(`" Fixing build errors..."`)
       execSync("npm run build", { "stdio": "pipe"})
-      console.log(" Build successful"")
+      console.log(" Build successful)
   console.warn("⚠  Build failed, but continuing with other fixes")
   console.log(" Running final checks...")
   execSync("npm run type-check", { "stdio": "pipe"})
@@ -129,7 +128,7 @@ export default function"
         const varMatch = message.match(/"(.+)"
           lines[line - 1] = lines[line - 1].replace(new RegExp("\\b${varName}\\b"), "_${varName}"
       } else if (message.includes("no-console")
-        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, "")} else if (message.includes("prefer-const")
+        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, )} else if (message.includes("prefer-const")
         lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const")
       fs.writeFileSync(filePath, lines.join("\n")
   "type": "eslint_error"
@@ -159,8 +158,8 @@ export default function"
       "summary": "Enhanced error fixing automation failed"
       "status": "failed"
       "config"
-      process.cwd(),enhanced-error-fixing-error-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Error report saved to ${reportPath}```)
+      process.cwd(),enhanced-error-fixing-error-report.json
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Error report saved to ${reportPath}``)"
   this.log("Installing missing "dependencies": ${missingDeps.join(", ")}"
       await this.runCommand("npm install --save-dev ${missingDeps.join(" ")}"
   "type": "dependency_install"
@@ -171,5 +170,6 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
+
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 

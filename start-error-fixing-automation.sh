@@ -10,8 +10,6 @@ pm2 delete all 2>/dev/null || true
 # Start the error fixing ecosystem
 echo "Starting PM2 error fixing ecosystem..."
 pm2 start ecosystem.error-fixing.config.cjs
-
-
 # Error Fixing Automation Startup Script
 # This script starts the comprehensive error fixing automation system
 # Error Fixing Automation PM2 Management Script
@@ -65,8 +63,6 @@ echo "Error fixing automation system started successfully!"
 echo "Monitor with: pm2 status"
 echo "View logs with: pm2 logs"
 echo "Stop with: pm2 stop all"
-
-
 echo "📋 Available commands:"
 echo "  pm2 logs error-fixer-automation          # View main error fixer logs"
 echo "  pm2 logs typescript-error-fixer          # View TypeScript error fixer logs"

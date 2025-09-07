@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -51,3 +52,4 @@ const { execSync } = require('child_process')
     console.log('\n "Recommendations")
 
     console.error(' Automation suite "failed")
+

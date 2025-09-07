@@ -12,4 +12,3 @@ async function analyzeBundle() {}
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
 });
 
-

@@ -10,15 +10,11 @@ function removeMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?    content = content.replace(/=======[\s\S]*?    
     // Clean up any remaining conflict markers
     content = content.replace(/<<<<<<< HEAD/g, '');
     content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+/g, '');
-    
+    content = content.replace(/    
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     

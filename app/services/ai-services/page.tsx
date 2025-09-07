@@ -97,93 +97,20 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* Core AI Services */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Solutions</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive AI services designed to accelerate your digital transformation and drive innovation.
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Coming Soon
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            This service page is under development. Please contact us for more information.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AIServiceCard
-            icon="🧠"
-            title="Custom LLM Development"
-            description="Build and deploy large language models tailored to your specific business needs and use cases."
-            features={[
-              "Custom model training",
-              "Fine-tuning for specific domains",
-              "API integration",
-              "Performance optimization",
-              "Cost-effective deployment"
-            ]}
-            price="From $15,000"
-          />
-          <AIServiceCard
-            icon="🔍"
-            title="RAG Systems"
-            description="Retrieval-Augmented Generation systems that combine knowledge bases with LLMs for accurate, contextual responses."
-            features={[
-              "Knowledge base integration",
-              "Vector database setup",
-              "Context-aware responses",
-              "Real-time data updates",
-              "Custom embeddings"
-            ]}
-            price="From $8,000"
-          />
-          <AIServiceCard
-            icon="🤖"
-            title="AI Agents & Automation"
-            description="Intelligent agents that automate complex workflows and decision-making processes."
-            features={[
-              "Workflow automation",
-              "Decision trees",
-              "Multi-agent systems",
-              "Integration with existing tools",
-              "Continuous learning"
-            ]}
-            price="From $12,000"
-          />
-          <AIServiceCard
-            icon="👁️"
-            title="Computer Vision"
-            description="Advanced image and video analysis solutions for object detection, recognition, and processing."
-            features={[
-              "Object detection",
-              "Image classification",
-              "Facial recognition",
-              "Video analysis",
-              "Real-time processing"
-            ]}
-            price="From $10,000"
-          />
-          <AIServiceCard
-            icon="🔧"
-            title="MLOps & Model Deployment"
-            description="End-to-end machine learning operations including model training, deployment, and monitoring."
-            features={[
-              "Model versioning",
-              "Automated training pipelines",
-              "A/B testing",
-              "Performance monitoring",
-              "Scalable deployment"
-            ]}
-            price="From $20,000"
-          />
-          <AIServiceCard
-            icon="💬"
-            title="Natural Language Processing"
-            description="Text analysis, sentiment analysis, and language understanding solutions for your applications."
-            features={[
-              "Sentiment analysis",
-              "Text classification",
-              "Named entity recognition",
-              "Language translation",
-              "Text summarization"
-            ]}
-            price="From $6,000"
-          />
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
         </div>
       </section>
 

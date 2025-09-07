@@ -1,8 +1,16 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
+class ImportExtensionFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -17,8 +25,8 @@ class ImportExtensionFixer {}
 });
     
     for (const file of files) {}
-      const filePath = path.join(this.projectRoot, file);
-      let content = fs.readFileSync(filePath, 'utf8');
+      const filePath = path.join(this.projectRoot, file);"
+
       let modified = false;
 
       // Fix .ts extensions in import statements;
@@ -53,19 +61,20 @@ class ImportExtensionFixer {}
       this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
+      if (modified) {}
+        this.fixesApplied++};
+    };
+  async run() {}"
+
       throw error};
-  };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
+
   automation.run();
-    .then(() => {}
-      console.log('Import Extension Fixer completed successfully!');
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('Import Extension Fixer "failed": ', error);
+    .then(() => {}"
+
       process.exit(1)})};
 
 module.exports = ImportExtensionFixer;
+

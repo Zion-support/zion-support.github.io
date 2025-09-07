@@ -1,8 +1,14 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Enhanced App Improvement Script;
- * Comprehensive automation for testing, fixing, and improving the application;
+ * Enhanced App Improvement Script
+ * Comprehensive improvements for the Zion Tech Group application
  */
+
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -48,3 +54,7 @@ const path = require('path')
         execSync(step, { "stdio"})
 
       this.log(` Process "failed"`)
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+

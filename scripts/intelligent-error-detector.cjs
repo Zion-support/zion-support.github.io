@@ -1,8 +1,10 @@
+
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+
   log(message, level = "INFO")
       fs.mkdirSync(this.reportsDir, { "recursive"})
       const content = fs.readFileSync(filePath, "utf8")
@@ -68,3 +70,4 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "components")
 
     this.log("� Error detection completed!", "SUCCESS")
+

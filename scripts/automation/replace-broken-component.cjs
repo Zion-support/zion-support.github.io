@@ -1,7 +1,16 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
+class ComponentReplacer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -11,6 +20,20 @@ class ComponentReplacer {}
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
     
+    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { }
+  Bot,
+  User,
+  Send,
+  Paperclip,
+  Mic,
+  MicOff,
+  Settings,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Sparkles,
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -48,26 +71,10 @@ interface AIChatbotSystemProps {}
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean};
-export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
-  showHeader = true,
-  showSettings = true,
-  maxMessages = 50,
-  autoScroll = true;
-}) => {}
+export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
+
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-  const [settings, setSettings] = useState({})
-    "voiceEnabled": false,
-    "autoResponse": true,
-    "language": 'en',
-    "theme": 'dark',
-    "responseSpeed": 'normal'
-  }
-});
-  const [isListening, setIsListening] = useState(false);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message;
@@ -183,6 +190,9 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     setIsListening(!isListening)}, [isListening]);
 
   return ()
+"
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
+
     <>
       {/* Chat Toggle Button */};
       <button;
@@ -194,21 +204,26 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       </button>
 
       {/* Chat Interface */};
+</button>"
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
+
+      </button>
       <AnimatePresence>
-        {isOpen && (})
-          <motion.div;
+
+          <motion.div;"
             initial={{ "opacity": 0, "y": 20, "scale": 0.95 }};
             animate={{ "opacity": 1, "y": 0, "scale": 1 }};
             exit={{ "opacity": 0, "y": 20, "scale": 0.95 }};
-            className="fixed bottom-24 right-6 w-96 h-[600px] bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl z-40 flex flex-col"
+            className="fixed bottom-24 right-6 w-96 h-[600px] bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl z-40 flex flex-col
           >
-            {/* Header */};
-            {showHeader && (})
-              <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
+</motion>"
+              <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">"
+</div>"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center gap-3">"
+                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">"
+                      <Bot className="w-5 h-5 text-white" />"
+
                     </div>
                     <div>
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
@@ -270,18 +285,29 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.suggestions.map((suggestion, index) => (})
                                 <button;
+
+                      <p className="text-xs text-zinc-400">Powered by AI</p>"
+                  <div className="flex items-center gap-2">"
+                        onClick={() => setShowSettingsPanel(!showSettingsPanel)};
+                        <Settings className="w-4 h-4" />"
+
+                      onClick={() => setIsOpen(false)};
+                      <X className="w-4 h-4" />"
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">"
+                <motion.div;
+                  key={message.id};"
+
+                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
+                        <User className="w-4 h-4 text-zinc-300" />"
+
+                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
+                        <Bot className="w-4 h-4 text-white" />"
+
+                        <div className="mt-2 space-y-2">"
+                            <div className="flex flex-wrap gap-1">"
                                   key={index};
                                   onClick={() => handleSuggestionClick(suggestion)};
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full "hover": bg-zinc-600/50 transition-colors"
-                                >
-                                  {suggestion};
-                                </button>
-                              ))};
-                            </div>
-                          )};
-                          {message.metadata.relatedServices && (})
-                            <div className="flex flex-wrap gap-1">
-                              {message.metadata.relatedServices.map((service, index) => (})
                                 <span;
                                   key={index};
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
@@ -321,24 +347,24 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                       )};
                     </div>
                   </div>
+                                  key={index};"
+
+                      <span className="text-xs text-zinc-500">"
+                      </span>"
+                        <div className="flex items-center gap-1">"
+                          <button;"
+
+                            <ThumbsDown className="w-3 h-3" />"
+
                 </motion.div>
               ))};
               {/* Typing Indicator */};
               {isTyping && (})
-                <motion.div;
-                  initial={{ "opacity": 0 }};
-                  animate={{ "opacity": 1 }};
-                  className="flex justify-start"
-                >
-                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ "animationDelay": '0.2s' }}></div>
-                    </div>
-                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>
-                  </div>
-                </motion.div>
+
+                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"
+                    <div className="flex space-x-1">"
+
+                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
               )};
               <div ref={messagesEndRef} />
             </div>
@@ -361,8 +387,21 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
                     <input;
                       type="file"
                       onChange={handleFileUpload};
+            <div className="p-4 border-t border-zinc-700/50">"
+              <form onSubmit={handleSubmit} className="flex items-center gap-2">"
+</form>"
+                <div className="flex-1 relative">"
+                  <input;"
+                    type="text
+                    value={inputValue};
+                    onChange={(e) => setInputValue(e.target.value)};
+</input>"
+                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
+</label>
+
+                      onChange={handleFileUpload};"
                       className="hidden"
-                      accept="image/*,.pdf,.doc,.docx,.txt"
+                      accept="image/*,.pdf,.doc,.docx,.txt
                     />
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
@@ -394,17 +433,17 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
+                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
+
+                  <Send className="w-4 h-4" />"
+
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">"
+                  <Sparkles className="w-3 h-3" />"
+
                   <span>Powered by Zion AI</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
+                  <Clock className="w-3 h-3" />"
+
                   <span>24/7 Available</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )};
-      </AnimatePresence>
     </>
   )};
 ";
@@ -418,19 +457,20 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
       this.log(`Error in Component "Replacer": ${error.message}`);
+  )};"
+";"
+    fs.writeFileSync(this.filePath, workingComponent);"
+
       throw error};
   };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
+
   automation.run();
-    .then(() => {}
-      console.log('Component Replacer completed successfully!');
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('Component Replacer "failed": ', error);
+    .then(() => {}"
+
       process.exit(1)})};
 
 module.exports = ComponentReplacer;
+

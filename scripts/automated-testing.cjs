@@ -2,6 +2,7 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
 const { execSync } = require('child_process')
 console.log('🧪 Running Automated Tests...')
       "status"
@@ -12,3 +13,4 @@ console.log('🧪 Running Automated Tests...')
     execSync('npm audit --audit-level=moderate', { "stdio"})
 
 console.log('🧪 Test "Summary")
+

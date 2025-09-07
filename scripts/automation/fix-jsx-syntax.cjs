@@ -1,7 +1,16 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
+class JSXSyntaxFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
 class JSXSyntaxFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -62,6 +71,7 @@ class JSXSyntaxFixer {}
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new JSXSyntaxFixer();
+
   automation.run();
     .then(() => {}
       console.log('JSX Syntax Fixer completed successfully!');
@@ -72,3 +82,4 @@ if (require.main === module) {}
       process.exit(1)})};
 
 module.exports = JSXSyntaxFixer;
+

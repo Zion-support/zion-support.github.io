@@ -1,8 +1,11 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing code complexity...")
     const srcDir = path.join(this.projectRoot, "src")
@@ -46,6 +49,7 @@ const { execSync } = require("child_process")
     this.log(" Starting Code Quality Enhancer")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "code-quality-report.json")
+
     this.log(` Code quality report "generated"`)
 // console.log("\n� Code Quality "Summary": ")
     console.log(`� Total lines of "code"`)
@@ -56,3 +60,5 @@ const { execSync } = require("child_process")
     const highPriority = recommendations.filter(r => r.priority === "high")
 
       console.log("\n� High Priority "Recommendations": ")
+      hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")","
+

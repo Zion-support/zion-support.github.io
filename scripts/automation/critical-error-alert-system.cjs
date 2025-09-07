@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -178,3 +179,4 @@ this.log(`� Report "generated"`)
   this.log(� Critical Error Alert System "failed")
 
         "ERROR"
+

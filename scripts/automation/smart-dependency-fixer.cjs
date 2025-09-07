@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -135,3 +136,8 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" No missing packages found")
 
   console.log(" No missing packages found")
+
+// Get automation interval from environment variable ("default")"
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`;
+console.log(`� Starting smart dependency fixer automation...``)"
+

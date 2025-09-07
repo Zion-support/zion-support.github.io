@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -37,3 +38,4 @@ const { execSync } = require('child_process')
     fixed = fixed.replace(/(\w+):\s*([^,}]+)/g, '"$1"
 
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 src
 src.disabled
 src.pages.disabled
@@ -170,3 +171,17 @@ automated-merge-conflict-resolver.cjs
 automation/**
 backup-problematic-files/**
 >>>>>>> 0651d2ac942059fb9543172da9743850a0a49100
+=======
+pages.broken/**
+pages.corrupted.*/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.old/**
+pages_disabled/**
+pages_minimal/**
+pm2-automation/**
+services/**
+*.js
+*.cjs
+*.mjs
+>>>>>>> cursor/integrate-build-improve-and-re-verify-3ee7

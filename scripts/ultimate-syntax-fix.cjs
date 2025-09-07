@@ -10,46 +10,37 @@ function fixAllSyntax(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
-    
     // Fix malformed meta tags
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-    
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
-    
     // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
-    
     // Fix array and object syntax
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
-    
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
-    
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
-    
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
-    
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
 }
-
 // Files to fix
 const filesToFix = [
   'pages/about.tsx',
@@ -64,6 +55,10 @@ const filesToFix = [
   'components/Layout.tsx',
   'components/layout/MainLayout.tsx'
 ];
+let totalFixed = 0;
+console.log('🔍 Fixing syntax errors in all files...');
+for (const file of filesToFix) {
+  try {
 
 let totalFixed = 0;
 
@@ -75,12 +70,9 @@ for (const file of filesToFix) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
-    
     content = fixAllSyntax(content);
-    
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -90,9 +82,7 @@ for (const file of filesToFix) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 }
-
 console.log(`\n✅ Fixed ${totalFixed} files`);
-
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
@@ -103,7 +93,6 @@ try {
   console.log('⚠️  Build still has issues, but syntax was fixed');
   console.log('Error:', error.message);
 }
-
 // Commit the fixes
 console.log('\n📝 Committing syntax fixes...');
 try {
@@ -115,7 +104,6 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to commit syntax fixes:', error.message);
 }
-
 // Push changes
 console.log('\n🚀 Pushing syntax fixes to main branch...');
 try {
@@ -126,5 +114,6 @@ try {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
 
+console.log('\n🎉 Ultimate syntax fix completed!');
 
 console.log('\n🎉 Ultimate syntax fix completed!');

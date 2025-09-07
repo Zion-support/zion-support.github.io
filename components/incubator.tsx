@@ -1,89 +1,91 @@
-  return (<EnhancedLayout>;
-      <div className='max-w-3xl'>;
-        <h1 className='text-3xl font-semibold mb-3'>Zion Incubator</h1>;
-        <p className='text-gray-700 dark:text-gray-300 mb-4'>;
+  return (<EnhancedLayout    />;
+      <div className='max-w-3xl'    />;
+        <h1 className='text-3xl font-semibold mb-3'    />Zion Incubator</h1>;
+        <p className='text-gray-700 dark:text-gray-300 mb-4'    />;
           Support for builders accelerating tools, research, and regional growth;
           aligned with Zion’s mission. Apply to join the incubator and receive;
           mentorship, milestone-based funding, and community resources.;
         </p>;
-        <div className='flex gap-3'>;
-          <Link href='/grants/apply'>;
-            <a className='px-4 py-2 bg-purple-600 text-white rounded'>;
+        <div className='flex gap-3'    />;
+          <Link href='/grants/apply'    />;
+            <a className='px-4 py-2 bg-purple-600 text-white rounded'    />;
               Apply to Incubator;
             </a>;
           </Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>;
-            <a className='px-4 py-2 border rounded'>View Incubator Projects</a>;
+          <Link href={{ pathname: '/grants',}
+  query: { program: 'incubator' } ,
+}    />;
+            <a className='px-4 py-2 border rounded'    />View Incubator Projects</a>;
           </Link>        </div>;
       </div>;
     </EnhancedLayout>;
-  )}      <div className="max-w-3xl">;
-        <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>;
-        <p className="text-gray-700 dark:text-gray-300 mb-4">Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone-based funding, and community resources.</p>;
-        <div className="flex gap-3">;
-          <Link href="/grants/apply"><a className="px-4 py-2 bg-purple-600 text-white rounded">Apply to Incubator</a></Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
+  )}      <div className=\"max-w-3xl\"    />;
+        <h1 className=\"text-3xl font-semibold mb-3\"    />Zion Incubator</h1>;
+        <p className=\"text-gray-700 dark:text-gray-300 mb-4\"    />Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone-based funding, and community resources.</p>;
+        <div className=\"flex gap-3\"    />;
+          <Link href=\"/grants/apply\"    /><a className=\"px-4 py-2 bg-purple-600 text-white rounded\"    />Apply to Incubator</a></Link>;
+          <Link href={{ pathname: '/grants',}
+  query: { program: 'incubator' } ,
+}    /><a className=\"px-4 py-2 border rounded\"    />View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>;
-export default function IncubatorPage() {return (<EnhancedLayout>;
-      <div className="max-w-3xl">;
-export default function IncubatorPage() {return (<EnhancedLayout>;
-      <div className='max-w-3xl'>;
-        <h1 className='text-3xl font-semibold mb-3'>Zion Incubator</h1>;
+export default function IncubatorPage() {}
+  return (
+    <EnhancedLayout>"
+      <div className="max-w-3xl">
+export default function IncubatorPage() {}
+  return (
+    <EnhancedLayout>'
+      <div className='max-w-3xl'>'
+        <h1 className='text-3xl font-semibold mb-3'>Zion Incubator</h1>'
         <p className='text-gray-700 dark:text-gray-300 mb-4'>;
           Support for builders accelerating tools, research, and regional growth;
           aligned with Zion’s mission. Apply to join the incubator and receive;
-          mentorship, milestone-based funding, and community resources.;
-        </p>;
-        <div className='flex gap-3'>;
-          <Link href='/grants/apply'>;
-            <a className='px-4 py-2 bg-purple-600 text-white rounded'>;
+          mentorship, milestone-based funding, and community resources.
+        </p>'
+        <div className='flex gap-3'>'
+          <Link href='/grants/apply'>'
+            <a className='px-4 py-2 bg-purple-600 text-white rounded'>
               Apply to Incubator;
-            </a>;
-          </Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>;
-            <a className='px-4 py-2 border rounded'>View Incubator Projects</a>;
-          </Link>;
-        </div>;
-      </div>;
+            </a>
+          </Link>'
+          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>'
+            <a className='px-4 py-2 border rounded'>View Incubator Projects</a>
+          </Link>
+        </div>
+      </div>
     </EnhancedLayout>;
-  )}      <div className="max-w-3xl">;
-        <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>;
-        <p className="text-gray-700 dark:text-gray-300 mb-4">Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone-based funding, and community resources.</p>;
-        <div className="flex gap-3">;
-          <Link href="/grants/apply"><a className="px-4 py-2 bg-purple-600 text-white rounded">Apply to Incubator</a></Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-import Link from 'next/link';
+
+          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>
+        </div>
+      </div>
+    </EnhancedLayout>
+
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**;
  * IncubatorPage - Function description;
- */;
-function IncubatorPage() {return (<EnhancedLayout>;
-      <div className='max - w-3xl'>;
-        <h1 className='text - 3xl font - semibold mb - 3'>Zion Incubator</h1>;
+ */
+function IncubatorPage() {}
+  return (
+    <EnhancedLayout>;'
+      <div className='max - w-3xl'>;'
+        <h1 className='text - 3xl font - semibold mb - 3'>Zion Incubator</h1>;'
         <p className='text - gray - 700 dark:text - gray - 300 mb - 4'>;
           Support for builders accelerating tools, research, and regional growth;
           aligned with Zion’s mission. Apply to join the incubator and receive;
-          mentorship, milestone - based funding, and community resources.;
+          mentorship, milestone-based funding, and community resources.;
         </p>;
-        <div className='flex gap - 3'>;
-          <Link href='/grants / apply'>;
-            <a className='px - 4 py - 2 bg - purple - 600 text - white rounded'>;
+        <div className='flex gap-3'    />;
+          <Link href='/grants/apply'    />;
+            <a className='px-4 py-2 bg-purple-600 text-white rounded'    />;
               Apply to Incubator;
-            </a>;
+            </a>;}
+          </Link>;}
+          <Link href={{ pathname: '/grants',}
+  query: { program: 'incubator' } ,
+}    />;
+            <a className='px-4 py-2 border rounded'    />View Incubator Projects</a>;
           </Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}>;
-            <a className='px - 4 py - 2 border rounded'>View Incubator Projects</a>;
-          </Link>        </div>;
+        </div>;
       </div>;
-    </EnhancedLayout>)}      <div className="max-w-3xl">;
-        <h1 className="text - 3xl font-semibold mb-3">Zion Incubator</h1>;
-        <p className="text - gray - 700 dark:text - gray-300 mb-4">Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone - based funding, and community resources.</p>;
-        <div className="flex gap-3">;
-          <Link href="/grants / apply"><a className="px - 4 py - 2 bg - purple-600 text-white rounded">Apply to Incubator</a></Link>;
-          <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
-      </div>;
-    </EnhancedLayout>)}
+

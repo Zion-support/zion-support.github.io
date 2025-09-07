@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -21,3 +22,4 @@ console.log(' Starting JSX/TSX syntax fixer...')
       "status"
 
   console.error(' JSX/TSX syntax fixer failed to "start")
+

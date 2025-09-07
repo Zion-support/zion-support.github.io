@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -5,15 +6,15 @@ const path = require('path');
 const { glob } = require('glob');
 
 /**
- * Script to remove console.log statements from production builds
- * This helps improve performance and security
+ * Script to remove console.log statements from production builds;
+ * This helps improve performance and security;
  */
 
 const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
-  // Keep console.error for debugging
+  // Keep console.error for debugging;
 ];
 
 const EXCLUDE_PATTERNS = ['node_modules',
@@ -71,6 +72,7 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
     if (stat && stat.isDirectory()) {
       results = results.concat(getAllFiles(filePath, extensions));
     } else {
+  // TODO: Implement
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         results.push(filePath);
@@ -82,7 +84,6 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
-
 
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
@@ -101,6 +102,7 @@ function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
+
         filesProcessed++}
     }
   }
@@ -110,6 +112,7 @@ function main() {
   console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
+
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
@@ -120,5 +123,18 @@ function main() {
 if (require.main === module) {
   main().catch(console.error)}
 
-
 module.exports = { removeConsoleStatements, processFile };
+
+  console.log("\n📊 Summary: ");"`;
+  console.log(`   Files processed: ${filesProcessed}`);"`;
+  console.log(`   Console statements "removed": ${totalRemoved}`);"
+  if (totalRemoved > 0) {`;
+    console.log(`\n✨ Production build optimized!`);
+  // TODO: Implement
+}`;
+    console.log(`\n✨ No console statements found to remove.`);
+
+if (require.main === module) {
+  main().catch(console.error)}
+
+"`;

@@ -1,5 +1,7 @@
 
 #!/usr/bin/env node;
+#!/usr/bin/env node;
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -22,3 +24,4 @@ const path = require('path')
       console.log('\n FAILED "STEPS")
 
       this.log(`� CI automation "failed"`)
+

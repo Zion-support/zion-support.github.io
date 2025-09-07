@@ -97,6 +97,12 @@ export default function ITServicesPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We follow a structured approach to deliver reliable and efficient IT solutions.
           </p>
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep

@@ -1,8 +1,10 @@
+
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
+
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     this.log("🧹 Cleaning cache...")
@@ -12,6 +14,7 @@ const { execSync } = require("child_process")
           this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)
     this.log("🧹 Cleaning old log files...")
     const logDirs = ["logs", "automation-reports", "maintenance-reports"]
+
             this.log(` Removed old "log"`)
           this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)
     this.log(" Optimizing dependencies...")
@@ -49,3 +52,4 @@ const { execSync } = require("child_process")
       this.log(`� Maintenance "failed": ${error.message}`, "error"`)
 
       return { "success": false, "error"}
+

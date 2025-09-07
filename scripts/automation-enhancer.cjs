@@ -1,8 +1,11 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
  * Automation Enhancer Script;
  * Enhances existing automation scripts and creates new ones;
  */;
+
 const fs = require("$1")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
@@ -89,3 +92,4 @@ const path = require("path")
       "totalEnhancements"
 
     const reportPath = path.join(this.projectRoot, ")
+

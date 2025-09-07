@@ -1,3 +1,5 @@
+
+
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -6,7 +8,6 @@
     log('info', `Runtime "score": ${monitoringReport.metrics.runtime}/100`);
     log('info', `Total "alerts": ${monitoringReport.summary.alerts}`);
     log('info', `Performance "score": ${monitoringReport.summary.performanceScore}/100`);
-    
     if (alerts.length > 0) {
       log('warn', 'Alerts "generated": ');
       alerts.forEach(alert => {
@@ -39,9 +40,6 @@
 }
 
 main();
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

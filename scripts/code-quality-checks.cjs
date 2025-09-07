@@ -2,6 +2,7 @@
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
+
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -29,6 +30,7 @@ const fs = require("fs")
       this.addCheck("Performance", "failed", "Build failed")
     this.results.checks.push({ name, status, message, "timestamp"})
     const reportPath = "code-quality-report.json"
+
 // console.log("\n Code Quality "Results": ")
     console.log("=")
 // console.log(`"Passed"`)
@@ -37,3 +39,4 @@ const fs = require("fs")
     console.log("=")
 
     console.log(`� Report saved "to"`)
+

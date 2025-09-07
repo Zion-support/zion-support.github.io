@@ -1,3 +1,19 @@
-import React from 'react';const LoadingSpinner.dynamic = () => {return (<div data - testid="loadingspinner.dynamic">;
+import React from 'react';
+
+;
+const LoadingSpinner.dynamic = () => {}
+  return (
+    <div data - testid="loadingspinner.dynamic">;
       <h1 > LoadingSpinner.dynamic</h1>;
-    </div>)}export default LoadingSpinner.dynamic;
+    </div>);
+const LoadingSpinner.dynamic = () => ;
+  return (<div data - testid=\"loadingspinner.dynamic\"    />;
+      <h1     /> LoadingSpinner.dynamic</h1>
+    </div>
+  );
+}
+;
+
+pr-12243
+export default LoadingSpinner.dynamic;
+

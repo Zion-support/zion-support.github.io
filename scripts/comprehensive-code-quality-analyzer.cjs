@@ -1,3 +1,5 @@
+
+
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -6,7 +8,6 @@
     log('info', `"Medium": ${qualityReport.summary.medium}`);
     log('info', `"Low": ${qualityReport.summary.low}`);
     log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
-    
     if (qualityReport.issues.length > 0) {
       log('warn', 'Issues "found": ');
       qualityReport.issues.forEach(issue => {
@@ -40,15 +41,12 @@
 
 main();
 
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log('')
+console.log()
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')

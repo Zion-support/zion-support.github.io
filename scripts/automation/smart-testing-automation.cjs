@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -240,3 +241,4 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   files.push(...this.getAllFiles(fullPath")
 
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+

@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -203,3 +204,8 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
   console.error(" Failed to start code quality "automation": ")
+
+// Get automation interval from environment variable ("default")"
+  console.log(` Running code quality automation at ${new Date().toISOString()}`;
+console.log(` Starting comprehensive code quality automation...``)"
+

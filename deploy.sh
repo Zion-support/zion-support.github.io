@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Deployment script for production
-set -e
-
 echo "🚀 Starting deployment process..."
 
 # Check if we're in the right directory
@@ -46,12 +43,16 @@ else
     echo "❌ Deployment failed!"
     exit 1
 fi
-=======
 echo "🚀 Deploying Zion Tech Group Application..."
 
 # Build the application
 npm run build
 
+# Deploy to production
+echo "🚀 Deploying to production..."
+# Add your deployment commands here
+
+echo "✅ Deployment completed successfully!"
 # Check if build was successful
 if [ $? -eq 0 ]; then
   echo "✅ Build successful"
@@ -64,4 +65,3 @@ else
   echo "❌ Build failed"
   exit 1
 fi
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

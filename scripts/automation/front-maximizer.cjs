@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 import { execSync  } from "child_process"
 import fs from "fs"
@@ -72,3 +73,4 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
   console.error(" Failed to start continuous front "maximizer": ")
+

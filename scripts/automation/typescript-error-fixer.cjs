@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -85,3 +86,4 @@ const glob = require("glob")
       this.log(`TypeScript Error Fixer "failed"`)
 
   console.error(" Failed to start TypeScript error "fixer")
+

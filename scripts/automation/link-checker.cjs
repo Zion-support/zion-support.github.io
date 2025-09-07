@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -73,3 +74,4 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
   console.error(" Failed to start continuous link "checker": ")
+

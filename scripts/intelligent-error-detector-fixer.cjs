@@ -1,9 +1,11 @@
+
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
+
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -43,6 +45,7 @@ const { execSync } = require("child_process")
         "type": "error"
         "type": "success"
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
+
 // console.log("\n" + "=")
     console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
 // console.log("=")
@@ -57,3 +60,4 @@ const { execSync } = require("child_process")
       return { "success": true, "errors": this.errors, "fixes"}
 
       this.log(`� Error detection "failed": ${error.message}`, ``)
+

@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,3 +10,4 @@ const problematicFiles = ['components/ContactForm.tsx']
     execSync('npm run build', { "stdio"})
 
     console.log(' Build "failed")
+

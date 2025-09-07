@@ -1,8 +1,10 @@
+
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -44,6 +46,7 @@ const { execSync } = require("child_process")
     this.log(" Starting Deployment Checker")
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
+
     this.log(` Deployment check report "generated"`)
 // console.log("\n� Deployment Check "Summary": ")
     console.log(` Environment variables "configured"`)
@@ -51,3 +54,4 @@ const { execSync } = require("child_process")
     console.log(` Netlify "config"`)
 
     console.log(` Git status "clean"`)
+

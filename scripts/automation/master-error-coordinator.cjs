@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -129,3 +130,4 @@ const path = require("path")
   console.log("Master error coordinator completed successfully")
 
   console.error("Master error coordinator "failed")
+

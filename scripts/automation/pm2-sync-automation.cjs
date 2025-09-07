@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * PM2 Sync Automation;
  * Manages PM2 processes and ensures synchronization;
@@ -11,31 +13,25 @@ const { execSync } = require('child_process');
 class PM2SyncAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'pm2-sync-automation.log');
-        this.reportFile = path.join(this.projectRoot, 'pm2-sync-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+
         console.log(message)};
     checkPM2Status() {}
         this.log('Checking PM2 status...');
         
         try {}
             const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -44,14 +40,8 @@ class PM2SyncAutomation {}
             this.log(`Found ${status.length} PM2 processes`);
             
             return {;}
-                "status": 'success',
-                "processes": status.length,
-                "details": status;
-            }} catch (error) {}
-            this.log(`PM2 status check "failed": ${error.message}`);
-            return {;}
-                "status": 'failed',
-                "error": error.message;
+
+                "error": error.message;"
             }};
     };
     syncPM2Processes() {}
@@ -60,11 +50,24 @@ class PM2SyncAutomation {}
         try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             
+            // Delete all processes;
+            execSync('pm2 delete all', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            // Start processes from ecosystem file;
+            execSync('pm2 start ecosystem.config.cjs', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            }
             // Delete all processes;
             execSync('pm2 delete all', { })
                 "cwd": this.projectRoot, 
@@ -89,7 +92,7 @@ class PM2SyncAutomation {}
         
         try {}
             const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -118,12 +121,12 @@ class PM2SyncAutomation {}
             
             if ( {})
                 execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
+                    "cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
+                    "cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })};
                 this.log('Unhealthy processes restarted');
@@ -171,14 +174,24 @@ class PM2SyncAutomation {}
             this.log('PM2 Sync Automation completed successfully');
             return report} catch (error) {}
             this.log(`PM2 Sync Automation "failed": ${error.message}`);
+
+            "pm2": {}"
+                status: this.checkPM2Status(),"
+                "health": this.checkProcessHealth(),
+                "sync": this.syncPM2Processes(),
+                "restart": this.restartUnhealthyProcesses();"
+            },"
+            "recommendations": this.generateSyncRecommendations();"
+
+        return report};
+    generateSyncRecommendations() {}
+        return [;]"
+
             throw error};
-    };
-};
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new PM2SyncAutomation) {}
-     {}
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
 
 module.exports = PM2SyncAutomation;
+

@@ -2,6 +2,11 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 const { execSync } = require('child_process')
 console.log(' Starting Master Automation Runner...')
     "name"
@@ -25,3 +30,6 @@ console.log(' Starting Master Automation Runner...')
     recommendations.push('"CRITICAL")
 
   console.log(' Master Automation "Summary")
+
+  console.log(' Master Automation "Summary")
+

@@ -1,0 +1,79 @@
+#!/usr/bin/env node
+/**
+ * Search Index Generator
+ * Generates search index for the application
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+class SearchIndexGenerator {
+  constructor() {
+    this.outputFile = path.join(process.cwd(), 'public', 'search-index.json');
+    this.pages = [];
+  }
+
+  generateIndex() {
+    try {
+      console.log('🔍 Generating search index...');
+
+      const pages = [
+        {
+          title: 'Home',
+          url: '/',
+          description: 'Zion Tech Group - Leading technology solutions provider',
+          keywords: ['home', 'technology', 'solutions', 'zion']
+        },
+        {
+          title: 'About Us',
+          url: '/about',
+          description: 'Learn about Zion Tech Group and our mission',
+          keywords: ['about', 'company', 'mission', 'team']
+        },
+        {
+          title: 'Services',
+          url: '/services',
+          description: 'Our comprehensive technology services',
+          keywords: ['services', 'technology', 'consulting', 'development']
+        },
+        {
+          title: 'Contact',
+          url: '/contact',
+          description: 'Get in touch with Zion Tech Group',
+          keywords: ['contact', 'support', 'help', 'inquiry']
+        }
+      ];
+
+      const searchIndex = {
+        generated: new Date().toISOString(),
+        pages: pages,
+        totalPages: pages.length
+      };
+
+      // Ensure public directory exists
+      const publicDir = path.dirname(this.outputFile);
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+
+      // Write search index
+      fs.writeFileSync(this.outputFile, JSON.stringify(searchIndex, null, 2));
+
+      console.log(`✅ Search index generated: ${this.outputFile}`);
+      console.log(`📊 Total pages: ${pages.length}`);
+
+      return { success: true, pages: pages.length };
+    } catch (error) {
+      console.error('❌ Error generating search index:', error.message);
+      return { success: false, error: error.message };
+    }
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const generator = new SearchIndexGenerator();
+  generator.generateIndex();
+}
+
+module.exports = SearchIndexGenerator;

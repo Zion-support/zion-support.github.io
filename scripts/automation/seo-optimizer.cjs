@@ -1,34 +1,33 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * SEO Optimizer Automation;
  * Optimizes the application for search engines;
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class SEOOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'seo-optimizer.log');
-        this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+
+        console.log(message)};
+    generateSitemap() {}
+        this.log('Generating sitemap...');
+        const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
+        const pages = this.findPages(;);
         console.log(message)};
     generateSitemap() {}
         this.log('Generating sitemap...');
@@ -39,14 +38,19 @@ class SEOOptimizer {}
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>`})
-    <loc>https://ziontechgroup.com${page}</loc>
+</url>
+    <loc>https://ziontechgroup.com${page}</loc>"
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>").join('\n')};
 </urlset;>;";
-
         fs.writeFileSync(sitemapPath, sitemap);
+        this.log(`Sitemap generated with ${pages.length} pages`);
+
+  </url>").join('\n')};
+</urlset;>;";"
+        fs.writeFileSync(sitemapPath, sitemap);`;
         this.log(`Sitemap generated with ${pages.length} pages`);
         
         return { "status": 'success', "pages": pages.length }};
@@ -54,28 +58,26 @@ ${pages.map(page => `  <url>`})
         const pagesDir = path.join(this.projectRoot, 'pages';);
         const appDir = path.join(this.projectRoot, 'app';);
         const pages = ['/'];
-        
         // Find pages from pages directory;
         if () {}
             this.findPagesInDirectory(pagesDir, '', pages)};
+        "
+        return { "status": success, "pages": pages.length }};"
+    findPages() {}"
+
+            this.findPagesInDirectory(pagesDir, , pages)};
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, '', pages)};
+            this.findPagesInAppDirectory(appDir, , pages)};
         return [...new Set(pages)) {}]
     ) {}
-            this.findPagesInDirectory(pagesDir, '', pages)};
-        // Find pages from app directory (App Router);
-        if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, '', pages)};
+
         return [...new Set(pages)}]; // Remove duplicates;
-    };
     findPagesInDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir;);
-        
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
-            
             if () {}
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
                 let pagePath = path.join(basePath, item) {}
@@ -85,14 +87,14 @@ ${pages.map(page => `  <url>`})
 });
                 pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
                 pagePath = pagePath.replace(/\\/g, '/');
-                
                 if ( {})
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
+        for (const item of items) {}
+            const fullPath = path.join(dir, item;);
+            const stat = fs.statSync(fullPath;);
+
                     pages.push(pagePath)};
-            };
-        };
-    };
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir) {}
      {}
@@ -105,11 +107,9 @@ ${pages.map(page => `  <url>`})
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir}
 });
-        
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
-            
             if () {}
                 this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === 'page.jsx' || item === 'page.ts' || item === 'page.tsx') {}
                 let pagePath = basePath || ') {}
@@ -122,9 +122,9 @@ ${pages.map(page => `  <url>`})
     };
     generateRobotsTxt() {}
         this.log('Generating robots.txt...');
-        
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
         const robotsContent = "User-"agent": *
+Allow: /
 Allow: /
 
 # Sitemap;
@@ -134,11 +134,17 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-
 # Crawl delay;
 Crawl-delay: 1;";
-
         fs.writeFileSync(robotsPath, robotsContent);
+        this.log('Robots.txt generated');
+        return { "status": 'success' }};
+    createSEOMetaComponent() {}
+        this.log('Creating SEO meta component...');
+
+# Crawl delay;"
+Crawl-delay: 1;";"
+        fs.writeFileSync(robotsPath, robotsContent);"
         this.log('Robots.txt generated');
         
         return { "status": 'success' }};
@@ -180,10 +186,10 @@ export default function SEO({})
 }: SEOProps) {}
   const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : descripti;o;n;
-  
+
   return (;)
     <Head>
-      {/* Basic Meta Tags */};
+
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
@@ -192,7 +198,6 @@ export default function SEO({})
       <meta name="robots" content="index, follow" />
       <meta name="language" content="en" />
       <meta name="revisit-after" content="7 days" />
-      
       {/* Open Graph Meta Tags */};
       <meta property=""og": type" content={type} />
       <meta property=""og": title" content={fullTitle} />
@@ -201,13 +206,11 @@ export default function SEO({})
       <meta property=""og": url" content={url} />
       <meta property=""og": site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */};
       <meta name=""twitter": card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name=""twitter": description" content={fullDescription} />
       <meta name=""twitter": image" content={image} />
-      
       {/* Additional Meta Tags */};
       {publishedTime && <meta property=""article": published_time" content={publishedTime} />};
       {modifiedTime && <meta property=""article": modified_time" content={modifiedTime} />};
@@ -218,52 +221,60 @@ export default function SEO({})
       ))};
       {/* Canonical URL */};
       <link rel="canonical" href={url} />
-      
       {/* Favicon */};
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Structured Data */};
       <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{}
+      <meta name="description" content={fullDescription} />"
+</meta>"
+      <meta name="keywords" content={keywords} />"
+      <meta name="author" content={author} />"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
+      <meta name="robots" content="index, follow" />"
+      <meta name="language" content="en" />"
+      <meta name="revisit-after" content="7 days" />"
+
+      <link rel="canonical" href={url} />"
+</link>"
+      <link rel="icon" href="/favicon.ico" />"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
+      <link rel="manifest" href="/site.webmanifest" />"
+</link>
+      <script;"
+        type="application/ld+json
+        dangerouslySetInnerHTML={{}"
           "__html": JSON.stringify({})
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": ""https": //ziontechgroup.com",
-            "logo": ""https": //ziontechgroup.com/logo.png",
+            "url": https": //ziontechgroup.com",
+            "logo": https": //ziontechgroup.com/logo.png",
             "description": "Leading provider of cutting-edge technology solutions",
             "address": {}
               "@type": "PostalAddress",
-              "addressCountry": "US"
-            },
-            "contactPoint": {}
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "email": "info@ziontechgroup.com"
-            },
-            "sameAs": [""https": //linkedin.com/company/zion-tech-group",]
-              ""https": //twitter.com/ziontechgroup"
+              "addressCountry": "US
+            },"
+
             ];
           }
-});
         }};
       />
     </Head>
   )};
 ";
-
         fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
         this.log('SEO meta component created');
-        
         return { "status": 'success' }};
     generateManifest() {}
         this.log('Generating web app manifest...');
-        
         const manifestPath = path.join(this.projectRoot, 'public', 'site.webmanifest';);
         const manifest = {}
             "name": "Zion Tech Group",
@@ -288,14 +299,11 @@ export default function SEO({})
             "lang": "en",
             "dir": "ltr"
        };
-
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
-        
         return { "status": 'success' }};
     generateSEOReport() {}
         this.log('Generating SEO optimization report...');
-        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -307,10 +315,8 @@ export default function SEO({})
             },
             "recommendations": this.generateSEORecommendations();
        };
-
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("SEO optimization report saved to ${this.reportFile}");
-        
         return report};
     generateSEORecommendations() {}
         return [;]
@@ -327,7 +333,6 @@ export default function SEO({})
         ]};
     async run() {}
         this.log('SEO Optimizer started');
-        
         try {}
             const report = this.generateSEOReport(;);
             this.log('SEO Optimizer completed successfully');
@@ -344,3 +349,6 @@ if ( {})
     optimizer.run().catch(console.error)};
 
 module.exports = SEOOptimizer;
+
+module.exports = SEOOptimizer;
+

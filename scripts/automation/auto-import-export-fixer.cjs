@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -12,3 +13,4 @@ console.log(' Starting auto import/export fixer...')
         content = content.replace(/from\s+['"]([^'')]
 
   console.error(' Auto import/export fixer failed to "start")
+

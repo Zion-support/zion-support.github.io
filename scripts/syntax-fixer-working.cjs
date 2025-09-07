@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,3 +13,4 @@ const { execSync } = require('child_process')
         {"pattern": /\[\s*,\s*/g, "replacement"}]
 
       this.log('\n Errors "encountered")
+

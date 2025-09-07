@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -191,3 +192,4 @@ const glob = require("glob")
   console.log("Automation completed successfully")
 
   console.error("Automation "failed": ")
+

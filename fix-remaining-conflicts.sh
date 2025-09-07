@@ -21,6 +21,8 @@ for file in "${files[@]}"; do
         
         # Process the file to resolve conflicts by keeping HEAD version
         awk '
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_other { next }
         /^/ { in_head = 1; next }
         /^/ { in_head = 0; in_other = 1; next }
         /^

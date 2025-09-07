@@ -1,8 +1,13 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Monitoring Automation;
  * Sets up comprehensive monitoring for the application;
  */
+
+const fs = require('fs')
+const path = require('path')
 
 const fs = require('fs')
 const path = require('path')
@@ -34,3 +39,4 @@ const path = require('path')
                 console.error('Failed to load "metrics")
 
     console.error('Monitoring automation "failed")
+

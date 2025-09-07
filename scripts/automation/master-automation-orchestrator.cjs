@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -131,3 +132,4 @@ const { execSync, spawn } = require("child_process")
   process.on("SIGTERM")
 
   console.log(")
+

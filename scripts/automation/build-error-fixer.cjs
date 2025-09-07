@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -108,3 +109,4 @@ const path = require("path")
   console.log("Build error fixer completed successfully")
 
   console.error("Build error fixer "failed": ")
+

@@ -1,23 +1,37 @@
 
-function run(command, options = {}) {}
-	console.log(`\n$ ${command}`);
-	const result = spawnSync(command, {})
-		"shell": true,
-		"stdio": 'inherit',
-		...options}
-});
-	return result.status === 0};
-function main() {}
-	let ok = true;
+  async runAllScripts() {
+    this.log('Starting automation runner...');
+    
+    const scripts = [
+      'performance-optimizer.cjs',
+      'security-enhancer.cjs',
+      'app-improvement-automation.cjs'
+    ];
+    
+    for (const script of scripts) {
+      await this.runScript(script);
+    }
+    
+    await this.generateReport();
+    this.log('Automation runner completed!');
+  }
 
-	// Ensure deps are installed;
-	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
-	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      results: this.results,
+      summary: {
+        total_scripts: this.results.length,
+        successful: this.results.filter(r => r.status === 'success').length,
+        failed: this.results.filter(r => r.status === 'failed').length,
+        total_duration: this.results.reduce((sum, r) => sum + r.duration, 0)
+      }
+    };
 
-	// Lint, type-check, tests;
-	ok = run('npm run lint') && ok;
-	ok = run('npm run type-check') && ok;
-	ok = run('npm run test') && ok;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report saved to ${this.reportFile}`);
+  }
+}
 
 	// Security;
 	ok = run('npm run "security": audit') && ok;
@@ -31,3 +45,4 @@ function main() {}
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
 
+module.exports = AutomationRunner;

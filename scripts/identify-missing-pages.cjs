@@ -1,9 +1,11 @@
+
 const fs = require("fs")
 const path = require("path")
     const appContent = await fs.readFile("src/App.tsx", "utf8")
     const routeMatches = appContent.match(/path=")
       ? routeMatches.map(match => match.replace("path= ").replace(", ")
     const pagesDir = "src/pages"
+
 // console.log("=== ROUTES FROM APP.TSX ===")
     console.log("\n=== EXISTING PAGE FILES ===")
 const fs = require("fs").promises;const path = require("path")"

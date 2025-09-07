@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -65,3 +66,4 @@ await this.log(" ESLint configuration fixed")
 });")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
 
   await this.log(")
+

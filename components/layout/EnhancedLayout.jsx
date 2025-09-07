@@ -1,12 +1,15 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import EnhancedFooter from './EnhancedFooter';
 
-;
-  return (<div className="min-h-screen flex flex-col">;
-      <EnhancedNavigation />;
-      <main className="flex-1">;
+const EnhancedLayout = ({ children }) => {
+  return (
+
         {children}
       </main>;
       <EnhancedFooter />;
-    </div>)},export default EnhancedLayout;import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-  )}export default EnhancedLayout;
+    </div>);
+},
+export default EnhancedLayout;
+;
+

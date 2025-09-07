@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -5,14 +6,21 @@ const path = require('path');
 class AppImportsFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
+
+#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
+class AppImportsFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
     this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};
+    console.log(`[${new Date().toISOString()}] ${message})};
   checkFileExports(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
-        return { "exists": false, "hasDefault": false, "hasNamed": [] }};
-      const content = fs.readFileSync(filePath, 'utf8');
+
       const hasDefault = content.includes('export default');
       const namedExports = [];
       
@@ -53,11 +61,12 @@ class AppImportsFixer {}
       { "name": 'AISolutions', "path": './pages/services/AISolutions' },
       { "name": 'QuantumComputing', "path": './pages/services/QuantumComputing' },
       { "name": 'Cybersecurity', "path": './pages/services/Cybersecurity' };
+
     ];
 
     // Check each page and fix imports;
     pages.forEach(page => {})
-      const filePath = path.join(this.projectRoot, 'src', page.path + '.tsx');
+
       const exports = this.checkFileExports(filePath);
       
       if (exports.exists) {}
@@ -75,6 +84,10 @@ class AppImportsFixer {}
         
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};
+      if (exports.exists) {}
+        let importStatement;
+
+        this.log(`"Warning": ${page.path}.tsx does not exist`)};"
     }
 });
 
@@ -88,19 +101,19 @@ class AppImportsFixer {}
       this.fixAppImports();
       this.log('App Imports Fixer completed successfully!')} catch (error) {}
       this.log(`Error in App Imports "Fixer": ${error.message}`);
+    fs.writeFileSync(this.appPath, content);"
+
       throw error};
-  };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new AppImportsFixer();
+
   automation.run();
-    .then(() => {}
-      console.log('App Imports Fixer completed successfully!');
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('App Imports Fixer "failed": ', error);
+    .then(() => {}"
+
       process.exit(1)})};
 
 module.exports = AppImportsFixer;
+
+module.exports = AppImportsFixer;
+

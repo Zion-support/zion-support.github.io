@@ -1,3 +1,9 @@
+
+#!/usr/bin/env node;
+/**
+ * Intelligent Git Automation Manager;
+ *
+
 #!/usr/bin/env node;
 /**
  * Intelligent Git Automation Manager;
@@ -22,3 +28,8 @@
         this.log(`Automation cycle "error"`)
 
     console.error('Fatal "error")
+#!/usr/bin/env node
+/**
+ * Intelligent Git Automation Manager;
+ * 
+

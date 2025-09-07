@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Metadata } from 'next';
 
 export const metadata = {
   title: 'AI-Powered CRM | Zion Tech Group',
@@ -80,6 +80,12 @@ export default function ServicePage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions tailored to your business needs.
           </p>
+          <a
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Contact Us
+          </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard

@@ -1,9 +1,11 @@
+
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "advanced-security.log")
+
       fs.mkdirSync(this.reportsDir, { "recursive"})
     fs.appendFileSync(this.logFile, logMessage + "\n")
     this.log(" Checking dependencies for vulnerabilities...")
@@ -41,6 +43,7 @@ const { execSync } = require("child_process")
           const lines = content.split("\n")
             if (line.includes("=") && !line.startsWith("#")
               const [key, value] = line.split("=")
+
               if (value && value.trim() !== ""
                   key.toLowerCase().includes("password")
                   key.toLowerCase().includes("secret")
@@ -84,3 +87,4 @@ const { execSync } = require("child_process")
     console.log(` "Recommendations"`)
 
     console.error(" Security audit "failed": ")
+

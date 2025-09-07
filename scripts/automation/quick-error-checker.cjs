@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -68,3 +69,4 @@ const path = require("path")
   type: "eslint-config-fix"
 
           "file": "
+

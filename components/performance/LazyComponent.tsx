@@ -1,21 +1,3 @@
-import React, { Suspense } from 'react';
-ursor/automate-test-improve-and-merge-code-646c;
-import React from 'react';
-}
-import React, { Suspense, lazy } from 'react';
-import React, { Suspense, ReactNode } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
-interface LazyComponentProps  {children: ReactNode;
-  fallback?: ReactNode;
-}const LazyComponent: React.FC<LazyComponentProps> = ({children,fallback = <LoadingSpinner />;
-}) => {return (<Suspense fallback={fallback}>;
-      <Component {...props} />;
-    </Suspense>)}export default LazyComponent;
-},<Suspense fallback={fallback}>;
-      {children}
-    </Suspense>;
-  )}export default LazyComponent;ursor/automate-test-improve-and-merge-code-646c;
-  return (
 
 interface LazyComponentProps {
   fallback?: React.ReactNode;
@@ -38,21 +20,9 @@ export default LazyComponent;
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
-}
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner /> 
-}) => {
   return (
-    <Suspense fallback={fallback}>;
-      <Component {...props} />;
-    </Suspense>);
-}
-;
-export default LazyComponent;
-import React from 'react'
-},
+
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
@@ -60,3 +30,4 @@ import React from 'react'
 };
 
 export default LazyComponent;
+

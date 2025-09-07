@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -8,3 +9,4 @@ fs.writeFileSync('src/components/LoadingSpinner.tsx')
 // console.log(' Loading Spinner created')
 
 console.log('� Quick improvements completed!')
+

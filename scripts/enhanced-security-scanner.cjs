@@ -6,7 +6,6 @@
     log('info', `Medium "severity": ${securityReport.summary.medium}`);
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
-    
     if (securityReport.vulnerabilities.length > 0) {
       log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
@@ -39,9 +38,6 @@
 }
 
 main();
-
-
-
 
 #!/usr/bin/env node;
 

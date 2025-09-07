@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Content Generator Script;
  * Generates meaningful content for placeholder pages;
@@ -6,6 +8,7 @@
 const fs = require("child_process")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
+
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -17,6 +20,7 @@ const path = require("path")
         "
       "it-services": {"title": "IT Services","description": "Complete IT solutions for digital transformation"}
         content: "
+
         "
     console.log(" Generating solution page content...")
       "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations"}
@@ -29,3 +33,4 @@ const path = require("path")
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
 
     console.log(`� Report saved "to"`)
+

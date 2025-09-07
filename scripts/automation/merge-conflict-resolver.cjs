@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -90,3 +91,4 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   process.on("SIGINT")
 
   process.on(")
+

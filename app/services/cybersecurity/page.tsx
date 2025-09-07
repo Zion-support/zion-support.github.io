@@ -77,16 +77,10 @@ export default function CybersecurityPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Cybersecurity Services Inquiry"
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
-            Get Security Assessment
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
+            Contact Us
           </a>
         </div>
       </section>

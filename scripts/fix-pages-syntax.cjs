@@ -1,9 +1,7 @@
+
 const fs = require('fs')
 const path = require('path')
-console.log(' Fixing pages syntax errors...')
-const pagesDir = path.join(__dirname, '..', 'pages')
-const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
-  let content = fs.readFileSync(filePath, 'utf8')
+
   if (content.includes('import React') && !content.includes('const ') && !content.includes('function ')
     const lines = content.split('\n')
     const importLines = lines.filter(line => line.startsWith('import')
@@ -15,3 +13,4 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
         '};\n\n'
 
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+

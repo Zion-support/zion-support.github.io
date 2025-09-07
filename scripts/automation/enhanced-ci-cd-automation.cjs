@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -258,6 +259,7 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.build.result?.duration || ""N/A""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ``
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
+
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 ### Immediate Actions "Required"
@@ -287,3 +289,4 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 // Start the ""CI/CD""
 
 // Start the "
+

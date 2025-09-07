@@ -1,3 +1,19 @@
-import React from 'react';const Layout.dynamic = () => {return (<div data - testid="layout.dynamic">;
+import React from 'react';
+
+;
+const Layout.dynamic = () => {}
+  return (
+    <div data - testid="layout.dynamic">;
       <h1 > Layout.dynamic</h1>;
-    </div>)}export default Layout.dynamic;
+    </div>);
+const Layout.dynamic = () => ;
+  return (<div data - testid=\"layout.dynamic\"    />;
+      <h1     /> Layout.dynamic</h1>
+    </div>
+  );
+}
+;
+
+pr-12243
+export default Layout.dynamic;
+

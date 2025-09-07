@@ -1,32 +1,31 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'health-check.log');
-        this.reportFile = path.join(this.projectRoot, 'health-check-report.json');
+
         this.ensureLogsDir()};
     ensureLogsDir() {}
         const logsDir = path.dirname(this.logFile);
         if (!fs.existsSync(logsDir)) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString();
+
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
     async checkSystemHealth() {}
         this.log('Starting health check...');
-        
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
@@ -41,7 +40,6 @@ class HealthChecker {}
                 "value": nodeVersion;
             };
             this.log(`Node.js "version": ${nodeVersion}`);
-
             // Check available memory;
             const memUsage = process.memoryUsage();
             healthReport.checks.memory = {}
@@ -55,8 +53,8 @@ class HealthChecker {}
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
 
             // Check disk space;
-            try {}
-                const diskUsage = execSync('df -h .', { "encoding": 'utf8' }
+            try {}"
+                const diskUsage = execSync('df -h ., { "encoding": utf8})
 });
                 healthReport.checks.diskSpace = {}
                     "status": 'pass',
@@ -116,23 +114,23 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
-        
         this.log(`Health check completed. "Status": ${healthReport.status}`);
+
+                    "value": `${onlineProcesses} processes online;"
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
+                healthReport.checks.pm2Processes = {}"
+
         return healthReport};
     async run() {}
-        try {}
             await this.checkSystemHealth();
             // Exit after successful completion;
-            setTimeout(() => {}
-                this.log('Health check completed successfully, exiting...');
-                process.exit(0)}, 1000)} catch (error) {}
-            this.log(`Fatal "error": ${error.message}`);
+            setTimeout(() => {}"
+
             process.exit(1)};
-    };
-};
 // Run if called directly;
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
 
 module.exports = HealthChecker;
+

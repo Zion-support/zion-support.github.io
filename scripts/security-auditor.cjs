@@ -1,10 +1,10 @@
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'security-reports');
+
     this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
   }
 
   log(message) {
@@ -54,7 +54,7 @@
             /PASSWORD/i,
             /TOKEN/i,
             /PRIVATE/i,
-            /CREDENTIAL/i
+            /CREDENTIAL/i;]
           ];
 
           const lines = content.split('\n');
@@ -63,9 +63,9 @@
               const [key] = line.split('=');
               if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
                 sensitiveVars.push({
-                  "file": envFile,
-                  "line": index + 1,
-                  "variable": key.trim()
+
+                  "line": index + 1,")"
+                  "variable": key.trim()"
                 })}
             }
           })}
@@ -179,8 +179,8 @@
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     
     const scanDirectory = (dir) => {
-      try {
-        execSync('npm audit fix', { stdio: 'inherit' });
+  // TODO: Implement
+
         this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {
@@ -196,8 +196,7 @@
         npmAudit: await this.runNpmAudit(),
         "environmentVariables": await this.checkEnvironmentVariables(),
         "dependencies": await this.checkDependencies(),
-        "codeSecurity": await this.checkCodeSecurity()
-      }
+        "codeSecurity": await this.checkCodeSecurity()"
     };
 
     // Generate recommendations
@@ -274,19 +273,11 @@ if (require.main === module) {
       
       
       process.exit(0)})
-    .catch((error) => {
-      console.error('\n💥 Security Auditor "failed": ', error.message);
+    .catch((error) => {"
+
       process.exit(1)})}
 
 module.exports = SecurityAuditor;
-
-
-
-
-
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

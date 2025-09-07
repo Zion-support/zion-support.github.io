@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -10,3 +11,4 @@ const path = require('path')
         "version"
 
   console.error('Fatal "error")
+

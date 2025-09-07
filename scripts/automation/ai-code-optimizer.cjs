@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -158,3 +159,4 @@ console.log( AI optimization report saved to ${reportPath}")
   console.log("🤖 Starting AI Code Optimizer...")
 
   console.error(" AI Code Optimizer "failed")
+

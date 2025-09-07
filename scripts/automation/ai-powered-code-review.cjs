@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -251,3 +252,7 @@ this.logError("Code review failed")
         .filter(file => file && !file.startsWith(".")
 
   const content = fs.readFileSync(filePath, ")
+
+        .map(line => line.split(" ")"
+</button>"`;
+

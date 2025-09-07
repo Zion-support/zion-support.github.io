@@ -1,3 +1,4 @@
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -17,6 +18,7 @@ const { execSync } = require('child_process')
             type: 'dependency'
             description: vuln.description || 'No description available'
             recommendation: vuln.recommendation || 'Update to latest version'
+
           this.stats[riskLevel + 'Risk']
       this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, 'WARNING'`)
       this.log(`Dependency scan failed: ${error.message}`, 'ERROR'`)
@@ -25,3 +27,4 @@ const { execSync } = require('child_process')
         pattern: /api[_-]?key\s*=\s*['"][^'']
 
         pattern: /secret\s*=\s*['"][^'']
+

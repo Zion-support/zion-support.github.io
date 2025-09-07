@@ -1,4 +1,6 @@
+
 #!/""usr/bin/env""
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -54,3 +56,5 @@ const { execSync, spawn } = require("child_process")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+        { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
+

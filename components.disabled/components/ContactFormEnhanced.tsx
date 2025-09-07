@@ -1,11 +1,7 @@
 
 
-
 // Auto-generated module
 export {};
-
-
-
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -213,7 +209,6 @@ const ContactFormEnhanced: React.FC = () => {
 };
 
 export default ContactFormEnhanced;
-
 
 // Auto-generated module
 export {};

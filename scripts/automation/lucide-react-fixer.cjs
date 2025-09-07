@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -74,3 +75,4 @@ const { execSync } = require("child_process")
   arrayOfFiles = await this.getAllFiles(fullPath")
 
   const fullPath = path.join(dirPath, ")
+

@@ -1,16 +1,22 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class ErrorPreventionSystem {}
   constructor() {}
-    this.logFile = path.join(__dirname, '../logs/error-prevention.log');
+
     this.errors = [];
     this.startTime = new Date()};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
+    );
     
     );
     
@@ -23,6 +29,10 @@ class ErrorPreventionSystem {}
     
     try {}
       execSync('npm run build', { "stdio": 'pipe' }
+    );
+    try {}
+      fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
+
 });
       this.log('Build check passed');
       return true} catch (error) {}
@@ -185,14 +195,10 @@ class ErrorPreventionSystem {}
 
       // Check for corrupted files;
       const sourceDirs = ['src', 'pages', 'components'];
+
       sourceDirs.forEach(dir => {})
-        if () {}
-          try {}
             const files = fs.readdirSync(dir) {}
-    ) {}
-          try {}
-            const files = fs.readdirSync(dir}
-});
+            const files = fs.readdirSync(dir})
             files.forEach(file => {})
               const filePath = path.join(dir, file;);
               try {}
@@ -242,6 +248,7 @@ class ErrorPreventionSystem {}
           "timestamp": new Date().toISOString();
         })};
         this.log(`"WARNING": Node.js version ${nodeVersion} is below recommended version 18`, 'WARN')};
+
       // Check available memory;
       const memUsage = process.memoryUsage(;);
       const freeMemory = require('os').freemem(;);
@@ -272,6 +279,7 @@ class ErrorPreventionSystem {}
   };
   async autoFixErrors() {}
     this.log('Attempting to auto-fix errors...');
+    let fixedCount = ;0;
     
     let fixedCount = ;0;
     
@@ -320,17 +328,27 @@ class ErrorPreventionSystem {}
     this.log('Starting error prevention system...');
     
     const checks = [this.checkBuildErrors(),]
+
+    let fixedCount = ;0;
+      // Fix linting errors;
+
       this.checkLintingErrors(),
       this.checkTypeScriptErrors(),
       this.checkDependencyErrors(),
       this.checkFileSystemErrors(),
       this.checkEnvironmentErrors();
     ];
+    await Promise.all(checks);
+    const endTime = new Date;(;);
+    const duration = endTime - this.startTim;e;
+    this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
 
     await Promise.all(checks);
 
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
+`;
+    this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);"
 
     this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
     
@@ -343,6 +361,7 @@ class ErrorPreventionSystem {}
       const highErrors = this.errors.filter(e => e.severity === 'high';);
       const mediumErrors = this.errors.filter(e => e.severity === 'medium';);
       const lowErrors = this.errors.filter(e => e.severity === 'low';);
+      this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
       
       this.log(`Error "breakdown": Critical: ${criticalErrors.length}, "High": ${highErrors.length}, "Medium": ${mediumErrors.length}, "Low": ${lowErrors.length}`);
       
@@ -371,17 +390,14 @@ class ErrorPreventionSystem {}
       this.log(`"ERROR": Failed to write error prevention report: ${error.message}`, 'ERROR')};
     return this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length === 0};
 };
+
 // Run error prevention if called directly;
-if ( {})
   const errorPrevention = new ErrorPreventionSystem) {}
-     {}
   const errorPrevention = new ErrorPreventionSystem}(;);
   errorPrevention.runErrorPrevention();
     .then(success => {})
       process.exit(success ? 0 : 1)}
-});
-    .catch(error => {})
-      console.error('Error prevention system "failed": ', error);
+
       process.exit(1)})};
 module.exports = ErrorPreventionSystem;
 

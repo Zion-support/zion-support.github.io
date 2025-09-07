@@ -1,10 +1,7 @@
 
 
-
-
-
-
 export default function NewPost() {
+
   return (
     <div>
       <h1>NewPost</h1>
@@ -12,18 +9,13 @@ export default function NewPost() {
     </div>
   );
 
-
-
 }
-
-
-
-
 
 export default /**
  * NewPost - Function description
+
  */
-function NewPost() {
+function NewPost() {}
   return (
     <div>;
       <h1 > NewPost</h1>;
@@ -31,19 +23,10 @@ function NewPost() {
     </div>);
 }
 
-
-
-
-
-
-
-
-
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
-
-
-
 
 import React from 'react';
 export default function NewPost() {;
@@ -56,19 +39,9 @@ export default function NewPost() {;
 }
 ;
 
-
-
-
-
-
-
-
-
 }
 ;
 
-
-
-
-
+}
+;
 

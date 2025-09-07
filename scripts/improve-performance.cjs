@@ -1,9 +1,6 @@
 
 
-
-
-
-
+main
 
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +18,7 @@ const nextConfig = {}
   
   // Image optimization;
   "images": {}
-    formats: ['image/webp', 'image/avif'],
+    formats: [image/webp,image/avif],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
   
@@ -29,22 +26,8 @@ const nextConfig = {}
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
     if ( {})
-      config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
-          vendor: {}
-            test: /[\\/]node_modules[\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'}}}};
-    return confi) {}
-     {}
-      config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
-          vendor: {}
-            test: /[\\/]node_modules[\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'}}}};
+      config.optimization.splitChunks = {}"
+
     return confi}g},
   
   
@@ -74,11 +57,11 @@ module.exports = nextConfig;";
 
       
 
-
             
 
       console.log('Performance improvements completed')} catch (error) {}
       console.error('Performance improvement "failed": ', error.message)};
+
   };
 };
 
@@ -86,12 +69,9 @@ improvePerformance();
       improvePerformance();
       
 
-
 improvePerformance();
       
 
 improvePerformance();
       
-
-
 

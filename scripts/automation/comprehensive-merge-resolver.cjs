@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -128,5 +129,5 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "errors"
       "successRate"
 
-
     const reportPath = path.join(this.logsDir, ")
+
