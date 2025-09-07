@@ -132,10 +132,8 @@ npm run dev
 
 ```bash
 # Clone the repository
-git clone https://github.com/ziontechgroup/zion-app.git
-
-# Navigate to project directory
-cd zion-app
+git clone <repository-url>
+cd zion-tech-group
 
 # Install dependencies
 npm install
@@ -764,7 +762,11 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - Performance monitoring
 - `npm run type-check` - Run TypeScript checks
 
-## 🌐 Deployment
+### Expected ROI
+- AI Services: 300-500% within 12 months
+- Quantum Computing: 500-1000% for research applications
+- Cloud Optimization: 200-400% through cost savings
+- Cybersecurity: 150-300% through security improvements
 
 The project is configured for deployment on:
 - **Netlify** - Automatic deployments from main branch
@@ -1040,7 +1042,7 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Email**: contact@zion.app
 - **Phone**: +1 (555) 123-4567
 
-## 🙏 Acknowledgments
+## 🆘 Support
 
 - Next.js team for the amazing framework
 - Tailwind CSS for the utility-first CSS framework

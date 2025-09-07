@@ -272,9 +272,6 @@ export default function ComprehensivePricingGuide2028() {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {benefit}
                       </div>
-                    ))}
-                  </div>
-                </div>
 
                 {/* Pricing Plans */}
                 <div className="grid md:grid-cols-3 gap-6">
