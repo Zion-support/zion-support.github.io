@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -26,7 +27,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AICustomerSuccessPlatform() {
+const AICustomerSuccessPlatform: React.FC = () => {
   const features = [
     {
       title: 'AI-Powered Customer Journey Mapping',
@@ -315,10 +316,9 @@ export default function AICustomerSuccessPlatform() {
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing for Every Business Size
@@ -503,4 +503,6 @@ export default function AICustomerSuccessPlatform() {
       </section>
     </div>
   );
-}
+};
+
+export default AICustomerSuccessPlatform;
