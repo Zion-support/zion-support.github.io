@@ -815,7 +815,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Zero-trust architecture</li>
                 </ul>
                 <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security & Privacy →
+                  View Security Guide →
                 </Link>
               </div>
 
@@ -829,7 +829,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Continuous validation</li>
                 </ul>
                 <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore Resources →
+                  View Testing Guide →
                 </Link>
               </div>
 
@@ -842,8 +842,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/reports" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Reports →
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
                 </Link>
               </div>
             </div>
@@ -862,7 +862,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
                 </ul>
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -890,7 +890,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
-                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
