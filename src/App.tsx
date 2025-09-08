@@ -6,7 +6,7 @@ import './App.css';
 
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
-import AppLayout from './layout/AppLayout';
+import { AppLayout } from './layout/AppLayout';
 import LazyLoad from './components/LazyLoad';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import Analytics from './components/Analytics';
