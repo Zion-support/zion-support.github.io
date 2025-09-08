@@ -89,10 +89,18 @@ export function AppHeader() {
       color: 'from-purple-500 to-violet-500'
     },
     { 
-      name: 'AI & Green Tech', 
-      href: '/services', 
-      icon: Leaf, 
-      description: 'Sustainability Solutions',
+      name: 'Services Showcase 2025', 
+      href: '/services/showcase-2025', 
+      icon: Star, 
+      description: 'Comprehensive 2025 Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity', 
+      icon: Shield, 
+      description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-emerald-500'
     },

@@ -1,371 +1,229 @@
 import { ProductListing } from "@/types/listings";
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025 = {
-  title: "Comprehensive Pricing Guide 2025",
-  subtitle: "Innovative Micro SAAS Services & Solutions",
-  description: "Complete pricing information for all our cutting-edge micro SAAS services, including AI, blockchain, quantum computing, and emerging technology solutions.",
-  lastUpdated: "2025-01-20",
-  version: "2025.1.0",
-  
-  pricingTiers: {
-    starter: {
-      name: "Starter",
-      price: "$999 - $2,999",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Basic AI integration",
-        "Standard support",
-        "Core functionality",
-        "Up to 5 users",
-        "Email support"
-      ]
+  marketOverview: {
+    totalMarketSize: "$2.8 trillion by 2025",
+    growthRate: "18.5% CAGR",
+    keyTrends: [
+      "AI-first approach becoming standard",
+      "Quantum computing commercialization",
+      "Blockchain mainstream adoption",
+      "IoT proliferation across industries",
+      "Cybersecurity as priority investment"
+    ]
+  },
+
+  pricingStrategies: {
+    valueBased: "Premium pricing for high-value solutions",
+    competitive: "Market-competitive for standard services",
+    penetration: "Aggressive pricing for new markets",
+    freemium: "Free tier with premium upgrades"
+  },
+
+  serviceCategories: {
+    "AI & Business Intelligence": {
+      marketSize: "$45.8 billion by 2025",
+      averagePrice: "$8,000-25,000",
+      pricingModel: "Annual subscription + usage-based",
+      competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+      roi: "400-800% within 12 months"
     },
-    professional: {
-      name: "Professional",
-      price: "$2,999 - $7,999",
-      description: "Ideal for growing businesses and mid-market companies",
-      features: [
-        "Advanced AI capabilities",
-        "Priority support",
-        "Full feature set",
-        "Up to 25 users",
-        "Phone & email support",
-        "Custom integrations"
-      ]
+
+    "Cybersecurity": {
+      marketSize: "$67.8 billion by 2025",
+      averagePrice: "$15,000-40,000",
+      pricingModel: "Annual subscription + incident response",
+      competitors: ["CrowdStrike", "Palo Alto Networks", "Fortinet", "SentinelOne"],
+      roi: "600-1200% within 18 months"
     },
-    enterprise: {
-      name: "Enterprise",
-      price: "$7,999 - $25,000+",
-      description: "For large enterprises and organizations",
-      features: [
-        "Custom AI solutions",
-        "24/7 dedicated support",
-        "White-label options",
-        "Unlimited users",
-        "Dedicated account manager",
-        "Custom development",
-        "SLA guarantees"
-      ]
+
+    "Cloud & DevOps": {
+      marketSize: "$89.2 billion by 2025",
+      averagePrice: "$12,000-35,000",
+      pricingModel: "Annual subscription + infrastructure costs",
+      competitors: ["AWS", "Azure", "Google Cloud", "HashiCorp"],
+      roi: "350-700% within 10 months"
+    },
+
+    "AI & Marketing": {
+      marketSize: "$32.4 billion by 2025",
+      averagePrice: "$8,000-20,000",
+      pricingModel: "Monthly subscription + performance fees",
+      competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
+      roi: "500-900% within 8 months"
+    },
+
+    "Quantum Computing": {
+      marketSize: "$1.8 billion by 2025",
+      averagePrice: "$25,000-75,000",
+      pricingModel: "Annual subscription + quantum time",
+      competitors: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum"],
+      roi: "800-2000% within 24 months"
+    },
+
+    "IoT & Edge Computing": {
+      marketSize: "$15.7 billion by 2025",
+      averagePrice: "$10,000-30,000",
+      pricingModel: "Annual subscription + device fees",
+      competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
+      roi: "400-800% within 15 months"
+    },
+
+    "Blockchain & Web3": {
+      marketSize: "$3.3 billion by 2025",
+      averagePrice: "$15,000-40,000",
+      pricingModel: "Annual subscription + transaction fees",
+      competitors: ["IBM Food Trust", "VeChain", "OriginTrail", "Chronicled"],
+      roi: "600-1200% within 18 months"
+    },
+
+    "AI & Healthcare": {
+      marketSize: "$45.2 billion by 2027",
+      averagePrice: "$20,000-50,000",
+      pricingModel: "Annual subscription + per-patient fees",
+      competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Butterfly Network"],
+      roi: "700-1500% within 20 months"
+    },
+
+    "FinTech": {
+      marketSize: "$158.8 billion by 2025",
+      averagePrice: "$18,000-45,000",
+      pricingModel: "Annual subscription + transaction fees",
+      competitors: ["Stripe", "Square", "PayPal", "Adyen"],
+      roi: "500-1000% within 12 months"
+    },
+
+    "Digital Twin": {
+      marketSize: "$86.1 billion by 2028",
+      averagePrice: "$25,000-60,000",
+      pricingModel: "Annual subscription + asset fees",
+      competitors: ["Siemens Mindsphere", "GE Digital Twin", "PTC ThingWorx", "Microsoft Azure Digital Twins"],
+      roi: "600-1200% within 18 months"
+    },
+
+    "Space Technology": {
+      marketSize: "$4.2 billion by 2027",
+      averagePrice: "$40,000-100,000",
+      pricingModel: "Annual subscription + mission fees",
+      competitors: ["Maxar", "Planet Labs", "Spire", "ICEYE"],
+      roi: "800-2000% within 36 months"
+    },
+
+    "Sustainable Technology": {
+      marketSize: "$74.8 billion by 2025",
+      averagePrice: "$18,000-45,000",
+      pricingModel: "Annual subscription + savings share",
+      competitors: ["Sphera", "Benchmark ESG", "Wolters Kluwer", "Sustainalytics"],
+      roi: "500-1000% within 15 months"
     }
   },
 
-  serviceCategories: [
-    {
-      name: "AI & Content",
-      description: "AI-powered content creation and optimization services",
-      services: [
-        {
-          name: "AI Content Intelligence Platform",
-          price: "$2,999",
-          marketPrice: "$2,500-5,000",
-          roi: "400% within 4 months",
-          features: [
-            "Real-time content scoring",
-            "SEO recommendations",
-            "Audience insights",
-            "Content optimization",
-            "Performance analytics"
-          ],
-          bestFor: "Content creators, marketers, businesses with content-heavy operations"
-        }
-      ]
+  pricingTiers: {
+    starter: {
+      name: "Starter",
+      price: "$2,000-8,000",
+      features: [
+        "Basic functionality",
+        "Standard support",
+        "Limited integrations",
+        "Community forum access"
+      ],
+      targetAudience: "Small businesses, startups",
+      roi: "200-400% within 6 months"
     },
-    {
-      name: "Blockchain & Web3",
-      description: "Decentralized finance and blockchain solutions",
-      services: [
-        {
-          name: "DeFi Portfolio Optimizer",
-          price: "$3,999",
-          marketPrice: "$3,000-6,000",
-          roi: "350% within 6 months",
-          features: [
-            "Portfolio management",
-            "Yield farming optimization",
-            "Risk assessment",
-            "Automated trading",
-            "Multi-chain support"
-          ],
-          bestFor: "DeFi investors, crypto traders, financial institutions"
-        }
-      ]
-    },
-    {
-      name: "Quantum Computing",
-      description: "Next-generation quantum computing solutions",
-      services: [
-        {
-          name: "Quantum AI Trading Algorithm",
-          price: "$14,999",
-          marketPrice: "$12,000-25,000",
-          roi: "800% within 12 months",
-          features: [
-            "Quantum algorithm optimization",
-            "Ultra-fast market analysis",
-            "Predictive modeling",
-            "High-frequency trading",
-            "Risk management"
-          ],
-          bestFor: "Hedge funds, investment banks, quantitative traders"
-        }
-      ]
-    },
-    {
-      name: "IoT & Edge Computing",
-      description: "Internet of Things and edge computing platforms",
-      services: [
-        {
-          name: "Smart City IoT Platform",
-          price: "$7,999",
-          marketPrice: "$6,000-15,000",
-          roi: "500% within 8 months",
-          features: [
-            "Real-time monitoring",
-            "Predictive maintenance",
-            "Resource optimization",
-            "Smart infrastructure",
-            "Data analytics"
-          ],
-          bestFor: "Municipalities, smart city planners, infrastructure companies"
-        }
-      ]
-    },
-    {
-      name: "AI & Healthcare",
-      description: "AI-powered healthcare and medical solutions",
-      services: [
-        {
-          name: "AI Diagnostic Assistant",
-          price: "$5,999",
-          marketPrice: "$4,500-10,000",
-          roi: "600% within 6 months",
-          features: [
-            "Medical image analysis",
-            "Symptom assessment",
-            "Treatment recommendations",
-            "Patient data management",
-            "Clinical decision support"
-          ],
-          bestFor: "Hospitals, clinics, healthcare providers, medical researchers"
-        }
-      ]
-    },
-    {
-      name: "FinTech",
-      description: "Financial technology and risk management solutions",
-      services: [
-        {
-          name: "AI Credit Risk Analyzer",
-          price: "$4,499",
-          marketPrice: "$3,500-8,000",
-          roi: "450% within 5 months",
-          features: [
-            "Credit risk assessment",
-            "Machine learning analysis",
-            "Default prevention",
-            "Financial modeling",
-            "Compliance reporting"
-          ],
-          bestFor: "Banks, credit unions, lending institutions, fintech companies"
-        }
-      ]
-    },
-    {
-      name: "AI & Marketing",
-      description: "AI-powered marketing automation and optimization",
-      services: [
-        {
-          name: "Predictive Marketing Automation",
-          price: "$3,499",
-          marketPrice: "$2,800-6,500",
-          roi: "500% within 4 months",
-          features: [
-            "Customer behavior prediction",
-            "Campaign optimization",
-            "Personalization",
-            "ROI tracking",
-            "Multi-channel integration"
-          ],
-          bestFor: "Marketing teams, agencies, e-commerce businesses, B2B companies"
-        }
-      ]
-    },
-    {
-      name: "Space Technology",
-      description: "Satellite and space data analytics platforms",
-      services: [
-        {
-          name: "Satellite Data Analytics Platform",
-          price: "$9,999",
-          marketPrice: "$8,000-18,000",
-          roi: "600% within 10 months",
-          features: [
-            "Satellite imagery analysis",
-            "Climate monitoring",
-            "Disaster response",
-            "Agricultural insights",
-            "Urban planning data"
-          ],
-          bestFor: "Government agencies, research institutions, environmental organizations, agricultural companies"
-        }
-      ]
-    },
-    {
-      name: "Sustainable Technology",
-      description: "Green technology and environmental solutions",
-      services: [
-        {
-          name: "Carbon Footprint Tracker",
-          price: "$1,999",
-          marketPrice: "$1,500-4,000",
-          roi: "300% within 3 months",
-          features: [
-            "Carbon tracking",
-            "Sustainability reporting",
-            "Environmental impact analysis",
-            "Green technology recommendations",
-            "Compliance monitoring"
-          ],
-          bestFor: "Sustainability officers, environmental consultants, green businesses, corporations"
-        }
-      ]
-    },
-    {
-      name: "AI & Legal Tech",
-      description: "AI-powered legal technology solutions",
-      services: [
-        {
-          name: "Contract Intelligence Platform",
-          price: "$4,999",
-          marketPrice: "$4,000-9,000",
-          roi: "550% within 5 months",
-          features: [
-            "Contract analysis",
-            "Risk assessment",
-            "Compliance checking",
-            "Document review",
-            "Legal research"
-          ],
-          bestFor: "Law firms, corporate legal departments, compliance officers, legal consultants"
-        }
-      ]
-    }
-  ],
 
-  pricingFactors: [
-    {
-      factor: "Service Complexity",
-      description: "More complex AI and quantum computing services command higher prices due to advanced technology requirements",
-      impact: "High"
+    professional: {
+      name: "Professional",
+      price: "$8,000-25,000",
+      features: [
+        "Advanced functionality",
+        "Priority support",
+        "Full integrations",
+        "Custom training",
+        "Dedicated account manager"
+      ],
+      targetAudience: "Mid-market companies",
+      roi: "400-800% within 12 months"
     },
-    {
-      factor: "Market Demand",
-      description: "High-demand services like AI cybersecurity and DeFi solutions have premium pricing",
-      impact: "High"
-    },
-    {
-      factor: "Implementation Time",
-      description: "Services requiring longer setup and integration periods typically cost more",
-      impact: "Medium"
-    },
-    {
-      factor: "Support Level",
-      description: "Enterprise-level support and dedicated account management increase costs",
-      impact: "Medium"
-    },
-    {
-      factor: "Customization",
-      description: "Highly customized solutions require additional development time and resources",
-      impact: "High"
-    }
-  ],
 
-  roiExamples: [
-    {
-      service: "AI Content Intelligence Platform",
-      investment: "$2,999",
-      monthlySavings: "$1,200",
-      paybackPeriod: "2.5 months",
-      annualROI: "480%"
-    },
-    {
-      service: "DeFi Portfolio Optimizer",
-      investment: "$3,999",
-      monthlySavings: "$1,400",
-      paybackPeriod: "2.9 months",
-      annualROI: "420%"
-    },
-    {
-      service: "Quantum AI Trading Algorithm",
-      investment: "$14,999",
-      monthlySavings: "$8,000",
-      paybackPeriod: "1.9 months",
-      annualROI: "640%"
-    },
-    {
-      service: "Smart City IoT Platform",
-      investment: "$7,999",
-      monthlySavings: "$3,200",
-      paybackPeriod: "2.5 months",
-      annualROI: "480%"
+    enterprise: {
+      name: "Enterprise",
+      price: "$25,000-100,000+",
+      features: [
+        "Full functionality",
+        "24/7 support",
+        "Custom integrations",
+        "On-site training",
+        "Dedicated success team",
+        "Custom development",
+        "SLA guarantees"
+      ],
+      targetAudience: "Large enterprises",
+      roi: "800-2000% within 18 months"
     }
-  ],
+  },
 
-  paymentOptions: [
-    {
-      option: "Monthly Subscription",
-      description: "Pay monthly with no long-term commitment",
-      bestFor: "Small businesses, startups, testing services"
+  competitiveAnalysis: {
+    marketLeaders: {
+      "Microsoft": "Azure-based solutions, enterprise focus",
+      "Google": "AI-first approach, cloud-native",
+      "Amazon": "AWS ecosystem, scalability",
+      "IBM": "Enterprise heritage, hybrid cloud",
+      "Oracle": "Database expertise, enterprise focus"
     },
-    {
-      option: "Annual Subscription",
-      description: "Pay annually and save 15-20%",
-      bestFor: "Growing businesses, established companies"
-    },
-    {
-      option: "Custom Enterprise",
-      description: "Tailored pricing for large organizations",
-      bestFor: "Enterprises, government agencies, large corporations"
-    }
-  ],
 
-  additionalCosts: [
-    {
-      cost: "Setup & Integration",
-      description: "One-time setup fee for complex integrations",
-      typicalRange: "$500 - $5,000"
+    emergingPlayers: {
+      "Snowflake": "Data cloud platform",
+      "Databricks": "Unified analytics platform",
+      "Palantir": "Data integration platform",
+      "C3.ai": "Enterprise AI platform",
+      "UiPath": "RPA platform"
     },
-    {
-      cost: "Custom Development",
-      description: "Additional features and customizations",
-      typicalRange: "$100 - $500 per hour"
-    },
-    {
-      cost: "Training & Onboarding",
-      description: "User training and system onboarding",
-      typicalRange: "$1,000 - $10,000"
-    },
-    {
-      cost: "Data Migration",
-      description: "Moving existing data to new systems",
-      typicalRange: "$2,000 - $20,000"
+
+    pricingStrategies: {
+      "Freemium": "Free tier with premium upgrades",
+      "Usage-based": "Pay per use model",
+      "Subscription": "Fixed monthly/annual fees",
+      "Enterprise": "Custom pricing for large deals",
+      "Performance-based": "Fees tied to business outcomes"
     }
-  ],
+  },
+
+  roiAnalysis: {
+    averageImplementation: "4-12 weeks",
+    averageROI: "500-1000% within 12 months",
+    costSavings: "20-60% operational costs",
+    efficiencyGains: "300-800% productivity improvement",
+    riskReduction: "40-80% security incidents",
+    compliance: "100% regulatory compliance"
+  },
+
+  marketPositioning: {
+    valueProposition: "Cutting-edge AI and technology solutions with proven ROI",
+    competitiveAdvantage: [
+      "AI-first approach",
+      "Quantum computing expertise",
+      "Blockchain innovation",
+      "IoT integration",
+      "Cybersecurity leadership"
+    ],
+    targetMarkets: [
+      "Fortune 500 companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions",
+      "Manufacturing companies"
+    ]
+  },
 
   contactInfo: {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
-    businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-    emergencySupport: "24/7 for enterprise customers"
-  },
-
-  nextSteps: [
-    "Schedule a free consultation to discuss your specific needs",
-    "Request a custom quote based on your requirements",
-    "Review our service portfolio and case studies",
-    "Start with a pilot program or proof of concept",
-    "Plan your implementation timeline and resource allocation"
-  ]
+    salesInquiry: "https://ziontechgroup.com/contact",
+    pricingConsultation: "https://ziontechgroup.com/request-quote"
+  }
 };
+
+export default COMPREHENSIVE_PRICING_GUIDE_2025;

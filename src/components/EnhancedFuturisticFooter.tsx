@@ -58,18 +58,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Innovative Services 2027',
       featured: true,
       links: [
-        { name: 'Innovative Services Showcase 2027', href: '/innovative-services-showcase-2027', featured: true },
-        { name: 'Comprehensive Pricing Guide 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
-        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', featured: true },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
-        { name: 'AI-Powered Cybersecurity', href: '/services/cybersecurity', featured: true },
-        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
-        { name: 'AI-Powered Micro CRM', href: '/services/micro-crm', featured: true },
-        { name: 'Space Technology Platform', href: '/services/space-tech', featured: true }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations' },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity' },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio' },
+        { name: 'AI Sales Intelligence', href: '/revolutionary-services-2030#ai-sales-intelligence' },
+        { name: 'AI Customer Support', href: '/revolutionary-services-2030#ai-customer-support-automation' },
+        { name: 'AI Data Analytics & BI', href: '/revolutionary-services-2030#ai-data-analytics-bi' },
+        { name: 'Cloud Infrastructure & DevOps', href: '/revolutionary-services-2030#cloud-infrastructure-devops' },
+        { name: 'IoT Edge Computing', href: '/revolutionary-services-2030#iot-edge-computing' },
+        { name: 'Digital Twin Platform', href: '/revolutionary-services-2030#digital-twin-platform' },
+        { name: 'Blockchain Web3 Platform', href: '/revolutionary-services-2030#blockchain-web3-platform' }
+      ]
+    },
+    {
+      title: 'AI & Technology Services',
+      featured: true,
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'Services Showcase 2025', href: '/services/showcase-2025', featured: true },
+        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
+        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
       ]
     },
     {
