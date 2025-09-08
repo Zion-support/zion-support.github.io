@@ -9752,3 +9752,26 @@ fatal: couldn't find remote ref cursor/build-and-deploy-nextjs-app-with-cloudina
 [2025-09-08T20:53:30.590Z] ✅ Success: Get git status
 [2025-09-08T20:53:30.590Z] 📄 Found 0 conflicted files
 [2025-09-08T20:53:30.590Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:53:30.673Z] ✅ Success: Add resolved files
+[2025-09-08T20:53:30.673Z] 🚀 Commit merge for cursor/build-and-deploy-nextjs-app-with-cloudinary-8e01: git commit -m "Resolve conflicts and merge cursor/build-and-deploy-nextjs-app-with-cloudinary-8e01"
+[2025-09-08T20:53:30.726Z] ✅ Success: Commit merge for cursor/build-and-deploy-nextjs-app-with-cloudinary-8e01
+[2025-09-08T20:53:30.726Z] ✅ Successfully resolved conflicts and merged: cursor/build-and-deploy-nextjs-app-with-cloudinary-8e01
+[2025-09-08T20:53:30.726Z] 🔄 Attempting to merge branch: cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c
+[2025-09-08T20:53:30.726Z] 🚀 Fetch origin/cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c: git fetch origin cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c
+[2025-09-08T20:53:31.057Z] ✅ Success: Fetch origin/cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c
+[2025-09-08T20:53:31.057Z] 🚀 Merge cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c: git merge origin/cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c --no-ff -m "Merge branch cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c into main"
+[2025-09-08T20:53:32.095Z] ❌ Error in Merge cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c: Command failed: git merge origin/cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c --no-ff -m "Merge branch cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c into main"
+[2025-09-08T20:53:32.095Z] ❌ Failed to merge cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c: Command failed: git merge origin/cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c --no-ff -m "Merge branch cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c into main"
+[2025-09-08T20:53:32.095Z] 🔧 Attempting to resolve conflicts for: cursor/build-and-deploy-nextjs-app-with-secrets-scan-ea6c
+[2025-09-08T20:53:32.095Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:53:32.150Z] ✅ Success: Get git status
+[2025-09-08T20:53:32.150Z] 📄 Found 4 conflicted files
+[2025-09-08T20:53:32.151Z] 🔧 Resolving conflicts in: app/layout.tsx
+[2025-09-08T20:53:32.152Z] ✅ Resolved conflicts in: app/layout.tsx
+[2025-09-08T20:53:32.152Z] 🔧 Resolving conflicts in: package.json
+[2025-09-08T20:53:32.152Z] ✅ Resolved conflicts in: package.json
+[2025-09-08T20:53:32.152Z] 🔧 Resolving conflicts in: src/components/Header.tsx
+[2025-09-08T20:53:32.153Z] ✅ Resolved conflicts in: src/components/Header.tsx
+[2025-09-08T20:53:32.153Z] 🔧 Resolving conflicts in: src/components/ui/sonner.tsx
+[2025-09-08T20:53:32.153Z] ✅ Resolved conflicts in: src/components/ui/sonner.tsx
+[2025-09-08T20:53:32.153Z] 🚀 Add resolved files: git add .
