@@ -1,6 +1,12 @@
 [build]
+<<<<<<< HEAD
   # Ensure Python deps install via an activated mise toolchain, then Node deps and build
   command = "mise install --yes && eval \"$(mise activate bash)\" && python -m pip install --upgrade pip && python -m pip install -r requirements.txt && npm ci && npm run build"
+=======
+  # Install Python dependencies first, then Node.js dependencies and build
+  # Explicitly use system Python to avoid mise shim issues
+  command = "/usr/bin/python3 -m pip install -r requirements.txt && npm ci && npm run build"
+>>>>>>> origin/cursor/build-image-with-dependency-installation-5b73
   publish = "dist"
   command_timeout = "30m"
 
@@ -10,8 +16,18 @@
   MISE_TRUSTED_CONFIG = "1"
   MISE_AUTO_INSTALL = "1"
   MISE_PYTHON_COMPILE = "false"
+<<<<<<< HEAD
   # Pin Python version used by mise
   MISE_TOOL_VERSIONS__python = "3.11.13"
+=======
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
+  # Disable mise shims entirely during Netlify builds
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  # Force mise to use system Python even during Netlify's dependency stage (defensive)
+  MISE_TOOL_VERSIONS__python = "system"
+>>>>>>> origin/cursor/build-image-with-dependency-installation-5b73
 
 [[plugins]]
   package = "netlify-plugin-compress"
