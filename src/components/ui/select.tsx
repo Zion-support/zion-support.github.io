@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
@@ -156,3 +158,10 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 }
+
+// Export aliases for backward compatibility
+export const _Select = Select
+export const _SelectContent = SelectContent
+export const _SelectItem = SelectItem
+export const _SelectTrigger = SelectTrigger
+export const _SelectValue = SelectValue

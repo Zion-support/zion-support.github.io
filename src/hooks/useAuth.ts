@@ -1,236 +1,120 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export interface User {
+interface User {
   id: string;
   email: string;
   name: string;
   avatar?: string;
-  role: 'user' | 'admin' | 'moderator';
-  createdAt: string;
-  updatedAt: string;
+  role?: string;
 }
 
-export interface AuthState {
+interface AuthState {
   user: User | null;
-  isAuthenticated: boolean;
   isLoading: boolean;
-  error: string | null;
+  isAuthenticated: boolean;
 }
 
-export interface LoginCredentials {
-  email: string;
-  password: string;
+interface AuthActions {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  register: (email: string, password: string, name: string) => Promise<void>;
+  updateUser: (userData: Partial<User>) => void;
 }
 
-export interface RegisterCredentials {
-  name: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
-
-export interface AuthContextType extends AuthState {
-  login: (credentials: LoginCredentials) => Promise<void>;
-  register: (credentials: RegisterCredentials) => Promise<void>;
-  logout: () => Promise<void>;
-  updateProfile: (updates: Partial<User>) => Promise<void>;
-  clearError: () => void;
-}
-
-const STORAGE_KEY = 'auth_user';
-
-export function useAuth(): AuthContextType {
-  const [state, setState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-    error: null,
-  });
+export const useAuth = (): AuthState & AuthActions => {
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Initialize auth state from localStorage
   useEffect(() => {
     const initializeAuth = () => {
       try {
-        const storedUser = localStorage.getItem(STORAGE_KEY);
+        const storedUser = localStorage.getItem('user');
         if (storedUser) {
-          const user = JSON.parse(storedUser);
-          setState({
-            user,
-            isAuthenticated: true,
-            isLoading: false,
-            error: null,
-          });
-        } else {
-          setState(prev => ({
-            ...prev,
-            isLoading: false,
-          }));
+          setUser(JSON.parse(storedUser));
         }
       } catch (error) {
-        console.error('Failed to initialize auth:', error);
-        setState({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false,
-          error: 'Failed to initialize authentication',
-        });
+        console.error('Error initializing auth:', error);
+        localStorage.removeItem('user');
+      } finally {
+        setIsLoading(false);
       }
     };
 
     initializeAuth();
   }, []);
 
-  const login = useCallback(async (credentials: LoginCredentials) => {
-    setState(prev => ({ ...prev, isLoading: true, error: null }));
-
+  const login = useCallback(async (email: string, password: string) => {
+    setIsLoading(true);
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-
-      // Mock authentication - in real app, this would be an API call
-      if (credentials.email === 'demo@example.com' && credentials.password === 'password') {
-        const user: User = {
-          id: '1',
-          email: credentials.email,
-          name: 'Demo User',
-          role: 'user',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        };
-
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-        setState({
-          user,
-          isAuthenticated: true,
-          isLoading: false,
-          error: null,
-        });
-      } else {
-        throw new Error('Invalid email or password');
-      }
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Login failed';
-      setState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: errorMessage,
-      }));
-      throw error;
-    }
-  }, []);
-
-  const register = useCallback(async (credentials: RegisterCredentials) => {
-    setState(prev => ({ ...prev, isLoading: true, error: null }));
-
-    try {
-      // Validate passwords match
-      if (credentials.password !== credentials.confirmPassword) {
-        throw new Error('Passwords do not match');
-      }
-
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      // Mock registration - in real app, this would be an API call
-      const user: User = {
-        id: Math.random().toString(36).substr(2, 9),
-        email: credentials.email,
-        name: credentials.name,
-        role: 'user',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+      
+      // Mock user data - in real app, this would come from API
+      const mockUser: User = {
+        id: '1',
+        email,
+        name: email.split('@')[0],
+        role: 'user'
       };
-
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-      setState({
-        user,
-        isAuthenticated: true,
-        isLoading: false,
-        error: null,
-      });
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Registration failed';
-      setState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: errorMessage,
-      }));
+      console.error('Login error:', error);
       throw error;
+    } finally {
+      setIsLoading(false);
     }
   }, []);
 
-  const logout = useCallback(async () => {
-    setState(prev => ({ ...prev, isLoading: true }));
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 500));
-
-      localStorage.removeItem(STORAGE_KEY);
-      setState({
-        user: null,
-        isAuthenticated: false,
-        isLoading: false,
-        error: null,
-      });
-    } catch (error) {
-      console.error('Logout error:', error);
-      // Still clear local state even if API call fails
-      localStorage.removeItem(STORAGE_KEY);
-      setState({
-        user: null,
-        isAuthenticated: false,
-        isLoading: false,
-        error: null,
-      });
-    }
-  }, []);
-
-  const updateProfile = useCallback(async (updates: Partial<User>) => {
-    if (!state.user) {
-      throw new Error('No user logged in');
-    }
-
-    setState(prev => ({ ...prev, isLoading: true, error: null }));
-
+  const register = useCallback(async (email: string, password: string, name: string) => {
+    setIsLoading(true);
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-
-      const updatedUser: User = {
-        ...state.user,
-        ...updates,
-        updatedAt: new Date().toISOString(),
+      
+      // Mock user data - in real app, this would come from API
+      const mockUser: User = {
+        id: '1',
+        email,
+        name,
+        role: 'user'
       };
-
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedUser));
-      setState(prev => ({
-        ...prev,
-        user: updatedUser,
-        isLoading: false,
-        error: null,
-      }));
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Profile update failed';
-      setState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: errorMessage,
-      }));
+      console.error('Registration error:', error);
       throw error;
+    } finally {
+      setIsLoading(false);
     }
-  }, [state.user]);
-
-  const clearError = useCallback(() => {
-    setState(prev => ({ ...prev, error: null }));
   }, []);
+
+  const logout = useCallback(() => {
+    setUser(null);
+    localStorage.removeItem('user');
+  }, []);
+
+  const updateUser = useCallback((userData: Partial<User>) => {
+    if (user) {
+      const updatedUser = { ...user, ...userData };
+      setUser(updatedUser);
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+    }
+  }, [user]);
 
   return {
-    ...state,
+    user,
+    isLoading,
+    isAuthenticated: !!user,
     login,
-    register,
     logout,
-    updateProfile,
-    clearError,
+    register,
+    updateUser,
   };
-}
+};
+
+// Export alias for backward compatibility
+export const _useAuth = useAuth;
