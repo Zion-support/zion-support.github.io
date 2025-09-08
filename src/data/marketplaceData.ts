@@ -42,6 +42,8 @@ export const marketplaceItems: MarketplaceItem[] = [
       verified: true
     },
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
+    videoUrl: "https://example.com/demo.mp4",
+    modelUrl: "https://example.com/model.glb",
     createdAt: "2024-01-10T12:30:00.000Z",
     rating: 4.9,
     reviewCount: 58,

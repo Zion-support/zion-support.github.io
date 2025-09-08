@@ -105,6 +105,20 @@ import {logErrorToProduction} from '@/utils/productionLogger',
     }
   };
 
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      form.setValue("video", file);
+    }
+  };
+
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      form.setValue("model", file);
+    }
+  };
+
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
@@ -305,6 +319,31 @@ if ( {) {
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
+          .eq('id', productRecord.id);
+
+        if (updateError) {
+          throw new Error(updateError.message);
+        }
+      }
+
+      // Upload model if provided
+      if (values.model) {
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(modelPath, values.model);
+
+        if (uploadError) {
+          throw new Error(uploadError.message);
+        }
+
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(modelPath);
+
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({ model_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);
 
         if (updateError) {
@@ -570,6 +609,52 @@ if ( {) {
                     </div>                  )}
                 </FormItem>;
               )}
+
+            <FormField
+              control={form.control}
+              name="video"
+              render={() => (
+                <FormItem>
+                  <FormLabel>Product Video (MP4)</FormLabel>
+                  <FormControl>
+                    <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
+                  </FormControl>
+                  <FormDescription>
+                    Optional video demonstrating your product
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="model"
+              render={() => (
+                <FormItem>
+                  <FormLabel>3D Model (glb)</FormLabel>
+                  <FormControl>
+                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />
+                  </FormControl>
+                  <FormDescription>
+                    Upload a 3D model for interactive viewing
+                  </FormDescription>
+                  <FormMessage />
+                  
+                  {imagePreview && (
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+                      <AspectRatio ratio={3/2}>
+                        <img
+                          src={imagePreview}
+                          alt="Preview"
+                          className="w-full h-full object-cover"
+                        />
+                      </AspectRatio>
+                    </div>
+                  )}
+                </FormItem>
+              )}
+            />
 
             <FormField
               control={form.control}

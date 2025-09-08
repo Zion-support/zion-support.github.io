@@ -4,9 +4,8 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { MessageSquare, Brain, Shield } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
+import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
@@ -79,11 +78,7 @@ export default function ListingDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <ProductGallery
-                images={listing.images}
-                videoUrl={listing.videoUrl}
-                modelUrl={listing.modelUrl}
-              />
+              <ProductGallery images={listing.images} videoUrl={listing.videoUrl} modelUrl={listing.modelUrl} />
 
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
