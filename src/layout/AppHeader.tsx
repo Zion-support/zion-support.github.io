@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Sidebar as SidebarIcon } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -93,16 +94,13 @@ export function AppHeader() {
         { name: 'AI Content Generation', href: '/services/ai-content-generation-platform', description: 'Advanced content creation' }
       ]
     },
-    {
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
-        { name: 'Edge Computing', href: '/services/edge-computing-platform', description: 'Edge infrastructure' }
-      ]
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
     },
     {
       name: 'Digital Solutions',
@@ -116,15 +114,69 @@ export function AppHeader() {
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'IoT solutions' }
       ]
     },
-    {
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-indigo-600 to-purple-600',
-      services: [
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
-      ]
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity', 
+      icon: Shield, 
+      description: 'AI-Powered Security',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Trading Systems',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI Solutions',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal AI & Document Processing',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
@@ -143,47 +195,39 @@ export function AppHeader() {
       ]
     },
     {
-      name: 'Industry Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Industry-specific solutions',
-      featured: true,
-      subSolutions: [
-        { name: 'Healthcare Solutions', href: '/solutions#healthcare' },
-        { name: 'Financial Solutions', href: '/solutions#financial' },
-        { name: 'Manufacturing Solutions', href: '/solutions#manufacturing' },
-        { name: 'Retail Solutions', href: '/solutions#retail' }
-      ]
+      name: 'Healthcare Solutions',
+      href: '/solutions#healthcare',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
     },
     {
-      name: 'AI & Automation',
-      href: '/solutions',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      solutions: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
-        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform', description: 'Advanced content creation' }
-      ]
-    },
-    {
-      name: 'Quantum & Emerging',
-      icon: Star,
-      color: 'from-indigo-600 to-purple-600',
-      solutions: [
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions' }
-      ]
-    },
-    {
-      name: 'Innovation Showcase',
+      name: 'Financial Solutions',
+      href: '/solutions#financial',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions#manufacturing',
+      icon: Building,
+      description: 'Smart manufacturing & automation',
+      featured: false
+    },
+    {
+      name: 'Legal Solutions',
+      href: '/solutions#legal',
+      icon: Scale,
+      description: 'Legal tech & compliance',
+      featured: false
+    },
+    {
+      name: 'Research & Development',
+      href: '/research-development',
+      icon: Code,
+      description: 'Innovation & R&D support',
+      featured: false
     }
   ];
 
@@ -238,44 +282,30 @@ export function AppHeader() {
       featured: true
     },
     {
-      name: 'Blog & Insights',
-      href: '/blog',
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Training & Certification',
+      href: '/training',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: false
-    },
-    {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: false
-    },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
+      description: 'Professional development',
       featured: false
     }
   ];
 
   const quickLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
-    { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp, description: 'Compare all services' },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
-    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign, description: 'View our pricing' },
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Partners', href: '/partners', icon: HeartHandshake },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play },
+    { name: 'Privacy', href: '/privacy', icon: Shield },
+    { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
 
   const companyCategories = [
