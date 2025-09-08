@@ -1,23 +1,4 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 
-#!/usr/bin/env node;
-
-class IntelligentErrorDetector {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.errors = [];
-    this.warnings = [];
-    this.suggestions = []}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();

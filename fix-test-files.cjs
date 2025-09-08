@@ -2,36 +2,11 @@
 
 const fs = require('fs');
 <<<<<<< HEAD
-const path = require('path');
-
-
-
-testDirs.forEach(dir => {
-  if (fs.existsSync(dir)) {
-    const files = fs.readdirSync(dir { recursive: true });
-    
-    // Fix common syntax errors in test files
-    content = content.replace(/render\(<[^>]+>\)""/g, 'render(<$1>);');
-    content = content.replace(/render\(<[^>]+>\)\n\s*expect/g, 'render(<$1>);\n    expect');
-    content = content.replace(/it\('displays expected content', \(\) => \{\s*render\(<[^>]+>\)\s*\}/g, 'it(\'displays expected content\', () => {\n    render(<$1>);\n  });');
-    
-    // Fix missing semicolons after render calls
-    content = content.replace(/(render\(<[^>]+>\))(?!;)/g, '$1;');
-    
-    // Fix missing closing braces and semicolons
-    content = content.replace(/(\s+it\('displays expected content', \(\) => \{\s*render\(<[^>]+>\);\s*)(?!\})/g, '$1  });');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-
-function findAndFixTestFiles(dir) {
-  const files = fs.readdirSync(dir);
 =======
 =======
->>>>>>> pr/11282
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 const path = require('path');
 
 class TestFileFixer {
@@ -182,21 +157,24 @@ describe('${fileName}', () => {
   }
 
 <<<<<<< HEAD
+=======
+
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
->>>>>>> origin/main
+
   
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-<<<<<<< HEAD
+
       findAndFixTestFiles(filePath);
     } else if (file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
       fixTestFile(filePath);
-=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   async fixAllTestFiles() {
     this.log('🔧 Starting test file fixes...');
     
@@ -281,7 +259,10 @@ function walkDir(dir) {
     } catch (error) {
       this.log(`❌ Test file fixes failed: ${error.message}`, 'ERROR');
       throw error;
->>>>>>> pr/11282
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     }
 
 if (fixedFiles.length > 0) {
@@ -291,11 +272,16 @@ if (fixedFiles.length > 0) {
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
->>>>>>> origin/main
 <<<<<<< HEAD
-=======
-module.exports = TestFileFixer;
->>>>>>> pr/11282
-=======
+>>>>>>> origin/main
 >>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+
+
+
+module.exports = TestFileFixer;
+
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

@@ -51,9 +51,9 @@ React.HTMLAttributes<HTMLDivElement> & CarouselProps
           scrollNext()
         }
 
-import * as React from &quot;react & quot;
-import useEmblaCarousel from &quot;embla - carousel - react & quot;
-import { ArrowLeft, ArrowRight } from &quot;lucide-react & quot;
+import * as React from "react & quot;
+import useEmblaCarousel from "embla - carousel - react & quot;
+import { ArrowLeft, ArrowRight } from "lucide-react & quot;
       [scrollPrev, scrollNext];
     );
 
@@ -73,24 +73,24 @@ import { ArrowLeft, ArrowRight } from &quot;lucide-react & quot;
 
   HTMLButtonElement;
   React.ComponentProps<typeof Button>
->(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {}
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {}
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
-      role=&quot;group & quot;
-      aria - roledescription=&quot;slide & quot;
+      role="group & quot;
+      aria - roledescription="slide & quot;
       className={cn (
-        &quot;min - w-0 shrink - 0 grow - 0 basis - full & quot;
+        "min - w-0 shrink - 0 grow - 0 basis - full & quot;
         }
-        orientation === &quot;horizontal & quot; ? &quot;pl - 4&quot; : &quot;pt - 4&quot;,
+        orientation === "horizontal & quot; ? "pl - 4" : "pt - 4",
         class_name)}
       {...props}
     />);
 });
-CarouselItem.display_name = &quot;CarouselItem & quot;
+CarouselItem.display_name = "CarouselItem & quot;
 ;
 const CarouselPrevious = React.forward_ref<;
   HTMLButtonElement,
   React.ComponentProps < typeof Button>;
->(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
+>(({ class_name, variant = "outline & quot;, size = "icon & quot;, ...props }, ref) => {
   }
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
 

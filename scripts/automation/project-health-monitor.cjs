@@ -1,313 +1,289 @@
 
-
-const { execSync } = require('child_process');
+=======
+#!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+/**
+ * Project Health Monitor Automation;
+ * Monitors overall project health and provides insights;
+ */
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
-const crypto = require('crypto');
-;
-class ProjectHealthMonitor {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+const { execSync } = require('child_process');
 
-    );
-    this.issuesLog = path.join(this.projectRoot, 'logs', 'health-issues.json');
-    this.fixesLog = path.join(this.projectRoot, 'logs', `health-fixes.json`);
-    this.ensureLogsDirectory()}
-;
-  ensureLogsDirectory() {;
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {;
-      fs.mkdirSync(logsDir { recursive: true })}
-  }
+=======
+class ProjectHealthMonitor {}
+    constructor() {}
+        this.projectRoot = process.cwd();
 
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
 
-      })}
-;
-    return { issues, fixes }}
-;
-  async checkPackageJson() {;
-    const issues = [];
-    const packagePath = path.join(this.projectRoot, 'package.json');
-;
-    try {;
-      if (!fs.existsSync(packagePath)) {;
-        issues.push({;
-          type: 'PACKAGE_JSON',;
-          severity: 'CRITICAL',;
-          message: 'package.json not found',;
-          file: packagePath,});
-        return issues}
-;
-      const packageContent = fs.readFileSync(packagePath, 'utf8');
-      const packageJson = JSON.parse(packageContent)})}
-        }
-      }
-
-      })}
-;
-    return issues}
-;
-  async checkTypeScript() {;
-    const issues = [];
-
-      const lines = output.split('\n');
-;
-      let errorCount = 0;
-
-          // Parse error details;
-          const match = line.match(/src\/([^:]+):(\d+):(\d+)/);
-          if (match) {;
-            const [', 'file', 'lineNum', 'colNum'] = match;
-            if (!fileErrors[file]) fileErrors[file] = [];
-;
-            fileErrors[file].push({;
-              line: parseInt(lineNum),;
-              column: parseInt(colNum),;
-              message: line.trim(),})}
-        }
-      }
-
-        })}
-    }
-;
-    return issues}
-;
-  async checkDependencies() {;
-    const issues = [];
-
-      const missingDeps = [];
-;
-      for (const dep of criticalDeps) {;
-        const depPath = path.join(nodeModulesPath, dep);
-        if (!fs.existsSync(depPath)) {;
-          missingDeps.push(dep)}
-      }
-
-      })}
-;
-    return issues}
-;
-  async findCorruptedPackages() {;
-    const corrupted = [];
-
-              corrupted.push(pkg)}
-          } catch {;
-            corrupted.push(pkg)}
-        } else {;
-          corrupted.push(pkg)}
-      }
-    } catch (error) {  this.log(`Error scanning packages: ${error.message  }`, `WARN`)}
-;
-    return corrupted}
-;
-  async checkBuildConfig() {;
-    const issues = []})}
-;
-          if (!viteConfig.includes('@'vitejs/plugin-react'')) {;
-            issues.push({;
-              type: 'BUILD_CONFIG',;
-              severity: 'HIGH',;
-              message: 'Vite config missing React plugin',;
-              file: viteConfigPath,})}
-
-      })}
-;
-    return issues}
-;
-  async checkFileIntegrity() {;
-    const issues = []})}
-;
-    return issues}
-;
-  async scanForCorruptedFiles(dir) {;
-    const corrupted = [];
-;
-    try {;
-      const files = fs.readdirSync(dir { withFileTypes: true });
-;
-      for (const file of files) {;
-        const fullPath = path.join(dir, file.name);
-;
-        if (file.isDirectory()) {;
-          corrupted.push(...(await this.scanForCorruptedFiles(fullPath)))})}
-        }
-      }
-    } catch (error) {  this.log(`Error scanning directory ${dir  }: ${error.message}`, `WARN`)}
-;
-    return corrupted}
-;
-  async findBackupFiles() {;
-    const backupFiles = [];
-
-      const allFiles = await this.getAllFiles(this.projectRoot);
-;
-      for (const file of allFiles) {;
-        const fileName = path.basename(file);
-        for (const pattern of backupPatterns) {;
-          if (this.matchesPattern(fileName, pattern)) {;
-            backupFiles.push(file);
-            break}
-        }
-      }
-    } catch (error) {  this.log(`Error finding backup files: ${error.message  }`, `WARN`)}
-;
-    return backupFiles}
-;
-  async getAllFiles(dir) {;
-    const files = [];
-;
-    try {;
-      const items = fs.readdirSync(dir { withFileTypes: true });
-;
-      for (const item of items) {;
-        const fullPath = path.join(dir, item.name);
-
-          files.push(...(await this.getAllFiles(fullPath)))} else if (item.isFile()) {;
-          files.push(fullPath)}
-      }
-
-  }
-;
-  async autoFixIssues(issues) {;
-    const fixes = [];
-
-            const fileFix = await this.fixCorruptedFiles(issue);
-            if (fileFix) fixes.push(fileFix);
-            break}
-
-        )}
-    }
-;
-    return fixes}
-
-          }}
-      } catch (error) {  this.log(`Failed to fix package.json: ${error.message  }`, `ERROR`)}
-    }
-;
-    return null}
-
-          }}
-      } catch (error) {  this.log(`Failed to fix TypeScript issues: ${error.message  }`, `ERROR`)}
-    }
-;
-    return null}
-;
-  async fixJSXSyntax(fileErrors) {;
-    const fixedFiles = [];
-
-        const filePath = path.join(this.projectRoot, 'file);
-        if (!fs.existsSync(filePath)) continue;
+        console.log(message)};
+    checkProjectStructure() {}
+        this.log('Checking project structure...');
+=======
+        console.log(message)};
+    checkProjectStructure() {}
+        this.log('Checking project structure...');
         
-        let content = fs.readFileSync(filePath, 'utf8');
-        let modified = false;
+        const requiredFiles = ['package.json',]
+            'next.config.js',
+            'tsconfig.json',
+            'tailwind.config.js'
+        ];
+        const optionalFiles = ['README.md',]
+            '.gitignore',
+            '.env.example',
+            'Dockerfile',
+            'docker-compose.yml'
+        ];
+        const structure = {}
+            "required": {},
+            "optional": {},
+            "score": 0;
+       };
+=======
+    checkProjectStructure() {}"
 
-        );
-;
-        // Fix unclosed JSX tags (basic heuristic);
-        const openTags = content.match(/<([A-Z][a-zA-Z]*)/g) || [];
-        const closeTags = content.match(/<\/([A-Z][a-zA-Z]*)/g) || [];
-;
-        if (openTags.length > closeTags.length) {;
-          // Add missing closing tags (simplified approach);
-          const missingTags = openTags.length - closeTags.length}
-          modified = true}
-;
-        if (modified) {;
-          fs.writeFileSync(filePath, content);
-          fixedFiles.push(file)}
-      } catch (error) {  this.log(`Failed to fix file ${file  }: ${error.message}`, `ERROR`)}
-    }
-;
-    return fixedFiles}
+            "score": 0;"
+        // Check required files;
+        for (const file of requiredFiles) {}
+            const exists = fs.existsSync(path.join(this.projectRoot, file;););
+            structure.required[file] = exists;
+            if (structure.score += 10};)
+        // Check optional files;
+        for (const file of optionalFiles) {}
+            const exists = fs.existsSync(path.join(this.projectRoot, file) {}
+    structure.score += 10};
+        // Check optional files;
+            const exists = fs.existsSync(path.join(this.projectRoot, file})
+}););
+            structure.optional[file] = exists;
+            if (structure.score += 5};)"`;
+        this.log(`Project structure "score": ${structure.score}/100`)) {`}"
+    structure.score += 5};"`;
+        this.log(`Project structure "score": ${structure.score}/100`)};"
+        return structure};
+    checkCodeQuality() {}
+        this.log('Checking code quality...');
+        try {}
+            // Run linting;
+            execSync('npm run lint', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+=======
+    checkCodeQuality() {}"
 
-        // Remove corrupted node_modules;
-        const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
-        const packageLockPath = path.join(;
-          this.projectRoot,package-lock.json';
-        );
-;
-        if (fs.existsSync(nodeModulesPath)) {;
-          fs.rmSync(nodeModulesPath { recursive: true, force: true });
-          this.log('Removed corrupted node_modules')}
-;
-        if (fs.existsSync(packageLockPath)) {;
-          fs.unlinkSync(packageLockPath);
-          this.log('Removed package-lock.json')}
+            }
+            return {;}
 
-        }} catch (error) {  this.log(`Failed to fix dependencies: ${error.message  }`, `ERROR`)}
-    }
-;
-    return null}
+                "error": error.message;"
+            }};
+    };
+    checkTypeScript() {}
+        this.log('Checking TypeScript configuration...');
+        try {}
+            execSync('npm run type-check', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            return {;}
+                "status": 'success',
+                "typeCheck": 'passed',
+                "score": 20;
+            }} catch (error) {}
+            return {;}
+                "status": 'warning',
+                "typeCheck": 'failed',
+                "score": 0,
+                "error": error.message;
+            }};
+    };
+    checkBuildHealth() {}
+        this.log('Checking build health...');
+        try {}
+            execSync('npm run build', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            return {;}
+                "status": 'success',
+                "build": 'passed',
+                "score": 20;
+            }} catch (error) {}
+            return {;}
+                "status": 'failed',
+                "build": 'failed',
+                "score": 0,
+                "error": error.message;
+            }};
+    };
+    checkDependencies() {}
+        this.log('Checking dependencies health...');
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            const totalDeps = Object.keys(packageJson.dependencies || {}).length +
+                             Object.keys(packageJson.devDependencies || {}).lengt;h;
+            // Check for outdated packages;
+            let outdatedCount = ;0;
+            try {}
+                execSync('npm outdated --json', { })
+                    "cwd": this.projectRoot,
+                    "stdio": 'pipe'
+=======
+    checkTypeScript() {}"
 
-            const fixed = await this.fixJSXSyntax({ [corruptedFile.file]: [] });
-            if (fixed.length > 0) {;
-              fixedFiles.push(corruptedFile.file)}
-          }
-        }
+            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
+                             Object.keys(packageJson.devDependencies || {}).lengt;h;
+            // Check for outdated packages;
+            let outdatedCount = ;0;
 
-          }}
-      } catch (error) {  this.log(`Failed to fix corrupted files: ${error.message  }`, `ERROR`)}
-    }
-;
-    return null}
+                })} catch (error) {}
+                if ( {})
+                        const outdated = JSON.parse(error.stdout) {}
+     {}
+                        const outdated = JSON.parse(error.stdout})
+                        outdatedCount = Object.keys(outdated).length} catch (parseError) {}
+                        // No outdated packages;
+            const score = Math.max(0, 20 - (outdatedCount * 2;););
+            return {;}
+                "status": 'success',
+                "totalDependencies": totalDeps,
+                "outdatedCount": outdatedCount,
+                "score": score;
+            }} catch (error) {}
+            return {;}
+                "status": 'failed',
+                "score": 0,
+                "error": error.message;
+            }};
+    };
+    checkSecurity() {}
+        this.log('Checking security health...');
+        try {}
+            const auditResult = execSync('npm audit --json', { })
+                "cwd": this.projectRoot,
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            const score = Math.max(0, 20 - (vulnerabilities * 5;););
+            };);
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            const score = Math.max(0, 20 - (vulnerabilities * 5;););
+            
+            return {;}
+                "status": 'success',
+                "vulnerabilities": vulnerabilities,
+                "score": score;
+            }} catch (error) {}
+            return {;}
+                "status": 'warning',
+                "score": 10,
+                "error": error.message;
+            }};
+    };
+    generateHealthReport() {}
+        this.log('Generating project health report...');
+=======
 
-    );
-    this.log( `Critical: ${report.summary.criticalIssues}, High: ${report.summary.highIssues}, Medium: ${report.summary.mediumIssues}`;
-    );
-;
-    return report}
-;
-  generateRecommendations(issues) {;
-    const recommendations = [];
+        const structure = this.checkProjectStructure(;);
+        const codeQuality = this.checkCodeQuality(;);
+        const typeScript = this.checkTypeScript(;);
+        const build = this.checkBuildHealth(;);
+        const dependencies = this.checkDependencies(;);
+        const security = this.checkSecurity(;);
+        const totalScore = structure.score + codeQuality.score + typeScript.score +
+                          build.score + dependencies.score + security.scor;e;
+        const healthStatus = totalScore >= 80 ? 'excellent' :
+                           totalScore >= 60 ? 'good' :
+                           totalScore >= 40 ? 'fair' : 'poo;r;';
+        const report = {}
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "health": {}
+=======
+        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+                          build.score + dependencies.score + security.scor;e;
 
-      recommendations.push('Run npm install to restore dependencies')}
-;
-    if (issues.some(i => i.type === 'TYPESCRIPT' && i.severity === 'HIGH')) {;
-      recommendations.push('Fix TypeScript compilation errors before building')}
-;
-    if (;
-      issues.some(i => i.type === 'PACKAGE_JSON' && i.severity === 'CRITICAL');
-    ) {;
-      recommendations.push('Restore package.json from version control')}
-;
-    if (;
-      issues.some(i => i.type === 'FILE_INTEGRITY' && i.severity === 'HIGH');
-    ) {;
-      recommendations.push('Review and fix corrupted source files')}
-;
-    if (recommendations.length === 0) {;
-      recommendations.push(Project appears healthy, no immediate action required';
-      )}
-;
-    return recommendations}
-;
-  async triggerRebuild() {;
-    try {;
-      this.log('Triggering project rebuild...');
+            "health": {}"
+                overall: {}
+                    score: totalScore,"
+                    "status": healthStatus,
+                    "maxScore": 100;"
+                },"
+                "structure": structure,
+                "codeQuality": codeQuality,
+                "typeScript": typeScript,
+                "build": build,
+                "dependencies": dependencies,
+                "security": security;
+            },
+            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
+       };
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Project health report saved to ${this.reportFile}`);
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
+        return report};
+    generateHealthRecommendations(score, status) {}
+        const recommendations = [];
 
-      // Try building;
-      execSync('npm run build' { cwd: this.projectRoot, stdio: 'pipe' });
-      this.log(`Project build successful after fixes`)} catch (error) {  this.log(`Rebuild failed: ${error.message  }`, `WARN`)}
-  }
-}
 
-  const monitor = new ProjectHealthMonitor();
-;
-  try {;
-    const result = await monitor.runHealthCheck();
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
+        return report};
+    generateHealthRecommendations(score, status) {}
+        const recommendations = [];
+        
+        if ( {})
+=======
+        if ( {})"
+            recommendations.push('Project health needs immediate attention')};
 
-      process.exit(1)} else if (result.issues.length > 0) {;
-      process.exit(2)} else {;
-      process.exit(0)}
-  } catch (error) {  monitor.log(`Fatal error: ${error.message  }`, `ERROR`);
-    process.exit(1)}
-}
+            recommendations.push('Focus on improving code quality and fixing build issues')};
+            recommendations.push('Update outdated dependencies');
+            recommendations.push('Address security vulnerabilities')};
+        recommendations.push('Implement automated testing');
+        recommendations.push('Set up continuous integration');
+        recommendations.push('Regularly monitor project health');
+        return recommendations};
+    async run() {}
+        this.log('Project Health Monitor started');
+        try {}
+            const report = this.generateHealthReport(;);
+            this.log('Project Health Monitor completed successfully');
+            return report} catch (error) {}
+            this.log(`Project Health Monitor "failed": ${error.message}`);
+=======
+        return recommendations};
+    async run() {}
+        this.log('Project Health Monitor started');
 
-  main()}
-;
+            throw error};
+// Run the monitor if this script is executed directly;
+    const monitor = new ProjectHealthMonitor) {}
+    const monitor = new ProjectHealthMonitor}(;);
+    monitor.run().catch(console.error)};
+
+=======
 module.exports = ProjectHealthMonitor;
+=======
+module.exports = ProjectHealthMonitor;
+=======
+
+
