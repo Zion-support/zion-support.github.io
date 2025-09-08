@@ -6,48 +6,41 @@ export default function TestingPage() {
   return (
     <>
       <Head>
-        <title>Testing & Quality — Zion Tech Group</title>
-        <meta name="description" content="Automated testing suites, QA pipelines, and continuous validation for autonomous systems." />
+        <title>Testing | Zion Tech Group</title>
+        <meta name="description" content="Testing strategy, quality assurance, and validation pipelines." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-12">
-            <h1 className="text-4xl font-extrabold bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Testing & Quality</h1>
-            <p className="mt-4 text-white/85 max-w-3xl mx-auto">Reliability at scale via automated tests, smoke checks, and continuous quality gates embedded in our CI/CD.</p>
-          </section>
-
-          <section className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 border border-white/20 rounded-xl p-6">
-              <h2 className="text-fuchsia-400 font-semibold mb-3">Automation</h2>
+          <nav className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300">← Back to Home</Link>
+          </nav>
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">Testing</h1>
+          <p className="text-white/80 max-w-3xl mb-8">Robust automated testing across unit, integration, end-to-end, and performance ensures reliability at scale.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h2 className="text-lg font-semibold text-amber-400 mb-3">Coverage</h2>
               <ul className="text-white/80 text-sm space-y-2">
-                <li>• Unit & integration coverage</li>
-                <li>• Visual & regression checks</li>
-                <li>• Lint & type validation</li>
+                <li>• Unit and integration testing</li>
+                <li>• E2E and smoke tests</li>
+                <li>• Security and accessibility checks</li>
+                <li>• Continuous test health monitoring</li>
               </ul>
             </div>
-            <div className="bg-white/10 border border-white/20 rounded-xl p-6">
-              <h2 className="text-fuchsia-400 font-semibold mb-3">Pipelines</h2>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h2 className="text-lg font-semibold text-amber-400 mb-3">Documentation</h2>
               <ul className="text-white/80 text-sm space-y-2">
-                <li>• Pre‑commit and PR smoke tests</li>
-                <li>• Build health auto‑healing</li>
-                <li>• Performance budgets</li>
+                <li>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">Testing Guide →</a>
+                </li>
+                <li>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/pr-smoke-report.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">PR Smoke Report →</a>
+                </li>
+                <li>
+                  <a href="https://github.com/Zion-Holdings/zion.app/blob/main/playwright-smoke-report.md" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200">Playwright Smoke →</a>
+                </li>
               </ul>
             </div>
-            <div className="bg-white/10 border border-white/20 rounded-xl p-6">
-              <h2 className="text-fuchsia-400 font-semibold mb-3">Observability</h2>
-              <ul className="text-white/80 text-sm space-y-2">
-                <li>• Metrics & dashboards</li>
-                <li>• Error tracking</li>
-                <li>• Release verification</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mx-auto max-w-5xl mt-10 text-center">
-            <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" className="text-fuchsia-300 hover:text-fuchsia-200 font-semibold">
-              Read the full Testing guide →
-            </Link>
-          </section>
+          </div>
         </main>
       </div>
     </>
