@@ -1,396 +1,256 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
 import { 
   FileText, 
   Download, 
   Calendar, 
-  Users, 
-  Eye, 
-  ArrowRight,
-  Star,
-  Clock,
+  User, 
   Tag,
+  ArrowRight,
   Search,
-  Filter,
-  BookOpen,
-  Brain,
-  Shield,
-  Cloud,
-  Zap
+  BookOpen
 } from 'lucide-react';
 
-const WhitePapersPage: React.FC = () => {
+const WhitePapers = () => {
   const whitePapers = [
     {
-      title: 'AI in Healthcare: A Comprehensive Guide to Implementation',
-      description: 'This comprehensive white paper explores the current state of AI in healthcare, implementation strategies, and best practices for healthcare organizations looking to adopt AI solutions.',
-      author: 'Dr. Sarah Johnson',
-      date: 'December 2024',
-      category: 'Healthcare AI',
-      downloads: 1247,
-      views: 3456,
-      featured: true,
-      tags: ['Healthcare', 'AI', 'Implementation', 'Best Practices'],
-      fileSize: '2.8 MB',
-      pages: 45,
-      color: 'from-red-500 to-pink-500'
+      id: 1,
+      title: "AI in Enterprise: A Comprehensive Guide to Implementation",
+      description: "This white paper explores the strategic implementation of AI technologies in enterprise environments, covering key considerations, best practices, and ROI analysis.",
+      author: "Dr. Sarah Chen",
+      date: "2025-01-15",
+      category: "Artificial Intelligence",
+      downloadCount: "2,450",
+      fileSize: "2.3 MB",
+      tags: ["AI", "Enterprise", "Implementation"]
     },
     {
-      title: 'Quantum Computing: The Future of Financial Services',
-      description: 'An in-depth analysis of how quantum computing is revolutionizing financial services, including risk assessment, portfolio optimization, and algorithmic trading.',
-      author: 'Dr. Michael Chen',
-      date: 'November 2024',
-      category: 'Quantum Computing',
-      downloads: 892,
-      views: 2341,
-      featured: true,
-      tags: ['Quantum Computing', 'FinTech', 'Risk Management', 'Trading'],
-      fileSize: '3.2 MB',
-      pages: 52,
-      color: 'from-purple-500 to-indigo-500'
+      id: 2,
+      title: "Quantum Computing: The Future of Computational Power",
+      description: "An in-depth analysis of quantum computing's potential impact on various industries and the roadmap to practical applications.",
+      author: "Prof. Michael Rodriguez",
+      date: "2024-12-20",
+      category: "Quantum Computing",
+      downloadCount: "1,890",
+      fileSize: "3.1 MB",
+      tags: ["Quantum Computing", "Technology", "Innovation"]
     },
     {
-      title: 'Cybersecurity in the Age of AI: Threats and Solutions',
-      description: 'A comprehensive analysis of emerging cybersecurity threats in the AI era and innovative solutions to protect organizations from sophisticated attacks.',
-      author: 'Alex Rodriguez',
-      date: 'October 2024',
-      category: 'Cybersecurity',
-      downloads: 1567,
-      views: 4123,
-      featured: false,
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security'],
-      fileSize: '2.1 MB',
-      pages: 38,
-      color: 'from-green-500 to-emerald-500'
+      id: 3,
+      title: "Cybersecurity in the AI Era: Threats and Defenses",
+      description: "Comprehensive analysis of emerging cybersecurity threats and AI-powered defense strategies for modern organizations.",
+      author: "Alex Thompson",
+      date: "2024-11-30",
+      category: "Cybersecurity",
+      downloadCount: "3,120",
+      fileSize: "1.8 MB",
+      tags: ["Cybersecurity", "AI", "Security"]
     },
     {
-      title: 'Digital Transformation: A Roadmap for Enterprise Success',
-      description: 'A strategic guide for enterprise organizations embarking on digital transformation journeys, including frameworks, methodologies, and success metrics.',
-      author: 'Jennifer Williams',
-      date: 'September 2024',
-      category: 'Digital Transformation',
-      downloads: 1123,
-      views: 2987,
-      featured: false,
-      tags: ['Digital Transformation', 'Enterprise', 'Strategy', 'Frameworks'],
-      fileSize: '2.5 MB',
-      pages: 41,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'IoT and Edge Computing: Building the Connected Future',
-      description: 'An exploration of IoT and edge computing technologies, their applications across industries, and implementation strategies for organizations.',
-      author: 'David Kim',
-      date: 'August 2024',
-      category: 'IoT & Edge Computing',
-      downloads: 756,
-      views: 1892,
-      featured: false,
-      tags: ['IoT', 'Edge Computing', 'Connected Devices', 'Implementation'],
-      fileSize: '1.9 MB',
-      pages: 34,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'AI-Powered Business Intelligence: Transforming Decision Making',
-      description: 'A detailed guide on implementing AI-powered business intelligence solutions to enhance decision-making processes and drive business growth.',
-      author: 'Dr. Emily Thompson',
-      date: 'July 2024',
-      category: 'Business Intelligence',
-      downloads: 1345,
-      views: 3567,
-      featured: false,
-      tags: ['Business Intelligence', 'AI', 'Decision Making', 'Analytics'],
-      fileSize: '2.3 MB',
-      pages: 39,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Blockchain and Web3: The Future of Digital Trust',
-      description: 'An analysis of blockchain technology and Web3 applications, their impact on various industries, and implementation considerations.',
-      author: 'Robert Martinez',
-      date: 'June 2024',
-      category: 'Blockchain & Web3',
-      downloads: 678,
-      views: 1456,
-      featured: false,
-      tags: ['Blockchain', 'Web3', 'Digital Trust', 'Decentralization'],
-      fileSize: '2.7 MB',
-      pages: 43,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Sustainable Technology: Green IT Solutions for the Future',
-      description: 'A comprehensive guide to implementing sustainable technology solutions that reduce environmental impact while maintaining business efficiency.',
-      author: 'Lisa Chen',
-      date: 'May 2024',
-      category: 'Sustainable Technology',
-      downloads: 945,
-      views: 2234,
-      featured: false,
-      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Efficiency'],
-      fileSize: '1.8 MB',
-      pages: 31,
-      color: 'from-emerald-500 to-teal-500'
+      id: 4,
+      title: "Digital Transformation: A Roadmap for Success",
+      description: "Strategic guide for organizations embarking on digital transformation journeys, with case studies and best practices.",
+      author: "Zion Tech Research Team",
+      date: "2024-11-15",
+      category: "Digital Transformation",
+      downloadCount: "4,200",
+      fileSize: "2.7 MB",
+      tags: ["Digital Transformation", "Strategy", "Best Practices"]
     }
   ];
 
   const categories = [
-    'All',
-    'Healthcare AI',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Digital Transformation',
-    'IoT & Edge Computing',
-    'Business Intelligence',
-    'Blockchain & Web3',
-    'Sustainable Technology'
+    "All Papers",
+    "Artificial Intelligence",
+    "Quantum Computing",
+    "Cybersecurity",
+    "Digital Transformation",
+    "Cloud Computing",
+    "Data Analytics"
   ];
-
-  const featuredPapers = whitePapers.filter(paper => paper.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="White Papers - Zion Tech Group"
-        description="Access our comprehensive collection of white papers covering AI, quantum computing, cybersecurity, digital transformation, and emerging technologies."
-      />
-      
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
-        <div className="container-responsive relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
+                <FileText className="w-12 h-12 text-white" />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              White Papers & Research
+              White Papers &
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Research
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Access our comprehensive collection of in-depth research and analysis on emerging technologies. 
-              Download expert insights to stay ahead of the curve and make informed decisions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Access in-depth research, analysis, and insights from Zion Tech Group's 
+              technology experts and industry thought leaders.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
-              >
-                Request Custom Research
-              </Link>
-              <Link
-                to="/resources"
-                className="px-8 py-4 border-2 border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                Browse All Resources
-              </Link>
+            
+            {/* Search Bar */}
+            <div className="max-w-md mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search white papers..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured White Papers */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Featured Research
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and impactful white papers that are shaping industry conversations 
-              and driving innovation across sectors.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredPapers.map((paper, index) => (
-              <div
-                key={paper.title}
-                className="group relative p-8 rounded-2xl border border-indigo-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-indigo-400/20 transition-all duration-300 transform hover:scale-105"
+      {/* Category Filter */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  category === "All Papers"
+                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                    : "bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white"
+                }`}
               >
-                <div className="absolute -top-3 -right-3">
-                  <div className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Featured
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* White Papers Grid */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {whitePapers.map((paper) => (
+              <div
+                key={paper.id}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2"
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full">
+                    {paper.category}
+                  </span>
+                  <div className="text-right text-sm text-gray-400">
+                    <div className="flex items-center">
+                      <Download className="w-4 h-4 mr-1" />
+                      {paper.downloadCount}
+                    </div>
+                    <div>{paper.fileSize}</div>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-4 mb-6">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${paper.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <FileText className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
-                      {paper.title}
-                    </h3>
-                    <p className="text-indigo-400 font-semibold">{paper.category}</p>
-                    <p className="text-gray-400">By {paper.author}</p>
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {paper.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 mb-4 line-clamp-3">
                   {paper.description}
                 </p>
-                
-                <div className="flex items-center gap-6 mb-6 text-sm text-gray-400">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    {paper.date}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Eye className="w-4 h-4" />
-                    {paper.views.toLocaleString()} views
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Download className="w-4 h-4" />
-                    {paper.downloads.toLocaleString()} downloads
-                  </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {paper.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-                
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {paper.tags.slice(0, 3).map((tag, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full">
-                        {tag}
-                      </span>
-                    ))}
+
+                {/* Author and Date */}
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center">
+                    <User className="w-4 h-4 mr-2" />
+                    {paper.author}
                   </div>
-                  <div className="text-right text-sm text-gray-400">
-                    <div>{paper.fileSize}</div>
-                    <div>{paper.pages} pages</div>
-                  </div>
+                  <span>
+                    {new Date(paper.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </span>
                 </div>
-                
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-                  <Download className="w-5 h-5" />
+
+                {/* Download Button */}
+                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  <Download className="w-5 h-5 mr-2" />
                   Download White Paper
                 </button>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* All White Papers */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              All White Papers
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Browse our complete collection of research papers covering the latest trends 
-              and technologies across all industries.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whitePapers.map((paper, index) => (
-              <div
-                key={paper.title}
-                className="group p-6 rounded-2xl border border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${paper.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <FileText className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-indigo-400 transition-colors">
-                      {paper.title}
-                    </h3>
-                    <p className="text-indigo-400 font-medium text-sm">{paper.category}</p>
-                    <p className="text-gray-400 text-sm">By {paper.author}</p>
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  {paper.description.substring(0, 120)}...
-                </p>
-                
-                <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                  <span>{paper.date}</span>
-                  <span>{paper.downloads.toLocaleString()} downloads</span>
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex flex-wrap gap-1">
-                    {paper.tags.slice(0, 2).map((tag, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    {paper.fileSize} • {paper.pages} pages
-                  </div>
-                </div>
-                
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-                  <Download className="w-4 h-4" />
-                  Download
-                </button>
-              </div>
-            ))}
+          {/* Load More Button */}
+          <div className="text-center mt-12">
+            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1">
+              Load More Papers
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Research Categories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our research by category to find the insights most relevant to your industry and interests.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {categories.slice(1).map((category, index) => (
-              <div
-                key={category}
-                className="text-center p-6 rounded-2xl border border-slate-700/50 bg-slate-800/30 hover:border-indigo-400/50 transition-all duration-300 group cursor-pointer"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-indigo-400 transition-colors">
-                  {category}
-                </h3>
-                <p className="text-sm text-gray-400 mt-2">
-                  {whitePapers.filter(paper => paper.category === category).length} papers
-                </p>
-              </div>
-            ))}
+      {/* Newsletter Section */}
+      <section className="py-20 bg-slate-800/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Stay Informed
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Subscribe to receive notifications about new white papers, 
+            research updates, and industry insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+            />
+            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-colors">
+              Subscribe
+            </button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Need Custom Research?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Can't find the research you need? Our team can conduct custom research and analysis 
-              on specific topics relevant to your organization.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
-              >
-                Request Custom Research
-              </Link>
-              <Link
-                to="/resources"
-                className="px-8 py-4 border-2 border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                Browse All Resources
-              </Link>
-            </div>
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Need Custom Research?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Looking for specific research or analysis? Our team can create 
+            custom white papers tailored to your industry and needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              Request Custom Research
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <button className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 transition-colors">
+              <BookOpen className="mr-2 w-5 h-5" />
+              View All Research
+            </button>
           </div>
         </div>
       </section>
@@ -398,4 +258,4 @@ const WhitePapersPage: React.FC = () => {
   );
 };
 
-export default WhitePapersPage;
+export default WhitePapers;

@@ -100,108 +100,51 @@ const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-s
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
 
-// Additional missing service pages
-const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
-const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
-const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+// Additional pages for navigation
+const QuantumComputing = createLazyComponent(() => import('./pages/quantum-computing'));
+const Blockchain = createLazyComponent(() => import('./pages/blockchain'));
+const IoTSolutions = createLazyComponent(() => import('./pages/iot-solutions'));
 
-// Service pages - only import existing ones
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-// Import real pages
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+// Company pages
+const News = createLazyComponent(() => import('./pages/News'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Careers = createLazyComponent(() => import('./pages/careers'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+// Resource pages
+const Blog = createLazyComponent(() => import('./pages/blog'));
+const Docs = createLazyComponent(() => import('./pages/docs'));
+const WhitePapers = createLazyComponent(() => import('./pages/white-papers'));
+const Training = createLazyComponent(() => import('./pages/training'));
+const Webinars = createLazyComponent(() => import('./pages/webinars'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
+const Support = createLazyComponent(() => import('./pages/support'));
 
-// Service pages - only import existing ones
-const Cloud = React.lazy(() => import('./pages/services/Cloud'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const Infrastructure = React.lazy(() => import('./pages/services/Infrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
-
-// Additional innovative services
-const AIBlockchainIntegration = React.lazy(() => import('./pages/services/AIBlockchainIntegration'));
-const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
-const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
-
-// Additional service imports
-const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
-const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
-const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
-const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
-const GDPRDSARPortal = React.lazy(() => import('./pages/services/GDPRDSARPortal'));
-const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
-const SecurityHeadersCSPManager = React.lazy(() => import('./pages/services/SecurityHeadersCSPManager'));
-const CheckoutPerformanceOptimizer = React.lazy(() => import('./pages/services/CheckoutPerformanceOptimizer'));
-const StatusIncidentHub = React.lazy(() => import('./pages/services/StatusIncidentHub'));
-const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
-const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
-const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
-const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
-const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernancePlatform = React.lazy(() => import('./pages/services/AIDataGovernancePlatform'));
-const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AIFinancialRiskManagement = React.lazy(() => import('./pages/services/AIFinancialRiskManagement'));
-const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
-const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
-const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
-const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
-
-// (deduped above)
-
-// 2026 Services pages
-const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
-const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
-const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
-const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
-
-// New 2026 service routes
-const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
-const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
-
-// 2028 Pricing
-const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
-
-// Additional routes
-const API = React.lazy(() => import('./pages/API'));
-const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
-
-// Service pages (already declared above with React.lazy)
-
-// 2029 Revolutionary Services
-const RevolutionaryServices2029 = React.lazy(() => import('./pages/RevolutionaryServices2029'));
-
-// Sitemap-aligned pages
-const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
-const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
-const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
-
-// All imports are now handled above - no duplicates (redundant block removed)
-
-// Accessibility page
-const Accessibility = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <EnhancedSEO
-      title="Accessibility - Zion Tech Group"
-      description="Learn about our commitment to accessibility and inclusive design."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Accessibility</h1>
-      <p className="text-xl text-gray-300">We strive to meet WCAG 2.1 AA guidelines.</p>
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+    <div className="text-center max-w-md">
+      <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+        </svg>
+      </div>
+      <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
+      <p className="text-gray-400 mb-6">We're sorry, but something unexpected happened. Please try again.</p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Try again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Go home
+        </button>
+      </div>
     </div>
   </div>
 );
@@ -364,6 +307,26 @@ function App() {
                     <Route path="/support" element={<Support />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/status" element={<Status />} />
+
+                    {/* Additional navigation pages */}
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/blockchain" element={<Blockchain />} />
+                    <Route path="/iot-solutions" element={<IoTSolutions />} />
+
+                    {/* Company pages */}
+                    <Route path="/news" element={<News />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/careers" element={<Careers />} />
+
+                    {/* Resource pages */}
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/docs" element={<Docs />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/support" element={<Support />} />
 
                     {/* 404 Page */}
                     <Route
