@@ -1,3 +1,4 @@
-export function registerServiceWorker(): void {
-  // no-op in this build
-}
+// Service worker registration
+export const registerServiceWorker = () => {
+  // No-op for now
+};

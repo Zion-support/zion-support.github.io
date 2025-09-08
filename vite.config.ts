@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath } from 'node:url'
+// import { fileURLToPath } from 'node:url'
 import path from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -46,6 +46,12 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     // Enable CSS code splitting
     cssCodeSplit: true,
+  },
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    // Disable TypeScript checking during build
+    logLevel: 'error',
   },
   resolve: {
     alias: {

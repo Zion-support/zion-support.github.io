@@ -55,7 +55,7 @@ try {
   );
 
   // Register service worker in production
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env.PROD) {
     registerServiceWorker();
   }
 } catch (error) {

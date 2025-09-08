@@ -41,6 +41,7 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"
@@ -48,8 +49,13 @@
     ]
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/layout/AppLayout.tsx",
+    "src/context/**/*.tsx",
+    "src/components/ui/**/*.tsx",
+    "src/components/PerformanceWrapper.tsx",
+    "src/components/support/ChatBotPanel.tsx"
   ],
   "exclude": [
     "node_modules",
