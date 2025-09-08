@@ -128,14 +128,38 @@ console.log('Supabase configured:', !!window.location.origin.includes('localhost
 
 The website uses a custom color palette defined in `tailwind.config.js`:
 
-```javascript
-colors: {
-  'zion-blue': '#0f172a',
-  'zion-blue-dark': '#020617',
-  'zion-cyan': '#06b6d4',
-  'zion-purple': '#8b5cf6',
-  // ... more colors
-}
+## Integrations
+
+See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
+Payment environment variables are documented in [docs/Payments.md](docs/Payments.md).
+
+## Product Media
+
+Product listings now support rich media. The `product_listings` table includes new
+`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
+through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+
+## Troubleshooting
+
+### Network Issues
+
+If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
+
+1. Ensure you have internet connectivity
+2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
+3. Use a pre-downloaded `node_modules` directory if available
+
+### Package Manager Issues
+
+If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
+
+For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
+
+If you see a warning about `rimraf@3.0.2` being deprecated, install the latest
+version of `rimraf`:
+
+```sh
+npm install rimraf@^5 --save-dev
 ```
 
 ### Components

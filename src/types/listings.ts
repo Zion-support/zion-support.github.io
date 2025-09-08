@@ -21,6 +21,8 @@ export interface ProductListing {
     email?: string;
   };
   images: string[];
+  videoUrl?: string;
+  modelUrl?: string;
   createdAt: string;
   rating?: number;
   reviewCount?: number;
