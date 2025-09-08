@@ -3,18 +3,10 @@ import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import type { GetStaticProps } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-type PageLink = {
-  href: string;
-  label: string;
-};
-
-type HomePageProps = {
-  pageLinks: PageLink[];
-};
-
-export default function HomePage({ pageLinks }: HomePageProps) {
+export default function HomePage({ updates = [] }: { updates?: { slug: string; title: string }[] }) {
   return (
     <div>
       <Head>
@@ -1043,51 +1035,18 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </div>
           </section>
 
-          {/* Technical Architecture & Infrastructure */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🏗️ Technical Architecture & Infrastructure</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🌐 Cloud-Native Architecture</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Microservices architecture</li>
-                  <li>• Container orchestration</li>
-                  <li>• Serverless functions</li>
-                  <li>• Auto-scaling systems</li>
-                  <li>• Load balancing</li>
-                </ul>
-                <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Architecture Guide →
+          {/* Latest Autonomous Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {updates.map((update) => (
+                <Link key={update.slug} href={`/reports/updates/${update.slug}`} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-lg font-semibold">{update.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                 </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔐 Enterprise Security</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Zero-trust security model</li>
-                  <li>• Automated threat detection</li>
-                  <li>• Compliance monitoring</li>
-                  <li>• Vulnerability scanning</li>
-                  <li>• Data encryption</li>
-                </ul>
-                <Link href="/SECURITY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Security Guide →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📊 Monitoring & Analytics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Real-time dashboards</li>
-                  <li>• Performance metrics</li>
-                  <li>• Predictive analytics</li>
-                  <li>• Health monitoring</li>
-                  <li>• Automated reporting</li>
-                </ul>
-                <Link href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </Link>
-              </div>
+              ))}
             </div>
           </section>
 
@@ -2031,4 +1990,29 @@ export default function HomePage({ pageLinks }: HomePageProps) {
       </footer>
     </>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const updatesDir = path.join(process.cwd(), 'pages', 'reports', 'updates');
+    const files = fs.readdirSync(updatesDir)
+      .filter((file) => file.endsWith('.tsx'))
+      .sort((a, b) => b.localeCompare(a))
+      .slice(0, 6);
+
+    const updates = files.map((file) => {
+      const slug = file.replace(/\.tsx$/, '');
+      const pretty = slug
+        .replace(/^update-/, '')
+        .replace(/-/g, ': ');
+      return {
+        slug,
+        title: `Autonomous Update — ${pretty}`,
+      };
+    });
+
+    return { props: { updates } };
+  } catch {
+    return { props: { updates: [] } };
+  }
 }
