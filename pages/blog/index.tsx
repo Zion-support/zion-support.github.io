@@ -1,36 +1,29 @@
-import { useEffect, useState } from 'react';
-import { useTenant } from '../../components/multiverse/TenantProvider';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import ShareBar from '../../components/ShareBar';
 
-export default function BlogIndex() {
-  const { tenant } = useTenant();
-  const [posts, setPosts] = useState<any[]>([]);
-
-  useEffect(() => {
-    let mounted = true;
-    const params = new URLSearchParams();
-    if (tenant?.id) {
-      params.set('tenantId', tenant.id);
-      params.set('scope', 'tenant');
-    }
-    fetch(`/api/multiverse/content?${params.toString()}`)
-      .then((r) => r.json())
-      .then((d) => { if (mounted) setPosts(d?.content ?? []); })
-      .catch(() => {});
-    return () => { mounted = false; };
-  }, [tenant?.id]);
-
+const Index: NextPage = () => {
+  const title = 'Blog - Zion Tech Solutions';
+  const desc = 'Latest insights from Zion';
+  const ogImage = '/og/default.svg';
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Blog</h1>
-      <div className="space-y-4">
-        {posts.map((p) => (
-          <article key={p.id} className="border rounded-md p-4">
-            <h2 className="font-semibold">{p.title}</h2>
-            <p className="text-sm text-gray-500">{p.type}</p>
-          </article>
-        ))}
-        {posts.length === 0 && <p className="text-gray-500">No posts yet.</p>}
-      </div>
+    <div>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <meta property="og:title" content="Blog" />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>Blog content coming soon...</p>
+        <ShareBar title="Blog" summary={desc} imageUrl={ogImage} />
+        <Link href="/blog"><a>Back to Blog</a></Link>
+      </main>
     </div>
   );
 }
