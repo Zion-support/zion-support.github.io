@@ -17,12 +17,6 @@ interface NotificationContextType {
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
-  const [notifications, setNotifications] = useStateg<div[]>([]);
-  
-  const addNotification = (notification: any) => {
-    setNotifications(prev => [...prev, { ...notification, id: Date.now().toString() }]);
-=======
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {

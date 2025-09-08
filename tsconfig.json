@@ -17,33 +17,29 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-<<<<<<< HEAD
-    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
     "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false
-=======
-    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true,
 
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
   },
   "include": [
 
