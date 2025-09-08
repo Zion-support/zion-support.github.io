@@ -1,4 +1,7 @@
 [tools]
+<<<<<<< HEAD
+python = "system"
+=======
 python = "3.11.13"
 node = "20"
 
@@ -7,3 +10,4 @@ node = "20"
 PIP_DEFAULT_TIMEOUT = "100"
 [tools]
 python = "3.11.13"
+>>>>>>> origin/cursor/install-project-dependencies-with-mise-2199
