@@ -28,10 +28,18 @@ import { Brain,
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
-  } from 'lucide-react';
-import { SEO   } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from '@/data/innovativeMicroSaasServices2025';
+  Globe as GlobeIcon,
+  Building,
+  Atom,
+  Satellite,
+  Dna,
+  Car
+} from 'lucide-react';
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADVANCED_INNOVATIVE_SERVICES_2025, INDUSTRY_SPECIFIC_SERVICES_2025 } from "@/data/advancedInnovativeServices2025";
+import { ENTERPRISE_INNOVATION_SERVICES_2025, ENTERPRISE_INDUSTRY_SOLUTIONS_2025 } from "@/data/enterpriseInnovationServices2025";
+import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "@/data/emergingTechServices2025";
 
 export default function ServicesPage(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -44,12 +52,16 @@ export default function ServicesPage(...args: any[]): any {
     { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
     { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' }
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'enterprise', name: 'Enterprise', icon: Building, color: 'from-zion-blue to-zion-green' },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, color: 'from-zion-purple to-zion-orange' },
+    { id: 'space-tech', name: 'Space Tech', icon: Satellite, color: 'from-zion-cyan to-zion-red' },
+    { id: 'biotech', name: 'Biotech', icon: Dna, color: 'from-zion-green to-zion-purple' },
+    { id: 'autonomous', name: 'Autonomous', icon: Car, color: 'from-zion-blue to-zion-orange' }
   ];
 
   const priceRanges = [
@@ -67,13 +79,15 @@ export default function ServicesPage(...args: any[]): any {
     { id: 'popular', name: 'Most Popular' }
   ];
 
-  // Filter and sort services
+  // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...ADVANCED_INNOVATIVE_SERVICES_2025,
+    ...ENTERPRISE_INNOVATION_SERVICES_2025,
+    ...EMERGING_TECH_SERVICES_2025
   ];
-  
+
+  // Filter and sort services
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -171,7 +185,7 @@ export default function ServicesPage(...args: any[]): any {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -180,7 +194,7 @@ export default function ServicesPage(...args: any[]): any {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">15+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -261,7 +275,7 @@ export default function ServicesPage(...args: any[]): any {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              Showing {sortedServices.length} of {allServices.length} services
             </div>
           </motion.div>
         </div>
@@ -417,8 +431,8 @@ export default function ServicesPage(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index)   => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[...SPECIALIZED_SERVICES, ...INDUSTRY_SPECIFIC_SERVICES_2025, ...ENTERPRISE_INDUSTRY_SOLUTIONS_2025, ...EMERGING_TECH_SOLUTIONS_2025].map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
