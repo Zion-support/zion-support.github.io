@@ -326,45 +326,45 @@ module.exports = {
       }
     },
 
-    // 🚨 NEW: Comprehensive Error Fixer - runs every 30 minutes (HIGHEST PRIORITY)
+    // Enhanced Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      name: 'enhanced-error-fixer',
+      script: './scripts/automation/enhanced-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-
-    // 🔧 NEW: TypeScript Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // 🛡️ NEW: Build Error Prevention - runs every 10 minutes (HIGHEST PRIORITY)
-    {
-      name: 'build-error-prevention',
-      script: './scripts/automation/build-error-prevention.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Automation Orchestrator - coordinates all automations
+    {
+      name: 'automation-orchestrator',
+      script: './scripts/automation/automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // Automation Dashboard - provides real-time monitoring
+    {
+      name: 'automation-dashboard',
+      script: './scripts/automation/automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '60000' // 1 minute
       }
     }
   ],

@@ -99,7 +99,7 @@ ${sitemapEntries}
   generateStructuredData(): string {
     const { baseUrl } = this.config;
     
-    const structuredData = {
+    const structuredData: any = {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",

@@ -8,12 +8,12 @@ export class ContentQualityAnalyzer {
         return ContentQualityAnalyzer.instance;
     }
     analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {
-        // Check if we already analyzed this page
-        const existing = this.analyzedPages.get(pageUrl);
+        // Check if we already analyzed this page;
+const existing = this.analyzedPages.get(pageUrl);
         if (existing) {
             return existing;
-        }
-        const wordCount = this.calculateWordCount(content);
+        };
+const wordCount = this.calculateWordCount(content);
         const headingCount = this.countHeadings(content);
         const imageCount = images.length;
         const linkCount = links.length;
@@ -61,8 +61,8 @@ export class ContentQualityAnalyzer {
     calculateWordCount(content) {
         if (!content)
             return 0;
-        // Remove HTML tags and count words
-        const cleanContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        // Remove HTML tags and count words;
+const cleanContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
         return cleanContent.split(' ').filter(word => word.length > 0).length;
     }
     countHeadings(content) {
@@ -87,24 +87,24 @@ export class ContentQualityAnalyzer {
         const syllableCount = this.estimateSyllableCount(content);
         if (wordCount === 0 || sentenceCount === 0)
             return 0;
-        // Flesch Reading Ease formula
-        const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
+        // Flesch Reading Ease formula;
+const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
         // Convert to 0-100 scale
         return Math.max(0, Math.min(100, fleschScore));
     }
     estimateSyllableCount(content) {
         if (!content)
             return 0;
-        // Simple syllable estimation
-        const words = content.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/);
+        // Simple syllable estimation;
+const words = content.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/);
         let syllableCount = 0;
         for (const word of words) {
             if (word.length <= 3) {
                 syllableCount += 1;
             }
             else {
-                // Count vowel groups
-                const vowelGroups = word.match(/[aeiouy]+/g);
+                // Count vowel groups;
+const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
             }
         }
@@ -171,8 +171,8 @@ export class ContentQualityAnalyzer {
         }
         return Math.round((score / maxScore) * 100);
     }
-    identifyIssues(metrics) {
-        const issues = [];
+    identifyIssues(metrics) {;
+const issues = [];
         if (!metrics.title || metrics.title.length < 30) {
             issues.push('Title is too short (should be 30-60 characters)');
         }
@@ -202,8 +202,8 @@ export class ContentQualityAnalyzer {
         }
         return issues;
     }
-    generateRecommendations(issues) {
-        const recommendations = [];
+    generateRecommendations(issues) {;
+const recommendations = [];
         if (issues.some(issue => issue.includes('Content is too short'))) {
             recommendations.push('Expand content with relevant information, examples, and detailed explanations');
         }
@@ -230,8 +230,8 @@ export class ContentQualityAnalyzer {
         recommendations.push('Include relevant keywords naturally throughout the content');
         return recommendations;
     }
-    generateReport() {
-        const pageMetrics = Array.from(this.analyzedPages.values());
+    generateReport() {;
+const pageMetrics = Array.from(this.analyzedPages.values());
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
@@ -243,12 +243,12 @@ export class ContentQualityAnalyzer {
                 pageMetrics: [],
                 summary: 'No pages analyzed yet'
             };
-        }
-        const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
+        };
+const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
-        // Collect all issues and count frequency
-        const issueCounts = {};
+        // Collect all issues and count frequency;
+const issueCounts = {};
         pageMetrics.forEach(page => {
             page.issues.forEach(issue => {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
@@ -269,8 +269,8 @@ export class ContentQualityAnalyzer {
             summary
         };
     }
-    generateSummary(pageMetrics, topIssues) {
-        const totalPages = pageMetrics.length;
+    generateSummary(pageMetrics, topIssues) {;
+const totalPages = pageMetrics.length;
         const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
         const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;
         const poorPages = pageMetrics.filter(page => page.overallScore < 40).length;

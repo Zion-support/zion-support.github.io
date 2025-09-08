@@ -27,15 +27,13 @@ export function AppHeader() {
     if (searchQuery.trim()) {
       setIsSearching(true);
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-      } finally {
-        setIsSearching(false);
-      }
+        await new Promise(resolve => (((setTimeout(resolve, 1000)); // Simulate search)))
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
+        setIsSearching(false)}
     }
   };
 
-  const mainNavigation = [
+  const mainNavigation: any[] = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
@@ -44,7 +42,7 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
 
-  const services = [
+  const services: any[] = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
@@ -64,7 +62,7 @@ export function AppHeader() {
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
   ];
 
-  const servicesCategories = [
+  const servicesCategories: any[] = [
     {
       name: 'Core Services',
       icon: Settings,
@@ -163,7 +161,7 @@ export function AppHeader() {
     }
   ];
 
-  const solutionsCategories = [
+  const solutionsCategories: any[] = [
     {
       name: 'AI Solutions',
       icon: Brain,
@@ -197,14 +195,14 @@ export function AppHeader() {
     }
   ];
 
-  const quickLinks = [
+  const quickLinks: any[] = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
 
-  const companyCategories = [
+  const compCategories: any[] = [
     {
       name: 'About Us',
       icon: Building,
@@ -229,7 +227,7 @@ export function AppHeader() {
     }
   ];
 
-  const supportCategories = [
+  const supportCategories: any[] = [
     {
       name: 'Help & Support',
       icon: HelpCircle,
@@ -254,7 +252,7 @@ export function AppHeader() {
     }
   ];
 
-  const supportLinks = [
+  const supportLinks: any[] = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Support', href: '/support', icon: MessageCircle },

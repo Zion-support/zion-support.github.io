@@ -9,7 +9,11 @@ export async function rewardOnboarding(userId: string) {
   });
 }
 
-export async function rewardReferral(userId: string) {
+export async function earnTokensForPurchase(
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string,
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -17,7 +21,10 @@ export async function rewardReferral(userId: string) {
   });
 }
 
-export async function rewardFiveStarReview(userId: string) {
+export async function earnTokensForReferral(
+  userId: string,
+  referredUserId: string,
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

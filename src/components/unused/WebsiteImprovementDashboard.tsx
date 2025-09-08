@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
-const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
-    const [isOpen, setIsOpen] = useState(showOnLoad);
+const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {;
+const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({
         loadTime: 0,
@@ -33,13 +33,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         warnings: 0
     });
     const [isAnalyzing, setIsAnalyzing] = useState(false);
-    // Analyze website performance
-    const analyzePerformance = useCallback(async () => {
+    // Analyze website performance;
+const analyzePerformance = useCallback(async () => {
         setIsAnalyzing(true);
         // Simulate performance analysis
         await new Promise(resolve => setTimeout(resolve, 2000));
-        // Mock performance data (in a real app, you'd use Web Vitals API)
-        const mockMetrics = {
+        // Mock performance data (in a real app, you'd use Web Vitals API);
+const mockMetrics = {
             loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
@@ -48,14 +48,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
         };
         setMetrics(mockMetrics);
-        setIsAnalyzing(false);
-    }, []);
-    // Analyze SEO
-    const analyzeSEO = useCallback(async () => {
+        setIsAnalyzing(false)}, []);
+    // Analyze SEO;
+const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
-        // Mock SEO analysis
-        const mockSEO = {
+        // Mock SEO analysis;
+const mockSEO = {
             score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues: [
                 'Missing meta description on some pages',
@@ -77,14 +76,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             }
         };
         setSeoAnalysis(mockSEO);
-        setIsAnalyzing(false);
-    }, []);
-    // Analyze accessibility
-    const analyzeAccessibility = useCallback(async () => {
+        setIsAnalyzing(false)}, []);
+    // Analyze accessibility;
+const analyzeAccessibility = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1800));
-        // Mock accessibility analysis
-        const mockAccessibility = {
+        // Mock accessibility analysis;
+const mockAccessibility = {
             score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues: [
                 'Some form controls lack proper labels',
@@ -96,26 +94,23 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             warnings: Math.floor(Math.random() * 5) + 1
         };
         setAccessibilityReport(mockAccessibility);
-        setIsAnalyzing(false);
-    }, []);
-    // Run comprehensive analysis
-    const runFullAnalysis = useCallback(async () => {
+        setIsAnalyzing(false)}, []);
+    // Run comprehensive analysis;
+const runFullAnalysis = useCallback(async () => {
         await Promise.all([
             analyzePerformance(),
             analyzeSEO(),
             analyzeAccessibility()
-        ]);
-    }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
-    // Get performance grade
-    const getPerformanceGrade = (metric, thresholds) => {
+        ])}, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
+    // Get performance grade;
+const getPerformanceGrade = (metric, thresholds) => {
         if (metric <= thresholds.good)
             return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
         if (metric <= thresholds.needsImprovement)
             return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
-        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
-    };
-    // Get trend indicator
-    const getTrendIndicator = (value, previousValue) => {
+        return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' }};
+    // Get trend indicator;
+const getTrendIndicator = (value, previousValue) => {
         if (value < previousValue)
             return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
         if (value > previousValue)
@@ -127,7 +122,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             runFullAnalysis();
         }
     }, [showOnLoad, runFullAnalysis]);
-    return (<>
+    return (<React.Fragment>
       {/* Dashboard Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 left-4 z-50 p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Website improvement dashboard" aria-expanded={isOpen}>
         <ChartBarIcon className="w-6 h-6"/>
@@ -198,13 +193,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
                   {/* Action Button */}
                   <button onClick={runFullAnalysis} disabled={isAnalyzing} className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
-                    {isAnalyzing ? (<>
+                    {isAnalyzing ? (<React.Fragment>
                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"/>
                         Analyzing...
-                      </>) : (<>
+                      </React.Fragment>) : (<React.Fragment>
                         <ChartBarIcon className="w-4 h-4"/>
                         Run Full Analysis
-                      </>)}
+                      </React.Fragment>)}
                   </button>
 
                   {/* Recent Activity */}
@@ -267,8 +262,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         unit: 'ms',
                         thresholds: { good: 100, needsImprovement: 300 }
                     }
-                ].map((metric, index) => {
-                    const grade = getPerformanceGrade(metric.value, metric.thresholds);
+                ].map((metric, index) => {;
+const grade = getPerformanceGrade(metric.value, metric.thresholds);
                     return (<div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                           <div>
                             <div className="text-sm font-medium text-gray-900 dark:text-white">
@@ -466,6 +461,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
-};
+    </React.Fragment>)};;;;
+
 export default WebsiteImprovementDashboard;
