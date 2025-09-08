@@ -2853,3 +2853,99 @@ fatal: couldn't find remote ref cursor/add-new-services-and-advertise-them-d1ac
 [2025-09-08T20:42:26.833Z] ✅ Success: Get git status
 [2025-09-08T20:42:26.833Z] 📄 Found 0 conflicted files
 [2025-09-08T20:42:26.833Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:42:26.930Z] ✅ Success: Add resolved files
+[2025-09-08T20:42:26.930Z] 🚀 Commit merge for cursor/add-new-services-and-advertise-them-d1ac: git commit -m "Resolve conflicts and merge cursor/add-new-services-and-advertise-them-d1ac"
+[2025-09-08T20:42:26.986Z] ✅ Success: Commit merge for cursor/add-new-services-and-advertise-them-d1ac
+[2025-09-08T20:42:26.986Z] ✅ Successfully resolved conflicts and merged: cursor/add-new-services-and-advertise-them-d1ac
+[2025-09-08T20:42:26.986Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d313
+[2025-09-08T20:42:26.986Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d313: git fetch origin cursor/add-new-services-and-advertise-them-d313
+[2025-09-08T20:42:27.321Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d313
+[2025-09-08T20:42:27.321Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d313: git merge origin/cursor/add-new-services-and-advertise-them-d313 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d313 into main"
+[2025-09-08T20:42:27.760Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d313
+[2025-09-08T20:42:27.760Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d313
+[2025-09-08T20:42:27.760Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d446
+[2025-09-08T20:42:27.760Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d446: git fetch origin cursor/add-new-services-and-advertise-them-d446
+[2025-09-08T20:42:28.117Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d446
+[2025-09-08T20:42:28.117Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d446: git merge origin/cursor/add-new-services-and-advertise-them-d446 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d446 into main"
+[2025-09-08T20:42:28.562Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d446
+[2025-09-08T20:42:28.563Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d446
+[2025-09-08T20:42:28.563Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d46f
+[2025-09-08T20:42:28.563Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d46f: git fetch origin cursor/add-new-services-and-advertise-them-d46f
+[2025-09-08T20:42:28.893Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d46f
+[2025-09-08T20:42:28.893Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d46f: git merge origin/cursor/add-new-services-and-advertise-them-d46f --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d46f into main"
+[2025-09-08T20:42:29.321Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d46f
+[2025-09-08T20:42:29.321Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d46f
+[2025-09-08T20:42:29.321Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d4b3
+[2025-09-08T20:42:29.321Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d4b3: git fetch origin cursor/add-new-services-and-advertise-them-d4b3
+[2025-09-08T20:42:29.631Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d4b3
+[2025-09-08T20:42:29.631Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d4b3: git merge origin/cursor/add-new-services-and-advertise-them-d4b3 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d4b3 into main"
+[2025-09-08T20:42:30.048Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d4b3
+[2025-09-08T20:42:30.049Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d4b3
+[2025-09-08T20:42:31.050Z] 📦 Processing batch 30/509
+[2025-09-08T20:42:31.050Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d52a
+[2025-09-08T20:42:31.050Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d52a: git fetch origin cursor/add-new-services-and-advertise-them-d52a
+[2025-09-08T20:42:31.369Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d52a
+[2025-09-08T20:42:31.369Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d52a: git merge origin/cursor/add-new-services-and-advertise-them-d52a --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d52a into main"
+[2025-09-08T20:42:31.787Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d52a
+[2025-09-08T20:42:31.787Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d52a
+[2025-09-08T20:42:31.787Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-d869
+[2025-09-08T20:42:31.787Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-d869: git fetch origin cursor/add-new-services-and-advertise-them-d869
+[2025-09-08T20:42:32.109Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-d869
+[2025-09-08T20:42:32.110Z] 🚀 Merge cursor/add-new-services-and-advertise-them-d869: git merge origin/cursor/add-new-services-and-advertise-them-d869 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-d869 into main"
+[2025-09-08T20:42:32.528Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-d869
+[2025-09-08T20:42:32.528Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-d869
+[2025-09-08T20:42:32.528Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-da84
+[2025-09-08T20:42:32.528Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-da84: git fetch origin cursor/add-new-services-and-advertise-them-da84
+[2025-09-08T20:42:32.861Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-da84
+[2025-09-08T20:42:32.862Z] 🚀 Merge cursor/add-new-services-and-advertise-them-da84: git merge origin/cursor/add-new-services-and-advertise-them-da84 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-da84 into main"
+[2025-09-08T20:42:33.287Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-da84
+[2025-09-08T20:42:33.287Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-da84
+[2025-09-08T20:42:33.288Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-db02
+[2025-09-08T20:42:33.288Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-db02: git fetch origin cursor/add-new-services-and-advertise-them-db02
+[2025-09-08T20:42:33.619Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-db02
+[2025-09-08T20:42:33.619Z] 🚀 Merge cursor/add-new-services-and-advertise-them-db02: git merge origin/cursor/add-new-services-and-advertise-them-db02 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-db02 into main"
+[2025-09-08T20:42:34.034Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-db02
+[2025-09-08T20:42:34.034Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-db02
+[2025-09-08T20:42:34.034Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-dc31
+[2025-09-08T20:42:34.034Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-dc31: git fetch origin cursor/add-new-services-and-advertise-them-dc31
+[2025-09-08T20:42:34.374Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-dc31
+[2025-09-08T20:42:34.375Z] 🚀 Merge cursor/add-new-services-and-advertise-them-dc31: git merge origin/cursor/add-new-services-and-advertise-them-dc31 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-dc31 into main"
+[2025-09-08T20:42:34.835Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-dc31
+[2025-09-08T20:42:34.836Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-dc31
+[2025-09-08T20:42:34.836Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-e19f
+[2025-09-08T20:42:34.836Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-e19f: git fetch origin cursor/add-new-services-and-advertise-them-e19f
+[2025-09-08T20:42:35.201Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-e19f
+[2025-09-08T20:42:35.202Z] 🚀 Merge cursor/add-new-services-and-advertise-them-e19f: git merge origin/cursor/add-new-services-and-advertise-them-e19f --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-e19f into main"
+[2025-09-08T20:42:35.626Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-e19f
+[2025-09-08T20:42:35.626Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-e19f
+[2025-09-08T20:42:35.626Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-e1ec
+[2025-09-08T20:42:35.626Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-e1ec: git fetch origin cursor/add-new-services-and-advertise-them-e1ec
+[2025-09-08T20:42:35.974Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-e1ec
+[2025-09-08T20:42:35.974Z] 🚀 Merge cursor/add-new-services-and-advertise-them-e1ec: git merge origin/cursor/add-new-services-and-advertise-them-e1ec --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-e1ec into main"
+[2025-09-08T20:42:36.393Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-e1ec
+[2025-09-08T20:42:36.393Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-e1ec
+[2025-09-08T20:42:36.393Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-e5cd
+[2025-09-08T20:42:36.394Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-e5cd: git fetch origin cursor/add-new-services-and-advertise-them-e5cd
+[2025-09-08T20:42:36.710Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-e5cd
+[2025-09-08T20:42:36.710Z] 🚀 Merge cursor/add-new-services-and-advertise-them-e5cd: git merge origin/cursor/add-new-services-and-advertise-them-e5cd --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-e5cd into main"
+[2025-09-08T20:42:37.130Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-e5cd
+[2025-09-08T20:42:37.130Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-e5cd
+[2025-09-08T20:42:37.130Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-e635
+[2025-09-08T20:42:37.130Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-e635: git fetch origin cursor/add-new-services-and-advertise-them-e635
+[2025-09-08T20:42:37.462Z] ✅ Success: Fetch origin/cursor/add-new-services-and-advertise-them-e635
+[2025-09-08T20:42:37.462Z] 🚀 Merge cursor/add-new-services-and-advertise-them-e635: git merge origin/cursor/add-new-services-and-advertise-them-e635 --no-ff -m "Merge branch cursor/add-new-services-and-advertise-them-e635 into main"
+[2025-09-08T20:42:37.888Z] ✅ Success: Merge cursor/add-new-services-and-advertise-them-e635
+[2025-09-08T20:42:37.889Z] ✅ Successfully merged: cursor/add-new-services-and-advertise-them-e635
+[2025-09-08T20:42:37.889Z] 🔄 Attempting to merge branch: cursor/add-new-services-and-advertise-them-e6fa
+[2025-09-08T20:42:37.889Z] 🚀 Fetch origin/cursor/add-new-services-and-advertise-them-e6fa: git fetch origin cursor/add-new-services-and-advertise-them-e6fa
+[2025-09-08T20:42:38.005Z] ❌ Error in Fetch origin/cursor/add-new-services-and-advertise-them-e6fa: Command failed: git fetch origin cursor/add-new-services-and-advertise-them-e6fa
+fatal: couldn't find remote ref cursor/add-new-services-and-advertise-them-e6fa
+
+[2025-09-08T20:42:38.005Z] ❌ Failed to merge cursor/add-new-services-and-advertise-them-e6fa: Command failed: git fetch origin cursor/add-new-services-and-advertise-them-e6fa
+fatal: couldn't find remote ref cursor/add-new-services-and-advertise-them-e6fa
+
+[2025-09-08T20:42:38.005Z] 🔧 Attempting to resolve conflicts for: cursor/add-new-services-and-advertise-them-e6fa
+[2025-09-08T20:42:38.005Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:42:38.063Z] ✅ Success: Get git status
+[2025-09-08T20:42:38.063Z] 📄 Found 0 conflicted files
+[2025-09-08T20:42:38.063Z] 🚀 Add resolved files: git add .
