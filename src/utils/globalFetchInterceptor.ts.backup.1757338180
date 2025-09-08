@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-// Minimal no-op fetch interceptor to satisfy imports during build
-export {};
-
-=======
-export {};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
