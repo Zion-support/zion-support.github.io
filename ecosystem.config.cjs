@@ -4,9 +4,7 @@ module.exports = {
     {
       name: 'zion-tech-app',
       script: 'npm',
-      args: 'run dev',
-      cwd: '/workspace',
-      watch: false,
+      args: 'run preview',
       instances: 1,
       autorestart: true,
       max_memory_restart: '1G',
@@ -15,37 +13,24 @@ module.exports = {
         PORT: 3000
       }
     },
-
-    // Comprehensive error fixer - runs every 10 minutes (HIGHEST PRIORITY)
+    
+    // Build and serve application
     {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      name: 'zion-build',
+      script: 'npm',
+      args: 'run build',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
+        NODE_ENV: 'production'
       }
     },
 
-    // TypeScript error fixer - runs every 5 minutes (HIGH PRIORITY)
-    {
-      name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
-    },
-
-    // JSX/React error fixer - runs every 5 minutes (HIGH PRIORITY)
+  // Enhanced Automation Processes
+  apps: [
+    // Core automation processes
     {
       name: 'jsx-error-fixer',
       script: './scripts/automation/jsx-error-fixer.cjs',

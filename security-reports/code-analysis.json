@@ -5,14 +5,6 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/workspace/src/components/ErrorBoundary.tsx",
-      "line": 128
-    },
-    {
-      "type": "pattern",
-      "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
       "line": 185
     },
@@ -23,6 +15,22 @@
       "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
       "line": 260
+    },
+    {
+      "type": "pattern",
+      "severity": 2,
+      "message": "eval() usage detected",
+      "rule": "no-eval",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
+      "line": 459
+    },
+    {
+      "type": "pattern",
+      "severity": 1,
+      "message": "document.write() usage detected",
+      "rule": "no-document-write",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
+      "line": 398
     },
     {
       "type": "pattern",
@@ -45,8 +53,16 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
+      "file": "/workspace/src/main.js.jsx",
+      "line": 48
+    },
+    {
+      "type": "pattern",
+      "severity": 1,
+      "message": "innerHTML assignment detected",
+      "rule": "no-inner-html",
       "file": "/workspace/src/main.jsx",
-      "line": 69
+      "line": 70
     }
   ],
   "summary": {
