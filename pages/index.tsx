@@ -82,161 +82,15 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <Link href="/contact" className="px-7 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 shadow-lg">
                 Get Started
               </Link>
-              <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Blog
-              </Link>
-              <Link href="/resources" className="px-8 py-4 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Resources
               </Link>
               <Link href="/case-studies" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Case Studies
               </Link>
-            </div>
-            <div className="flex justify-center">
-              <a
-                href="https://github.com/Zion-Holdings/zion.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50"
-              >
-                ⭐ Star us on GitHub
-              </a>
-            </div>
-          </section>
-
-          {/* Content Directory */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🗂️ Content Directory</h2>
-
-            {/* Core Pages */}
-            <div className="mb-10">
-              <h3 className="text-2xl font-semibold text-white mb-4">Core Pages</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <Link href="/about" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-cyan-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-cyan-300 font-semibold">About</div>
-                      <div className="text-white/70 text-sm">Mission, vision, and approach</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/services" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-fuchsia-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-fuchsia-300 font-semibold">Services</div>
-                      <div className="text-white/70 text-sm">AI solutions and offerings</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/resources" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-blue-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-blue-300 font-semibold">Resources</div>
-                      <div className="text-white/70 text-sm">Tools, guides, and insights</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/case-studies" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-yellow-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-yellow-300 font-semibold">Case Studies</div>
-                      <div className="text-white/70 text-sm">Real-world success stories</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-purple-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-purple-300 font-semibold">Blog</div>
-                      <div className="text-white/70 text-sm">Analyses and deep-dives</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/contact" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-green-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-green-300 font-semibold">Contact</div>
-                      <div className="text-white/70 text-sm">Get in touch</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/privacy" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-red-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-red-300 font-semibold">Privacy</div>
-                      <div className="text-white/70 text-sm">Trust and compliance</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-
-            {/* Featured Blog Posts */}
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Featured Blog Posts</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <Link href="/blog/ai-automation-trends-2025" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-cyan-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-cyan-300 font-semibold">AI Automation Trends 2025</div>
-                      <div className="text-white/70 text-sm">What to expect next</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog/ai-ethics-automation" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-fuchsia-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-fuchsia-300 font-semibold">AI Ethics & Automation</div>
-                      <div className="text-white/70 text-sm">Responsible systems</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog/autonomous-content-generation" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-green-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-green-300 font-semibold">Autonomous Content Generation</div>
-                      <div className="text-white/70 text-sm">Scaling content safely</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog/cloud-native-automation" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-blue-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-blue-300 font-semibold">Cloud-Native Automation</div>
-                      <div className="text-white/70 text-sm">Modern infra patterns</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog/future-of-work" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-yellow-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-yellow-300 font-semibold">The Future of Work</div>
-                      <div className="text-white/70 text-sm">AI x human collaboration</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-                <Link href="/blog/performance-optimization" className="group rounded-xl border border-white/20 bg-white/5 p-4 hover:border-purple-400/30 transition-all">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-purple-300 font-semibold">Performance Optimization</div>
-                      <div className="text-white/70 text-sm">Ship fast, stay fast</div>
-                    </div>
-                    <span className="opacity-75 group-hover:opacity-100">→</span>
-                  </div>
-                </Link>
-              </div>
+              <Link href="/privacy" className="px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Privacy
+              </Link>
             </div>
           </section>
 
@@ -591,6 +445,57 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                 </div>
                 <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy</h3>
                 <p className="text-white/70 text-sm">Our policy</p>
+              </Link>
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Your data matters</p>
+              </Link>
+              <Link href="/reports/updates/update-2025-08-15-0406" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-orange-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-amber-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🗞️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-orange-300 mb-2">Updates</h3>
+                <p className="text-white/70 text-sm">Latest reports & news</p>
+              </Link>
+            </div>
+          </section>
+
+          {/* Featured Blog Posts */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📝 Featured Blog Posts</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">AI Automation Trends 2025</h3>
+                <p className="mt-1 text-sm text-white/75">What’s next in intelligent automation.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">Cloud-Native Automation</h3>
+                <p className="mt-1 text-sm text-white/75">Designing resilient, scalable systems.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">Performance Optimization</h3>
+                <p className="mt-1 text-sm text-white/75">Speed, reliability, and efficiency.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/autonomous-content-generation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">Autonomous Content Generation</h3>
+                <p className="mt-1 text-sm text-white/75">Scaling high-quality content with AI.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/ai-ethics-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">AI Ethics in Automation</h3>
+                <p className="mt-1 text-sm text-white/75">Responsible development at scale.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/future-of-work" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold">The Future of Work</h3>
+                <p className="mt-1 text-sm text-white/75">Humans and AI building together.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
               </Link>
             </div>
           </section>
@@ -1730,85 +1635,3 @@ export default function HomePage({ pageLinks }: HomePageProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  const path = await import('path');
-  const fs = await import('fs');
-  const pagesDir = path.default.join(process.cwd(), 'pages');
-
-  const isPageFile = (filePath: string) => filePath.endsWith('.tsx') || filePath.endsWith('.ts') || filePath.endsWith('.jsx') || filePath.endsWith('.js');
-  const shouldExclude = (relativePath: string) => {
-    if (relativePath.startsWith('_')) return true; // _app, _document
-    if (relativePath.startsWith('api')) return true;
-    if (relativePath === 'index.tsx' || relativePath === 'index.jsx' || relativePath === 'index.js' || relativePath === 'index.ts') return false;
-    return false;
-  };
-
-  const humanize = (slug: string) => {
-    const cleaned = slug
-      .replace(/[\/_-]+/g, ' ')
-      .replace(/\b\w/g, (c) => c.toUpperCase())
-      .trim();
-    return cleaned;
-  };
-
-  const collected: PageLink[] = [];
-
-  const walk = (dir: string, baseRoute: string = '') => {
-    const entries = fs.readdirSync(dir, { withFileTypes: true }) as unknown as Array<import('fs').Dirent>;
-    for (const entry of entries) {
-      // Skip Next.js special files and hidden/system files
-      if (entry.name.startsWith('.')) continue;
-      if (entry.name === '_app.tsx' || entry.name === '_document.tsx') continue;
-
-      const full = path.default.join(dir, entry.name);
-      const rel = path.default.relative(pagesDir, full).replace(/\\/g, '/');
-
-      if (entry.isDirectory()) {
-        if (entry.name === 'api') continue;
-        walk(full, path.default.join(baseRoute, entry.name));
-        continue;
-      }
-
-      if (!isPageFile(full)) continue;
-      if (shouldExclude(rel)) {
-        if (rel.startsWith('index.')) {
-          // Root index
-          collected.push({ href: '/', label: 'Home' });
-        }
-        continue;
-      }
-
-      // Derive route path
-      const routePath = (() => {
-        const noExt = rel.replace(/\.(tsx|ts|jsx|js)$/i, '');
-        if (noExt.endsWith('/index')) return `/${noExt.replace(/\/index$/, '')}`;
-        return `/${noExt}`;
-      })();
-
-      // Filter out dynamic and bracketed routes for simplicity
-      if (routePath.includes('[')) continue;
-
-      // Prefer concise labels
-      const label = humanize(routePath.replace(/^\//, '')) || 'Home';
-      collected.push({ href: routePath, label });
-    }
-  };
-
-  try {
-    walk(pagesDir);
-  } catch {
-    // ignore
-  }
-
-  // De-duplicate and sort
-  const map = new Map<string, PageLink>();
-  for (const link of collected) {
-    map.set(link.href, link);
-  }
-  const pageLinks = Array.from(map.values()).sort((a, b) => a.href.localeCompare(b.href));
-
-  return {
-    props: { pageLinks },
-  };
-};
