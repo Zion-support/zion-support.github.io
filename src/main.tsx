@@ -5,13 +5,14 @@ import './index.css';
 
 // Import i18n configuration
 import './i18n';
+
 // Register service worker
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Error handling function
-// const showApiError = (error: unknown): void => {
-//   console.error('API Error:', error);
-// };
+const showApiError = (error: unknown): void => {
+  console.error('API Error:', error);
+};
 
 // Global error handler
 const handleGlobalError = (error: Error): void => {
@@ -34,11 +35,11 @@ const handleGlobalError = (error: Error): void => {
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
-  handleGlobalError(event.error as Error);
+  handleGlobalError(event.error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-  handleGlobalError(new Error(String(event.reason)));
+  handleGlobalError(new Error(event.reason));
 });
 
 try {
@@ -47,8 +48,7 @@ try {
     throw new Error('Root element not found');
   }
 
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,

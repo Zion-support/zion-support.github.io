@@ -16,8 +16,8 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 }
 
 // Feature card props
-export interface FeatureCardProps extends BaseComponentProps {
-  id: string;
+export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
+  id: number;
   title: string;
   description: string;
   icon: ReactNode;
