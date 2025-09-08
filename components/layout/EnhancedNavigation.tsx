@@ -14,59 +14,11 @@ export default function EnhancedNavigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const navigationItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: '🏠'
-    },
-    {
-      name: 'Revolutionary Services',
-      href: '/revolutionary-services-showcase',
-      icon: '🚀',
-      highlight: true
-    },
-    {
-      name: 'All Services',
-      href: '/services',
-      icon: '⚡'
-    },
-    {
-      name: 'Market Pricing',
-      href: '/comprehensive-market-pricing',
-      icon: '💰'
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      icon: '💡'
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: 'ℹ️'
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: '📞'
-    }
+  const services = [
+    { name: 'AI Services', href: '/services/ai-services' },
+    { name: 'IT Services', href: '/services/it-services' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+    { name: 'All Services', href: '/services' },
   ];
 
   const serviceCategories = [

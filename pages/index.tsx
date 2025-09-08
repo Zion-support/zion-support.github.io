@@ -1,187 +1,141 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+import React from 'react';
+import Layout from '../components/Layout';
 
-export default function Index() {
-	const title = 'Zion Tech Group — AI, Cloud, and Cybersecurity Solutions'
-	const description = 'We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.'
+const HomePage: React.FC = () => {
+  const services = [
+    {
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with intelligent automation, predictive analytics, and AI-powered solutions.',
+      icon: '🤖',
+      link: '/services/ai-services'
+    },
+    {
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure, DevOps implementation, and modern deployment strategies.',
+      icon: '☁️',
+      link: '/services/it-services'
+    },
+    {
+      title: 'Micro SaaS Development',
+      description: 'Build and launch successful micro SaaS applications with our comprehensive development services.',
+      icon: '🚀',
+      link: '/services/micro-saas'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your digital assets with comprehensive security solutions and threat monitoring.',
+      icon: '🛡️',
+      link: '/services/it-services'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern frameworks.',
+      icon: '📱',
+      link: '/services/it-services'
+    },
+    {
+      title: 'Data Analytics & BI',
+      description: 'Transform raw data into actionable insights with advanced analytics and business intelligence.',
+      icon: '📊',
+      link: '/services/it-services'
+    }
+  ];
 
-	return (
-		<PageTransition>
-			{/* Hero Section */}
-			<section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							Transform Your Business with{' '}
-							<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-								AI & Cloud
-							</span>
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business from startup to enterprise.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
-							>
-								Get Started
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
-							</Link>
-							<Link
-								to="/services"
-								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
-							>
-								Learn more <span aria-hidden="true">→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-				
-				{/* Background Pattern */}
-				<div className="absolute inset-0 -z-10 overflow-hidden">
-					<svg className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
-						<defs>
-							<pattern id="hero-pattern" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-								<path d="M.5 200V.5H200" fill="none" />
-							</pattern>
-						</defs>
-						<rect width="100%" height="100%" strokeWidth="0" fill="url(#hero-pattern)" />
-					</svg>
-				</div>
-			</section>
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' }
+  ];
 
-			{/* Features Section */}
-			<section className="py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl lg:text-center">
-						<h2 className="text-base font-semibold leading-7 text-blue-600">Advanced Technology</h2>
-						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Everything you need to scale your business
-						</p>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							From AI-powered automation to enterprise-grade security, we provide the tools and expertise to transform your operations.
-						</p>
-					</div>
-					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-							<div className="flex flex-col">
-								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Brain className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-									AI Autonomous Systems
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										Multi-agent copilots, RAG workflows, and intelligent automation that scales with your business needs.
-									</p>
-									<p className="mt-6">
-										<a href="/services#ai" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
-										</a>
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Cloud className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-									Cloud Platforms
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										Serverless architectures, Kubernetes orchestration, and data pipelines built for enterprise scale.
-									</p>
-									<p className="mt-6">
-										<a href="/services#cloud" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
-										</a>
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Shield className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-									Cybersecurity
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										Zero-trust frameworks, compliance automation, and incident response that protects your business.
-									</p>
-									<p className="mt-6">
-										<a href="/services#cybersecurity" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
-										</a>
-									</p>
-								</dd>
-							</div>
-						</dl>
-					</div>
-				</div>
-			</section>
+  return (
+    <Layout 
+      title="Zion Tech Group - Leading Technology Solutions Provider" 
+      description="Transform your business with cutting-edge technology solutions. From AI development to cloud architecture, we help companies succeed in the digital landscape."
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Transform Your Business with Technology</h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Leading technology solutions provider helping businesses leverage AI, cloud architecture, and innovative development services for growth and success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Get Started
+            </a>
+            <a 
+              href="/services" 
+              className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Our Services
+            </a>
+          </div>
+        </div>
+      </section>
 
-			{/* Stats Section */}
-			<section className="bg-white py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl lg:max-w-none">
-						<div className="text-center">
-							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-								Trusted by leading companies
-							</h2>
-							<p className="mt-4 text-lg leading-8 text-gray-600">
-								We've helped businesses across industries transform their operations and scale efficiently.
-							</p>
-						</div>
-						<dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">AI Systems Deployed</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">50+</dd>
-							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Cloud Migrations</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">100+</dd>
-							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Security Audits</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">200+</dd>
-							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Client Satisfaction</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">98%</dd>
-							</div>
-						</dl>
-					</div>
-				</div>
-			</section>
+      {/* Stats Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Ready to transform your business?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let's discuss how our AI, cloud, and cybersecurity solutions can help you scale efficiently and securely.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/contact"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
-								Get Started
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
-							</Link>
-							<Link
-								to="/services"
-								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
-							>
-								View Services <span aria-hidden="true">→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-		</PageTransition>
-	)
-}
+      {/* Services Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions tailored to your business needs and growth objectives.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <a 
+                  href={service.link}
+                  className="text-blue-600 hover:text-blue-700 font-semibold"
+                >
+                  Learn More →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our technology solutions can help transform your business and drive growth.
+          </p>
+          <a 
+            href="/contact" 
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Contact Us Today
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default HomePage;
