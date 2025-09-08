@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 module.exports = {
+=======
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+>>>>>>> origin/combined-pr-merge
   testEnvironment: 'jsdom',
   testMatch: ['**/App.smoke.test.tsx'],
   moduleNameMapper: {
@@ -12,6 +23,7 @@ module.exports = {
     '!**/node_modules/**',
   ],
   testPathIgnorePatterns: [
+<<<<<<< HEAD
     '/\\.next/',
     '/node_modules/',
     '/src\\.broken/',
@@ -38,3 +50,32 @@ module.exports = {
   ],
   passWithNoTests: true,
 };
+=======
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/.next/',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000,
+};
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> origin/combined-pr-merge

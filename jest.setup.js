@@ -1,8 +1,11 @@
 import "@testing-library/jest-dom";
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/combined-pr-merge
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -44,6 +47,7 @@ jest.mock('next/link', () => ({
     return <a href={href} {...props}>{children}</a>;  },
 }));
 
+<<<<<<< HEAD
 // Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -59,6 +63,11 @@ addEventListener: jest.fn(),
 }),
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {constructor() {}});
+=======
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  const React = require("react");
+>>>>>>> origin/combined-pr-merge
   return function MockedImage({ src, alt, ...props }) {
     return React.createElement("img", { src, alt, ...props });
   };
@@ -75,6 +84,22 @@ jest.mock("next/link", () => {
   };
 });
 
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -90,6 +115,7 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
+<<<<<<< HEAD
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -115,3 +141,9 @@ beforeEach(() => {
 beforeEach(() => {
   jest.clearAllMocks();
 });
+=======
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+>>>>>>> origin/combined-pr-merge
