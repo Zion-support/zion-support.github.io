@@ -1,16 +1,17 @@
 [build]
-  # Install Python dependencies first, then Node.js dependencies and build
-  # Use python -m pip to avoid mise shim issues during Netlify dependency phase
-  command = "python -m pip install -r requirements.txt && npm ci && npm run build"
+  # Ensure Python deps install via an activated mise toolchain, then Node deps and build
+  command = "mise install --yes && eval \"$(mise activate bash)\" && python -m pip install --upgrade pip && python -m pip install -r requirements.txt && npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  MISE_PYTHON_COMPILE = "false"
-  # Trust repo's mise config and pin Python used by mise shim
+  # Let mise manage Python and activate in build
   MISE_TRUSTED_CONFIG = "1"
-  MISE_TOOL_VERSIONS__python = "3.11.9"
+  MISE_AUTO_INSTALL = "1"
+  MISE_PYTHON_COMPILE = "false"
+  # Pin Python version used by mise
+  MISE_TOOL_VERSIONS__python = "3.11.13"
 
 [[plugins]]
   package = "netlify-plugin-compress"
