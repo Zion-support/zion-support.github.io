@@ -14,7 +14,7 @@ export default function HomePage() {
       <Head>
         <title>Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
         <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
-        <meta property="og:title" content="Zion Tech Group — World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:title" content="Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
         <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="AI automation, autonomous systems, cloud infrastructure, machine learning, DevOps, CI/CD, technology consulting, Zion Tech Group" />
@@ -58,6 +58,53 @@ export default function HomePage() {
               </Link>
               <Link href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-xl">
                 View Case Studies
+              </Link>
+            </div>
+          </section>
+
+          {/* Featured Articles */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 Featured Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
+                <h3 className="text-lg font-semibold text-fuchsia-300">AI Automation Trends 2025</h3>
+                <p className="mt-2 text-sm text-white/75">Where autonomous systems are heading next.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/blog/autonomous-content-generation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <h3 className="text-lg font-semibold text-cyan-300">Autonomous Content Generation</h3>
+                <p className="mt-2 text-sm text-white/75">How AI agents create and optimize content end-to-end.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-blue-400/30">
+                <h3 className="text-lg font-semibold text-blue-300">Cloud-Native Automation</h3>
+                <p className="mt-2 text-sm text-white/75">Design principles for reliable, scalable AI infrastructure.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-blue-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-yellow-400/30">
+                <h3 className="text-lg font-semibold text-yellow-300">Performance Optimization</h3>
+                <p className="mt-2 text-sm text-white/75">Tuning autonomous platforms for speed and efficiency.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-yellow-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/blog/future-of-work" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-green-400/30">
+                <h3 className="text-lg font-semibold text-green-300">The Future of Work</h3>
+                <p className="mt-2 text-sm text-white/75">Human + AI collaboration at enterprise scale.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-green-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/blog/ai-ethics-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-purple-400/30">
+                <h3 className="text-lg font-semibold text-purple-300">AI Ethics in Automation</h3>
+                <p className="mt-2 text-sm text-white/75">Responsible, transparent, and auditable autonomous systems.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-purple-300/90">Read article <span aria-hidden>→</span></div>
+              </Link>
+            </div>
+            <div className="text-center mt-8">
+              <Link href="/blog" className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
+                Explore all articles
               </Link>
             </div>
           </section>
