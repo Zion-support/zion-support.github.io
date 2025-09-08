@@ -23,9 +23,8 @@ export const measurePerformance = (name: string, startTime: number) => {
     const endTime = window.performance.now();
     const duration = endTime - startTime;
 
-    // Log performance metrics (disabled for production)
-    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-
+    // Log performance metrics
+    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     // Send to analytics if available
     trackEvent('performance_metric', {
       metric_name: name,
@@ -37,8 +36,7 @@ export const measurePerformance = (name: string, startTime: number) => {
 
 // Error tracking
 export const trackError = (error: Error, context?: string) => {
-  // console.error('Error tracked:', error, context); // Disabled for production
-
+  console.error('Error tracked:', error, context);
   trackEvent('error_occurred', {
     error_message: error.message,
     error_stack: error.stack,

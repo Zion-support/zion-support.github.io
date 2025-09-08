@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export type AnalyticsEventType = 'page_view' | 'click' | 'conversion' | 'custom';
+export type AnalyticsEventType = 'page_view' | 'click' | 'form_submit' | 'conversion' | 'error';
 
 export interface AnalyticsEvent {
   type: AnalyticsEventType;
@@ -42,7 +42,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
   const location = useLocation();
 
-  // Track page views
+  // Track page views automatically
   useEffect(() => {
     const event: AnalyticsEvent = {
       type: 'page_view',
@@ -50,9 +50,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       timestamp: Date.now(),
     };
     
+    setPageViews(prev => prev + 1);
     setEvents(prev => [...prev, event]);
     setLastEvent(event);
-    setPageViews(prev => prev + 1);
   }, [location.pathname]);
 
   const trackEvent = (type: AnalyticsEventType, metadata?: Record<string, any>) => {
@@ -65,6 +65,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     
     setEvents(prev => [...prev, event]);
     setLastEvent(event);
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Analytics Event:', event);
   };
 
   const trackConversion = (conversionType: string, value?: number, metadata?: Record<string, any>) => {
@@ -81,6 +84,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     
     setEvents(prev => [...prev, event]);
     setLastEvent(event);
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Conversion Event:', event);
   };
 
   const clearEvents = () => {

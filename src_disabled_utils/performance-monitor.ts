@@ -1,4 +1,4 @@
-import React from 'react';
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
 /**
  * Performance monitoring utilities
  * Tracks Core Web Vitals and provides performance insights
@@ -48,8 +48,10 @@ class PerformanceMonitor {
       fcpObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(fcpObserver);
     } catch (e) {
+<<<<<<< HEAD
       // console.warn('FCP observer not supported:', e);
-    }
+=======
+      console.warn('FCP observer not supported:', e);    }
 
     // LCP Observer
     try {
@@ -61,30 +63,26 @@ class PerformanceMonitor {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
     } catch (e) {
-      // console.warn('LCP observer not supported:', e);
-    }
+      console.warn('LCP observer not supported:', e);    }
 
     // FID Observer
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry: any) => {          this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
     } catch (e) {
-      // console.warn('FID observer not supported:', e);
-    }
+      console.warn('FID observer not supported:', e);    }
 
     // CLS Observer
     try {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          if (!entry.hadRecentInput) {
+        entries.forEach((entry: any) => {          if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
         });
@@ -93,8 +91,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (e) {
-      // console.warn('CLS observer not supported:', e);
-    }
+      console.warn('CLS observer not supported:', e);    }
 
     // TTFB Observer
     try {
@@ -108,8 +105,7 @@ class PerformanceMonitor {
       ttfbObserver.observe({ entryTypes: ['navigation'] });
       this.observers.push(ttfbObserver);
     } catch (e) {
-      // console.warn('TTFB observer not supported:', e);
-    }
+      console.warn('TTFB observer not supported:', e);    }
 
     // Memory Observer
     if ('memory' in performance) {
@@ -224,11 +220,10 @@ class PerformanceMonitor {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚀 Performance Report');
-      // console.log('Score:', report.score);
-      // console.log('Metrics:', report.metrics);
+      console.log('Score:', report.score);
+      console.log('Metrics:', report.metrics);
       if (report.recommendations.length > 0) {
-        // console.log('Recommendations:', report.recommendations);
-      }
+        console.log('Recommendations:', report.recommendations);      }
       console.groupEnd();
     }
 
@@ -282,24 +277,21 @@ export const measurePerformance = async <T>(
   const result = await fn();
   const end = performance.now();
   
-  // console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);
-  
+  console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);  
   return result;
 };
 
-export const debounce = <T extends (...args: unknown[]) => any>(
+export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
+  let timeout: NodeJS.Timeout;  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: unknown[]) => any>(
-  func: T,
+export const throttle = <T extends (...args: any[]) => any>(  func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;

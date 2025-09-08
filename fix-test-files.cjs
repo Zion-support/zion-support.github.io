@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-<<<<<<< HEAD
-=======
-=======
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 const path = require('path');
 
 class TestFileFixer {
@@ -156,113 +151,6 @@ describe('${fileName}', () => {
     }
   }
 
-<<<<<<< HEAD
-=======
-
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-
-      findAndFixTestFiles(filePath);
-    } else if (file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
-      fixTestFile(filePath);
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-  async fixAllTestFiles() {
-    this.log('🔧 Starting test file fixes...');
-    
-    const testsDir = path.join(this.projectRoot, '__tests__');
-    if (!fs.existsSync(testsDir)) {
-      this.log('Tests directory not found', 'WARNING');
-      return { fixedFiles: 0, errors: 0 };
-    }
-
-    const testFiles = this.getAllTestFiles(testsDir);
-    let fixedCount = 0;
-    
-    for (const file of testFiles) {
-      if (this.fixTestFile(file)) {
-        fixedCount++;
-      }
-    }
-
-    this.log(`\n📊 Test File Fix Summary:`);
-    this.log(`Fixed files: ${fixedCount}`);
-    this.log(`Errors: ${this.errors.length}`);
-
-    if (this.errors.length > 0) {
-      this.log('\n❌ Files with errors:');
-      this.errors.forEach(({ file, error }) => {
-        this.log(`  - ${path.relative(this.projectRoot, file)}: ${error}`);
-      });
-    }
-
-    return {
-      fixedFiles: fixedCount,
-      errors: this.errors.length
-    };
-  }
-
-  getAllTestFiles(dir) {
-    const files = [];
-    
-    const readDir = (currentDir) => {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const itemPath = path.join(currentDir, item);
-        const stat = fs.statSync(itemPath);
-        
-        if (fs.existsSync(filePath)) {
-          let content = fs.readFileSync(filePath, 'utf8');
-          let originalContent = content;
-          
-          // Fix common syntax errors from the comprehensive fixer
-          // 1. Fix malformed imports like "import React from 'react';';"
-          content = content.replace(/from\s+'([^']+)';';/g, "from '$1';");
-          content = content.replace(/import\s+'([^']+)';';/g, "import '$1';");
-          
-          // 2. Fix unterminated strings in imports
-          content = content.replace(/import\s+([^]+);';/g, 'import $1;');
-          
-          // 3. Fix double quotes in imports
-          content = content.replace(/import\s+([^"]*)"([^"]*)"([^"]*);";/g, 'import $1"$2"$3;');
-          
-          // 4. Fix malformed component imports
-          content = content.replace(/from\s+"([^"]+)";";/g, 'from "$1";');
-          
-          if (content !== originalContent) {
-            fs.writeFileSync(filePath, content, 'utf8');
-            fixedFiles.push(filePath);
-            console.log(`✅ Fixed ${filePath}`)}
-        }
-      }
-    })}
-});
-
-  async run() {
-    try {
-      this.log('🚀 Starting test file fixes...');
-      
-      const results = await this.fixAllTestFiles();
-      
-      this.log('\n✅ Test file fixes completed!');
-      
-      return results;
-    } catch (error) {
-      this.log(`❌ Test file fixes failed: ${error.message}`, 'ERROR');
-      throw error;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     }
 
 if (fixedFiles.length > 0) {
@@ -272,10 +160,6 @@ if (fixedFiles.length > 0) {
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> merged-prs-20250907-203621
-=======
 
 
 
@@ -283,5 +167,3 @@ module.exports = TestFileFixer;
 
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

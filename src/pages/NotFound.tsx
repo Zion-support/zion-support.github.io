@@ -73,8 +73,7 @@ const NotFound: React.FC = () => {
 
         <div className="mt-8 text-sm text-blue-300">
           <p>If you believe this is an error, please <a href="/contact" className="text-blue-400 hover:text-blue-300 underline">contact us</a> and let us know.</p>
-        </div>
-      </div>
+        </div>      </div>
     </div>
   );
 };

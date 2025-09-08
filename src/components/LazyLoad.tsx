@@ -22,7 +22,7 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
           setIsVisible(true);
           setHasLoaded(true);
           observer.disconnect();
@@ -33,7 +33,6 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
         rootMargin
       }
     );
-
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
@@ -44,10 +43,12 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
   return (
     <div ref={elementRef} className={className}>
       {isVisible ? children : (hasLoaded ? children : fallback)}
+<<<<<<< HEAD
+=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     </div>
   );
 });
 
 LazyLoad.displayName = 'LazyLoad';
 
-export default LazyLoad;
+>>>>>>> origin/mainexport default LazyLoad;

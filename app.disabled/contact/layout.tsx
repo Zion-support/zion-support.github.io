@@ -6,7 +6,8 @@ export const metadata: Metadata = {
   description: 'Get in touch with Zion Tech Group for AI solutions, micro SaaS development, and IT services. We reply within one business day.',
   keywords: 'contact, AI solutions, micro SaaS, IT services, business consultation'
 };
-export default function ContactLayout({
+=======
+>>>>>>> origin/main:app.disabled/contact/layout.tsxexport default function ContactLayout({
   children,
 }: {
   children: React.ReactNode;

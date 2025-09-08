@@ -3,26 +3,12 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 console.log('🚀 Starting Comprehensive PR Merge Solution...\n');
 // Function to run git commands safely;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-function runGitCommand(command, description) {
-  try {
-  // TODO: Implement
-}
-    console.log(`📝 ${description}...`);
-<<<<<<< HEAD
-
-=======
 
     const result = execSync(command, { 
       encoding: utf8', 
       stdio: 'pipe,
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       cwd: process.cwd()
     });`;
     console.log(`✅ ${description} completed successfully`);
@@ -35,36 +21,16 @@ function resolveMergeConflictsInFile(filePath) {
   if (!fs.existsSync(filePath)) {
     return false;
 
-<<<<<<< HEAD
-  // TODO: Implement
-
-=======
 
   try {
     let content = fs.readFileSync(filePath, utf8');
 
   // TODO: Implement
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     let modified = false;
 
     // Remove conflict markers;
     const originalContent = content;
-<<<<<<< HEAD
-=======
-
-    content = content
-
-
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-      .replace(/\n/g, ')
-      .replace(/\n/g, ')
-      .replace(/
-      .replace(/
-<<<<<<< HEAD
-=======
 =======
 =======
 
@@ -74,9 +40,7 @@ function resolveMergeConflictsInFile(filePath) {
       .replace(/\n/g, '')
       .replace(/[^\n]+\n/g, '');
 
-      .replace(/
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-      .replace(/
+      .replace(/      .replace(/
 
       .replace(/\n/g, '')
 
@@ -95,34 +59,6 @@ function resolveMergeConflictsInFile(filePath) {
 
 // Function to resolve all merge conflicts;
 function resolveAllMergeConflicts() {
-<<<<<<< HEAD
-=======
-
-  console.log('\n🔧 Resolving all merge conflicts...\n);
-  
-  // Get list of files with conflicts
-  const statusResult = runGitCommand(git status --porcelain', 'Getting conflicted files);
-  if (!statusResult) return false;
-
-  const conflictedFiles = statusResult
-    .split(\n')
-    .filter(line => line.includes('UU) || line.includes(AA') || line.includes('DD))
-    .map(line => line.split( ').pop())
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-  console.log('\n🔧 Resolving all merge conflicts...\n');
-  // Get list of files with conflicts;
-
-  if (!statusResult) return false;
-
-  const conflictedFiles = statusResult;
-    .split('\n')
-    .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
-    .map(line => line.split(' ').pop())
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     .filter(file => file && file.trim());
 `;
   console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
@@ -134,10 +70,6 @@ function resolveAllMergeConflicts() {
   console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
 
   if (resolvedCount > 0) {
-<<<<<<< HEAD
-    // Add resolved files;
-
-=======
 
     // Add resolved files
     runGitCommand('git add ., Adding resolved files');
@@ -149,8 +81,6 @@ function resolveAllMergeConflicts() {
     // Add resolved files;
 
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-
   return resolvedCount > 0;
 
 // Function to merge a specific PR;
@@ -159,9 +89,6 @@ function mergeSpecificPR(prNumber) {`;
 
     console.log(`❌ Failed to checkout PR #${prNumber} branch`);
 
-<<<<<<< HEAD
-
-=======
 
   // Try to merge with main
   const mergeResult = runGitCommand('git merge main, `Merging main into PR #${prNumber}`);
@@ -169,15 +96,10 @@ function mergeSpecificPR(prNumber) {`;
   if (mergeResult && mergeResult.includes(CONFLICT')) {
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     console.log(`⚠️  Merge conflicts detected in PR #${prNumber}. Resolving...`);
     resolveAllMergeConflicts();
 
 
-<<<<<<< HEAD
-    `Converting PR #${prNumber} to ready for review`)
-=======
 
   // Convert draft to ready for review
   runGitCommand(
@@ -185,15 +107,10 @@ function mergeSpecificPR(prNumber) {`;
     `Converting PR #${prNumber} to ready for review`
 
     `Converting PR #${prNumber} to ready for review`)
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   );
 
   // Try to merge the PR;`;
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
-<<<<<<< HEAD
-
-=======
 
   const mergePRResult = runGitCommand(
     `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d {"merge_method:merge"}'`,
@@ -201,8 +118,6 @@ function mergeSpecificPR(prNumber) {`;
   );
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
   if (mergePRResult) {
   // TODO: Implement
@@ -212,11 +127,6 @@ function mergeSpecificPR(prNumber) {`;
 
 // Function to create a comprehensive merge commit;
 function createComprehensiveMerge() {
-<<<<<<< HEAD
-  console.log('\n🔄 Creating comprehensive merge...\n');
-  // Ensure we're on main;
-
-=======
 
   console.log('\n🔄 Creating comprehensive merge...\n);
   
@@ -241,8 +151,6 @@ function createComprehensiveMerge() {
   console.log('\n🔄 Creating comprehensive merge...\n');
   // Ensure we're on main;
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
   // Create a PR for the comprehensive merge;`;
   const prBody = `# Comprehensive Fixes and Improvements;
@@ -273,10 +181,6 @@ This PR consolidates all the fixes and improvements made during the automation p
 - All merge conflicts resolved;`;
 This comprehensive merge ensures the codebase is in a stable, working state with all recent improvements and fixes applied.`;
 
-<<<<<<< HEAD
-  if (prResult) {
-  // TODO: Implement
-=======
 
   const createPRCommand = `curl -X POST -H Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls -d '{
     title": "Comprehensive Fixes and Improvements - All Issues Resolved,
@@ -301,16 +205,10 @@ This comprehensive merge ensures the codebase is in a stable, working state with
   if (prResult) {
   // TODO: Implement
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-
 
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD
-  console.log('📋 Starting comprehensive PR merge process...\n');
-  // First, let's try to merge the existing PRs;
-=======
 
   console.log(📋 Starting comprehensive PR merge process...\n);
   
@@ -318,8 +216,6 @@ async function main() {
 
   console.log('📋 Starting comprehensive PR merge process...\n');
   // First, let's try to merge the existing PRs;
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   const prs = [12098, 12097, 12096];
   let mergedCount = 0;
 
