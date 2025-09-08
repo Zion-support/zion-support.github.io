@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-const fs = require('fs');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-///usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -136,7 +110,7 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -150,43 +124,10 @@ async function main() {}
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"User-Agent": "force-merge-script"
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-
-    console.log(`Merging head into "main: PR #${pr.number} (${head})`);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    }
-})
-  const text = await res.text()
-  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
-  let mergedCount = 0; let attempted = 0,
-  for($2) {}
-    attempted++
-    const head = pr.head && pr.head.ref,
-  console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    if (!head) continue;
+    console.log(`Merging head into "main": PR #${pr.number} (${head})`);
+    try {}
+      sh(`git fetch origin ${head}:${head} || true`);
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...);
@@ -204,33 +145,4 @@ async function main() {}
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-try {}`
-      sh(`git fetch origin ${head}:${head} || true`)
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-});
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-});
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
-
-    console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
-    try {}`;
-      sh(`git fetch origin ${head}:${head} || true`);
-
->>>>>>> origin/chore/fix-lint-and-merge

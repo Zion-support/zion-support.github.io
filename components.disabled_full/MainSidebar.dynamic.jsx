@@ -32,26 +32,6 @@ const MainSidebar = dynamic(() => import('./MainSidebar'),{'; 'loading': () => <
 const MainSidebar = dynamic(() => import(\"./MainSidebar\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default MainSidebar\' ,
 const MainSidebar = dynamic(() => import("./MainSidebar"),{"; loading: () => <p>Loading.</p,>}) export: "default MainSidebar" ,"""
 const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

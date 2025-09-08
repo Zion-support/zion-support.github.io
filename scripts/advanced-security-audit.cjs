@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -29,18 +28,6 @@ const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "advanced-security.log")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       fs.mkdirSync(this.reportsDir, { "recursive"})
     fs.appendFileSync(this.logFile, logMessage + "\n")
     this.log(" Checking dependencies for vulnerabilities...")
@@ -78,16 +65,6 @@ const { execSync } = require("child_process")
           const lines = content.split("\n")
             if (line.includes("=") && !line.startsWith("#")
               const [key, value] = line.split("=")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
               if (value && value.trim() !== ""
                   key.toLowerCase().includes("password")
                   key.toLowerCase().includes("secret")
@@ -147,94 +124,4 @@ const permissions = (mode & parseInt("777");
       this.log(` Fatal error in security "audit"`)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
-
     console.error(" Security audit "failed": ")
-
-
-
-
-
-=======
-<<<<<<< HEAD
-    this.log(" Generating security report...)
-    const report = {timestamp": new Date().toISOString(),"dependencies: await this.checkDependencies(),codeSecurity"}
-        "type: dependencies"
-        "action: Run npm audit fix to resolve vulnerabilities"
-      issue => issue.severity === "high
-        type": "code
-        action": "Review and fix high severity security issues in code
-        type": "environment
-        action": "Review environment variables and ensure sensitive data is properly secured
-      advanced-security-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8
-    this.log(` Security report generated"`)
-    this.log(" Starting Advanced Security Audit)
-      this.log(� Advanced Security Audit Completed")
-      this.log(` "Recommendations`)
-      this.log(` Fatal error in security audit"`)
-// console.log(" Advanced Security Audit completed successfully!)
-    console.log(` Recommendations"`)
-
-
-    console.error(" Security audit failed: ")
-
-    console.error(" Security audit failed: ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.error(" Security audit failed: ")
-
-=======
-    this.log(" Generating security report...")
-    const report = {"timestamp": new Date().toISOString(),"dependencies": await this.checkDependencies(),"codeSecurity"}
-        "type": "dependencies"
-        "action": "Run npm audit fix to resolve vulnerabilities"
-      issue => issue.severity === "high"
-        "type": "code"
-        "action": "Review and fix high severity security issues in code"
-        "type": "environment"
-        "action": "Review environment variables and ensure sensitive data is properly secured"
-      "advanced-security-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"
-    this.log(` Security report "generated"`)
-    this.log(" Starting Advanced Security Audit")
-      this.log("� Advanced Security Audit Completed")
-      this.log(` "Recommendations"`)
-      this.log(` Fatal error in security "audit"`)
-// console.log(" Advanced Security Audit completed successfully!")
-    console.log(` "Recommendations"`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-
-=======
-    console.error(" Security audit "failed": ")
-<<<<<<< HEAD
-    console.error(" Security audit "failed": ")
-    console.error(" Security audit "failed": ")
-
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    console.error(" Security audit "failed": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.error(" Security audit "failed": ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

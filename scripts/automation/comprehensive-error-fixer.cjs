@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -832,13 +814,7 @@ class ComprehensiveErrorFixer {
       const analyzer = new ErrorAnalyzer();
       this.errorReport = await analyzer.analyzeAllErrors();
       if (this.errorReport.totalErrors === 0) {
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return this.fixReport}
       // Apply fixes based on error categories
       await this.fixTypeScriptErrors()
@@ -1123,17 +1099,7 @@ class ComprehensiveErrorFixer {
       error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
-<<<<<<< HEAD
       
-=======
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return}
     console.log(`📝 Found ${tsErrors.length} TypeScript errors to fix`);
     for (const error of tsErrors) {
@@ -1388,15 +1354,6 @@ class ComprehensiveErrorFixer {
       error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-        stdio": pipe',
-        "cwd: process.cwd()
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
@@ -1427,10 +1384,7 @@ class ComprehensiveErrorFixer {
         "action": 'Auto-fix applied',
         "count": eslintErrors.length
       })} catch (error) {
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
 <<<<<<< HEAD
         "type": 'eslint',
@@ -1481,23 +1435,6 @@ class ComprehensiveErrorFixer {
       return false;
     console.log('🔧 Fixing dependency issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-        stdio": 'pipe,
-        "cwd: process.cwd()
-=======
-<<<<<<< HEAD
-      return}
-    try {
-      // Try to fix security vulnerabilities
-      execSync('npm audit fix', {
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
@@ -1528,10 +1465,7 @@ class ComprehensiveErrorFixer {
         "action": 'Security vulnerabilities fixed',
         "count": this.errorReport.errors.dependency.length
       })} catch (error) {
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
         "type": 'dependency',
         "action": 'Security vulnerabilities fixed with warnings',
@@ -1541,23 +1475,6 @@ class ComprehensiveErrorFixer {
   async fixSecurityIssues() {
     console.log('🔧 Fixing security issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.security || this.errorReport.errors.security.length === 0) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-        stdio": pipe',
-        "cwd: process.cwd()
-=======
-<<<<<<< HEAD
-      return}
-    try {
-      // Update dependencies to fix security issues
-      execSync('npm update', {
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
@@ -1588,10 +1505,7 @@ class ComprehensiveErrorFixer {
         "action": 'Dependencies updated for security',
         "count": this.errorReport.errors.security.length
       })} catch (error) {
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
 <<<<<<< HEAD
         "type": 'security',
@@ -1800,30 +1714,10 @@ class ComprehensiveErrorFixer {
 module.exports = ComprehensiveErrorFixer;
     console.log('🔧 Fixing build errors...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    console.log(✅ Build errors should be resolved by previous fixes')}
-=======
-<<<<<<< HEAD
-      return}
-    // Build errors are usually resolved by fixing TypeScript and ESLint errors
-    // This method will be called after those fixes are applied
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
-<<<<<<< HEAD
     console.log('✅ Build errors should be resolved by previous fixes')}
 =======
 <<<<<<< HEAD
@@ -1844,7 +1738,6 @@ module.exports = ComprehensiveErrorFixer;
   async saveFixReport() {
     const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
-<<<<<<< HEAD
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
 =======
 <<<<<<< HEAD
@@ -1891,7 +1784,6 @@ async function main() {
     this.fixesApplied.forEach((fix, index) => {
       console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`)});
     if (this.fixesFailed.length > 0) {
-<<<<<<< HEAD
       
       this.fixesFailed.forEach((fix, index) => {
         }] ${fix.error.file}: ${fix.reason}`)})}
@@ -1936,60 +1828,4 @@ async function main() {
 module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-
   main()}
-<<<<<<< HEAD
-  main()}
-
-  main()}
-
-  main()}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-  main()}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  main()}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  main()}
-
-  main()}
-
-  main()}
-
-<<<<<<< HEAD
-  main()}
-=======
-=======
-  main()}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

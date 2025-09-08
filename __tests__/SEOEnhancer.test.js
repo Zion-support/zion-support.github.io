@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import SEOEnhancer from '../components/SEOEnhancer" describe('SEOEnhancer',() => {' test('renders without crashing',() => {' render(<SEOEnhancer / />) expect(screen.getByTestId("seoenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOEnhancer / />) }) test('handles user interactions',() => {' render(<SEOEnhancer / />) }) test('applies correct styling',() => {' render(<SEOEnhancer / />) }) })

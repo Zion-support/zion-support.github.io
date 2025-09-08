@@ -1,151 +1,385 @@
-React from, react';'
-import { motion } from
-  'framer-motion';'{ SEO } from'
-  '../components/SEO';
-import { Card } from
-  '../components/ui/Card';'{ Badge } from'
-  '../components/ui/Badge';
-import { ;'  Map, ArrowRight,'ExternalLink, Home,
-  Users, Briefcase,
-  Phone, DollarSign,
-  FileText, BookOpen,
-  Award, Shield,
-  Globe, Search,
-  Filter, Calendar,
-  Star, TrendingUp,
-  Brain, Cloud,
-  Database, Network,
-  Zap, Target,
-  CheckCircle
-} from
-  'lucide-react';''
-  'const Sitemap: React.FC = () => {'
-  const lastUpdated = new Date().toISOString().split('T'
-  ')[0];'  const mainPages = [;{ name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ];"
-  const servicePages = [;
-    { name: "AI Services", url: "/ai-services", description: "Artificial Intelligence solutions", icon: Brain },"    { name: "IT Services", url: "/it-services", description: "Information Technology services", icon: Network },"    { name: "Micro SaaS", url: "/micro-saas", description: "Micro Software as a Service solutions", icon: Cloud },"    { name: "AI Cybersecurity Platform", url: "/services/ai-autonomous-cybersecurity-platform", description: "AI-powered security solutions", icon: Shield },"    { name: "AI Customer Experience", url: "/services/ai-customer-experience-platform", description: "AI-driven customer experience", icon: Users },"    { name: "AI Healthcare Diagnostics", url: "/services/ai-healthcare-diagnostics", description: "AI medical diagnostic tools", icon: Brain },"    { name: "AI Enterprise Orchestrator", url: "/services/ai-enterprise-orchestrator", description: "Enterprise AI orchestration", icon: Zap },"    { name: "AI Healthcare Analytics", url: "/services/ai-healthcare-analytics-platform", description: "Healthcare data analytics", icon: Database },"    { name: "AI Supply Chain", url: "/services/ai-autonomous-supply-chain", description: "Supply chain optimization", icon: Target },"    { name: "AI Financial Planning", url: "/services/ai-financial-planning", description: "AI financial planning tools", icon: DollarSign }"  ];""
-  const contentPages = [;
-    { name: "Pricing Guide", url: "/pricing-guide", description: "Comprehensive pricing information", icon: DollarSign },"    { name: "Services Overview", url: "/services-overview", description: "Overview of all our services", icon: Briefcase }"  ];""
-  const categories = [;
-    { name: "Main Pages", pages: mainPages, color: "from-blue-500 to-cyan-500" }, { name: "Services", pages: servicePages, color: "from-purple-500 to-pink-500" },"    { name: "Content", pages: contentPages, color: "from-green-500 to-emerald-500" }"  ];""
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  Phone as PhoneIcon, 
+  MapPin, 
+  Globe,
+  ArrowRight
+} from 'lucide-react';
+
+const sitemapData = {
+  main: [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Products', href: '/products', icon: Globe },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ],
+  services: [
+    { name: 'AI Services', href: '/services/ai' },
+    { name: 'Cloud Computing', href: '/services/cloud' },
+    { name: 'Micro SaaS', href: '/services/saas' },
+    { name: 'Security', href: '/security' }
+  ],
+  products: [
+    { name: 'AI Email Responder', href: '/products/ai-email-responder' },
+    { name: 'Cloud Infrastructure', href: '/products/cloud-infrastructure' },
+    { name: 'Security Suite', href: '/products/security-suite' },
+    { name: 'Micro SaaS Platform', href: '/products/micro-saas-platform' }
+  ],
+  resources: [
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Guides', href: '/guides' },
+    { name: 'Help', href: '/help' },
+    { name: 'API Documentation', href: '/api-docs' }
+  ],
+  company: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Newsletter', href: '/newsletter' }
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' }
+  ]
+};
+
+export default function SitemapPage() {
   return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."''"
-  '      />'{/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Badge variant="secondary" className="mb-4">"              <Map className="w-4 h-4 mr-2" />"              Site Navigation"            </Badge>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Sitemap"            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Find all pages and content on our website. Navigate through our services, resources, and information easily."            </p>
-            <div className="flex items-center justify-center text-gray-400">"              <Calendar className="w-4 h-4 mr-2" />"              Last updated: {new Date(lastUpdated).toLocaleDateString()}"            </div></motion.div>"
-        </div>
-      </section>
+    <Layout
+      title="Sitemap - Zion Tech Group"
+      description="Navigate our website easily with our comprehensive sitemap. Find all pages and resources in one place."
+      keywords="sitemap, navigation, website map, pages, resources"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Sitemap
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Navigate our website easily with our comprehensive sitemap
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+  ArrowRight 
+} from 'lucide-react';
 
-          <section className="mx-auto max-w-6xl">
-            {/* Main Pages */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Main Pages</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="/" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">🏠</div>
-                  <h3 className="text-lg font-semibold mb-2">Home</h3>
-                  <p className="text-sm text-white/70">Main landing page with overview and navigation</p>
-                </a>
-                <a href="/about" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-fuchsia-400 mb-2">ℹ️</div>
-                  <h3 className="text-lg font-semibold mb-2">About Us</h3>
-                  <p className="text-sm text-white/70">Company mission, vision, and story</p>
-                </a>
-                <a href="/services" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-green-400 mb-2">⚙️</div>
-                  <h3 className="text-lg font-semibold mb-2">Services</h3>
-                  <p className="text-sm text-white/70">AI development and automation solutions</p>
-                </a>
-                <a href="/automation" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-purple-400 mb-2">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">Automation</h3>
-                  <p className="text-sm text-white/70">Autonomous systems showcase</p>
-                </a>
-                <a href="/blog" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-blue-400 mb-2">📝</div>
-                  <h3 className="text-lg font-semibold mb-2">Blog</h3>
-                  <p className="text-sm text-white/70">AI & technology insights</p>
-                </a>
-                <a href="/innovation" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-yellow-400 mb-2">🚀</div>
-                  <h3 className="text-lg font-semibold mb-2">Innovation</h3>
-                  <p className="text-sm text-white/70">Breakthrough technologies</p>
-                </a>
-                <a href="/contact" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl font-bold text-orange-400 mb-2">📞</div>
-                  <h3 className="text-lg font-semibold mb-2">Contact</h3>
-                  <p className="text-sm text-white/70">Get in touch with us</p>
-                </a>
-              </div>
-            </div>
+const sitemapData = [
+  {
+    category: 'Main Pages',
+    pages: [
+      { name: 'Home', url: '/', icon: Home, description: 'Main landing page' },
+      { name: 'About', url: '/about', icon: Users, description: 'Learn about our company' },
+      { name: 'Contact', url: '/contact', icon: Globe, description: 'Get in touch with us' },
+      { name: 'Services', url: '/services', icon: Settings, description: 'Our comprehensive services' }
+    ]
+  },
+  {
+    category: 'Services',
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: Brain, description: 'AI and machine learning solutions' },
+      { name: 'IT Services', url: '/it-services', icon: Network, description: 'Information technology services' },
+      { name: 'Cloud Solutions', url: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure and services' },
+      { name: 'Security', url: '/security', icon: Shield, description: 'Cybersecurity solutions' }
+    ]
+  },
+  {
+    category: 'Resources',
+    pages: [
+      { name: 'Blog', url: '/blog', icon: Globe, description: 'Latest insights and updates' },
+      { name: 'Documentation', url: '/docs', icon: Globe, description: 'Technical documentation' },
+      { name: 'Help Center', url: '/help', icon: Globe, description: 'Support and help articles' },
+      { name: 'Sitemap', url: '/sitemap', icon: Globe, description: 'This page' }
+    ]
+  }
+];
 
-            {/* Update Reports */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Autonomous Updates</h2>
-              <p className="text-white/70 mb-6 text-center">
-                Latest system updates and content generated by our autonomous AI agents
+export default function SitemapPage() {
+  return (
+    <>
+      <Head>
+        <title>Site Map - Zion Tech Group</title>
+        <meta name="description" content="Navigate through all our pages and discover everything we offer" />
+        <meta name="keywords" content="sitemap, navigation, pages, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Site Map
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Navigate through all our pages and discover everything we offer
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/reports/updates/update-2025-08-15-0406" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-cyan-400 mb-2">Latest Update</div>
-                  <h4 className="font-semibold">2025-08-15 0406</h4>
-                </a>
-                <a href="/reports/updates/update-2025-08-15-0405" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-fuchsia-400 mb-2">System Update</div>
-                  <h4 className="font-semibold">2025-08-15 0405</h4>
-                </a>
-                <a href="/reports/updates/update-2025-08-15-0404" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-green-400 mb-2">Content Update</div>
-                  <h4 className="font-semibold">2025-08-15 0404</h4>
-                </a>
-                <a href="/reports/updates/update-2025-08-15-0111" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-blue-400 mb-2">Performance Update</div>
-                  <h4 className="font-semibold">2025-08-15 0111</h4>
-                </a>
-                <a href="/reports/updates/update-2025-08-15-0403" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-purple-400 mb-2">Security Update</div>
-                  <h4 className="font-semibold">2025-08-15 0403</h4>
-                </a>
-                <a href="/reports/updates/update-2025-08-15-0402" className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-sm text-orange-400 mb-2">Feature Update</div>
-                  <h4 className="font-semibold">2025-08-15 0402</h4>
-                </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Sitemap Content */}
+<<<<<<< HEAD
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Main Navigation */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Main Navigation</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.main.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          <item.icon className="w-4 h-4 mr-2" />
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Services */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Services</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.services.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Products */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Products</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.products.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Resources */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Resources</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.resources.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Company */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Company</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.company.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Legal */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Legal</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.legal.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               </div>
             </div>
 
-            {/* Quick Navigation */}
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
-              <h2 className="text-3xl font-bold mb-6 text-green-400">Quick Navigation</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Getting Started</h3>
-                  <div className="space-y-3">
-                    <a href="/about" className="block text-white/70 hover:text-white transition-colors">→ Learn About Us</a>
-                    <a href="/services" className="block text-white/70 hover:text-white transition-colors">→ Explore Services</a>
-                    <a href="/automation" className="block text-white/70 hover:text-white transition-colors">→ See Automation</a>
-                    <a href="/contact" className="block text-white/70 hover:text-white transition-colors">→ Get in Touch</a>
+        {/* Contact Information */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">info@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <PhoneIcon className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">San Francisco, CA</span>
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Learn More</h3>
+              </motion.div>
+=======
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {sitemapData.map((section, sectionIndex) => (
+                <motion.div
+                  key={section.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6"
+                >
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                    {section.category}
+                  </h2>
                   <div className="space-y-3">
-                    <a href="/blog" className="block text-white/70 hover:text-white transition-colors">→ Read Our Blog</a>
-                    <a href="/innovation" className="block text-white/70 hover:text-white transition-colors">→ Explore Innovation</a>
-                    <a href="/reports/updates/update-2025-08-15-0406" className="block text-white/70 hover:text-white transition-colors">→ Latest Updates</a>
+                    {section.pages.map((page, pageIndex) => (
+                      <Link
+                        key={page.name}
+                        href={page.url}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
+                        <div>
+                          <div className="font-semibold text-gray-900 group-hover:text-blue-600">
+                            {page.name}
+                          </div>
+                          {page.description && (
+                            <div className="text-sm text-gray-600">
+                              {page.description}
+                            </div>
+                          )}
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
+                      </Link>
+                    ))}
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              ))}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
             </div>
           </section>
         </main>
         <Footer />
       </div>
+<<<<<<< HEAD
+    </Layout>
+  );
+}
+=======
     </>
   );
 }
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

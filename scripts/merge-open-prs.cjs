@@ -1,19 +1,12 @@
-#!/usr/bin/env node
-
-// Minimal, safe PR merger: lists open PRs and attempts to merge them via GitHub API.
-// - Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
-// - Handles drafts by readying for review.
-// - If merge fails due to out-of-date branch, requests update-branch then retries once.
+#!/usr/bin/env node;
+// Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
+// Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
 
 const { execSync } = require('child_process');
 
-function getOriginUrl() {
-  const raw = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
-  return raw;
-}
-
-function getRepoFromGit() {
-  const remoteUrl = getOriginUrl();
+function getRepoFromGit() {}
+  // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app;
+  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
   const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!match) throw new Error('Unable to parse owner/repo from origin');
   return { owner: match[1], repo: match[2] };
@@ -99,24 +92,26 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function main() {
   const { owner, repo } = getRepoFromGit();
+  
   const prs = await listOpenPRs(owner, repo);
-  if (!prs.length) {
+  if (!prs.length) {}
     console.log('No open PRs');
-    return;
-  }
-  console.log(`Open PRs: ${prs.length}`);
+    return};
+  console.log(`Open "PRs": ${prs.length}`);
   const results = [];
-  for (const pr of prs) {
-    console.log(`Attempting merge: #${pr.number} ${pr.title}`);
-    if (pr.draft) {
+  for (const pr of prs) {}
+    console.log(`Attempting "merge": #${pr.number} ${pr.title}`);
+    // If draft, try to ready it;
+    if (pr.draft) {}
       const ok = await readyForReview(owner, repo, pr.number);
-      console.log(` -> draft -> ready_for_review: ${ok ? 'ok' : 'failed'}`);
-      await sleep(500);
-    }
+      console.log(` -> draft -> "ready_for_review": ${ok ? 'ok' : 'failed'}`);
+      await sleep(500)};
+    // Try initial merge;
     let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
-    if (res.status === 'failed' && (res.code === 405 || res.code === 409)) {
-      const updated = await requestUpdateBranch(owner, repo, pr.number);
-      if (updated) {
+    // If not mergeable, ask GitHub to update branch and retry once;
+    if (res.status !== 'merged') {}
+      const updated = await updateBranch(owner, repo, pr.number);
+      if (updated) {}
         console.log(' -> update-branch requested; waiting before retry...');
         await sleep(2500);
         await getPR(owner, repo, pr.number).catch(() => {});
@@ -129,10 +124,9 @@ async function main() {
   }
   const merged = results.filter(r => r.status === 'merged').length;
   const skipped = results.length - merged;
-  console.log(`Merged: ${merged}, Skipped: ${skipped}`);
-}
-
-main().catch(err => {
-  console.error('Error:', err.message);
-  process.exit(1);
+  console.log(`"Merged": ${merged}, "Skipped": ${skipped}`)};
+main().catch(err => {})
+  console.error('"Error": ', err.message);
+  process.exit(1)}
 });
+

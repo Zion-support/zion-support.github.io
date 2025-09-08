@@ -1,5 +1,167 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { 
+  Zap, 
+  Settings, 
+  Bot, 
+  Workflow, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Users,
+  Shield,
+  Globe,
+  BarChart3,
+  Database
+} from 'lucide-react';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+
+const automationServices = [
+  {
+    title: "Process Automation",
+    description: "Automate repetitive business processes to increase efficiency and reduce errors",
+    icon: Workflow,
+    features: [
+      "Workflow Design",
+      "Task Automation",
+      "Approval Processes",
+      "Document Processing",
+      "Email Automation",
+      "Data Entry Automation"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "RPA Solutions",
+    description: "Robotic Process Automation for complex business operations",
+    icon: Bot,
+    features: [
+      "Bot Development",
+      "Screen Scraping",
+      "Data Extraction",
+      "Form Filling",
+      "Report Generation",
+      "System Integration"
+    ],
+    price: "Starting at $2,000/month"
+  },
+  {
+    title: "API Integration",
+    description: "Connect disparate systems with seamless API integrations",
+    icon: Settings,
+    features: [
+      "System Integration",
+      "Data Synchronization",
+      "Real-time Updates",
+      "Error Handling",
+      "Monitoring & Alerts",
+      "Custom Connectors"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Workflow Management",
+    description: "Streamline complex workflows with intelligent automation",
+    icon: Zap,
+    features: [
+      "Visual Workflow Designer",
+      "Conditional Logic",
+      "Parallel Processing",
+      "Exception Handling",
+      "Performance Monitoring",
+      "Scalable Architecture"
+    ],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "Data Automation",
+    description: "Automate data processing, transformation, and analysis",
+    icon: Database,
+    features: [
+      "ETL Processes",
+      "Data Validation",
+      "Report Generation",
+      "Data Quality Checks",
+      "Scheduled Processing",
+      "Error Recovery"
+    ],
+    price: "Starting at $1,600/month"
+  },
+  {
+    title: "Business Intelligence Automation",
+    description: "Automate reporting and analytics for real-time insights",
+    icon: BarChart3,
+    features: [
+      "Automated Reporting",
+      "Dashboard Updates",
+      "Alert Systems",
+      "KPI Monitoring",
+      "Trend Analysis",
+      "Custom Metrics"
+    ],
+    price: "Starting at $2,500/month"
+  }
+];
+
+const automationTypes = [
+  {
+    title: "IT Operations",
+    description: "Server monitoring, backup automation, and system maintenance",
+    icon: "💻"
+  },
+  {
+    title: "HR Processes",
+    description: "Employee onboarding, payroll processing, and performance tracking",
+    icon: "👥"
+  },
+  {
+    title: "Finance & Accounting",
+    description: "Invoice processing, expense management, and financial reporting",
+    icon: "💰"
+  },
+  {
+    title: "Customer Service",
+    description: "Ticket routing, response automation, and customer support workflows",
+    icon: "🎧"
+  },
+  {
+    title: "Marketing",
+    description: "Campaign management, lead nurturing, and social media automation",
+    icon: "📢"
+  },
+  {
+    title: "Sales",
+    description: "Lead qualification, follow-up automation, and pipeline management",
+    icon: "📈"
+  }
+];
+
+const benefits = [
+  {
+    title: "Increased Efficiency",
+    description: "Reduce manual work by up to 80% with intelligent automation",
+    icon: "⚡"
+  },
+  {
+    title: "Cost Savings",
+    description: "Lower operational costs through reduced manual labor",
+    icon: "💰"
+  },
+  {
+    title: "Error Reduction",
+    description: "Minimize human errors with consistent automated processes",
+    icon: "🎯"
+  },
+  {
+    title: "24/7 Operations",
+    description: "Run automated processes around the clock without interruption",
+    icon: "🕐"
+  }
+];
 
 export default function AutomationPage() {
   const automationFeatures = [

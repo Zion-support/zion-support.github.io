@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
       this.projectRoot,logs"
       "performance-monitor.log"
       this.projectRoot,logs"
@@ -477,64 +476,4 @@ return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
-=======
-<<<<<<< HEAD
-  console.error(� Uncaught exception": ")
-    this.logError(Uncaught exception)
-  console.error("� Unhandled "rejection: )
-
-=======
-  console.error("� Uncaught "exception": ")
-    this.logError("Uncaught exception")
-  console.error("� Unhandled "rejection": ")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
     this.logError("Unhandled rejection")
-<<<<<<< HEAD
-    this.logError("Unhandled rejection")
-    this.logError("Unhandled rejection")
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-    this.logError(Unhandled rejection)
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    this.logError("Unhandled rejection")
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    this.logError("Unhandled rejection")
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

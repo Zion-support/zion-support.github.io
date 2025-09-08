@@ -1,14 +1,6 @@
-
-;
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;"
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;"";"
-ursor/automate-test-improve-and-merge-code-646c;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;"
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;"
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;"""
-
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 <<<<<<< HEAD
-
-
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

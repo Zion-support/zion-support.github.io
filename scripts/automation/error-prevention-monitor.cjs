@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-#!/""usr/bin/env"" node;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-#!/"usr/bin/env" node;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('🛡️ Starting error prevention monitor...');
-#!/usr/bin/env node;"
-
-<<<<<<< HEAD
-class ErrorPreventionMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-=======
-console.log('🛡️ Starting error prevention monitor...);
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -42,14 +6,6 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-console.log('🛡️ Starting error prevention monitor...');
-#!/usr/bin/env node;"
-
-class ErrorPreventionMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
 console.log('🛡️ Starting error prevention monitor...');
 =======
 <<<<<<< HEAD
@@ -376,15 +332,6 @@ class ErrorPreventionMonitor {
   log(message, level = 'INFO') {
 <<<<<<< HEAD
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
@@ -756,45 +703,4 @@ monitor.run();
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
-=======
 monitor.run();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-monitor.run();
-monitor.run();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-// Start the monitor;
-
-`;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require(fs');
@@ -157,25 +134,23 @@ function resolveConflictsFiles() {}
 }
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-
+  
+  sh('git fetch origin');
+  const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
   const dirty = sh(git status --porcelain || true');
   let stashed = false;
-  if (dirty && dirty.split('\n).filter(Boolean).length) {}
-    console.log(Local changes detected, stashing...');
-    try { sh('git stash push -u -m "auto-resolve-temp); stashed = true} catch {}
-  }
-=======
-  // list conflicted files;"
-
->>>>>>> origin/chore/fix-lint-and-merge
+  if (dirty && dirty.split('\n').filter(Boolean).length) {}
+    console.log('Local changes detected, stashing...');
+    try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
+  };
   const prs = await listOpenPRs(owner, repo);
-  if (!prs.length) { console.log(No open PRs'); return}
+  if (!prs.length) { console.log('No open PRs'); return};
   let merged = 0, processed = 0;
   for (const pr of prs) {}
     processed++;
     const head = pr.head.ref;
-    const base = pr.base.ref;`;
+    const base = pr.base.ref;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
 <<<<<<< HEAD
@@ -211,38 +186,4 @@ async function main() {}
   }
 }
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-// list conflicted files;"
-  const prs = await listOpenPRs(owner, repo)
-  if($2) { console.log('No open PRs'); return}
-  let merged = 0, processed = 0
-  for($2) {}
-    processed++
-    const head = pr.head.ref
-    const base = pr.base.ref;`
-    console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`)
-    try {}
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-});
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-});
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge

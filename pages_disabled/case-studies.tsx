@@ -1,9 +1,25 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { 
+  ArrowRight, 
+  ExternalLink, 
+  Calendar, 
+  User, 
+  Building,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  TrendingUp,
+  Award,
+  Clock,
+  Target,
+  Zap,
+  Shield,
+  Cloud,
+  Brain
+} from 'lucide-react';
+import Layout from '../components/Layout';
 
 const CaseStudies: NextPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');

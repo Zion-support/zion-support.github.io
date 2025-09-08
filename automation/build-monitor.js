@@ -7,12 +7,6 @@ const { execSync } = require('child_process');
  */
 class BuildMonitor {
   constructor() {
-<<<<<<< HEAD
-
-
-
-
-=======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -139,7 +133,6 @@ class BuildMonitor {
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
->>>>>>> origin/cursor/delete-old-data-records-6bba
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -157,6 +150,11 @@ class BuildMonitor {
     } else {
       console.log(logMessage);
     }
+  }
+<<<<<<< HEAD
+
+
+=======
     const report = {
       ...results
       trends: {
@@ -221,6 +219,8 @@ class BuildMonitor {
     return recommendations}
   async run() {
     this.log('Starting build health check...');
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+  async checkBuildStatus() {
     try {
 
       this.log('info', 'Checking build status...')
@@ -240,12 +240,17 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
+      
+      
+=======
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);

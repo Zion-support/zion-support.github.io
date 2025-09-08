@@ -1,13 +1,14 @@
-
-
-
-import React from 'react';
-import Head from 'next / head';
-
-import { motion } from 'framer-motion';
-
-import {
-
+import { 
+  Globe, 
+  Award, 
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Building,
+  Shield,
+  Zap,
+  Target,
+  Star,
   Handshake,
   Globe,
   Rocket,

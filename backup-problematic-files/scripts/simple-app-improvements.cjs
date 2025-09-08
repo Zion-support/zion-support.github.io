@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -30,7 +29,8 @@ class SimpleAppImprovements {
     this.startTime = Date.now();
   }
   log(message, type = 'info') {
-
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     
   }
   async runCommand(command, description) {
@@ -293,4 +293,3 @@ improvements.runImprovements().then(() => {;
   }).catch(error => {;
   console.error('Improvements "failed": ', error.message);
   process.exit(1)})
-

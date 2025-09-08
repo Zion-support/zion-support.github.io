@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,23 +52,3 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
       content = "
     "email"
     "password"
-      content = 
-    email"
-    "password"
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-  'pages/login.tsx,
-  let content =
-    if (filePath === 'pages/docs/integration-examples.tsx')
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  'pages/login.tsx,
-  let content =
-    if (filePath === 'pages/docs/integration-examples.tsx')
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

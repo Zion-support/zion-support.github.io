@@ -32,26 +32,6 @@ const Analytics = dynamic(() => import('./Analytics'),{'; 'loading': () => <p>Lo
 const Analytics = dynamic(() => import(\"./Analytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Analytics\' ,
 const Analytics = dynamic(() => import("./Analytics"),{"; loading: () => <p>Loading.</p,>}) export: "default Analytics" ,"""
 const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

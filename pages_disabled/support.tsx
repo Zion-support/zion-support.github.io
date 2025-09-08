@@ -1,3 +1,21 @@
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Phone, 
+  Mail, 
+  MessageSquare, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight,
+  HelpCircle,
+  BookOpen,
+  FileText,
+  Users,
+  Zap,
+  Shield
+} from 'lucide-react';
 
 
 

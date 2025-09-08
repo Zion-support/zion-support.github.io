@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Eye, Lock, Database, Users, Globe,
-  CheckCircle, AlertTriangle, Info
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import Link from 'next/link';
+import Layout from './components/Layout';
 
 export default function PrivacyPage() {
   const lastUpdated = 'January 15, 2025';

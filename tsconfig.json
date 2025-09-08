@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
       "ES2024",
       "DOM",
@@ -9,58 +8,13 @@
       "WebWorker",
       "WebWorker.Iterable"
     ],
-    "module": "esnext",
+    "allowJs": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*",
-        "./pages/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/api/*": [
-        "./src/api/*"
-      ],
-      "@/types/*": [
-        "./src/types/*",
-        "./types/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/context/*": [
-        "./src/context/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "react-router-dom": [
-        "./src/stubs/react-router-dom.tsx"
-      ],
-      "next-cloudinary": [
-        "./types/next-cloudinary.d.ts"
-      ],
-      "types/*": [
-        "./types/*"
-      ]
-    },
-    "typeRoots": ["./src/types"],
-
-    /* Bundler mode */
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -100,23 +54,37 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "tsBuildInfoFile": ".next/tsbuildinfo"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/data/*": [
+        "./data/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ]
+    }
   },
   "include": [
-    "next-env.d.ts",
-    "pages/**/*",
-    "src/**/*",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

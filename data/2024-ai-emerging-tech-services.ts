@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 export interface AIEmergingTechService {;
   id: string
@@ -91,5 +90,5 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200
     rating: 4.8
     reviews: 1800
-  };
-]
+  }
+];

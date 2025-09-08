@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -27,18 +26,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -91,71 +78,9 @@ const buildDir = path.join(this.projectRoot, ".next");
     this.log(" Starting Deployment Checker")
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
     this.log(` Deployment check report "generated"`)
 // console.log("\n� Deployment Check "Summary": ")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
-<<<<<<< HEAD
-
     console.log(` Git status "clean"`)
-    console.log(` Git status "clean"`)
-    console.log(` Git status "clean"`)
-
-
-
-=======
-<<<<<<< HEAD
-
-    console.log(` Git status "clean"`)
-
-
-<<<<<<< HEAD
-
-
-
-=======
-    console.log(` Git status clean"`)
-
-    console.log(` Git status "clean`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.log(` Git status clean"`)
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    console.log(` Git status "clean"`)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    console.log(` Git status "clean"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.log(` Git status "clean"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

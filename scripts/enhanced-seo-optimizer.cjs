@@ -1,8 +1,4 @@
 #!/usr/bin/env node;
-#!/usr/bin/env node;
-
-
-
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`)
@@ -51,4 +47,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
-
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}

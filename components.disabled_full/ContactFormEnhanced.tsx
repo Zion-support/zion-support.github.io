@@ -255,50 +255,15 @@ import {
   AlertCircle,
   User,
   Mail,
-<<<<<<< HEAD
-
-
-
-  const handleSubmit = async ("e": React.FormEvent) => {
-
-
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));'
-    setSubmitStatus('success');
-
-    setIsSubmitting(false);
-
-
-
-=======
-
-
-
-
-  MessageSquare} from 'lucide-react';'
-const "ContactFormEnhanced": React.FC = () => {"
-  }
+  MessageSquare,
+} from 'lucide-react';
+const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({
-    "name": '','
-    "email": '','
-    "subject": '','
-    "message": ''});'
-  const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<;
-    'idle' | 'success' | 'error''
-  >('idle');'
-
-
-
-  const handleSubmit = async ("e": React.FormEvent) => {"
-    }
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => { return setTimeout(resolve, 2000)); }
-    setSubmitStatus('success');'
-    setIsSubmitting(false);
-
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
   const [formData, setFormData] = useState({
@@ -310,141 +275,21 @@ const "ContactFormEnhanced": React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
-
   const handleSubmit = async (e: React.FormEvent) => {
-  const handleSubmit = async (e: React.FormEvent) => {
-  const handleSubmit = async (e: React.FormEvent) => {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
   const handleSubmit = async ("e": React.FormEvent) => {
 
 
 
     setIsSubmitting(false);
-
-
     setFormData({ name: '', email: '', subject: '', message: '' });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-                value={formData.name}
-                onChange={e =>
-
-
-
-
-
-
-                  setFormData({ ...formData, "name": 'e.target.value' })'
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
-                placeholder="Enter your name""
-                required
-              />{' '}'
-            </div>{' '}'
-          </div>{' '}'
-          <div>
-            {' '}'
-
-
-
-            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
-              {' '}'
-              Email *{' '}'
-            </label>{' '}'
-            <div className="relative">"
-              {' '}'
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '}'
-              <input,
-type="email""
-                value={formData.email}
-                onChange={e =>
-
-
-
-
-
-
-                  setFormData({ ...formData, "email": 'e.target.value' })'
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
-                placeholder="Enter your email""
-                required
-              />{' '}'
-            </div>{' '}'
-          </div>{' '}'
-          <div>
-            {' '}'
-
-
-
-            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
-              {' '}'
-              Subject *{' '}'
-            </label>{' '}'
-            <input,
-type="text""
-              value={formData.subject}
-              onChange={e =>
-
-
-
-
-
-
-                setFormData({ ...formData, "subject": 'e.target.value' })'
-              }
-              className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 bg-white "dark":bg-gray-700 text-gray-900 "dark":text-white""
-              placeholder="Enter subject""
-              required
-            />{' '}'
-          </div>{' '}'
-          <div>
-            {' '}'
-
-
-
-            <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">"
-              {' '}'
-              Message *{' '}'
-            </label>{' '}'
-            <div className="relative">"
-              {' '}'
-              <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '}'
-              <textarea,
-value={formData.message}
-                onChange={e =>
-
-
-
-
-                  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
   };
   return ("
     <div className="max-w-2xl mx-auto p-6">'
       {' '}
-
-<<<<<<< HEAD
-=======
-
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
-        {' '}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
       <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">
@@ -452,17 +297,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           {' '}
           <div>'
             {' '}
-
-<<<<<<< HEAD
-=======
-
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Name *{' '}
@@ -475,21 +310,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 type="text"
                 value={formData.name}
                 onChange={e =>
-
-<<<<<<< HEAD
-=======
-
                   setFormData({ ...formData, name: 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  setFormData({ ...formData, name: 'e.target.value' })
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
                   setFormData({ ...formData, "name": 'e.target.value' })
                 }"
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -500,17 +323,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>{' '}
           <div>'
             {' '}
-
-<<<<<<< HEAD
-=======
-
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Email *{' '}
@@ -523,21 +336,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 type="email"
                 value={formData.email}
                 onChange={e =>
-
-<<<<<<< HEAD
-=======
-
                   setFormData({ ...formData, email: 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  setFormData({ ...formData, email: 'e.target.value' })
-                }
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
                   setFormData({ ...formData, "email": 'e.target.value' })
                 }"
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -548,17 +349,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>{' '}
           <div>'
             {' '}
-
-<<<<<<< HEAD
-=======
-
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Subject *{' '}
@@ -568,21 +359,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               type="text"
               value={formData.subject}
               onChange={e =>
-
-<<<<<<< HEAD
-=======
-
                 setFormData({ ...formData, subject: 'e.target.value' })
               }
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                setFormData({ ...formData, subject: 'e.target.value' })
-              }
-              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
                 setFormData({ ...formData, "subject": 'e.target.value' })
               }"
               className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white""
@@ -592,17 +371,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>{' '}
           <div>'
             {' '}
-
-<<<<<<< HEAD
-=======
-
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Message *{' '}
@@ -616,30 +385,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 
                 onChange={e =>
-
-=======
-                onChange={e =>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  setFormData({ ...formData, message: 'e.target.value' })
+                }
+                rows={6}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
+                  setFormData({ ...formData, "message": 'e.target.value' })
+                }
+                rows={6}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
+                placeholder="Enter your message"
+                required
+              />{' '}
+            </div>{' '}
+          </div>{' '}
+          <button
+            type="submit"
             disabled={isSubmitting}
-
-
-
-<<<<<<< HEAD
-=======
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 "disabled":opacity-50 flex items-center justify-center space-x-2""
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
+            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
           >
             {' '}'
             {isSubmitting ? (
@@ -678,17 +441,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             )}{' '}'
           </button>{' '}'
           {submitStatus === 'success' && (
-
-<<<<<<< HEAD
-=======
-
             <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
-            <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
             <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
               {' '}
               <CheckCircle className="w-5 h-5" />{' '}
@@ -707,28 +460,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   );
 }
 export default ContactFormEnhanced;
-
-<<<<<<< HEAD
-
-=======
-
-
-
 import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-'"
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Send,CheckCircle,AlertCircle,User,Mail,MessageSquare,} from 'lucide-react'; const ContactFormEnhanced: React.FC = () => { const [formData,setFormData] = useState({ name: '',email: '',subject: '',message: '',}); const [isSubmitting,setIsSubmitting] = useState(false); const [submitStatus,setSubmitStatus] = useState< 'idle' | 'success' | 'error' >('idle'); const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setIsSubmitting(true); await new Promise(resolve => setTimeout(resolve,2000)); setSubmitStatus('success'); setIsSubmitting(false); setFormData({ name: '',email: '',subject: '',message: '' })}; return ( <div className="max-w-2xl mx-auto p-6"> {' '} <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6"> {' '} <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6"> {' '} Get in Touch{' '} </h2>{' '} <form onSubmit={handleSubmit} className="space-y-4"> {' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Name *{' '} </label>{' '} <div className="relative"> {' '} <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="text" value={formData.name} onChange={e => setFormData({ ...formData,name: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your name" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Email *{' '} </label>{' '} <div className="relative"> {' '} <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />{' '} <input type="email" value={formData.email} onChange={e => setFormData({ ...formData,email: 'e.target.value' }) } className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter your email" required />{' '} </div>{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Subject *{' '} </label>{' '} <input type="text" value={formData.subject} onChange={e => setFormData({ ...formData,subject: 'e.target.value' }) } className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="Enter subject" required />{' '} </div>{' '} <div> {' '} <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> {' '} Message *{' '} </label>{' '} <div className="relative"> {' '} <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400" />{' '} <textarea value={formData.message} onChange={e => setFormData({ ...formData,message: 'e.target.value' }) } rows={6} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none" placeholder="Enter your message" required />{' '} </div>{' '} </div>{' '} <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2" > {' '} {isSubmitting ? ( <> {' '} <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>{' '} <span>Sending...</span>{' '} </> ) : ( <> {' '} <Send className="w-4 h-4" /> <span>Send Message</span>{' '} </> )}{' '} </button>{' '} {submitStatus === 'success' && ( <div className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2"> {' '} <CheckCircle className="w-5 h-5" />{' '} <span>Message sent successfully!</span>{' '} </div> )}{' '} </form>{' '} </div>{' '} </div> )}; export default ContactFormEnhanced;
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-#!/usr/bin/env node,
-  const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
-class SecurityAuditor {
-  constructor() {
-    this.vulnerabilities = [];
-    this.recommendations = [];
-  }
-  async auditDependencies() {
-    try {
-<<<<<<< HEAD
-      console.log('Auditing dependencies...);
-      const result = execSync(npm audit --json', { encoding: 'utf8 });
-      const auditData = JSON.parse(result);
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-      if (auditData.vulnerabilities) {
-        this.vulnerabilities = Object.values(auditData.vulnerabilities);
-        console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
-=======
-=======
     this.projectRoot = process.cwd();
 
     this.ensureDirectories()}
@@ -70,18 +27,7 @@ class SecurityAuditor {
       const auditData = JSON.parse(result);
       const vulnerabilities = auditData.vulnerabilities || {};
       const vulnerabilityCount = Object.keys(vulnerabilities).length;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      console.log('Auditing dependencies...');
-      const result = execSync('npm audit --json', { encoding: 'utf8' });
-      const auditData = JSON.parse(result);
-      if (auditData.vulnerabilities) {
-        this.vulnerabilities = Object.values(auditData.vulnerabilities);
-        console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
@@ -198,16 +144,6 @@ const sensitivePatterns = [/API_KEY/i,;
 
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
 
-<<<<<<< HEAD
-  // TODO: Implement
-
-  // TODO: Implement
-      const securityIssues = [];
-      // Check for common security issues in code;
-      const patterns = [{
-
-=======
->>>>>>> merged-prs-20250907-203621
       return {
         "totalDependencies": Object.keys(dependencies).length,
         "vulnerablePackages": foundVulnerable,
@@ -278,6 +214,7 @@ const sensitivePatterns = [/API_KEY/i,;
           })} catch (error) {
           // Skip files that can't be read
         }
+      }
 
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
 
@@ -314,7 +251,8 @@ const sensitivePatterns = [/API_KEY/i,;
       console.error('Error auditing dependencies:', error);
     }
   }
-  async generateReport() {
+
+  generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
       "analysis": {
@@ -323,35 +261,12 @@ const sensitivePatterns = [/API_KEY/i,;
         "dependencies": await this.checkDependencies(),
         "codeSecurity": await this.checkCodeSecurity()"
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
-    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`Security audit report generated: ${reportPath}`);
-  }
-  async run() {
-    console.log('🔒 Starting Security Audit');
-    await this.auditDependencies();
-    await this.generateReport();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Generate recommendations;
     // Generate recommendations
     report.recommendations = this.generateRecommendations(report.analysis);
 
     const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
     
     this.log(`📄 Security report "generated": ${reportFile}`);
     
@@ -420,59 +335,19 @@ const sensitivePatterns = [/API_KEY/i,;
   }
 }
 
-      throw error}
->>>>>>> origin/chore/fix-lint-and-merge
-
-=======
-  }
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-  }
-}
->>>>>>> merged-prs-20250907-203621
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       
       
       
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
+
 module.exports = SecurityAuditor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 <<<<<<< HEAD
 const fs = require('fs');
@@ -521,36 +396,4 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "message"
 <<<<<<< HEAD
         "impact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        impact
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       console.error('\n� Security Auditor "failed")
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-      console.error('\n� Security Auditor "failed")
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-
-
-
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      console.error('\n� Security Auditor "failed")
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

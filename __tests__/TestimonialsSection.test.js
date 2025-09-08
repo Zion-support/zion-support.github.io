@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import TestimonialsSection from '../components/TestimonialsSection" describe('TestimonialsSection',() => {' test('renders without crashing',() => {' render(<TestimonialsSection / />) expect(screen.getByTestId("testimonialssection")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<TestimonialsSection / />) }) test('handles user interactions',() => {' render(<TestimonialsSection / />) }) test('applies correct styling',() => {' render(<TestimonialsSection / />) }) })

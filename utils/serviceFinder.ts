@@ -29,6 +29,3 @@ export const findService = ("_serviceName": string) => {
   return null
 };
 export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};

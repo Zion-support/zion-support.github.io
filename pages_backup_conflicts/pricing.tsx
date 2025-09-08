@@ -1,14 +1,12 @@
-import React from 'react';
 <<<<<<< HEAD
+import * as React from 'react';
 
-
+=======
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 interface PricingProps {
   // Add props here as needed
 }
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 export default function Pricing({ }: PricingProps) {
   return (
     <div>
@@ -16,27 +14,4 @@ export default function Pricing({ }: PricingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
-
-
-  it('renders add to cart button', () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
-    
-    const button = screen.getByTestId('add-to-cart');
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveTextContent('Add to Cart');
-  });
-
-
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba

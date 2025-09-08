@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -25,25 +7,10 @@
  * Monitors system health and reports status
  */
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
 
->>>>>>> merged-prs-20250907-203621
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -57,80 +24,18 @@ class HealthChecker {}
     };
     log(message) {}
         const timestamp = new Date().toISOString();
-const logMessage = `[${timestamp}] ${message}\n`;`;
+        const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
     async checkSystemHealth() {}
         this.log('Starting health check...');
-=======
-<<<<<<< HEAD
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString();
-        const logMessage = `[${timestamp}] ${message}\n`;`
-        console.log(logMessage.trim());
-        fs.appendFileSync(this.logFile, logMessage)};
         
-=======
-            fs.mkdirSync(logsDir, { "recursive: true })}
-    }
-    log(message) {}
-        const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
-    async checkSystemHealth() {}"
 
-<<<<<<< HEAD
-            "checks": {};"
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const logMessage = `[${timestamp}] ${message}\n`;`
-        console.log(logMessage.trim());
-        fs.appendFileSync(this.logFile, logMessage)};
-<<<<<<< HEAD
-    async checkSystemHealth() {}
-        this.log('Starting health check...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-        const healthReport = {}
-            "timestamp": new Date().toISOString(),
-            "status": 'healthy',
-            "checks": {};
-        };
-<<<<<<< HEAD
-    async checkSystemHealth() {}"
-
-            "checks": {};"
-=======
-<<<<<<< HEAD
-=======
-=======
-    async checkSystemHealth() {}"
-
-            "checks": {};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
@@ -144,12 +49,7 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
                 "value": nodeVersion;
             };
             this.log(`Node.js "version": ${nodeVersion}`);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
             // Check available memory;
             const memUsage = process.memoryUsage();
             healthReport.checks.memory = {}
@@ -177,19 +77,7 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
 =======
             };
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
-<<<<<<< HEAD
-            healthReport.checks.nodeVersion = {}"
-=======
-<<<<<<< HEAD
-=======
-=======
-            healthReport.checks.nodeVersion = {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check disk space;
             try {}"
 <<<<<<< HEAD
@@ -282,11 +170,7 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
         this.log(`Health check completed. "Status": ${healthReport.status}`);
 =======
 
@@ -309,57 +193,4 @@ if (require.main === module) {}
     const healthChecker = new HealthChecker();
 <<<<<<< HEAD
     healthChecker.run()};
-=======
-<<<<<<< HEAD
-    healthChecker.run()}
-
-=======
-    healthChecker.run()};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
 module.exports = HealthChecker;
-<<<<<<< HEAD
-module.exports = HealthChecker;
-module.exports = HealthChecker;
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = HealthChecker;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = HealthChecker;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

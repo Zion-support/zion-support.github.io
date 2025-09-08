@@ -1,30 +1,14 @@
-
-
 <<<<<<< HEAD
-=======
-
-import React from 'react;
-import Layout from ../../components/Layout';';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from lucide-react;
-import React from 'react';
-
+import * as React from 'react';
 import Head from 'next/head';
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-
-const features = [
-  {
-    icon: Cloud,
-    title: 'Cloud Migration',
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 const features = [;
   {}
@@ -35,302 +19,12 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
-    icon: Cloud,;
-    title: 'Cloud Migration,',,
-  description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import Layout from '../../components/Layout';
-import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';  {
-
-    icon: Server,
-    title: 'Infrastructure as Code',
-    description: 'Manage your infrastructure using code for better consistency and automation.',
-
-<<<<<<< HEAD
-
-    description: Seamless migration to cloud platforms with minimal downtime and maximum efficiency.,
-    benefits: ['Zero-downtime migration', Cost optimization, 'Performance improvement', Scalability]
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: [Zero-downtime migration, 'Cost optimization', Performance improvement, 'Scalability']
-  },
-
-=======
-
-    benefits: ['Version control', 'Automated provisioning', 'Consistent environments', 'Disaster recovery']
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
-<<<<<<< HEAD
-
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
-
-const features = [;
-  {;
-    icon: Cloud,;
-    title: 'Cloud Migration',;
-    description: 'Seamless migration to cloud platforms with zero downtime';
-  },;
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  {}
-    icon: Server,
-    title: 'Infrastructure as Code,',
-    description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
-  },
-  {}
-    icon: Database,
-    title: 'Database Management,',
-    description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',
-  },
-  {}
-<<<<<<< HEAD
-
-
-    icon: Shield,;
-    title: 'Security & Compliance,',;
-    description: 'Implement robust security measures and maintain compliance with industry standards.'',;
-  },;
-
-
-=======
-    icon: Shield,
-    title: 'Security & Compliance,',
-    description: 'Implement robust security measures and maintain compliance with industry standards.'';
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  {}
-    icon: Zap,
-    title: 'CI/CD Pipelines,',
-    description: 'Build automated deployment pipelines for faster, more reliable software delivery.',
-  }
-;];
-const services = [;
-<<<<<<< HEAD
-
-
-
-  'Cloud Architecture Design',',;
-  'Container Orchestration (Kubernetes)',',;
-  'Microservices Implementation',',;
-  'Monitoring & Logging Setup',',;
-  'Disaster Recovery Planning',',;
-  'Performance Optimization',',;
-  'Cost Optimization',',;
-  'Security Hardening'',;
-
-  ];
-export default function CloudDevOpsPage() {;
-  return (
-    <Layout)
-      title="Cloud & DevOps Services - Zion Tech Group""
-      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."">;
-
-
-=======
-  'Cloud Architecture Design',',
-  'Container Orchestration (Kubernetes)',',
-  'Microservices Implementation',',
-  'Monitoring & Logging Setup',',
-  'Disaster Recovery Planning',',
-  'Performance Optimization',',
-  'Cost Optimization',',
-  'Security Hardening'';
-;];
-export default function CloudDevOpsPage() {
-  return (;
-    <Layout );
-      title="Cloud & DevOps Services - Zion Tech Group"";
-      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure.""
-    >;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">"
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto text-center">";
-<<<<<<< HEAD
-
-
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Cloud & DevOps,;
-
-
-=======
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
-                Cloud & DevOps;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
-                  Solutions;
-                </span>;
-              </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Accelerate your digital transformation with our comprehensive cloud migration, 
-                infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.,
-              </p>;
-<<<<<<< HEAD
-
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";
-                </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,;
-
-
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";
-                </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";
-                  View Case Studies;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-white mb-4">";
-                Comprehensive Cloud & DevOps Services;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                From cloud migration to continuous deployment, we provide end-to-end solutions;
-                that modernize your infrastructure and accelerate your development cycles.;
-              </p>;
-            </div>;
-<<<<<<< HEAD
-
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-              {features && features.map((feature, index) => (,;
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature && feature.icon className="w-6 h-6 text-white" />";
-                  </div>,;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
-                  <p className="text-gray-300">{feature && feature.description}</p>";
-
-
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature.icon className="w-6 h-6 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-                  <p className="text-gray-300">{feature.description}</p>"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </div>;
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Services List */}
-        <section className="py-20 bg-gray-800/30">"
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto">";
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";
-                Our Cloud & DevOps Expertise;
-              </h2>;
-<<<<<<< HEAD
-
-
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
-                {services && services.map((service, index) => (,;
-                  <div key={index} className="flex items-center space-x-3">";
-
-
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {services.map((service, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{service}</span>"
-                  </div>;
-                ))}
-              </div>,
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
-                Ready to Transform Your Infrastructure?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our cloud and DevOps experts help you build a scalable, secure, 
-                and efficient infrastructure that grows with your business.;
-              </p>;
-<<<<<<< HEAD
-
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Whitepaper,;
-
-
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Whitepaper;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-<<<<<<< HEAD
-
-
-
-
-=======
-    title: 'Infrastructure as Code',
-    description: 'Automated infrastructure provisioning and management'
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    description: 'Seamless migration to cloud platforms with zero downtime'
-  },
-
-
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-    description: 'Seamless migration to cloud platforms with zero downtime'
-  },
   {}
     icon: Server,
     title: 'Infrastructure as Code,',
@@ -464,8 +158,6 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
   },
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -474,73 +166,41 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     icon: GitBranch,
-    title: CI/CD Pipelines,
+    title: 'CI/CD Pipelines',
     description: 'Automated build, test, and deployment processes'
   },
   {
     icon: Shield,
-    title: Security & Compliance,
+    title: 'Security & Compliance',
     description: 'Enterprise-grade security and compliance frameworks'
   },
   {
     icon: Zap,
-    title: Performance Optimization,
+    title: 'Performance Optimization',
     description: 'Optimized cloud resources for maximum performance'
   },
   {
     icon: CheckCircle,
-    title: Monitoring & Alerting,
+    title: 'Monitoring & Alerting',
     description: '24/7 monitoring and proactive alerting systems'
-<<<<<<< HEAD
-=======
-  },
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
   }
 ];
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function CloudDevOpsPage() {;
-const benefits = [;
-  'Reduced infrastructure costs by up to 50%',;
-  'Improved deployment speed and reliability',;
-  'Enhanced security and compliance',;
-  'Automated scaling and resource management',;
-  'Better disaster recovery capabilities',;
-  'Faster time-to-market for applications';
+const benefits = [
+  'Reduced infrastructure costs by up to 50%',
+  'Improved deployment speed and reliability',
+  'Enhanced security and compliance',
+  'Automated scaling and resource management',
+  'Better disaster recovery capabilities',
+  'Faster time-to-market for applications'
 ];
-export default function CloudDevOpsServices() {;
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export default function CloudDevOpsServices() {
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
-
-<<<<<<< HEAD
-
-=======
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
     >
       <div className="min-h-screen bg-white">
-
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -557,20 +217,41 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   Get Started
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   View Case Studies
                 </button>
               </div>
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-
-
-=======
+        {/* Features Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Cloud & DevOps Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive cloud and DevOps services designed to modernize your infrastructure
+                and accelerate your development processes.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -603,133 +284,31 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        {/* Tools Section */}
-        <section className="py-16 bg-white">;
-          <div className="max-w-7xl mx-auto px-4">;
-            <motion&& motion.div              initial={{ opacity: 0, y: 20 }}
-
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center mb-12"
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive cloud and DevOps solutions to modernize your infrastructure.
-
-              </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow>
-                  <div className=w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-blue-600 />
-                  </div>
-                  <h3 className=text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600>
-                    {feature.description}
-                  </p>
-                </div>
-
-              ))}
-
-
-
-        {/* Tools Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-        {/* Tools Section */}"
-        <section className="py-16 bg-white">"
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center mb-12"
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We work with leading cloud platforms and DevOps tools to deliver the best solutions.
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tools.map((tool, index) => (
-                <motion.div;
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className=bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors text-center"
-                >
-                  <h3 className="text-lg font-semibold mb-2>{tool.name}</h3>
-                  <p className=text-gray-600 text-sm">{tool.description}</p>
-                </motion.div>
-              ))}
-
-        {/* Process Section */}
-        <section className="py-16 px-4>
-          <div className=max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12
-            >
-              <h2 className=text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto>
-                We follow a proven methodology to ensure successful cloud and DevOps implementations.
-              </p>
-            </motion.div>
-            <div className=grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { step: 1, title: 'Assessment', description: Analyze your current infrastructure and requirements },
-                { step: '2', title: Planning, description: 'Design the optimal cloud and DevOps strategy' },
-                { step: 3, title: 'Implementation', description: Execute the migration and setup processes },
-                { step: '4', title: Optimization, description: 'Monitor, optimize, and maintain your systems' }
-              ].map((phase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center
-                >
-                  <div className=w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    {phase.step}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2>{phase.title}</h3>
-                  <p className=text-gray-600">{phase.description}</p>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-
-
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our cloud and DevOps team to discuss your specific requirements
+              and discover how we can help modernize your infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Cloud Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Cloud Brochure
+              </button>
+            </div>
           </div>
         </section>
       </div>
-
     </Layout>
-    </Layout>
-    </Layout>
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-    </Layout>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
   );
 
 =======

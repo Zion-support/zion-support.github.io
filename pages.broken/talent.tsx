@@ -20,10 +20,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-
-
-
-
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{;
     "id": 1,;
@@ -39,19 +35,25 @@ const jobOpenings = [{;
       "Proficiency in Python, TensorFlow, PyTorch";
       "Experience with cloud platforms (AWS, Azure, GCP)";
 import Layout from '../components/Layout';
-
-
-
-
+const jobOpenings = [
+  {
+    id: 1,
+    title: "Senior AI/ML Engineer",
+    department: "AI Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
+    requirements: [
+      "Master's degree in Computer Science or related field",
+      "5+ years experience in AI/ML development",
+      "Proficiency in Python, TensorFlow, PyTorch",
+      "Experience with cloud platforms (AWS, Azure, GCP)",
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
-
-
-
-
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -75,21 +77,11 @@ import Layout from '../components/Layout';
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
-
-
-
-
-
-
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
-
-
-
-
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -113,21 +105,11 @@ import Layout from '../components/Layout';
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
-
-
-
-
-
-
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
-
-
-
-
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -151,21 +133,11 @@ import Layout from '../components/Layout';
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
-
-
-
-
-
-
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
-
-
-
-
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -189,21 +161,11 @@ import Layout from '../components/Layout';
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
-
-
-
-
-
-
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
-
-
-
-
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -227,21 +189,11 @@ import Layout from '../components/Layout';
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
-
-
-
-
-
-
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
-
-
-
-
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -441,112 +393,17 @@ const benefits = [{;
     "icon": ArrowRight;
   }
 ];
-const values = ["Innovation and creativity";
-  "Collaboration and teamwork";
-  "Continuous learning";
-  "Work-life balance";
-  "Diversity and inclusion";
-const benefits = [;
-  {;
-    title: "Competitive Compensation",;
-    description: "We offer competitive salaries and performance-based bonuses",;
-    icon: Star;
-  },;
-  {;
-    title: "Health & Wellness",;
-    description: "Comprehensive health insurance and wellness programs",;
-    icon: Users;
-  },;
-  {;
-    title: "Flexible Work",;
-    description: "Remote work options and flexible schedules",;
-    icon: Clock;
-  },;
-  {;
-    title: "Professional Growth",;
-    description: "Learning opportunities and career development support",;
-    icon: ArrowRight;
-  }
-];
-const values = [;
-  "Innovation and creativity",;
-  "Collaboration and teamwork",;
-  "Continuous learning",;
-  "Work-life balance",;
-  "Diversity and inclusion",;
+const values = [
+  "Innovation and creativity",
+  "Collaboration and teamwork",
+  "Continuous learning",
+  "Work-life balance",
+  "Diversity and inclusion",
+<<<<<<< HEAD
 
 
-
-
-
-const benefits = [{
-    "title": "Competitive Compensation"
-    "description": "We offer competitive salaries and performance-based bonuses"
-    "icon": Star
-  },
-  {
-    "title": "Health & Wellness"
-    "description": "Comprehensive health insurance and wellness programs"
-    "icon": Users
-  },
-  {
-    "title": "Flexible Work"
-    "description": "Remote work options and flexible schedules"
-    "icon": Clock
-  },
-  {
-    "title": "Professional Growth"
-    "description": "Learning opportunities and career development support"
-    "icon": ArrowRight
-const benefits = [{;
-    "title": "Competitive Compensation";
-    "description": "We offer competitive salaries and performance-based bonuses";
-    "icon": Star;
-  },;
-  {;
-    "title": "Health & Wellness";
-    "description": "Comprehensive health insurance and wellness programs";
-    "icon": Users;
-  },;
-  {;
-    "title": "Flexible Work";
-    "description": "Remote work options and flexible schedules";
-    "icon": Clock;
-  },;
-  {;
-    "title": "Professional Growth";
-    "description": "Learning opportunities and career development support";
-    "icon": ArrowRight;
-  }
-];
-const values = ["Innovation and creativity";
-  "Collaboration and teamwork";
-  "Continuous learning";
-  "Work-life balance";
-  "Diversity and inclusion";
-const benefits = [;
-  {;
-    title: "Competitive Compensation",;
-    description: "We offer competitive salaries and performance-based bonuses",;
-    icon: Star;
-  },;
-  {;
-    title: "Health & Wellness",;
-    description: "Comprehensive health insurance and wellness programs",;
-    icon: Users;
-  },;
-  {;
-    title: "Flexible Work",;
-    description: "Remote work options and flexible schedules",;
-    icon: Clock;
-  },;
-  {;
-    title: "Professional Growth",;
-    description: "Learning opportunities and career development support",;
-    icon: ArrowRight;
-  }
-];
-
+=======
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -565,9 +422,8 @@ export default function TalentPage() {;
 
 
   return (
-
-
-
+    <MainLayout,
+    title="Careers - Zion Tech Group"
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -605,35 +461,20 @@ export default function TalentPage() {;
                   key={job && job.id}
     <Layout 
       title="Careers - Zion Tech Group"
-
-
-
-
-
-
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-
-
-
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div,
-
-
-
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -656,10 +497,6 @@ export default function TalentPage() {;
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-
-
-
-
             <motion.div,
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
@@ -693,10 +530,8 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -751,19 +586,13 @@ export default function TalentPage() {;
                   </motion && motion.div>;
                 );
               })}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
         {/* Values Section */}
-
-
-
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div,
-
-
-
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -773,10 +602,8 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -841,10 +668,10 @@ export default function TalentPage() {;
                   </div>;
                 </motion && motion.div>;
               ))}
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">;
         <div className="container mx-auto px-4">;
@@ -856,17 +683,11 @@ export default function TalentPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={index}
-        </section>;
+        </section>
         {/* Job Openings Section */}
-
-
-
-        <section id="openings" className="py-20 bg-white">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div,
-
-
-
+        <section id="openings" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -876,10 +697,8 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -978,38 +797,32 @@ export default function TalentPage() {;
                   </div>;
                 </motion && motion.div>;
               ))}
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-        <div className="container mx-auto px-4">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-3xl font-bold mb-4">;
-              Don't See Your Role?;
-            </h2>;
-            <p className="text-xl mb-8">;
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.;
-            </p>;
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
-              Send Resume;
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
-        </section>;
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Don't See Your Role?
+            </h2>
+            <p className="text-xl mb-8">
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Send Resume
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+        </section>
         {/* CTA Section */}
-
-
-
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion&& motion.div,
-
-
-
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1017,10 +830,8 @@ export default function TalentPage() {;
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

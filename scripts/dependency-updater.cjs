@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-const { execSync } = require('child_process');
-// console.log('� Starting dependency update check...')
-    console.log(' Checking for outdated packages...')
-const output = execSync('npm outdated --json', { "encoding"});
-      console.log('⚠  Could not check outdated "packages")
-const output = execSync('npm audit --json', { "encoding"});
-    console.log('⚠  Could not check security "vulnerabilities")
-      "type"
-// console.log('\n Dependency Update "Report")
-  console.log('\n Dependency Update "Report")
-// console.log('\n� Outdated "Packages")
-    console.log('\n� Security "Vulnerabilities")
-=======
-<<<<<<< HEAD
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
-#!/usr/bin/env node;
-///usr/bin/env node
-const fs = require('fs')
-
-
-
 const { execSync } = require('child_process')
 =======
 <<<<<<< HEAD
@@ -111,51 +86,4 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
-<<<<<<< HEAD
-
     console.log('\n "Recommendations")
-    console.log('\n "Recommendations")
-    console.log('\n "Recommendations")
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    console.log('\n "Recommendations")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    console.log('\n "Recommendations")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.log('\n "Recommendations")
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-<<<<<<< HEAD
-
-const { execSync } = require('child_process')
-    console.log('\n "Recommendations")
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

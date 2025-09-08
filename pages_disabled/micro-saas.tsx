@@ -1,14 +1,5 @@
-
-
-
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
-
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import * as React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 
 import {;

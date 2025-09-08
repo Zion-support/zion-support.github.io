@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 =======
 <<<<<<< HEAD
@@ -48,8 +47,6 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const glob = require("glob");
-const glob = require("glob");"
-
 
 class $1 {}
   constructor() {}
@@ -102,8 +99,7 @@ class $1 {}
   };
   log(message, isError = false) {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-const logMessage = `[${timestamp}] ${message}\n`;`;
+    const logMessage = `[${timestamp}] ${message}\n`;`
     if (isError) {}
   fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {`}
   fs.appendFileSync(this.logFile, logMessage);console.log(`[INFO] ${message}`)};
@@ -117,28 +113,6 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
         "stdio": "pipe",
         "timeout": 60000;
 
-=======
-<<<<<<< HEAD
-    const logMessage = `[${timestamp}] ${message}\n`;`
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    const logMessage = `[${timestamp}] ${message}\n`;`
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-    if (isError) {}
-  fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {`}
-  fs.appendFileSync(this.logFile, logMessage);console.log(`[INFO] ${message}`)};
-  };
-;
   async runTypeCheck() {}
   try {}
   this.log("Running TypeScript type check...");
@@ -218,17 +192,7 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 120000;
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async runBuild() {}
   try {}
   this.log("Running build process...");
@@ -503,7 +467,6 @@ const fullPath = path.join(this.projectRoot, "filePath)
         if (missingSemicolonRegex.test(content)) {}
   content = content.replace(missingSemicolonRegex, "$&;");
 
-
   fixImportIssues() {}
   this.log("Fixing import issues...");
     const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
@@ -513,7 +476,6 @@ const fullPath = path.join(this.projectRoot, "filePath)
   const fullPath = path.join(this.projectRoot, "filePath);
         let content = fs.readFileSync(fullPath", "utf8");
         let modified = false;
-
 
         // Fix broken import statements;
         const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^"]+)["]\s*;?\s*$/gm;
@@ -597,17 +559,7 @@ const fullPath = path.join(this.projectRoot, "filePath)
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
@@ -633,16 +585,6 @@ const fullPath = path.join(this.projectRoot, "filePath)
         }
 <<<<<<< HEAD
 });
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
@@ -701,17 +643,7 @@ const fullPath = path.join(this.projectRoot, "filePath)
       for (const dep of essentialDeps) {}
   try {execSync(`npx ${dep} --version`, { "stdio": "pipe" })} catch (error) {  this.log(`Installing missing "dependency": ${dep  }`);execSync(`npm install --save-dev ${dep}`, { "cwd": this.projectRoot, "stdio": "pipe" }
 });this.log(`${dep} installed`);
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Check if other essential dependencies are available;
       const essentialDeps = ["@"types/react"", "@"types/react-dom"", "@"types/node""];
       for (const dep of essentialDeps) {}
@@ -908,7 +840,6 @@ const fullPath = path.join(this.projectRoot, "filePath)
       }
 });
 
-
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
 
@@ -1030,17 +961,7 @@ await this.installMissingDependencies()
         this.errorCount++};
       ;
       this.log("PM2 Error Prevention Automation completed")} catch (error) {  this.log(`Fatal error in "automation": ${error.message  }`, true);
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async run() {}
   this.log("Starting PM2 Error Prevention Automation...");
     try {}
@@ -1117,45 +1038,11 @@ process.on("SIGINT", () => {}
 <<<<<<< HEAD
 });
 
-
-=======
-<<<<<<< HEAD
-
-
-
 process.on("SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");
   process.exit(0)}
 });
 
-
-
-// Run the automation;
-<<<<<<< HEAD
-automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
-=======
-automation.run().catch(error => {automation.log(`Unhandled error": ${error.message}`, true);
-=======
-<<<<<<< HEAD
-});
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-process.on("SIGTERM", () => {}
-  automation.log("Received SIGTERM, shutting down gracefully...");
-  process.exit(0)}
-});
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
 =======
@@ -1176,53 +1063,4 @@ process.on("SIGTERM", () => {}
 
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   process.exit(1)}
-
 });
-<<<<<<< HEAD
-=======
-});
-});
-<<<<<<< HEAD
-
-
-
-=======
-});
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-});
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

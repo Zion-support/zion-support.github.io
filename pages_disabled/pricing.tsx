@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import Head from 'next/head'
+import Link from 'next/link'
 import { 
   CheckCircle, Star, Zap, Shield, Users, 
   ArrowRight, Brain, Atom, Rocket, Database,
@@ -129,7 +128,19 @@ export default function PricingPage() {
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Head>
 
-      <EnhancedNavigation />
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+import React from 'react';
+import Head from 'next/head';
+            </h1>
+            <p className="text-xl text-blue-100 mb-8">
+              Choose the perfect plan for your business needs
+            </p>
+          </div>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">

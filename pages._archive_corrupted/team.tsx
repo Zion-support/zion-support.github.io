@@ -1,9 +1,7 @@
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
+}
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -11,18 +9,8 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-
-}
-}
-
-
-
 <<<<<<< HEAD
-
-
-
-
+}
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

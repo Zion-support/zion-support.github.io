@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-#!/""usr/bin/env"" node;
-=======
-<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-
-
-=======
-<<<<<<< HEAD
-
-#!/"usr/bin/env" node;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-
 
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 #!/usr/bin/env node;"
@@ -87,7 +72,6 @@ function cleanContent(content) {}
       .replace(/^"\s*$/u, );"
   );
 
-
   let out = lines.join("\n");
 "
   let out = lines.join("\n");"
@@ -98,37 +82,7 @@ function cleanContent(content) {}
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*"\s*(?=\s*["", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
-    .replace(/,\s*"/g, ",");"
-    // Remove apostrophe after closing tokens if followed by punctuation or end;"
-    .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1");
-    // "JSX": >"< to ><;"
-=======
-      .replace(/([)}\]>])\s*"\s*$/u, $1);
-      .replace(/>\s*"\s*$/u, ">);
-      .replace(/^\s*$/u, );"
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  );
-<<<<<<< HEAD
 
-
-  let out = lines.join("\n");
-<<<<<<< HEAD
-"
-  let out = lines.join("\n");"
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  let out = lines.join("\n");
-=======
-"
-  let out = lines.join("\n");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // In-line fixes across the whole file;
   out = out;"
     // Comma followed by stray apostrophe (e.g., "Shield,");
@@ -145,10 +99,7 @@ function cleanContent(content) {}
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
-
-<<<<<<< HEAD
-    .replace(/>\s*"\s*</g, "><");"
-
+    .replace(/>\s*"\s*</g, "><");
 
   return out};
 =======
@@ -278,40 +229,7 @@ function $1() {}
 
         changed += 1};
     } catch (e) {}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
   
-
-  
-
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-
-=======
-  
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
-  
-
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } catch (e) {}
 =======
 <<<<<<< HEAD
@@ -329,55 +247,4 @@ function $1() {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};
 if (require.main === module) {}
-<<<<<<< HEAD
-
   main()};
-  main()};
-  main()};
-
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  main()};
-
-
-
-
-
-=======
-
-  main()}
-
-  main()}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  main()}
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  main()};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  main()};
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  main()};
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

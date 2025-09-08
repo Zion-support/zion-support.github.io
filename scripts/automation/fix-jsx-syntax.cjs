@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
+
 class JSXSyntaxFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -13,10 +11,6 @@ class JSXSyntaxFixer {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   fixJSXSyntax() {}
     this.log('Fixing JSX syntax errors in AIChatbotSystem.tsx...');
-    let content = fs.readFileSync(this.filePath, 'utf8');
-    
-    let content = fs.readFileSync(this.filePath, 'utf8');
-    
     
     let content = fs.readFileSync(this.filePath, 'utf8');
     
@@ -135,34 +129,6 @@ class JSXSyntaxFixer {}
       { "pattern": /<\/button>;\s*$/gm, "replacement": '</button>' },
       { "pattern": /<\/span>;\s*$/gm, "replacement": '</span>' },
       { "pattern": /<\/div>;\s*$/gm, "replacement": '</div>' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      // Fix onClick syntax;
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'positive'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'positive\')}' },
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'negative'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'negative\')}' },
-      // Fix className syntax;
-      { "pattern": /className:\s*\{"w-8 h-8 rounded-full flex items-center justify-center \$\{/gm, "replacement": 'className={"w-8 h-8 rounded-full flex items-center justify-center ${' },
-      { "pattern": /message\.sender === 'user' \?\s*\(;\s*$/gm, "replacement": 'message.sender === \'user\' ? (' },)
-      // Fix missing closing parentheses and brackets;
-      { "pattern": /\);\s*\}\s*\);\s*$/gm, "replacement": ')}' },
-      { "pattern": /\);\s*\}\s*\);\s*\}\s*$/gm, "replacement": ')}' },
->>>>>>> origin/chore/fix-lint-and-merge
-      // Fix missing return statement;
-      { "pattern": /return\s*\(\s*<>\s*<AnimatePresence>/gm, "replacement": 'return (\n    <>\n      <AnimatePresence>' };)
-    ];
-    fixes.forEach(fix => {})
-      content = content.replace(fix.pattern, fix.replacement)}
-});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       // Fix onClick syntax;
       { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'positive'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'positive\')}' },
@@ -183,59 +149,7 @@ class JSXSyntaxFixer {}
     fixes.forEach(fix => {})
       content = content.replace(fix.pattern, fix.replacement)}
 });
-<<<<<<< HEAD
-      
-      // Fix onClick syntax;
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'positive'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'positive\')}' },
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'negative'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'negative\')}' },
-      
-      // Fix className syntax;
-      { "pattern": /className:\s*\{"w-8 h-8 rounded-full flex items-center justify-center \$\{/gm, "replacement": 'className={"w-8 h-8 rounded-full flex items-center justify-center ${' },
-      { "pattern": /message\.sender === 'user' \?\s*\(;\s*$/gm, "replacement": 'message.sender === \'user\' ? (' },)
-      
-      // Fix missing closing parentheses and brackets;
-      { "pattern": /\);\s*\}\s*\);\s*$/gm, "replacement": ')}' },
-      { "pattern": /\);\s*\}\s*\);\s*\}\s*$/gm, "replacement": ')}' },
-      
-      // Fix missing return statement;
-      { "pattern": /return\s*\(\s*<>\s*<AnimatePresence>/gm, "replacement": 'return (\n    <>\n      <AnimatePresence>' };)
-    ];
     
-<<<<<<< HEAD
-=======
-    fixes.forEach(fix => {})
-      content = content.replace(fix.pattern, fix.replacement)}
-});
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'positive'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'positive\')}' },
-      { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'negative'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'negative\')}' },
-
-      // Fix className syntax
-      { "pattern": /className:\s*\{"w-8 h-8 rounded-full flex items-center justify-center \$\{/gm, "replacement": 'className={"w-8 h-8 rounded-full flex items-center justify-center ${' },
-      { "pattern": /message\.sender === 'user' \?\s*\(;\s*$/gm, "replacement": 'message.sender === \'user\' ? (' },)
-
-      // Fix missing closing parentheses and brackets
-      { "pattern": /\);\s*\}\s*\);\s*$/gm, "replacement": ')}' },
-      { "pattern": /\);\s*\}\s*\);\s*\}\s*$/gm, "replacement": ')}' },
-
-      // Fix missing return statement
-      { "pattern": /return\s*\(\s*<>\s*<AnimatePresence>/gm, "replacement": 'return (\n    <>\n      <AnimatePresence>' };)
-    ]
-    fixes.forEach(fix => {})
-      content = content.replace(fix.pattern, fix.replacement)}
-});
-    
-    
-=======
-    
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Write the fixed content back;
     fs.writeFileSync(this.filePath, content);
     this.log('JSX syntax errors fixed successfully!')};
@@ -243,32 +157,6 @@ class JSXSyntaxFixer {}
 <<<<<<< HEAD
     this.log('Starting JSX Syntax Fixer...');
     
-=======
-<<<<<<< HEAD
-    this.log('Starting JSX Syntax Fixer...');
-    
-    
-=======
-<<<<<<< HEAD
-    this.log(Starting JSX Syntax Fixer...');
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Starting JSX Syntax Fixer...');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       this.fixJSXSyntax();
       this.log('JSX Syntax Fixer completed successfully!')} catch (error) {}
@@ -278,23 +166,6 @@ class JSXSyntaxFixer {}
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new JSXSyntaxFixer();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   automation.run();
     
     
@@ -331,61 +202,4 @@ this.log(`Error in JSX Syntax "Fixer": ${error.message}`)
 <<<<<<< HEAD
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
-=======
-<<<<<<< HEAD
-      console.error('JSX Syntax Fixer failed": ', error);
-      process.exit(1)})}
-
-=======
-      console.error('JSX Syntax Fixer "failed": ', error);
-      process.exit(1)})};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
 module.exports = JSXSyntaxFixer;
-<<<<<<< HEAD
-module.exports = JSXSyntaxFixer;
-module.exports = JSXSyntaxFixer;
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = JSXSyntaxFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = JSXSyntaxFixer;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import * as React from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import Link from 'next/link'
+import Layout from '../components/Layout'
 
 const Blog: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

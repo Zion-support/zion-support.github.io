@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveStats from '../components/InteractiveStats" describe('InteractiveStats',() => {' test('renders without crashing',() => {' render(<InteractiveStats / / />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveStats / / />) }) test('handles user interactions',() => {' render(<InteractiveStats / / />) }) test('applies correct styling',() => {' render(<InteractiveStats / / />) }) })

@@ -32,26 +32,6 @@ const EnhancedSEO = dynamic(() => import('./EnhancedSEO'),{'; 'loading': () => <
 const EnhancedSEO = dynamic(() => import(\"./EnhancedSEO\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedSEO\' ,
 const EnhancedSEO = dynamic(() => import("./EnhancedSEO"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedSEO" ,"""
 const EnhancedSEO = dynamic(() => import("./EnhancedSEO"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedSEO' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

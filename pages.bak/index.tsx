@@ -1,14 +1,12 @@
-
+export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
+import React from 'react';
 <<<<<<< HEAD
-
 import React from 'react';
-
+import * as React from 'react';
 
 =======
-=======
-import React from 'react';
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 interface IndexProps {
   // Add props here as needed
 }
@@ -29,9 +27,7 @@ export default function Index({ }: IndexProps) {
     </div>
   );
 <<<<<<< HEAD
-
-
-
+}
 }
 }
 }
@@ -44,5 +40,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 }
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

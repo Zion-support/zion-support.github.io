@@ -1,32 +1,59 @@
-
 <<<<<<< HEAD
-
-
+import * as React from 'react';
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
-
-<<<<<<< HEAD
-import React from 'react;
-import Link from next/link';';
-
-=======
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { motion } from framer-motion;
 
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
-import Layout from "../../components/Layout;;
-
-<<<<<<< HEAD
-
+import Layout from "../../components/Layout";";
+const features = [;
+  {}
+    title: 'Rapid Prototyping,',
+    description: 'Quick MVP development to validate your ideas and get to market fast,',
+    icon: Zap,
+    benefits: ['2-4 Week MVPs, 'Agile Development', 'User Feedback Integration', 'Iterative Improvement']',
+  },
+  {}
+    title: 'Cost Optimization,',
+    description: 'Budget-friendly solutions that maximize your startup resources,',
+    icon: DollarSign,
+    benefits: ['Flexible Pricing, 'Pay-as-you-grow', 'No Hidden Costs', 'ROI Focused']',
+  },
+  {}
+    title: 'Scalable Infrastructure,',
+    description: 'Technology that grows with your startup from day one,',
+    icon: TrendingUp,
+    benefits: ['Auto-scaling, 'Cloud-native', 'Performance Optimized', 'Future-proof']',
+  },
+  {}
+    title: 'Expert Guidance,',
+    description: 'Mentorship and technical guidance from experienced entrepreneurs,',
+    icon: Users,
+    benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
+  }
+;];
+const services = [;
+  { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
+  { title: 'Tech Stack Selection, description: 'Choose the right technologies for your startup' },',
+  { title: 'UI/UX Design, description: 'User-centered design that converts visitors to customers' },',
+  { title: 'API Development, description: 'Robust APIs for your mobile and web applications' },',
+  { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
+  { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
+;];
+const stats = [;
+  { number: '100+, label: 'Startups Helped' },',
+  { number: '300+, label: 'Projects Delivered' },',
+  { number: '300%, label: 'Average Growth' },',
   { number: '2-4, label: 'Weeks to MVP' }',
 ;];
-
 export default function StartupSolutionsPage() {
 
   return (;
@@ -83,7 +110,6 @@ const stats = [;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -119,8 +145,9 @@ const stats = [;
             </motion.div>;
           </div>;
         </section>;
-
-
+        {/* Stats Section */}
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
@@ -133,7 +160,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* Features Section */}
 <<<<<<< HEAD
 
@@ -175,8 +201,11 @@ const stats = [;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
               </h2>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
+              </p>;
+            </motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
@@ -212,7 +241,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* Services Section */}
 <<<<<<< HEAD
 
@@ -285,7 +313,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
 <<<<<<< HEAD
 

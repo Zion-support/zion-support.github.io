@@ -32,26 +32,6 @@ const AccessibilityManager = dynamic(() => import('./AccessibilityManager'),{'; 
 const AccessibilityManager = dynamic(() => import(\"./AccessibilityManager\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AccessibilityManager\' ,
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{"; loading: () => <p>Loading.</p,>}) export: "default AccessibilityManager" ,"""
 const AccessibilityManager = dynamic(() => import("./AccessibilityManager"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AccessibilityManager' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

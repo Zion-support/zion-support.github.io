@@ -1,10 +1,128 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Zap, Shield, Globe, Rocket, 
-  Cpu, Database, Lock, Cloud, BarChart3
-} from 'lucide-react';
+
+const products = [
+  {
+    title: "ZionAI Analytics",
+    description: "Advanced AI-powered analytics platform that transforms raw data into actionable insights for business growth.",
+    icon: Brain,
+    category: "AI Solutions",
+    features: [
+      "Machine Learning Models",
+      "Predictive Analytics",
+      "Real-time Dashboards",
+      "Custom AI Training",
+      "API Integration",
+      "Multi-cloud Support"
+    ],
+    pricing: "Starting at $299/month",
+    rating: 4.9,
+    reviews: 127,
+    href: "/products/zion-ai-analytics"
+  },
+  {
+    title: "CloudSecure Pro",
+    description: "Enterprise-grade cloud security solution with zero-trust architecture and advanced threat protection.",
+    icon: Shield,
+    category: "Security",
+    features: [
+      "Zero-Trust Architecture",
+      "Threat Detection",
+      "Compliance Management",
+      "Real-time Monitoring",
+      "Automated Response",
+      "Multi-cloud Security"
+    ],
+    pricing: "Starting at $499/month",
+    rating: 4.8,
+    reviews: 89,
+    href: "/products/cloudsecure-pro"
+  },
+  {
+    title: "DataFlow Engine",
+    description: "High-performance data processing and ETL platform for modern data pipelines and analytics.",
+    icon: Database,
+    category: "Data Solutions",
+    features: [
+      "Real-time Processing",
+      "ETL Pipelines",
+      "Data Transformation",
+      "Scalable Architecture",
+      "API Management",
+      "Monitoring & Alerts"
+    ],
+    pricing: "Starting at $199/month",
+    rating: 4.7,
+    reviews: 156,
+    href: "/products/dataflow-engine"
+  },
+  {
+    title: "MobileFirst CMS",
+    description: "Headless CMS designed for mobile-first experiences with advanced content management capabilities.",
+    icon: Smartphone,
+    category: "Content Management",
+    features: [
+      "Headless Architecture",
+      "Mobile Optimization",
+      "Content Versioning",
+      "Multi-language Support",
+      "SEO Optimization",
+      "Developer APIs"
+    ],
+    pricing: "Starting at $149/month",
+    rating: 4.6,
+    reviews: 98,
+    href: "/products/mobilefirst-cms"
+  },
+  {
+    title: "ZionCloud Platform",
+    description: "Comprehensive cloud infrastructure platform with automated scaling and management capabilities.",
+    icon: Cloud,
+    category: "Cloud Infrastructure",
+    features: [
+      "Auto-scaling",
+      "Multi-cloud Support",
+      "Cost Optimization",
+      "Monitoring & Alerts",
+      "DevOps Integration",
+      "Security Compliance"
+    ],
+    pricing: "Starting at $399/month",
+    rating: 4.8,
+    reviews: 203,
+    href: "/products/zioncloud-platform"
+  },
+  {
+    title: "WorkflowMax",
+    description: "Business process automation platform that streamlines operations and increases productivity.",
+    icon: Zap,
+    category: "Automation",
+    features: [
+      "Process Automation",
+      "Workflow Designer",
+      "Integration Hub",
+      "Task Management",
+      "Analytics & Reporting",
+      "Custom Triggers"
+    ],
+    pricing: "Starting at $99/month",
+    rating: 4.5,
+    reviews: 167,
+    href: "/products/workflowmax"
+  }
+];
+
+const categories = [
+  { name: "All Products", count: 6, active: true },
+  { name: "AI Solutions", count: 1, active: false },
+  { name: "Security", count: 1, active: false },
+  { name: "Data Solutions", count: 1, active: false },
+  { name: "Content Management", count: 1, active: false },
+  { name: "Cloud Infrastructure", count: 1, active: false },
+  { name: "Automation", count: 1, active: false }
+];
 
 export default function ProductsPage() {
   const productCategories = [

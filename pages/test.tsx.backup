@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function TestPage() {
+  return (
+<<<<<<< HEAD
+    <Layout title="Test - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Test Page</h1>
+            <p className="text-xl text-blue-100">This is a test page</p>
+          </div>
+        </section>
+=======
+=======
+import React from 'react';
+<<<<<<< HEAD:pages/test.tsx.backup
+<<<<<<< HEAD
+import SimpleLayout from './components/SimpleLayout';
+=======
+import Layout from './components/Layout';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
+export default function TestPage() {
+  return (
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+    <SimpleLayout title="Test Page">
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+      </div>
+<<<<<<< HEAD
+    </SimpleLayout>
+=======
+<<<<<<< HEAD
+    </SimpleLayout>
+=======
+    </Layout>
+=======
+import Head from 'next/head';
+
+export default function TestPage() {
+  return (
+    <>
+      <Head>
+        <title>Test Page - Zion Tech Group</title>
+        <meta name="description" content="Test page for development purposes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+      </div>
+    </>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/test.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+  );
+}

@@ -1,32 +1,66 @@
-
 <<<<<<< HEAD
-
-
+import * as React from 'react';
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-
-<<<<<<< HEAD
-import React from 'react;
-import Link from next/link';';
-
-=======
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { motion } from framer-motion;
 
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import Layout from "../../components/Layout;;
-
-<<<<<<< HEAD
-
+import Layout from "../../components/Layout";";
+const features = [;
+  {}
+    title: 'Tailored Solutions,',
+    description: 'Bespoke software solutions designed specifically for your unique business needs,',
+    icon: Settings,
+    benefits: ['Custom Architecture, 'Unique Features', 'Business Logic Integration', 'Scalable Design']',
+  },
+  {}
+    title: 'Full Stack Development,',
+    description: 'Complete end-to-end development from frontend to backend and everything in between,',
+    icon: Code,
+    benefits: ['Frontend Development, 'Backend APIs', 'Database Design', 'Cloud Integration']',
+  },
+  {}
+    title: 'API Integration,',
+    description: 'Seamless integration with existing systems and third-party services,',
+    icon: Zap,
+    benefits: ['RESTful APIs, 'GraphQL', 'Third-party Integrations', 'Data Synchronization']',
+  },
+  {}
+    title: 'Ongoing Support,',
+    description: 'Continuous support and maintenance to ensure your solution remains optimal,',
+    icon: Users,
+    benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
+  }
+;];
+const technologies = [;
+  { category: 'Frontend, techs: ['_React, 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },',
+  { category: 'Backend, techs: ['Node.js, 'Python', 'Java', 'C#', 'Go'] },',
+  { category: 'Database, techs: ['PostgreSQL, 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },',
+  { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',
+  { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',
+;];
+const process = [;
+  { step: 'Discovery, description: 'Understanding your requirements and business goals' },',
+  { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',
+  { step: 'Development, description: 'Agile development with regular feedback and iterations' },',
+  { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',
+  { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
+  { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
+;];
+const stats = [;
+  { number: '150+, label: 'Custom Projects' },',
+  { number: '98%, label: 'Client Satisfaction' },',
+  { number: 'On Time, label: 'Delivery Rate' },',
   { number: '5+, label: 'Years Experience' }',
 ;];
-
 export default function CustomDevelopmentPage() {
 
   return (;
@@ -91,7 +125,6 @@ const stats = [;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -127,8 +160,9 @@ const stats = [;
             </motion.div>;
           </div>;
         </section>;
-
-
+        {/* Stats Section */}
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
@@ -141,7 +175,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* Features Section */}
 <<<<<<< HEAD
 
@@ -181,8 +214,6 @@ const stats = [;
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
               </p>;
             </motion.div>;
-<<<<<<< HEAD
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
 
 =======
@@ -225,7 +256,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* Technologies Section */}
 <<<<<<< HEAD
 
@@ -298,7 +328,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* Process Section */}
 <<<<<<< HEAD
 
@@ -340,8 +369,11 @@ const stats = [;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>";
               </h2>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
+              </p>;
+            </motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {process.map((step, index) => (,
                 <motion.div}),
                   key={step.step}
@@ -377,7 +409,6 @@ const stats = [;
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
 <<<<<<< HEAD
 

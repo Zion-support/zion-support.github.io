@@ -1,27 +1,56 @@
-React, { useState, useEffect } from
-  'react';
-import { Link, useLocation } from
-  'react-router-dom';'{ motion, AnimatePresence } from'
-  'framer-motion';
-import {
-  '  Menu, X, 'Home, Users, 
-  Briefcase, Phone, 
-  Mail, ChevronDown,
-  Brain, Shield,
-  Cloud, Database,
-  Network, Zap,
-  Target, DollarSign,
-  BookOpen, Calendar,
-  FileText, Award,
-  Globe, Search,
-  ArrowRight
-} from
-  'lucide-react';'{ Button } from'
-  '../ui/Button';
-import { Badge } from
-  '../ui/Badge';''
-  'const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);'const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Phone, 
+  FileText,
+  BarChart3,
+  Cpu,
+  Shield,
+  Cloud,
+  Database,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Target,
+  Rocket,
+  Code,
+  Network,
+  Server,
+  Atom,
+  Workflow,
+  MessageCircle,
+  ArrowUp,
+  Sparkles,
+  Home,
+  Truck,
+  BookOpen,
+  Leaf,
+  Satellite,
+  HelpCircle,
+  Building2,
+  Factory,
+  Building,
+  DollarSign,
+  ShoppingCart,
+  Heart,
+  Eye,
+  Server,
+  Lock,
+  ChevronDown
+} from 'lucide-react';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {

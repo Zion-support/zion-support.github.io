@@ -1,63 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-=======
-<<<<<<< HEAD
-
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-
-
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -66,7 +11,6 @@ class QualityAssuranceMonitor {}
     this.startTime = Date.now()};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
   async runCommand(command, options = {}) {}
     try {}
@@ -172,26 +116,7 @@ this.log('Running quality assurance checks...')
   async checkCodeQuality() {}
 <<<<<<< HEAD
     this.log('Running quality assurance checks...');
-=======
-<<<<<<< HEAD
-    this.log(Running quality assurance checks...');
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Running quality assurance checks...');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
@@ -227,48 +152,10 @@ this.log('Running quality assurance checks...')
     return this.issuesFound};
   async run() {}
     this.log('Starting Quality Assurance Monitor...');
-=======
->>>>>>> merged-prs-20250907-203621
-    return this.issuesFound}
-  async run() {}
-<<<<<<< HEAD
-    this.log('Starting Quality Assurance Monitor...);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Starting Quality Assurance Monitor...');
-<<<<<<< HEAD
-    try {}
-      const issues = await this.checkCodeQuality();
-=======
-<<<<<<< HEAD
-    try {}
-      const issues = await this.checkCodeQuality();
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     try {}
       const issues = await this.checkCodeQuality();
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-    try {}
-      const issues = await this.checkCodeQuality();
-      
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
@@ -335,78 +222,4 @@ this.log('Starting Quality Assurance Monitor...')
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
-=======
-<<<<<<< HEAD
-        "details": auditResult.output.substring(0, 500);"
-      })};`
-    this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`)
-    return this.issuesFound}
-  async run() {}"
-=======
-        details": auditResult.output.substring(0, 500);"
-      })}`;
-    this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
-    return this.issuesFound}
-  async run() {}
->>>>>>> merged-prs-20250907-203621
-
-<<<<<<< HEAD
-      return { success": false, "error": error.message }}"
-if (require.main === module) {}
-  const monitor = new QualityAssuranceMonitor();
-  monitor.run().catch(console.error)}
-
-=======
-      return { "success": false, "error": error.message }};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-if (require.main === module) {}
-  const monitor = new QualityAssuranceMonitor();
-  monitor.run().catch(console.error)};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
 module.exports = QualityAssuranceMonitor;
-<<<<<<< HEAD
-module.exports = QualityAssuranceMonitor;
-module.exports = QualityAssuranceMonitor;
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = QualityAssuranceMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = QualityAssuranceMonitor;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

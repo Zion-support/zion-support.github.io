@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})

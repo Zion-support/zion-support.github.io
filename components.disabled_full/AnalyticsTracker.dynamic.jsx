@@ -32,26 +32,6 @@ const AnalyticsTracker = dynamic(() => import('./AnalyticsTracker'),{'; 'loading
 const AnalyticsTracker = dynamic(() => import(\"./AnalyticsTracker\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default AnalyticsTracker\' ,
 const AnalyticsTracker = dynamic(() => import("./AnalyticsTracker"),{"; loading: () => <p>Loading.</p,>}) export: "default AnalyticsTracker" ,"""
 const AnalyticsTracker = dynamic(() => import("./AnalyticsTracker"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default AnalyticsTracker' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

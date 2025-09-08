@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import LoadingSpinner from '../components/LoadingSpinner" describe('LoadingSpinner',() => {' test('renders without crashing',() => {' render(<LoadingSpinner / / />) expect(screen.getByTestId("loadingspinner")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<LoadingSpinner / / />) }) test('handles user interactions',() => {' render(<LoadingSpinner / / />) }) test('applies correct styling',() => {' render(<LoadingSpinner / / />) }) })

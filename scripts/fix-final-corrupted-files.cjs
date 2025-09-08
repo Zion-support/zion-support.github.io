@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-const fs = require('fs')
-const path = require('path')
-=======
-const fs = require('fs');
-const path = require('path');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/chore/fix-lint-and-merge
-// console.log(' Fixing Final Corrupted Files...')
-console.log('')
-const corruptedFiles = ['pages/docs/integration-examples.tsx']
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -117,7 +80,3 @@ let content = '';
     "message"
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
         <meta name="description" content="
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

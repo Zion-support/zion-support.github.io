@@ -1,30 +1,37 @@
-
 <<<<<<< HEAD
-import React from 'react';
-import Link from next/link;';
-import { motion } from 'framer-motion;
-import {
-
-
+import * as React from 'react';
 =======
-import React from 'react;
-import Link from next/link';';
-import { motion } from framer-motion;
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
 import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 
 import { motion } from 'framer-motion';
-
-
+import { Building, 
+  Shield, 
+  Users, 
+import {
+  Building,
+  Shield,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  BarChart3,
+  FileText,
+  Lock,
+  Database,
+  Phone,
+  Mail;
+} from 'lucide-react';
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
+    title: 'Citizen Service Portals,',
+    description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
 import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';
 import React from 'react';
@@ -196,20 +203,12 @@ const benefits = []
       'Audit automation'';
     ];
   }
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
     icon: Shield;
-
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ];
 const benefits = [
   {
@@ -294,10 +293,6 @@ export default function GovernmentPage() {
     description: 'Digital systems provide transparency and enable better accountability.,',
     icon: Globe;
   }
-
-  }
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;];
 export default function GovernmentPage() {
   return (;
@@ -375,15 +370,61 @@ export default function GovernmentPage() {
               </div>;
             </motion.div>;
           </div>;
-
+        </section>;
+];
+export default function GovernmentPage() {
+  return (
+    <Layout
+      title="Government Technology Solutions - Zion Tech Group"
+      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
+      keywords="government technology, citizen services, digital government, public safety, government security, civic tech"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <div className="flex items-center justify-center mb-6">
+                <Building className="w-12 h-12 text-indigo-400 mr-4" />
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  Government
+                  <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
+                    Technology Solutions
+                  </span>
+                </h1>
+              </div>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Transform government operations with secure, efficient, and citizen-centric technology solutions.
+                Enhance service delivery, improve transparency, and ensure public safety.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Government Consultation
+                </Link>
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">
+                  View Government Case Studies
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -397,9 +438,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
 
             >
@@ -418,8 +456,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-
-
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -427,9 +464,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </div>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  <ul className="space-y-3">";
+                    {service.features.map((feature, featureIndex) => (,
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >"
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">"
@@ -456,31 +494,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </ul>,
                 </motion.div>;
               ))}
-
-<<<<<<< HEAD
-
-              className=text-center mb-16"
-
-=======
-
-            </div>
-          </div>
-        </section>
-
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
             </div>,
           </div>;
         </section>;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-            </div>,
-          </div>;
-        </section>;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -491,8 +507,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -532,9 +546,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
 >>>>>>> origin/cursor/delete-old-data-records-6bba
             >
@@ -580,38 +591,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-
-
-<<<<<<< HEAD
-
-=======
             </div>,
           </div>;
         </section>;
-
-
-            </div>
-          </div>
-        </section>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-
-
-=======
-          <div className="container mx-auto px-4 text-center">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            </div>,
-          </div>;
-        </section>;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-            </div>,
-          </div>;
-        </section>;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -625,12 +607,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Government?;
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
@@ -657,8 +637,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>;
         </section>;
       </div>;
-
-
+    </Layout>;
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
 >>>>>>> origin/cursor/delete-old-data-records-6bba

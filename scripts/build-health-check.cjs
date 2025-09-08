@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -64,7 +46,6 @@ class BuildHealthCheck {;}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
       console.log(logEntry.trim()),} catch (error) {;}
       console.error("Failed to write to log "file": ", error),};
       console.log(logEntry.trim())} catch (error) {;}"
@@ -187,14 +168,6 @@ class BuildHealthCheck {;}
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
       console.log(logEntry.trim())} catch (error) {;}
       console.error("Failed to write to log ""file": ", error)}"}
   async checkDependencies() {;}
@@ -363,57 +336,4 @@ if (require.main === module) {;}
   process.on("SIGINT", () => {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 module.exports = BuildHealthCheck;
-<<<<<<< HEAD
-module.exports = BuildHealthCheck;
-module.exports = BuildHealthCheck;
-  // Keep process alive;"
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = BuildHealthCheck;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = BuildHealthCheck;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // Keep process alive;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-<<<<<<< HEAD
-  // Keep process alive;"
-
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-`;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

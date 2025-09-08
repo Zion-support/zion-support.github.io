@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import PerformanceMonitor from '../components/PerformanceMonitor" describe('PerformanceMonitor',() => {' test('renders without crashing',() => {' render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceMonitor / />) }) test('handles user interactions',() => {' render(<PerformanceMonitor / />) }) test('applies correct styling',() => {' render(<PerformanceMonitor / />) }) })

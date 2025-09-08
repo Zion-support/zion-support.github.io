@@ -1,10 +1,13 @@
-React, { Component, ErrorInfo, ReactNode } from
-  'react';
-import { AlertTriangle, RefreshCw, Home } from
-  'lucide-react';
-import Link from'
-  'next/link';''
-  'interface Props {children: ReactNode;'fallback?: ReactNode;
+<<<<<<< HEAD
+=======
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
   hasError: boolean;
@@ -66,16 +69,7 @@ error, errorInfo,
                 </pre>
               </details>
             )}
-
-<div className="flex flex-col sm: flex-row gap-3">"              <button"                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200""              >"                <RefreshCw className="w-4 h-4 mr-2" />"                Try Again"              </button>
-              
-              <Link
-                href="/""                className="flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200""              >"                <Home className="w-4 h-4 mr-2" />"                Go Home"              </Link>"
-            </div>
-
-<div className="mt-6 pt-6 border-t border-gray-200">"              <p className="text-sm text-gray-500">"                If this problem persists, please{' '
-  '}'                <Link href="/contact" className="text-blue-600 hover: text-blue-700">"                  contact our support team"                </Link></p></div>
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
           </div>
         </div>
       );
@@ -83,4 +77,8 @@ error, errorInfo,
     return this.props.children;
   }
 }
+
+<<<<<<< HEAD
+=======
 export default ErrorBoundary;
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

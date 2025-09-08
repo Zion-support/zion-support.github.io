@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("child_process");
@@ -29,18 +28,6 @@ const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "enhanced-build-test.log")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "timestamp"
       summary: { total: 0, "passed": 0, "failed": 0, "warnings"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -63,16 +50,6 @@ const path = require("path")
     this.log("� Running build process...")
     return await this.runCommand("npm run build", "Next.js Build")
     this.log("🧪 Running tests...")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
       return await this.runCommand("npm test", "Jest Tests")
       this.log("⚠ Tests not configured or failed, continuing...", "warning")
       return { "success": true, "output": "Tests skipped", "duration"}
@@ -95,56 +72,4 @@ const path = require("path")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
-<<<<<<< HEAD
-
       return { "success": false, "error"}
-      return { "success": false, "error"}
-      return { "success": false, "error"}
-
-
-
-=======
-<<<<<<< HEAD
-
-      return { "success": false, "error"}
-
-
-<<<<<<< HEAD
-
-
-
-=======
-      return { "success: false, error"}
-
-      return { "success: false, error"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      return { "success: false, error"}
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      return { "success": false, "error"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-      return { "success": false, "error"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      return { "success": false, "error"}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

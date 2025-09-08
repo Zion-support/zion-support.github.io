@@ -1,47 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -51,83 +12,17 @@ class BuildErrorAutoFixer {}
 <<<<<<< HEAD
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
     
-=======
-<<<<<<< HEAD
-    this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === true';
-
-=======
-    this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-class BuildErrorAutoFixer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-
-<<<<<<< HEAD
-    
-    
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> merged-prs-20250907-203621
-    
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
-<<<<<<< HEAD
     
-    
-=======
-<<<<<<< HEAD
-    
-    
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.fixesApplied = 0;
     this.buildHistory = []};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)};
     console.log(`[${timestamp}] [${level}] ${message})};
   async runBuildCheck() {}
@@ -179,62 +74,10 @@ class BuildErrorAutoFixer {}
     const errorLines = output.split('\n').filter(line => )
 
     );
-    const errors = [];
-    let currentError = null;
-=======
-      return { "success: false, errors, count": errors.length }}"
-  }
-  parseBuildErrors(output) {}
-    const errorLines = output.split(\n').filter(line => )
-
-    );
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-    const errors = [];
-    let currentError = null;
-=======
-    
-<<<<<<< HEAD
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     const errors = [];
     let currentError = null;
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const errors = [];
-    let currentError = null;
-    
-    const errors = [];
-    let currentError = null;
-    
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    const errors = [];
-    let currentError = null;
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    const errors = [];
-    let currentError = null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     for (const line of errorLines) {}
 )
     const errors = []
@@ -262,27 +105,7 @@ class BuildErrorAutoFixer {}
 
       return 0};
     let fixesApplied = 0;
-<<<<<<< HEAD
     
-    
-=======
-<<<<<<< HEAD
-    
-    
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     for (const error of errors) {}
 return 0}
     let fixesApplied = 0
@@ -355,22 +178,7 @@ const message = error.message.toLowerCase()
     return fixesApplied};
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
-<<<<<<< HEAD
     
-    
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Fix common build errors;
     if (message.includes('module not found') || message.includes('cannot find module')) {}
       return await this.fixModuleNotFoundError(error)};
@@ -400,12 +208,7 @@ const message = error.message.toLowerCase()
 =======
 <<<<<<< HEAD
     this.log('Attempting to fix module not found error...', 'INFO');
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Try to install missing dependencies;
       const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
@@ -430,68 +233,23 @@ const message = error.message.toLowerCase()
   async fixSyntaxError(error) {}
 <<<<<<< HEAD
     this.log('Attempting to fix syntax error...', 'INFO');
-=======
-<<<<<<< HEAD
-    this.log(Attempting to fix syntax error..., 'INFO');
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Attempting to fix syntax error...', 'INFO');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       if (error.file && error.file !== 'unknown') {}
         const content = fs.readFileSync(error.file, 'utf8');
 <<<<<<< HEAD
         const lines = content.split('\n');
         
-
-        const lines = content.split('\n');
-
-        const lines = content.split('\n');
-        
-        
-=======
-<<<<<<< HEAD
-        const lines = content.split(\n);
-
-=======
-        const lines = content.split('\n');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-
-        const lines = content.split('\n');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Basic syntax fixes;
         const fixes = [this.fixMissingSemicolons.bind(this)]
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
         ];
-<<<<<<< HEAD
         
         let originalContent = content;
         let modifiedContent = content;
         
-        let originalContent = content;
-        let modifiedContent = content;
         for (const fix of fixes) {}
             const result = fix(lines, error);
             if (result.modified) {}
@@ -570,60 +328,12 @@ const message = error.message.toLowerCase()
   async fixMemoryError(error) {}
 <<<<<<< HEAD
     this.log('Attempting to fix memory error...', 'INFO');
-=======
-<<<<<<< HEAD
-    this.log('Attempting to fix memory error...', INFO);
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Attempting to fix memory error...', 'INFO');
-<<<<<<< HEAD
-    
-    
-    try {}
-      // Clean build artifacts
-      execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
-});
-      
-      
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Clean build artifacts;
       execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
-      
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Increase Node.js memory limit for build;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.scripts && packageJson.scripts.build) {}
@@ -654,44 +364,7 @@ const message = error.message.toLowerCase()
   };
   async fixPermissionError(error) {}
     this.log('Attempting to fix permission error...', 'INFO');
-=======
-      this.log(`Failed to fix memory "error": ${fixError.message}`, ERROR);
->>>>>>> merged-prs-20250907-203621
-      return false}
-  }
-  async fixPermissionError(error) {}
-<<<<<<< HEAD
-    this.log('Attempting to fix permission error...', INFO);
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Attempting to fix permission error...', 'INFO');
-<<<<<<< HEAD
-    
-    
-    try {}
-      // Fix file permissions
-      execSync('chmod -R 755 .', { "stdio": 'pipe' }
-})
-      execSync('chmod -R 644 src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' }
-})
-      this.log('Fixed file permissions', 'INFO')
-      return true} catch (fixError) {}
-      this.log(`Failed to fix permission "error": ${fixError.message}`, 'ERROR')
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       // Fix file permissions;
       execSync('chmod -R 755 .', { "stdio": 'pipe' }
@@ -706,70 +379,12 @@ const message = error.message.toLowerCase()
   };
   async fixDependencyError(error) {}
     this.log('Attempting to fix dependency error...', 'INFO');
-=======
-      this.log(`Failed to fix permission error: ${fixError.message}`, 'ERROR');
->>>>>>> merged-prs-20250907-203621
-      return false}
-  }
-  async fixDependencyError(error) {}
-<<<<<<< HEAD
-    this.log(Attempting to fix dependency error..., 'INFO');
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
-    
-<<<<<<< HEAD
     try {}
       // Try to fix peer dependency issues;
       execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' }
 });
       
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Attempting to fix dependency error...', 'INFO');
-<<<<<<< HEAD
-    
-    
-    try {}
-      // Try to fix peer dependency issues
-      execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' }
-});
-      // If that doesn't work, try to update dependencies;
-      execSync('npm update', { "stdio": 'pipe' }
-});
-      
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-    try {}
-      // Try to fix peer dependency issues;
-      execSync(npm install --legacy-peer-deps, { "stdio": 'pipe' }
-});
-<<<<<<< HEAD
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      // If that doesn't work, try to update dependencies;
-      execSync('npm update', { "stdio": 'pipe' }
-});
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-      
-      // If that doesnt work, try to update dependencies;
-      execSync(npm update', { stdio: 'pipe }
-});
-      
-<<<<<<< HEAD
-      
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // If that doesn't work, try to update dependencies;
       execSync('npm update', { "stdio": 'pipe' }
 });
@@ -824,40 +439,6 @@ const message = error.message.toLowerCase()
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
       
-      
-=======
-      if (!line.trim().endsWith(';) && !line.trim().endsWith({') && !line.trim().endsWith('})) {}
-        lines[lineIndex] = line + ;';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        return {}
-          "modified": true,""
-          "content": lines.join('\n'),
-          "description": 'Added missing semicolon
-    return { "modified": false, "content": lines.join('\n') }};
-  fixUnclosedBrackets(lines, error) {}
-      const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
-      const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      
-      
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
         const closingBrackets = ')}]'.slice(0, missingBrackets);
@@ -880,69 +461,7 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
       const line = lines[lineIndex];
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       
-      
-      if (singleQuotes % 2 !== 0) {}
-        lines[lineIndex] = line + "'";
-}}
-    }
-    return { "modified": false, "content": lines.join('\n') }}
-  fixUnclosedQuotes($2) {}
-    const lineIndex = error.line - 1
-  if($2) {}
-      const line = lines[lineIndex]
-      const singleQuotes = (line.match(/'/g) || []).length
-      const doubleQuotes = (line.match(/"/g) || []).length
-  if($2) {}
-        lines[lineIndex] = line + "'"
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Added missing single quote'
-        }}
-  if($2) {}
-        lines[lineIndex] = line + '"'
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Added missing double quote'
-        }}
-    }
-    return { "modified": false, "content": lines.join('\n') }}
-  fixTrailingCommas($2) {}
-    const lineIndex = error.line - 1
-  if($2) {}
-      const line = lines[lineIndex]
-      if (line.includes(',') && line.trim().endsWith(',')) {}
-        lines[lineIndex] = line.trim().slice(0, -1)
-        return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Removed trailing comma'
-        }}
-    }
-    return { "modified": false, "content": lines.join('\n') }}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      
-      
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (singleQuotes % 2 !== 0) {}
         lines[lineIndex] = line + "'";
         return {}
@@ -975,78 +494,15 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
     return { "modified": false, "content": lines.join('\n') }};
   async runAutoFix() {}
     this.log('Starting build error auto-fix...');
-=======
-          content: lines.join('\n'),
-          "description": Removed trailing comma
-        }}
-    }
-    return { modified: false, "content": lines.join('\n') }}
->>>>>>> merged-prs-20250907-203621
-  async runAutoFix() {}
-<<<<<<< HEAD
-    this.log(Starting build error auto-fix...);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Starting build error auto-fix...');
-<<<<<<< HEAD
-    try {}
-      // Get current build errors;
-      const checkResult = await this.runBuildCheck();
-=======
-<<<<<<< HEAD
-    try {}
-      // Get current build errors;
-      const checkResult = await this.runBuildCheck();
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     try {}
       // Get current build errors;
       const checkResult = await this.runBuildCheck();
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-    try {}
-      // Get current build errors;
-      const checkResult = await this.runBuildCheck();
-      
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (checkResult.success) {}
         this.log('No build errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} build errors, attempting to fix...`, 'INFO');
-<<<<<<< HEAD
-      
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      // Apply fixes;
-      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
-      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
-      // Run build check again to see if fixes worked;
-      const postCheckResult = await this.runBuildCheck();
-<<<<<<< HEAD
-=======
-=======
->>>>>>> merged-prs-20250907-203621
       
       // Apply fixes;
       const fixesApplied = await this.fixBuildErrors(checkResult.errors);
@@ -1056,69 +512,6 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
       
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> merged-prs-20250907-203621
-      if (openBrackets > closeBrackets) {}
-        const missingBrackets = openBrackets - closeBrackets;
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Apply fixes;
-      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
-      
-      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
-      
-      // Run build check again to see if fixes worked;
-      const postCheckResult = await this.runBuildCheck();
-      
-      
-      // Apply fixes;
-      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
-      
-      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
-      
-      // Run build check again to see if fixes worked;
-      const postCheckResult = await this.runBuildCheck();
-      
-      if (openBrackets > closeBrackets) {}
-        const missingBrackets = openBrackets - closeBrackets;
-
-      const doubleQuotes = (line.match(/"/g) || []).length;"
-      if (singleQuotes % 2 !== 0) {}"
-        lines[lineIndex] = line + "";"
-        return {}"
-
-      // Get current build errors;
-      const checkResult = await this.runBuildCheck();
-      if (checkResult.success) {}
-
-      // Run build check again to see if fixes worked;
-<<<<<<< HEAD
-      const postCheckResult = await this.runBuildCheck();
-      
-=======
-<<<<<<< HEAD
-      const postCheckResult = await this.runBuildCheck();
-      
-=======
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-      const postCheckResult = await this.runBuildCheck();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
@@ -1135,27 +528,11 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
 <<<<<<< HEAD
         "success": postCheckResult.success;
       };
-      // Save report;
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-=======
-<<<<<<< HEAD
-        "success": postCheckResult.success;
-      };
-<<<<<<< HEAD
-      // Save report;
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
-<<<<<<< HEAD
       // Update build history;
       this.buildHistory.push(report);
       if (this.buildHistory.length > 50) {}
@@ -1165,130 +542,16 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
   };
   async startAutoFixer() {}
     this.log('Starting build error auto-fixer...');
-=======
-<<<<<<< HEAD
-      
-      // Save report;
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      
-      // Update build history;
-      this.buildHistory.push(report);
-      if (this.buildHistory.length > 50) {}
-        this.buildHistory = this.buildHistory.slice(-50)};
-"success": postCheckResult.success
-      }
-      // Save report
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`)
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-      // Save report
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`)
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-      // Update build history
-      this.buildHistory.push(report)
-  if($2) {}
-        this.buildHistory = this.buildHistory.slice(-50)}
-      this.log(`Build auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {`}
-      this.log(`Build auto-fix "failed": ${error.message}`, 'ERROR')}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-      // Update build history;
-      this.buildHistory.push(report);
-      if (this.buildHistory.length > 50) {}
-        this.buildHistory = this.buildHistory.slice(-50)}
-      this.log(`Build auto-fix completed. Report saved to ${reportPath}`, INFO)} catch (error) {`}
-      this.log(`Build auto-fix failed": ${error.message}`, 'ERROR')}
->>>>>>> merged-prs-20250907-203621
-  }
-  async startAutoFixer() {}
-<<<<<<< HEAD
-    this.log(Starting build error auto-fixer...);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-    this.log('Starting build error auto-fixer...');
-<<<<<<< HEAD
-    // Run initial fix;
-    await this.runAutoFix();
-=======
-<<<<<<< HEAD
-    // Run initial fix;
-    await this.runAutoFix();
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Run initial fix;
     await this.runAutoFix();
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-    // Run initial fix;
-    await this.runAutoFix();
-    
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Set up periodic fixing;
     setInterval(async () => {}
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        "success": postCheckResult.success;"
-=======
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        success": postCheckResult.success;"
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> merged-prs-20250907-203621
-        "success": postCheckResult.success;"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Save report;`;
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      // Update build history;
-      this.buildHistory.push(report);
-      if (this.buildHistory.length > 50) {}
-
-    // Run initial fix;
-    await this.runAutoFix();
-    // Set up periodic fixing;
-    setInterval(async () => {}
-
-    }, this.fixInterval);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
 =======
@@ -1313,112 +576,18 @@ const closeBrackets = (line.match(/[\)\]\}]/g) || []).length
 // Main execution;
 if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   
-  
-  // Handle graceful shutdown;
-this.log('Starting build error auto-fixer...')
-    // Run initial fix
-    await this.runAutoFix()
-    // Run initial fix
-    await this.runAutoFix()
-    // Set up periodic fixing
-    setInterval(async () => {}
-      try {}
-        await this.runAutoFix()} catch (error) {}
-        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')}
-    }, this.fixInterval)
-        "success": postCheckResult.success;"
-      // Save report;`
-      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`)
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-      // Update build history
-      this.buildHistory.push(report)
-  if($2) {}
-
-    // Run initial fix
-    await this.runAutoFix()
-    // Set up periodic fixing
-    setInterval(async () => {}
-
-    }, this.fixInterval)
-    this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
-  getStatus($2) {}
-
-      "autoFixEnabled": this.autoFixEnabled;"
-// Main execution
-  if($2) {}
-  const fixer = new BuildErrorAutoFixer()
-  // Handle graceful shutdown
-  process.on('SIGINT', () => {}
-    fixer.log('Shutting down build error auto-fixer...')
-    process.exit(0)}
-});
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  
-  
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
-<<<<<<< HEAD
-
 
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
 
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-  process.on('SIGTERM', () => {}
-    fixer.log('Shutting down build error auto-fixer...')
-    process.exit(0)}
-});
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Start auto-fixer;
 })
   // Start auto-fixer
@@ -1430,59 +599,3 @@ this.log('Starting build error auto-fixer...')
 <<<<<<< HEAD
     process.exit(1)})};
 module.exports = BuildErrorAutoFixer;
-
-module.exports = BuildErrorAutoFixer;
-
-module.exports = BuildErrorAutoFixer;
-
-=======
-<<<<<<< HEAD
-    process.exit(1)})};
-
-module.exports = BuildErrorAutoFixer;
-module.exports = BuildErrorAutoFixer;
-
-=======
-<<<<<<< HEAD
-    process.exit(1)})}
-
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = BuildErrorAutoFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = BuildErrorAutoFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = BuildErrorAutoFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
-
->>>>>>> merged-prs-20250907-203621
-module.exports = BuildErrorAutoFixer;
-
-module.exports = BuildErrorAutoFixer;
-
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-module.exports = BuildErrorAutoFixer;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge

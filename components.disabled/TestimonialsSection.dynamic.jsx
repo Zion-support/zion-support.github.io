@@ -1,39 +1,4 @@
-<<<<<<< HEAD
-=======
-
-</p>'
-</p>'
-ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-</p>
-<<<<<<< HEAD
-
-</p>
-
-</p>'
-</p>'
-
-
-
-=======
-</p>
-
-
-</p>'
-
-
-</p>'
-
+const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
 </p>'
 </p>'
 </p>'
-</p>'
-
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

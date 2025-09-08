@@ -93,4 +93,3 @@ const element = screen.getByRole(
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
->>>>>>> origin/cursor/delete-old-data-records-6bba

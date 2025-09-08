@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-}")}"
-
-  async runTypeCheck() {}
-    console.log(" Running TypeScript type checking...")
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -514,7 +488,6 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.build.result?.duration || ""N/A""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ``
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
-<<<<<<< HEAD
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 =======
@@ -584,53 +557,4 @@ const report = await this.generateCIReport();";
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
 // Start the "
-<<<<<<< HEAD
-// Start the "
-// Start the "
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-// Start the "
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-// Start the "
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,46 +1,80 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
-export default function Blockchain() {
-  const services = [
-    {
-      icon: Shield,
-title: 'Smart Contract Development'
-      description: 'Secure, audited smart contracts for various blockchain platforms.'
-      features: ['EthereumPolygonBinance Smart ChainCustom Blockchains']
-    }
-    {
-      icon: DollarSign,
-title: 'DeFi Solutions'
-      description: 'Decentralized finance applications and protocols.',
-features: ['DEX DevelopmentYield FarmingLiquidity PoolsToken Economics']
-    }
-    {
-      icon: Users,
-title: 'NFT Marketplace'
-      description: 'Complete NFT marketplace solutions with minting and trading.',
-features: ['Minting PlatformAuction SystemRoyalty ManagementMetadata Storage']
-    }
-    {
-      icon: Lock,
-title: 'Security Audits'
-      description: 'Comprehensive security analysis for blockchain applications.',
-features: ['Code ReviewVulnerability AssessmentPenetration TestingCompliance Check']
-    }
-    {
-      icon: Globe,
-title: 'Cross-Chain Solutions'
-      description: 'Interoperability solutions for multi-blockchain ecosystems.',
-features: ['Bridge DevelopmentCross-Chain SwapsAsset MigrationUniversal Protocols']
-    }
-    {
-      icon: BarChart3,
-title: 'Blockchain Analytics'
-      description: 'Data analysis and insights for blockchain transactions.',
-features: ['Transaction TrackingPattern AnalysisRisk AssessmentCompliance Reporting']
-    }
-  ];
+import { 
+  Shield, 
+  Zap, 
+  Globe, 
+  Lock, 
+  ArrowRight, 
+  CheckCircle, 
+  Users, 
+  Award, 
+  Phone, 
+  Mail, 
+  MapPin 
+} from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+
+const features = [
+  {
+    icon: Shield,
+    title: 'Smart Contracts',
+    description: 'Secure, self-executing contracts with automated enforcement and transparent terms.'
+  },
+  {
+    icon: Zap,
+    title: 'DeFi Solutions',
+    description: 'Decentralized finance applications including lending, borrowing, and trading platforms.'
+  },
+  {
+    icon: Globe,
+    title: 'NFT Marketplaces',
+    description: 'Custom NFT platforms for digital art, collectibles, and unique digital assets.'
+  },
+  {
+    icon: Lock,
+    title: 'Security Audits',
+    description: 'Comprehensive smart contract audits to ensure security and prevent vulnerabilities.'
+  }
+];
+
+const services = [
+  {
+    title: 'Smart Contract Development',
+    description: 'Custom smart contracts for various blockchain platforms including Ethereum, BSC, and Polygon.',
+    features: ['Solidity Development', 'Gas Optimization', 'Multi-chain Support', 'Testing & Deployment'],
+    pricing: 'Starting at $5,000'
+  },
+  {
+    title: 'DeFi Platform Development',
+    description: 'Complete decentralized finance solutions with advanced trading and liquidity features.',
+    features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics'],
+    pricing: 'Starting at $15,000'
+  },
+  {
+    title: 'NFT Marketplace',
+    description: 'Custom NFT platforms with minting, trading, and marketplace functionality.',
+    features: ['NFT Minting', 'Marketplace UI', 'Royalty System', 'Wallet Integration'],
+    pricing: 'Starting at $8,000'
+  },
+  {
+    title: 'Blockchain Integration',
+    description: 'Integrate blockchain technology into existing applications and systems.',
+    features: ['API Integration', 'Wallet Connectivity', 'Transaction Management', 'Real-time Updates'],
+    pricing: 'Starting at $3,000'
+  }
+];
+
+const stats = [
+  { number: '50+', label: 'Blockchain Projects' },
+  { number: '15+', label: 'DeFi Platforms' },
+  { number: '25+', label: 'Smart Contracts' },
+  { number: '99.9%', label: 'Security Score' }
+];
+
+export default function BlockchainPage() {
   return (
     <div><Head>
         <title>Blockchain Solutions - Zion Tech Group</title>

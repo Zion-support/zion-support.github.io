@@ -32,26 +32,6 @@ const ErrorBoundary = dynamic(() => import('./ErrorBoundary'),{'; 'loading': () 
 const ErrorBoundary = dynamic(() => import(\"./ErrorBoundary\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ErrorBoundary\' ,
 const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{"; loading: () => <p>Loading.</p,>}) export: "default ErrorBoundary" ,"""
 const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

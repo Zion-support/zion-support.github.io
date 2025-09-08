@@ -1,24 +1,12 @@
 <<<<<<< HEAD
-=
-
-
-
-
-import React from 'react';
+import * as React from 'react';
 
 =======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 interface DocsProps {
   // Add props here as needed
 }
-
-<<<<<<< HEAD
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function Docs({ }: DocsProps) {
   return (
     <div>
@@ -26,17 +14,4 @@ export default function Docs({ }: DocsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-}
-<<<<<<< HEAD
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import _React from 'react"  import '@testing-library/jest-dom import ModernLayout from '../components/ModernLayout" describe('ModernLayout',() => {' test('renders without crashing',() => {' render(<ModernLayout / / />) expect(screen.getByTestId("modernlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernLayout / / />) }) test('handles user interactions',() => {' render(<ModernLayout / / />) }) test('applies correct styling',() => {' render(<ModernLayout / / />) }) })

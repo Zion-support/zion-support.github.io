@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -103,8 +85,6 @@ class ComprehensiveTestingSuite {}
 =======
   log(message, type = "info") {;}
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    ,}
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),}
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`
@@ -352,62 +332,4 @@ if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
   testSuite.run().catch(console.error),};
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 module.exports = ComprehensiveTestingSuite;
-<<<<<<< HEAD
-module.exports = ComprehensiveTestingSuite;
-module.exports = ComprehensiveTestingSuite;
-      const report = await this.generateTestReport();"
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = ComprehensiveTestingSuite;
-<<<<<<< HEAD
-      const report = await this.generateTestReport();"
-
-
-      const report = await this.generateTestReport();"
-
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComprehensiveTestingSuite;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      const report = await this.generateTestReport();
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-      const report = await this.generateTestReport();"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-"`;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

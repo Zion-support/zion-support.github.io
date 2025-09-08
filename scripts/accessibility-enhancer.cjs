@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-#!/usr/bin/env node;
 const fs = require("$1")
 const path = require("path")
     this.log("♿ Creating accessibility configuration...")
@@ -66,24 +65,4 @@ const path = require("path")
       this.log(" Accessibility styles created successfully")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
-<<<<<<< HEAD
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
-#!/usr/bin/env node
-
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-class AccessibilityEnhancer {
-  // TODO: Implement
-}
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.accessibilityIssues = [];
-    this.improvements = [];
-
-          // Check for img tags without alt attributes;
-          const imgPattern = /<img[^>]*>/gi;
-</img>`;
-

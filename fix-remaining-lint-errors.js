@@ -1,8 +1,13 @@
-import React from 'react';
 #!/usr/bin/env node;
-import fs from 'fs;
-import path from 'path;
-import { execSync } from 'child_process';
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8');  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } main().catch(console.error);
+<<<<<<< HEAD
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8');  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } main().catch(console.error);
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8');  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } main().catch(console.error);
+=======
+#!/usr/bin/env node;,
+import fs from 'fs';';,
+import path from 'path';';
+import { execSync } from 'child_process';,
 // Function to recursively find all files;
 function findFiles(dir, extensions = ['.js.jsx.ts.tsx']) {'};
   let files = []
@@ -81,50 +86,49 @@ function fixSyntaxIssues(content) {};
   return fixed
 };
 // Main function;
-function main() {};
-  _console.log('🔧 Starting targeted lint error fixes...'),'
-  const files = findFiles('/workspace'),'
-  let fixedCount = 0
-  let errorCount = 0
-  for (const file of, files) {};
-    try {};
-      let content = fs.readFileSync(file, 'utf8'),'
-      let originalContent = content
-      // Apply targeted fixes
-      content = fixParsingErrors(content)
-      content = fixUnusedVariables(content)
-      content = fixSyntaxIssues(content)
-      // Only write if content changed
-      if (content !== originalContent) {};
-        fs.writeFileSync(file, content, 'utf8'),'
-        fixedCount++
-        _console.log(`✅ Fixed: ${file}`)
-      };
-    } catch (error) {};
-      errorCount++
-      _console.error(`❌ Error fixing ${file}:`, error.message)
-    };
-  };
-  _console.log(`\n📊 Summary: `)
-  _console.log(`   Files processed: ${files.length}`)
-  _console.log(`   Files fixed: ${fixedCount}`)
-  _console.log(`   Errors: ${errorCount}`)
-  // Run linter again to check progress
-  _console.log('\n🔍 Running linter to check progress...'),'
-  try {};
-    const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),'
-    const lines = result.split('\n'),'
-    const lastLine = lines[lines.length - 2]
-    _console.log(`📈 Lint result: ${lastLine}`)
-  } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
-  };
-};
-main()
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")>, fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}),  let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'),  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} }  } main().catch(console.error)
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")>, fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}),  let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'),  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} }  } main().catch(console.error)
-#!/usr/bin/env node
-// Function to fix remaining lint errors
+function main() {}
+  _console.log('🔧 Starting targeted lint error fixes...');',
+  const files = findFiles('/workspace');';
+  let fixedCount = 0;
+  let errorCount = 0;
+  for (const file of, files) {}
+    try {}
+      let content = fs.readFileSync(file, 'utf8');',
+      let originalContent = content;,
+      // Apply targeted fixes;
+      content = fixParsingErrors(content);
+      content = fixUnusedVariables(content);
+      content = fixSyntaxIssues(content);
+      // Only write if content changed;
+      if (content !== originalContent) {}
+        fs.writeFileSync(file, content, 'utf8');',
+        fixedCount++;,
+        _console.log(`✅ Fixed: ${file}`);,
+      }
+    } catch (error) {}
+      errorCount++;,
+      _console.error(`❌ Error fixing ${file}:`, error.message);,
+    }
+  }
+  _console.log(`\n📊 Summary:`);
+  _console.log(`   Files processed: ${files.length}`);,
+  _console.log(`   Files fixed: ${fixedCount}`);,
+  _console.log(`   Errors: ${errorCount}`);,
+  // Run linter again to check progress;
+  _console.log('\n🔍 Running linter to check progress...');';
+  try {}
+    const result = execSync('npm run lint 2>&1', { encoding: 'utf8' });',
+    const lines = result.split('\n');';,
+    const lastLine = lines[lines.length - 2];,
+    _console.log(`📈 Lint result: ${lastLine}`);,
+  } catch (error) {}
+    _console.log('⚠️  Some lint errors remain. Check the output above.');',
+  }
+}
+main();
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+#!/usr/bin/env node;
+// Function to fix remaining lint errors;
 function fixRemainingLintErrors(content) {
   let fixed = content
   // Fix unescaped entities
@@ -162,11 +166,17 @@ async function $1() {
         fixedCount++};
     } catch (error) {;
   console.error(`Error processing ${file}:`, error.message);
-      errorCount++};
-  };
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-main().catch(console.error)
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")> fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g, "<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}), console.log(``Found ${files.length} files to process...``), let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'), console.log(``Fixed: ${file}``), fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} } , console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error)
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")>, fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}), console.log(``Found ${files.length} files to process...``), let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'), console.log(``Fixed: ${file}``), fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} } , console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error)
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")>, fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}), console.log(``Found ${files.length} files to process...``), let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'), console.log(``Fixed: ${file}``), fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} } , console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error)
-#!/usr/bin/env node, function fixRemainingLintErrors(content) { let fixed = content, fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos,$2"), fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot,$2")>, fixed = fixed.replace( /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"), fixed = fixed.replace(/<\/a>/g,"</Link>"), fixed = fixed.replace( /import\s+([^]+),/,"import $1,\nimport Link from \"next/link\"," ), if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {", fixed = fixed.replace(/import\s+([^]+),/,"import $1,\nimport Link from "next/link)"} , return fixed} , async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}), console.log(``Found ${files.length} files to process...``), let fixedCount = 0, let errorCount = 0, for (const file of files) { try { const content = fs.readFileSync(file,"utf8"), const fixed = fixRemainingLintErrors(content), if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'), console.log(``Fixed: ${file}``), fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message), errorCount++} } , console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error)
+      errorCount++}
+  }
+;
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
+main().catch(console.error);
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")> fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,; "<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)";,} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++;,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++;,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+<<<<<<< HEAD
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+=======
+#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

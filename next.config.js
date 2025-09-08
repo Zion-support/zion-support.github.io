@@ -2,441 +2,141 @@ const os = require('os');
 
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+  
+  // Performance optimizations
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  
+  // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
-    formats: ['image/webp', 'image/avif']
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-    minimumCacheTTL: 31536000
-  }
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+  },
+  
+  // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     if (dev) {
+      // Exclude problematic directories from file watching
       config.watchOptions = {
         ignored: [
-          '**/node_modules/****/.git/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/****/pages.disabled*/****/pages.broken*/**'
-          '**/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/**'
-          '**/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/**'
-          '**/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
-        ]
-        poll: 1000
-        aggregateTimeout: 300
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/pages_backup*/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/src_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+          '**/performance-*.txt'
+        ],
+        poll: 1000,
+        aggregateTimeout: 300,
       };
     }
     
-    // For Netlify deployment, exclude problematic files temporarily
-    if (process.env.SKIP_TYPE_CHECK === 'true') {
-      config.externals = config.externals || [];
-      config.externals.push({
-        './src/context/FavoritesContext.tsx': 'empty',
-        './src/context/LanguageContext.tsx': 'empty', 
-        './src/context/RequestQuoteWizard.tsx': 'empty',
-        './src/context/WhitelabelContext.tsx': 'empty',
-        './src/hooks/useApiKeys.ts': 'empty',
-      });
-    }
-
-    // Smart Sentry detection: Disable automatically if would cause build issues
-    const shouldDisableSentry = process.env.SKIP_SENTRY_BUILD === 'true' || 
-                                process.env.CI === 'true' ||
-                                process.env.NODE_ENV === 'production' ||
-                                !process.env.SENTRY_DSN ||
-                                process.env.SENTRY_DSN?.includes('dummy') ||
-                                process.env.SENTRY_DSN?.includes('placeholder');
-    
-    if (shouldDisableSentry) {
-      console.log('🚫 Sentry disabled - using mock implementation (Smart Detection)');
-      
-      // Use webpack aliases to completely replace all Sentry imports with mocks
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@sentry/nextjs': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
-        '@sentry/node': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
-        '@sentry/tracing': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
-        '@sentry/react': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
-        '@sentry/browser': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
-      };
-    }
-
-    // Completely exclude dd-trace during CI builds to prevent native module issues  
-    if (process.env.SKIP_DATADOG === 'true' || process.env.CI === 'true') {
-      console.log('🚫 DD-Trace disabled for CI build - using mock implementation');
-      
-      // Use webpack alias to replace dd-trace with mock implementation
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'dd-trace': path.resolve(__dirname, 'src/utils/dd-trace-mock.ts'),
-      };
-    }
-
-    // PHASE 3: Advanced Performance Optimizations and Error Handling
-    // Enhanced bundle optimization and monitoring capabilities
-
-    // CRITICAL: Minimal serverless environment protection (avoiding read-only property issues)
-    if (isServer) {
-      // Only essential polyfills to avoid property assignment errors
-      if (typeof global !== 'undefined') {
-        // Only set properties that are safe to assign
-        try {
-          Object.defineProperty(global, 'self', { 
-            value: global.self || global, 
-            writable: true, 
-            configurable: true 
-          });
-        } catch (e) { /* ignore if already defined */ }
-        
-        try {
-          Object.defineProperty(global, 'webpackChunk_N_E', { 
-            value: global.webpackChunk_N_E || [], 
-            writable: true, 
-            configurable: true 
-          });
-        } catch (e) { /* ignore if already defined */ }
-      }
-      
-      // Add serverless-specific webpack configuration
-      config.target = 'node';
-      config.externalsPresets = { node: true };
-      
-      // Ensure proper module resolution in serverless
-      config.resolve.conditionNames = ['node', 'require', 'default'];
-      config.resolve.mainFields = ['main', 'module'];
-    }
-
-    // Exclude native modules from server-side bundling to prevent build errors
-    if (isServer) {
-      // Add all problematic native modules as externals
-      config.externals = config.externals || [];
-      const nativeModules = [
-        '@chainsafe/libp2p-noise',
-        '@chainsafe/libp2p-gossipsub', 
-        '@libp2p/tcp',
-        'libp2p',
-        '@orbitdb/core',
-        'helia',
-        '@helia/json',
-        'blockstore-level',
-        'datastore-level',
-        'multiformats',
-        'dd-trace',
-        // Add any other native modules that might cause issues
-        '@chainsafe/as-sha256',
-        '@chainsafe/as-chacha20poly1305',
-        '@chainsafe/bls',
-        'node-datachannel',
-        'classic-level',
-        'level'
-      ];
-      
-      config.externals.push(...nativeModules);
-      console.log('🚫 Native modules externalized for server build:', nativeModules.length);
-    }
-
-    // Fix webpack cache configuration to prevent build errors and warnings
-    if (config.cache) {
-      // Use memory cache to prevent filesystem cache issues and "Serializing big strings" warnings
-      config.cache = {
-        type: 'memory',
-        maxGenerations: dev ? 1 : 5,
-      };
-    } else {
-      // Ensure memory cache is properly configured
-      config.cache = {
-        type: 'memory',
-        maxGenerations: dev ? 1 : 5,
-      };
-    }
-
-    // Add optimization to prevent temporal dead zone issues
-    if (!dev && isServer) {
-      config.optimization = {
-        ...config.optimization,
-        concatenateModules: false, // Disable module concatenation which can cause TDZ issues
-        minimize: false, // Disable minimization on server side to preserve variable names
-        mangleExports: false,
-        usedExports: false, // Disable to prevent conflict with cacheUnaffected
-      };
-    }
-
-    // Suppress warnings in both dev and production
-    config.ignoreWarnings = [
-      /punycode.*deprecated/i,
-      /DEP0040/,
-      /Critical dependency/,
-      /Serializing big strings/i,
-      /PackFileCacheStrategy/,
-      // Suppress common Next.js warnings that don't affect functionality
-      /Module not found.*can't resolve/i,
-      /export.*was not found in/i,
-      // Additional Next.js 14 warnings
-      /images\.domains.*deprecated/i,
-      /Fast Refresh/i,
-      /webpack performance recommendations/i,
-      // Suppress optimization warnings
-      /optimization\.usedExports/i,
-      /cacheUnaffected/i,
-      // Suppress cache-related warnings
-      /cache.*filesystem/i,
-      /memory.*cache/i,
-    ];
-
-
-
-    // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
-    if (!isServer) {
-      config.optimization = {
-        ...config.optimization,
-        
-        // Advanced splitChunks configuration for bundle optimization
-        splitChunks: {
-          chunks: 'all',
-          minSize: 20000,     // 20KB minimum chunk size
-          maxSize: 244000,    // 244KB maximum chunk size (target from plan)
-          minChunks: 1,
-          maxAsyncRequests: 30,
-          maxInitialRequests: 30,
-          cacheGroups: {
-            // Heavy libraries that need special handling
-            heavy: {
-              test: /[\\/]node_modules[\\/](@libp2p|helia|orbitdb|blockstore|datastore|multiformats)[\\/]/,
-              name: 'heavy-vendor',
-              chunks: 'async', // Only load when needed
-              priority: 30,
-              maxSize: 200000,
-              enforce: true,
-            },
-            
-            // Vendor libraries bundle (optimized)
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-              priority: 10,
-              maxSize: 200000, // Reduced from 244KB
-              minSize: 10000,  // Prevent tiny chunks
-              enforce: true,
-            },
-            
-            // React ecosystem bundle
-            react: {
-              test: /[\\/]node_modules[\\/](react|react-dom|react-router|@tanstack)[\\/]/,
-              name: 'react-vendor',
-              chunks: 'all',
-              priority: 20,
-              maxSize: 244000,
-              enforce: true,
-            },
-            
-            // UI libraries bundle
-            ui: {
-              test: /[\\/]node_modules[\\/](@radix-ui|@chakra-ui|framer-motion|lucide-react)[\\/]/,
-              name: 'ui-vendor',
-              chunks: 'all',
-              priority: 20,
-              maxSize: 244000,
-              enforce: true,
-            },
-            
-            // Utilities bundle
-            utils: {
-              test: /[\\/]node_modules[\\/](lodash-es|date-fns|axios|zod|yup)[\\/]/,
-              name: 'utils-vendor',
-              chunks: 'all',
-              priority: 20,
-              maxSize: 244000,
-              enforce: true,
-            },
-            
-            // Common application code
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 5,
-              maxSize: 244000,
-              enforce: true,
-            },
-            
-            // Default vendor chunk for everything else
-            default: {
-              minChunks: 2,
-              priority: -20,
-              reuseExistingChunk: true,
-              maxSize: 244000,
-            },
-          }
-        },
-        
-        // Optimization settings for better performance
-        moduleIds: 'deterministic',
-        chunkIds: 'deterministic',
-        usedExports: !dev,
-        sideEffects: false,
-        concatenateModules: !dev,
-        minimize: !dev,
-        
-        // Runtime chunk optimization
-        runtimeChunk: {
-          name: 'runtime',
-        },
-      };
-      
-      // Updated performance hints with stricter budgets
-      config.performance = {
-        hints: dev ? false : 'warning',
-        maxEntrypointSize: 1000000, // 1MB for main entrypoint (down from 4.97MB)
-        maxAssetSize: 244000,       // 244KB for individual assets
-        assetFilter: (assetFilename) => {
-          return /\.(js|css)$/.test(assetFilename);
-        },
-      };
-    }
-
-    // Only apply optimizations in production
-    if (!dev && !isServer) {
-      // Sentry webpack plugin optimizations
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@sentry/tracing': '@sentry/tracing/esm',
-      };
-
-      // Remove cacheUnaffected when usedExports is enabled to prevent conflicts
-      if (config.cache && config.cache.cacheUnaffected !== undefined) {
-        delete config.cache.cacheUnaffected;
-      }
-    }
-
-    // CRITICAL FIX: Remove cacheUnaffected in ALL cases to prevent webpack conflicts
-    // The cacheUnaffected option conflicts with usedExports optimization
-    if (config.cache && config.cache.cacheUnaffected !== undefined) {
-      delete config.cache.cacheUnaffected;
-    }
-    
-    // Also ensure that cache.type is properly configured when filesystem caching is used
-    if (config.cache && config.cache.type === 'filesystem') {
-      // Remove any potentially conflicting cache options
-      delete config.cache.cacheUnaffected;
-      
-      // Set safe cache options
-      config.cache.allowCollectingMemory = false;
-      config.cache.managedPaths = [path.resolve(__dirname, 'node_modules')];
-    }
-
-    // Define feature flags for tree shaking
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        __SENTRY_DEBUG__: false,
-        __SENTRY_TRACING__: true,
-      })
-    );
-
-    // Replace problematic lodash imports with lodash-es equivalents
-    config.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(
-        /^lodash\//,
-        (resource) => {
-          const request = resource.request.replace('lodash/', 'lodash-es/');
-          resource.request = request;
-        }
-      )
-    );
-
-    // Note: Sentry replacement is handled via resolve.alias above for CI builds
-
-    // Handle date-fns ESM import issues
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        'date-fns': 'date-fns',
-      })
-    );
-
-    // Force certain packages to use ESM - Enhanced for Next.js 15
-    config.module.rules.push({
-      test: /\.m?js$/,
-      resolve: {
-        fullySpecified: false,
-      },
-    });
-
-    // Additional ESM handling for Next.js 15 compatibility
-    if (!isServer) {
-      config.resolve.mainFields = ['module', 'main'];
-      config.resolve.conditionNames = ['import', 'require', 'default'];
-    }
-
-    // Add polyfills for Node.js APIs
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-      crypto: false,
-      async_hooks: false,
-      diagnostics_channel: false,
-      worker_threads: false,
-      module: false,
-      child_process: false,
-      http: false,
-      https: false,
-      os: false,
-      path: false,
-      stream: false,
-      util: false,
-      zlib: false,
-      url: false,
-      'dd-trace': false,
-      'node:http': false,
-      'node:https': false,
-      'node:fs': false,
-      'node:path': false,
-      'node:stream': false,
-      'node:util': false,
-      'node:crypto': false,
-      'node:os': false,
-      'node:url': false,
-      'node:worker_threads': false,
-      'node:async_hooks': false,
-      'node:child_process': false,
-      'node:diagnostics_channel': false,
-    };
-
-    // Optimize bundle size
-    if (!dev) {
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-        chunkIds: 'deterministic',
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-              priority: 10,
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 5,
-              reuseExistingChunk: true,
-            },
-          },
-        },
-      };
-    }
-
     return config;
   },
+  
+  // Headers for security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Generate ETags
+  generateEtags: true,
+  
+  // Dist directory
+  distDir: '.next',
+  
+  // Build ID
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
 };
+
 export default nextConfig;

@@ -1,30 +1,19 @@
-
 <<<<<<< HEAD
-
-
+import * as React from 'react';
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
-
-<<<<<<< HEAD
-import React from 'react;
-import Link from next/link';';
-
-=======
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { motion } from framer-motion;
 
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
-import Layout from "../../components/Layout;;
-
-<<<<<<< HEAD
-
-
+import Layout from "../../components/Layout";";
 const industries = [;
   {}
     name: Healthcare,,
@@ -75,9 +64,6 @@ const capabilities = [;
 
   { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
 ;];
-
-  }
-;];
 const capabilities = [;
   { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
   { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',
@@ -86,8 +72,6 @@ const capabilities = [;
   { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
   { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
 ;];
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 const stats = [;
   { number: '15+, label: 'Industries Served' },',
   { number: '10+, label: 'Years Experience' },',
@@ -178,9 +162,9 @@ export default function IndustrySolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
-
-<<<<<<< HEAD
-
+        {/* Stats Section */}
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
 
 =======
@@ -214,7 +198,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Industries Section */}
 <<<<<<< HEAD
 
@@ -256,8 +239,11 @@ export default function IndustrySolutionsPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>";
               </h2>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
+              </p>;
+            </motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {industries.map((industry, index) => (,
                 <motion.div}),
                   key={industry.name}
@@ -306,7 +292,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Capabilities Section */}
 <<<<<<< HEAD
 
@@ -346,8 +331,6 @@ export default function IndustrySolutionsPage() {
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
               </p>;
             </motion.div>;
-<<<<<<< HEAD
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
 
 =======
@@ -386,7 +369,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
 <<<<<<< HEAD
 

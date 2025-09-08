@@ -1,90 +1,16 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-#!/usr/bin/env node;
-
-const fs = require('fs');
-const path = require('path');
-class ComponentReplacer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-#!/usr/bin/env node;
-
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-class ComponentReplacer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-    
-
-    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { }
-    
-    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { }
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react;
-import { motion, AnimatePresence } from framer-motion';
-import {}
->>>>>>> merged-prs-20250907-203621
-
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    const workingComponent = import React, { useState, useEffect, useRef, useCallback } from 'react;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
+
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-#!/usr/bin/env node;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const fs = require('fs');
-const path = require('path');
-class ComponentReplacer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+    
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -136,29 +62,6 @@ import { }
   Star;
 <<<<<<< HEAD
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-} from 'lucide-react;
-
-=======
-} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
-interface ChatMessage {}
-  id": string;"
-  content: string;,
-
-<<<<<<< HEAD
 
 interface ChatMessage {}
   "id": string;
@@ -237,42 +140,7 @@ const [settings, setSettings] = useState({});
 });
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-=======
-<<<<<<< HEAD
 
-=======
-  autoScroll?: boolean};
-export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Sample welcome message;
 const [messages, setMessages] = useState<ChatMessage[]>([])
   const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -294,66 +162,12 @@ const [messages, setMessages] = useState<ChatMessage[]>([])
         };
       setMessages([welcomeMessage])};
   }, [isOpen, messages.length]);
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Auto-scroll to bottom;
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
   }, [messages, autoScroll]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // Simulate AI response;
-  const simulateAIResponse = useCallback(async ("userInput": string) => {}
-    setIsTyping(true);
-    // Simulate processing delay;
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-<<<<<<< HEAD
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> merged-prs-20250907-203621
-  // Simulate AI response;
-  const simulateAIResponse = useCallback(async ("userInput": string) => {}
-    setIsTyping(true);
-    
-    // Simulate processing delay;
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
@@ -362,8 +176,7 @@ const [messages, setMessages] = useState<ChatMessage[]>([])
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-<<<<<<< HEAD
-const responses = [{}];
+    const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
         "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
@@ -416,14 +229,6 @@ const responses = [{}];
         "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
-<<<<<<< HEAD
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
@@ -480,64 +285,15 @@ const responses = [{}];
 =======
       };
     };
-<<<<<<< HEAD
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false)}, []);
-=======
-<<<<<<< HEAD
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false)}, []);
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false)}, []);
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle message submission;
   const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       "content": inputValue.trim(),
@@ -547,40 +303,7 @@ const responses = [{}];
       "status": 'sent'
 <<<<<<< HEAD
     };
-=======
-<<<<<<< HEAD
-    }
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    
-=======
-    };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
->>>>>>> origin/chore/fix-lint-and-merge
-    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
-  // Handle suggestion clicks;
-  const handleSuggestionClick = useCallback(("suggestion": string) => {}
-    setInputValue(suggestion)}, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     
@@ -590,31 +313,6 @@ const responses = [{}];
   const handleSuggestionClick = useCallback(("suggestion": string) => {}
     setInputValue(suggestion)}, []);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  // Handle file upload;
-}
-    setMessages(prev => [...prev, userMessage])
-    setInputValue('')
-    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse])
-  // Handle suggestion clicks
-  const handleSuggestionClick = useCallback(("suggestion": string) => {}
-    setInputValue(suggestion)}, [])
-  // Handle file upload
-  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
-    const file = e.target.files?.[0]
-  if($2) {}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // Handle file upload;
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
     const file = e.target.files?.[0];
@@ -630,34 +328,16 @@ const responses = [{}];
       };
       setMessages(prev => [...prev, fileMessage])};
   }, []);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // Toggle voice input;
-  const toggleVoiceInput = useCallback(() => {}
-    setIsListening(!isListening)}, [isListening]);
-
-<<<<<<< HEAD
-return ();
+  return ()
     <>
       {/* Chat Toggle Button */};
       <button;
@@ -668,103 +348,6 @@ return ();
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
       </button>
 
-
-=======
-
-<<<<<<< HEAD
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, rating: 'positive' | negative) => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  return ()
->>>>>>> merged-prs-20250907-203621
-
-  const handleFileUpload = useCallback((e": React.ChangeEvent<HTMLInputElement>) => {}"
-
-<<<<<<< HEAD
-
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
-
-  // Toggle voice input;
-  const toggleVoiceInput = useCallback(() => {}
-    setIsListening(!isListening)}, [isListening]);
-
-
-  return ()
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      {/* Chat Interface */}
-</button>
-        {isOpen ? <X className=w-6 h-6" /> : <MessageCircle className="w-6 h-6 />}
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  return ()
-=======
->>>>>>> merged-prs-20250907-203621
-"
-  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
-
-
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
-    <>
-      {/* Chat Toggle Button */};
-      <button;
-        onClick={() => setIsOpen(!isOpen)};
-<<<<<<< HEAD
-        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg "hover": bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
-        aria-label="Toggle AI Chat"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
-      </button>
-<<<<<<< HEAD
-
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {/* Chat Interface */};
 </button>"
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
@@ -890,21 +473,11 @@ return ();
                       </div>
                     )};
                   </div>
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
                   {/* Message Content */};
                   <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
                     <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-<<<<<<< HEAD
-                      
                       
                       {/* Message Metadata */};
 {/* Message Content */}
@@ -1032,78 +605,12 @@ return ();
                         </div>
                       )};
                     </div>
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-                    {/* Message Actions */};
-{/* Message Actions */}
-                    <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
-                      <span className="text-xs text-zinc-500">
-                        {message.timestamp.toLocaleTimeString()}
-                      </span>
-<<<<<<< HEAD
-
-
-                      {message.sender === 'bot' && (})
-                        <div className="flex items-center gap-1">
-                          <button
-                            onClick={() => rateResponse(message.id, 'positive')}
-                            className="p-1 text-zinc-400 "hover": text-green-400 transition-colors"
-                            aria-label="Rate response positively"
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                      {message.sender === 'bot' && (})
-                        <div className="flex items-center gap-1">
->>>>>>> origin/chore/fix-lint-and-merge
-                          <button;
-                            onClick={() => rateResponse(message.id, 'positive')}
-                            className=p-1 text-zinc-400 "hover": text-green-400 transition-colors
-                            aria-label=Rate response positively"
->>>>>>> merged-prs-20250907-203621
-                          >
-                            <ThumbsUp className="w-3 h-3 />
-                          </button>
-<<<<<<< HEAD
-                          <button
-                            onClick={() => rateResponse(message.id, 'negative')}
-                            className="p-1 text-zinc-400 "hover": text-red-400 transition-colors"
-                            aria-label="Rate response negatively"
-=======
-                          <button;
-                            onClick={() => rateResponse(message.id, negative)}
-                            className=p-1 text-zinc-400 "hover": text-red-400 transition-colors
-                            aria-label=Rate response negatively"
->>>>>>> merged-prs-20250907-203621
-                          >
-                            <ThumbsDown className="w-3 h-3 />
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-<<<<<<< HEAD
-                                  key={index}
-=======
-=======
-                                  key={index};"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
                     {/* Message Actions */};
                     <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()};
                       </span>
-
 
                       {message.sender === 'bot' && (})
                         <div className="flex items-center gap-1">
@@ -1151,7 +658,6 @@ return ();
               )}
               <div ref={messagesEndRef} />
             </div>
-
 
             {/* Input Area */};
 {/* Input Area */}
@@ -1205,8 +711,6 @@ return ();
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping};
                   />
-<<<<<<< HEAD
-
 
                   {/* File Upload */};
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
@@ -1289,7 +793,6 @@ return ();
                   </label>
                 </div>
 
-
                 {/* Voice Input */};
 {/* Voice Input */}
                 {settings.voiceEnabled && (})
@@ -1346,8 +849,6 @@ return ();
                   <Send className="w-4 h-4" />
                 </button>
               </form>
-<<<<<<< HEAD
-
 
               {/* Quick Actions */};
 {/* Quick Actions */}
@@ -1404,54 +905,11 @@ return ();
   )};
 ";
     
-    
     fs.writeFileSync(this.filePath, workingComponent);
     this.log('AIChatbotSystem component replaced successfully!')};
   async run() {}
     this.log('Starting Component Replacer...');
     
-    
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-<<<<<<< HEAD
-  )};
-";
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    fs.writeFileSync(this.filePath, workingComponent);
-    this.log('AIChatbotSystem component replaced successfully!')};
-  async run() {}
-<<<<<<< HEAD
-    this.log('Starting Component Replacer...');
-    
-=======
-<<<<<<< HEAD
-    this.log(Starting Component Replacer...);
-
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    
-    
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
@@ -1470,81 +928,3 @@ if (require.main === module) {}
 
       process.exit(1)})};
 module.exports = ComponentReplacer;
-
-module.exports = ComponentReplacer;
-
-
-
-module.exports = ComponentReplacer;
-
-<<<<<<< HEAD
-
-
-=======
-=======
-    this.log('Starting Component Replacer...');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    try {}
-      this.replaceComponent();
-      this.log('Component Replacer completed successfully!')} catch (error) {}
-      this.log(`Error in Component "Replacer": ${error.message}`);
-=======
-  )};"
-";"
-    fs.writeFileSync(this.filePath, workingComponent);"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      throw error};
-  };
-// Run the automation if this script is executed directly;
-if (require.main === module) {}
-  const automation = new ComponentReplacer();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-  automation.run();
-    .then(() => {}"
-
-      process.exit(1)})};
-<<<<<<< HEAD
-
-module.exports = ComponentReplacer;
-module.exports = ComponentReplacer;
-module.exports = ComponentReplacer;
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = ComponentReplacer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = ComponentReplacer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComponentReplacer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

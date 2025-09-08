@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 export interface RealMarketService {;
   id: string
@@ -91,5 +90,5 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800
     rating: 4.7
     reviews: 950
-  };
-]
+  }
+];

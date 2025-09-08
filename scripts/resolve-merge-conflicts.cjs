@@ -1,19 +1,10 @@
-
-
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
 
-console.log(🔧 Starting merge conflict resolution...');
+console.log('🔧 Starting merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -21,22 +12,33 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-    if (!content.includes(
-
-
-
-
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      return false;
+    }
+    
+    console.log(`📝 Resolving conflicts in: ${filePath}`);
+    
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = '';
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        conflictType = 'head';
+        continue;
+      }
+      
+      if (line.includes('=======')) {
         conflictType = 'incoming';
         continue;
       }
       
-      if (line.includes(>>>>>>>)) {
+      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -73,19 +75,56 @@ function findConflictedFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith(.) && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith(.tsx) || item.endsWith('.ts') || item.endsWith(.js) || item.endsWith('.jsx'))) {
         try {
-          const content = fs.readFileSync(fullPath, utf8);
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+            conflictedFiles.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return conflictedFiles;
+}
 
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-          if (content.includes('
-
-
-
-
+// Main execution
+try {
+  const conflictedFiles = findConflictedFiles('.');
+  
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+    process.exit(0);
+  }
+  
+  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
+  
+  let resolvedCount = 0;
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      resolvedCount++;
+    }
+  }
+  
+  console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
+  
+  // Try to build after resolving conflicts
+  console.log('\n🔨 Testing build after conflict resolution...');
+  try {
+    execSync('npm run build', { stdio: 'inherit' });
+    console.log('✅ Build successful after conflict resolution!');
+  } catch (error) {
+    console.log('⚠️  Build still has issues, but conflicts are resolved');
+  }
+  
+} catch (error) {
+  console.error('❌ Error during merge conflict resolution:', error.message);
+  process.exit(1);
+}

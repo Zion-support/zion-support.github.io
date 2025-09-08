@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
-
-
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -155,5 +146,3 @@ pr-12325
   
   return response;
 }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

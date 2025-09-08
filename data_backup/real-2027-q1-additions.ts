@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-
-
-
 export interface Real2027Q1Addition {
   "id": string;
   name: string;
@@ -16,31 +11,11 @@ export const "real2027Q1Additions": Real2027Q1Addition[] = [{
     "price": '$1199',
     "features": ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']},
 ];
-
-export interface Real2027Q1Addition {
-  // TODO: Implement
-}
-  "id": string;"
-  name: string;,
-  tagline: string;
-  price: string;,
-  features: string[]}"
-export const "real2027Q1Additions": Real2027Q1Addition[] = [{""
-    id: 'q1-2027-addition-1',
-    "name": 'Q1 2027 Addition 1',
-    "tagline": 'First quarter 2027 addition',
-    "price": '$1199',']
-    "features": ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']},
-];
-
-
-=======
 <<<<<<< HEAD
+export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
+export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
+export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
 =======
 
 export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
-
-export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
-
-export interface Real2027Q1Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q1Additions: Real2027Q1Addition[] = [ { id: 'q1-2027-addition-1',name: 'Q1 2027 Addition 1',tagline: 'First quarter 2027 addition',price: '$1199',features: ['Q1 2027 features','Future innovations','Next-gen solutions'],},];
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

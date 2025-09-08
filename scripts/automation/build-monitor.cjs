@@ -1,51 +1,13 @@
-<<<<<<< HEAD
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-#!/usr/bin/env node;"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-#!/"usr/bin/env" node;
-#!/usr/bin/env node;
-const { execSync } = require("child_process);
-const fs = require(fs");
-const path = require("path);
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-#!/""usr/bin/env"" node;
-#!/usr/bin/env node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec, execSync } = require('child_process');
-=======
-=======
-#!/usr/bin/env node;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const fs = require('fs');
 const path = require('path');
 const { exec, execSync } = require('child_process');
-<<<<<<< HEAD
+
 class BuildMonitor {}
   constructor() {}
     this.projectRoot = '/workspace';
@@ -76,13 +38,7 @@ class BuildMonitor {}
     this.fixesApplied = [];
     this.errorsFound = [];
     this.startTime = Date.now();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.ensureDirectories();
     this.setupSignalHandlers()};
   ensureDirectories() {}
@@ -137,149 +93,15 @@ class BuildMonitor {}
     if (installResult.success) {}
   this.fixesApplied.push("Installed missing dependencies")};
     ;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 setupSignalHandlers() {}
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-=======
-<<<<<<< HEAD
-
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-    const logFile = path.join(this.logDir, 'build-monitor.log');
-    fs.appendFileSync(logFile, message + '\n')};
-  this.log("Attempting to fix build issues...")
-    // Try to install dependencies first
-    const installResult = await this.runCommand("npm install")
-  if($2) {}
-  this.fixesApplied.push("Installed missing dependencies")}
-  setupSignalHandlers($2) {}
-    process.on('SIGTERM', () => this.shutdown())
-    process.on('SIGINT', () => this.shutdown())}
-  log($2) {}
-    const timestamp = new Date().toISOString()
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-=======
-<<<<<<< HEAD
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' )}`;`
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    console.log(message);
-    
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-
-<<<<<<< HEAD
-const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    console.log(message);
-    
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-=======
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  async fixBuildIssues(buildError) {}"
-  this.log("Attempting to fix build issues...");"
-    // Try to install dependencies first;"
-<<<<<<< HEAD
-    const installResult = await this.runCommand("npm install");"
-=======
-<<<<<<< HEAD
-    const installResult = await this.runCommand("npm install");"
-  if($2) {}"
-  this.fixesApplied.push("Installed missing dependencies")};"
-  setupSignalHandlers($2) {}"
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-    const logFile = path.join(this.logDir, 'build-monitor.log')
-    fs.appendFileSync(logFile, message + '\n')}
-  async runCommand(command, options = {}) {}
-    try {}
-      const result = execSync(command, { })
-        "encoding": 'utf8', 
-=======
-    const installResult = await this.runCommand(npm install);"
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    if (installResult.success) {}"
-  this.fixesApplied.push("Installed missing dependencies")};"
-
-setupSignalHandlers() {}"
-
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-    const logFile = path.join(this.logDir, 'build-monitor.log');
-    fs.appendFileSync(logFile, message + '\n')};
-  async runCommand(command, options = {}) {}
-    try {}
-const result = execSync(command, { });
-        "encoding": 'utf8', 
-        "cwd": this.projectRoot,
-=======
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -329,7 +151,6 @@ const result = execSync(command, { });
   async runBuild() {}
     return new Promise((resolve) => {}
       const startTime = Date.now();
-<<<<<<< HEAD
       
       exec('npm run build', { })
         "cwd": this.projectRoot, 
@@ -389,14 +210,7 @@ const result = execSync(command, { });
       }, (error, stdout, stderr) => {}
         const endTime = Date.now();
         const duration = Math.round((endTime - startTime) / 1000);
-<<<<<<< HEAD
         
-=======
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
         resolve({})
           "success": error === null,
           duration,
@@ -425,20 +239,7 @@ const result = execSync(command, { });
     return new Promise((resolve) => {}
       exec('npm run type-check, { "cwd": this.projectRoot }, (error, stdout, stderr) => {}
         const errorCount = stderr ? (stderr.match(/error TS/g) || []).length : 0;
-<<<<<<< HEAD
         
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         resolve({})
           "success": error === null,
           errorCount,
@@ -473,7 +274,6 @@ const result = execSync(command, { });
         const output = stdout + stderr;
         const errorCount = output ? (output.match(/error/g) || []).length : 0;
         const warningCount = output ? (output.match(/warning/g) || []).length : 0;
-<<<<<<< HEAD
         
         resolve({})
           "success": error === null,
@@ -543,16 +343,9 @@ const result = execSync(command, { });
       })})};
   async checkBuildHealth() {}
     this.log('info', 'Checking build health...');
-<<<<<<< HEAD
-    const result = await this.runBuild();
-=======
     
     const result = await this.runBuild();
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (result.success) {}
       this.log('info', 'Build completed successfully');
       return true} else {}
@@ -568,33 +361,6 @@ const result = execSync(command, { });
   async fixBuildIssues() {}
     this.log('info', 'Attempting to fix build issues...');
     
-          resolve({ "used": 0, "total": 0, "percentage": 0 })};"
-=======
-      this.errorsFound.push(`Build failed: ${result.errorMessage}`);
->>>>>>> merged-prs-20250907-203621
-      return false}
-  }
-  async fixBuildIssues() {}
-<<<<<<< HEAD
-    this.log(info, 'Attempting to fix build issues...');
-
-          resolve({ "used": 0, total: 0, "percentage": 0 })}
-=======
-    this.log('info', 'Attempting to fix build issues...');
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> merged-prs-20250907-203621
-          resolve({ "used": 0, "total": 0, "percentage": 0 })};"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Try to install dependencies first;
     const installResult = await this.runCommand('npm install');
     if (installResult.success) {}
@@ -621,13 +387,7 @@ const result = execSync(command, { });
   };
   async fixMissingModules() {}
     this.log('info', 'Checking for missing modules...');
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const result = await this.runCommand('npm ls --depth=0');
     if (!result.success) {}
       this.log('warn', 'Missing modules detected, attempting to install...');
@@ -639,22 +399,6 @@ const result = execSync(command, { });
 <<<<<<< HEAD
     this.log('info', 'Checking for syntax errors...');
     
-=======
-<<<<<<< HEAD
-    this.log(info, 'Checking for syntax errors...');
-
-=======
-    this.log('info', 'Checking for syntax errors...');
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // This would typically involve parsing files and checking syntax;
     // For now, we'll just run a basic check;
     const result = await this.runCommand('node -c src/main.jsx 2>&1 || true');
@@ -674,50 +418,6 @@ const result = execSync(command, { });
   async generateReport() {}
     this.log('info', 'Generating build monitor report...');
     
-=======
-<<<<<<< HEAD
-    this.log('info, Checking for TypeScript type errors...');
-
-    const result = await this.runCommand('npx tsc --noEmit);
-=======
-    this.log('info', 'Checking for TypeScript type errors...');
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-    const result = await this.runCommand('npx tsc --noEmit');
->>>>>>> origin/chore/fix-lint-and-merge
-    if (result.success) {}
-<<<<<<< HEAD
-      this.log('info', 'No TypeScript type errors detected')} else {}
-      this.log('warn', 'TypeScript type errors detected')
-      this.errorsFound.push(`TypeScript "errors": ${result.output}`)}
-=======
-      this.log(info', 'No TypeScript type errors detected)} else {}
-      this.log(warn', 'TypeScript type errors detected);
-      this.errorsFound.push(`TypeScript errors": ${result.output}`)}
->>>>>>> merged-prs-20250907-203621
-  }
-  async generateReport() {}
-<<<<<<< HEAD
-    this.log(info', 'Generating build monitor report...);
-
-=======
-    this.log('info', 'Generating build monitor report...');
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const report = {}
       "timestamp": new Date().toISOString(),
       "duration": Date.now() - this.startTime,
@@ -747,41 +447,16 @@ const result = execSync(command, { });
         "totalFixes": this.fixesApplied.length;
       };
     };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const reportFile = path.join(this.logDir, 'build-monitor-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-=======
->>>>>>> merged-prs-20250907-203621
 
     const reportFile = path.join(this.logDir, 'build-monitor-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
     this.log('info', `Build monitor report "generated": ${reportFile}`)};
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async start() {}
     this.log('info', 'Build Monitor starting...');
     this.isRunning = true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    while (this.isRunning) {}
-      try {}
-        this.log('info', 'Starting build monitoring cycle...');
-        const buildHealthy = await this.checkBuildHealth();
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     while (this.isRunning) {}
       try {}
@@ -789,64 +464,21 @@ const result = execSync(command, { });
         
         const buildHealthy = await this.checkBuildHealth();
         
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-      "summary": {}"
-        buildSuccessful: this.errorsFound.length === 0,"
-        "totalErrors": this.errorsFound.length,
-        "totalFixes": this.fixesApplied.length;"
-
-        const buildHealthy = await this.checkBuildHealth();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (!buildHealthy) {}
           await this.fixBuildIssues();
           await this.fixMissingModules();
           await this.fixSyntaxErrors();
           await this.fixTypeErrors()};
         await this.generateReport();
-<<<<<<< HEAD
         
         this.log('info', 'Build monitoring cycle completed');
         
-=======
-<<<<<<< HEAD
-        
-        this.log('info', 'Build monitoring cycle completed');
-        
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.log('info', 'Build monitoring cycle completed');
-=======
-        
-        this.log('info', 'Build monitoring cycle completed');
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Wait for next cycle;
         await new Promise(resolve => setTimeout(resolve, this.checkInterval))} catch (error) {}
         this.log('error', `Error during build "monitoring": ${error.message}`);
         this.errorsFound.push(`Process "error": ${error.message}`);
         await this.generateReport();
-<<<<<<< HEAD
         
-=======
-<<<<<<< HEAD
-        
-
         // Wait before retrying;
         await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute;
     }  };
@@ -882,71 +514,10 @@ const result = execSync(command, { });
 <<<<<<< HEAD
 };
 ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Start the build monitor;
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 
   process.exit(1)}
-<<<<<<< HEAD
 });
-
-});
-
-});
-
-=======
-<<<<<<< HEAD
-
-});
-});
-
-=======
-<<<<<<< HEAD
-
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-});
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
-
->>>>>>> merged-prs-20250907-203621
-});
-
-});
-
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-});
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge

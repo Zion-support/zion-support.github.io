@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -29,18 +28,6 @@ const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -80,7 +67,6 @@ const { execSync } = require("child_process")
         "type": "error"
         "type": "success"
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
-<<<<<<< HEAD
 // console.log("\n" + "=")
     console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
 // console.log("=")
@@ -93,79 +79,4 @@ const { execSync } = require("child_process")
       this.log(" Starting Intelligent Error Detector & Fixer")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
-
       this.log(`� Error detection "failed": ${error.message}`, ``)
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-
-
-
-<<<<<<< HEAD
-=======
-      this.log(`� Error detection "failed: ${error.message}`, ``)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(`� Error detection failed": ${error.message}`, ``)
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-// console.log("\n" + "=")
-    console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
-// console.log("=")
-    console.log(`Errors "Found"`)
-// console.log(`Fixes "Applied"`)
-    console.log(`Files "Scanned"`)
-// console.log("=")
-      console.log("\n ERRORS "FOUND": ")
-      console.log("\n FIXES "APPLIED": ")
-      this.log(" Starting Intelligent Error Detector & Fixer")
-      this.log("� Intelligent Error Detector & Fixer completed successfully")
-      return { "success": true, "errors": this.errors, "fixes"}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-
-=======
-      this.log(`� Error detection "failed": ${error.message}`, ``)
-<<<<<<< HEAD
-      this.log(`� Error detection "failed": ${error.message}`, ``)
-      this.log(`� Error detection "failed": ${error.message}`, ``)
-
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-      this.log(`� Error detection "failed": ${error.message}`, ``)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(`� Error detection "failed": ${error.message}`, ``)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

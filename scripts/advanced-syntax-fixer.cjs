@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
-
-
-main
-#!/usr/bin/env node;
-
-
-
-
-
-
-#!/usr/bin/env node;
-
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
 
   }
@@ -190,21 +161,4 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
 <<<<<<< HEAD
       "blue"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "blue"
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
-
-
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-      "blue"
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      "blue"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}

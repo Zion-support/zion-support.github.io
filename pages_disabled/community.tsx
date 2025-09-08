@@ -1,3 +1,24 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { 
+  Users, 
+  MessageSquare, 
+  Calendar, 
+  Award, 
+  Star, 
+  ThumbsUp, 
+  Share2, 
+  ExternalLink,
+  Search,
+  Filter,
+  Clock,
+  MapPin,
+  Video,
+  BookOpen,
+  Code,
+  Lightbulb
+} from 'lucide-react';
+import Layout from '../components/Layout';
 
 
 

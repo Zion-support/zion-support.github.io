@@ -1,68 +1,59 @@
-#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-console.log('🔧 Fixing all import issues...');
+console.log('Fixing all broken import statements...');
 
-function fixFile(filePath) {
+// Find all .tsx files in pages directory
+const pages = glob.sync('pages/**/*.tsx', { ignore: ['node_modules/**', 'dist/**', 'out/**', '.next/**'] });
+
+let fixedCount = 0;
+
+pages.forEach(file => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
     
-    // Remove duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const fixedLines = [];
+    // Fix various broken import patterns
+    // Pattern 1: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
     
-    for (const line of lines) {
-      if (line.trim().startsWith('import ')) {
-        const importKey = line.trim();
-        if (!seenImports.has(importKey)) {
-          seenImports.add(importKey);
-          fixedLines.push(line);
-        } else {
-          fixed = true;
-        }
-      } else {
-        fixedLines.push(line);
-      }
+    // Pattern 2: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 3: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 4: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 5: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 6: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 7: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 8: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 9: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    // Pattern 10: import { \nimport { motion } from 'framer-motion';
+    content = content.replace(/import { \nimport { motion } from 'framer-motion';\n/g, "import { motion } from 'framer-motion';\nimport { ");
+    
+    if (content !== originalContent) {
+      console.log(`Fixed broken imports in: ${file}`);
+      fs.writeFileSync(file, content, 'utf8');
+      fixedCount++;
     }
-    
-    if (fixed) {
-      content = fixedLines.join('\n');
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed imports in: ${filePath}`);
-      return true;
-    }
-    return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing file ${file}:`, error.message);
   }
-}
+});
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      if (!['node_modules', '.next', 'dist', 'out'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
-
-const workspacePath = process.cwd();
-const fixedCount = processDirectory(workspacePath);
-console.log(`✨ Fixed ${fixedCount} files with import issues`);
+console.log(`Fixed broken imports in ${fixedCount} files`);
+console.log('Import fixes complete!');

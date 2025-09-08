@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-console.log(""� Starting Smart Documentation Generator...")
-// Get automation interval from environment variable ("default")
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -464,57 +441,6 @@ return "- Network errors are handled automatically\n- API errors are thrown with
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
-=======
-<<<<<<< HEAD
-
-  generateComponentExamples(componentName) {return `\"\"`}
-<${componentName} className=custom-class
-</${componentName}>\`\"\"
-  extractComponentStyling(content) {return This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop.}
-
-  fetch": "Fetches data from the API
-      create": "Creates a new resource
-      update": "Updates an existing resource
-      delete": "Deletes a resource
-      get": "Retrieves data
-      set": "Sets data
-      validate": "Validates input data
-      format": "Formats data for display
-    for (const [key", "description)]
-    return Performs the specified operation"
-  console.log("� Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals)
-  
-=======
-      .join("\n")
-  // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
-  return "- Promise resolving to the API response"
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-<<<<<<< HEAD
-  generateServiceExamples($2) {return "\"\"}
-=======
-  generateServiceExamples(serviceName) {return "\"\"}
->>>>>>> merged-prs-20250907-203621
-  "name": "Example"
-  "description": "Test item"}
-});\`\"\""
-    return "provides user interface functionality"
-  // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples($2) {return "\"\"}
-  generateComponentExamples($2) {return `\"\"`}
-<${componentName} className="custom-class"
-</${componentName}>\`\"\""
-  extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -538,60 +464,4 @@ process.on("SIGINT")
 process.on("SIGTERM")
 <<<<<<< HEAD
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start smart documentation "generator")
-
-
-
-
-
-=======
-<<<<<<< HEAD
-  console.log(� Received SIGTERM, shutting down gracefully...)
-
-
-  console.error(" Failed to start smart documentation "generator)
-
-  console.error( Failed to start smart documentation "generator")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error( Failed to start smart documentation generator")
-
-=======
-  console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-
-=======
-  console.error(" Failed to start smart documentation "generator")
-<<<<<<< HEAD
-  console.error(" Failed to start smart documentation "generator")
-  console.error(" Failed to start smart documentation "generator")
-
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  console.error(" Failed to start smart documentation "generator")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start smart documentation "generator")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

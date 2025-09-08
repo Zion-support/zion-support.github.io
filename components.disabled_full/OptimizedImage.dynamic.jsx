@@ -32,26 +32,6 @@ const OptimizedImage = dynamic(() => import('./OptimizedImage'),{'; 'loading': (
 const OptimizedImage = dynamic(() => import(\"./OptimizedImage\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default OptimizedImage\' ,
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{"; loading: () => <p>Loading.</p,>}) export: "default OptimizedImage" ,"""
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

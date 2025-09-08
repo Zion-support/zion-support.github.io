@@ -8,9 +8,8 @@ export default function SEOHead({ }: SEOHeadProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
-export default function SEOHead() {return (<div>;
-      <h1>SEOHead</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
+=======
+}
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

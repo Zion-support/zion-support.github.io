@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
-#!/usr/bin/env node;
-const fs = require("child_process");
-#!/usr/bin/env node;
-const fs = require("child_process");
-
-
-=======
-<<<<<<< HEAD
-
-#!/usr/bin/env node;
-const fs = require("child_process");
-#!/usr/bin/env node;
-const fs = require("child_process");
-
-#!/usr/bin/env node;
-const fs = require("child_process");
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("path");
@@ -255,57 +236,4 @@ if (require.main === module) {}
   const restorer = new FileRestorer();
 <<<<<<< HEAD
   restorer.restoreCorruptedFiles().catch(console.error)};
-=======
-<<<<<<< HEAD
-  restorer.restoreCorruptedFiles().catch(console.error)}
-
-=======
-  restorer.restoreCorruptedFiles().catch(console.error)};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-=======
 module.exports = FileRestorer;
-<<<<<<< HEAD
-module.exports = FileRestorer;
-module.exports = FileRestorer;
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-module.exports = FileRestorer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = FileRestorer;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

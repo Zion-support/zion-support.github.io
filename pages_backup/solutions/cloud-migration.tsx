@@ -1,19 +1,12 @@
-
 <<<<<<< HEAD
-
-
+import * as React from 'react';
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-
-<<<<<<< HEAD
-import React from 'react;
-import Link from next/link';';
-
-=======
+import React from 'react';
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -36,11 +29,6 @@ import { Cloud,
 
 <<<<<<< HEAD
 import Layout from "../../components/Layout";";
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const phases = [;
   {}
 
@@ -130,24 +118,7 @@ import Layout from "../../components/Layout;;
     ];
   }
 ;];
-
-    title: 'AWS Migration,',
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
-    icon: Cloud,
-    features: [;
-      EC2 instance migration,,
-      'RDS database migration',,
-      S3 storage migration',',
-
-      Lambda serverless functions';
-
-    ];
-  }];
-  },
+const services = [;
   {}
 <<<<<<< HEAD
 
@@ -225,8 +196,19 @@ import Layout from "../../components/Layout;;
       'Cloud Storage migration',',
       Cost optimization'';
     ];
-  }];
-
+  },
+  {}
+    title: 'Multi-Cloud Strategy,',
+    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',
+    icon: Globe,
+    features: [;
+      'Cross-cloud integration,',
+      'Disaster recovery',',
+      'Load balancing',',
+      'Cost optimization'';
+    ];
+  }
+;];
 const benefits = [;
   {}
     title: Cost Reduction,,
@@ -275,7 +257,6 @@ export default function CloudMigrationPage() {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -321,7 +302,6 @@ export default function CloudMigrationPage() {
             </motion.div>;
           </div>;
         </section>;
-
         {/* Process Section */}
         <section className="py-20 bg-white">"
 
@@ -353,8 +333,6 @@ export default function CloudMigrationPage() {
                 with minimal downtime and maximum security.;
               </p>;
             </motion.div>;
-
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {phases.map((phase, index) => (,
                 <motion.div}),
@@ -401,7 +379,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Services Section */}
 <<<<<<< HEAD
 
@@ -440,8 +417,6 @@ export default function CloudMigrationPage() {
                 for maximum flexibility and redundancy.;
               </p>;
             </motion.div>;
-<<<<<<< HEAD
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
 
 =======
@@ -519,7 +494,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Benefits Section */}
 <<<<<<< HEAD
 
@@ -588,7 +562,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
 <<<<<<< HEAD
 
@@ -604,12 +577,10 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Move to the Cloud?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
@@ -636,8 +607,7 @@ export default function CloudMigrationPage() {
           </div>;
         </section>;
       </div>;
-
-
+    </Layout>;
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
 >>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -36,14 +36,7 @@ describe('App'
 
   it('has proper heading structure', () => {
     render(<App />);
-    const heading = screen.getByRole('heading', { level: '1' });
+    const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
-
-
-
-=======
-});
-})ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/delete-old-data-records-6bba

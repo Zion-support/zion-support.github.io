@@ -1,10 +1,2 @@
-
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''

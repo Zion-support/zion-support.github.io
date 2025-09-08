@@ -1,17 +1,3 @@
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-
-<<<<<<< HEAD
 export type InnovativeMicroSaasV2 = {
   \"id\": string;
   title: string;}
@@ -89,7 +75,10 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[]  = [];
   price?: string};
-
+export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
@@ -97,4 +86,4 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 
 =======
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

@@ -32,26 +32,6 @@ const LoadingSpinner = dynamic(() => import('./LoadingSpinner'),{'; 'loading': (
 const LoadingSpinner = dynamic(() => import(\"./LoadingSpinner\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default LoadingSpinner\' ,
 const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{"; loading: () => <p>Loading.</p,>}) export: "default LoadingSpinner" ,"""
 const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default LoadingSpinner' ,'
-
-<<<<<<< HEAD
-
-=======
-
-
-'
-</p>'
-
 </p>'
 </p>'
 </p>'
-
-</p>'
-
-</p>'
-
-</p>'
-</p>'
-
-</p>'
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
