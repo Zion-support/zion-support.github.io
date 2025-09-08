@@ -1,245 +1,301 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   BookOpen, 
   Target, 
   FileText, 
   Users, 
   Code, 
-  HelpCircle, 
-  DollarSign,
+  HelpCircle,
   ArrowRight,
-  Star,
-  Sparkles,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Globe,
-  Cpu,
-  Zap,
-  Rocket,
-  Heart,
-  Scale,
-  PenTool,
-  TrendingUp,
-  Lock,
-  Server,
-  Smartphone,
-  Atom,
-  Leaf,
-  Building,
-  Car,
-  Factory,
-  City,
-  CheckCircle,
-  Play,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Download,
   Calendar,
   Clock,
-  User,
-  Award,
+  Star,
+  Download,
+  Play,
+  ExternalLink,
+  Search,
+  Filter,
+  TrendingUp,
   Lightbulb,
-  BarChart3,
-  PieChart,
-  LineChart,
-  Activity,
-  Layers,
-  GitBranch,
-  GitCommit,
-  GitPullRequest,
-  GitMerge,
-  GitCompare
+  Award,
+  Globe,
+  Zap
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Resources() {
   const resourceCategories = [
     {
-      id: 'blog',
       title: 'Blog & Insights',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      color: 'from-blue-500 to-indigo-500',
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Latest industry trends, technology insights, and thought leadership',
       featured: true,
       items: [
-        { title: 'AI Trends 2024', type: 'Article', readTime: '5 min', featured: true },
-        { title: 'Quantum Computing Breakthroughs', type: 'Research', readTime: '8 min', featured: false },
-        { title: 'Digital Transformation Guide', type: 'Guide', readTime: '12 min', featured: true },
-        { title: 'Cybersecurity Best Practices', type: 'Tutorial', readTime: '6 min', featured: false }
+        {
+          title: 'The Future of AI in Healthcare',
+          excerpt: 'Exploring how artificial intelligence is revolutionizing patient care and medical diagnostics.',
+          date: '2025-01-15',
+          readTime: '5 min read',
+          category: 'AI & Healthcare',
+          featured: true
+        },
+        {
+          title: 'Quantum Computing Breakthroughs 2025',
+          excerpt: 'Latest developments in quantum computing and their implications for business.',
+          date: '2025-01-10',
+          readTime: '8 min read',
+          category: 'Quantum Computing',
+          featured: true
+        },
+        {
+          title: 'Cybersecurity Trends for 2025',
+          excerpt: 'Emerging threats and innovative security solutions for the digital age.',
+          date: '2025-01-05',
+          readTime: '6 min read',
+          category: 'Cybersecurity',
+          featured: false
+        }
       ]
     },
     {
-      id: 'case-studies',
       title: 'Case Studies',
       icon: Target,
-      description: 'Real-world success stories',
       color: 'from-green-500 to-emerald-500',
+      description: 'Real-world success stories and implementation results',
       featured: true,
       items: [
-        { title: 'Healthcare AI Implementation', type: 'Healthcare', readTime: '10 min', featured: true },
-        { title: 'Manufacturing Transformation', type: 'Manufacturing', readTime: '8 min', featured: true },
-        { title: 'Financial Services Innovation', type: 'Finance', readTime: '7 min', featured: false },
-        { title: 'Retail Digital Revolution', type: 'Retail', readTime: '9 min', featured: false }
+        {
+          title: 'Healthcare Provider Transformation',
+          excerpt: 'How we helped a major hospital system implement AI-powered diagnostics.',
+          results: '40% faster diagnosis, 25% cost reduction',
+          industry: 'Healthcare',
+          featured: true
+        },
+        {
+          title: 'Financial Services Innovation',
+          excerpt: 'AI-driven risk management system for a Fortune 500 bank.',
+          results: '60% faster risk assessment, 30% improved accuracy',
+          industry: 'Financial Services',
+          featured: true
+        },
+        {
+          title: 'Manufacturing Efficiency',
+          excerpt: 'IoT and AI optimization for a global manufacturing company.',
+          results: '35% reduced downtime, 20% increased productivity',
+          industry: 'Manufacturing',
+          featured: false
+        }
       ]
     },
     {
-      id: 'white-papers',
       title: 'White Papers',
       icon: FileText,
-      description: 'In-depth research and analysis',
       color: 'from-purple-500 to-pink-500',
+      description: 'In-depth research and analysis on emerging technologies',
       featured: true,
       items: [
-        { title: 'AI Ethics Framework', type: 'Research', readTime: '15 min', featured: true },
-        { title: 'Quantum Security Protocols', type: 'Technical', readTime: '20 min', featured: true },
-        { title: 'Sustainable Tech Solutions', type: 'Environmental', readTime: '12 min', featured: false },
-        { title: 'Digital Twin Applications', type: 'Technology', readTime: '18 min', featured: false }
+        {
+          title: 'AI Ethics in Business Applications',
+          excerpt: 'Comprehensive guide to implementing ethical AI practices in enterprise environments.',
+          pages: '45 pages',
+          category: 'AI Ethics',
+          featured: true
+        },
+        {
+          title: 'Quantum Computing Business Impact',
+          excerpt: 'Analysis of quantum computing\'s potential impact on various industries.',
+          pages: '32 pages',
+          category: 'Quantum Computing',
+          featured: true
+        },
+        {
+          title: 'Cybersecurity in the Age of AI',
+          excerpt: 'How AI is both enhancing and challenging cybersecurity practices.',
+          pages: '38 pages',
+          category: 'Cybersecurity',
+          featured: false
+        }
       ]
     },
     {
-      id: 'webinars',
       title: 'Webinars',
       icon: Users,
-      description: 'Expert-led learning sessions',
       color: 'from-orange-500 to-red-500',
-      featured: true,
-      items: [
-        { title: 'AI Implementation Strategies', type: 'Strategy', duration: '60 min', featured: true },
-        { title: 'Cybersecurity in 2024', type: 'Security', duration: '45 min', featured: true },
-        { title: 'Cloud Migration Best Practices', type: 'Technology', duration: '90 min', featured: false },
-        { title: 'Data Analytics Masterclass', type: 'Analytics', duration: '75 min', featured: false }
-      ]
-    },
-    {
-      id: 'documentation',
-      title: 'Documentation',
-      icon: Code,
-      description: 'Technical guides and APIs',
-      color: 'from-cyan-500 to-blue-500',
-      featured: true,
-      items: [
-        { title: 'API Reference Guide', type: 'Technical', readTime: '30 min', featured: true },
-        { title: 'Integration Tutorials', type: 'Tutorial', readTime: '25 min', featured: true },
-        { title: 'Deployment Guide', type: 'Guide', readTime: '20 min', featured: false },
-        { title: 'Troubleshooting Manual', type: 'Reference', readTime: '35 min', featured: false }
-      ]
-    },
-    {
-      id: 'faq',
-      title: 'FAQ & Support',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      color: 'from-yellow-500 to-orange-500',
+      description: 'Expert-led learning sessions and interactive workshops',
       featured: false,
       items: [
-        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
-        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },
-        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },
-        { title: 'Training Resources', type: 'Training', readTime: '10 min', featured: false }
+        {
+          title: 'AI Implementation Best Practices',
+          excerpt: 'Learn from industry experts about successful AI deployment strategies.',
+          duration: '60 minutes',
+          date: '2025-01-20',
+          speakers: ['Dr. Sarah Chen', 'Mark Johnson'],
+          featured: true
+        },
+        {
+          title: 'Quantum Computing for Business',
+          excerpt: 'Understanding quantum computing applications in business contexts.',
+          duration: '45 minutes',
+          date: '2025-01-25',
+          speakers: ['Dr. Michael Rodriguez'],
+          featured: false
+        }
       ]
     },
     {
-      id: 'pricing-guide-2025',
-      title: 'Pricing Guide 2025',
-      icon: DollarSign,
-      description: 'Complete pricing information',
-      color: 'from-emerald-500 to-green-500',
-      featured: true,
+      title: 'Documentation',
+      icon: Code,
+      color: 'from-indigo-500 to-purple-500',
+      description: 'Technical guides, APIs, and implementation resources',
+      featured: false,
       items: [
-        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },
-        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false }
+        {
+          title: 'API Reference Guide',
+          excerpt: 'Complete API documentation for all Zion Tech Group services.',
+          version: 'v2.1',
+          updated: '2025-01-12',
+          featured: true
+        },
+        {
+          title: 'Implementation Guide',
+          excerpt: 'Step-by-step guide to implementing our solutions.',
+          version: 'v1.8',
+          updated: '2025-01-08',
+          featured: false
+        }
+      ]
+    },
+    {
+      title: 'FAQ & Support',
+      icon: HelpCircle,
+      color: 'from-slate-500 to-gray-500',
+      description: 'Get help and answers to common questions',
+      featured: false,
+      items: [
+        {
+          title: 'Getting Started Guide',
+          excerpt: 'Quick start guide for new customers.',
+          category: 'Onboarding',
+          featured: true
+        },
+        {
+          title: 'Troubleshooting Common Issues',
+          excerpt: 'Solutions to frequently encountered problems.',
+          category: 'Support',
+          featured: false
+        }
       ]
     }
   ];
 
-  const additionalResources = [
+  const upcomingEvents = [
     {
-      id: 'api-docs',
-      title: 'API Reference',
-      icon: GitBranch,
-      description: 'Comprehensive API documentation',
-      color: 'from-purple-500 to-indigo-500',
-      href: '/api-docs'
+      title: 'AI in Manufacturing Summit',
+      date: '2025-02-15',
+      time: '10:00 AM EST',
+      type: 'Virtual Conference',
+      description: 'Join industry leaders discussing AI transformation in manufacturing.',
+      registration: 'Open'
     },
     {
-      id: 'developers',
-      title: 'Developer Portal',
-      icon: GitCommit,
-      description: 'Developer tools and resources',
-      color: 'from-blue-500 to-cyan-500',
-      href: '/developers'
+      title: 'Quantum Computing Workshop',
+      date: '2025-02-20',
+      time: '2:00 PM EST',
+      type: 'Interactive Workshop',
+      description: 'Hands-on workshop exploring quantum computing applications.',
+      registration: 'Limited Spots'
     },
     {
-      id: 'training',
-      title: 'Training & Certification',
-      icon: Award,
-      description: 'Professional development programs',
-      color: 'from-green-500 to-emerald-500',
-      href: '/training'
-    },
-    {
-      id: 'community',
-      title: 'Community Forum',
-      icon: Users,
-      description: 'Connect with peers and experts',
-      color: 'from-orange-500 to-red-500',
-      href: '/community'
+      title: 'Cybersecurity Roundtable',
+      date: '2025-02-25',
+      time: '11:00 AM EST',
+      type: 'Panel Discussion',
+      description: 'Expert panel on emerging cybersecurity challenges and solutions.',
+      registration: 'Open'
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  const featuredResources = [
+    {
+      title: '2025 Technology Trends Report',
+      type: 'Research Report',
+      description: 'Comprehensive analysis of emerging technologies and their business impact.',
+      downloadCount: '2,847',
+      rating: 4.8,
+      featured: true
+    },
+    {
+      title: 'AI Implementation Roadmap',
+      type: 'Guide',
+      description: 'Step-by-step roadmap for successful AI implementation in your organization.',
+      downloadCount: '1,923',
+      rating: 4.9,
+      featured: true
+    },
+    {
+      title: 'Cybersecurity Best Practices',
+      type: 'White Paper',
+      description: 'Essential cybersecurity practices for modern businesses.',
+      downloadCount: '3,156',
+      rating: 4.7,
+      featured: true
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Resources & Support - Zion Tech Group"
+        description="Access our comprehensive library of resources including blog insights, case studies, white papers, webinars, documentation, and support materials."
+      />
+      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="container-responsive">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-red-500/20"></div>
+        <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              Resources & Knowledge
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Resources & Support
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Access our comprehensive library of insights, guides, and resources to stay ahead 
-              of the latest technology trends and best practices.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Access our comprehensive library of knowledge resources, expert insights, 
+              and support materials to accelerate your technology journey.
             </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search resources, guides, and insights..."
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/blog"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Explore Resources
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Support
-              </Link>
+              </a>
+              <a
+                href="/blog"
+                className="px-8 py-4 border border-purple-400/50 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
+              >
+                Browse Blog
+              </a>
             </div>
           </motion.div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
       </section>
 
@@ -253,131 +309,118 @@ export default function Resources() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Featured Resources
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Discover our most popular and valuable resources to accelerate your success
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our most popular and highly-rated resources to help you stay ahead of the curve.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-purple-400/50 p-8 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105 group"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-full">
+                    {resource.type}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-sm text-gray-300">{resource.rating}</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{resource.description}</p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-sm text-gray-500">
+                    {resource.downloadCount} downloads
+                  </span>
+                </div>
+
+                <a
+                  href="#"
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                >
+                  Download Resource
+                  <Download className="w-4 h-4 ml-2" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Categories */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Resource Categories
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Explore our comprehensive collection of resources organized by category.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {category.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {category.description}
-                  </p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {category.items.slice(0, 2).map((item, idx) => (
-                      <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                        <div className="flex-1">
-                          <h4 className="text-sm font-medium text-white">{item.title}</h4>
-                          <p className="text-xs text-gray-400">{item.type}</p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-xs text-gray-400">
-                            {item.readTime || item.duration}
-                          </span>
-                          {item.featured && (
-                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-2 text-cyan-400 text-sm font-medium">
-                      <Star className="w-4 h-4" />
-                      Featured
-                    </span>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All Resources Grid */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Complete Resource Library
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Explore our comprehensive collection of resources across all categories
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resourceCategories.map((category, index) => (
               <motion.div
-                key={category.id}
-                id={category.id}
+                key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-8 hover:transform hover:scale-105 transition-all duration-300 ${
+                  category.featured ? 'border-purple-400/50' : 'border-slate-700/50'
+                }`}
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {category.title}
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                  {category.description}
-                </p>
-                
-                <div className="space-y-2 mb-4">
-                  {category.items.slice(0, 3).map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between text-sm">
-                      <span className="text-gray-300">{item.title}</span>
-                      <span className="text-gray-500 text-xs">
-                        {item.readTime || item.duration}
-                      </span>
-                    </div>
-                  ))}
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <category.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">
-                    {category.items.length} resources
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">{category.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-purple-400 mb-3">Featured Items</h4>
+                  <ul className="space-y-2">
+                    {category.items.filter(item => item.featured).slice(0, 2).map((item, idx) => (
+                      <li key={idx} className="text-sm text-gray-300">
+                        • {item.title}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+
+                <a
+                  href="#"
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                >
+                  Explore {category.title}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Additional Resources */}
+      {/* Upcoming Events */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -387,44 +430,57 @@ export default function Resources() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Additional Resources
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Upcoming Events
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Specialized tools and platforms to support your development journey
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Join our upcoming webinars, workshops, and events to learn from industry experts.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
               <motion.div
-                key={resource.id}
-                id={resource.id}
+                key={event.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8 hover:border-purple-400/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <resource.icon className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-full">
+                    {event.type}
+                  </span>
+                  <span className={`px-3 py-1 text-sm font-medium rounded-full ${
+                    event.registration === 'Open' 
+                      ? 'bg-green-500/20 text-green-400' 
+                      : 'bg-yellow-500/20 text-yellow-400'
+                  }`}>
+                    {event.registration}
+                  </span>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {resource.title}
-                </h3>
+                <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{event.description}</p>
                 
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                  {resource.description}
-                </p>
-                
-                <Link
-                  to={resource.href}
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {event.date}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {event.time}
+                  </div>
+                </div>
+
+                <a
+                  href="#"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                 >
-                  Access Resource
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
+                  Register Now
+                </a>
               </motion.div>
             ))}
           </div>
@@ -439,71 +495,28 @@ export default function Resources() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl border border-purple-400/30 p-12 text-center"
           >
-            <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Need More Resources?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our team is here to help you access 
-                the right resources and support for your needs.
-              </p>
-              
-              {/* Contact Information */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-slate-300 text-sm">
-                    {contactInfo.address}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  Get Support
-                </Link>
-                <Link
-                  to="/request-quote"
-                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
-                  Request Custom Resources
-                </Link>
-                <Link
-                  to="/demo"
-                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Schedule Demo
-                </Link>
-              </div>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need Help or Have Questions?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our support team is here to help you find the right resources and get the most 
+              out of our solutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+              >
+                Contact Support
+              </a>
+              <a
+                href="/faq"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
+              >
+                View FAQ
+              </a>
             </div>
           </motion.div>
         </div>

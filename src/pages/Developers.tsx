@@ -1,165 +1,191 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
-import { Code, Terminal, Download, ExternalLink, Github, Star, Zap, BookOpen, Play, Cpu, Globe, Shield } from 'lucide-react';
+import { Code, Terminal, BookOpen, Users, Zap, Shield, Globe, Download, ExternalLink, Play, Database, Cloud, Cpu, Brain } from 'lucide-react';
 
-export const Developers: React.FC = () => {
+const Developers: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: Globe },
+    { id: 'tools', label: 'Developer Tools', icon: Terminal },
+    { id: 'sdks', label: 'SDKs & Libraries', icon: Code },
+    { id: 'community', label: 'Community', icon: Users },
+    { id: 'resources', label: 'Resources', icon: BookOpen }
+  ];
+
   const developerTools = [
     {
-      name: 'AI Content Generation API',
-      description: 'Generate high-quality content using advanced AI models',
-      version: 'v2.0',
-      status: 'stable',
-      endpoints: 12,
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+      name: 'API Playground',
+      description: 'Interactive API testing environment with real-time request/response visualization',
+      icon: Play,
+      status: 'Live',
+      category: 'Testing',
+      link: '/api-playground'
     },
     {
-      name: 'Business Intelligence API',
-      description: 'Advanced data analytics and business insights',
-      version: 'v1.8',
-      status: 'stable',
-      endpoints: 18,
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      name: 'Code Generator',
+      description: 'Generate client code in multiple languages from API specifications',
+      icon: Code,
+      status: 'Beta',
+      category: 'Development',
+      link: '/code-generator'
     },
     {
-      name: 'Cloud Infrastructure API',
-      description: 'Manage cloud resources and deployments',
-      version: 'v3.1',
-      status: 'stable',
-      endpoints: 24,
-      featured: false,
-      color: 'from-green-500 to-emerald-500'
+      name: 'SDK Builder',
+      description: 'Custom SDK generation tool for your specific use cases',
+      icon: Terminal,
+      status: 'Coming Soon',
+      category: 'Development',
+      link: '/sdk-builder'
     },
     {
-      name: 'Cybersecurity API',
-      description: 'Security scanning and threat detection',
-      version: 'v1.5',
-      status: 'beta',
-      endpoints: 15,
-      featured: false,
-      color: 'from-red-500 to-orange-500'
+      name: 'Performance Monitor',
+      description: 'Real-time API performance monitoring and analytics dashboard',
+      icon: Zap,
+      status: 'Live',
+      category: 'Monitoring',
+      link: '/performance-monitor'
+    },
+    {
+      name: 'Security Scanner',
+      description: 'Automated security testing for your API integrations',
+      icon: Shield,
+      status: 'Live',
+      category: 'Security',
+      link: '/security-scanner'
+    },
+    {
+      name: 'Database Explorer',
+      description: 'Interactive database query tool with schema visualization',
+      icon: Database,
+      status: 'Beta',
+      category: 'Data',
+      link: '/database-explorer'
     }
   ];
 
   const learningResources = [
     {
-      language: 'Python',
-      description: 'Official Python SDK with full API coverage',
-      version: '2.1.0',
-      downloads: '50K+',
-      icon: '🐍',
-      featured: true
+      language: 'JavaScript/Node.js',
+      version: 'v2.1.0',
+      icon: 'JS',
+      color: 'bg-yellow-500/20 text-yellow-400',
+      features: ['TypeScript support', 'Async/await', 'Error handling', 'Middleware support'],
+      install: 'npm install @ziontech/api',
+      docs: '/docs/javascript'
     },
     {
-      language: 'JavaScript/Node.js',
-      description: 'TypeScript-ready SDK for web and server applications',
-      version: '1.8.3',
-      downloads: '35K+',
-      icon: '📦',
-      featured: true
+      language: 'Python',
+      version: 'v1.8.2',
+      icon: 'PY',
+      color: 'bg-blue-500/20 text-blue-400',
+      features: ['Async support', 'Pandas integration', 'Jupyter examples', 'Type hints'],
+      install: 'pip install ziontech',
+      docs: '/docs/python'
     },
     {
       language: 'Go',
-      description: 'Lightweight and performant Go SDK',
-      version: '1.4.2',
-      downloads: '12K+',
-      icon: '🚀',
-      featured: false
+      version: 'v1.2.1',
+      icon: 'GO',
+      color: 'bg-green-500/20 text-green-400',
+      features: ['Context support', 'Middleware', 'Testing', 'High performance'],
+      install: 'go get github.com/ziontech/go-sdk',
+      docs: '/docs/go'
     },
     {
       language: 'Java',
-      description: 'Enterprise-ready Java SDK with Spring Boot support',
-      version: '2.0.1',
-      downloads: '18K+',
-      icon: '☕',
-      featured: false
-    },
-    {
-      language: 'C#/.NET',
-      description: '.NET SDK with async/await support',
-      version: '1.6.0',
-      downloads: '8K+',
-      icon: '⚡',
-      featured: false
-    },
-    {
-      language: 'Ruby',
-      description: 'Ruby gem with Rails integration',
-      version: '1.3.1',
-      downloads: '4K+',
-      icon: '💎',
-      featured: false
+      version: 'v1.5.0',
+      icon: 'JA',
+      color: 'bg-orange-500/20 text-orange-400',
+      features: ['Spring integration', 'Async support', 'Maven/Gradle', 'Javadoc'],
+      install: 'Maven dependency',
+      docs: '/docs/java'
     }
   ];
 
-  const tools = [
+  const communityFeatures = [
     {
-      name: 'API Playground',
-      description: 'Interactive API testing environment',
-      type: 'Web Tool',
-      icon: Play,
-      color: 'from-green-500 to-emerald-500',
-      featured: true
+      name: 'Developer Forum',
+      description: 'Ask questions, share solutions, and connect with other developers',
+      members: '5,234',
+      topics: '1,847',
+      icon: Users,
+      link: '/community/forum'
     },
     {
-      name: 'CLI Tool',
-      description: 'Command-line interface for API management',
-      type: 'Command Line',
-      icon: Terminal,
-      color: 'from-blue-500 to-cyan-500',
-      featured: true
+      name: 'Code Examples',
+      description: 'Browse and contribute to our collection of code examples',
+      examples: '342',
+      languages: '8',
+      icon: Code,
+      link: '/community/examples'
     },
     {
-      name: 'Postman Collection',
-      description: 'Pre-configured API collection for Postman',
-      type: 'Collection',
-      icon: Download,
-      color: 'from-orange-500 to-red-500',
-      featured: false
+      name: 'Hackathons',
+      description: 'Participate in regular hackathons and coding challenges',
+      events: '12',
+      participants: '2,156',
+      icon: Zap,
+      link: '/community/hackathons'
     },
     {
-      name: 'OpenAPI Spec',
-      description: 'Complete OpenAPI 3.0 specification',
-      type: 'Specification',
-      icon: BookOpen,
-      color: 'from-purple-500 to-pink-500',
-      featured: false
+      name: 'Mentorship Program',
+      description: 'Get mentored by experienced developers or mentor others',
+      mentors: '89',
+      mentees: '156',
+      icon: Users,
+      link: '/community/mentorship'
     }
   ];
 
-  const codeExamples = [
+  const resources = [
     {
-      title: 'Content Generation',
-      language: 'Python',
-      code: `import ziontech
-
-client = ziontech.Client(api_key="your_api_key")
-
-response = client.content.generate(
-    prompt="Write a product description for a smart watch",
-    model="gpt-4",
-    max_tokens=150
-)
-
-print(response.content)`
+      title: 'Getting Started Guide',
+      description: 'Complete beginner guide to start building with our platform',
+      type: 'Guide',
+      difficulty: 'Beginner',
+      time: '15 min',
+      icon: BookOpen
     },
     {
-      title: 'Data Analytics',
-      language: 'JavaScript',
-      code: `const ZionTech = require('@ziontech/sdk');
-
-const client = new ZionTech({
-  apiKey: process.env.ZION_API_KEY
-});
-
-const insights = await client.analytics.analyze({
-  dataset: 'sales_data',
-  metrics: ['revenue', 'conversion'],
-  timeRange: '30d'
-});
-
-console.log(insights);`
+      title: 'API Reference',
+      description: 'Comprehensive API documentation with examples',
+      type: 'Reference',
+      difficulty: 'All',
+      time: '60 min',
+      icon: Code
+    },
+    {
+      title: 'Best Practices',
+      description: 'Industry best practices for building scalable applications',
+      type: 'Guide',
+      difficulty: 'Intermediate',
+      time: '30 min',
+      icon: Shield
+    },
+    {
+      title: 'Architecture Patterns',
+      description: 'Common architectural patterns and implementation examples',
+      type: 'Guide',
+      difficulty: 'Advanced',
+      time: '45 min',
+      icon: Cpu
+    },
+    {
+      title: 'AI Integration Guide',
+      description: 'How to integrate AI services into your applications',
+      type: 'Tutorial',
+      difficulty: 'Intermediate',
+      time: '40 min',
+      icon: Brain
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'Techniques for optimizing API performance and reducing latency',
+      type: 'Guide',
+      difficulty: 'Advanced',
+      time: '35 min',
+      icon: Zap
     }
   ];
 
@@ -167,33 +193,34 @@ console.log(insights);`
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
-        description="Comprehensive developer resources for Zion Tech Group APIs. Documentation, SDKs, tools, and code examples for developers."
+        description="Access developer tools, SDKs, community resources, and comprehensive documentation for building with our AI-powered platform."
       />
       
-      {/* Header */}
-      <div className="bg-gradient-to-r from-slate-800 to-slate-700 border-b border-slate-600">
-        <div className="container mx-auto px-6 py-16">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl">
-                <Code className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-4xl font-bold text-white">Developer Portal</h1>
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build the future with our AI-powered APIs. Everything you need to integrate, 
-              develop, and scale your applications with Zion Tech Group.
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Developer Portal
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Everything you need to build, deploy, and scale with our AI-powered platform. 
+              Access tools, SDKs, community, and comprehensive resources.
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-colors">
                 <Play className="w-5 h-5" />
                 Try API Playground
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-xl font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors duration-300 flex items-center justify-center gap-2">
-                <BookOpen className="w-5 h-5" />
-                View Documentation
+              <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-medium transition-colors">
+                <Download className="w-5 h-5" />
+                Download SDKs
+              </button>
+              <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-medium transition-colors">
+                <Users className="w-5 h-5" />
+                Join Community
               </button>
             </div>
           </div>
@@ -201,209 +228,276 @@ console.log(insights);`
       </div>
 
       {/* Quick Stats */}
-      <div className="py-12 bg-slate-800/50">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-400">API Endpoints</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-400">Official SDKs</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime SLA</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-              <div className="text-gray-400">Developers</div>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+            <Users className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white">10K+</div>
+            <div className="text-gray-400">Developers</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+            <Code className="w-8 h-8 text-green-400 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white">8</div>
+            <div className="text-gray-400">SDKs</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+            <Terminal className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white">12</div>
+            <div className="text-gray-400">Tools</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
+            <BookOpen className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+            <div className="text-2xl font-bold text-white">156</div>
+            <div className="text-gray-400">Resources</div>
           </div>
         </div>
       </div>
 
-      {/* APIs */}
-      <div className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our APIs</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {apis.map((api, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  api.featured 
-                    ? 'bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border-cyan-400/50 hover:border-cyan-400' 
-                    : 'bg-slate-800/50 border-slate-700 hover:border-slate-600'
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                  activeTab === tab.id
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
                 }`}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${api.color} flex items-center justify-center`}>
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {api.featured && <Star className="w-5 h-5 text-cyan-400" />}
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      api.status === 'stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
-                    }`}>
-                      {api.status}
-                    </span>
-                  </div>
-                </div>
-                
-                <h3 className="font-bold text-white mb-2">{api.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">{api.description}</p>
-                
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>Version {api.version}</span>
-                  <span>{api.endpoints} endpoints</span>
-                </div>
-                
-                <div className="flex gap-2">
-                  <button className="flex-1 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:scale-105 transition-transform text-sm">
-                    View Docs
-                  </button>
-                  <button className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors text-sm">
-                    Try It
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* SDKs */}
-      <div className="py-16 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Official SDKs</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sdks.map((sdk, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  sdk.featured 
-                    ? 'bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border-cyan-400/50 hover:border-cyan-400' 
-                    : 'bg-slate-800/50 border-slate-700 hover:border-slate-600'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{sdk.icon}</div>
-                  {sdk.featured && <Star className="w-5 h-5 text-cyan-400" />}
-                </div>
-                
-                <h3 className="font-bold text-white mb-2">{sdk.language}</h3>
-                <p className="text-gray-400 text-sm mb-4">{sdk.description}</p>
-                
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>v{sdk.version}</span>
-                  <span>{sdk.downloads} downloads</span>
-                </div>
-                
-                <div className="flex gap-2">
-                  <button className="flex-1 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:scale-105 transition-transform text-sm flex items-center justify-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Install
-                  </button>
-                  <button className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors text-sm">
-                    <Github className="w-4 h-4" />
-                  </button>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-gray-400 text-sm">{resource.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Developer Tools */}
-      <div className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Developer Tools</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  tool.featured 
-                    ? 'bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border-cyan-400/50 hover:border-cyan-400' 
-                    : 'bg-slate-800/50 border-slate-700 hover:border-slate-600'
-                }`}
-              >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4`}>
-                  {React.createElement(tool.icon, { className: "w-6 h-6 text-white" })}
-                </div>
-                
-                <h3 className="font-bold text-white mb-2">{tool.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">{tool.description}</p>
-                
-                <div className="text-xs text-gray-500 mb-4">{tool.type}</div>
-                
-                <button className="w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:scale-105 transition-transform text-sm">
-                  Access Tool
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Code Examples */}
-      <div className="py-16 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Code Examples</h2>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            {codeExamples.map((example, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-700 flex items-center justify-between">
-                  <h3 className="font-semibold text-white">{example.title}</h3>
-                  <span className="px-3 py-1 bg-slate-700 text-gray-300 rounded text-sm">
-                    {example.language}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <pre className="text-sm text-gray-300 overflow-x-auto">
-                    <code>{example.code}</code>
-                  </pre>
-                </div>
-                <div className="px-6 py-4 border-t border-slate-700">
-                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">
-                    View Full Example →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Getting Started CTA */}
-      <div className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl p-12 border border-cyan-400/50 text-center">
-            <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-4">Ready to Start Building?</h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get your API key and start integrating our powerful AI services into your applications today.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
-                <Cpu className="w-5 h-5" />
-                Get API Key
+                <Icon className="w-4 h-4" />
+                {tab.label}
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-xl font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors duration-300 flex items-center justify-center gap-2">
-                <BookOpen className="w-5 h-5" />
-                Quick Start Guide
-              </button>
+            );
+          })}
+        </div>
+
+        {/* Tab Content */}
+        <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-8">
+          {activeTab === 'overview' && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Welcome to the Developer Portal</h2>
+              <p className="text-gray-300 mb-8">
+                Build powerful applications with our comprehensive suite of AI services, analytics, and business intelligence tools. 
+                Whether you're a beginner or an experienced developer, we have everything you need to succeed.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">What You Can Build</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      AI-powered content generation applications
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Business intelligence dashboards
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Predictive analytics solutions
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Micro SaaS platforms
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                      Digital twin applications
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">Getting Started</h3>
+                  <ol className="list-decimal list-inside space-y-3 text-gray-300">
+                    <li>Choose your preferred programming language</li>
+                    <li>Install the appropriate SDK</li>
+                    <li>Get your API key from the dashboard</li>
+                    <li>Follow our getting started guide</li>
+                    <li>Join the developer community</li>
+                  </ol>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
+
+          {activeTab === 'tools' && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Developer Tools</h2>
+              <p className="text-gray-300 mb-8">
+                Access our comprehensive suite of developer tools to accelerate your development workflow.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {developerTools.map((tool, index) => {
+                  const Icon = tool.icon;
+                  return (
+                    <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                      <div className="flex items-start justify-between mb-4">
+                        <Icon className="w-8 h-8 text-blue-400" />
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                          tool.status === 'Live' ? 'bg-green-500/20 text-green-400' :
+                          tool.status === 'Beta' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-gray-500/20 text-gray-400'
+                        }`}>
+                          {tool.status}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-lg font-semibold text-white mb-2">{tool.name}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">
+                          {tool.category}
+                        </span>
+                        <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                          Launch Tool
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'sdks' && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">SDKs & Libraries</h2>
+              <p className="text-gray-300 mb-8">
+                Choose from our collection of official SDKs and libraries for your preferred programming language.
+              </p>
+              
+              <div className="space-y-6">
+                {sdks.map((sdk, index) => (
+                  <div key={index} className="bg-slate-800 rounded-lg p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-4">
+                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${sdk.color}`}>
+                          <span className="font-bold text-lg">{sdk.icon}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white">{sdk.language}</h3>
+                          <p className="text-sm text-gray-400">Version {sdk.version}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium">
+                          Install
+                        </button>
+                        <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded text-sm">
+                          Docs
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-white mb-3">Features</h4>
+                        <ul className="space-y-2">
+                          {sdk.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                              <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-sm font-semibold text-white mb-3">Installation</h4>
+                        <div className="bg-slate-900 rounded p-3">
+                          <code className="text-green-400 text-sm font-mono">{sdk.install}</code>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'community' && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Developer Community</h2>
+              <p className="text-gray-300 mb-8">
+                Connect with fellow developers, share knowledge, and get help when you need it.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {communityFeatures.map((feature, index) => {
+                  const Icon = feature.icon;
+                  return (
+                    <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Icon className="w-8 h-8 text-blue-400" />
+                        <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
+                      </div>
+                      
+                      <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                      
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        {Object.entries(feature).filter(([key]) => !['name', 'description', 'icon', 'link'].includes(key)).map(([key, value]) => (
+                          <div key={key} className="text-center">
+                            <div className="text-lg font-bold text-white">{value}</div>
+                            <div className="text-xs text-gray-400 capitalize">{key}</div>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm font-medium transition-colors">
+                        Join Now
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'resources' && (
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Developer Resources</h2>
+              <p className="text-gray-300 mb-8">
+                Access comprehensive documentation, tutorials, and guides to help you build better applications.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {resources.map((resource, index) => {
+                  const Icon = resource.icon;
+                  return (
+                    <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                      <Icon className="w-8 h-8 text-blue-400 mb-4" />
+                      
+                      <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                        <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">
+                          {resource.type}
+                        </span>
+                        <span className="bg-gray-500/20 text-gray-300 px-2 py-1 rounded">
+                          {resource.difficulty}
+                        </span>
+                        <span>{resource.time}</span>
+                      </div>
+                      
+                      <button className="w-full bg-white/10 hover:bg-white/20 text-white py-2 px-4 rounded text-sm font-medium transition-colors">
+                        Read More
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
