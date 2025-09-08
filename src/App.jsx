@@ -1,8 +1,32 @@
 
+// Lazy load all pages
+const Home = React.lazy(() => import('./pages/Home.tsx'));
+const About = React.lazy(() => import('./pages/about.tsx'));
+const Contact = React.lazy(() => import('./pages/Contact.tsx'));
+const Blog = React.lazy(() => import('./pages/Blog.tsx'));
+const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
+const Careers = React.lazy(() => import('./pages/Careers.tsx'));
+const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
+const Terms = React.lazy(() => import('./pages/Terms.tsx'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
-import { ChatAssistant } from './components/ChatAssistant.tsx';
+// Services pages
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027.tsx'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage.tsx'));
+const ITServices = React.lazy(() => import('./pages/ITServices.tsx'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage.tsx'));
 
 
+// Support pages
+const Support = React.lazy(() => import('./pages/Support.tsx'));
+const Security = React.lazy(() => import('./pages/Security.tsx'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard.tsx'));
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
@@ -13,7 +37,13 @@ const Login = lazy(() => import('./pages/Login.tsx'));
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
 
-const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
+// Search and categories
+const Search = React.lazy(() => import('./pages/Search.tsx'));
+const Categories = React.lazy(() => import('./pages/Categories.tsx'));
+
+// API Playground
+const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote.tsx'));
 
 // Loading component
 const LoadingSpinner = () => ('
@@ -64,17 +94,66 @@ const LoadingSpinner = () => ('
 
 
         <AppHeader />
-        <main className=&apos;flex-1&apos;>&apos;
-          <Suspense fallback={}<LoadingSpinner />}>
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/pricing" element={<ComprehensivePricing2027 />} />
+
+              {/* Services routes */}
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaasServicesPage />} />
 
 
+              {/* Support routes */}
+              <Route path="/support" element={<Support />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<SystemStatus />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/dashboard" element={<Dashboard />} />
 
-                        Go Home
+              {/* Documentation routes */}
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<Research />} />
 
-                      </a>
-                    </div>
-                  </div> }
-              />
+              {/* Search and categories */}
+              <Route path="/search" element={<Search />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+
+              {/* API Playground */}
+              <Route path="/api-playground" element={<ApiPlayground />} />
+
+              {/* Catch-all route for 404 */}
+              <Route path="*" element={
+                <div className="flex items-center justify-center min-h-screen">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold text-zion-cyan mb-4">404 - Page Not Found</h1>
+                    <p className="text-zion-slate-light mb-6">The page you're looking for doesn't exist.</p>
+                    <a href="/" className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors">
+                      Go Home
+                    </a>
+                  </div>
+                </div>
+              } />
             </Routes>
           </Suspense>
         </main>
