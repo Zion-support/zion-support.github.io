@@ -1,7 +1,5 @@
 
-import { Card } from "@/components/ui/card";
-import Skeleton from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 export function TalentPlaceholder() {
   return (

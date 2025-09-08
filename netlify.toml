@@ -1,19 +1,32 @@
 [build]
-  # Build the project on Netlify
-  command = "npm ci && npm run build"
+  # Build the Vite project on Netlify
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
-  command_timeout = "30m"
+  command_timeout = "15m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
   NPM_FLAGS = "--omit=optional"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_FUNCTIONS_TIMEOUT = "30"
+
+# Function bundling optimization
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["aws-sdk"]
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration
-
-
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -31,6 +44,28 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -40,29 +40,35 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noEmitOnError": false
   },
   "include": [
     "src/**/*",
-    "src/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.jsx"
+    "pages/**/*",
+    "*.ts",
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
+    "out",
     "build",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*"
+    "coverage",
+    "src-disabled",
+    "src.broken",
+    "src_disabled_*",
+    "pages._archive_corrupted",
+    "pages.bak",
+    "*.disabled",
+    "*.backup",
+    "*.bak",
+    "recovered-branches",
+    "backup",
+    "corrupted*",
+    "*_backup*",
+    "temp*",
+    "tmp*",
+    "*.tmp",
+    "*.temp"
   ]
 }

@@ -5,10 +5,11 @@ import './index.css';
 
 // Import i18n configuration
 import './i18n';
+
 // Register service worker
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
-// Error handling function
+// Error handling function (currently unused but kept for future use)
 // const showApiError = (error: unknown): void => {
 //   console.error('API Error:', error);
 // };
