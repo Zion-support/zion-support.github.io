@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production vite build",
+    "build": "vite build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
