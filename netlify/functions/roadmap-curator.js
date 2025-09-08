@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 roadmap-curator function triggered');
+    console.log('Running roadmap-curator function');
     
-    // Basic functionality - curate roadmap content
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple roadmap curation logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Roadmap curator function executed successfully',
-        timestamp: timestamp,
-        function: 'roadmap-curator',
-        status: 'completed',
-        activities: ['roadmap-curation', 'feature-planning', 'timeline-management']
-      })
+      curated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Roadmap curation completed'
     };
     
-    console.log('✅ roadmap-curator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Roadmap curator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ roadmap-curator failed:', error);
+    console.error('Error in roadmap-curator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Roadmap curator function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

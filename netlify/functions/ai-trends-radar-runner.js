@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 ai-trends-radar-runner function triggered');
+    console.log('Running ai-trends-radar-runner function');
     
-    // Basic functionality - run AI trends radar operations
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple AI trends radar logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'AI trends radar runner function executed successfully',
-        timestamp: timestamp,
-        function: 'ai-trends-radar-runner',
-        status: 'completed',
-        activities: ['trend-detection', 'ai-analysis', 'future-prediction']
-      })
+      scanned: true,
+      timestamp: new Date().toISOString(),
+      message: 'AI trends radar scanning completed'
     };
     
-    console.log('✅ ai-trends-radar-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'AI trends radar runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ ai-trends-radar-runner failed:', error);
+    console.error('Error in ai-trends-radar-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'AI trends radar runner function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

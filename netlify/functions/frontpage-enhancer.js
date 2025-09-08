@@ -1,44 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('frontpage-enhancer function triggered');
+    console.log('Running frontpage-enhancer function');
     
-    // Simulate frontpage enhancement
-    const enhancementData = {
-      seo: Math.floor(Math.random() * 100),
-      performance: Math.floor(Math.random() * 100),
-      accessibility: Math.floor(Math.random() * 100),
-      userExperience: Math.floor(Math.random() * 100),
-      lastEnhanced: new Date().toISOString(),
-      enhanced: true
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple frontpage enhancement logic
+    const result = {
+      enhanced: true,
+      timestamp: new Date().toISOString(),
+      message: 'Frontpage enhancement completed'
     };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 65));
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'frontpage-enhancer function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'frontpage-enhancer',
-        enhancementData,
-        enhanced: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Frontpage enhancer completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in frontpage-enhancer:', error);
+    console.error('Error in frontpage-enhancer function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

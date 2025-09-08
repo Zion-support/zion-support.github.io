@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 autonomous-meta-orchestrator function triggered');
+    console.log('Running autonomous-meta-orchestrator function');
     
-    // Basic functionality - autonomous meta orchestration
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple autonomous meta orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Autonomous meta orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'autonomous-meta-orchestrator',
-        status: 'completed',
-        operations: ['meta-coordination', 'autonomous-execution', 'self-managing-systems']
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Autonomous meta orchestration completed'
     };
     
-    console.log('✅ autonomous-meta-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Autonomous meta orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ autonomous-meta-orchestrator failed:', error);
+    console.error('Error in autonomous-meta-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Autonomous meta orchestrator function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

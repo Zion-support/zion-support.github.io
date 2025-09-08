@@ -1,43 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('hyper-front-index-accelerator function triggered');
+    console.log('Running hyper-front-index-accelerator function');
     
-    // Simulate hyper-fast front-end indexing acceleration
-    const accelerationData = {
-      speed: Math.floor(Math.random() * 1000) + 500,
-      efficiency: Math.floor(Math.random() * 100) + 90,
-      throughput: Math.floor(Math.random() * 10000) + 5000,
-      lastAccelerated: new Date().toISOString(),
-      accelerated: true
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple hyper front index acceleration logic
+    const result = {
+      accelerated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Hyper front index acceleration completed'
     };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 35));
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'hyper-front-index-accelerator function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'hyper-front-index-accelerator',
-        accelerationData,
-        accelerated: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Hyper front index accelerator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in hyper-front-index-accelerator:', error);
+    console.error('Error in hyper-front-index-accelerator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

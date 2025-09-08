@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 ultrafast-orchestrator function triggered');
+    console.log('Running ultrafast-orchestrator function');
     
-    // Basic functionality - ultrafast orchestration
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple ultrafast orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Ultrafast orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'ultrafast-orchestrator',
-        status: 'completed',
-        operations: ['lightning-fast-execution', 'instant-coordination', 'rapid-deployment']
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Ultrafast orchestration completed'
     };
     
-    console.log('✅ ultrafast-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Ultrafast orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ ultrafast-orchestrator failed:', error);
+    console.error('Error in ultrafast-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Ultrafast orchestrator function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

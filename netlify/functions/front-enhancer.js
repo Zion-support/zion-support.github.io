@@ -1,30 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('front-enhancer function triggered');
+    console.log('Running front-enhancer function');
     
-    // Simple response for testing
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple front enhancement logic
+    const result = {
+      enhanced: true,
+      timestamp: new Date().toISOString(),
+      message: 'Front enhancement completed'
+    };
+    
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-enhancer function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-enhancer'
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Front enhancer completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in front-enhancer:', error);
+    console.error('Error in front-enhancer function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

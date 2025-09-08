@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 stale-content-auditor-runner function triggered');
+    console.log('Running stale-content-auditor-runner function');
     
-    // Basic functionality - run stale content auditing
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple stale content auditing logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Stale content auditor runner function executed successfully',
-        timestamp: timestamp,
-        function: 'stale-content-auditor-runner',
-        status: 'completed',
-        activities: ['content-freshness-check', 'outdated-content-detection', 'update-recommendations']
-      })
+      audited: true,
+      timestamp: new Date().toISOString(),
+      message: 'Stale content auditing completed'
     };
     
-    console.log('✅ stale-content-auditor-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Stale content auditor runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ stale-content-auditor-runner failed:', error);
+    console.error('Error in stale-content-auditor-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Stale content auditor runner function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

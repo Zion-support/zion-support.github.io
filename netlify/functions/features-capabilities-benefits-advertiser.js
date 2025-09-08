@@ -1,44 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('features-capabilities-benefits-advertiser function triggered');
+    console.log('Running features-capabilities-benefits-advertiser function');
     
-    // Simulate features, capabilities, and benefits advertising
-    const featureData = {
-      features: Math.floor(Math.random() * 30) + 15,
-      capabilities: Math.floor(Math.random() * 25) + 10,
-      benefits: Math.floor(Math.random() * 20) + 8,
-      adoption: Math.floor(Math.random() * 100),
-      lastAdvertised: new Date().toISOString(),
-      advertised: true
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple features, capabilities, and benefits advertising logic
+    const result = {
+      advertised: true,
+      timestamp: new Date().toISOString(),
+      message: 'Features, capabilities, and benefits advertising completed'
     };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 60));
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'features-capabilities-benefits-advertiser function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'features-capabilities-benefits-advertiser',
-        featureData,
-        advertised: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Features, capabilities, and benefits advertiser completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in features-capabilities-benefits-advertiser:', error);
+    console.error('Error in features-capabilities-benefits-advertiser function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

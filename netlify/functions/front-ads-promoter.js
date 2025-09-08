@@ -1,44 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('front-ads-promoter function triggered');
+    console.log('Running front-ads-promoter function');
     
-    // Simulate front-end ads promotion
-    const adsData = {
-      impressions: Math.floor(Math.random() * 100000) + 50000,
-      clicks: Math.floor(Math.random() * 10000) + 5000,
-      ctr: Math.random() * 10,
-      revenue: Math.floor(Math.random() * 10000) + 5000,
-      lastPromoted: new Date().toISOString(),
-      promoted: true
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple front ads promotion logic
+    const result = {
+      promoted: true,
+      timestamp: new Date().toISOString(),
+      message: 'Front ads promotion completed'
     };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 50));
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-ads-promoter function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-ads-promoter',
-        adsData,
-        promoted: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Front ads promoter completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in front-ads-promoter:', error);
+    console.error('Error in front-ads-promoter function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

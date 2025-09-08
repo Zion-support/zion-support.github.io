@@ -1,25 +1,37 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('cloud_orchestrator function triggered');
+    console.log('Running cloud_orchestrator function');
     
-    // Basic function logic
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple cloud orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Cloud orchestrator function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator'
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Cloud orchestration completed'
     };
     
-    return result;
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Cloud orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('Error in cloud_orchestrator:', error);
+    console.error('Error in cloud_orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

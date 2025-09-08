@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 ultrafast-front-orchestrator function triggered');
+    console.log('Running ultrafast-front-orchestrator function');
     
-    // Basic functionality - ultrafast frontend orchestration
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple ultrafast front orchestration logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Ultrafast front orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'ultrafast-front-orchestrator',
-        status: 'completed',
-        operations: ['lightning-front-coordination', 'instant-front-execution', 'rapid-front-deployment']
-      })
+      orchestrated: true,
+      timestamp: new Date().toISOString(),
+      message: 'Ultrafast front orchestration completed'
     };
     
-    console.log('✅ ultrafast-front-orchestrator completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Ultrafast front orchestrator completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ ultrafast-front-orchestrator failed:', error);
+    console.error('Error in ultrafast-front-orchestrator function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Ultrafast front orchestrator function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

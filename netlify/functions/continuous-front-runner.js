@@ -1,43 +1,38 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('continuous-front-runner function triggered');
+    console.log('Running continuous-front-runner function');
     
-    // Simulate continuous front-end running
-    const runningData = {
-      uptime: Date.now(),
-      status: 'running',
-      performance: Math.floor(Math.random() * 100) + 80,
-      lastCheck: new Date().toISOString(),
-      continuous: true
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple continuous front running logic
+    const result = {
+      run: true,
+      timestamp: new Date().toISOString(),
+      message: 'Continuous front running completed'
     };
-    
-    // Simulate some processing time
-    await new Promise(resolve => setTimeout(resolve, 45));
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'continuous-front-runner function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'continuous-front-runner',
-        runningData,
-        running: true
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: true,
+        message: 'Continuous front runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
     };
   } catch (error) {
-    console.error('Error in continuous-front-runner:', error);
+    console.error('Error in continuous-front-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

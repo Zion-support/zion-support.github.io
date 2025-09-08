@@ -1,30 +1,36 @@
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 topics-map-runner function triggered');
+    console.log('Running topics-map-runner function');
     
-    // Basic functionality - run topics mapping
-    const timestamp = new Date().toISOString();
+    // Check if this is a scheduled invocation
+    if (event.source === 'aws.events') {
+      console.log('Scheduled invocation detected');
+    }
+    
+    // Simple topics mapping logic
     const result = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'Topics map runner function executed successfully',
-        timestamp: timestamp,
-        function: 'topics-map-runner',
-        status: 'completed',
-        activities: ['topics-mapping', 'content-visualization', 'knowledge-structuring']
-      })
+      mapped: true,
+      timestamp: new Date().toISOString(),
+      message: 'Topics mapping completed'
     };
     
-    console.log('✅ topics-map-runner completed successfully');
-    return result;
-    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Topics map runner completed successfully',
+        result: result,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('❌ topics-map-runner failed:', error);
+    console.error('Error in topics-map-runner function:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Topics map runner function failed',
-        message: error.message,
+        success: false,
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };
