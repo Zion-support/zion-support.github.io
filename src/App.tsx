@@ -48,9 +48,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const AdvancedServicesShowcase2027 = React.lazy(() => import('./pages/AdvancedServicesShowcase2027'));
-const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const MicroSAAS = React.lazy(() => import('./pages/services/MicroSAAS'));
+const ServicesPricingPage = React.lazy(() => import('./pages/services/ServicesPricingPage'));
+const MicroSaasServices = React.lazy(() => import('./pages/services/MicroSaasServices'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -89,9 +90,10 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/advanced-services-2027" element={<AdvancedServicesShowcase2027 />} />
-              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
-              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/micro-saas" element={<MicroSAAS />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/services/micro-saas-services" element={<MicroSaasServices />} />
             </Routes>
           </Suspense>
         </main>

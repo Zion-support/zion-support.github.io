@@ -8,4 +8,7 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+// Note: headers, redirects, and rewrites don't work with output: 'export'
+// These are handled by Netlify via _headers and _redirects files
+
+export default nextConfig;
