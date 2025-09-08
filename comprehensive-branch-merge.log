@@ -10486,3 +10486,26 @@ fatal: couldn't find remote ref cursor/build-nextjs-app-with-vite-and-fix-module
 [2025-09-08T21:03:23.104Z] ✅ Success: Get git status
 [2025-09-08T21:03:23.104Z] 📄 Found 0 conflicted files
 [2025-09-08T21:03:23.104Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:03:23.195Z] ✅ Success: Add resolved files
+[2025-09-08T21:03:23.195Z] 🚀 Commit merge for cursor/build-nextjs-app-with-vite-and-fix-module-error-ad5d: git commit -m "Resolve conflicts and merge cursor/build-nextjs-app-with-vite-and-fix-module-error-ad5d"
+[2025-09-08T21:03:23.258Z] ✅ Success: Commit merge for cursor/build-nextjs-app-with-vite-and-fix-module-error-ad5d
+[2025-09-08T21:03:23.258Z] ✅ Successfully resolved conflicts and merged: cursor/build-nextjs-app-with-vite-and-fix-module-error-ad5d
+[2025-09-08T21:03:23.258Z] 🔄 Attempting to merge branch: cursor/build-partner-integration-portal-and-api-da2c
+[2025-09-08T21:03:23.259Z] 🚀 Fetch origin/cursor/build-partner-integration-portal-and-api-da2c: git fetch origin cursor/build-partner-integration-portal-and-api-da2c
+[2025-09-08T21:03:23.601Z] ✅ Success: Fetch origin/cursor/build-partner-integration-portal-and-api-da2c
+[2025-09-08T21:03:23.601Z] 🚀 Merge cursor/build-partner-integration-portal-and-api-da2c: git merge origin/cursor/build-partner-integration-portal-and-api-da2c --no-ff -m "Merge branch cursor/build-partner-integration-portal-and-api-da2c into main"
+[2025-09-08T21:03:24.063Z] ✅ Success: Merge cursor/build-partner-integration-portal-and-api-da2c
+[2025-09-08T21:03:24.063Z] ✅ Successfully merged: cursor/build-partner-integration-portal-and-api-da2c
+[2025-09-08T21:03:24.063Z] 🔄 Attempting to merge branch: cursor/build-project-and-deploy-with-netlify-1c1d
+[2025-09-08T21:03:24.063Z] 🚀 Fetch origin/cursor/build-project-and-deploy-with-netlify-1c1d: git fetch origin cursor/build-project-and-deploy-with-netlify-1c1d
+[2025-09-08T21:03:24.185Z] ❌ Error in Fetch origin/cursor/build-project-and-deploy-with-netlify-1c1d: Command failed: git fetch origin cursor/build-project-and-deploy-with-netlify-1c1d
+fatal: couldn't find remote ref cursor/build-project-and-deploy-with-netlify-1c1d
+
+[2025-09-08T21:03:24.186Z] ❌ Failed to merge cursor/build-project-and-deploy-with-netlify-1c1d: Command failed: git fetch origin cursor/build-project-and-deploy-with-netlify-1c1d
+fatal: couldn't find remote ref cursor/build-project-and-deploy-with-netlify-1c1d
+
+[2025-09-08T21:03:24.186Z] 🔧 Attempting to resolve conflicts for: cursor/build-project-and-deploy-with-netlify-1c1d
+[2025-09-08T21:03:24.186Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:03:24.238Z] ✅ Success: Get git status
+[2025-09-08T21:03:24.238Z] 📄 Found 0 conflicted files
+[2025-09-08T21:03:24.238Z] 🚀 Add resolved files: git add .
