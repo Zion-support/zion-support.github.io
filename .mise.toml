@@ -1,0 +1,7 @@
+[tools]
+python = "3.12.6"
+nodejs = "20.18.1"
+
+[settings]
+# Prefer prebuilt binaries on Netlify to avoid source compilation
+python.compile = false
