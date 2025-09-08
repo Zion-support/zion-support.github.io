@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
+
 export const InstallPrompt: React.FC = () => {
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
 

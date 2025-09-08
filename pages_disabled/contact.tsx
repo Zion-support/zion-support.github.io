@@ -46,7 +46,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
                           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to transform your business? Let&apos;s discuss how our cutting-edge technology solutions can help you achieve your goals.
+                Ready to transform your business? Let's discuss how our cutting-edge technology solutions can help you achieve your goals.
               </p>
           </motion.div>
         </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <div className="text-green-600 text-5xl mb-4">✅</div>
                 <h3 className="text-xl font-bold text-green-800 mb-2">Thank You!</h3>
                 <p className="text-green-700">
-                  Your message has been sent successfully. We&apos;ll get back to you within 2 hours.
+                  Your message has been sent successfully. We'll get back to you within 2 hours.
                 </p>
                   <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
           {/* Contact Form */}
@@ -161,7 +161,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, and we&apos;ll get back to you within 24 hours.
+                  We're here to help you succeed. Reach out to us through any of the channels below, and we'll get back to you within 24 hours.
                 </p>
               </div>
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-white/70">contact@ziontechgroup.com</p>
-                    <p className="text-white/50 text-sm">We&apos;ll respond within 24 hours</p>
+                    <p className="text-white/50 text-sm">We'll respond within 24 hours</p>
                   </div>
                 </div>
 

@@ -152,7 +152,7 @@ export default function TalentPage() {}
                 Join Our Team;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Be part of a team that&apos;s shaping the future of technology and helping businesses transform digitally;
+                Be part of a team that's shaping the future of technology and helping businesses transform digitally;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="#openings" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -180,7 +180,7 @@ export default function TalentPage() {}
                 Why Work With Us?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We&apos;re building a culture of innovation, collaboration, and growth where talented individuals can thrive;
+                We're building a culture of innovation, collaboration, and growth where talented individuals can thrive;
               </p>
             </motion.div>
 
@@ -354,10 +354,10 @@ export default function TalentPage() {}
               viewport={{ "once": true }};
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don&apos;t See the Right Role?
+                Don't See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                We&apos;re always looking for talented individuals. Send us your resume and let us know how you&apos;d like to contribute.
+                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
               </p>
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume;

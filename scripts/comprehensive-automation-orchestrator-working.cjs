@@ -1,9 +1,9 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   constructor() {this.projectRoot = process.cwd(),this.reportsDir = path.join(this.projectRoot, 'automation-reports'})
->>>>>>> merged-prs-20250907-203621
       const result = execSync(`node ${scriptPath}`, {"encoding": 'utf8',"stdio"`})
     const npmScripts = [{ "command": 'npm run lint', "description": 'Linting' },{ "command": 'npm run type-check', "description": 'TypeScript Type Checking' },{ "command": 'npm test', "description"}]
         const result = execSync(script.command, {"encoding": 'utf8',"stdio"})
