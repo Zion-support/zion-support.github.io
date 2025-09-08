@@ -1,132 +1,109 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import App from './App'
-import './index.css'
-<<<<<<< HEAD
+console.log("main.tsx: Start");
+import React from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
 
-// Service worker registration function
-const registerServiceWorker = async () => {
-  if ('serviceWorker' in navigator) {
-    try {
-      const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
-      });
-      
-      if (registration.installing) {
-        console.log('Service worker installing');
-      } else if (registration.waiting) {
-        console.log('Service worker installed');
-      } else if (registration.active) {
-        console.log('Service worker active');
-      }
-      
-      // Handle updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New service worker available
-              if (confirm('New version available! Reload to update?')) {
-                window.location.reload();
-              }
-            }
-          });
-        }
-      });
-      
-      return registration;
-    } catch (error) {
-      console.error('Service worker registration failed:', error);
-      throw error;
-    }
-  }
-  throw new Error('Service workers not supported');
-};
+// Import i18n configuration
+import './i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+import { AppLayout } from '@/layout/AppLayout';
+import { ReferralMiddleware } from '@/components/referral/ReferralMiddleware';
 
-// Performance monitoring
-const reportWebVitals = (metric: any) => {
-  if (process.env['NODE_ENV'] === 'development') {
-    console.log('Web Vitals:', metric);
-  }
-  // In production, you could send this to analytics
-};
+// Import auth and notification providers
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { NotificationProvider } from './context';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
-// Error boundary for the root
-class RootErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
+// Import analytics provider
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error };
-  }
+// Initialize a React Query client with global error handling
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      onError: (error) => showApiError(error),
+    },
+    mutations: {
+      onError: (error) => showApiError(error),
+    },
+  },
+});
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Root error boundary caught an error:', error, errorInfo);
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-          <div className="text-center max-w-md">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h1 className="text-2xl font-bold text-white mb-2">Application Error</h1>
-            <p className="text-gray-400 mb-6">Something went wrong with the application. Please refresh the page.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-// Main render function
-const renderApp = () => {
-  const root = ReactDOM.createRoot(document.getElementById('root')!);
-  
-  root.render(
+try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-      <RootErrorBoundary>
-        <HelmetProvider>
-          <Router>
-            <App />
-          </Router>
-        </HelmetProvider>
-      </RootErrorBoundary>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <CartProvider>
+                          <ReferralMiddleware>
+                            <AppLayout>
+                              <App />
+                            </AppLayout>
+                          </ReferralMiddleware>
+                        </CartProvider>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
     </React.StrictMode>,
   );
-};
-
-// Initialize the application
-try {
-  renderApp();
-  
-  // Register service worker with error handling
-  registerServiceWorker().catch((error) => {
-    console.warn('Service worker registration failed:', error);
-  });
+  console.log("main.tsx: After ReactDOM.createRoot");
+} catch (error) {
+  console.error("Global error caught in main.tsx:", error);
+  console.log("main.tsx: Global error caught");
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Application Error</h1>
+        <p>A critical error occurred while loading the application.</p>
+        <p>Error: ${(error as Error).message}</p>
+        <pre>${(error as Error).stack}</pre>
+        <p>Please check the console for more details.</p>
+      </div>
+    `;
+  }
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+registerServiceWorker();
+
+// Global fallback for images that fail to load
+// Replace broken images (e.g., offline Unsplash links) with a local placeholder
+document.addEventListener(
+  'error',
+  (event) => {
+    const target = event.target as HTMLElement;
+    if (target instanceof HTMLImageElement && !target.dataset.fallback) {
+      target.dataset.fallback = 'true';
+      target.src = '/placeholder.svg';
+    }
+  },
+  true,
+);

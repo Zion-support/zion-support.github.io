@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { useAuth } from '@/hooks/useAuth';
-import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
+import { CartContextType, CartItem, CartAction } from '@/types/cart';
+import { saveCart, getCart } from '@/lib/db';
 
-const initialState = { items: [] };
+interface CartState { items: CartItem[]; }
 
-function cartReducer(state, action) {
+const initialState: CartState = { items: [] };
+
+function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case 'ADD_ITEM': {
       const existing = state.items.find(i => i.id === action.payload.id);
@@ -25,61 +26,37 @@ function cartReducer(state, action) {
       return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
       return { items: [] };
+    case 'SET_ITEMS':
+      return { items: action.payload };
     default:
       return state;
   }
 }
 
-const CartContext = createContext(undefined);
+const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function useCart() {
-  const ctx = useContext(CartContext);
+export function useCart(): CartContextType {
+  const ctx = useContext(CartContext) as CartContextType;
   if (!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx;
 }
 
-export function CartProvider({ children }) {
-  const { user } = useAuth();
+export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
-  const cartKey = getCartKey(user?.id);
 
   useEffect(() => {
-    let items = [];
-    const stored = safeStorage.getItem(cartKey);
-    if (stored) {
-      try {
-        items = JSON.parse(stored);
-      } catch {
-        items = [];
+    getCart().then(items => {
+      if (items.length) {
+        dispatch({ type: 'SET_ITEMS', payload: items as CartItem[] });
       }
-    }
-
-    // Merge guest cart when user logs in
-    if (user?.id) {
-      const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
-        try {
-          const guestItems = JSON.parse(guestStored);
-          items = mergeCartItems(items, guestItems);
-        } catch {
-          /* ignore */
-        }
-        case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !== action.payload) };
-        case 'CLEAR_CART':
-            return { items: [] };
-        default:
-            return state;
-    }
-
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  }, [cartKey]);
+    });
+  }, []);
 
   useEffect(() => {
-    safeStorage.setItem(cartKey, JSON.stringify(state.items));
-  }, [state.items, cartKey]);
+    saveCart(state.items);
+  }, [state.items]);
 
-  const value = {
+  const value: CartContextType = {
     items: state.items,
     dispatch,
   };

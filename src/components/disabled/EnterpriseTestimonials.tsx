@@ -46,7 +46,12 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
-                      <img loading="lazy" src={testimonial.image} alt={testimonial.author} className="h-full w-full object-cover"/>
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
                     <div>
                       <p className="font-bold">{testimonial.author}</p>

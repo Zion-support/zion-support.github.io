@@ -185,7 +185,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">
               <img
-                src = {screenshot.url,}
+                src={screenshot.url}
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"

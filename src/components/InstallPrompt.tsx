@@ -1,12 +1,13 @@
-}
-// Augment the WindowEventMap to include 'beforeinstallprompt'
-declare global {
-  interface WindowEventMap {
-    beforeinstallprompt: BeforeInstallPromptEvent
-    // appinstalled event is standard, but if issues arise, it can be augmented too
-    // appinstalled: Event
-  }
-}
+import React, { useEffect, useState } from 'react';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { safeSessionStorage } from '@/utils/safeStorage';
+import type { BeforeInstallPromptEvent } from '@/types/pwa';
+
+const SHOWN_KEY = 'pwaInstallShown';
+const DISMISS_KEY = 'pwaInstallDismissUntil';
+const DISMISS_MS = 24 * 60 * 60 * 1000; // 24 hours
+
 export const InstallPrompt: React.FC = () => {
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null)
   const [visible, setVisible] = useState(false)

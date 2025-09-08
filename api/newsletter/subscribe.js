@@ -1,17 +1,7 @@
-
-    return}
-  try {;
-
-    const { email } = req.body || {}
-<<<<<<< HEAD
-    if (!email) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-=======
-    if (!email) {;
-
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+const { withSentry } = require('../withSentry.cjs');
+const { isValidEmail } = require('../emailUtils.cjs');
+const fs = require('fs');
+const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -28,7 +18,21 @@ async function handler(req, res) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       res.statusCode = 400;
 
-  , err);
+  const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
+  let existing = [];
+  try {
+    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+    if (!Array.isArray(existing)) existing = [];
+  } catch {
+    // File doesn't exist or is invalid, use empty array
+  }
+  existing.push({ email, subscribedAt: new Date().toISOString() });
+  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
+  res.statusCode = 200;
+  res.json({ success: true });
+  } catch (err) {
+    console.error('Subscribe API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message ||;
   'Subscription failed }});'}

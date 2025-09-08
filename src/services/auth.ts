@@ -1,36 +1,23 @@
+import axios from 'axios';
 
- * @param {*} params - Function parameters;*/
+// Axios instance used for API calls
+export const api = axios.create({ baseURL: '/api/auth' });
 
- * @returns {*} Function return value;*/
- */;
+// Attach Authorization header if token stored
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token && config.headers) {
+    config.headers['Authorization'] = `Bearer ${token}`;
+  }
+  return config;
+});
 
-    console.error ('Error in register: ', error) }
-} catch (error) {'
-    console.error ('Error in register: ', error) }
-
-} catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
-
-
- * forgotPassword function;
- * @param {*} params - Function parameters;
-
-    console.error ('Error in register: ', error) }
-} catch (error) {""
-    console.error ('Error in register: ', error) }", "
-} catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
- * forgotPassword function;*/
- * @param {*} params - Function parameters;*/
-
- * @returns {*} Function return value;*/
- */;
-
-    try {
-
-
-
-
-
-
-
-
-
+export async function login(email: string, password: string) {
+  const response = await api.post('/login', { email, password });
+  const token = response.data?.token;
+  if (response.status === 200 && token) {
+    localStorage.setItem('token', token);
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
+  return response;
+}

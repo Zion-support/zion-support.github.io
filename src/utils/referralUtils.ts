@@ -42,6 +42,8 @@ export function checkUrlForReferralCode(): string | null {
 /**
  * Track referral when a user signs up
  */
+import api from '@/lib/api';
+
 export async function trackReferral(userId: string, email: string) {
   try {
     const refCode = localStorage.getItem('referral_code');
@@ -60,8 +62,8 @@ export async function trackReferral(userId: string, email: string) {
         ipAddress: '', // This will be captured by the server
       }),
     });
-    
-    if (response.ok) {
+
+    if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code');
     }

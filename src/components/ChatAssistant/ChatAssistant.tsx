@@ -1,6 +1,9 @@
-import React, { useState, useRef } from 'react';
-import { X, Send  } from 'lucide-react';
-export interface Message {
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 export interface Message {
   id: string;
@@ -34,7 +37,7 @@ export function ChatAssistant({
   onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [messages, setMessages] = useState(initialMessages);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {

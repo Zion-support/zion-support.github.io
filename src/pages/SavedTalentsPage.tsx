@@ -6,21 +6,24 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
-    const { user } = useAuth();
-    const [savedTalents, setSavedTalents] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const navigate = useNavigate();
-    useEffect(() => {
-        const fetchSavedTalents = async () => {
-            setIsLoading(true);
-            try {
-                if (!user) {
-                    // // // console.warn("User not authenticated.");
-                    return;
-                }
-                const { data, error } = await supabase
-                    .from("saved_talents")
-                    .select(`
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState([] as TalentProfile[]);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchSavedTalents = async () => {
+      setIsLoading(true);
+      try {
+        if (!user) {
+          console.warn("User not authenticated.");
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("saved_talents")
+          .select(
+            `
             talent_profile (
               id,
               user_id,
@@ -143,9 +146,23 @@ export default function SavedTalentsPage() {
           Here are the talents you've saved for future reference.
         </p>
         
-        {isLoading ? (<div className="text-center py-8">Loading saved talents...</div>) : savedTalents.length === 0 ? (<div className="text-center py-8">No talents saved yet.</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {savedTalents.map((talent) => (<TalentCard key={talent.id} talent={talent} onViewProfile={handleViewProfile} onRequestHire={handleRequestHire} isSaved={true} onToggleSave={handleToggleSave} isAuthenticated={!!user}/>))}
-          </div>)}
+        {isLoading ? (
+          <div className="text-center py-8">Loading saved talents...</div>
+        ) : savedTalents.length === 0 ? (
+          <div className="text-center py-8">No talents saved yet.</div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {savedTalents.map((talent) => (
+              <TalentCard
+                key={talent.id}
+                talent={talent}
+                onViewProfile={handleViewProfile}
+                onRequestHire={handleRequestHire}
+                isAuthenticated={!!user}
+              />
+            ))}
+          </div>
+        )}
       </div>
       
     </React.Fragment>)}

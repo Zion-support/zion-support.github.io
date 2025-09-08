@@ -26,9 +26,15 @@
 >>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "axios": ["./src/lib/axios"]
+    },
+    "types": [],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -94,36 +100,6 @@
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": [
-    "next-env.d.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "utils/**/*.ts",
-    "utils/**/*.tsx",
-    "types/**/*.ts",
-    "types/**/*.tsx",
-    "hooks/**/*.ts",
-    "hooks/**/*.tsx",
-    "context/**/*.ts",
-    "context/**/*.tsx",
-    "services/**/*.ts",
-    "services/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "zion.app/recovered-content/**",
-    "contracts/**",
-    "cypress/**",
-    "vitest.config.ts"
-  ]
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
-  "include": ["src"],
+  "include": ["src", "src/types/offline-shims.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }

@@ -6,6 +6,22 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
+  detailBasePath = '/marketplace/listing',
+  itemsPerPage,
+}: DynamicListingPageProps) {
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [view, setView] = useState<ListingView>("grid");
+  const isGrid = view === "grid";
+  // Swap icons to match action
+  const ToggleViewIcon = isGrid ? (
+    <List className="h-4 w-4" />
+  ) : (
+    <LayoutGrid className="h-4 w-4" />
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
 
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -454,11 +470,8 @@ export function DynamicListingPage({
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
-
                     {ToggleViewIcon}
-                    <span className="sr-only">
-                      {isGrid ? "List view" : "Grid view"}
-                    </span>
+                    <span className="sr-only">{isGrid ? "List view" : "Grid view"}</span>
                   </Button>
                 </div>
               </div>

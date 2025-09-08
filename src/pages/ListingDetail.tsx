@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useParams } from "react-router-dom";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { ProductGallery } from "@/components/gallery/ProductGallery";
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from 'next/link';
@@ -13,18 +14,17 @@ import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
+
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-<<<<<<< HEAD
-  const router = null;
-=======
-  const router = useRouter();
-  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+  const { id } = useParams() as { id?: string };
+  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
-  const { formatPrice } = useCurrency();
+
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -60,34 +60,30 @@ export default function ListingDetail() {
               </Button>
             </div>
           </div>
-        </div>);
+        </div>
+      );
+  }
+
+  const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true);
+    } else {
+      setIsContactDialogOpen(true);
     }
-    const handleContact = () => {
-        if (user) {
-            setIsChatOpen(true);
-        }
-        else {
-            setIsContactDialogOpen(true);
-        }
-    };
-    return (<div className="min-h-screen bg-zion-blue py-12 px-4">
+  };
+
+  return (
+    <>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
-                      <span className="text-zion-slate-light">No image available</span>
-                    </div>)}
-                </div>
-                
-                {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent")}>
-                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
-                      </div>))}
-                  </div>)}
-              </div>
+              <ProductGallery
+                images={listing.images}
+                videoUrl={listing.videoUrl}
+                modelUrl={listing.modelUrl}
+              />
 
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
@@ -145,10 +141,9 @@ export default function ListingDetail() {
                 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
-                {listing.rating && (<div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={cn("h-5 w-5", i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")}/>))}
-                    </div>
+                {listing.rating && (
+                  <div className="flex items-center gap-2 mb-6">
+                    <RatingStars value={listing.rating} />
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
                     </span>
@@ -213,10 +208,16 @@ export default function ListingDetail() {
           </div>
         </div>
       </div>
-  {/* Removed stray comma */}
-            <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
-    { /* Contact Dialog */ }
-    <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+
+      <ChatWidget
+        roomId={listing.id}
+        recipientId={listing.author.id}
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>

@@ -1,27 +1,5 @@
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  ExternalLink, 
-  Download, 
-  Smartphone, 
-  Globe, 
-  CheckCircle, 
-  Clock,
-  ArrowRight,
-  Loader2,
-  Phone,
-  Mail
-} from 'lucide-react';
-
-<<<<<<< HEAD
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
@@ -29,7 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 
 // This component handles deep linking to the mobile app
-<<<<<<< HEAD
 const OpenAppRedirect = () => {
   const navigate = useNavigate();
   const [status, setStatus] = useState('redirecting' as 'redirecting' | 'failed' | 'timeout');

@@ -261,26 +261,21 @@ export function TrustedBySection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <Card className="h-full bg-zion-slate-700/50 border-zion-slate-600 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                <CardContent className="p-6">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-2">{company.logo}</div>
-                    <h3 className="text-xl font-bold text-white mb-1">
-                      {company.name}
-                    </h3>
-                    <p className="text-zion-cyan text-sm font-medium">
-                      {company.industry}
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-zion-slate-300 italic">
-                      "{company.testimonial}"
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+              {failedLogos[company.name] ? (
+                // Fallback to text if image fails to load
+                <div className="text-white font-semibold text-center">
+                  {company.name}
+                </div>
+              ) : (
+                <img
+                  src={company.logo}
+                  alt={company.alt}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                  loading="lazy"
+                  onError={() => handleImageError(company.name)}
+                />
+              )}
+            </div>
           ))}
         </div>
 

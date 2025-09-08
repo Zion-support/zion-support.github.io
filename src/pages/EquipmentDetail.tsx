@@ -15,11 +15,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
+import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
@@ -27,47 +30,189 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 
-  return (
-    <>
-      <SEO 
-        title="Equipment Details - Zion Tech Group"
-        description="View detailed information about our equipment"
-        canonical={`https://ziontechgroup.com/equipment/${id}`}
-      />
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Equipment Details
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8">
-              View detailed information about our equipment
-            </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
-              <p className="text-white">
-                Equipment ID: {id}
-              </p>
-              <p className="text-white mt-4">
-                Our equipment detail page is coming soon. You'll be able to view comprehensive information about each piece of equipment.
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import React from 'react';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
+interface EquipmentDetails {
+  id: string;
+  name: string;
+  description: string;
+  brand: string;
+  category: string;
+  subcategory?: string;
+  images: string[];
+  videoUrl?: string;
+  modelUrl?: string;
+  price: number;
+  currency: string;
+  rating?: number;
+  reviewCount?: number;
+  inStock: boolean;
+  expectedShipping?: string;
+  specifications: EquipmentSpecification[];
+  features: string[];
+  warranty?: string;
+  returnPolicy?: string;
+  videoUrl?: string;
+  modelUrl?: string;
+}
+
+// Sample data - in a real app this would come from an API
+const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
+  "2u-rack-mount-server": {
+    id: "2u-rack-mount-server",
+    name: "2U Rack Mount Server",
+    description: "High‑density server optimized for virtualization and private cloud deployments.",
+    brand: "DataCore",
+    category: "Servers",
+    images: ["/images/equipment-placeholder.svg"],
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    modelUrl: "/models/sample.glb",
+    price: 4200,
+    currency: "$",
+    rating: 4.8,
+    reviewCount: 23,
+    inStock: true,
+    expectedShipping: "3-5 business days",
+    weightKg: 18,
+    widthCm: 44.5,
+    heightCm: 8.9,
+    depthCm: 65,
+    specifications: [
+      { name: "CPU", value: "Dual Xeon" },
+      { name: "Memory", value: "64GB RAM" },
+      { name: "Power", value: "Dual PSU" },
+    ],
+    features: ["Hot-swappable drives", "Remote management"],
+    warranty: "1 year manufacturer warranty",
+    returnPolicy: "30-day return policy",
+  },
+  "pro-camera-x1000": {
+    id: "pro-camera-x1000",
+    name: "Pro Camera X1000",
+    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
+    brand: "CineTech",
+    category: "Equipment",
+    subcategory: "Cameras",
+    images: [
+      "/images/equipment-placeholder.svg",
+      "/images/equipment-placeholder.svg",
+      "/images/equipment-placeholder.svg"
+    ],
+    videoUrl: "/videos/camera-demo.mp4",
+    modelUrl: "/models/camera.glb",
+    price: 6999,
+    currency: "$",
+    rating: 4.9,
+    reviewCount: 87,
+    inStock: true,
+    expectedShipping: "3-5 business days",
+    weightKg: 2.1,
+    widthCm: 15,
+    heightCm: 12,
+    depthCm: 10,
+    specifications: [
+      { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
+      { name: "Resolution", value: "8K (8192 x 4320)" },
+      { name: "Dynamic Range", value: "16+ stops" },
+      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" },
+      { name: "Recording Format", value: "RAW, ProRes, H.265" },
+      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" },
+      { name: "Storage", value: "Dual CFexpress Type B" },
+      { name: "Battery Life", value: "~3 hours continuous recording" },
+      { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
+    ],
+    features: [
+      "Advanced 8K full-frame sensor",
+      "16+ stops of dynamic range",
+      "Internal RAW recording",
+      "Dual native ISO technology",
+      "5-axis in-body image stabilization",
+      "AI-powered autofocus with subject tracking",
+      "Weather-sealed magnesium alloy body",
+      "Multiple assist tools: false color, waveform, vectorscope",
+      "Anamorphic de-squeeze options",
+      "Custom 3D LUT support"
+    ],
+    warranty: "2 years manufacturer warranty",
+    returnPolicy: "30-day return policy for unused items in original packaging"
+  },
+  "audio-mixer-pro": {
+    id: "audio-mixer-pro",
+    name: "AudioMixer Pro Digital Mixing Console",
+    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
+    brand: "AudioTech",
+    category: "Equipment",
+    subcategory: "Audio",
+    images: [
+      "/images/equipment-placeholder.svg",
+      "/images/equipment-placeholder.svg"
+    ],
+    price: 3499,
+    currency: "$",
+    rating: 4.8,
+    reviewCount: 42,
+    inStock: true,
+    expectedShipping: "5-7 business days",
+    weightKg: 14.5,
+    widthCm: 55,
+    heightCm: 20,
+    depthCm: 45,
+    specifications: [
+      { name: "Channels", value: "32 input channels" },
+      { name: "Faders", value: "16 motorized faders" },
+      { name: "Preamps", value: "24 premium mic preamps" },
+      { name: "Sampling Rate", value: "Up to 96kHz" },
+      { name: "EQ", value: "4-band parametric per channel" },
+      { name: "Dynamics", value: "Compressor/Gate on all channels" },
+      { name: "Effects", value: "8 stereo effects processors" },
+      { name: "Recording", value: "64-channel USB interface" }
+    ],
+    features: [
+      "32-channel digital mixer with 24 premium mic preamps",
+      "16 motorized faders with touch-sensitive control",
+      "7-inch high-resolution color touchscreen",
+      "Comprehensive routing matrix",
+      "Onboard multi-track recording to USB",
+      "iOS and Android remote control app",
+      "Configurable user layers",
+      "8 DCA groups and 6 mute groups",
+      "Integrated WiFi for wireless control"
+    ],
+    warranty: "3 years manufacturer warranty",
+    returnPolicy: "21-day return policy for items in original condition"
+  }
+};
 
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
+  const { unit, setUnit } = useUnitSystem();
   
   // In a real app, this would fetch from an API
-  const equipment: EquipmentDetails | undefined =
-    equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
+  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined;
+
+  const specsToDisplay = equipment
+    ? [
+        ...equipment.specifications,
+        ...(equipment.widthCm && equipment.heightCm && equipment.depthCm
+          ? [
+              {
+                name: 'Dimensions',
+                value: formatDimensions(
+                  equipment.widthCm,
+                  equipment.heightCm,
+                  equipment.depthCm,
+                  unit
+                ),
+              },
+            ]
+          : []),
+        ...(equipment.weightKg
+          ? [{ name: 'Weight', value: formatWeight(equipment.weightKg, unit) }]
+          : []),
+      ]
+    : [];
   
   if (!equipment) {
     return (
@@ -86,32 +231,35 @@ export default function EquipmentDetail() {
     );
   }
 
+  const dispatch = useAppDispatch();
   const handleAddToCart = () => {
-    setIsAdding(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
-      toast({
-        title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    }, 800);
+    dispatch(addItem({
+      id: equipment.id,
+      name: equipment.name,
+      price: equipment.price,
+      quantity,
+    }));
+    toast({ title: 'Added to cart 🛒' });
   };
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/equipment/${equipmentId}`);
+      if (equipmentId) {
+        sessionStorage.setItem('intendedProduct', equipmentId);
+      }
+      navigate('/login?next=/checkout');
       return;
     }
 
     setIsAdding(true);
     try {
-      const response = await fetch('/api/checkout_sessions', {
-      const response = await fetch('/checkout/create-session', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: equipmentId }),
+        body: JSON.stringify({
+          productId: id,
+          customerEmail: user?.email,
+        }),
       });
       const { sessionId } = await response.json();
       const stripe = await getStripe();
@@ -128,45 +276,44 @@ export default function EquipmentDetail() {
     }
   };
 
+  const pageUrl = `https://app.ziontechgroup.com/equipment/${equipment.id}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: equipment.name,
+    description: equipment.description,
+    image: equipment.images,
+    brand: equipment.brand,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: equipment.currency,
+      price: equipment.price,
+      availability: equipment.inStock
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      url: pageUrl
+    }
+  };
+
   return (
     <>
-      <FuturisticNavigation />
+      <SEO
+        title={equipment.name}
+        description={equipment.description}
+        ogImage={equipment.images[0]}
+        canonical={pageUrl}
+      />
+      <StructuredData data={structuredData} />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
+            {/* Left Column - Media */}
             <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                {/* Main Image */}
-                <div className="aspect-video w-full relative">
-                  <img 
-                    src={equipment.images[selectedImageIndex]} 
-                    alt={equipment.name} 
-                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
-                  />
-                </div>
-                
-                {/* Thumbnail Gallery */}
-                {equipment.images.length > 1 && (
-                  <div className="flex p-4 gap-2 overflow-x-auto">
-                    {equipment.images.map((image, index) => (
-                      <div 
-                        key={index}
-                        onClick={() => setSelectedImageIndex(index)}
-                        className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        }`}
-                      >
-                        <img 
-                          src={image} 
-                          alt={`${equipment.name} - image ${index + 1}`} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <ProductGallery
+                images={equipment.images}
+                videoUrl={equipment.videoUrl}
+                modelUrl={equipment.modelUrl}
+              />
 
               {/* Product Details Tabs */}
               <div className="mt-8">
@@ -192,9 +339,17 @@ export default function EquipmentDetail() {
                   </TabsContent>
                   
                   <TabsContent value="specifications" className="mt-4">
+                    <div className="flex items-center justify-end mb-2 gap-2">
+                      <span className="text-xs">Metric</span>
+                      <Switch
+                        checked={unit === 'imperial'}
+                        onCheckedChange={(c) => setUnit(c ? 'imperial' : 'metric')}
+                      />
+                      <span className="text-xs">Imperial</span>
+                    </div>
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {equipment.specifications.map((spec, index) => (
+                        {specsToDisplay.map((spec, index) => (
                           <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">
                             <div className="flex justify-between">
                               <span className="text-zion-slate-light">{spec.name}</span>
@@ -244,18 +399,7 @@ export default function EquipmentDetail() {
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-5 w-5 ${
-                            i < Math.floor(equipment.rating!) 
-                              ? "text-zion-cyan fill-zion-cyan" 
-                              : "text-zion-slate-light"
-                          }`}
-                        />
-                      ))}
-                    </div>
+                    <RatingStars value={equipment.rating} />
                     <span className="text-sm text-zion-slate-light">
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>

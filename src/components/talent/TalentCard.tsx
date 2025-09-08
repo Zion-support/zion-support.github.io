@@ -10,83 +10,37 @@ import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
 import { FavoriteButton } from "@/components/FavoriteButton";
+import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
-import { RatingStars  } from '@/components/RatingStars';
-import { useAuth  } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
-
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
+import { useAppDispatch } from "@/store/hooks";
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
 
 export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { TalentProfile } from "@/types/talent",;
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
   isAuthenticated: boolean;
-
 }
-const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
+
+export function TalentCard({
+  talent,
+  onViewProfile,
+  onRequestHire,
   isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
+}: TalentCardProps) {
+  const navigate = useNavigate();
+  
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
+    navigate(`/talent/${talent.id}`);
+    
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id)
+      onViewProfile(talent.id);
     }
-
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-
-  },
-
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string,) => void,;
-  onRequestHire: (talent: TalentProfile,) => void,;
-  isAuthenticated: boolean;
-}
-
-const TalentCardComponent = ({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isAuthenticated;
-}: TalentCardProps,) => {;
-  const router = useRouter(),;
+  };
 
   const handleViewProfile = () => {;
     // Navigate directly to the talent profile;
@@ -105,13 +59,9 @@ const TalentCardComponent = ({;
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-  },
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [];
 
   return (
     <Card
@@ -153,13 +103,12 @@ const TalentCardComponent = ({;
           </div>;
 
           {/* Main Info */}
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
-              <FavoriteButton itemId={talent && talent.id} className="-mt-1" />;
-            </div>;
-            <p className="text-white font-medium">{talent && talent.professional_title}</p>;
-
+          <div className="flex-1">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
+              <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />
+            </div>
+            <p className="text-white font-medium">{talent.professional_title}</p>
             
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;

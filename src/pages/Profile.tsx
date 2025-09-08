@@ -1,168 +1,157 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion.ts';
-import { User, 
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
-  X,
-  Shield,
-  Bell,
-  Palette,
-  Key,
-  Trash2,
-  Download,
-  Upload,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Settings,
-  UserCheck,
-  CreditCard,
-  Activity,
-  BarChart3,
-  Calendar,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket
- } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+} from '@/components/ui/avatar';
 
-interface UserProfile {
-
-  firstName: string;
-  lastName: string;
+interface User {
+  id: string;
+  name: string;
   email: string;
-  phone: string;
-  comp: string;
-  position: string;
-  industry: string;
-  location: string;
-  website: string;
-  bio: string;
-  avatar: string}
+  avatarUrl: string;
+  notifications: { email: boolean; push: boolean };
+  softDeleted?: boolean;
+}
 
-interface NotificationSettings {
+export default function Profile() {
+  const [user, setUser] = useState<User | null>(null);
+  const [avatarPreview, setAvatarPreview] = useState<string>('');
 
-  emailNotifications: boolean;
-  pushNotifications: boolean;
-  marketingEmails: boolean;
-  securityAlerts: boolean;
-  projectUpdates: boolean;
-  weeklyReports: boolean}
+  useEffect(() => {
+    fetch('/api/users/me')
+      .then(res => res.json())
+      .then(setUser)
+      .catch(() => {});
+  }, []);
 
-interface SecuritySettings {
+  const handleSave = async () => {
+    if (!user) return;
+    const res = await fetch('/api/users/me', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user),
+    });
+    const data = await res.json();
+    setUser(data);
+  };
 
-  twoFactorEnabled: boolean;
-  sessionTimeout: number;
-  passwordLastChanged: string;
-  lastLogin: string;
-loginHistory: Array<any>}
+  const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatarPreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
-const Profile: React.FC = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState<any>('profile');
-  const [isEditing, setIsEditing] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [success, setSuccess] = useState('');
-  const [error, setError] = useState('');
+  const handleDelete = async () => {
+    const confirm = window.prompt('Enter password to confirm');
+    if (!confirm) return;
+    await fetch('/api/users/me', { method: 'DELETE' });
+    setUser(prev => (prev ? { ...prev, softDeleted: true } : prev));
+  };
 
-  const [profile, setProfile] = useState<any>({
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@ziontechgroup.com',
-    phone: '+1 (555) 123-4567',
-    comp: 'Zion Tech Group',
-    position: 'Senior Developer',
-    industry: 'Technology',
-    location: 'San Francisco, CA',
-    website: 'https://ziontechgroup.com',
-    bio: 'Passionate technology professional with expertise in AI, cloud computing, and digital transformation. Committed to delivering innovative solutions that drive business growth.',
-    avatar: '/api/placeholder/150/150'
-  });
+  if (!user) {
+    return (
+      <div className="p-4">Loading...</div>
+    );
+  }
 
-  const [notifications, setNotifications] = useState<any>({
-    emailNotifications: true,
-    pushNotifications: true,
-    marketingEmails: false,
-    securityAlerts: true,
-    projectUpdates: true,
-    weeklyReports: false
-  });
+  return (
+    <div className="container mx-auto p-4">
+      <Tabs defaultValue="info" className="w-full">
+        <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-4">
+          <TabsTrigger value="info">Personal Info</TabsTrigger>
+          <TabsTrigger value="security">Security</TabsTrigger>
+          <TabsTrigger value="notifications">Notifications</TabsTrigger>
+        </TabsList>
 
-  const [security, setSecurity] = useState<any>({
-    twoFactorEnabled: true,
-    sessionTimeout: 30,
-    passwordLastChanged: '2024-01-15',
-    lastLogin: '2024-01-20 14:30:00',
-    loginHistory[
-      { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
-      { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
-      { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
-      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
-    ]
-  });
+        <TabsContent value="info">
+          <div className="space-y-4">
+            <div>
+              <Avatar className="w-24 h-24 mb-2">
+                {avatarPreview || user.avatarUrl ? (
+                  <AvatarImage src={avatarPreview || user.avatarUrl} alt="avatar" />
+                ) : (
+                  <AvatarFallback>{user.name?.charAt(0)}</AvatarFallback>
+                )}
+              </Avatar>
+              <Input type="file" aria-label="avatar" onChange={handleAvatarChange} />
+            </div>
+            <div>
+              <Label htmlFor="name">Name</Label>
+              <Input
+                id="name"
+                value={user.name}
+                onChange={e => setUser({ ...user, name: e.target.value })}
+              />
+            </div>
+            <div>
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                value={user.email}
+                onChange={e => setUser({ ...user, email: e.target.value })}
+              />
+            </div>
+            <Button onClick={handleSave}>Save</Button>
+          </div>
+        </TabsContent>
 
-  const [currentPassword, setCurrentPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [showPasswords, setShowPasswords] = useState({
-    current: false,
-    new: false,
-    confirm: false
-  });
+        <TabsContent value="security">
+          <Button variant="destructive" onClick={handleDelete}>
+            Delete account
+          </Button>
+        </TabsContent>
 
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
-    'Other'
-  ];
-
-  const handleProfileUpdate = async () => {
-    setIsLoading(true);
-    setError('');
-    setSuccess('');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/3">
-                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
-                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
-                </div>
-              </div>
-              <div className="md:w-2/3">
-                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
-                <p className="text-zion-slate-light mb-4">{user.email}</p>
-                <Button onClick={() => {
-            logout();
-            navigate("/");
-        }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-                  Logout
-                </Button>
-              </div>
+        <TabsContent value="notifications">
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="nemail"
+                checked={user.notifications.email}
+                onCheckedChange={v =>
+                  setUser({
+                    ...user,
+                    notifications: { ...user.notifications, email: !!v },
+                  })
+                }
+              />
+              <label htmlFor="nemail" className="text-sm text-white">
+                Email notifications
+              </label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="npush"
+                checked={user.notifications.push}
+                onCheckedChange={v =>
+                  setUser({
+                    ...user,
+                    notifications: { ...user.notifications, push: !!v },
+                  })
+                }
+              />
+              <label htmlFor="npush" className="text-sm text-white">
+                Push notifications
+              </label>
             </div>
           </div>
-        </div>
-      </div>
-      
-    </>);
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
 }

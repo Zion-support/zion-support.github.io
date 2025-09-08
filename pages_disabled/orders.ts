@@ -2,7 +2,11 @@ import { createClient } from '@supabase/supabase-js';
 import { serializeOrders } from './orders/serializer';
 
 // Generic request/response types so the handler works in Node or Next.js
-type Req = { method?: string; query?: { userId?: string; user_id?: string } };
+type Req = {
+  method?: string;
+  query?: { userId?: string; user_id?: string };
+  headers?: Record<string, string | undefined>;
+};
 interface JsonRes {
   status: (code: number) => JsonRes;
   json: (data: any) => void;
@@ -37,7 +41,7 @@ export default async function handler(req: Req, res: JsonRes) {
 
   const { data, error } = await supabase
     .from('orders')
-    .select('id, created_at, total, status, invoice_url')
+    .select('id, created_at, total, status, invoice_url, tracking_status')
     .eq('user_id', userId)
     .order('created_at', { ascending: false });
 

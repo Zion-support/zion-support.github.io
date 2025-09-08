@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react';
+
+import { GradientHeading } from "./GradientHeading";
+import { Link } from "react-router-dom";
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const categories = [
   {
@@ -96,89 +97,23 @@ const specialServices = [
   }
 ];
 
-const serviceCategories = [
-  {
-    title: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and deployment automation",
-    icon: <Cloud className="w-8 h-8" />,
-    link: "/cloud-services",
-    color: "from-blue-500 to-cyan-600",
-  },
-  {
-    title: "Data & Analytics",
-    description: "Big data processing, analytics, and business intelligence",
-    icon: <Database className="w-8 h-8" />,
-    link: "/data-analytics",
-    color: "from-green-500 to-emerald-600",
-  },
-  {
-    title: "AI & Machine Learning",
-    description: "Intelligent automation and predictive analytics",
-    icon: <Cpu className="w-8 h-8" />,
-    link: "/ai-solutions",
-    color: "from-purple-500 to-indigo-600",
-  },
-  {
-    title: "Cybersecurity",
-    description: "Advanced threat protection and security compliance",
-    icon: <LinkIcon className="w-8 h-8" />,
-    link: "/cybersecurity-services",
-    color: "from-red-500 to-pink-600",
-  },
-  {
-    title: "IoT & Edge Computing",
-    description: "Connected devices and edge processing solutions",
-    icon: <TrendingUp className="w-8 h-8" />,
-    link: "/iot-solutions",
-    color: "from-orange-500 to-yellow-600",
-  },
-  {
-    title: "Blockchain",
-    description: "Distributed ledger technology and smart contracts",
-    icon: <Sparkles className="w-8 h-8" />,
-    link: "/blockchain",
-    color: "from-indigo-500 to-purple-600",
-  },
-];
+interface CategoriesSectionProps
+  extends React.HTMLAttributes<HTMLElement> {
+  showTitle?: boolean
+}
 
-export function CategoriesSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  const cardVariants = {
-    hover: {
-      y: -8,
-      scale: 1.02,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
+export function CategoriesSection({
+  showTitle = true,
+  className,
+  style,
+  ...props
+}: CategoriesSectionProps) {
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-zion-blue">
+    <section
+      className={cn("py-20 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">

@@ -24,6 +24,11 @@ import React from 'react';
   const currentPath = router && router.pathname;
 export default ApiDocsLayout;
 
+import type { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+// Next.js Link must be used with an `href` prop. Earlier revisions used
+// React Router's `to` attribute, resulting in the "Cannot find name 'Link'"
+// error in `build-test-2.log`.
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'

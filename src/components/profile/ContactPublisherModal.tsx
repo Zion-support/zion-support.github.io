@@ -65,32 +65,12 @@ import { Input } from '@/components / ui / input';
   FormLabel,
   FormControl,
   FormMessage,
-} from '@/components / ui / form';
-import { use_form, type Resolver } from 'react - hook - form';
-import { yup_resolver } from '@hookform / resolvers / yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'; import api from '@/services / api_client';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { LoginModal } from '@/components / auth / LoginModal';
-  Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage} from '@/components / ui / form';
-import {use_form, type, Resolver} from 'react - hook - form';
-import {yup_resolver} from '@hookform / resolvers / yup';
-import { SendIcon, Mail } from 'lucide-react';
-import api from '@/services / api_client';
-  is_open: boolean;
-  on_close: () => void;
-  publisher_name: string;
-  publisher_email?: string;
-  product_id?: string;
-type FormValues = {
-  subject: string
-  message: string }
+} from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Send, Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
   subject: string,
   message: string;
@@ -179,8 +159,37 @@ import { LoginModal } from '@/components/auth/LoginModal';
   productId?: string;
 }
 
-    }
-    const values = form && form.getValues();
+type FormValues = {
+  subject: string;
+  message: string;
+};
+
+const schema = z.object({
+  subject: z
+    .string()
+    .min(5, 'Subject must be at least 5 characters')
+    .nonempty('Subject is required'),
+  message: z
+    .string()
+    .min(20, 'Message must be at least 20 characters')
+    .nonempty('Message is required'),
+});
+
+export function ContactPublisherModal({
+  isOpen,
+  onClose,
+  publisherName,
+  publisherEmail,
+}: ContactPublisherModalProps) {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(schema),
+    mode: 'onChange',
+    defaultValues: { subject: '', message: '' },
+  });
+
+  const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     setError(null);
 

@@ -2,9 +2,17 @@
 
   const getRegionEmoji = (countryName: string | undefined): string => {
 
-    if (!countryName) return "🌐",
-    
-    const emojiMap: Record<string string> = {
+interface CountryServiceCardProps {
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean;
+}
+
+export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+  // Get region flag based on country name (for demo purposes)
+  const getRegionEmoji = (countryName: string): string => {
+    const emojiMap: Record<string, string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
@@ -371,12 +379,10 @@ export function CountryServiceCard(): any ({;
           Select Service
         </Button>
         <Button
-
           variant="outline"
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
         >
-
           Get Quote
         </Button>
         <Button

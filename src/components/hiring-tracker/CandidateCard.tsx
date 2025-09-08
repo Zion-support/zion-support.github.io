@@ -1,4 +1,49 @@
-  const handleSaveNotes = () => {    // Here you would save the notes to the database
+
+import { useState } from "react";
+import { Draggable } from "@hello-pangea/dnd";
+import { formatDistanceToNow } from "date-fns";
+import { Link } from "react-router-dom";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  MessageSquare, 
+  User, 
+  FileText, 
+  MoreVertical, 
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon
+} from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+
+interface CandidateCardProps {
+  application: JobApplication;
+  index: number;
+}
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+  
+  // Check if application is stalled (no activity for 7 days)
+  const isStalled = application.updated_at && 
+    new Date(application.updated_at).getTime() < 
+    (Date.now() - 7 * 24 * 60 * 60 * 1000);
+  
+  const handleSaveNotes = () => {
+    // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
 
@@ -142,7 +187,15 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
-                    {application.talent_profile?.profile_picture_url ? (<img src={application.talent_profile.profile_picture_url} alt={application.talent_profile.full_name || "Candidate"}/>) : (<User className="h-4 w-4"/>)}
+                    {application.talent_profile?.profile_picture_url ? (
+                      <img
+                        src={application.talent_profile.profile_picture_url}
+                        alt={application.talent_profile.full_name || "Candidate"}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <User className="h-4 w-4" />
+                    )}
                   </Avatar>
                   <div>
                     <h4 className="font-medium text-sm">

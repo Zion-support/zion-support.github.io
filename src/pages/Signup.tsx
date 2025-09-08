@@ -1,59 +1,70 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  UserPlus, 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
-  User, 
-  Building, 
-  Phone, 
-  Globe, 
-  Shield, 
-  CheckCircle, 
-  AlertCircle,
-  ArrowRight,
-  Github,
-  Chrome,
-  Building2,
-  Zap,
-  Brain,
-  Cloud,
-  Database,
-  Code,
-  Target,
-  Star,
-  Rocket,
-  Award,
-  Lightbulb,
-  Users,
-  Globe2,
-  Heart,
-  Car,
-  GraduationCap,
-  Factory,
-  ShoppingCart,
-  Camera,
-  Gamepad2,
-  Microscope,
-  Key,
-  Fingerprint
-} from 'lucide-react';
+
+import { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
+
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { safeStorage } from "@/utils/safeStorage";
+import { mailchimpService } from "@/integrations/mailchimp";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions",
+    }),
+    newsletterOptIn: z.boolean().optional(),
+  })
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
+type SignupFormValues = any;
 
 export default function Signup() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    company: '',
-    phone: '',
-    website: '',
-    acceptTerms: false,
-    acceptMarketing: false
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(signupSchema),
+    defaultValues: {
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      termsAccepted: false,
+      newsletterOptIn: false,
+    },
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -96,11 +107,55 @@ export default function Signup() {
       return;
     }
 
-    if (formData.password.length < 8) {
-      setSignupStatus('error');
-      setErrorMessage('Password must be at least 8 characters long');
-      setIsLoading(false);
-      return;
+    console.log("register form data", data);
+
+    setIsSubmitting(true);
+    try {
+      const { res, data: resData } = await registerUser(
+        data.displayName,
+        data.email,
+        data.password
+      );
+
+      if (res.status !== 201) {
+        const message = resData?.message || "Registration failed";
+        if (res.status === 409) {
+          form.setError("email", { message });
+        } else if (res.status === 400 && message.toLowerCase().includes("password")) {
+          form.setError("password", { message });
+        } else {
+          form.setError("root", { message });
+        }
+        toast.error(message);
+        return;
+      }
+
+      if (resData?.token) {
+        safeStorage.setItem("token", resData.token);
+      }
+
+      // Subscribe user to Mailchimp if opted in
+      if (data.newsletterOptIn && mailchimpService) {
+        try {
+          await mailchimpService.addSubscriber({
+            email: data.email,
+            mergeFields: { FNAME: data.displayName }
+          });
+          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+        } catch (err) {
+          console.error('Mailchimp subscription failed', err);
+        }
+      }
+
+      toast.success("Welcome to ZionAI 🎉");
+      navigate("/dashboard");
+    } catch (err: any) {
+      const message =
+        err?.response?.data?.message ?? err?.message ?? "Unexpected error";
+      form.setError("root", { message });
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
     }
 
     if (!formData.acceptTerms) {
@@ -305,11 +360,125 @@ export default function Signup() {
                 </div>
               </div>
 
-              {/* Email Field */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address *
-                </label>
+                  <FormField
+                    control={form.control}
+                    name="confirmPassword"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Input
+                              type={showConfirmPassword ? "text" : "password"}
+                              placeholder="Enter password"
+                              aria-label="Confirm password"
+                              aria-invalid={!!form.formState.errors.confirmPassword}
+                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
+                              value={confirmPasswordValue}
+                              onChange={(e) => {
+                                field.onChange(e)
+                                setConfirmPasswordValue(e.target.value)
+                              }}
+                              onBlur={(e) => {
+                                field.onBlur()
+                                setConfirmPasswordValue(e.target.value)
+                              }}
+                              autoComplete="new-password"
+                            />
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                            >
+                              {showConfirmPassword ? (
+                                <EyeOff className="h-4 w-4" />
+                              ) : (
+                                <Eye className="h-4 w-4" />
+                              )}
+                              <span className="sr-only">
+                                {showConfirmPassword ? "Hide password" : "Show password"}
+                              </span>
+                            </Button>
+                          </div>
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+
+                  <PasswordStrengthMeter password={passwordValue} />
+
+                  <FormField
+                    control={form.control}
+                    name="newsletterOptIn"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel className="text-sm text-zion-slate-light">
+                            Subscribe to our newsletter
+                          </FormLabel>
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="termsAccepted"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel className="text-sm text-zion-slate-light">
+                            I agree to the{" "}
+                            <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
+                              Terms of Service
+                            </a>{" "}
+                            and{" "}
+                            <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
+                              Privacy Policy
+                            </a>
+                          </FormLabel>
+                          <FormMessage className="text-red-400" />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Creating Account...
+                      </>
+                    ) : (
+                      "Create Account"
+                    )}
+                  </Button>
+                </form>
+              </Form>
+
+              <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />

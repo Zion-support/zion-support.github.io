@@ -7,10 +7,5 @@ export function useScrollToTop() {
   }, []);
 }
 
-export function useAuth() {
-  // Simple auth hook
-  return {
-    user: null,
-    isAuthenticated: false
-  };
-}
+export * from "./useLocalStorage";
+export * from "./useFavorites";

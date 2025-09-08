@@ -15,18 +15,17 @@ import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
+
 export default function TalentProfilePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
-  const router = useRouter()
-  // Get id from Next.js router query params
-  const { id } = router.query as { id?: string }
-  const { profile, isLoading, error } = useTalentProfile(id)
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false)
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false)
-  const { userDetails } = useAuthStatus()
-  const { isAuthenticated, user } = useAuth()
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
     ? {
@@ -67,11 +66,24 @@ export default function TalentProfilePage() {
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
-    created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
-    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
-    name: ''
-    points: 0
-  }
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
+    role: '' // Default empty string since userDetails doesn't have this property
+  };
+
+  const pageUrl = id ? `https://app.ziontechgroup.com/talent/${id}` : undefined;
+  const structuredData = profile ? {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: profile.title,
+    provider: {
+      '@type': 'Person',
+      name: profile.name
+    },
+    description: profile.bio,
+    url: pageUrl
+  } : null;
+
   // Handle loading error gracefully
   useEffect((,) => {
     if (error) {
@@ -121,99 +133,16 @@ export default function TalentProfilePage() {
   return (
     <>
       <SEO
-        title = {profile.full_name,}
-        description = {profile.bio |'Talent profile',}
-        ogImage = {profile.profile_picture_url,}
+        title={profile ? `${profile.name} - ${profile.title}` : 'Talent Profile'}
+        description={profile?.bio || 'Talent profile on Zion'}
+        canonical={pageUrl}
       />
-      <div className='min-h-screen bg-zion-blue pb-12'>
-        <TalentProfile
-          profile={profile}
-          onRequestHire={handleRequestHire}
-          onMessageTalent={handleMessageTalent}
-        />
-        <BackToDirectoryButton />
-        {/* Sticky action buttons that appear when scrolling */}
-        <StickyAction>
-          <div className='p-2 flex gap-2'>
-            <Button
-              size='sm'
-              className='bg-zion-purple text-white hover:bg-zion-purple-dark'
-              onClick={handleRequestHire}><Handshake className='mr-2 h-4 w-4' />
-              Hire Now
-            </Button>
-            <Button
-              size='sm'
-              variant='outline'
-              className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-              onClick={handleMessageTalent}><MessageSquare className='mr-2 h-4 w-4' />
-              Message
-            </Button>
-          </div>
-        </StickyAction>
-        {/* Request to Hire Modal */}
-        <HireRequestModal
-          talent={profile}
-          isOpen={isHireModalOpen}
-          onClose={() => setIsHireModalOpen(false)}
-          userDetails={userProfile}
-        />
-        {/* Message Talent Modal */}
-        <MessageTalentModal
-          talent={profile}
-          isOpen={isMessageModalOpen}
-          onClose={() => setIsMessageModalOpen(false)}
-        />
-      </div>
-    </>
-  )
-}, [error])
-return
-}setIsHireModalOpen (true)
-}
-const handleMessageTalent = () => {
-  if (!isAuthenticated) {
-  toast ({
-  return
-}setIsMessageModalOpen (true)
-}
-return (<> <SEO title= {
-  profile.full name
-}description= {'
-  profile.bio |'Talent profile'
-}ogImage= {
-  profile.profile picture url
-}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
-  profile
-}onRequestHire= {
-  handleRequestHire
-}onMessageTalent= {
-  handleMessageTalent
-}/> <BackToDirectoryButton /> {
-  /* Sticky action buttons that appear when scrolling */ "
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
-  /* Request to Hire Modal */
-}<HireRequestModal talent= {
-  profile
-}isOpen= {
-  isHireModalOpen
-}onClose= {
-  () => setIsHireModalOpen (false)
-}userDetails= {
-  userProfile
-}/> {
-  /* Message Talent Modal */
-}<MessageTalentModal talent= {
-  profile
-}isOpen= {
-  isMessageModalOpen
-}onClose= {
-  () => setIsMessageModalOpen (false)
-}/> </div> </>)
-}'"      <div className="min-h-screen bg-zion-blue pb-12">
+      {structuredData && <StructuredData data={structuredData} />}
+      <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-        profile = {profile,}
-        onRequestHire = {handleRequestHire,}
-        onMessageTalent = {handleMessageTalent,}
+        profile={profile}
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
       />
       <BackToDirectoryButton />
       {/* Sticky action buttons that appear when scrolling */}
@@ -252,5 +181,5 @@ return (<> <SEO title= {
         onClose = {() => setIsMessageModalOpen(false),}      />
     </div>
     </>
-  )
+  );
 }

@@ -1,18 +1,19 @@
-module.exports = {
-  testEnvironment:,
-  jsdom',
-  setupFilesAfterEnv: [
-  '<rootDir>/src/setupTests.ts],
-  moduleNameMapping: {,
-  ^@/(.*)$': '<rootDir>/src/$1,
-,
-  \.(css|less|scss|sass)$': 'identity-obj-proxy,
+export default {
+  preset: 'ts-jest/presets/default-esm',
+  testEnvironment: 'jsdom',
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
   },
-  collectCoverageFrom: [
-'src/**/*.{js,jsx,ts,tsx}',
-  '!src/**/*.d.ts',
-  '!src/index.tsx',
-  '!src/serviceWorker.ts',],
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
+  moduleNameMapper: {
+    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^vitest$': '<rootDir>/tests/vitest-mock.ts',
+  },
+  roots: ['<rootDir>/__tests__', '<rootDir>/tests'],
   coverageThreshold: {
     global: {
       branche,"s": 80

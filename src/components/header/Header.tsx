@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
-import { Menu, X, Search, User, ShoppingCart, Phone, Mail } from 'lucide-react';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { MainNavigation } from '@/layout/MainNavigation';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -125,35 +134,32 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   };
   
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-zinc-900/98 backdrop-blur-md shadow-lg shadow-cyan-500/10 border-b border-cyan-500/20' 
-        : 'bg-zinc-900/95 backdrop-blur supports-[backdrop-filter]:bg-zinc-900/75 border-b border-zinc-800/50'
-    }`}>
-      {/* Top Bar */}
-      <div className="hidden lg:block bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-zinc-800/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-10 items-center justify-between text-sm">
-            <div className="flex items-center space-x-6 text-zinc-400">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                Support
-              </Link>
-              <span className="text-zinc-600">|</span>
-              <Link to="/request-quote" className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                Get Free Quote
-              </Link>
-            </div>
-          </div>
+    <header 
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      style={headerStyle}
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+          <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            onSelectSuggestion={(text) => {
+              navigate(`/search?q=${encodeURIComponent(text)}`);
+              setQuery("");
+            }}
+            searchSuggestions={searchSuggestions}
+          />
+        </form>
+
+        <div className="flex items-center gap-2">
+          <PointsBadge />
+          <LanguageSelector />
+          {!hideLogin && <UserMenu />}
         </div>
       </div>
 

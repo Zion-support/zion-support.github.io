@@ -1,24 +1,31 @@
 import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated, viewProfile, clearFilters, handleBook, handleMessage }) {
-    const handleBookInternal = (talent) => {
-        if (handleBook) {
-            handleBook(talent);
-        }
-        else {
-            // console.log removed for production
-        }
-    };
-    const handleMessageInternal = (talent) => {
-        if (handleMessage) {
-            handleMessage(talent);
-        }
-        else {
-            onTalentClick(talent.id);
-        }
-    };
-    if (isLoading) {
-        return <TalentSkeleton />;
+import { TalentProfile } from "@/types/talent";
+
+export interface TalentGridProps {
+  talents: TalentProfile[];
+  isLoading: boolean;
+  onTalentClick: (id: string) => void;
+  isAuthenticated: boolean;
+  viewProfile?: (id: string) => void;
+  clearFilters?: () => void;
+  handleRequestHire?: (talent: TalentProfile) => void;
+}
+
+export function TalentGrid({ 
+  talents, 
+  isLoading, 
+  onTalentClick, 
+  isAuthenticated,
+  viewProfile,
+  clearFilters,
+  handleRequestHire
+}: TalentGridProps) {
+  const handleRequestHireInternal = (talent: TalentProfile) => {
+    if (handleRequestHire) {
+      handleRequestHire(talent);
+    } else {
+      // Default implementation
+      console.log("Request to hire:", talent.id);
     }
     if (!talents || talents.length === 0) {
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
@@ -27,8 +34,19 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
           Clear Filters
         </button>)}
     </div>;
-    }
-    return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {talents.map((talent) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}
-    </div>);
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {talents.map((talent) => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onViewProfile={() => handleViewProfile(talent.id)}
+          onRequestHire={() => handleRequestHireInternal(talent)}
+          isAuthenticated={isAuthenticated}
+        />
+      ))}
+    </div>
+  );
 }

@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss'
-export default (async () => {
-  const forms = await import('@tailwindcss/forms');
-  const typography = await import('@tailwindcss/typography');
-  const aspectRatio = await import('@tailwindcss/aspect-ratio');
-  
-  return {
+import { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
+
+const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -112,9 +112,9 @@ export default (async () => {
           dark: "#090c1a",
         },
         "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
+          DEFAULT: "#a855f7",
+          light: "#d8b4fe",
+          dark: "#9333ea",
         },
         "zion-cyan": {
           DEFAULT: "#00e5ff",
