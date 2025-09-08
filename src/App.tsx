@@ -34,7 +34,7 @@ import { PWAProvider, OfflineIndicator, UpdateAvailable } from './utils/pwa';
 
 // SEO and Performance utilities
 import { SEO } from './utils/seo';
-import { usePerformanceMonitor } from './utils/performance';
+import { PerformanceMonitor } from './utils/performance';
 
 // Create QueryClient instance with enhanced configuration
 const queryClient = new QueryClient({
@@ -86,14 +86,16 @@ const AppLoadingFallback = () => (
 
 // Performance monitoring component
 const PerformanceWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { metrics, reportMetrics } = usePerformanceMonitor();
+  const performanceMonitor = React.useMemo(() => new PerformanceMonitor(), []);
 
   React.useEffect(() => {
-    if (metrics) {
-      // Report metrics to analytics endpoint
-      reportMetrics(import.meta.env.VITE_ANALYTICS_ENDPOINT);
-    }
-  }, [metrics, reportMetrics]);
+    // Start performance monitoring
+    performanceMonitor.startMonitoring();
+    
+    return () => {
+      performanceMonitor.stopMonitoring();
+    };
+  }, [performanceMonitor]);
 
   return <>{children}</>;
 };
