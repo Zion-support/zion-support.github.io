@@ -33,7 +33,6 @@ const alertVariants = cva("
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"}},
     defaultVariants: {"
       variant: "default"}}
-<<<<<<< HEAD
 
 )
 const Alert = React.forwardRef<
@@ -55,26 +54,6 @@ const AlertTitle = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <h5
   />));
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-Alert.display_name = 'Alert';
-;
-const AlertTitle = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttributes < HTMLHeadingE</HTMLHeadingElement > lement>;
->(({ class_name, ...props }, ref) => (
-  <h5;
-    ref={ref}
-    className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
-    {...props}
-
-  />
-  <h5
-    ref={ref}
-    className={cn('mb-1 font-medium leading-none tracking-tight', className)}
-    {...props}
-  />
 ));
 AlertTitle.displayName = 'AlertTitle';
 const AlertDescription = React.forwardRef<
@@ -115,6 +94,3 @@ const Alert = React.forward_ref<;
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-

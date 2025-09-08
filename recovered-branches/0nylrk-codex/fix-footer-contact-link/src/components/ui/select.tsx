@@ -2,29 +2,6 @@
 
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
-<<<<<<< HEAD
-"
-import { cn } from "@/lib/utils"
-
-
-=======
-
-import { cn } from "@/lib/utils"
-
-const Select = SelectPrimitive.Root
-const SelectGroup = SelectPrimitive.Group
-const SelectValue = SelectPrimitive.Value
-const SelectTrigger = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Trigger>
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-  <SelectPrimitive.Trigger
-    ref={ref}
-    className={cn(      className
-    )}
-    {...props}
-  >;
-    {children}
 
   </SelectPrimitive.Trigger>
 ))
@@ -56,33 +33,7 @@ const SelectContent = React.forwardRef<
       ref={ref}
       className={cn(  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
-=======  </SelectPrimitive.Portal>));
-SelectContent.display_name = SelectPrimitive.Content.display_name;
-const SelectLabel = React.forward_ref<;
-  React.ElementRef < typeof SelectPrimitive.Label>,
-  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
->(({ class_name, ...props }, ref) => (
-<<<<<<< HEAD
 
-=======
-  <SelectPrimitive.Label;
-    ref={ref}
-    className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
-    {...props}>(({ className, children, ...props }, ref) => (;
-  <SelectPrimitive.Item;
-    ref={ref}
-      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-    className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-    className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-  <SelectPrimitive.Item;
-    ref={ref}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
 
 
       &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;

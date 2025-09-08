@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import InteractiveElements from '../components/InteractiveElements';
   test('applies correct styling', () => {
     render(<InteractiveElements />);
     // Add styling tests if needed;
-
-

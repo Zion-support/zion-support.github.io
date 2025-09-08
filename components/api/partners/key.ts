@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";

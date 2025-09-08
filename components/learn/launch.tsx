@@ -32,7 +32,6 @@ export default function LaunchRedirect() {;
   return null;
 }
       destination: '/academy / founder - course',
->>>>>>> origin/cursor/delete-old-data-records-6bba
       permanent: false,
     },
   }      permanent: false}}

@@ -1,85 +1,3 @@
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Edit, X, Eye} from "lucide-react";
-import {format} from "date-fns";
-import {Link} from "react-router-dom";
-interface JobsListProps {;
-
-<<<<<<< HEAD
-
-=======
-filter?: JobStatus;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
-}
-
-export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
-
-  const { user } = useAuth();
-
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Edit, X, Eye } from "lucide-react",
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
-import { format } from "date-fns",
-import { Link } from "react-router-dom",
-interface JobsListProps {
-  filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string) => void
-}
-  const { user } = useAuth();
-
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-
-    const fetchJobs = async () => {
-      if (!user) return;
-      if (!user) return,  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-
-    const fetchJobs = async () => {
-      if (!user) return;
-      if (!user) return,
-
-        let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order($2);
-        if (filter) {
-          query = query.eq("status", filter)          }
-        </p>;
-        <Button asChild className="mt-4">;
-          <Link to="/post-job">Post Your First Job</Link>;
-        </Button>;
-      </div>;
-    );
-  }
-
-  const getStatusColor = (status: JobStatus) => {;
-    switch (status) {;
-      case "new": return "bg-blue-100 text-blue-800";
-      case "in_progress":;
-        return "bg-yellow-100 text-yellow-800";
-      case "filled":;
-
-        return "bg-green-100 text-green-800";
 
       case "closed":;
         return "bg-gray-100 text-gray-800",;
@@ -170,14 +88,6 @@ interface JobsListProps {
               </div>;
               <Badge className={getStatusColor(job && job.status)}>;"
                 {job && job.status.replace("_", " ").toUpperCase()}
-              </Badge>;
-            </div>;
-          </CardHeader>;"
-          <CardContent className="p-4 pt-0">;"
-            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
-              {job && job.description}
-            </p>;
-            <div className="flex flex-wrap gap-1 mt-2">;
               {job.skills.slice(0, 3).map((skill, index) => (;
               <Link to={`/jobs/${job.id}`}>;
               </Link>;
@@ -430,4 +340,3 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

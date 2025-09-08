@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-
 }: ResumeStepContentProps) => {
   return (
     <>
@@ -17,12 +15,6 @@ import {SkillsForm} from '../forms/SkillsForm';'
 import {CertificationsForm} from '../forms/CertificationsForm';'
 import {PreviewResume} from '../PreviewResume';
 interface ResumeStepContentProps {
-
-            // // // console.log("Saving basic info:", data)
-          }}
-          onComplete={onNextStep}
-        />
-
       </TabsContent>"
       <TabsContent value="work-experience">
         <WorkExperienceForm
@@ -37,11 +29,6 @@ import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
-          onBack={onPrevStep}
-
-        />;
-      </TabsContent>;
-
       <TabsContent value="education">;
 
         <EducationForm        />
@@ -115,15 +102,6 @@ onPrevStep
 };
 }
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
-<<<<<<< HEAD
-=======
-        />;
-      </TabsContent>;
-    </>;
-  )
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

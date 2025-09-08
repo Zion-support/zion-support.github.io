@@ -1,18 +1,6 @@
-<<<<<<< HEAD
 </p>'</p>'
-=======
-const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
-
-
-
-</p>'
-
-
-</p>'
-
 </p>'
 </p>'
->>>>>>> origin/main
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'

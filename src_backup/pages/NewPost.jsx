@@ -12,7 +12,6 @@ function NewPost() {}
 
 import React from 'react';
 export default function NewPost() {
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (;
     <div>;
       <h1>NewPost</h1>;
@@ -21,4 +20,3 @@ export default function NewPost() {
   );
 }
 ;
-

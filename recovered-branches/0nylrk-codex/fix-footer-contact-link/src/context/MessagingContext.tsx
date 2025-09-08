@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -57,7 +55,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   const { user } = useAuth();
   const {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
     messages;
     active_messages;
@@ -72,151 +69,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
-<<<<<<< HEAD
-
-);
-),
-
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType;
-  // Cast to avoid type errors when React type definitions are missing
-  const context = useContext(MessagingContext) as MessagingContextType,
-
-=======
-
-const MessagingContext = createContext($2);
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing
-  const context = $2;
-  if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider')
-  }
-  return context
-}
-
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider')
-  }
-  return context
-}
-<<<<<<< HEAD
-
-
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth();
-  const {
-
-=======
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode}) {
-  const { user } = useAuth($2);
-  const {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    messages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    fetchConversations;
-    loadMessages
-<<<<<<< HEAD
-
-  } = useMessagingOperations(user);
-  // Setup real-time subscription
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
-      setUnreadCount(count)
-    }
-  }, [conversations, setUnreadCount]);
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations()
-    } else {
-      setConversations([]);
-      setUnreadCount(0)
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]);
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
-    messages;
-    activeMessages;
-    conversations;
-    unreadCount;
-    activeConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    setActiveConversation;
-    fetchConversations
-    loadMessages
-  }
-
-  return (
-    <MessagingContext.Provider value={contextValue}>
-      {children}
-    </MessagingContext.Provider>
-  )
-}
-;
-// Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth(),;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]);
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
-
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -273,15 +125,3 @@ if ( {) {
   );
 }
 
-=======  return (
-    <MessagingContext && MessagingContext.Provider value={contextValue}>;
-      {children}
-    fetch_conversations,
-    load_messages;
-  }
-;
-  return (
-    <MessagingContext.Provider value={context_value}>;
-      {children}
-    </MessagingContext.Provider>);
-}

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import Link from 'next/link';';
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
@@ -13,25 +12,6 @@ const services = [
     icon: Settings,
     features: [;
 
-<<<<<<< HEAD
-      'Real-time production monitoring,',
-      'Automated quality control',',
-      'Predictive maintenance',',
-    title: 'Smart Factory Solutions,',,
-  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
-import Layout from '../../components/Layout';
-const services = [;
-  {;
-    title: 'Smart Factory Solutions',,
-  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
-    icon: Settings,;
-    features: [,;
-      'Real-time production monitoring,',;
-      'Automated quality control',',;
-      'Predictive maintenance',',;      'Cost optimization'';
-    ];
-  },
-  {}
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
@@ -106,7 +86,6 @@ export default function ManufacturingPage() {
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
@@ -117,60 +96,6 @@ export default function ManufacturingPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-        {/* Services Section */}"
-        <section className="py-20 bg-white">""
-          <div className="container mx-auto px-4">";
-
-=======
-
-
-              className="text-center max-w-4xl mx-auto"
-            >"
-              <div className="flex items-center justify-center mb-6">"
-                <Settings className="w-12 h-12 text-blue-400 mr-4" />"
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Manufacturing"
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Technology Solutions;
-                  </span>
-                </h1>
-              </div>"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
-                IoT networks, predictive maintenance, and digital twin solutions.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Manufacturing Consultation;
-                </Link>"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Manufacturing Case Studies;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-
-              className=text-center mb-16"
-
-=======
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
-                IoT networks, predictive maintenance, and digital twin solutions.,
-              </p>;
-
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
         </section>;              className="text-center mb-16"
             >
 
@@ -253,12 +178,4 @@ export default function ManufacturingPage() {
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
-<<<<<<< HEAD
-
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
     </Layout>;

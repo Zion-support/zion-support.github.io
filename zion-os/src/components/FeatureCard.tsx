@@ -11,6 +11,7 @@ interface FeatureCardProps {}
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 =======}
 export /**
  * FeatureCard - Function description
@@ -25,10 +26,8 @@ function FeatureCard() {}
     yellow: "bg - yellow - 500 / 20 hover:bg - yellow - 500 / 30 border - yellow - 500 / 30","
     indigo: "bg - indigo - 500 / 20 hover:bg - indigo - 500 / 30 border - indigo - 500 / 30";
   }
-<<<<<<< HEAD
 
 
-=======
   const color_classes = {
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -64,9 +63,7 @@ if ( {) {
       </p>;
       <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">;
         <Link;
-<<<<<<< HEAD
 
-=======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
           href={href}
           className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded";
@@ -105,3 +102,8 @@ if ( {) {
           Learn more →;
         </Link>;
       </div>;
+=======
+
+
+
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

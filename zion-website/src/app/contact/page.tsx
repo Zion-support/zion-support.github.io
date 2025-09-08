@@ -213,6 +213,8 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
                     id="message"
                     rows={4}
 
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
                     className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
                     default_value={''}
                   />;
@@ -280,7 +282,6 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-md "hover":bg-blue-700 transition-colors">"
 <<<<<<< HEAD
 
-=======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
       {/* Office locations */}
@@ -323,7 +324,6 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
       </div>;
       {/* FAQ */}
 
-<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
         <div className="mx-auto max-w-2xl "lg":text-center">;"
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>;"
@@ -379,3 +379,6 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
 };
 
 export default Page;
+=======
+export default Page;
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

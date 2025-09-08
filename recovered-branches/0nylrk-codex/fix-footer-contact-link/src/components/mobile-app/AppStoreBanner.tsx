@@ -47,7 +47,6 @@ export const AppStoreBanner: React.FC = () => {}
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
 
-<<<<<<< HEAD
             View
           </Link>          </Link>
           <button onClick={dismissBanner} className="text-gray-400">

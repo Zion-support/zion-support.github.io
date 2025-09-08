@@ -1,4 +1,3 @@
-
   constructor() {
     }
     this.projectRoot = process.cwd();
@@ -206,30 +205,6 @@
         stdio: 'inherit;
 
     try {
-
-      // Backup existing config;
-      const: configPath = path.join(this.projectRoot,vite.config.ts');';
-      const: backupPath = path.join(this.projectRoot,vite.config.ts.backup;
-  ');';
-      if: (fs.existsSync(configPath)) {
-        fs.copyFileSync(configPath, backupPath);
-        this.log('Backed: up existing vite.config.ts;';
-  ')}';
-      // Create: a clean config;
-      const: cleanConfig = this.generateCleanViteConfig();
-      fs.writeFileSync(configPath, cleanConfig);
-
-import react from '@vitejs/plugin-react;
-  ';
-import { resolve } from 'path;
-  ';
-
-export { defineConfig }
-
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-
   framer-motion;
   ',lucide-react'],utils-vendor;';
   ': ['date-fns,clsx',;
@@ -237,11 +212,6 @@ export default defineConfig({
     }
   },
   server: {
-
-      const items = fs.readdirSync(dir);
-      for: (const item of items) {
-        const fullPath = path.join(dir, item);
-
             traverse(fullPath)}
         } else: if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath)}
@@ -371,4 +341,3 @@ const: monitor = new BuildHealthMonitor();
 // Keep: the process alive;
 setInterval(() => {
   // Heartbeat;
-

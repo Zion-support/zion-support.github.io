@@ -1,75 +1,83 @@
-export const metadata = { title: 'AI Services | Zion Tech Group' };
+import React from 'react';
+
+export const metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Professional AI services including RAG, agents, fine-tuning, and MLOps solutions.',
+  keywords: 'AI services, RAG, agents, fine-tuning, MLOps, machine learning'
+};
+
+interface ItemProps {
+  title: string;
+  details: string[];
+}
+
+const Item: React.FC<ItemProps> = ({ title, details }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md">
+    <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+    <ul className="space-y-2">
+      {details.map((detail, index) => (
+        <li key={index} className="text-gray-600 flex items-center">
+          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+          {detail}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const Pricing: React.FC = () => (
+  <div className="mt-8 bg-gray-50 p-6 rounded-lg">
+    <h3 className="text-xl font-semibold mb-4 text-gray-900">Pricing</h3>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white p-4 rounded-lg text-center">
+        <h4 className="font-semibold text-gray-900">Starter</h4>
+        <p className="text-2xl font-bold text-blue-600 mt-2">$99/month</p>
+        <p className="text-sm text-gray-600">Basic AI features</p>
+      </div>
+      <div className="bg-white p-4 rounded-lg text-center border-2 border-blue-500">
+        <h4 className="font-semibold text-gray-900">Professional</h4>
+        <p className="text-2xl font-bold text-blue-600 mt-2">$299/month</p>
+        <p className="text-sm text-gray-600">Advanced AI solutions</p>
+      </div>
+      <div className="bg-white p-4 rounded-lg text-center">
+        <h4 className="font-semibold text-gray-900">Enterprise</h4>
+        <p className="text-2xl font-bold text-blue-600 mt-2">Custom</p>
+        <p className="text-sm text-gray-600">Tailored solutions</p>
+      </div>
+    </div>
+  </div>
+);
 
 export default function AIPage() {
   return (
-    <section>
-      <h1 style={{fontSize: 26, fontWeight: 800}}>AI Services</h1>
-      <p style={{marginTop: 8, color: '#374151'}}>Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps.</p>
-      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
-        <Item title="Applied AI" details={["RAG over private data", "Task-specific agents", "Vision + speech", "Personalization"]} />
-        <Item title="Model Ops" details={["Offline evals", "Safety + guardrails", "Batch + streaming", "Cost controls"]} />
-        <Item title="Data & MLOps" details={["Pipelines", "Feature stores", "Vector DBs", "Monitoring + drift"]} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Applied AI" 
+            details={["RAG over private data", "Task-specific agents", "Vision + speech", "Personalization"]} 
+          />
+          <Item 
+            title="Model Ops" 
+            details={["Offline evals", "Safety + guardrails", "Batch + streaming", "Cost controls"]} 
+          />
+          <Item 
+            title="Data & MLOps" 
+            details={["Pipelines", "Feature stores", "Vector DBs", "Monitoring + drift"]} 
+          />
+        </div>
+        
+        <Pricing />
       </div>
-      <Pricing />
-    </section>
-  );
-}
-
-    </div>
-  );
-}
-
-function AIServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
-      <h3 style={{fontWeight: 700}}>{title}</h3>
-      <ul style={{paddingLeft: 18, color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <div style={{marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))'}}>
-      <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks", "Use-case design", "Tech selection", "Roadmap"]} />
-      <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks", "RAG/agent MVP", "Evals + safety", "Dashboards"]} />
-      <Plan name="Production" price="$50k+" features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization"]} />
-    </div>
-  );
-}
-
-function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
-  return (
-    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
-      <h4 style={{fontWeight: 700}}>{name}</h4>
-      <div style={{color: '#111827', fontWeight: 800, marginTop: 4}}>{price}</div>
-      <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
-      <a href="https://ziontechgroup.com" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Get Started</a>
     </div>
   );
 }

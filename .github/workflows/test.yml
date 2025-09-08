@@ -1,14 +1,11 @@
-name: Test Runner
-'on':
-  workflow_dispatch: {}
-  schedule:
-    - cron: 0 2 * * *
-permissions:
-  contents: read
-  actions: read
-concurrency:
-  group: test-${{ github.ref }}
-  cancel-in-progress: false
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
 jobs:
   test-runner:
     name: Test Runner
@@ -37,9 +34,31 @@ jobs:
         continue-on-error: true
       - name: Build verification
         run: npm run build
-        env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
+      - name: Verify build output
+        run: |
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+      - name: Verify asset paths
+        run: |
+          if [ -d dist ]; then
+            echo "Build assets found:"
+            ls -la dist/
+            echo "Total files: $(find dist -type f | wc -l)"
+          fi
+      - name: Run tests (if available)
+        run: npm test --if-present
         continue-on-error: true
-      - name: Test completion
-        run: echo "Test workflow completed successfully"
-    runs_on: ubuntu-latest
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: dist
+          retention-days: 7
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

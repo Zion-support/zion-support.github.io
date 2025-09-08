@@ -7,9 +7,8 @@
 } from '@heroicons/react/24/outline'
 
 
-<<<<<<< HEAD
 import React from 'react';'
-=======
+<<<<<<< HEAD
         <div className=&quot;mx - auto max - w-2xl py - 32 "sm":py - 48 "lg":py - 56 & quot>
 
           <div className=&quot;text - center & quot>
@@ -226,3 +225,5 @@ import React from 'react';'
 };
 
 export default Page;
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

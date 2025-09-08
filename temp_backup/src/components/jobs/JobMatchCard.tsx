@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,15 +23,8 @@ interface JobMatchProps {
 }
 
 export function JobMatchCard({ 
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
   matchId,
-========
-  matchId;
-=======
-<<<<<<< HEAD
 
->>>>>>> merged-prs-20250907-203621
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx
   talentId, 
   name, 
   title, 
@@ -41,12 +33,8 @@ export function JobMatchCard({
   location, 
   category, 
   matchPercent, 
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
   skills,
-========
-<<<<<<< HEAD
   skills;
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx
   onApply, 
   onViewDetails, 
   onInvite 
@@ -55,58 +43,7 @@ export function JobMatchCard({
   const handleViewDetails = $2;
   const handleInvite = $2;
   // Generate a formatted date for display
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
   const postedDate = new Date($2);
-========
-  const postedDate = new Date();
-=======
-}
-}
-;
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-interface JobMatchProps {
-  matchId: string;
-  talentId: string;
-  name: string;
-  title: string;
-  company: string;
-  avatar: string;
-  location: string;
-  category: string;
-  matchPercent: number;
-  skills: string[];
-  onApply?: (matchId: string) => void;
-  onViewDetails?: (matchId: string) => void;
-  onInvite?: (matchId: string) => void
-talentId, ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-
-
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-
-}
-}
-<<<<<<< HEAD
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -115,19 +52,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import { JobMatch } from "@/types/jobs",;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-  talent_id,
-  name,
-  title,
-  company,
-  avatar,
-  location,
-  category,
-  match_percent,
-<<<<<<< HEAD
   skills,;
   onApply, ;
   onViewDetails, ;
@@ -276,8 +200,6 @@ export function JobMatchCard({;
 
   // Generate a formatted date for display
   const postedDate = new Date(),
->>>>>>> merged-prs-20250907-203621
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   
   return (
@@ -290,109 +212,16 @@ export function JobMatchCard({;
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
             {formatDistanceToNow(postedDate, { addSuffix: true})}
-========
-            {formatDistanceToNow(postedDate, { addSuffix: true })}
-<<<<<<< HEAD
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx
           </Badge>
         </div>
         
-=======
-          </Badge>;
-        </div>;
->>>>>>> merged-prs-20250907-203621
-        {/* Talent details */}
-        <div className="p-4">
-          <div className="flex justify-between items-start gap-2 mb-3">
-            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>
-            <Badge variant="default">
-              Available
-            </Badge>
-          </div>
-          
-          <div className="text-lg font-medium mb-2">{title}</div>
-          
-          <div className="flex flex-wrap gap-2 mb-3">
-            <Badge variant="outline">{category}</Badge>
-          </div>
-          
-          <div className="flex items-center gap-2 mb-2">
-            <Avatar className="h-6 w-6">
-              {avatar ? (
-                <AvatarImage src={avatar} alt={name} />
-              ) : (
-                <AvatarFallback>
-                  <Building className="h-3 w-3" />
-                </AvatarFallback>
-              )}
-            </Avatar>
-            <span className="text-sm font-medium">{company || 'Independent'}</span>
-          </div>
-          
-          <div className="space-y-1 text-sm text-muted-foreground mb-3">
-            <div className="flex items-center gap-1">
-              <MapPin className="h-3.5 w-3.5" />
-              <span>{location || 'Remote'}</span>
-            </div>
-          </div>
-          
-          <div className="flex flex-wrap gap-1 mb-4">
-            {skills?.slice(0, 5).map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-xs">
-                {skill}
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
               </Badge>;
-========
-<<<<<<< HEAD
               </Badge>
-=======
-              </Badge>;
->>>>>>> merged-prs-20250907-203621
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx
-            ))}
-          </div>
-          
-          <div className="flex gap-2 justify-end">
-            {onInvite && (
-              <Button onClick={handleInvite} variant="default" size="sm">
-                Invite
-              </Button>
-            )}
-            {onViewDetails && (
-              <Button onClick={handleViewDetails} variant="outline" size="sm">
-                View Details
-              </Button>
-            )}
-            {onApply && (
-              <Button onClick={handleApply} className="w-full">
-                Apply Now
-              </Button>
-            )}
-<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
   )
 }
-<<<<<<<< HEAD:temp_backup/src/components/jobs/JobMatchCard.tsx
 ;
-========
-=======
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-}
-}
-=======
-}
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
->>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc:src/components/jobs/JobMatchCard.tsx

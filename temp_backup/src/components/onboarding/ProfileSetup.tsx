@@ -10,10 +10,6 @@ const profileSchema = z.object ({;
 bio: z.string () .min (10, "Bio must be at least 10 characters") .max (500, "Bio must be less than 500 characters");";""
 headline: z.string () .min (5,  "Headline must be at least 5 characters") .max (100, "Headline must be less than 100 characters") ;"
 });""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 type ProfileFormValues = z.infer<typeof profileSchema>;";""
->>>>>>> origin/resolved-merge-conflicts
 case "talent": return "Talent";";""
 case "client": return "Client";
 default: ;

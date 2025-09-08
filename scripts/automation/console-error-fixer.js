@@ -1,4 +1,3 @@
-
 // Get automation interval from environment variable (default: 15 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes;
 async function runConsoleErrorFixer() {
@@ -9,11 +8,6 @@ async function runConsoleErrorFixer() {
   , error.message);
     // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`);
     // Build the project first;
-
-  '⚠️  Build failed but continuing...');
-      // // // // // // // console.log('
-  'Build error:,
-
   , error.message);
       return;
     // Check if dist folder exists;
@@ -170,4 +164,3 @@ process.on('SIGTERM;
   // // // console.error('❌ Failed to start continuous console error fixer:', error);
 
   process.exit(1)})}}}}}}}}}}}}}}}}}}}}}}}}})));
-

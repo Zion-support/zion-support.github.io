@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import EnhancedAnalyticsdynamic from "../components/EnhancedAnalytics.dynamic";
@@ -16,5 +14,3 @@ import EnhancedAnalyticsdynamic from "../components/EnhancedAnalytics.dynamic";
 
     render(<EnhancedAnalyticsdynamic />);
     // Add styling tests if needed})});
-
-

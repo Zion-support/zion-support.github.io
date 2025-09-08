@@ -1,4 +1,3 @@
-
   let timeout: NodeJS && NodeJS.Timeout,
 
   return (...args: Parameters<T>) => {

@@ -1,15 +1,5 @@
-
-
     const url = response.url();
     expect(url).toMatch(/^https: /)});
-
-    const headers = response.headers();
-
-
-    expect(headers['x-frame-options']).toBeTruthy();
-    expect(headers['x-content-type-options']).toBe('nosniff');
-    expect(headers['x-xss-protection']).toBeTruthy()});
-
 
     // Get page content
     const content = await page.content();

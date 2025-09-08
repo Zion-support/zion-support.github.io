@@ -6,10 +6,6 @@ FormDescription;
 FormField;
 FormItem;
 FormLabel;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema message: "Hourly rate must be a number" ;""
->>>>>>> origin/resolved-merge-conflicts
 });";""
 availability: z.enum (["available", "limited", "unavailable"]);
 enhancedProfile: z.boolean () .default (true) ;
@@ -34,10 +30,6 @@ reader.readAsDataURL (file) ;
 }
 };
 //Generate enhanced profile with AI return;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;'
->>>>>>> origin/resolved-merge-conflicts
 }//Call the Supabase Edge Function const {;''
   data, error ';''
 }= await supabase.functions.invoke ('talent-profile-enhancer', {;
@@ -129,10 +121,6 @@ availability status: values.availability;
 });
 if (error) throw error;
 */ setIsSubmitting (false);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;"
->>>>>>> origin/resolved-merge-conflicts
 }""
 };";""
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {;

@@ -35,10 +35,6 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 }<Button > <Plus className="h-4 w-4" /> Add Another Education </Button> </div>) ;"
 }""
 };";""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 > <SelectTrigger className="w-[130px]" > <SelectValue placeholder="Level" /> </SelectTrigger> <SelectContent> <SelectItem value="beginner" >Beginner</SelectItem> <SelectItem value="intermediate" >Intermediate</SelectItem> <SelectItem value="advanced" >Advanced</SelectItem> <SelectItem value="expert" >Expert</SelectItem> </SelectContent> </Select> onClick={;""
->>>>>>> origin/resolved-merge-conflicts
   () => removeSkill (skill.id) ";""
 }aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;""
 }</div>) ) ";""

@@ -3,6 +3,5 @@
 const nextConfig = {}
   /* config options here */
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 module.exports = nextConfig;

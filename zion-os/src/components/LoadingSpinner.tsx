@@ -2,12 +2,12 @@
 interface LoadingSpinnerProps {"
   size?: "small" | "medium" | "large",
   class_name?: string;
+<<<<<<< HEAD
 =======}
 export /**
  * LoadingSpinner - Function description
 
  */
-<<<<<<< HEAD
 
 function LoadingSpinner() {}
   const size_classes = {"
@@ -26,7 +26,6 @@ function LoadingSpinner() {}
         aria - hidden="true";
 
       >;
-=======
 function LoadingSpinner() {
   }
   const size_classes = {
@@ -36,6 +35,8 @@ function LoadingSpinner() {
     "large": "w - 12 h - 12";"
   }
 
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;"  return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;"
@@ -63,7 +64,8 @@ function LoadingSpinner() {
       <span className="sr-only">Loading...</span>;
     </div>);
 }
-<<<<<<< HEAD
 
-=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

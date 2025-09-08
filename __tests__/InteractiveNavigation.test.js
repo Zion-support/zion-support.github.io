@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import InteractiveNavigation from '../components/InteractiveNavigation';
   test('applies correct styling', () => {
     render(<InteractiveNavigation />);
     // Add styling tests if needed;
-
-

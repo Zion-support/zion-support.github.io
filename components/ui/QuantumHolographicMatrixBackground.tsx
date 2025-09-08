@@ -1,5 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function QuantumHolographicMatrixBackground({ children }: { children?: React.ReactNode }) {
-	return <div>{children}</div>;
-}
+const QuantumHolographicMatrixBackground: React.FC<{ children: ReactNode }> = ({ children }) => <div>{children}</div>;
+export default QuantumHolographicMatrixBackground;

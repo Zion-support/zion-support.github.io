@@ -1,50 +1,14 @@
-<<<<<<< HEAD
-
-
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
   'partners'
   'grant-redemptions.json'
 );
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
 ) {
-
-  try {
-  const started = Date && Date.now();
-  const auth = await authenticateRequest(req),
-
-  if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
-
-=======
-  if (!auth) {}
-    return res && res.status(401).json({ error: 'Unauthorized'}
-});
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);}
-    return res && res.status(429).json({ error: 'Rate limit exceeded'}
-});
-  }
-
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);}
-    return res && res.status(405).json({ error: 'Method Not Allowed'}
-});  }
-
-const { studentEmail, grantCode, courseId } = req && req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'Missing required fields' });
-
-
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -71,21 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now($2);
   const auth = await authenticateRequest($2);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest($2);
     return res.status(429).json({ error: "Rate limit exceeded" })
   }
   if (req.method !== "POST") {
     res.setHeader($2);
     await recordRequest($2);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {},
-  if (!studentEmail || !grantCode || !courseId) {
     await recordRequest($2);
     return res.status(400).json({ error: "Missing required fields" })
   }
@@ -262,7 +217,6 @@ redeemed_at: now}
   return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now });
 }
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const { studentEmail, grantCode, courseId } = req.body || {}
   if (!studentEmail || !grantCode || !courseId) {}
@@ -271,169 +225,4 @@ redeemed_at: now}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)records.push(record)await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id, redeemedAt: now })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    id: uuidv4($2);
-    partnerId: auth.partner.id,
-    studentEmail,
-    grantCode,
-    courseId,
-    redeemedAt: now},
-  records.push($2);
-  await fs.writeJSON($2);
-  await recordRequest($2);
-  return res.status(201).json({ id: record.id, redeemedAt: now})
-<<<<<<< HEAD
-
-}
-  return res.status(201).json({ id: record.id;, redeemedAt: now ;})
-}
-
-
-
-
-=======
-}
-
-const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {}
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}
-return res.status(400).json({ error: 'Missing required fields'}
-});
-  }
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-
-const records = (await fs.pathExists(REDEMPTIONS_FILE))
-    ? await fs.readJSON(REDEMPTIONS_FILE)
-"
-  if (req.method !== \"POST\") {"
-    res.setHeader(\"Allow\", \"POST\");}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
- 
-}
-
-const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    : [];
-
-const now = new Date().toISOString();
-
-const record = {
-    id: uuidv4(),
-
-    partnerId: auth.partner.id,
-    studentEmail,
-    grantCode,
-    courseId}
-    redeemedAt: now}
-  };
-
-  records.push(record);
-  await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2}
-});
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id, redeemedAt: now}
-});
-
-"
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-const REDEMPTIONS_FILE = path.join(
-  process.cwd()
-  'data'
-  'partners'
-  'grant-redemptions.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const started = Date.now();
-  const auth = await authenticateRequest(req)
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-    return res.status(429).json({ error: 'Rate limit exceeded' });
-  }
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const started = Date.now();
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { studentEmail, grantCode, courseId } = req.body |{}
-  if (!studentEmail |!grantCode |!courseId) {
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
-  const records = (await fs.pathExists(REDEMPTIONS_FILE))
-    ? await fs.readJSON(REDEMPTIONS_FILE)
-    : [];
-  const now = new Date().toISOString();
-  const record = {
-    id: uuidv4()
-    partnerId: auth.partner.id
-    studentEmail
-    grantCode
-    courseId
-redeemedAt: now
-  }
-  records.push(record);
-  await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
-}
-
-
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-}
-}
-}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 

@@ -1,17 +1,8 @@
-
-    return}
-  try {;
-
-    const { email } = req.body || {}
 <<<<<<< HEAD
-    if (!email) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-=======
-    if (!email) {;
-
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+const { withSentry } = require('../withSentry.cjs');
+const { isValidEmail } = require('../emailUtils.cjs');
+const fs = require('fs');
+const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -25,11 +16,3 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      res.statusCode = 400;
-
-  , err);
-    res.statusCode = 500;
-    res.json({ error: err.message ||;
-  'Subscription failed }});'}
-module.exports: = withErrorLogging(handler);

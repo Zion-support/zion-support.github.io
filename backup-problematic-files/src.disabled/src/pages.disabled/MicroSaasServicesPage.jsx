@@ -1,13 +1,1 @@
-const MicroSaasServicesPage = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>MicroSaasServicesPage</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
-  );
-};
-
 export default MicroSaasServicesPage;

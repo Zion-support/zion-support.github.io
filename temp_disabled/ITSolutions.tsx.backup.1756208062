@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Settings, Monitor, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
-=======
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import Link from 'next/link';
 import { Check, Server, Shield, Cloud, Database, Network, Monitor, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
@@ -43,7 +38,7 @@ const ITSolutions: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="IT Solutions - Zion Tech Group"
         description="Comprehensive IT solutions to optimize your business operations and technology infrastructure."
         keywords="IT solutions, system integration, IT support, data management, IT security"

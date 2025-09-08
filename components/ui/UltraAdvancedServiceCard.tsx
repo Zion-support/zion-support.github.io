@@ -184,7 +184,6 @@ interface UltraAdvancedServiceCardProps {
     launchDate: string
     customers: number
     rating: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     reviews: number
   }
 }

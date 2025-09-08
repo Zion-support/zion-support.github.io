@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,10 +22,6 @@ import React from 'react';
 const PortfolioBuilder = ({ className }) => {
   return (
 
-=======
-
-return (
->>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className={className || ''}>
       <h1>PortfolioBuilder</h1>
       <p>This component is under development.</p>

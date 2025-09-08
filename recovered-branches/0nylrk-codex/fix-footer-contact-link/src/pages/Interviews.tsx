@@ -25,13 +25,6 @@ function InterviewsContent() {
 
     const loadInterviews = async () => {
       await fetchInterviews()
-    loadInterviews()
-  }, []);
-  // Filter interviews based on status and date
-  const now = new Date();
-  const today = startOfDay(now);
-  const upcomingInterviews = interviews
-    .filter((interview) => {
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
@@ -157,48 +150,6 @@ return Object.entries(groupedInterviews);
       ))
 };
 
-=======  return (
-    <>
-      <SEO"
-        title="Interviews | Zion AI Marketplace""
-        description="Manage your scheduled interviews with clients and talent"
-      />
-      <AppHeader />"
-      <main className="container mx-auto px-4 py-8">"
-        <div className="flex justify-between items-center mb-8">"
-          <div>
-            <h1 className="text-3xl font-bold">Interviews</h1>"
-            <p className="text-muted-foreground mt-1">"
-              Schedule and manage your video interviews
-            </p>
-          </div>
-        </div>
-        <Tabs,
-defaultValue={activeTab}
-          onValueChange={setActiveTab}
-          className="space-y-8""
-        >
-          <TabsList className="mb-6">"
-            <TabsTrigger value="upcoming" className="flex items-center">"
-              <Clock className="h-4 w-4 mr-2" />"
-              Upcoming
-              {upcomingInterviews.length > 0 && (
-                <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">"
-                  {upcomingInterviews.length}
-                </span>
-              )}
-            </TabsTrigger>
-
-            <TabsTrigger value="past">Past</TabsTrigger>
-          </TabsList>"
-          <TabsContent value="upcoming" className="space-y-6">
-            {isLoading ? ("
-              <div className="flex justify-center py-12">"
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
-
-              </div>
-            ) : upcomingInterviews.length > 0 ? (
-              renderInterviewGroups(upcomingGrouped)
             ) : (
 
               </div>
@@ -212,22 +163,7 @@ defaultValue={activeTab}
             ) : pendingInterviews.length > 0 ? (
               renderInterviewGroups(pendingGrouped)
             ) : (
-
-              </div>
-            ) : pastInterviews.length > 0 ? (
-              renderInterviewGroups(pastGrouped)
             ) : (
 
               </div>
             )}
-    </>);
-}
-export default /**
- * Interviews - Function description
- */
-function Interviews() {
-  return (
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>);
-}

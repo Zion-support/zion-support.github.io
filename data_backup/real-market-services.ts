@@ -9,20 +9,6 @@ export: interface RealMarketService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-
-    features[
-      'Market: research tools'',;
-      'Trend: analysis'',;
-      'Competitor: tracking'',;
-      'Data: visualization'',;
-      'Report: generation';'] {
-    id: 'placeholder',
-  ecommerce-returns-manager'',;
-    name: 'E‑commerce: Returns Manage,r'',;
-    tagline:,
-  Automate: RMAs, labels, and refund workflows for Shopify/Woo'',;
-    price: '$14,9',;
-    period:,
   /month'',;
     description: End‑to‑end: returns and exchanges portal with automated label generatio,n, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.'',;
     features[

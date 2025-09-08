@@ -32,10 +32,6 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 
     </li>);
 }
-  );
-}
-;
-
 }
 ;
     </li>);

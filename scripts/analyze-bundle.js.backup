@@ -1,0 +1,50 @@
+
+  child_process';
+import fs from "fsfs';
+import path from "pathpath';
+const BUNDLE_ANALYZER_PACKAGE =;
+  '@next/bundle-analyzer';
+
+<<<<<<< HEAD
+  '🔍 Analyzing bundle size...\n');
+  try {;
+    // Check if bundle analyzer is installed;
+
+  'npm run build' { stdio: 'inherit });
+    // Analyze bundle;
+    // // // // // // // console.log(,;
+  📊 Analyzing bundle...');
+
+  '❌ Bundle analysis failed:', error.message);
+    process.exit(1)}
+}
+function generateBundleReport() {;
+  const distPath = path.join(process.cwd(),;
+  'dist');
+  const jsPath = path.join(distPath,;
+  'js');
+
+  '.js'));
+    .map(file => {;
+      const filePath = path.join(jsPath, file);
+=======
+
+>>>>>>> main
+
+      const stats = fs.statSync(filePath);
+      return {;
+
+  '\n📋 Bundle Size Report:');
+  const totalSize = 0;
+  jsFiles.forEach(file => {;
+    totalSize += file.size;
+
+  '   - Enable gzip compression on your server')}
+// Run analysis;
+analyzeBundle().catch(console.error)}}}}}}}
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> main

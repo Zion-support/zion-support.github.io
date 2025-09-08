@@ -7,7 +7,6 @@ import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 const features = [;
   {}
@@ -21,56 +20,7 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
     description: 'Automated infrastructure provisioning and management'
   },
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  {
-    icon: GitBranch,
-    title: 'CI/CD Pipelines',
-    description: 'Automated build, test, and deployment processes'
-  },
-  {
-    icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Enterprise-grade security and compliance frameworks'
-  },
-  {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Optimized cloud resources for maximum performance'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Monitoring & Alerting',
-    description: '24/7 monitoring and proactive alerting systems'
-  }
-];
-  return (
-    <Layout
-      title="Cloud & DevOps Services - Zion Tech Group"
-      description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
-      keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
-    >
-      <div className="min-h-screen bg-white">        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud & DevOps</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Transform your infrastructure with our comprehensive cloud and DevOps services 
-                designed for scalability, reliability, and efficiency.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Case Studies
                 </button>
               </div>

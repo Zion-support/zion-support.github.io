@@ -357,62 +357,12 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-      {/* Services Grid */}
-      <section className="py-20 px-4 "sm": px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {microSAAS.map((service, index) => (
-              <div key={index} className="bg-gray-800 p-8 rounded-lg "hover": bg-gray-700 transition-colors">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-semibold text-cyan-400">
-                    {service.name}
-                  </h3>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-green-400">{service.price}</div>
-                    <div className="text-sm text-gray-400">"Market": {service.marketPrice}</div>
-                    <div className="text-sm text-green-400 font-semibold">{service.savings}</div>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-6">
-                  {service.description}
-                </p>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key "Features": </h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <span className="text-cyan-400 mr-2">✓</span>
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                </div>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">"Benefits": </h4>
-                  <ul className="text-gray-300 space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center">
-                        <span className="text-green-400 mr-2">→</span>
                         {benefit}
                       </li>
                     ))}
-                  </ul>
-                </div>
-                <div className="flex gap-4">
-                  <Link
-                    href="/contact"
-                    className="bg-cyan-500 "hover": bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="/request-quote"
-                    className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
-                  >
-                    Request Demo
-                  </Link>
-                </div>
-              </div>
             ))}
           </div>
         </div>

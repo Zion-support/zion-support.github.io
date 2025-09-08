@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 
 
@@ -565,52 +566,7 @@ origin/automation-improvements-final
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
-
-  "timestamp": "2025-09-04T15:37:53.118Z",
-  "totalFiles": 1516,
-  "fixedFiles": 31,
-  "errors": 0,
-  "fixedFileList": [
-    "/workspace/src/components/Accessibility.js.jsx",
-    "/workspace/src/components/Accessibility.jsx",
-    "/workspace/src/components/AdvancedDataTable.jsx",
-    "/workspace/src/components/AdvancedForm.jsx",
-    "/workspace/src/components/BlockchainWeb3Dashboard.jsx",
-    "/workspace/src/components/EnhancedLoadingSpinner.tsx",
-    "/workspace/src/components/EnterpriseDashboard.jsx",
-    "/workspace/src/components/FuturisticServicesShowcase.jsx",
-
-    "/workspace/src/components/LinkMonitor.js.jsx",
-    "/workspace/src/components/LinkMonitor.jsx",
-    "/workspace/src/components/ModernDataTable.jsx",
-    "/workspace/src/components/ModernForm.jsx",
-    "/workspace/src/components/ModernLoadingSpinner.jsx",
-    "/workspace/src/components/ModernLoadingSpinner.tsx",
-    "/workspace/src/components/ModernTable.jsx",
-    "/workspace/src/components/ModernTable.tsx",
-    "/workspace/src/components/ModernTableWithPagination.jsx",
-    "/workspace/src/components/ModernTableWithPagination.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSorting.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSorting.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFiltering.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFiltering.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearch.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearch.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExport.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExport.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImport.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImport.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrint.jsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrint.tsx",
-    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrintAndShare.jsx"
-  ],
-  "summary": "Successfully fixed syntax errors in 31 files"
-
-}
-
-"errorDetails": []
-}
-
+<<<<<<< HEAD
 "errorDetails": []
 }
   "errorDetails": []

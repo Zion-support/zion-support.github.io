@@ -1,8 +1,4 @@
-{
-<<<<<<< HEAD
   "timestamp": "2025-09-07T05:23:23.086Z",
-=======
-<<<<<<< HEAD
   "timestamp": "2025-09-07T03:28:17.122Z",
   "fixesApplied": [
     "Applied ESLint auto-fixes for imports",
@@ -882,26 +878,4 @@
     "fulfilled",
     "fulfilled",
     "fulfilled"
-=======
-  "timestamp": "2025-09-07T05:08:49.763Z",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
-  "results": {
-    "mergeConflicts": true,
-    "importErrors": true,
-    "typeScriptErrors": true,
-    "syntaxErrors": true
-  },
-  "fixesApplied": [
-    "Applied ESLint auto-fixes for imports",
-    "Applied TypeScript fixes",
-    "Fixed syntax in /workspace/src/data/marketplaceData.js"
-  ],
-<<<<<<< HEAD
   "fixesFailed": []
-=======
-  "fixesFailed": [
-    "Failed to fix TypeScript errors: spawnSync /bin/sh ENOBUFS"
->>>>>>> origin/main
-  ]
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
-}

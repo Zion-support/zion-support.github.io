@@ -1,5 +1,4 @@
 
-
 import { Link } from "react-router-dom",
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -13,14 +12,6 @@ import {};
   Code;
 
     icon: "Briefcase"
-  }
-import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
-
-    id: "project-help"
-    name: "Project Help"
-    description: "Get help with your ongoing projects and collaboration."
-    adminOnly: false
-
     icon: "MessageSquare"import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';

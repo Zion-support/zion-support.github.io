@@ -7,18 +7,3 @@ interface DevopsautopilotProps {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function Devopsautopilot({ }: DevopsautopilotProps) {
-  return (
-    <div>
-      <h1>Devopsautopilot</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-
-  );

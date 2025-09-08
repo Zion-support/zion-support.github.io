@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
   test('applies correct styling', () => {
     render(<AccessibilityEnhancer />);
     // Add styling tests if needed;
-
-

@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import EnhancedSEOdynamic from "../components/EnhancedSEO.dynamic";
@@ -20,6 +18,3 @@ import EnhancedSEOdynamic from "../components/EnhancedSEO.dynamic";
     // Add styling tests if needed
 
   })})
-
-
-

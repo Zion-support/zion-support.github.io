@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
   UserGroupIcon,
@@ -8,7 +9,6 @@ import {
   RocketLaunchIcon,
   AcademicCapIcon,
 
-<<<<<<< HEAD
 
 import React from 'react';'
 
@@ -300,3 +300,6 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
 };
 
 export default Page;
+=======
+export default Page;
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

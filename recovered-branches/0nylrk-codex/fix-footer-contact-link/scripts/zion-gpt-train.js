@@ -1,4 +1,3 @@
-
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -46,12 +45,6 @@ async function fetchData() {
   const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
   const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
-  result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
-  // US-style phone numbers
-  result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
-  // Naive full name removal (two capitalized words)
-  result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
-
   return result
 }
 
@@ -65,70 +58,7 @@ async function fetchData() {
     jobs: jobPosts.data |[]
     resumes: resumes.data |[]
     logs: supportLogs.data |[]
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  }
-}
-function stripPii(text) {
-
-  if (!text) return text
-  let result = text
-  // Emails
-<<<<<<< HEAD
-
-
-  result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
-  // US-style phone numbers
-  result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
-  // Naive full name removal (two capitalized words)
-  result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
-
-=======
-  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]')
-
-  // US-style phone numbers
-  result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]')
-  // Naive full name removal (two capitalized words)
-
-  result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]')
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  return result
-}
-
-<<<<<<< HEAD
-
-
-
-
-
-function buildTrainingPairs(records) {
-
-
-
-
-=======
-function buildTrainingPairs(records) {
-
-  const pairs = []
-  for (const job of records.jobs) {
-    pairs.push({
-      prompt: `Create a job description titled "${stripPii(job.title)}"`
-
-      completion: stripPii(job.description)
-    })    })
-  }
-  return pairs;
-}
-async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
-;
-async function createFineTune(filePath) {;
-  const formData = new FormData(),;
-  formData.append('purposefine-tune'),;
-  formData.append('file', createReadStream(filePath), path.basename(filePath)),;
   const uploadRes = await fetch('https://api.openai.com/v1/files', {;
     method: 'POST',;
     headers: {;
@@ -155,23 +85,3 @@ async function createFineTune(filePath) {;
 async function main() {
 
 
-<<<<<<< HEAD
-=======
-  const records = await fetchData()
-  const pairs = buildTrainingPairs(records)'
-  await saveJsonl(pairs, 'training-data.jsonl')
-'
-  await createFineTune('training-data.jsonl')
-}
-main().catch((err) => {'
-  console.error('Training workflow failed', err)
-
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-}),
-;
-
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-}),
-;

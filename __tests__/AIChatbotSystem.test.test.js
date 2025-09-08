@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import AIChatbotSystemtest from "../components/AIChatbotSystem.test";
@@ -16,5 +14,3 @@ import AIChatbotSystemtest from "../components/AIChatbotSystem.test";
 
     render(<AIChatbotSystemtest />);
     // Add styling tests if needed})});
-
-

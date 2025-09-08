@@ -1,160 +1,4 @@
-import React from 'react';'
-Plus,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,  ArrowUp,
-  X,
-  Settings,
-  HelpCircle,
-  Star,
-  Share2,
-  Bookmark,';'
-  Download,';';'
-  Printer'';';'
-Plus,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,  ArrowUp,;
-  X,;
-  Settings,;
-  HelpCircle,;
-  Star,;
-  Share2,;
-  Bookmark,;
-  Download,;
-  Printer';'
-  Bookmark,
-  Download,
-  Printer''
-} from 'lucide-react';'
-;
-interface FloatingAction {;
-  }
-  "id": string;
-  "icon": React.ComponentType<{ size?: number; className?: string;
-}>;
-  "label": string;
-  "action": () => void;';'
-  "color": string;';';'
-  "priority": 'high' | 'medium' | 'low'}'
-interface FloatingActionButtonProps {
-';'
-  }
-  actions?: FloatingAction[];';';'
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';';';'
-  "id": "string;"
-  "icon": React.ComponentType<{ size?: number; className?: string;"
-"}>;"
-  "label": "string;"
-  "action": () => void;"
-  "color": string;"
-  "priority": 'high' | 'medium' | 'low'"}"
-;
-interface FloatingActionButtonProps {;
-  }
-  actions?: "FloatingAction[];"
-interface FloatingAction {
-  }
-  "id": string;
-  "icon": React.ComponentType<{ size?: number; className?: string 
-}>;
-  "label": string;
-  "action": () => void;
-  "color": string;
-  "priority": 'high' | 'medium' | 'low'}'
-interface FloatingActionButtonProps {
-  }
-  actions?: FloatingAction[];
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';'
-  theme?: 'light' | 'dark' | 'auto';'
-  showScrollToTop?: boolean;
-  showContactActions?: boolean;
-  showUtilityActions?: boolean;
-const "FloatingActionButton": Reac t.FC<FloatingActionButtonProps> = ({
-';'
-  }
-  actions = [],: any;';';'
-  position = 'bottom-right',: any;';';'
-;
-const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;
-  }
-  actions = [],: any;
-  position = 'bottom-right',: any;'
-  theme = 'auto',: any;'
-  showScrollToTop = true,: any;
-  showContactActions = true,: any;
-  showUtilityActions = "true": any;
-}) => {
-  }
-  const [isExpanded, setIsExpanded] = useState<any>(false);';'
-  const [showScrollButton, setShowScrollButton] = useState<any>(false);';';'
-}) => {;
-  }
-  const [isExpanded, setIsExpanded] = useState<any>(false);
-  const [showScrollButton, setShowScrollButton] = useState<any>(false);
-;
-const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({;"
-  }
-  actions = []",: "any;"
-  position = 'bottom-right'",: "any;"
-  theme = 'auto'",: "any;"
-  showScrollToTop = true",: "any;"
-  showContactActions = true",: "any;"
-  showUtilityActions = "true": any;"
-"}) => {;"
-  }
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');'
-;
-  // Detect theme;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;"
-  }
-  return () => {;
-    // Cleanup function;
-  "};"
-const "FloatingActionButton": React.FC<FloatingActionButtonProps> = ({
-  }
-  actions = [],: any;
-  position = 'bottom-right',: any;'
-  theme = 'auto',: any;'
-  showScrollToTop = true,: any;
-  showContactActions = true,: any;
-  showUtilityActions = "true": any;
-}) => {
-  }
-  // Detect theme,
-useEffect(() => {
-  // "TODO": Add dependencies if needed
-}
-return () => {
-    // Cleanup function
-  };
-}, []);, []);';'
-';';'
-    if(theme === 'auto') {';'
-';';'
-      }
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};';';'
-      '';';'
-      mediaQuery.addEventListener('change', handleChange)';';'
-      return () => mediaQuery.removeEventListener('change', handleChange)} else {}, []), [])if(theme === 'auto') {setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')}';'
-      mediaQuery.addEventListener('change', handleChange)return () => mediaQuery.removeEventListener('change', handleChange)} else {}, []), [])if(theme === 'auto') {setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')}';'
-      mediaQuery.addEventListener('change', handleChange)return () => mediaQuery.removeEventListener('change', handleChange)} else {setCurrentTheme(theme)}'
-  }, [theme])// Show scroll to top button when scrolled down;
-  useEffect(() => {// "TODO": "Add dependencies if needed;"
-  }
-  return () => {// Cleanup function;
-  "}// Show scroll to top button when scrolled down;"
-  useEffect(() => {// "TODO": Add dependencies if needed;
-  }
-  return () => {// Cleanup function;
-<<<<<<< HEAD
   }, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
-=======
-  }}, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;'
->>>>>>> origin/resolved-merge-conflicts
       mediaQuery.addEventListener('change', handleChange);';';'
       return () => mediaQuery.removeEventListener('change', handleChange)} else {'
 }, []);, []);
@@ -677,67 +521,18 @@ case 'top-right':''
 key={action.id}``                  className={``                    }
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75;
-<<<<<<< HEAD
     "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{"
 `';'
                     }
                     "animationDelay": `${index * 100}"ms`,';';'                    "animation": 'slideInUp 0.3s ease-out forwards''
-=======
-    "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{{"
-`';'
-                    }
-                    "animationDelay": `${index * 100}}"ms`,';';'                    "animation": 'slideInUp 0.3s ease-out forwards''
->>>>>>> origin/resolved-merge-conflicts
-      "default":';'
-      "default":''
-        return 'bottom-6 right-6'}'
-  };
-  // Get theme classes
-  };
-;
-  return ();
-    <>;
-      {/* Main Floating Action Button */}`;`      <div className={`fixed ${getPositionClasses()} z-50`}>;`        {/* Action Buttons */}'`;`        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>;`          {isExpanded && (;
-            <div className="absolute bottom-full mb-4 space-y-3">;"
-              {sortedActions.map((action, index) => (;
-                <div;
-                  }
-                  key={action.id}`;`                  className={`;`                    }
-                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300;
-                    ${action.color} text-white transform opacity-0 scale-75;
-                    "hover": "scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50`;`                  `"}"
-<<<<<<< HEAD
                   style="{{;"
 `;`                    }
                     "animationDelay": `${index * 100}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
                     "animationDelay": "`${index * 100"}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
-=======
-                  style="{{{;"
-`;`                    }
-                    "animationDelay": `${index * 100}}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
-                    "animationDelay": "`${index * 100"}}"ms`,;`                    "animation": 'slideInUp 0.3s ease-out forwards';'
->>>>>>> origin/resolved-merge-conflicts
-  return ()
-    <>
-      {/* Main Floating Action Button */}``      <div className={`fixed ${getPositionClasses()} z-50`}>`        {/* Action Buttons */}'``        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>`          {isExpanded && (
-            <div className="absolute bottom-full mb-4 space-y-3">"
-              {sortedActions.map((action, index) => (
-                <div
-}
-key={action.id}``                  className={``                    }
-                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
-                    ${action.color} text-white transform opacity-0 scale-75,
-<<<<<<< HEAD
 "hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{"
 ``                    }
                     "animationDelay": `${index * 100}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
                   }
-=======
-"hover": scal e-105 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white/50``                  `}`                  style="{{{"
-``                    }
-                    "animationDelay": `${index * 100}}"ms`,`                    "animation": 'slideInUp 0.3s ease-out forwards''
-                  }}
->>>>>>> origin/resolved-merge-conflicts
                 >
                   <action.icon size={20} />""
                   <span className="whitespace-nowrap text-sm font-medium">"
@@ -885,19 +680,4 @@ export default FloatingActionButton;
 </any>
 </FloatingActionButtonProps>
 </any>';'
-<<<<<<< HEAD
 </FloatingActionButtonProps>;';';'
-=======
-</FloatingActionButtonProps>;';;';'
->>>>>>> origin/resolved-merge-conflicts
-;
-</any>;
-</FloatingActionButtonProps>;
-</any>;
-</any>;
-</FloatingActionButtonProps>;
-</any>
-</FloatingActionButtonProps>
-</any>
-</any>
-</FloatingActionButtonProps>

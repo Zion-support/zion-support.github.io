@@ -1,42 +1,3 @@
-
-  constructor() {
-
-  'child_process');
-class AutoCommitFixes {;
-  constructor() {;
-
-    this.projectRoot = process.cwd();
-
-      const status = execSync('git status --porcelain;
-  ' {;
-        cwd: this.projectRoot,;
-
-        encoding: 'utf8;
-  '});
-
-        return { hasChanges: false, files: [] }
-      const files = status.split('\n;
-  ');
-        .filter(line => line.trim());
-        .map(line => {;
-          const parts = line.trim().split(/\s+/)})
-
-      return { hasChanges: true, files }
-
-      const staged = execSync('git diff --cached --name-only;
-  ' {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8;
-  '});
-      return staged.split('\n;
-
-      const unstaged = execSync('git diff --name-only;
-  ' {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8;
-  '});
-      return unstaged.split('\n;
-
         stdio: 'pipe;
   '});
       this.log(`Staged ${files.length} files`)} catch (error) {;
@@ -116,6 +77,3 @@ class AutoCommitFixes {;
       process.exit(1);
 // Run the auto commit fixes;
 const autoCommit = new AutoCommitFixes();
-
-
-

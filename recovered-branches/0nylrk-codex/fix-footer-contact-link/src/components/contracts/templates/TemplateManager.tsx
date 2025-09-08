@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface TemplateManagerProps {
-
-  isOpen: boolean
-  onClose: () => void
-  onSelectTemplate: (template: ContractFormValues) => void
-
-  currentValues?: ContractFormValues
-}
-
-  currentValues
-}: TemplateManagerProps) {
-  const [mode, setMode] = useState<"list" | "save">("list"),
-  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
-
 import {useState} from "react";
 import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {ContractTemplate} from "@/types/contracts";
@@ -41,10 +23,6 @@ export function TemplateManager(): any ({;
 }: TemplateManagerProps) {;
   const [mode, setMode] = useState<"list" | "save">("list");
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-
-  const { templates, isLoading } = useContractTemplates();
-  const { toast } = useToast();
-
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
@@ -80,58 +58,4 @@ import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(tem
       </DialogContent>;
     </Dialog>);
 }  ),; interface TemplateManagerProps {
-  isOpen: boolean;
-onClose: () => void;
-onSelectTemplate: (template: ContractFormValues) => void;
-currentValues?: ContractFormValues 
-}export function TemplateManager ({
-  isOpen;
-onClose;
-onSelectTemplate;
-currentValues 
-}: TemplateManagerProps) {
-  const handleSelectTemplate = (template: ContractTemplate) => {
-  if (template && template.template data) {
-  onSelectTemplate (template.template data);
-onClose ();
-toast ({
-  
-}
-
-=======
-
-
-  ),; interface TemplateManagerProps {
-
-  isOpen: boolean;
-onClose: () => void;
-onSelectTemplate: (template: ContractFormValues) => void;
-currentValues?: ContractFormValues;
-}export function TemplateManager ({};
-  isOpen;
-onClose;
-onSelectTemplate;
-currentValues;
-}: TemplateManagerProps) {}
-  const handleSelectTemplate = (template: ContractTemplate) => {}
-  if (template && template.template data) {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            }}
-            onComplete={handleSaveComplete}
-            editTemplate={selectedTemplate}
-            currentValues={currentValues}
-          />
-        )}
-      </DialogContent>
-    </Dialog>
-  )
-}
-<<<<<<< HEAD
-
-      </DialogContent>;
-    </Dialog>;
-  );
-}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

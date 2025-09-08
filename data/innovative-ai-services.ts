@@ -1,7 +1,3 @@
-
-
-  {
-
 export interface InnovativeAIService {
   id: string;
   name: string;
@@ -26,10 +22,10 @@ export interface InnovativeAIService {
   use_cases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: string;
-  contact_info: {
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -82,8 +78,9 @@ export interface InnovativeAIService {
   customers: number;
   rating: number;
   reviews: number;
-;
-export const innovativeAIServices: InnovativeAIService[] = [;
+}
+
+export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum - ai - brain - computer - interface',
     name: 'Quantum AI Brain - Computer Interface',
@@ -1054,7 +1051,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     technology: ['Computer VisionDeep LearningLIDARRadarGPSEdge Computing'], integrations: ['Fleet management systemsGPS trackingMaintenance softwareInsurance platforms'],
     useCases: ['Commercial deliveryPassenger transportLogistics operationsEmergency services'], roi: '300% ROI within 12 months through reduced labor costs and increased efficiency',
     competitors: ['Waymo ($50,000+/month)', 'Cruise ($100,000+/month)', 'Tesla FSD'],
-    marketSize: '$556B autonomous vehicle market', growthRate: '250% annual growth',
+    marketSize: '$556B autonomous vehicle market',
+    growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       
@@ -1092,12 +1090,18 @@ export const innovativeAIServices: InnovativeAIService[] = [
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai', marketPosition: 'Accessible alternative to Insitro and Recursion with comprehensive research tools',
     targetAudience: 'Pharmaceutical companies, Research institutions, Biotech startups, Medical researchers',
-    trialDays: 30, setupTime: '2 weeks',
-    category: 'Biotechnology & AI', realService: true,
-    technology: ['Machine LearningBioinformaticsComputational BiologyAI/MLCloud Computing'], integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory platforms'],
-    useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicine'], roi: '500% ROI within 18 months through accelerated drug development and cost savings',
-    competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)Atomwise'], marketSize: '$150B AI in healthcare',
-    growthRate: '250% annual growth', variant: 'holographic-matrix',
+    trialDays: 30,
+    setupTime: '2 weeks',
+    category: 'Biotechnology & AI',
+    realService: true,
+    technology: ['Machine Learning', 'Bioinformatics', 'Computational Biology', 'AI/ML', 'Cloud Computing'],
+    integrations: ['Research databases', 'Lab equipment', 'Clinical trial systems', 'Regulatory platforms'],
+    useCases: ['Drug discovery', 'Genetic research', 'Clinical trials', 'Personalized medicine'],
+    roi: '500% ROI within 18 months through accelerated drug development and cost savings',
+    competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)', 'Atomwise'],
+    marketSize: '$150B AI in healthcare',
+    growthRate: '250% annual growth',
+    variant: 'holographic-matrix',
     contactInfo: {
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1127,11 +1131,12 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Advanced backtesting',
       'Regulatory compliance',
       'Performance analytics',
-
       'API for integration'
     ],
-    popular: true, icon: '💰',
-    color: 'from-yellow-600 to-orange-700', textColor: 'text-yellow-400',
+    popular: true,
+    icon: '💰',
+    color: 'from-yellow-600 to-orange-700',
+    textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'Accessible quantum AI technology for smaller firms, competing with Renaissance Technologies',
     targetAudience: 'Hedge funds, Investment firms, Trading companies, Financial institutions',
@@ -1284,19 +1289,27 @@ export const innovativeAIServices: InnovativeAIService[] = [
     color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity', marketPosition: 'Quantum-resistant security platform competing with CrowdStrike and Palo Alto Networks',
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDays: 30, setupTime: '2 weeks',
-    category: 'Quantum Cybersecurity', realService: true,
-    technology: ['Quantum ComputingAI/MLCybersecurityEncryptionThreat Intelligence'], integrations: ['SIEM systemsFirewallsEndpoint protectionCompliance platforms'],
-    useCases: ['Threat detectionIncident responseComplianceSecurity monitoring'], roi: '500% ROI within 12 months through threat prevention and compliance savings',
-    competitors: ['CrowdStrike ($5000+/month)Palo Alto Networks ($10000+/month)SentinelOne'], marketSize: '$200B cybersecurity market',
-    growthRate: '180% annual growth', variant: 'quantum-cyberpunk',
+    trialDays: 30,
+    setupTime: '2 weeks',
+    category: 'Quantum Cybersecurity',
+    realService: true,
+    technology: ['Quantum Computing', 'AI/ML', 'Cybersecurity', 'Encryption', 'Threat Intelligence'],
+    integrations: ['SIEM systems', 'Firewalls', 'Endpoint protection', 'Compliance platforms'],
+    useCases: ['Threat detection', 'Incident response', 'Compliance', 'Security monitoring'],
+    roi: '500% ROI within 12 months through threat prevention and compliance savings',
+    competitors: ['CrowdStrike ($5000+/month)', 'Palo Alto Networks ($10000+/month)', 'SentinelOne'],
+    marketSize: '$200B cybersecurity market',
+    growthRate: '180% annual growth',
+    variant: 'quantum-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true, implementationDetails: 'Quantum-resistant cybersecurity platform with AI threat detection and automated response capabilities.',
-    launchDate: '2024-10-01', customers: 95,
+    realImplementation: true,
+    implementationDetails: 'Quantum-resistant cybersecurity platform with AI threat detection and automated response capabilities.',
+    launchDate: '2024-10-01',
+    customers: 95,
     rating: 4.8,
     reviews: 48
   };
@@ -1315,19 +1328,27 @@ export const innovativeAIServices: InnovativeAIService[] = [
     link: 'https://ziontechgroup.com/quantum-internet-security-platform',
     marketPosition: 'First quantum internet security platform, competing with traditional internet security providers',
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
-    trialDays: 30, setupTime: '1 month',
-    category: 'Quantum Internet', realService: true,
-    technology: ['Quantum ComputingQuantum NetworksQuantum Key DistributionAI/MLNetwork Security'], integrations: ['Network infrastructureSecurity systemsCompliance platformsMonitoring tools'],
-    useCases: ['Secure communicationsGovernment networksFinancial transactionsHealthcare data'], roi: '600% ROI within 18 months through security improvements and compliance benefits',
-    competitors: ['Traditional ISPsSecurity providersNetwork equipment vendors'], marketSize: '$100B quantum internet market',
-    growthRate: '400% annual growth', variant: 'quantum-entanglement',
+    trialDays: 30,
+    setupTime: '1 month',
+    category: 'Quantum Internet',
+    realService: true,
+    technology: ['Quantum Computing', 'Quantum Networks', 'Quantum Key Distribution', 'AI/ML', 'Network Security'],
+    integrations: ['Network infrastructure', 'Security systems', 'Compliance platforms', 'Monitoring tools'],
+    useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Healthcare data'],
+    roi: '600% ROI within 18 months through security improvements and compliance benefits',
+    competitors: ['Traditional ISPs', 'Security providers', 'Network equipment vendors'],
+    marketSize: '$100B quantum internet market',
+    growthRate: '400% annual growth',
+    variant: 'quantum-entanglement',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true, implementationDetails: 'Quantum internet security platform with quantum key distribution and ultra-secure network infrastructure.',
-    launchDate: '2024-11-15', customers: 12,
+    realImplementation: true,
+    implementationDetails: 'Quantum internet security platform with quantum key distribution and ultra-secure network infrastructure.',
+    launchDate: '2024-11-15',
+    customers: 12,
     rating: 4.9,
     reviews: 6
   };
@@ -1345,26 +1366,30 @@ export const innovativeAIServices: InnovativeAIService[] = [
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-logistics', marketPosition: 'Quantum-enhanced logistics platform competing with SAP and Oracle',
     targetAudience: 'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains',
-    trialDays: 30, setupTime: '2 weeks',
-    category: 'Quantum Logistics', realService: true,
-    technology: ['Quantum ComputingAI/MLSupply Chain ManagementIoTCloud Computing'], integrations: ['ERP systemsWMS platformsTransportation systemsE-commerce platforms'],
-    useCases: ['Supply chain optimizationRoute planningInventory managementDemand forecasting'], roi: '400% ROI within 12 months through operational efficiency and cost savings',
-    competitors: ['SAP ($5000+/month)Oracle ($8000+/month)Manhattan Associates'], marketSize: '$300B supply chain management',
-    growthRate: '200% annual growth', variant: 'quantum-matrix',
+    trialDays: 30,
+    setupTime: '2 weeks',
+    category: 'Quantum Logistics',
+    realService: true,
+    technology: ['Quantum Computing', 'AI/ML', 'Supply Chain Management', 'IoT', 'Cloud Computing'],
+    integrations: ['ERP systems', 'WMS platforms', 'Transportation systems', 'E-commerce platforms'],
+    useCases: ['Supply chain optimization', 'Route planning', 'Inventory management', 'Demand forecasting'],
+    roi: '400% ROI within 12 months through operational efficiency and cost savings',
+    competitors: ['SAP ($5000+/month)', 'Oracle ($8000+/month)', 'Manhattan Associates'],
+    marketSize: '$300B supply chain management',
+    growthRate: '200% annual growth',
+    variant: 'quantum-matrix',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
     },
-    realImplementation: true, implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
-    launchDate: '2024-08-01', customers: 67,
+    realImplementation: true,
+    implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
+    launchDate: '2024-08-01',
+    customers: 67,
     rating: 4.7,
-    reviews: 34;
-
-
-export interface InnovativeAIService {;
-
+    reviews: 34
   }
 ];
 ];

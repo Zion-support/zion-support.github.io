@@ -30,10 +30,6 @@ export: interface Revolutionary2028FintechDigitalBankingService {
    email: string;
 
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
 
     tagline:,
   Transform: banking with AI-powered digital services and personalized financial management'',;

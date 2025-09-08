@@ -25,10 +25,6 @@ reader.readAsDataURL (file) ;
 }
 };
 //Generate enhanced profile with AI return;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
->>>>>>> origin/resolved-merge-conflicts
 }//Call the Supabase Edge Function const {;
   data, error ;
 }= await supabase.functions.invoke ('service-profile-enhancer', {;

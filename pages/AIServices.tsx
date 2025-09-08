@@ -20,9 +20,6 @@ import {
   Cog,
   Shield
 } from 'lucide-react';
-=======
-import { Brain, CheckCircle, ArrowRight, Star } from 'lucide-react';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
 
 const aiServices = [
   {

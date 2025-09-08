@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -33,7 +32,6 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
     }
   });
 
-<<<<<<< HEAD
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({    onSuccess: (_, variables) => {
       toast({
@@ -52,7 +50,6 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
 
-<<<<<<< HEAD
     onError: (error: Error) => {
       toast({
         title: "Error",

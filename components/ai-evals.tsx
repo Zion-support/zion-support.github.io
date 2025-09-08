@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
@@ -10,65 +9,6 @@ return (<QuantumHolographicMatrixBackground> <Head> <title>AI Evals & Observabil
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-<<<<<<< HEAD
-=======
-
-import React from 'react','
-import Head from 'next/head';'
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';'
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground','
-import Card from '../components/ui/Card';'
-import Button from '../components/ui/Button';'
-
-export default function AIEvalsPage() {
-	}
-	const contactInfo = null;
-return (;
-		<QuantumHolographicMatrixBackground>
-			<Head>
-				<title>AI Evals & Observability | Zion Tech Group</title>
-				<meta name='description' content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.' />'
-				<link rel='canonical' href=''https'://ziontechgroup.com/ai-evals' />'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function AIEvalsPage() {
-	const contactInfo = null;
-	return (
-		<QuantumHolographicMatrixBackground    />
-			<Head><title>AI Evals & Observability | Zion Tech Group</title>
-				<meta name=\"description\" content=\"Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.\"    />
-				<link rel=\"canonical\" href=\"https://ziontechgroup.com/ai-evals\"    />
-			</Head>
-
-import {
-<<<<<<< HEAD
-
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-
-export default function AIEvalsPage() {
-  const contactInfo = {
-
-    mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',}
-  website: 'https://ziontechgroup.com',}
-};
-=======
-  }
-  Check,
-ShieldCheck
-  TrendingUp,
-Clock
-  Phone,
-
 const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -76,7 +16,6 @@ const features = [
     'LLM version comparison reports'
     'CI quality gates and webhooks'
     'Latency and cost KPIs with budgets'
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   ];
@@ -167,7 +106,6 @@ key={f}
                       <Check className='w-5 h-5 text-emerald-400 mt-0.5'    />{' '}
                       <span    />{,}
 }</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                     </li>;
                   ))}
                 </ul>;
@@ -187,10 +125,6 @@ key={f}
                 </div>;
                 <div className='mt - 4'>;
                   <Button;
-                    href='/contact';
-                    className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-                  >;
-
                     Request Demo;
                   </Button>;
                 </div>;
@@ -288,12 +222,6 @@ key={f}
               </p>;
             </Card>;
           </div>;
-
-
-	);
-}
-
-
 	);
 }
 	);

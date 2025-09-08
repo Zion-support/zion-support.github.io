@@ -4,22 +4,6 @@ import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
-import { useToast } from "@/hooks/use-toast",
-import { ForumCategory } from "@/types/community",
-interface PostFormValues {
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string}
-
-export default function CreatePostPage() {;
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
 export default function CreatePostPage() {
 
   const navigate = useNavigate();
@@ -201,4 +185,3 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 pr-12325
     </AppLayout>);
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

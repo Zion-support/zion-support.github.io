@@ -1,4 +1,3 @@
-
 const __dirname = path.dirname(__filename);
 class HealthChecker {;
   constructor() {;
@@ -38,24 +37,6 @@ class HealthChecker {;
         }
         req.destroy();
         const responseTime = Date.now() - startTime;
-
-          status: 'unhealthy,
-          responseTime,
-
-          reason:;
-  'Timeout'        })})})}
-
-  '%', ';
-  '));
-
-      const status = usagePercent > 90 ? 'critical;
-  ': usagePercent > 80 ? 'warning;
-  ' : 'healthy;
-  ';
-      this.log('info, `Disk usage: ${usage}` { status, usagePercent });
-
-        reason: error.message      }
-
     }
 
   }
@@ -244,5 +225,3 @@ class HealthChecker {;
     process.exit(1)})}
 
 export default HealthChecker;
-
-

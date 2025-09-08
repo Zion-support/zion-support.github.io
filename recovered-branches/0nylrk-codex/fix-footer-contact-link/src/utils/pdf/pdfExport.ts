@@ -1,4 +1,3 @@
-
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -12,31 +11,6 @@ import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {  theme: 'light' | 'dark';
   includePortfolio?: boolean;
-
-  maxProjects?: number
-  fontFamily?: FontFamily
-}
-const defaultOptions: ExportOptions = {
-  theme: 'light';
-  includePortfolio: true;
-  maxProjects: 2
-  fontFamily: 'default'
-
-}
-
-const defaultOptions: ExportOptions = $2;
-  includePortfolio: true,
-  maxProjects: 2,
-  fontFamily: 'default'
-},
-
-export async function exportResumeToPDF(
-  resume: Resume
-  options: Partial<ExportOptions> = {}
-
-): Promise<Blob> {;
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
-
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({

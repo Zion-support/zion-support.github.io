@@ -1,324 +1,56 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react';
-
-export default function Pricing() {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: 'per month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Basic AI Integration',
-        'Cloud Infrastructure Setup',
-        'Monthly Support (8 hours)',
-        'Basic Security Features',
-        'Email Support',
-        'Standard SLA (99.5%)' ],
-      popular: false,
-      cta: 'Get Started',
-      href: '/contact' }, {
-      name: 'Professional',
-      price: '$7,999',
-      period: 'per month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Advanced AI Solutions',
-        'Custom Development',
-        'Monthly Support (20 hours)',
-        'Enhanced Security & Compliance',
-        'Priority Support',
-        'Premium SLA (99.9%)',
-        'Dedicated Account Manager',
-        'Custom Integrations' ],
-      popular: true,
-      cta: 'Most Popular',
-      href: '/contact' }, {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Full AI Suite Implementation',
-        'Custom Enterprise Solutions',
-        'Unlimited Support',
-        'Enterprise Security & Compliance',
-        '24/7 Phone Support',
-        'Enterprise SLA (99.99%)',
-        'Dedicated Team',
-        'Custom Training & Documentation',
-        'Multi-region Deployment',
-        'Advanced Analytics & Reporting' ],
-      popular: false,
-      cta: 'Contact Sales',
-      href: '/contact' } ];
-
-  const addOns = [
-    {
-      name: 'Additional Support Hours',
-      price: '$150',
-      period: 'per hour',
-      description: 'Extra support hours for your project needs' }, {
-      name: 'Priority Support',
-      price: '$500',
-      period: 'per month',
-      description: 'Faster response times and dedicated support' }, {
-      name: 'Custom Integrations',
-      price: '$2,000',
-      period: 'per integration',
-      description: 'Custom third-party integrations and APIs' }, {
-      name: 'Training & Documentation',
-      price: '$1,000',
-      period: 'per session',
-      description: 'Team training and comprehensive documentation' } ];
-
-  const faqs = [
-    {
-      question: 'Can I change my plan at any time?',
-      answer:
-        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.' }, {
-      question: 'What is included in the support hours?',
-      answer:
-        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.' }, {
-      question: 'Do you offer custom pricing for large projects?',
-      answer:
-        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.' }, {
-      question: 'What payment methods do you accept?',
-      answer:
-        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.' } ];
-
-  return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transparent pricing for our technology services. Choose the plan that fits your business needs and budget."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Simple, Transparent Pricing
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include
-                our core services with the option to add additional features.
-              </p>
-            </div>
-          </div>
-        </section>
-
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, CheckCircle, Star, Zap, Shield, 
+  Brain, Atom, Rocket, Building, ArrowRight,
+  Users, Globe, Cpu, Database, Lock
+    price: '$99',
+    price: '$5,000',
+      '5 Projects',
+      '10GB Storage',
+      'Email Support'
+      'Core Features',
+      'Email Support',
+      'Basic Analytics'
+        <meta name="description" content="Transparent pricing and market comparisons for all our technology services. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="pricing, plans, AI services, quantum services, enterprise IT, micro SAAS" />
+        <meta name="description" content="Transparent pricing and market comparisons for all our technology services. Find the perfect plan for your business needs." />
+        <meta name="keywords" content="pricing, plans, service costs, enterprise pricing, custom solutions, ROI calculator" />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-yellow-900/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-yellow-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105"
+                  className="px-8 py-4 border border-yellow-500/40 text-yellow-300 rounded-xl font-semibold hover:bg-yellow-500/10 transition-all duration-200"
+                  className="px-8 py-4 border border-green-500/50 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-200"
         {/* Pricing Plans */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${
-                    plan.popular
-                      ? 'border-blue-500 ring-2 ring-blue-500'
-                      : 'border-gray-200'
-                  }`}
-                >
-                  {plan.popular && (
+        <section className="py-20 relative">
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-gray-900">
-                        {plan.price}
-                      </span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href={plan.href}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                      plan.popular
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Add-ons Section */}
-        <section className="py-20 bg-gray-50">
+                      <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-bold rounded-full">
+        {/* Service Categories Pricing */}
+        <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Add-on Services
-              </h2>
-              <p className="text-lg text-gray-600">
-                Enhance your plan with additional services tailored to your
-                specific needs.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOns.map((addOn, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {addOn.name}
-                  </h3>
-                  <div className="mb-3">
-                    <span className="text-2xl font-bold text-blue-600">
-                      {addOn.price}
-                    </span>
-                    <span className="text-gray-600 ml-1">{addOn.period}</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">{addOn.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Comparison */}
-        <section className="py-20">
+        {/* Service Pricing */}
+        <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Choose Our Services?
-              </h2>
-              <p className="text-lg text-gray-600">
-                We provide comprehensive technology solutions with unmatched
-                support and expertise.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Fast Delivery
-                </h3>
-                <p className="text-gray-600">
-                  Quick turnaround times without compromising on quality or
-                  security.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Enterprise Security
-                </h3>
-                <p className="text-gray-600">
-                  Bank-level security and compliance with industry standards.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Expert Support
-                </h3>
-                <p className="text-gray-600">
-                  Dedicated support from our team of technology experts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* Benefits Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Benefits Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-600">
-                Have questions about our pricing? We've got answers.
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+        <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and custom quote tailored
-              to your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Free Quote
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Our Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )}
+        <section className="py-20 bg-gradient-to-r from-green-900/20 to-yellow-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                Choose the plan that fits your business needs or contact us for a custom solution. 
+                Start transforming your business today.
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 hover:scale-105"
+                  View Market Pricing

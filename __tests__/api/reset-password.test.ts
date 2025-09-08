@@ -1,4 +1,3 @@
-
 // Define expected response structure for error messages
 interface ErrorResponse {
   message: string

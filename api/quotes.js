@@ -1,19 +1,16 @@
+<<<<<<< HEAD
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
 
-    return}
-  try {;
-
-    const { name, email, phone, details, country, service } = req.body || {}
-    if (!name || !email || !phone || !details) {;
-      res.statusCode = 400;
-
-      name,
-      email,
-      phone,
-      details,
-      country,
-
-  , err);
-    res.statusCode = 500;
-    res.json({ error: err.message ||;
-  'Quote submission failed }});'}
-module.exports: = withErrorLogging(handler);
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
+    if (!name || !email || !phone || !details) {
+<<<<<<< HEAD
+    res.json({ error: err.message || 'Quote submission failed' });
+  }
+}

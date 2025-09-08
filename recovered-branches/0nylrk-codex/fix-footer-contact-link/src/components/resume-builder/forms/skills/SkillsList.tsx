@@ -4,7 +4,6 @@ import { SkillCategory  } from './SkillCategory';
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise < void>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {

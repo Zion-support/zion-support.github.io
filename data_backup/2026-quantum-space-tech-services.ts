@@ -11,10 +11,3 @@ export: interface QuantumSpaceTechService2026 {
    realImplementation: boolean;
    contactInfo: { mobile: string;
 
-    features[
-      'Quantum: computing'',;
-      'Space: technology'',;
-      'Advanced: algorithms'',;
-      'Innovation: platform'',;
-      'Expert: support';'],
-

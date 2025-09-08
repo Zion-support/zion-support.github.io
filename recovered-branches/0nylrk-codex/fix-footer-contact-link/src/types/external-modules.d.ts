@@ -1,7 +1,6 @@
 declare module '@tanstack/react-query';
 declare module '@tanstack/react-query';
 declare module '@tanstack/react-query';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   export interface DateRange {
     }
@@ -26,14 +25,6 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
-
-
-
-=======
-declare module '@tanstack/react-query',
-declare module 'react-day-picker' {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 declare module '@tanstack/react-query',
@@ -86,94 +77,6 @@ declare module 'react-day-picker' {;
     from?: Date,;
     to?: Date
 };
-
-declare module 'sonner';
-declare module 'lucide-react' {
-
-import {FC, SVGProps} from 'react';
-
-
-
-  export type LucideProps = SVGProps < SVGSVGElement>;
-  export type LucideIcon = FC < LucideProps>;
-;
-
-
-
-
-=======
-  export interface DateRange {;
-    }
-    from?: Date;
-    to?: Datedeclare module 'lucide-react' {
-
-import {FC, SVGProps} from 'react';
-
-  export type LucideProps = SVGProps < SVGSVGElement>;
-  export type LucideIcon = FC < LucideProps>;
-;}
-declare module 'child_process';
-declare module 'date - fns';
-declare module 'jspdf' {
-
-  export const jsPDF: any,
-  export default jsPDF;
-}
-declare module '@hookform / resolvers / zod';
-declare module '@radix - ui / react - accordion';
-declare module '@radix - ui / react - alert - dialog';
-declare module '@radix - ui / react - aspect - ratio';
-declare module '@radix - ui / react - avatar';
-declare module '@radix - ui / react - checkbox';
-declare module '@radix - ui / react - collapsible';
-declare module '@radix - ui / react - dialog';
-declare module '@radix - ui / react - dropdown - menu';
-declare module '@radix - ui / react - label';
-declare module '@radix - ui / react - popover';
-declare module '@radix - ui / react - progress';
-declare module '@radix - ui / react - radio - group';
-declare module '@radix - ui / react - scroll - area';
-declare module '@radix - ui / react - select';
-declare module '@radix - ui / react - separator';
-declare module '@radix - ui / react - slider';
-declare module '@radix - ui / react - slot';
-declare module '@radix - ui / react - switch';
-declare module '@radix - ui / react - tabs';
-declare module '@radix - ui / react - toast';
-declare module '@radix - ui / react - tooltip';
-declare module '@supabase / supabase - js';
-declare module 'class - variance - authority' {
-  export function cva (...inputs: any[]): any;
-  export type VariantProps < T extends (...args: any) => any> = any;
-}
-declare module 'clsx' {
-  export type ClassValue = any;
-  export default function clsx (...classes: ClassValue[]): string;
-}
-declare module 'embla - carousel - react';  export interface UseFormReturn<
-
-  export interface UseFormReturn<;
-    TFieldValues extends FieldValues = FieldValues;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  > {
-    }
-    'control': Control<TFieldValues>
-    'handleSubmit': any;
-    'register': any,
-'formState': any
-    ['key': string]: any
-  }
-  export function useForm<
-    TFieldValues extends FieldValues = $2;
-  >(options?: any): UseFormReturn<TFieldValues>
-  export function useFieldArray<
-<<<<<<< HEAD
-
-    TFieldValues extends FieldValues = FieldValues;
-  >(options: any): any
   export interface ControllerProps<  > {
     name: TName;
     control?: Control < TFieldValues>;
@@ -203,14 +106,5 @@ declare module 'react-dom / client';  export const FormProvider: ComponentType <
 }
 declare module 'react - i18next';
 declare module 'react-dom / client';
-declare module 'react-dom';
-declare module 'react-beautiful-dnd';
-declare module 'react-redux';
-declare module 'semver';
-declare module 'ws';
-declare module 'recharts';
-declare module 'next-themes';
-declare module 'tailwind-merge';
-
 declare module 'react - i18next';
 declare module 'react-dom / client';

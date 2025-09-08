@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-
-unreadCount?: number;
-export interface MobileMenuProps {;
   unreadCount?: number;
   onClose: () => void;
 }
-
-export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation();
-  const { user } = useAuth();
   const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void
 }
@@ -89,7 +81,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
   );
 
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';

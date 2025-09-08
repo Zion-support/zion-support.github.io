@@ -1,4 +1,3 @@
-
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -19,12 +18,6 @@ export async function createNotification({
   title,
   message,
   type,
-<<<<<<< HEAD
-
-  relatedId = null,
-  sendEmail = false,
-  actionUrl = null,
-
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;

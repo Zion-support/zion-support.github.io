@@ -1,28 +1,11 @@
-{
-  "general": {
-    "app_name": "Zion AI Marketplace",
-    "loading": "Loading...",
-    "search": "Search",
-    "select_language": "Select language",
-    "save": "Save",
-    "cancel": "Cancel",
-    "submit": "Submit",
-    "yes": "Yes",
-    "no": "No",
-    "success": "Success",
-    "error": "Error",
-    "explore": "Explore",
-    "menu": "Menu",
-
-:public/locales/en-US/common.json
-
-    "services": "Services",
-
+<<<<<<< HEAD
+    "categories": "Categories",
+<<<<<<< HEAD
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
-
-
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",

@@ -1,10 +1,3 @@
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-
-
   test('renders without crashing', () => {
 
     render(<EnhancedNavigation />);
@@ -25,5 +18,3 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
   test('applies correct styling', () => {
     render(<EnhancedNavigation />);
     // Add styling tests if needed;
-
-

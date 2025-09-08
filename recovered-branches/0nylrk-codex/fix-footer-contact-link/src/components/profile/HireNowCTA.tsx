@@ -1,5 +1,3 @@
-
-
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
@@ -8,42 +6,12 @@ import {TalentProfile} from "@/types/talent";
 
 interface HireNowCTAProps {
 
-=======
-interface HireNowCTAProps {
-interface HireNowCTAProps {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  talentProfile: {
-    id: string,
-    full_name?: string,
-    professional_title?: string,
-export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
-  const [modalOpen, setModalOpen] = useState(false);
-export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
-  const [modalOpen, setModalOpen] = useState(false),
-
-  const handleOpenModal = () => {
-    setModalOpen(true)
-
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
-  },
-
-  const handleCloseModal = () => {
-    setModalOpen(false)
-  },
-
-  // Check if we have minimum required data
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
-
-  // Calculate talent profile completeness (simplified)
-  const profileCompleteness = calculateProfileCompleteness(talentProfile),
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -92,10 +60,6 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
       <HireRequestModal
 
       <HireRequestModal
-
-      <HireRequestModal 
-      <HireRequestModal 
-
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {

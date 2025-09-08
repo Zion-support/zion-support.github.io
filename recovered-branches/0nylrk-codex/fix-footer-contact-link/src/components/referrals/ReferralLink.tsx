@@ -43,9 +43,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </CardDescription>
       </CardHeader>
 
-<<<<<<< HEAD
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">  )
   )
-

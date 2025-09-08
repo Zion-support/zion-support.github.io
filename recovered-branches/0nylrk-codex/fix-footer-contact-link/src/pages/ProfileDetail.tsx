@@ -350,22 +350,6 @@ export default function ProfileDetail() {
                     <Linkedin className="h - 4 w-4" />;
                     LinkedIn;
                   </a>)}
-
-                {profileData.linkedin_url && (
-                  <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn
-
-
-                  </Link>
-                )}
-
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
       <Footer />;                {profileData.linkedin_url && (
                   <a
                     href={profileData.linkedin_url}
@@ -389,4 +373,3 @@ export default function ProfileDetail() {
     </>
   );
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -50,40 +50,6 @@ interface TranslatableJobFormProps {;
     }
 
 
-=======
-  };
-
-  // Auto translate function;'
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {;'
-    let sourceLanguage: SupportedLanguage = 'en',;'
-    let content = '';
-
-    // Find first non-empty content to translate;
-    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;'
-      if (field === 'title' && title[lang]) {;
-        content = title[lang];
-        sourceLanguage = lang;
-        break;'
-      } else if (field === 'description' && description[lang]) {;
-        content = description[lang];
-        sourceLanguage = lang;
-        break;'
-
-      } else if (field === 'requirements' && requirements[lang]) {;
-        content = requirements[lang];
-        sourceLanguage = lang;
-        break;
-
-      }
-    }      if (error) {
-        }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      }
-    }      if (error) {
-        toast({
-
-          title: t('translation.translation_failed')
-<<<<<<< HEAD
 
           description: error
           variant: "destructive"})
@@ -139,7 +105,6 @@ if (Object.values(requirements).some(val => val) && Object.values(requirements).
   },
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -163,137 +128,8 @@ if (Object.values(requirements).some(val => val) && Object.values(requirements).
         variant: "destructive"}),;
       return;
     }
-<<<<<<< HEAD
-
-    try {;
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      if (error) {;
-        }
-        toast({;
-          title: t('translation && translation.translation_failed'),,
-  description: error,;
-          variant: "destructive"}),;
-        return;
-
-<<<<<<< HEAD
       }
 
-=======
-      }'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      if (field === 'title') {;
-        setTitle(translations);'
-      } else if (field === 'description') {;
-        setDescription(translations);'
-      } else if (field === 'requirements') {;
-        setRequirements(translations);
-      }
-      toast({;
-        title: t('translation && translation.translation_success'),,
-  description: t('translation && translation.content_translated')});
-    } catch (error) {;
-      console && console.error(`Error translating ${field}:`, error);
-      toast({;
-        title: t('translation && translation.translation_failed'),,
-  description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
-        variant: "destructive"});
-    }
-  };
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      toast({;
-        }
-        "title": t('translation && translation.translation_success'),,'
-  "description": t('translation && translation.content_translated')});'
-    } catch (error) {;
-      }
-      console && console.error(`Error translating ${field}:`, error);`      toast({;
-        }
-        "title": t('translation && translation.translation_failed'),,'
-  "description": error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;'
-        "variant": "destructive"});"
-    }
-  };
-<<<<<<< HEAD
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {;
-    const promises = [];
-    if (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar) return;
-    if (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar) return;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    // Title translations;
-    if (Object && Object.values(title).some(val => val) && Object && Object.values(title).some(val => !val)) {;
-      }
-      promises && promises.push(autoTranslate('title'));'
-    }
-    // Description translations;
-    if (Object && Object.values(description).some(val => val) && Object && Object.values(description).some(val => !val)) {;
-      }
-      promises && promises.push(autoTranslate('description'));'
-    }
-    // Requirements translations;
-    if (Object && Object.values(requirements).some(val => val) && Object && Object.values(requirements).some(val => !val)) {;
-      }
-      promises && promises.push(autoTranslate('requirements'));'
-    }
-    if (promises && promises.length) {;
-      }
-      await Promise && Promise.all(promises);
-    }
-  };
-
-<<<<<<< HEAD
-  return (
-
-=======
-  return ("
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <form onSubmit={handleSubmit} className="space-y-6">;
-      <div>;'"
-        <h1 className="text-2xl font-bold mb-6">{t('jobs && jobs.post_job_title')}</h1>;"
-        <p className="text-zion-slate-light mb-6">;'
-          {t('jobs && jobs.post_job_description')}
-        </p>;
-      </div>;
-
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="title" className="text-lg font-medium">;
-      }
-    }            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <div className="space-y-1">;
-                  <Input
-                    id={`title-${lang && lang.code}`}
-                    value={title[lang && lang.code] || ''}
-                    onChange={(e) => handleTitleChange(e && e.target.value)}
-                    placeholder={t('jobs && jobs.title_placeholder')}
-                    className="w-full";
-                    dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
                   />;
                 </div>;              </TabsContent>;
             ))}
@@ -460,4 +296,3 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 }</Button> </div> </form>)
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,8 +1,5 @@
 from pathlib import Path
 import os
-import logging.config
-
-from backend.logging_config import LOGGING as LOGGING_CONFIG
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-placeholder'
@@ -16,8 +13,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'drf_yasg',
     'authentication',
-    'promotions',
+    'public_api',
 ]
 
 MIDDLEWARE = [
@@ -27,7 +26,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'backend.middleware.PrometheusMiddleware',
 ]
 
 ROOT_URLCONF = 'django_backend.urls'
@@ -66,6 +64,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1'),
+    }
+}
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
@@ -73,8 +78,21 @@ SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
 PASSWORD_RESET_TIMEOUT = 900  # 15 minutes
 
-# Structured logging configuration
-LOGGING = LOGGING_CONFIG
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'public_api.authentication.ApiKeyAuthentication',
+    ],
+    'DEFAULT_THROTTLE_CLASSES': [
+        'public_api.throttling.RedisDailyThrottle',
+    ],
+}
 
-# Initialize metrics and DB instrumentation
-import backend.observability  # noqa: E402
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'ApiKeyAuth': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'X-API-KEY'
+        }
+    }
+}

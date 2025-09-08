@@ -14,13 +14,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 interface BrowseItem {
-
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  location?: string;
-  badges: string[]
     setSavedItems((prev) =>
       prev.includes(id)
         ? prev.filter(itemId => itemId !== id)
@@ -170,15 +163,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 className="gap-1";
               >;
                 View Details <ChevronRight className="h-4 w-4" />;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </Button>;
-            </div>;
-          </CardContent>;
-        </Card>;
-<<<<<<< HEAD
 
       ))}
 

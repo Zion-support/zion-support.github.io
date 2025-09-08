@@ -1,10 +1,3 @@
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-
-
   test('renders without crashing', () => {
 
     render(<AnalyticsTracker />);
@@ -25,5 +18,3 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
   test('applies correct styling', () => {
     render(<AnalyticsTracker />);
     // Add styling tests if needed;
-
-

@@ -1,38 +1,20 @@
-
-
-    const startTime = Date.now();
-    await page.goto('/');
-    const loadTime = Date.now() - startTime;
-    expect(loadTime).toBeLessThan(3000);
-  });
-
-  test('bundle size is reasonable', async ({ page }) => {
-    await page.goto('/');
-    const metrics = await page.evaluate(() => {
-
-=======
-
-
-import { test, expect } from '@playwright/test';
-
-test.describe(Performance Tests, () => {
-  test('page load performance', async ({ page }) => {
-    const startTime = Date.now();
-    await page.goto(/);
-    await page.waitForLoadState('networkidle');
-    const loadTime = Date.now() - startTime;
-    // Page should load within 3 seconds
-    expect(loadTime).toBeLessThan(3000)});
-
-
+<<<<<<< HEAD
+  test("lighthouse performance audit", async ({ page }) => {
+    await page.goto("/");
     // Run lighthouse audit
     const lighthouse = await page.evaluate(() => {
       return new Promise((resolve) => {
-        if (typeof window.lighthouse !== 'undefined') {
+        if (typeof window.lighthouse !== "undefined") {
           window
-
+            .lighthouse(window.location.href, {
+              output: "json",
+            })
+            .then(resolve);
+        } else {
+          resolve({ error: "Lighthouse not available" });
         }
-      })});
+      });
+    });
 
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
@@ -42,14 +24,29 @@ test.describe(Performance Tests, () => {
     }
   });
 
+  test("bundle size check", async ({ page }) => {
+    await page.goto("/");
+    // Check for large bundle warnings
+    const consoleMessages = [];
+    page.on("console", (msg) => {
+      if (msg.type() === "warning" && msg.text().includes("bundle")) {
         consoleMessages.push(msg.text());
       }
     });
-    
+
     await page.waitForTimeout(2000);
+    expect(consoleMessages.length).toBe(0);
+  });
 
-    // Should not have bundle size warnings
-    expect(consoleMessages.length).toBe(0)})});
-
-
-
+  test("memory usage check", async ({ page }) => {
+    await page.goto("/");
+    const metrics = await page.evaluate(() => {
+      if (performance.memory) {
+        return {
+          usedJSHeapSize: performance.memory.usedJSHeapSize,
+          totalJSHeapSize: performance.memory.totalJSHeapSize,
+          jsHeapSizeLimit: performance.memory.jsHeapSizeLimit,
+        };
+      }
+      return null;
+    });

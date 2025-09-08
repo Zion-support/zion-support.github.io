@@ -1,7 +1,4 @@
-
-
 type Theme = "dark" | "light" | "system"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 type ThemeProviderProps = {
   children: React.ReactNode
@@ -16,10 +13,6 @@ type ThemeProviderProps = {
         .matches
         ? &quot;dark&quot;
         : &quot;light&quot;      root.classList.add(systemTheme)
-      return
-    }
-    root.classList.add(theme)
-  }, [theme])
   const value = {
     theme
     setTheme: (theme: Theme) => {  return context

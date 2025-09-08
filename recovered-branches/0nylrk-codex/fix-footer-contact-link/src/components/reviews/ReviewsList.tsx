@@ -1,12 +1,5 @@
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
-interface ReviewsListProps {
-  reviews: Review[];
-  isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
-}
-
-export function ReviewsList({
   reviews,
   isLoading,
   onReportReview,
@@ -37,7 +30,6 @@ export function ReviewsList({
       </div>
     );
   }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   if (reviews.length === 0) {}
     return ("
@@ -52,4 +44,3 @@ export function ReviewsList({
   }
 }
 ;
-

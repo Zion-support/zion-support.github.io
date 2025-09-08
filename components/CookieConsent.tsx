@@ -1,6 +1,4 @@
 
-
-
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -26,28 +24,6 @@ export default function CookieConsent() {;
 
 export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-<<<<<<< HEAD
-
-  const [preferences, setPreferences] = useState({;
-    necessary: true,;
-    analytics: false,;
-    marketing: false,;
-    functional: false,;
-  });
-  useEffect(() => {;
-    const consent = localStorage && localStorage.getItem("cookie-consent");
-    if (!consent) {;
-      setIsVisible(true);
-    }
-  }, []);
-  const acceptAll = () => {;
-    const allAccepted = {;
-      necessary: true,;
-      analytics: true,;
-      marketing: true,;
-      functional: true,;
-    };
-
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
@@ -216,7 +192,6 @@ if ( {) {
                 Cookie Settings;
               </button>;
               <button;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors" />;
                 Reject All;
@@ -464,7 +439,6 @@ if ( {) {
               </button>;
             </div>;
           </div>)}
-<<<<<<< HEAD
 
       </div>;
     </div>);

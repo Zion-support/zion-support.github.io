@@ -1,11 +1,3 @@
-import type { NextApiRequest } from 'next';
-
-export interface User {
-  id: string;
-  email: string;
-  role?: string;
-}
-
 export function parseUserFromRequest(req: NextApiRequest): User | null {
   // Simple implementation - in production, this would parse JWT or session
   const authHeader = req.headers.authorization;

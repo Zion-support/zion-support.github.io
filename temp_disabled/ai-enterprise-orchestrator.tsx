@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
 import { Link  } from 'react-router-dom';
 

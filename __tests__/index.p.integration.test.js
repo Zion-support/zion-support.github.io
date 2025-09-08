@@ -1,5 +1,3 @@
-
-
 import { render, screen } from '@testing-library/react';
 import @testing-library/jest-dom';
 import indexp from "../pages/index.p";
@@ -16,5 +14,3 @@ import indexp from "../pages/index.p";
 
     render(<indexp />);
     // Test data loading and display})});
-
-

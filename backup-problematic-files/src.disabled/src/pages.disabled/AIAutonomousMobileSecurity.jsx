@@ -1,13 +1,1 @@
-const AIAutonomousMobileSecurity = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>AIAutonomousMobileSecurity</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
-  );
-};
-
 export default AIAutonomousMobileSecurity;

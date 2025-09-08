@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
@@ -84,18 +82,6 @@ import { X } from "lucide-react",;
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
-interface ActiveFiltersBarProps {;
-  selectedProductTypes: string[],;
-  selectedLocations: string[],;
-  selectedAvailability: string[],;
-  selectedRating: number | null,;
-  searchQuery: string,;
-
-  onRemoveFilter: (filterType: string, value: string) => void,;
-  onRemoveRating: () => void,;
-  onClearSearch: () => void;
-}
-
 export function ActiveFiltersBar(): any ({;
 
   selectedProductTypes;

@@ -88,13 +88,6 @@ async function runDependencyUpdates() {
   dependency-updates-report.json;
   `);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-
-  // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  // Run initial dependency updates;
-  await runDependencyUpdates();
-  // Set up continuous execution;
-
   process.exit(0)})
 process.on('
   'SIGTERM', () => {

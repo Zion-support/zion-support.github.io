@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -10,25 +8,6 @@ import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";  amount;
   serviceId;
   providerId;
-=======
-
-
-  serviceId;
-  providerId;
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
-  redirectUrl}: PaymentButtonProps) {;
-  const [isProcessing, setIsProcessing] = useState(false);
-  const { isAuthenticated, user } = useAuth();
-  const navigate = useNavigate();
-
-  amount: number
-  serviceId: string
-  providerId: string
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {

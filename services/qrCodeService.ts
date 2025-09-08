@@ -41,16 +41,7 @@ export interface QRCodeOptions {;
       options: finalOptions,
       generatedAt: new Date($2);
       size: {
-    name: string;
-    company: string;
-    title: string;
-    email: string;
     phone: string;      text: wifiString;
-      size: 256;
-      errorCorrectionLevel: 'M'
-      format: 'svg'
-    })
-  }
 
   async generateEmailQR(data: {
     to: string,
@@ -60,12 +51,6 @@ export interface QRCodeOptions {;
     
     return this && this.generateQRCode({
 
-      text: smsString;
-      size: 256;
-      errorCorrectionLevel: 'M'
-      format: 'svg'
-    })
-  }
 
   async generateGeoLocationQR(data: {
     latitude: number,
@@ -130,37 +115,14 @@ export interface QRCodeOptions {;
     });
   }
   async generateGeoLocationQR (data: {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
     latitude: number;
     longitude: number;
     altitude?: number,
     name?: string;
 
   }): Promise < QRCodeResult> {
-<<<<<<< HEAD
-    const geo_string = this.generateGeoString (data);
-;
-    return this.generateQRCode ({
-      text: geo_string;
-      size: 256;
-      errorCorrectionLevel: 'M',
-      format: 'svg';
-    });
-  }
-  get_templates (): QRCodeTemplate[] {
-    return [;
         id: 'business - card';
         name: 'Business Card';      }
-      {
-        id: 'wifi - network';
-        name: 'WiFi Network';
-      }
-      {
-        id: 'website - link';
-        name: 'Website Link';
-    ];
-  }
-
   }
 
   private validateOptions(options: QRCodeOptions): void {
@@ -179,11 +141,6 @@ export interface QRCodeOptions {;
   }
     }
   }
-
-    
-    const size = options && options.size!;
-    const margin = options && options.margin!;
-
       throw new Error('Margin must be between 0 and 10')
     }
   }
@@ -193,14 +150,6 @@ export interface QRCodeOptions {;
     const size = options && options.size!;
     const margin = options && options.margin!;
     const contentSize = size - (margin * 2);
-
-  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
-    // In a real implementation, this would use a QR code library
-    // For now, we'll generate a placeholder SVG
-    const size = options.size!;
-    const margin = options.margin!;
-    const contentSize = size - (margin * 2);
-
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
@@ -321,11 +270,6 @@ export interface QRCodeOptions {;
     return mailto
   }
   private generateSMSString(data: any): string {
-
-    }
-    return smsString
-  }
-  private generateGeoString(data: any): string {
   private generateSMSString(data: any): string {
 
     }
@@ -349,9 +293,4 @@ export interface QRCodeOptions {;
       canFit: textLength <= maxCapacity;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
-    }
-  }
-  getQRCodeHistory(): QRCodeResult[] {
-    // In a real app, this would retrieve from storage
-    return []
   }

@@ -14,21 +14,6 @@ const REGION_OPTIONS = [;"
   { id: "South America", label: "South America" },;"
   { id: "Australia", label: "Australia" },;
   { id: "Africa", label: "Africa" }
-<<<<<<< HEAD
-
-];
-
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-  return (;
-];
-export function RegionFilter({
-  selectedRegions
-  toggleRegion
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: RegionFilterProps) {
-
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}

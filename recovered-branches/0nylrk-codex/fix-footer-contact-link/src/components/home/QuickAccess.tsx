@@ -1,5 +1,3 @@
-
-
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
       link: "/match"
@@ -117,7 +115,6 @@ export function QuickAccess() {;
     }
   ];
   return (;
-<<<<<<< HEAD
 
 
 
@@ -178,7 +175,6 @@ export function QuickAccess() {;
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
             Quick Access;
           </h2>;"

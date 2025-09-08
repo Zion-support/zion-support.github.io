@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -94,8 +93,6 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {

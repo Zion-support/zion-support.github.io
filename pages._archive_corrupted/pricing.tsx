@@ -1,5 +1,3 @@
-
-
       ],
       \"popular\": false
     },
@@ -55,63 +53,6 @@
         \'Third-party integrations\'
       ],
       \"popular\": false
-<<<<<<< HEAD
-=======
-    }
-  ];
-  return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />
-      </Head>
-      <div className=\"min-h-screen bg-gray-50 py-12\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">              Simple, Transparent Pricing
-            </h1>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Choose the plan that fits your business needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
-                  plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \''
-                }`}
-              >
-                {plan.popular && (
-                  <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">
-                    <span className=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">                <div className=\"text-center mb-8\">
-                  <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
-                  <p className=\"text-gray-600 mb-4\">{plan.description}</p>
-                  <div className=\"mb-4\">
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan.price}</span>
-                    <span className=\"text-gray-600 ml-2\">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className=\"space-y-4 mb-8\">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-2">{plan.period}</span>
-                  </div>
-                </div>
                 <ul className="space-y-4 mb-8">                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
@@ -133,42 +74,6 @@
               </div>
             ))}
           </div>
-                <div className=\"text-center mb-8\">;
-                  <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan && plan.name}</h3>;
-                  <p className=\"text-gray-600 mb-4\">{plan && plan.description}</p>;
-                  <div className=\"mb-4\">;
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan && plan.price}</span>;
-                    <span className=\"text-gray-600 ml-2\">{plan && plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className=\"space-y-4 mb-8\">;
-                <div className="text-center mb-8">;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan && plan.name}</h3>;
-                  <p className="text-gray-600 mb-4">{plan && plan.description}</p>;
-                  <div className="mb-4">;
-                    <span className="text-4xl font-bold text-gray-900">{plan && plan.price}</span>;
-                    <span className="text-gray-600 ml-2">{plan && plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className=\"flex items-center\">;
-                      <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />;
-                      <span className=\"text-gray-600\">{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>;
-                <Link
-                  href=\"/contact\"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan && plan.popular
-                      ? \'bg-blue-600 text-white \"hover\": bg-blue-700\'
-                      : \'bg-gray-900 text-white hover:bg-gray-800\'
-                  }`}>;
-                  Get Started;
-                  <ArrowRight className=\"w-4 h-4 ml-2 inline\" />;
-                </Link>;
-              </div>;
             ))}              Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
@@ -241,4 +146,3 @@ import React from 'react';  import Head from 'next/head'; import Link from 'next
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,5 +1,4 @@
 
-
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
 
@@ -37,40 +36,6 @@ export function ApiKeysManager() {  const {
     createApiKey, 
     regenerateApiKey, 
     revokeApiKey,
-    clearNewApiKey
-
-  const { 
-
-    keys,
-
-
-    loading, 
-
-    newApiKey,
-    fetchApiKeys,
-    createApiKey,
-    regenerateApiKey,
-    revokeApiKey,
-    clearNewApiKey;
-  } = useApiKeys(),
-
-  const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-
-  
-
-  // Create key form state
-
-  const [keyName, setKeyName] = useState(""),
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-
-
-  // Load keys on mount
-  useState(() => {
-    fetchApiKeys()
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   }),
   
   const handleCreateKey = async () => {"
@@ -95,88 +60,7 @@ export function ApiKeysManager() {  const {
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }]
   // Toggle a scope selection;
   const toggleScope = (scope: ApiKeyScope) => {}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    setSelectedScopes(prev =>
-      prev.includes(scope)
-        ? prev.filter(s => s !== scope)
-        : [...prev, scope]
-    )  const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
-  -H "Authorization: Bearer ${key}" \\
-  -H "Content-Type: application/json"`
-
-  // Reset form when dialog closes
-  const handleDialogClose = () => {
-    setKeyName("");
-    setSelectedScopes([]);
-    setShowCreateDialog(false)
-
-  },
-
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
-import { format } from "date-fns",;
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import CodeBlock from "./CodeBlock",;
-export function ApiKeysManager() {;
-  const {;
-    keys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    clearNewApiKey;
-  } = useApiKeys(),;
-  const [showCreateDialog, setShowCreateDialog] = useState(false),;
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
-  // Create key form state;
-  const [keyName, setKeyName] = useState(""),;
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
-  // Load keys on mount;
-  useState(() => {;
-    fetchApiKeys();
-  }),;
-
-  const handleCreateKey = async () => {;
-    if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
-    setShowCreateDialog(false);
-    setKeyName("");
-    setSelectedScopes([])
-};  const handleRevokeKey = async (keyId: string) => {;
-    await revokeApiKey(keyId),;
-    setShowDeleteConfirm(null)
-};
-    <Card className="bg-zinc-900 border-zinc-800 text-white">;
-      <CardHeader>;"
-        <CardTitle className="text-xl flex items-center">;"
-          <Key className="mr-2" size={20} /> API Keys;
-        </CardTitle>;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <CardDescription className="text-zinc-400">;
-          Create and manage API keys for accessing the Zion APIs.;
-        </CardDescription>;
-      </CardHeader>;
-
-      <CardContent>;
-        <div className="flex justify-between items-center mb-6">;
-          <p className="text-sm text-zinc-400">;
-            You have {keys && keys.length} API {keys && keys.length === 1 ? 'key' : 'keys'}
-          </p>;
                         <Checkbox 
 
                           id={scope.value} 
@@ -233,10 +117,6 @@ export function ApiKeysManager() {;
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
                         )}
 
-                      </div>;
-                    </div>;
-                  </div>;
-                  <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;                      </div>;
                     </div>;
                   </div>;
@@ -257,55 +137,6 @@ export function ApiKeysManager() {;
               </Button>;
             </div>;
             <p className="text - sm text - zinc - 300 mb-2">;
-              This key will only be displayed once. Please save it securely.;
-            </p>;
-            <CodeBlock code={newApiKey} className="mb-3" />;
-            <div className="text - sm text - zinc-400">;
-              <span className="font-medium">Example usage:</span>;
-            </div>;
-            <CodeBlock code={getExampleCode (newApiKey)} language="bash" />;
-          </div>)}
-        {/* API Keys List */}
-        <div className="space-y-4">;
-          {loading ? (
-            <div className="text - center py - 8 text - zinc-500">Loading API keys...</div>) : keys.length === 0 ? (
-            <div className="text - center py - 8 text - zinc-500">;
-              <Key className="mx - auto mb - 2 opacity-30" size={24} />;
-              <p > No API keys found.</p>;
-              <p className="text - sm mt-1">Create one to access the Zion APIs.</p>;
-            </div>) : (
-            keys.map ((key) => (
-              <div key={key.id} className="p - 4 border border - zinc - 800 rounded-lg">;
-                <div className="flex items - center justify-between">;
-                  <div className="flex items-center">;
-                    <div>;
-                      <h3 className="font-medium">{key.name}</h3>;
-                      <div className="flex items - center space - x-2 mt-1">;
-                        <span className="text - sm text - zinc - 400 font-mono">{key.key_prefix}••••••••••••</span>;
-                        {key.is_active ? (                      <DropdownMenuItem
-                        onClick={() => setShowRegenerateConfirm(key && key.id)}
-                        className="cursor-pointer";
-                        disabled={!key && key.is_active}
-                      >;
-                        disabled={!key.is_active}
-                      >
-                        <RefreshCw size={14} className="mr-2" /> Regenerate
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        onClick={() => setShowDeleteConfirm(key.id)}
-                        className="cursor-pointer text-red-500"
-                        disabled={!key.is_active}
-                      >
-                        <X size={14} className="mr-2" /> Revoke
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope) => (
-                    <Badge
-                        <RefreshCw size={14} className="mr-2" /> Regenerate;
-                      </DropdownMenuItem>;
                       <DropdownMenuItem
                       </DropdownMenuItem>;
                     </DropdownMenuContent>;
@@ -316,25 +147,4 @@ export function ApiKeysManager() {;
                       {scope}
                     </Badge>;
                   ))}            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
-              Cancel;
-            </AlertDialogCancel>;
-            <AlertDialogAction              onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
-              className="bg-blue-600 hover:bg-blue-700";
-            >;
-              Regenerate;
-            </AlertDialogAction>;
-          </AlertDialogFooter>;
-        </AlertDialogContent>;
-      </AlertDialog>;
-
-      {/* Delete Key Confirmation Dialog */}
-      <AlertDialog
-        open={showDeleteConfirm !== null}         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
-      >;
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
-          <AlertDialogHeader>;
-            <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;

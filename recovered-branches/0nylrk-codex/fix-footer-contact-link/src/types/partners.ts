@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-export interface PartnerProfile {
-
 export interface PartnerProfile {;
 export interface PartnerProfile {export interface PartnerProfile {
 

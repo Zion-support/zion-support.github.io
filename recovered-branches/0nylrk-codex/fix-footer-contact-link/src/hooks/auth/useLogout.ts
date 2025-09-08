@@ -52,12 +52,6 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
 
       cleanupAuthState(),
       
-
-      // Update state
-      setUser(null)
-    } catch (error) {
-      console.error("Error during logout:", error)
-
     }
   };
 
@@ -79,23 +73,4 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 
   return { logout }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  };
-
-
-  return { logout }
-
-}
-
-
-
-
-=======
-  return { logout }
-},
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

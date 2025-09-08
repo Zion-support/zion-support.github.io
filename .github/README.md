@@ -1,175 +1,128 @@
-# PM2 Automation System
+# GitHub Actions Workflows
 
-This directory contains the configuration for the PM2 process manager that handles all automation tasks for the Zion Tech Group website.
+This directory contains all the GitHub Actions workflows for the Zion Tech Group website.
 
-## Overview
+## Workflows Overview
 
-Instead of GitHub Actions, this project uses PM2 (Process Manager 2) to run continuous automation tasks. PM2 provides better performance, local execution, and real-time monitoring capabilities.
+### 1. CI (Continuous Integration)
+**File**: `.github/workflows/ci.yml`
+- **Trigger**: Push to main branch or pull requests
+- **Purpose**: Build, test, and validate code changes
+- **Jobs**:
+  - Build: Install dependencies, lint, type-check, and build the project
+  - Test: Run tests and upload build artifacts
 
-## Current Automation Processes
+### 2. Test
+**File**: `.github/workflows/test.yml`
+- **Trigger**: Push to main branch or pull requests
+- **Purpose**: Comprehensive testing and validation
+- **Jobs**:
+  - Main: Build, test, and verify the application
 
-### 🔄 Console Error Fixer
-- **Process Name**: `console-error-fixer`
-- **Script**: `./scripts/automation/console-error-fixer.cjs`
-- **Interval**: Every 15 minutes (900,000ms)
-- **Purpose**: Automatically detects and fixes console errors in the application
+### 3. Deploy
+**File**: `.github/workflows/deploy.yml`
+- **Trigger**: Push to main branch or manual dispatch
+- **Purpose**: Deploy the application to production
+- **Jobs**:
+  - Deploy: Build and deploy to Netlify/Vercel (if configured)
 
-### 🔗 Link Checker
-- **Process Name**: `link-checker`
-- **Script**: `./scripts/automation/link-checker.cjs`
-- **Interval**: Every 30 minutes (1,800,000ms)
-- **Purpose**: Checks for broken links and reports issues
+### 4. Security
+**File**: `.github/workflows/security.yml`
+- **Trigger**: Push to main branch, pull requests, or weekly schedule
+- **Purpose**: Security vulnerability scanning
+- **Jobs**:
+  - Security: Run npm audit and security checks
 
-### 🚀 Continuous Improvement
-- **Process Name**: `continuous-improvement`
-- **Script**: `./scripts/automation/continuous-improvement.cjs`
-- **Interval**: Every 2 hours (7,200,000ms)
-- **Purpose**: Suggests and implements improvements automatically
+### 5. CodeQL
+**File**: `.github/workflows/codeql.yml`
+- **Trigger**: Push to main/develop branches, pull requests, or weekly schedule
+- **Purpose**: Static code analysis for security vulnerabilities
+- **Jobs**:
+  - Analyze: CodeQL analysis for JavaScript/TypeScript
 
-### 🧪 Daily Build & Test
-- **Process Name**: `daily-build-test`
-- **Script**: `./scripts/automation/daily-build-test.cjs`
-- **Interval**: Every hour (3,600,000ms)
-- **Purpose**: Runs build verification and testing
+### 6. Continuous Improvement
+**File**: `.github/workflows/continuous-improvement.yml`
+- **Trigger**: Every 4 hours or manual dispatch
+- **Purpose**: Automated code quality improvements
+- **Jobs**:
+  - Improve: Run linting, type checking, and create improvement PRs
 
-### 🔒 Security Audit
-- **Process Name**: `security-audit`
-- **Script**: `./scripts/automation/security-audit.cjs`
-- **Interval**: Every 4 hours (14,400,000ms)
-- **Purpose**: Performs security vulnerability scanning
+### 7. Link Checker
+**File**: `.github/workflows/agent-factory.yml`
+- **Trigger**: Every 6 hours or manual dispatch
+- **Purpose**: Check for broken links on the website
+- **Jobs**:
+  - Check-links: Verify internal and external links
 
-### 📦 Dependency Updates
-- **Process Name**: `dependency-updates`
-- **Script**: `./scripts/automation/dependency-updates.cjs`
-- **Interval**: Every 6 hours (21,600,000ms)
-- **Purpose**: Checks for and updates outdated dependencies
+## Required Secrets
 
-### 📊 Performance Monitoring
-- **Process Name**: `performance-monitor`
-- **Script**: `./scripts/automation/performance-monitor.cjs`
-- **Interval**: Every 2 hours (7,200,000ms)
-- **Purpose**: Monitors application performance metrics
+### For Deployment
+- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
+- `NETLIFY_SITE_ID`: Netlify site ID
+- `VERCEL_TOKEN`: Vercel authentication token
+- `VERCEL_ORG_ID`: Vercel organization ID
+- `VERCEL_PROJECT_ID`: Vercel project ID
 
-### ✅ Quality Checks
-- **Process Name**: `quality-checks`
-- **Script**: `./scripts/automation/quality-checks.cjs`
-- **Interval**: Every 3 hours (10,800,000ms)
-- **Purpose**: Runs code quality and linting checks
+### For Testing (Optional)
+- `CODECOV_TOKEN`: Codecov token for test coverage
+- `CYPRESS_TEST_USER_EMAIL`: Test user email for Cypress
+- `CYPRESS_TEST_USER_PASSWORD`: Test user password for Cypress
 
-### 🔗 Link Integrity
-- **Process Name**: `link-integrity`
-- **Script**: `./scripts/automation/link-integrity.cjs`
-- **Interval**: Every 2 hours (7,200,000ms)
-- **Purpose**: Ensures link integrity and reports broken links
+## Local Development
 
-### 🎯 Front Maximizer
-- **Process Name**: `front-maximizer`
-- **Script**: `./scripts/automation/front-maximizer.cjs`
-- **Interval**: Every 4 hours (14,400,000ms)
-- **Purpose**: Optimizes frontend performance and user experience
+To test workflows locally, you can use [act](https://github.com/nektos/act):
 
-### 🗺️ Sitemap Runner
-- **Process Name**: `sitemap-runner`
-- **Script**: `./scripts/automation/sitemap-runner.cjs`
-- **Interval**: Every 6 hours (21,600,000ms)
-- **Purpose**: Generates and validates sitemaps
-
-## Configuration
-
-### Ecosystem File
-The PM2 configuration is defined in `ecosystem.config.cjs` at the project root.
-
-### Environment Variables
-All automation processes run with:
-- `NODE_ENV`: production
-- `AUTOMATION_INTERVAL`: Process-specific interval in milliseconds
-
-## Management Commands
-
-### Start All Processes
 ```bash
-pm2 start ecosystem.config.cjs
+# Install act
+brew install act
+
+# Run a specific workflow
+act -W .github/workflows/ci.yml
+
+# Run with specific event
+act push -W .github/workflows/ci.yml
 ```
 
-### Monitor Processes
-```bash
-pm2 list
-pm2 monit
-```
+## Workflow Dependencies
 
-### View Logs
-```bash
-pm2 logs [process-name]
-pm2 logs --lines 100
-```
-
-### Restart Processes
-```bash
-pm2 restart [process-name]
-pm2 restart all
-```
-
-### Stop Processes
-```bash
-pm2 stop [process-name]
-pm2 stop all
-```
-
-### Delete Processes
-```bash
-pm2 delete [process-name]
-pm2 delete all
-```
-
-## Benefits of PM2 over GitHub Actions
-
-1. **Real-time Execution**: Processes run continuously instead of on-demand
-2. **Local Control**: No dependency on external services or API limits
-3. **Better Performance**: Faster execution without CI/CD overhead
-4. **Cost Effective**: No additional service costs
-5. **Immediate Feedback**: Real-time monitoring and logging
-6. **Customizable Intervals**: Precise control over execution timing
-
-### 📦 Dependency Updates
-- **Script**: `./scripts/automation/dependency-updates.cjs`
-- **Frequency**: Every 6 hours
-- **Purpose**: Checks for outdated packages and security updates
-
-### Process Status
-- All processes are configured with `autorestart: true`
-- Memory limits are set to prevent resource exhaustion
-- Processes automatically restart on failure
-
-### Health Checks
-- Monitor process status with `pm2 list`
-- Check logs for any errors or issues
-- Use `pm2 monit` for real-time monitoring
+The workflows are designed to work together:
+1. **CI** runs on every push/PR
+2. **Test** provides comprehensive testing
+3. **Security** runs security checks
+4. **Deploy** deploys successful builds
+5. **Continuous Improvement** maintains code quality
+6. **Link Checker** ensures website integrity
 
 ## Troubleshooting
 
 ### Common Issues
-1. **Process Stopped**: Check logs for error details
-2. **High Memory Usage**: Verify memory limits in ecosystem config
-3. **Script Errors**: Check automation script syntax and dependencies
 
-### Debug Mode
-To debug a specific process:
-```bash
-pm2 logs [process-name] --lines 200
-pm2 restart [process-name]
-```
+1. **Build Failures**: Check Node.js version compatibility and dependency issues
+2. **Test Failures**: Ensure all tests pass locally before pushing
+3. **Deployment Issues**: Verify deployment secrets are configured correctly
+4. **Security Alerts**: Review npm audit output and update vulnerable dependencies
 
-## Security
+### Debugging
 
-- All processes run in production mode
-- No sensitive data is logged
-- Processes are isolated and have memory limits
-- Regular security audits are performed automatically
+- Check workflow logs in the Actions tab
+- Use `act` for local testing
+- Review artifact uploads for debugging information
+- Check issue creation for automated reports
 
-## Support
+## Contributing
 
-For PM2 automation issues:
-1. Check process status with `pm2 list`
-2. Review logs for error details
-3. Verify automation scripts exist and are executable
-4. Check ecosystem configuration syntax
+When adding new workflows:
+1. Follow the existing naming conventions
+2. Include proper error handling
+3. Add appropriate permissions
+4. Document the workflow purpose
+5. Test locally with `act`
+
+## Best Practices
+
+- Use Node.js 20 for consistency
+- Cache npm dependencies for faster builds
+- Upload artifacts for debugging
+- Use appropriate permissions (principle of least privilege)
+- Include proper error handling and continue-on-error where appropriate
+- Use concurrency groups to prevent workflow conflicts

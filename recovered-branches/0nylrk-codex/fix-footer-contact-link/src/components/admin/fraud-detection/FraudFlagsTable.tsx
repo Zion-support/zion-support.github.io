@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -35,38 +33,6 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
   if (flags.length === 0) {}
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }    <Table>;
-      <TableHeader>;
-        <TableRow>;
-          <TableHead>Severity</TableHead>;
-          <TableHead>User</TableHead>;
-          <TableHead>Content</TableHead>;
-          <TableHead>Type</TableHead>;
-          <TableHead>Reason</TableHead>;
-          <TableHead>GPT Analysis</TableHead>;
-          <TableHead>Timestamp</TableHead>;
-          <TableHead>Status</TableHead>;
-          <TableHead>Actions</TableHead>;
-        </TableRow>;
-      </TableHeader>;
-      <TableBody>;
-        {flags && flags.map((flag) => (;
-          <TableRow key={flag && flag.id}>;
-            <TableCell>;
-              <SeverityDisplay severity={flag && flag.severity} />;
-            </TableCell>;
-            <TableCell className="font-medium">;
-              {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
-            </TableCell>;
-            <TableCell className="max-w-xs truncate">;
-              {flag && flag.content_excerpt}
-            </TableCell>;
-            <TableCell>;
-              <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;
-  }
-  return (
-              )}
-            </TableCell>;
-            <TableCell>;
                 {flag && flag.status}
               </Badge>;
             </TableCell>;

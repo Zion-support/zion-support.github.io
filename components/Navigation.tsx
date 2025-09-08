@@ -1,5 +1,3 @@
-
-
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)}, {
       name: 'Solutions'',,';
@@ -179,7 +177,3 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
-
-
-
-

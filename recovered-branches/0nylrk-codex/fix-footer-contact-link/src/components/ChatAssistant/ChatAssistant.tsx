@@ -1,4 +1,3 @@
-
 import { ChatMessage  } from './ChatMessage';
 
 import { ChatInput  } from './ChatInput';
@@ -16,16 +15,6 @@ export interface Message {export interface Message {
 
     id: string,
     name: string,;
-    role?: string
-
-  }
-
-  conversationId?: string;
-  initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-
-  contextHeader?: ReactNode
-}
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
   isOpen;
   onClose;
@@ -185,9 +174,4 @@ if (return null) {}
         </div>;
       </div>;
     </div>);
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-    </div>
   )

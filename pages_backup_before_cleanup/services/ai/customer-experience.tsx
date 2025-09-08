@@ -7,18 +7,3 @@ interface CustomerexperienceProps {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default function Customerexperience({ }: CustomerexperienceProps) {
-  return (
-    <div>
-      <h1>Customerexperience</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-
-  );

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -48,36 +47,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  noindex = false,
-  nofollow = false }) => {
-  const robots = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow' ].join(', ');
-
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type === 'article' ? 'Article' : 'WebPage',
-    name: title,
-    description,
-    url,
-    image,
-    author: type === 'article' ? { '@type': 'Person', name: author } : undefined,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png' } },
-    datePublished: publishedTime,
-    dateModified: modifiedTime,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': url },
-    ...(tags.length > 0 && { keywords: tags.join(', ') }) };
-
-  return (
-    <Head>;
-      {/* Basic Meta Tags */}
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -100,28 +69,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
 
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData) }}
-      />
-
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-    </Head>
-  )};
-
-
-export default SEOHead;
-export default SEOHead;
-export default SEOHead;
-};
-
-export default SEOHead;
 }
 };
 

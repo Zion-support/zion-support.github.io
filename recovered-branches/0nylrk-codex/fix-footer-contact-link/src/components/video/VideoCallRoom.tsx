@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -15,7 +13,6 @@ import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume
   isMuted?: boolean,
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
-<<<<<<< HEAD
 
   isHost?: boolean
   };
@@ -153,10 +150,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
 
             Room: {roomId}    }
-
-  }
-  return (
-            Room: {roomId}
           </Badge>;
         </div>;
         <div className="flex items-center space-x-2">;
@@ -295,10 +288,6 @@ if ( {) {
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow-hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (          </Button>;
 
-<<<<<<< HEAD
-          <Button
-          
-
           <Button 
 
             variant="outline" 
@@ -320,13 +309,6 @@ if ( {) {
   )
 
 
-<<<<<<< HEAD
-          </Button>;
-          <Button
-            variant="destructive" 
-            size="icon"
-            className="video-button video-button-danger rounded-full h-10 w-10"
-            onClick={handleLeaveCall}>;
             <Phone className="rotate-135" />;
           </Button>;
         </div>;
@@ -411,7 +393,6 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>);
-<<<<<<< HEAD
 
 }
 ;

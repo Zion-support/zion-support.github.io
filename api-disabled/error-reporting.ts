@@ -1,28 +1,4 @@
 export {};
-
-interface ErrorReport {
-  error: {
-    message: string;
-    stack?: string;
-    name: string};
-  errorInfo: {
-    componentStack?: string};
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId?: string;
-  sessionId?: string}
-
-module.exports = {};
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
-
-
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
       return res.status(400).json({ error: 'Missing required fields' })}

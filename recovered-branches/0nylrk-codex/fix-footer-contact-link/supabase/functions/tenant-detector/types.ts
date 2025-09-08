@@ -9,14 +9,6 @@ export interface TenantInfo {
   landing_page_copy: {}
     headline: string;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export interface TenantResponse {
-  tenant: TenantInfo | null,
-  error?: string;
-export interface TenantResponse {;
-  tenant: TenantInfo | null;
-    subtitle: string,    cta: string
-};
   is_active: boolean;
 }
 export interface TenantResponse {

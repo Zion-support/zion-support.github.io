@@ -40,13 +40,3 @@ import React from './react';'
 import { cn  } from '@/lib / utils';
 interface SidebarGroupContentProps;
 
-
-<<<<<<< HEAD
-
-
-=======
-      {children}
-    </div>);
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

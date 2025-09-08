@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -19,15 +17,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       icon: Star"
       text: "Featured""
       colors: "bg-yellow-500/20 text-yellow-400"}
-<<<<<<< HEAD
-
-
-    new: {
-      icon: Clock
-      text: "New"
-      colors: "bg-green-500/20 text-green-400"}
-    "top-rated": {
-
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},

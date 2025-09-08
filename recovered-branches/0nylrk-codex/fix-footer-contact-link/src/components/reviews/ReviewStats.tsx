@@ -1,5 +1,3 @@
-
-
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
@@ -9,7 +7,6 @@ interface ReviewStatsProps {
   totalReviews: number,
   ratingDistribution?: Record<number number>
 
-<<<<<<< HEAD
   // Format the average rating to one decimal place
 
 }

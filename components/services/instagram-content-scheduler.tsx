@@ -1,5 +1,3 @@
-
-
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;

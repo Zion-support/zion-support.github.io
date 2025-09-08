@@ -1,5 +1,3 @@
-import {
-
   LightBulbIcon
   CpuChipIcon
   GlobeAltIcon
@@ -93,10 +91,6 @@ import {
                   <p className="mt-6">;
                     <a href="/solutions" className="text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration-200">;
                       Learn more <span aria - hidden="true">→</span>;
-                    </a>;
-                  </p>;
-                </dd>;
-              </div>))}
           </dl>;
         </div>;
       </div>;
@@ -233,7 +227,6 @@ import {
                 </div>
               </article>
             ))}
->>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="mx - auto mt - 32 max - w-7xl px - 6 "sm":mt - 40 "lg":px-8">;"
         <div className="mx - auto max - w-2xl "lg":max-w-none">;"
           <div className="text-center">;"
@@ -287,8 +280,9 @@ import {
               href="/contact";"
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm "hover":bg-gray-100 focus-"visible":outline focus-"visible":outline-2 focus-"visible":outline-offset-2 focus-"visible":outline-white transition-all duration-200 "hover":scale-105">"
 
-=======
 
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

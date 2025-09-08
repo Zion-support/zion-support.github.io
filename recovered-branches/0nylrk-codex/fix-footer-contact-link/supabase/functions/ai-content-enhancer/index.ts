@@ -10,10 +10,6 @@ const corsHeaders = {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-
   try {
     const { content, enhancementType, context, instructions } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
@@ -106,4 +102,3 @@ if ( {) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-

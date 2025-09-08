@@ -16,45 +16,4 @@ export const MobileAppHero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-zion-cyan">Zion</span> in Your Pocket
             </h1>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            <p className="text-lg md:text-xl opacity-90 mb-8">
-              Find top AI talent or global IT jobs on the go. The power of;
-              Zion's AI matching, now available on your mobile device.
-            </p>
-
-            <div className="mb-8">
-              <AppStoreButtons;
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-            </div>
-
-            <Link to="/open-app">
-              <Button"
-                variant="outline""
-                size="lg""
-                className="flex gap-2 border-white text-white hover:bg-white/10"
-              >
-                Open App;
-                <ArrowRight size={20} />
-              </Button>
-            </Link>
-          </div>
-
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-64 h-auto">
-              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
-              <Phone className="w-full h-auto text-white" />
-            <div className="relative w-64 h-auto">;
-              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
-              <Phone className="w-full h-auto text-white" />;
-              {/* This would be replaced with an actual phone mockup image in production */}
-            </div>;
-          </div>;
-        </div>;
-      </div>;  )
-};

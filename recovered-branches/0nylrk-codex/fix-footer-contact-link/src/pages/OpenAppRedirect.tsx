@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -19,9 +17,6 @@ const OpenAppRedirect: React.FC = () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       const isAndroid = /Android/.test(navigator.userAgent);
       // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
-          if (isAndroid) {;
-            window && window.location.href = androidAppUrl;
-          } else if (isiOS) {;
             window && window.location.href = iosAppUrl;
           }    
     attemptAppOpen()
@@ -61,12 +56,6 @@ const OpenAppRedirect: React.FC = () => {
         )}
       </div>;
     </div>;
-  )
-};      </div>;
-    </div>;
-  );
-},;
-
       }
 export default OpenAppRedirect;export default OpenAppRedirect;
       }

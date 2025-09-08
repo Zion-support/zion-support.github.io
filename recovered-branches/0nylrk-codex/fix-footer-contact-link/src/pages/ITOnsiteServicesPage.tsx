@@ -1,19 +1,3 @@
-import {useState, useEffect} from "react";
-import {useSearchParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {ITServicePricingTable} from "@/components/services/ITServicePricingTable";
-import {GlobalServiceSection} from "@/components/GlobalServiceSection";
-import {QuoteFormSection} from "@/components/QuoteFormSection";
-import {TrustedBySection} from "@/components/TrustedBySection";
-import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
-import {toast} from "@/hooks/use-toast";
-import {PageHero} from "@/components/services/PageSections/PageHero";
-import {CountryTabs} from "@/components/services/PageSections/CountryTabs";
-import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceDetailsSection";
-import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
-import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
-import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -362,27 +346,3 @@ if (return 1) {}
       <QuoteFormSection />;
     </AppLayout>);
 }
-  ),; //Show success toast if redirected from successful payment useEffect ( () => {
-  if (success === "true") {
-  toast ({
-  
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
-
-}
-
-
-<<<<<<< HEAD
-
-
-
-=======
-}<ServiceIncludes /> <div className="text-center mb-8"> <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2> <p className="text-zion-slate-light mb-6"> Our per-incident prices include transportation costs and the first hour of onsite service. Additional hours are billed separately at standard rates. </p> </div> <ITServicePricingTable /> </div> <EnterpriseCallToAction /> </div> </section> <GlobalServiceSection /> <TrustedBySection /> <QuoteFormSection /> </AppLayout>) 
-}
-}
-}
-;
-
-;

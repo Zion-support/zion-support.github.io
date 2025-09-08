@@ -37,13 +37,6 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-=======
-
-
-
-import fs from 'fs';'
-import path from 'path';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 </div> </div>) ) 
 

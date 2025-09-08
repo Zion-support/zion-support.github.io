@@ -1,60 +1,3 @@
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface SmartContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-  onContractGenerated?: (contractContent: string) => void
-
-  onDeploy?: (contractContent: string) => void
-}
-
-import {useState} from "react";
-import {Dialog, DialogContent} from "@/components/ui/dialog";
-import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
-import {Button} from "@/components/ui/button";
-import {Save} from "lucide-react";
-import {TalentProfile} from "@/types/talent";
-import {ContractForm, ContractFormValues} from "./components/ContractForm";
-import {ContractPreview} from "./components/ContractPreview";
-import {TemplateManager} from "./templates/TemplateManager";
-import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
-import {useSmartContracts} from "@/hooks/useSmartContracts";
-import {toast} from "sonner";
-interface SmartContractBuilderProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  talent: TalentProfile,;
-  clientName: string,;
-  onContractGenerated?: (contractContent: string) => void,;}
-  onDeploy?: (contractContent: string) => void;}
-}
-export function SmartContractBuilder(): any ({;
-
-export function SmartContractBuilder({;export function SmartContractBuilder({;
-
-export function SmartContractBuilder(): any ({;
-
-export function SmartContractBuilder({;export function SmartContractBuilder({;
-  isOpen;
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated;  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-
-  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({}
-    network: 'ethereum'
-
-    useEscrow: true
-
-    deployToChain: false
-
   }),
 
   const [deployStatus, setDeployStatus] = useState<string>(''),
@@ -75,62 +18,6 @@ export function SmartContractBuilder({;export function SmartContractBuilder({;
       if (onContractGenerated) {;
         onContractGenerated(generatedContractText);
 
-<<<<<<< HEAD
-import { useState } from './react';
-import { Dialog, DialogContent } from '@/components / ui / dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
-import { Button } from '@/components / ui / button';
-import { Save } from './lucide-react';
-import { TalentProfile } from '@/types / talent';
-import { ContractForm, ContractFormValues } from './components / ContractForm';
-import { ContractPreview } from './components / ContractPreview';
-import { TemplateManager } from './templates / TemplateManager';
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types / smart - contracts';
-import { useSmartContracts } from '@/hooks / useSmartContracts';
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { toast } from './sonner';
-interface SmartContractBuilderProps {}
-  is_open: boolean,
-  on_close: () => void,
-  talent: TalentProfile,
-  client_name: string,
-  onContractGenerated?: (contract_content: string) => void,
-  on_deploy?: (contract_content: string) => void;
-}
-export /**;
- * SmartContractBuilder - Function description;
- */
-function SmartContractBuilder() { return null; }
-  });'
-  const [deploy_status, setDeployStatus] = useState < string>('');
-  const [deployment_info, setDeploymentInfo] = useState < SmartContractInfo | null>(null);
-;
-  const { generateSolidityContract, deploySmartContract, deployment_status } = useSmartContracts ();
-;
-  const handleLoadTemplate = (template_data: ContractFormValues) =>: any {}
-    setFormValues (template_data);
-  }
-;
-  // Convert ContractFormValues to contract content string;
-  const handleContractGenerated = async (form_values: ContractFormValues) => {}
-    // Check condition;
-if (return, ) {}
-  $2;
-}
-    try {}
-      const generatedContractText = await generateSolidityContract (form_values, talent, client_name);
-      setGeneratedContract (generatedContractText);"
-      setActiveTab ("preview");
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        onContractGenerated (generatedContractText);
-      }      }
-    } catch (error) {
-<<<<<<< HEAD
 
       console.error("Error generating contract:", error),
       toast.error("Failed to generate smart contract")
@@ -245,7 +132,6 @@ export function SmartContractBuilder({;
         toast.success("Smart contract deployed successfully!")
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
   const handleDeployContract = async () => {
@@ -265,19 +151,6 @@ if ( {) {}
         setDeploymentInfo (contract_info);'
         setDeployStatus ('deployed');"
         toast.success ("Smart contract deployed successfully!");
-<<<<<<< HEAD
-
-      } else {
-        setDeployStatus ('error');
-
-        toast.error ("Failed to deploy smart contract");
-      }
-    } catch (error) {}
-  }
-
-
-  };
-
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) => {;
     // This should be a function that takes a string (contract content);
@@ -285,18 +158,6 @@ if ( {) {}
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-    setGeneratedContract(contract);
-    setActiveTab("preview")
-};
-
-  return (  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
-          <div className="flex justify-between items-center">;
-            <TabsList className="grid grid-cols-2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;                  generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -470,10 +331,4 @@ setActiveTab ("preview")
     </Dialog>
   )
 }
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

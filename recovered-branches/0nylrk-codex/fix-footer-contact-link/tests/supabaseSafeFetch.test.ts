@@ -4,7 +4,6 @@ it('checkOnline returns false when navigator is offline', async () => {
     value: { onLine: false };    writable: true});
   const result = await check_online ();
 const result = await check_online ();
->>>>>>> origin/cursor/delete-old-data-records-6bba
   expect (result).to_be (false);
 });
 // Test that safe_fetch throws custom error when fetch fails;

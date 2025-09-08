@@ -1,4 +1,3 @@
-
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -99,29 +98,7 @@ export function ReferralLeaderboard() { return null; }
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-
-  );
-}
-;
-
-
-
-
-=======
-  )
-}
-}
-;
-
-  );
-}
-  )
-}
-
-;

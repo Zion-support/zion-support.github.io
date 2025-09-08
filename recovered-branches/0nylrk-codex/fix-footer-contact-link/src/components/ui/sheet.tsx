@@ -1,5 +1,3 @@
-
-
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 import * as React from "react"
@@ -57,17 +55,6 @@ interface SheetContentProps;
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>
   SheetContentProps      </SheetPrimitive.Close>
-    </SheetPrimitive.Content>
-  </SheetPortal>
-))
-SheetContent.displayName = SheetPrimitive.Content.displayName;
-const SheetHeader = ({}
-  className;
-  ...props;
-
-}: React.HTMLAttributes<HTMLDivElement>) => (
-
-  <div
     className={cn(const SheetFooter = ({
   className
   ...props
@@ -82,33 +69,8 @@ const SheetTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title    ref={ref}
-    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
-    {...props}
-
-  React.ElementRef<typeof SheetPrimitive.Description>,;
-
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;    ref={ref}
-    className={cn("text-lg font-semibold text-foreground", className)}
-    {...props}
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-  />));
-SheetTitle.display_name = SheetPrimitive.Title.display_name;
-const SheetDescription = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Description;
-    ref={ref}
-    className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
-    {...props}
 
   />));
 SheetDescription.display_name = SheetPrimitive.Description.display_name;
 export {
 
-export {;
-
-  Sheet, SheetClose;
-}

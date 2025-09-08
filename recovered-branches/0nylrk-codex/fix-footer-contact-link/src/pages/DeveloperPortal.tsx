@@ -36,9 +36,6 @@ export function DeveloperPortal() {;
   const [activeTab, setActiveTab] = useState<string>("documentation");
 export function DeveloperPortal() {
   const { user } = useAuth();
-
-  const [activeTab, setActiveTab] = useState<string>("documentation");
-
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
               return (

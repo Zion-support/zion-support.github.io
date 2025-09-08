@@ -1,27 +1,46 @@
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string,
-  name: string,
-  iconName?: string, // Example field if categories have icons
-  itemCount?: number, // Example field for number of items in a category
-  // Add a 'link' property if your API provides it, or construct it.
-  link?: string  {
-    id: "services"
-    name: t('categories.services')
-    description: t('categories.services_desc')
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services"
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
+<<<<<<< HEAD
 
-export default function CategoriesSection() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="CategoriesSection - Zion Tech Group" description="Professional CategoriesSection services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">CategoriesSection</h1>
-        <p className="text-gray-300 text-lg">
-          Professional CategoriesSection services to help your business grow.
-        </p>
-      </div>
-    </div>
-  )}
+import { GradientHeading } from "./GradientHeading";
+import { Link } from "react-router-dom";
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const categories = [
+  {
+    title: "Services",
+    description: "On-demand IT support, consulting, development, and more",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/services",
+    color: "from-purple-500 to-indigo-600",
+  },
+  {
+    title: "Talents",
+    description: "Connect with AI experts, developers, and tech specialists",
+    icon: <Users className="w-10 h-10" />,
+    link: "/talent",
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    title: "Equipment",
+    description: "Rent or buy specialized hardware, servers, and devices",
+    icon: <HardDrive className="w-10 h-10" />,
+    link: "/equipment",
+    color: "from-amber-500 to-orange-600",
+  },
+  {
+    title: "Innovation",
+    description: "Discover cutting-edge solutions and tech breakthroughs",
+    icon: <Lightbulb className="w-10 h-10" />,
+    link: "/category/innovation",
+    color: "from-emerald-500 to-green-600",
+  },
+];
+
+const specialServices = [
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+  },
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD

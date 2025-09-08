@@ -1,37 +1,5 @@
-
-
 import React from "react";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Link} from "react-router-dom";
-import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
-    {
-      title: "AI Talent Matching",
-      description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
-      icon: <Search className="h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue-700" />,
-      link: "/marketplace",
-      badge: "Popular",
-      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
-    }
-    {
-      title: "Services Marketplace"
-      description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
-      title: "Community Hub"
-      description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
-      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
-      link: "/community"
-      details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."    }
-    {
-      title: "Developer Tools"
-      description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
-
-      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray-700" />,
-      link: "/developers",
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";    }
     {
       title: "Project Management"

@@ -1,4 +1,3 @@
-
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
 import {Alert, AlertDescription} from '@/components / ui / alert';
@@ -50,7 +49,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   }
 
-<<<<<<< HEAD
   const refreshSkills = async () => {
     try {
       const resumeData = await fetchResume(resumeId);      return success;
@@ -59,12 +57,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       return false;
     }
   };
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
-
-    if (confirm('Are you sure you want to delete this skill?')) {;
-      const success = await deleteSkill(id),;
-      if (success) {;
-        // Update local state;
         setLocalSkills(localSkills && localSkills.filter(skill => skill && skill.id !== id));
       }
     }
@@ -77,39 +69,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         setLocalSkills(resumeData.skills);
 
       }
-=======
-      }
-      const resumeData = await fetchResume(resumeId);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      if (resumeData && resumeData.skills) {;
-        setLocalSkills(resumeData.skills);
-      }
-    }
-
-  },
-
-  }
-
-  },
-  };
-  },
-
-  return (
-      <div>;
-        <h2 className='text-xl font-semibold mb-2'>Skills</h2>;
-        <p className='text-muted-foreground'>;
-          Add your technical and professional skills.;
-        </p>;
-      </div>;
-
-      {/* Display skills by category */}
-      <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />;
-      <div className="space-y-6">;
-        <div className="bg-muted/40 p-6 rounded-lg">;
-          <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>;
-          <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />;
-        </div>;
-
         <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
       </div>;
 

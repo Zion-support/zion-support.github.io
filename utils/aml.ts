@@ -78,11 +78,3 @@ class MockAmlProvider implements AmlProvider {    }
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
-=======}
-
-export function getAmlProvider(): AmlProvider {;
-  return new MockAmlProvider();
-=======}
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ();
-}

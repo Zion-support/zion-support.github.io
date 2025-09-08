@@ -7,4 +7,3 @@ id: string;
    monthly: string;
    yearly: string;
    enterprise: string;
-

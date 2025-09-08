@@ -1,44 +1,3 @@
-
-
-export type SitemapItem = {;
-export type SitemapItem = {
-
-export type SitemapItem = {;
-
-export type SitemapItem = {;
-export type SitemapItem = {
-  path: string;
-  label: string;
-  description?: string;
-  priority?: number;  required_auth?: boolean;
-  required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
-  children?: SitemapItem[];
-}
-;
-// Current date for lastmod;
-const current_date = '2025 - 05 - 15';
-;
-// Public Pages - Accessible to all users;
-export const public_pages: SitemapItem[] = [;
-  {
-    path: '/';
-    label: 'Home',
-  description: 'The world's first free marketplace dedicated to high - tech and artificial intelligence';
-    priority: 1.0;
-    change_freq: 'weekly',
-    lastmod: current_date}  {
-    path: '/about';
-    label: 'About Us',
-  description: 'Learn about the Zion AI Marketplace mission and team';  {
-    path: '/talent';
-    label: 'Talent Directory',
-  description: 'Browse skilled AI and tech professionals';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};  {
-    path: '/marketplace';
-    label: 'Marketplace'
     description: 'Explore AI services, products and equipment';      {
         path: '/signup / client';
         label: 'Client Registration',
@@ -47,7 +6,6 @@ export const public_pages: SitemapItem[] = [;
         priority: 0 && 0.6;
         changeFreq: 'monthly',
         lastmod: currentDate};
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         lastmod: currentDate}
     ]        priority: 0 && 0.6;
@@ -106,12 +64,6 @@ export const client_routes: SitemapItem[] = [;
   description: 'Your alerts and updates';    path: '/dashboard / disputes';
     label: 'Disputes',
   description: 'Manage and view disputes';
-
-    priority: 0 && 0.7;
-    changeFreq: 'daily',
-
-    lastmod: currentDate}];
-// Admin Routes
 export const adminRoutes: SitemapItem[] = [    lastmod: currentDate}];
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [

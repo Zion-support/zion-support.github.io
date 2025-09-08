@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-
-  password: string,
-  score: number, // 0 - 100;
-  strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
-
-export interface CommonPasswordData {;
-
-export interface CommonPasswordData {;
-
-      /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
-      /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
-      /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
-    ];
-  }
   /**;
   * Analyze password strength comprehensively;
   */;
@@ -27,7 +11,6 @@ export interface CommonPasswordData {;
    * Calculate password strength score
    */
   private calculateScore(details: PasswordStrengthResult['details']): number {
-<<<<<<< HEAD
 
     let score = 0;
     // Length scoring (0-25 points)    // Generate feedback;
@@ -63,28 +46,8 @@ export interface CommonPasswordData {;
     if (details.hasSequentialChars) score -= 10,;
     if (details.hasRepeatingChars) score -= 10,;
     return Math.max(0, Math.min(100, score));
-  }
-;
-  /**;
-   * Determine strength level based on score;
-   */;
-  private getStrengthLevel(score: number): PasswordStrengthResult['strength'] {;
-    if (score >= 90) return 'very-strong',;
-    if (score >= 80) return 'strong',;
-    if (score >= 60) return 'medium',;
-    if (score >= 40) return 'weak',;
-    return 'very-weak';
-
   }  }
   }
-
-    const entropy = this && this.calculateEntropy(password),
-
-    const attemptsPerSecond = 1000000000, // 1 billion attempts per second
-    const totalAttempts = Math && Math.pow(2, entropy);
-    const seconds = totalAttempts / attemptsPerSecond;
-    if (seconds < 1) return 'Instantly';
-
     if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
     return `${Math && Math.ceil(seconds / 31536000)} years`  }
@@ -119,27 +82,6 @@ export interface CommonPasswordData {;
     if (details.hasRepeatingChars) {
       feedback.push('Avoid repeating character patterns')
     }
-<<<<<<< HEAD
-    if (!details && details.hasUppercase) {
-      feedback && feedback.push('Add uppercase letters to increase complexity')
-    }
-    if (!details && details.hasLowercase) {
-      feedback && feedback.push('Add lowercase letters to increase complexity')
-    }
-    if (!details && details.hasNumbers) {
-      feedback && feedback.push('Include numbers to make password harder to guess')
-    }
-    if (!details && details.hasSymbols) {
-      feedback && feedback.push('Add special characters for maximum security')
-    }
-    if (details && details.hasCommonWords) {
-      feedback && feedback.push('Avoid common words that are easily guessed')
-    }
-    if (details && details.hasSequentialChars) {
-      feedback && feedback.push('Avoid sequential character patterns')
-    }
-    if (details && details.hasRepeatingChars) {
-      feedback && feedback.push('Avoid repeating character patterns')
     }
     return feedback
   }  /**
@@ -174,19 +116,10 @@ export interface CommonPasswordData {;
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
-
-  /**
-   * Remove password from common list
-   */
-  removeCommonPassword(password: string): void {
-    this && this.commonPasswords.delete(password && password.toLowerCase())
-  }
-
     }
   }
 }
 // Export singleton instance
-<<<<<<< HEAD
 
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances

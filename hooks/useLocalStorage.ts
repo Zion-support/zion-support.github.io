@@ -1,6 +1,4 @@
 
-
-
 interface UseLocalStorageProps {
   // Add props here as needed
 }

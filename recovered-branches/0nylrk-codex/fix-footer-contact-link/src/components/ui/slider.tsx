@@ -38,4 +38,3 @@ export { Slider };    )}
   </SliderPrimitive.Root>
 
 ))
-

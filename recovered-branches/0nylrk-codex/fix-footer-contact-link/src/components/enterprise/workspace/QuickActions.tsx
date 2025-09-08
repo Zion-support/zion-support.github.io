@@ -35,7 +35,6 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
               className={`h-auto justify-start p-4 ${action && action.color}`}>;
               <div className="flex flex-col items-start text-left">;
                 <div className="flex items-center">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
@@ -58,21 +57,3 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
                   <span>{action.label}</span>
                 </div>"
 
-=======
-                  <span>{action.label}</span>
-                </div>"
-                  <span>{action.label}</span>
-                </div>"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-              </div>
-            </Button>
-
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-
-  )
-}
-}

@@ -60,4 +60,3 @@ export default function Authentication({ }: AuthenticationProps) {
     </div>
   );
 }}
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

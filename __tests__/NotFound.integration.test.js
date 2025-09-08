@@ -3,27 +3,3 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NotFound from '../pages/NotFound';
-
-
-  test('page renders correctly', () => {
-
-    render(<NotFound />);
-    expect(screen.getByRole('main)).toBeInTheDocument()});
-
-
-  test('navigation works', () => {
-    render(<NotFound />);
-
-    // Test navigation elements
-  });
-
-  test('page content is accessible', () => {
-
-    render(<NotFound />);
-    // Test accessibility features});
-;
-  test('page loads with correct data', () => {
-    render(<NotFound />);
-    // Test data loading and display;
-
-

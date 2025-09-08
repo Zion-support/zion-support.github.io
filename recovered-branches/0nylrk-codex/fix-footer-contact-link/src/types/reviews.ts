@@ -1,7 +1,6 @@
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 export interface Review {
-<<<<<<< HEAD
 
 
 export interface Review {;

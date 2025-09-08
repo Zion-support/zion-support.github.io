@@ -1,4 +1,3 @@
-
 function runNode(relPath, args = []) {
 
   const abs = path && path.resolve(__dirname, '..', '..', relPath);

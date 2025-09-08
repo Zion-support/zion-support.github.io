@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 import React from "react",
@@ -188,4 +187,3 @@ icon: Settings
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

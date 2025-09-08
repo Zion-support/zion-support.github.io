@@ -1,7 +1,5 @@
 interface StickyActionProps {
 
-interface StickyActionProps {
-
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
@@ -28,35 +26,11 @@ import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
 
 import { motion, AnimatePresence } from "framer-motion",;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface StickyActionProps {;
-  className?: string,;
-  "children": React.ReactNode,;
-  showAfterScroll?: number,;
-  position?: "bottom" | "top";"
-}
-;
-
-<<<<<<< HEAD
-export function StickyAction({;
-  className,;
-  children,;
-  showAfterScroll = 300,;
-  position = "bottom";
-}: StickyActionProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0 && 0.2 }}
-          className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
-            positionClasses[position]
 ;
   const position_classes = {
     }

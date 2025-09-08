@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -50,13 +48,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-<<<<<<< HEAD
-
-
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -66,23 +57,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
 
       )}
-<<<<<<< HEAD
-
-
-
-    </div>;
-  );
-}
-            on_submit={handle_generate}
-            is_loading={is_loading}
-            initial_values={initial_values}
-          />;
-        </CardContent>;
-      </Card>;
-      {is_loading && <LoadingContentSkeleton />}
-      {generated_content && !is_loading && (
-        <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
-    </div>);
 }
 ;
 interface AIListingGeneratorProps {;
@@ -184,4 +158,3 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

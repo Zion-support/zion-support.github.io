@@ -8,15 +8,6 @@
   "collectCoverageFrom: [,
     'components/**/*.{ts,tsx}lib/**/*.{ts,tsx}pages/**/*.{ts,tsx}!**/*.d && d.ts!**/node_modules/**],
 
-=======
-module.exports = {,
-  "testEnvironment: 'jsdom,
-  "setupFilesAfterEnv": ['<rootDir>/tests/setup.t,s'],
-  testMatch": [,
-    <rootDir>/tests/unit/**/*.test.{ts,tsx}<rootDir>/tests/integration/**/*.test.{ts,tsx}'],
-  "collectCoverageFrom: [,
-    'components/**/*.{ts,tsx}lib/**/*.{ts,tsx}pages/**/*.{ts,tsx}!**/*.d.ts!**/node_modules/**],
->>>>>>> origin/cursor/delete-old-data-records-6bba
   "coverageThreshold": {,
     global: {,
       branche,s": 80,

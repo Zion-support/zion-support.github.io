@@ -17,4 +17,3 @@ import Analyticsdynamic from "../components/Analytics.dynamic";
     render(<Analyticsdynamic />);
     // Add styling tests if needed})});
 
-

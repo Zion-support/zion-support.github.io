@@ -78,4 +78,3 @@ interface JobMatchProps {
       </CardContent>;
     </Card>;
   );
-

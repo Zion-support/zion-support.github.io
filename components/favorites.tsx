@@ -1,11 +1,9 @@
 
-
 import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
 
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';,
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
@@ -342,7 +340,6 @@ export default function FavoritesPage() {;
     </div>
   )
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
           </ol>

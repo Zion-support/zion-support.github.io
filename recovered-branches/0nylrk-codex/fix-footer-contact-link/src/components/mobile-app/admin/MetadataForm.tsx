@@ -1,4 +1,3 @@
-
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
@@ -19,7 +18,6 @@ import {
   FormItem,
 
   FormLabel,
-<<<<<<< HEAD
   FormMessage,;
   const { control, register, watch, setValue } = form;
 
@@ -44,25 +42,7 @@ import {
                   <FormDescription>;
                     Max {platform === "ios" ? "170" : "80"} characters;
                   </FormDescription>;
-
             />;
-
-            <FormField
-              control={control}
-              name="longDescription"              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Long Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea
-                      placeholder="Detailed description of your app"
-                      className="min-h-32"                      maxLength={maxDescriptionLength}                </FormItem>)}
-            />;
-
-=======
-
-
-            />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
             <FormField;
               control={control}"
               name="long_description";
@@ -85,7 +65,6 @@ import {
             <FormField;
               control={control}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
@@ -116,7 +95,6 @@ import {
 
                       type="button"            <FormField
               control={control}
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
               name="version"
               render={({ field }) => (
@@ -127,11 +105,6 @@ import {
 ););
                     <Input 
                       placeholder="e.g., 1.0.0"
-                      {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
-              )}
             />;
           </div>;
         </Form>;
@@ -139,4 +112,3 @@ import {
     </Card>;
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

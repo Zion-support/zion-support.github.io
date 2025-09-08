@@ -1,13 +1,1 @@
-const ComprehensivePricing = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>ComprehensivePricing</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
-  );
-};
-
 export default ComprehensivePricing;

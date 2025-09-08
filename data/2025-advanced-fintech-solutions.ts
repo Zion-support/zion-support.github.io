@@ -108,12 +108,10 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     ],
     roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',
     competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
-    market_size: '$35B credit scoring market',
-    growth_rate: '25% annual growth',
-    variant: 'ai - finance - enterprise',
-    contact_info: {
-
-
+    marketSize: '$35B credit scoring market',
+    growthRate: '25% annual growth',
+    variant: 'ai-finance-enterprise',
+    contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -308,14 +306,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation',
     ],
     roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',
-    competitors: [;
-      'Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics',
-    ],
-    market_size: '$20B insurtech market',
-    growth_rate: '30% annual growth',
-    variant: 'ai - finance - enterprise',
-    contact_info: {
-
+    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
+    marketSize: '$20B insurtech market',
+    growthRate: '30% annual growth',
+    variant: 'ai-finance-enterprise',
+    contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

@@ -1,29 +1,2 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function enterpriseaioperationscenter() {
-  return (
-    <Layout>
-      <Head>
-        <title>Enterprise Ai Operations Center - Zion Tech Group</title>
-        <meta name="description" content="Enterprise Ai Operations Center solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Enterprise Ai Operations Center</h1>
-          <p className="text-lg text-gray-600">
-            Professional enterprise ai operations center solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-}
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

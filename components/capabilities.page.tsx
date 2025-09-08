@@ -1,5 +1,4 @@
 
-
 const CAPABILITIES = [;
   'Full‑stack Web',;
   'Mobile (iOS/Android)',;
@@ -29,10 +28,6 @@ export default function CapabilitiesPage() {;
           </div>;
         ))}
 
-      </div>;
-    </EnhancedLayout>;
-  );
-}
 
   );
 }
@@ -70,15 +65,6 @@ function CapabilitiesPage() {
     </EnhancedLayout>);
 }
 import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-    </EnhancedLayout>;
-);
-}
-
 
 
 

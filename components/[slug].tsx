@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +34,6 @@ for (const entry of entries) {
   const base = entry.name.replace (/\. (tsx|ts|jsx|js) $/i, '')
 if (base !== 'index'&& base !== '[slug]'&& !base.startsWith (' ') ) {
   staticSlugs.add (base.toLowerCase () ) 
-<<<<<<< HEAD
 
 import React, { useMemo } from 'react';
 
@@ -232,49 +229,6 @@ if (return undefined) {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-
-
-export default function DynamicServicePage() {;
-  const router = useRouter();
-  const { slug } = router && router.query as { slug?: string };
-
-  const service = useMemo(() => {;
-    if (!slug) return undefined;
-    const all: any[] = ([] as any[]).concat(;
-      enhancedRealMicroSaasServices as any,;
-      extraServices as any,;
-      additionalEnhancedServices as any,;
-      innovativeAIServices as any,;
-      quantumSpaceServices as any,;
-      enterpriseITServices as any,;
-      newRealServices as any,;
-      marketReadyServices as any,;
-      realMarketServices as any,;
-      new2025Services as any,;
-      newRealInnovations as any,;
-      emergingTechnologyServices as any,;
-      comprehensiveITSolutions as any,;
-      marketValidatedServices as any,;
-      curatedMarketServices as any,;
-      cuttingEdgeITServices as any,;
-      nextGenerationAIServices as any,;
-      nextGenAIServices as any,;
-      industryRealServices as any,;
-      professionalServices as any,;
-      realEnterpriseServices2025 as any,;
-      augmentedServicesBatch3 as any,;
-      real2025Q3Additions as any,;
-      realQ4Services2025 as any,;
-      real2026Q1Additions as any,;
-      ultimateFuturisticServices2025 as any;
-    );    const byLink = all && all.find(s => {;
-      try {;
-        const url = new URL(s && s.link);
-        return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
-      } catch {;
-        return false;        return false;
-
-
         return false
         return false
       }
@@ -283,11 +237,6 @@ export default function DynamicServicePage() {;
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
   }, [slug]);
-
-
-
-
-
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
@@ -298,21 +247,10 @@ export default function DynamicServicePage() {;
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
           </div>
       </UltraAdvancedFuturisticBackground>
     )
-
-  }
-
-const canonicalUrl = `https: //ziontechgroup.com/${slu,}
-}`;
-  return (
-    <UltraAdvancedFuturisticBackground    />
-      <Head><title>{service.name} - Zion Tech Group</title>
-
-
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
   return (
     <UltraAdvancedFuturisticBackground>
@@ -398,7 +336,6 @@ const canonicalUrl = `https: //ziontechgroup.com/${slu,}
           <div className='text-center mb-10'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <span className='text-5xl' aria-hidden>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 {service.icon}
               </span>;
@@ -417,190 +354,10 @@ const canonicalUrl = `https: //ziontechgroup.com/${slu,}
                     className='flex items-start space-x-3 text-slate-200'>;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
                     <span>{feat}</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   </li>;
                 ))}
               </ul>;
             </div>;
-<<<<<<< HEAD
-
-            <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'    />;
-              <div className='flex items-end justify-between mb-3'    />;
-                <div    />;
-                  <div className='text-3xl font-bold text-white'    />;
-=======
-            <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;'
-              <div className='flex items-end justify-between mb-3'>;'
-                <div>;
-                  <div className='text-3xl font-bold text-white'>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    {service && service.price}
-                    <span className='text-slate-400 text-base'>;'
-                      {service && service.period}
-                    </span>;
-                  </div>;
-                  <div className='text-slate-400'>;'
-                    {service && service.trialDays}-day free trial • 'Setup': {' '}'
-                    {service && service.setupTim
-}
-                  </div>;
-                </div>;
-<<<<<<< HEAD
-                <div className='flex items-center text-yellow-400'    />;
-                  <Star className='w-4 h-4 mr-1'    />;
-                  {service && service.rating?.toFixed;}
-
-                    ? service && service.rating.toFixed(1): service && service.rating}
-                </div>;
-              </div>;
-
-              <Button;
-
-href='/contact'
-                variant='quantum'
-                size='lg'
-                className='w-full'>;
-                Start Free Trial;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <span>{service && service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
-                  <span>{service && service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <MapPin className='w-4 h-4 text-green-400' />;
-                  <span className='text-xs'>{service && service.contactInfo.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
-            <div className='lg:col - span - 2 bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6'>;
-              <h2 className='text - 2xl font - semibold mb - 4'>What you get</h2>;
-              <p className='text - slate - 300 mb - 6'>{service.description}</p>;
-              <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-                {service.features.slice (0, 16).map ((feat, i) => (
-                  <li;
-                    key={i}
-                    className='flex items - start space - x-3 text - slate - 200';
-                  >;
-                    <Check className='w - 5 h - 5 text - cyan - 400 mt - 0.5' />;
-                    <span>{feat}</span>;
-                  </li>))}
-              </ul>;
-            </div>;
-            <div className='bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit'>;
-              <div className='flex items - end justify - between mb - 3'>;
-                <div>;
-                  <div className='text - 3xl font - bold text - white'>;
-                    {service.price}
-                    <span className='text - slate - 400 text - base'>;
-                      {service.period}
-                    </span>;
-                  </div>;
-                  <div className='text - slate - 400'>;
-                    {service.trial_days}-day free trial • Setup:{' '}
-                    {service.setup_time}
-                  </div>;
-                </div>;
-                <div className='flex items - center text - yellow - 400'>;
-                  <Star className='w - 4 h - 4 mr - 1' />;
-                  {service.rating?.to_fixed;
-                    ? service.rating.to_fixed (1);
-                    : service.rating}
-                </div>;
-              </div>;
-              <Button;
-                href='/contact';
-                variant='quantum';
-                size='lg';
-                className='w - full';
-              >;
-                Start Free Trial;
-                <ArrowRight className='w - 5 h - 5 ml - 2' />;
-              </Button>;
-              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
-                <div className='flex items - center space - x-2'>;
-                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                  <span>{service.contact_info.mobile}</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;
-                  <Mail className='w - 4 h - 4 text - purple - 400' />;
-                  <span>{service.contact_info.email}</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;
-                  <MapPin className='w - 4 h - 4 text - green - 400' />;
-                  <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w - full">Start Free Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
-              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;
-                <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
-                <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
-                <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-
-
-
-// Static export support: generate root-level pages for service slugs;
-
-function normalizeSlug(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
-              <span className="text-5xl" aria-hidden>{service.icon}</span>{service.name}
-            </h1>
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">What you get</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 16).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating?.toFixed ? service.rating.toFixed(1) : service.rating}</div>
-              </div>
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
   );
 }
 
@@ -746,21 +503,7 @@ function normalizeSlug(): any (value: string): string {;
   };
 }
 
-<<<<<<< HEAD
 
-
-=======
-  const services = collectAllServices();
-  const staticSlugs = new Set<string>();
-  try {;
-    const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
-          }
-    }
-  } catch {}
-
-  const staticSlugs = new Set<string>();
-  try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
 
     </UltraAdvancedFuturisticBackground>);
 // Static export support: generate root - level pages for service slugs;
@@ -804,85 +547,10 @@ if (return null) {
     return null;
   } catch {
     return null;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
 
 const services = collectAllServices();
-
-<<<<<<< HEAD
-
-const staticSlugs = new Set<string    />();
-
-  try {}
-const entries = fs.readdirSync(pagesDir, { withFileTypes: true,}
-});
-
-      }
-    }
-  } catch {}
-
-      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
-    for (const entry of entries) {
-      if (&& /\.tsx?$/.test (entry.name)) {) {
-  $2
-}
-        const base = entry.name.replace (/\.(tsx | ts | jsx | js)$/i, '');
-        if () {) {
-  $2
-}
-          static_slugs.add (base.toLowerCase ());
-        }
-
-
-
-
-
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
-    slug => !staticSlugs.has(slug)
-  );
-  return {
-
-
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
-    fallback: true,
-  }
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} }
-};
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
-
-
-      const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-    for (const entry of entries) {;
-      if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
-        const base = entry && entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
-        if (base !== 'index' && base !== '[slug]' && !base && base.startsWith('_')) {;
-          staticSlugs && staticSlugs.add(base && base.toLowerCase());
-        }
-    }
-  } catch {}
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
-    slug => !staticSlugs && staticSlugs.has(slug);
-  );
-  return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
-    fallback: true,
-}
-};
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} }
-};
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
-
 
 
 
@@ -924,43 +592,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 }// Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting  = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))return {paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),fallback: true;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-  // No dynamic fetching needed; the component resolves the service client-side.}
-  return { props: {} }}
-
-<<<<<<< HEAD
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
-    fallback: true;
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
-}
-;
-      }
-    }
-  } catch {}
-
-  for (const s of services) {
-    const fromLink = extractRootSlugFromLink((s as any).link)
-    const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''))
-    if (!slugCandidate) continue,
-    if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
-    candidateSlugs.add(slugCandidate)
-  }
-
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug))
 
   return {_paths: uniqueNonConflicting.map(_(slug) => ({ params: { slug} })),
     fallback: true

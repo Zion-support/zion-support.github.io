@@ -53,7 +53,6 @@ import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unre
       name: "Home",;"
       href: "/",;
 
-<<<<<<< HEAD
       icon: Home,;
       matches: (path: string) => path === "/"
 };    {;
@@ -98,18 +97,4 @@ import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unre
             className={cn(
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1",;
-              item.matches(location.pathname);
-                ? "text-zion-cyan";
-                :"text-white/70 hover:text-white";
-            )}
-          >;
-            <div className="relative">;
-              <item.icon className="h-5 w-5 mb-1" />;
-              {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;

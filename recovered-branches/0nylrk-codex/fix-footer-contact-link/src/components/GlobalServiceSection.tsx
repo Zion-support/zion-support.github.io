@@ -1,8 +1,6 @@
-
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
@@ -85,7 +83,6 @@ import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
 const services = [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   {;
     title: "Servers",,
   description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",;

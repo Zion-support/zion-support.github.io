@@ -6,18 +6,6 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType,
-    })
-};
-
-  const filteredListings = SAMPLE_LISTINGS.filter((item) => {
-    // Filter by category only when a service type has been selected
-    if (formData.serviceType !== "") {
-      const categoryMatch =
-        item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
-
-    }
-
     if (searchQuery.trim() === "") return true;
     return (
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -25,19 +13,6 @@ import { Card } from "@/components/ui/card",  const handleItemSelect = (item: Li
     );
   });
 
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="text-xl font-semibold text-white mb-4">
-          What are you looking for?
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "service"
-                ? "bg-zion-purple/20 border-zion-purple"
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"

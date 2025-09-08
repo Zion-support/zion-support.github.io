@@ -12,11 +12,6 @@ export: const additionalRealMicroSaas2026 = [
   'Entity: and FAQ extraction with schema hints'',;
   'Internal: link and anchor text suggestions'',;
   'Competitor: SERP snapshot and diff''],
-
-		link:,
-		launchDate:,
-  2025-11-01''},
-
 		name:,
   Low-Competition: Keyword Finder'',;
 		description: Discover: long-tai,l, intent-aligned keywords with low difficulty for quick wins.,

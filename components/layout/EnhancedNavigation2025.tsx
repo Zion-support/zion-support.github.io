@@ -1,9 +1,135 @@
-import React, { useState, useEffect } from 'react.ts';
-import Link from 'next/link.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react.ts';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, 
+  Brain, Cpu, Rocket, Shield, 
+  Zap, Globe, Star, Users,
+  Target, Microscope, Atom, Database,
+  Lock, Cloud, BarChart3, Settings,
+  Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck, ZapIcon,
+  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
+  CheckCircleIcon, ArrowRightIcon, CpuIcon,
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, HelpCircle,
+  Sparkles, Crown, Infinity, Target as TargetIcon, Award, MessageCircle
+} from 'lucide-react';
 
 
 
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'All Services',
+    href: '/comprehensive-new-services-showcase-2025',
+    icon: <Globe className="w-5 h-5" />,
+    description: 'Complete portfolio of all technology services',
+    badge: 'New 2025',
+    children: [
+      { name: 'New Services Showcase 2025', href: '/comprehensive-new-services-showcase-2025', description: 'Latest innovative services portfolio' },
+      { name: 'Micro SAAS Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'New business solutions' },
+      { name: 'AI Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Next-gen infrastructure' },
+      { name: 'Business Solutions', href: '/comprehensive-new-services-showcase-2025#services', description: 'AI-powered business tools' },
+      { name: 'Service Categories', href: '/comprehensive-new-services-showcase-2025#services', description: 'Browse by category' },
+      { name: 'Pricing & Plans', href: '/comprehensive-new-services-showcase-2025#services', description: 'Service pricing' },
+      { name: 'Contact & Support', href: '/comprehensive-new-services-showcase-2025#contact', description: 'Get in touch' }
+    ]
+  },
+  {
+    name: '🧠 AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5" />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    color: 'from-violet-500 to-purple-600',
+    isHot: true,
+    children: [
+      { name: 'AI Consciousness Evolution Pro', href: '/ai-consciousness-evolution-pro', description: 'Advanced AI consciousness development', isNew: true },
+      { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform', description: 'Quantum-AI hybrid computing', isHot: true },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
+      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro', description: 'AI-powered creative platform', isNew: true }
+    ]
+  },
+  {
+    name: '⚛️ Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className="w-5 h-5" />,
+    description: 'Breakthrough quantum computing and space technology solutions',
+    badge: 'Revolutionary',
+    color: 'from-indigo-500 to-blue-600',
+    isPremium: true,
+    children: [
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unhackable quantum-secured internet', isPremium: true },
+      { name: 'Quantum Bio-Computing Platform', href: '/quantum-bio-computing-platform', description: 'Quantum molecular simulation', isNew: true },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Neural interface development', isHot: true },
+      { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Autonomous space mining operations', isPremium: true },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Quantum energy optimization', isNew: true }
+    ]
+  },
+  {
+    name: '🏢 Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className="w-5 h-5" />,
+    description: 'Advanced enterprise infrastructure and security solutions',
+    badge: 'Enterprise',
+    color: 'from-blue-500 to-cyan-600',
+    children: [
+      { name: 'Quantum Cloud Infrastructure Pro', href: '/quantum-cloud-infrastructure-pro', description: 'Quantum-enhanced cloud computing', isNew: true },
+      { name: 'Edge Computing Orchestrator Pro', href: '/edge-computing-orchestrator-pro', description: 'Advanced edge computing platform', isHot: true },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Comprehensive zero trust security', isNew: true },
+      { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent DevOps automation', isNew: true },
+      { name: 'Quantum Data Center Platform', href: '/quantum-data-center-platform', description: 'Quantum data center management', isPremium: true }
+    ]
+  },
+  {
+    name: '💻 Micro SAAS',
+    href: '/micro-saas',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Popular',
+    color: 'from-teal-500 to-emerald-600',
+    children: [
+      { name: 'AI Content Factory Enterprise', href: '/ai-content-factory-enterprise', description: 'Enterprise AI content generation', isNew: true },
+      { name: 'Quantum CRM Suite Enterprise', href: '/quantum-crm-suite-enterprise', description: 'Quantum-enhanced CRM platform', isHot: true },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Autonomous AI decision making', isNew: true },
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'AI-powered legal analysis', isNew: true },
+      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro', description: 'Advanced medical AI diagnostics', isPremium: true }
+    ]
+  },
+  {
+    name: '💰 Pricing',
+    href: '/pricing',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Transparent pricing and market comparisons',
+    badge: 'Transparent',
+    color: 'from-green-500 to-emerald-600',
+    children: [
+      { name: 'Service Pricing', href: '/pricing', description: 'All service pricing plans' },
+      { name: 'Market Pricing', href: '/market-pricing', description: 'Competitor price references' },
+      { name: 'Enterprise Quotes', href: '/contact', description: 'Custom enterprise pricing' },
+      { name: 'ROI Calculator', href: '/contact', description: 'Calculate your ROI' }
+    ]
+  },
+  {
+    name: 'Innovative 2025',
+    href: '/innovative-2025-services-showcase',
+    icon: <Sparkles className="w-5 h-5" />,
+    description: 'Latest innovative services showcase',
+    badge: 'New',
+    children: [
+      { name: 'AI Content Intelligence Suite', href: '/ai-content-intelligence-suite', description: 'AI-powered content creation' },
+      { name: 'Quantum Cyber Defense Platform', href: '/quantum-cyber-defense-platform', description: 'Quantum-enhanced cybersecurity' },
+      { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', description: 'Self-driving analytics' },
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator', description: 'Intelligent edge management' },
+      { name: 'Blockchain Identity Management', href: '/blockchain-identity-management', description: 'Decentralized identity' },
+      { name: 'AI-Powered DevOps Automation', href: '/ai-devops-automation', description: 'Intelligent DevOps' },
+      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning', description: 'Quantum-enhanced ML' },
+      { name: 'Autonomous Customer Service AI', href: '/autonomous-customer-service-ai', description: 'Self-learning support' },
+      { name: 'Space Technology Analytics', href: '/space-technology-analytics', description: 'Space mission analytics' }
+    ]
+  }
+];
 
 'use client';
 

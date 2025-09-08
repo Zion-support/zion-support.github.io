@@ -12,5 +12,3 @@ id: string;
    support: string;
    rating: number;
    reviews: number;
-
-

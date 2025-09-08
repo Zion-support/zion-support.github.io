@@ -1,10 +1,3 @@
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-
   test('renders without crashing', () => {
 
     render(<EnhancedSEO />);
@@ -25,5 +18,3 @@ import EnhancedSEO from '../components/EnhancedSEO';
   test('applies correct styling', () => {
     render(<EnhancedSEO />);
     // Add styling tests if needed;
-
-

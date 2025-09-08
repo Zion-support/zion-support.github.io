@@ -1,19 +1,10 @@
 
-
 import React from "react",
 
 import { Badge } from "@/components/ui/badge",
 import {}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  Select,
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-<<<<<<< HEAD
 
   SelectValue 
 } from "@/components/ui/select",

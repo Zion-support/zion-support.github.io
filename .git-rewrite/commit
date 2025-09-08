@@ -1,6 +1,6 @@
-tree 58b859317b285457f6950dd74d155ea9ab83e2da
-parent 32290650ef76d6a72c1a85b96c484e598e264834
-author github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755131984 -0300
-committer github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755131984 -0300
+tree db0c7c0e7358e11900f0d73b7acf06e1b3b49d2f
+parent 94c52747f484bdb0d52724377786bda817a005c7
+author Automation Bot <automation@bolt.new.zion.app> 1754052890 -0300
+committer Automation Bot <automation@bolt.new.zion.app> 1754052890 -0300
 
-chore(sync): fast autonomous sync
+Sync all project changes: new blog posts, category pages, service pages, and updated content generation

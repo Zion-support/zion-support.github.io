@@ -424,4 +424,3 @@ export const getAIServicesByCategory = (category: string) => {
 export: const getPopularAIServices = () => {
   return innovative2026AIServices.filter(service => service.popular)}
 export const getAIServicesByCategory = (category: string) => {
-

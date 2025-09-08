@@ -1,4 +1,3 @@
-
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
   const domain = email.split('@')[1]?.toLowerCase();
@@ -28,13 +27,6 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
       reasons.push (`Suspicious email domain: ${domain}`);      break;
     }
   }
-<<<<<<< HEAD
-
-  return {
-    is_suspicious: reasons.length > 0,
-    reasons;
-  }
-}
 
 };
 

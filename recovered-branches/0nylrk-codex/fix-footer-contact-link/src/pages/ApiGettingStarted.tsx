@@ -101,7 +101,6 @@ console.log(response.data),`;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
 
-<<<<<<< HEAD
             Download Postman Collection
           </Link>
         </div>
@@ -115,7 +114,6 @@ console.log(response.data),`;
 }
 
 ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default ApiGettingStarted;
 
@@ -125,74 +123,6 @@ export default ApiGettingStarted;
 "
 import React from "react";"
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
-<<<<<<< HEAD
-
-import {CodeBlock} from "@/components/developers/CodeBlock";
-"
-import React from "react",;"
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;"
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-
-
-    Authorization: \`Bearer \${API_KEY}\`;
-
-  }
-});
-
-=======
-import {CodeBlock} from "@/components/developers/CodeBlock";"
-import { CodeBlock } from "@/components/developers/CodeBlock",;"
-export function ApiGettingStarted() {;
-  const quickStartJs = `import axios from 'axios';
-const response = await axios && axios.get('https://api && api.zionai.com/v1/jobs', {;
-  headers: {;
-export function ApiGettingStarted() { return null; }`
-    Authorization: \`Bearer \${API_KEY}\`;
-  }
-});
-
-`
-console && console.log(response && response.data),`;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  return (
-    <ApiDocsLayout>;"
-      <div className="max-w-3xl prose prose-invert">;
-        <h1>Getting Started</h1>;
-
-        <h2>Overview</h2>;
-        <p>;
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles, ;
-          quotes, and projects. Our RESTful API lets you integrate Zion's features into your ;
-          own applications and workflows.;
-        </p>;
-        <h2>Authentication</h2>;
-        <p>;
-          All API requests must include your API key in the Authorization header. ;"
-          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.;
-        </p>;
-
-        <CodeBlock code={authExample} language="bash" showLineNumbers={false} />;
-        <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">;
-          <h3 className="text-yellow-500 text-sm font-medium mt-0">Important</h3>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          <p className="text-sm text-yellow-300/90 mb-0">;
-            Keep your API keys secure! Never expose them in client-side code or public repositories.;
-          </p>;
-        </div>;
-
-        <h2>Base URL</h2>;
-        <p>All API requests should be made to the following base URL:</p>;
-        <div className="bg-zinc-900 p-4 rounded-md">;
-          <code className="text-zion-cyan break-words">https://api && api.zionai.com/v1</code>;
-        </div>;
-
-        <h2>Content Type</h2>;
-        <p>;
-          All requests must use <code>application/json</code> content type. Set the ;
-          <code>Content-Type</code> header accordingly.;
-        </p>;
-
         <h2>Quick Start</h2>;
         <p>Here's a simple example of fetching jobs using JavaScript:</p>;
 

@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
@@ -24,7 +22,6 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamSize: 5;
           teamLimit: 10;
           billingCycle: "Monthly"
->>>>>>> origin/cursor/delete-old-data-records-6bba
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -132,7 +129,6 @@ export function useCompanyWorkspace(companySlug?: string) {;
           "teamLimit": 50,;
           "billingCycle": "Annual",;"
           "workspaceUrl": "acme.zion-ai.com"}),;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace() { return null; }
@@ -142,36 +138,5 @@ export function useCompanyWorkspace() { return null; }
           teamLimit: 50,;"
           billingCycle: "Annual",;"
           workspaceUrl: "acme.zion-ai.com"}),;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        setError(null);
-      } else {;'
-        // For any other slug, we could check if it's a valid company;'
-        // For demo purposes, let's assume it exists;
-        setCompany({;`
-          id: `company-${companySlug}`,;
-          name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),;"
-          logoUrl: "/placeholder.svg",;
-          theme: {;"
-            primaryColor: "#4f46e5",;"
-            backgroundColor: "#ffffff",;"
-            textColor: "#1f2937"},;"
-          plan: "Teams",;
-          teamSize: 5,;
-          teamLimit: 10,;"
-          billingCycle: "Monthly",;`
-          workspaceUrl: `${companySlug}.zion-ai.com`});
-        setError(null);
-      }
-      setIsLoading(false);
-    }, 1000), // Simulate loading delay;
-  }, [companySlug]);
-
-  const [error, setError] = useState<string | null>(null),;
-</string>"`;
-pr-12325
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

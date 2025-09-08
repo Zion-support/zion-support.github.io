@@ -1,4 +1,3 @@
-
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
@@ -45,16 +44,6 @@ const SearchBar: React.FC = () => {
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
       url: '/micro - saas',
       type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai - services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it - services',
       type: 'category',
     },
@@ -78,48 +67,6 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
-
-
-  // Mock search data - in a real app, this would come from an API;
-  const searchData: SearchResult[] = [;
-    {;
-      title: 'Micro SaaS Products',;
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
-      url: '/micro-saas',;
-      type: 'category',;
-    },;
-    {;
-      title: 'AI Services',;
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
-      url: '/ai-services',;
-      type: 'category',;
-    },;
-    {;
-      title: 'IT Services',;
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
-      url: '/it-services',;
-      type: 'category',;
-    },;
-    {;
-      title: 'Cloud Cost Guard',;
-      description: 'FinOps Assistant for anomaly detection and cost optimization',;
-      url: '/services',;
-      type: 'service',;
-    },;
-    {;
-      title: 'Contact Us',;
-      description: 'Get in touch with our experts for consultation and quotes',;
-      url: '/contact',;
-      type: 'page',;
-    },;
-    {;
-      title: 'Pricing',;
-      description: 'View our transparent pricing for all services',;
-      url: '/pricing',;
-      type: 'page',;
-    },;
-  ];
-
   const handleSearch = async (searchQuery: string) => {;
     if (!searchQuery && searchQuery.trim()) {;
       setResults([]);
@@ -141,117 +88,6 @@ const SearchBar: React.FC = () => {
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-
-  };
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const value = e && e.target.value;
-    setQuery(value);
-    handleSearch(value),;
-  };
-
-  const handleResultClick = () => {;
-    setIsOpen(false),;
-    setQuery('');
-  };
-
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === 'Escape') {;
-    setIsOpen(false),;
-    inputRef && inputRef.current?.blur();
-  }
-  };
-
-  useEffect(() => {;
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
-        setIsOpen(false),;
-      }
-    };
-
-    document && document.addEventListener('mousedown', handleClickOutside);
-    return () => {;
-      document && document.removeEventListener('mousedown', handleClickOutside);
-    };
-
-  }, []);
-  return (
-    <div className="relative" ref={searchRef}>
-      <div className="relative">
-        <input,
-ref={inputRef}
-          type="text"
-          value={query}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          onFocus={() => query && setIsOpen(true)}
-          placeholder="Search services, products, or pages..."
-          className="w-full md:w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          aria-label="Search"
-          aria-expanded={isOpen}
-          aria-haspopup="listbox"
-          role="combobox"
-        />
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <svg,
-className="h-5 w-5 text-slate-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"><path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />;
-          </svg>;
-        </div>;
-        {isLoading && (;
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">;
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
-          </div>;
-        )}
-
-      </div>;
-
-
-      {/* Search Results Dropdown */}
-      {isOpen && (;
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
-          {results && results.length > 0 ? (;
-            <div className="py-2">;
-              {results && results.map((result, index) => (;
-                <Link
-                  key={index}
-                  href={result && result.url}
-                  onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
-                  <div className="flex items-start space-x-3">;
-                    <div className="flex-shrink-0">;
-                      <divclassName={`w-2 h-2 rounded-full mt-2 ${
-                        result && result.type === 'service' ? 'bg-blue-500' :
-                        result && result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
-                      }`}></div>;
-                    </div>;
-                    <div className="flex-1 min-w-0">;
-                      <p className="text-sm font-medium text-gray-900 truncate">;
-                        {result && result.title}
-                      </p>;
-                      <p className="text-sm text-gray-500 truncate">;
-                        {result && result.description}
-                      </p>;
-                    </div>;
-                  </div>;
-                </Link>;
-              ))}
-            </div>;
-          ) : query && !isLoading ? (;
-            <div className="px-4 py-3 text-sm text-gray-500">;
-              No results found for &quot;{query}&quot;
-            </div>;
-          ) : null}
-        </div>;
-      )}
-
 ;
   const handle_search = async (search_query: string) => {
     if () {) {

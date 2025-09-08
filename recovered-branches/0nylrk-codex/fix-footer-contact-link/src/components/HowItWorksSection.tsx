@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
@@ -68,10 +65,6 @@ const steps = [
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
 
-                  ) : null}
-                </div>;
-              </div>;
-            ))}
           </div>;
         </div>;
       </div>;

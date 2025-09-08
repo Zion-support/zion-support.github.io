@@ -1,5 +1,3 @@
-
-
 export * from "./JobsList";
 export * from "./job-posting";
 export * from "./SuggestedTalents";
@@ -13,4 +11,3 @@ export * from "./NoJobsCard";
 export * from "./JobApplicationsTable";
 export * from "./ApplicationScoreCard";
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import inviteHandler from @/pages/api/team-builder/invite';
 import { supabase } from '@/integrations/supabase/client // To be mocked;

@@ -1,5 +1,4 @@
 
-
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -32,12 +31,6 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";              value={newResumeTitle}
-
-              disabled={!newResumeTitle.trim() || isLoading}
-
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
-            />
             <Button
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() |isLoading}

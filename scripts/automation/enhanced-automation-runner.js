@@ -276,36 +276,3 @@ class EnhancedAutomationRunner {
 
   printSummary(report) {
     console.log('\n📊 ENHANCED AUTOMATION RUNNER SUMMARY');
-    console.log('=====================================');
-    console.log(`Total Automations: ${report.summary.totalAutomations}`);
-    console.log(`Successful: ${report.summary.successfulAutomations}`);
-    console.log(`Failed: ${report.summary.failedAutomations}`);
-    console.log(`Success Rate: ${report.summary.successRate}`);
-    console.log(`Total Duration: ${report.summary.totalDuration}`);
-    console.log(`Errors Fixed: ${report.summary.totalErrorsFixed}`);
-    console.log(`Remaining Errors: ${report.summary.totalRemainingErrors}`);
-    
-    if (report.recommendations.length > 0) {
-      console.log('\n💡 RECOMMENDATIONS:');
-      report.recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec.message}`);
-      });
-    }
-    
-    console.log('\n📁 Detailed report saved to:', this.reportFile);
-  }
-  {/* Removed stray closing brace */}
-
-// Auto-start if run directly
-if (require.main === module) {
-  const runner = new EnhancedAutomationRunner();
-  global.currentRunner = runner;
-  
-  runner.start().catch(async (error) => {
-    console.error('Fatal error:', error);
-    await runner.shutdown();
-    process.exit(1);
-  });
-  {/* Removed stray closing brace */}
-
-module.exports = EnhancedAutomationRunner;

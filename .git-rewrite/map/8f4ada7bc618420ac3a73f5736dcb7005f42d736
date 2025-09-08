@@ -1,6 +1,1 @@
-<<<<<<< HEAD:.git-rewrite/map/8f4ada7bc618420ac3a73f5736dcb7005f42d736
 3aaf1000feaba5b8a06a3effde52a03ae1f86b59
-=======
-/* global styles */
-html,body{margin:0;padding:0;font-family:sans-serif;}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7a8f:app/globals.css

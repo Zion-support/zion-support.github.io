@@ -1,4 +1,3 @@
-
   axios';
 import fs from "fsfs';
 import path from "pathpath';
@@ -13,10 +12,6 @@ const BASE_URL =;
 ;
     this.checkedUrls = new Set();
     this.linkQueue = []}
-
-  '🚀 Starting comprehensive website analysis...');
-    console.log(`📍 Base URL: ${BASE_URL}`);
-
     await this.checkPage(BASE_URL);
     // Check all navigation links;
     await this.checkNavigationLinks();

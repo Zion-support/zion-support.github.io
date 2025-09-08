@@ -1,4 +1,3 @@
-
 export type Json =;
   | string;
   | number;
@@ -34,20 +33,6 @@ export type Json =;
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-
-
-<<<<<<< HEAD
-=======
-          {"
-            foreignKeyName: "job_applications_resume_id_fkey";","
-  columns: ["resume_id"];"
-            isOneToOne: false;,"
-  referenced_relation: "talent_resumes";""
-            referenced_columns: ["id"];"
-          }
-foreignKeyName: "job_applications_job_id_fkey";
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
             columns: ["job_id"];
             isOneToOne: false;
             referenced_relation: "jobs";
@@ -188,7 +173,6 @@ foreignKeyName: "job_applications_job_id_fkey";
         }
         Relationships: [;
 
-<<<<<<< HEAD
           {
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
@@ -222,136 +206,6 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]          }
-          }
-          {
-            foreignKeyName: "projects_talent_id_fkey";
-            columns: ["talent_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-=======
-
-            foreignKeyName: "milestone_activities_user_id_fkey";
-
-            columns: ["user_id"];
-            isOneToOne: false;"
-            referenced_relation: "user_metrics";"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            referenced_columns: ["user_id"];
-          }];
-      }
-      notification_preferences: {}
-        Row: {}
-          created_at: string;
-          id: string;
-          marketing_emails: boolean | null;
-          system_notifications: boolean | null;
-          updated_at: string;
-          user_id: string;
-        }
-        Insert: {}
-          created_at?: string;
-          id?: string;
-          marketing_emails?: boolean | null;
-          system_notifications?: boolean | null;
-          updated_at?: string;
-          user_id: string;
-        }
-        Update: {}
-          created_at?: string;
-          id?: string;
-          marketing_emails?: boolean | null;
-          system_notifications?: boolean | null;
-          updated_at?: string;
-          user_id?: string;
-        }
-        Relationships: [;
-          {}
-      }
-      notifications: {}
-        Row: {}
-          created_at: string | null;
-          id: string;
-          message: string;
-          read: boolean | null;
-          related_id: string | null;
-          title: string;
-          type: string;
-          updated_at: string | null;
-          user_id: string;
-        }
-        Insert: {}
-          created_at?: string | null;
-          id?: string;
-          message: string;
-          read?: boolean | null;
-          related_id?: string | null;
-          title: string;
-          type: string;
-          updated_at?: string | null;
-          user_id: string;
-        }
-        Update: {}
-          created_at?: string | null;
-          id?: string;
-          message?: string;
-          read?: boolean | null;
-          related_id?: string | null;
-          title?: string;
-          type?: string;
-          updated_at?: string | null;
-          user_id?: string;
-        }
-        Relationships: [;
-          {}
-      }
-      partner_payouts: {}
-        Row: {}
-          amount: number;
-          completed_at: string | null;
-          created_at: string;
-          id: string;
-          method: string;
-          partner_id: string;
-          payout_details: Json | null;
-          status: string;
-          updated_at: string;
-        }
-        Insert: {}
-          amount: number;
-          completed_at?: string | null;
-          created_at?: string;
-          id?: string;
-          method: string;
-          partner_id: string;
-          payout_details?: Json | null;
-          status?: string;
-          updated_at?: string;
-        }
-        Update: {}
-          amount?: number;
-          completed_at?: string | null;
-          created_at?: string;
-          id?: string;
-          method?: string;
-          partner_id?: string;
-          payout_details?: Json | null;
-          status?: string;
-          updated_at?: string;
-        }
-        Relationships: [;
-
-            foreignKeyName: "profiles_id_fkey";
-
-            columns: ["id"];
-            isOneToOne: true;"
-            referenced_relation: "user_metrics";"
-            referenced_columns: ["user_id"];
-
-          }
-
-          },
-
           {
             foreignKeyName: "profiles_tenant_id_fkey";
 
@@ -630,100 +484,12 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at?: string;
           user_id: string;
         }
-<<<<<<< HEAD
-
-        Update: {
-
-=======
-        Update: {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          code?: string;
-          created_at?: string;
-          id?: string;
-          updated_at?: string;
-          user_id?: string;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        }
-        Relationships: [;
-          {"
-            foreignKeyName: "referral_codes_user_id_fkey";",]"
-  columns: ["user_id"];"
-            isOneToOne: true;,"
-  referenced_relation: "user_metrics";""
-            referenced_columns: ["user_id"];"
-          }];
-      }
-      referral_rewards: {,
-  Row: {
-          amount: number | null;,
-  created_at: string;
-          expires_at: string | null;,
-  id: string;
-          partner_id: string | null;,
-  referral_id: string;
-          reward_type: string;,
-  user_id: string;
-
-        }
-        Insert: {}
-          amount?: number | null;
-          created_at?: string;
-          expires_at?: string | null;
-          id?: string;
-          partner_id?: string | null;
-          referral_id: string;
-          reward_type: string;
-
-          referral_id: string;,
-  reward_type: string;
-          user_id: string;
-
-        }
-        Update: {}
-          amount?: number | null;
-          created_at?: string;
-          expires_at?: string | null;
-          id?: string;
-          partner_id?: string | null;
-          referral_id?: string;
-          reward_type?: string;}
-          user_id?: string;}
-        }
-        Relationships: [;
-
-<<<<<<< HEAD
-            isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
-
-
-
-=======
-
-            isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
-            foreignKeyName: "referral_rewards_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }
-
-          },
-
-
           {
             foreignKeyName: "referral_rewards_referral_id_fkey";
             columns: ["referral_id"];
             isOneToOne: false;
             referenced_relation: "referrals";
             referenced_columns: ["id"];
->>>>>>> origin/cursor/delete-old-data-records-6bba
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -959,93 +725,6 @@ foreignKeyName: "job_applications_job_id_fkey";
         }
         Returns: string;
       }
-        Returns: undefined;
-
-
-      }
-      flag_suspicious_content: {
-        Args: {
-          p_user_id: string;
-          p_user_email: string;
-          p_content_type: string;
-          p_content_id: string;
-          p_content_excerpt: string;
-          p_severity: string;
-          p_reason: string;
-          p_ip_address: string;
-        }
-        Returns: string;
-      }
-      generate_api_key: {
-        Args: { prefix: string }
-        Returns: string;
-      }
-      generate_fraud_report: {
-        Args: { year: number, month: number }
-        Returns: string;
-      }
-      generate_referral_code: {
-        Args: { user_id: string }
-        Returns: string;
-      }
-      get_api_key_user_id: {
-        Args: { key_prefix: string, provided_key: string }
-
-        Returns: string
-      }
-
-      }
-      complete_referral: {
-        Args: { _referred_id: string, _user_type: string }
-        Returns: undefined
-      }
-      create_notification: {
-        Args: {
-          _user_id: string
-          _title: string
-          _message: string
-          _type: string
-          _related_id?: string
-        }
-        Returns: string
-      }
-      create_scheduled_reminders: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      create_scheduled_reminders: {;
-        Args: Record<PropertyKey never>;
-        Returns: undefined;
-      }
-      flag_suspicious_content: {
-        Args: {
-          p_user_id: string
-          p_user_email: string
-          p_content_type: string
-          p_content_id: string
-          p_content_excerpt: string
-          p_severity: string
-          p_reason: string
-          p_ip_address: string
-        }
-        Returns: string
-      }
-      generate_api_key: {
-        Args: { prefix: string }
-        Returns: string
-      }
-      generate_fraud_report: {
-        Args: { year: number, month: number }
-        Returns: string
-      }
-      generate_referral_code: {
-        Args: { user_id: string }
-        Returns: string
-      }
-      get_api_key_user_id: {
-        Args: { key_prefix: string, provided_key: string }
-        Returns: string
-      }
-      get_current_tenant_id: {
         Args: Record < PropertyKey, never>;
         Returns: string;      api_key_scope:;
         | "jobs:read";
@@ -1076,57 +755,6 @@ export type Tables<;
       }
       schedule_email_reminders: {
         Args: Record<PropertyKey, never>
-        Returns: number
-      schedule_email_reminders: {;
-        Args: Record<PropertyKey never>;
-        Returns: number;
-      }
-      trigger_resume_scoring: {
-        Args: { application_id: string }
-        Returns: undefined
-      }
-      update_onboarding_milestone: {
-        Args: { _user_id: string, _milestone: string, _status: boolean }
-        Returns: undefined
-      }
-      verify_api_key: {
-        Args: { provided_key: string, stored_hash: string }
-        Returns: boolean
-      }
-    }
-    Enums: {
-      api_key_scope:
-        | "jobs:read"
-        | "jobs:write"
-        | "talent:read"
-        | "quotes:write"
-        | "webhooks:manage"
-      fraud_severity: "safe" | "suspicious" | "dangerous"
-      quote_request_status:
-        | "new"
-        | "in_review"
-        | "accepted"
-        | "responded"
-        | "closed"
-        | "archived"
-      referral_status: "pending" | "completed" | "expired"
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
-}
-
-type DefaultSchema = Database[Extract<keyof Database, "public">]
-export type Tables<
-  DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-    | { schema: keyof Database };
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-      ? R
-      : never
-    : never
-export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
 
@@ -1145,15 +773,6 @@ export type TablesInsert<
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
     | keyof DefaultSchema["CompositeTypes"]
-
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
-    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
 ;
 ;
 export const Constants = {
@@ -1220,147 +839,5 @@ export type Tables<;
     ? (DefaultSchema["Tables"] &;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
-=======
-
-      }
-      ? R;
-      :never;
-    :never;
-;
-export type TablesInsert<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-    | { schema:keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema:keyof Database;
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
-    :never = never> = DefaultSchemaTableNameOrOptions extends { schema:keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
-      Insert:infer I;
-    }
-    ? I;
-    :never;
-  :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
-
-
-  DefaultSchemaTableNameOrOptions extends;"
-    | keyof DefaultSchema["Tables"];"
-    | { schema:keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema:keyof Database;
-  }"
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
-    :never = never> = DefaultSchemaTableNameOrOptions extends { schema:keyof Database }"
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;"
-      Insert:infer I;
-    }
-    ? I;
-    :never;"
-  :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
-        Insert:infer I;
-
-
-      }
-      ? I;
-      :never;
-    :never;
-;
-export type TablesUpdate<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-    | { schema:keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema:keyof Database;
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
-    :never = never> = DefaultSchemaTableNameOrOptions extends { schema:keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
-      Update:infer U;
-    }
-    ? U;
-    :never;
-  :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
-
-
-  DefaultSchemaTableNameOrOptions extends;"
-    | keyof DefaultSchema["Tables"];"
-    | { schema:keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema:keyof Database;
-  }"
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];"
-    :never = never> = DefaultSchemaTableNameOrOptions extends { schema:keyof Database }"
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;"
-      Update:infer U;
-    }
-    ? U;
-    :never;"
-  :DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];""
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;"
-        Update:infer U;
-
-
-      }
-      ? U;
-      :never;
-    :never;
-;
-export type Enums<;
-  DefaultSchemaEnumNameOrOptions extends;
-    | keyof DefaultSchema["Enums"];
-    | { schema:keyof Database },;
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {;
-    schema:keyof Database;
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
-    :never = never> = DefaultSchemaEnumNameOrOptions extends { schema:keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
-  :DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
-    :never;
-;
-export type CompositeTypes<;
-  PublicCompositeTypeNameOrOptions extends;
-    | keyof DefaultSchema["CompositeTypes"];
-    | { schema:keyof Database },;
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
-    schema:keyof Database;
-  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
-    :never = never> = PublicCompositeTypeNameOrOptions extends { schema:keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
-  :PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
-    :never;
-;
-export const Constants = {;
-  public:{;
-    Enums:{;
-      api_key_scope:[;
-export const Constants = {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  public: {;
-    Enums: {;
-      api_key_scope: [;
-        "jobs:read",;
-        "jobs:write",;
-        "talent:read",;
-        "quotes:write",;
-        "webhooks:manage"],;
-      fraud_severity: ["safe", "suspicious", "dangerous"],;
-      quote_request_status: [;
-        "new",;
-        "in_review",;
-        "accepted",;
-        "responded",;
-        "closed",;
-        "archived"];
-      referral_status: ["pending", "completed", "expired"]}}} as const;

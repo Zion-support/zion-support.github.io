@@ -1,5 +1,3 @@
-
-
 import {
 
   Dialog;
@@ -20,18 +18,3 @@ import { ApplicationScoreCard } from "../ApplicationScoreCard",
         {application && (;
           <ApplicationScoreCard
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          <ApplicationScoreCard
-
-          <ApplicationScoreCard 
-
-            application={application}
-            onScoreUpdated={onScoreUpdated}
-          />;
-        )}
-
-    </Dialog>;
-  );
-}

@@ -1,4 +1,5 @@
-import Layout from '../components/Layout';
+import { useState } from "react";
+import Layout from "../components/Layout";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,10 @@ const Contact = () => {
     alert("Thank you for your message! We will get back to you soon.");
   };
 
-  
+  return (
+    <Layout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. Contact us via phone, email, or our contact form."
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <main className="container mx-auto px-4 py-12">

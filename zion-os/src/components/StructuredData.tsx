@@ -25,15 +25,8 @@ function StructuredData() {}
         "https://twitter.com / ziontechgroup","
         "https://github.com / ziontechgroup","
         "https://linkedin.com / company / ziontechgroup";
-=======      ];
-    },
-    "feature_list": [;
-      "Marketplace & Jobs",
-      "AI Governance",
-      "Token Systems",
-      "Identity & KYC",
-      "AI - Powered Tools",
 
+<<<<<<< HEAD
       "Modular Architecture";
     ],"
     "screenshot": "https://ziontechgroup.com / screenshot.png","
@@ -58,7 +51,7 @@ function StructuredData() {}
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
-<<<<<<< HEAD
 
-=======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+>>>>>>> f056e1038c528e7c7990a21cd793614976bb5152

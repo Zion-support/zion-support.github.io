@@ -1,4 +1,3 @@
-
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
@@ -32,7 +31,6 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
             variant: "destructive"});
         }
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
     }
   }, []);
@@ -138,14 +136,6 @@ if ( {) {
         }
         // Depending on how strict we want to be, we could block the signup;
         // If the check is very suspicious, block the signup;
-<<<<<<< HEAD
-
-        // Check condition
-if (||) {
-  $2
-}
-          r.includes ('suspicious email domain'))) {
-          toast ({
         // Otherwise, allow but flag for review;
         return true;
       }
@@ -166,18 +156,5 @@ if (||) {
   return {
   return {  return {
 
-<<<<<<< HEAD
 
 
-=======
-  return {}
-    isCheckingFraud;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    isCheckingFraud;
-
-    checkFraudBeforeSignup}
-}    isCheckingFraud;
-
-    checkFraudBeforeSignup}
-}

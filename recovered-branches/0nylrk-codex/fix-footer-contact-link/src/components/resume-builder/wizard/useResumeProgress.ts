@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
@@ -52,10 +51,6 @@ if ( {) {
     setProgress(progressPercentage);
   }, [resume]);
 
-    // Check condition
-if ( {) {
-  $2
-}
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
@@ -69,17 +64,6 @@ if ( {) {
     }};
 
 import { useState, useEffect } from 'react',;'
-<<<<<<< HEAD
-
-
-
-
-=======
-import { Resume } from '@/types/resume',;
-;
-export const useResumeProgress = (resume:Resume | null) => {;
-  const [progress, setProgress] = useState(0),;
-
   ;
   useEffect(() => {;
     // Calculate progress based on completed sections;
@@ -135,4 +119,3 @@ export const useResumeProgress = (resume:Resume | null) => {;
 
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

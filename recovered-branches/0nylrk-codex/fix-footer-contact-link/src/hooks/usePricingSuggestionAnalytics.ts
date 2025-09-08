@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
   total_suggestions: number;
@@ -6,34 +5,6 @@ import { supabase } from '@/integrations / supabase / client';interface PricingS
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
 
-<<<<<<< HEAD
-=======
-  recent_suggestions: {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    id: string;
-    user_id: string;
-    suggested_min: number;
-    suggested_max: number;
-    actual_value?: number;
-    accepted: boolean;import {useState, useEffect} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from 'react',
-import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
-  totalSuggestions: number,
-  acceptanceRate: number,
-  averagePriceGap: number,
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
-  recentSuggestions: {}
-    id: string,
-<<<<<<< HEAD
-
-
-    userId: string,
-    suggestedMin: number,
-    suggestedMax: number,
-    actualValue?: number,
-    accepted: boolean,
-    createdAt: string,
     type: 'client' | 'talent'        setAnalytics({
           ...mockData;
           isLoading: false;
@@ -43,7 +14,6 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
 
         // Mock data for demonstration;
         const mockData = {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
           totalSuggestions: 256,
           acceptanceRate: 0.72,
           averagePriceGap: 12.5,
@@ -55,30 +25,5 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
             { category: 'data', count: 11, acceptanceRate: 0.78 }],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({}
             id: `suggestion-${i}`,`
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            userId: `user-${Math.floor(Math.random() * 100)}`,
-            suggestedMin: 30 + Math.floor(Math.random() * 30),
-            suggestedMax: 60 + Math.floor(Math.random() * 40),
-            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-            accepted: Math.random() > 0.25,
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),'
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
-        },
-
-        setAnalytics({}
-          ...mockData,
-          isLoading: false,
-          error: null;
-        }),
-
-        // In a real implementation with Supabase, you might do:
-        // const { data, error } = await supabase'
-        //   .from('pricing_suggestions')
-        //   .select(...)

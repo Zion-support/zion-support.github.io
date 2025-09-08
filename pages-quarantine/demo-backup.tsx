@@ -1,15 +1,3 @@
-import React, { useState } from "react"
-const Head = dynamic(() => import("next/head"), { "ssr": false })
-}
-const Link = dynamic(() => import("next/link"), { "ssr": false })
-}
-const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr": false })
-}
-const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false })
-}
-const Demo = () => {"
-  const [selectedDemo, setSelectedDemo] = useState("ai-services")import Head from "next/head"
-import React, { useState } from "react"
 const Head = dynamic(() => import("next/head"), { "ssr": false })  const demos = []
 },
     {"

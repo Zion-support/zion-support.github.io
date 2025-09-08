@@ -1,11 +1,9 @@
 
-
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
@@ -42,21 +40,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
         </CardHeader>;
       </Card>;
 
-<<<<<<< HEAD
-      <Card>;
-        <CardHeader className="pb - 2 flex flex - row items - center justify-between">;
-          <div>;
             <CardTitle className="text - 2xl font-bold">;
               {stats.pending_flags}
             </CardTitle>;
             <CardDescription > Pending Review</CardDescription>;
           </div>;
           {stats.pending_flags > 0 && (
-
-      
-      <Card>
-        <CardHeader className="pb-2 flex flex-row items-center justify-between">
-          <div>
             <CardTitle className="text-2xl font-bold text-amber-500">
               {stats.suspicious_count}
             </CardTitle>            <CardTitle className="text-2xl font-bold text-amber-500">
@@ -80,7 +69,6 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
           <CardTitle className="text-2xl font-bold">
 
-<<<<<<< HEAD
             {stats.false_positives}
           </CardTitle>      
       <Card>
@@ -174,7 +162,6 @@ export default FraudStatsCards;
 );
   )
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default FraudStatsCards;
 

@@ -1,5 +1,4 @@
 
-
 export function LoadingContentSkeleton() {;
 
   return (export function LoadingContentSkeleton() {
@@ -35,7 +34,6 @@ export function LoadingContentSkeleton() {;
         <div className="space-y-2">;
           {[...Array(3)].map((_, i) => (;"
             <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
-<<<<<<< HEAD
 
           ))}
         </div>;

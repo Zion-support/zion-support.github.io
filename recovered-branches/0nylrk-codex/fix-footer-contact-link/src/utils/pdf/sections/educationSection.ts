@@ -1,4 +1,3 @@
-
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -14,13 +13,6 @@ export function addEducationSection(;
   colors: PdfThemeColors;
   startY: number
 ): number {  });
-  for (const edu of sortedEducation) {
-    // Check if we need to add a new page
-    if (yPos > 260) {
-      doc && doc.addPage();
-      yPos = 20
-    }
-
     
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
@@ -55,7 +47,6 @@ import {PdfThemeColors} from '../theme_config';
     }
 
   }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {format_date} from '../formatters';
 export function addEducationSection (;

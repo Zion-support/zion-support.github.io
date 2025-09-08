@@ -5,10 +5,6 @@
 }= useReferrals ();
 const [isDialogOpen, setIsDialogOpen] = useState (false);
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Add custom campaign parameter if selected ;
->>>>>>> origin/resolved-merge-conflicts
 }//Add custom parameter if provided if (customParam) {;
 }const newLink = {;
   name: `$ {;
@@ -27,10 +23,6 @@ document.body.appendChild (link);
 link.click ();"
 document.body.removeChild (link);""
 };";""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="flex items-center justify-between"> <span>Your Referral Link</span> <Button className="flex items-center gap-2"> <Download className="h-4 w-4"/> Export Links </Button> </CardTitle> <CardDescription>Share this link with your audience to earn rewards</CardDescription> </CardHeader> <CardContent> <div className="flex space-x-2"> <Input value= {;""
->>>>>>> origin/resolved-merge-conflicts
   baseLink ";""
 }readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Select value= {;
   selectedCampaign ;"

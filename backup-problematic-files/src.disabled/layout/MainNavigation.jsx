@@ -13,10 +13,6 @@ interface MainNavigationProps {
 :src.disabled/layout/MainNavigation.jsx
 }
 }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
   }
   render() {

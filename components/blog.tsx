@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,25 +31,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-
-import React from 'react';
-
-
-export default function BlogPage() {
-export default function BlogPage() {
-  return (
-    <UltraFuturisticBackground intensity='high' variant='quantum'>;
-      <SEO
-        title='Blog | Zion Tech Group'
-        description='Insights and updates on AI, cloud, and automation.'
-
-
-export default function BlogPage() {
-  return (
-    <UltraFuturisticBackground intensity='high' variant='quantum'>
-      <SEO
-        title='Blog | Zion Tech Group'
-        description='Insights and updates on AI, cloud, and automation.'
 
         canonical='https://ziontechgroup && ziontechgroup.com/blog/'
       />;
@@ -146,7 +126,6 @@ function BlogPage() {
     </UltraFuturisticBackground>
   );export default function BlogPage() {
 export default function BlogPage() {
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup.com/blog/" />
@@ -159,10 +138,6 @@ export default function BlogPage() {
 }
 
 }
-
-
-
-
 }
 
 }

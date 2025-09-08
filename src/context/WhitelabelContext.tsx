@@ -1,22 +1,23 @@
+<<<<<<< HEAD
 
+const WhitelabelContext = createContext(defaultConfig);
+export const useWhitelabel = () => useContext(WhitelabelContext);
 
+export function WhitelabelProvider({ children, config = {} }) {
+	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } };
+	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
+}
 
-   isWhitelabeled: boolean;
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
+  children, 
+  config = {} 
+}) => {
+  const mergedConfig = { ...defaultConfig, ...config };
 
-   brandName: string;
-   brandLogo: string;
-   primaryColor: string;
-   secondaryColor: string;
-   setBrandName: (name: string) => void;
-
-
-&apos;'
-
-
-
-
-
-
-
-
-
+  return (
+    <WhitelabelContext.Provider value={mergedConfig}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
+<<<<<<< HEAD
+};

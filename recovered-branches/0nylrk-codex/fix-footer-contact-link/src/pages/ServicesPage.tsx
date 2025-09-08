@@ -1,33 +1,3 @@
-
-
-import { DynamicListingPage } from "@/components/DynamicListingPage",
-import { ProductListing } from "@/types/listings",
-import { AppLayout } from "@/layout/AppLayout",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-// Sample service listings
-const SERVICE_LISTINGS: ProductListing[] = [
-  {
-
-    id: "service-1"
-    title: "AI Development & Integration"
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems."
-    category: "Development"
-    price: 5000
-    currency: "$"
-    tags: ["AI Integration", "Machine Learning", "Enterprise"];
-import { Link } from "react-router-dom",
-import { Globe } from "lucide-react",    author: {
-      name: "TechSolutions Inc."
-      id: "tech-solutions"
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"}
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"]
-    createdAt: "2023-12-10T14:48:00.000Z"
-    aiScore: 95
-    rating: 4.9
-    reviewCount: 124}
   {    author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}

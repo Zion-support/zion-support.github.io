@@ -1,74 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-interface AnalyticsEvent {
-  "name": string;
-=======
-interface AnalyticsEvent {}
-  "name": string;
-
-import { NextApiRequest, NextApiResponse } from 'next';'
-interface AnalyticsEvent {
-  // TODO: Implement
-}
-  "name": string;"
-pr-12325
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-
-<<<<<<< HEAD
-  custom_parameters?: Record<string, any>;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  "timestamp": string;
-  session_id: string;
-  user_id: string;
-  page_url: string;
-  user_agent: string}
-<<<<<<< HEAD
-
-// In-memory storage for demo purposes
-// In production, you would use a proper database
-const "analyticsData": AnalyticsEven t[] = [];
-
-=======
-// In-memory storage for demo purposes;
-// In production, you would use a proper database"
-const "analyticsData": AnalyticsEven t[] = [];
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default async function handler(
-  req: NextApiReques t,
-  "res": NextApiRespons e
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
-  try {
-    const "event": AnalyticsEven t = req.body;
-    // Validate required fields
-    if (!event.name || !event.category || !event.timestamp) {
-      return res.status(400).json({ error: 'Missing required fields' })}
-    // Add to analytics data
-    analyticsData.push(event);    // In production, you "would": // 1. Store in a database (PostgreSQL, MongoDB, etc.)
-    // 2. Send to analytics services (Google Analytics, Mixpanel, etc.)
-<<<<<<< HEAD
-
-    // 3. Process for real-time dashboards
-    // 4. Apply data retention policies
-    // Log for debugging (remove in production)
-    // Send to external analytics services
-    await sendToExternalServices(event);
     res.status(200).json({ "success": tru e })} catch (error) {
     console.error('Analytics API "Error": ', error);
     res.status(500).json({ "error": 'Internal server error' })}
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 async function sendToExternalServices("event": AnalyticsEven t) {
   try {

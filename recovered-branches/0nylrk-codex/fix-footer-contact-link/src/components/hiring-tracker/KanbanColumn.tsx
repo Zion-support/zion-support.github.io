@@ -1,5 +1,4 @@
 
-
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -47,10 +46,6 @@ function KanbanColumn() {}
       default:"
         return "bg-muted/30"
     }
-      case "rejected":;
-        return "bg-red-50",;
-      default:;
-        return "bg-muted/30";
     }
   };
 
@@ -137,47 +132,6 @@ function KanbanColumn() {}
               className="min-h-full space-y-2";
             >;
               {applications.map((application, index) => (;
-
-};
-const getColumnBgColor = (columnId: string) => {
-  switch (columnId) {
-  case "rejected": return "bg-red-50";
-default: 
-}
-};
-return (<Card className= {
-  `$ {
-  getColumnBgColor (id) 
-}flex flex-col h-[calc (100vh-300px) ] min-h-[500px]` 
-}> <CardHeader className="pb-2" > <div className="flex justify-between items-center" > <CardTitle className="text-base" > {
-  title 
-}</CardTitle> <Badge variant= {
-  getBadgeVariant (id) as any 
-}> {
-  count 
-}</Badge> </div> <p className="text-xs text-muted-foreground" > {
-  description 
-}</p> </CardHeader> <CardContent className="flex-grow p-3 overflow-y-auto" > <Droppable droppableId= {
-  id 
-}> {
-  (provided) => (<div ref= {
-  provided.innerRef 
-}{
-  ...provided.droppableProps 
-}className="min-h-full space-y-2" applications.map ( (application, index) => (<CandidateCard key= {
-  application.id 
-}application= {
-  application 
-}index= {
-  index 
-}/>) ) 
-}{
-  provided.placeholder 
-}Drag candidates here </p> </div>) 
-}</div>) 
-}</Droppable> </CardContent> </Card>) 
-}
-
                 <CandidateCard 
 
   return (
@@ -226,4 +180,3 @@ return (<Card className= {
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

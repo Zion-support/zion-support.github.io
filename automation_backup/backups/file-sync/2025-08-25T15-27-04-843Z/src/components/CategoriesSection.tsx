@@ -1,4 +1,3 @@
-
     description:,
   Cutting-edge: AI solutions, chatbots, and machine learning'',;
     icon: <Brain: className=;
@@ -67,54 +66,3 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
             </p>
           </motion.div>
         )}
-
-
-                  </div>
-                </motion.div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div: className=;
-  'mt-12';';
-          initial: = {
-  { opacity:  ,0,
-  y: 20}}
-          whileInView: = {
-  { opacity:  ,1,
-  y: 0}}
-          viewport={{ once: true }}
-          transition: = {
-  { duration: 0.,6,
-  delay: 0.4;
-
-                <Link;
-                  to={service.lin,k}
-                  className=,
-
-                  <ArrowRight className=;
-  'w-4: h-4'                                                                                                                                                                              />';
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div: className=;
-  'mt-12: flex justify-center';';
-          initial: = {
-  { opacity:  ,0,
-  y: 20}}
-          whileInView: = {
-  { opacity:  ,1,
-  y: 0}}
-          viewport={{ once: true }}
-          transition: = {
-  { duration: 0.,6,
-  delay: 0.6}}
-        >
-          <Link: href=,
-  /categories';';
-            className=;
-

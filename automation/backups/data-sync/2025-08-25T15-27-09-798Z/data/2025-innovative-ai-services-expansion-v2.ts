@@ -1,11 +1,6 @@
 module.exports = {};
 module.exports = {};
 module.exports = {};
-module.exports = {};
-<<<<<<< HEAD
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
 
     color: ;

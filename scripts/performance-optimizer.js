@@ -1,4 +1,3 @@
-
 };
 
 let totalOptimizations = 0;
@@ -56,12 +55,6 @@ function optimizeReactComponent(content, filePath) {
   });
 
   return { content: optimized, changes }}
-
-// Optimize CSS files
-function optimizeCSS(content, filePath) {
-  let optimized = content;
-  let changes = 0;
-
   // Remove unused CSS rules (basic implementation)
   if (optimizations.code.minifyInlineStyles) {
     // Remove empty rules`
@@ -91,22 +84,6 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const ext = path.extname(filePath);
     let result = { content, changes: 0 };
-
-    switch (ext) {'
-      case '.tsx':'
-      case '.jsx':
-        result = optimizeReactComponent(content, filePath);
-        break;
-      case '.css':'
-      case '.scss':
-        result = optimizeCSS(content, filePath);
-        break}
-
-    if (result.changes > 0) {'
-      fs.writeFileSync(filePath, result.content, 'utf8');
-      totalOptimizations += result.changes;
-      console.log(`✅ Optimized ${filePath} (${result.changes} changes)`)}
-
     filesProcessed++} catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
@@ -124,41 +101,6 @@ function generatePerformanceReport() {
     e: optimizations.bundleSize.maxFileSize,
         maxTotalSize: optimizations.bundleSize.maxTotalSize },
       recommendations: [`
-        'Consider implementing code splitting for large components',
-        'Use React.memo for expensive components',
-        'Optimize images to WebP/AVIF format',
-        'Implement lazy loading for non-critical components',
-        'Use CSS-in-JS libraries for better tree shaking' ]
-    }
-  };
-'
-  fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('📊 Performance report generated: performance-optimization-report.json')}
-
-// Main optimization function
-async function main() {'
-  console.log('🚀 Starting performance optimization...\n');
-
-  const patterns = ['
-    'src/**/*.{tsx,jsx,ts,js},
-    'pages/**/*.{tsx,jsx,ts,js},
-    'components/**/*.{tsx,jsx,ts,js},
-    'styles/**/*.{css,scss}
-  ];
-
-  const excludeDirs = ['
-    'node_modules',
-    '.next',
-    'build',
-    'dist',
-    'scripts',
-    'automation',
-    'automation_backup',
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
-  ];
-
   for (const pattern of patterns) {
     const files = await glob(pattern {'
       ignore: excludeDirs.map(dir => `**/${dir}/**`)});
@@ -250,6 +192,3 @@ console.log(;
   `   - Lighthouse Score: ${performanceReport.metrics.lighthouseScore}`);
 console.log(`   - Accessibility: ${performanceReport.metrics.accessibility}`);
 console.log('\n✨ Website is now optimized and ready for production!');
-
-
-

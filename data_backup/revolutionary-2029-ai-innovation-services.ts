@@ -1,33 +1,3 @@
-import: { ServiceVariant } from '../types/service-variants';';
-export: interface RevolutionaryAIInnovationService2029 {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   benefits: string[];
-   category: string;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string[];
-   trialDays: number;
-   setupTime: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   variant: string;
-   contactInfo: { mobile: string;
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

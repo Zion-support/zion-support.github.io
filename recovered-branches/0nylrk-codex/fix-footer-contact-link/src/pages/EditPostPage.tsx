@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -66,14 +64,6 @@ export default function EditPostPage() {;
     );
   }
     );
-  }
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
-      // Here we would normally update the post in the database
-      // For now, we'll just simulate a successful update
-
-      toast({
-        title: "Post updated"
         description: "Your post has been updated successfully"      // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {}
@@ -94,16 +84,6 @@ export default function EditPostPage() {;
     try {;
       // Here we would normally update the post in the database;'
       // For now, we'll just simulate a successful update;
-<<<<<<< HEAD
-
-      toast({;
-        title: "Post updated",,
-  description: "Your post has been updated successfully";
-      });
-      // Redirect back to the post;
-
-      navigate(`/community/post/${postId}`);
-    } catch (error) {;
       toast({;
         title: "Error",,
   description: "There was a problem updating your post",;
@@ -118,17 +98,6 @@ export default function EditPostPage() {;
   return (
 
     <AppLayout>;
-
-  return (
-
-    <AppLayout>;
-
-
-
-  },
-
-  return (
-    <AppLayout>
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
@@ -281,47 +250,6 @@ export default function EditPostPage() { return null; }
     categoryId: post.categoryId as ForumCategory,;"
     tags: post.tags.join(", ");
   },;
-<<<<<<< HEAD
 
   const handleSubmit = async (values: PostFormValues) => {;
 
-=======
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    try {;
-      // Here we would normally update the post in the database;'
-      // For now, we'll just simulate a successful update;
-      toast({;
-        title: "Post updated",,
-  description: "Your post has been updated successfully";
-      }),;
-      // Redirect back to the post;`
-      navigate(`/community/post/${postId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",,
-  description: "There was a problem updating your post";
-        variant: "destructive";
-      });
-    }
-  };
-  return (;
-    <AppLayout>;
-      <SEO;"
-        title="Edit Post | Community Forum | Zion AI Marketplace";"
-        description="Edit your discussion post in the Zion AI Marketplace community forum.";"
-        keywords="community, forum, discussion, edit post";
-      />;      />;
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;"
-          <span className="text-muted-foreground">/</span>;"`
-          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">;
-            Post;
-          </Link>;"
-          <span className="text-muted-foreground">/</span>;"
-          <span className="text-sm font-medium">Edit</span>;
-        </div>;

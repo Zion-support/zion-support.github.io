@@ -1,15 +1,4 @@
 
-
-import {useState, useEffect} from 'react';
-
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 768 : false,
-  );
-  useEffect(() => {
-
-    const handleResize = () => {
-
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
       return () => window && window.removeEventListener('resize', handleResize)    }
@@ -36,44 +25,3 @@ if ( {) {
       window.addEventListener ('resize', handle_resize);
 
       return () => window.removeEventListener ('resize', handle_resize);
-=======
-      window.addEventListener ('resize', handle_resize);'
-      return () => window.removeEventListener ('resize', handle_resize);'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    }
-    return undefined;
-  }, []);import { useState, useEffect } from 'react',;
-export function useIsMobile() {;
-<<<<<<< HEAD
-
-  const [isMobile, setIsMobile] = useState(;
-    typeof window !== 'undefined' ? window.innerWidth < 768 : false;
-
-=======
-  }
-  const [isMobile, setIsMobile] = useState(;
-    typeof window !== 'undefined' ? window.innerWidth < 768 : false;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  ),;
-  useEffect(() => {;
-    }
-    const handleResize = () => {;
-      }
-      setIsMobile(window.innerWidth < 768);
-    },;
-    if (typeof window !== 'undefined') {;'
-      }
-      window.addEventListener('resize', handleResize);'
-      return () => window.removeEventListener('resize', handleResize);'
-    }
-    return undefined;
-  }, []);
-  return isMobile;
-}
-;
-
-}
-;
-  return is_mobile;
-}}
-;

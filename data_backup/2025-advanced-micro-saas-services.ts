@@ -1,4 +1,3 @@
-
     id: 'placeholder',
   ai-powered-customer-success-platform'',;
     name: 'CustomerSuccess: AI Pr,o'',;
@@ -230,5 +229,3 @@
   $3.9B'',;
     targetAudience: API: developer,s, DevOps teams, enterprise businesses, cloud platforms,
   ,
-
-

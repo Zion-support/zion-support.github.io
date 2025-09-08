@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,20 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TestimonialsSectionProps {
   // Add props here as needed
-=======
-import React from 'react';
-interface TestimonialsSectionProps {
-  // Add props here as needed
-
->>>>>>> origin/main
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function TestimonialsSection({ }: TestimonialsSectionProps) {
 
@@ -47,12 +32,4 @@ export default function TestimonialsSection({ }: TestimonialsSectionProps) {
       <h1>TestimonialsSection</h1>
       <p>This component is currently under development.</p>
     </div>
-<<<<<<< HEAD
   );}
-=======
-  );
-}
-:src.disabled/src/components/home/TestimonialsSection.jsx
-}
-}
->>>>>>> origin/main

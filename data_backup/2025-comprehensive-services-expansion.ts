@@ -1,40 +1,7 @@
-
   id: string;
 
 
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-
-    tagline:,
-  Automated: code quality analysis, security scanning, and best practice recommendations'',;
-    price: '$19,9',;
-    period:,
-  /month'',;
-    description: Intelligent: code review system that analyzes pull request,s, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'',;
-    features[],
-    popular: tru,e,
-    icon:,
-  🔍'',;
-    color: 'from-blue-600: to-indigo-70,0',;
-    textColor:,
-
-    trialDays: 14,
-    setupTime: '1-2 weeks',
-    category: 'Business Intelligence',
-    realService: true,
-    technology: ['AI/ML', 'Data Analytics', 'Predictive Modeling', 'Visualization'],
-    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Excel', 'SQL databases'],
-    useCases: ['Business analytics', 'Predictive insights', 'Performance monitoring'],
-    roi: 'Improve decision-making speed by 50-70% and increase business performance by 20-30%.',
-    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-    marketSize: '$28B business intelligence',
-    growthRate: '22% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-
     implementationDetails:,
   AI-powered: analysis engine with custom rule sets and integration APIs.'',;
     launchDate: '2025-01-1,5',;
@@ -897,5 +864,3 @@
     customers: 23,4,
     rating: 4.,8,
     reviews: 178;
-
-

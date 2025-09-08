@@ -1,13 +1,3 @@
-
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
-
-
-=======
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
-
-
 export function useUIState() {;
 
   return {
@@ -52,7 +42,3 @@ export function useUIState() { return null; }
 }    expandedSections;
     toggleSection;
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    closeMobileFilter}
-}

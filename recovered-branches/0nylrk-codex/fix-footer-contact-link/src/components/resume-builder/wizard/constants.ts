@@ -1,4 +1,3 @@
-
 { id: 'basic - info', label: 'Basic Info' }
   { id: 'work - experience', label: 'Work Experience' }
   { id: 'basic-info', label: 'Basic Info' },;
@@ -11,4 +10,3 @@
 
 
   { id: 'preview', label: 'Preview' }];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

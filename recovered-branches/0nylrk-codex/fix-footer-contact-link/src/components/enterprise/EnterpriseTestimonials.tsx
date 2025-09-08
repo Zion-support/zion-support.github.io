@@ -120,39 +120,3 @@ const testimonials = [;
     title: "CTO","
     company: "FutureTech Systems",;"
     image: "/placeholder.svg"}];
-<<<<<<< HEAD
-
-export function EnterpriseTestimonials() {;
-  return (;
-              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
-                <div className="bg-card rounded-xl p-8 border border-border h-full">;
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />;
-                  <blockquote className="text-xl mb-6 italic">;
-                    "{testimonial && testimonial.quote}";
-                  </blockquote>;
-                  <div className="flex items-center gap-4">;
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
-import React from './react';
-import { Quote  } from './lucide-react';
-import {}
-
-=======
-
-
-          </p>;
-        </div>;"
-        <Carousel className="w-full">;"
-
-
-          <CarouselContent>;
-
-import { Quote  } from './lucide-react';
-import {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,';
-} from '@/components / ui / carousel';
-                      <img;

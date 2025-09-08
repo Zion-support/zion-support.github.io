@@ -1,4 +1,3 @@
-
 function Skeleton({
   className
   ...props

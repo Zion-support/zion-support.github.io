@@ -1,7 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
 :pages/solutions/index.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';

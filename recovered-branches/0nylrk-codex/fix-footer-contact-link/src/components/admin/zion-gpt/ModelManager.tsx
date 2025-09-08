@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react',
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -98,7 +97,6 @@ export function ZionGPTModelManager() { return null; }
   const fetchModels = async () => {;
     try {;
 
-<<<<<<< HEAD
       setIsLoading(true),;
       const { data, error } = await supabase;
         .from('model_versions');
@@ -124,18 +122,6 @@ export function ZionGPTModelManager() { return null; }
                   </TableCell>;
                 </TableRow>;
 
-<<<<<<< HEAD
-=======
-
-                    )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-              ))}
-            </TableBody>;
-          </Table>;
         )};
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
@@ -293,4 +279,3 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

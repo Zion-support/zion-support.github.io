@@ -25,28 +25,55 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-        continue-on-error: true
-      - name: Run continuous improvement
-        if: always()
-        run: node automation/continuous-automation-improvement-system.js once
-        continue-on-error: true
-      - name: Fallback push (if any changes remain)
-        if: always()
+      - name: Run code quality checks
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore(automation): CI continuous improvement adjustments" -a || true
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
-          else
-            echo "No changes to push"
-          fi
-        continue-on-error: true
-      - name: Create summary
-        if: always()
-        run: |
-          echo "## Continuous Improvement Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Status:** Continuous improvement process completed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          npm run lint --if-present
+          npm run type-check --if-present
+          npm run build
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(improvement): continuous improvement and code quality updates"
+          title: "chore(improvement): apply continuous improvement and code quality updates"
+          body: |
+            Automated improvement and code quality updates.
+
+            - Runs linting and type checking
+            - Ensures build passes
+            - Updates code quality standards
+          branch: automation/continuous-improvement
+          delete-branch: true
+          signoff: false
+          labels: |
+            automation
+            improvement
+            auto-merge
+      - name: Enable Auto-merge
+        if: steps.cpr.outputs.pull-request-number
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
+      - name: Attempt immediate merge
+        if: steps.cpr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = Number(core.getInput('pr'))
+            try {
+              await github.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr,
+                merge_method: 'squash'
+              })
+            } catch (e) {
+              core.info(`Merge not completed yet: ${e.message}`)
+            }
+          result-encoding: string
+          inputs: |
+            pr: ${{ steps.cpr.outputs.pull-request-number }}

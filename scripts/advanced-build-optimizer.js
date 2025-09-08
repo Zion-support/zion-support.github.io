@@ -1,37 +1,3 @@
-
-console.log('🚀 Advanced Build Optimizer Starting...');
-class BuildOptimizer {;
-  constructor() {;
-
-    this.optimizations = [];
-    this.errors = [];
-    this.warnings = []}
-
-    console.log('📊 Analyzing build configuration...');
-    try {;
-      // 1. Optimize Next.js configuration;
-
-      await this.optimizeNextConfig();
-      // 2. Optimize TypeScript configuration;
-      await this.optimizeTypeScriptConfig();
-      // 3. Optimize package.json scripts;
-      await this.optimizePackageScripts();
-      // 4. Create optimized build script;
-      await this.createOptimizedBuildScript();
-      // 5. Generate performance report;
-      await this.generatePerformanceReport();
-
-            /module\.exports\s*=\s*{/,
-            `module.exports = {\n  ${opt},`);`
-
-          config.compilerOptions[key] = value;
-
-    console.log('🔧 Optimizing package.json scripts...');
-    const packagePath = 'package.json';
-    if (fs.existsSync(packagePath)) {;
-      const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-      // Add optimized build scripts;
-
     console.log('🔧 Creating optimized build script...');
     const buildScript = "#!/bin/bash;
 # Advanced Build Script for Zion Tech Group;"
@@ -69,13 +35,3 @@ fi;
     console.log('📊 Generating performance report...')]}
     fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2));
     this.optimizations.push('Generated performance report')}
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-// Run the optimizer;
-
-const optimizer = new BuildOptimizer();
-
-optimizer.optimize().catch(console.error);
