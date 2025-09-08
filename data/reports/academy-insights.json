@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T08:41:30.206Z",
+  "generatedAt": "2025-09-08T09:07:15.300Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -14,6 +14,10 @@
     {
       "title": "Using Claude Code to modernize a 25-year-old kernel driver",
       "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver"
+    },
+    {
+      "title": "Show HN: TheAuditor – Offline security scanner for AI-generated code",
+      "url": "https://github.com/TheAuditorTool/Auditor"
     },
     {
       "title": "The MacBook has a sensor that knows the exact angle of the screen hinge",
@@ -36,20 +40,16 @@
       "url": "https://www.guru3d.com/story/intel-arc-pro-b50-gpu-launched-at-for-compact-workstations/"
     },
     {
-      "title": "Show HN: Veena Chromatic Tuner",
-      "url": "https://play.google.com/store/apps/details?id=in.magima.digitaltuner&hl=en_US"
-    },
-    {
       "title": "Why Is Japan Still Investing in Custom Floating Point Accelerators?",
       "url": "https://www.nextplatform.com/2025/09/04/why-is-japan-still-investing-in-custom-floating-point-accelerators/"
     },
     {
-      "title": "Creative Technology: The Sound Blaster",
-      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
-    },
-    {
       "title": "Analog optical computer for AI inference and combinatorial optimization",
       "url": "https://www.nature.com/articles/s41586-025-09430-z"
+    },
+    {
+      "title": "Creative Technology: The Sound Blaster",
+      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
     }
   ],
   "recommendations": [
