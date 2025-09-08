@@ -74,14 +74,14 @@ export interface CardProps extends BaseComponentProps {
 
 // Form props
 export interface FormProps extends BaseComponentProps {
-  onSubmit: (data: Record<string, any>) => void;
-  initialValues?: Record<string, any>;
-  validationSchema?: any;
+  onSubmit: (data: Record<string, unknown>) => void;
+  initialValues?: Record<string, unknown>;
+  validationSchema?: unknown;
   loading?: boolean;
 }
 
 // Table props
-export interface TableProps<T = any> extends BaseComponentProps {
+export interface TableProps<T = unknown> extends BaseComponentProps {
   data: T[];
   columns: TableColumn<T>[];
   loading?: boolean;
@@ -95,10 +95,10 @@ export interface TableProps<T = any> extends BaseComponentProps {
   };
 }
 
-export interface TableColumn<T = any> {
+export interface TableColumn<T = unknown> {
   key: keyof T | string;
   title: string;
-  render?: (value: any, row: T) => ReactNode;
+  render?: (value: unknown, row: T) => ReactNode;
   sortable?: boolean;
   width?: string | number;
   align?: 'left' | 'center' | 'right';
@@ -137,5 +137,5 @@ export interface SEOProps {
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }

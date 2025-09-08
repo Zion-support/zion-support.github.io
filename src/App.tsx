@@ -11,7 +11,7 @@ import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 import { AppLayout } from './layout/AppLayout';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/LoadingSpinner';
+// import { LoadingSpinner } from './components/LoadingSpinner';
 import { AppConfig } from './types/app';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,10 +22,13 @@ import NotFound from './pages/NotFound';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: (failureCount, error: any) => {
+      retry: (failureCount, error: unknown) => {
         // Don't retry on 4xx errors
-        if (error?.status >= 400 && error?.status < 500) {
-          return false;
+        if (error && typeof error === 'object' && 'status' in error) {
+          const status = (error as { status: number }).status;
+          if (status >= 400 && status < 500) {
+            return false;
+          }
         }
         return failureCount < 3;
       },
@@ -43,7 +46,7 @@ const queryClient = new QueryClient({
 const appConfig: AppConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
-  environment: (process.env.NODE_ENV as any) || 'development',
+  environment: (process.env.NODE_ENV as 'development' | 'production' | 'test') || 'development',
   apiUrl: process.env.REACT_APP_API_URL || '/api',
   features: {
     analytics: true,
