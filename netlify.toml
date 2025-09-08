@@ -16,11 +16,7 @@
   # Force mise to use system Python even during Netlify's dependency stage (defensive)
   MISE_TOOL_VERSIONS__python = "system"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+
 
 [[redirects]]
   from = "/*"
