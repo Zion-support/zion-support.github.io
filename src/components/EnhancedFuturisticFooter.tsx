@@ -38,37 +38,14 @@ import {
   Atom,
   Target,
   TrendingUp,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ShoppingCart,
-  Lock,
-  FileText,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
   CheckCircle,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  HeartHandshake
+  Settings,
+  DollarSign,
+  HelpCircle,
+  MessageCircle,
+  Building,
+  BookOpen,
+  Briefcase
 } from 'lucide-react';
 
 export function EnhancedFuturisticFooter() {
@@ -231,31 +208,24 @@ export function EnhancedFuturisticFooter() {
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Services Catalog', href: '/services-catalog' },
-    { name: 'Services Comparison', href: '/services-comparison' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Request Quote', href: '/request-quote' },
-    { name: 'Marketplace', href: '/marketplace' },
-    { name: 'Developer Portal', href: '/developer-portal' },
-    { name: 'Status', href: '/status' },
-    { name: 'Sitemap', href: '/sitemap' }
+    { name: 'Services Overview', href: '/services-overview', icon: Settings, description: 'Complete service portfolio' },
+    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign, description: 'View our pricing' },
+    { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Find answers' },
+    { name: 'FAQ', href: '/faq', icon: MessageCircle, description: 'Common questions' },
+    { name: 'About Us', href: '/about', icon: Building, description: 'Our story' },
+    { name: 'Contact', href: '/contact', icon: Mail, description: 'Get in touch' },
+    { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
+    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' }
   ];
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play, featured: false },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false },
-    { name: 'Partner Program', href: '/partnerships', icon: Users, featured: false }
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Our story and mission' },
+    { name: 'Team', href: '/team', description: 'Meet our experts' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'Blog', href: '/blog', description: 'Latest insights' },
+    { name: 'News', href: '/news', description: 'Company updates' },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
 
   const supportLinks = [
@@ -264,7 +234,7 @@ export function EnhancedFuturisticFooter() {
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Community', href: '/community', description: 'User community' }
   ];
 
   const legalLinks = [
