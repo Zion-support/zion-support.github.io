@@ -17,4 +17,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-# Netlify configuration - clean version without merge conflicts
