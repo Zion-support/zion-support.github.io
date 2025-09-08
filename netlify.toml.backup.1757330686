@@ -6,7 +6,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.10"
+=======
   PYTHON_VERSION = "3.12"
+>>>>>>> origin/cursor/build-project-with-dependency-installation-ff4e
 
 [[plugins]]
   package = "netlify-plugin-compress"
