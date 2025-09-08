@@ -1,0 +1,20 @@
+import React, { createContext, useContext, useMemo, useState } from 'react';
+
+export interface LanguageContextValue {
+  language: string;
+  setLanguage: (lang: string) => void;
+}
+
+const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
+
+export const LanguageProvider: React.FC<React.PropsWithChildren<{ authState?: unknown }>> = ({ children }) => {
+  const [language, setLanguage] = useState<string>('en');
+  const value = useMemo(() => ({ language, setLanguage }), [language]);
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+};
+
+export const useLanguage = (): LanguageContextValue => {
+  const ctx = useContext(LanguageContext);
+  if (!ctx) throw new Error('useLanguage must be used within a LanguageProvider');
+  return ctx;
+};
