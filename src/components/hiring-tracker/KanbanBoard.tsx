@@ -6,7 +6,7 @@ import { DragDropContext, Droppable, Draggable } from "@/lib/dnd-stub";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Skeleton from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
 import { KanbanColumn } from "./KanbanColumn";
