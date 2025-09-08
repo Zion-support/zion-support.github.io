@@ -430,17 +430,28 @@ export default function Home() {
 
             <Link href="/main/front#features"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Features — explore capabilities</span></a></Link>
 
-            <Link href="/main/front#capabilities"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Capabilities — what agents can do</span></a></Link>
+            <a href="/.netlify/functions/ai-changelog-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI Changelog — Daily</span></a>
 
-            <Link href="/main/front#benefits"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Benefits — outcomes & ROI</span></a></Link>
+            <a href="/.netlify/functions/docs-index-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Docs Indexer — 12h</span></a>
 
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Hub — live agents & reports</span></a></Link>
+            <a href="/.netlify/functions/security-audit-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Security Audit — Daily</span></a>
 
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
-          </div>
-        </section>
-/* AUTO-GENERATED: HOME_VISIONARY_END */
-</main>
+            <a href="/.netlify/functions/dead-code-scan-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Dead Code Scan — Weekly</span></a>
+
+            <a href="/.netlify/functions/broken-image-scanner-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Broken Image Scanner — 6h</span></a>
+
+            <a href="/.netlify/functions/repo-graph-runner" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Repo Knowledge Graph — Weekly</span></a>
+
+            <a href="/.netlify/functions/og-image-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">OG Image Generator — 2h</span></a>
+
+            <a href="/.netlify/functions/newsroom-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom Curator — 2h</span></a>
+
+            <a href="/.netlify/functions/image-optimizer-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Image Optimizer — Daily</span></a>
+
+  </div>
+</section>
+/* AUTO-GENERATED: HOME_UPDATER_END */}
+ </main>
     </div>
   );
 }
