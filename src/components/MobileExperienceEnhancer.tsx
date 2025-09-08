@@ -271,41 +271,40 @@ export function MobileExperienceEnhancer() {
       } else if (diffX < -50) {
         handleSwipe('right');
       }
-    } else {
-      if (diffY > 50) {
-        handleSwipe('up');
-      } else if (diffY < -50) {
-        handleSwipe('down');
-      }
-    }
-
-    setTouchStart(null);
-    setTouchEnd(null);
-    setPinchDistance(0);
-    setRotationAngle(0);
-  }, [mobileGestures, touchStart]);
-
-  // Handle swipe gestures
-  const handleSwipe = useCallback((direction: 'left' | 'right' | 'up' | 'down') => {
-    const gestureId = `swipe-${direction}`;
-    if (touchGestures.has(gestureId)) {
-      // Execute gesture action
-      switch (direction) {
-        case 'left':
-          // Navigate next
-          // // console.log('Swipe left - Next');
+      
+      const gesture: TouchGesture = {
+        type: gestureType,
+        direction,
+        timestamp: Date.now(),
+        coordinates: { x: touch.clientX, y: touch.clientY },
+        intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+      };
+      
+      setTouchGestures(prev => [...prev.slice(-9), gesture]);
+      handleGesture(gesture);
+      
+      touchStartRef.current = null;
+    };
+    
+    const handleGesture = (gesture: TouchGesture) => {
+      // Handle different gesture types
+      switch (gesture.type) {
+        case 'swipe':
+          if (gesture.direction === 'left') {
+            // Navigate forward
+            // console.log('Swipe left - navigate forward');
+          } else if (gesture.direction === 'right') {
+            // Navigate back
+            // console.log('Swipe right - navigate back');
+          }
           break;
-        case 'right':
-          // Navigate previous
-          // // console.log('Swipe right - Previous');
+        case 'longPress':
+          // Show context menu
+          // console.log('Long press - show context menu');
           break;
-        case 'up':
-          // Expand
-          // // console.log('Swipe up - Expand');
-          break;
-        case 'down':
-          // Refresh
-          // // console.log('Swipe down - Refresh');
+        case 'tap':
+          // Handle tap
+          // console.log('Tap detected');
           break;
       }
     }
@@ -320,21 +319,53 @@ export function MobileExperienceEnhancer() {
       } else {
         newSet.delete(optimizationId);
       }
+      
+      // Apply mobile navigation
+      if (settings.mobileNavigation) {
+        document.body.classList.add('mobile-navigation');
+      }
+      
+      // Apply adaptive layout
+      if (settings.adaptiveLayout) {
+        document.body.classList.add('mobile-adaptive-layout');
+      }
+      
+      // Apply touch feedback
+      if (settings.touchFeedback) {
+        document.body.classList.add('mobile-touch-feedback');
+      }
+      
+      // Simulate optimization delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Calculate mobile score
+      const enabledFeatures = features.filter(f => f.enabled).length;
+      const totalFeatures = features.length;
+      const score = Math.round((enabledFeatures / totalFeatures) * 100);
+      setMobileScore(score);
+      
+    } catch (error) {
+      // console.error('Mobile optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [settings, features]);
 
       return newSet;
     });
 
-    // Apply specific optimization
-    switch (optimizationId) {
-      case 'touch-optimization':
-        if (enabled) {
-          document.documentElement.classList.add('touch-optimized');
-          // Increase touch target sizes
-          document.documentElement.style.setProperty('--touch-target-size', '44px');
-        } else {
-          document.documentElement.classList.remove('touch-optimized');
-          document.documentElement.style.removeProperty('--touch-target-size');
-        }
+  // Save mobile settings
+  const saveSettings = useCallback(async () => {
+    setIsOptimizing(true);
+    try {
+      localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } catch (error) {
+      // console.error('Failed to save mobile settings:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [settings]);
 
         break;
 
@@ -370,20 +401,12 @@ export function MobileExperienceEnhancer() {
 
         break;
       }
-    }, []);
-
-  // Toggle touch gesture
-  const toggleTouchGesture = useCallback((gestureId: string, enabled: boolean) => {
-    setTouchGestures(prev => {
-      const newSet = new Set(prev);
-      if (enabled) {
-        newSet.add(gestureId);
-      } else {
-        newSet.delete(gestureId);
-      }
-
-      return newSet;
-    });
+      await new Promise(resolve => setTimeout(resolve, 500));
+    } catch (error) {
+      // console.error('Failed to load mobile settings:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
   }, []);
 
   // Apply mobile settings

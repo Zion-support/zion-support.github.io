@@ -12,121 +12,105 @@ export const EnhancedContact = () => {
         phone: '',
         service: '',
         message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const contactMethods = [
-        {
-            icon: Mail,
-            title: 'Email Us',
-            description: 'Send us a detailed message',
-            action: 'kleber@ziontechgroup.com',
-            href: 'mailto:kleber@ziontechgroup.com'
-        },
-        {
-            icon: Phone,
-            title: 'Call Us',
-            description: 'Speak with our team directly',
-            action: '+1 302 464 0950',
-            href: 'tel:+13024640950'
-        },
-        {
-            icon: MapPin,
-            title: 'Visit Us',
-            description: 'Our office location',
-            action: '364 E Main St STE 1008, Middletown DE 19709',
-            href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
-        },
-        {
-            icon: Clock,
-            title: 'Business Hours',
-            description: 'When we\'re available',
-            action: 'Mon-Fri: 9AM-6PM EST',
-            href: '#'
-        }
-    ];
-    const services = [
-        'AI Solutions',
-        'Cloud & DevOps',
-        'Cybersecurity',
-        'Digital Transformation',
-        'IT Infrastructure',
-        'Consulting',
-        'Other'
-    ];
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    const cardVariants = {
-        hidden: { scale: 0.9, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        },
-        hover: {
-            scale: 1.02,
-            y: -5,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut"
-            }
-        }
-    };
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({
-                name: '',
-                email: '',
-                company: '',
-                phone: '',
-                service: '',
-                message: ''
-            });
-        }, 3000);
-    };
-    if (isSubmitted) {
-        return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
-        <div className="text-center max-w-md mx-auto px-4">
-          <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6"/>
-          <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
-          <p className="text-xl text-gray-300 mb-6">
-            Your message has been sent successfully. We'll get back to you within 24 hours.
+      });
+    } catch (error) {
+      // console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      description: 'Get in touch via email'
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 (302) 464-0950',
+      description: 'Call us directly'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      value: '364 E Main St STE 1008, Middletown, DE 19709',
+      description: 'Visit our office'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Mon-Fri: 9AM-6PM EST',
+      description: 'Available during these hours'
+    }
+  ];
+
+  if (isSubmitted) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
+      >
+        <div className="max-w-md mx-auto text-center">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring" }}
+            className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <CheckCircle className="w-10 h-10 text-white" />
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-3xl font-bold text-white mb-4"
+          >
+            Message Sent Successfully!
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-zion-slate-light mb-8"
+          >
+            Thank you for reaching out to us. We'll get back to you within 24 hours.
+          </motion.p>
+          
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            onClick={() => setIsSubmitted(false)}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+          >
+            Send Another Message
+          </motion.button>
+        </div>
+      </motion.div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Get in Touch
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Ready to transform your business? Let's discuss how our AI-powered solutions 
+            can help you achieve your goals.
           </p>
           <Button onClick={() => setIsSubmitted(false)} className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700">
             Send Another Message

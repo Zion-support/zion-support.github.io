@@ -1,3 +1,90 @@
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  Target, 
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Play,
+  Settings,
+  Cpu,
+  Cloud,
+  Activity,
+  Sparkles,
+  FileText,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  PieChart,
+  LineChart,
+  Activity as ActivityIcon
+} from 'lucide-react';
+
+const AIBusinessIntelligenceAnalytics = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms that automatically discover patterns and generate actionable insights'
+    },
+    {
+      icon: BarChart3,
+      title: 'Real-time Dashboards',
+      description: 'Live monitoring and visualization of key business metrics across all departments'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and identify opportunities using historical data analysis'
+    },
+    {
+      icon: Target,
+      title: 'Performance Tracking',
+      description: 'Monitor KPIs and track progress toward business goals with automated alerts'
+    },
+    {
+      icon: Users,
+      title: 'User Behavior Analysis',
+      description: 'Understand customer and employee behavior patterns for optimization'
+    },
+    {
+      icon: PieChart,
+      title: 'Data Visualization',
+      description: 'Interactive charts and graphs that make complex data easy to understand'
+    }
+  ];
+
+  const benefits = [
+    'Increase revenue by 25% through data-driven decisions',
+    'Reduce operational costs by 30%',
+    'Improve decision-making speed by 60%',
+    'Identify new business opportunities faster',
+    'Optimize resource allocation and efficiency',
+    'Enhance competitive advantage with insights'
+  ];
+
+  const useCases = [
+    {
+      industry: 'Finance',
+      description: 'Risk assessment, fraud detection, and investment portfolio optimization'
+    },
+    {
+      industry: 'Retail',
+      description: 'Inventory management, customer segmentation, and sales forecasting'
+    },
+    {
+      industry: 'Manufacturing',
+      description: 'Production optimization, quality control, and supply chain management'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'Patient outcomes analysis, resource planning, and operational efficiency'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

@@ -1,16 +1,9 @@
-import React from 'react';
-
-export function Select({ children, className = '', value, onValueChange, disabled }) {
-    return (
-        <select 
-            className={`w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-blue-light/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${className}`} 
-            value={value} 
-            onChange={onValueChange} 
-            disabled={disabled}
-        >
-            {children}
-        </select>
-    );
+interface SelectProps {
+  children: React.ReactNode;
+  className?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  disabled?: boolean;
 }
 
 export function SelectTrigger({ children, className = '', onClick, ...props }) {

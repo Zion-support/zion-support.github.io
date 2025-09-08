@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
 export function ITServiceRequestHero() {
     const [location, setLocation] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);

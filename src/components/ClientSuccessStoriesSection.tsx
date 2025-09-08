@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 const successStories = [
     {
         id: 1,

@@ -108,6 +108,133 @@ export default function EnhancedAccessibilityEnhancer() {
     const feature = accessibilityFeatures.find(f => f.id === featureId);
     if (!feature) return;
 
+  const accessibilityRef = useRef<HTMLDivElement>(null);
+
+  // Apply accessibility settings to the document
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    const body = document.body;
+
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      body.style.setProperty('--zion-bg', '#000000');
+      body.style.setProperty('--zion-text', '#ffffff');
+      body.style.setProperty('--zion-primary', '#ffff00');
+      body.style.setProperty('--zion-secondary', '#00ffff');
+    } else {
+      root.classList.remove('high-contrast');
+      body.style.removeProperty('--zion-bg');
+      body.style.removeProperty('--zion-text');
+      body.style.removeProperty('--zion-primary');
+      body.style.removeProperty('--zion-secondary');
+    }
+
+    // Large text mode
+    if (newSettings.largeText) {
+      root.style.fontSize = '18px';
+      root.style.setProperty('--zion-font-size', '18px');
+      root.style.setProperty('--zion-line-height', '1.6');
+    } else {
+      root.style.fontSize = '16px';
+      root.style.setProperty('--zion-font-size', '16px');
+      root.style.setProperty('--zion-line-height', '1.5');
+    }
+
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--zion-reduced-motion', 'reduce');
+      document.body.classList.add('reduced-motion');
+    } else {
+      root.style.removeProperty('--zion-reduced-motion');
+      document.body.classList.remove('reduced-motion');
+    }
+
+    // Custom colors
+    if (newSettings.colorScheme === 'custom') {
+      root.style.setProperty('--zion-custom-bg', newSettings.customColors.background);
+      root.style.setProperty('--zion-custom-text', newSettings.customColors.text);
+      root.style.setProperty('--zion-custom-primary', newSettings.customColors.primary);
+      root.style.setProperty('--zion-custom-secondary', newSettings.customColors.secondary);
+    }
+
+    // Dyslexia friendly
+    if (newSettings.dyslexiaFriendly) {
+      body.style.setProperty('--zion-font-family', 'OpenDyslexic, Arial, sans-serif');
+      body.style.setProperty('--zion-letter-spacing', '0.12em');
+      body.style.setProperty('--zion-word-spacing', '0.16em');
+    } else {
+      body.style.removeProperty('--zion-font-family');
+      body.style.removeProperty('--zion-letter-spacing');
+      body.style.removeProperty('--zion-word-spacing');
+    }
+
+    // Focus indicators
+    if (newSettings.focusIndicators) {
+      body.classList.add('enhanced-focus');
+    } else {
+      body.classList.remove('enhanced-focus');
+    }
+
+    setSettings(newSettings);
+  }, []);
+
+  // Initialize voice recognition
+  useEffect(() => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onresult = (event: any) => {
+        let finalTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          }
+        }
+        if (finalTranscript) {
+          setTranscript(finalTranscript);
+          handleVoiceCommand(finalTranscript.toLowerCase());
+        }
+      };
+
+      recognition.onerror = (event: any) => {
+        // console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
+
+      setVoiceRecognition(recognition);
+    }
+  }, []);
+
+  // Handle voice commands
+  const handleVoiceCommand = useCallback((command: string) => {
+    if (command.includes('open') || command.includes('show')) {
+      if (command.includes('accessibility') || command.includes('settings')) {
+        setIsOpen(true);
+      }
+    } else if (command.includes('close') || command.includes('hide')) {
+      setIsOpen(false);
+    } else if (command.includes('high contrast')) {
+      toggleFeature('high-contrast');
+    } else if (command.includes('large text')) {
+      toggleFeature('large-text');
+    } else if (command.includes('reduced motion')) {
+      toggleFeature('reduced-motion');
+    }
+  }, []);
+
+  // Toggle accessibility features
+  const toggleFeature = useCallback((featureId: string) => {
+    setFeatures(prev => prev.map(f => 
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+    ));
+
+    // Update active features
     setActiveFeatures(prev => {
       const newSet = new Set(prev);
       if (enabled) {
@@ -271,15 +398,75 @@ export default function EnhancedAccessibilityEnhancer() {
     setIsAuditing(false);
   }, []);
 
-  // Apply font size changes
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
+  // Save settings to localStorage
+  const saveSettings = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate save
+    } catch (error) {
+      // console.error('Failed to save settings:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [settings]);
 
-  // Apply focus indicator
-  useEffect(() => {
-    if (focusIndicator) {
-      document.documentElement.classList.add('focus-visible');
+  // Load settings from localStorage
+  const loadSettings = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const saved = localStorage.getItem('zion-accessibility-settings');
+      if (saved) {
+        const parsedSettings = JSON.parse(saved);
+        setSettings(parsedSettings);
+        applyAccessibilitySettings(parsedSettings);
+      }
+      await new Promise(resolve => setTimeout(resolve, 500)); // Simulate load
+    } catch (error) {
+      // console.error('Failed to load settings:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [applyAccessibilitySettings]);
+
+  // Reset to default settings
+  const resetSettings = useCallback(() => {
+    const defaultSettings: AccessibilitySettings = {
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicators: false,
+      colorBlindSupport: false,
+      dyslexiaFriendly: false,
+      autoRead: false,
+      voiceControl: false,
+      gestureControl: false,
+      fontSize: 16,
+      lineHeight: 1.5,
+      letterSpacing: 0,
+      colorScheme: 'light',
+      customColors: {
+        background: '#ffffff',
+        text: '#000000',
+        primary: '#3b82f6',
+        secondary: '#64748b'
+      }
+    };
+    
+    setSettings(defaultSettings);
+    applyAccessibilitySettings(defaultSettings);
+    setActiveFeatures([]);
+  }, [applyAccessibilitySettings]);
+
+  // Toggle voice recognition
+  const toggleVoiceRecognition = useCallback(() => {
+    if (!voiceRecognition) return;
+    
+    if (isListening) {
+      voiceRecognition.stop();
+      setIsListening(false);
     } else {
       document.documentElement.classList.remove('focus-visible');
     }

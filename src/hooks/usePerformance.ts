@@ -44,7 +44,7 @@ export function usePerformance() {
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
-      console.warn('PerformanceObserver not supported');
+      // console.warn('PerformanceObserver not supported');
       return;
     }
 
@@ -94,7 +94,7 @@ export function usePerformance() {
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      console.warn('Error setting up performance observers:', error);
+      // console.warn('Error setting up performance observers:', error);
     }
 
     // Navigation timing metrics
@@ -190,7 +190,7 @@ export function usePerformance() {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
-          console.warn('Long task detected:', {
+          // console.warn('Long task detected:', {
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
@@ -202,7 +202,7 @@ export function usePerformance() {
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      console.warn('Error setting up long task observer:', error);
+      // console.warn('Error setting up long task observer:', error);
     }
 
     return () => longTaskObserver.disconnect();
@@ -232,7 +232,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
     try {
       observer.observe({ entryTypes: [eventName] });
     } catch (error) {
-      console.warn(`Error observing ${eventName}:`, error);
+      // console.warn(`Error observing ${eventName}:`, error);
     }
 
     return () => observer.disconnect();

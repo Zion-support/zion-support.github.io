@@ -1,313 +1,103 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
-export default function MicroSAASPage() {
-    const microSAASServices = [
-        {
-            id: "email-automation",
-            title: "Email Marketing Automation",
-            description: "Powerful email automation platform with advanced segmentation, A/B testing, and analytics for growing businesses.",
-            features: [
-                "Drag & drop email builder",
-                "Advanced segmentation",
-                "A/B testing tools",
-                "Analytics dashboard",
-                "API integration"
-            ],
-            pricing: {
-                starter: "$29/month",
-                professional: "$79/month",
-                enterprise: "$199/month"
-            },
-            icon: <Mail className="h-8 w-8 text-blue-500"/>,
-            category: "Marketing",
-            badge: "Popular",
-            users: "Up to 10,000",
-            rating: 4.8,
-            reviews: 234
-        },
-        {
-            id: "project-management",
-            title: "Project Management Suite",
-            description: "Comprehensive project management tool with task tracking, team collaboration, and project analytics.",
-            features: [
-                "Task & milestone tracking",
-                "Team collaboration tools",
-                "Gantt charts",
-                "Time tracking",
-                "Mobile apps"
-            ],
-            pricing: {
-                starter: "$12/month",
-                professional: "$25/month",
-                enterprise: "$49/month"
-            },
-            icon: <Calendar className="h-8 w-8 text-green-500"/>,
-            category: "Productivity",
-            badge: "Essential",
-            users: "Up to 50 users",
-            rating: 4.7,
-            reviews: 189
-        },
-        {
-            id: "crm-system",
-            title: "Customer Relationship Management",
-            description: "Lightweight CRM system designed for small to medium businesses with contact management and sales tracking.",
-            features: [
-                "Contact management",
-                "Sales pipeline tracking",
-                "Email integration",
-                "Reporting dashboard",
-                "Mobile access"
-            ],
-            pricing: {
-                starter: "$19/month",
-                professional: "$39/month",
-                enterprise: "$79/month"
-            },
-            icon: <Users className="h-8 w-8 text-purple-500"/>,
-            category: "Sales",
-            badge: "Hot",
-            users: "Up to 25 users",
-            rating: 4.9,
-            reviews: 156
-        },
-        {
-            id: "analytics-platform",
-            title: "Business Analytics Platform",
-            description: "Simple yet powerful analytics platform for tracking business metrics, user behavior, and performance insights.",
-            features: [
-                "Real-time dashboards",
-                "Custom metrics tracking",
-                "Data visualization",
-                "Export capabilities",
-                "API access"
-            ],
-            pricing: {
-                starter: "$39/month",
-                professional: "$89/month",
-                enterprise: "$199/month"
-            },
-            icon: <BarChart3 className="h-8 w-8 text-orange-500"/>,
-            category: "Analytics",
-            badge: "Insightful",
-            users: "Unlimited",
-            rating: 4.6,
-            reviews: 98
-        },
-        {
-            id: "payment-processor",
-            title: "Payment Processing Solution",
-            description: "Secure payment processing platform with support for multiple payment methods and subscription billing.",
-            features: [
-                "Multiple payment methods",
-                "Subscription billing",
-                "Fraud protection",
-                "PCI compliance",
-                "Developer API"
-            ],
-            pricing: {
-                starter: "2.9% + $0.30",
-                professional: "2.5% + $0.30",
-                enterprise: "Custom"
-            },
-            icon: <CreditCard className="h-8 w-8 text-indigo-500"/>,
-            category: "Payments",
-            badge: "Secure",
-            users: "Unlimited",
-            rating: 4.8,
-            reviews: 312
-        },
-        {
-            id: "form-builder",
-            title: "Advanced Form Builder",
-            description: "Professional form creation tool with conditional logic, file uploads, and advanced validation rules.",
-            features: [
-                "Drag & drop builder",
-                "Conditional logic",
-                "File uploads",
-                "Multi-step forms",
-                "Analytics tracking"
-            ],
-            pricing: {
-                starter: "$15/month",
-                professional: "$35/month",
-                enterprise: "$75/month"
-            },
-            icon: <FileText className="h-8 w-8 text-teal-500"/>,
-            category: "Forms",
-            badge: "Flexible",
-            users: "Unlimited",
-            rating: 4.7,
-            reviews: 145
-        },
-        {
-            id: "chat-widget",
-            title: "Live Chat Widget",
-            description: "Professional live chat solution for websites with visitor tracking, chat history, and team collaboration.",
-            features: [
-                "Real-time chat",
-                "Visitor tracking",
-                "Chat history",
-                "Team collaboration",
-                "Mobile apps"
-            ],
-            pricing: {
-                starter: "$25/month",
-                professional: "$59/month",
-                enterprise: "$129/month"
-            },
-            icon: <MessageSquare className="h-8 w-8 text-pink-500"/>,
-            category: "Communication",
-            badge: "Engaging",
-            users: "Up to 5 agents",
-            rating: 4.8,
-            reviews: 203
-        },
-        {
-            id: "seo-toolkit",
-            title: "SEO Optimization Toolkit",
-            description: "Comprehensive SEO tool for keyword research, site audits, and performance monitoring.",
-            features: [
-                "Keyword research",
-                "Site audit tools",
-                "Ranking tracking",
-                "Backlink analysis",
-                "Performance reports"
-            ],
-            pricing: {
-                starter: "$49/month",
-                professional: "$99/month",
-                enterprise: "$199/month"
-            },
-            icon: <Search className="h-8 w-8 text-yellow-500"/>,
-            category: "SEO",
-            badge: "Optimized",
-            users: "Up to 3 users",
-            rating: 4.7,
-            reviews: 167
-        },
-        {
-            id: "design-tool",
-            title: "Graphic Design Platform",
-            description: "Online design tool with templates, stock photos, and collaboration features for marketing teams.",
-            features: [
-                "Template library",
-                "Stock photo access",
-                "Collaboration tools",
-                "Brand kit management",
-                "Export options"
-            ],
-            pricing: {
-                starter: "$12/month",
-                professional: "$25/month",
-                enterprise: "$49/month"
-            },
-            icon: <FileText className="h-8 w-8 text-red-500"/>,
-            category: "Design",
-            badge: "Creative",
-            users: "Up to 10 users",
-            rating: 4.6,
-            reviews: 134
-        },
-        {
-            id: "inventory-management",
-            title: "Inventory Management System",
-            description: "Simple inventory tracking solution for small businesses with barcode scanning and low stock alerts.",
-            features: [
-                "Barcode scanning",
-                "Low stock alerts",
-                "Purchase orders",
-                "Vendor management",
-                "Mobile app"
-            ],
-            pricing: {
-                starter: "$29/month",
-                professional: "$59/month",
-                enterprise: "$119/month"
-            },
-            icon: <Database className="h-8 w-8 text-blue-600"/>,
-            category: "Inventory",
-            badge: "Organized",
-            users: "Up to 15 users",
-            rating: 4.8,
-            reviews: 89
-        },
-        {
-            id: "appointment-scheduler",
-            title: "Appointment Scheduling System",
-            description: "Online booking platform for service businesses with calendar integration and automated reminders.",
-            features: [
-                "Online booking",
-                "Calendar integration",
-                "Automated reminders",
-                "Payment processing",
-                "Client portal"
-            ],
-            pricing: {
-                starter: "$19/month",
-                professional: "$39/month",
-                enterprise: "$79/month"
-            },
-            icon: <Clock className="h-8 w-8 text-emerald-500"/>,
-            category: "Scheduling",
-            badge: "Efficient",
-            users: "Up to 20 users",
-            rating: 4.9,
-            reviews: 178
-        },
-        {
-            id: "survey-platform",
-            title: "Survey & Feedback Platform",
-            description: "Professional survey creation tool with advanced question types, logic branching, and analytics.",
-            features: [
-                "Advanced question types",
-                "Logic branching",
-                "Response analytics",
-                "Custom themes",
-                "Data export"
-            ],
-            pricing: {
-                starter: "$25/month",
-                professional: "$55/month",
-                enterprise: "$125/month"
-            },
-            icon: <Search className="h-8 w-8 text-violet-500"/>,
-            category: "Feedback",
-            badge: "Insightful",
-            users: "Unlimited",
-            rating: 4.7,
-            reviews: 112
-        }
-    ];
-    const categories = [
-        "All Services",
-        "Marketing",
-        "Productivity",
-        "Sales",
-        "Analytics",
-        "Payments",
-        "Forms",
-        "Communication",
-        "SEO",
-        "Design",
-        "Inventory",
-        "Scheduling",
-        "Feedback"
-    ];
-    const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-    const filteredServices = selectedCategory === "All Services"
-        ? microSAASServices
-        : microSAASServices.filter(service => service.category === selectedCategory);
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative container mx-auto px-4 py-20 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-            Micro SAAS Hub
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Zap, 
+  Code, 
+  Database, 
+  Users, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  Star,
+  TrendingUp,
+  BarChart3,
+  Settings,
+  Lightbulb,
+  Briefcase,
+  Award,
+  Rocket,
+  Target,
+  Globe
+} from 'lucide-react';
+const MicroSAASPage = () => {
+  const saasServices = [
+    {
+      id: 'custom-applications',
+      title: 'Custom Applications',
+      description: 'Tailored software solutions designed for your specific business needs',
+      icon: <Code className="w-8 h-8" />,
+      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
+      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      pricing: 'Starting from $2,500/month'
+    },
+    {
+      id: 'api-development',
+      title: 'API Development',
+      description: 'Robust and scalable APIs to connect your applications and services',
+      icon: <Database className="w-8 h-8" />,
+      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
+      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      pricing: 'Starting from $1,800/month'
+    },
+    {
+      id: 'scalable-architecture',
+      title: 'Scalable Architecture',
+      description: 'Cloud-native architectures that grow with your business',
+      icon: <Globe className="w-8 h-8" />,
+      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
+      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      pricing: 'Starting from $3,200/month'
+    },
+    {
+      id: 'user-management',
+      title: 'User Management',
+      description: 'Comprehensive user authentication and authorization systems',
+      icon: <Users className="w-8 h-8" />,
+      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
+      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
+      pricing: 'Starting from $1,500/month'
+    }
+  ];
+  const saasBenefits = [
+    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+      <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
+            <Zap className="w-10 h-10 text-white" />
+          </div>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              Micro SAAS
+            </span> Solutions
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Discover powerful, affordable software solutions designed for growing businesses. 

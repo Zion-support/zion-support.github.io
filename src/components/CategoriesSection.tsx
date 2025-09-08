@@ -1,7 +1,6 @@
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
 const categories = [
     {
         title: "Comprehensive Services",

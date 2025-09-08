@@ -1,4 +1,3 @@
-import React from 'react';
 import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi } from 'lucide-react';
 const QuantumEdgeComputing = () => {
     const edgeFeatures = [

@@ -1,11 +1,73 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const API = () => {
-    return (<>
-      <Helmet>
-        <title>API Reference - Zion Tech Group</title>
-        <meta name="description" content="Access Zion Tech Group's API documentation and integration guides for developers."/>
-      </Helmet>
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
+
+const API: React.FC = () => {
+  const endpoints = [
+    {
+      method: 'GET',
+      path: '/api/v1/services',
+      description: 'Retrieve all available services',
+      auth: 'Required'
+    },
+    {
+      method: 'POST',
+      path: '/api/v1/quote',
+      description: 'Request a quote for services',
+      auth: 'Required'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/analytics',
+      description: 'Get analytics data',
+      auth: 'Required'
+    },
+    {
+      method: 'PUT',
+      path: '/api/v1/user/profile',
+      description: 'Update user profile',
+      auth: 'Required'
+    }
+  ];
+
+  const features = [
+    {
+      icon: Shield,
+      title: 'Secure Authentication',
+      description: 'OAuth 2.0 and API key authentication'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Sub-100ms response times guaranteed'
+    },
+    {
+      icon: Globe,
+      title: 'Global CDN',
+      description: 'Worldwide edge locations for fast access'
+    },
+    {
+      icon: Database,
+      title: 'Real-time Data',
+      description: 'Live data synchronization across all endpoints'
+    }
+  ];
+
+  const sdks = [
+    { name: 'JavaScript/Node.js', icon: '🔷' },
+    { name: 'Python', icon: '🐍' },
+    { name: 'Java', icon: '☕' },
+    { name: 'C#', icon: '🔷' },
+    { name: 'Go', icon: '🐹' },
+    { name: 'PHP', icon: '🐘' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="API Reference - Zion Tech Group"
+        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
+      />
       
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

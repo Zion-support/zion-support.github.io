@@ -1,4 +1,3 @@
-import React from "react";
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";

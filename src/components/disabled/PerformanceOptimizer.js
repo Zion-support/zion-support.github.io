@@ -78,7 +78,7 @@ export const PerformanceOptimizer = ({ children }) => {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
-                    // // // console.log('SW registered: ', registration);
+                    // console.log('SW registered: ', registration);
                     
                     // Check for updates
                     registration.addEventListener('updatefound', () => {
@@ -87,22 +87,22 @@ export const PerformanceOptimizer = ({ children }) => {
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
-                                    // // // console.log('New service worker available');
+                                    // console.log('New service worker available');
                                 }
                             });
                         }
                     });
                 })
                 .catch((registrationError) => {
-                    // // // console.warn('SW registration failed: ', registrationError);
+                    // console.warn('SW registration failed: ', registrationError);
                 });
         }
     }, []);
     
     // Intersection Observer for lazy loading
     useEffect(() => {
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
+        if ('window.IntersectionObserver' in window) {
+            const observer = new window.IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const target = entry.target;

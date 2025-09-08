@@ -1,4 +1,17 @@
-import React from 'react';
+interface ForumCategoryInfo {
+  id: string;
+  name: string;
+  description: string;
+  postCount: number;
+  adminOnly?: boolean;
+  icon?: string;
+  lastPost?: {
+    title: string;
+    author: string;
+    date: string;
+  };
+}
+
 export default function ForumCategories() {
     const categories = [
         {

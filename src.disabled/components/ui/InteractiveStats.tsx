@@ -1,4 +1,3 @@
-:src.disabled/components/ui/InteractiveStats.tsx
 interface Stat {
   label: string;
   value: string;

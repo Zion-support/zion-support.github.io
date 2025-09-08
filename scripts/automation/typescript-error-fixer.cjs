@@ -1,158 +1,239 @@
-#!/""usr/bin/env""
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
-    // Get automation interval from environment variable ("default")
-const { execSync, spawn } = require("child_process")
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-=======
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    // Get automation interval from environment variable ("default")
-      this.log(" Fixing TypeScript compilation errors...")
-      this.log(" Fixing type annotation errors...")
-      this.log(" Fixing interface and type definition errors...")
-      // 4. Fix ""import/export""
-      this.log(" Fixing ""import/export"" errors...")
-      this.log(" Running TypeScript compiler check...")
-<<<<<<< HEAD
-const result = await this.runCommand("npm", { "args": ["run", "type-check"})];
-        this.log("No TypeScript errors detected")
-=======
-  const result = await this.runCommand("npm", { "args": ["run", "type-check"})]
-        this.log("No TypeScript errors detected")
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  this.log(⚠  TypeScript compilation still has issues, but fixes were applied")
-      this.log(" Generating TypeScript error fixer report...")
-  "timestamp"
-        "fixesApplied"
-        "summary": "TypeScript error fixer completed"
-        "status": "completed"
-        process.cwd(),typescript-error-fixer-report.json"
-      this.log( TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.")
-  this.log(" TypeScript error fixer "failed": ${error.message  }")
-  this.log(⚠  TypeScript compilation still has issues, but fixes were applied")
-      this.log(" Generating TypeScript error fixer report...")
-  "timestamp"
-        "fixesApplied"
-        "summary": "TypeScript error fixer completed"
-        "status": "completed"
-        process.cwd(),typescript-error-fixer-report.json"
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(" TypeScript error fixer report saved to ${reportPath}")
-      this.log( TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.")
-<<<<<<< HEAD
-  this.log(` TypeScript error fixer "failed": ${error.message}"`)
-    const filesToFix = [`""src/components/MobileExperienceEnhancer.tsx"""", """src/components/ModernUIEnhancer.tsx""", """src/components/NotificationSystem.tsx"""", """src/components/PerformanceOptimizedLoader.tsx""", """src/components/ProjectManagementTimeline.tsx"""", """src/components/ResourceManagementSystem.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/UltimateServicesShowcase2025.tsx"""", """src/context/auth/AuthContext.tsx""", """src/context/auth/profileMapper.ts"""", """src/context/auth/useAuthEventHandlers.ts""", """src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/layout/AppHeader.tsx"""", """src/layout/AppLayout.tsx""", """src/layout/MainNavigation.tsx"""", """src/layout/PrimaryNav.tsx""", """src/legal/TermsOfService.tsx"""", """src/pages/AIServicesPage.tsx""", """src/pages/ForgotPassword.tsx"""", """src/pages/admin/SupportRequests.tsx""", ""`]
-let content = fs.readFileSync(filePath, "utf8");
-          // Fix "any"
-          content = content.replace(/:\s*any"/g, ": string")
-          content = content.replace(/:\s*"anyany/g", ": any")
-          content = content.replace(/:\s*"anystring/g", ": string")
-          content = content.replace(/:\s*anykeyof\s+(\w+)/g, ": keyof $1"
-          content = content.replace(/:\s*any\(\)/g, ": () => void"
-          content = content.replace(/:\s*any\(/g, ": (")
-          content = content.replace(/:\s*any\s*=>/g, ": ")
-          content = content.replace(/:\s*any\s*{/g, ": {"})
-          content = content.replace(/:\s*any\s*;/g, ": any;")
-          content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {"}
-          content = content.replace(/:\s*{\s*;/g, ": {"})
-          content = content.replace(/:\s*{\s*}/g, ": {}")
-          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {"})
-          content = content.replace(/lastPost\?\s*:\s*{\s*;/g, "lastPost?: {"})
-          content = content.replace(/post\s*:\s*{\s*;/g, ""post": {"})
-          content = content.replace(/author\s*:\s*{\s*;/g, ""author": {"})
-          content = content.replace(/contactInfo\s*:\s*{\s*;/g, ""contactInfo": {"})
-            /coreWebVitals\s*:\s*{\s*;/g,"coreWebVitals": {"}
-            ""logout": () => Promise<any>;"
-            ""logout"
-            /resetPassword:\s*any\(email:\s*string\)\s*=>\s*Promise<any>;/g,"resetPassword"
-            ""updateProfile"
-=======
-<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            /loginWithGoogle:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithGoogle"
-            ""loginWithFacebook"
-            /loginWithTwitter:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithTwitter"
-            ""loginWithWeb3"
-            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*""void/g"","setUser": (user: User | null) => void"
-            /setOnboardingStep:\s*any\(step:\s*number\)\s*=>\s*"void/g"
-            ""setOnboardingStep": (step: number) => void"
-            /onClearAll:\s*any\(\)\s*=>\s*void;/g,"onClearAll": () => void;"
-            /onClearAll:\s*any\(\)\s*=>\s*void;/g,"onClearAll"
-            ""onClearFilters"
-            /removeNotification:\s*any\(id:\s*string\)\s*=>\s*void;/g,"removeNotification"
-            ""clearAll"
-            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*"delay": \s*(\d+\.?\d*)\s*\}\}/g,transition={{ "duration": $1, "delay": $2 }}"
-          content = content.replace(/"color": \s*any"([^"]+)"/g, ""color": "$1"
-          content = content.replace(/icon:\s*any"([^"]+)"/g, "icon": "$1"
-          content = content.replace(/id:\s*any"([^"]+)"/g, "id": "$1"
-            /property:\s*any"([^"]+)"/g,"property": "$1"
-          content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1""
-            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
-          content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
-            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
-      this.log(`TypeScript Error Fixer "failed"`)
+console.log('🔧 Starting TypeScript error fixer automation...');
 
-<<<<<<< HEAD
-=======
+// Get automation interval from environment variable (default: 25 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1500000; // 25 minutes
 
-  console.error( Failed to start TypeScript error "fixer")
+async function runTypeScriptErrorFixer() {
+  try {
+    console.log(`🔧 Running TypeScript error fixer at ${new Date().toISOString()}`);
+    
+    const fixes = {
+      typeErrors: 0,
+      unusedVars: 0,
+      importErrors: 0,
+      remaining: 0,
+      errors: []
+    };
+    
+    // Check current TypeScript errors
+    console.log('🔍 Checking current TypeScript errors...');
+    const currentErrors = await checkTypeScriptErrors();
+    fixes.remaining = currentErrors.length;
+    fixes.errors = currentErrors;
+    
+    if (currentErrors.length > 0) {
+      console.log(`⚠️  Found ${currentErrors.length} TypeScript errors:`);
+      currentErrors.forEach(error => {
+        console.log(`  - ${error.file}:${error.line}: ${error.message}`);
+      });
+      
+      // Apply TypeScript fixes
+      console.log('🔧 Applying TypeScript fixes...');
+      const fixResults = await applyTypeScriptFixes();
+      fixes.typeErrors = fixResults.typeErrors;
+      fixes.unusedVars = fixResults.unusedVars;
+      fixes.importErrors = fixResults.importErrors;
+      
+      // Check remaining errors after fixes
+      console.log('🔍 Checking remaining TypeScript errors...');
+      const remainingErrors = await checkTypeScriptErrors();
+      fixes.remaining = remainingErrors.length;
+      
+      if (remainingErrors.length > 0) {
+        console.log(`⚠️  ${remainingErrors.length} TypeScript errors remain:`);
+        remainingErrors.forEach(error => {
+          console.log(`  - ${error.file}:${error.line}: ${error.message}`);
+        });
+      } else {
+        console.log('✅ All TypeScript errors fixed');
+      }
+    } else {
+      console.log('✅ No TypeScript errors found');
+    }
+    
+    // Generate TypeScript error fixer report
+    console.log('📊 Generating TypeScript error fixer report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixes: fixes,
+      totalFixes: fixes.typeErrors + fixes.unusedVars + fixes.importErrors,
+      summary: 'TypeScript error fixer completed',
+      status: 'completed'
+    };
+    
+    const reportPath = path.join(process.cwd(), 'typescript-error-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`✅ TypeScript error fixer report saved to ${reportPath}`);
+    
+    console.log('✅ TypeScript error fixer completed successfully');
+    
+  } catch (error) {
+    console.error('❌ TypeScript error fixer failed:', error.message);
+  }
+}
 
-  console.error( Failed to start TypeScript error fixer")
-=======
-  this.log(` TypeScript error fixer "failed": ${error.message}"`)
-    const filesToFix = [`""src/components/MobileExperienceEnhancer.tsx"""", """src/components/ModernUIEnhancer.tsx""", """src/components/NotificationSystem.tsx"""", """src/components/PerformanceOptimizedLoader.tsx""", """src/components/ProjectManagementTimeline.tsx"""", """src/components/ResourceManagementSystem.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/UltimateServicesShowcase2025.tsx"""", """src/context/auth/AuthContext.tsx""", """src/context/auth/profileMapper.ts"""", """src/context/auth/useAuthEventHandlers.ts""", """src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/layout/AppHeader.tsx"""", """src/layout/AppLayout.tsx""", """src/layout/MainNavigation.tsx"""", """src/layout/PrimaryNav.tsx""", """src/legal/TermsOfService.tsx"""", """src/pages/AIServicesPage.tsx""", """src/pages/ForgotPassword.tsx"""", """src/pages/admin/SupportRequests.tsx""", ""`]
-  let content = fs.readFileSync(filePath, "utf8")
-          // Fix "any"
-          content = content.replace(/:\s*any"/g, ": string")
-          content = content.replace(/:\s*"anyany/g", ": any")
-          content = content.replace(/:\s*"anystring/g", ": string")
-          content = content.replace(/:\s*anykeyof\s+(\w+)/g, ": keyof $1"
-          content = content.replace(/:\s*any\(\)/g, ": () => void"
-          content = content.replace(/:\s*any\(/g, ": (")
-          content = content.replace(/:\s*any\s*=>/g, ": ")
-          content = content.replace(/:\s*any\s*{/g, ": {"})
-          content = content.replace(/:\s*any\s*;/g, ": any;")
-          content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {"}
-          content = content.replace(/:\s*{\s*;/g, ": {"})
-          content = content.replace(/:\s*{\s*}/g, ": {}")
-          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {"})
-          content = content.replace(/lastPost\?\s*:\s*{\s*;/g, "lastPost?: {"})
-          content = content.replace(/post\s*:\s*{\s*;/g, ""post": {"})
-          content = content.replace(/author\s*:\s*{\s*;/g, ""author": {"})
-          content = content.replace(/contactInfo\s*:\s*{\s*;/g, ""contactInfo": {"})
-            /coreWebVitals\s*:\s*{\s*;/g,"coreWebVitals": {"}
-            ""logout": () => Promise<any>;"
-            ""logout"
-            /resetPassword:\s*any\(email:\s*string\)\s*=>\s*Promise<any>;/g,"resetPassword"
-            ""updateProfile"
-            /loginWithGoogle:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithGoogle"
-            ""loginWithFacebook"
-            /loginWithTwitter:\s*any\(\)\s*=>\s*Promise<any>;/g,"loginWithTwitter"
-            ""loginWithWeb3"
-            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*""void/g"","setUser": (user: User | null) => void"
-            /setOnboardingStep:\s*any\(step:\s*number\)\s*=>\s*"void/g"
-            ""setOnboardingStep": (step: number) => void"
-            /onClearAll:\s*any\(\)\s*=>\s*void;/g,"onClearAll": () => void;"
-            /onClearAll:\s*any\(\)\s*=>\s*void;/g,"onClearAll"
-            ""onClearFilters"
-            /removeNotification:\s*any\(id:\s*string\)\s*=>\s*void;/g,"removeNotification"
-            ""clearAll"
-            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*"delay": \s*(\d+\.?\d*)\s*\}\}/g,transition={{ "duration": $1, "delay": $2 }}"
-          content = content.replace(/"color": \s*any"([^"]+)"/g, ""color": "$1"
-          content = content.replace(/icon:\s*any"([^"]+)"/g, "icon": "$1"
-          content = content.replace(/id:\s*any"([^"]+)"/g, "id": "$1"
-            /property:\s*any"([^"]+)"/g,"property": "$1"
-          content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1""
-            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
-          content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
-            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
-      this.log(`TypeScript Error Fixer "failed"`)
-  console.error(" Failed to start TypeScript error "fixer")
+async function checkTypeScriptErrors() {
+  const errors = [];
+  
+  try {
+    const result = execSync('npm run type-check', { stdio: 'pipe' });
+    console.log('✅ No TypeScript errors found');
+  } catch (error) {
+    const output = error.stdout ? error.stdout.toString() : error.stderr ? error.stderr.toString() : '';
+    const lines = output.split('\n');
+    
+    lines.forEach(line => {
+      if (line.includes('error TS') && line.includes(':')) {
+        const match = line.match(/([^:]+):(\d+):(\d+):\s*-\s*error\s+TS(\d+):\s*(.+)/);
+        if (match) {
+          errors.push({
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            code: `TS${match[4]}`,
+            message: match[5].trim()
+          });
+        }
+      }
+    });
+  }
+  
+  return errors;
+}
+
+async function applyTypeScriptFixes() {
+  const results = {
+    typeErrors: 0,
+    unusedVars: 0,
+    importErrors: 0
+  };
+  
+  function scanForTypeScriptIssues(dir) {
+    try {
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanForTypeScriptIssues(fullPath);
+        } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+          try {
+            let content = fs.readFileSync(fullPath, 'utf8');
+            const originalContent = content;
+            
+            // Fix TS1185: Merge conflict marker encountered
+            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+              content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+              content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+              content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+              results.typeErrors++;
+            }
+            
+            // Fix TS1005: Unexpected token
+            content = content.replace(/>>>>>>> [a-f0-9]+/g, '');
+            
+            // Fix TS1382: Unexpected token (merge conflict markers)
+            content = content.replace(/>>>>>>> [a-f0-9]+/g, '');
+            
+            // Fix unused variables by prefixing with underscore
+            content = content.replace(/(\w+): (\w+)(?=,|\)|;)/g, (match, name, type) => {
+              if (name.startsWith('_')) return match;
+              return `_${name}: ${type}`;
+            });
+            
+            // Fix any type annotations
+            content = content.replace(/const (\w+): any/g, 'const $1: unknown');
+            content = content.replace(/function (\w+)\(\): any/g, 'function $1(): unknown');
+            content = content.replace(/let (\w+): any/g, 'let $1: unknown');
+            content = content.replace(/var (\w+): any/g, 'var $1: unknown');
+            
+            // Fix missing type annotations
+            content = content.replace(/const (\w+) =/g, 'const $1: unknown =');
+            content = content.replace(/let (\w+) =/g, 'let $1: unknown =');
+            content = content.replace(/var (\w+) =/g, 'var $1: unknown =');
+            
+            // Fix import errors
+            content = content.replace(/import.*from ['"]\.\.\/\.\.\/\.\.\/\.\.\/['"]/g, '// Fixed broken import');
+            
+            // Fix unused imports
+            content = content.replace(/import React from ['"]react['"];?\s*\n?/g, '');
+            content = content.replace(/import \{ [^}]* \} from ['"][^'"]*['"];?\s*\n?/g, (match) => {
+              const imports = match.match(/import \{ ([^}]*) \} from/);
+              if (imports) {
+                const importList = imports[1].split(',').map(i => i.trim());
+                const usedImports = importList.filter(imp => {
+                  const cleanImp = imp.replace(/\s+as\s+\w+/, '');
+                  return content.includes(cleanImp) && !content.includes(`import.*${cleanImp}`);
+                });
+                
+                if (usedImports.length === 0) {
+                  results.unusedVars++;
+                  return '';
+                } else if (usedImports.length < importList.length) {
+                  results.unusedVars++;
+                  return `import { ${usedImports.join(', ')} } from '${match.match(/from ['"]([^'"]*)['"]/)[1]}';\n`;
+                }
+              }
+              return match;
+            });
+            
+            // Fix missing JSX closing tags
+            content = content.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2></$1>');
+            
+            if (content !== originalContent) {
+              fs.writeFileSync(fullPath, content);
+              console.log(`✅ Fixed TypeScript issues in ${path.relative(process.cwd(), fullPath)}`);
+            }
+          } catch (error) {
+            // Skip files that can't be read/written
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanForTypeScriptIssues('./src');
+  return results;
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting TypeScript error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial TypeScript error fixer
+  await runTypeScriptErrorFixer();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runTypeScriptErrorFixer();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ TypeScript error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the TypeScript error fixer
+runContinuous().catch(error => {
+  console.error('❌ Failed to start TypeScript error fixer:', error);
+  process.exit(1);
+});

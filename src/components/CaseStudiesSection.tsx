@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 const caseStudies = [
     {
         id: 'healthcare-ai',

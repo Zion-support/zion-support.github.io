@@ -13,22 +13,103 @@ export function registerServiceWorker() {
         .then((registration) => {
           // // // console.log('SW registered: ', registration);
 
-          // Handle updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-                  // // // console.log('New content is available; please refresh.');
-                }
-              });
+  async register(): Promise<ServiceWorkerRegistration | null> {
+    if (!this.isSupported) {
+      // console.log('Service Worker not supported');
+      return null;
+    }
+
+    try {
+      // Check if service worker is already registered
+      const existingRegistration = await navigator.serviceWorker.getRegistration();
+      if (existingRegistration) {
+        // console.log('Service Worker already registered');
+        this.swRegistration = existingRegistration;
+        return existingRegistration;
+      }
+
+      // Register new service worker with better error handling
+      const registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
+      });
+
+      // console.log('Service Worker registered successfully:', registration);
+      this.swRegistration = registration;
+
+      // Wait for service worker to be ready before setting up handlers
+      await navigator.serviceWorker.ready;
+
+      // Handle updates
+      this.handleUpdates(registration);
+
+      // Handle messages
+      this.handleMessages();
+
+      return registration;
+    } catch (error) {
+      // console.error('Service Worker registration failed:', error);
+      return null;
+    }
+  }
+
+  private handleUpdates(registration: ServiceWorkerRegistration) {
+    try {
+      // Check for updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            try {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
+                this.showUpdateNotification();
+              }
+            } catch (error) {
+              // console.error('Error handling worker state change:', error);
             }
           });
-        })
-        .catch((registrationError) => {
-          // // // console.error('SW registration failed: ', registrationError);
-        });
+        }
+      });
+
+      // Handle controller change
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        try {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        } catch (error) {
+          // console.error('Error handling controller change:', error);
+        }
+      });
+    } catch (error) {
+      // console.error('Error setting up update handlers:', error);
+    }
+  }
+
+  private handleMessages() {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      try {
+        // console.log('Message from Service Worker:', event.data);
+        
+        switch (event.data.type) {
+          case 'CACHE_UPDATED':
+            // console.log('Cache updated:', event.data.payload);
+            break;
+          case 'OFFLINE_READY':
+            // console.log('App is ready for offline use');
+            break;
+          case 'ERROR':
+            // console.error('Service Worker error:', event.data.payload);
+            break;
+          default:
+            // console.log('Unknown message type:', event.data.type);
+        }
+      } catch (error) {
+        // console.error('Error handling service worker message:', error);
+      }
     });
   }
 
@@ -75,7 +156,7 @@ export function registerServiceWorker() {
       }
     }, 10000);
     } catch (error) {
-      console.error('Error showing update notification:', error);
+      // console.error('Error showing update notification:', error);
     }
   }
 
@@ -84,9 +165,9 @@ export function registerServiceWorker() {
 
     try {
       await this.swRegistration.update();
-      console.log('Service Worker update initiated');
+      // console.log('Service Worker update initiated');
     } catch (error) {
-      console.error('Service Worker update failed:', error);
+      // console.error('Service Worker update failed:', error);
     }
   }
 
@@ -96,12 +177,12 @@ export function registerServiceWorker() {
     try {
       const unregistered = await this.swRegistration.unregister();
       if (unregistered) {
-        console.log('Service Worker unregistered');
+        // console.log('Service Worker unregistered');
         this.swRegistration = null;
       }
       return unregistered;
     } catch (error) {
-      console.error('Service Worker unregistration failed:', error);
+      // console.error('Service Worker unregistration failed:', error);
       return false;
     }
   }
@@ -130,9 +211,9 @@ export function registerServiceWorker() {
       await Promise.all(
         cacheNames.map(cacheName => caches.delete(cacheName))
       );
-      console.log('All caches cleared');
+      // console.log('All caches cleared');
     } catch (error) {
-      console.error('Failed to clear caches:', error);
+      // console.error('Failed to clear caches:', error);
     }
   }
 
@@ -158,7 +239,7 @@ export function registerServiceWorker() {
 
       return totalSize;
     } catch (error) {
-      console.error('Failed to calculate cache size:', error);
+      // console.error('Failed to calculate cache size:', error);
       return 0;
     }
   }
@@ -173,12 +254,12 @@ export function registerServiceWorker() {
       const registration = await this.getRegistration();
       if (registration) {
         await (registration as any).sync.register(tag);
-        console.log('Background sync requested:', tag);
+        // console.log('Background sync requested:', tag);
         return true;
       }
       return false;
     } catch (error) {
-      console.error('Background sync request failed:', error);
+      // console.error('Background sync request failed:', error);
       return false;
     }
   }
@@ -191,10 +272,10 @@ export function registerServiceWorker() {
 
     try {
       const permission = await Notification.requestPermission();
-      console.log('Notification permission:', permission);
+      // console.log('Notification permission:', permission);
       return permission;
     } catch (error) {
-      console.error('Failed to request notification permission:', error);
+      // console.error('Failed to request notification permission:', error);
       return 'denied';
     }
   }
@@ -207,13 +288,13 @@ export function registerServiceWorker() {
     try {
       const permission = await this.requestNotificationPermission();
       if (permission !== 'granted') {
-        console.log('Notification permission denied');
+        // console.log('Notification permission denied');
         return null;
       }
 
       const registration = await this.getRegistration();
       if (!registration) {
-        console.log('No service worker registration');
+        // console.log('No service worker registration');
         return null;
       }
 
@@ -222,10 +303,10 @@ export function registerServiceWorker() {
         applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '') as Uint8Array as Uint8Array
       });
 
-      console.log('Push subscription created:', subscription);
+      // console.log('Push subscription created:', subscription);
       return subscription;
     } catch (error) {
-      console.error('Push subscription failed:', error);
+      // console.error('Push subscription failed:', error);
       return null;
     }
   }

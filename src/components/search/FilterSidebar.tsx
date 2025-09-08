@@ -1,3 +1,4 @@
+import { Filter, X } from 'lucide-react';
 
 <<<<<<< HEAD
 

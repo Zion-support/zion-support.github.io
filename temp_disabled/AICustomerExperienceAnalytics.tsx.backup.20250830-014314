@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Users, 
-  BarChart3, 
-  Brain, 
-  Zap, 
-  Eye, 
-  TrendingUp, 
-  Globe,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Heart,
-  MessageSquare,
-  Activity,
-  Target,
-  Clock,
-  DollarSign,
-  Award,
-  Database,
-  Network,
-  Cpu,
-  PieChart,
-  LineChart
-} from 'lucide-react';
-=======
-import React from 'react';
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe } from 'lucide-react';
+import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
   const features = [

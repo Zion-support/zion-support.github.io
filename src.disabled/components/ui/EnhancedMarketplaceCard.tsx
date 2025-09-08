@@ -1,8 +1,4 @@
-:src.disabled/components/ui/EnhancedMarketplaceCard.tsx
-import React from 'react.ts';
-
-interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
-
+interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   className?: string;

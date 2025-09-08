@@ -1,6 +1,16 @@
-return (<>
-      <SEO title="Zion Hire AI - White-labeled AI Recruiting Assistant" description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI" canonical="https://ziontechgroup.com/zion-hire-ai"/>
-      
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Footer } from '@/components/Footer';
+
+const ZionHireAI = () => {
+  const successMetrics = [
+    { metric: '95%', label: 'Faster Hiring' },
+    { metric: '87%', label: 'Better Matches' },
+    { metric: '92%', label: 'Cost Reduction' },
+    { metric: '89%', label: 'Candidate Satisfaction' }
+  ];
+
+  return (
+    <>
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">

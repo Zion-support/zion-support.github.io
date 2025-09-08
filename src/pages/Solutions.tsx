@@ -1,5 +1,47 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Heart, 
+  TrendingUp, 
+  Scale, 
+  Atom, 
+  Factory, 
+  ShoppingCart, 
+  Shield, 
+  Leaf, 
+  Rocket, 
+  GraduationCap,
+  Building,
+  Car,
+  City,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Users,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Target,
+  Zap,
+  Brain,
+  Eye,
+  Network,
+  Clock,
+  FileText,
+  Settings,
+  Key,
+  ShieldCheck,
+  Building2,
+  Home,
+  Play,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
 export default function Page() {
 export default function Page() {

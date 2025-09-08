@@ -1,50 +1,72 @@
-import React from 'react';
-import Link from 'next/link';
-const AccessibilityAuditor = () => {
-    const features = [
-        {
-            title: "Automated Testing",
-            description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
-            icon: "🔍"
-        },
-        {
-            title: "Manual Review",
-            description: "Expert manual accessibility audits by certified professionals",
-            icon: "👁️"
-        },
-        {
-            title: "Real-time Monitoring",
-            description: "Continuous monitoring and alerting for accessibility issues",
-            icon: "📊"
-        },
-        {
-            title: "Compliance Reporting",
-            description: "Detailed reports with actionable recommendations",
-            icon: "📋"
-        }
-    ];
-    const complianceStandards = [
-        "WCAG 2.1 AA",
-        "Section 508",
-        "ADA Title III",
-        "EN 301 549",
-        "ISO 9241-171"
-    ];
-    const testingAreas = [
-        {
-            category: "Visual Accessibility",
-            items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
-        },
-        {
-            category: "Content Accessibility",
-            items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
-        },
-        {
-            category: "Technical Accessibility",
-            items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-        }
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+import { Link } from 'react-router-dom';
+import { 
+  Eye, 
+  Shield, 
+  CheckCircle, 
+  AlertTriangle, 
+  BarChart3, 
+  Users, 
+  Globe,
+  Zap,
+  Target,
+  Award,
+  ArrowRight,
+  Accessibility,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop
+} from 'lucide-react';
+
+const AccessibilityAuditor: React.FC = () => {
+  const features = [
+    {
+      title: "Automated Testing",
+      description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
+      icon: "🔍"
+    },
+    {
+      title: "Manual Review",
+      description: "Expert manual accessibility audits by certified professionals",
+      icon: "👁️"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring and alerting for accessibility issues",
+      icon: "📊"
+    },
+    {
+      title: "Compliance Reporting",
+      description: "Detailed reports with actionable recommendations",
+      icon: "📋"
+    }
+  ];
+
+  const complianceStandards = [
+    "WCAG 2.1 AA",
+    "Section 508",
+    "ADA Title III",
+    "EN 301 549",
+    "ISO 9241-171"
+  ];
+
+  const testingAreas = [
+    {
+      category: "Visual Accessibility",
+      items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+    },
+    {
+      category: "Content Accessibility",
+      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+    },
+    {
+      category: "Technical Accessibility",
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

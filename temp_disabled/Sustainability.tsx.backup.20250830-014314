@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-=======
-import React from 'react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
 import { motion } from 'framer-motion';
 import { Heart, Leaf, Zap, Globe, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu } from 'lucide-react';
 

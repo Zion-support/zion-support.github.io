@@ -1,1 +1,38 @@
-import React from 'react'; import Head from 'next / head'; export default React.memo(function About () { return (<> <Head> <title > About - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group" / /> </Head> <main className="min - h-screen bg - white"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20"> <div className="text - center mb - 16"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 6"> About Zion Tech Group </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto"> Leading technology solutions provider. </p> </div> <div className="grid md:grid - cols - 2 gap - 12"> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Mission</h2> <p className="text - gray - 600 mb - 6"> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Vision</h2> <p className="text - gray - 600"> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Why Choose Us</h2> <ul className="space - y-3 text - gray - 600"> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) ; }""";
+const About: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-24 text-center text-white">
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          About Zion Tech Group
+        </h1>
+        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+          We are a forward-thinking technology company dedicated to transforming businesses through innovative AI, cloud, and cybersecurity solutions.
+        </p>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            To democratize cutting-edge technology and make AI, cloud, and cybersecurity solutions accessible to businesses of all sizes.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
+              <div className="text-gray-300 space-y-2">
+                <p>📞 +1 (302) 464-0950</p>
+                <p>✉️ kleber@ziontechgroup.com</p>
+                <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
+              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
+                https://ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;

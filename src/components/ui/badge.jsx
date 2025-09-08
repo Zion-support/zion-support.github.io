@@ -1,7 +1,5 @@
-import React from 'react';
-import { cn } from '../../lib/utils';
-
-const Badge = React.forwardRef(({ className, variant = 'default', children, ...props }, ref) => {
+const Badge = ({ children, className = '', variant = 'default' }) => {
+  const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
   const variantClasses = {
     default: 'border-transparent bg-zion-cyan text-white hover:bg-zion-cyan-dark',
     secondary: 'border-transparent bg-zion-slate text-white hover:bg-zion-slate-dark',

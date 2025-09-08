@@ -1,4 +1,3 @@
-import React from 'react';
 import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard } from 'lucide-react';
 const QuantumNeuralNetwork = () => {
     const quantumFeatures = [

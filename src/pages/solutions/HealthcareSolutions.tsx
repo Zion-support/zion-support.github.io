@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function HealthcareSolutions() {

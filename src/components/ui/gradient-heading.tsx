@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 export function GradientHeading({ children, className = '', size = '4xl', gradient = 'zion', customColors }) {
     const sizeClasses = {

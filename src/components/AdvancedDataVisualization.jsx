@@ -24,83 +24,71 @@ const colorPalettes = [
 ];
 
 export function AdvancedDataVisualization() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [selectedChartType, setSelectedChartType] = useState('bar');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedColorPalette, setSelectedColorPalette] = useState(0);
-  const [chartConfig, setChartConfig] = useState({
-    showLegend: true,
-    showGrid: true,
-    animate: true,
-    responsive: true
-  });
-  const [data, setData] = useState(mockChartData);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [autoRefresh, setAutoRefresh] = useState(false);
-
-  const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
-  const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
-
-  const refreshData = async () => {
-    setIsRefreshing(true);
-    // Simulate data refresh
-    setTimeout(() => {
-      const newData = data.map(item => ({
-        ...item,
-        value: item.value + Math.floor(Math.random() * 100000 - 50000)
-      }));
-      setData(newData);
-      setIsRefreshing(false);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    if (autoRefresh) {
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
-    }
-  }, [autoRefresh]);
-
-  const downloadChart = (format) => {
-    // Simulate chart download
-    console.log(`Downloading chart as ${format}`);
-  };
-
-  const renderChart = () => {
-    switch (selectedChartType) {
-      case 'bar':
-        return renderBarChart();
-      case 'line':
-        return renderLineChart();
-      case 'pie':
-        return renderPieChart();
-      case 'area':
-        return renderAreaChart();
-      case 'scatter':
-        return renderScatterChart();
-      default:
-        return renderBarChart();
-    }
-  };
-
-  const renderBarChart = () => {
-    const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalette];
-    
-    return (
-      <div className="h-80 flex items-end justify-center gap-4 p-6">
-        {filteredData.map((item, index) => (
-          <div key={item.id} className="flex flex-col items-center">
-            <div
-              className="w-16 bg-gradient-to-t from-blue-500 to-purple-600 rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer"
-              style={{
-                height: `${(item.value / maxValue) * 280}px`,
-                backgroundColor: colors[index % colors.length]
-              }}
-              title={`${item.name}: ${item.value.toLocaleString()}`}
-            />
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [selectedChartType, setSelectedChartType] = useState('bar');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedColorPalette, setSelectedColorPalette] = useState(0);
+    const [chartConfig, setChartConfig] = useState({
+        showLegend: true,
+        showGrid: true,
+        animate: true,
+        responsive: true
+    });
+    const [data, setData] = useState(mockChartData);
+    const [isRefreshing, setIsRefreshing] = useState(false);
+    const [autoRefresh, setAutoRefresh] = useState(false);
+    const containerRef = useRef(null);
+    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
+    const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
+    const refreshData = async () => {
+        setIsRefreshing(true);
+        // Simulate data refresh
+        setTimeout(() => {
+            const newData = data.map(item => ({
+                ...item,
+                value: item.value + Math.floor(Math.random() * 100000 - 50000)
+            }));
+            setData(newData);
+            setIsRefreshing(false);
+        }, 1000);
+    };
+    useEffect(() => {
+        if (autoRefresh) {
+            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            return () => clearInterval(interval);
+        }
+    }, [autoRefresh]);
+    const downloadChart = (format) => {
+        // Simulate chart download
+        // console.log(`Downloading chart as ${format}`);
+    };
+    const renderChart = () => {
+        switch (selectedChartType) {
+            case 'bar':
+                return renderBarChart();
+            case 'line':
+                return renderLineChart();
+            case 'pie':
+                return renderPieChart();
+            case 'area':
+                return renderAreaChart();
+            case 'scatter':
+                return renderScatterChart();
+            default:
+                return renderBarChart();
+        }
+    };
+    const renderBarChart = () => {
+        const maxValue = Math.max(...filteredData.map(item => item.value));
+        const colors = colorPalettes[selectedColorPalette];
+        return (<div className="h-80 flex items-end justify-center gap-4 p-6">
+        {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">
+            <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
+                    height: `${(item.value / maxValue) * 280}px`,
+                    backgroundColor: colors[index % colors.length]
+                }} title={`${item.name}: ${item.value.toLocaleString()}`}/>
             <div className="mt-2 text-center">
               <div className="text-xs font-medium text-gray-900">{item.name}</div>
               <div className="text-xs text-gray-600">{item.value.toLocaleString()}</div>

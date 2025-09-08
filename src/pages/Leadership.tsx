@@ -1,150 +1,124 @@
-import React from 'react';
-import Link from 'next/link';
-import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
-const Leadership = () => {
-    const leadershipTeam = [
-        {
-            name: "Dr. Sarah Chen",
-            role: "Chief Executive Officer",
-            image: "/leadership/sarah-chen.jpg",
-            bio: "Dr. Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation. She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.",
-            experience: "15+ years in technology leadership",
-            education: "Ph.D. in Computer Science, Stanford University",
-            expertise: ["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
-            achievements: [
-                "Led company to 300% growth in 3 years",
-                "Named Top 50 Women in Tech by Forbes",
-                "Published 25+ research papers",
-                "Advisor to 3 successful tech startups"
-            ],
-            linkedin: "https://linkedin.com/in/sarah-chen",
-            email: "sarah.chen@ziontechgroup.com",
-            location: "San Francisco, CA"
-        },
-        {
-            name: "Michael Rodriguez",
-            role: "Chief Technology Officer",
-            image: "/leadership/michael-rodriguez.jpg",
-            bio: "Michael Rodriguez is a technology expert with deep expertise in AI, cloud architecture, and emerging technologies. He has architected solutions for Fortune 500 companies and is passionate about using technology to solve complex business challenges.",
-            experience: "18+ years in technology architecture",
-            education: "M.S. in Computer Science, MIT",
-            expertise: ["AI/ML", "Cloud Architecture", "Technology Strategy", "System Design"],
-            achievements: [
-                "Architected solutions for 50+ enterprise clients",
-                "Led cloud migration projects worth $100M+",
-                "Named Top 100 Technology Leaders",
-                "Speaker at major tech conferences"
-            ],
-            linkedin: "https://linkedin.com/in/michael-rodriguez",
-            email: "michael.rodriguez@ziontechgroup.com",
-            location: "Austin, TX"
-        },
-        {
-            name: "Dr. Emily Watson",
-            role: "Chief Research Officer",
-            image: "/leadership/emily-watson.jpg",
-            bio: "Dr. Emily Watson is a leading researcher in quantum computing, AI consciousness, and advanced algorithms. She has published over 100 research papers and holds multiple patents in quantum computing applications.",
-            experience: "20+ years in research and development",
-            education: "Ph.D. in Quantum Physics, Caltech",
-            expertise: ["Quantum Computing", "AI Research", "Algorithm Development", "Research Strategy"],
-            achievements: [
-                "Published 100+ research papers",
-                "Holds 15 patents in quantum computing",
-                "Led $50M research initiatives",
-                "Fellow of the American Physical Society"
-            ],
-            linkedin: "https://linkedin.com/in/emily-watson",
-            email: "emily.watson@ziontechgroup.com",
-            location: "Boston, MA"
-        },
-        {
-            name: "David Kim",
-            role: "Chief Security Officer",
-            image: "/leadership/david-kim.jpg",
-            bio: "David Kim is a cybersecurity expert with extensive experience in threat detection and security architecture. He has helped organizations build robust security frameworks and maintain compliance with industry standards.",
-            experience: "16+ years in cybersecurity",
-            education: "M.S. in Information Security, Carnegie Mellon",
-            expertise: ["Cybersecurity", "Threat Intelligence", "Security Architecture", "Compliance"],
-            achievements: [
-                "Secured 100+ enterprise organizations",
-                "Zero security breaches in 10 years",
-                "Expert witness in cybersecurity cases",
-                "Author of 3 cybersecurity books"
-            ],
-            linkedin: "https://linkedin.com/in/david-kim",
-            email: "david.kim@ziontechgroup.com",
-            location: "Washington, DC"
-        },
-        {
-            name: "Lisa Thompson",
-            role: "VP of Engineering",
-            image: "/leadership/lisa-thompson.jpg",
-            bio: "Lisa Thompson is an engineering leader focused on building scalable solutions and developing high-performing teams. She has led engineering organizations of 100+ developers and delivered complex projects on time and budget.",
-            experience: "14+ years in software engineering",
-            education: "B.S. in Computer Science, UC Berkeley",
-            expertise: ["Software Engineering", "Team Leadership", "System Architecture", "Agile Development"],
-            achievements: [
-                "Led teams of 100+ engineers",
-                "Delivered 50+ major projects",
-                "Reduced deployment time by 80%",
-                "Mentored 25+ engineering leaders"
-            ],
-            linkedin: "https://linkedin.com/in/lisa-thompson",
-            email: "lisa.thompson@ziontechgroup.com",
-            location: "Seattle, WA"
-        },
-        {
-            name: "James Wilson",
-            role: "VP of Business Development",
-            image: "/leadership/james-wilson.jpg",
-            bio: "James Wilson is a business strategist with expertise in partnerships and market expansion. He has helped companies enter new markets and build strategic relationships that drive growth and innovation.",
-            experience: "12+ years in business development",
-            education: "MBA, Harvard Business School",
-            expertise: ["Business Strategy", "Partnerships", "Market Analysis", "Growth Strategy"],
-            achievements: [
-                "Generated $200M+ in new business",
-                "Established 50+ strategic partnerships",
-                "Expanded to 15 new markets",
-                "Led 3 successful market entries"
-            ],
-            linkedin: "https://linkedin.com/in/james-wilson",
-            email: "james.wilson@ziontechgroup.com",
-            location: "New York, NY"
-        }
-    ];
-    const companyValues = [
-        {
-            title: "Innovation First",
-            description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
-            icon: Zap
-        },
-        {
-            title: "Excellence in Everything",
-            description: "We maintain the highest standards in our work, from code quality to client relationships.",
-            icon: Award
-        },
-        {
-            title: "Collaborative Culture",
-            description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",
-            icon: Users
-        },
-        {
-            title: "Client Success",
-            description: "Our success is measured by the success of our clients and the impact we create together.",
-            icon: Target
-        }
-    ];
-    const vision = {
-        title: "Our Vision",
-        description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
-        goals: [
-            "Advance AI consciousness and autonomous systems",
-            "Democratize quantum computing access",
-            "Create sustainable technology solutions",
-            "Build the most trusted technology partner network"
-        ]
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Award, 
+  Star, 
+  Target, 
+  TrendingUp, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Rocket,
+  Building,
+  Heart,
+  Crown,
+  Sparkles,
+  ArrowRight,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+export default function Leadership() {
+  const leadershipTeam = [
+    {
+      name: 'Kleber Santos',
+      title: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+      bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',
+      expertise: ['AI & Machine Learning', 'Business Strategy', 'Technology Innovation', 'Team Leadership'],
+      linkedin: 'https://linkedin.com/in/klebersantos',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    {
+      name: 'Dr. Sarah Chen',
+      title: 'Chief Technology Officer',
+      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+      bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.',
+      expertise: ['Quantum Computing', 'AI Research', 'Technology Architecture', 'Innovation Strategy'],
+      linkedin: 'https://linkedin.com/in/sarahchen',
+      email: 'sarah@ziontechgroup.com',
+      phone: '+1 302 464 0951'
+    },
+    {
+      name: 'Michael Rodriguez',
+      title: 'Chief Operations Officer',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
+      bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.',
+      expertise: ['Operations Management', 'Process Optimization', 'Client Success', 'Team Development'],
+      linkedin: 'https://linkedin.com/in/michaelrodriguez',
+      email: 'michael@ziontechgroup.com',
+      phone: '+1 302 464 0952'
+    },
+    {
+      name: 'Dr. Emily Watson',
+      title: 'Head of AI Research',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
+      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
+      linkedin: 'https://linkedin.com/in/emilywatson',
+      email: 'emily@ziontechgroup.com',
+      phone: '+1 302 464 0953'
+    }
+  ];
+
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative problem-solving.'
+    },
+    {
+      icon: Heart,
+      title: 'Client Success',
+      description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'We believe technology should make the world better for everyone, everywhere.'
+    }
+  ];
+
+  const achievements = [
+    {
+      metric: '500+',
+      label: 'AI Solutions Deployed',
+      description: 'Successfully implemented AI solutions across diverse industries'
+    },
+    {
+      metric: '50+',
+      label: 'Enterprise Clients',
+      description: 'Trusted by leading companies worldwide'
+    },
+    {
+      metric: '95%',
+      label: 'Client Satisfaction',
+      description: 'Consistently high satisfaction ratings from our clients'
+    },
+    {
+      metric: '25+',
+      label: 'Industry Awards',
+      description: 'Recognition for innovation and excellence in technology'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Leadership - Zion Tech Group"
+        description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
+      />
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>

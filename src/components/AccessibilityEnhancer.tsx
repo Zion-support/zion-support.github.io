@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Add keyboard navigation enhancements
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Tab key
-      if (event.key === 'Tab' && !event.shiftKey) {
-        const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
-        if (skipLink && document.activeElement === document.body) {
-          skipLink.focus();
-        }
+    const savedSettings = localStorage.getItem('zion-accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings({ ...DEFAULT_SETTINGS, ...parsed });
+        applySettings({ ...DEFAULT_SETTINGS, ...parsed });
+      } catch (error) {
+        // console.warn('Failed to parse accessibility settings:', error);
       }
     };
 

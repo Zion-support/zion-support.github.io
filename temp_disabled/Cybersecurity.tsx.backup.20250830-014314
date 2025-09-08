@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> e220500ccca44de2253ff84a9759db22263da039
 import { Link } from 'react-router-dom';

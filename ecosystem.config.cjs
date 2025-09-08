@@ -111,7 +111,63 @@ module.exports = {
       }
     },
 
-    // 🔧 NEW: Error Fixer - runs every 15 minutes (HIGH PRIORITY)
+    // Merge conflict resolver - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'merge-conflict-resolver',
+      script: './scripts/automation/merge-conflict-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Comprehensive error fixer - runs every 30 minutes
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Linting error fixer - runs every 20 minutes
+    {
+      name: 'linting-error-fixer',
+      script: './scripts/automation/linting-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // TypeScript error fixer - runs every 25 minutes
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1500000' // 25 minutes
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes
     {
       name: 'error-fixer',
       script: './scripts/automation/error-fixer.cjs',
@@ -229,30 +285,86 @@ module.exports = {
 
     // Enhanced Dependency Health Monitor
     {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
-        NODE_ENV: 'development',
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true',
-      },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+      name: 'performance-monitor',
+      script: './scripts/automation/performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous quality checks - runs every 3 hours
+    {
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
+    },
+
+    // Continuous link integrity checker - runs every 2 hours
+    {
+      name: 'link-integrity',
+      script: './scripts/automation/link-integrity.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: 'front-maximizer',
+      script: './scripts/automation/front-maximizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Error fixing orchestrator - runs every hour
+    {
+      name: 'error-fixing-orchestrator',
+      script: './scripts/automation/error-fixing-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Continuous sitemap runner - runs every 6 hours
+    {
+      name: 'sitemap-runner',
+      script: './scripts/automation/sitemap-runner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     }
   ]
 =======

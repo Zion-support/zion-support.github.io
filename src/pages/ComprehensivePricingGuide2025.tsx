@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,

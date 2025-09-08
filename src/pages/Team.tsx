@@ -1,63 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  UsersIcon, 
-  LightBulbIcon, 
-  RocketLaunchIcon, 
-  ShieldCheckIcon,
-  GlobeAltIcon,
-  ChartBarIcon,
-  CogIcon,
-  HeartIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  LinkedinIcon
-} from '@heroicons/react/24/outline';
-
-const Team: React.FC = () => {
-  const leadership = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',
-      expertise: ['Strategic Leadership', 'AI Innovation', 'Business Transformation', 'Technology Strategy'],
-      image: '/team/kleber-santos.jpg',
-      email: 'kleber@ziontechgroup.com',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      location: 'Delaware, USA'
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'Chief Technology Officer',
-      bio: 'Technology expert specializing in AI, cloud architecture, and scalable solutions. Leads our technical strategy and innovation initiatives.',
-      expertise: ['Cloud Architecture', 'AI/ML Systems', 'Scalable Solutions', 'Technical Strategy'],
-      image: '/team/sarah-chen.jpg',
-      email: 'sarah@ziontechgroup.com',
-      linkedin: 'https://linkedin.com/in/sarah-chen',
-      location: 'California, USA'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Head of AI Solutions',
-      bio: 'AI specialist with deep expertise in machine learning and autonomous systems. Pioneering next-generation AI solutions for enterprise clients.',
-      expertise: ['Machine Learning', 'Autonomous Systems', 'AI Ethics', 'Neural Networks'],
-      image: '/team/marcus-rodriguez.jpg',
-      email: 'marcus@ziontechgroup.com',
-      linkedin: 'https://linkedin.com/in/marcus-rodriguez',
-      location: 'Texas, USA'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Research Director',
-      bio: 'Leading our quantum computing and emerging technology research initiatives. PhD in Quantum Physics with 10+ years in research.',
-      expertise: ['Quantum Computing', 'Research & Development', 'Emerging Technologies', 'Academic Collaboration'],
-      image: '/team/emily-watson.jpg',
-      email: 'emily@ziontechgroup.com',
-      linkedin: 'https://linkedin.com/in/emily-watson',
-      location: 'Massachusetts, USA'
-    }
-  ];
+const Team: React.FC = () => (
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+		<div className="text-center text-white">
+			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+			<p className="text-xl text-gray-300">Meet the people behind Zion Tech Group.</p>
+		</div>
+	</div>
+);
 
   const seniorTeam = [
     {
