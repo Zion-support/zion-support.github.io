@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 const path = require('path');
 
 class TestFileFixer {
@@ -151,6 +156,25 @@ describe('${fileName}', () => {
     }
   }
 
+<<<<<<< HEAD
+=======
+
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+
+      findAndFixTestFiles(filePath);
+    } else if (file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
+      fixTestFile(filePath);
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   async fixAllTestFiles() {
     this.log('🔧 Starting test file fixes...');
     
@@ -235,6 +259,10 @@ describe('${fileName}', () => {
     } catch (error) {
       this.log(`❌ Test file fixes failed: ${error.message}`, 'ERROR');
       throw error;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     }
 
 if (fixedFiles.length > 0) {
@@ -244,5 +272,16 @@ if (fixedFiles.length > 0) {
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> merged-prs-20250907-203621
+=======
+
+
+
+module.exports = TestFileFixer;
+
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

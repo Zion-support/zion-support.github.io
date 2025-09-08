@@ -8,10 +8,51 @@
     this.log('📊 Report saved to batch-syntax-fix-report.json');
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 // Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+
+
+
+
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+
+      /import\s*{\s*([^}]+)\s*}\s*from\s*[]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*[]([^')]
+      
+      /import\s*{[^}]+}\s*from\s*['"][^]
+    content = content.replace(/['"]\s*;\s*[')]
+    content = content.replace(/[]\s*;\s*([^']*)\s*[']
+      /\[\s*["]\s*;\s*([^'')]
+      "
+      /\[\s*[]\s*([^')]
+      
+    content = content.replace(/{\s*['"]\s*;\s*([^"]*)\s*[]\s*:/g, }
+    content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*[]\s*,/g, ;
+      /:\s*["]\s*;\s*([^'')];
+      ";
+      /className\s*=\s*[]\s*;\s*([^')];
+      ;
+      /href\s*=\s*['"]\s*;\s*([^)];
+      ";
+      /title\s*=\s*[']\s*;\s*([^')];
+      ;
+        line.includes(");
+        !line.endsWith(");
+        return line + ";
+        line.includes(');
+        !line.endsWith(');
+        return line + ';
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^)]
       """
       /import\s*{[^}]+}\s*from\s*['"][^]
@@ -32,3 +73,7 @@ fixer.run().catch(console.error);
         line.includes()
         !line.endsWith()
         return line + 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

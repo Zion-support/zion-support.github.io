@@ -34,11 +34,8 @@ For files with complex nested conflicts, use this approach:
 
 ```bash
 # Find files with conflicts
-grep -r "<<<<<<< HEAD" . --include="*.js" --include="*.ts" --include="*.tsx" --include="*.jsx" --include="*.json" --include="*.md" --include="*.sh" --include="*.cjs" --include="*.xml" -l | head -20
-
-# For each file, use this sed command to keep incoming changes:
-sed -i '/<<<<<<< HEAD/,/=======/d' filename
-sed -i '/>>>>>>> /d' filename
+grep -r "/d' filename
+sed -i '/
 ```
 
 ### 4. Git Operations After Resolution

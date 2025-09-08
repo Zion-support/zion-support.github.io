@@ -1,15 +1,76 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+
+
+
+
+
+main
+
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
           content = content.replace(/
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+
+const { execSync } = require('child_process');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixMergeConflicts() {
+    this.log('🔧 Fixing merge conflicts...');
+    
+    const files = [
+      'tsconfig.json',
+      '.eslintrc.js',
+      'package.json'
+    ];
+
+    for (const file of files) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          
+          // Remove merge conflict markers
+
+
+
+          content = content.replace(/
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 console.log('🔧 Running comprehensive syntax fix...');
 // Fix specific files with known issues;
@@ -92,6 +153,7 @@ let fixedCount = 0;
 for (const fix of fixes) {
   try {
 
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -99,13 +161,62 @@ const { execSync } = require('child_process');
           content = content.replace(/
 
 =======
+=======
+
+console.log(`✅ Fixed ${fixedCount} files`);
+
+ursor/automate-test-improve-and-merge-code-59d5
+
+
+
+const { execSync } = require('child_process');
+
+
+
+
+          content = content.replace(/
+
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+
+    }
+  }
+
+  log(message) {
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixMergeConflicts() {
+    this.log('🔧 Fixing merge conflicts...');
+    
+      'tsconfig.json',
+      '.eslintrc.js',
+      'package.json'
+    ];
+
+    for (const file of files) {
+      if (fs.existsSync(filePath)) {
+        try {
+          
+          // Remove merge conflict markers
+main
+
+          content = content.replace(/[\s\S]*?[\s\S]*?
+          content = content.replace(/[\s\S]*?
+          
+
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {
           this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
         }
       }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     }
   }
 
@@ -167,8 +278,8 @@ console.log(`✅ Fixed ${fixedCount} files`);
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+
+

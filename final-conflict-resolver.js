@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f0e1294785e083e3a9ce6b4bf5f6686fd9008276
+=======
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('🚀 Starting final merge conflict resolution...');
 
@@ -118,17 +122,19 @@ if (remaining.length === 0) {
     remaining.forEach(file => console.log(`  - ${file}`));
 }
 =======
+=======
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 console.log('🚀 Final comprehensive merge conflict resolution...\n');
 
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '')
-    .replace(/>>>>>>> [^\n]+/g, '')
-    .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+/g, '')
-    .replace(/=======/g, '')
-    .replace(/>>>>>>> [^\n]+/g, '')
+    .replace(/
+    .replace(/
+    .replace(/\n?[\s\S]*?
+    .replace(/
+    .replace(//g, '')
+    .replace(/
     .replace(/\n\n\n+/g, '\n\n'); // Clean up excessive newlines
 }
 
@@ -139,7 +145,7 @@ function processFile(filePath) {
     
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) return false;
+    if (!content.includes('
     
     console.log(`📝 Processing: ${filePath}`);
     
@@ -175,7 +181,7 @@ function findConflictedFiles(dir, extensions = ['.js', '.ts', '.tsx', '.jsx', '.
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD')) {
+              if (content.includes('
                 conflictedFiles.push(fullPath);
               }
             } catch (error) {
@@ -245,4 +251,8 @@ try {
   console.error('💥 Fatal error:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 >>>>>>> f0e1294785e083e3a9ce6b4bf5f6686fd9008276
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

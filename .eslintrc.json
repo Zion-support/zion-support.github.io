@@ -1,6 +1,10 @@
 {
   "root": true,
-  "env": { "browser": true, "es2020": true },
+  "env": { 
+    "browser": true, 
+    "es2020": true,
+    "node": true
+  },
   "extends": [
     "eslint:recommended",
     "@typescript-eslint/recommended"
@@ -10,18 +14,7 @@
     ".eslintrc.cjs",
     "media/**/*",
     "scripts/**/*",
-    "node_modules/**/*",
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
+    "node_modules/**/*"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -36,6 +29,8 @@
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
-    ]
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "off"
   }
 }
