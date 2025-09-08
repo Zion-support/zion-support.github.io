@@ -43,15 +43,24 @@ jobs:
             echo "Build failed: .next folder not found"
             exit 1
           fi
-      - name: Run Jest with Coverage
-        run: npm test
+          echo "Build completed successfully"
+      - name: Verify asset paths
+        run: |
+          if [ -d dist ]; then
+            echo "Build assets found:"
+            ls -la dist/
+            echo "Total files: $(find dist -type f | wc -l)"
+          fi
+      - name: Run tests (if available)
+        run: npm test --if-present
         continue-on-error: true
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: .next
+          path: dist
+          retention-days: 7
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

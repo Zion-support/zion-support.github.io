@@ -25,24 +25,24 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run basic checks
+      - name: Run code quality checks
         run: |
-          npm run lint || true
-          npm run type-check || true
-          npm run build || true
+          npm run lint --if-present
+          npm run type-check --if-present
+          npm run build
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement results"
-          title: "chore(improvement): apply continuous improvement results"
+          commit-message: "chore(improvement): continuous improvement and code quality updates"
+          title: "chore(improvement): apply continuous improvement and code quality updates"
           body: |
-            Automated improvement loop.
+            Automated improvement and code quality updates.
 
             - Runs linting and type checking
-            - Verifies build process
-            - Ensures code quality
+            - Ensures build passes
+            - Updates code quality standards
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false

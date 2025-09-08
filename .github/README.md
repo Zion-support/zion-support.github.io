@@ -4,130 +4,125 @@ This directory contains all the GitHub Actions workflows for the Zion Tech Group
 
 ## Workflows Overview
 
-### 🔄 CI (Continuous Integration)
-- **File**: `ci.yml`
-- **Triggers**: Push to main, Pull requests to main
-- **Purpose**: Automated testing and building on every code change
+### 1. CI (Continuous Integration)
+**File**: `.github/workflows/ci.yml`
+- **Trigger**: Push to main branch or pull requests
+- **Purpose**: Build, test, and validate code changes
 - **Jobs**:
-  - Build: Lint, type-check, and build the project
-  - Test: Run tests in parallel
+  - Build: Install dependencies, lint, type-check, and build the project
+  - Test: Run tests and upload build artifacts
 
-### 🧪 Test
-- **File**: `test.yml`
-- **Triggers**: Push to main, Pull requests to main
-- **Purpose**: Comprehensive testing with coverage and build verification
+### 2. Test
+**File**: `.github/workflows/test.yml`
+- **Trigger**: Push to main branch or pull requests
+- **Purpose**: Comprehensive testing and validation
 - **Jobs**:
-  - Main: Build, test, and verify build output
-  - Uploads build artifacts for inspection
+  - Main: Build, test, and verify the application
 
-### 🔒 Security
-- **File**: `security.yml`
-- **Triggers**: Push to main, Pull requests to main, Weekly schedule
-- **Purpose**: Security auditing and dependency vulnerability scanning
+### 3. Deploy
+**File**: `.github/workflows/deploy.yml`
+- **Trigger**: Push to main branch or manual dispatch
+- **Purpose**: Deploy the application to production
 - **Jobs**:
-  - Security Audit: npm audit, outdated packages check
-  - Dependency Review: Automated dependency review on PRs
+  - Deploy: Build and deploy to Netlify/Vercel (if configured)
 
-### 🚀 Deploy
-- **File**: `deploy.yml`
-- **Triggers**: Push to main, Manual dispatch
-- **Purpose**: Automated deployment pipeline
+### 4. Security
+**File**: `.github/workflows/security.yml`
+- **Trigger**: Push to main branch, pull requests, or weekly schedule
+- **Purpose**: Security vulnerability scanning
 - **Jobs**:
-  - Deploy: Build and prepare for deployment
-  - Uploads build artifacts for manual deployment
+  - Security: Run npm audit and security checks
 
-### 🔍 CodeQL
-- **File**: `codeql.yml`
-- **Triggers**: Push to main/develop, Pull requests, Weekly schedule
+### 5. CodeQL
+**File**: `.github/workflows/codeql.yml`
+- **Trigger**: Push to main/develop branches, pull requests, or weekly schedule
 - **Purpose**: Static code analysis for security vulnerabilities
 - **Jobs**:
-  - Analyze: JavaScript/TypeScript security analysis
+  - Analyze: CodeQL analysis for JavaScript/TypeScript
 
-### 🔗 Link Crawler Factory
-- **File**: `agent-factory.yml`
-- **Triggers**: Every 6 hours, Manual dispatch
-- **Purpose**: Automated link checking and broken link detection
-- **Jobs**:
-  - Generate Matrix: Create parallel processing matrix
-  - Agent: Parallel link crawling using linkinator
-  - Aggregate: Merge results and create reports
-
-### 📈 Continuous Improvement
-- **File**: `continuous-improvement.yml`
-- **Triggers**: Every 4 hours, Manual dispatch
+### 6. Continuous Improvement
+**File**: `.github/workflows/continuous-improvement.yml`
+- **Trigger**: Every 4 hours or manual dispatch
 - **Purpose**: Automated code quality improvements
 - **Jobs**:
-  - Improve: Run quality checks and create improvement PRs
+  - Improve: Run linting, type checking, and create improvement PRs
 
-### 📦 NPM Publish (Disabled)
-- **File**: `npm-publish.yml`
-- **Status**: Disabled (private package)
-- **Purpose**: Would publish to npm if this were a public package
+### 7. Link Checker
+**File**: `.github/workflows/agent-factory.yml`
+- **Trigger**: Every 6 hours or manual dispatch
+- **Purpose**: Check for broken links on the website
+- **Jobs**:
+  - Check-links: Verify internal and external links
 
-## Configuration
+## Required Secrets
 
-### Node.js Version
-All workflows use Node.js 20.x for consistency with the project requirements.
+### For Deployment
+- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
+- `NETLIFY_SITE_ID`: Netlify site ID
+- `VERCEL_TOKEN`: Vercel authentication token
+- `VERCEL_ORG_ID`: Vercel organization ID
+- `VERCEL_PROJECT_ID`: Vercel project ID
 
-### Caching
-- npm dependencies are cached using `actions/setup-node@v4`
-- Build artifacts are uploaded and can be downloaded for inspection
+### For Testing (Optional)
+- `CODECOV_TOKEN`: Codecov token for test coverage
+- `CYPRESS_TEST_USER_EMAIL`: Test user email for Cypress
+- `CYPRESS_TEST_USER_PASSWORD`: Test user password for Cypress
 
-### Permissions
-- Most workflows use minimal permissions (`contents: read`)
-- Security workflows require `security-events: write`
-- Some workflows require `contents: write` for automated PR creation
+## Local Development
 
-## Usage
+To test workflows locally, you can use [act](https://github.com/nektos/act):
 
-### Manual Triggers
-Most workflows can be triggered manually via the GitHub Actions tab:
-1. Go to Actions tab in the repository
-2. Select the workflow you want to run
-3. Click "Run workflow"
-4. Configure any required inputs
+```bash
+# Install act
+brew install act
 
-### Scheduled Runs
-- **Security**: Weekly on Mondays at 2 AM UTC
-- **CodeQL**: Weekly on Mondays at 1:33 AM UTC
-- **Link Crawler**: Every 6 hours
-- **Continuous Improvement**: Every 4 hours
+# Run a specific workflow
+act -W .github/workflows/ci.yml
 
-## Monitoring
+# Run with specific event
+act push -W .github/workflows/ci.yml
+```
 
-### Artifacts
-- Build outputs are uploaded as artifacts
-- Security reports are preserved for 30 days
-- Link crawling reports are available for inspection
+## Workflow Dependencies
 
-### Notifications
-- Failed workflows will show in the Actions tab
-- Security issues are reported in the Security tab
-- Broken links are automatically reported as GitHub issues
+The workflows are designed to work together:
+1. **CI** runs on every push/PR
+2. **Test** provides comprehensive testing
+3. **Security** runs security checks
+4. **Deploy** deploys successful builds
+5. **Continuous Improvement** maintains code quality
+6. **Link Checker** ensures website integrity
 
 ## Troubleshooting
 
 ### Common Issues
-1. **Build Failures**: Check the build logs for compilation errors
-2. **Test Failures**: Review test output and fix failing tests
-3. **Permission Errors**: Ensure workflows have appropriate permissions
-4. **Dependency Issues**: Run `npm ci` locally to verify dependencies
 
-### Local Testing
-Before pushing, test locally:
-```bash
-npm ci
-npm run lint
-npm run type-check
-npm run build
-npm test
-```
+1. **Build Failures**: Check Node.js version compatibility and dependency issues
+2. **Test Failures**: Ensure all tests pass locally before pushing
+3. **Deployment Issues**: Verify deployment secrets are configured correctly
+4. **Security Alerts**: Review npm audit output and update vulnerable dependencies
+
+### Debugging
+
+- Check workflow logs in the Actions tab
+- Use `act` for local testing
+- Review artifact uploads for debugging information
+- Check issue creation for automated reports
 
 ## Contributing
 
 When adding new workflows:
 1. Follow the existing naming conventions
-2. Use the latest action versions
-3. Include appropriate permissions
-4. Add documentation here
-5. Test thoroughly before committing
+2. Include proper error handling
+3. Add appropriate permissions
+4. Document the workflow purpose
+5. Test locally with `act`
+
+## Best Practices
+
+- Use Node.js 20 for consistency
+- Cache npm dependencies for faster builds
+- Upload artifacts for debugging
+- Use appropriate permissions (principle of least privilege)
+- Include proper error handling and continue-on-error where appropriate
+- Use concurrency groups to prevent workflow conflicts
