@@ -1,860 +1,469 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function RequestQuote() {
-	return (
-		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
-			<SEO title="Request a Quote - Zion Tech Group" description="Tell us about your project and get a customized quote." />
-			<div className="container-responsive text-white">
-				<h1 className="text-4xl font-bold mb-4">Request a Quote</h1>
-				<p className="text-zion-slate-light max-w-2xl">Share your requirements, timelines, and goals. We'll follow up promptly.</p>
-			</div>
-		</div>
-	);
-}
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calculator, 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Calendar, 
-  FileText, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Building, 
-  Globe, 
-  Target, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Network,
-  Server,
-  Rocket,
-  Users as Team,
-  Award,
-  TrendingUp,
-  Lightbulb,
-  CheckSquare,
-  Square,
-  Info,
-  HelpCircle
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Send, CheckCircle, Building, Users, Clock, DollarSign } from 'lucide-react';
 
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { SEO } from "@/components/SEO";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-
-export default function RequestQuote() {
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Request Quote - Zion Tech Group" 
-        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
-        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      
-      <AppHeader />
-      
-      <main className="pt-16 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project and we'll connect you with the perfect talent and services for your needs
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-import SEOHead from "@/components/SEOHead";
-import { FuturisticNavigation } from "@/components/FuturisticNavigation";
-import { FuturisticFooter } from "@/components/FuturisticFooter";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, Zap } from "lucide-react";
-
-export default function RequestQuote() {
-  return (
-    <div className="min-h-screen bg-zion-blue">
-      <SEO
-        title="Request a Quote | Zion Tech Group"
-        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
-        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <FuturisticNavigation />
-      
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Get Your Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
-              we'll provide you with a detailed, competitive quote tailored to your specific requirements.
-            </p>
-          </div>
-
-          {/* Benefits Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-                <CardTitle className="text-lg">Fast Response</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
-                  Get your quote within 24 hours
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-                <CardTitle className="text-lg">Customized</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
-                  Tailored to your specific needs
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-                <CardTitle className="text-lg">Expert Team</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
-                  Reviewed by industry experts
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-                <CardTitle className="text-lg">No Obligation</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
-                  Free quotes with no commitment
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Services Overview */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              What We Can Quote For You
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Custom AI solutions, model development, and ML infrastructure
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom AI model development</li>
-                    <li>• Machine learning consulting</li>
-                    <li>• AI infrastructure setup</li>
-                    <li>• Data science services</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Onsite IT support, infrastructure, and digital transformation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Onsite IT support</li>
-                    <li>• Infrastructure setup</li>
-                    <li>• Cloud migration</li>
-                    <li>• Cybersecurity services</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    AI-powered talent matching and recruitment services
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI talent matching</li>
-                    <li>• Recruitment services</li>
-                    <li>• Team building</li>
-                    <li>• Skill assessment</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    High-tech equipment, servers, and specialized hardware
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI/ML hardware</li>
-                    <li>• Server infrastructure</li>
-                    <li>• Networking equipment</li>
-                    <li>• Green IT solutions</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Strategic technology consulting and digital transformation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Technology strategy</li>
-                    <li>• Digital transformation</li>
-                    <li>• Process optimization</li>
-                    <li>• Innovation consulting</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Tailored solutions for unique business requirements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom software development</li>
-                    <li>• Integration services</li>
-                    <li>• API development</li>
-                    <li>• Legacy system modernization</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Quote Form Section */}
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Request Your Quote
-              </h2>
-              <p className="text-zion-slate-light text-lg">
-                Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
-              </p>
-            </div>
-            
-            <QuoteRequestForm />
-          </div>
-
-          {/* Additional Information */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Need Immediate Assistance?
-            </h3>
-            <p className="text-zion-slate-light mb-6">
-              For urgent requests or to speak with our team directly, contact us:
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:commercial@ziontechgroup.com"
-                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
-              >
-                Email Us
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors"
-              >
-                Contact Page
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-import { FuturisticNavigation } from "@/components/FuturisticNavigation";
-import { FuturisticFooter } from "@/components/FuturisticFooter";
-
-export default function RequestQuote() {
+const RequestQuote = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    companyName: '',
+    contactName: '',
     email: '',
     phone: '',
-    company: '',
-    website: '',
+    companySize: '',
     industry: '',
-    projectType: '',
-    budget: '',
+    serviceType: '',
+    projectDescription: '',
     timeline: '',
-    teamSize: '',
-    description: '',
-    requirements: [],
-    additionalServices: []
+    budget: '',
+    additionalInfo: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleServiceToggle = (serviceId: string) => {
-    setSelectedServices(prev => 
-      prev.includes(serviceId) 
-        ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setSubmitSuccess(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        website: '',
-        industry: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        teamSize: '',
-        description: '',
-        requirements: [],
-        additionalServices: []
-      });
-      setSelectedServices([]);
-    }, 5000);
+    // Here you would typically send the data to your backend
+    console.log('Quote request submitted:', formData);
+    setIsSubmitted(true);
   };
 
-  const serviceCategories = [
-    {
-      id: "ai-ml",
-      name: "AI & Machine Learning",
-      icon: <Brain className="h-6 w-6" />,
-      description: "Custom AI development and ML solutions",
-      basePrice: 8000,
-      color: "from-purple-500 to-indigo-600",
-      services: [
-        { name: "Custom AI Development", price: 8000, duration: "8-12 weeks" },
-        { name: "ML Model Training", price: 12000, duration: "6-10 weeks" },
-        { name: "AI Strategy Consulting", price: 5000, duration: "2-4 weeks" },
-        { name: "NLP Solutions", price: 6000, duration: "4-8 weeks" },
-        { name: "Computer Vision", price: 10000, duration: "6-10 weeks" }
-      ]
-    },
-    {
-      id: "cybersecurity",
-      name: "Cybersecurity",
-      icon: <Shield className="h-6 w-6" />,
-      description: "Security audits and compliance frameworks",
-      basePrice: 8000,
-      color: "from-red-500 to-orange-600",
-      services: [
-        { name: "Security Audit", price: 8000, duration: "2-4 weeks" },
-        { name: "Penetration Testing", price: 12000, duration: "3-5 weeks" },
-        { name: "Compliance Framework", price: 15000, duration: "8-12 weeks" },
-        { name: "Incident Response", price: 10000, duration: "Ongoing" },
-        { name: "Security Training", price: 3000, duration: "1-2 weeks" }
-      ]
-    },
-    {
-      id: "cloud-infrastructure",
-      name: "Cloud & Infrastructure",
-      icon: <Cloud className="h-6 w-6" />,
-      description: "Cloud migration and DevOps implementation",
-      basePrice: 5000,
-      color: "from-cyan-500 to-blue-600",
-      services: [
-        { name: "Cloud Migration", price: 15000, duration: "8-16 weeks" },
-        { name: "DevOps Implementation", price: 12000, duration: "6-12 weeks" },
-        { name: "Infrastructure Modernization", price: 20000, duration: "12-20 weeks" },
-        { name: "Monitoring & Support", price: 5000, duration: "Ongoing" }
-      ]
-    },
-    {
-      id: "data-analytics",
-      name: "Data & Analytics",
-      icon: <Database className="h-6 w-6" />,
-      description: "Big data and business intelligence solutions",
-      basePrice: 7000,
-      color: "from-emerald-500 to-green-600",
-      services: [
-        { name: "Big Data Engineering", price: 18000, duration: "12-20 weeks" },
-        { name: "Data Pipeline Development", price: 12000, duration: "8-16 weeks" },
-        { name: "Business Intelligence", price: 8000, duration: "6-12 weeks" },
-        { name: "Data Visualization", price: 5000, duration: "4-8 weeks" }
-      ]
-    },
-    {
-      id: "digital-transformation",
-      name: "Digital Transformation",
-      icon: <TrendingUp className="h-6 w-6" />,
-      description: "Strategic consulting and implementation",
-      basePrice: 10000,
-      color: "from-amber-500 to-orange-600",
-      services: [
-        { name: "Digital Strategy", price: 15000, duration: "4-8 weeks" },
-        { name: "Process Reengineering", price: 20000, duration: "12-20 weeks" },
-        { name: "Technology Assessment", price: 8000, duration: "2-4 weeks" },
-        { name: "Change Management", price: 12000, duration: "8-16 weeks" }
-      ]
-    },
-    {
-      id: "micro-saas",
-      name: "Micro SAAS Solutions",
-      icon: <Zap className="h-6 w-6" />,
-      description: "Custom business applications and tools",
-      basePrice: 5000,
-      color: "from-pink-500 to-rose-600",
-      services: [
-        { name: "Business Process Automation", price: 8000, duration: "6-12 weeks" },
-        { name: "Custom CRM Development", price: 12000, duration: "8-16 weeks" },
-        { name: "BI Dashboard Creation", price: 6000, duration: "4-8 weeks" },
-        { name: "Workflow Management", price: 5000, duration: "4-8 weeks" }
-      ]
-    }
+  const companySizes = [
+    '1-10 employees',
+    '11-50 employees',
+    '51-200 employees',
+    '201-500 employees',
+    '500+ employees'
   ];
 
   const industries = [
-    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education",
-    "Real Estate", "Transportation", "Energy", "Media", "Non-Profit", "Other"
+    'Technology',
+    'Healthcare',
+    'Financial Services',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Energy',
+    'Transportation',
+    'Other'
   ];
 
-  const projectTypes = [
-    "New Development", "Enhancement", "Migration", "Integration", "Consulting", "Support & Maintenance"
+  const serviceTypes = [
+    'AI & Machine Learning',
+    'Cybersecurity',
+    'Cloud Migration',
+    'Digital Transformation',
+    '5G & IoT Solutions',
+    'Data Analytics',
+    'Custom Software Development',
+    'IT Consulting',
+    'Other'
   ];
 
-  const budgetRanges = [
-    "Under $5,000", "$5,000 - $15,000", "$15,000 - $50,000", "$50,000 - $100,000", "Over $100,000"
+  const timelines = [
+    'Immediate (1-3 months)',
+    'Short-term (3-6 months)',
+    'Medium-term (6-12 months)',
+    'Long-term (12+ months)',
+    'Not sure yet'
   ];
 
-  const timelineOptions = [
-    "Immediate (1-2 weeks)", "Quick (1-2 months)", "Standard (3-6 months)", "Long-term (6+ months)"
+  const budgets = [
+    'Under $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $250,000',
+    '$250,000 - $500,000',
+    '$500,000 - $1,000,000',
+    'Over $1,000,000',
+    'Not sure yet'
   ];
 
-  const teamSizes = [
-    "1-10 employees", "11-50 employees", "51-200 employees", "201-500 employees", "500+ employees"
-  ];
-
-  const additionalServices = [
-    "Project Management", "Quality Assurance", "Training & Documentation", "Ongoing Support", "Performance Optimization"
-  ];
-
-  const calculateEstimatedCost = () => {
-    let total = 0;
-    selectedServices.forEach(serviceId => {
-      const [categoryId, serviceIndex] = serviceId.split('-');
-      const category = serviceCategories.find(cat => cat.id === categoryId);
-      if (category && serviceIndex !== undefined) {
-        const service = category.services[parseInt(serviceIndex)];
-        if (service) {
-          total += service.price;
-        }
-      }
-    });
-    return total;
-  };
-
-  const estimatedCost = calculateEstimatedCost();
-
-  return (
-    <>
-      <SEOHead 
-        title="Request a Quote - Zion Tech Group"
-        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
-        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <FuturisticNavigation />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get Your Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project requirements and we'll provide you with a detailed quote tailored to your needs. 
-              Whether it's AI development, IT services, or equipment solutions, we've got you covered.
-<<<<<<< HEAD
-=======
-=======
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          {/* Hero */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Request a Quote</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tell us about your project and we\'ll send a tailored proposal within 24 hours.
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-xl p-8 max-w-md mx-4 text-center">
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle className="w-8 h-8 text-green-600" />
+          </div>
+          <h2 className="text-2xl font-bold text-zion-slate-dark mb-4">Thank You!</h2>
+          <p className="text-zion-slate-light mb-6">
+            Your quote request has been submitted successfully. Our team will review your requirements 
+            and get back to you within 24-48 hours with a detailed proposal.
+          </p>
+          <div className="space-y-3">
+            <p className="text-sm text-zion-slate-light">
+              <strong>What happens next?</strong>
             </p>
+            <ul className="text-sm text-zion-slate-light space-y-2 text-left">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                We'll review your requirements
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                Our experts will create a custom proposal
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                You'll receive a detailed quote within 48 hours
+              </li>
+            </ul>
           </div>
-        </section>
-        
-        {/* Quote Form Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-zion-blue-light/20 rounded-lg border border-zion-purple/20 p-8">
-                <QuoteRequestForm />
-              </div>
-            </div>
+          <div className="mt-6 space-y-3">
+            <Link
+              to="/contact"
+              className="block w-full bg-zion-purple hover:bg-zion-purple/80 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/"
+              className="block w-full bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-slate-dark px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Back to Home
+            </Link>
           </div>
-<<<<<<< HEAD
-        </section>
-        
-        {/* Why Choose Zion Section */}
-        <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion for Your Tech Needs?</h2>
-              <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
-                We combine cutting-edge technology with proven expertise to deliver exceptional results.
-=======
         </div>
       </div>
-    </div>
-=======
-      <main className="flex-1 relative">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20" />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-                Get Your Custom Quote
-              </h1>
-              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">
-                Tell us about your project and we'll provide a detailed, transparent quote 
-                tailored to your specific needs and budget.
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-              </p>
-              
-              {/* Quick Contact */}
-              <div className="bg-zion-blue-dark/50 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/30 max-w-2xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-                  <div className="flex items-center text-zion-cyan">
-                    <Phone className="h-5 w-5 mr-2" />
-                    <span className="font-medium">+1 (302) 464-0950</span>
-                  </div>
-                  <div className="flex items-center text-zion-cyan">
-                    <Mail className="h-5 w-5 mr-2" />
-                    <span className="font-medium">kleber@ziontechgroup.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-<<<<<<< HEAD
-=======
-        </section>
-        
-        {/* Why Choose Zion Section */}
-        <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion for Your Tech Needs?</h2>
-              <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
-                We combine cutting-edge technology with proven expertise to deliver exceptional results.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-6">
-                <div className="bg-zion-purple/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Fast & Efficient</h3>
-                <p className="text-zion-slate-light">
-                  Get your quote within 24 hours and start your project quickly with our streamlined process.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="bg-zion-cyan/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Quality Assured</h3>
-                <p className="text-zion-slate-light">
-                  All our services and equipment meet the highest industry standards with comprehensive warranties.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="bg-zion-purple-light/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-zion-slate-light">
-                  Get the best value for your investment with our transparent pricing and no hidden costs.
-                </p>
-              </div>
-            </div>
-          </div>
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        </section>
-      </main>
-      
-      <Footer />
-<<<<<<< HEAD
-    </div>
-=======
-    </>
-  );
-}
-=======
-import React from 'react';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Clock, Users, Shield, Zap } from 'lucide-react';
-
-export default function RequestQuote() {
-  const benefits = [
-    {
-      icon: <Clock className="w-6 h-6 text-zion-cyan" />,
-      title: "Quick Response",
-      description: "Get quotes within 24 hours from qualified professionals"
-    },
-    {
-      icon: <Users className="w-6 h-6 text-zion-cyan" />,
-      title: "Expert Network",
-      description: "Access to verified AI and tech experts worldwide"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-zion-cyan" />,
-      title: "Secure & Reliable",
-      description: "Protected payments and quality assurance guaranteed"
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-zion-cyan" />,
-      title: "Fast Delivery",
-      description: "Quick turnaround times for urgent projects"
-    }
-  ];
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <SEO 
-        title="Request Quote - Zion Tech Group" 
-        description="Get competitive quotes from top AI and tech professionals for your project needs."
-        keywords="request quote, project quote, AI services, tech services, Zion Tech Group"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Request a Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get competitive quotes from verified AI and tech professionals. 
-              Describe your project and receive tailored proposals within 24 hours.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <div className="bg-zion-blue-dark text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold mb-6">Request a Quote</h1>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Get a customized quote for your technology project. Our experts will analyze your requirements 
+            and provide a detailed proposal tailored to your business needs.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-zion-cyan" />
+              <span>24-48 hour response</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="w-5 h-5 text-zion-cyan" />
+              <span>Expert consultation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-zion-cyan" />
+              <span>Competitive pricing</span>
+            </div>
           </div>
+        </div>
+      </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Benefits Section */}
-            <div className="lg:col-span-1 space-y-6">
-              <Card className="bg-zion-blue border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white">Why Choose Zion?</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Get the best value for your tech projects
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="flex-shrink-0 mt-1">
-                        {benefit.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-white font-medium">{benefit.title}</h3>
-                        <p className="text-zion-slate-light text-sm">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Form Section */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-zion-slate-dark mb-6">Project Details</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Company Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="companyName" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="companyName"
+                      name="companyName"
+                      required
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                      placeholder="Enter company name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="companySize" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Company Size *
+                    </label>
+                    <select
+                      id="companySize"
+                      name="companySize"
+                      required
+                      value={formData.companySize}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    >
+                      <option value="">Select company size</option>
+                      {companySizes.map((size) => (
+                        <option key={size} value={size}>{size}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
 
-              <Card className="bg-zion-blue border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white">Popular Services</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {['AI Development', 'Web Development', 'Mobile Apps', 'Data Science', 'Cloud Services', 'IT Support'].map((service) => (
-                      <Badge key={service} variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
-                        {service}
-                      </Badge>
+                {/* Contact Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="contactName" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Contact Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="contactName"
+                      required
+                      value={formData.contactName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                      placeholder="Enter contact name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                      placeholder="Enter email address"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Industry *
+                    </label>
+                    <select
+                      id="industry"
+                      name="industry"
+                      required
+                      value={formData.industry}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    >
+                      <option value="">Select industry</option>
+                      {industries.map((industry) => (
+                        <option key={industry} value={industry}>{industry}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Project Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="serviceType" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Service Type *
+                    </label>
+                    <select
+                      id="serviceType"
+                      name="serviceType"
+                      required
+                      value={formData.serviceType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    >
+                      <option value="">Select service type</option>
+                      {serviceTypes.map((service) => (
+                        <option key={service} value={service}>{service}</option>
+                      ))}
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                      Project Timeline *
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      required
+                      value={formData.timeline}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      {timelines.map((timeline) => (
+                        <option key={timeline} value={timeline}>{timeline}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="budget" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                    Budget Range *
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    required
+                    value={formData.budget}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                  >
+                    <option value="">Select budget range</option>
+                    {budgets.map((budget) => (
+                      <option key={budget} value={budget}>{budget}</option>
                     ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  </select>
+                </div>
 
-            {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <Card className="bg-zion-blue border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white">Project Details</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Fill out the form below to get started. Be as detailed as possible for accurate quotes.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <QuoteRequestForm />
-                </CardContent>
-              </Card>
+                <div>
+                  <label htmlFor="projectDescription" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                    Project Description *
+                  </label>
+                  <textarea
+                    id="projectDescription"
+                    name="projectDescription"
+                    required
+                    rows={4}
+                    value={formData.projectDescription}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    placeholder="Describe your project requirements, goals, and any specific challenges you're facing..."
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="additionalInfo" className="block text-sm font-medium text-zion-slate-dark mb-2">
+                    Additional Information
+                  </label>
+                  <textarea
+                    id="additionalInfo"
+                    name="additionalInfo"
+                    rows={3}
+                    value={formData.additionalInfo}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                    placeholder="Any additional details, constraints, or questions..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white px-8 py-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                >
+                  <Send className="w-5 h-5" />
+                  Submit Quote Request
+                </button>
+              </form>
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Need Help Getting Started?
-              </h2>
-              <p className="text-zion-slate-light mb-6">
-                Our team is here to help you find the right talent for your project.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/talent"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
-                >
-                  Browse Talent
-                </a>
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Why Choose Us */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold text-zion-slate-dark mb-4">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Building className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-zion-slate-dark">Expert Team</h4>
+                    <p className="text-sm text-zion-slate-light">100+ certified professionals with industry expertise</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-zion-purple/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-zion-purple" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-zion-slate-dark">Proven Track Record</h4>
+                    <p className="text-sm text-zion-slate-light">500+ successful projects across industries</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-zion-slate-dark">Fast Delivery</h4>
+                    <p className="text-sm text-zion-slate-light">Average 30% faster project completion</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
 
-      <Footer />
-    </div>
-=======
-    <>
-      <SEO 
-        title="Request a Quote - Zion AI Marketplace"
-        description="Get customized quotes for AI and tech services from verified professionals. Submit your project requirements and receive competitive pricing."
-        keywords="request quote, AI services, tech services, project pricing, custom quotes, IT services"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <Header />
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project and we'll connect you with the perfect AI and tech professionals. 
-              Get competitive quotes from verified experts in our marketplace.
-            </p>
+            {/* What to Expect */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold text-zion-slate-dark mb-4">What to Expect</h3>
+              <div className="space-y-3 text-sm text-zion-slate-light">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Detailed project analysis</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Custom solution design</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Comprehensive cost breakdown</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Implementation timeline</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Ongoing support options</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="bg-zion-gradient rounded-lg p-6 text-white">
+              <h3 className="text-xl font-bold mb-4">Need Immediate Help?</h3>
+              <p className="text-zion-slate-light mb-4">
+                Can't wait for a quote? Contact our team directly for urgent consultations.
+              </p>
+              <Link
+                to="/contact"
+                className="block w-full bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
-          <QuoteRequestForm />
         </div>
       </div>
-    </>
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    </div>
   );
-}
+};
+
+export default RequestQuote;
