@@ -4,12 +4,11 @@
 declare module 'react' {
   export type FC<P = any> = (props: P) => any;
   export type ReactNode = any;
-  export const Fragment: any;
-  export type Ref<T> = { current: T | null };
-  export type LegacyRef<T> = Ref<T> | ((instance: T | null) => void) | null;
   export interface ChangeEvent<T = any> extends Event { target: T }
   export interface FormEvent<T = any> extends Event {}
   export interface KeyboardEvent<T = any> extends Event {}
+  export type Ref<T> = { current: T | null } | ((value: T | null) => void) | null;
+  export type LegacyRef<T> = Ref<T>;
   export function useState<S = any>(initial?: S): [S, (value: S) => void];
   export function useEffect(fn: () => any, deps?: any[]): void;
   export function useRef<T = any>(initial: T): { current: T };
@@ -62,12 +61,23 @@ declare module 'zod' {
   export default z;
 }
 
+// Basic jsPDF stub
 declare module 'jspdf' {
   export class jsPDF {
-    addPage(...args: any[]): void;
+    constructor(...args: any[]);
     [key: string]: any;
   }
   export default jsPDF;
+}
+
+// Minimal JSX definitions
+declare global {
+  namespace JSX {
+    interface Element {}
+    interface IntrinsicElements {
+      [elem: string]: any;
+    }
+  }
 }
 
 // Fallback for other modules
