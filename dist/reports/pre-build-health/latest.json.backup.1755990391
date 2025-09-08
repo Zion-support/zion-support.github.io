@@ -5,11 +5,15 @@
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD:dist/reports/pre-build-health/latest.json.backup.1755990391
 <<<<<<< HEAD
     "timestamp": "2025-08-20T11:46:56.847Z"
 =======
     "timestamp": "2025-08-19T18:25:53.083Z"
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-1358
+=======
+    "timestamp": "2025-08-20T12:03:17.038Z"
+>>>>>>> origin/feat/improve-homepage-advertising:public/reports/pre-build-health/latest.json
   },
   "results": [
     {
