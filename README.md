@@ -8,14 +8,7 @@
 
 ## 🚀 Tech Stack
 
-- **Frontend Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Routing**: React Router DOM
-- **State Management**: React Hooks (useState, useContext)
-- **Package Manager**: npm
+There are several ways of editing your application.
 
 **Use your preferred IDE**
 
