@@ -51,10 +51,8 @@ interface EquipmentDetails {
   features: string[];
   warranty?: string;
   returnPolicy?: string;
-  weightKg?: number;
-  widthCm?: number;
-  heightCm?: number;
-  depthCm?: number;
+  videoUrl?: string;
+  modelUrl?: string;
 }
 
 // Sample data - in a real app this would come from an API
@@ -66,8 +64,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "DataCore",
     category: "Servers",
     images: ["/images/equipment-placeholder.svg"],
-    videoUrl: "/videos/server-demo.mp4",
-    modelUrl: "/models/server.glb",
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    modelUrl: "/models/sample.glb",
     price: 4200,
     currency: "$",
     rating: 4.8,
@@ -312,7 +310,11 @@ export default function EquipmentDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Media */}
             <div className="lg:col-span-2">
-              <ProductGallery images={equipment.images} videoUrl={equipment.videoUrl} modelUrl={equipment.modelUrl} />
+              <ProductGallery
+                images={equipment.images}
+                videoUrl={equipment.videoUrl}
+                modelUrl={equipment.modelUrl}
+              />
 
               {/* Product Details Tabs */}
               <div className="mt-8">

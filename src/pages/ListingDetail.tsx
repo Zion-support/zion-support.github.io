@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
 import { useParams } from "react-router-dom";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductGallery } from "@/components/gallery/ProductGallery";
@@ -78,7 +79,11 @@ export default function ListingDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <ProductGallery images={listing.images} videoUrl={listing.videoUrl} modelUrl={listing.modelUrl} />
+              <ProductGallery
+                images={listing.images}
+                videoUrl={listing.videoUrl}
+                modelUrl={listing.modelUrl}
+              />
 
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
