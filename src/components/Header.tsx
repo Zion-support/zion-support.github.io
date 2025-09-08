@@ -77,13 +77,12 @@ export function Header() {
       ]
     },
     {
-      name: 'Solutions',
-      href: '/solutions',
-      dropdown: [
-        { name: 'Enterprise', href: '/enterprise', icon: Building, description: 'Enterprise solutions' },
-        { name: 'Industry Solutions', href: '/industry-solutions', icon: Briefcase, description: 'Industry-specific solutions' },
-        { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket, description: 'Next-gen technology' },
-        { name: 'Space Tech', href: '/space-tech', icon: Rocket, description: 'Space technology solutions' }
+      title: 'Solutions',
+      items: [
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Education', href: '/solutions/education' }
       ]
     },
     {
@@ -110,9 +109,7 @@ export function Header() {
         { name: 'About Us', href: '/about' },
         { name: 'Leadership', href: '/leadership' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News', href: '/news' },
-        { name: 'Events', href: '/events' }
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
@@ -120,12 +117,8 @@ export function Header() {
       href: '/resources',
       dropdown: true,
       items: [
-        { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/documentation' },
-        { name: 'API Reference', href: '/api' },
+        { name: 'Training', href: '/training' },
         { name: 'Research & Development', href: '/research-development' }
       ]
     },

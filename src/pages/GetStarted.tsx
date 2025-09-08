@@ -1,391 +1,522 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Users,
+import { 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Users, 
   Building2,
-  Globe,
-  Zap,
-  Brain,
-  Server,
-  Shield,
-  Target,
-  FileText,
   Phone,
   Mail,
-  MapPin,
+  Calendar,
   Clock,
-  Star,
   Award,
+  Globe,
   TrendingUp,
-  Lightbulb
+  Lightbulb,
+  Target,
+  BarChart3,
+  ShoppingCart,
+  Truck,
+  GraduationCap,
+  Cpu
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-export default function GetStarted() {
-  const [selectedPlan, setSelectedPlan] = useState('consultation');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    industry: '',
-    projectType: '',
-    timeline: '',
-    budget: '',
-    description: ''
-  });
+const GetStarted = () => {
+  const [selectedService, setSelectedService] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('');
+  const [companySize, setCompanySize] = useState('');
+  const [timeline, setTimeline] = useState('');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const plans = [
+  const services = [
     {
-      id: 'consultation',
-      title: 'Free Consultation',
-      description: 'Start with a free 30-minute consultation to discuss your needs',
-      features: ['30-minute strategy session', 'Technology assessment', 'Custom roadmap', 'No commitment required'],
-      icon: Users,
-      color: 'from-zion-cyan to-zion-blue'
+      id: 'ai-ml',
+      name: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge AI solutions',
+      icon: Brain,
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      id: 'pilot',
-      title: 'Pilot Project',
-      description: 'Test our solutions with a small-scale pilot project',
-      features: ['Proof of concept', 'Limited scope implementation', 'Performance metrics', 'Scalability assessment'],
+      id: 'quantum',
+      name: 'Quantum Computing',
+      description: 'Next-generation computing power for complex problem solving',
+      icon: Zap,
+      features: ['Quantum Algorithms', 'Optimization', 'Cryptography', 'Simulation']
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      description: 'Protect your digital assets with advanced security solutions',
+      icon: Shield,
+      features: ['Threat Detection', 'Incident Response', 'Compliance', 'Security Audits']
+    },
+    {
+      id: 'cloud-devops',
+      name: 'Cloud & DevOps',
+      description: 'Streamline your operations with cloud-native solutions',
+      icon: Cloud,
+      features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure as Code', 'Monitoring']
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Modernize your business processes and technology stack',
       icon: Rocket,
-      color: 'from-zion-purple to-zion-cyan'
+      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training']
     },
     {
-      id: 'full',
-      title: 'Full Implementation',
-      description: 'Complete solution deployment with ongoing support',
-      features: ['End-to-end implementation', 'Training & documentation', 'Ongoing support', 'Performance optimization'],
-      icon: Award,
-      color: 'from-zion-blue to-zion-purple'
+      id: 'micro-saas',
+      name: 'Micro SAAS Solutions',
+      description: 'Custom software solutions tailored to your specific needs',
+      icon: Building2,
+      features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance']
     }
   ];
 
   const industries = [
-    'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Education',
-    'Technology', 'Real Estate', 'Transportation', 'Energy', 'Other'
+    { id: 'healthcare', name: 'Healthcare', icon: Shield },
+    { id: 'financial', name: 'Financial Services', icon: BarChart3 },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Building2 },
+    { id: 'retail', name: 'Retail & E-commerce', icon: ShoppingCart },
+    { id: 'transportation', name: 'Transportation & Logistics', icon: Truck },
+    { id: 'education', name: 'Education', icon: GraduationCap },
+    { id: 'government', name: 'Government', icon: Building2 },
+    { id: 'technology', name: 'Technology', icon: Cpu }
   ];
 
-  const projectTypes = [
-    'AI & Machine Learning', 'Cloud Migration', 'Digital Transformation', 'Cybersecurity',
-    'Data Analytics', 'IoT Solutions', 'Blockchain', 'Micro SaaS Platform', 'Other'
+  const companySizes = [
+    { id: 'startup', name: 'Startup (1-50 employees)', description: 'Perfect for growing companies' },
+    { id: 'small', name: 'Small Business (51-200 employees)', description: 'Ideal for established businesses' },
+    { id: 'medium', name: 'Medium Business (201-1000 employees)', description: 'Great for scaling organizations' },
+    { id: 'enterprise', name: 'Enterprise (1000+ employees)', description: 'Tailored for large corporations' }
   ];
 
   const timelines = [
-    'Immediate (1-3 months)', 'Short-term (3-6 months)', 'Medium-term (6-12 months)', 'Long-term (1+ years)'
+    { id: 'immediate', name: 'Immediate (Within 30 days)', description: 'Urgent implementation needed' },
+    { id: 'quarter', name: 'This Quarter (1-3 months)', description: 'Planned implementation' },
+    { id: 'year', name: 'This Year (3-12 months)', description: 'Strategic planning phase' },
+    { id: 'future', name: 'Future Planning (12+ months)', description: 'Long-term strategy' }
   ];
 
-  const budgets = [
-    'Under $10K', '$10K - $50K', '$50K - $100K', '$100K - $500K', '$500K+'
+  const benefits = [
+    {
+      icon: Award,
+      title: 'Proven Expertise',
+      description: 'Over 10 years of experience in cutting-edge technology solutions'
+    },
+    {
+      icon: Users,
+      title: 'Dedicated Team',
+      description: 'Assigned experts who understand your business and industry'
+    },
+    {
+      icon: Clock,
+      title: 'Fast Implementation',
+      description: 'Quick deployment with minimal disruption to your operations'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Measurable Results',
+      description: 'Clear metrics and ROI tracking for all implementations'
+    },
+    {
+      icon: Globe,
+      title: 'Global Support',
+      description: '24/7 support across multiple time zones'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Innovation Focus',
+      description: 'Always ahead of the curve with latest technologies'
+    }
+  ];
+
+  const steps = [
+    {
+      number: '01',
+      title: 'Initial Consultation',
+      description: 'Free 30-minute consultation to understand your needs',
+      duration: '30 minutes',
+      icon: Phone
+    },
+    {
+      number: '02',
+      title: 'Discovery & Assessment',
+      description: 'Comprehensive analysis of your current state and goals',
+      duration: '1-2 weeks',
+      icon: Target
+    },
+    {
+      number: '03',
+      title: 'Solution Design',
+      description: 'Custom solution architecture and implementation plan',
+      duration: '1-2 weeks',
+      icon: Lightbulb
+    },
+    {
+      number: '04',
+      title: 'Implementation',
+      description: 'Professional deployment with minimal disruption',
+      duration: '2-8 weeks',
+      icon: Rocket
+    },
+    {
+      number: '05',
+      title: 'Training & Support',
+      description: 'Comprehensive training and ongoing support',
+      duration: 'Ongoing',
+      icon: Users
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h1>
-            <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-              Join hundreds of organizations that have accelerated their digital transformation
-              with Zion Tech Group's cutting-edge AI and technology solutions.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="flex items-center space-x-2 text-zinc-400">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>500+ Successful Projects</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zinc-400">
-                <Star className="w-5 h-5 text-zion-cyan" />
-                <span>98% Client Satisfaction</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zinc-400">
-                <TrendingUp className="w-5 h-5 text-zion-cyan" />
-                <span>40% Average ROI Increase</span>
-              </div>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Get Started Today
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology solutions? 
-              Let's start your digital transformation journey together.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Plans Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Path Forward</h2>
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              We offer flexible engagement models to meet your needs and budget.
-              Start small and scale up as you see results.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {plans.map((plan, index) => (
-              <motion.div
-                key={plan.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                className={`relative p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                  selectedPlan === plan.id
-                    ? 'border-zion-cyan bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark shadow-2xl shadow-zion-cyan/25'
-                    : 'border-zion-purple/30 bg-zion-slate-dark/50 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/10'
-                }`}
-                onClick={() => setSelectedPlan(plan.id)}
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${plan.color} flex items-center justify-center mb-6 mx-auto`}>
-                  <plan.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3 text-center">{plan.title}</h3>
-                <p className="text-zinc-400 mb-6 text-center">{plan.description}</p>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3 text-zinc-300">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                {selectedPlan === plan.id && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="absolute -top-3 -right-3 w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center"
-                  >
-                    <CheckCircle className="w-5 h-5 text-white" />
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Let's Start Your Journey</h2>
-              <p className="text-xl text-zinc-300">
-                Tell us about your project and we'll create a customized solution for your business.
+    <>
+      <SEO 
+        title="Get Started - Zion Tech Group"
+        description="Start your digital transformation journey with Zion Tech Group. Get expert consultation, custom solutions, and dedicated support for your business needs."
+        keywords="get started, consultation, digital transformation, AI solutions, IT services, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#3b82f6_1px,_transparent_1px)] bg-[length:50px_50px] opacity-10"></div>
+          
+          <div className="relative z-10 container mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's start your digital transformation journey together. Get expert consultation, 
+                custom solutions, and dedicated support tailored to your specific needs.
               </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-zion-purple/30">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-white font-medium mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zinc-400 focus:border-zion-cyan focus:outline-none transition-colors"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Email Address *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zinc-400 focus:border-zion-cyan focus:outline-none transition-colors"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Company</label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zinc-400 focus:border-zion-cyan focus:outline-none transition-colors"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zinc-400 focus:border-zion-cyan focus:outline-none transition-colors"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Industry</label>
-                  <select
-                    name="industry"
-                    value={formData.industry}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors"
-                  >
-                    <option value="">Select your industry</option>
-                    {industries.map((industry) => (
-                      <option key={industry} value={industry}>{industry}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Project Type</label>
-                  <select
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors"
-                  >
-                    <option value="">Select project type</option>
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Timeline</label>
-                  <select
-                    name="timeline"
-                    value={formData.timeline}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors"
-                  >
-                    <option value="">Select timeline</option>
-                    {timelines.map((timeline) => (
-                      <option key={timeline} value={timeline}>{timeline}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-white font-medium mb-2">Budget Range</label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors"
-                  >
-                    <option value="">Select budget range</option>
-                    {budgets.map((budget) => (
-                      <option key={budget} value={budget}>{budget}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label className="block text-white font-medium mb-2">Project Description</label>
-                <textarea
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  rows={4}
-                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zinc-400 focus:border-zion-cyan focus:outline-none transition-colors"
-                  placeholder="Describe your project requirements, goals, and any specific challenges you're facing..."
-                />
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Your Project
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
+                  Schedule Free Consultation
+                  <ArrowRight className="inline ml-2 w-5 h-5" />
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-700 transition-all duration-300 border border-slate-600"
+                >
+                  Call Now: +1 (302) 464-0950
+                </a>
               </div>
-            </form>
-          </motion.div>
-        </div>
-      </section>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Contact Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-12">Ready to Get Started?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-zinc-400">+1 302 464 0950</p>
-                <p className="text-zinc-400">Mon-Fri 9AM-6PM EST</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-zinc-400">kleber@ziontechgroup.com</p>
-                <p className="text-zinc-400">24/7 support available</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-zinc-400">364 E Main St STE 1008</p>
-                <p className="text-zinc-400">Middletown DE 19709</p>
-              </div>
+        {/* Services Selection */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                What Can We Help You With?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Choose from our comprehensive range of technology solutions and services
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
+                    selectedService === service.id
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-slate-600 bg-slate-700/50 hover:border-blue-400 hover:bg-slate-700/70'
+                  }`}
+                  onClick={() => setSelectedService(service.id)}
+                >
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+
+        {/* Industry Selection */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                What Industry Are You In?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We have specialized solutions and expertise for various industries
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={industry.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`p-4 rounded-lg border-2 text-center transition-all duration-300 cursor-pointer ${
+                    selectedIndustry === industry.id
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-slate-600 bg-slate-700/50 hover:border-blue-400 hover:bg-slate-700/70'
+                  }`}
+                  onClick={() => setSelectedIndustry(industry.id)}
+                >
+                  <industry.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-white font-medium">{industry.name}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Company Size & Timeline */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Company Size */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold text-white mb-6">Company Size</h3>
+                <div className="space-y-4">
+                  {companySizes.map((size) => (
+                    <div
+                      key={size.id}
+                      className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
+                        companySize === size.id
+                          ? 'border-blue-500 bg-blue-500/10'
+                          : 'border-slate-600 bg-slate-700/50 hover:border-blue-400 hover:bg-slate-700/70'
+                      }`}
+                      onClick={() => setCompanySize(size.id)}
+                    >
+                      <h4 className="text-lg font-semibold text-white mb-1">{size.name}</h4>
+                      <p className="text-gray-300 text-sm">{size.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Timeline */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h3>
+                <div className="space-y-4">
+                  {timelines.map((time) => (
+                    <div
+                      key={time.id}
+                      className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
+                        timeline === time.id
+                          ? 'border-blue-500 bg-blue-500/10'
+                          : 'border-slate-600 bg-slate-700/50 hover:border-blue-400 hover:bg-slate-700/70'
+                      }`}
+                      onClick={() => setTimeline(time.id)}
+                    >
+                      <h4 className="text-lg font-semibold text-white mb-1">{time.name}</h4>
+                      <p className="text-gray-300 text-sm">{time.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with a proven track record of success
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6"
+                >
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Steps */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Our Simple 5-Step Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                From initial consultation to successful implementation, we guide you every step of the way
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {steps.map((step, index) => (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center relative"
+                >
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-blue-500/30 z-0"></div>
+                  )}
+                  
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                      {step.number}
+                    </div>
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <step.icon className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                    <p className="text-gray-300 text-sm mb-2">{step.description}</p>
+                    <p className="text-blue-400 text-sm font-medium">{step.duration}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Take the first step towards transforming your business. Our team is ready to help you succeed.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Free Consultation
+                  <ArrowRight className="inline ml-2 w-5 h-5" />
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-700 transition-all duration-300 border border-slate-600"
+                >
+                  Call Now: +1 (302) 464-0950
+                </a>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="text-center p-4">
+                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <h3 className="text-lg font-semibold text-white mb-1">Phone Support</h3>
+                  <p className="text-gray-300 text-sm">Available 24/7 for urgent matters</p>
+                </div>
+                <div className="text-center p-4">
+                  <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <h3 className="text-lg font-semibold text-white mb-1">Email Support</h3>
+                  <p className="text-gray-300 text-sm">Response within 2 hours</p>
+                </div>
+                <div className="text-center p-4">
+                  <Calendar className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <h3 className="text-lg font-semibold text-white mb-1">Free Consultation</h3>
+                  <p className="text-gray-300 text-sm">30-minute session to get started</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+export default GetStarted;

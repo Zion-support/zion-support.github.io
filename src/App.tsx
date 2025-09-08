@@ -62,24 +62,9 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
 const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const Leadership = createLazyComponent(() => import('./pages/Leadership'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
-const News = createLazyComponent(() => import('./pages/News'));
-const Events = createLazyComponent(() => import('./pages/Events'));
-const Partners = createLazyComponent(() => import('./pages/Partners'));
-const Help = createLazyComponent(() => import('./pages/Help'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const Blog = createLazyComponent(() => import('./pages/Blog'));
-const Docs = createLazyComponent(() => import('./pages/Documentation'));
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
-const Webinars = createLazyComponent(() => import('./pages/Webinars'));
-const Community = createLazyComponent(() => import('./pages/Community'));
-const ROICalculator = createLazyComponent(() => import('./pages/tools/ROICalculator'));
-const SecurityAssessment = createLazyComponent(() => import('./pages/tools/SecurityAssessment'));
-const PerformanceMonitor = createLazyComponent(() => import('./pages/tools/PerformanceMonitor'));
-const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
 // New AI Services 2025 - Combined from both versions
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -415,34 +400,16 @@ function App() {
                         </motion.div>
                       }
                     />
-                    {/* Main Pages with Sidebar */}
-                    <Route path="/about" element={<ModernLayout><About /></ModernLayout>} />
-                    <Route path="/contact" element={<ModernLayout><Contact /></ModernLayout>} />
-                    <Route path="/services" element={<ModernLayout><Services /></ModernLayout>} />
-                    <Route path="/ai-services" element={<ModernLayout><AIServices /></ModernLayout>} />
-                    <Route path="/ai-solutions" element={<ModernLayout><AISolutions /></ModernLayout>} />
-                    <Route path="/it-services" element={<ModernLayout><ITServices /></ModernLayout>} />
-                    <Route path="/micro-saas" element={<ModernLayout><MicroSaaS /></ModernLayout>} />
-                    <Route path="/solutions" element={<ModernLayout><Solutions /></ModernLayout>} />
-                    <Route path="/leadership" element={<ModernLayout><Leadership /></ModernLayout>} />
-                    <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
-                    <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
-                    <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
-                    <Route path="/support" element={<ModernLayout><Support /></ModernLayout>} />
-                    <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
-                    <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
-                    <Route path="/docs" element={<ModernLayout><Docs /></ModernLayout>} />
-                            <Route path="/white-papers" element={<ModernLayout><WhitePapers /></ModernLayout>} />
-        <Route path="/webinars" element={<ModernLayout><Webinars /></ModernLayout>} />
-                <Route path="/community" element={<ModernLayout><Community /></ModernLayout>} />
-        <Route path="/tools/roi-calculator" element={<ModernLayout><ROICalculator /></ModernLayout>} />
-        <Route path="/tools/security-assessment" element={<ModernLayout><SecurityAssessment /></ModernLayout>} />
-        <Route path="/tools/performance-monitor" element={<ModernLayout><PerformanceMonitor /></ModernLayout>} />
-        <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
-                    <Route path="/research-development" element={<ModernLayout><ResearchDevelopment /></ModernLayout>} />
-                    <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
-                    <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
-                    <Route path="/case-studies" element={<ModernLayout><CaseStudies /></ModernLayout>} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/ai-services" element={<AIServices />} />
+                    <Route path="/ai-solutions" element={<AISolutions />} />
+                    <Route path="/it-services" element={<ITServices />} />
+                    <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/get-started" element={<GetStarted />} />
+                    <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/careers" element={<Careers />} />
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />

@@ -220,8 +220,6 @@ export function Footer() {
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News & Updates', href: '/news' },
         { name: 'Case Studies', href: '/case-studies' }
       ]
     },
@@ -229,10 +227,8 @@ export function Footer() {
       title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
         { name: 'Support Center', href: '/help' },
         { name: 'Training', href: '/training' },
-        { name: 'Blog', href: '/blog' },
         { name: 'Research', href: '/research-development' }
       ]
     }
@@ -285,17 +281,14 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 302 464 0950',
+      text: '+1 (302) 464-0950',
       href: 'tel:+13024640950'
     },
     {
@@ -305,7 +298,7 @@ export function Footer() {
     },
     {
       icon: MapPin,
-      text: 'Middletown, DE',
+      text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'
     },
     {
@@ -482,21 +475,19 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Achievements Section */}
-        <div className="mt-16 pt-8 border-t border-slate-700">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Our Achievements</h3>
-            <p className="text-gray-400">Delivering exceptional results for our clients worldwide</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {achievements.map((achievement) => (
-              <div key={achievement.label} className="text-center">
-                <div className="flex justify-center mb-3">
-                  <achievement.icon className="w-8 h-8 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">{achievement.number}</div>
-                <div className="text-sm text-gray-400">{achievement.label}</div>
+            {/* Copyright & Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-6 text-sm text-gray-400"
+            >
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <div className="flex space-x-4">
+                <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">
+                  Terms of Service
+                </Link>
               </div>
             ))}
           </div>

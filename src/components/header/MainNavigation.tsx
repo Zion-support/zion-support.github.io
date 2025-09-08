@@ -60,11 +60,10 @@ export function MainNavigation({ className }) {
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services Overview</Link></li>
                     <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
                     <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-                    <li><Link to="/services/it-consulting" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Consulting</Link></li>
-                    <li><Link to="/services/it-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Infrastructure</Link></li>
+                    <li><Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
+                    <li><Link to="/services/micro-saas-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
                   </ul>
                 </div>
               </div>
@@ -106,6 +105,8 @@ export function MainNavigation({ className }) {
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/solutions/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare</Link></li>
                     <li><Link to="/solutions/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Services</Link></li>
+                    <li><Link to="/solutions/education" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
+                    <li><Link to="/solutions/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
                     <li><Link to="/solutions/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
                     <li><Link to="/solutions/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail</Link></li>
                   </ul>
@@ -155,8 +156,6 @@ export function MainNavigation({ className }) {
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
                 <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
-                <li><Link to="/leadership" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Leadership</Link></li>
-                <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
                 <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
               </ul>
             </div>
@@ -183,10 +182,7 @@ export function MainNavigation({ className }) {
           >
             <div className="p-4">
               <ul className="space-y-2 text-sm">
-                <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
-                <li><Link to="/documentation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
                 <li><Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Case Studies</Link></li>
-                <li><Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link></li>
                 <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
                 <li><Link to="/research-development" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Research</Link></li>
               </ul>
@@ -194,27 +190,17 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
-      {/* Support */}
-      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
-        <HelpCircle className="w-4 h-4 mr-1" />
-        Support
-      </Link>
-
-      {/* Pricing */}
-      <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
-        <BarChart3 className="w-4 h-4 mr-1" />
-        Pricing
-      </Link>
-
+      
       {/* Get Started Button */}
       <NavLink 
-        to="/signup" 
-        className={({ isActive }) => cn(
-          "text-sm font-medium transition-colors hover:text-primary", 
-          isActive ? "text-zion-cyan" : "text-muted-foreground",
-          "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1"
-        )}
+        to="/get-started"
+        className={({ isActive }) => 
+          cn(
+            "text-sm font-medium transition-colors hover:text-primary", 
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
+            "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1"
+          )
+        }
       >
         Get Started
       </NavLink>
