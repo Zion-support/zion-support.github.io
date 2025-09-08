@@ -16,12 +16,12 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      external: [],
+      external: [], 
     },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src')
     }
   },
   server: {
