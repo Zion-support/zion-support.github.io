@@ -55,91 +55,12 @@ const reportWebVitals = (metric: any) => {
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { initGA } from './lib/gtag';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
-
-try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
-  // Render the app with proper provider structure
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <UnitProvider>
-                          <CartProvider>
-                            <AppLayout>
-                              <App />
-                            </AppLayout>
-                          </CartProvider>
-                        </UnitProvider>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>,
-  );
-  console.log("main.tsx: After ReactDOM.createRoot");
-} catch (error) {
-  console.error("Global error caught in main.tsx:", error);
-  console.log("main.tsx: Global error caught");
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
-        <h1>Application Error</h1>
-        <p>A critical error occurred while loading the application.</p>
-        <p>Error: ${(error as Error).message}</p>
-        <pre>${(error as Error).stack}</pre>
-        <p>Please check the console for more details.</p>
-      </div>
-    `;
-  }
-}
-
-// Main render function
-const renderApp = () => {
-  const root = ReactDOM.createRoot(document.getElementById('root')!);
-  
-  root.render(
-    <React.StrictMode>
-      <RootErrorBoundary>
-        <HelmetProvider>
-          <Router>
-            <App />
-          </Router>
-        </HelmetProvider>
-      </RootErrorBoundary>
-    </React.StrictMode>,
-  );
-};
-
-// Initialize the application
-try {
-  renderApp();
-  
-  // Register service worker with error handling
-  registerServiceWorker().catch((error) => {
-    console.warn('Service worker registration failed:', error);
-  });
-}
 
 initGA();
 // Render the app with proper provider structure
@@ -147,26 +68,22 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <ErrorBoundary>
+                      <App />
                       <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </Provider>
+                    </ErrorBoundary>
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
