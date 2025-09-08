@@ -6,8 +6,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.11.10"
+=======
   PYTHON_VERSION = "3.11.9"
   MISE_PYTHON_COMPILE = "false"
+>>>>>>> origin/cursor/install-project-dependencies-and-build-3392
 
 [[plugins]]
   package = "netlify-plugin-compress"
