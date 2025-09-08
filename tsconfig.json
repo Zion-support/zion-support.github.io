@@ -1,106 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["dom", "dom.iterable", "es6"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "declaration": false,
-    "declarationMap": false,
-    "sourceMap": true,
-    "removeComments": false,
-    "importHelpers": true,
-    "downlevelIteration": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/types/*": ["./src/types/*"],
-<<<<<<< HEAD
-      "@/hooks/*": ["./src/hooks/*"],
-=======
->>>>>>> cursor/resolve-conflicts-and-merge-to-main-1d25
-      "@/services/*": ["./src/services/*"],
-      "@/store/*": ["./src/store/*"]
-    }
-=======
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/public/*": ["./public/*"]
-    },
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
-<<<<<<< HEAD
     "node_modules"
-=======
-    "node_modules",
-    ".next",
-    "out",
-    "dist"
->>>>>>> cursor/resolve-conflicts-and-merge-to-main-1d25
   ]
 }
