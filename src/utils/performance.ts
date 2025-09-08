@@ -1,186 +1,292 @@
-// Performance monitoring and optimization utilities
-
+// Performance monitoring utilities
 export interface PerformanceMetrics {
   loadTime: number;
-  bundleSize: number;
-  memoryUsage: number;
-  renderTime: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  cumulativeLayoutShift?: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
 }
 
-export class PerformanceTracker {
-  private static instance: PerformanceTracker;
+export interface PerformanceConfig {
+  enableWebVitals: boolean;
+  enableMemoryMonitoring: boolean;
+  enableResourceTiming: boolean;
+  sampleRate: number;
+}
+
+class PerformanceMonitor {
+  private config: PerformanceConfig;
   private metrics: PerformanceMetrics | null = null;
-  private observers: ((metrics: PerformanceMetrics) => void)[] = [];
+  private observers: PerformanceObserver[] = [];
 
-  static getInstance(): PerformanceTracker {
-    if (!PerformanceTracker.instance) {
-      PerformanceTracker.instance = new PerformanceTracker();
-    }
-    return PerformanceTracker.instance;
+  constructor(config: PerformanceConfig = {
+    enableWebVitals: true,
+    enableMemoryMonitoring: true,
+    enableResourceTiming: true,
+    sampleRate: 1.0,
+  }) {
+    this.config = config;
+    this.initialize();
   }
 
-  private constructor() {
-    this.initializeTracking();
-  }
-
-  private initializeTracking() {
+  private initialize() {
     if (typeof window === 'undefined') return;
 
-    // Track page load performance
-    window.addEventListener('load', () => {
-      this.captureMetrics();
+    // Only initialize for a percentage of users based on sample rate
+    if (Math.random() > this.config.sampleRate) return;
+
+    if (this.config.enableWebVitals) {
+      this.observeWebVitals();
+    }
+
+    if (this.config.enableMemoryMonitoring) {
+      this.observeMemoryUsage();
+    }
+
+    if (this.config.enableResourceTiming) {
+      this.observeResourceTiming();
+    }
+
+    // Capture page load metrics
+    this.capturePageLoadMetrics();
+  }
+
+  private observeWebVitals() {
+    // First Contentful Paint
+    this.observePaint('first-contentful-paint', (entry) => {
+      this.metrics = { ...this.metrics, firstContentfulPaint: entry.startTime } as PerformanceMetrics;
     });
 
-    // Track navigation timing
-    if ('performance' in window) {
+    // Largest Contentful Paint
+    if ('PerformanceObserver' in window) {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics = { ...this.metrics, largestContentfulPaint: lastEntry.startTime } as PerformanceMetrics;
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    }
+
+    // First Input Delay
+    if ('PerformanceObserver' in window) {
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          this.metrics = { ...this.metrics, firstInputDelay: entry.processingStart - entry.startTime } as PerformanceMetrics;
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    }
+
+    // Cumulative Layout Shift
+    if ('PerformanceObserver' in window) {
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        this.metrics = { ...this.metrics, cumulativeLayoutShift: clsValue } as PerformanceMetrics;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
+    }
+  }
+
+  private observePaint(metricName: string, callback: (entry: PerformanceEntry) => void) {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(callback);
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeMemoryUsage() {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics = {
+        ...this.metrics,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
+      } as PerformanceMetrics;
+    }
+  }
+
+  private observeResourceTiming() {
+    if ('PerformanceObserver' in window) {
+      const resourceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          // Log slow resources
+          if (entry.duration > 1000) {
+            console.warn(`Slow resource: ${entry.name} took ${entry.duration}ms`);
+          }
+        });
+      });
+      resourceObserver.observe({ entryTypes: ['resource'] });
+      this.observers.push(resourceObserver);
+    }
+  }
+
+  private capturePageLoadMetrics() {
+    window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         this.metrics = {
+          ...this.metrics,
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          bundleSize: this.estimateBundleSize(),
-          memoryUsage: this.getMemoryUsage(),
-          renderTime: performance.now(),
-          firstContentfulPaint: this.getFirstContentfulPaint(),
-          largestContentfulPaint: this.getLargestContentfulPaint(),
-          cumulativeLayoutShift: this.getCumulativeLayoutShift(),
-        };
-      }
-    }
-  }
-
-  private estimateBundleSize(): number {
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
-    
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/')) {
-        // Rough estimation based on common bundle sizes
-        totalSize += 200; // KB
+          timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+        } as PerformanceMetrics;
       }
     });
-    
-    return totalSize;
-  }
-
-  private getMemoryUsage(): number {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize / 1024 / 1024; // MB
-    }
-    return 0;
-  }
-
-  private getFirstContentfulPaint(): number | undefined {
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    return fcp ? fcp.startTime : undefined;
-  }
-
-  private getLargestContentfulPaint(): number | undefined {
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    const lcp = lcpEntries[lcpEntries.length - 1];
-    return lcp ? lcp.startTime : undefined;
-  }
-
-  private getCumulativeLayoutShift(): number | undefined {
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    return clsEntries.reduce((total, entry) => {
-      return total + (entry as any).value;
-    }, 0);
-  }
-
-  private captureMetrics() {
-    if (this.metrics) {
-      this.notifyObservers(this.metrics);
-    }
   }
 
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics;
   }
 
-  public subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
-    this.observers.push(callback);
-    
-    // Return unsubscribe function
-    return () => {
-      const index = this.observers.indexOf(callback);
-      if (index > -1) {
-        this.observers.splice(index, 1);
-      }
+  public reportMetrics(endpoint?: string) {
+    if (!this.metrics) return;
+
+    const data = {
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: Date.now(),
+      metrics: this.metrics,
     };
-  }
 
-  private notifyObservers(metrics: PerformanceMetrics) {
-    this.observers.forEach(callback => callback(metrics));
-  }
-
-  public logMetrics() {
-    if (this.metrics) {
-      console.group('🚀 Performance Metrics');
-      console.log('Load Time:', `${this.metrics.loadTime.toFixed(2)}ms`);
-      console.log('Bundle Size:', `~${this.metrics.bundleSize}KB`);
-      console.log('Memory Usage:', `${this.metrics.memoryUsage.toFixed(2)}MB`);
-      console.log('Render Time:', `${this.metrics.renderTime.toFixed(2)}ms`);
-      
-      if (this.metrics.firstContentfulPaint) {
-        console.log('First Contentful Paint:', `${this.metrics.firstContentfulPaint.toFixed(2)}ms`);
-      }
-      if (this.metrics.largestContentfulPaint) {
-        console.log('Largest Contentful Paint:', `${this.metrics.largestContentfulPaint.toFixed(2)}ms`);
-      }
-      if (this.metrics.cumulativeLayoutShift) {
-        console.log('Cumulative Layout Shift:', this.metrics.cumulativeLayoutShift.toFixed(4));
-      }
-      
-      console.groupEnd();
+    if (endpoint) {
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }).catch(console.error);
     }
+
+    // Also log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', this.metrics);
+    }
+  }
+
+  public cleanup() {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
   }
 }
 
-// Export singleton instance
-export const performanceTracker = PerformanceTracker.getInstance();
+// React hook for performance monitoring
+export const usePerformanceMonitor = (config?: Partial<PerformanceConfig>) => {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+  const monitorRef = React.useRef<PerformanceMonitor | null>(null);
+
+  React.useEffect(() => {
+    monitorRef.current = new PerformanceMonitor(config);
+    
+    const interval = setInterval(() => {
+      const currentMetrics = monitorRef.current?.getMetrics();
+      if (currentMetrics) {
+        setMetrics(currentMetrics);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+      monitorRef.current?.cleanup();
+    };
+  }, [config]);
+
+  const reportMetrics = React.useCallback((endpoint?: string) => {
+    monitorRef.current?.reportMetrics(endpoint);
+  }, []);
+
+  return { metrics, reportMetrics };
+};
 
 // Utility functions
-export const measurePerformance = (fn: () => void, label: string): number => {
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  const duration = end - start;
-  
-  if (import.meta.env.MODE === 'development') {
-    console.log(`⏱️ ${label}: ${duration.toFixed(2)}ms`);
-  }
-  
-  return duration;
+export const measureFunction = <T extends (...args: any[]) => any>(
+  fn: T,
+  name?: string
+): T => {
+  return ((...args: Parameters<T>) => {
+    const start = performance.now();
+    const result = fn(...args);
+    const end = performance.now();
+    
+    if (name) {
+      console.log(`${name} took ${end - start} milliseconds`);
+    }
+    
+    return result;
+  }) as T;
 };
 
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
+): T => {
   let timeout: NodeJS.Timeout;
-  
-  return (...args: Parameters<T>) => {
+  return ((...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
-  };
+  }) as T;
 };
 
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
+): T => {
   let inThrottle: boolean;
-  
-  return (...args: Parameters<T>) => {
+  return ((...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
-  };
+  }) as T;
 };
+
+// Bundle size analyzer
+export const analyzeBundleSize = () => {
+  if (typeof window === 'undefined') return;
+
+  const scripts = Array.from(document.querySelectorAll('script[src]'));
+  const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
+  
+  const totalScriptSize = scripts.reduce((total, script) => {
+    const src = script.getAttribute('src');
+    if (src && src.includes('assets')) {
+      // This is a rough estimate - in reality you'd need to fetch the actual file size
+      return total + 100; // Placeholder
+    }
+    return total;
+  }, 0);
+
+  const totalStyleSize = stylesheets.reduce((total, link) => {
+    const href = link.getAttribute('href');
+    if (href && href.includes('assets')) {
+      return total + 50; // Placeholder
+    }
+    return total;
+  }, 0);
+
+  console.log('Bundle Analysis:', {
+    scripts: scripts.length,
+    stylesheets: stylesheets.length,
+    estimatedScriptSize: `${totalScriptSize}KB`,
+    estimatedStyleSize: `${totalStyleSize}KB`,
+    totalEstimatedSize: `${totalScriptSize + totalStyleSize}KB`,
+  });
+};
+
+export default PerformanceMonitor;
