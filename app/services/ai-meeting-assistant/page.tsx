@@ -91,7 +91,7 @@ export default function AIMeetingAssistantPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <p className="text-gray-600 mb-4 italic">
-              "The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
+              &quot;The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate.&quot;
             </p>
             <div className="font-semibold text-gray-900">Jennifer Martinez</div>
             <div className="text-sm text-gray-500">Account Director, Marketing Agency Pro</div>

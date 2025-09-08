@@ -25,7 +25,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    // console.log('Form submitted:', formData); // Disabled for production
     alert('Thank you for your message! We will get back to you soon.');
   };
 

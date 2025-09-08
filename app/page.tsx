@@ -9,18 +9,7 @@ interface CardProps {
   href: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, icon, href }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="flex items-center mb-4">
-      <div className="text-blue-600 mr-3">{icon}</div>
-      <h3 className="text-xl font-semibold">{title}</h3>
-    </div>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <Link href={href} className="text-blue-600 hover:text-blue-700 font-semibold">
-      Learn More →
-    </Link>
-  </div>
-);
+// Card component removed as it's not being used
 
 export default function HomePage() {
   // Removed unused variables to fix linting warnings
@@ -106,7 +95,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our technology solutions can drive your success.
+            Let&apos;s discuss how our technology solutions can drive your success.
           </p>
           <Link
             href="/contact"
