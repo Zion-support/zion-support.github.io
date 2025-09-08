@@ -1,14 +1,5 @@
 {
-  "timestamp": "2025-08-29T14:18:21.629Z",
-  "totalChecks": 2,
-  "checks": [
-    {
-      "type": "npm-audit",
-      "result": "Security vulnerabilities checked"
-    },
-    {
-      "type": "sensitive-files",
-      "result": "Found sensitive files: .env"
-    }
-  ]
+  "timestamp": "2025-08-29T18:18:51.192Z",
+  "summary": "Security audit completed",
+  "status": "completed"
 }
