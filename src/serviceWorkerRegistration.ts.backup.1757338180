@@ -1,0 +1,9 @@
+export function registerServiceWorker(): void {
+<<<<<<< HEAD
+  // No-op in minimal build
+}
+
+=======
+  // no-op in this build
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604

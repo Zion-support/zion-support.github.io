@@ -1,7 +1,12 @@
 [build]
+<<<<<<< HEAD
+  # Install dependencies and build the static site via Vite. Publish the dist output.
+  command = "npm ci --no-audit --no-fund && npm run build"
+=======
   # Install Python dependencies first (if used), then Node.js dependencies and build
   # Use npm ci with production deps to avoid dev-only native installs during Netlify build
   command = "/usr/bin/python3 -m pip install -r requirements.txt || true && npm ci --omit=dev && npm run build"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
   publish = "dist"
   command_timeout = "30m"
 

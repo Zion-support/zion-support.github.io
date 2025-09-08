@@ -1,6 +1,8 @@
 import React from 'react';
 
-export function LanguageDetectionPopup(): JSX.Element | null {
+export const LanguageDetectionPopup: React.FC = () => {
   return null;
-}
+};
+
+export default LanguageDetectionPopup;
 

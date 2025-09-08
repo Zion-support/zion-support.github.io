@@ -1,0 +1,15 @@
+export function showApiError(error: unknown): void {
+<<<<<<< HEAD
+  if (import.meta.env.DEV) {
+    // eslint-disable-next-line no-console
+    console.error("API Error:", error);
+  }
+}
+
+=======
+  if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line no-console
+    console.error('[API Error]', error);
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604

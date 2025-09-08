@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { PropsWithChildren } from 'react';
+
+export function ThemeProvider({ children }: PropsWithChildren): JSX.Element {
+  return <>{children}</>;
+}
+=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import { createContext, useContext, useLayoutEffect, useState } from "react"
@@ -43,3 +50,4 @@ export const useTheme = (): ThemeContextValue => {
   if (!ctx) throw new Error('useTheme must be used within a ThemeProvider');
   return ctx;
 };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604

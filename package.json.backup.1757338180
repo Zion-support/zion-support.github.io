@@ -157,8 +157,14 @@
     "ts-jest": "^29.3.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.33.0",
+<<<<<<< HEAD
+    "vite": "^6.3.5",
+    "vitest": "^3.2.1",
+    "netlify-plugin-compress": "latest"
+=======
     "vite": "^6.3.6",
     "vitest": "^3.2.1"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

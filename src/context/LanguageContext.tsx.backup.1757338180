@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React, { createContext, PropsWithChildren } from 'react';
+
+type AuthState = { isAuthenticated: boolean; user: unknown | null };
+
+export const LanguageContext = createContext<{ locale: string }>({ locale: 'en' });
+
+export function LanguageProvider({ children }: PropsWithChildren<{ authState: AuthState }>): JSX.Element {
+  return <LanguageContext.Provider value={{ locale: 'en' }}>{children}</LanguageContext.Provider>;
+}
+
+=======
 import React, { createContext, useContext, useMemo, useState } from 'react';
 
 export interface LanguageContextValue {
@@ -18,3 +30,4 @@ export const useLanguage = (): LanguageContextValue => {
   if (!ctx) throw new Error('useLanguage must be used within a LanguageProvider');
   return ctx;
 };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604

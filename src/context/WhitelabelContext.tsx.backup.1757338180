@@ -20,7 +20,23 @@ interface WhitelabelProviderProps { children: ReactNode; config?: Partial<Whitel
 const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 
+<<<<<<< HEAD
+type WhitelabelProviderProps = {
+  children: ReactNode;
+  config?: Partial<typeof defaultConfig> & { contactInfo?: Partial<typeof defaultConfig.contactInfo> };
+};
+
+export function WhitelabelProvider({ children, config = {} }: WhitelabelProviderProps) {
+	const mergedConfig = { 
+    ...defaultConfig, 
+    ...config, 
+    contactInfo: { ...defaultConfig.contactInfo, ...(config as any).contactInfo }
+  };
+	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
+}
+=======
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children, config = {} }) => {
 	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...(config as any).contactInfo } } as WhitelabelConfig;
 	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
 };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
