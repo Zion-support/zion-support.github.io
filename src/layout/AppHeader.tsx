@@ -41,11 +41,13 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Company', href: '/about', current: false, hasDropdown: true },
-    { name: 'Support', href: '/help', current: false, hasDropdown: true },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
+    { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
+    { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
+    { name: 'About', href: '/about', current: false, hasDropdown: false },
+    { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
+    { name: 'Events', href: '/events', current: false, hasDropdown: false },
   ];
 
   const services = [
@@ -190,8 +192,11 @@ export function AppHeader() {
       name: 'Government Solutions',
       href: '/solutions',
       icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+      services: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
+        { name: 'Incident Response', href: '/services/ai-cybersecurity-suite', description: 'Security incident management' }
+      ]
     },
     {
       name: 'SMB Solutions',
