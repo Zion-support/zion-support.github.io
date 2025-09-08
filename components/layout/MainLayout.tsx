@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 
-interface LayoutProps {
+interface MainLayoutProps {
+  title: string;
+  description: string;
   children: React.ReactNode;
-  title?: string;
-  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -16,57 +16,49 @@ interface LayoutProps {
   canonical?: string;
 }
 
-const MainLayout: React.FC<LayoutProps> = ({
+const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, IT, micro SaaS, solutions",
+  title,
+  description,
+  keywords,
   image,
   url,
   type = 'website',
   noindex = false,
   nofollow = false,
-  canonical = "https://ziontechgroup.com"
+  canonical,
 }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
-        
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        {keywords && <meta name="keywords" content={keywords} />}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {noindex && <meta name="robots" content="noindex" />}
+        {nofollow && <meta name="robots" content="nofollow" />}
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image || '/og-image.jpg'} />
-        <meta property="og:url" content={url || canonical} />
         <meta property="og:type" content={type} />
-        
+        <meta property="og:title" content={title || 'Zion Tech Group'} />
+        <meta property="og:description" content={description || 'Leading technology solutions provider'} />
+        {image && <meta property="og:image" content={image} />}
+        {url && <meta property="og:url" content={url} />}
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image || '/og-image.jpg'} />
-        
-        {/* Additional meta tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        {(noindex || nofollow) && (
-          <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-        )}
+        <meta name="twitter:title" content={title || 'Zion Tech Group'} />
+        <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
+        {image && <meta name="twitter:image" content={image} />}
       </Head>
-
-      <Header />
-
-      <main className="flex-1">
-        {children}
-      </main>
-
-      <Footer />
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

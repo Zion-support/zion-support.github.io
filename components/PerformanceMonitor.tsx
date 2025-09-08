@@ -1,80 +1,74 @@
 import React, { useEffect } from 'react';
 
-interface PerformanceEntry {
-  entryType: string;
-  startTime: number;
-  processingStart?: number;
-  value?: number;
-  hadRecentInput?: boolean;
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
 }
 
-interface PerformanceObserver {
-  observe(options: { entryTypes: string[] }): void;
-  disconnect(): void;
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false)
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
-      const observer = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // eslint-disable-next-line no-console
-            console.log('LCP:', entry.startTime);
-          }
-        }
-      });
-      
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') {
+      return;
+    }
+
+    const measurePerformance = () => {
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch {
-        // Fallback for browsers that don't support LCP
-      }
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paint = performance.getEntriesByType('paint');
+        
+        const performanceData: PerformanceData = {
+          // Navigation timing
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+          
+          // Paint timing
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+          
+          // Resource timing
+          resourceCount: performance.getEntriesByType('resource').length,
+          
+          // Memory usage (if available)
+          memory: (performance as any).memory ? {
+            used: (performance as any).memory.usedJSHeapSize,
+            total: (performance as any).memory.totalJSHeapSize,
+            limit: (performance as any).memory.jsHeapSizeLimit
+          } : null
+        };
 
-      // Monitor First Input Delay (FID)
-      const fidObserver = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            // eslint-disable-next-line no-console
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
+        if (onPerformanceData) {
+          onPerformanceData(performanceData);
         }
-      });
 
-      try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch {
-        // Fallback for browsers that don't support FID
-      }
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new (window as { PerformanceObserver: new (callback: (list: { getEntries(): PerformanceEntry[] }) => void) => PerformanceObserver }).PerformanceObserver((list: { getEntries(): PerformanceEntry[] }) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value || 0;
-          }
+        // Log performance data in development
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance Metrics:', performanceData);
         }
-        // eslint-disable-next-line no-console
-        console.log('CLS:', clsValue);
-      });
-
-      try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch {
-        // Fallback for browsers that don't support CLS
+      } catch (error) {
+        console.warn('Performance monitoring failed:', error);
       }
+    };
 
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
   }, []);
 
