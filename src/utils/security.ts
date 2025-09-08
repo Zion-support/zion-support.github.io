@@ -26,9 +26,9 @@ export const sanitizeHTML = (html: string): string => {
 
 export const sanitizeInput = (input: string): string => {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+=/gi, '') // Remove event handlers
+    .replace(/[<>]/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+=/gi, '')
     .trim();
 };
 
@@ -366,7 +366,7 @@ export const useSecurity = (config: Partial<SecurityConfig> = {}) => {
       rateLimitWindow: 60000,
       rateLimitMaxRequests: 100,
       ...config,
-    });
+    } as SecurityConfig);
   }, [config]);
 
   const checkRateLimit = React.useCallback((identifier: string) => {

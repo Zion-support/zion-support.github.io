@@ -159,7 +159,7 @@ export const hexToRgb = (hex: string): { r: number; g: number; b: number } | nul
 
 export const isAccessibleContrast = (foreground: string, background: string): boolean => {
   const ratio = getContrastRatio(foreground, background);
-  return ratio >= 4.5; // WCAG AA standard
+  return ratio >= 4.5;
 };
 
 // Screen reader utilities
@@ -167,7 +167,6 @@ export const useScreenReader = () => {
   const [isScreenReaderActive, setIsScreenReaderActive] = React.useState(false);
 
   React.useEffect(() => {
-    // Check if screen reader is active
     const checkScreenReader = () => {
       const hasScreenReader = 
         window.speechSynthesis ||
@@ -181,7 +180,6 @@ export const useScreenReader = () => {
 
     checkScreenReader();
     
-    // Listen for screen reader events
     const handleFocus = () => {
       if (document.activeElement?.getAttribute('aria-label') || 
           document.activeElement?.getAttribute('aria-describedby')) {
@@ -199,7 +197,6 @@ export const useScreenReader = () => {
   return { isScreenReaderActive };
 };
 
-// Skip links
 export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a
     href={href}
@@ -216,7 +213,6 @@ export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = (
   </a>
 );
 
-// Accessible button component
 export const AccessibleButton: React.FC<{
   onClick: () => void;
   children: React.ReactNode;
@@ -238,7 +234,6 @@ export const AccessibleButton: React.FC<{
   </button>
 );
 
-// Accessible input component
 export const AccessibleInput: React.FC<{
   type?: string;
   value: string;
@@ -278,7 +273,6 @@ export const AccessibleInput: React.FC<{
   );
 };
 
-// High contrast mode detection
 export const useHighContrastMode = () => {
   const [isHighContrast, setIsHighContrast] = React.useState(false);
 
@@ -301,7 +295,6 @@ export const useHighContrastMode = () => {
   return isHighContrast;
 };
 
-// Reduced motion detection
 export const useReducedMotion = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
 
@@ -324,17 +317,14 @@ export const useReducedMotion = () => {
   return prefersReducedMotion;
 };
 
-// Accessibility testing utilities
 export const runAccessibilityAudit = () => {
   const issues: string[] = [];
 
-  // Check for missing alt text
   const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
   imagesWithoutAlt.forEach((img, index) => {
     issues.push(`Image ${index + 1} is missing alt text`);
   });
 
-  // Check for missing form labels
   const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
   inputsWithoutLabels.forEach((input, index) => {
     const label = document.querySelector(`label[for="${input.id}"]`);
@@ -343,7 +333,6 @@ export const runAccessibilityAudit = () => {
     }
   });
 
-  // Check for missing heading hierarchy
   const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   let previousLevel = 0;
   headings.forEach((heading, index) => {
@@ -354,7 +343,6 @@ export const runAccessibilityAudit = () => {
     previousLevel = level;
   });
 
-  // Check for color contrast
   const textElements = document.querySelectorAll('p, span, div, a, button');
   textElements.forEach((element, index) => {
     const styles = window.getComputedStyle(element);
