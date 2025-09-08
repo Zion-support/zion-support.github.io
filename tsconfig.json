@@ -43,23 +43,26 @@
     "noEmitOnError": false
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/layout/AppLayout.tsx",
-    "src/context/**/*.tsx",
-    "src/components/ui/**/*.tsx",
-    "src/components/PerformanceWrapper.tsx",
-    "src/components/support/ChatBotPanel.tsx"
+    "src/**/*",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "vitest.config.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/pages",
-    "src/routes",
-    "src/components",
-    "src/hooks",
-    "src/services",
-    "src/data",
-    "src/layout",
-    "src/context/WalletContext.tsx"
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "src_disabled_*",
+    "src.disabled",
+    "tests",
+    "__tests__",
+    "supabase/functions"
   ]
 }
