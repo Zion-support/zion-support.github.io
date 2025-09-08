@@ -16,8 +16,24 @@ const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Privacy = React.lazy(() => import('./legal/PrivacyPolicy'));
-const Terms = React.lazy(() => import('./legal/TermsOfService'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Team = React.lazy(() => import('./pages/Team'));
+const News = React.lazy(() => import('./pages/News'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Insights = React.lazy(() => import('./pages/Insights'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -47,6 +63,16 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
               
               {/* Catch all route for 404 */}
               <Route path="*" element={
