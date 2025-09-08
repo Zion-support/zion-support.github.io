@@ -59,7 +59,7 @@ const AllServices2027: React.FC = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <SEOHead 
         title="All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
@@ -311,7 +311,7 @@ const AllServices2027: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </React.Fragment>
   )};
 
 // Service Card Component

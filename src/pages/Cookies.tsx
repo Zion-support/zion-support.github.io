@@ -175,11 +175,45 @@ const Cookies = () => {
 
 export default function Cookies() {}
   return (
-    <div className="min-h-screen bg-zion-blue">
-      <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <React.Fragment>
+      <SEO 
+        title="Cookie Policy | Zion Tech Group"
+        description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content."
+        keywords="cookie policy, privacy, data collection, website cookies, data protection"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex justify-center mb-6">
+                  <div className="p-3 bg-orange-600/20 rounded-full">
+                    <Cookie className="h-12 w-12 text-orange-400"/>
+                  </div>
+                </div>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                  Cookie Policy
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Learn how Zion Tech Group uses cookies and similar technologies to enhance your browsing 
+                  experience and improve our services.
+                </p>
+                <p className="text-sm text-gray-400">
+                  Last updated: {new Date().toLocaleDateString()}
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cookie Information */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold text-white mb-8">Cookie Policy</h1>
             
@@ -379,39 +413,8 @@ export default function Cookies() {}
           </div>
         </div>
       </div>
-
-      {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Questions About Our Cookie Policy?
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our privacy team is here to help you understand how we use cookies and protect your data. 
-            Contact us for more information or to exercise your data rights.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <Shield className="w-5 h-5 mr-2" />
-              Contact Privacy Team
-            </Link>
-            <Link
-              to="/privacy"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <Info className="w-5 h-5 mr-2" />
-              Privacy Policy
-            </Link>
-          </div>
-        </div>
-      </div>
-    </
-  );
-};
+    </React.Fragment>
+  )};
 
 export default Cookies;
 >

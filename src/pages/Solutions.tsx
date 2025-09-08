@@ -268,7 +268,7 @@ export default function Solutions() {
   });
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Technology Solutions | Zion Tech Group"
         description="Industry-specific technology solutions designed to transform your business operations and drive innovation across healthcare, finance, manufacturing, and more."
@@ -327,7 +327,7 @@ export default function Solutions() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
 export default Solutions;

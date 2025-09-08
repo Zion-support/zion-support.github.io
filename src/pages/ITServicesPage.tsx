@@ -2,7 +2,7 @@ import { SEO } from '@/components/SEO';
 
 const ITServicesPage = () => {
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."
@@ -41,7 +41,7 @@ const ITServicesPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
 export default ITServicesPage;>

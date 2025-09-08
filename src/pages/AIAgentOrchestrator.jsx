@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 } from 'lucide-react';
 const AIAgentOrchestrator = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Agent Orchestrator - Zion Tech Group</title>
         <meta name="description" content="Advanced AI agent orchestration platform for coordinating multiple AI systems and workflows seamlessly."/>
@@ -140,6 +140,5 @@ const AIAgentOrchestrator = () => {
           </div>
         </section>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default AIAgentOrchestrator;

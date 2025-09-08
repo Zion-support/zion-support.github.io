@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Database } from 'lucide-react';
 const AIAnalyticsCopilot = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Analytics Copilot - Zion Tech Group</title>
         <meta name="description" content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization."/>
@@ -142,6 +142,5 @@ const AIAnalyticsCopilot = () => {
           </div>
         </section>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default AIAnalyticsCopilot;

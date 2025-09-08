@@ -674,7 +674,7 @@ export function MobileExperienceEnhancer({
   }, [mobileOptimizationFeatures, applyMobileOptimization, toggleTouchGesture]);
 
   return (
-    <div>
+    <React.Fragment>
       {/* Mobile Experience Controls Button */}
       {showControls && isMobile && (
         <button
@@ -969,7 +969,7 @@ export function MobileExperienceEnhancer({
           📱 Mobile
         </div>
       )}
-    </div>
+    </React.Fragment>
   )};
 
                 {/* Advanced Settings */}

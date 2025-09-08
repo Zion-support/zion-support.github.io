@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const Community = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."/>
@@ -22,6 +22,5 @@ const Community = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default Community;

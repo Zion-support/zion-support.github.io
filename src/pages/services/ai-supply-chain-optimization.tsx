@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AISupplyChainOptimization() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
         <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
@@ -375,6 +375,6 @@ export default function AISupplyChainOptimization() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }>

@@ -83,7 +83,7 @@ export default function RevolutionaryServices2030() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <SEO
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover our cutting-edge revolutionary services for 2030 including AI-powered autonomous operations, quantum cybersecurity, and next-generation technology solutions."
@@ -371,5 +371,5 @@ export default function RevolutionaryServices2030() {
           </motion.div>
         </div>
       )}
-    </div>
+    </React.Fragment>
   )}

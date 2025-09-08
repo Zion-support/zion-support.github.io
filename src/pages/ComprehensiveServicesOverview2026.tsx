@@ -325,15 +325,15 @@ export default function ComprehensiveServicesOverview2026() {
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
                   >
                     {expandedCategory === category.id ? (
-                      <div>
+                      <React.Fragment>
                         <EyeOff className="w-4 h-4" />
                         Show Less
-                      </div>
+                      </React.Fragment>
                     ) : (
-                      <div>
+                      <React.Fragment>
                         <Eye className="w-4 h-4" />
                         View All Services
-                      </div>
+                      </React.Fragment>
                     )}
                   ></button>
 

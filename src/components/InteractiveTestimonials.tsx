@@ -195,15 +195,15 @@ export function InteractiveTestimonials() {
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             {isPlaying ? (
-              <div>
+              <React.Fragment>
                 <Pause className="h-4 w-4 mr-2" />
                 Pause
-              </div>
+              </React.Fragment>
             ) : (
-              <div>
+              <React.Fragment>
                 <Play className="h-4 w-4 mr-2" />
                 Play
-              </div>
+              </React.Fragment>
             )}
           </button>
         </div>

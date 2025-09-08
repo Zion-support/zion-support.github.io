@@ -275,15 +275,15 @@ const SecurityEnhancer: React.FC = () => {
               className="w-full"
             >
               {isScanning ? (
-                <div>
+                <React.Fragment>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Scanning...
-                </div>
+                </React.Fragment>
               ) : (
-                <div>
+                <React.Fragment>
                   <Zap className="h-4 w-4 mr-2" />
                   Run Security Scan
-                </div>
+                </React.Fragment>
               )}
             ></Button>
             <div className="text-xs text-gray-500 mt-2 text-center">

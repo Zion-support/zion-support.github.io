@@ -19,7 +19,7 @@ export default function EquipmentDetail() {
     // In a real app, this would fetch from an API
     const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
     if (!equipment) {
-        return (<>
+        return (<React.Fragment>
         <Header />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
@@ -30,8 +30,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-      </>);
-    }
+      </React.Fragment>)}
     const handleAddToCart = () => {
         setIsAdding(true);
         // Simulate API call
@@ -67,7 +66,7 @@ export default function EquipmentDetail() {
             setIsAdding(false);
         }
     };
-    return (<>
+    return (<React.Fragment>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -247,5 +246,4 @@ export default function EquipmentDetail() {
         </div>
       </div>
       <Footer />
-    </>);
-}
+    </React.Fragment>)}

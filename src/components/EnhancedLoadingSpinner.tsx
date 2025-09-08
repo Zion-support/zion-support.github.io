@@ -33,7 +33,7 @@ export default function EnhancedLoadingSpinner({
         
         {/* Orbiting particles for futuristic variants */}
         {variant !== 'default' && (
-          <div>
+          <React.Fragment>
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
@@ -60,7 +60,7 @@ export default function EnhancedLoadingSpinner({
             >
               <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
             </motion.div>
-          </div>
+          </React.Fragment>
         )}
       ></div>
 

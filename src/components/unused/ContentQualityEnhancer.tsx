@@ -344,7 +344,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
         }
     };
-    return (<>
+    return (<React.Fragment>
       {/* Content Quality Toggle Button */}
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
         <DocumentTextIcon className="w-6 h-6"/>
@@ -379,7 +379,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
                       <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
                       <p>Click "Analyze Content" to get started</p>
-                    </div>) : (<>
+                    </div>) : (<React.Fragment>
                       {/* Overall Score */}
                       <div className={`p-4 rounded-lg ${getScoreBgColor(analysis.overallScore)}`}>
                         <div className="text-center">
@@ -448,7 +448,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                           <div>{analysis.suggestions.length} suggestions available</div>
                         </div>
                       </div>
-                    </>)}
+                    </React.Fragment>)}
 
                   {/* Analyze Button */}
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
@@ -580,6 +580,5 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           transition: all 0.3s ease !important;
         }
       `}</style>
-    </>);
-};
+    </React.Fragment>)};
 export default ContentQualityEnhancer;

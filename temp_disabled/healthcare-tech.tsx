@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function HealthcareTech() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>Healthcare Technology Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />
@@ -376,6 +376,6 @@ export default function HealthcareTech() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }>

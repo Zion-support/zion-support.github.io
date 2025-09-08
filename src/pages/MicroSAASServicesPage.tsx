@@ -437,7 +437,7 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
       {/* Category Filter */}

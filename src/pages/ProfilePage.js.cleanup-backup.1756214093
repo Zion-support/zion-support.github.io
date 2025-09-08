@@ -54,9 +54,8 @@ export default function ProfilePage() {
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
-      </div>);
-    }
-    return (<>
+      </div>)}
+    return (<React.Fragment>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
       
       <div className="container mx-auto px-4 py-8">
@@ -162,5 +161,4 @@ export default function ProfilePage() {
         </div>
       </div>
       
-    </>);
-}
+    </React.Fragment>)}

@@ -516,18 +516,21 @@ export default function EnhancedAccessibilityEnhancer() {
   }, [screenReaderMode]);
 
   return (
-    <div>
-      {/* Floating Accessibility Button */}
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Open Accessibility Settings"
-      >
-        <Accessibility className="w-6 h-6 text-white" />
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-      </motion.button>
+    <React.Fragment>
+      {/* Accessibility Controls Button */}
+      {showControls && (
+        <button
+          onClick={togglePanel}
+          className="fixed bottom-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          aria-label="Accessibility settings"
+          aria-expanded={isVisible}
+          aria-controls="accessibility-panel"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </button>
+      )}
 
       {/* Accessibility Dashboard Modal */}
       <AnimatePresence>
@@ -765,7 +768,9 @@ export default function EnhancedAccessibilityEnhancer() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </div>
+    </React.Fragment>
+  )};
 
       {/* Global Accessibility Styles */}
       <style jsx global>{`

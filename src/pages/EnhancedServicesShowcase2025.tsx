@@ -623,7 +623,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <div className="mt-4 text-sm text-gray-400">
               Showing {filteredServices.length} of {enhancedServicesCatalog2025.length} services
               {selectedCategory !== 'all' && (
-                <div> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></div>
+                <React.Fragment> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></React.Fragment>
               )}
             ></div>
           </div>
@@ -638,7 +638,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <p className="text-gray-400">
               Showing <span className="text-white font-semibold">{filteredServices.length}</span> services
               {selectedCategory !== 'all' && (
-                <div> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></div>
+                <React.Fragment> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></React.Fragment>
               )}
             ></p>
           </div>

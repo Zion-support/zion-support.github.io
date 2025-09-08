@@ -117,7 +117,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         }
     };
     return (<AnimatePresence>
-      {isOpen && (<>
+      {isOpen && (<React.Fragment>
           {/* Backdrop */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" onClick={onToggle}/>
 
@@ -209,7 +209,6 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
               </div>
             </div>
           </motion.div>
-        </>)}
-    </AnimatePresence>);
-};
+        </React.Fragment>)}
+    </AnimatePresence>)};
 export default MobileNavigation;

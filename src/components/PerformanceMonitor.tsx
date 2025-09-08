@@ -187,7 +187,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div>
+    <React.Fragment>
       {/* Performance Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
@@ -380,7 +380,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </React.Fragment>
   )};
 // Simple refresh icon component
 const RefreshCw: React.FC<{ size: number }> = ({ size }) => (

@@ -166,7 +166,7 @@ const AIServicesPage = () => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="AI Services - Zion Tech Group"
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
@@ -294,8 +294,7 @@ const AIServicesPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default AIServicesPage;>

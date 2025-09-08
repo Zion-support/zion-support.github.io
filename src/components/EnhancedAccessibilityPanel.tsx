@@ -231,7 +231,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, [isOpen, announceToScreenReader]);
 
   return (
-    <div>
+    <React.Fragment>
       {/* Toggle Button */}
       <motion.button
         initial={{ opacity: 0 }}
@@ -506,5 +506,5 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
           onClick={togglePanel}
         />
       )}
-    </div>
+    </React.Fragment>
   )};

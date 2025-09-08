@@ -6,9 +6,8 @@ export default function ServiceOnboarding() {
     const { user, isLoading } = useAuth();
     // If not authenticated, redirect to login
     if (!isLoading && !user) {
-        return <Navigate to="/login" replace/>;
-    }
-    return (<>
+        return <Navigate to="/login" replace/>}
+    return (<React.Fragment>
       
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
         <div className="container mx-auto px-4">
@@ -24,5 +23,4 @@ export default function ServiceOnboarding() {
         </div>
       </div>
       
-    </>);
-}
+    </React.Fragment>)}

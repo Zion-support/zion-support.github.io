@@ -83,7 +83,7 @@ export const PerformanceOptimizer = ({ children }) => {
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect()}
     }, [location.pathname]);
-    return <>{optimizedChildren}</>};
+    return <React.Fragment>{optimizedChildren}</React.Fragment>};
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks

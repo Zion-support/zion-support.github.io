@@ -117,7 +117,7 @@ export default function CybersecurityServicesPage() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Cybersecurity Services | Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
@@ -1162,7 +1162,7 @@ const CybersecurityServicesPage = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
       {/* Security Framework */}

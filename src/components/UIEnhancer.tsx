@@ -66,9 +66,8 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         });
     };
     const toggleParticleMode = () => {
-        setIsParticleMode(!isParticleMode);
-    };
-    return (<>
+        setIsParticleMode(!isParticleMode)};
+    return (<React.Fragment>
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">
           {/* Theme Toggle */}
@@ -147,6 +146,5 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </div>
         </div>
       </motion.div>
-    </>);
-};
+    </React.Fragment>)};
 export default UIEnhancer;

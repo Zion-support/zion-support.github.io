@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AICybersecuritySuite() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
         <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
@@ -308,6 +308,6 @@ export default function AICybersecuritySuite() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }>

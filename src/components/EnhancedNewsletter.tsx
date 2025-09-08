@@ -316,15 +316,15 @@ export const EnhancedNewsletter: React.FC = () => {
           whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
         >
           {status === 'loading' ? (
-            <div>
+            <React.Fragment>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               Subscribing...
-            </div>
+            </React.Fragment>
           ) : (
-            <div>
+            <React.Fragment>
               <Send className="h-5 w-5" />
               Subscribe to Newsletter
-            </div>
+            </React.Fragment>
           )}
         ></motion.button>
 

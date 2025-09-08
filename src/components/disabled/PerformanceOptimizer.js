@@ -109,10 +109,7 @@ export const PerformanceOptimizer = ({ children }) => {
             return () => observer.disconnect();
         }
     }, [location.pathname]);
-    
-    return <>{optimizedChildren}</>;
-};
-
+    return <React.Fragment>{optimizedChildren}</React.Fragment>};
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks

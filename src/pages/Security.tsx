@@ -200,7 +200,7 @@ export default function Security() {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Security - Zion Tech Group"
         description="Learn about Zion Tech Group's comprehensive security practices, certifications, and commitment to protecting your data and systems."
@@ -499,5 +499,5 @@ export default function Security() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   )}

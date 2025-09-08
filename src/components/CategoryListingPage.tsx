@@ -68,7 +68,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 return 0;
         }
     });
-    return (<>
+    return (<React.Fragment>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -146,5 +146,4 @@ export function CategoryListingPage({ title, description, listings: initialListi
         </div>
       </div>
       <Footer />
-    </>);
-}
+    </React.Fragment>)}

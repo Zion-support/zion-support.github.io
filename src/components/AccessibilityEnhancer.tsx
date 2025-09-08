@@ -255,7 +255,7 @@ const AccessibilityEnhancer: React.FC = () => {
   ] as const;
 
   return (
-    <div>
+    <React.Fragment>
       {/* Accessibility Toggle Button */}
       <button
         onClick={togglePanel}
@@ -556,59 +556,8 @@ const AccessibilityEnhancer: React.FC = () => {
                 />
               </button>
             </div>
-
-            {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Keyboard className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
-              </div>
-              <button
-                onClick={() => applySettings({ keyboardNavigation: !settings.keyboardNavigation })}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-                aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* Focus Indicator */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Eye className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicator</span>
-              </div>
-              <button
-                onClick={() => applySettings({ focusIndicator: !settings.focusIndicator })}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-                aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-          </div>
-
-          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-              These settings are saved in your browser and will persist across sessions.
-            </p>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </React.Fragment>
+  )}

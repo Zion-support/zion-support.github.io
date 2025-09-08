@@ -3,7 +3,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
 function ContractBuilderPage() {
     return (<ProtectedRoute>
-      <>
+      <React.Fragment>
         <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>
         
         
@@ -12,7 +12,6 @@ function ContractBuilderPage() {
         </main>
         
         
-      </>
-    </ProtectedRoute>);
-}
+      </React.Fragment>
+    </ProtectedRoute>)}
 export default ContractBuilderPage;

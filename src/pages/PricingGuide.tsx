@@ -113,7 +113,7 @@ export default function PricingGuide() {
                   ))}
                   
                   {plan.notIncluded.length > 0 && (
-                    <div>
+                    <React.Fragment>
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
@@ -121,6 +121,41 @@ export default function PricingGuide() {
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
+                    </React.Fragment>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service-Specific Pricing */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
+            <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {servicePricing.map((category, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
+                    <category.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white ml-4">{category.category}</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-lg font-semibold text-white">{service.name}</h4>
+                        <span className="text-cyan-400 font-semibold">{service.price}</span>
+                      </div>
+                      <p className="text-slate-400 text-sm">{service.description}</p>
                     </div>
                   )}
                 ></div>

@@ -33,9 +33,8 @@ export function CandidateCard({ application, index }) {
         toast({
             title: "Hiring process initiated",
             description: "Offer has been sent to the talent."
-        });
-    };
-    return (<>
+        })};
+    return (<React.Fragment>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
             <CardContent className="p-3">
@@ -134,5 +133,4 @@ export function CandidateCard({ application, index }) {
       
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>
-    </>);
-}
+    </React.Fragment>)}

@@ -163,7 +163,7 @@ const Support: React.FC = () => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Support Center - Zion Tech Group"
         description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."
@@ -453,5 +453,5 @@ const Support: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   )}

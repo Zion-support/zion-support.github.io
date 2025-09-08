@@ -177,7 +177,7 @@ export default function SOC2ComplianceTracker() {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="SOC2 Compliance Tracker - Zion Tech Group"
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
@@ -452,7 +452,7 @@ export default function SOC2ComplianceTracker() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

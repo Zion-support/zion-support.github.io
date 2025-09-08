@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users } from 'lucide-react';
 const AdvancedCybersecuritySuite = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Advanced Cybersecurity Suite - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions with advanced threat detection, prevention, and response capabilities."/>
@@ -175,6 +175,5 @@ const AdvancedCybersecuritySuite = () => {
           </div>
         </section>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default AdvancedCybersecuritySuite;

@@ -250,15 +250,15 @@ export default function ComprehensivePricing2027() {
                         {/* Expand/Collapse Button */}
                         <button className="w-full mt-4 p-2 text-zion-cyan hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-colors flex items-center justify-center gap-2">
                           {expandedService === service.id ? (
-                            <div>
+                            <React.Fragment>
                               <ChevronUp className="w-4 h-4" />
                               Show Less
-                            </div>
+                            </React.Fragment>
                           ) : (
-                            <div>
+                            <React.Fragment>
                               <ChevronDown className="w-4 h-4" />
                               View Details
-                            </div>
+                            </React.Fragment>
                           )}
                         ></button>
 

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const AIConsumerWillingnessToUse = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Consumer Willingness to Use Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI consumer willingness to use platform that analyzes customer usage readiness, adoption likelihood, and product utilization with advanced AI capabilities."/>
@@ -161,6 +161,5 @@ const AIConsumerWillingnessToUse = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default AIConsumerWillingnessToUse;

@@ -206,22 +206,29 @@ export const AICodeGenerator = () => {
                   />
                 </div>
 
-                <button
-                  onClick={handleGenerateCode}
-                  disabled={isGenerating || !form.description.trim()}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {isGenerating ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <Sparkles className="w-5 h-5" />
+                {/* Advanced Options */}
+                {showAdvanced && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    {[
+                    { key: 'includeTests', label: 'Tests', icon: TestTube },
+                    { key: 'includeDocs', label: 'Docs', icon: FileText },
+                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },
+                    { key: 'includeLogging', label: 'Logging', icon: Info },
+                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
+                ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" checked={form[key]} onChange={(e) => setForm(prev => ({ ...prev, [key]: e.target.checked }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                        <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>
+                        <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>
+                      </label>))}
+                  </motion.div>)}
+
+                <button type="submit" disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
+                  {isGenerating ? (<React.Fragment>
+                      <Loader2 className="w-5 h-5 animate-spin"/>
+                      Generating Code...
+                    </React.Fragment>) : (<React.Fragment>
+                      <Sparkles className="w-5 h-5"/>
                       Generate Code
-                    </>
-                  )}
+                    </React.Fragment>)}
                 </button>
               </div>
 
@@ -258,10 +265,87 @@ export const AICodeGenerator = () => {
                 </div>
               )}
 
-              {/* Custom Code Input */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Or Paste Your Own Code
+          {activeTab === 'analyze' && (<motion.div key="analyze" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Paste code to analyze
+                </label>
+                <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder="Paste your code here for AI-powered analysis..." className="w-full h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
+              </div>
+
+              <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
+                {isAnalyzing ? (<React.Fragment>
+                    <Loader2 className="w-5 h-5 animate-spin"/>
+                    Analyzing Code...
+                  </React.Fragment>) : (<React.Fragment>
+                    <Eye className="w-5 h-5"/>
+                    Analyze Code
+                  </React.Fragment>)}
+              </button>
+
+              {/* Analysis Results */}
+              {codeAnalysis && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+                  {/* Metrics Overview */}
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {[
+                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },
+                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },
+                    { key: 'security', label: 'Security', icon: Shield, color: 'green' },
+                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },
+                    { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
+                ].map(({ key, label, icon: Icon, color }) => {
+                    const value = codeAnalysis[key];
+                    if (typeof value === 'number') {
+                        return (<div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>
+                            <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                              {value}/10
+                            </div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
+                          </div>)}
+                    return null})}
+                  </div>
+
+                  {/* Code Metrics */}
+                  <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">
+                      {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className="text-center">
+                          <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>
+                          <div className="text-gray-600 dark:text-gray-400 capitalize">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </div>
+                        </div>))}
+                    </div>
+                  </div>
+
+                  {/* Issues */}
+                  {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>
+                      <div className="space-y-2">
+                        {codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark:bg-red-900/30' :
+                            issue.severity === 'warning' ? 'bg-yellow-50 dark:bg-yellow-900/30' :
+                                'bg-blue-50 dark:bg-blue-900/30'}`}>
+                            {issue.severity === 'error' ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/>) : issue.severity === 'warning' ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/>) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/>)}
+                            <div className="flex-1">
+                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                                {issue.message}
+                              </div>
+                              {issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                  Line {issue.line}
+                                </div>)}
+                            </div>
+                          </div>))}
+                      </div>
+                    </div>)}
+                </motion.div>)}
+            </motion.div>)}
+
+          {activeTab === 'optimize' && (<motion.div key="optimize" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+              <div className="text-center py-8">
+                <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Code Optimization
                 </h3>
                 <textarea
                   value={customCode}

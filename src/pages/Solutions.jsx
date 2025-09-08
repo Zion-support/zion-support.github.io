@@ -1,5 +1,5 @@
 const Solutions = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Custom Solutions - Zion Tech Group</title>
         <meta name="description" content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."/>
@@ -21,6 +21,5 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default Solutions;

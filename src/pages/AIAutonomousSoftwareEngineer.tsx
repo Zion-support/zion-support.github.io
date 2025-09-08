@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousSoftwareEngineer = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Autonomous Software Engineer | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI autonomous software engineer that writes code, debugs programs, and develops software solutions with advanced AI capabilities and human-like programming skills."/>
@@ -167,6 +167,5 @@ const AIAutonomousSoftwareEngineer = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default AIAutonomousSoftwareEngineer;

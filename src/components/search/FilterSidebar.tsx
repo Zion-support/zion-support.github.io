@@ -34,7 +34,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
 export function FilterSidebar(...args: []):  {
   return (
-    <div>
+    <React.Fragment>
       {/* Mobile overlay */}
       {isOpen && (
         <div 
@@ -108,5 +108,5 @@ export function FilterSidebar(...args: []):  {
           ))}
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )}

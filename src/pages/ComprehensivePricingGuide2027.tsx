@@ -223,15 +223,15 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                   className="w-full flex items-center justify-center py-3 bg-white/5 hover:bg-white/10 rounded-lg transition-colors text-white"
                 >
                   {expandedServices.has(service.id) ? (
-                    <div>
+                    <React.Fragment>
                       <span>Show Less</span>
                       <ChevronUp className="w-5 h-5 ml-2" />
-                    </div>
+                    </React.Fragment>
                   ) : (
-                    <div>
+                    <React.Fragment>
                       <span>Show Details</span>
                       <ChevronDown className="w-5 h-5 ml-2" />
-                    </div>
+                    </React.Fragment>
                   )}
                 </button>
               </div>
@@ -296,7 +296,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       </div>
 
                       {service.technicalSpecs && (
-                        <div>
+                        <React.Fragment>
                           <h4 className="text-lg font-semibold text-white mb-4">Technical Specifications</h4>
                           <div className="grid grid-cols-2 gap-4 text-sm text-gray-300">
                             <div>
@@ -322,7 +322,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </React.Fragment>
                       )}
                     </div>
                   </div>

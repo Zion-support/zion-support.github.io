@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const OpenApp = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Open App - Zion Tech Group</title>
         <meta name="description" content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."/>
@@ -22,6 +22,5 @@ const OpenApp = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default OpenApp;

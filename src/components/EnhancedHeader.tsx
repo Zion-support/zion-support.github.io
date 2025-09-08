@@ -268,7 +268,7 @@ export const EnhancedHeader: React.FC = () => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       {/* Matrix Rain Background */}
       <div className="matrix-rain"></div>
       
@@ -653,7 +653,7 @@ export const EnhancedHeader: React.FC = () => {
           )}
         </AnimatePresence>
       </motion.header>
-    </div>
+    </React.Fragment>
   );
 }
 

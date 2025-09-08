@@ -68,7 +68,7 @@ export default function MicroSaasServicesPage() {
 
 const MicroSAASServicesPage = () => {
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Micro SAAS Services - Zion Tech Group"
         description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."
@@ -107,7 +107,7 @@ const MicroSAASServicesPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
 export default MicroSAASServicesPage;>

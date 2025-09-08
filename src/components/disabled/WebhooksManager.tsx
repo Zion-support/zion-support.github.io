@@ -234,7 +234,7 @@ export function WebhooksManager() {
             </DialogDescription>
           </DialogHeader>
           
-          {!showTestResult ? (<>
+          {!showTestResult ? (<React.Fragment>
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="test-event-type">Event Type</Label>
@@ -262,7 +262,7 @@ export function WebhooksManager() {
                   Send Test
                 </Button>
               </DialogFooter>
-            </>) : (<>
+            </React.Fragment>) : (<React.Fragment>
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -300,7 +300,7 @@ export function WebhooksManager() {
                   Test Another Event
                 </Button>
               </DialogFooter>
-            </>)}
+            </React.Fragment>)}
         </DialogContent>
       </Dialog>
 

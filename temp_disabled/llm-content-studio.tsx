@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function LLMContentStudio() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
         <meta name="description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
@@ -409,6 +409,6 @@ export default function LLMContentStudio() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }>

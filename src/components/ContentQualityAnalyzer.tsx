@@ -137,7 +137,7 @@ const ContentQualityAnalyzer = () => {
                 return type;
         }
     };
-    return (<>
+    return (<React.Fragment>
       {/* Floating Action Button */}
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <FileText className="w-6 h-6"/>
@@ -347,6 +347,5 @@ const ContentQualityAnalyzer = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </React.Fragment>)};
 export default ContentQualityAnalyzer;

@@ -246,7 +246,7 @@ export default function ForumPostPage() {
     };
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
-    return (<>
+    return (<React.Fragment>
       <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       
       <div className="container py-8">
@@ -318,7 +318,7 @@ export default function ForumPostPage() {
                     </Link>
                   </Button>)}
                 
-                {isAdminOrMod && (<>
+                {isAdminOrMod && (<React.Fragment>
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>
                       <Pin className="h-4 w-4 mr-1"/>
                       {post.isPinned ? "Unpin" : "Pin"}
@@ -327,7 +327,7 @@ export default function ForumPostPage() {
                       <Lock className="h-4 w-4 mr-1"/>
                       {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
-                  </>)}
+                  </React.Fragment>)}
                 
                 <Button variant="ghost" size="sm" onClick={handleReportPost}>
                   <Flag className="h-4 w-4 mr-1"/>
@@ -372,5 +372,4 @@ export default function ForumPostPage() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </React.Fragment>)}

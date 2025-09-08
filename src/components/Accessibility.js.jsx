@@ -99,57 +99,30 @@ export const AccessibilityProvider = ({ children }) => {}
   return ()
     <AccessibilityContext.Provider value={value}>
       {children}
-    </AccessibilityContext.Provider>
-  );
-};
-// Accessibility Panel Component;
-export const AccessibilityPanel = () => {}
-  const [isOpen, setIsOpen] = useState(false);
-  const {}
-    highContrast,
-    reducedMotion,
-    fontSize,
-    colorBlindMode,
-    toggleHighContrast,
-    toggleReducedMotion,
-    setFontSize,
-    setColorBlindMode} = useAccessibility();
-  // Keyboard shortcuts;
-  useEffect(() => {}
-    const handleKeyDown = event => {}
-      // Ctrl/Cmd + Shift + A to open accessibility panel;
-      if()
-        (event.ctrlKey || event.metaKey) &&'
-        event.shiftKey &&''
-        event.key === 'A'
-      ) {}
-        event.preventDefault();
-        setIsOpen(!isOpen);
-      }
-      // Ctrl/Cmd + Shift + H to toggle high contrast;
-      if()
-        (event.ctrlKey || event.metaKey) &&'
-        event.shiftKey &&''
-        event.key === 'H'
-      ) {}
-        event.preventDefault();
-        toggleHighContrast();
-      }
-      // Ctrl/Cmd + Shift + M to toggle reduced motion;
-      if()
-        (event.ctrlKey || event.metaKey) &&'
-        event.shiftKey &&''
-        event.key === 'M'
-      ) {}
-        event.preventDefault();
-        toggleReducedMotion();'
-      }''
-    };'''
-    window.addEventListener('keydown', handleKeyDown);'''
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-  return ()
-    <>
+    </AccessibilityContext.Provider>)};
+// Accessibility Panel Component
+export const AccessibilityPanel = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
+    // Keyboard shortcuts
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            // Ctrl/Cmd + Shift + A to open accessibility panel
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+                event.preventDefault();
+                setIsOpen(!isOpen)}
+            // Ctrl/Cmd + Shift + H to toggle high contrast
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+                event.preventDefault();
+                toggleHighContrast()}
+            // Ctrl/Cmd + Shift + M to toggle reduced motion
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+                event.preventDefault();
+                toggleReducedMotion()}
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
+    return (<React.Fragment>
       {/* Floating Accessibility Button */}
       <motion.button;
         whileHover={{ scale: 1.1 }}
@@ -350,51 +323,39 @@ export const AccessibilityPanel = () => {}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
-  );
-};
-// Skip to Content Link;
-export const SkipToContent = () => ("""
-  <a""""
-    href="#main-content""""
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300"""
-  >
-    Skip to main content;
-  </a>
-);
-// Focus Trap Hook;
-export const useFocusTrap = isActive => {}
-  useEffect(() => {}
-    if (!isActive) return;'"""
-    const focusableElements ='"'"""
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);'
-    const container = document.activeElement?.closest('[data-focus-trap]');
-    if(!container) return;
-    const firstFocusableElement = focusableContent[0];
-    const lastFocusableElement = focusableContent[focusableContent.length-1];
-    const handleTabKey = e => {}
-'
-      if (e.key === 'Tab') {}
-        if(e.shiftKey) {}
-          if(document.activeElement === firstFocusableElement) {}
-            e.preventDefault();
-            lastFocusableElement.focus();
-          }
-        } else {}
-          if(document.activeElement === lastFocusableElement) {}
-            e.preventDefault();
-            firstFocusableElement.focus();
-          }
-        }'
-      }''
-    };'''
-    document.addEventListener('keydown', handleTabKey);'''
-    return () => document.removeEventListener('keydown', handleTabKey);
-  }, [isActive]);
-};
-// Screen Reader Only Text"""
-export const SrOnly = ({ children }) => (""""
-  <span className="sr-only">{children}</span>
-);
-export default AccessibilityPanel;'"""
-'"'"""
+    </React.Fragment>)};
+// Skip to Content Link
+export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
+    Skip to main content
+  </a>);
+// Focus Trap Hook
+export const useFocusTrap = (isActive) => {
+    useEffect(() => {
+        if (!isActive)
+            return;
+        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const container = document.activeElement?.closest('[data-focus-trap]');
+        if (!container)
+            return;
+        const focusableContent = container.querySelectorAll(focusableElements);
+        const firstFocusableElement = focusableContent[0];
+        const lastFocusableElement = focusableContent[focusableContent.length - 1];
+        const handleTabKey = (e) => {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusableElement) {
+                        e.preventDefault();
+                        lastFocusableElement.focus()}
+                }
+                else {
+                    if (document.activeElement === lastFocusableElement) {
+                        e.preventDefault();
+                        firstFocusableElement.focus()}
+                }
+            }
+        };
+        document.addEventListener('keydown', handleTabKey);
+        return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};
+// Screen Reader Only Text
+export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
+export default AccessibilityPanel;

@@ -25,7 +25,7 @@ export default function JobDetails() {
       </div>);
     }
     if (error || !job) {
-        return (<>
+        return (<React.Fragment>
         
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
@@ -33,8 +33,7 @@ export default function JobDetails() {
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>);
-    }
+      </React.Fragment>)}
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
@@ -57,7 +56,7 @@ export default function JobDetails() {
         return `$${budget.min} - $${budget.max}`;
     };
     const isOwnJob = user?.id === job.client_id;
-    return (<>
+    return (<React.Fragment>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
       
       <main className="container mx-auto px-4 py-8">
@@ -154,5 +153,4 @@ export default function JobDetails() {
                 budget: job.budget,
                 client_id: job.client_id
             }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>);
-}
+    </React.Fragment>)}

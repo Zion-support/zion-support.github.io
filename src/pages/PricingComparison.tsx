@@ -338,7 +338,7 @@ const PricingComparison: React.FC = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <SEO
         title="Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
         description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs."
@@ -604,7 +604,7 @@ const PricingComparison: React.FC = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
 export default PricingComparison;>

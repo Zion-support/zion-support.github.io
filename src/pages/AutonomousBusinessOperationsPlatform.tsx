@@ -56,7 +56,7 @@ export default function AutonomousBusinessOperationsPlatform() {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="AI Autonomous Business Operations Platform | Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
@@ -131,7 +131,7 @@ export default function AutonomousBusinessOperationsPlatform() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
 export default AutonomousBusinessOperationsPlatform;>

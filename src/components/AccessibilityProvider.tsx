@@ -293,4 +293,4 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
 
-  return <div>{children}</div>};
+  return <React.Fragment>{children}</React.Fragment>};

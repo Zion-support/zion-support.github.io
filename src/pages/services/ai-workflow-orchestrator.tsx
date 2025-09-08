@@ -114,7 +114,7 @@ const AIWorkflowOrchestrator = () => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>AI Workflow Orchestrator - Zion Tech Group | Intelligent Process Automation</title>
         <meta name="description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization." />
@@ -344,7 +344,7 @@ const AIWorkflowOrchestrator = () => {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

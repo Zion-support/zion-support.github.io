@@ -121,7 +121,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     };
     if (!isVisible)
         return null;
-    return (<>
+    return (<React.Fragment>
       {/* Toggle Button */}
       <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Toggle accessibility panel" title="Accessibility Settings">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -357,18 +357,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 />
               </div>
             </div>
-
-            {/* Reset Button */}
-            <button
-              onClick={resetSettings}
-              className="w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium flex items-center justify-center gap-2"
-            >
-              <RotateCcw className="w-4 h-4" />
-              Reset to Defaults
-            </button>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
-  );
-};
+          </motion.div>)}
+      </AnimatePresence>
+    </React.Fragment>)};
+export default AccessibilityPanel;

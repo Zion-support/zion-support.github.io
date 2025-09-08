@@ -260,7 +260,7 @@ export function AppHeader() {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
@@ -537,5 +537,5 @@ export function AppHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </React.Fragment>
   )}

@@ -92,7 +92,7 @@ function Contact(): JSX.Element {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO
         title="Contact Us | Zion Tech Group - Get Expert Consultation"
         description="Contact Zion Tech Group for expert consultation on AI-powered micro SAAS, cloud infrastructure, data analytics, and security solutions. Get in touch today!"
@@ -304,9 +304,8 @@ function Contact(): JSX.Element {
           </div>
         </section>
       </div>
-    </>
-  );
-}
+    </React.Fragment>
+  )};
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

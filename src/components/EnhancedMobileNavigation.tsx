@@ -236,7 +236,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(true)}
@@ -360,5 +360,5 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </React.Fragment>
   )};

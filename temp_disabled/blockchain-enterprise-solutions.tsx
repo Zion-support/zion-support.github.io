@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function BlockchainEnterpriseSolutions() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
@@ -362,6 +362,6 @@ export default function BlockchainEnterpriseSolutions() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }>

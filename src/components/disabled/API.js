@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const API = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Access Zion Tech Group's API documentation and integration guides for developers."/>
@@ -22,6 +22,5 @@ const API = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default API;

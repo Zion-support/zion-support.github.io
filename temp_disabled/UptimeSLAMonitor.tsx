@@ -144,7 +144,7 @@ export default function UptimeSLAMonitor() {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SEO 
         title="Uptime SLA Monitor - Zion Tech Group"
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
@@ -387,7 +387,7 @@ export default function UptimeSLAMonitor() {
           </div>
         </section>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

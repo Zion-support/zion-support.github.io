@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const Documentation = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."/>
@@ -22,6 +22,5 @@ const Documentation = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default Documentation;

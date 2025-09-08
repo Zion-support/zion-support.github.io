@@ -110,7 +110,7 @@ const ComprehensiveServices: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )};
 
       {/* Contact Information */}

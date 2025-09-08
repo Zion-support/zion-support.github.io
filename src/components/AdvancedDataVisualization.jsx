@@ -342,10 +342,138 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
 
-      {/* Chart Area */}
-      <div className="p-6 h-[calc(100%-140px)] overflow-auto">
-        <div className="bg-white border border-gray-200 rounded-lg p-4 h-full">
-          {renderChart()}
+      <div className="flex h-full">
+        {/* Sidebar Controls */}
+        <div className="w-80 border-r border-zion-slate-light p-4 overflow-y-auto">
+          <div className="space-y-6">
+            {/* Chart Type Selection */}
+            <div>
+              <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Type</h3>
+              <div className="space-y-2">
+                {chartTypes.map((type) => (<button key={type.id} onClick={() => setSelectedChartType(type.id)} className={`w-full p-3 text-left rounded-lg border transition-all duration-200 ${selectedChartType === type.id
+                ? 'border-zion-cyan bg-zion-cyan/10 text-zion-cyan'
+                : 'border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">{type.icon}</span>
+                      <div>
+                        <div className="font-medium">{type.name}</div>
+                        <div className="text-xs text-zion-slate-light">{type.description}</div>
+                      </div>
+                    </div>
+                  </button>))}
+              </div>
+            </div>
+
+            {/* Data Filtering */}
+            <div>
+              <h3 className="text-sm font-medium text-zion-slate mb-3">Data Filter</h3>
+              <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
+                {categories.map(category => (<option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>))}
+              </select>
+            </div>
+
+            {/* Color Palette */}
+            <div>
+              <h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {colorPalettes.map((palette, index) => (<button key={index} onClick={() => setSelectedColorPalette(index)} className={`p-2 rounded-lg border transition-all duration-200 ${selectedColorPalette === index
+                ? 'border-zion-cyan bg-zion-cyan/10'
+                : 'border-zion-slate-light hover:border-zion-cyan'}`}>
+                    <div className="flex gap-1">
+                      {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }}/>))}
+                    </div>
+                  </button>))}
+              </div>
+            </div>
+
+            {/* Chart Configuration */}
+            <div>
+              <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>
+              <div className="space-y-3">
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" checked={chartConfig.showLegend} onChange={(e) => setChartConfig(prev => ({ ...prev, showLegend: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <span className="text-sm text-zion-slate">Show Legend</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" checked={chartConfig.showGrid} onChange={(e) => setChartConfig(prev => ({ ...prev, showGrid: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <span className="text-sm text-zion-slate">Show Grid</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" checked={chartConfig.animate} onChange={(e) => setChartConfig(prev => ({ ...prev, animate: e.target.checked }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <span className="text-sm text-zion-slate">Animations</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" checked={autoRefresh} onChange={(e) => setAutoRefresh(e.target.checked)} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
+                  <span className="text-sm text-zion-slate">Auto Refresh</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="space-y-3">
+              <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                {isRefreshing ? (<React.Fragment>
+                    <RefreshCw className="w-4 h-4 animate-spin"/>
+                    Refreshing...
+                  </React.Fragment>) : (<React.Fragment>
+                    <RefreshCw className="w-4 h-4"/>
+                    Refresh Data
+                  </React.Fragment>)}
+              </button>
+              
+              <div className="grid grid-cols-3 gap-2">
+                <button onClick={() => downloadChart('png')} className="px-3 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald-light transition-colors text-xs">
+                  PNG
+                </button>
+                <button onClick={() => downloadChart('svg')} className="px-3 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-light transition-colors text-xs">
+                  SVG
+                </button>
+                <button onClick={() => downloadChart('csv')} className="px-3 py-2 bg-zion-gold text-white rounded-lg hover:bg-zion-gold-light transition-colors text-xs">
+                  CSV
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Chart Display */}
+        <div className="flex-1 p-6">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-zion-slate mb-2">
+              {chartTypes.find(t => t.id === selectedChartType)?.name}
+            </h2>
+            <p className="text-zion-slate-light">
+              {chartTypes.find(t => t.id === selectedChartType)?.description}
+            </p>
+          </div>
+          
+          <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
+            {renderChart()}
+          </div>
+          
+          {/* Data Summary */}
+          <div className="mt-6 grid grid-cols-3 gap-4">
+            <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">
+              <div className="text-2xl font-bold text-zion-cyan">
+                {filteredData.length}
+              </div>
+              <div className="text-sm text-zion-slate-light">Data Points</div>
+            </div>
+            <div className="bg-zion-emerald/10 p-4 rounded-lg border border-zion-emerald/20">
+              <div className="text-2xl font-bold text-zion-emerald">
+                {Math.max(...filteredData.map(item => item.value)).toLocaleString()}
+              </div>
+              <div className="text-sm text-zion-slate-light">Max Value</div>
+            </div>
+            <div className="bg-zion-purple/10 p-4 rounded-lg border border-zion-purple/20">
+              <div className="text-2xl font-bold text-zion-purple">
+                {(filteredData.reduce((sum, item) => sum + item.value, 0) / filteredData.length).toLocaleString()}
+              </div>
+              <div className="text-sm text-zion-slate-light">Average</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

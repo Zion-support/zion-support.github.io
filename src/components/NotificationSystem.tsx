@@ -226,7 +226,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [addNotification]);
 
   return (
-    <div>
+    <React.Fragment>
       {/* Notification Bell */}
       <div className={`fixed ${getPositionClasses()} z-50`}>
         <button
@@ -437,7 +437,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </React.Fragment>
   )};
 
 // Hook for using notifications in components

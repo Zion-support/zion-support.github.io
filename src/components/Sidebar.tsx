@@ -170,7 +170,7 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}
@@ -232,7 +232,7 @@ export const Sidebar: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        </div>
+        </React.Fragment>
       )}
     </AnimatePresence>
   )}

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 const MobileLaunch = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>
         <meta name="description" content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps."/>
@@ -22,6 +22,5 @@ const MobileLaunch = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </React.Fragment>)};
 export default MobileLaunch;

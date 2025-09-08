@@ -33,9 +33,8 @@ function ReviewsModerationContent() {
         fetchReviews();
     }, [activeTab]);
     const handleRefresh = () => {
-        fetchReviews();
-    };
-    return (<>
+        fetchReviews()};
+    return (<React.Fragment>
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
       
       <main className="container mx-auto px-4 py-8">
@@ -81,8 +80,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>);
-}
+    </React.Fragment>)}
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />

@@ -59,7 +59,7 @@ export const HelpCenter: React.FC = () => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />

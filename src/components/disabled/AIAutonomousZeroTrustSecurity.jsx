@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousZeroTrustSecurity = () => {
-    return (<>
+const AIAutonomousThreatDetection = () => {
+    return (<React.Fragment>
       <Helmet>
         <title>AI Autonomous Zero Trust Security Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI autonomous zero trust security platform that continuously secures zero trust environments, detects threats, and protects zero trust infrastructure with advanced AI capabilities and autonomous operation."/>
@@ -167,6 +167,5 @@ const AIAutonomousZeroTrustSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
-};
-export default AIAutonomousZeroTrustSecurity;
+    </React.Fragment>)};
+export default AIAutonomousThreatDetection;

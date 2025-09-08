@@ -287,15 +287,15 @@ const UltimateInnovativeServices2026 = () => {
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
                     >
                       {expandedService === service.id ? (
-                        <div>
+                        <React.Fragment>
                           <EyeOff className="w-4 h-4" />
                           Show Less
-                        </div>
+                        </React.Fragment>
                       ) : (
-                        <div>
+                        <React.Fragment>
                           <Eye className="w-4 h-4" />
                           Learn More
-                        </div>
+                        </React.Fragment>
                       )}
                     ></button>
 

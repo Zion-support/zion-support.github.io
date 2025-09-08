@@ -98,9 +98,8 @@ const LinkHealthMonitor = () => {
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
             return true;
-        return link.status === selectedFilter;
-    });
-    return (<>
+        return link.status === selectedFilter});
+    return (<React.Fragment>
       {/* Floating Action Button */}
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Link className="w-6 h-6"/>
@@ -253,6 +252,5 @@ const LinkHealthMonitor = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </React.Fragment>)};
 export default LinkHealthMonitor;

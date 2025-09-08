@@ -76,7 +76,7 @@ export default function AccountSettings() {
             toast.error(error.message || 'Failed to connect wallet');
         }
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title="Account Settings" description="Manage your account"/>
       
       <main className="container mx-auto py-8 px-4">
@@ -211,5 +211,4 @@ export default function AccountSettings() {
         </div>
       </main>
       
-    </>);
-}
+    </React.Fragment>)}

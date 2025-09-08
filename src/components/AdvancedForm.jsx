@@ -547,31 +547,34 @@ export function AdvancedForm({
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {fields.map(renderField)}
-        
-        <motion.button
-          type="submit"
-          disabled={isSubmitting || !isFormValid()}
-          className={`w-full py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
-            isSubmitting || !isFormValid()
-              ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-              : 'bg-blue-600 hover:bg-blue-700 text-white'
-          }`}
-          whileHover={!isSubmitting && isFormValid() ? { scale: 1.02 } : {}}
-          whileTap={!isSubmitting && isFormValid() ? { scale: 0.98 } : {}}
-        >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="w-4 h-4 animate-spin" />
-              Submitting...
-            </>
-          ) : (
-            <>
-              <Send className="w-4 h-4" />
-              Submit
-            </>
-          )}
+      {/* Progress Bar */}
+      {showProgressBar && (<div className="px-6 pt-4">
+          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+            <span>Form Progress</span>
+            <span>{Math.round(progress)}%</span>
+          </div>
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          </div>
+        </div>)}
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="p-6 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {fields.map(field => renderField(field))}
+        </div>
+
+        {/* Submit Button */}
+        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
+            ? 'bg-gray-400 cursor-not-allowed'
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
+          {isSubmitting ? (<React.Fragment>
+              <Loader2 className="w-5 h-5 animate-spin"/>
+              Sending...
+            </React.Fragment>) : (<React.Fragment>
+              <Send className="w-5 h-5"/>
+              {submitText}
+            </React.Fragment>)}
         </motion.button>
       </form>
     </div>

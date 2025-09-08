@@ -115,11 +115,11 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           {error && (<div className="text-center text-red-400 text-sm">{error}</div>)}
           
           <div className="grid grid-cols-1 gap-4 mt-4">
-            {loading ? (<>
+            {loading ? (<React.Fragment>
                 <Skeleton className="h-[120px] w-full"/>
                 <Skeleton className="h-[120px] w-full"/>
                 <Skeleton className="h-[120px] w-full"/>
-              </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>
+              </React.Fragment>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>
                   <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description"/>
                 </div>))) : (<div className="text-center py-8 text-zion-slate-light">
                 No items found. Please try a different search.
