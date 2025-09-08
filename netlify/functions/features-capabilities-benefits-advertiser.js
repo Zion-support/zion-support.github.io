@@ -1,70 +1,60 @@
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, '..', '..');
-
 exports.handler = async function(event, context) {
+  console.log('🤖 features-capabilities-benefits-advertiser function triggered');
+  
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running features-capabilities-benefits advertiser...');
-      
-      // Simulate features, capabilities, and benefits advertising tasks
-      const tasks = [
-        'Highlighting key features',
-        'Showcasing capabilities',
-        'Promoting benefits',
-        'Optimizing feature descriptions'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate task execution
-        await new Promise(resolve => setTimeout(resolve, 135));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
-      }
-      
-      console.log('Features-capabilities-benefits advertising completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Features-capabilities-benefits advertising completed',
-          tasksExecuted: results.length,
-          featuresPromoted: true,
-          results
-        })
-      };
-    } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'features-capabilities-benefits-advertiser',
-          status: 'active',
-          description: 'Advertise features, capabilities, and benefits',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every 2 minutes',
-          capabilities: [
-            'Feature highlighting',
-            'Capability showcasing',
-            'Benefit promotion',
-            'Description optimization'
-          ]
-        })
-      };
+    // Features, capabilities, and benefits advertising logic
+    const timestamp = new Date().toISOString();
+    
+    // Simulate advertising operations
+    const advertisingOperations = [
+      'feature-highlighting',
+      'capability-showcasing',
+      'benefit-communication',
+      'value-proposition-enhancement'
+    ];
+    
+    // Simulate operation execution
+    const operationResults = {};
+    for (const operation of advertisingOperations) {
+      await new Promise(resolve => setTimeout(resolve, 25)); // Simulate advertising time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-refinement'; // 96% success rate
     }
+    
+    // Simulate advertising metrics
+    const advertisingMetrics = {
+      featureAwareness: Math.floor(Math.random() * 40) + 60, // 60-100%
+      capabilityUnderstanding: Math.floor(Math.random() * 35) + 65, // 65-100%
+      benefitRecognition: Math.floor(Math.random() * 30) + 70, // 70-100%
+      conversionImpact: Math.floor(Math.random() * 25) + 15 // 15-40%
+    };
+    
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Features, capabilities, and benefits advertising completed successfully',
+        timestamp: timestamp,
+        function: 'features-capabilities-benefits-advertiser',
+        status: 'success',
+        advertisingOperations: advertisingOperations,
+        operationResults: operationResults,
+        advertisingMetrics: advertisingMetrics,
+        advertisingEffectiveness: advertisingMetrics.featureAwareness > 80 ? 'highly-effective' : advertisingMetrics.featureAwareness > 60 ? 'effective' : 'needs-improvement',
+        nextRun: new Date(Date.now() + 2 * 60 * 1000).toISOString() // 2 minutes from now
+      })
+    };
+    
+    console.log('✅ features-capabilities-benefits-advertiser completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in features-capabilities-benefits-advertiser:', error);
+    console.error('❌ features-capabilities-benefits-advertiser failed:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
+      body: JSON.stringify({
+        message: 'Features, capabilities, and benefits advertising failed',
+        error: error.message,
+        function: 'features-capabilities-benefits-advertiser',
+        status: 'error'
       })
     };
   }

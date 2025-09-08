@@ -1,70 +1,60 @@
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, '..', '..');
-
 exports.handler = async function(event, context) {
+  console.log('🤖 fast-orchestrator function triggered');
+  
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running fast orchestrator...');
-      
-      // Simulate fast orchestration tasks
-      const tasks = [
-        'Quick system health check',
-        'Fast resource allocation',
-        'Rapid status updates',
-        'Immediate response coordination'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate fast task execution
-        await new Promise(resolve => setTimeout(resolve, 50));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
-      }
-      
-      console.log('Fast orchestration completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Fast orchestration completed',
-          tasksExecuted: results.length,
-          executionTime: 'fast',
-          results
-        })
-      };
-    } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'fast-orchestrator',
-          status: 'active',
-          description: 'Fast orchestration operations',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every minute',
-          capabilities: [
-            'Quick health checks',
-            'Fast resource allocation',
-            'Rapid status updates',
-            'Immediate coordination'
-          ]
-        })
-      };
+    // Fast orchestration logic
+    const timestamp = new Date().toISOString();
+    
+    // Simulate fast orchestration tasks
+    const orchestrationTasks = [
+      'resource-allocation',
+      'load-balancing',
+      'cache-management',
+      'performance-tuning'
+    ];
+    
+    // Simulate task execution
+    const taskResults = {};
+    for (const task of orchestrationTasks) {
+      await new Promise(resolve => setTimeout(resolve, 10)); // Simulate very fast task execution
+      taskResults[task] = Math.random() > 0.02 ? 'success' : 'warning'; // 98% success rate
     }
+    
+    // Simulate performance metrics
+    const performanceMetrics = {
+      responseTime: Math.floor(Math.random() * 100) + 20, // 20-120ms
+      throughput: Math.floor(Math.random() * 1000) + 500, // 500-1500 req/s
+      errorRate: Math.floor(Math.random() * 5) + 1, // 1-6%
+      availability: Math.floor(Math.random() * 5) + 95 // 95-100%
+    };
+    
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Fast orchestration completed successfully',
+        timestamp: timestamp,
+        function: 'fast-orchestrator',
+        status: 'success',
+        orchestrationTasks: orchestrationTasks,
+        taskResults: taskResults,
+        performanceMetrics: performanceMetrics,
+        systemHealth: performanceMetrics.availability > 98 ? 'excellent' : performanceMetrics.availability > 95 ? 'good' : 'needs-attention',
+        nextRun: new Date(Date.now() + 60 * 1000).toISOString() // 1 minute from now
+      })
+    };
+    
+    console.log('✅ fast-orchestrator completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in fast-orchestrator:', error);
+    console.error('❌ fast-orchestrator failed:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
+      body: JSON.stringify({
+        message: 'Fast orchestration failed',
+        error: error.message,
+        function: 'fast-orchestrator',
+        status: 'error'
       })
     };
   }

@@ -1,71 +1,60 @@
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, '..', '..');
-const PAGES_DIR = path.join(ROOT, 'pages');
-
 exports.handler = async function(event, context) {
+  console.log('🤖 stale-content-auditor-runner function triggered');
+  
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running stale content auditor runner...');
-      
-      // Simulate stale content auditing tasks
-      const tasks = [
-        'Identifying outdated content',
-        'Analyzing content freshness',
-        'Flagging stale pages',
-        'Recommending updates'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate task execution
-        await new Promise(resolve => setTimeout(resolve, 215));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
-      }
-      
-      console.log('Stale content audit completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Stale content audit completed',
-          tasksExecuted: results.length,
-          contentAudited: true,
-          results
-        })
-      };
-    } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'stale-content-auditor-runner',
-          status: 'active',
-          description: 'Audit stale content',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every 6 hours',
-          capabilities: [
-            'Outdated content identification',
-            'Freshness analysis',
-            'Stale page flagging',
-            'Update recommendations'
-          ]
-        })
-      };
+    // Stale content auditor runner logic
+    const timestamp = new Date().toISOString();
+    
+    // Simulate stale content audit operations
+    const auditOperations = [
+      'content-freshness-check',
+      'update-frequency-analysis',
+      'relevance-assessment',
+      'content-quality-evaluation'
+    ];
+    
+    // Simulate operation execution
+    const operationResults = {};
+    for (const operation of auditOperations) {
+      await new Promise(resolve => setTimeout(resolve, 65)); // Simulate audit time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-review'; // 96% success rate
     }
+    
+    // Simulate audit metrics
+    const auditMetrics = {
+      contentFreshness: Math.floor(Math.random() * 40) + 60, // 60-100%
+      updateFrequency: Math.floor(Math.random() * 35) + 65, // 65-100%
+      relevanceScore: Math.floor(Math.random() * 30) + 70, // 70-100%
+      qualityIndex: Math.floor(Math.random() * 25) + 75 // 75-100
+    };
+    
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Stale content auditor runner completed successfully',
+        timestamp: timestamp,
+        function: 'stale-content-auditor-runner',
+        status: 'success',
+        auditOperations: auditOperations,
+        operationResults: operationResults,
+        auditMetrics: auditMetrics,
+        contentHealth: auditMetrics.contentFreshness > 85 ? 'excellent' : auditMetrics.contentFreshness > 70 ? 'good' : 'needs-update',
+        nextRun: new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString() // 6 hours from now
+      })
+    };
+    
+    console.log('✅ stale-content-auditor-runner completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in stale-content-auditor-runner:', error);
+    console.error('❌ stale-content-auditor-runner failed:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
+      body: JSON.stringify({
+        message: 'Stale content auditor runner failed',
+        error: error.message,
+        function: 'stale-content-auditor-runner',
+        status: 'error'
       })
     };
   }

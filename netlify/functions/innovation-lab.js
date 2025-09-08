@@ -1,70 +1,60 @@
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, '..', '..');
-
 exports.handler = async function(event, context) {
+  console.log('🤖 innovation-lab function triggered');
+  
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running innovation lab...');
-      
-      // Simulate innovation laboratory tasks
-      const tasks = [
-        'Exploring new technologies',
-        'Testing innovative approaches',
-        'Prototyping solutions',
-        'Analyzing breakthrough potential'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate task execution
-        await new Promise(resolve => setTimeout(resolve, 165));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
-      }
-      
-      console.log('Innovation lab completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Innovation lab completed',
-          tasksExecuted: results.length,
-          innovationsExplored: true,
-          results
-        })
-      };
-    } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'innovation-lab',
-          status: 'active',
-          description: 'Innovation laboratory capabilities',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every 10 minutes',
-          capabilities: [
-            'Technology exploration',
-            'Innovative testing',
-            'Solution prototyping',
-            'Breakthrough analysis'
-          ]
-        })
-      };
+    // Innovation lab logic
+    const timestamp = new Date().toISOString();
+    
+    // Simulate innovation lab operations
+    const innovationOperations = [
+      'experimental-feature-testing',
+      'user-feedback-analysis',
+      'prototype-development',
+      'innovation-metrics-tracking'
+    ];
+    
+    // Simulate operation execution
+    const operationResults = {};
+    for (const operation of innovationOperations) {
+      await new Promise(resolve => setTimeout(resolve, 70)); // Simulate innovation time
+      operationResults[operation] = Math.random() > 0.05 ? 'success' : 'experimental'; // 95% success rate
     }
+    
+    // Simulate innovation metrics
+    const innovationMetrics = {
+      creativityScore: Math.floor(Math.random() * 30) + 70, // 70-100
+      userAdoption: Math.floor(Math.random() * 40) + 30, // 30-70%
+      marketPotential: Math.floor(Math.random() * 35) + 65, // 65-100%
+      technicalFeasibility: Math.floor(Math.random() * 25) + 75 // 75-100%
+    };
+    
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'Innovation lab completed successfully',
+        timestamp: timestamp,
+        function: 'innovation-lab',
+        status: 'success',
+        innovationOperations: innovationOperations,
+        operationResults: operationResults,
+        innovationMetrics: innovationMetrics,
+        innovationLevel: innovationMetrics.creativityScore > 85 ? 'breakthrough' : innovationMetrics.creativityScore > 75 ? 'innovative' : 'experimental',
+        nextRun: new Date(Date.now() + 10 * 60 * 1000).toISOString() // 10 minutes from now
+      })
+    };
+    
+    console.log('✅ innovation-lab completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('❌ innovation-lab failed:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
-        error: 'Internal server error',
-        message: error.message 
+      body: JSON.stringify({
+        message: 'Innovation lab failed',
+        error: error.message,
+        function: 'innovation-lab',
+        status: 'error'
       })
     };
   }
