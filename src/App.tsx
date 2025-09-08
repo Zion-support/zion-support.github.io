@@ -7,9 +7,6 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import OfflineToast from "./components/OfflineToast";
-import PwaInstallButton from "./components/PwaInstallButton";
-import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,

@@ -8,9 +8,10 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   requiredUserType
 }) => {
   const { user, isLoading } = useAuth();
-  const location = useLocation();
+  const currentLocation = useLocation();
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
+  const routeLocation = useLocation();
   
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
@@ -23,7 +24,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   // Redirect to login if not authenticated
   if (!user) {
-    const next = encodeURIComponent(location.pathname + location.search);
+    const next = encodeURIComponent(currentLocation.pathname + currentLocation.search);
     return <Navigate to={`/login?next=${next}`} />;
   }
 
