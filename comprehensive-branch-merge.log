@@ -10527,3 +10527,166 @@ fatal: couldn't find remote ref cursor/build-project-and-handle-publish-director
 [2025-09-08T21:03:25.563Z] ✅ Success: Get git status
 [2025-09-08T21:03:25.563Z] 📄 Found 0 conflicted files
 [2025-09-08T21:03:25.563Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:03:25.646Z] ✅ Success: Add resolved files
+[2025-09-08T21:03:25.646Z] 🚀 Commit merge for cursor/build-project-and-handle-publish-directory-error-a0e4: git commit -m "Resolve conflicts and merge cursor/build-project-and-handle-publish-directory-error-a0e4"
+[2025-09-08T21:03:25.698Z] ✅ Success: Commit merge for cursor/build-project-and-handle-publish-directory-error-a0e4
+[2025-09-08T21:03:25.699Z] ✅ Successfully resolved conflicts and merged: cursor/build-project-and-handle-publish-directory-error-a0e4
+[2025-09-08T21:03:25.699Z] 🔄 Attempting to merge branch: cursor/build-project-with-netlify-95a5
+[2025-09-08T21:03:25.699Z] 🚀 Fetch origin/cursor/build-project-with-netlify-95a5: git fetch origin cursor/build-project-with-netlify-95a5
+[2025-09-08T21:03:26.046Z] ✅ Success: Fetch origin/cursor/build-project-with-netlify-95a5
+[2025-09-08T21:03:26.046Z] 🚀 Merge cursor/build-project-with-netlify-95a5: git merge origin/cursor/build-project-with-netlify-95a5 --no-ff -m "Merge branch cursor/build-project-with-netlify-95a5 into main"
+[2025-09-08T21:03:26.474Z] ✅ Success: Merge cursor/build-project-with-netlify-95a5
+[2025-09-08T21:03:26.474Z] ✅ Successfully merged: cursor/build-project-with-netlify-95a5
+[2025-09-08T21:03:26.474Z] 🔄 Attempting to merge branch: cursor/build-project-with-netlify-9d19
+[2025-09-08T21:03:26.474Z] 🚀 Fetch origin/cursor/build-project-with-netlify-9d19: git fetch origin cursor/build-project-with-netlify-9d19
+[2025-09-08T21:03:26.797Z] ✅ Success: Fetch origin/cursor/build-project-with-netlify-9d19
+[2025-09-08T21:03:26.797Z] 🚀 Merge cursor/build-project-with-netlify-9d19: git merge origin/cursor/build-project-with-netlify-9d19 --no-ff -m "Merge branch cursor/build-project-with-netlify-9d19 into main"
+[2025-09-08T21:03:27.220Z] ✅ Success: Merge cursor/build-project-with-netlify-9d19
+[2025-09-08T21:03:27.220Z] ✅ Successfully merged: cursor/build-project-with-netlify-9d19
+[2025-09-08T21:03:27.220Z] 🔄 Attempting to merge branch: cursor/build-real-time-salary-benchmarking-tool-dea9
+[2025-09-08T21:03:27.220Z] 🚀 Fetch origin/cursor/build-real-time-salary-benchmarking-tool-dea9: git fetch origin cursor/build-real-time-salary-benchmarking-tool-dea9
+[2025-09-08T21:03:27.536Z] ✅ Success: Fetch origin/cursor/build-real-time-salary-benchmarking-tool-dea9
+[2025-09-08T21:03:27.537Z] 🚀 Merge cursor/build-real-time-salary-benchmarking-tool-dea9: git merge origin/cursor/build-real-time-salary-benchmarking-tool-dea9 --no-ff -m "Merge branch cursor/build-real-time-salary-benchmarking-tool-dea9 into main"
+[2025-09-08T21:03:27.962Z] ✅ Success: Merge cursor/build-real-time-salary-benchmarking-tool-dea9
+[2025-09-08T21:03:27.962Z] ✅ Successfully merged: cursor/build-real-time-salary-benchmarking-tool-dea9
+[2025-09-08T21:03:27.962Z] 🔄 Attempting to merge branch: cursor/build-talent-marketplace-platform-793e
+[2025-09-08T21:03:27.962Z] 🚀 Fetch origin/cursor/build-talent-marketplace-platform-793e: git fetch origin cursor/build-talent-marketplace-platform-793e
+[2025-09-08T21:03:28.299Z] ✅ Success: Fetch origin/cursor/build-talent-marketplace-platform-793e
+[2025-09-08T21:03:28.299Z] 🚀 Merge cursor/build-talent-marketplace-platform-793e: git merge origin/cursor/build-talent-marketplace-platform-793e --no-ff -m "Merge branch cursor/build-talent-marketplace-platform-793e into main"
+[2025-09-08T21:03:28.720Z] ✅ Success: Merge cursor/build-talent-marketplace-platform-793e
+[2025-09-08T21:03:28.720Z] ✅ Successfully merged: cursor/build-talent-marketplace-platform-793e
+[2025-09-08T21:03:28.720Z] 🔄 Attempting to merge branch: cursor/build-talent-profiles-and-hire-workflow-bea7
+[2025-09-08T21:03:28.721Z] 🚀 Fetch origin/cursor/build-talent-profiles-and-hire-workflow-bea7: git fetch origin cursor/build-talent-profiles-and-hire-workflow-bea7
+[2025-09-08T21:03:29.021Z] ✅ Success: Fetch origin/cursor/build-talent-profiles-and-hire-workflow-bea7
+[2025-09-08T21:03:29.021Z] 🚀 Merge cursor/build-talent-profiles-and-hire-workflow-bea7: git merge origin/cursor/build-talent-profiles-and-hire-workflow-bea7 --no-ff -m "Merge branch cursor/build-talent-profiles-and-hire-workflow-bea7 into main"
+[2025-09-08T21:03:29.442Z] ✅ Success: Merge cursor/build-talent-profiles-and-hire-workflow-bea7
+[2025-09-08T21:03:29.442Z] ✅ Successfully merged: cursor/build-talent-profiles-and-hire-workflow-bea7
+[2025-09-08T21:03:29.442Z] 🔄 Attempting to merge branch: cursor/build-white-labeled-zion-hire-ai-saas-21f7
+[2025-09-08T21:03:29.442Z] 🚀 Fetch origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7: git fetch origin cursor/build-white-labeled-zion-hire-ai-saas-21f7
+[2025-09-08T21:03:29.752Z] ✅ Success: Fetch origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7
+[2025-09-08T21:03:29.752Z] 🚀 Merge cursor/build-white-labeled-zion-hire-ai-saas-21f7: git merge origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7 --no-ff -m "Merge branch cursor/build-white-labeled-zion-hire-ai-saas-21f7 into main"
+[2025-09-08T21:03:30.179Z] ✅ Success: Merge cursor/build-white-labeled-zion-hire-ai-saas-21f7
+[2025-09-08T21:03:30.179Z] ✅ Successfully merged: cursor/build-white-labeled-zion-hire-ai-saas-21f7
+[2025-09-08T21:03:30.179Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+[2025-09-08T21:03:30.179Z] 🚀 Fetch origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3: git fetch origin cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+[2025-09-08T21:03:30.494Z] ✅ Success: Fetch origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+[2025-09-08T21:03:30.494Z] 🚀 Merge cursor/build-zion-ai-api-developer-documentation-hub-2aa3: git merge origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3 --no-ff -m "Merge branch cursor/build-zion-ai-api-developer-documentation-hub-2aa3 into main"
+[2025-09-08T21:03:30.926Z] ✅ Success: Merge cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+[2025-09-08T21:03:30.926Z] ✅ Successfully merged: cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+[2025-09-08T21:03:30.926Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-blog-and-content-system-cb83
+[2025-09-08T21:03:30.926Z] 🚀 Fetch origin/cursor/build-zion-ai-blog-and-content-system-cb83: git fetch origin cursor/build-zion-ai-blog-and-content-system-cb83
+[2025-09-08T21:03:31.273Z] ✅ Success: Fetch origin/cursor/build-zion-ai-blog-and-content-system-cb83
+[2025-09-08T21:03:31.273Z] 🚀 Merge cursor/build-zion-ai-blog-and-content-system-cb83: git merge origin/cursor/build-zion-ai-blog-and-content-system-cb83 --no-ff -m "Merge branch cursor/build-zion-ai-blog-and-content-system-cb83 into main"
+[2025-09-08T21:03:31.697Z] ✅ Success: Merge cursor/build-zion-ai-blog-and-content-system-cb83
+[2025-09-08T21:03:31.697Z] ✅ Successfully merged: cursor/build-zion-ai-blog-and-content-system-cb83
+[2025-09-08T21:03:31.697Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-analytics-suite-7b81
+[2025-09-08T21:03:31.697Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-analytics-suite-7b81: git fetch origin cursor/build-zion-ai-marketplace-analytics-suite-7b81
+[2025-09-08T21:03:32.033Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-analytics-suite-7b81
+[2025-09-08T21:03:32.033Z] 🚀 Merge cursor/build-zion-ai-marketplace-analytics-suite-7b81: git merge origin/cursor/build-zion-ai-marketplace-analytics-suite-7b81 --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-analytics-suite-7b81 into main"
+[2025-09-08T21:03:32.460Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-analytics-suite-7b81
+[2025-09-08T21:03:32.460Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-analytics-suite-7b81
+[2025-09-08T21:03:33.462Z] 📦 Processing batch 125/509
+[2025-09-08T21:03:33.462Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+[2025-09-08T21:03:33.462Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-4a2a: git fetch origin cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+[2025-09-08T21:03:33.815Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+[2025-09-08T21:03:33.815Z] 🚀 Merge cursor/build-zion-ai-marketplace-chat-assistant-4a2a: git merge origin/cursor/build-zion-ai-marketplace-chat-assistant-4a2a --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-chat-assistant-4a2a into main"
+[2025-09-08T21:03:34.271Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+[2025-09-08T21:03:34.271Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-chat-assistant-4a2a
+[2025-09-08T21:03:34.271Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+[2025-09-08T21:03:34.271Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3: git fetch origin cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+[2025-09-08T21:03:34.626Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+[2025-09-08T21:03:34.626Z] 🚀 Merge cursor/build-zion-ai-marketplace-chat-assistant-7fc3: git merge origin/cursor/build-zion-ai-marketplace-chat-assistant-7fc3 --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-chat-assistant-7fc3 into main"
+[2025-09-08T21:03:35.083Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+[2025-09-08T21:03:35.083Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-chat-assistant-7fc3
+[2025-09-08T21:03:35.083Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-chat-assistant-9918
+[2025-09-08T21:03:35.083Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-9918: git fetch origin cursor/build-zion-ai-marketplace-chat-assistant-9918
+[2025-09-08T21:03:35.476Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-chat-assistant-9918
+[2025-09-08T21:03:35.477Z] 🚀 Merge cursor/build-zion-ai-marketplace-chat-assistant-9918: git merge origin/cursor/build-zion-ai-marketplace-chat-assistant-9918 --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-chat-assistant-9918 into main"
+[2025-09-08T21:03:35.945Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-chat-assistant-9918
+[2025-09-08T21:03:35.945Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-chat-assistant-9918
+[2025-09-08T21:03:35.945Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-homepage-4873
+[2025-09-08T21:03:35.945Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-homepage-4873: git fetch origin cursor/build-zion-ai-marketplace-homepage-4873
+[2025-09-08T21:03:36.305Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-homepage-4873
+[2025-09-08T21:03:36.305Z] 🚀 Merge cursor/build-zion-ai-marketplace-homepage-4873: git merge origin/cursor/build-zion-ai-marketplace-homepage-4873 --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-homepage-4873 into main"
+[2025-09-08T21:03:36.755Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-homepage-4873
+[2025-09-08T21:03:36.755Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-homepage-4873
+[2025-09-08T21:03:36.755Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-notification-center-ffe7
+[2025-09-08T21:03:36.755Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-notification-center-ffe7: git fetch origin cursor/build-zion-ai-marketplace-notification-center-ffe7
+[2025-09-08T21:03:37.122Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-notification-center-ffe7
+[2025-09-08T21:03:37.122Z] 🚀 Merge cursor/build-zion-ai-marketplace-notification-center-ffe7: git merge origin/cursor/build-zion-ai-marketplace-notification-center-ffe7 --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-notification-center-ffe7 into main"
+[2025-09-08T21:03:37.569Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-notification-center-ffe7
+[2025-09-08T21:03:37.569Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-notification-center-ffe7
+[2025-09-08T21:03:37.569Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-marketplace-service-listing-9ebf
+[2025-09-08T21:03:37.569Z] 🚀 Fetch origin/cursor/build-zion-ai-marketplace-service-listing-9ebf: git fetch origin cursor/build-zion-ai-marketplace-service-listing-9ebf
+[2025-09-08T21:03:37.933Z] ✅ Success: Fetch origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
+[2025-09-08T21:03:37.933Z] 🚀 Merge cursor/build-zion-ai-marketplace-service-listing-9ebf: git merge origin/cursor/build-zion-ai-marketplace-service-listing-9ebf --no-ff -m "Merge branch cursor/build-zion-ai-marketplace-service-listing-9ebf into main"
+[2025-09-08T21:03:38.392Z] ✅ Success: Merge cursor/build-zion-ai-marketplace-service-listing-9ebf
+[2025-09-08T21:03:38.393Z] ✅ Successfully merged: cursor/build-zion-ai-marketplace-service-listing-9ebf
+[2025-09-08T21:03:38.393Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-notification-center-5a66
+[2025-09-08T21:03:38.393Z] 🚀 Fetch origin/cursor/build-zion-ai-notification-center-5a66: git fetch origin cursor/build-zion-ai-notification-center-5a66
+[2025-09-08T21:03:38.766Z] ✅ Success: Fetch origin/cursor/build-zion-ai-notification-center-5a66
+[2025-09-08T21:03:38.766Z] 🚀 Merge cursor/build-zion-ai-notification-center-5a66: git merge origin/cursor/build-zion-ai-notification-center-5a66 --no-ff -m "Merge branch cursor/build-zion-ai-notification-center-5a66 into main"
+[2025-09-08T21:03:39.236Z] ✅ Success: Merge cursor/build-zion-ai-notification-center-5a66
+[2025-09-08T21:03:39.236Z] ✅ Successfully merged: cursor/build-zion-ai-notification-center-5a66
+[2025-09-08T21:03:39.236Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-talent-directory-page-f450
+[2025-09-08T21:03:39.236Z] 🚀 Fetch origin/cursor/build-zion-ai-talent-directory-page-f450: git fetch origin cursor/build-zion-ai-talent-directory-page-f450
+[2025-09-08T21:03:39.598Z] ✅ Success: Fetch origin/cursor/build-zion-ai-talent-directory-page-f450
+[2025-09-08T21:03:39.598Z] 🚀 Merge cursor/build-zion-ai-talent-directory-page-f450: git merge origin/cursor/build-zion-ai-talent-directory-page-f450 --no-ff -m "Merge branch cursor/build-zion-ai-talent-directory-page-f450 into main"
+[2025-09-08T21:03:40.066Z] ✅ Success: Merge cursor/build-zion-ai-talent-directory-page-f450
+[2025-09-08T21:03:40.066Z] ✅ Successfully merged: cursor/build-zion-ai-talent-directory-page-f450
+[2025-09-08T21:03:40.066Z] 🔄 Attempting to merge branch: cursor/build-zion-ai-talent-profile-system-f64e
+[2025-09-08T21:03:40.066Z] 🚀 Fetch origin/cursor/build-zion-ai-talent-profile-system-f64e: git fetch origin cursor/build-zion-ai-talent-profile-system-f64e
+[2025-09-08T21:03:40.423Z] ✅ Success: Fetch origin/cursor/build-zion-ai-talent-profile-system-f64e
+[2025-09-08T21:03:40.423Z] 🚀 Merge cursor/build-zion-ai-talent-profile-system-f64e: git merge origin/cursor/build-zion-ai-talent-profile-system-f64e --no-ff -m "Merge branch cursor/build-zion-ai-talent-profile-system-f64e into main"
+[2025-09-08T21:03:40.882Z] ✅ Success: Merge cursor/build-zion-ai-talent-profile-system-f64e
+[2025-09-08T21:03:40.882Z] ✅ Successfully merged: cursor/build-zion-ai-talent-profile-system-f64e
+[2025-09-08T21:03:40.882Z] 🔄 Attempting to merge branch: cursor/build-zion-global-expo-platform-712b
+[2025-09-08T21:03:40.882Z] 🚀 Fetch origin/cursor/build-zion-global-expo-platform-712b: git fetch origin cursor/build-zion-global-expo-platform-712b
+[2025-09-08T21:03:41.223Z] ✅ Success: Fetch origin/cursor/build-zion-global-expo-platform-712b
+[2025-09-08T21:03:41.223Z] 🚀 Merge cursor/build-zion-global-expo-platform-712b: git merge origin/cursor/build-zion-global-expo-platform-712b --no-ff -m "Merge branch cursor/build-zion-global-expo-platform-712b into main"
+[2025-09-08T21:03:41.719Z] ✅ Success: Merge cursor/build-zion-global-expo-platform-712b
+[2025-09-08T21:03:41.719Z] ✅ Successfully merged: cursor/build-zion-global-expo-platform-712b
+[2025-09-08T21:03:42.721Z] 📦 Processing batch 126/509
+[2025-09-08T21:03:42.721Z] 🔄 Attempting to merge branch: cursor/build-zion-ipo-readiness-portal-e565
+[2025-09-08T21:03:42.721Z] 🚀 Fetch origin/cursor/build-zion-ipo-readiness-portal-e565: git fetch origin cursor/build-zion-ipo-readiness-portal-e565
+[2025-09-08T21:03:43.055Z] ✅ Success: Fetch origin/cursor/build-zion-ipo-readiness-portal-e565
+[2025-09-08T21:03:43.055Z] 🚀 Merge cursor/build-zion-ipo-readiness-portal-e565: git merge origin/cursor/build-zion-ipo-readiness-portal-e565 --no-ff -m "Merge branch cursor/build-zion-ipo-readiness-portal-e565 into main"
+[2025-09-08T21:03:43.486Z] ✅ Success: Merge cursor/build-zion-ipo-readiness-portal-e565
+[2025-09-08T21:03:43.486Z] ✅ Successfully merged: cursor/build-zion-ipo-readiness-portal-e565
+[2025-09-08T21:03:43.486Z] 🔄 Attempting to merge branch: cursor/build-zion-marketplace-landing-page-edf0
+[2025-09-08T21:03:43.486Z] 🚀 Fetch origin/cursor/build-zion-marketplace-landing-page-edf0: git fetch origin cursor/build-zion-marketplace-landing-page-edf0
+[2025-09-08T21:03:43.807Z] ✅ Success: Fetch origin/cursor/build-zion-marketplace-landing-page-edf0
+[2025-09-08T21:03:43.807Z] 🚀 Merge cursor/build-zion-marketplace-landing-page-edf0: git merge origin/cursor/build-zion-marketplace-landing-page-edf0 --no-ff -m "Merge branch cursor/build-zion-marketplace-landing-page-edf0 into main"
+[2025-09-08T21:03:44.257Z] ✅ Success: Merge cursor/build-zion-marketplace-landing-page-edf0
+[2025-09-08T21:03:44.257Z] ✅ Successfully merged: cursor/build-zion-marketplace-landing-page-edf0
+[2025-09-08T21:03:44.257Z] 🔄 Attempting to merge branch: cursor/build-zion-os-developer-sdk-83c5
+[2025-09-08T21:03:44.257Z] 🚀 Fetch origin/cursor/build-zion-os-developer-sdk-83c5: git fetch origin cursor/build-zion-os-developer-sdk-83c5
+[2025-09-08T21:03:44.713Z] ✅ Success: Fetch origin/cursor/build-zion-os-developer-sdk-83c5
+[2025-09-08T21:03:44.714Z] 🚀 Merge cursor/build-zion-os-developer-sdk-83c5: git merge origin/cursor/build-zion-os-developer-sdk-83c5 --no-ff -m "Merge branch cursor/build-zion-os-developer-sdk-83c5 into main"
+[2025-09-08T21:03:45.156Z] ✅ Success: Merge cursor/build-zion-os-developer-sdk-83c5
+[2025-09-08T21:03:45.156Z] ✅ Successfully merged: cursor/build-zion-os-developer-sdk-83c5
+[2025-09-08T21:03:45.156Z] 🔄 Attempting to merge branch: cursor/build-zion-protocol-whitepaper-document-a8e0
+[2025-09-08T21:03:45.156Z] 🚀 Fetch origin/cursor/build-zion-protocol-whitepaper-document-a8e0: git fetch origin cursor/build-zion-protocol-whitepaper-document-a8e0
+[2025-09-08T21:03:45.477Z] ✅ Success: Fetch origin/cursor/build-zion-protocol-whitepaper-document-a8e0
+[2025-09-08T21:03:45.477Z] 🚀 Merge cursor/build-zion-protocol-whitepaper-document-a8e0: git merge origin/cursor/build-zion-protocol-whitepaper-document-a8e0 --no-ff -m "Merge branch cursor/build-zion-protocol-whitepaper-document-a8e0 into main"
+[2025-09-08T21:03:45.899Z] ✅ Success: Merge cursor/build-zion-protocol-whitepaper-document-a8e0
+[2025-09-08T21:03:45.899Z] ✅ Successfully merged: cursor/build-zion-protocol-whitepaper-document-a8e0
+[2025-09-08T21:03:45.899Z] 🔄 Attempting to merge branch: cursor/build-zion-s-modular-org-chart-builder-7425
+[2025-09-08T21:03:45.899Z] 🚀 Fetch origin/cursor/build-zion-s-modular-org-chart-builder-7425: git fetch origin cursor/build-zion-s-modular-org-chart-builder-7425
+[2025-09-08T21:03:46.229Z] ✅ Success: Fetch origin/cursor/build-zion-s-modular-org-chart-builder-7425
+[2025-09-08T21:03:46.229Z] 🚀 Merge cursor/build-zion-s-modular-org-chart-builder-7425: git merge origin/cursor/build-zion-s-modular-org-chart-builder-7425 --no-ff -m "Merge branch cursor/build-zion-s-modular-org-chart-builder-7425 into main"
+[2025-09-08T21:03:46.650Z] ✅ Success: Merge cursor/build-zion-s-modular-org-chart-builder-7425
+[2025-09-08T21:03:46.650Z] ✅ Successfully merged: cursor/build-zion-s-modular-org-chart-builder-7425
+[2025-09-08T21:03:46.650Z] 🔄 Attempting to merge branch: cursor/check-and-fix-github-actions-e92c
+[2025-09-08T21:03:46.650Z] 🚀 Fetch origin/cursor/check-and-fix-github-actions-e92c: git fetch origin cursor/check-and-fix-github-actions-e92c
+[2025-09-08T21:03:46.755Z] ❌ Error in Fetch origin/cursor/check-and-fix-github-actions-e92c: Command failed: git fetch origin cursor/check-and-fix-github-actions-e92c
+fatal: couldn't find remote ref cursor/check-and-fix-github-actions-e92c
+
+[2025-09-08T21:03:46.755Z] ❌ Failed to merge cursor/check-and-fix-github-actions-e92c: Command failed: git fetch origin cursor/check-and-fix-github-actions-e92c
+fatal: couldn't find remote ref cursor/check-and-fix-github-actions-e92c
+
+[2025-09-08T21:03:46.755Z] 🔧 Attempting to resolve conflicts for: cursor/check-and-fix-github-actions-e92c
+[2025-09-08T21:03:46.755Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:03:46.816Z] ✅ Success: Get git status
+[2025-09-08T21:03:46.816Z] 📄 Found 0 conflicted files
+[2025-09-08T21:03:46.816Z] 🚀 Add resolved files: git add .
