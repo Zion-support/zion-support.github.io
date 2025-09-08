@@ -22822,3 +22822,129 @@ fatal: couldn't find remote ref cursor/fix-broken-links-169a
 [2025-09-08T21:30:04.595Z] ✅ Success: Get git status
 [2025-09-08T21:30:04.595Z] 📄 Found 0 conflicted files
 [2025-09-08T21:30:04.595Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:30:04.708Z] ✅ Success: Add resolved files
+[2025-09-08T21:30:04.708Z] 🚀 Commit merge for cursor/fix-broken-links-169a: git commit -m "Resolve conflicts and merge cursor/fix-broken-links-169a"
+[2025-09-08T21:30:04.779Z] ✅ Success: Commit merge for cursor/fix-broken-links-169a
+[2025-09-08T21:30:04.780Z] ✅ Successfully resolved conflicts and merged: cursor/fix-broken-links-169a
+[2025-09-08T21:30:04.780Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-177c
+[2025-09-08T21:30:04.780Z] 🚀 Fetch origin/cursor/fix-broken-links-177c: git fetch origin cursor/fix-broken-links-177c
+[2025-09-08T21:30:05.130Z] ✅ Success: Fetch origin/cursor/fix-broken-links-177c
+[2025-09-08T21:30:05.131Z] 🚀 Merge cursor/fix-broken-links-177c: git merge origin/cursor/fix-broken-links-177c --no-ff -m "Merge branch cursor/fix-broken-links-177c into main"
+[2025-09-08T21:30:05.609Z] ✅ Success: Merge cursor/fix-broken-links-177c
+[2025-09-08T21:30:05.610Z] ✅ Successfully merged: cursor/fix-broken-links-177c
+[2025-09-08T21:30:05.610Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-1cd6
+[2025-09-08T21:30:05.610Z] 🚀 Fetch origin/cursor/fix-broken-links-1cd6: git fetch origin cursor/fix-broken-links-1cd6
+[2025-09-08T21:30:06.015Z] ✅ Success: Fetch origin/cursor/fix-broken-links-1cd6
+[2025-09-08T21:30:06.015Z] 🚀 Merge cursor/fix-broken-links-1cd6: git merge origin/cursor/fix-broken-links-1cd6 --no-ff -m "Merge branch cursor/fix-broken-links-1cd6 into main"
+[2025-09-08T21:30:06.483Z] ✅ Success: Merge cursor/fix-broken-links-1cd6
+[2025-09-08T21:30:06.484Z] ✅ Successfully merged: cursor/fix-broken-links-1cd6
+[2025-09-08T21:30:06.484Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-22a4
+[2025-09-08T21:30:06.484Z] 🚀 Fetch origin/cursor/fix-broken-links-22a4: git fetch origin cursor/fix-broken-links-22a4
+[2025-09-08T21:30:06.842Z] ✅ Success: Fetch origin/cursor/fix-broken-links-22a4
+[2025-09-08T21:30:06.842Z] 🚀 Merge cursor/fix-broken-links-22a4: git merge origin/cursor/fix-broken-links-22a4 --no-ff -m "Merge branch cursor/fix-broken-links-22a4 into main"
+[2025-09-08T21:30:07.326Z] ✅ Success: Merge cursor/fix-broken-links-22a4
+[2025-09-08T21:30:07.326Z] ✅ Successfully merged: cursor/fix-broken-links-22a4
+[2025-09-08T21:30:07.326Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-2aa3
+[2025-09-08T21:30:07.326Z] 🚀 Fetch origin/cursor/fix-broken-links-2aa3: git fetch origin cursor/fix-broken-links-2aa3
+[2025-09-08T21:30:07.679Z] ✅ Success: Fetch origin/cursor/fix-broken-links-2aa3
+[2025-09-08T21:30:07.679Z] 🚀 Merge cursor/fix-broken-links-2aa3: git merge origin/cursor/fix-broken-links-2aa3 --no-ff -m "Merge branch cursor/fix-broken-links-2aa3 into main"
+[2025-09-08T21:30:08.147Z] ✅ Success: Merge cursor/fix-broken-links-2aa3
+[2025-09-08T21:30:08.147Z] ✅ Successfully merged: cursor/fix-broken-links-2aa3
+[2025-09-08T21:30:08.147Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-2ca8
+[2025-09-08T21:30:08.147Z] 🚀 Fetch origin/cursor/fix-broken-links-2ca8: git fetch origin cursor/fix-broken-links-2ca8
+[2025-09-08T21:30:08.555Z] ✅ Success: Fetch origin/cursor/fix-broken-links-2ca8
+[2025-09-08T21:30:08.556Z] 🚀 Merge cursor/fix-broken-links-2ca8: git merge origin/cursor/fix-broken-links-2ca8 --no-ff -m "Merge branch cursor/fix-broken-links-2ca8 into main"
+[2025-09-08T21:30:09.025Z] ✅ Success: Merge cursor/fix-broken-links-2ca8
+[2025-09-08T21:30:09.025Z] ✅ Successfully merged: cursor/fix-broken-links-2ca8
+[2025-09-08T21:30:09.025Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-348d
+[2025-09-08T21:30:09.025Z] 🚀 Fetch origin/cursor/fix-broken-links-348d: git fetch origin cursor/fix-broken-links-348d
+[2025-09-08T21:30:09.411Z] ✅ Success: Fetch origin/cursor/fix-broken-links-348d
+[2025-09-08T21:30:09.411Z] 🚀 Merge cursor/fix-broken-links-348d: git merge origin/cursor/fix-broken-links-348d --no-ff -m "Merge branch cursor/fix-broken-links-348d into main"
+[2025-09-08T21:30:09.871Z] ✅ Success: Merge cursor/fix-broken-links-348d
+[2025-09-08T21:30:09.871Z] ✅ Successfully merged: cursor/fix-broken-links-348d
+[2025-09-08T21:30:09.871Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-3b73
+[2025-09-08T21:30:09.871Z] 🚀 Fetch origin/cursor/fix-broken-links-3b73: git fetch origin cursor/fix-broken-links-3b73
+[2025-09-08T21:30:10.225Z] ✅ Success: Fetch origin/cursor/fix-broken-links-3b73
+[2025-09-08T21:30:10.225Z] 🚀 Merge cursor/fix-broken-links-3b73: git merge origin/cursor/fix-broken-links-3b73 --no-ff -m "Merge branch cursor/fix-broken-links-3b73 into main"
+[2025-09-08T21:30:10.687Z] ✅ Success: Merge cursor/fix-broken-links-3b73
+[2025-09-08T21:30:10.687Z] ✅ Successfully merged: cursor/fix-broken-links-3b73
+[2025-09-08T21:30:10.687Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-4839
+[2025-09-08T21:30:10.687Z] 🚀 Fetch origin/cursor/fix-broken-links-4839: git fetch origin cursor/fix-broken-links-4839
+[2025-09-08T21:30:11.038Z] ✅ Success: Fetch origin/cursor/fix-broken-links-4839
+[2025-09-08T21:30:11.039Z] 🚀 Merge cursor/fix-broken-links-4839: git merge origin/cursor/fix-broken-links-4839 --no-ff -m "Merge branch cursor/fix-broken-links-4839 into main"
+[2025-09-08T21:30:11.496Z] ✅ Success: Merge cursor/fix-broken-links-4839
+[2025-09-08T21:30:11.496Z] ✅ Successfully merged: cursor/fix-broken-links-4839
+[2025-09-08T21:30:11.496Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-51f6
+[2025-09-08T21:30:11.496Z] 🚀 Fetch origin/cursor/fix-broken-links-51f6: git fetch origin cursor/fix-broken-links-51f6
+[2025-09-08T21:30:11.833Z] ✅ Success: Fetch origin/cursor/fix-broken-links-51f6
+[2025-09-08T21:30:11.834Z] 🚀 Merge cursor/fix-broken-links-51f6: git merge origin/cursor/fix-broken-links-51f6 --no-ff -m "Merge branch cursor/fix-broken-links-51f6 into main"
+[2025-09-08T21:30:12.298Z] ✅ Success: Merge cursor/fix-broken-links-51f6
+[2025-09-08T21:30:12.298Z] ✅ Successfully merged: cursor/fix-broken-links-51f6
+[2025-09-08T21:30:13.299Z] 📦 Processing batch 279/509
+[2025-09-08T21:30:13.300Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-5af6
+[2025-09-08T21:30:13.300Z] 🚀 Fetch origin/cursor/fix-broken-links-5af6: git fetch origin cursor/fix-broken-links-5af6
+[2025-09-08T21:30:13.698Z] ✅ Success: Fetch origin/cursor/fix-broken-links-5af6
+[2025-09-08T21:30:13.698Z] 🚀 Merge cursor/fix-broken-links-5af6: git merge origin/cursor/fix-broken-links-5af6 --no-ff -m "Merge branch cursor/fix-broken-links-5af6 into main"
+[2025-09-08T21:30:14.141Z] ✅ Success: Merge cursor/fix-broken-links-5af6
+[2025-09-08T21:30:14.141Z] ✅ Successfully merged: cursor/fix-broken-links-5af6
+[2025-09-08T21:30:14.141Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-8467
+[2025-09-08T21:30:14.141Z] 🚀 Fetch origin/cursor/fix-broken-links-8467: git fetch origin cursor/fix-broken-links-8467
+[2025-09-08T21:30:14.502Z] ✅ Success: Fetch origin/cursor/fix-broken-links-8467
+[2025-09-08T21:30:14.502Z] 🚀 Merge cursor/fix-broken-links-8467: git merge origin/cursor/fix-broken-links-8467 --no-ff -m "Merge branch cursor/fix-broken-links-8467 into main"
+[2025-09-08T21:30:14.945Z] ✅ Success: Merge cursor/fix-broken-links-8467
+[2025-09-08T21:30:14.945Z] ✅ Successfully merged: cursor/fix-broken-links-8467
+[2025-09-08T21:30:14.945Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-dc30
+[2025-09-08T21:30:14.945Z] 🚀 Fetch origin/cursor/fix-broken-links-dc30: git fetch origin cursor/fix-broken-links-dc30
+[2025-09-08T21:30:15.280Z] ✅ Success: Fetch origin/cursor/fix-broken-links-dc30
+[2025-09-08T21:30:15.280Z] 🚀 Merge cursor/fix-broken-links-dc30: git merge origin/cursor/fix-broken-links-dc30 --no-ff -m "Merge branch cursor/fix-broken-links-dc30 into main"
+[2025-09-08T21:30:15.726Z] ✅ Success: Merge cursor/fix-broken-links-dc30
+[2025-09-08T21:30:15.726Z] ✅ Successfully merged: cursor/fix-broken-links-dc30
+[2025-09-08T21:30:15.726Z] 🔄 Attempting to merge branch: cursor/fix-broken-links-eaca
+[2025-09-08T21:30:15.726Z] 🚀 Fetch origin/cursor/fix-broken-links-eaca: git fetch origin cursor/fix-broken-links-eaca
+[2025-09-08T21:30:16.088Z] ✅ Success: Fetch origin/cursor/fix-broken-links-eaca
+[2025-09-08T21:30:16.088Z] 🚀 Merge cursor/fix-broken-links-eaca: git merge origin/cursor/fix-broken-links-eaca --no-ff -m "Merge branch cursor/fix-broken-links-eaca into main"
+[2025-09-08T21:30:16.531Z] ✅ Success: Merge cursor/fix-broken-links-eaca
+[2025-09-08T21:30:16.531Z] ✅ Successfully merged: cursor/fix-broken-links-eaca
+[2025-09-08T21:30:16.531Z] 🔄 Attempting to merge branch: cursor/fix-build-errors-in-deployment-65ba
+[2025-09-08T21:30:16.531Z] 🚀 Fetch origin/cursor/fix-build-errors-in-deployment-65ba: git fetch origin cursor/fix-build-errors-in-deployment-65ba
+[2025-09-08T21:30:16.866Z] ✅ Success: Fetch origin/cursor/fix-build-errors-in-deployment-65ba
+[2025-09-08T21:30:16.867Z] 🚀 Merge cursor/fix-build-errors-in-deployment-65ba: git merge origin/cursor/fix-build-errors-in-deployment-65ba --no-ff -m "Merge branch cursor/fix-build-errors-in-deployment-65ba into main"
+[2025-09-08T21:30:17.308Z] ✅ Success: Merge cursor/fix-build-errors-in-deployment-65ba
+[2025-09-08T21:30:17.308Z] ✅ Successfully merged: cursor/fix-build-errors-in-deployment-65ba
+[2025-09-08T21:30:17.308Z] 🔄 Attempting to merge branch: cursor/fix-client-side-exception-in-javascript-720d
+[2025-09-08T21:30:17.308Z] 🚀 Fetch origin/cursor/fix-client-side-exception-in-javascript-720d: git fetch origin cursor/fix-client-side-exception-in-javascript-720d
+[2025-09-08T21:30:17.646Z] ✅ Success: Fetch origin/cursor/fix-client-side-exception-in-javascript-720d
+[2025-09-08T21:30:17.646Z] 🚀 Merge cursor/fix-client-side-exception-in-javascript-720d: git merge origin/cursor/fix-client-side-exception-in-javascript-720d --no-ff -m "Merge branch cursor/fix-client-side-exception-in-javascript-720d into main"
+[2025-09-08T21:30:18.093Z] ✅ Success: Merge cursor/fix-client-side-exception-in-javascript-720d
+[2025-09-08T21:30:18.093Z] ✅ Successfully merged: cursor/fix-client-side-exception-in-javascript-720d
+[2025-09-08T21:30:18.093Z] 🔄 Attempting to merge branch: cursor/fix-computer-sync-not-working-dddc
+[2025-09-08T21:30:18.093Z] 🚀 Fetch origin/cursor/fix-computer-sync-not-working-dddc: git fetch origin cursor/fix-computer-sync-not-working-dddc
+[2025-09-08T21:30:18.437Z] ✅ Success: Fetch origin/cursor/fix-computer-sync-not-working-dddc
+[2025-09-08T21:30:18.437Z] 🚀 Merge cursor/fix-computer-sync-not-working-dddc: git merge origin/cursor/fix-computer-sync-not-working-dddc --no-ff -m "Merge branch cursor/fix-computer-sync-not-working-dddc into main"
+[2025-09-08T21:30:18.896Z] ✅ Success: Merge cursor/fix-computer-sync-not-working-dddc
+[2025-09-08T21:30:18.896Z] ✅ Successfully merged: cursor/fix-computer-sync-not-working-dddc
+[2025-09-08T21:30:18.896Z] 🔄 Attempting to merge branch: cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa
+[2025-09-08T21:30:18.896Z] 🚀 Fetch origin/cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa: git fetch origin cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa
+[2025-09-08T21:30:19.215Z] ✅ Success: Fetch origin/cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa
+[2025-09-08T21:30:19.215Z] 🚀 Merge cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa: git merge origin/cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa --no-ff -m "Merge branch cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa into main"
+[2025-09-08T21:30:19.651Z] ✅ Success: Merge cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa
+[2025-09-08T21:30:19.651Z] ✅ Successfully merged: cursor/fix-cron-syntax-in-performance-monitoring-workflow-c9fa
+[2025-09-08T21:30:19.651Z] 🔄 Attempting to merge branch: cursor/fix-dropdown-build-and-deploy-281e
+[2025-09-08T21:30:19.651Z] 🚀 Fetch origin/cursor/fix-dropdown-build-and-deploy-281e: git fetch origin cursor/fix-dropdown-build-and-deploy-281e
+[2025-09-08T21:30:19.990Z] ✅ Success: Fetch origin/cursor/fix-dropdown-build-and-deploy-281e
+[2025-09-08T21:30:19.990Z] 🚀 Merge cursor/fix-dropdown-build-and-deploy-281e: git merge origin/cursor/fix-dropdown-build-and-deploy-281e --no-ff -m "Merge branch cursor/fix-dropdown-build-and-deploy-281e into main"
+[2025-09-08T21:30:20.425Z] ✅ Success: Merge cursor/fix-dropdown-build-and-deploy-281e
+[2025-09-08T21:30:20.425Z] ✅ Successfully merged: cursor/fix-dropdown-build-and-deploy-281e
+[2025-09-08T21:30:20.425Z] 🔄 Attempting to merge branch: cursor/fix-errors-and-automate-with-pm2-2f65
+[2025-09-08T21:30:20.425Z] 🚀 Fetch origin/cursor/fix-errors-and-automate-with-pm2-2f65: git fetch origin cursor/fix-errors-and-automate-with-pm2-2f65
+[2025-09-08T21:30:20.536Z] ❌ Error in Fetch origin/cursor/fix-errors-and-automate-with-pm2-2f65: Command failed: git fetch origin cursor/fix-errors-and-automate-with-pm2-2f65
+fatal: couldn't find remote ref cursor/fix-errors-and-automate-with-pm2-2f65
+
+[2025-09-08T21:30:20.536Z] ❌ Failed to merge cursor/fix-errors-and-automate-with-pm2-2f65: Command failed: git fetch origin cursor/fix-errors-and-automate-with-pm2-2f65
+fatal: couldn't find remote ref cursor/fix-errors-and-automate-with-pm2-2f65
+
+[2025-09-08T21:30:20.536Z] 🔧 Attempting to resolve conflicts for: cursor/fix-errors-and-automate-with-pm2-2f65
+[2025-09-08T21:30:20.536Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:30:20.601Z] ✅ Success: Get git status
+[2025-09-08T21:30:20.601Z] 📄 Found 0 conflicted files
+[2025-09-08T21:30:20.601Z] 🚀 Add resolved files: git add .
