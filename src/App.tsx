@@ -97,7 +97,7 @@ const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/Compre
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
-const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
+const ComprehensiveServices2030 = React.lazy(() => import('./pages/ComprehensiveServices2030'));
 
 // New innovative services
 const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
@@ -114,9 +114,25 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+
+// Add missing service imports that are referenced in the header
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+
+// NEW INNOVATIVE MICRO SAAS SERVICE PAGES
+const AILegalDocumentAnalyzer = React.lazy(() => import('./pages/services/ai-legal-document-analyzer'));
+const AIRealEstateInvestmentAnalyzer = React.lazy(() => import('./pages/services/ai-real-estate-investment-analyzer'));
+const AIRestaurantManagementSystem = React.lazy(() => import('./pages/services/ai-restaurant-management-system'));
+const AIFitnessCoachingPlatform = React.lazy(() => import('./pages/services/ai-fitness-coaching-platform'));
+const AIEcommercePersonalizationEngine = React.lazy(() => import('./pages/services/ai-ecommerce-personalization-engine'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const AIVideoContentCreationStudio = React.lazy(() => import('./pages/services/ai-video-content-creation-studio'));
+const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/ai-customer-churn-prediction'));
+const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai-financial-fraud-detection'));
+const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-energy-management-system'));
 
 // Simple placeholder pages for missing ones
 const Marketplace = () => (
@@ -200,6 +216,11 @@ function App() {
                 <Route path="/help" element={<Help />} />
                 <Route path="/docs" element={<Docs />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
+                <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/comprehensive-services-2030" element={<ComprehensiveServices2030 />} />
+                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
@@ -211,20 +232,53 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                
+                {/* Add missing service routes referenced in header */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                 <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                 
-                {/* Additional Routes */}
-                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                <Route path="/services2026" element={<Services2026 />} />
-                <Route path="/services2027" element={<Services2027 />} />
-                <Route path="/webinars" element={<Webinars />} />
-                <Route path="/white-papers" element={<WhitePapers />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
+                <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
+                <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
+                <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} />
+                <Route path="/services/ai-fitness-coaching-platform" element={<AIFitnessCoachingPlatform />} />
+                <Route path="/services/ai-ecommerce-personalization-engine" element={<AIEcommercePersonalizationEngine />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                <Route path="/services/ai-video-content-creation-studio" element={<AIVideoContentCreationStudio />} />
+                <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
+                <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
+                <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} />
+
+                {/* Enhanced 404 route */}
+                <Route path="*" element={
+                  <div className="min-h-screen bg-futuristic flex items-center justify-center">
+                    <SEO 
+                      title="Page Not Found - Zion Tech Group"
+                      description="The page you're looking for doesn't exist."
+                      keywords="404, page not found, Zion Tech Group"
+                      ogType="website"
+                    />
+                    <div className="text-center text-white">
+                      <h1 className="text-6xl font-bold mb-4 animate-fade-in">404</h1>
+                      <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-200">Page Not Found</p>
+                      <p className="text-gray-400 mb-8 animate-fade-in animation-delay-400">The page you're looking for doesn't exist.</p>
+                      <button 
+                        onClick={() => window.history.back()} 
+                        className="btn-futuristic mr-4"
+                      >
+                        Go Back
+                      </button>
+                      <button 
+                        onClick={() => window.location.href = '/'} 
+                        className="btn-futuristic"
+                      >
+                        Go Home
+                      </button>
+                    </div>
+                  </div>
+                } />
               </Routes>
             </Suspense>
           </main>
