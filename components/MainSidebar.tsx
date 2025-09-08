@@ -37,7 +37,9 @@ import { Home, Briefcase, ;'  Users, Phone,Mail, MapPin,
   'lucide-react.ts';''
   'interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;'onClose: ()               => void}
 
-const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const MainSidebar: React.FC<SidebarProps> = ({ isOpen: unknown, onClose }: unknown) => {
+  const router = useNavigate();
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
@@ -246,180 +248,22 @@ const navigation = {main: [;
 },  ];
   }
 
-const quickActions = [
-  {name: 'Get Quote'}
-  href: '/quote', icon: DollarSign, color: 'from-green-500 to-green-600',}
-},{name: 'Schedule Call'}
-  href: '/schedule', icon: Calendar, color: 'from-blue-500 to-blue-600',}
-},{name: 'View Portfolio'}
-  href: '/portfolio', icon: Eye, color: 'from-purple-500 to-purple-600',}
-},{name: 'Support'}
-  href: '/support', icon: HelpCircle, color: 'from-orange-500 to-orange-600',}
-},];
-
-const contactInfo = [
-  { icon: Phone, text: '+1 (555) 123-4567',}
-  href: 'tel:+15551234567',}
-},{ icon: Mail, text: 'info@ziontechgroup.com',}
-  href: 'mailto:info@ziontechgroup.com',}
-}, { icon: MapPin, text: 'San Francisco, CA',}
-  href: '#',}
-},  ];
-
-const socialLinks = [
-  {name: 'LinkedIn'}
-  href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400',}
-},{name: 'Twitter'}
-  href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400',}
-},{name: 'Website'}
-  href: 'https://ziontechgroup.com', icon: Globe, color: 'hover:text-green-400',}
-},];
-
-const renderNavSection = (title: string, items: NavItem[], sectionKey: string) => (<div key={sectionKe,}
-} className="mb-6" />;
-      <button;
-}  Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind } from;
-  'lucide-react.ts'';
-
-interface SidebarProps extends React.PropsWithChildren<{} /> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean';}
-  onClose: ()               => voi,}
-}
-
-const MainSidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
-
-
-const router = useRouter()const [expandedSections, setExpandedSections] =;
-  useState<any />([];
-  const toggleSection = (setExpandedSections(prev =>;
-      prev.includes(section)? prev.filter(s => s !== section): [...prev, section];) => {
-  return $3;}
-}
-    )}
-
-const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
-
-interface NavItem {
-  name: string;
-   href: string;
-   icon: any;
-   description?: string;}
-}
-}
-
-const navigation: {main: NavItem[] services: NavItem[] solutions: NavItem[] resources: NavItem[] company: NavItem[]}
-} = {main: [;
-      { name: 'Home'}
-  href: '/', icon: Home,}
-}, {name: 'About'}
-  href: '/about', icon: Building,}
-}, {name: 'Services'}
-  href: '/services', icon: Briefcase,}
-}, {name: 'Solutions'}
-  href: '/solutions', icon: Target,}
-}, {name: 'Partners'}
-  href: '/partners', icon: Handshake,}
-}, {name: 'Careers'}
-  href: '/careers', icon: Users,}
-}, {name: 'Blog'}
-  href: '/blog', icon: Newspaper,}
-}, {name: 'Contact'}
-  href: '/contact', icon: Phone,}
-}], services: [;
-      {name: 'AI Services'}
-  href: '/services/ai-services', icon: Brain, description: 'Applied AI solutions',}
-}, {name: 'IT Services'}
-  href: '/services/it-services', icon: Server, description: 'Infrastructure & support',}
-}, {name: 'Micro SaaS'}
-  href: '/services/micro-saas', icon: Store, description: 'Rapid product development',}
-}, {name: 'AI Ops Copilot'}
-  href: '/services/ai-ops-copilot', icon: Cpu, description: 'Ops automation',}
-}, {name: 'Security Copilot'}
-  href: '/services/security-copilot', icon: Shield, description: 'Proactive defense',}
-}, {name: 'Data Platform'}
-  href: '/services/data-platform', icon: Database, description: 'Data pipelines & BI',}
-}, {name: 'MarTech Automation'}
-  href: '/services/martech-automation', icon: Rocket, description: 'Growth automation',}
-}], solutions: [;
-      {name: 'Solutions Overview'}
-  href: '/solutions', icon: Target, description: 'All solution areas',}
-}, {name: 'Enterprise'}
-  href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations',}
-}, {name: 'Small Business'}
-  href: '/solutions/small-business', icon: Store, description: 'SMB focused',}
-}, {name: 'Startups'}
-  href: '/solutions/startups', icon: Rocket, description: 'Growth acceleration',}
-}, {name: 'Case Studies'}
-  href: '/case-studies', icon: BarChart3, description: 'Success stories',}
-}], resources: [;
-      {name: 'Documentation'}
-  href: '/documentation', icon: FileText, description: 'Technical guides',}
-}, {name: 'API Reference'}
-  href: '/api', icon: Code, description: 'Developer resources',}
-}, {name: 'Case Studies'}
-  href: '/case-studies', icon: BarChart3, description: 'Success stories',}
-}, {name: 'Help Center'}
-  href: '/help', icon: HelpCircle, description: 'Support & FAQs',}
-}, {name: 'Status'}
-  href: '/status', icon: CheckCircle, description: 'System status',}
-}, {name: 'Pricing'}
-  href: '/pricing', icon: DollarSign, description: 'Service pricing',}
-}], company: [;
-      {name: 'About Us'}
-  href: '/about', icon: Building, description: 'Our story & mission',}
-}, {name: 'Team'}
-  href: '/team', icon: Users, description: 'Meet our experts',}
-}, {name: 'Partners'}
-  href: '/partners', icon: Handshake, description: 'Strategic partnerships',}
-}, {name: 'Careers'}
-  href: '/careers', icon: Briefcase, description: 'Join our team',}
-}, {name: 'Blog'}
-  href: '/blog', icon: Newspaper, description: 'Company updates',}
-}];
-  }
-
-const quickActions = [
-  {name: 'Contact Sales'}
-  href: '/contact', icon: Quote, color: 'from-cyan-500 to-blue-600',}
-}, {name: 'Get Support'}
-  href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600',}
-}, {name: 'View Status'}
-  href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600',}
-}, {name: 'Documentation'}
-  href: '/documentation', icon: FileText, color: 'from-purple-500 to-pink-600',}
-}];
-
-const contactInfo = [
-  { icon: Phone, text: '+1 (302) 464-0950',}
-  href: 'tel:+13024640950',}
-}, { icon: Mail, text: 'kleber@ziontechgroup.com',}
-  href: 'mailto:kleber@ziontechgroup.com',}
-}, { icon: MapPin, text: 'Middletown, DE 19709',}
-  href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',}
-}];
-
-const socialLinks = [
-  {name: 'LinkedIn'}
-  href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500',}
-}, {name: 'Twitter'}
-  href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400',}
-}, {name: 'GitHub'}
-  href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400',}
-}];
-
-const renderNavSection = (title: string, items: NavItem[], sectionKey: string) => (<div key={sectionKe,}
-} className='mb-6' />;
-      <button;
-        onClick={() = /> toggleSection(sectionKey)}
-        className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium'>
-
-        <span className='text-sm font-semibold uppercase tracking-wide' />{titl,}
-}</span>;
-        {expandedSections.includes(sectionKey) ? (<ChevronDown className='w-4 h-4' />;}
-        ) : (<ChevronRight className='w-4 h-4' />;}
+  const renderNavSection = (title: string, items: unknown[], sectionKey: string) => (<div key={sectionKey} className="mb-6">
+      <button
+        onClick={(: unknown) => toggleSection(sectionKey)}
+        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+      >
+        <span className="text-sm font-semibold uppercase tracking-wide">{title}</span>
+        {expandedSections.includes(sectionKey) ? (
+          <ChevronDown className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4" />
         )}
-      </button>;
-      {expandedSections.includes(sectionKey) && (<div className="mt-2 space-y-1" />;}
-          {items.map((item) => (<Link;}
+      </button>
+      
+      {expandedSections.includes(sectionKey) && (<div className="mt-2 space-y-1">
+          {items.map((item: unknown) => (
+            <Link
               key={item.name}
               href={item.href}
               onClick={onClose}
@@ -487,10 +331,11 @@ isOpen ?, translate-x-0
         {/* Navigation Content */}
         <div className="flex-1 overflow-y-auto p-4 space-y-6" />;
           {/* Quick Actions */}
-          <div className="mb-6" />;
-            <h3 className="text-sm font-semibold text-white mb-3 px-3" />Quick Actions</h3>;
-            <div className="grid grid-cols-2 gap-2" />;
-              {quickActions.map((action) => (<Link;}
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold text-white mb-3 px-3">Quick Actions</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {quickActions.map((action: unknown) => (
+                <Link
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
@@ -510,8 +355,9 @@ isOpen ?, translate-x-0
             </div>;
           </div>;
           {/* Main Navigation */}
-          <div className="space-y-1" />;
-            {navigation.main.map((item) => (<Link;}
+          <div className="space-y-1">
+            {navigation.main.map((item: unknown) => (
+              <Link
                 key={item.name}
                 href={item.href}
                 onClick={onClose}
@@ -535,8 +381,9 @@ isActive(item.href);
         {/* Footer */}
         <div className="p-4 border-t border-zion-blue-light" />;
           {/* Contact Info */}
-          <div className="mb-4 space-y-2" />;
-            {contactInfo.map((contact, index) => (<a;}
+          <div className="mb-4 space-y-2">
+            {contactInfo.map((contact: unknown, index: unknown) => (
+              <a
                 key={index}
                 href={contact.href}
 target={contact.href.startsWith(
@@ -552,8 +399,9 @@ target={contact.href.startsWith(
             ))}
           </div>;
           {/* Social Links */}
-          <div className="flex items-center gap-3 mb-4" />;
-            {socialLinks.map((social) => (<a;}
+          <div className="flex items-center gap-3 mb-4">
+            {socialLinks.map((social: unknown) => (
+              <a
                 key={social.name}
                 href={social.href}
                 target="_blank";

@@ -1,10 +1,24 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
-import Layout from './components/layout/Layout';
-import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
+
+// Layout Components
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+
+// Enhanced Components
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/index'));
@@ -221,7 +235,7 @@ const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
 const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
+const DataAnalytics = createLazyComponent(() => import('./pages/services/AIDataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 
@@ -279,19 +293,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-return (
-<HelmetProvider>
-<ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
-        <Router>
-          <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            {/* SEO Component */}
-            <SEO
-              title="Zion Tech Group - Leading AI & Technology Solutions"
-              description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-              keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-              ogImage="/og-image.jpg"
-              canonicalUrl="https://ziontechgroup.com"
-            />
 
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />

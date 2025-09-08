@@ -7,7 +7,7 @@ interface FuturisticAnimatedBackground2029Props {
 export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -56,8 +56,81 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
       });
-      
-      requestAnimationFrame(animate);
+
+      // Update and draw particles
+      particles.forEach((particle: unknown, index: unknown) => {
+        particle.update();
+        particle.draw();
+
+        if (particle.isDead()) {
+          particles[index] = new Particle();
+        }
+      });
+
+      // Draw connections between nearby particles
+      ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+      ctx.lineWidth = 1;
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            const alpha = 1 - distance / 100;
+            ctx.strokeStyle = `rgba(100, 200, 255, ${alpha * 0.1})`;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Add floating geometric shapes
+      const time = Date.now() * 0.001;
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate(time * 0.1);
+
+      // Draw rotating hexagon
+      ctx.strokeStyle = 'rgba(255, 100, 200, 0.2)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = 0; i < 6; i++) {
+        const angle = (i * Math.PI) / 3;
+        const x = Math.cos(angle) * 150;
+        const y = Math.sin(angle) * 150;
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.closePath();
+      ctx.stroke();
+
+      // Draw inner triangle
+      ctx.strokeStyle = 'rgba(100, 255, 200, 0.2)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = 0; i < 3; i++) {
+        const angle = (i * Math.PI * 2) / 3 + time * 0.5;
+        const x = Math.cos(angle) * 100;
+        const y = Math.sin(angle) * 100;
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.closePath();
+      ctx.stroke();
+
+      ctx.restore();
+
+      animationId = requestAnimationFrame(animate);
     };
 
     animate();

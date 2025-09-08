@@ -214,10 +214,8 @@ title: 'Comp & Resources,'
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
-  onClose: ()               => void}
-
-export default function EnhancedSidebar2025(...args[]: any): {const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: EnhancedSidebar2025Props) {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
       newExpanded.delete(sectionTitle)} else {
@@ -239,8 +237,7 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
 
-  useEffect(() => {
-
+  useEffect((: unknown) => {
     if (isOpen) {
 
 document.body.style.overflow =
@@ -286,27 +283,46 @@ initial={{ x:, -100%
         <div className="p-6 space-y-6">"          {/* Home Link */}"          <Link
             href="/""            onClick={onClose}"            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"""            <Home className="w-5 h-5 text-cyan-400" />"            <span className="text-white font-semibold">Home</span>"          </Link>""
           {/* Service Sections */}
-          {sidebarSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="space-y-3">"              <button"                onClick={() => toggleSection(section.title)}
-                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"""                <div className="flex items-center gap-3">"                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-white font-semibold">{section.title}</span>"                </div>"                <ChevronDown`                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${`
-                    expandedSections.has(section.title) ?, rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
-                    initial = {
+          {sidebarSections.map((section: unknown, sectionIndex: unknown) => (<div key={sectionIndex} className="space-y-3">
+              <button
+                onClick={(: unknown) => toggleSection(section.title)}
+                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover:bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
+                    <section.icon className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-white font-semibold">{section.title}</span>
+                </div>
+                <ChevronDown 
+                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
+                    expandedSections.has(section.title) ? 'rotate-180' : ''
+                  }`} 
+                />
+              </button>
 
-{ opacity: 0, height: 0}}
-                    animate = {
-
-{ opacity: 1,;
-  height: 'auto' ''
-  '}}'exit = {
-
-{ opacity: 0, height: 0}}
+              <AnimatePresence>
+                {expandedSections.has(section.title) && (<motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-className="space-y-2 ml-6"""                    {section.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="space-y-2">"                        <button"                          onClick={() => toggleItem(item.name)}
-                          className="w-full flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"""                          <div className="flex items-center gap-3">"                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />"                            <div>"                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">"                                {item.name}"                              </span>"
-                              <p className="text-gray-500 text-xs">{item.description}</p>"                            </div>"                          </div>
+                    className="space-y-2 ml-6"
+                  >
+                    {section.items.map((item, itemIndex: unknown) => (<div key={itemIndex} className="space-y-2">
+                        <button
+                          onClick={(: unknown) => toggleItem(item.name)}
+                          className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
+                        >
+                          <div className="flex items-center gap-3">
+                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                            <div>
+                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
+                                {item.name}
+                              </span>
+                              <p className="text-gray-500 text-xs">{item.description}</p>
+                            </div>
+                          </div>
                           {item.subItems && item.subItems.length > 0 && (
                             <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${`
@@ -316,19 +332,15 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
                         {/* Sub-items */}
                         {item.subItems && item.subItems.length > 0 && (
                           <AnimatePresence>
-                            {expandedItems.has(item.name) && (
-                              <motion.div
-                                initial = {
-
-{ opacity: 0, height: 0}}
-                                animate = {
-
-{ opacity: 1,;
-  height: 'auto' ''}}exit = {
-
-{ opacity: 0, height: 0}}
+                            {expandedItems.has(item.name) && (<motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.3 }}
-className="space-y-1 ml-6"""                                {item.subItems.map((subItem, subIndex) => (<Link
+                                className="space-y-1 ml-6"
+                              >
+                                {item.subItems.map((subItem, subIndex: unknown) => (
+                                  <Link
                                     key={subIndex}
                                     href={subItem.href}
                                     onClick={onClose}
