@@ -182,13 +182,88 @@ export function AppHeader() {
     {
       name: 'Innovation Showcase',
       icon: TrendingUp,
-      color: 'from-green-600 to-emerald-600',
-      solutions: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', description: 'Advanced pricing strategies' },
-        { name: 'Services Comparison', href: '/services-comparison', description: 'Compare all services' }
-      ]
+      description: 'Fintech innovation & compliance',
+      featured: true
+    }
+  ];
+
+  const resources = [
+    {
+      name: 'Support Center',
+      href: '/support',
+      icon: HelpCircle,
+      description: 'Get help and technical support',
+      featured: true
+    },
+    {
+      name: 'Knowledge Base',
+      href: '/knowledge-base',
+      icon: BookOpen,
+      description: 'Documentation and guides',
+      featured: true
+    },
+    {
+      name: 'Training & Certification',
+      href: '/training',
+      icon: Users,
+      description: 'Professional development programs',
+      featured: true
+    },
+    {
+      name: 'Video Tutorials',
+      href: '/video-tutorials',
+      icon: Code,
+      description: 'Learn through video content',
+      featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Connect with our community',
+      featured: true
+    },
+    {
+      name: 'Events & Conferences',
+      href: '/events',
+      icon: Target,
+      description: 'Upcoming events and webinars',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
+      description: 'Frequently asked questions',
+      featured: true
+    },
+    {
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Latest industry trends and insights',
+      featured: false
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: false
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: false
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: false
     }
   ];
 
