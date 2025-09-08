@@ -1,528 +1,383 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ApiDocumentation = () => {
-  const [activeSection, setActiveSection] = useState('overview');
-
+export default function APIDocumentationPage() {
   const apiEndpoints = [
     {
       method: 'GET',
-      path: '/api/health',
-      description: 'Check system health status',
-      response: { status: 'healthy', timestamp: '2025-01-17T10:00:00Z' }
-    },
-    {
-      method: 'POST',
-      path: '/api/auth/login',
-      description: 'Authenticate user and get access token',
-      request: { email: 'user@example.com', password: 'password' },
-      response: { token: 'jwt_token_here', expires: '2025-01-18T10:00:00Z' }
+      endpoint: '/api/health',
+      description: 'Get system health status',
+      parameters: [],
+      response: 'Health status object'
     },
     {
       method: 'GET',
-      path: '/api/users',
-      description: 'Get list of users (requires authentication)',
-      headers: { 'Authorization': 'Bearer <token>' },
-      response: { users: [], total: 0, page: 1 }
+      endpoint: '/api/reports',
+      description: 'Retrieve system reports',
+      parameters: ['limit', 'type', 'date'],
+      response: 'Array of report objects'
     },
     {
       method: 'POST',
-      path: '/api/users',
-      description: 'Create a new user',
-      request: { name: 'John Doe', email: 'john@example.com' },
-      response: { id: 123, name: 'John Doe', email: 'john@example.com' }
+      endpoint: '/api/webhooks',
+      description: 'Register webhook endpoint',
+      parameters: ['url', 'events', 'secret'],
+      response: 'Webhook configuration object'
     },
     {
-      method: 'PUT',
-      path: '/api/users/{id}',
-      description: 'Update user information',
-      request: { name: 'John Smith', email: 'johnsmith@example.com' },
-      response: { id: 123, name: 'John Smith', email: 'johnsmith@example.com' }
-    },
-    {
-      method: 'DELETE',
-      path: '/api/users/{id}',
-      description: 'Delete a user',
-      response: { success: true, message: 'User deleted successfully' }
+      method: 'GET',
+      endpoint: '/api/metrics',
+      description: 'Get performance metrics',
+      parameters: ['timeframe', 'metric'],
+      response: 'Metrics data object'
     }
   ];
 
-  const codeExamples = {
-    javascript: `// JavaScript/Node.js example
-const response = await fetch('/api/users', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer ${'${token}'}',
-    'Content-Type': 'application/json'
-  }
-});
+  const codeExamples = [
+    {
+      language: 'JavaScript',
+      title: 'Health Check',
+      code: `fetch('/api/health')
+  .then(response => response.json())
+  .then(data => console.log(data));`
+    },
+    {
+      language: 'Python',
+      title: 'Get Reports',
+      code: `import requests
 
-const users = await response.json();
-console.log(users);`,
-    
-    python: `# Python example
-import requests
-
-headers = {
-    'Authorization': f'Bearer {token}',
-    'Content-Type': 'application/json'
-}
-
-response = requests.get('/api/users', headers=headers)
-users = response.json()
-print(users)`,
-    
-    curl: `# cURL example
-curl -X GET "https://api.zion.app/users" \\
-  -H "Authorization: Bearer ${token}" \\
-  -H "Content-Type: application/json"`,
-    
-    postman: `// Postman example
-// Set Authorization header:
-// Key: Authorization
-// Value: Bearer ${token}
-
-// Set Content-Type header:
-// Key: Content-Type
-// Value: application/json`
-  };
+response = requests.get('/api/reports', params={
+    'limit': 10,
+    'type': 'performance'
+})
+reports = response.json()`
+    },
+    {
+      language: 'cURL',
+      title: 'Webhook Registration',
+      code: `curl -X POST /api/webhooks \\
+  -H "Content-Type: application/json" \\
+  -d '{"url": "https://example.com/webhook", "events": ["report.created"]}'`
+    }
+  ];
 
   return (
     <>
       <Head>
-        <title>API Documentation - Zion App</title>
-        <meta name="description" content="Comprehensive API documentation for Zion App, including endpoints, authentication, and code examples." />
-        <meta name="keywords" content="API, documentation, endpoints, authentication, REST, Zion App" />
+        <title>API Documentation — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group's autonomous systems and services." />
       </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-6xl mx-auto">
+            <section className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                API Documentation
+              </h1>
+              <p className="text-xl text-white/80 max-w-4xl mx-auto">
+                Integrate with Zion Tech Group's autonomous systems through our comprehensive 
+                REST API and webhook services.
+              </p>
+            </section>
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">API Documentation</h1>
-                <p className="text-gray-600 mt-2">Complete guide to Zion App API endpoints and usage</p>
+            {/* Quick Start */}
+            <section className="mb-16">
+              <div className="bg-white/10 rounded-3xl p-8 border border-white/20">
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Quick Start</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">🔑</div>
+                    <h3 className="text-xl font-bold mb-2">1. Get API Key</h3>
+                    <p className="text-white/70">
+                      Sign up and generate your API key from the dashboard
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">📚</div>
+                    <h3 className="text-xl font-bold mb-2">2. Read Docs</h3>
+                    <p className="text-white/70">
+                      Explore our endpoints and integration examples
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">🚀</div>
+                    <h3 className="text-xl font-bold mb-2">3. Start Building</h3>
+                    <p className="text-white/70">
+                      Integrate autonomous systems into your applications
+                    </p>
+                  </div>
+                </div>
               </div>
-              <Link href="/" className="text-blue-600 hover:text-blue-800">
-                ← Back to Home
-              </Link>
-            </div>
-          </div>
-        </header>
+            </section>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="lg:flex lg:gap-8">
-            {/* Sidebar Navigation */}
-            <div className="lg:w-64 flex-shrink-0 mb-8 lg:mb-0">
-              <nav className="bg-white rounded-lg shadow-sm border p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h2>
-                <ul className="space-y-2">
-                  {[
-                    { id: 'overview', label: 'Overview' },
-                    { id: 'authentication', label: 'Authentication' },
-                    { id: 'endpoints', label: 'API Endpoints' },
-                    { id: 'examples', label: 'Code Examples' },
-                    { id: 'errors', label: 'Error Handling' },
-                    { id: 'rate-limiting', label: 'Rate Limiting' },
-                    { id: 'webhooks', label: 'Webhooks' }
-                  ].map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => setActiveSection(item.id)}
-                        className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                          activeSection === item.id
-                            ? 'bg-blue-100 text-blue-700 font-medium'
-                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            {/* Main Content */}
-            <div className="lg:flex-1">
-              {/* Overview Section */}
-              {activeSection === 'overview' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">API Overview</h2>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-6">
-                      The Zion App API provides a comprehensive set of endpoints for managing users, 
-                      content, and system operations. Our API follows RESTful principles and provides 
-                      consistent JSON responses across all endpoints.
-                    </p>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Base URL</h3>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono mb-6">
-                      https://api.zion.app/v1
+            {/* API Endpoints */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">API Endpoints</h2>
+              
+              <div className="space-y-4">
+                {apiEndpoints.map((endpoint, index) => (
+                  <div key={index} className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className={`px-3 py-1 rounded text-sm font-bold ${
+                        endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
+                        endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
+                        'bg-yellow-500/20 text-yellow-400'
+                      }`}>
+                        {endpoint.method}
+                      </span>
+                      <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
                     </div>
+                    
+                    <p className="text-white/80 mb-4">{endpoint.description}</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-white/90 mb-2">Parameters:</h4>
+                        {endpoint.parameters.length > 0 ? (
+                          <ul className="space-y-1">
+                            {endpoint.parameters.map((param, idx) => (
+                              <li key={idx} className="text-white/70 text-sm">• {param}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <span className="text-white/50 text-sm">None</span>
+                        )}
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-white/90 mb-2">Response:</h4>
+                        <span className="text-white/70 text-sm">{endpoint.response}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Features</h3>
-                    <ul className="space-y-2 text-gray-600 mb-6">
-                      <li>• RESTful API design</li>
-                      <li>• JSON request/response format</li>
-                      <li>• JWT-based authentication</li>
-                      <li>• Comprehensive error handling</li>
-                      <li>• Rate limiting and throttling</li>
-                      <li>• Webhook support for real-time updates</li>
+            {/* Code Examples */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Code Examples</h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {codeExamples.map((example, index) => (
+                  <div key={index} className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-bold text-cyan-400">{example.title}</h3>
+                      <span className="px-3 py-1 bg-white/10 text-white/70 rounded text-sm">
+                        {example.language}
+                      </span>
+                    </div>
+                    
+                    <pre className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                      <code className="text-white text-sm">{example.code}</code>
+                    </pre>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Authentication */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-yellow-400">Authentication</h2>
+              
+              <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-bold mb-4 text-cyan-400">API Key Authentication</h3>
+                <p className="text-white/80 mb-6">
+                  All API requests require authentication using an API key. Include your API key 
+                  in the request headers.
+                </p>
+                
+                <div className="bg-slate-900 rounded-lg p-4 mb-6">
+                  <code className="text-white text-sm">
+                    Authorization: Bearer YOUR_API_KEY
+                  </code>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-white/90 mb-2">Getting Your API Key</h4>
+                    <ol className="space-y-2 text-white/70">
+                      <li>1. Sign up for a Zion Tech Group account</li>
+                      <li>2. Navigate to the API section in your dashboard</li>
+                      <li>3. Generate a new API key</li>
+                      <li>4. Copy and securely store your key</li>
+                    </ol>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-white/90 mb-2">Security Best Practices</h4>
+                    <ul className="space-y-2 text-white/70">
+                      <li>• Keep your API key secure and private</li>
+                      <li>• Rotate keys regularly</li>
+                      <li>• Use environment variables in production</li>
+                      <li>• Monitor API usage for anomalies</li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Response Format</h3>
-                    <p className="text-gray-600 mb-4">
-                      All API responses follow a consistent format:
-                    </p>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono">
-                      <code>
-{`{
-  "success": true,
-  "data": { ... },
-  "message": "Operation completed successfully",
-  "timestamp": "2025-01-17T10:00:00Z"
+            {/* Rate Limiting */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Rate Limiting</h2>
+              
+              <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">1000</div>
+                    <div className="text-white/70">Requests per hour</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-3xl font-bold text-fuchsia-400 mb-2">100</div>
+                    <div className="text-white/70">Requests per minute</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">10</div>
+                    <div className="text-white/70">Requests per second</div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-white/5 rounded-lg">
+                  <h4 className="font-semibold text-white/90 mb-2">Rate Limit Headers</h4>
+                  <p className="text-white/70 text-sm">
+                    Response headers include rate limit information: X-RateLimit-Limit, 
+                    X-RateLimit-Remaining, and X-RateLimit-Reset.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Webhooks */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-purple-400">Webhooks</h2>
+              
+              <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-bold mb-4 text-cyan-400">Real-time Notifications</h3>
+                <p className="text-white/80 mb-6">
+                  Set up webhooks to receive real-time notifications about system events, 
+                  performance updates, and security alerts.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-white/90 mb-3">Available Events</h4>
+                    <ul className="space-y-2 text-white/70">
+                      <li>• report.created</li>
+                      <li>• system.alert</li>
+                      <li>• performance.threshold</li>
+                      <li>• security.incident</li>
+                      <li>• automation.completed</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-white/90 mb-3">Webhook Payload</h4>
+                    <div className="bg-slate-900 rounded-lg p-4">
+                      <code className="text-white text-sm">
+                        {`{
+  "event": "report.created",
+  "timestamp": "2025-01-15T10:30:00Z",
+  "data": { ... }
 }`}
                       </code>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
+            </section>
 
-              {/* Authentication Section */}
-              {activeSection === 'authentication' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Authentication</h2>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-6">
-                      Zion App API uses JWT (JSON Web Tokens) for authentication. You'll need to 
-                      include the token in the Authorization header for protected endpoints.
-                    </p>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Getting Started</h3>
-                    <ol className="list-decimal list-inside space-y-2 text-gray-600 mb-6">
-                      <li>Obtain your API credentials from the Zion App dashboard</li>
-                      <li>Make a POST request to <code className="bg-gray-100 px-2 py-1 rounded">/api/auth/login</code></li>
-                      <li>Include the returned token in subsequent requests</li>
-                    </ol>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Header Format</h3>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono mb-6">
-                      <code>
-                        Authorization: Bearer &lt;your_jwt_token&gt;
-                      </code>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Token Expiration</h3>
-                    <p className="text-gray-600 mb-4">
-                      JWT tokens expire after 24 hours. You can refresh them using the refresh endpoint 
-                      or request a new token by re-authenticating.
-                    </p>
-
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                      <div className="flex">
-                        <div className="flex-shrink-0">
-                          <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm text-yellow-700">
-                            <strong>Security Note:</strong> Never expose your JWT token in client-side code 
-                            or public repositories. Always use environment variables or secure storage.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            {/* SDKs and Libraries */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">SDKs & Libraries</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-bold mb-3">JavaScript/Node.js</h3>
+                  <p className="text-white/70 mb-4">
+                    Official SDK for Node.js and browser environments
+                  </p>
+                  <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
+                    View on npm →
+                  </a>
                 </div>
-              )}
-
-              {/* API Endpoints Section */}
-              {activeSection === 'endpoints' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">API Endpoints</h2>
-                  
-                  <div className="space-y-6">
-                    {apiEndpoints.map((endpoint, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
-                            endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                            endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
-                            'bg-red-100 text-red-800'
-                          }`}>
-                            {endpoint.method}
-                          </span>
-                          <code className="text-sm bg-gray-100 px-2 py-1 rounded">
-                            {endpoint.path}
-                          </code>
-                        </div>
-                        
-                        <p className="text-gray-600 mb-4">{endpoint.description}</p>
-                        
-                        {endpoint.headers && (
-                          <div className="mb-4">
-                            <h4 className="text-sm font-semibold text-gray-700 mb-2">Headers:</h4>
-                            <div className="bg-gray-50 p-3 rounded text-sm">
-                              <code>{endpoint.headers['Authorization']}</code>
-                            </div>
-                          </div>
-                        )}
-                        
-                        {endpoint.request && (
-                          <div className="mb-4">
-                            <h4 className="text-sm font-semibold text-gray-700 mb-2">Request Body:</h4>
-                            <div className="bg-gray-900 text-green-400 p-3 rounded text-sm font-mono">
-                              <code>{JSON.stringify(endpoint.request, null, 2)}</code>
-                            </div>
-                          </div>
-                        )}
-                        
-                        <div>
-                          <h4 className="text-sm font-semibold text-gray-700 mb-2">Response:</h4>
-                          <div className="bg-gray-900 text-green-400 p-3 rounded text-sm font-mono">
-                            <code>{JSON.stringify(endpoint.response, null, 2)}</code>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">🐍</div>
+                  <h3 className="text-xl font-bold mb-3">Python</h3>
+                  <p className="text-white/70 mb-4">
+                    Python client library for easy integration
+                  </p>
+                  <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
+                    View on PyPI →
+                  </a>
                 </div>
-              )}
-
-              {/* Code Examples Section */}
-              {activeSection === 'examples' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Code Examples</h2>
-                  
-                  <div className="space-y-6">
-                    {Object.entries(codeExamples).map(([language, code]) => (
-                      <div key={language} className="border border-gray-200 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4 capitalize">
-                          {language} Example
-                        </h3>
-                        <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono overflow-x-auto">
-                          <code>{code}</code>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">☕</div>
+                  <h3 className="text-xl font-bold mb-3">Java</h3>
+                  <p className="text-white/70 mb-4">
+                    Java client for enterprise applications
+                  </p>
+                  <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
+                    View on Maven →
+                  </a>
                 </div>
-              )}
+              </div>
+            </section>
 
-              {/* Error Handling Section */}
-              {activeSection === 'errors' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Error Handling</h2>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-6">
-                      The API returns appropriate HTTP status codes and detailed error messages 
-                      to help you identify and resolve issues.
-                    </p>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Common HTTP Status Codes</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">400</span>
-                        <span className="text-gray-700">Bad Request - Invalid request format or parameters</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">401</span>
-                        <span className="text-gray-700">Unauthorized - Invalid or missing authentication</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">403</span>
-                        <span className="text-gray-700">Forbidden - Insufficient permissions</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">404</span>
-                        <span className="text-gray-700">Not Found - Resource doesn't exist</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">429</span>
-                        <span className="text-gray-700">Too Many Requests - Rate limit exceeded</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-semibold">500</span>
-                        <span className="text-gray-700">Internal Server Error - Server-side issue</span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 mt-8">Error Response Format</h3>
-                    <div className="bg-gray-900 text-red-400 p-4 rounded-md text-sm font-mono">
-                      <code>
-{`{
-  "success": false,
-  "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Invalid email format",
-    "details": {
-      "email": "Must be a valid email address"
-    }
-  },
-  "timestamp": "2025-01-17T10:00:00Z"
-}`}
-                      </code>
-                    </div>
-                  </div>
+            {/* Support and Resources */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Support & Resources</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold mb-4 text-cyan-400">Documentation</h3>
+                  <ul className="space-y-3 text-white/70">
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">API Reference</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Integration Guides</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Best Practices</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Tutorials</a></li>
+                  </ul>
                 </div>
-              )}
-
-              {/* Rate Limiting Section */}
-              {activeSection === 'rate-limiting' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Rate Limiting</h2>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-6">
-                      To ensure fair usage and system stability, the Zion App API implements rate limiting 
-                      on all endpoints.
-                    </p>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Rate Limits</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                      <div className="bg-blue-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-blue-900 mb-2">Free Tier</h4>
-                        <p className="text-blue-700">1,000 requests per hour</p>
-                      </div>
-                      <div className="bg-green-50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-green-900 mb-2">Pro Tier</h4>
-                        <p className="text-green-700">10,000 requests per hour</p>
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Rate Limit Headers</h3>
-                    <p className="text-gray-600 mb-4">
-                      The API includes rate limit information in response headers:
-                    </p>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono mb-6">
-                      <code>
-{`X-RateLimit-Limit: 1000
-X-RateLimit-Remaining: 999
-X-RateLimit-Reset: 1642413600`}
-                      </code>
-                    </div>
-
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                      <div className="flex">
-                        <div className="flex-shrink-0">
-                          <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm text-yellow-700">
-                            When you exceed the rate limit, the API returns a 429 status code. 
-                            Implement exponential backoff in your applications to handle this gracefully.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold mb-4 text-fuchsia-400">Community</h3>
+                  <ul className="space-y-3 text-white/70">
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Developer Forum</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">GitHub Repository</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Discord Community</a></li>
+                    <li>• <a href="#" className="text-cyan-400 hover:text-cyan-300">Stack Overflow</a></li>
+                  </ul>
                 </div>
-              )}
+              </div>
+            </section>
 
-              {/* Webhooks Section */}
-              {activeSection === 'webhooks' && (
-                <div className="bg-white rounded-lg shadow-sm border p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Webhooks</h2>
-                  
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-600 mb-6">
-                      Webhooks allow you to receive real-time notifications when specific events 
-                      occur in the Zion App system.
-                    </p>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Supported Events</h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center space-x-3">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        <span className="text-gray-700">user.created - When a new user is created</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        <span className="text-gray-700">user.updated - When user information is modified</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        <span className="text-gray-700">content.published - When new content is published</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        <span className="text-gray-700">system.maintenance - When system maintenance begins/ends</span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Webhook Payload Format</h3>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-md text-sm font-mono mb-6">
-                      <code>
-{`{
-  "event": "user.created",
-  "timestamp": "2025-01-17T10:00:00Z",
-  "data": {
-    "userId": 123,
-    "email": "user@example.com",
-    "name": "John Doe"
-  }
-}`}
-                      </code>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Setting Up Webhooks</h3>
-                    <ol className="list-decimal list-inside space-y-2 text-gray-600 mb-6">
-                      <li>Configure your webhook endpoint URL in the Zion App dashboard</li>
-                      <li>Select the events you want to receive notifications for</li>
-                      <li>Set up your endpoint to handle POST requests</li>
-                      <li>Verify webhook delivery with the test endpoint</li>
-                    </ol>
-
-                    <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-                      <div className="flex">
-                        <div className="flex-shrink-0">
-                          <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm text-blue-700">
-                            <strong>Security:</strong> Webhook endpoints should implement signature verification 
-                            to ensure requests are coming from Zion App. Check the documentation for signature details.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+            {/* Call to Action */}
+            <section className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-green-400">Ready to Get Started?</h2>
+              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Start integrating with our autonomous systems today and experience 
+                the future of technology automation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all">
+                  Get API Key
+                </Link>
+                <Link href="/reports" className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+                  View Live Demo
+                </Link>
+              </div>
+            </section>
           </div>
-
-          {/* Call to Action */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg p-8 text-white text-center">
-            <h2 className="text-2xl font-bold mb-4">Need Help with Integration?</h2>
-            <p className="text-blue-100 mb-6">
-              Our team is here to help you integrate with the Zion App API successfully.
-            </p>
-            <div className="space-x-4">
-              <Link href="/contact" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
-                Contact Support
-              </Link>
-              <Link href="/services" className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Services
-              </Link>
-            </div>
-          </div>
-        </div>
+        </main>
       </div>
     </>
   );
-};
-
-export default ApiDocumentation;
+}

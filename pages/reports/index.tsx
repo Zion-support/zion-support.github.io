@@ -1,141 +1,82 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ReportsPage() {
   return (
     <>
       <Head>
-        <title>Reports | Zion Tech Group</title>
-        <meta name="description" content="View detailed reports and system status updates from Zion Tech Group's autonomous systems." />
-        <meta property="og:title" content="Reports | Zion Tech Group" />
-        <meta property="og:description" content="View detailed reports and system status updates from Zion Tech Group's autonomous systems." />
+        <title>Reports — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive reports and analytics from Zion Tech Group's autonomous systems." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <nav className="mb-8">
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </a>
-              <span className="mx-2 text-white/40">|</span>
-              <a href="/blog" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
-                Blog
-              </a>
-              <span className="mx-2 text-white/40">|</span>
-              <a href="/resources" className="text-purple-400 hover:text-purple-300 transition-colors">
-                Resources
-              </a>
-            </nav>
-            
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                System Reports
-              </h1>
-              <p className="text-xl text-white/80 max-w-4xl mx-auto">
-                Comprehensive insights into our autonomous systems' performance, health, and operations
-              </p>
-            </header>
+          <section className="text-center mb-16">
+            <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Reports & Analytics
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Comprehensive insights from our autonomous systems and technology operations.
+            </p>
+          </section>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">System Overview</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
-                  <div className="text-white/80">Active Automations</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-fuchsia-400 mb-2">2,960</div>
-                  <div className="text-white/80">Pages Maintained</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                  <div className="text-white/80">System Uptime</div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Updates Section */}
+            <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+              <h2 className="text-2xl font-bold mb-4 text-cyan-400">Latest Updates</h2>
+              <div className="space-y-3">
+                <Link href="/reports/updates/update-2025-08-15-0406" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Update 2025-08-15 0406</h3>
+                  <p className="text-sm text-white/70">Latest autonomous system update</p>
+                </Link>
+                <Link href="/reports/updates/update-2025-08-15-0405" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Update 2025-08-15 0405</h3>
+                  <p className="text-sm text-white/70">System performance update</p>
+                </Link>
+                <Link href="/reports/updates/update-2025-08-15-0404" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Update 2025-08-15 0404</h3>
+                  <p className="text-sm text-white/70">Security and monitoring update</p>
+                </Link>
               </div>
-            </section>
+            </div>
 
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-300">Latest Updates</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0406</h3>
-                  <p className="text-sm text-white/75 mb-3">Latest autonomous system status and performance metrics.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
-                
-                <a href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0405</h3>
-                  <p className="text-sm text-white/75 mb-3">Performance metrics and content analytics overview.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
-                
-                <a href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0404</h3>
-                  <p className="text-sm text-white/75 mb-3">Security status and infrastructure health report.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
-                
-                <a href="/reports/updates/update-2025-08-15-0111" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0111</h3>
-                  <p className="text-sm text-white/75 mb-3">Content strategy and user experience insights.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
-                
-                <a href="/reports/updates/update-2025-08-15-0403" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0403</h3>
-                  <p className="text-sm text-white/75 mb-3">Innovation metrics and technology stack overview.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
-                
-                <a href="/reports/updates/update-2025-08-15-0402" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold mb-2">Update 2025-08-15 0402</h3>
-                  <p className="text-sm text-white/75 mb-3">Global operations and quality assurance report.</p>
-                  <div className="text-xs text-cyan-300/90">View Details →</div>
-                </a>
+            {/* Blueprints Section */}
+            <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+              <h2 className="text-2xl font-bold mb-4 text-fuchsia-400">System Blueprints</h2>
+              <div className="space-y-3">
+                <Link href="/reports/blueprints/blueprint-2025-08-18-122901" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Blueprint 2025-08-18 122901</h3>
+                  <p className="text-sm text-white/70">Infrastructure architecture</p>
+                </Link>
+                <Link href="/reports/blueprints/blueprint-2025-08-18-122931" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Blueprint 2025-08-18 122931</h3>
+                  <p className="text-sm text-white/70">Automation framework</p>
+                </Link>
+                <Link href="/reports/blueprints/blueprint-2025-08-18-122952" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Blueprint 2025-08-18 122952</h3>
+                  <p className="text-sm text-white/70">Security protocols</p>
+                </Link>
               </div>
-            </section>
+            </div>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Report Categories</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-300">System Health</h3>
-                  <p className="text-white/70 mb-4">Comprehensive monitoring of all autonomous systems, performance metrics, and operational status.</p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Performance monitoring</li>
-                    <li>• Error tracking</li>
-                    <li>• Resource utilization</li>
-                    <li>• Uptime statistics</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white/5 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-300">Content Analytics</h3>
-                  <p className="text-white/70 mb-4">Detailed insights into content performance, user engagement, and optimization opportunities.</p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• User behavior analysis</li>
-                    <li>• Content performance metrics</li>
-                    <li>• SEO optimization data</li>
-                    <li>• Engagement statistics</li>
-                  </ul>
-                </div>
+            {/* Performance Section */}
+            <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+              <h2 className="text-2xl font-bold mb-4 text-green-400">Performance Metrics</h2>
+              <div className="space-y-3">
+                <Link href="/reports/performance" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">System Performance</h3>
+                  <p className="text-sm text-white/70">Real-time metrics and analytics</p>
+                </Link>
+                <Link href="/reports/automation-health" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Automation Health</h3>
+                  <p className="text-sm text-white/70">System status and diagnostics</p>
+                </Link>
+                <Link href="/reports/security" className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                  <h3 className="font-semibold">Security Reports</h3>
+                  <p className="text-sm text-white/70">Threat analysis and protection</p>
+                </Link>
               </div>
-            </section>
-
-            <div className="text-center">
-              <a 
-                href="/" 
-                className="inline-flex items-center px-6 py-3 border border-white/20 text-white font-medium rounded-xl hover:bg-white/10 transition-all duration-200"
-              >
-                ← Back to Home
-              </a>
             </div>
           </div>
         </main>

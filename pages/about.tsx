@@ -1,284 +1,163 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and intelligent automation systems." />
-        <meta property="og:title" content="About Zion Tech Group | Autonomous Innovation Hub" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and intelligent automation systems." />
+        <title>About — Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, vision, and commitment to autonomous innovation." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Pioneering the future of autonomous technology and AI-driven innovation
-            </p>
-          </section>
+          <div className="max-w-6xl mx-auto">
+            <section className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl text-white/80 max-w-4xl mx-auto">
+                Pioneering the future of autonomous technology and intelligent automation systems.
+              </p>
+            </section>
 
-          <section className="mx-auto max-w-6xl">
-            {/* Navigation */}
-            <nav className="mb-8">
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </a>
-            </nav>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <div>
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
+                <p className="text-lg text-white/80 mb-6">
+                  To revolutionize technology operations through autonomous systems that continuously 
+                  improve, adapt, and innovate without human intervention. We believe in creating 
+                  technology that works for humanity, not the other way around.
                 </p>
-              </header>
+                <p className="text-lg text-white/80">
+                  Our autonomous platforms handle everything from content generation to system 
+                  optimization, security monitoring to performance tuning, ensuring maximum 
+                  efficiency and reliability.
+                </p>
+              </div>
               
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Vision</h3>
-                    <p className="text-white/80">
-                      To create a world where technology operates autonomously, intelligently, and seamlessly, 
-                      empowering businesses and individuals to focus on what truly matters.
-                    </p>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Purpose</h3>
-                    <p className="text-white/80">
-                      We develop cutting-edge autonomous systems that continuously learn, adapt, and improve, 
-                      driving innovation across all sectors of technology.
-                    </p>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">What We Do</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Autonomous Systems</h3>
-                    <p className="text-white/70">
-                      We build intelligent systems that operate independently, making decisions and taking actions 
-                      without human intervention.
-                    </p>
-                  </div>
-                  <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">AI Automation</h3>
-                    <p className="text-white/70">
-                      Our AI-powered automation solutions streamline processes, reduce costs, and increase efficiency 
-                      across all business operations.
-                    </p>
-                  </div>
-                  <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-3">Cloud Innovation</h3>
-                    <p className="text-white/70">
-                      We leverage cloud-native technologies to create scalable, resilient, and globally accessible 
-                      solutions for modern businesses.
-                    </p>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">Our Technology</h2>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white mb-4">Core Technologies</h3>
-                      <ul className="space-y-3 text-white/80">
-                        <li className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          Advanced Machine Learning & AI
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          Cloud-Native Architecture
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          Autonomous Agent Systems
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          Intelligent Process Automation
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
-                          Blockchain & Web3 Integration
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white mb-4">Innovation Areas</h3>
-                      <ul className="space-y-3 text-white/80">
-                        <li className="flex items-start">
-                          <span className="text-fuchsia-400 mr-2">•</span>
-                          Quantum Computing Research
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-fuchsia-400 mr-2">•</span>
-                          Edge Computing Solutions
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-fuchsia-400 mr-2">•</span>
-                          Autonomous Content Generation
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-fuchsia-400 mr-2">•</span>
-                          Intelligent Security Systems
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-fuchsia-400 mr-2">•</span>
-                          Sustainable Tech Solutions
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">Our Impact</h2>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
-                    <div className="text-white/70">Active Automations</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-fuchsia-400 mb-2">2,960</div>
-                    <div className="text-white/70">Pages Generated</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                    <div className="text-white/70">System Uptime</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
-                    <div className="text-white/70">Autonomous Operation</div>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-full p-2 mr-4 mt-1">
-                        <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Cutting-Edge Innovation</h4>
-                        <p className="text-white/70">We stay ahead of the curve with the latest technologies and methodologies.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-full p-2 mr-4 mt-1">
-                        <svg className="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
-                        <p className="text-white/70">Our systems deliver measurable improvements in efficiency and performance.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="bg-purple-500/20 border border-purple-500/30 rounded-full p-2 mr-4 mt-1">
-                        <svg className="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Scalable Solutions</h4>
-                        <p className="text-white/70">Our architecture grows with your business needs and requirements.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="bg-green-500/20 border border-green-500/30 rounded-full p-2 mr-4 mt-1">
-                        <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">24/7 Support</h4>
-                        <p className="text-white/70">Our autonomous systems provide continuous monitoring and support.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
-                <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 border border-cyan-500/20 rounded-lg p-8 text-center">
-                  <p className="text-xl text-white/80 mb-6">
-                    Ready to revolutionize your business with autonomous technology?
-                  </p>
-                  <div className="space-x-4">
-                    <a href="/contact" className="inline-block bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all">
-                      Contact Us
-                    </a>
-                    <a href="/" className="inline-block border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-fuchsia-400">2,960</div>
-                  <div className="text-sm text-white/70">Pages Generated</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">12</div>
-                  <div className="text-sm text-white/70">AI Components</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">99.9%</div>
-                  <div className="text-sm text-white/70">Uptime</div>
-                </div>
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Vision</h2>
+                <p className="text-lg text-white/80 mb-6">
+                  A world where technology systems are self-healing, self-optimizing, and 
+                  self-improving. Where businesses can focus on innovation while their 
+                  infrastructure runs autonomously in the background.
+                </p>
+                <p className="text-lg text-white/80">
+                  We envision a future where AI-powered automation handles the complexity 
+                  of modern technology, freeing human creativity for what matters most.
+                </p>
               </div>
             </div>
-          </section>
 
-          {/* Related Pages */}
-          <section className="mx-auto max-w-6xl mt-16">
-            <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">⚡</span>
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Core Capabilities</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-xl font-bold mb-3">Autonomous Operations</h3>
+                  <p className="text-white/70">
+                    Self-running systems that monitor, maintain, and optimize technology 
+                    infrastructure 24/7 without human intervention.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Services</h3>
-                <p className="text-white/80 text-sm">Discover our comprehensive AI and automation solutions</p>
-              </a>
-              
-              <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">📊</span>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">🔒</div>
+                  <h3 className="text-xl font-bold mb-3">Intelligent Security</h3>
+                  <p className="text-white/70">
+                    AI-powered threat detection and response systems that adapt to new 
+                    security challenges in real-time.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Case Studies</h3>
-                <p className="text-white/80 text-sm">See real-world results from our implementations</p>
-              </a>
-              
-              <a href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">💬</span>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl mb-4">📊</div>
+                  <h3 className="text-xl font-bold mb-3">Performance Analytics</h3>
+                  <p className="text-white/70">
+                    Comprehensive monitoring and analytics that provide deep insights into 
+                    system performance and optimization opportunities.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-purple-400 mb-2">Get in Touch</h3>
-                <p className="text-white/80 text-sm">Ready to start your transformation journey?</p>
-              </a>
-            </div>
-          </section>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-yellow-400">Technology Stack</h2>
+              <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-bold mb-4 text-cyan-400">Frontend & UI</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li>• Next.js with TypeScript</li>
+                      <li>• Tailwind CSS for styling</li>
+                      <li>• React components and hooks</li>
+                      <li>• Responsive design systems</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-bold mb-4 text-fuchsia-400">Backend & Automation</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li>• Node.js and PM2 process management</li>
+                      <li>• GitHub Actions for CI/CD</li>
+                      <li>• Automated testing and deployment</li>
+                      <li>• Cloud-native architecture</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Our Approach</h2>
+              <div className="space-y-6">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold mb-3 text-cyan-400">Continuous Innovation</h3>
+                  <p className="text-white/80">
+                    We believe in constantly pushing the boundaries of what's possible. Our 
+                    autonomous systems are designed to learn, adapt, and improve continuously, 
+                    ensuring that our solutions remain at the cutting edge of technology.
+                  </p>
+                </div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Reliability First</h3>
+                  <p className="text-white/80">
+                    Every system we build prioritizes reliability and uptime. Our autonomous 
+                    platforms include comprehensive redundancy, self-healing capabilities, and 
+                    continuous monitoring to ensure maximum availability.
+                  </p>
+                </div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold mb-3 text-green-400">Transparency</h3>
+                  <p className="text-white/80">
+                    We believe in complete transparency in our operations. All system activities, 
+                    performance metrics, and updates are publicly available, allowing our 
+                    community to understand and trust our autonomous systems.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Ready to Experience the Future?</h2>
+              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Join us in exploring the possibilities of autonomous technology and discover 
+                how our systems can transform your digital operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/reports" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all">
+                  View Our Reports
+                </Link>
+                <Link href="/contact" className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+                  Get in Touch
+                </Link>
+              </div>
+            </section>
+          </div>
         </main>
       </div>
     </>
