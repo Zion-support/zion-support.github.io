@@ -1,69 +1,48 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-import React, { create_context, useContext, useState, ReactNode } from './react';
-;
-interface AccessibilityContextType {
-  high_contrast: boolean;
-  large_text: boolean;
-  reduced_motion: boolean;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  toggleHighContrast: () => void;
-  toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
 }
-<<<<<<< HEAD
 
-
-
-
-interface AccessibilityProviderProps {
-=======
-export const useAccessibility = () => {
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
 interface AccessibilityProviderProps {
   children: ReactNode;
-'use client';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-  }
-  "children": ReactNode;
 }
 
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
 
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-
-  const value = {
-    highContrast,
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion
+  const setFocus = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.focus();
+    }
   };
 
   return (
-    <AccessibilityContext.Provider value={value}>
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
   );
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      'useAccessibility must be used within an AccessibilityProvider'
+    );
+  }
+  return context;
 };

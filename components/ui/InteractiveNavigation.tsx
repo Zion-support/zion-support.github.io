@@ -1,5 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+interface NavItem {
+  label: string;
+  href: string;
+  children?: NavItem[];
+}
+
+interface InteractiveNavigationProps {
+  items: NavItem[];
+  className?: string;
+}
+
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items,
+  className = '',
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  };
 
 const InteractiveNavigation = () => {
   return (

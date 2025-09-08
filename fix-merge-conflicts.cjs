@@ -4,14 +4,7 @@ const path = require('path');
 // Function to resolve merge conflicts by preferring the main branch version
 function resolveMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to resolve
-    }
-    
-    console.log(`Resolving conflicts in: ${filePath}`);
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Split content into lines
     const lines = content.split('\n');
@@ -58,11 +51,11 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
   const files = [];
   
-  function traverse(currentDir) {
+  function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -71,38 +64,33 @@ function findSourceFiles(dir) {
       
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          traverse(fullPath);
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'out', 'coverage'].includes(item)) {
+          scanDirectory(fullPath);
         }
       } else if (stat.isFile()) {
-        // Check for TypeScript/JavaScript files
-        if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-          files.push(fullPath);
+        // Check for TypeScript, JavaScript, and other relevant files
+        if (/\.(ts|tsx|js|jsx|cjs|mjs)$/.test(item)) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+              files.push(fullPath);
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
         }
       }
     }
   }
   
-  traverse(dir);
+  scanDirectory(dir);
   return files;
 }
 
 // Main execution
-console.log('Starting merge conflict resolution...');
-
-const sourceFiles = findSourceFiles('.');
-let resolvedCount = 0;
-let totalConflicts = 0;
-
-for (const file of sourceFiles) {
-  if (resolveMergeConflicts(file)) {
-    resolvedCount++;
-    totalConflicts++;
-  }
-}
-
-function findAndFixConflicts(dir) {
-  const files = fs.readdirSync(dir);
+try {
+  const filesWithConflicts = findFilesWithConflicts('/workspace');
+  console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+  
   let fixedCount = 0;
   
   for (const file of files) {
@@ -119,10 +107,8 @@ function findAndFixConflicts(dir) {
   } catch (error) {
     console.log(`⚠️  Could not fix ${filePath}: ${error.message}`);
   }
+  
+} catch (error) {
+  console.error('❌ Error during merge conflict resolution:', error.message);
+  process.exit(1);
 }
-
-console.log(`🎉 Fixed ${fixedCount} files with merge conflicts!`);
-console.log("Starting merge conflict resolution...");
-findAndFixFiles(".");
-console.log("Merge conflict resolution completed!")
-console.log(`Fixed merge conflicts in ${fixedCount} files`);

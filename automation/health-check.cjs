@@ -90,19 +90,11 @@ if (healthCheck.status === 'healthy') {
 =======
 #!/usr/bin/env node
 
-<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-});
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-#!/usr/bin/env node
+console.log('🏥 Starting Health Check...');
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -461,10 +453,6 @@ if (healthReport.status === 'unhealthy') {
   }
 }
 
-const checker = new HealthChecker();
-checker.run().catch(console.error);
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+// Run the health checker
+const healthChecker = new HealthChecker();
+healthChecker.run().catch(console.error);

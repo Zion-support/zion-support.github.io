@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }; traverse(dir); return files};
 // Find and fix files with merge conflicts;
 const conflictedFiles = findFilesWithConflicts('.');
@@ -15,13 +14,7 @@ console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 for (const file of conflictedFiles) {;
   fixMergeConflicts(file)};
 console.log('Merge conflict resolution complete!');
-// Find and fix files with merge conflicts,
-const conflictedFiles = findFilesWithConflicts('.'),
-// console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
-for (const file of conflictedFiles) {,
-  fixMergeConflicts(file)};
-// console.log('Merge conflict resolution complete!'),
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
 };
         }
 };
@@ -140,37 +133,11 @@ function findFilesWithConflicts(dir) {
   traverse(dir)
   return files
 };
-// Find and fix all files with merge conflicts
-const filesWithConflicts = findFilesWithConflicts('/workspace')
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
-let fixedCount = 0
-for (const file of filesWithConflicts) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-<<<<<<< HEAD
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-// Run TypeScript check to see remaining errors
-console.log('\nRunning TypeScript check...');
-try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
-  console.log('TypeScript check passed!');
-} catch (error) {
-  console.log('TypeScript check found some issues, but continuing...');
-}
-}
+};
+};
 };
 console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
-console.log('\nMerge conflict fixing complete!');
-}),;
-console.log('\nMerge conflict fixing complete!'),;
-console.log('\nMerge conflict fixing complete!'),;
-,;
-console.log(`Fixed merge conflicts in ${fixedCount} files`),;
-,),;
-=======
-
-console.log(`Fixed conflicts in ${fixedCount} files`);
->>>>>>> origin/main
+;
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+);

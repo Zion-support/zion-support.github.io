@@ -3,21 +3,64 @@ import React, { useEffect, useState } from
   'interface AccessibilityEnhancerProps {children: React.ReactNode;'
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-const [fontSize, setFontSize] = useState(, normal
-  ');'  const [reducedMotion, setReducedMotion] = useState(false);''
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Check for user&apos;s motion preferences''
-  '    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
-  ').matches;'    setReducedMotion(prefersReducedMotion);''
-    // Apply accessibility settings from localStorage
-    const savedHighContrast = localStorage.getItem(
-  'highContrast') ===
-  'true';'    const savedFontSize = localStorage.getItem('
-  'fontSize') ||
-  'normal';'    setIsHighContrast(savedHighContrast);setFontSize(savedFontSize);'// Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+    // Add skip link for keyboard navigation
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className =
+      'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Add ARIA live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
+
+    // Announce page changes
+    const announcePageChange = (message: string) => {
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.textContent = message;
+      }
+    };
+
+    // Listen for route changes (Next.js specific)
+    const handleRouteChange = () => {
+      announcePageChange('Page loaded');
+    };
+
+    // Add route change listener if available
+    if (typeof window !== 'undefined' && window.history) {
+      const originalPushState = window.history.pushState;
+      const originalReplaceState = window.history.replaceState;
+
+      window.history.pushState = function (...args) {
+        originalPushState.apply(this, args);
+        setTimeout(handleRouteChange, 100);
+      };
+
+      window.history.replaceState = function (...args) {
+        originalReplaceState.apply(this, args);
+        setTimeout(handleRouteChange, 100);
+      };
+
+      window.addEventListener('popstate', handleRouteChange);
+    }
+
+    // Cleanup
+    return () => {
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);
+      }
+      if (liveRegion.parentNode) {
+        liveRegion.parentNode.removeChild(liveRegion);
+      }
+    };
   }, []);
 
 const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;const root = document.documentElement;
@@ -167,36 +210,5 @@ href="#main-content""        className="sr-only focus: not-sr-only focus:absolut
         }
 `}</style>`</>);
 };
-// Add CSS for focus management;
-const focusStyles = `;
-  .using-mouse *:focus {;
-    outline: none !important;};
-  .focus-visible: focus {;,
-outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;};
-  .sr-only {;
-    position: absolute;,
-width: 1px;
-    height: 1px;,
-padding: 0;
-    margin: -1px;,
-overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;,
-border: 0;};
-  .sr-only.focus: not-sr-only:focus {;,
-position: static;
-    width: auto;,
-height: auto;
-    padding: inherit;,
-margin: inherit;
-    overflow: visible;,
-clip: auto;
-    white-space: normal;};
-`;
-// Inject styles;
-if (typeof document !== 'undefined') {;
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
-};
+
+export default AccessibilityEnhancer;

@@ -1,23 +1,6 @@
 import React from 'react';
 
-// ServiceCard component
-const ServiceCard = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md text-center">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-
-// Card component
-const Card = ({ title, description }: { title: string; description: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-
-function App() {
+export default function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">
@@ -63,5 +46,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

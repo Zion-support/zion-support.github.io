@@ -61,32 +61,12 @@ const nextConfig = {
             value: 'origin-when-cross-origin',
           },
         ],
-      },
-    ];
-  },
-  webpack: (config, { isServer }) => {
-    // Handle problematic files
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      include: [
-        /corrupted_backup/,
-        /backup/,
-        /disabled/
-      ],
-      use: 'ignore-loader'
-    });
-
-    // Optimize for production
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
+        poll: 1000,
+        aggregateTimeout: 300,
       };
     }
-    return config
-  }
+    return config;
+  },
 };
 
 export default nextConfig;

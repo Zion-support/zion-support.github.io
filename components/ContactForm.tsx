@@ -20,80 +20,22 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
-const [formData, setFormData] = useState<FormData>({;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
-name:, ', email: ', '    company:,'
-  ', service: ',
-, message: '});'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);'
-  const [errors, setErrors] = useState<Partial<FormData>>({});
-
-  const services = [;
-
-  'AI & Machine Learning', 'Cloud & DevOps',
-  '    'Cybersecurity
-  ', 'Web Development
-  ',' 
-  'Mobile Development', 'Data Analytics',
-  '    'Digital Transformation
-  ', 'Other
-  ','  ];''
-  const validateForm = (): boolean => {;const newErrors: Partial<FormData> = {};
-
-    if (!formData.name.trim()) {
-
-newErrors.name =
-  'Name is required';'    }'
-  ''
-    if (!formData.email.trim()) {
-
-      newErrors.email = 'Email is required'
-  ';'    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-  ''
-      newErrors.email = 'Email is invalid'
-  ';'    }
-  ''
-    if (!formData.message.trim()) {
-
-      newErrors.message = 'Message is required'
-  ';'    }
-  'setErrors(newErrors);'return Object.keys(newErrors).length === 0;
-  };
-
-const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
-
-    if (!validateForm()) {
-
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-
-      setIsSubmitted(false)
-      setFormData({
-
-name:, ', email: ', '        company:,'
-  ', service: ',
-, message: '});'    }, 3000);'  };'const handleChange = (;e: React.ChangeEvent<
+  const handleInputChange = (
+    e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }))
-};
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -110,7 +52,7 @@ name:, ', email: ', '        company:,'
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       });
     } catch {
       setSubmitStatus('error');

@@ -668,23 +668,79 @@ console.log('🚀 Starting Master Automation Orchestrator');
 async function runAllAutomations() {
   const tasks = [
     {
+      name: 'Code Quality Check',
+      command: 'npm run lint:check',
+      critical: false,
+    },
+    {
+      name: 'Type Check',
+      command: 'npm run type-check',
+      critical: false,
+    },
+    {
+      name: 'Build Test',
+      command: 'npm run build',
+      critical: true,
+    },
+    {
+      name: 'Test Suite',
+      command: 'npm run test:smoke',
+      critical: true,
+    },
+    {
+      name: 'Security Audit',
+      command: 'npm audit',
+      critical: false,
+    },
+    {
+      name: 'Performance Analysis',
+      command: 'node automation/performance-optimizer.js',
+      critical: false,
+    },
+    {
+      name: 'Security Scan',
+      command: 'node automation/security-scanner.cjs',
+      critical: false,
+    },
+  ];
 
   ];
   const results = [];
   let successCount = 0;
   let failureCount = 0;
   for (const task of tasks) {
-  // TODO: Implement
+    try {
+      console.log(`\n🔧 Running: ${task.name}`);
+      const startTime = Date.now();
 
+      execSync(task.command, {
+        stdio: 'pipe',
+        cwd: '/workspace',
+      });
 
       const duration = Date.now() - startTime;
       results.push({
         task: task.name,
-
+        status: 'success',
+        duration: duration,
+        critical: task.critical,
+      });
+      successCount++;
       console.log(`✅ ${task.name} completed in ${duration}ms`);
+    } catch (error) {
       const duration = Date.now() - Date.now();
+      results.push({
+        task: task.name,
+        status: 'failed',
+        duration: duration,
+        critical: task.critical,
+        error: error.message,
+      });
+      failureCount++;
+      console.log(`❌ ${task.name} failed: ${error.message}`);
 
-
+      if (task.critical) {
+        console.log(`⚠️ Critical task failed: ${task.name}`);
       }
     } catch (error) {
       const duration = Date.now() - startTime;
@@ -736,18 +792,18 @@ function generateReport(results) {
     },
     tasks: results.results,
     recommendations: [
-
-
-
-
-
+      'Continue monitoring build and test status',
+      'Address any critical failures immediately',
+      'Review and fix linting issues',
+      'Optimize performance based on analysis results',
+      'Implement security recommendations',
     ],
   };
 ;
   // Ensure reports directory exists;
   const reportsDir = '/workspace/automation/reports';
-  if (!fs.existsSync(reportsDir)) {;
-    fs.mkdirSync(reportsDir, { "recursive": true });
+  if (!fs.existsSync(reportsDir)) {
+    fs.mkdirSync(reportsDir, { recursive: true });
   }
 
   fs.writeFileSync(
@@ -770,33 +826,14 @@ async function main() {;
     console.log(    console.log('    console.log('====================');
     console.log('====================');
 
-    console.log('====================');
-    console.log('====================');
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    console.log('
-
-
-    console.log(======);
-    console.log('======');
-    console.log(======);
-
-
-
-
-
-
+    console.log('\n📊 AUTOMATION SUMMARY');
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
     console.log(`Failed: ${report.summary.failed}`);
     console.log(`Success Rate: ${report.summary.successRate}`);
-;
-    console.log('\n📊 AUTOMATION SUMMARY');
 
     if (results.failureCount > 0) {
-      console.log('\n❌ FAILED: TASKS:');
+      console.log('\n❌ FAILED TASKS:');
       results.results
         .filter(r => r.status === 'failed')
         .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
@@ -826,7 +863,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     console.log('\n✅ Master automation orchestration completed');
     console.log(
-
+      '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
     );
 
 
@@ -874,9 +911,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console.log('\n🎉 All critical tasks passed successfully');
       process.exit(0);
     }
-;
-  } catch (error) {;
-    console.error('❌ Master automation "failed": ', error.message);
+  } catch (error) {
+    console.error('❌ Master automation failed:', error.message);
     process.exit(1);
   }
 }

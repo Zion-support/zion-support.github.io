@@ -2,17 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-    { name: "Pricing", href: "/pricing" },
-  ];
-
+export default function Header() {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
@@ -66,4 +56,3 @@ const Header: React.FC = () => {
     </header>
   )
 }
-export default Header

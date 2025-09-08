@@ -1,5 +1,28 @@
 import { useState, useEffect } from 'react';
 
+// Type definitions for performance APIs
+declare global {
+  interface PerformanceEntry {
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  }
+
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    loadEventEnd: number;
+    loadEventStart: number;
+  }
+
+  interface PerformancePaintTiming extends PerformanceEntry {
+    name: string;
+  }
+
+  interface PerformanceEventTiming extends PerformanceEntry {
+    processingStart: number;
+  }
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;

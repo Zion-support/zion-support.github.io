@@ -2,6 +2,7 @@
 // Type definitions index
 
 export interface ContactInfo {
+export interface ContactInfo {;
   phone: string;
   email: string;
   address: string;
@@ -351,9 +352,9 @@ export interface LoadingState {
   error?: string;
 }
 
-export interface CompanyInfo {
-  name: string;
-  href: string;
+export interface AnimationState {
+  isLoaded: boolean;
+  hasError: boolean;
 }
 export interface FooterSection {
   title: string;

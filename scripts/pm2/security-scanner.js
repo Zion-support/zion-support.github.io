@@ -71,9 +71,6 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 // Run the security scanner;
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
-<<<<<<< HEAD
-}),);#!/usr/bin/env node,;
-=======
 }),);
 #!/usr/bin/env node,;
 >>>>>>> origin/main

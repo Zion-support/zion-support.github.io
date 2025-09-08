@@ -9,7 +9,7 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -139,8 +139,9 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly'
-      }
+        afterAll: 'readonly',
+        jest: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -222,7 +223,9 @@ export default [
       '.eslintrc.js.eslintrc.cjs.eslintrc.disabled.js.prettierrc.js',
 
       // Page backups
-      'pages.__backup/**pages-disabled/**pages.disabled_auto/**'
-    ]
-  }
+      'pages.__backup/**',
+      'pages-disabled/**',
+      'pages.disabled_auto/**',
+    ],
+  },
 ];

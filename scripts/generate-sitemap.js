@@ -116,6 +116,5 @@ ${pages.map(page => `
 
   fs.writeFileSync(path.join(process.cwd(), 'public/sitemap.xml'), sitemap);
 };
-
-export default generateSitemap;
->>>>>>> origin/main
+generateSitemap();
+generateSitemap();

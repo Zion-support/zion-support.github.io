@@ -8,21 +8,23 @@ export function usePerformanceMetrics() {
       return      const fcp = paintEntries && paintEntries.find(
         (entry) => entry && entry.name === "first-contentful-paint",
       );
-      const lcpEntries = window && window.performance.getEntriesByType(
-        "largest-contentful-paint",
-      );
-      const lcp = lcpEntries[0] as PerformanceEntry;
-      const clsEntries = window && window.performance.getEntriesByType("layout-shift");
-      const cls = clsEntries && clsEntries.reduce((acc, entry) => {
-        return acc + (entry as PerformanceEntry & { value: number }).value;
-      }, 0);
-      const fidEntries = window && window.performance.getEntriesByType("first-input");
-      const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
+      const lcp = performance.getEntriesByType(
+        'largest-contentful-paint'
+      )[0] as PerformanceNavigationTiming;
+      const cls = performance
+        .getEntriesByType('layout-shift')
+        .reduce((acc, entry) => {
+          return acc + (entry as any).value;
+        }, 0);
+      const fid = performance.getEntriesByType(
+        'first-input'
+      )[0] as PerformanceEventTiming;
+      setMetrics({
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
+        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
       });
     }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
