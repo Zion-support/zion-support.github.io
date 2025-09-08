@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 
+=======
 
 #!/usr/bin/env node;
 
@@ -63,11 +64,14 @@ class LinterWatcher {}
 
 
 
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       child.on('close', (code) => {}
         if ( {})
 
           console.log('Lint check passed ✓')) {}
      {}
+<<<<<<< HEAD
+=======
           console.log('Lint check passed ✓')}} else {}
           console.log('Lint check failed ✗');
           console.log(Lint check passed ✓')}} else {}
@@ -101,6 +105,7 @@ class LinterWatcher {}
      {}
           console.log('Auto-fix completed ✓')}} else {}
           console.log('Auto-fix failed ✗')};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       child.on(close', (code) => {}
       console.log('Attempting to auto-fix linting issues...');
       
@@ -112,18 +117,6 @@ class LinterWatcher {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
-
-
-
-
-
-
-
-
-      child.on('close', (code) => {}
-        if ( {})
-
           console.log('Auto-fix completed ✓)) {}
           console.log('Auto-fix completed ✓')) {}
      {}

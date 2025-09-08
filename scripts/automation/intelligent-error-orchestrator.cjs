@@ -48,12 +48,7 @@ class IntelligentErrorOrchestrator {}
       return null};
   };
   async runComprehensiveErrorCheck() {}
-    this.log('Running comprehensive error check...');
-    const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },]
-      { "name": 'ESLint', "command": 'npm run lint' },
-      { "name": 'Build', "command": 'npm run build' },
-      { "name": 'Dependencies', "command": 'npm audit --audit-level=moderate' };
-=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
     ];
     const results = {};
@@ -62,22 +57,18 @@ class IntelligentErrorOrchestrator {}
 
         const output = error.stdout?.toString() || error.stderr?.toString() || ;
         const errors = this.parseErrors(output, check.name);
-        results[check.name] = { "success": false, errors, "count": errors.length };"
-        totalErrors += errors.length};
-    return { results, totalErrors }};
-  parseErrors(output, checkType) {}"
-    const errorLines = output.split('\n').filter(line => )
-
-    );
-=======
-    return errorLines.map(line => ({})
-      type: checkType,
-
-    }))};
   async prioritizeErrors(errorReport) {}
     if (!errorReport || !errorReport.checks) {}
       return []};
     const prioritizedErrors = [];
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    // Priority "1: Build errors (critical);
+    // Priority 1": Build errors (critical);"
+=======
+    
+>>>>>>> merged-prs-20250907-203621
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     // Priority "1": Build errors (critical);
 =======
     // Priority "1": Build errors (critical);"

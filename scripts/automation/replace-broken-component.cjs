@@ -34,26 +34,12 @@ import { }
   ThumbsUp,
   ThumbsDown,
   Sparkles,
+
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
-  Bot, 
-  User, 
-  Send, 
-  Paperclip, 
-  Mic, 
-  MicOff, 
-  Settings, 
-  X, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Sparkles, 
-  Clock,
-  MessageCircle,
-  HelpCircle,
-  Star;
-} from 'lucide-react';
-=======
 interface ChatMessage {}
   "id": string;"
   content: string;,"
@@ -67,6 +53,9 @@ interface AIChatbotSystemProps {}
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
+    
+=======
+=======
   autoScroll?: boolean};
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
@@ -102,6 +91,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     setIsTyping(true);
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
@@ -120,6 +110,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     ];
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     const "botMessage": ChatMessage = {}
+    const botMessage: ChatMessage = {}
+=======
+>>>>>>> merged-prs-20250907-203621
+    const "botMessage": ChatMessage = {}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       id: Date.now().toString(),
       "content": randomResponse.content,
       "sender": 'bot',
@@ -219,6 +217,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
                     </div>
                     <div>
+=======
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <p className="text-xs text-zinc-400">Powered by AI</p>
                     </div>
@@ -296,6 +295,30 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
                         <Bot className="w-4 h-4 text-white" />"
 
+
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+                      {message.sender === bot && (})
+                        <div className="flex items-center gap-1>
+=======
+                        <div className="mt-2 space-y-2">"
+                            <div className="flex flex-wrap gap-1">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                                  key={index};
+                                  onClick={() => handleSuggestionClick(suggestion)};
+                                <span;
+=======
+
+            {/* Input Area */}
+=======
+
+            {/* Input Area */};
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
                         <div className="mt-2 space-y-2">"
                             <div className="flex flex-wrap gap-1">"
                                   key={index};
@@ -360,6 +383,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
               <div ref={messagesEndRef} />
             </div>
             {/* Input Area */};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
@@ -375,6 +399,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <input;
                       type="file"
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
                       onChange={handleFileUpload};
 =======
             <div className="p-4 border-t border-zinc-700/50">"
@@ -383,6 +408,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                 <div className="flex-1 relative">"
                   <input;"
                     type="text
+=======
                     value={inputValue};
                     onChange={(e) => setInputValue(e.target.value)};
 </input>"
@@ -397,6 +423,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   </label>
                 </div>
                 {/* Voice Input */};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
                 {settings.voiceEnabled && (})
                   <button;
                     type="button"
@@ -418,11 +445,18 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                 </button>
               </form>
               {/* Quick Actions */};
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+              {/* Quick Actions */}
+=======
+=======
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
 =======
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
                   <Send className="w-4 h-4" />"
 

@@ -1,3 +1,7 @@
+>>>>>>> origin/chore/fix-lint-and-merge
+  log(message) {}
+    console.log(`[${new Date().toISOString()}] ${message})}
+=======
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -20,6 +24,7 @@ class AppImportsFixer {}
 
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message})};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   checkFileExports(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
@@ -83,6 +88,8 @@ class AppImportsFixer {}
         content = content.replace(regex, importStatement);
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
       if (exports.exists) {}
         let importStatement;

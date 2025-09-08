@@ -57,6 +57,8 @@ function removeConsoleStatements(content) {
       const ext = path.extname(file)
       if (extensions.includes(ext)) {
         results.push(filePath);
+  const srcDir = path.join(process.cwd(), 'src');
+=======
 ursor/expand-services-advertise-and-build-project-0033
 
       }

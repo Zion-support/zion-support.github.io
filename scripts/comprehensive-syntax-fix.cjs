@@ -6,6 +6,11 @@ const path = require('path')
     content = content.replace(/<div className="([^]*)\n\s*([^]*)\s*>/g, '<div className="$1 $2"
 
     content = content.replace(/<div className=([^]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 console.log(' Comprehensive syntax fix...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'

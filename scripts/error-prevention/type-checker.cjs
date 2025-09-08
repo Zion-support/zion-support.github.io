@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 
+=======
 
 #!/usr/bin/env node;
 
@@ -56,6 +57,9 @@ class TypeChecker {}
 
 
       child.on('close', (code) => {}
+
+
+=======
       child.on('close, (code) => {}
 
 
@@ -85,34 +89,6 @@ class TypeChecker {}
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
-      line.includes('error TS') || line.includes('Type error');
-   ;);
-    
-    if ( {})
-      console.log('TypeScript errors "found": ')) {}
-      console.log('TypeScript errors found:')};
-      line.includes('error TS') || line.includes('Type error');)
-    if ( {})      console.log('TypeScript errors "found": ')) {}
-      console.log('TypeScript errors found:')}
-
-    if ( {})
-    
-    
-
-
-      console.log('TypeScript errors "found": ')) {}
-      console.log('TypeScript errors found:')};
-      console.log('TypeScript errors "found": )) {}
-      console.log(TypeScript errors found:')}
-    
-
-
-    if ( {})
-      console.log('TypeScript errors "found": ')) {}
-      console.log('TypeScript errors found:')};
-      typeErrors.forEach(error => {})
-        console.log(`  ${error}`)})};
-  stop() {}
     console.log('Stopping Type Checker...');
     this.isRunning = false;
     

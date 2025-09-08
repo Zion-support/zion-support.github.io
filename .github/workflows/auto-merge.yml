@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-name: Auto Merge labeled PRs
-
-on:
-  pull_request:
-    types: [opened, reopened, synchronize, ready_for_review, labeled]
-
-jobs:
-  automerge:
-    if: >-
-      ${{ !github.event.pull_request.draft && contains(github.event.pull_request.labels.*.name, 'automerge') }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Auto-merge PR when conditions are met
-        uses: peter-evans/auto-merge@v3
-        with:
-          merge-method: squash
-          delete-branch: true
-          commit-message: pull-request-title
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          required-labels: automerge
-=======
 name: Auto-merge labeled PRs
 
 on:
@@ -82,4 +57,3 @@ jobs:
               merge_method: 'squash'
             });
 
->>>>>>> ci/auto-merge-workflow

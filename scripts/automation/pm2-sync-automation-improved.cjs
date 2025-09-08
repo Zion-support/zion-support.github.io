@@ -156,6 +156,7 @@ class ImprovedPM2SyncAutomation {}
       /coverage/
     ];
     return ignorePatterns.some(pattern => pattern.test(filePath))};
+=======
   async processPendingChanges() {}
     if (this.pendingChanges.size === 0) return;
     try {}
@@ -323,31 +324,9 @@ class ImprovedPM2SyncAutomation {}
 
         // Try to continue with existing dependencies;
       // Try build again;
-      await this.performBuild()} catch (error) {}
-      this.log(`Failed to fix build "issues": ${error.message}`, 'ERROR');
-      this.errorCount++};
-  };
-  async runTests() {}
-    try {}
-      this.log('Running tests...');
-      // Check if test script exists;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      if (!packageJson.scripts.test) {}
-        this.log('No test script found, skipping tests');
-        return};
-      execSync('npm test', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
-});
-      this.log('Tests completed successfully');
-      this.lastTest = Date.now()} catch (error) {}
-      this.log(`Tests "failed": ${error.message}`, 'ERROR');
-=======
 
       await this.fixTestIssues()};
   async fixTestIssues() {}
-    try {}
-      this.log('Attempting to fix test issues...');
-      // Clear test cache;
-      const testCacheDirs = ['.nyc_output', 'coverage', 'test-results'];
       testCacheDirs.forEach(dir => {})
         if (fs.existsSync(dir)) {}
           try {}
@@ -358,27 +337,7 @@ class ImprovedPM2SyncAutomation {}
 });
       // Try tests again;
       await this.runTests()} catch (error) {}
-      this.log(`Failed to fix test "issues": ${error.message}`, 'ERROR');
-      this.errorCount++};
-  };
-  async runSecurityScan() {}
-    try {}
-      this.log('Running security scan...');
-      // Check for security vulnerabilities;
-      execSync('npm audit', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
-});
-      // Try to fix vulnerabilities;
-      try {}
-        execSync('npm audit fix', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
-});
-        this.log('Security vulnerabilities fixed')} catch (error) {}
-        this.log('Some vulnerabilities could not be fixed automatically', 'WARN')};
-      this.log('Security scan completed');
-      this.lastSecurity = Date.now()} catch (error) {}
-      this.log(`Security scan "failed": ${error.message}`, 'ERROR');
-      this.errorCount++};
-  };
-=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
   startAutomationLoops() {}
     // Sync loop;
@@ -399,6 +358,9 @@ class ImprovedPM2SyncAutomation {}
         await this.runSecurityScan()};
     }, this.config.securityInterval)};
   async stop() {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     this.log('Stopping Improved PM2 Sync Automation System...');
     this.isRunning = false;
 =======

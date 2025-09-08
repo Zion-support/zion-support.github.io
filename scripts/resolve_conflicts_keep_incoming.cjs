@@ -1,20 +1,12 @@
 #!/usr/bin/env node;
 
+=======
 
 #!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
 function getAllFiles(dir) {}
-  const entries = fs.readdirSync(dir, { "withFileTypes": true }")
-  const entries = fs.readdirSync(dir, { "withFileTypes": true }")
-})
-  const entries = fs.readdirSync(dir, { "withFileTypes: true })
-});
-  const files = entries.flatMap((entry) => {}
-    const fullPath = path.join(dir, entry.name)
-    if (entry.isDirectory()) return getAllFiles(fullPath)
-    return [fullPath]}
   return files};
   if (!text.includes('')) return false;
 function resolveConflictsKeepIncoming(filePath) {}"
@@ -73,7 +65,11 @@ function main() {}
       console.error(`Failed to process ${f}: ${e.message}`)};
   };
   console.log(`Done. Files "updated": ${count}`)};
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;

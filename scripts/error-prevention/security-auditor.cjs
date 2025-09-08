@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 
+=======
 
 #!/usr/bin/env node;
 
@@ -113,24 +114,15 @@ class SecurityAuditor {}
           console.log('Security fix failed ✗')};
       child.on('close, (code) => {}
       console.log('Attempting to fix security issues...');
+      
+=======
 
       
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       const child = spawn('npm', ['audit', 'fix', '--force'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
-
-
-
-
-
-
-
-
-      child.on('close', (code) => {}
-        if ( {})
-
           console.log(Security fix completed ✓')) {}
           console.log('Security fix completed ✓')) {}
      {}
