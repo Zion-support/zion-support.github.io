@@ -163,6 +163,9 @@ quality-report.json
 continuous-improvement-report.json
 console-error-fixer-report.json
 
+# Automation logs (may contain sensitive tokens)
+automation_logs/
+
 # PM2 automation files
 setup-pm2-cron.sh
 pm2-*.sh
