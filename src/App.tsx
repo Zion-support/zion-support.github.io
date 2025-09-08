@@ -48,6 +48,11 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Developers = React.lazy(() => import('./pages/Developers'));
 
 // New pages
 const Solutions = React.lazy(() => import('./pages/solutions'));
@@ -256,126 +261,31 @@ function App() {
               <div className="min-h-screen bg-futuristic">
                 <AppHeader />
                 
-                <main id="main-content" className="flex-1">
-                  <Suspense fallback={<EnhancedLoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/about" element={<About />} />
-                      <Route path="/contact" element={<Contact />} />
-                      <Route path="/blog" element={<Blog />} />
-                      <Route path="/blog/:slug" element={<BlogPost />} />
-                      <Route path="/faq" element={<FAQ />} />
-                      <Route path="/docs" element={<Documentation />} />
-                      <Route path="/careers" element={<Careers />} />
-                      <Route path="/privacy" element={<Privacy />} />
-                      <Route path="/terms" element={<Terms />} />
-                      <Route path="/cookies" element={<Cookies />} />
-                      <Route path="/partners" element={<Partners />} />
-                      <Route path="/pricing" element={<Pricing />} />
-                      <Route path="/services" element={<Services />} />
-                      <Route path="/solutions" element={<Solutions />} />
-                      <Route path="/resources" element={<Resources />} />
-                      <Route path="/case-studies" element={<CaseStudies />} />
-                      <Route path="/white-papers" element={<WhitePapers />} />
-                      <Route path="/webinars" element={<Webinars />} />
-                      <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                      <Route path="/demo" element={<Demo />} />
-                      <Route path="/community" element={<Community />} />
-                      <Route path="/support" element={<Support />} />
-                      <Route path="/schedule-demo" element={<ScheduleDemo />} />
-                      <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                      <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                      <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
-                      <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                      <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                      <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                      <Route path="/request-quote" element={<RequestQuote />} />
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/marketplace" element={<Marketplace />} />
-                      <Route path="/search" element={<SearchPage />} />
-                      <Route path="/api-docs" element={<APIDocumentation />} />
-                      <Route path="/developers" element={<Developers />} />
-                      <Route path="/training" element={<Training />} />
-                      <Route path="/investors" element={<InvestorRelations />} />
-                      <Route path="/press" element={<Press />} />
-                      <Route path="/legal" element={<Legal />} />
-
-                    {/* New AI Services 2025 */}
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
-                    
-                    {/* New Innovative Services 2025 */}
-                    <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
-                    <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
-                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-                    
-                    {/* Showcase pages */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-                    
-                    {/* 2031 Cutting-Edge Services */}
-                    <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
-                    
-                    {/* Comprehensive Pricing Guide 2031 */}
-                    <Route path="/comprehensive-pricing-guide-2031" element={<ComprehensivePricingGuide2031 />} />
-                    
-                    {/* Additional pages */}
-                    <Route path="/solutions" element={<Solutions />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/white-papers" element={<WhitePapers />} />
-                    <Route path="/webinars" element={<Webinars />} />
-                    <Route path="/request-quote" element={<RequestQuote />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/help" element={<Help />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/cookies" element={<Cookies />} />
-                    <Route path="/partners" element={<Partners />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/news" element={<News />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/testimonials" element={<Testimonials />} />
-                    <Route path="/training" element={<Training />} />
-                    <Route path="/tutorials" element={<Tutorials />} />
-                    <Route path="/support" element={<Support />} />
-                    <Route path="/sustainability" element={<Sustainability />} />
-                    <Route path="/space-tech" element={<SpaceTech />} />
-                    <Route path="/startup-solutions" element={<StartupSolutions />} />
-                    <Route path="/supply-chain" element={<SupplyChain />} />
-                    <Route path="/talent" element={<Talent />} />
-                    <Route path="/video-call/:roomId" element={<VideoCall />} />
-                    <Route path="/wishlist" element={<Wishlist />} />
-                    
-                    {/* New pages I've created */}
-                    <Route path="/careers" element={<Careers />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/events" element={<Events />} />
-                    
-                    {/* Additional missing pages */}
-                    <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-                    <Route path="/enhanced-services" element={<EnhancedServices />} />
-                    <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
-                  </Routes>
-                </AnimatePresence>
-              </main>
-              
-              <Footer />
-              
-              {/* Enhanced Components */}
-              <EnhancedAccessibilityPanel />
-              <AdvancedPerformanceMonitor />
-              <InteractiveUserExperience />
-              <SecurityEnhancer />
-              <ChatAssistant />
-            </div>
-          </Router>
-        </ThemeProvider>
-      </HelmetProvider>
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Additional pages */}
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/developers" element={<Developers />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+        </div>
+      </Router>
     </ErrorBoundary>
   );
 }
