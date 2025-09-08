@@ -1,5 +1,9 @@
 name: Dependency Maintenance
-'on':
+
+on:
+permissions:
+  contents: read
+  actions: read
   schedule:
     - cron: 17 5 * * *
   workflow_dispatch: {}
