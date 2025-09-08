@@ -2,10 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+
   const { operatorPrompt, inputs, metrics } = req.body || {};
 
   const seed = [
@@ -20,6 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     'Token Strategy',
     'Ask & Call to Action'
   ];
+
   try {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
@@ -38,7 +42,8 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
-          { role: 'user', content: prompt }],
+          { role: 'user', content: prompt }
+        ],
         temperature: 0.5
       });
       content = chat.choices?.[0]?.message?.content || '';

@@ -1,68 +1,27 @@
 import fs from 'fs';
 import path from 'path';
 
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items && items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-// Database utilities
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
-  ssl?: boolean;
-}export interface QueryResult<T = any> {
-  rows: T[];
-  rowCount: number;
-  fields: any[];
+const DATA_DIR = path.join(process.cwd(), 'data');
+
+export function readJsonFile<T>(filename: string, defaultValue: T): T {
+  try {
+    const filePath = path.join(DATA_DIR, filename);
+    if (!fs.existsSync(filePath)) return defaultValue;
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch {
+    return defaultValue;
+  }
 }
-export class DatabaseManager {
-  private config: DatabaseConfig;
-  constructor(config: DatabaseConfig) {
-    this.config = config;
-  }
-  async connect(): Promise<void> {
-    // Mock connection - in production, this would establish a real database connection
-    console.log('Connected to database');
-  }
-  async disconnect(): Promise<void> {
-    // Mock disconnection - in production, this would close the database connection
-    console.log('Disconnected from database');
-  }
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
-    // Mock query execution - in production, this would execute real SQL
-    console.log('Executing query:', sql, params);
-    return {
-      rows: [],
-      rowCount: 0,
-      fields: []
-    };
-  }
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
-    // Mock transaction - in production, this would wrap the callback in a real transaction
-    try {
-      return await callback(this);
-    } catch (error) {
-      throw error;
+
+export function writeJsonFile<T>(filename: string, data: T): void {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
     }
-=======  }
-  return defaultValue;
-}
-
-export function writeJsonFile < T>(file_name: string, data: T): void {
-  const file_path = getFilePath (file_name);
-  const tmp_path = `${file_path}.tmp`;
-  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8');
-  fs.rename_sync (tmp_path, file_path);
-}
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
-  const items = readJsonFile < T[]>(file_name, []);
-  items.push (item);
-  writeJsonFile < T[]>(file_name, items);
-}import fs from 'fs';
-import path from 'path';
-
-}
+    const filePath = path.join(DATA_DIR, filename);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error('Error writing JSON file:', error);
+  }
 }

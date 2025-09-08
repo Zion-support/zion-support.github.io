@@ -1,62 +1,84 @@
 export interface ModerationFlag {
-export interface ModerationFlag {;
-
-export interface ModerationFlag {
   id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  reason: string;
-  userEmail: string;
-  contentType: string;
-  contentId: string;
+  content: string;
+  reporterId: string;
+  reportedUserId: string;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
   reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
+  userEmail: string;
+  contentType: string;
 }
-// Mock data storage - replace with actual database;
-let flags: ModerationFlag[] = [];
-;
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
-  return flags.find (flag => flag.id === id) || null;    contentId: data.contentId || "",
-    contentType: data.contentType || "post",
-    reason: data.reason || "",
-    userEmail: data.userEmail || "",
-    status: "pending",
-    createdAt: new Date().toISOString(),
-    ...data,
-  };
 
-  flags.push(flag);
-    content_id: data.content_id || '',
-    content_type: data.content_type || 'post',
-    reason: data.reason || '',
-    user_email: data.user_email || '',
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  // Mock implementation - in a real app, this would query a database
+  return {
+    id,
+    type: 'spam',
     status: 'pending',
-    created_at: new Date ().toISOString (),
-    ...data;
-  }
-;
-  flags.push (flag);
-  return flag;
+    content: 'Mock content',
+    reporterId: 'user-1',
+    reportedUserId: 'user-2',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    reason: 'Spam content',
+    userEmail: 'user@example.com',
+    contentType: 'post'
+  };
 }
 
 export async function updateFlagStatus(
-  id: string,
-  status: ModerationFlag["status"],
-  adminNotes?: string,
-): Promise<FlaggedContent | undefined> {
+  id: string, 
+  status: 'approved' | 'removed' | 'warned' | 'banned',
+  adminNotes?: string
+): Promise<ModerationFlag | null> {
+  // Mock implementation - in a real app, this would update a database
   const flag = await getFlagById(id);
-  if (!flag) return undefined;
-  flag.status = status;
-  flag.updatedAt = new Date().toISOString();
+  if (!flag) return null;
   
-  return flag;
+  return {
+    ...flag,
+    status,
+    adminNotes,
+    updatedAt: new Date().toISOString()
+  };
+}
+
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  // Mock implementation - in a real app, this would query a database
+  return [
+    {
+      id: 'flag-1',
+      type: 'spam',
+      status: 'pending',
+      content: 'Mock content 1',
+      reporterId: 'user-1',
+      reportedUserId: 'user-2',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      reason: 'Spam content',
+      userEmail: 'user@example.com',
+      contentType: 'post'
+    }
+  ];
+}
+
+export async function createFlag(data: any): Promise<ModerationFlag> {
+  // Mock implementation - in a real app, this would create a database record
+  return {
+    id: `flag-${Date.now()}`,
+    type: data.type || 'other',
+    status: 'pending',
+    content: data.content || '',
+    reporterId: data.reporterId || 'user-1',
+    reportedUserId: data.reportedUserId || 'user-2',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    reason: data.reason || '',
+    userEmail: data.userEmail || '',
+    contentType: data.contentType || 'post'
+  };
 }

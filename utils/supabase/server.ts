@@ -1,24 +1,19 @@
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
-const supabaseKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
-
+// Mock Supabase client for development
 export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
-}import { createClient } from '@supabase/supabase-js';
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
-
-export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
+  return {
+    from: (table: string) => ({
+      select: (columns: string) => ({
+        eq: (column: string, value: any) => ({
+          gte: (column: string, value: any) => ({
+            data: [],
+            error: null
+          })
+        }),
+        order: (column: string, options: any) => ({
+          data: [],
+          error: null
+        })
+      })
+    })
+  };
 }
-
-export function getClientSupabase() {
-  return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
-
-export function getServerSupabase() {;
-  return createClient(supabaseUrl, supabaseKey);
-}
-

@@ -1,69 +1,75 @@
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  };
-export interface TokenTransaction {;  id: string;
-  userId: string;
+export interface TokenConfig {
+  totalSupply: number;
+  maxSupply: number;
+  decimals: number;
+  symbol: string;
+  name: string;
+}
 
-  id: string;
-  user_id: string;
 export interface TokenTransaction {
   id: string;
-  user_id: string;
+  userId: string;
   amount: number;
+  type: 'issue' | 'revoke' | 'transfer';
+  reason: string;
   timestamp: number;
-
 }
-// Mock data storage - replace with actual database;
-let transactions: TokenTransaction[] = [];    type: 'redeem',
-    reason,
-    timestamp: Date.now(),
-    description: reason
-  };
-  transactions.push(transaction);
-  return transaction;
 
-  transactions.push(transaction);
-  return transaction;
-    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    type: 'burn',
-    amount,
-    reason,
-    timestamp: Date && Date.now()
-    timestamp: Date.now()
+let config: TokenConfig = {
+  totalSupply: 1000000,
+  maxSupply: 10000000,
+  decimals: 18,
+  symbol: 'ZION',
+  name: 'Zion Token'
 };
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+
+let transactions: TokenTransaction[] = [];
+
+export function getConfig(): TokenConfig {
+  return { ...config };
 }
 
-  partial: Partial<ReturnType<typeof getConfig>>,
-): void {
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-=======  transactions.push(transaction);
-  return transaction;
+export function setConfig(newConfig: Partial<TokenConfig>): void {
+  config = { ...config, ...newConfig };
 }
 
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-export function set_config (
-  partial: Partial < ReturnType < typeof get_config>>): void {
-  const current = get_config ();
-  // Update the configuration;
-  Object.assign (current, partial);
+export function getAllTransactions(): TokenTransaction[] {
+  return [...transactions];
+}
+
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  if (amount <= 0) throw new Error('Amount must be positive');
+  if (config.totalSupply + amount > config.maxSupply) throw new Error('Exceeds max supply');
+  
+  const tx: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now()
+  };
+  
+  transactions.push(tx);
+  config.totalSupply += amount;
+  
+  return tx;
+}
+
+export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  if (amount <= 0) throw new Error('Amount must be positive');
+  
+  const tx: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'revoke',
+    reason,
+    timestamp: Date.now()
+  };
+  
+  transactions.push(tx);
+  config.totalSupply = Math.max(0, config.totalSupply - amount);
+  
+  return tx;
 }
