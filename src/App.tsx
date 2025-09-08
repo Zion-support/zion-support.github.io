@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <ThemeProvider defaultTheme="dark">
-      <div style={{ padding: 24 }}>
-        <h1>Zion App</h1>
-        <p>Build placeholder rendered successfully.</p>
+    <div className="min-h-screen bg-zion-blue text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-2">Zion App</h1>
+        <p className="text-zion-slate-light">Build placeholder to restore Netlify deployment.</p>
       </div>
-    </ThemeProvider>
+    </div>
   );
-}
+};
+
+export default App;
