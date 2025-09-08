@@ -39,18 +39,28 @@ export default function Revolutionary2025PricingPage() {
         'Standard Security Features
   '],
       icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
+      variant: 'quantum
+  ' as const,
       popular: false,
 cta:,
   Start Free Trial
   ',
       ctaVariant: 'secondary as const},
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name:,
+  Professional
+  ',
+      description: 'Ideal for growing businesses and teams,
+      price: billingCycle === 'monthly
+  ' ? 299 : 239,
+      period: billingCycle ===,
+  monthly
+  ' ? '/month
+  ': '/month,
+      savings: billingCycle ===,
+  yearly
+  ' ? 'Save 20%
+  ': ',
       features: [
 'Access to 50+ Services',
   'Advanced AI Integration',

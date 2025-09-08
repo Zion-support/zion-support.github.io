@@ -454,22 +454,6 @@ checker.run().then(report => {
     process.exit(1);
   });}
 
-
-const logEntry = { timestamp level message data}` console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`); 'if': (data) { console.log(JSON.stringify(data,null,2))}`
-const logFile = path.join(this.logDir health-checker.log')'; fs.appendFileSync(logFile,JSON.stringify(logEntry) +';\n')}'; 'async': checkApplicationHealth() { return new Promise(resolve = > {;'
-  }
-  const startTime = Date.now();
-
-const req = http.get(this.healthEndpoint,(res) => {;
-  }
-  const responseTime = Date.now() - startTime; 'if': (res.statusCode === 200) { this.log( 'info' `Application health check passed (${responseTim,`}ms)` ); resolve({ 'status': 'healthy responseTime 'statusCode': res.statusCode })} else { this.log( 'warning' `Application health check failed with status ${res.statusCod,`}` ); resolve({ 'status': 'unhealthy responseTime 'statusCode': res.statusCode 'reason': `HTTP ${res.statusCode}` })},`}); req.on('error',error = > {;'
-}
-const responseTime = Date.now() - startTime; this.log('error','Application health check failed',{ 'error': error.message,;'
-}); resolve({ 'status': 'unhealthy',responseTime 'reason': error.message },'
-}); req.setTimeout(this.maxResponseTime,() => { const logFile = path.join(this.logDir,,req.destroy();
-
-}
-
 const responseTime = Date.now() - startTime; this.log(,); error','';Application health check timed out')'; resolve({;); 'status': 'unhealthy,'; responseTime,'; 'reason':;'';Timeout' })})})}'; async checkDiskSpace() {'; try {;'
 
 }

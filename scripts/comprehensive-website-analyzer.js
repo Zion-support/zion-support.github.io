@@ -1550,11 +1550,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   '/digital-twin',
   '/ai-devops-automation-platform'];
 
-
-
-    /services${serviceRoute}`);
-    }
-
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
     }
 ursor/add-new-services-and-deploy-updates-0462
@@ -1571,10 +1566,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   '/quantum-ai-platform',
   '/digital-twin',
   '/zero-trust-security'];
-
-
-    /solutions${solutionRoute}`);
-
 
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
@@ -1600,36 +1591,6 @@ const aboutRoutes = [
       '/help'
   '/training',
   '/help'];
-
-
-
-    // Check resources sub-routes;
-    const resourceRoutes = ["
-  '/blog',
-      '/case-studies'
-  '/research-development',
-      '/docs'
-  '/api',
-      '/sitemap'
-  '/support',
-      '/training'
-  '/help'    ];
-
-
-
-    console.log(;)';Starting comprehensive website analysis...')';        // Start with the main page';    await this.checkUrl(this.baseUrl);
-    // Check common routes;
-
-
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
-    const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
-    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
-    const aboutRoutes = [';/story', '';/team'';;    ]';;    for (const aboutRoute of aboutRoutes) {;
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
-
-=======
-}
 
 const linkRegex = /href=[']([^'';';]+)['']/g';'let': match;'
     'while': ((match = linkRegex.exec(html)) !== null) ;
@@ -2402,24 +2363,6 @@ type:,
   '/sitemap',
   '/contact',
   '/about'];
-
-          { action: 'Add: case studie,s, priority: ';
-  medium' }';
-=======
-const report = this.generateReport()';    await fs.writeFile(filename, JSON.stringify(report, null, 2))console.log(`Report saved to ${filename}`)';    return report}'      recommendations.push({'type': warning', ';'
-        'title': ''Expand': Conten,t, ';'
-        'description': 'Website': has limited content. Consider adding more pages and services.', ';'
-        'actions': [{ 'action':';'Add': more service page,s, 'priority': ';'
-  }
-  medium' }, ';'
-          { 'action': ''Create': blog sectio,n, 'priority': ';'
-  }
-  medium' }, ';{ 'action': ''Add': case studie,s, 'priority': ';'
-  }
-  medium' }';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        ]      })}
-    // 'Check': for missing essential pages;
 
 <<<<<<< HEAD
 

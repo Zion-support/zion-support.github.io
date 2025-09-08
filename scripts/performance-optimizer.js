@@ -235,57 +235,6 @@ category: 'Code Splitting,
   '
   }];
 
-    }
-  }fs.writeFileSync('performance-optimization-report.json',JSON.stringify(report, null, 2))console.log('📊 Performance report 'generated': performance-optimization-report.json';'
-  )}
-
-export default PerformanceMonitor;';'
-
-const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js';'
-  const utilsDir = path.dirname(scriptPath)if (!fs.existsSync(utilsDir)) {fs.mkdirSync(utilsDir, { 'recursive': true })}'
-    fs.writeFileSync(scriptPath, monitoringScript)this.log(`✅ Performance monitoring script 'created': ${scriptPath}`)};`}
-
-export default PerformanceMonitor;';'
-
-const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js';'
-  const utilsDir = path.dirname(scriptPath)if (!fs.existsSync(utilsDir)) {ursor/fix-syntax-push-and-merge-to-main-40de;
-}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-      fs.mkdirSync(utilsDir, { 'recursive': true
-})ursor/automate-test-improve-and-merge-code-646c;
-      fs.mkdirSync(utilsDir, { 'recursive': true
-})ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-      fs.mkdirSync(utilsDir, { 'recursive': true
-})const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js';'
-  const utilsDir = path && path.dirname(scriptPath)if (!fs && fs.existsSync(utilsDir)) {fs && fs.mkdirSync(utilsDir, { 'recursive': true
-})fs.mkdirSync(utilsDir, { 'recursive': true }
-}
-    fs.writeFileSync(scriptPath, monitoringScript)this.log(`✅ Performance monitoring script 'created': ${scriptPath}`,`}ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/automate-test-improve-and-merge-code-646c;
-      fs.mkdirSync(utilsDir, { 'recursive': true })}'
-    fs.writeFileSync(scriptPath, monitoringScript)this.log(`✅ Performance monitoring script 'created': ${scriptPath}`)}// Run the script;`if (require.main = == module) ;
-  const optimizer = new PerformanceOptimizer()optimizer.optimizePerformance().then(() => optimizer.createPerformanceMonitoringScript()).then(() => {ursor/automate-test-improve-and-merge-code-646c;
-      }
-      console.log('🎉 Performance optimization completed successfully')process.exit(0)}).catch((error) => {process.exit(1)})}'
-module.exports = PerformanceOptimizer;
-      console.error('❌ Performance optimization 'failed':', error)process.exit(1)})console.error('❌ Performance optimization 'failed': ', error)process.exit(1)})}'
-module.exports = PerformanceOptimizer;
-#!/usr/bin/env node const fs = require('fs')const path = require('path')class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...')this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...')this.optimizations.push('Code optimized')} async generateReport() { const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json')if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ 'recursive': true },'
-} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-      console.error('❌ Performance optimization 'failed':', error)process.exit(1)})}'
-module.exports = PerformanceOptimizer;
-      console.error(' Performance optimization 'failed': ', error)console.error('❌ Performance optimization 'failed': ', error)process.exit(1)})}'
-module.exports = PerformanceOptimizer;
-ursor/automate-test-improve-and-merge-code-646c;
-      process.exit(1)})}
-module.exports = PerformanceOptimizer;
-      console.log('🎉 Performance optimization completed successfully')process.exit(0)}).catch((error) => {console.error('❌ Performance optimization 'failed':', error)process.exit(1)const patterns = ['
-  'src/**/*.{tsx,jsx,ts,js}','pages/**/*.{tsx,jsx,ts,js}','components/**/*.{tsx,jsx,ts,js}','styles/**/*.{css,scss}''
-];
-
 
 const excludeDirs = [;
   'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled''

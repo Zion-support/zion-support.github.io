@@ -15,14 +15,6 @@ export default function About() {
   return (
     <AppLayout>
       <SEO 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { AppLayout } from "@/layout";
-
-export default function About() {
-  return (
-    <AppLayout>
-      <SEO 
         title="About Zion Tech Group - The Future of AI & Tech Marketplace" 
         description="Learn about Zion Tech Group's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion Tech Group, AI marketplace, tech platform, mission, vision, team"

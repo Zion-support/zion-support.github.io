@@ -4,18 +4,6 @@ export const securityConfig = {
 };contentSecurityPolicy: "default - src 'self'";
 };
 
-// Helper function to generate CSP header string
-export const generateCSPHeader = (): string => {
-  return Object.entries(securityConfig.csp)
-    .map(([key, values]) => {
-      if (Array.isArray(values)) {
-        return `${key} ${values.join(' ')}`;
-      }
-      return `${key} ${values}`;
-    })
-    .join('; ');
-};
-
 // Security middleware for Express/Node.js
 export const securityMiddleware = (req: any, res: any, next: any) => {
   // Set security headers
