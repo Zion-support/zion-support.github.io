@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2025-08-11T22:43:40.635Z",
+  "generatedAt": "2025-08-11T23:00:54.727Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
-    "anchor-integrity-runner",
+    "ai-trends-radar-runner",
+    "asset-size-report",
+    "auto-discovery-runner",
     "auto-scheduler",
     "automation-atlas-runner",
     "automation-matrix",
@@ -90,8 +92,7 @@
     "newsroom-runner",
     "newsroom-scheduler",
     "og-image-update-runner",
-    "perf-budget-runner",
-    "performance-budget-watcher",
+    "orphan-pages-runner",
     "readme-advertiser",
     "redirect-manager",
     "repo-knowledge-graph-runner",
