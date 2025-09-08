@@ -184,3 +184,10 @@ performance-metrics.json
 security-scan-report.json
 
 core
+
+# Scripts with sensitive operations (should use environment variables)
+merge-prs-simple.js
+merge-prs.sh
+merge_all_prs.sh
+merge-prs.cjs
+comprehensive-merge-resolver.cjs
