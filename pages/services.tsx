@@ -1,111 +1,17 @@
-type Service = {
-  name: string;
-  summary: string;
-  pricing: string;
-  link: string;
-};
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
 
-const microSaaS: Service[] = [
-  {
-    name: 'Cloud Cost Guard (FinOps Assistant)',
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'LLM Evaluation & Safety Suite',
-    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    pricing: 'Typical: $799–$3,500/month',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'Customer Feedback & NPS Micro-App',
-    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    pricing: 'Typical: $149–$799/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'Event Management Dashboard',
-    summary: 'Comprehensive event management with ticket sales, attendee tracking, and real-time analytics.',
-    pricing: 'Typical: $199–$999/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'Customer Support & Helpdesk Platform',
-    summary: 'Complete support solution with ticket management, knowledge base, and AI chatbots.',
-    pricing: 'Typical: $99–$599/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'Project Management & Collaboration',
-    summary: 'Streamlined project management with task tracking, team collaboration, and time tracking.',
-    pricing: 'Typical: $79–$399/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'Invoice & Billing Management',
-    summary: 'Automated invoicing and billing with payment processing and financial reporting.',
-    pricing: 'Typical: $49–$299/month',
-    link: '/services/micro-saas'
-  },
-  {
-    name: 'Lead Generation & CRM',
-    summary: 'Intelligent lead generation with automated follow-ups and sales pipeline tracking.',
-    pricing: 'Typical: $149–$799/month',
-    link: '/services/micro-saas'
-  }
-];
+import { additionalEnhancedServices } from '../data/additional-real-services'
+import { enhancedServices2025 } from '../data/enhanced-services-2025'
+import { zionInnovativeServices2025 } from '../data/zion-2025-innovative-services'
 
-const aiServices: Service[] = [
-  {
-    name: 'AI Customer Support Automation',
-    summary: 'Chatbots, triage, knowledge mining and human-in-the-loop escalation.',
-    pricing: 'Typical: $2k–$8k setup, $0.02–$0.2/session',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'Predictive Analytics & Forecasting',
-    summary: 'Time-series forecasts for demand, revenue, churn and supply risk.',
-    pricing: 'Typical: $4k–$20k project',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'GenAI Content & SEO Automation',
-    summary: 'Editorial-quality drafts, briefs, clustering and internal linking suggestions.',
-    pricing: 'Typical: $1k–$6k/month',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'AI-Powered Email Responder',
-    summary: 'Intelligent email automation with smart classification and auto-response generation.',
-    pricing: 'Typical: $1.5k–$8k setup, $0.05–$0.15/email',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'AI Document Processing & OCR',
-    summary: 'Advanced document digitization with intelligent data extraction and form processing.',
-    pricing: 'Typical: $3k–$15k setup, $0.02–$0.10/page',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'AI Voice Assistant & IVR',
-    summary: 'Intelligent voice assistants with natural language understanding and multi-language support.',
-    pricing: 'Typical: $5k–$25k setup, $0.10–$0.50/call',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'AI Fraud Detection & Security',
-    summary: 'Advanced fraud detection using machine learning to identify suspicious activities.',
-    pricing: 'Typical: $8k–$40k setup, $0.01–$0.05/transaction',
-    link: '/services/ai-services'
-  },
-  {
-    name: 'AI Recommendation Engine',
-    summary: 'Personalized recommendation systems to boost engagement and sales.',
-    pricing: 'Typical: $4k–$20k setup, $0.02–$0.10/recommendation',
-    link: '/services/ai-services'
-  }
-];
+export default function Services() {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState('all')
+	const [sortBy, setSortBy] = useState('popularity')
+	const [currentPage, setCurrentPage] = useState(1)
+	const [itemsPerPage] = useState(12) // Show 12 services per page
 
 const itServices: Service[] = [
   {
@@ -160,7 +66,65 @@ const itServices: Service[] = [
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
+
+	// Combine all services
+	const allServices = [...additionalEnhancedServices, ...enhancedServices2025, ...zionInnovativeServices2025]
+
+	// Get unique categories
+	const categories = ['all', ...new Set(allServices.map(service => service.category))]
+
+	// Filter and sort services
+	const filteredServices = allServices
+		.filter(service => 
+			(selectedCategory === 'all' || service.category === selectedCategory) &&
+			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			 (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())))
+		)
+		.sort((a, b) => {
+			switch (sortBy) {
+				case 'popularity':
+					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+				case 'price':
+					return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))
+				case 'rating':
+					return (b.rating || 0) - (a.rating || 0)
+				case 'newest':
+					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
+				default:
+					return 0
+			}
+		})
+
+	// Pagination logic
+	const totalPages = Math.ceil(filteredServices.length / itemsPerPage)
+	const startIndex = (currentPage - 1) * itemsPerPage
+	const endIndex = startIndex + itemsPerPage
+	const currentServices = filteredServices.slice(startIndex, endIndex)
+
+	// Reset to first page when filters change
+	React.useEffect(() => {
+		setCurrentPage(1)
+	}, [searchTerm, selectedCategory, sortBy])
+
+	// Pagination controls
+	const goToPage = (page: number) => {
+		setCurrentPage(page)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+
+	const goToNextPage = () => {
+		if (currentPage < totalPages) {
+			goToPage(currentPage + 1)
+		}
+	}
+
+	const goToPreviousPage = () => {
+		if (currentPage > 1) {
+			goToPage(currentPage - 1)
+		}
+	}
 
 	return (
 		<PageTransition>
@@ -174,52 +138,163 @@ export default function Services() {
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
 						</p>
+						<div className="mt-8 flex items-center justify-center gap-4">
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Users2 className="h-4 w-4" />
+								<span>500+ Active Customers</span>
+							</div>
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Star className="h-4 w-4 text-yellow-400" />
+								<span>4.9/5 Rating</span>
+							</div>
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Clock className="h-4 w-4" />
+								<span>24/7 Support</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Search and Filter Section */}
+			<section className="bg-white py-8 border-b border-gray-200">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+						{/* Search */}
+						<div className="relative flex-1 max-w-md">
+							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+							<input
+								type="text"
+								placeholder="Search services..."
+								value={searchTerm}
+								onChange={(e) => setSearchTerm(e.target.value)}
+								className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							/>
+						</div>
+
+						{/* Category Filter */}
+						<div className="flex items-center gap-4">
+							<select
+								value={selectedCategory}
+								onChange={(e) => setSelectedCategory(e.target.value)}
+								className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								{categories.map((category) => (
+									<option key={category} value={category}>
+										{category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
+									</option>
+								))}
+							</select>
+
+							{/* Sort */}
+							<select
+								value={sortBy}
+								onChange={(e) => setSortBy(e.target.value)}
+								className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								<option value="popularity">Most Popular</option>
+								<option value="price">Price: Low to High</option>
+								<option value="rating">Highest Rated</option>
+								<option value="newest">Newest First</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			{/* Services Grid */}
-			<section className="py-24 sm:py-32">
+			<section className="bg-gray-50 py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg:grid-cols-2">
-						{/* AI Autonomous Systems */}
-						<div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-									<Brain className="h-6 w-6 text-white" />
+					{/* Results Count */}
+					<div className="mb-8">
+						<p className="text-gray-600">
+							Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services
+						</p>
+					</div>
+
+					{/* Services Grid */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+						{currentServices.map((service) => (
+							<div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+								<div className="p-6">
+									{/* Service Header */}
+									<div className="flex items-start justify-between mb-4">
+										<div className="text-3xl">{service.icon}</div>
+										{service.popular && (
+											<span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+												POPULAR
+											</span>
+										)}
+									</div>
+
+									{/* Service Info */}
+									<h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
+									<p className="text-gray-600 text-sm mb-4 line-clamp-2">{service.description}</p>
+
+									{/* Price */}
+									<div className="mb-4">
+										<span className="text-2xl font-bold text-blue-600">{service.price}</span>
+										<span className="text-gray-500">{service.period}</span>
+									</div>
+
+									{/* Features Preview */}
+									<div className="mb-4">
+										<ul className="space-y-1">
+											{service.features.slice(0, 3).map((feature, index) => (
+												<li key={index} className="flex items-center gap-2 text-sm text-gray-600">
+													<div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+													{feature}
+												</li>
+											))}
+										</ul>
+									</div>
+
+									{/* CTA Button */}
+									<Link
+										href={service.link}
+										className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 group"
+									>
+										Learn More
+										<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+									</Link>
 								</div>
 								<h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2>
 							</div>
-							<p className="mt-4 text-gray-600">
-								Transform your operations with intelligent automation and AI-powered decision making.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">RAG and workflow orchestration</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Observability and guardrails</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Users className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Intelligent process automation</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
+						))}
+					</div>
+
+					{/* Pagination */}
+					{totalPages > 1 && (
+						<div className="mt-12 flex items-center justify-center gap-2">
+							<button
+								onClick={goToPreviousPage}
+								disabled={currentPage === 1}
+								className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+							>
+								<ChevronLeft className="w-4 h-4" />
+							</button>
+
+							{Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+								<button
+									key={page}
+									onClick={() => goToPage(page)}
+									className={`px-4 py-2 rounded-lg transition-colors ${
+										currentPage === page
+											? 'bg-blue-600 text-white'
+											: 'border border-gray-300 hover:bg-gray-50'
+									}`}
 								>
-									Get started with AI
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
+									{page}
+								</button>
+							))}
+
+							<button
+								onClick={goToNextPage}
+								disabled={currentPage === totalPages}
+								className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+							>
+								<ChevronRight className="w-4 h-4" />
+							</button>
 						</div>
 
 						{/* Cloud Platforms */}
@@ -345,88 +420,28 @@ export default function Services() {
 				</div>
 			</section>
 
-			{/* Process Section */}
-			<section className="bg-white py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl lg:text-center">
-						<h2 className="text-base font-semibold leading-7 text-blue-600">Our Process</h2>
-						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							How we deliver results
-						</p>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							We follow a proven methodology that ensures successful delivery and measurable outcomes.
-						</p>
-					</div>
-					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">1</span>
-									Discovery
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We analyze your current state, understand your goals, and design a roadmap for success.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">2</span>
-									Design
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We architect solutions that align with your business objectives and technical requirements.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">3</span>
-									Develop
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We build and test your solution using industry best practices and modern technologies.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">4</span>
-									Deploy
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We launch your solution and provide ongoing support to ensure continued success.
-									</p>
-								</dd>
-							</div>
-						</dl>
-					</div>
-				</div>
-			</section>
-
 			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Ready to get started?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let's discuss your project and how we can help you achieve your goals.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/contact"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
-								Get in touch
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
-							</Link>
-						</div>
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+					<h2 className="text-3xl font-bold text-white mb-4">
+						Ready to Transform Your Business?
+					</h2>
+					<p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+						Let our team of experts help you implement the right solutions for your unique challenges.
+					</p>
+					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+						<Link
+							href="/contact"
+							className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+						>
+							Get Started Today
+						</Link>
+						<Link
+							href="/pricing"
+							className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+						>
+							View Pricing
+						</Link>
 					</div>
 				</div>
 			</section>

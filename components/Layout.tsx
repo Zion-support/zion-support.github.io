@@ -1,194 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  ArrowUp,
-  ChevronDown
-} from 'lucide-react';
+import React from 'react';
+import EnhancedNavigation2025 from "./layout/EnhancedNavigation2025";
+import EnhancedFooter from "./layout/EnhancedFooter";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const serviceCategories = [
-    { name: 'AI & Machine Learning', href: '/services#ai-ml' },
-    { name: 'Cloud Solutions', href: '/services#cloud' },
-    { name: 'Cybersecurity', href: '/services#security' },
-    { name: 'Data Analytics', href: '/services#data' },
-    { name: 'Digital Transformation', href: '/services#transformation' },
-    { name: 'IoT Solutions', href: '/services#iot' },
-    { name: 'Blockchain & Web3', href: '/services#blockchain' },
-    { name: 'Mobile Development', href: '/services#mobile' },
-    { name: 'Technology Consulting', href: '/services#consulting' }
-  ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-slate-900">
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700' 
-          : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.name === 'Services' ? (
-                    <div className="relative">
-                      <button
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors duration-200"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          isServicesOpen ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      <AnimatePresence>
-                        {isServicesOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-xl shadow-xl"
-                          >
-                            <div className="p-4">
-                              {serviceCategories.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  href={service.href}
-                                  className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700 rounded-lg transition-all duration-200"
-                                  onClick={() => setIsServicesOpen(false)}
-                                >
-                                  {service.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-slate-300 hover:text-white transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              
-              <Link
-                href="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-slate-800 border-t border-slate-700"
-            >
-              <div className="container mx-auto px-4 py-6">
-                <div className="space-y-4">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block text-slate-300 hover:text-white transition-colors duration-200 py-2"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                  
-                  <div className="pt-4 border-t border-slate-700">
-                    <Link
-                      href="/contact"
-                      className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-
-      {/* Main Content */}
-      <main className="pt-20">
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation2025 />
+      <main className="flex-grow">
         {children}
       </main>
 
@@ -372,6 +194,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
     </div>
   );
-};
-
-export default Layout;
+}
