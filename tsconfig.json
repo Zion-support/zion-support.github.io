@@ -2,47 +2,20 @@
   "compilerOptions": {
     "target": "ES2024",
     "useDefineForClassFields": true,
-<<<<<<< HEAD
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
->>>>>>> origin/cursor/build-and-fix-errors-fb38
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "module": "ESNext",
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios"]
+      "@/*": ["./src/*"]
     },
     "types": [],
-
-    /* Bundler mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-
-    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -58,48 +31,7 @@
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false
-=======
-      "@/*": [
-        "./src/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/lib/*": [
-        "./src/lib/*"
-      ],
-      "@/data/*": [
-        "./src/data/*"
-      ]
-    },
-    "allowJs": true,
-    "incremental": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
-    "jsx": "preserve",
-    "noEmit": true,
-    "isolatedModules": true
   },
-  "include": ["src", "src/types/offline-shims.d.ts"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
