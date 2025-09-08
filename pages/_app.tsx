@@ -1,229 +1,70 @@
 import type { AppProps } from 'next/app';
 import SiteLayout from '../components/layout/SiteLayout';
 
-// Removed duplicate imports
-
-// Dynamically load heavy components to improve initial load time
-const IntercomChat = dynamic(() => import('@/components/IntercomChat'), {
-  ssr: false,
-  loading: () => null
-});
-import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
-// Import Next.js fonts for optimal loading and CLS prevention
-import { Inter, Poppins } from 'next/font/google';
-import Head from 'next/head';
-// Import global Tailwind styles so they load before the app renders
-import '../src/index.css';
-import * as Sentry from '@sentry/nextjs';
-import getConfig from 'next/config';
-import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
-import {
-  validateProductionEnvironment,
-  initializeServices,
-} from '@/utils/environmentConfig';
-import {
-  initializePerformanceOptimizations,
-  initializePerformance,
-} from '@/utils/performance';
-import '@/utils/globalFetchInterceptor';
-import '@/utils/consoleErrorToast';
-import { initConsoleLogCapture } from '@/utils/consoleLogCapture';
-import { RouteChangeHandler } from '@/components/RouteChangeHandler';
-import { registerServiceWorker } from '@/serviceWorkerRegistration';
-import PageTransition from '@/components/PageTransition';
-import { AnimatePresence } from 'framer-motion';
-
-// Configure fonts with optimal loading strategies
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-inter',
-  preload: true, // Enable automatic preloading
-});
-
-const poppins = Poppins({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-poppins',
-  preload: true, // Enable automatic preloading
-});
-const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const { user, isAuthenticated } = useAuth();
-
-  // Prevent hydration issues by ensuring this only runs on client
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Provide safe defaults during initial render to prevent blank screens
-  const safeAuthState = React.useMemo(
-    () => ({
-      isAuthenticated: isClient ? !!isAuthenticated : false,
-      user: isClient ? user : null,
-    }),
-    [isClient, isAuthenticated, user],
-  );
+function Header(): any {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
-    <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
-  );
-};
-
-// If you have global CSS, import it here:
-// import '../styles/globals.css';
-
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const [queryClient] = React.useState(() => new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes
-        retry: false, // Disable retries for faster error handling
-      },
-    },
-  }));
-  const [isInitialized, setIsInitialized] = React.useState(false);
-
-  // Optimize initialization by deferring non-critical operations
-  React.useEffect(() => {
-    let isMounted = true;
-
-    const initializeApp = async () => {
-      try {
-        // Validate essential environment variables early
-        try {
-          checkEssentialEnvVars();
-        } catch (envError: any) {
-          console.error('Environment validation failed:', envError);
-          setInitializationError(envError.message);
-          setIsLoading(false);
-          return;
-        }
-        // Simulate progressive loading with realistic steps
-        const steps = [
-          { name: 'Loading Core Components', duration: 300 },
-          { name: 'Initializing Providers', duration: 400 },
-          { name: 'Setting up Analytics', duration: 200 },
-          { name: 'Configuring Theme', duration: 200 },
-          { name: 'Final Setup', duration: 300 }
-        ];
-
-        let currentProgress = 0;
-        const progressStep = 100 / steps.length;
-
-        for (let i = 0; i < steps.length; i++) {
-          const step = steps[i];
-          if (!step) continue;
+    <header className="header">
+      <nav className="header-nav">
+        <Link href="/" className="header-logo">
+          <span className="logo-text">Zion Tech Group</span>
+          <span className="logo-tagline">Innovative Technology Solutions</span>
+        </Link>
+        
+        <div className="header-nav-links">
+          <Link href="/" className="header-nav-link">Home</Link>
           
-          // Update progress
-          currentProgress = (i + 1) * progressStep;
-          setLoadingProgress(Math.min(currentProgress, 95));
+          {/* Services Dropdown */}
+          <div 
+            className="header-nav-dropdown"
+            onMouseEnter={() => setServicesDropdownOpen(true)}
+            onMouseLeave={() => setServicesDropdownOpen(false)}
+          >
+            <span className="header-nav-link dropdown-trigger">
+              Services <span className="dropdown-arrow">▼</span>
+            </span>
+            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+              <Link href="/services" className="dropdown-item">All Services</Link>
+              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
+              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
+              <Link href="/it-services" className="dropdown-item">IT Services</Link>
+              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
+            </div>
+          </div>
 
-          // Simulate async work
-          await new Promise(resolve => setTimeout(resolve, step.duration));
-        }
-
-        // Critical: Initialize error handlers first
-        initializeGlobalErrorHandlers();
-
-        // Critical: Validate environment (graceful in development)
-        try {
-          validateProductionEnvironment();
-        } catch (error) {
-          logWarn('[App] Environment validation warning:', { data:  { error } });
-        }
-
-        // Defer non-critical initializations
-        setTimeout(() => {
-          if (!isMounted) return;
-
-          // Initialize services asynchronously
-          initializeServices().catch((err) =>
-            logWarn('Service initialization failed', { data:  { error: err } }),
-          );
-
-          // Initialize performance monitoring only if needed
-          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
-            initializePerformanceOptimizations();
-            initializePerformance();
-          }
-
-          // Initialize console log capture only in development
-          if (process.env.NODE_ENV === 'development') {
-            initConsoleLogCapture();
-          }
-        }, 100); // Defer by 100ms to improve initial render time
-
-        // Mark as initialized immediately for critical path
-        if (isMounted) {
-          setIsInitialized(true);
-        }
-      } catch (error) {
-        logError('[App] Critical initialization error:', { data:  { error } });
-
-        // Ensure isInitialized is set to true immediately in case of an error,
-        // so the app doesn't hang on the loading screen.
-        if (isMounted) {
-          setIsInitialized(true);
-        }
-
-        // Defer Sentry reporting to make it non-blocking and allow Sentry.init to potentially run first.
-        setTimeout(() => {
-          try {
-            if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-              Sentry.captureException(error);
-            }
-          } catch (sentryError) {
-            logWarn('[App] Could not send error to Sentry (deferred):', { data:  { error: sentryError } });
-          }
-        }, 0);
-      }
-    };
-
-    initializeApp();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  // Set Sentry context for current route (optimized)
-  React.useEffect(() => {
-    if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-      Sentry.setTag('route', router.pathname);
-      Sentry.setContext('query', router.query);
-    }
-  }, [router.pathname, router.query]);
-
-  // Register service worker only in production
-  React.useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      setTimeout(() => {
-        registerServiceWorker();
-      }, 2000); // Defer service worker registration
-    }
-  }, []);
-
-  // Show optimized loading screen during critical initialization
-  if (!isInitialized) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
-          <p className="text-blue-200 text-sm mt-2">Optimizing performance...</p>
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/blog" className="header-nav-link">Blog</Link>
+          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/faq" className="header-nav-link">FAQ</Link>
+          <Link href="/request-quote" className="header-nav-link">Get Quote</Link>
+          <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
+
+        <button 
+          className="mobile-menu-button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          ☰
+        </button>
+      </nav>
+      
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        <Link href="/request-quote" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Get Quote</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     );
   }
@@ -309,9 +150,104 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-// Optimize component logging
-if (process.env.NODE_ENV === 'development') {
-  logInfo('[App] MyApp component optimized and ready');
+function Footer(): any {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        {/* Company Info */}
+        <div className="footer-section">
+          <div className="footer-logo">
+            <span className="logo-text">Zion Tech Group</span>
+            <span className="logo-tagline">Innovative Technology Solutions</span>
+          </div>
+          <p>
+            Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
+            Empowering businesses with cutting-edge technology and digital transformation.
+          </p>
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <a href="tel:+13024640950" className="contact-link">+1 302 464 0950</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">✉️</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="contact-link">kleber@ziontechgroup.com</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📍</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Services */}
+        <div className="footer-section">
+          <h3>Our Services</h3>
+          <div className="footer-links">
+            <Link href="/services" className="footer-link">All Services</Link>
+            <Link href="/micro-saas" className="footer-link">Micro SaaS Products</Link>
+            <Link href="/ai-services" className="footer-link">AI Services</Link>
+            <Link href="/it-services" className="footer-link">IT Services</Link>
+            <Link href="/services-catalog" className="footer-link">Services Catalog</Link>
+            <Link href="/pricing" className="footer-link">Pricing Plans</Link>
+          </div>
+          <div className="service-stats">
+            <div className="stat-item">• 120+ Micro SaaS Products</div>
+            <div className="stat-item">• 80+ AI Services</div>
+            <div className="stat-item">• 80+ IT Solutions</div>
+            <div className="stat-item">• 24/7 Support</div>
+          </div>
+        </div>
+
+        {/* Company */}
+        <div className="footer-section">
+          <h3>Company</h3>
+          <div className="footer-links">
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="/about" className="footer-link">About Us</Link>
+            <Link href="/blog" className="footer-link">Blog</Link>
+            <Link href="/contact" className="footer-link">Contact Us</Link>
+            <Link href="/faq" className="footer-link">FAQ</Link>
+            <Link href="/request-quote" className="footer-link">Request Quote</Link>
+            <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-link">Terms of Service</Link>
+          </div>
+        </div>
+
+        {/* Get Started */}
+        <div className="footer-section">
+          <h3>Get Started</h3>
+          <p className="footer-description">
+            Ready to transform your business with our innovative solutions? 
+            Let's discuss your project requirements.
+          </p>
+          <div className="footer-cta">
+            <Link href="/contact" className="footer-cta-button">Request Quote</Link>
+            <a href="tel:+13024640950" className="footer-cta-secondary">Call Now</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="footer-cta-secondary">Email Us</a>
+          </div>
+          <div className="social-links">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              🌐 Main Website
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <div className="footer-bottom-content">
+          <small>
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </small>
+          <div className="footer-bottom-links">
+            <Link href="/privacy" className="footer-bottom-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-bottom-link">Terms of Service</Link>
+            <Link href="/contact" className="footer-bottom-link">Contact</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default MyApp;
