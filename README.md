@@ -1,272 +1,274 @@
+# Zion Tech Group - Technology Solutions Platform
 
-# Zion Tech Group - Comprehensive IT & AI Services Platform
+## Overview
 
-## 🚀 About Zion Tech Group
+Zion Tech Group is a comprehensive technology solutions provider specializing in digital transformation, AI, cloud architecture, and cybersecurity. This platform showcases our extensive portfolio of services, products, and industry-specific solutions.
 
-Zion Tech Group is a leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services. Our platform serves businesses worldwide with cutting-edge technology solutions designed to drive innovation and growth.
+## 🚀 New Features & Improvements
 
-**Website**: https://ziontechgroup.com  
-**Contact**: +1 302 464 0950 | kleber@ziontechgroup.com  
-**Address**: 364 E Main St STE 1008, Middletown DE 19709
+### 1. Enhanced Navigation & Layout
+- **Improved Header Navigation**: Added dropdown menu for services with organized categories
+- **New Navigation Items**: Added Products and Solutions pages to main navigation
+- **Responsive Design**: Enhanced mobile navigation and responsive layouts
+- **Better Footer Organization**: Restructured footer with organized links and new sections
 
-## 🌟 Our Service Portfolio
+### 2. New Products Page (`/products`)
+Comprehensive showcase of our micro SAAS solutions and enterprise products:
 
-### 🤖 AI & Machine Learning Services
-- **AI-Powered Business Process Automation Suite** - $299/month
-  - Reduce operational costs by 40-60%
-  - Increase productivity by 300%
-  - ROI within 3 months
-  
-- **Enterprise AI Content Generation Platform** - $199/month
-  - Save 80% on content creation time
-  - Improve SEO rankings by 200%
-  - Consistent brand messaging
-  
-- **AI Customer Behavior Analytics & Insights Platform** - $449/month
-  - Increase customer retention by 35%
-  - Boost customer lifetime value by 200%
-  - Reduce churn by 50%
+#### Micro SAAS Solutions
+- **ZionTask Pro** - Advanced project management platform ($29/month)
+- **ZionCRM Hub** - AI-powered CRM with insights ($49/month)
+- **ZionAnalytics** - Real-time business intelligence ($39/month)
 
-### 🔒 Cybersecurity Services
-- **Zero-Trust Security Architecture Implementation** - $2,500 (project-based)
-  - Reduce security incidents by 90%
-  - Meet compliance requirements
-  - Protect against insider threats
-  
-- **AI-Powered Advanced Threat Detection System** - $899/month
-  - Detect threats 10x faster
-  - Reduce false positives by 80%
-  - 24/7 automated protection
+#### AI-Powered Services
+- **ZionAI Assistant** - Customer support chatbot ($199/month)
+- **ZionPredict** - Predictive analytics platform ($299/month)
+- **ZionVision** - Computer vision API ($149/month)
 
-### ☁️ Cloud & DevOps Services
-- **Multi-Cloud Management & Optimization Platform** - $399/month
-  - Reduce cloud costs by 30-40%
-  - Unified management interface
-  - Improved security posture
-  
-- **Enterprise DevOps Automation & CI/CD Pipeline** - $599/month
-  - Deploy 10x faster
-  - Reduce deployment failures by 90%
-  - Automated quality gates
+#### Cloud Infrastructure
+- **ZionCloud Platform** - Multi-cloud management ($199/month)
+- **ZionKubernetes** - Managed Kubernetes clusters ($299/month)
+- **ZionServerless** - Serverless computing platform ($99/month)
 
-### 📊 Data & Analytics Services
-- **Real-Time Business Intelligence & Analytics Platform** - $299/month
-  - Instant business insights
-  - Data-driven decisions
-  - Improved operational efficiency
-  
-- **Enterprise Data Warehouse & ETL Solution** - $799/month
-  - Centralized data management
-  - Improved data quality
-  - Faster analytics
+#### Cybersecurity Solutions
+- **ZionGuard** - Threat detection platform ($399/month)
+- **ZionComply** - Compliance management ($299/month)
+- **ZionSecure** - Zero-trust network access ($199/month)
 
-### 🔄 Digital Transformation Services
-- **Digital Transformation Strategy & Implementation** - $1,500 (project-based)
-  - Improved operational efficiency
-  - Enhanced customer experience
-  - Competitive advantage
+#### Development Tools
+- **ZionDevOps** - CI/CD automation platform ($249/month)
+- **ZionAPI Gateway** - API management ($179/month)
+- **ZionCode Quality** - Code analysis platform ($129/month)
 
-### 🌐 IoT & Smart Solutions
-- **Enterprise IoT Platform & Smart Solutions** - $599/month
-  - Operational efficiency
-  - Predictive maintenance
-  - Cost reduction
+#### Data Solutions
+- **ZionData Lake** - Data lake platform ($399/month)
+- **ZionBI Studio** - Business intelligence ($249/month)
+- **ZionData Sync** - Data synchronization ($179/month)
 
-### ⛓️ Blockchain & Web3 Services
-- **Enterprise Blockchain & Web3 Development Services** - $899 (project-based)
-  - Transparent transactions
-  - Reduced costs
-  - Enhanced security
+### 3. New Solutions Page (`/solutions`)
+Industry-specific solutions for various sectors:
 
-## 🎯 Key Features
+#### Healthcare & Life Sciences
+- Electronic Health Records with AI diagnostics
+- Telemedicine platform with e-prescriptions
+- Healthcare analytics and predictive modeling
 
-- **Global Reach**: IT services available worldwide with local expertise
-- **24/7 Support**: Round-the-clock technical support and monitoring
-- **Enterprise-Grade**: SOC 2, ISO 27001, GDPR, HIPAA compliance
-- **AI-Powered**: Cutting-edge machine learning and automation
-- **Custom Solutions**: Tailored implementations for specific business needs
-- **Proven ROI**: Measurable business impact and cost savings
+#### Financial Services
+- Digital banking platform with enhanced security
+- AI-powered fraud detection systems
+- RegTech compliance automation
 
-## 🏆 Why Choose Zion Tech Group?
+#### Manufacturing & Industry 4.0
+- Smart factory IoT platforms
+- Supply chain optimization with AI
+- Quality management systems
 
-- **15+ Years Experience**: Proven expertise in enterprise technology
-- **AI Innovation**: Leading-edge AI and machine learning solutions
-- **Global Support**: Worldwide services with local expertise
-- **Customer Success**: Dedicated teams ensuring project success
-- **Competitive Pricing**: Transparent pricing with volume discounts
-- **Custom Solutions**: Tailored implementations for your business
+#### Retail & E-commerce
+- Modern e-commerce platforms
+- Customer analytics and personalization
+- Omnichannel integration solutions
+
+#### Education & EdTech
+- Learning management systems
+- Adaptive learning with AI
+- Virtual reality learning experiences
+
+#### Logistics & Transportation
+- Fleet management systems
+- Route optimization algorithms
+- Supply chain visibility platforms
+
+### 4. Enhanced Services Page (`/services`)
+Expanded service offerings with new categories:
+
+#### New Service Categories Added
+- **Blockchain & Web3**: Smart contracts, DeFi platforms, NFT marketplaces
+- **Mobile Development**: iOS, Android, and cross-platform solutions
+- **Technology Consulting**: Strategy, innovation, and performance optimization
+
+#### Enhanced Existing Services
+- **AI & Machine Learning**: Custom AI development, predictive analytics, NLP
+- **Cloud Architecture**: Migration, microservices, DevOps automation
+- **Cybersecurity**: Auditing, threat detection, compliance management
+- **Data Analytics**: Business intelligence, big data processing, visualization
+- **Digital Transformation**: Process optimization, legacy modernization, change management
+- **IoT Solutions**: Platform development, edge computing, smart infrastructure
+
+### 5. Updated Contact Information
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+### 6. Improved Home Page
+- **Products Showcase Section**: Highlighting key product categories
+- **Enhanced Services Section**: Better organization and visual appeal
+- **Technology Stack Display**: Showcasing our technical expertise
+- **Improved CTAs**: Better call-to-action buttons and contact options
+
+### 7. Enhanced Responsiveness
+- **Mobile-First Design**: Optimized for all screen sizes
+- **Improved Spacing**: Better page spacing and pagination
+- **Touch-Friendly Interface**: Enhanced mobile user experience
+- **Responsive Grid Layouts**: Adaptive layouts for different devices
+
+## 🛠️ Technical Improvements
+
+### Frontend Enhancements
+- **Framer Motion**: Smooth animations and transitions
+- **Tailwind CSS**: Modern, responsive design system
+- **TypeScript**: Type-safe development
+- **Next.js 14**: Latest framework features and optimizations
+
+### Performance Optimizations
+- **Static Generation**: Pre-rendered pages for better performance
+- **Image Optimization**: Optimized images and assets
+- **Code Splitting**: Efficient bundle loading
+- **SEO Optimization**: Meta tags and structured data
+
+### Accessibility Improvements
+- **Semantic HTML**: Proper heading structure and landmarks
+- **ARIA Labels**: Enhanced screen reader support
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Color Contrast**: WCAG compliant color schemes
+
+## 📱 Responsive Design Features
+
+- **Mobile Navigation**: Collapsible mobile menu
+- **Adaptive Layouts**: Grid systems that adapt to screen size
+- **Touch Interactions**: Mobile-optimized touch targets
+- **Flexible Typography**: Responsive text sizing
+- **Optimized Images**: Responsive image handling
+
+## 🔗 Navigation Structure
+
+```
+Home (/)
+├── About (/about)
+├── Services (/services)
+│   ├── AI & Machine Learning
+│   ├── Cloud Solutions
+│   ├── Cybersecurity
+│   ├── Data Analytics
+│   ├── Digital Transformation
+│   ├── IoT Solutions
+│   ├── Blockchain & Web3
+│   ├── Mobile Development
+│   └── Technology Consulting
+├── Products (/products)
+│   ├── Micro SAAS Solutions
+│   ├── AI-Powered Services
+│   ├── Cloud Infrastructure
+│   ├── Cybersecurity
+│   ├── Development Tools
+│   └── Data Solutions
+├── Solutions (/solutions)
+│   ├── Healthcare
+│   ├── Finance
+│   ├── Manufacturing
+│   ├── Retail
+│   ├── Education
+│   └── Logistics
+└── Contact (/contact)
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.0.0 or higher
+- npm 9.0.0 or higher
+
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project directory
+cd zion-tech-group
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+## 🌐 Live Demo
+
+Visit the live application at: [https://ziontechgroup.com](https://ziontechgroup.com)
 
 ## 📞 Contact Information
 
 - **Phone**: +1 302 464 0950
 - **Email**: kleber@ziontechgroup.com
 - **Address**: 364 E Main St STE 1008, Middletown DE 19709
-- **Website**: https://ziontechgroup.com
 
-## 🔗 Quick Links
+## 🔧 Technology Stack
 
-- [Enhanced Services](/enhanced-services) - Complete service catalog
-- [Services Overview](/services-overview) - Detailed service information
-- [Services Pricing](/services-pricing) - Transparent pricing
-- [IT Onsite Services](/it-onsite-services) - Global IT support
-- [Request Quote](/request-quote) - Get custom pricing
+### Frontend
+- **React 18** - Modern React with hooks and concurrent features
+- **Next.js 14** - Full-stack React framework
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+
+### Development Tools
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Husky** - Git hooks for quality assurance
+
+### Deployment
+- **Netlify** - Hosting and deployment platform
+- **Static Generation** - Pre-rendered pages for performance
+
+## 📈 Key Metrics
+
+- **500+ Projects Completed**
+- **50+ Team Members**
+- **15+ Years Experience**
+- **98% Client Satisfaction**
+
+## 🎯 Business Focus
+
+Zion Tech Group specializes in:
+- **Digital Transformation**: End-to-end business modernization
+- **AI & Machine Learning**: Intelligent automation solutions
+- **Cloud Architecture**: Scalable infrastructure design
+- **Cybersecurity**: Enterprise-grade security solutions
+- **Industry Solutions**: Sector-specific technology solutions
+- **Micro SAAS**: Ready-to-deploy business applications
+
+## 🔮 Future Roadmap
+
+- **AI-Powered Chatbots**: Interactive customer support
+- **Advanced Analytics**: Real-time business intelligence
+- **Blockchain Solutions**: Web3 and DeFi platforms
+- **IoT Integration**: Smart device connectivity
+- **Mobile Applications**: Native and cross-platform apps
+- **API Services**: Developer-friendly integrations
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 🤝 Contributing
+
+For business inquiries and partnerships, please contact:
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
 
 ---
 
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
-
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
-```
-
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-If you see a warning about `rimraf@3.0.2` being deprecated, install the latest
-version of `rimraf`:
-
-```sh
-npm install rimraf@^5 --save-dev
-```
-
-This updates the dependency to a supported v5 release.
-
-To prevent memory leaks from the deprecated `inflight` package, the project pins
-`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
-`npm install` to ensure this version is installed.
-
-### Whitelabel Tenant Errors
-
-If the app logs **"Error loading tenant"** during startup, the request to the
-Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
-that you have network connectivity. The tenant hook will retry a few times
-before giving up.
-
-## Testing
-
-Run unit tests with:
-
-```sh
-npm run test
-```
-
-To watch tests during development:
-
-```sh
-npm run test:watch
-```
-
-### End-to-End Tests
-
-Open Cypress for interactive debugging:
-
-```sh
-npm run cypress:open
-```
-
-Run the Cypress suite headlessly:
-
-```sh
-npm run cypress:run
-```
-
-### Coverage Report
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v3`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
-## Notes
-- Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
-- For enterprise usage, add authentication and stronger rate limiting.
+**Zion Tech Group** - Transforming businesses through innovative technology solutions.
