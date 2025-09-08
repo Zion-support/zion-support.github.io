@@ -1,55 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingDown, BarChart3, CheckCircle, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, Calculator } from 'lucide-react';
+import { Shield, CheckCircle, FileText, AlertTriangle, CheckCircle2, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, Lock, Bot } from 'lucide-react';
 
-export default function CloudFinOpsOptimizer() {
+export default function AIComplianceCopilot() {
   const features = [
     {
-      icon: DollarSign,
-      title: 'Cost Optimization',
-      description: 'AI-powered analysis identifies cost-saving opportunities across your cloud infrastructure.'
+      icon: Bot,
+      title: 'AI-Powered Compliance Assistant',
+      description: 'Intelligent AI copilot that guides you through complex compliance requirements and automates routine tasks.'
     },
     {
-      icon: TrendingDown,
-      title: 'Spend Reduction',
-      description: 'Automated recommendations reduce cloud spending by up to 40% without performance impact.'
+      icon: Shield,
+      title: 'Real-time Compliance Monitoring',
+      description: 'Continuous monitoring of regulatory changes and automatic compliance status updates.'
     },
     {
-      icon: BarChart3,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of cloud costs with instant alerts for budget overruns.'
+      icon: FileText,
+      title: 'Smart Document Processing',
+      description: 'AI-powered document analysis and compliance verification with automated workflows.'
     },
     {
-      icon: Calculator,
-      title: 'Predictive Analytics',
-      description: 'Forecast future cloud costs and optimize resource allocation proactively.'
+      icon: AlertTriangle,
+      title: 'Predictive Risk Assessment',
+      description: 'Advanced AI algorithms predict potential compliance risks before they materialize.'
     },
     {
-      icon: PieChart,
-      title: 'Cost Allocation',
-      description: 'Accurate cost attribution to teams, projects, and business units.'
+      icon: CheckCircle2,
+      title: 'Automated Audit Support',
+      description: 'Intelligent preparation of compliance reports and audit documentation with AI assistance.'
     },
     {
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Set and enforce budgets with automated controls and notifications.'
+      icon: Lock,
+      title: 'Intelligent Policy Management',
+      description: 'AI-driven policy enforcement with real-time monitoring and automated compliance alerts.'
     }
   ];
 
   const benefits = [
-    'Reduce cloud costs by 40%',
-    'Improve cost visibility by 90%',
-    'Automate 80% of cost optimization',
-    'Real-time budget monitoring',
-    'Predictive cost forecasting',
-    'Team-level cost accountability'
+    'Reduce compliance workload by 70%',
+    'Automate 85% of compliance tasks',
+    'Real-time regulatory updates',
+    'AI-powered risk prediction',
+    'Seamless audit preparation',
+    '24/7 intelligent compliance support'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
         <div className="relative container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -57,21 +57,21 @@ export default function CloudFinOpsOptimizer() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
-              <DollarSign className="w-5 h-5 text-green-400" />
-              <span className="text-green-400 text-sm font-medium">Cost Optimization</span>
+            <div className="inline-flex items-center space-x-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-6">
+              <Bot className="w-5 h-5 text-indigo-400" />
+              <span className="text-indigo-400 text-sm font-medium">AI Copilot</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cloud FinOps Optimizer
+              AI Compliance Copilot
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Optimize your cloud costs with AI-powered insights, automated optimization, and real-time financial governance.
+              Your intelligent AI companion for compliance management, automating complex tasks and providing real-time guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-green-400 hover:text-green-400 transition-all duration-300">
+              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -89,10 +89,10 @@ export default function CloudFinOpsOptimizer() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Cost Management
+              Your AI Compliance Partner
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our FinOps platform provides comprehensive cost optimization with AI-driven insights and automated recommendations.
+              Our AI copilot provides intelligent assistance, automates complex compliance tasks, and guides you through regulatory requirements.
             </p>
           </motion.div>
 
@@ -103,9 +103,9 @@ export default function CloudFinOpsOptimizer() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -126,15 +126,15 @@ export default function CloudFinOpsOptimizer() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose Cloud FinOps?
+                Why Choose AI Compliance Copilot?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Transform your cloud financial management with intelligent automation and proactive cost optimization.
+                Transform your compliance management with intelligent AI assistance, predictive insights, and comprehensive automation.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
@@ -147,23 +147,23 @@ export default function CloudFinOpsOptimizer() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-500/30">
+              <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
-                    <div className="text-slate-300 text-sm">Cost Reduction</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">70%</div>
+                    <div className="text-slate-300 text-sm">Workload Reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-400 mb-2">90%</div>
-                    <div className="text-slate-300 text-sm">Cost Visibility</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+                    <div className="text-slate-300 text-sm">Task Automation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
-                    <div className="text-slate-300 text-sm">Automation</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">Real-time</div>
+                    <div className="text-slate-300 text-sm">Updates</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-400 mb-2">Real-time</div>
-                    <div className="text-slate-300 text-sm">Monitoring</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                    <div className="text-slate-300 text-sm">AI Support</div>
                   </div>
                 </div>
               </div>
@@ -182,17 +182,17 @@ export default function CloudFinOpsOptimizer() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Optimize Cloud Costs?
+              Ready to Meet Your AI Compliance Partner?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join leading enterprises that save millions with intelligent cloud cost optimization and FinOps best practices.
+              Join leading organizations that use AI copilots to streamline compliance management and reduce regulatory risk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-green-400 hover:text-green-400 transition-all duration-300">
+              <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300">
                 Contact Sales
               </button>
             </div>

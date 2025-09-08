@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Brain, 
+  Cloud, 
   Shield, 
   Cpu, 
   Cloud, 

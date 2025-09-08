@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  LifeBuoy, 
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 

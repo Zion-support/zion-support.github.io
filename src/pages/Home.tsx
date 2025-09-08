@@ -1,57 +1,126 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { 
-  ArrowRight, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Rocket, 
-  Users, 
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Target,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Play,
-  ChevronRight
-} from 'lucide-react';
 
-const Home: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence that transforms your business operations',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern business needs',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategies',
-      color: 'from-yellow-500 to-orange-500'
+import React, { Suspense, useState, useEffect, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+
+
+import { SEO  } from '@/components/SEO';
+import { HeroSection  } from '@/components/HeroSection';
+import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
+
+// Optimized futuristic animated background component
+const FuturisticBackground = React.memo(() => {
+  const particles = useMemo(() => 
+    [...Array(20)].map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: i * 0.1,
+      duration: 5 + i * 0.3
+    })), []
+  );
+
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+          style={{
+            left: particle.left,
+            top: particle.top,
+          }}
+          animate={{
+            y: [-20, 20, -20],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: particle.duration,
+            delay: particle.delay,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+    </div>
+  );
+});
+
+// Loading fallback component
+const LoadingFallback = ({ message }: { message: string })  => (
+  <div className="py-20 bg-slate-900">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <div className="animate-pulse">
+          <div className="h-12 bg-slate-700 rounded-lg mb-4 max-w-md mx-auto"></div>
+          <div className="h-6 bg-slate-700 rounded-lg max-w-2xl mx-auto"></div>
+        </div>
+        <p className="text-slate-400 mt-4">{message}</p>
+      </div>
+    </div>
+  </div>
+);
+
+// Service categories data
+const serviceCategories = [
+  {
+    name: "AI Solutions",
+    description: "Cutting-edge artificial intelligence services for business transformation",
+    icon: "🤖",
+    href: "/ai-services",
+    count: 20,
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Edge & IoT",
+    description: "Ultra-low latency edge computing and IoT platform solutions",
+    icon: "⚡",
+    href: "/services/edge-computing-platform",
+    count: 8,
+    color: "from-blue-500 to-purple-600"
+  },
+  {
+    name: "Cloud & DevOps",
+    description: "Scalable cloud infrastructure and automated deployment solutions",
+    icon: "☁️",
+    href: "/services/cloud-devops",
+    count: 12,
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    name: "Cybersecurity",
+    description: "Advanced security protocols and threat protection systems",
+    icon: "🔒",
+    href: "/services/ai-compliance-copilot",
+    count: 10,
+    color: "from-red-500 to-orange-600"
+  },
+  {
+    name: "Data Governance",
+    description: "AI-powered data protection and compliance management",
+    icon: "🛡️",
+    href: "/services/ai-data-governance",
+    count: 6,
+    color: "from-purple-500 to-pink-600"
+  },
+  {
+    name: "Customer Success",
+    description: "AI-driven customer engagement and retention platforms",
+    icon: "💝",
+    href: "/services/ai-customer-success-platform",
+    count: 5,
+    color: "from-yellow-500 to-orange-600"
+  }
+];
+
+// Animation variants for smooth performance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
     }
   ];
 
@@ -239,7 +308,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-700/50 text-center"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+                whileHover={{ y: -8, scale: 1.02 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -435,4 +506,82 @@ export default function Home() {
   );
 };
 
-export default Home;
+      {/* Lazy Loaded Sections */}
+      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
+        <CategoriesSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
+        <FeatureHighlights />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
+        <FeatureCTAs />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading benefits..." />}>
+        <BenefitsSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading how it works..." />}>
+        <HowItWorksSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading tech solutions..." />}>
+        <TechSolutionsSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading case studies..." />}>
+        <CaseStudiesSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading team expertise..." />}>
+        <TeamExpertiseSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading global presence..." />}>
+        <GlobalPresenceSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading innovation research..." />}>
+        <InnovationResearchSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading client stories..." />}>
+        <ClientSuccessStoriesSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
+        <InteractiveTestimonials />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading technology stack..." />}>
+        <TechnologyStackSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading security compliance..." />}>
+        <SecurityComplianceSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading pricing..." />}>
+        <PricingSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading featured listings..." />}>
+        <FeaturedListingsSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading newsletter..." />}>
+        <NewsletterSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading IT service request..." />}>
+        <ITServiceRequestHero />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading floating CTA..." />}>
+        <FloatingCTA />
+      </Suspense>
+    </div>
+  );
+}

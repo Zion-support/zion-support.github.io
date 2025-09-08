@@ -13,13 +13,44 @@ export function ChatAssistant() {
   ]);
   const [inputValue, setInputValue] = useState('');
 
-  const handleSendMessage = () => {
-    if (inputValue.trim()) {
-      const newMessage = {
-        id: messages.length + 1,
-        type: 'user' as const,
-        content: inputValue,
-        timestamp: new Date()
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const recognitionRef = useRef<any>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  const scrollToBottom = useCallback(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, []);
+
+  useEffect(()  => {
+    scrollToBottom()}, [messages, scrollToBottom]);
+
+  // Theme management
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+      
+      const handleChange = (e: MediaQueryListEvent)  => {
+        setCurrentTheme(e.matches ? 'dark' : 'light')};
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {
+      setCurrentTheme(theme)}
+  }, [theme]);
+
+  // Voice recognition setup
+  useEffect(() => {
+    if (enableVoice && 'webkitSpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      recognitionRef.current = new SpeechRecognition();
+      recognitionRef.current.continuous = false;
+      recognitionRef.current.interimResults = false;
+      recognitionRef.current.lang = 'en-US';
+
+      recognitionRef.current.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setInputValue(transcript);
+        setIsListening(false);
       };
       
       setMessages([...messages, newMessage]);

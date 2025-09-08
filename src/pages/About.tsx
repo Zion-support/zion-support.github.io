@@ -1,7 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { SEO  } from '@/components/SEO';
+import { Users, 
+  Target, 
   Award, 
   Target, 
   Globe, 
@@ -54,8 +56,6 @@ function About() {
       image: '/team/kleber-santos.jpg'
     }
   ];
-
-const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -273,6 +273,4 @@ const About: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default About;
+}

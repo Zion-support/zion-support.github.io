@@ -429,9 +429,9 @@ const Blog: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                  </article>
-                </motion.div>
-              ))}
+                  </div>
+                </motion.article>
+                ))}
             </div>
           </div>
         </section>
