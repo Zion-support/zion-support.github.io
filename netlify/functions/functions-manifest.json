@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:17:52.009Z",
+  "generatedAt": "2025-08-11T23:13:23.023Z",
   "functions": [
     "a11y-alt-text-runner",
     "a11y-audit-runner",
@@ -155,7 +155,7 @@
     "newsroom-runner",
     "newsroom-scheduler",
     "og-image-update-runner",
-    "og-meta-audit-runner",
+    "orphan-routes-detector",
     "readme-advertiser",
     "redirects-synthesizer",
     "repo-knowledge-graph-runner",
@@ -198,7 +198,7 @@
     "ultrafast-fcb-orchestrator",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "unused-assets-scanner-runner",
+    "unused-assets-scanner",
     "website-search-index-runner"
   ]
 }
