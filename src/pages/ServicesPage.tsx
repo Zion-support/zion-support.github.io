@@ -1,116 +1,121 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { SERVICES } from "@/data/servicesData";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import useSWR from 'swr';
-import { captureException } from "@/utils/sentry";
-import { SkeletonCard } from '@/components/ui';
-import { useDelayedError } from '@/hooks/useDelayedError';
-
-// Filter options specific to services
-const SERVICE_FILTERS = [
-  { label: 'Development', value: 'development' },
-  { label: 'Management', value: 'management' },
-  { label: 'Security', value: 'security' },
-  { label: 'Analytics', value: 'analytics' },
-  { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' },
-];
-
-async function fetchServices(): Promise<ProductListing[]> {
-  try {
-    const res = await fetch('/api/services');
-    if (!res.ok) {
-      throw new Error(`Failed to fetch services: ${res.status} ${res.statusText}`);
-    }
-    return (await res.json()) as ProductListing[];
-  } catch (err) {
-    captureException(err);
-    throw err;
-  }
-}
-
-export default function ServicesPage() {
-  const { data, error, isLoading, mutate } = useSWR<ProductListing[]>(
-    '/api/services',
-    fetchServices,
+const ServicesPage: React.FC = () => {
+  const services = [
     {
-      shouldRetryOnError: false,
-      revalidateOnFocus: false,
+      id: 1,
+      title: 'AI Development',
+      description: 'Custom AI solutions and machine learning models',
+      icon: '🤖',
+      price: 'From $5,000',
+      features: ['Custom AI Models', 'Machine Learning', 'Data Analysis', 'AI Integration']
+    },
+    {
+      id: 2,
+      title: 'Web Development',
+      description: 'Modern, responsive web applications',
+      icon: '🌐',
+      price: 'From $3,000',
+      features: ['React/Next.js', 'Full-Stack Development', 'API Integration', 'Performance Optimization']
+    },
+    {
+      id: 3,
+      title: 'Mobile Development',
+      description: 'iOS and Android mobile applications',
+      icon: '📱',
+      price: 'From $4,000',
+      features: ['React Native', 'Native Development', 'Cross-Platform', 'App Store Deployment']
+    },
+    {
+      id: 4,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and deployment',
+      icon: '☁️',
+      price: 'From $2,000',
+      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Monitoring']
+    },
+    {
+      id: 5,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions',
+      icon: '🔒',
+      price: 'From $3,500',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
+    },
+    {
+      id: 6,
+      title: 'Data Analytics',
+      description: 'Business intelligence and data visualization',
+      icon: '📊',
+      price: 'From $2,500',
+      features: ['Data Visualization', 'Business Intelligence', 'Predictive Analytics', 'Reporting']
     }
-  );
-  const delayedError = useDelayedError(error);
-
-  const listings = data || SERVICES;
-
-  if (isLoading || (error && !delayedError)) {
-    return (
-      <div data-testid="loading-state" className="container mx-auto px-4 py-12">
-        {/* Optional: you can add a skeleton for the title if needed */}
-        {/* <Skeleton className="h-8 w-1/3 mb-8" /> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <SkeletonCard key={index} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  if (delayedError) {
-    return (
-      <div data-testid="error-state" className="py-12 text-center space-y-4">
-        <p className="text-red-400">Failed to load services. {delayedError?.message}</p>
-        <Button data-testid="retry-button" onClick={() => mutate()}>
-          Retry
-        </Button>
-      </div>
-    );
-  }
+  ];
 
   return (
-    <ErrorBoundary>
-    <>
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
-              </Button>
-            </Link>
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-600">
+        {/* Header */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center text-white mb-16">
+            <h1 className="text-5xl font-bold mb-6">
+              Our <span className="text-cyan-400">Services</span>
+            </h1>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Comprehensive IT solutions tailored to your business needs. From AI development to cloud infrastructure, we've got you covered.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {services.map((service) => (
+              <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+                <p className="text-blue-200 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="text-sm text-blue-200 flex items-center">
+                      <span className="text-cyan-400 mr-2">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  to={`/contact?service=${service.title}`}
+                  className="w-full bg-cyan-400 hover:bg-cyan-500 text-blue-600 font-semibold py-2 px-4 rounded-lg text-center block transition-colors"
+                >
+                  Get Quote
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your project requirements and get a personalized quote.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Link 
+                to="/contact"
+                className="bg-cyan-400 hover:bg-cyan-500 text-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <DynamicListingPage
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
-        listings={listings}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
-      />
-      <div className="bg-zion-blue-dark py-8 text-center">
-        <p className="text-white">
-          New to Zion? Learn more{' '}
-          <Link to="/about" className="text-zion-cyan underline">about our mission</Link>{' '}
-          or <Link to="/contact" className="text-zion-cyan underline">contact our team</Link> for custom solutions.
-        </p>
-      </div>
-      <TrustedBySection />
-    </>
-    </ErrorBoundary>
   );
-}
+};
+
+export default ServicesPage;
