@@ -14,7 +14,6 @@ class TestRunner {
     testDirs.forEach(dir => {}
       if (fs.existsSync(dir)) {}
         const files = fs.readdirSync(dir)
->>>>>>> origin/cursor/delete-old-data-records-6bba
           file.includes('.test.') || file.includes('.spec.')
         );
         testFilesFound += testFiles.length;
@@ -23,7 +22,6 @@ class TestRunner {
     if (testFilesFound === 0) {
       console.log('⚠️ No test files found');
     } else {
->>>>>>> origin/cursor/delete-old-data-records-6bba
       console.log(`✅ Found ${testFilesFound} test files`);
     }
     return testFilesFound;
@@ -35,41 +33,8 @@ class TestRunner {
   checkPackageJsonScripts() {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-<<<<<<< HEAD
-
-=======
-      if (!packageJson.scripts.test) {
-        console.log('⚠️ No test script found in package.json');
-        return false;
-      }
-      console.log('✅ Test script found in package.json');
-      return true;
-<<<<<<< HEAD
 
 
-=======
-    } catch (error) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      console.log('❌ Error reading package.json:', error.message);
-      return false;
-    }
-        return false}
-
-      console.log('✅ Test script found in package.json')
-      return true} catch (error) {'"
-      console.log('❌ Error reading package."json": ', error.message)
-      return false}
-  generateReport($2) {}
-    const report = {"
-      "timestamp": new Date().toISOString(),"
-      "results": this.results,"
-      "summary": {}
-        testFilesFound: this.checkTestFiles(),"
-        "testScriptExists": this.checkPackageJsonScripts()
-      }
-    fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
-    console.log('Test report generated');
-  }
 
 if (require.main === module) {
   const runner = new TestRunner();

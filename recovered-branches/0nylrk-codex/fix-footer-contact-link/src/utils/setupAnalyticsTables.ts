@@ -1,9 +1,5 @@
 import {supabase} from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',export async function ensureAnalyticsTablesExist() {
-  try {
-    // Check if analytics_events table exists
-    const { error } = await supabase
-      .from('analytics_events')
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -31,18 +27,6 @@ export async function ensureAnalyticsTablesExist() {;
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
-<<<<<<< HEAD
-
-        
-
-        -- View for daily page views
-        CREATE OR REPLACE VIEW public && public.daily_page_views        -- View for daily page views
-        CREATE OR REPLACE VIEW public.daily_page_views
-        WITH (security_invoker = true) AS
-        SELECT
-          DATE_TRUNC('day', created_at) AS date;
-          path;
-
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id),
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at),
@@ -112,11 +96,6 @@ SELECT
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC,
       `
-    }),
-    
-    // // // console.log('Analytics tables created successfully')
-  } catch (error) {
-    console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
 ;
 async function createAnalyticsTables() {;
@@ -212,4 +191,3 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 // Tables creation failed, but we can still continue;
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

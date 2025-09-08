@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useEffect, useCallback } from 'react';
 
 // Define MessageEvent type if not available
@@ -138,3 +139,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 origin/main
 origin/automation-improvements-final
+=======
+
+
+
+}
+
+
+}
+
+
+        }
+
+
+
+
+
+
+
+
+
+>>>>>>> main

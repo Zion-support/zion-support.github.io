@@ -8,20 +8,6 @@ export default function FirstSteps() {
     "address": '364 E Main St STE 1008 Middletown DE 19709',
     "site": 'https://ziontechgroup.com'
 
-<<<<<<< HEAD
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {ArrowLeft,, Play,, CheckCircle,, ArrowRight,, Book} from 'lucide-react';
-export default function FirstSteps() {;
-  const contact = {;
-    "phone": '+1 302 464 0950',;
-    "email": 'kleber@ziontechgroup && ziontechgroup.com',;
-    "address": '364 E Main St STE 1008 Middletown DE 19709',;
-    "site": 'https://ziontechgroup && ziontechgroup.com'
-};
   return (
     <>;
       <Head>;

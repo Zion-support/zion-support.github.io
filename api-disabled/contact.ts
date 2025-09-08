@@ -1,22 +1,4 @@
 export {};
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' })}
-
-module.exports = {};
-module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
@@ -37,18 +19,6 @@ module.exports = {};
       return res.status(400).json({ 
         message: 'Invalid email format' 
       })}
-
-    // TODO: Integrate with email service (SendGrid, AWS SES, etc.)
-    // For now, we'll just log the data and return success
-    console.log('Contact form submission:' {
-      ...formData,
-      timestamp: new Date().toISOString(),
-      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-    });
-
-    // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
     res.status(200).json({ 
       message: 'Thank you for your message! We will get back to you soon.',
       success: true 

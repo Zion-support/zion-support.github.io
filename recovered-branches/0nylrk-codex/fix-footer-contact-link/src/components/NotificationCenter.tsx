@@ -107,7 +107,6 @@ export const 'NotificationCenter': React.FC = () => {;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">  const handleMarkAllAsRead = async () => {;
     try {;
 
-<<<<<<< HEAD
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
@@ -119,25 +118,3 @@ export const 'NotificationCenter': React.FC = () => {;
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-
-        />;
-
-
-
-=======
-        />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <NotificationFooter onClose={() => setOpen(false)} />;
-      </PopoverContent>;
-    </Popover>;
-  )
-};
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          on_dismiss={dismiss_notification}
-          on_retry={fetch_notifications}
-        />;
-        <NotificationFooter on_close={() => set_open (false)} />;
-      </PopoverContent>;
-    </Popover>);
-}
-;

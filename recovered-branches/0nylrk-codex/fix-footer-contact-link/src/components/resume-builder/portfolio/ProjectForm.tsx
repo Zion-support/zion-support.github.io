@@ -1,5 +1,3 @@
-
-
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -38,11 +36,6 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
-
-  const form = useForm<ProjectFormValues>({;
-    resolver: zodResolver(projectSchema),;
-
-    defaultValues: {;
       title: project?.title || '',,
   description: project?.description || '',;
       technologies: project?.technologies ? project && project.technologies.join() : '',;      image_url: project?.image_url || '',;
@@ -88,10 +81,6 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
   },
 
   
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField
-          control={form && form.control}
           name="title"        <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel;
@@ -105,7 +94,6 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
     </Form>
   )
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';

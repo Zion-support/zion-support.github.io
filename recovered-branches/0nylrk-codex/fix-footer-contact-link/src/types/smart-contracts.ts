@@ -14,11 +14,6 @@ export interface SmartContractInfo {;
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
-
-export interface EscrowContractDetails {;
-
-export interface EscrowContractDetails {
-
 export interface EscrowContractDetails {;
   talent: string;
   amount: number;
@@ -38,7 +33,6 @@ export interface DeploymentOptions {;
   arbitrator?: string;}
 export interface DeploymentOptions {
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   completion_deadline: string,
 
@@ -63,12 +57,6 @@ export interface DeploymentOptions {;
   walletAddress?: string,;
 
 
-<<<<<<< HEAD
 
 
 
-=======
-  useEscrow: boolean;,
-  deployToChain: boolean;
-}
-;

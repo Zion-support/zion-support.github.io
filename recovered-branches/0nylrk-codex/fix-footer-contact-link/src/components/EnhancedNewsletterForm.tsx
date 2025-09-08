@@ -1,7 +1,5 @@
-
 import React from 'react';import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { useState } from "react";
@@ -26,10 +24,6 @@ export function EnhancedNewsletterForm() {;
         <div>;"
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
           <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
-            deals;
-          </p>;
-        </div>;
-      </div>;
 
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">            </div>;
           ))}
@@ -123,41 +117,9 @@ export function EnhancedNewsletterForm() {;
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
               {String.fromCharCode(65 + i)}
             </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
           ))}
         </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  );
-
-
-<<<<<<< HEAD
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-            required
-          />
-          <Button 
-            type="submit" 
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-          >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
-          </Button>
-        </form>
-      )}
-
-
-
-
-
-=======
-};
-}</div>) ) 
-}</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/newsroom-scheduler.js
 :backup-problematic-files/netlify/functions/newsroom-scheduler.js
 const path = require('path'),;
@@ -32,6 +33,12 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
     stdio: 'pipe,
   encoding: 'utf8)
@@ -44,25 +51,6 @@ function runNode(relPath, args = []) {
     stderr: res.stderr |
 exports.config = { schedule: '0 * * * *' }
 
-=======
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
-exports.config = { schedule: '0 * * * *' }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-<<<<<<< HEAD
 
     if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
@@ -78,6 +66,7 @@ exports.handler = async () => {
 
 
 
+<<<<<<< HEAD
 =======
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
@@ -145,3 +134,5 @@ main:netlify/functions/newsroom-scheduler.js
 }
 main:netlify/functions/newsroom-scheduler.js
 :backup-problematic-files/netlify/functions/newsroom-scheduler.js
+=======
+>>>>>>> main

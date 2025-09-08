@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-import { useEffect  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { Message, Conversation  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-
-=======
-import { useEffect  } from 'react';'
-import { supabase  } from '@/integrations/supabase/client';'
-import { UserProfile, UserDetails  } from '@/types/auth';'
-import { Message, Conversation  } from '@/types/messaging';'
-import { toast } from '@/hooks/use-toast';'
-import {useEffect} from 'react';'
-import {supabase} from '@/integrations / supabase / client';'
-import {UserProfile, UserDetails} from '@/types / auth';'
-import {Message, Conversation} from '@/types / messaging';'
-import {toast} from '@/hooks / use - toast';'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-export function useMessagingRealtime (
-
-import {useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {UserProfile, UserDetails} from '@/types/auth';
-import {Message, Conversation} from '@/types/messaging';
-import {toast} from '@/hooks/use-toast';
-        { 
-          event: 'INSERT', 
-          schema: 'public', 
-          table: 'messages', 
-          filter: `recipient_id=eq.${user && user.id}` 
-        }, 
-        (payload) => {
-          // Update messages if the conversation is selected
-          if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
-            setActiveMessages(prev => [...prev, payload && payload.new as Message])
-          }
-          // Update conversations;
-          fetchConversations();
-
-          // Show toast notification for new message
           toast({          })
         }
       )
       .subscribe();
 
 
-<<<<<<< HEAD
     return () => {
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
@@ -148,51 +101,3 @@ export function useMessagingRealtime(;
     if (!user) return,;
 ;
     // Subscribe to new messages;
-<<<<<<< HEAD
-
-    const subscription = supabase;
-      .channel('messages');
-
-=======
-      .channel('messages');'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      .on(;
-        'postgres_changes',;
-        {;
-          event: 'INSERT',;
-          schema: 'public',;
-          table: 'messages',;
-          filter: `recipient_id=eq.${user.id}`;
-        },;
-        (payload) => {;
-          // Update messages if the conversation is selected;
-          if (activeConversation && payload.new.sender_id === activeConversation.other_user.id) {;
-            setActiveMessages(prev => [...prev, payload.new as Message]);
-          }
-;
-          // Update conversations;
-          fetchConversations(),;
-          // Show toast notification for new message;
-          toast({;
-            title: `New message from ${payload.new.sender_name || 'Someone'}`,
-  description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
-          });
-        });
-      .subscribe();
-    return () => {;
-      supabase.removeChannel(subscription);
-
-
-<<<<<<< HEAD
-
-
-    }
-  }, [user, active_conversation, fetch_conversations, setActiveMessages]);
-
-
-
-=======
-    }
-  }, [user, activeConversation, fetchConversations, setActiveMessages])
-}
-}

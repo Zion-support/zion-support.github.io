@@ -1,15 +1,3 @@
-
-
-import React from "react";
-import { TALENT_PROFILES } from "../../data/talent";
-import type { TalentProfile } from "../../data/talent";
-type Props = {;
-  region?: string;
-  service?: string;
-
-
-};
-
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
 
@@ -107,15 +95,6 @@ export default function TalentGrid({ region, service }: Props) {
       ))}
     </div>;
   );
-
-}
-
-}
-
-      ))}
-    </div>
-  );
-}
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";

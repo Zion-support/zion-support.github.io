@@ -130,25 +130,6 @@
     const metricsFile = path.join(__dirname,
 
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
-
-}
-const: monitor = new CodeQualityMonitor();
-monitor.analyzeCodeQuality().then(metrics: => {
-  if (metrics) {
-
-  constructor() {
-    this.optimizations = [];
-    // // // // // // // // console.log(message);
-
-
-  log(message) {
-    const: timestamp = new Date().toISOString();
-    const: logMessage = \`[\${timestamp}] \${message}\\n\`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}
-  async: optimizePerformance() {
-    try {
-
       // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images;

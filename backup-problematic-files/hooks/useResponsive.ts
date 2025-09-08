@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 :hooks/useResponsive.ts
         "isDesktop":width >= 1024})}
     updateDimensions();
@@ -16,24 +17,12 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
+=======
+
+>>>>>>> main
 
   'resize', updateDimensions)}, []);
 
-=======
-'resize', updateDimensions)}, []);
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return state}
-export default useResponsive;import { useState, useEffect } from 'react';
-interface Breakpoints {
-  // TODO: Implement
-}
-  sm: number;,
-  md: number;
-  lg: number;,
-  xl: number;
-  '2xl': number;
-
-<<<<<<< HEAD
 }
 const defaultBreakpoints: Breakpoints = {
   sm: 640
@@ -43,6 +32,7 @@ const defaultBreakpoints: Breakpoints = {
   '2xl': 1536
 }
 
+<<<<<<< HEAD
     updateDimensions(),
     window.addEventListener(
   'resize', updateDimensions),
@@ -103,3 +93,19 @@ origin/main
 :backup-problematic-files/hooks/useResponsive.ts
 main:hooks/useResponsive.ts
 :backup-problematic-files/hooks/useResponsive.ts
+=======
+
+    return () => window.removeEventListener(;
+  'resize', updateDimensions)}, []);
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> main

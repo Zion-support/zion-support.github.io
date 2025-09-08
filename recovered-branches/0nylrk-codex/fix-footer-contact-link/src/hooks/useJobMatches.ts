@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -23,11 +22,6 @@ export function useJobMatches(jobId: string) {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-      // Refresh the matches list
-      await fetchMatches()
-    } catch (error) {
-      console.error("Error triggering AI matching:", error),
-      toast({
   }
 }
 ;
@@ -43,31 +37,3 @@ export function useJobMatches(jobId: string) {
     } catch (error) {"
       console.error ("Error triggering AI matching:", error);
 
-<<<<<<< HEAD
-      toast ({
-        title: "Matching Failed",
-  description: "Could not process talent matching. Please try again later.",
-        variant: "destructive"});
-    } finally {
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      setIsProcessing (false);
-    }
-  }
-  }
-}
-
-;
-  useEffect (() => {}
-    fetch_matches ();
-  }, [job_id]);
-;
-  return {}
-    matches;
-    is_loading;
-    is_processing;
-    triggerAIMatching;
-
-  }
-}}

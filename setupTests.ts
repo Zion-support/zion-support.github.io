@@ -2,6 +2,7 @@ const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
+<<<<<<< HEAD
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
@@ -23,3 +24,10 @@ import '@testing-library/jest-dom/vitest';''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+
+
+
+
+
+>>>>>>> main

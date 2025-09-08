@@ -1,5 +1,3 @@
-
-
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -71,30 +69,6 @@ const syncLogs = [;
   }  return (
     <Card>;
       <div className="p-4">;
-<<<<<<< HEAD
-
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Integration</TableHead>;
-              <TableHead>Event</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead>Time</TableHead>;"
-              <TableHead className="hidden md:table-cell">Details</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {syncLogs && syncLogs.map((log) => (;
-              <TableRow key={log && log.id}>;"
-                <TableCell className="font-medium">{log && log.integration}</TableCell>;
-                <TableCell>;'
-                  {log && log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l && l.toUpperCase())}
-                </TableCell>;
-                <TableCell>{getStatusBadge(log && log.status)}</TableCell>;
-                <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;"
-                <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
-              </TableRow>;
-
         </Table>;
       </div>;
     </Card>;
@@ -317,5 +291,3 @@ pr-12325
           </TableBody>;
         </Table>;
       </div>;
-    </Card>);
-}

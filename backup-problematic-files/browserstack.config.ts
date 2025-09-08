@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
 ;
 export default defineConfig({;
@@ -47,6 +48,10 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "tests/e2e",
   use: {
+=======
+
+
+>>>>>>> main
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
@@ -54,6 +59,7 @@ export default defineConfig({
 
   },
   projects: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { define_config, devices } from '@playwright / test';
@@ -159,3 +165,6 @@ import { define_config, devices } from '@playwright / test';
     ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],
   ],
 });
+=======
+
+>>>>>>> main

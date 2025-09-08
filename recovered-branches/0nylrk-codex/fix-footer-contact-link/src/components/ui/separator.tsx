@@ -27,29 +27,7 @@ import {cn} from '@/lib/utils';
 import * as React from "react"""
 import * as SeparatorPrimitive from "@radix-ui/react-separator"""
 import { cn } from "@/lib/utils""
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const Separator = React.forwardRef<
-  React.ElementRef<typeof SeparatorPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
-></typeof>(
-  (    ref
-  ) => (
-    <SeparatorPrimitive.Root
-
-import React from 'react';
-import * as React from 'react';import React from 'react';
-import * as React from 'react';
-      ref={ref}
-      decorative={decorative}
-      orientation={orientation}
-      className={cn(        className
-=======      className={cn(;
-        "shrink-0 bg-border",;
-        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
-        className;
 export { Separator };
 ;
 
@@ -107,29 +85,10 @@ const Separator = React.forward_ref<;
     { class_name, orientation = 'horizontal', decorative = true, ...props },'
   ('
     { class_name, orientation = 'horizontal', decorative = true, ...props },
->>>>>>> origin/cursor/delete-old-data-records-6bba
     ref) => (
     <SeparatorPrimitive.Root;
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-<<<<<<< HEAD
-
-      className={cn ('
-        'shrink - 0 bg - border','
-        orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',
-
-=======
-      className={cn (
-        'shrink - 0 bg - border','
-        }
-        orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]','
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        class_name)}
-      {...props} />));
-Separator.display_name = SeparatorPrimitive.Root.display_name;
-<<<<<<< HEAD
-
-;
 export { Separator }
 ;

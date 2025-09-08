@@ -1,12 +1,14 @@
-<<<<<<< HEAD
 
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 import React from 'react';
+=======
+
+>>>>>>> main
 interface PricingProps {
   className?: string;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 const Pricing: React.FC<PricingProps> = ({ className }) => {

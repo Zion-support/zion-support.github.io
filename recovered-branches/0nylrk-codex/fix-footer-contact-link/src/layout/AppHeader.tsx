@@ -54,7 +54,6 @@ export function AppHeader() {;
           <div className="md:hidden ml-auto mr-4">;
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
->>>>>>> origin/cursor/delete-old-data-records-6bba
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
               aria-expanded={mobileMenuOpen}"
               aria-label="Toggle mobile menu";
@@ -78,20 +77,6 @@ export function AppHeader() {;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"    <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur-md">;
         <div className="container flex h - 16 items - center px - 4 sm:px-6">;
-          <Logo />;
-          <div className="ml - 6 flex-1 hidden md:block">;
-            <MainNavigation unread_count={unread_count} />;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden ml - auto mr-4">;
-            <button;
-              on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
-              className="inline - flex items - center justify - center rounded - md p - 2 text - white / 70 hover:text - white hover:bg - zion - purple / 10 focus:outline-none";
-              aria - expanded={mobileMenuOpen}
-              aria - label="Toggle mobile menu";
-            >;
-              <span className="sr-only">Open main menu</span>;
-              {mobileMenuOpen ? (
                 <X className="block h - 6 w-6" aria - hidden="true" />) : (
                 <Menu className="block h - 6 w-6" aria - hidden="true" />)}
             </button>;

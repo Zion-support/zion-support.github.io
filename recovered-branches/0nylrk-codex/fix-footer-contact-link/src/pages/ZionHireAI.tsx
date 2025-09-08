@@ -26,11 +26,6 @@ export default function ZionHireAI() {};
 import { useAuth } from "@/hooks/useAuth",
 import { Link } from "react-router-dom",
 export default function ZionHireAI() {
-<<<<<<< HEAD
-
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
-    return (
     <>
       <SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant"
@@ -65,12 +60,6 @@ import { Link } from "react-router-dom",;
 ;
 export default function ZionHireAI() {;
   }
-
-export default function ZionHireAI() { return null; }
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),;
-  const { isAuthenticated } = useAuth(),;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       />;
       <Header />;"
       <main className="flex-1">;
@@ -147,25 +136,10 @@ function ZionHireAI() {
                   >;
                     <Link to={is_authenticated ? "/enterprise / admin" : "/login"}>;
                       Get Started <ArrowRight className="ml - 2 h - 4 w-4" />;
-                    </Link>;
-                  </Button>;
-                  <Button;
-                    variant="outline";
-                    size="lg";
-                    className="bg-transparent border-white text-white hover:bg-white/10";
-                    asChild;
-                  >;
-                    <Link to="/enterprise/demo">;
                     className="bg - transparent border - white text - white hover:bg-white / 10";
                     as_child;
                   >;
                     <Link to="/enterprise / demo">;
-                      Request Demo;
-                    </Link>;
-                  </Button>;
-                </div>;
-              </div>;
-              <div className="relative hidden md:block">;
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -217,7 +191,6 @@ function ZionHireAI() {
   isWhitelabel, brandName, primaryColor 
 }= useWhitelabel ();
 const {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 reduce time-to-hire, and improve candidate experience. </p> <Button asChild > <Link to=" /enterprise/demo" > Schedule a Demo </Link> </Button> </div> </section> </main> <Footer /> </>) 
 }
     </>;

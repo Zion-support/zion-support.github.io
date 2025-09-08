@@ -1,5 +1,3 @@
-
-
 };
 
 };
@@ -60,10 +58,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</motion && motion.div>) ) ;
 }</motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Micro SAAS Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
-
-
-}initial= {
-  {
   opacity: 0, y: 50
 }whileInView= {
   {
@@ -138,12 +132,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   {
   opacity: 0, y: 50
   duration: 0.8, delay: index * 0.1
-}viewport= {
-  {
-  once: true
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
-  once: true 
-
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {
   service.id
@@ -157,10 +145,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }whileInView= {
   {
   opacity: 1, y: 0
-}transition= {
-  {
-
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 
   duration: 0.8, delay: index * 0.1 
   duration: 0.8, delay: index * 0.1
@@ -192,19 +176,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-
-}viewport= {
-  {
-  once: true 
-
-}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion && motion.div> <motion&& motion.div key= {
-  service && service.id 
-
-
 }initial= {
   {
   opacity: 0, y: 50
@@ -213,19 +184,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-
-}viewport= {
-  {
-  once: true 
-
-}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" > Emerging Technologies </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary technologies that define the future of human civilization and business. </p> </motion && motion.div> <motion&& motion.div key= {
-  service && service.id 
-
-
 }initial= {
   {
   opacity: 0, y: 50
@@ -234,18 +192,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-
-}viewport= {
-  {
-  once: true 
-
-}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
-}</div> </div> </section> <motion&& motion.div initial= {
-
-
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -466,31 +412,13 @@ export default Homepage2025;
 }
 }export default Homepage2025;export default Homepage2025;
 
-
 }
-}
-}
-}
-}
-}
-}
-}
-}
-}
-{
-  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
-=======
-{title: 'Scalable Solutions'}
-  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';}
-}].map ( (feature, index) => (<motion.div </p    /> </motion.div>) )}</div> </div> </div> </footer> </UltraFuturisticBackground2035>)}
-
 export default Homepage2025;
 
 export default Homepage2025;title: 'Scalable Solutions',
   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
 }].map ( (feature, index) => (<motion.div </p    /> </motion.div>) )}</div> </div> </div> </footer> </UltraFuturisticBackground2035>)}
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
@@ -500,9 +428,3 @@ export default Homepage2025;title: 'Scalable Solutions',
 }
 }
 }
-{
-  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
-}].map ( (feature, index) => (<motion.div </p> </motion.div>) );
-}</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
-}export default Homepage2025;export default Homepage2025;
-;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -94,6 +93,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -115,3 +115,10 @@ beforeEach(() => {
 };
 };
 :backup-problematic-files/jest.setup.js
+=======
+
+};
+
+
+
+>>>>>>> main

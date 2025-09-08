@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -45,56 +44,6 @@ interface MobileConversationListProps {;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
-
-              "px-4";
-
-              "px-4",
-
-=======
-
-
-      <div className="space-y-2 pb-24">;
-        {conversations && conversations.map((conversation) => (;
-
-          <div
-            key={conversation && conversation.id}
-            className={cn(
-
-              "px-4",
-              "px-4"
-              activeConversation === conversation && conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation && conversation.id)}
-          >;"
-            <div className="flex items-center gap-3 py-3 cursor-pointer">;
-
-              <Avatar>;
-
-                <AvatarImage src={conversation && conversation.avatar} />;
-
-                <AvatarFallback>;
-<<<<<<< HEAD
-
-                  {conversation && conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>;
-              </Avatar>;
-              <div className="flex-1 min-w-0">;
-                <div className="flex justify-between items-baseline">;
-                  <h3 className="font-medium truncate">{conversation && conversation.name}</h3>;
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;
-                    {conversation && conversation.timestamp}
-                  </span>;
-                </div>;
-                <div className="flex justify-between items-center">;
-                  <p className="text-sm text-muted-foreground truncate">;
-                    {conversation && conversation.isTyping ;
-                      ? <em>Typing...</em> ;
-                      : conversation && conversation.lastMessage}
-                  </p>;
-
-                  {conversation && conversation.unreadCount > 0 && (;
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
-                      {conversation && conversation.unreadCount}
                     </Badge>;
 
                   )}
@@ -105,7 +54,6 @@ interface MobileConversationListProps {;
           </div>;
         ))}
 
-<<<<<<< HEAD
       </div>;
     </div>;
   );

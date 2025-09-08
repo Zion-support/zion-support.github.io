@@ -1,4 +1,3 @@
-
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -142,6 +141,3 @@ const maximizer = new FrontMaximizer();
 
   '❌ Front Maximizer Failed:', error);
   process.exit(1)})
-
-
-

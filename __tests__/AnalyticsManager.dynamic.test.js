@@ -17,4 +17,3 @@ import AnalyticsManagerdynamic from "../components/AnalyticsManager.dynamic";
     render(<AnalyticsManagerdynamic />);
     // Add styling tests if needed})});
 
-

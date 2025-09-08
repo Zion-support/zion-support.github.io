@@ -1,4 +1,3 @@
-
 // Define a more specific type for the mocked response;
 interface MockApiResponse extends NextApiResponse {;
   status: vi.Mock<[number] MockApiResponse>;
@@ -26,5 +25,4 @@ function mockRes(): MockApiResponse {
 test(
   'DELETE soft deletes account', () => {'
   const req = mockReq(
-
 

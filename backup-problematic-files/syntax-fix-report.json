@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 
 
@@ -565,6 +566,17 @@ origin/automation-improvements-final
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> main
 
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
@@ -611,6 +623,7 @@ origin/automation-improvements-final
 "errorDetails": []
 }
 
+<<<<<<< HEAD
 "errorDetails": []
 }
   "errorDetails": []
@@ -633,3 +646,10 @@ origin/main
 origin/automation-improvements-final
 "errorDetails": []
 }
+=======
+
+
+
+
+
+>>>>>>> main

@@ -181,6 +181,7 @@ function ComprehensiveServicesShowcase2025V2() {
 
 
 
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.4 }}
           >;
             <a;
@@ -313,32 +314,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
             <a;
               href="#services";
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
               className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg";
 
-=======
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            >;
-              Explore Services;
-            </a>;
-            <a;
-              href="#contact";
-<<<<<<< HEAD
 
               className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
 
-=======
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            >;
-              Get Started;
-            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Contact Information */}
-<<<<<<< HEAD
 
       <section id="contact" className="py - 16 px - 4 bg - black / 20">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -362,6 +345,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="grid md:grid-cols-3 gap-8"
 
 
+<<<<<<< HEAD
 =======
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -423,6 +407,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
+=======
+
+>>>>>>> main
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
@@ -496,6 +483,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       </a>
                     </motion.div>
 
+<<<<<<< HEAD
                   ))}
                     </motion.div>))}
                   ))}
@@ -508,6 +496,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>;
       </section>;
       {/* Market Statistics */}
+=======
+
+>>>>>>> main
 
 
             initial={{ opacity: 0, y: 20 }}
@@ -537,6 +528,7 @@ pr-12325
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
+<<<<<<< HEAD
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -568,6 +560,12 @@ pr-12325
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
+=======
+
+
+
+
+>>>>>>> main
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -584,6 +582,7 @@ pr-12325
             transition={{ duration: 0.6, delay: 0.4 }}
 
 
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - xl text - gray - 300 mb - 8";
@@ -632,3 +631,8 @@ pr-12325
 }
     </div>);
 }
+=======
+
+
+
+>>>>>>> main

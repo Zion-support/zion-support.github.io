@@ -1,5 +1,3 @@
-
-
 import { PanelLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -22,7 +20,6 @@ export const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
-<<<<<<< HEAD
 
       className={cn("h-7 w-7", props.className)}
 

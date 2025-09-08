@@ -1,14 +1,3 @@
-
-
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus  } from '@/components/icons';
-import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -56,47 +45,6 @@ interface MilestonesListProps {;
           </CardContent>;
         </Card>;
       )}
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone) => (;
-          <MilestoneCard
-            key={milestone && milestone.id}
-            id={milestone && milestone.id}
-            projectId={milestone && milestone.project_id}
-            title={milestone && milestone.title}
-            description={milestone && milestone.description}
-            amount={parseFloat(milestone && milestone.amount.toString())}
-            status={milestone && milestone.status}
-            dueDate={milestone && milestone.due_date}
-      ;
-      <div className="space-y-4">;
-        {milestones.map((milestone) => (;
-          <MilestoneCard;
-            key={milestone.id}            id={milestone.id}
-            projectId={milestone.projectid}
-            <AddMilestoneForm
-            <AddMilestoneForm 
-              onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />
-          </CardContent>
-        </Card>
-      )}
-      
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-          <MilestoneCard
-            key={milestone.id}
-            id={milestone.id}
-            projectId={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
-            status={milestone.status}
-
       </div>;
     </div>;
   );

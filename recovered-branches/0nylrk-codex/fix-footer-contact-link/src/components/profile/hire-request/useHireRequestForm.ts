@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -20,9 +19,6 @@ interface UseHireRequestFormProps {
   initialJobTitle?: string,
   userDetails?: {  }
 }
-
-export interface FormValues {;
-
   requesterName: string;
   requesterEmail: string;
   projectOverview: string;
@@ -45,11 +41,6 @@ interface UseHireRequestFormProps {;
 
     email?: string,
     id?: string;
-
-  }
-}    id?: string;
-  }
-}
 ;
 export interface FormValues {;
   requesterName: string,;
@@ -59,10 +50,6 @@ export interface FormValues {;
   budgetMin: number,;
   budgetMax: number;
 }    requesterName: z.string().min(2, "Name is required"),
-    requesterEmail: z.string().email("Valid email is required"),
-    projectOverview: z.string().min(10, "Please provide more details about your project"),
-    timeline: z.string().min(5, "Please specify your timeline"),
-    budgetMin: z.number().min(1, "Budget minimum is required"),
     budgetMax: z.number().min(1, "Budget maximum is required")
   }).refine(data => data.budgetMax >= data.budgetMin, {"
     message: "Maximum budget must be greater than or equal to minimum budget""
@@ -86,47 +73,6 @@ export interface FormValues {;
           budgetMax: values.budgetMax      }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          id: talent.id || "";
-          full_name: talent.full_name,
-          professional_title: talent.professional_title}
-        requester: {}
-          name: values.requester_name;
-          email: values.requester_email,
-          id: user_details?.id;
-        }
-        project: {}
-          overview: values.project_overview;
-          timeline: values.timeline;
-          budget_min: values.budget_min,
-          budget_max: values.budget_max;
-        }
-      }
-;
-      const result = await submitHireRequest (request_data);
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        on_close ();
-      }
-    } catch (error) {"
-      console.error ("Error submitting hire request:", error);
-<<<<<<< HEAD
-
-    } finally {
-
-      setIsSubmitting(false)
-
     } catch (error) {;
 
       console.error("Error submitting hire request:", error);
@@ -139,10 +85,6 @@ if ( {) {}
     isSubmitting;
 
     onSubmit;
-  }
-}
-;
-
   }
 }
   return {

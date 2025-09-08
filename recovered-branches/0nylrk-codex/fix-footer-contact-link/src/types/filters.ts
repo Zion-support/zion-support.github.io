@@ -1,11 +1,4 @@
 export interface FilterSidebarProps {
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (availability: string) => void;
-  selectedRegions: string[];
   toggleRegion: (region: string) => void;
   priceRange: [number, number];
 
@@ -88,7 +81,6 @@ export interface RegionFilterProps extends FilterComponentProps {
   toggle_region: (region: string) => void;
 }
 
-<<<<<<< HEAD
 export interface ExperienceFilterProps extends FilterComponentProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
@@ -165,12 +157,6 @@ export interface SortFilterProps {
   sortOption: string;
   setSortOption: (option: string) => void;
 }
-<<<<<<< HEAD
-
-export interface SortFilterProps {
-  sort_option: string,
-  setSortOption: (option: string) => void;
-
 }  searchTerm: string
 
 }
@@ -179,27 +165,3 @@ export interface SearchFilterProps {
 
 }
 
-<<<<<<< HEAD
-=======
-  sortOption: string
-
-  setSortOption: (option: string) => void
-}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-export interface SortFilterProps {;
-  sortOption: string;
-  // TODO: Implement
-}
-  sortOption: string;,
-  setSortOption: (option: string) => void;
-}
-;
-export interface SortFilterProps {;
-  sortOption: string;,
-  setSortOption: (option: string) => void;
-}
-export interface SearchFilterProps {
-}

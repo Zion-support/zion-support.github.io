@@ -1,10 +1,3 @@
-
-  child_process';
-import fs from "fsfs';
-import path from "pathpath';
-const BUNDLE_ANALYZER_PACKAGE =;
-  '@next/bundle-analyzer';
-
   '🔍 Analyzing bundle size...\n');
   try {;
     // Check if bundle analyzer is installed;
@@ -26,18 +19,4 @@ function generateBundleReport() {;
   '.js'));
     .map(file => {;
       const filePath = path.join(jsPath, file);
-
-      const stats = fs.statSync(filePath);
-      return {;
-
-  '\n📋 Bundle Size Report:');
-  const totalSize = 0;
-  jsFiles.forEach(file => {;
-    totalSize += file.size;
-
-  '   - Enable gzip compression on your server')}
-// Run analysis;
-analyzeBundle().catch(console.error)}}}}}}}
-
-
 

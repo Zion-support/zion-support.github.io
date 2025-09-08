@@ -1,14 +1,3 @@
-
-
-  {
-    id: "getting-started"
-    name: "Getting Started"
-    description: "Learn the basics of using the Zion AI Marketplace"
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
-    articles: [
-      {
-
-        id: "create-account",
       {
         id: "platform-navigation",
         title: "Navigating the platform",
@@ -83,7 +72,6 @@
         tags: ["offer", "contract", "negotiation"]
       }
     ]
-<<<<<<< HEAD
 
   },
 

@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";

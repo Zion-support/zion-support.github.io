@@ -1,5 +1,4 @@
 
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import Layoutdynamic from "../components/Layout.dynamic";
@@ -16,5 +15,3 @@ import Layoutdynamic from "../components/Layout.dynamic";
 
     render(<Layoutdynamic />);
     // Add styling tests if needed})});
-
-

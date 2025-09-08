@@ -30,10 +30,6 @@ import { format, parseISO } from "date-fns";export function InterviewResponseFor
   const formattedEndTime = format(endTime, "h: mm a");
 
   return (
-
-          Interview requested by {interview.client_name || 'Client'}
-        </p>
-
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>

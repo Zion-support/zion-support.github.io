@@ -1,47 +1,9 @@
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
-import React from 'react';
-import Layout from "../../components/Layout";";""
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-export default function CloudServicesPage() {
-export default function CloudServicesPage() {;
-  const cloudServices = [;
-    {}
-
-<<<<<<< HEAD
       title: "Cloud Migration",";
       description: "Seamless migration of your infrastructure to the cloud",";
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      icon: Cloud,;
-      features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]";
-    },;
-    {}
-
-<<<<<<< HEAD
       title: "Cloud Infrastructure",";
       description: "Scalable and secure cloud infrastructure setup",";
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      icon: Server,;
-      features: ["Auto Scaling", "High Availability", "Disaster Recovery"]";
-    },;
-    {}
-
-<<<<<<< HEAD
       title: "Cloud Security",";
       description: "Comprehensive security solutions for cloud environments",";
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      icon: Shield,;
-      features: ["Identity Management", "Data Encryption", "Compliance"]";
-    },;
-    {}
-<<<<<<< HEAD
 
       title: "Cloud Optimization",";
       description: "Performance and cost optimization for cloud resources",";
@@ -55,54 +17,13 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
-
-
-      icon: Zap,;
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";
-      title: "Cloud Migration",";""
-      description: "Seamless migration of your infrastructure to the cloud",";"
-      icon: Cloud,;]"
-      features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]";"
-    },;
-    {}"
-      title: "Cloud Infrastructure",";""
-      description: "Scalable and secure cloud infrastructure setup",";"
-      icon: Server,;"
-      features: ["Auto Scaling", "High Availability", "Disaster Recovery"]";"
-      title: "Cloud Security",";""
-      description: "Comprehensive security solutions for cloud environments",";"
-      icon: Shield,;"
-      features: ["Identity Management", "Data Encryption", "Compliance"]";"
-      title: "Cloud Optimization",";""
-      description: "Performance and cost optimization for cloud resources",";"
-      icon: Zap,;"
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";"
-pr-12325
-    }
-;  ];
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-interface CloudProps {
-  className?: string;
-}
-
-export default function CloudServicesPage() {
-  return (
-
-      <div className="min-h-screen bg-gray-50">
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
-
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -122,6 +43,8 @@ export default function CloudServicesPage() {
             </motion && motion.div>;
 
 <<<<<<< HEAD
+=======
+>>>>>>> main
           </div>;
         </section>;
               className="text-center";
@@ -135,6 +58,7 @@ export default function CloudServicesPage() {
               </p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
@@ -163,6 +87,8 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
+=======
+>>>>>>> main
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -207,6 +133,7 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -222,6 +149,8 @@ export default function CloudServicesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+=======
+>>>>>>> main
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;
@@ -272,4 +201,7 @@ export default function CloudServicesPage() {
   );
 };
 
+<<<<<<< HEAD
 export default Cloud;
+=======
+>>>>>>> main

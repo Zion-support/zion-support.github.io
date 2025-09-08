@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -207,10 +206,6 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Company Stats */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,10 +271,6 @@ export default function About() {
                 </p>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,37 +415,4 @@ export default function About() {
                   ))}
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Join Us on Our Mission
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology? 
-              Let's work together to build the future.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                Get Started Today
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
 }

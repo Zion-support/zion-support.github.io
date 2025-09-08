@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 const path = require('path'),;
@@ -32,6 +33,12 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
     stdio: 'pipe,
   encoding: 'utf8)
@@ -43,30 +50,13 @@ function runNode(relPath, args = []) {
   stdout: res.stdout |
     stderr: res.stderr |
 
-=======
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-<<<<<<< HEAD
 
     if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
 
 
 
+<<<<<<< HEAD
 =======
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
@@ -129,3 +119,5 @@ main:netlify/functions/asset-inventory-runner.js
 }
 main:netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
+=======
+>>>>>>> main

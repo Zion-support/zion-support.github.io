@@ -88,7 +88,6 @@ interface ActiveFiltersProps {
       <Button
         variant="ghost" 
         size="sm" 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         Clear All;
       </Button>;
@@ -99,35 +98,4 @@ interface ActiveFiltersProps {
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { X } from './lucide-react';
-interface ActiveFiltersProps {}
-  selected_skills: string[],
-  toggle_skill: (skill: string) => void,
-  selected_availability: string[],
-  toggle_availability: (status: string) => void,
-  selected_regions: string[],
-  toggle_region: (region: string) => void,
-  price_range: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experience_range: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clear_filters: () => void;
-}
-export /**;
- * ActiveFilters - Function description;
- */
-function ActiveFilters() {}
-  // Check if any filters are active;
-  const hasActiveFilters =;
-    selected_skills.length > 0 ||;
-    selected_availability.length > 0 ||;
-    selected_regions.length > 0 ||;
-    experience_range[0] !== 0 ||;
-    experience_range[1] !== 15 ||;
-    price_range[0] !== 50 ||;
-    price_range[1] !== 200;
-;

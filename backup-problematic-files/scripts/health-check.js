@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const Health-check = () => {
   // Implementation here
   return null
@@ -5,3 +6,8 @@ export const Health-check = () => {
   return null;
 
 export default Health-check;
+=======
+};
+
+
+>>>>>>> main

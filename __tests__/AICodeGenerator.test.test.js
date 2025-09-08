@@ -1,5 +1,3 @@
-
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import AICodeGeneratortest from "../components/AICodeGenerator.test";
@@ -16,5 +14,3 @@ import AICodeGeneratortest from "../components/AICodeGenerator.test";
 
     render(<AICodeGeneratortest />);
     // Add styling tests if needed})});
-
-

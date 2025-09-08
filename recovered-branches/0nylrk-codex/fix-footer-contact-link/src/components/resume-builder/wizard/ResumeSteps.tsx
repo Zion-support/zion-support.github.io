@@ -36,45 +36,4 @@ export const ResumeSteps = ({
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 import { StepProps } from "./types",;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-interface ResumeStepsProps {;
-  steps:StepProps[],;
-  activeTab:string,;
-  onChange:(value:string) => void;
-}
-;
-export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => {;
-
-<<<<<<< HEAD
-  return (;
-
-=======
-  return (;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
-      {steps.map((step) => (;
-        <TabsTrigger key={step.id} value={step.id}>;
-          {step.label}
-        </TabsTrigger>;
-      ))}
-    </TabsList>;
-{step.label}
-        </TabsTrigger>
-      ))}
-    </TabsList>
-
-  );
-
-<<<<<<< HEAD
-}
-
-  )
-};
-
-  )
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

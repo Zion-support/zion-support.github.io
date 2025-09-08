@@ -1,0 +1,78 @@
+
+
+<<<<<<< HEAD
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import MainLayoutdynamic from "../components/MainLayout.dynamic";
+
+  test('renders without crashing', () => {
+    render(<MainLayoutDynamic />);
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()})
+'
+  test('displays correct content', () => {
+    render(<MainLayoutDynamic />);
+
+=======
+
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import MainLayout from '../components/MainLayout.dynamic';
+describe('MainLayout', () => {
+  test('renders without crashing', () => {
+    render(<MainLayout />);
+    expect(screen.getByTestId('main-layout')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    // Test content display
+  });
+});
+origin/main
+
+
+
+
+});
+
+
+    expect(screen && screen.getByTestId('mainlayout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainLayoutdynamic from "./components/MainLayout ; describe('MainLayoutdynamic', () => { test("renders without crashing",() => { render(<MainLayoutdynamic />); expect(screen && screen.getByTestId("mainlayout && mainlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainLayoutdynamic />)}); test("handles user interactions",() => { render(<MainLayoutdynamic />)}); test("applies correct styling"
+
+
+describe('MainLayout', () => {
+  test('renders without crashing', () => {
+    render(<MainLayout />);
+
+    expect(screen.getByTestId('mainlayout')).toBeInTheDocument();
+
+  });
+
+  test('displays correct content', () => {
+
+
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import MainLayout from '../components / MainLayout.dynamic';
+describe ('MainLayout', () => {
+  test ('renders without crashing', () => {
+    render (<MainLayout />);
+    expect (screen.getByTestId ('main - layout')).toBeInTheDocument ();
+
+    render(<MainLayout />);
+>>>>>>> main
+    // Add specific content tests based on component
+
+  test('handles user interactions', () => {
+    render(<MainLayoutDynamic />);
+    // Add interaction tests based on component functionality
+
+    // Add styling tests if needed
+
+  })})
+
+
+

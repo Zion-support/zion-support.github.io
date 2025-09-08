@@ -1,8 +1,5 @@
 import { GetServerSideProps } from 'next';
 
-
-  };      permanent: true}}
-
 }
 
 

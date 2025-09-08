@@ -1,5 +1,4 @@
 
-
 import {
   Dialog;
   DialogContent;
@@ -62,7 +61,6 @@ import { JobApplication } from "@/types/jobs",
 
   isOpen: boolean,
   onClose: () => void,
->>>>>>> origin/cursor/delete-old-data-records-6bba
   candidateData?: TalentProfile,
   application?: JobApplication,
 
@@ -231,7 +229,6 @@ export interface HireConfirmationModalProps {;
               type="checkbox"
               id="updateAvailability"
               className="h-4 w-4"
-<<<<<<< HEAD
 
               checked={updateAvailability}
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;

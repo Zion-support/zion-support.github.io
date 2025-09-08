@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/alt-text-suggester-runner.js
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
 const path = require('path'),;
@@ -34,20 +35,12 @@ function runNode(relPath, args = []) {
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 exports.config = {
 <<<<<<< HEAD
-  schedule: '*/15 * * * *
 =======
-  schedule: '*/15 * * * *'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
 
-exports.handler = async () => {
-  const logs = [];
-  function step(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const res = fn();
-    if (res.stdout) logs.push(res.stdout);
-    if (res.stderr) logs.push(res.stderr);
-<<<<<<< HEAD
+
+
+>>>>>>> main
+  schedule: '*/15 * * * *
 `;
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
@@ -61,6 +54,7 @@ exports.handler = async () => {
 
 
 
+<<<<<<< HEAD
 =======
 
     logs.push(`exit=${res.status |0}`);
@@ -85,3 +79,5 @@ main:netlify/functions/alt-text-suggester-runner.js
 :netlify/functions/alt-text-suggester-runner.js
 main:netlify/functions/alt-text-suggester-runner.js
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
+=======
+>>>>>>> main

@@ -2,17 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  createSessionCookie,
-
-
-=======
-
-
 import {
   createSessionCookie,}
   validateCredentials,;}
@@ -93,43 +82,4 @@ if ( {) {}
   $2;
 }'
     return res.status (400).json ({ error: 'Missing credentials' });
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-  const result = validate_credentials (email, password, code);
-  // Check condition;
-if ( {) {}
-  $2;
-}'
-    return res.status (401).json ({ error: 'Invalid credentials' });
-  }
-  const cookie = createSessionCookie ({}
-    email,
-    role: result.role,
-    twofa_verified: true,
-  });'
-  res.set_header ('Set - Cookie', cookie);
-  return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });'
-  res.set_header ('Set - Cookie', cookie);
-  return res.status (200).json ({ ok: true });
-}
-
-    role: result.role,}
-    twofaVerified: true,}
-  });
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true,}
-});
-  return res.status(200).json({ ok: true }),
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-}
-
-  return res.status(200).json({ ok: true })
-}
-}

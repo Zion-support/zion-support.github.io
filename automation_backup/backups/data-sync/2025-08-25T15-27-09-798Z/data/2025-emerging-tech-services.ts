@@ -1,4 +1,3 @@
-
     tagline:,
   Access: to quantum computing power for complex problem solving and optimization'',;
     price: $,1,299,

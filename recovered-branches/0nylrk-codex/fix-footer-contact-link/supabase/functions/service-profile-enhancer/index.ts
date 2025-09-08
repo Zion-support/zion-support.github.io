@@ -73,14 +73,6 @@ if ( {) {}
     }
 
 
-<<<<<<< HEAD
-
-
-
-
-    // Get OpenAI API key from environment
-    const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-    if (!apiKey) {
       return new Response(        { headers, status: 500 }
       );
     }        { headers, status: 500 }
@@ -103,7 +95,6 @@ if ( {) {}
     Business/Service Title: ${providerData && providerData.title}
     Location: ${providerData && providerData.location}
     Current Bio: ${providerData && providerData.bio}
-<<<<<<< HEAD
 
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`      : "No services listed yet."}
@@ -185,20 +176,9 @@ if ( {) {}
     return new Response(
       JSON.stringify({
         error: "Internal server error"}),
->>>>>>> origin/cursor/delete-old-data-records-6bba
       { 
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
 
         status: 500 
-
-      }
-    );
-
-=======
-
-      });
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-});

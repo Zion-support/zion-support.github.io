@@ -22,6 +22,7 @@
 
 
 
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -80,6 +81,8 @@ import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
+=======
+>>>>>>> main
 
 
 const fadeInUp = {;
@@ -248,6 +251,7 @@ function ComprehensiveServicesShowcase2025V2() {
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
     ...emergingTechBreakthroughs2025V2
   const serviceCategories = [
     {
@@ -418,6 +422,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+
+
+>>>>>>> main
 
 
         <div className="max-w-7xl mx-auto text-center">
@@ -450,6 +458,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
 
 
+<<<<<<< HEAD
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
       <SEO
@@ -523,11 +532,24 @@ export default function ComprehensiveServicesShowcase2025V2() {
             >
               Explore Services
             </a>
+=======
+
+
+
+
+
+            <a
+              href='#services'
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'>;
+              Explore Services;
+            </a>;
+>>>>>>> main
             <a
               href='#contact'
 
 
 
+<<<<<<< HEAD
       {_/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
 
@@ -649,6 +671,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
@@ -913,6 +940,7 @@ pr-12325
           </motion && motion.h2>;
           <motion&& motion.div
 
+<<<<<<< HEAD
             className='space-y-20'
             variants={staggerContainer}
             initial='initial'
@@ -1449,6 +1477,8 @@ pr-12325
             initial='initial'
             whileInView='animate'
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
 
             {_serviceCategories.map((category) => (_<motion.div key={category.id} variants={_fadeInUp}>
@@ -1570,6 +1600,7 @@ pr-12325
                       key={service && service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
 
+<<<<<<< HEAD
 =======
             viewport={{ once: true }}
             initial={_{ opacity: 0, _y: 20}}
@@ -1623,12 +1654,15 @@ pr-12325
                         {_service.description}
                       </p>
 
+=======
+>>>>>>> main
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
                           {_service.marketSize}
 
+<<<<<<< HEAD
 
                         </div>
                         <div className="flex items-center text-sm text-green-400">
@@ -1642,12 +1676,16 @@ pr-12325
 
                           {(service as any).pricing?.starter |service.price}
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
                           {(service as any).pricing?.starter || service.price}
                       
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {_(service as any).pricing?.starter || service.price}
 
+<<<<<<< HEAD
 
 
                         </div>
@@ -1823,6 +1861,8 @@ pr-12325
                           }
                         </div>;
                       </div>;
+=======
+>>>>>>> main
 
 
                       <a
@@ -1837,6 +1877,7 @@ pr-12325
 
 
 
+<<<<<<< HEAD
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
 
@@ -2001,18 +2042,17 @@ pr-12325
           <motion.h2
             className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
 
       {_/* Call to Action */}
       <section className="py-20 px-4">
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-            whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
 
                       </p>;
@@ -2132,6 +2172,7 @@ pr-12325
 
             whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
             viewport={{ once: true }}
@@ -2141,6 +2182,10 @@ pr-12325
           </motion.h2>
           <motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion.p
+=======
+
+
+>>>>>>> main
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
             <div className='text-center'>;
               <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>;
@@ -2179,6 +2224,7 @@ pr-12325
 
           <motion&& motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.p 
+<<<<<<< HEAD
           >
             Ready to Lead the Future?
           </motion.h2>
@@ -2188,6 +2234,11 @@ pr-12325
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+=======
+
+
+
+>>>>>>> main
 
           </motion && motion.p>;
           <motion&& motion.div 
@@ -2329,6 +2380,7 @@ pr-12325
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
 
+<<<<<<< HEAD
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -2349,6 +2401,8 @@ pr-12325
             Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
           </motion.p>
+=======
+>>>>>>> main
 
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -2357,6 +2411,7 @@ pr-12325
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.4}}
 
+<<<<<<< HEAD
           >
             <a
               href={`mailto:${contactInfo.email}`}
@@ -2499,3 +2554,9 @@ pr-12325
       </section>;
     </div>);
 }
+=======
+
+}
+
+
+>>>>>>> main

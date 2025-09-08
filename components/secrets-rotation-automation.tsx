@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -115,48 +114,6 @@ export default function SecretsRotationAutomationPage() {
           </div>;
         </section>;
       </main>;
-
-    </>);
-  return (
-    <>;
-      <SEO;
-        title="Secrets Rotation Automation";
-        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
-      />;
-      <main id="main" className="container mx - auto px-4 py-24">;
-        <section className="max-w-5xl mx-auto">;
-          <h1 className="text - 4xl font-extrabold tracking-tight">;
-            Secrets Rotation Automation;
-          </h1>;
-          <p className="mt - 4 text - lg text-gray-300">;
-            Keep credentials short - lived and compliant. Automate rotations;
-            across providers with full auditability.;
-          </p>;
-          <div className="mt - 8 grid sm:grid - cols-2 gap-6">;
-            {features.map ((f) => (
-              <div;
-return (
-  return (
-  return (
-  return (
-    <>
-      <SEO
-        title="Secrets Rotation Automation"
-        description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Secrets Rotation Automation
-          </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Keep credentials short-lived and compliant. Automate rotations
-            across providers with full auditability.
-          </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            {features.map((f) => (
-              <div
-
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg-white / 5 border border-white / 10";
               >;

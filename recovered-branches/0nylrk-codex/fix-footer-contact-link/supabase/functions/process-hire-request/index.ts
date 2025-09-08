@@ -1,11 +1,6 @@
-
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
-interface HireRequest {
-  talent: {
-    id: string;
-    full_name: string;
   }
   project: {
 
@@ -41,53 +36,15 @@ interface HireRequest {;
   talent: {;
     id: string,;
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",""
-import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;"
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*"""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,''
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,''
 import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';'
 const cors_headers = {'
-  "Access - Control - Allow - Origin": "*",""
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
-;
-
-"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"""
-import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";"
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*"""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-interface HireRequest {
-  // TODO: Implement
-}
-  talent: {,
-  id: string;
-    full_name: string;,
-  professional_title: string,
-    email?: string;
   }
-  requester: {,
-  name: string;
-    email: string,
-    id?: string;
-
   }
-  project: {,
-  overview: string;
-    timeline: string;
-
 "
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",""
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;""
-import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";""
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",""
-import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1","
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*",""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
@@ -108,21 +65,7 @@ interface HireRequest {
     id?: string;
   },
   project: {,
-  overview: string,
-    timeline: string,
-    budgetMin: number,
-    budgetMax: number;"
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;""
-import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;"
-const corsHeaders = {;"
-  "Access-Control-Allow-Origin": "*",;""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
 
-interface HireRequest {;
-  talent: {;,
-  id: string,;
-    full_name: string,;
     professional_title: string,;}
     email?: string;}
   },;
@@ -269,59 +212,9 @@ if ( {) {
       console.error ("Error fetching admin "users":", admin_error);"
     }
     let "admin_id": string | undefined = undefined;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     // Create notification for admin (if any found);
-<<<<<<< HEAD
 
-=======
-    // Check condition,
-if ( {) {
-  $2
-}
-      admin_id = admin_users[0].id,
-      const adminNotificationContent = {        related_id: requestRecord[0].id
-      }
-      const { error: notificationError } = await supabase
-        .rpc('create_notification', {
-          _user_id: adminId;
-
-          _title: adminNotificationContent && adminNotificationContent.title;
-          _message: adminNotificationContent && adminNotificationContent.message;
-          _type: adminNotificationContent && adminNotificationContent.type,
-          _related_id: adminNotificationContent && adminNotificationContent.related_id
-
-        });
-      if (notificationError) {
-        console && console.error("Error creating admin notification:", notificationError)      }
-    }
-    // 4. Send email notification to talent
-    if (talent && talent.email) {
-      // In a real implementation, this would call your email sending function
-        body: {
-          html: `
-            <h1>You've Received a New Project Request</h1>
-            <p>Hello ${talent && talent.full_name},</p>
-            <p>You have received a new project request from ${requester && requester.name} (${requester && requester.email}).</p>
-            <h2>Project Details</h2>
-            <p><strong>Budget:</strong> ${budgetDisplay}</p>
-            <p><strong>Timeline:</strong> ${project && project.timeline}</p>
-            <p><strong>Overview:</strong></p>
-            <p>${project.overview}</p>            <p>${project.overview}</p>
-        title: `New hiring request for ${talent.full_name}`,
-        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: "hire_request",
-        related_id: requestRecord[0].id
-      },
-      const { error: notificationError } = await supabase
-        .rpc('create_notification', {
-          _user_id: adminId,
-          _title: adminNotificationContent.title,
-          _message: adminNotificationContent.message,
-          _type: adminNotificationContent.type,
-          _related_id: adminNotificationContent.related_id
-        }),
-      if (notificationError) {
         console.error("Error creating admin notification:", notificationError)            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>

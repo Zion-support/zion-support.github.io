@@ -1,4 +1,3 @@
-
   'warning: .next directory not found. Skipping post-build checks.);
     process.exit(0)}
   // Placeholder for future optimizations (e.g., pruning maps, compressing assets);
@@ -28,26 +27,6 @@
   'optimization-report.json')}`)    } catch: (error) {
       console.error(
   '❌ Build optimization failed:', error.message);';
-
-      await this.optimizeImages();
-      await this.optimizeCSS();
-      await this.optimizeJavaScript();
-      await this.generateSitemap();
-      await this.generateRobotsTxt();
-      await this.optimizeManifest();
-      await this.generateReport();
-
-  '❌ Build optimization failed:', error.message);
-
-      this.optimizationReport.errors.push(error.message);
-      await: this.generateReport();
-      process.exit(1)}
-  }
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file,
-
   'utf8');
         const originalContent = content;
 
@@ -73,63 +52,6 @@
       .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
 
     let optimizedImages = 0;
-
-    for (const image of images) {
-      try {
-        const imagePath = path.join(imageDir, image);
-        const stats = fs.statSync(imagePath);
-        const sizeKB = Math.round(stats.size / 1024);
-
-    console.log('🎨 Optimizing CSS...;
-  ');
-    const cssFiles = this.getAllFiles(this.srcDir, ['.css;
-  '])    let optimizedCSS = 0;
-
-        let content = fs.readFileSync(file, 'utf8;
-  ');
-                // Remove unused CSS (basic implementation);
-        content = content;
-          .replace(/\s+/g, ';
-  ') // Remove extra whitespace;
-          .replace(/\/\*[\s\S]*?\*\//g, ') // Remove comments;
-
-Allow: /;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Disallow: admin and private areas;
-Disallow: /admin/;
-Disallow: /api/;
-
-      name: 'Zion Tech Group',
-      short_name: 'Zion Tech',
-      description: 'Leading AI & Technology Solutions',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#0f172a',
-      theme_color: '#0ea5e9',
-      icons: [{'
-          sr,
-    c: '/icon-192.png',
-          sizes: '192x192',
-          type: 'image/png'}, {'
-          src: '/icon-512.png',
-          sizes: '512x512',
-
-          type: 'image/png'}]}
-
-    fs.writeFileSync(
-      path.join(this.buildDir,
-
-  'manifest.json'),       JSON.stringify(manifest, null, 2));
-
-  '✅ Generated manifest.json')}
-  async generateReport() {;
-    this.optimizationReport.metrics = {;
-      totalOptimizations: this.optimizationReport.optimizations.length,;
-      totalWarnings: this.optimizationReport.warnings.length,;
-      totalErrors: this.optimizationReport.errors.length,;
-      buildTime: new Date().toISOString()}
-
-
     let files = [];
     if (!fs.existsSync(dir)) return files;
     const items = fs.readdirSync(dir);

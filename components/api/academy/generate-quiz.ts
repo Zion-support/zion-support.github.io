@@ -1,77 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
-
-  const fallback = () => {
-    return res.status(200).json({
-      questions: [
-        {
-
-
-          options: [
-            'Random Ops'
-            'Zion OS mission'
-            'Unrelated finance'
-            'Legacy ERP'
-          ]
-          answerIndex: 1;
-       
-}
-          question: 'What does DAO commonly refer to?';
-          options: [;
-            'Data Access Object';
-            'Decentralized Autonomous Organization';
-            'Digital Asset Option';
-            'Dynamic Allocation Output'
-];
-
-          answerIndex: 1;
-        }
-        {question: 'What should be configured during deployment?';
-          options: [;
-            'Genesis Deploy Kit & modules';
-            'Only UI colors';
-            'Nothing';
-            'Random plugins'
-];
-}
-          answerIndex: 0;}
-        }
-        {question: 'Who are key community roles to hire?';
-          options: [;
-            'Moderators, educators, ambassadors';
-            'Astronauts';
-            'Comedians';
-            'No one'
-];
-}
-          answerIndex: 0;}
-        }
-
-        {
-          question: 'Which docs are needed for launch?',
-  options: [
-
-            'Whitepaper + governance docs',
-            'Novel',
-            'Recipe book',
-            'None'
-          ]}
-          answerIndex: 0}
-        }
-      ]
-    })
 };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
   }
   };
-
-  if (!apiKey) return fallback();
-  try {}
-    const client = new OpenAI({ apiKey });
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
-
 
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -105,7 +38,6 @@ import OpenAI from 'openai';
       const json = JSON && JSON.parse(text);
       return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];
->>>>>>> origin/cursor/delete-old-data-records-6bba
       temperature: 0 && 0.2});
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
@@ -154,7 +86,6 @@ import OpenAI from 'openai';
     return fallback ();
   }    } catch {
 
-<<<<<<< HEAD
 
       return fallback()
     }
@@ -175,11 +106,3 @@ import OpenAI from 'openai';
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
-
-
-      return fallback ();
-    }
-  } catch (err) {
-    return fallback ();
-}
-}

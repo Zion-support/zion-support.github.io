@@ -1,7 +1,3 @@
-import: React from 'react';';
-import: Link from 'next/link';';
-
-
             OpenAI, Google Vertex, custom PyTorch/TensorFlow, and serve via
             scalable APIs.
           </p>"

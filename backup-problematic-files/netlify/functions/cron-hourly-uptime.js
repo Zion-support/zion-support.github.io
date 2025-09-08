@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/cron-hourly-uptime.js
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
 const { upsertFile } = require('./_lib/github'),;
@@ -102,33 +103,19 @@ exports.handler = async function () {
         results.push({ path: ep, status: resp.status, ms });
       } catch (e) {
 <<<<<<< HEAD
-
-
 =======
-        }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        results.push({
-          path: ep;,
-  status: 0;
-          ms;)
-          error: String(e.message |e)
-        });
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const log = { timestamp: Date.now(), results }
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {
-      const existingPath = 'data/ops/uptime-log.json';
-<<<<<<< HEAD
+
+>>>>>>> main
+
+
+
 
       // Fetch existing file, append, and trim to last 500 entries;
   // TODO: Implement
 }`;
 
+<<<<<<< HEAD
 =======
       // Fetch existing file, append, and trim to last 500 entries;
   // TODO: Implement
@@ -274,3 +261,9 @@ main:netlify/functions/cron-hourly-uptime.js
 :netlify/functions/cron-hourly-uptime.js
 main:netlify/functions/cron-hourly-uptime.js
 :backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+=======
+
+
+
+
+>>>>>>> main

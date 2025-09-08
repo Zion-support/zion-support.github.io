@@ -1,5 +1,3 @@
-
-
 import React from './react';
 import { SeverityIndicator  } from '@/components / ui / severity - indicator';
 interface SeverityDisplayProps {
@@ -56,4 +54,3 @@ interface SeverityDisplayProps {
 
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

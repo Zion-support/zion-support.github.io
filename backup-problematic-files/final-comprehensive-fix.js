@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   "src/pages/InnovativeServicesShowcase2025 && InnovativeServicesShowcase2025.tsx",
   "src/pages/InnovativeServicesShowcase2026 && InnovativeServicesShowcase2026.tsx",
   "src/pages/InnovativeServicesShowcase2028 && InnovativeServicesShowcase2028.tsx",
@@ -159,6 +160,21 @@ import Head from "next/head";
 import Link from "next/link";
 const ${componentName} = () => {
 #!/usr / bin / env node;
+=======
+
+
+
+
+// Function to create a proper React component;
+function createPageComponent(fileName) {
+  const componentName = fileName && fileName.replace(/[^a-zA-Z0-9]/g, "");""
+  const displayName = fileName && fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();""
+  return `import React from "react";""
+import Head from "next/head";""
+import Link from "next/link";"
+const ${componentName} = () => {
+#!/usr / bin / env node;"
+>>>>>>> main
 import fs from './fs';
 import path from './path';
 import { fileURLToPath   } from './url';
@@ -336,6 +352,7 @@ const ${component_name} = () => {
       </Head>;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                 Contact Us;
@@ -344,6 +361,8 @@ const ${component_name} = () => {
           </div>;
         </div>;
       </div>;
+=======
+>>>>>>> main
 
 
 
@@ -442,3 +461,8 @@ export default function Placeholder() { return null};
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main

@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -141,10 +140,6 @@ export default function ApiDocsPage({ docs }: PageProps) {
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
-
-
-
-
 <div className="space-y-4 mt-4">
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
@@ -227,7 +222,3 @@ function ApiDocsPage() {
     </DocsLayout>;
 );
 }
-    </DocsLayout>
-  );
-}
-

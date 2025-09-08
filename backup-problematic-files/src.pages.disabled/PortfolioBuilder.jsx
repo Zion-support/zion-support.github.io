@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,6 +22,7 @@ import React from 'react';
 const PortfolioBuilder = ({ className }) => {
   return (
 
+<<<<<<< HEAD
 =======
 
 return (
@@ -36,3 +36,5 @@ return (
 }
 }
 }
+=======
+>>>>>>> main

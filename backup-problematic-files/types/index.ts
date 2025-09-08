@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ContactInfo {
 export interface ContactInfo {;
 export interface ContactInfo {
@@ -5,39 +6,12 @@ export interface ContactInfo {
   address: string, site: string,
 export interface Service {;
 }
-
-<<<<<<< HEAD
-
 =======
-  // TODO: Implement
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-  phone: string;,
-  email: string;
-  address: string;,
-  site: string;
+>>>>>>> main
 
-// Service interfaces;
-export interface Service {
-
-  features: string[];
-  // TODO: Implement
-  id: string;,
-  name: string;
-  description: string;,
-  category: 'micro-saas' | 'ai-services' | 'it-services';
-  price: {,
-  min: number;
-    max: number;,
-  currency: string;
-  };
-  features: string[];,
-pr-12325
-  technologies: string[];
-
-<<<<<<< HEAD
   delivery_time: string;
 
+<<<<<<< HEAD
 =======
   deliveryTime: string;,
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -236,6 +210,10 @@ export interface Notification {
 }
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 
 // Project management
 export interface Project {
@@ -293,6 +271,7 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
+<<<<<<< HEAD
   class_name?: string;
   children?: React.ReactNode;
   id?: string;
@@ -324,3 +303,7 @@ export interface Environment {
 
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+=======
+
+
+>>>>>>> main

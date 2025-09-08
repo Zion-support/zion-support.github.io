@@ -1,4 +1,3 @@
-
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
@@ -98,142 +97,21 @@ pr-12325
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }        }
-      );
-    }
-
-    const configuration = new Configuration({
-
-=======
-
-    const configuration = new Configuration({
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
-    const openai = new OpenAIApi(configuration);
-    const prompt = `Generate an optimized marketplace listing for the following product:
-
-    
-
-;
-    const configuration = new Configuration({;'
-      apiKey: Deno.env.get('OPENAI_API_KEY')}),;
-    const openai = new OpenAIApi(configuration),;
-    const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
-Category: ${category}
-Key Features: ${keyFeatures || "Not specified"}
-Target Audience: ${targetAudience || "General users"}
-
-Format the response as a JSON object with the following structure: {
-  "description": "The optimized description here..."
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-
-      messages: [{ role: "user", content: prompt }];
-
-    const configuration = new Configuration({;)
-      apiKey: Deno.env.get('OPENAI_API_KEY')}),;
-    const openai = new OpenAIApi(configuration),;`;
-      apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});'
-
-    const openai = new OpenAIApi(configuration);
-    const prompt = `Generate an optimized marketplace listing for the following product:
-;
-
-    const configuration = new Configuration({;)'
-      apiKey: Deno.env.get('OPENAI_API_KEY')}),;'
-    const openai = new OpenAIApi(configuration),;
-    const prompt = `Generate an optimized marketplace listing for the following product: ;,
-  Title: ${title}
-Category: ${category}
-Key Features: ${keyFeatures || "Not specified"}""
-Target Audience: ${targetAudience || "General users"}"
-Please create:
-1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases;
-2. A list of 5-7 relevant tags for the listing;
-3. A suggested price range based on the category and features;
-4. A bulleted list of 3-5 key selling points;
-    const configuration = new Configuration ({)"
-      api_key: Deno.env.get ('OPENAI_API_KEY')});
-    const openai = new OpenAIApi (configuration);
-;`;
-Key Features: ${key_features || "Not specified"}""
-Target Audience: ${target_audience || "General users"}"
-Please create:;
-1. A compelling, SEO - friendly description (100 - 150 words) that highlights benefits and use cases;
-2. A list of 5 - 7 relevant tags for the listing;
-4. A bulleted list of 3 - 5 key selling points;
-
-Format the response as a JSON object with the following structure: {"
-  "description": "The optimized description here..."""
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];"
-    const completion = await openai && openai.chat.completions && completions.create({"
-      model: "gpt-4o-mini",""
-      messages: [{ role: "user", content: prompt }];")
-pr-12325
-      temperature: 0 && 0.7});
-
-    const responseText = completion && completion.choices[0].message && message.content;
-    
-
-                        [null, responseText];
-      const jsonString = jsonMatch[1].trim();
-      parsedResponse = JSON && JSON.parse(jsonString)
-    } catch (error) {      parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.";
-        tags: []
-        suggestedPrice: { min: 0, max: 0 }
-                        responseText.match(/({[\s\S]*})/) ||
-                        [null, responseText],
-      
-      const jsonString = jsonMatch[1].trim($2);
-      // Provide a fallback structured response
-      parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.",
-        tags: [],
-        suggestedPrice: { min: 0, max: 0 },
-
-        keyPoints: []
-      }
-    }
-    return new Response(      });
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }      }
-    );
   } catch (error) {
       });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======      }
-    );
-  }
-});
-
 ;
       JSON.stringify({
         generated: parsedResponse
 
       }),
->>>>>>> origin/cursor/delete-old-data-records-6bba
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
   } catch (error) {
-<<<<<<< HEAD
-
-    console.error("Error in AI listing generator:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-
   }
 });
 });

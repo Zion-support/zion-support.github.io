@@ -1,23 +1,5 @@
-
   '🔧 PM2 Automation Manager');
 class AutomationManager {;
-  constructor() {;
-    this.automationProcesses = [
-  'console-error-fixer',;
-  'link-checker',;
-  'continuous-improvement',;
-  'daily-build-test',;
-  'security-audit',;
-  'dependency-updates',;
-  'performance-monitor',;
-  'quality-checks',;
-  'link-integrity',;
-  'front-maximizer',;
-  'sitemap-runner']}
-
-    // // // // // // // console.log(`;
-🔧 PM2 Automation Manager - Available Commands: ;
-📊 Status & Monitoring:;
   status                    - Show all automation processes status;
 
   logs <process>           - Show logs for specific process;
@@ -30,51 +12,6 @@ class AutomationManager {;
   delete                   - Delete all automation processes;
 
   node scripts/automation-manager.js logs console-error-fixer;
-
-  pm2 jlist' { encoding: 'utf8 });
-      const processes = JSON.parse(output);
-      const automationProcesses = processes.filter(proc =>;
-        this.automationProcesses.includes(proc.name));
-      // // // // // // // console.log(,;
-  📊 Automation Processes Status: ');
-
-  'Name'.padEnd(25) +;
-  'Status'.padEnd(10) +;
-  'Memory'.padEnd(10) +;
-  'CPU'.padEnd(8) +;
-  'Uptime'.padEnd(15) +;
-  'Restarts');
-
-  '─'.repeat(80));
-      automationProcesses.forEach(proc => {;
-        const statusIcon = proc.pm2_env.status ===;
-  'online' ?;
-  '🟢' : proc.pm2_env.status ===;
-  'errored' ?;
-  '🔴` :;
-  `🟡;
-        const memory = `${Math.round(proc.monit.memory / 1024 / 1024)}MB`;
-        const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
-
-          `${statusIcon} ${proc.pm2_env.status}`.padEnd(10) +;
-          memory.padEnd(10) +;`
-          `${proc.monit.cpu}%`.padEnd(8) +;
-          uptime.padEnd(15) +;
-
-  'online').length;
-
-      const totalCount = automationProcesses.length;
-      // // // // // // // console.log(`;
-  `);
-      // // // // // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);
-
-      // // // // // // // console.error('❌ Failed to get status: , error.message)}
-        console.log(,;
-  ⚠️  Some processes are not running. Use 'check' to see details.;
-  ')}
-
-      console.error('❌ Failed to get status: , error.message)}
-
   }
   async startAll() {;
     // // // // // // // console.log(,;
@@ -248,6 +185,4 @@ async function manager = new AutomationManager();
       break}
 
 }
-
-
 

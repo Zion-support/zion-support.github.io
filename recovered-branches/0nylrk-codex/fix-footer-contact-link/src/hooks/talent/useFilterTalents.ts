@@ -1,4 +1,3 @@
-
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -40,4 +39,3 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
     clearFilters}
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

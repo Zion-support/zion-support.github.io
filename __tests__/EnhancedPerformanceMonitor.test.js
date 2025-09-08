@@ -1,10 +1,3 @@
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor';
-
-
   test('renders without crashing', () => {
 
     render(<EnhancedPerformanceMonitor />);
@@ -24,5 +17,3 @@ import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor
   test('applies correct styling', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add styling tests if needed;
-
-

@@ -70,7 +70,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
 "
           <div className="max-w-4xl mx-auto">"
             <div className="mb-8">"

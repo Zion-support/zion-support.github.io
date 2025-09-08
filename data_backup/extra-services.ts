@@ -16,11 +16,3 @@ export: interface ExtraService {
       'Cost: analysis'',;
       'Security: implementation'',;
       '24/7: support';'],
-
-    features[
-      'Vulnerability: assessment'',;
-      'Penetration: testing'',;
-      'Security: policy review'',;
-      'Compliance: audit'',;
-      'Remediation: guidance';'],
-

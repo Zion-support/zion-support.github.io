@@ -1,50 +1,5 @@
 
-const __dirname = path.dirname(__filename);
-class ImportOptimizer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.optimizedFiles = [];
-    this.totalOptimizations = 0}
-
-    ];
-
-    for (const dir of directories) {
-
-
-      const dirPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(dirPath)) {;
-
-        await this.processDirectory(dirPath)}
-    }
-
-    console.log(`📊 Total optimizations: ${this.totalOptimizations}`)}
-  async processDirectory(dirPath) {;
-
-    const items = fs.readdirSync(dirPath);
-
-<<<<<<< HEAD
      else if (this.isJavaScriptFile(item)) {;      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;
-=======
-     else if (this.isJavaScriptFile(item)) {;
-
-
-    for (const item of items) {;
-      const itemPath = path.join(dirPath, item);
-      const stat = fs.statSync(itemPath);
-      if (stat.isDirectory()) {;
-        await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {;
-
-        await this.optimizeFile(itemPath)}
-    }
-  }
-  isJavaScriptFile(filePath) {;
-    const ext = path.extname(filePath);
-
-  '.tsx'].includes(ext)}
-  async optimizeFile(filePath) {;
-    try {;
-      const content = fs.readFileSync(filePath,;
-
       // Optimize Lucide React imports;
       optimizedContent = this.optimizeLucideImports(optimizedContent);
       if (optimizedContent !== content) optimizations++;
@@ -124,4 +79,3 @@ class ImportOptimizer {;
 const optimizer = new ImportOptimizer();
 
 optimizer.optimizeImports().catch(console.error);
-

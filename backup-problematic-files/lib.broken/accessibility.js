@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 // Accessibility utilities
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
 export const focusElement = (elementId) => {
   const element = document && document.getElementById(elementId);
@@ -34,6 +37,7 @@ export default function Accessibility({ }: AccessibilityProps) {
 
 
 
+<<<<<<< HEAD
 =======
 export const focusElement = (elementId) => {
   const element = document.getElementById(elementId);
@@ -120,3 +124,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> main

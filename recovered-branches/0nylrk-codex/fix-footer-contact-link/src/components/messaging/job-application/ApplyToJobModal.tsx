@@ -1,38 +1,12 @@
 
-
 import React from "react";
 import {
-
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
-export function ApplyToJobModal({
-  job
-  isOpen
-  onClose
-  onApplySuccess
-}: ApplyToJobModalProps) {
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px]">
-        <DialogHeader>
-          <DialogTitle>Apply to Job: {job.title}</DialogTitle>
-          <DialogDescription>
-            Complete your application for this position
-          </DialogDescription>
-        </DialogHeader>
-
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogHeader,;
 import React from './react';
->>>>>>> origin/cursor/delete-old-data-records-6bba
   Dialog,
   DialogContent,
   DialogDescription,

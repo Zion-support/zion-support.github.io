@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const { execSync } = require('child_process');
-
-console.log('🔒 Starting security audit...');
-
 async function runSecurityAudit() {
   try {
     // Install dependencies

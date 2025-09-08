@@ -1,7 +1,3 @@
-
-
-    await expect(page).toHaveTitle(/Zion Tech Group/)});
-
     const count = await navLinks.count();
     expect(count).toBeGreaterThan(0);
     // Test clicking on first nav link

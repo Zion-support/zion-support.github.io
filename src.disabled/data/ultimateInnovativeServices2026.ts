@@ -18,4 +18,3 @@ import React from';react' "export": interface UltimateInnovativeService {';
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-

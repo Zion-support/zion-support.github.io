@@ -1,4 +1,3 @@
-
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
@@ -33,132 +32,6 @@ export default function JobDetails() {
 
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-  if (isLoading) {
-  
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-    return (
-  }
-  if (error |!job) {
-    return (
-      <>;
-        <Header />;"
-        <div className="container mx-auto px-4 py-16 text-center">;"
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;'"
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;'
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>;
-        </div>;
-        <Footer />;
-      </>;
-    );
-  }
-  const handleApply = () => {
-    if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job"),
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
-      return
-    }
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs"),
-      return
-    }
-    setIsApplyModalOpen(true)
-  
-
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-
-<<<<<<< HEAD
-
-  if (isLoading) {
-
-=======
-  
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-  
-
-
-  
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  if (isLoading) {
-  
-
-
-<<<<<<< HEAD
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-  if (isLoading) {;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return (
-      <div className="flex items-center justify-center min-h-screen">;"
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-      </div>;
-    );
-  }
-
-<<<<<<< HEAD
-  if (error || !job) {;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    return (
-
-import React, { useState, useEffect } from 'react',;
-import { useParams, useNavigate } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Badge } from '@/components/ui/badge',;
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',;
-import { formatDistanceToNow } from 'date-fns',;
-import { toast } from 'sonner',;
-import { useAuth } from '@/hooks/useAuth',;
-import useJobDetails from '@/hooks/useJobDetails',;
-import { ApplyToJobModal } from '@/components/messaging/job-application',;
-import { SEO } from '@/components/SEO',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
-;
-export default function JobDetails() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { jobId } = useParams() as { jobId?:string },;
-  const { job, isLoading, error } = useJobDetails(jobId),;
-  const { user, isAuthenticated } = useAuth(),;
-  const navigate = useNavigate(),;
-  const { isWhitelabel, brandName } = useWhitelabel(),;
-  ;
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
-;
-  if (isLoading) {;
-    return (;
-      <div className="flex items-center justify-center min-h-screen">;
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-      </div>;
-    );
-  }
-    return (
-      <>;
-        <Header />;
-        <div className="container mx-auto px-4 py-16 text-center">;
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>;
-        </div>;
-        <Footer />;
-      </>;
     );
   }
   const handleApply = () => {
@@ -181,7 +54,6 @@ export default function JobDetails() {;
 
     return (
       <div className="flex items-center justify-center min-h-screen">;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
       </div>;

@@ -1,5 +1,5 @@
-import React from "react",;
 
+<<<<<<< HEAD
 import {;
   Table,;
   TableBody,;
@@ -184,3 +184,5 @@ status: "paid";";
 
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
+=======
+>>>>>>> main

@@ -1,5 +1,3 @@
-
-
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: 'POST',
@@ -24,7 +22,6 @@ export async /**
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
 export async /**;
  * reward_onboarding - Function description;
->>>>>>> origin/cursor/delete-old-data-records-6bba
  */
 function reward_onboarding() { return null; }
     headers: { 'Content - Type': 'application / json' }'
@@ -55,4 +52,3 @@ function rewardFiveStarReview() {
     body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
 }
 ;
-<<<<<<< HEAD

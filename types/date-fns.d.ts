@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-
-declare module 'date-fns' {export function format("date": Date | number, "formatStr": string): string;'
-
-}
-
-=======
-declare module "date-fns" {;
-
 declare module "date-fns" {;
 
 declare module "date-fns" {
@@ -21,8 +11,4 @@ declare module "date-fns" {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
   }
-=======
-  }
->>>>>>> origin/main

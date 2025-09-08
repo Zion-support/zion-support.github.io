@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
 import React from 'react';
@@ -14,35 +12,6 @@ const features = [;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Users, 
-  BookOpen, 
-  Laptop, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
-
-const features = [
-  {
-    icon: GraduationCap,
-    title: 'Learning Management System',
-    description: 'Comprehensive LMS with course management and student tracking',
-    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
-  },
-  {
-    icon: Users,
-    title: 'Student Analytics',
-    description: 'AI-powered analytics to improve student outcomes',
-    benefits: ['Performance tracking', 'Predictive analytics', 'Intervention alerts', 'Reporting']
-  },
-<<<<<<< HEAD
 
   },;
   {}
@@ -69,6 +38,7 @@ const features = [
   },
   {
     icon: BookOpen,
+<<<<<<< HEAD
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -204,6 +174,8 @@ export default function EducationSolutions() {
 export default function EducationSolutionsPage() {
   return (
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -213,6 +185,7 @@ export default function EducationSolutionsPage() {
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
+<<<<<<< HEAD
 =======
 
 
@@ -289,6 +262,8 @@ export default function EducationSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
+=======
+>>>>>>> main
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -472,11 +447,14 @@ export default function EducationSolutionsPage() {;
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
+<<<<<<< HEAD
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Education Solutions;
               </h2>;
+=======
+>>>>>>> main
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {solutions && solutions.map((solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
@@ -485,6 +463,7 @@ export default function EducationSolutionsPage() {;
                   </div>;
                 ))}
               </div>,;
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -497,11 +476,15 @@ export default function EducationSolutionsPage() {;
                   Accessible & Inclusive Education;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
+=======
+        <section className="py-20">";
+>>>>>>> main
                   Our education solutions are built with accessibility in mind, ;
                   ensuring equal access to learning opportunities for all students.;
                 </p>;
               </div>;
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
+<<<<<<< HEAD
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Globe className="w-8 h-8 text-white" />";
                   </div>;
@@ -537,15 +520,21 @@ export default function EducationSolutionsPage() {;
                 Let our education technology experts help you implement solutions that;
                 enhance learning outcomes and support modern educational practices.;
               </p>;
+=======
+        <section className="py-20">";
+>>>>>>> main
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Education Guide,;
+<<<<<<< HEAD
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> main
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -566,38 +555,12 @@ export default function EducationSolutionsPage() {;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Transform Education?</h3>
-                <p className="text-lg mb-6">
-                  Let our education technology experts help you implement solutions
-                  that enhance learning and streamline operations.
-                </p>
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-
-<<<<<<< HEAD
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -648,3 +611,7 @@ export default function EducationSolutionsPage() {;
 };
 
 export default Education;
+=======
+    </>
+
+>>>>>>> main

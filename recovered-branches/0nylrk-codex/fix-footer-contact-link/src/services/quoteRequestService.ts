@@ -1,4 +1,3 @@
-
 import {supabase} from "@/integrations/supabase/client";
 
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
@@ -118,30 +117,6 @@ pr-12325
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
-      ...item,
-)
-    return data && data.map((item: any) => ({
-      .order('created_at', { ascending: false }),
-)
-    return data && data.map((item: any) => ({
-)'
-      .order('created_at', { ascending: false }),'
-    if (error) throw error,
-    // Format the data to include talent_name;
-    return data.map((item: any) => ({
-
-      ...item,)
-pr-12325
-      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  };
-
-  
-
-  // Update quote request status
-  updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
-    // If marking as responded, set replied_at
-    if (status === 'responded') {
       updates && updates.replied_at = new Date().toISOString()    }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
@@ -421,7 +396,6 @@ pr-12325
       .select (`;
         *;
         talent:talent_id (
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     }
@@ -480,68 +454,6 @@ pr-12325
         .select('viewed_at')
         .eq('id', id)
         .single();
-
-<<<<<<< HEAD
-
-      }
-    }
-
-    
-    const { data, error } = await supabase
-
-=======
-      
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
-      }
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      .from('quote_requests')
-      .update(updates)
-      .eq('id', id)
-      .select();
-    
-    if (error) throw error;
-    return data[0] as QuoteRequest
-  };
-  
-  // Archive/Unarchive a quote request
-<<<<<<< HEAD
-
-  toggleArchive: async (id: string, isArchived: boolean) => {
-    const { data, error } = await supabase
-
-=======
-  toggleArchive: async(id: string, isArchived: boolean) => {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      .from('quote_requests')
-      .update({ is_archived: isArchived })
-      .eq('id', id)
-      .select();
-    
-    if (error) throw error;
-    return data[0] as QuoteRequest
-  };
-  
-  // Delete a quote request
-  delete: async (id: string) => {
-    const { error } = await supabase
-      .from('quote_requests')
-      .delete()
-      .eq('id', id);
-    
-    if (error) throw error;
-    return true
-
-<<<<<<< HEAD
-
-
-    // If marking as responded, set replied_at
-    if (status === 'responded') {
-      updates.replied_at = new Date().toISOString()
-
-
-=======
 
 import { supabase } from "@/integrations/supabase/client",;
 

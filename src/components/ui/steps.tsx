@@ -1,9 +1,3 @@
-  className?: string
-}
-export function Step({  className}: StepProps) {
-  return (
-    <li
-<<<<<<< HEAD
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
@@ -88,73 +82,4 @@ const Step = React.forwardRef<HTMLDivElement, StepProps>(
 )
 Step.displayName = "Step"
 
-<<<<<<< HEAD
 export { Steps, Step }
-=======
-export { Steps, Step }
-=======
-      className={cn(
-
-        "relative flex items-center",
-        {
-          "opacity-60": status === "incomplete"},
-
-        className
-      )}><div
-        className={cn(
-              status === "incomplete"
-            "bg-zion-blue border-zion-cyan text-white":
-              status === "current"
-            "bg-zion-purple border-zion-purple text-white":
-            "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
-        )}
-      >
-        {status === "complete" ? (
-          <CheckIcon className="h-5 w-5" />
-        ) : (
-          <span>
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { CheckIcon } from 'lucide-react';
-interface StepProps {;
-  status: "incomplete" | "current" | "complete",;
-  label: string,;
-  description?: string,;
-  className?: string;
-}
-;
-export function Step({;
-  status,;
-  label,;
-  description,;
-  className}: StepProps) {;
-  return (;
-    <li;
-      className={cn(;
-        "relative flex items-center",;
-        {;
-          "opacity-60": status === "incomplete"},;
-        className;
-      )}
-    >;
-      <div;
-        className={cn(;
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",;
-          {;
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
-              status === "incomplete",;
-            "bg-zion-blue border-zion-cyan text-white":;
-              status === "current",;
-            "bg-zion-purple border-zion-purple text-white":;
-              status === "complete"}
-        )}
-      >;
-
-            {/* Step number would go here */}
-          </span>        )}
-
-export { Steps, Step, CheckIcon }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

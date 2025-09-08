@@ -1,5 +1,3 @@
-
-
 export function EnterpriseTrustBadges() {;
 
   return (
@@ -173,4 +171,3 @@ function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
-

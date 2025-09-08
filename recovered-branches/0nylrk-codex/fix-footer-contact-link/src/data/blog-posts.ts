@@ -55,21 +55,6 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
-      name: 'Dr. Alicia Zhang',
-      title: 'AI Research Director',
-      avatarUrl:
-        'https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200',
-    },
-    publishedDate: 'Apr 15, 2025',
-    readTime: '5 min read',
-    category: 'Trends',
-    tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
-    featuredImage:
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630',
-    isFeatured: true,
-  },
-
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -137,17 +122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {"
     id: "green-it",'"
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
-
-    excerpt:
-      'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>    id: "green-it";
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint";
-    slug: "green-it";
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-    slug: "green-it",
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
-
     published_date: 'Apr 5, 2025',
     read_time: '6 min read',
     category: 'Sustainability',
@@ -166,17 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     title: "AI Compute Optimization: Balancing Performance and Cost";
     slug: "ai - compute - optimization";
     excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
-    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
-<h2>Right-sizing Compute Resources</h2>
-<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
-<h2>Model Compression Techniques</h2>
-<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
-<h2>Strategic Cloud vs. On-Premise Decisions</h2>
-<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
-<h2>Training Efficiency Optimization</h2>
-<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
-<h2>Inference Serving Architecture</h2>
-
     author: {
       name: 'Michael Wong'
       title: 'ML Infrastructure Architect'
@@ -212,54 +175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     readTime: "6 min read";
     category: "Infrastructure"
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-<<<<<<< HEAD
-
-    featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>;
-<h2 > Right - sizing Compute Resources</h2>;
-<p > Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>;
-<h2 > Model Compression Techniques</h2>;
-<p > Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>;
-<h2 > Strategic Cloud vs. On - Premise Decisions</h2>;
-<p > While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>;
-<h2 > Training Efficiency Optimization</h2>;
-<p > Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>;
-<h2 > Inference Serving Architecture</h2>;
-<p > The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,
-    author: {
-      name: 'Michael Wong',
-      title: 'ML Infrastructure Architect',
-      avatar_url:;
-        'https://images.unsplash.com / photo - 1506794778202 - cad84cf45f1d?auto = format & fit = crop & w=200 & h=200',    author: {
-      name: "Michael Wong";
-      title: "ML Infrastructure Architect",
-      avatar_url: "https://images.unsplash.com / photo - 1506794778202 - cad84cf45f1d?auto = format & fit = crop & w=200 & h=200";
-    }
-    published_date: "Mar 15, 2025";
-    read_time: "6 min read";
-    category: "Infrastructure",
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featured_image: "https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630";
-  }
-];
-
-
-      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
-    },
-    published_date: 'Mar 15, 2025',
-    read_time: '6 min read',
-    category: 'Infrastructure',
-    tags: [;
-
-      'AI Infrastructure',
-      'Cost Optimization',
-      'Machine Learning',
-      'Computing',
-    ],
-
-    featured_image:;
-      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
-
   },
 ];
 
@@ -269,4 +184,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 }];
-

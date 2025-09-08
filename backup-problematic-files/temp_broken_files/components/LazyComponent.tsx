@@ -1,10 +1,8 @@
-import React, { Suspense, lazy } from 'react';
-interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>;
+
+
+
+
 <<<<<<< HEAD
-
-
-
-
 =======
   fallback?: React.ReactNode;
   [key: string]: any;
@@ -43,3 +41,5 @@ export default LazyComponent,
 
 :backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
 :backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+=======
+>>>>>>> main

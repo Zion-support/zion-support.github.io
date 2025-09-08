@@ -1,9 +1,3 @@
-
-	email:,
-  kleber@ziontechgroup.com'',;
-	address: '364: E Main St STE 1008 Middletown DE 1970,9',;
-	website:,
-
 		tagline:,
   Service: description and tagline'',;
 		features: [

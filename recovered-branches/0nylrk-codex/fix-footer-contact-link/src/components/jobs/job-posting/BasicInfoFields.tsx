@@ -18,13 +18,6 @@ import {}
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
-import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",
-import { Control } from "react-hook-form",
-
   return (
     <div className="space-y-4">
       <FormField
@@ -36,30 +29,16 @@ import { Control } from "react-hook-form",
   control: Control < any>;
 }
 
-  return (
-
-    <div className="space-y-4">
-      <FormField;
-        control={control}"
-        name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Title</FormLabel>
             <FormControl>"
               <Input placeholder="e.g. Senior React Developer" {...field} />
               <Input placeholder="e.g. Senior React Developer" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
   FormMessage;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
@@ -116,10 +95,6 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
           />
         </CardContent>
       </Card>            onSuggestionApplied={handleSuggestionApplied}
-          />;
-        </CardContent>;
-      </Card>;
-
       <FormField
         control={control}
         name="location"      <FormField
@@ -135,13 +110,6 @@ import { Card, CardContent } from "@/components/ui/card",;        <FormField
             </FormControl>;
             <FormMessage />;
 
-<<<<<<< HEAD
 );
 
 
-=======
-          </FormItem>)}
-      />;
-    </div>);
-}
-;

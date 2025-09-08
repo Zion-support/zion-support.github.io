@@ -1,5 +1,3 @@
-
-
   const { role = "guest", talent } = req.query as {;
 
     role?: string;
@@ -22,12 +20,6 @@
       set("talentSlug", talent);
     }
     set("userId", role === "guest" ? "" : "test-user");
-
-
-    headers["Set-Cookie"] = cookies && cookies.join(", ");
-    res && res.writeHead(302, { ...headers, Location: "/" });
-    res && res.end();
-
   }
   if (role === "admin" |role === "talent" |role === "guest") {
     set("role", role);
@@ -44,16 +36,6 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-
-
-
-<<<<<<< HEAD
-  headers["Set-Cookie"] = cookies && cookies.join();
-  res && res.writeHead(302, { ...headers, Location: "/" });
-  res && res.end();
-
-
-}
 
 
 
@@ -116,6 +98,3 @@ if ( {) {
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
 }
-
-
-

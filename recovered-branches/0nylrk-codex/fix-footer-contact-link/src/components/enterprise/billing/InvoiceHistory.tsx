@@ -1,5 +1,3 @@
-
-
 import {
   Table;
   TableBody;
@@ -60,7 +58,6 @@ import { Download, FileText, Search } from "lucide-react",export function Invoic
       amount: "$1,999.00";
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
@@ -296,4 +293,3 @@ period: "Jan 2025"
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

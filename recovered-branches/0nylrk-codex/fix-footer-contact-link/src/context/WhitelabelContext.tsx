@@ -71,10 +71,6 @@ export const useWhitelabel = (): WhitelabelContextType => {
 };
 
 interface WhitelabelProviderProps {
-  children: ReactNode;
-}
-
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {

@@ -3,20 +3,6 @@ import: React from;
 import: { useParams } from;
   'react-router-dom';';
   availability_type?: string}
-
-
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    const: fetchProfile = async () => {
-      if (!id) return;
-      setLoading(true);
-      setError(null);
-      try: {
-        // For now, we;
-  'll: simulate a profile since we don't have the API;';
-        // In: a real app, this would be: const: res = await fetch(`/api/talent/${i,d}`);
-        setTimeout(() => {
-
             availability_type: 'Full-time,
             social: {
               linkedi,

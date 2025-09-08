@@ -1,5 +1,4 @@
 
-
   src;
   alt;
   className = ''
@@ -46,83 +45,6 @@ import React from 'react';
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-
-  useEffect(() => {;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
-
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
-      },      { threshold }
-    );
-
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
-
-        }
-      }
-      { threshold }
-    );
-
-          setIsInView(true);
-          observer.disconnect()
-
-        }
-      }
-      { threshold }
-    );
-
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
-    }
-
-    return () => observer && observer.disconnect();
-  }, [threshold]);
-
-  const handleLoad = () => {;
-    setIsLoaded(true);  };    }
-
-    return () => observer && observer.disconnect();
-  }, [threshold]);
-
-  const handleLoad = () => {;
-    setIsLoaded(true);
-
-  };
-
-  };
-
-  return (
-    <div className={`relative overflow-hidden ${className}`}>;
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      observer.observe (img_ref.current);
-    }
-    return () => observer.disconnect ();
-  }, [threshold]);
-;
-  const handle_load = () =>: any {
-    setIsLoaded (true);  }    }
-    return () => observer.disconnect ();
-  }, [threshold]);
-;
-  const handle_load = () =>: any {
-    setIsLoaded (true);
-  }
-  return (
-    <div className={`relative overflow - hidden ${class_name}`}>;
-      {/* Placeholder */}
-      <img;
-        src={placeholder}
-
-
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
 
@@ -146,30 +68,6 @@ if ( {) {
         src={placeholder}
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
-
-=======
-      <img;
-src={placeholder}
-alt=''
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${}
-          isLoaded ? 'opacity-0' : 'opacity-100'}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        }`}
-        style={{ width, height }}
-
-
-      />
-
-
-
-      {/* Actual Image */}
-      {isInView && (;
-        <motion&& motion.img
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -225,7 +123,6 @@ alt=''
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
->>>>>>> origin/cursor/delete-old-data-records-6bba
           ref={imgRef}
           src={src}
           alt={alt}

@@ -1,4 +1,3 @@
-
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
@@ -14,13 +13,6 @@ export interface DisputeMessage {export interface DisputeMessage {
   message: string;
   created_at: string;
   is_admin_note: boolean;
-<<<<<<< HEAD
-
-  user_profile?: {
-
-    display_name: string,
-    avatar_url?: string;
-
   }
 }
 
@@ -103,12 +95,3 @@ export type DisputeReason =;'
   | 'contract_terms';'
   | 'other',;
 
-<<<<<<< HEAD
-export const disputeReasonLabels: Record<DisputeReason string> = {;
-  milestone_quality: 'Quality of Deliverable',;
-  delayed_delivery: 'Delayed Delivery',;
-  scope_change: 'Scope Change Disagreement',;
-  communication: 'Communication Issues',;
-  payment: 'Payment Dispute',;
-  contract_terms: 'Contract Terms Disagreement',;
-  other: 'Other Issue'};

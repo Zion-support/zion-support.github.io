@@ -1,5 +1,4 @@
 
-
 export function MobileOnboarding() {;
 
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
@@ -11,22 +10,17 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker",
 import { SignUpForm } from "../components/onboarding/SignUpForm",
 type OnboardingStep = "language" | "role" | "signup",
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
   
-
-export function MobileOnboarding() {;
-
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 
   const goToNextStep = () => {
     }
   };
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const handleRoleSelect = () => {
     setCurrentStep("signup")
@@ -49,28 +43,11 @@ export function MobileOnboarding() {;
       setCurrentStep("signup");
     } else {;"
       navigate("/mobile");
-<<<<<<< HEAD
-
-    }
-  };
-
-  const handleRoleSelect = () => {;
-    setCurrentStep("signup")
-};
-
   return (    <div className="min-h-screen flex flex-col">;
-      <div className="flex-1 py-8">;
-        {currentStep === "language" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-8">;
-              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
-              <p className="text-muted-foreground">Let's set up your experience</p>;
-            </div>;
             <LanguageThemeSelector />;
             <div className="px-4 mt-8">;
 "
             <div className="px-4 mt-8">;"
->>>>>>> origin/cursor/delete-old-data-records-6bba
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
@@ -277,4 +254,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

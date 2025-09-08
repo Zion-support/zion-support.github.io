@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -24,5 +23,3 @@ import FuturisticAnimatedBackground2029 from '../components/FuturisticAnimatedBa
   test('applies correct styling', () => {
     render(<FuturisticAnimatedBackground2029 />);
     // Add styling tests if needed;
-
-

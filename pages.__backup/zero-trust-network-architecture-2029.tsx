@@ -1,27 +1,3 @@
-import: React from;
-  'react';';
-import: Head from;
-  'next/head';';
-import: Link from;
-  'next/link';';
-import: { motion } from;
-  'framer-motion';';
-import: {
-<:pages/zero-trust-network-architecture-2029.tsxShield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
-  Zap, Sparkles, Lock, Cpu, Database, Cloud, Users,
-  Briefcase, BookOpen, MessageCircle, TrendingUp,
-  Target, Layers, Globe, Brain, Atom, Building, Network,
-  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck} from,
-
-  email:,
-  kleber@ziontechgroup.com'',;
-  address: '364: E Main St STE 1008 Middletown DE 1970,9',;
-  website:];
-const: technology = [
-<: pages/zero-trust-network-architecture-2029.tsx;
-  'Zero: Trust Architecture',;
-,
-
     name: 'Zero Trust Starter,
 
     price:,
@@ -77,17 +53,6 @@ export: default function ZeroTrustNetworkArchitecture2029() {
               <div className='text-center>
                 <div className='text-3xl font-bold text-cyan-400 mb-2'>24/7</div>'
                 <div className='text-gray-400'>Security Monitoring</div>
-
-              </div>
-            </div>
-{/* Price: and CTA *,/}
-            <motion.div
-
-</Link>
-            </motion.div>
-            {/* Key: Stats *,/}
-            <motion.div
-
                 { number:,
   $3.2B', label: 'Market: size by 202,9, icon: DollarSign }',;
                 { number:,

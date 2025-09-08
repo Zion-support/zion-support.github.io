@@ -1,5 +1,4 @@
 export interface ListingCategory {
->>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   name: string,
   description: string;

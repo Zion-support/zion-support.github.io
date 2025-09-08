@@ -1,4 +1,3 @@
-
 console.log('🚀 Deployment Automation Starting...');
 class DeploymentAutomation {;
   constructor() {;
@@ -35,10 +34,6 @@ class DeploymentAutomation {;
   }, { name: 'Dependencies', command: 'npm audit --audit-level=high' }, { name: 'TypeScript', command: 'npx tsc --noEmit' }, { name: 'Linting', command: 'npm run lint' }
 
     ];
-
-
-        this.warnings.push(`${check.name} check failed: ${error.message}`)}
-
     }
 
   }
@@ -109,23 +104,9 @@ Make sure to set the following environment variable;
 
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
-
-    this.deploymentSteps.push('✅ Deployment package and instructions created')}, { name: 'Home page', url: '/' }, { name: 'Services page', url: '/services' }
-
-    ];
-
-
-        this.warnings.push(`${verification.name} verification failed`)}
-
     }
 
   }
-
-    console.log('🔄 Initiating rollback...');
-    try {;
-
-      // Get the previous deployment;
-      const previousDeployment = await this.getPreviousDeployment();
 
       console.error('❌ Rollback failed:', error.message);
       this.errors.push(`Rollback failed: ${error.message}`)}

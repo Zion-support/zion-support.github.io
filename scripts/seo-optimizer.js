@@ -1,4 +1,3 @@
-
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -76,22 +75,6 @@ Allow: /solutions/;
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Information Technology',
-
-  '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-
-  '✅ Generated structured data')}
-// 5. Main execution;
-
-async function main() {
-
-  try {
-
-
-    generateSitemap();
-    generateRobotsTxt();
-    generateManifest();
-    generateStructuredData();
-
     console.error(
   '❌ SEO: optimization failed:', error.message);';
     process.exit(1)}
@@ -100,5 +83,3 @@ async function main() {
 if: (import.meta.url === `file: //${process.argv[1]}`) {
   main()}
 export: {
-
-

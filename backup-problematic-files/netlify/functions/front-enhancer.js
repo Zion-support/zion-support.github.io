@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 const path = require('path'),;
@@ -37,6 +38,11 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
     stdio: 'pipe,
   encoding: 'utf8)
   });
@@ -48,33 +54,13 @@ function runNode(relPath, args = []) {
     stderr: res.stderr |
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes;
-=======
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
-exports.config = {
-  schedule: '*/20 * * * *', // every 20 minutes
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-<<<<<<< HEAD
     if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
 
     return status;
   // Update the front page auto-generated section;
 
+<<<<<<< HEAD
 =======
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
@@ -148,3 +134,9 @@ exports.handler = async () => {
 main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
+=======
+
+
+
+
+>>>>>>> main

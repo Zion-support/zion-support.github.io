@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +18,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 const ContentCreation = ({ className }) => {
   return (
     <div className={className || ''}>
@@ -31,3 +30,5 @@ const ContentCreation = ({ className }) => {
 }
 }
 }
+=======
+>>>>>>> main

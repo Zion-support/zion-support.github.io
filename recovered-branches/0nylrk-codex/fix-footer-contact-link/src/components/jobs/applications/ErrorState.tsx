@@ -1,5 +1,4 @@
 
-
 interface ErrorStateProps {
   error: string;
 }

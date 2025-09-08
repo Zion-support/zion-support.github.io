@@ -22,7 +22,6 @@ import { Button } from "@/components/ui/button",;
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import { Link } from "react-router-dom",;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button } from "@/components/ui/button",  return (
     <div className="mt - 12 text-center">;
       <Link to="/request - quote">;
@@ -52,11 +51,6 @@ import { Button } from "@/components/ui/button",  return (
 ;
 
 
-<<<<<<< HEAD
 
 
 
-=======
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

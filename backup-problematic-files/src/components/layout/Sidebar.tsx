@@ -1,12 +1,9 @@
-import React from 'react';
-
-export default function Sidebar() {
-
-  return (
-
-<<<<<<< HEAD
     <aside className="sidebar">
       <p>Sidebar</p>
     </aside>
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> main

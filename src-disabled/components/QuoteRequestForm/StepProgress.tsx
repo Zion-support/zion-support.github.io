@@ -1,98 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { QuoteRequestSteps } from '../QuoteRequestForm'
-import { CheckIcon } from 'lucide-react'
-import { cn } from '@/lib/utils'
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' }
-    { id: 'details', label: 'Details' }
-    { id: 'timeline', label: 'Timeline' }
-    { id: 'budget', label: 'Budget' }
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/cursor/delete-old-data-records-6bba
-return (
-    <div className='relative'>;
-      <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
-
-        <div
-          className='absolute h-full bg-zion-purple transition-all duration-500'
-          style={{
-
-  currentStep: QuoteRequestSteps;
-export function StepProgress({ currentStep }: StepProgressProps) {;
-    { id: 'service', label: 'Service' },
-    { id: 'details', label: 'Details' },
-    { id: 'timeline', label: 'Timeline' },
-    { id: 'budget', label: 'Budget' },
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { cn } from "@/lib/utils",
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
-}
-
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" }
-  ],
-
-
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-
-    const stepOrder = steps.findIndex(s => s.id === stepId),
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
-    
-    if (stepOrder < currentStepOrder) return "complete",
-    if (stepOrder === currentStepOrder) return "current",
-    return "upcoming"
-
-  },
-  return (
-
-    <div className="relative">
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
-        <div 
-          className="absolute h-full bg-zion-purple transition-all duration-500"
-          style={{ 
-
-          }}
-        />
-      </div>
-            <div key={step && step.id} className='flex flex-col items-center relative'>;
-
-
-              <div
-                className={cn(
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:src-disabled/components/QuoteRequestForm/StepProgress.tsx
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                  'w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors'
-                  status === 'complete'
-                    ? 'bg-zion-purple text-white'
-                    : status === 'current'
-                      ? 'bg-zion-cyan border-2 border-zion-purple'
-                      : 'bg-zion-blue-light text-zion-slate-light'
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -102,23 +8,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   </span>;
                 )}
               </div>;
-              <span
-                className={cn(
-                  'text-xs mt-2 font-medium'
-                  status === 'complete'
-                    ? 'text-zion-cyan'
-                    : status === 'current'
-                      ? 'text-white'
-
-                      : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
-
-                )}
-              <span
-                className = {cn(
-                  "text-xs mt-2 font-medium"
-                  status === "complete" ? "text-zion-cyan" :
-                  status === "current" ? "text-white" :
-                  "text-zion-slate-light"
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
@@ -253,11 +142,6 @@ if (return "current", ) {"
 ;
 ;
 
-                ),}
-              >
-                {step.label}
-              </span>
-            </div>
 );
         })}
       </div>

@@ -1,10 +1,3 @@
-
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ContactForm from '../components/ContactForm';
-
-
   test('renders without crashing', () => {
 
     render(<ContactForm />);
@@ -25,5 +18,3 @@ import ContactForm from '../components/ContactForm';
   test('applies correct styling', () => {
     render(<ContactForm />);
     // Add styling tests if needed;
-
-

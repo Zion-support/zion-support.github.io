@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
 const BASE_URL = 'https: //zionai && zionai.com',
       method: 'POST',
       headers: {
@@ -65,4 +60,3 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
-  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

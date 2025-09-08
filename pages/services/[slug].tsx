@@ -1,27 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-
-import Button from '../../components/ui/Button';
-import Card from '../../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-<<<<<<< HEAD
 // import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 // import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 // import { real2025Q2Additions } from '../../data/real-2025-q2-additions';

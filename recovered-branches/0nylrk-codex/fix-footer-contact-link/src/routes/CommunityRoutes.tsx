@@ -29,49 +29,6 @@ const CommunityRoutes = () => {;  return (
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
 
 const CommunityRoutes = () => {
-=======const CommunityRoutes = () => {;
-  return (
-    <Routes>;
-      {/* Public routes */}
-<<<<<<< HEAD
-=======
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route
-        path="/community/category/:categoryId"
-        element={<ForumCategoryPage />}
-      />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route
-        path="/community/profile/:userId"
-        element={<CommunityProfilePage />}
-      />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      {/* Protected routes */}
-      <Route
-        path="/community/create
-        element={
-          <ProtectedRoute>
-            <CreatePostPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path=/community/edit/:postId"
-        element={
-          <ProtectedRoute>
-            <EditPostPage />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  )
-};
-
-          </ProtectedRoute>;
-        }
-
       />;
     </Routes>;
   );

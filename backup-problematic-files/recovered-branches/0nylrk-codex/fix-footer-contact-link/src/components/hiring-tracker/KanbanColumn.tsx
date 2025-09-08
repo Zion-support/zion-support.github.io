@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -41,6 +42,9 @@ export function KanbanColumn({;
       default:;
 
         return "bg-muted/30";
+=======
+
+>>>>>>> main
     }
   },;
   ;
@@ -132,5 +136,3 @@ return (<Card className= {
 }</Droppable> </CardContent> </Card>) 
 }
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

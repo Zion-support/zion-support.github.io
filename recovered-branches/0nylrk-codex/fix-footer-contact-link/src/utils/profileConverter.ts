@@ -1,5 +1,3 @@
-
-
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
 import { ProfileData } from "@/types/profile";

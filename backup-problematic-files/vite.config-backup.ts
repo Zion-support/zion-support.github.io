@@ -1,10 +1,3 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from '"node": path';
-export default defineConfig({
-	plugins: [react({
-			// Handle JSX in .js files
-<<<<<<< HEAD
 
 			include: '**/*.{jsx,js,ts,tsx}',
 			// Fast refresh
@@ -21,6 +14,7 @@ export default defineConfig({
 		target: 'esnext',
 		"minify": 'terser',
 		"sourcemap": false,
+<<<<<<< HEAD
 =======
 			include: '**/*.{jsx,js,ts,tsx}'
 			// Fast refresh
@@ -46,6 +40,8 @@ export default defineConfig({
 			output: {
 				manualChunks: {
 <<<<<<< HEAD
+=======
+>>>>>>> main
 					'react-vendor': ['react', 'react-dom'],
 					'ui-vendor': ['@radix-ui/react-accordion',
 						'@radix-ui/react-alert-dialog',
@@ -123,6 +119,7 @@ export default defineConfig({
 						'@radix-ui/react-toggle
 						'@radix-ui/react-tooltip]
 
+<<<<<<< HEAD
 =======
 					'react-vendor': ['react', 'react-dom']
 					'ui-vendor': ['@radix-ui/react-accordion'
@@ -157,6 +154,9 @@ export default defineConfig({
 					'icons-vendor': ['lucide-react']
 					'state-vendor': ['@reduxjs/toolkit', 'react-redux']
 					'router-vendor': ['react-router-dom']
+=======
+
+>>>>>>> main
 
 					if (/\.(css)$/.test(assetInfo && assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
 					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo && assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
@@ -170,6 +170,7 @@ export default defineConfig({
 					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
 					if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
 
+<<<<<<< HEAD
 					return 'assets/[name]-[hash].[ext]'}
 			}
 		}
@@ -199,6 +200,31 @@ export default defineConfig({
 			}
 		}
 <<<<<<< HEAD
+=======
+
+
+
+					return 'assets/[name]-[hash].[ext]'}
+			}
+		},
+		"terserOptions": {
+			compress: {
+
+
+
+				// Enhanced compression
+				"passes": 2,
+				"unsafe": true,
+				"unsafe_comps": true,
+				"unsafe_math": true,
+				"unsafe_proto": true,
+				"unsafe_regexp": true,
+				"unsafe_undefined": true
+			},
+			"mangle": { 
+				safari10: true,
+
+>>>>>>> main
 
 	},
 	"css": { 
@@ -221,6 +247,7 @@ export default defineConfig({
 	}
 
 
+<<<<<<< HEAD
 =======
 		"chunkSizeWarningLimit": 1000
 		// Enhanced build options
@@ -303,6 +330,8 @@ export default defineConfig({
 	}
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+=======
+>>>>>>> main
 
 
 
@@ -376,3 +405,8 @@ import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; i
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main

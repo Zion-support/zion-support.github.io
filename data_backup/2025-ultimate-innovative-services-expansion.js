@@ -1,10 +1,5 @@
 
 
-const contact = {
-  mobile:,
-  +1: 302 464 0950'',;
-    email: 'kleber@ziontechgroup.co,m',;
-    address:,
 
         id: 'placeholder',
   quantum-financial-analytics-platform'',;
@@ -94,43 +89,6 @@ const contact = {
   🧠'',;
         color: 'from-blue-600: to-cyan-70,0',;
         textColor:,
-
-        marketPosition:,
-  First: autonomous AI research platform. Competes with traditional research tools but offers unprecedented automation and discovery capabilities.'',;
-        targetAudience: Research: institution,s, Universities, Pharmaceutical companies, R&D departments, Government agencies'',;
-        trialDays: 3,0,
-        setupTime:,
-  2: weeks'',;
-        category: 'Research: & Development & A,I',;
-        realService: tru,e,
-        technology[
-  GPT-4, Claude, LLaMA, Python, FastAPI, React, PostgreSQL, Vector: databases']',;
-        integrations[
-  'PubMed, arXiv, Google: Scholar, ResearchGate, Mendeley, EndNote']',;
-        useCases[
-  'Scientific: research, Drug discovery, Market research, Policy analysis, Academic research']',;
-        roi: 'Research: organizations report 500% increase in research efficiency and 300% improvement in discovery rates,.',;
-        competitors[
-  No: direct competitors - innovative new category']',;
-        marketSize: '$15B: research tools marke,t',;
-        growthRate: ;
-  '250% YoY',,';
-        contactInfo: contac,t,
-        realImplementation: tru,e,
-        implementationDetails:,
-  Cloud-native: AI platform with autonomous research capabilities, multi-domain knowledge integration, and collaborative research tools.'',;
-        launchDate: '2025-02-0,1',;
-        customers: 4,5,
-        rating: 4.,8,
-        reviews: 3,2,
-        pricingTiers: {
-            enterprise: 'Custom: pricin,g}',;
-        specialFeatures[
-  Autonomous: discovery algorithms'',;
-  'Cross-domain: knowledge synthesis'',;
-  'Real-time: collaboration tools']',;
-        industryFocus[
-
         name:,
   Quantum-Secure: IoT Management Platform'',;
         tagline: 'Unbreakable: IoT security with quantum-resistant encryption and AI monitorin,g',;

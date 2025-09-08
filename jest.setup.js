@@ -1,29 +1,12 @@
-
-
 import "@testing-library/jest-dom";
 
 
 
 
 // Mock Next.js router
->>>>>>> origin/main
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-      route: "/"
-      pathname: "/"
-      query: {}
-      asPath: '/'
-      push: jest.fn()
-      pop: jest.fn()
-      reload: jest.fn()
-      back: jest.fn()
-      prefetch: jest.fn().mockResolvedValue(undefined)
-      beforePopState: jest.fn()
-      events: {
-
-import "@testing-library/jest-dom";
-
 // Mock Next && Next.js router
 jest && jest.mock("next/router", () => ({
   useRouter() {
@@ -46,24 +29,7 @@ jest && jest.mock("next/router", () => ({
       isFallback: false,
     };
   },
-<<<<<<< HEAD
 }));
-
-// Mock Next.js Image component
-jest.mock("next/image", () => {
-  const React = require("react");
-  return function MockImage({ src, alt, ...props }) {
-
-
-// Mock Next && Next.js Link component
-jest && jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
-});
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -72,21 +38,6 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-
-// Global test setup
-beforeEach(() => {
-  jest.clearAllMocks();
-
-
-
-});
-
-});
-});
-
-
-// Mock Next.js Link component
-
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {

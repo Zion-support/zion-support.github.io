@@ -38,42 +38,11 @@ export interface PortfolioAsset {;
     totalReturn: number}
 }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/delete-old-data-records-6bba
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
   purchase_price: number;
   purchase_date: Date;
-
-<<<<<<< HEAD
-  performance: {
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    daily_return: number;
-    weekly_return: number;
-    monthly_return: number;
-    yearly_return: number,
-    total_return: number;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  volatility: number;
-  sharpe_ratio: number;
-  max_drawdown: number;
-  beta: number;
-  alpha: number;
-<<<<<<< HEAD
-
-
-=======
-  id: string;
-  user_id: string;
 
   }
 }
@@ -140,12 +109,6 @@ export interface InvestmentRecommendation {;
   created_at: Date,
   updated_at: Date;
 }
-  userId: string;
-
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>;
-
-  preferences?: Record<string, any>
 }export interface FinancialRequest {
   user_id: string;
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
@@ -166,41 +129,6 @@ export interface InvestmentRecommendation {;
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.recommendations || []
-
-    } catch (error) {
-      console && console.error('Error getting investment recommendations:', error);      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.recommendations || []
-
-    } catch (error) {
-      console && console.error('Error getting investment recommendations:', error);
-      const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.recommendations |[]
-    } catch (error) {
       console.error('Error getting investment recommendations:', error);
       throw error
     }
@@ -314,7 +242,6 @@ export interface InvestmentRecommendation {;
   }
 }
 
-<<<<<<< HEAD
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
   id: string,;
   userId: string,;

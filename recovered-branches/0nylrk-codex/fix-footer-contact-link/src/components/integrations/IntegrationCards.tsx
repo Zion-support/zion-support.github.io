@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -103,20 +101,11 @@ export function IntegrationCard({;
 }        )}
       </CardFooter>;
     </Card>;
-  );
-}
-import React from './react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-=======
-
       </CardFooter>;
     </Card>;
   );
 }
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { ArrowRight, Check, ExternalLink } from './lucide-react';
 interface IntegrationCardProps {}

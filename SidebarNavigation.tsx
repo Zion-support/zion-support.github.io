@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 ;
 const SidebarNavigation: React.FC = () => {
   const [is_open, setIsOpen] = useState (false);
 ;
   const navigation_items = [;
 
+<<<<<<< HEAD
     { name: 'Home', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
@@ -125,3 +130,16 @@ import React,{ useState } from \'react\'; import { Link,useLocation } from \'rea
 }
 ;
 export default SidebarNavigation;
+=======
+
+
+
+
+;
+
+
+
+
+
+
+>>>>>>> main

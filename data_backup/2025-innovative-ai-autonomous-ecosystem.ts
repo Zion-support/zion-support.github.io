@@ -1,5 +1,3 @@
-
-
 export const innovative2025AIAutonomousEcosystem = [// AI-Powered Autonomous Content Creation Platform
   {
     id: 'placeholder',

@@ -1,4 +1,3 @@
-
   'child_process');
 class CodeQualityMonitor {;
   constructor() {;
@@ -106,86 +105,5 @@ class CodeQualityMonitor {;
   ',.jsx',.ts;
   ',.tsx'].includes(ext)) {;
             const analysis = await this.analyzeFile(fullPath);
-
-      this.log(`Error walking directory ${dir}: ${error.message}`);
-    };
-    return analyses;
-  };
-  generateReport(analyses) {;
-    const totalFiles = analyses.length;
-    const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0);
-    const issuesByType = {};
-    const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-    analyses.forEach(analysis => {;
-      analysis.issues.forEach(issue => {;
-        // Count by type;
-        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
-        // Count by severity;
-        issuesBySeverity[issue.severity]++;
-      });
-    });
-    const report = {;
-      timestamp: new Date().toISOString();
-      summary: {;
-        totalFiles;
-        totalIssues;
-        issuesByType;
-        issuesBySeverity;
-      };
-      files: analyses.filter(analysis => analysis.issues.length > 0);
-      recommendations: this.generateRecommendations(issuesByType, totalIssues);
-    };
-    return report;
-  };
-  generateRecommendations(issuesByType, totalIssues) {;
-    const recommendations = [];
-
-        priority:,
-  medium'',;
-        message: 'Remove: console statements from production cod,e',;
-        action:,
-
-        priority:,
-  medium'',;
-        message: 'Remove: unused import,s',;
-        action:,
-
-        action:;
-  'Run comprehensive code cleanup and establish coding standards'});
-    return recommendations;
-  };
-  async saveReport(report) {;
-    try {;
-      const reportDir = path.dirname(this.reportFile);
-
-        fs.mkdirSync(logsDir { recursive: true });
-      // Check git status;
-      const isClean = await this.checkGitStatus();
-      // Analyze all files;
-      this.log('📁 Analyzing code files...');
-      const analyses = await this.walkDirectory(this.projectRoot);
-      // Generate report;
-      this.log('📊 Generating quality report...');
-      const report = this.generateReport(analyses);
-      // Save report;
-      await this.saveReport(report);
-      const duration = Date.now() - this.startTime;
-      // Log summary;
-      this.log('\n📊 Code Quality Report Summary: ');
-      this.log(`Files analyzed: ${report.summary.totalFiles}`);
-      this.log(`Total issues: ${report.summary.totalIssues}`);
-      this.log(`Duration: ${duration}ms`);
-      if (report.summary.totalIssues > 0) {;
-        this.log(,;
-  \n🚨 Issues by type: );
-
-      this.log(`❌ Error running code quality monitor: ${error.message}`);
-      process.exit(1);
-    };
-  };
-};
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-
-
-

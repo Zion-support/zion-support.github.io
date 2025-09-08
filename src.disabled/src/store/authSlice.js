@@ -2,19 +2,5 @@ import React from "react"; ); export default function Authslice() {}; return nul
 const React from "react"; ); export default function Authslice() { return
 }; return null} }""
 import _React from "react"; ); export default function Authslice() {}; return null} }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
-import React from "react";
-  );
-export default function Authslice() {};
-  return null}
-}
-import React from "react"; ); export default function Authslice() {}; return null} }
-<<<<<<< HEAD
 const React from "react"; ); export default function Authslice() { return
 }; return null} }""
-=======
-const React from "react"; ); export default function Authslice() { return; }; return null} }""
->>>>>>> origin/main

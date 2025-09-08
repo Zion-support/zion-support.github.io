@@ -1,4 +1,3 @@
-
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -42,12 +41,6 @@ import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
 import { UseFormReturn } from "react-hook-form",;
 import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -197,27 +190,13 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p-0" align="start">;
                   <Calendar;
-                    mode="single";
-                    selected={field.value}
-                    on_select={field.on_change}
-                    disabled={(date) => date < new Date ()}
 
 </Calendar>
 
-                </PopoverContent>;
-              </Popover>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
           control={form.control}
           name="end_date";
           render={({ field }) => (
             <FormItem className="flex flex-col">;
-              <FormLabel > End Date (Optional)</FormLabel>;
-              <Popover>;
-                <PopoverTrigger as_child>;
-                  <FormControl>;
                     <Button;
                       variant={"outline"}
                       className={`w - full pl - 3 text - left font - normal ${!field.value && "text - muted - foreground"}`}

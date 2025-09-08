@@ -1,4 +1,3 @@
-
 import {cn} from '@/lib/utils';
 
 import {Label} from '@/components/ui/label';
@@ -143,7 +142,6 @@ FormDescription.displayName = "FormDescription"
 
 const FormMessage = React.forwardRef<
   HTMLParagraphElement,
->>>>>>> origin/cursor/delete-old-data-records-6bba
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
   const { error, formMessageId } = useFormField()
@@ -151,7 +149,6 @@ const FormMessage = React.forwardRef<
 
 
 
-<<<<<<< HEAD
 
   if (!body) {
 

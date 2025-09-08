@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
@@ -15,13 +14,6 @@ export function useResumeList() {  const { user } = useAuth();
     }
     setIsLoading(true);
     setError(null);
-<<<<<<< HEAD
-
-    try {
-      // Fetch resume list with basic info for the current user
-      const { data: resumeData, error: resumeError } = await supabase
-        .from('talent_resumes')
-        .select('*')
         setResumes([]);
         return []
       }

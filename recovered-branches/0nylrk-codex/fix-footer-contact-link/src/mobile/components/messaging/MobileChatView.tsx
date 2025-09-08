@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -38,15 +36,6 @@ interface MobileChatViewProps {;
   messages: Message[],;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
-}
-
-  onSendMessage: (content: string) => void
-}
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  onSendMessage: (content: string) => void
-}
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-
 interface MobileChatViewProps {;
   contact: {;
     id: string,;
@@ -81,7 +70,6 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
-<<<<<<< HEAD
 
   
 
@@ -104,7 +92,6 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
->>>>>>> origin/cursor/delete-old-data-records-6bba
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
@@ -153,7 +140,6 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lu
 import { cn } from "@/lib/utils",;
 import { useNavigate } from "react-router-dom",;
 import { toast } from "sonner",;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 interface Message {;
   id:string,;
@@ -176,131 +162,9 @@ interface MobileChatViewProps {;
   onSendMessage:(content:string) => void;
 }
 ;
-<<<<<<< HEAD
-
-export function MobileChatView() { return null; }
-      setNewMessage(""),;    }
-
-=======
-export function MobileChatView() {;
-  }
-  const [newMessage, setNewMessage] = useState(""),;"
-  const navigate = useNavigate(),;
-  ;
-    }
-    if (newMessage.trim() !== "") {;"
-      }
-      onSendMessage(newMessage),;
-      setNewMessage(""),;    }"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },;
-  ;
-  const handleKeyDown = (e:React.KeyboardEvent<HTMLInputElement>) => {;'
-    if (e.key === 'Enter' && !e.shiftKey) {;
-      e.preventDefault(),;
-      handleSend();
-    }
-  },;
-  ;
-  const startVideoCall = () => {;
-    const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {,
-  description:`Connecting with ${contact.name}...`;
-    }),;
-    ;
-    // Navigate to video call page;`
-    navigate(`/call/${roomId}`),;
-
-=======
-    }
-    const roomId = `mobile-${contact.id}`,;`    toast.success("Starting video call", {,"
-  }
-  "description":`Connecting with ${contact.name}...`;`    }),;
-    ;
-    // Navigate to video call page;
-    navigate(`/call/${roomId}`),;`  },;
-  ;
-  const startAudioCall = () => {;
-    const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {,
-  description:`Connecting with ${contact.name}...`;
-    }),;
-    ;
-    // Navigate to video call page with audio-only flag;
-    navigate(`/call/${roomId}?audioOnly=true`),;`  },;
-  ;
-return (,;
-  "description": `Connecting with ${contact.name}...`;`    }),;
-    // Navigate to video call page;
-    navigate(`/call/${roomId}`);`  },;
-    }
-  }
-  "description": `Connecting with ${contact.name}...`;`    }),;
-    // Navigate to video call page with audio-only flag;
-    navigate(`/call/${roomId}?audioOnly=true`);`
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  },;
-  ;
-
-    }),;
-    ;
-    // Navigate to video call page with audio-only flag;`
-    navigate(`/call/${roomId}?audioOnly=true`),;
-  },;
-  ;
-  return (,
-  description: `Connecting with ${contact.name}...`;
-    }),;
-    // Navigate to video call page;`
-    navigate(`/call/${roomId}`);
-  },;
-  const startAudioCall = () => {;
-    const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {,
-  description: `Connecting with ${contact.name}...`;
-    }),;
-    // Navigate to video call page with audio-only flag;`
-    navigate(`/call/${roomId}?audioOnly=true`);
-<<<<<<< HEAD
 
   };
   return (
-=======
-  },;
-  return (;          ;
-          <div className="flex items-center flex-1 gap-3 mx-2">;
-            <Avatar>;
-              <AvatarImage src={contact.avatar} alt={contact.name} />;
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>;
-            </Avatar>;
-            <div>;
-              <h3 className="font-medium">{contact.name}</h3>;
-              <p className="text-xs text-muted-foreground">;
-                {contact.status || "Online"}
-              </p>;
-            </div>;
-          </div>;              )}>;              <p>{message && message.content}</p>;
-              <divclassName={cn(
-                "text-xs mt-1 flex justify-end"
-                message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;"
-                  <span className="ml-1">;'
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;                )}
-              </div>;
-            </div>;
-          </div>;
-        ))}
-
-      </div>;
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
-        <div className="flex items-center gap-2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h-5 w-5" />;
-          </Button>;
-
             <Send className="h-5 w-5" />;
             disabled={!newMessage && newMessage.trim()}"
             className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;"
@@ -342,10 +206,6 @@ return (,;
         </div>;
       </div>;
     </div>);
-}
-}
-;
-
   ),;}
  interface Message {
   id: string;
@@ -392,4 +252,3 @@ setNewMessage ("") contact.avatar
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

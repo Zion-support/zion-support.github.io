@@ -1,5 +1,3 @@
-
-
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
@@ -118,7 +116,6 @@ export const SidebarGroup = React.forwardRef<
     <div;
       ref={ref}"
       data-sidebar="group""
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
       className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
       {...props}

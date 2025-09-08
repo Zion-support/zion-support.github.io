@@ -1,23 +1,4 @@
 
-
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { ApplicationCard } from "./ApplicationCard";
-import { LoadingState } from "./LoadingState";
-import { EmptyState } from "./EmptyState";
-import { ErrorState } from "./ErrorState";
-
-import { Button } from "@/components/ui/button";
-import { ApplicationStatus } from "@/types/jobs";
-
-export function ApplicationsTracker() {
-
-  const { applications, isLoading, error } = useJobApplications();
-
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
-    "all",;
-
-  );
-
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -44,91 +25,7 @@ import { ApplicationStatus } from "@/types/jobs",;
 export function ApplicationsTracker() { return null; }
   const { applications, isLoading, error } = useJobApplications(),;'
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  if (isLoading) {;
-    }
-    return <LoadingState />;
-  }
-;
-
-  if (isLoading) {;
-    return <LoadingState />;
-  }
-
-
-  const filteredApplications = statusFilter === 'all' 
-    ? applications;
-    : applications.filter(app => app.status === statusFilter),
-
-  
-=======
-  if (error) {;
-    }
-    return <ErrorState error={error} />;
-  }
-
-  if (applications && applications.length === 0) {;
-    }
-    return <EmptyState />;
-  }  
-  const filteredApplications = statusFilter === 'all' 
-    ? applications;
-    : applications.filter(app => app.status === statusFilter),
-  
-  const filteredApplications =;
-    statusFilter === "all";
-      ? applications;
-      : applications && applications.filter((app) => app && app.status === statusFilter);
-  return (
-    <div className="space-y-6">;
-
-      <div className="flex flex-wrap gap-2">;
-        <Button"
-          size="sm""
-          variant={statusFilter === "all" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("all")}"
-        >;
-          All;
-        </Button>;
-        <Button,
-size="sm""
-          variant={statusFilter === "new" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("new")}"
-        >;
-          Submitted;
-        </Button>;
-        <Button,
-size="sm""
-          variant={statusFilter === "viewed" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("viewed")}"
-        >;
-          Viewed;
-        </Button>;
-        <Button,
-size="sm""
-          variant={statusFilter === "shortlisted" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("shortlisted")}"
-        >;
-          Shortlisted;
-        </Button>;
-        <Button,
-size="sm""
-          variant={statusFilter === "interview" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("interview")}"
-        >;
-          Interview;
-        </Button>;
-        <Button,
-size="sm""
-          variant={statusFilter === "hired" ? "default" : "outline"}"
-          onClick={() => setStatusFilter("hired")}"
-        >;
-          Hired;
-        </Button>;
-<<<<<<< HEAD
         <Button"
           size="sm"
           onClick={() => setStatusFilter("rejected")}
@@ -163,12 +60,6 @@ function ApplicationsTracker() {}
   const { applications, is_loading, error } = useJobApplications ();"
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">("
     "all",
-<<<<<<< HEAD
-
-      )}
-
-    </div>;
-
   );
 ;
   // Check condition,
@@ -242,7 +133,6 @@ if ( {) {
         <Button;
           size="sm";"
           variant={status_filter === "rejected" ? "default" : "outline"}"
-<<<<<<< HEAD
           on_click={() => setStatusFilter ("rejected")}
           onClick={() => setStatusFilter("rejected")}
         >;

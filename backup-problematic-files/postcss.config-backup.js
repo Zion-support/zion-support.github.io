@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 
 
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
@@ -12,6 +17,7 @@ export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 
 
 
+<<<<<<< HEAD
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 module && module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
@@ -32,6 +38,12 @@ export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -40,9 +52,3 @@ module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 
 
-=======
-module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
-export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
-module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
-export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,3 @@
-
-
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -32,21 +30,8 @@ interface Milestone {
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
-      additionalClauses: additionalClauses,
-      milestones: milestoneData}
-  });
-  if (error) {
-    throw error
-  }
-  
-
-  if (data.success && data.contract) {
-    return data.contract  } else {
-    throw new Error("Failed to generate contract")
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
@@ -110,4 +95,3 @@ export async function generateContract(;
     throw new Error("Failed to generate contract");
 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

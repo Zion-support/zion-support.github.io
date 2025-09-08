@@ -1,5 +1,3 @@
-
-
 import { 
 
   FormField;
@@ -19,11 +17,6 @@ interface RateOptimizationSectionProps {
   skills: string[],
   yearsExperience: number,
   location?: string,}) => {
-  const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate)
-
-  },
-
   return (
 
     <div className="space-y-4">
@@ -39,20 +32,6 @@ interface RateOptimizationSectionProps {
                 min="1"
                 step="0.01"
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
-  control: Control<any>,;
-  setValue: (name: string, value: any) => void,;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string;
-  rateType: "hourly" | "fixed";
-
-=======
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
-    <div className="space-y-4">;
-      <FormField;
-        control={control}"
-        name="hourlyRate"
             <FormControl>;            <FormControl>;
               <Input;
                 type="number";
@@ -66,12 +45,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
               Set a competitive rate based on your skills and experience;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-      <Card>;
-        <CardContent className="pt-4">;
-
           <TalentRateRecommender          <TalentRateRecommender
           </FormItem>)}
       />;
@@ -83,7 +56,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
             onSuggestionApplied={handleSuggestionApplied}
 
 };
->>>>>>> origin/cursor/delete-old-data-records-6bba
             rate_type={rate_type}
           />;
         </CardContent>;

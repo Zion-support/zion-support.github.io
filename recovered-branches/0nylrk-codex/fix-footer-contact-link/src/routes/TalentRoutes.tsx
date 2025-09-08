@@ -16,30 +16,6 @@ const TalentRoutes = () => {
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
       <Route path="/talents" element={<TalentsPage />} />
-      <Route path="/talent/:id" element={<TalentProfilePage />} />
-      <Route
-        path="/saved-talents"
-        element={
-          <ProtectedRoute>
-            <SavedTalentsPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/create-talent-profile"
-        element={}
-          <ProtectedRoute>
-            <CreateTalentProfile />
-          </ProtectedRoute>
-        }
-      />"
-      <Route path="/profile/:id" element={<ProfilePage />} />
-    </Routes>
-  )
-};
-
-const TalentRoutes = () => {
-const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
@@ -78,12 +54,4 @@ const TalentRoutes = () =>: any {}
       <Route path="/profile/:id" element={<ProfilePage />} />;
     </Routes>);
 }
-;
-<<<<<<< HEAD
-
-
-},
-
-
-export default TalentRoutes;
 ;

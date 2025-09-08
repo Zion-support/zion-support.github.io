@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import ErrorBoundary from '../components/ErrorBoundary';
   test('applies correct styling', () => {
     render(<ErrorBoundary />);
     // Add styling tests if needed;
-
-

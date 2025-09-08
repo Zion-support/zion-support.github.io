@@ -4,6 +4,7 @@ import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
 
+<<<<<<< HEAD
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -45,6 +46,9 @@ interface ContentCategory {id: string;
   name: string;
   icon: any;
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
 
 
   description: string;
@@ -239,8 +243,11 @@ const contentItems: ContentItem[] = [
       type: 'insight'
 
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> main
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -252,6 +259,7 @@ const contentItems: ContentItem[] = [
       relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];
       source: 'security-scanner';
+<<<<<<< HEAD
       type: 'security';
     }
     {id: '3';
@@ -308,101 +316,76 @@ const contentItems: ContentItem[] = [
     {id: 'all';
       name: 'All Content';
 <<<<<<< HEAD
+=======
+
+      type: 'security';
+    {id: '3';',
+  title: 'AI Model Performance Update';
+      href: '/reports/ai-model-performance-2025-08-19';',
+  desc: 'Latest performance metrics and optimization insights for deployed AI models.';
+      category: 'ai';',
+  subcategory: 'performance';
+      tags: ['aiperformanceoptimizationmetrics'];',
+  source: 'ai-monitor';
+      type: 'update';
+    {id: '4';',
+  title: 'Feature Deployment Summary';
+      href: '/reports/feature-deployment-2025-08-19';',
+  desc: 'Overview of newly deployed features and their impact on user experience.';
+      category: 'features';',
+  subcategory: 'deployment';
+  relevance: 'medium';
+      tags: ['featuresdeploymentuximpact'];',
+  source: 'deployment-tracker';
+      type: 'feature';
+    {id: '5';',
+  title: 'System Health Dashboard';
+      href: '/reports/system-health-2025-08-19';',
+  desc: 'Real-time system performance metrics and infrastructure health status.';
+      category: 'monitoring';',
+  subcategory: 'system-health';
+      tags: ['monitoringperformanceinfrastructurehealth'];',
+  source: 'health-monitor';
+    {id: '6';',
+  title: 'User Behavior Insights';
+      href: '/reports/user-behavior-2025-08-19';',
+  desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
+      category: 'analytics';',
+  subcategory: 'user-behavior';
+      tags: ['analyticsuser-behaviorengagementoptimization'];',
+  source: 'behavior-analyzer';
+      type: 'insight';
+>>>>>>> main
 
 
   description: 'Complete collection of autonomous content';
 
 
-=======
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-blue-500 to-cyan-500';
-      count: contentItems.length;
-    }
-    {id: 'seo';
-      name: 'SEO & Analytics';
-<<<<<<< HEAD
 
 
   description: 'Search optimization and performance analytics';
 
 
-=======
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
-      subcategories: ['structured-dataperformancetechnical-seo'];
-    }
-    {id: 'security';
-      name: 'Security & Compliance';
-<<<<<<< HEAD
 
 
   description: 'Security assessments and compliance reports';
 
 
-=======
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-scancompliancethreat-detection'];
-    }
-    {id: 'ai';
-      name: 'AI & Machine Learning';
-<<<<<<< HEAD
 
 
   description: 'AI model performance and insights';
 
 
-=======
-      icon: Brain;
-      description: 'AI model performance and insights';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: ['performancetrainingdeployment'];
-    }
-    {id: 'features';
-      name: 'Feature Updates';
-<<<<<<< HEAD
 
 
   description: 'New features and system updates';
 
 
-=======
-      icon: Zap;
-      description: 'New features and system updates';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: ['deploymentenhancementsroadmap'];
-    }
-    {id: 'monitoring';
-      name: 'System Monitoring';
-<<<<<<< HEAD
 
 
   description: 'Infrastructure and system health';
 
 
-=======
-      icon: Cpu;
-      description: 'Infrastructure and system health';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-healthperformanceinfrastructure'];
-    }
-    {id: 'analytics';
-      name: 'User Analytics';
-<<<<<<< HEAD
 
 
   description: 'User behavior and engagement insights';
@@ -475,6 +458,7 @@ pr-12325
   const relevanceLevels = [;
 
 
+<<<<<<< HEAD
 =======
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
@@ -524,6 +508,8 @@ pr-12325
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
+=======
+>>>>>>> main
 
 
   ],
@@ -557,6 +543,7 @@ filtered.sort((a, b) => {
 
       return sortOrder === 'asc' ? comparison : -comparison;
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
       }
@@ -568,17 +555,10 @@ filtered.sort((a, b) => {
   const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Globe;
 <<<<<<< HEAD
-
-
 =======
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
-<<<<<<< HEAD
+>>>>>>> main
+
+
 
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type)
@@ -586,43 +566,11 @@ filtered.sort((a, b) => {
   const clearAllFilters = () => {
     setSearchTerm()
 
-=======
-    }
-}
-  const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
-    return typeInfo ? typeInfo.icon : Globe
-  }
-  const clearAllFilters = () => {
-    setSearchTerm('')
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    setSelectedCategory('all')
-    setSelectedSubcategory('all')
-    setSelectedType('all')
-    setSelectedDateRange('all')
-    setSelectedRelevance('all')
-<<<<<<< HEAD
 
   return (
     <div className=&quot;space-y-6&quot;>
 </div>
 
-=======
-  }
-  return (
-    <div className=&quot;space-y-6&quot;>
-      {/* Search and Advanced Filters */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <div className=&quot;space-y-4&quot;>
-        {/* Search Bar */}
-        <div className=&quot;relative&quot;>
-          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
-          <input,
-type=&quot;text&quot;
-            placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
 
 </input>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
@@ -631,6 +579,7 @@ type=&quot;text&quot;
 
 
 
+<<<<<<< HEAD
 =======
             className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
           />
@@ -655,6 +604,8 @@ value={selectedCategory}
                   {category.name} ({category.count})
                 </option>
               ))}
+=======
+>>>>>>> main
 
             </select>
           </div>
@@ -662,6 +613,7 @@ value={selectedCategory}
           {_/* Subcategory Filter */}
           <div>
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
@@ -669,6 +621,9 @@ value={selectedCategory}
 value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
 
 </select>
               <option value=&quot;all&quot;>All Subcategories</option>
@@ -684,6 +639,7 @@ value={selectedType}
               ))}
 
 
+<<<<<<< HEAD
 =======
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
@@ -725,6 +681,8 @@ value={selectedType}
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
                 <option key={level.id} value={level.id}>
 
@@ -738,6 +696,7 @@ value={selectedRelevance}
 
 
 
+<<<<<<< HEAD
 =======
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
               {relevanceLevels.map(level => (
@@ -763,6 +722,8 @@ value={selectedRelevance}
             <div className=&quot;flex items-center gap-2&quot;>
               <label className=&quot;text-sm text-white/70&quot;>Sort by:</label>
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
@@ -774,6 +735,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 
 
 
+<<<<<<< HEAD
 =======
               <select,
 value={sortBy}
@@ -822,6 +784,11 @@ onClick={clearAllFilters}
           ))}
         </div>;
       </div>;
+=======
+
+:components/ContentCategorizer.tsx
+
+>>>>>>> main
 
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -839,6 +806,7 @@ onClick={clearAllFilters}
       </div>;
 ;
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
       {/* Results Summary */}
@@ -849,6 +817,9 @@ onClick={clearAllFilters}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+=======
+
+>>>>>>> main
 
 
 
@@ -893,6 +864,7 @@ onClick={clearAllFilters}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
 </h3>
 
+<<<<<<< HEAD
 =======
                   {item.type}
                 </div>;
@@ -922,6 +894,12 @@ onClick={clearAllFilters}
                 {item.tags.slice(0, 3).map((tag, index) => (
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
                     {tag}
                   </span>;
@@ -934,6 +912,7 @@ onClick={clearAllFilters}
               </div>;
 ;
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
               {/* Metadata */}
@@ -945,6 +924,12 @@ onClick={clearAllFilters}
                 <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
                   <TrendingUp className=&quot;w-3 h-3&quot; />
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
@@ -982,6 +967,7 @@ href={item.href}
 onClick={clearAllFilters}
             className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
 
+<<<<<<< HEAD
 =======
                   {item.relevance} priority
                 </span>
@@ -1040,3 +1026,5 @@ onClick={clearAllFilters}
 }
 export default ContentCategorizer;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+>>>>>>> main

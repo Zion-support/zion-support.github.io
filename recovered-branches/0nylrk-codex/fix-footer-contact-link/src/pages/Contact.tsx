@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
 
   // TODO: Implement
@@ -192,18 +190,6 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
                 className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
               >;
                 <MessageSquare className="mr - 2 h - 5 w-5" />;                Chat With AI;
-              </Button>;
-              <Button;
-                variant="outline";
-                className="border - zion - cyan text - zion - cyan hover:bg - zion-cyan / 10";
-                as_child;
-              >;
-                <a href="mailto:support@ziontechgroup.com">;
-                  <Mail className="mr - 2 h - 5 w-5" />;      {isChatOpen && (;
-        <ChatAssistant
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-
           recipient={{;
             id: 'ai-assistant',;
             name: 'AI Assistant',;
@@ -213,4 +199,3 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
           onSendMessage={handleSendMessage}
         />;
       )}
-<<<<<<< HEAD

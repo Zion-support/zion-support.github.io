@@ -24,8 +24,4 @@ export default function RootLayout() {return (<html lang=&quot;en & quot; classN
       <body className={`${inter.class_name} bg - black text - white antialiased`}>`
         <Navigation />;
         <main className=&quot;min - h-screen & quot>
-
-          {children}
-        </main>;
-        <Footer />;
       </body>;

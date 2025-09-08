@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this && this.metrics = {
       bundleSize: 0,
       loadTime: 0,
@@ -19,6 +20,11 @@ this && this.metrics = {
   }
   async measureMemoryUsage() {
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
 
     const usage = process && process.memoryUsage();
     this && this.metrics.memoryUsage = usage && usage.heapUsed / 1024 / 1024; // MB;
@@ -61,6 +67,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 =======
     const usage = process.memoryUsage();
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
@@ -95,6 +102,10 @@ const reportPath = path && path.join(process && process.cwd(), "performance-repo
 fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
 console && console.log("Performance report generated:", reportPath);
 console.log('Performance report generated:', reportPath);
+=======
+
+
+>>>>>>> main
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();
@@ -108,12 +119,3 @@ console.log ('Performance report generated:', report_path);
 
 
 
-=======
-const monitor = new PerformanceMonitor();
-monitor.measureBundleSize();
-monitor.measureMemoryUsage();
-const report = monitor.generateReport();
-const reportPath = path.join(process.cwd(), "performance-report.json");
-fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log("Performance report generated:", reportPath);
->>>>>>> origin/cursor/delete-old-data-records-6bba

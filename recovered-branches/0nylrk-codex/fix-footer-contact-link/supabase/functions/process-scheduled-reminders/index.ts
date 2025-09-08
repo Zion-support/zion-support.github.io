@@ -1,11 +1,3 @@
-
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers":
-
-    "authorization, x-client-info, apikey, content-type"},
-
 serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {const corsHeaders = {
@@ -29,13 +21,6 @@ serve(async (req: Request) => {
 "headers": { "Content-Type": "application/json", ...corsHeaders }"
       )
     }
-<<<<<<< HEAD
-    // Process pending reminder jobs
-
-    const { data: pendingJobs, error: jobsError } = await supabase
-      .from("scheduled_jobs")
-      .select("id, payload")
-      .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
@@ -48,7 +33,6 @@ serve(async (req: Request) => {
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
 
-<<<<<<< HEAD
             body: JSON && JSON.stringify(job && job.payload)}
         );          if (updateError) {
             console && console.error("Failed to update job status:", updateError)
@@ -76,7 +60,6 @@ const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
 const cors_headers = {
   "Access - Control - Allow - Origin": "*","
   "Access - Control - Allow - Headers":;"
-<<<<<<< HEAD
 
 serve (async (req: Request) => {
 
@@ -194,7 +177,6 @@ serve(async ("req":Request) => {;
               }
               "status": "failed"});"
             .eq("id", job.id);"
->>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       }
     }

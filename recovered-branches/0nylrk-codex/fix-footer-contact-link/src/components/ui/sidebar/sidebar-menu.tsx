@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { forwardRef } from "react";
-import {ChevronDown} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {SafeRef} from "@/types/ref-types";
-interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode,
-  active?: boolean,
-  href?: string,
-  target?: string,
   badge?: React.ReactNodeimport React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -74,13 +61,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 SidebarMenuItem.displayName = "SidebarMenuItem",
 ),
 ),
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-  }
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -128,14 +108,6 @@ const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, 
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-export { SidebarMenuItem, SidebarMenuGroup }
-;
-
-},
-
-export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 ;
 export { SidebarMenuItem, SidebarMenuGroup },; interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {

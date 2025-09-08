@@ -9,6 +9,7 @@ interface User {
 
 }
 
+<<<<<<< HEAD
 interface User {
   id: string;
   email: string;
@@ -29,6 +30,11 @@ export const useAuth = () => {;
     user
     loading
     login: (email: string, password: string) => {
+=======
+;
+
+
+>>>>>>> main
 
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });

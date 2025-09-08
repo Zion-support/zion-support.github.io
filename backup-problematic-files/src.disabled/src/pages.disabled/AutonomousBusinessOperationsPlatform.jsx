@@ -1,11 +1,19 @@
-import React from 'react';
+<<<<<<< HEAD
 =======
-    console.error('Error caught by boundary:', error, errorInfo);'
+
+    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> main
+import React from 'react';
 
+<<<<<<< HEAD
 
   return (
     <div className={className || ''}>
@@ -16,3 +24,5 @@ import React from 'react';
 
 
 export default AutonomousBusinessOperationsPlatform;
+=======
+>>>>>>> main

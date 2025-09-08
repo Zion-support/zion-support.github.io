@@ -7,21 +7,6 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-
-;
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
-  if (!openAiKey) {;
-    return new Response(;
-      JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  }
-
-  const supabase = createClient(supabaseUrl, supabaseAnonKey),
-
-  try {
-    const { applicationId } = await req.json(),
         
     if (!applicationId) {
 
@@ -233,65 +218,9 @@ const jobSkills = application.job?.skills || [],;
             "role": "role","
     "content": `You are an expert resume analyzer that compares resumes against job descriptions`            to determine how well a candidate matches a job. Analyze the resume and job details,
 provided, focusing on skills, experience, and qualifications.``          },
-<<<<<<< HEAD
 
             # Resume Content
 
-=======
-            # Resume Content
-    // 4. Prepare job details
-
-        Bio: ${application.talent_profile?.bio || ""}
-        Cover Letter: ${application.cover_letter || ""}
-        Skills: ${application.talent_profile?.skills?.join(", ") || ""}
-      `,;
-      resumeSkills = application.talent_profile?.skills || [];
-
-    }
-
-    // 4. Prepare job details"
-    const jobTitle = application.job?.title || "","
-    const jobDescription = application.job?.description || "",
-    const jobSkills = application.job?.skills || [],
-        model: "gpt-4o-mini";          {
-            role: "system"
-            content: `You are an expert resume analyzer that compares resumes against job descriptions
-            to determine how well a candidate matches a job. Analyze the resume and job details
-            provided, focusing on skills, experience, and qualifications.`
-
-          },
-            # Resume Content
-
-            ${resumeContent}
-            Compare the resume to the job description and provide:
-            1. A match score between 0-100 (where 100 is a perfect match)
-
-=======
-            ${resumeContent}
-            Compare the resume to the job description and provide:
-            1. A match score between 0-100 (where 100 is a perfect match)
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            2. A brief summary of why this score was given (1-2 sentences)'
-            3. A detailed breakdown of how well the candidate's skills and experience align with job requirements"
-            4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
-    const aiResult = await openAIResponse.json(),
-    let matchResult,
-    
-    try {
-      // Extract JSON from the response
-      const content = aiResult.choices[0].message.content,
-      matchResult = JSON.parse(content),
-      
-
-      // Validate required fields
-      if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
-      if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
-      const content = aiResult && aiResult.choices[0].message && message.content;
-      matchResult = JSON && JSON.parse(content);
-      // Validate required fields
-      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
-
-<<<<<<< HEAD
         ];
     let matchResult;
     try {
@@ -319,46 +248,9 @@ provided, focusing on skills, experience, and qualifications.``          },
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
     );
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
       JSON.stringify({ error: error.message }),
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
-<<<<<<< HEAD
-    ;
-    // 3. If no resume content, use talent profile and cover letter;
-    if (!resumeContent) {;
-      resumeContent = `;
-        Bio:${application.talent_profile?.bio || ""}
-        Cover Letter:${application.cover_letter || ""}
-        Skills:${application.talent_profile?.skills?.join(", ") || ""}
-      `,;
-      resumeSkills = application.talent_profile?.skills || [],;
-    }
-=======
-  }
-});
-
-;
-      }
-    } catch (error) {
-      console.error("Error parsing AI response:", error),
-      throw new Error("Failed to parse AI analysis results")
-    }
-
-
-  }
-});
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-
-
-      });
-  }
-});
-  }
-});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

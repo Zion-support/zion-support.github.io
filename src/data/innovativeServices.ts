@@ -1,105 +1,3 @@
-export interface InnovativeService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  location?: string;
-  availability?: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-}
-
-export const INNOVATIVE_SERVICES: InnovativeService[] = [
-  {
-    id: "ai-content-studio-pro",
-    title: "AI Content Studio Pro",
-    description: "Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and technical documentation.",
-    category: "AI Services",
-    subcategory: "Content Creation",
-    price: 299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-format content generation (blogs, social media, emails)",
-      "SEO optimization with keyword research",
-      "Brand voice consistency",
-      "Plagiarism detection",
-      "Content analytics and performance tracking",
-      "Multi-language support (25+ languages)",
-      "API integration capabilities",
-      "Team collaboration tools"
-    ],
-    benefits: [
-      "Increase content production by 10x",
-      "Improve SEO rankings by 40%",
-      "Reduce content creation costs by 70%",
-      "Maintain consistent brand voice across all channels",
-      "24/7 content generation capability"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-commerce businesses",
-      "Content creators",
-      "Startups and SMEs",
-      "Enterprise marketing teams"
-    ],
-    targetAudience: [
-      "Marketing professionals",
-      "Content creators",
-      "Business owners",
-      "SEO specialists",
-      "Digital agencies"
-    ],
-    tags: ["AI", "Content Creation", "SEO", "Marketing", "Automation"],
-    estimatedDelivery: "Immediate access",
-    supportLevel: "premium",
-    marketPrice: "$299 - $999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 95,
-    rating: 4.9,
-    reviewCount: 342,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-content-studio",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-content-studio"
-  },
-  {
-    id: "ai-support-hub",
-    title: "AI Support Hub",
-    description: "Intelligent customer support automation platform that handles customer inquiries, provides instant responses, and escalates complex issues to human agents seamlessly.",
-    category: "AI Services",
-    subcategory: "Customer Support",
-    price: 199,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-<<<<<<< HEAD
       "Natural language processing",
       "Multi-channel support (chat, email, phone)",
       "Automated ticket routing",
@@ -110,9 +8,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       "Analytics dashboard"
     ],
     benefits: [
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       "24/7 automated customer support",
       "Multi-language support (50+ languages)",
       "Intelligent ticket routing",
@@ -128,98 +23,12 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       "Improve customer satisfaction scores",
       "Reduce support costs by 60%",
       "Scale support operations effortlessly"
-=======
-      "Natural language processing",
-      "Multi-channel support (chat, email, phone)",
-      "Intelligent ticket routing",
-      "Knowledge base automation",
-      "Sentiment analysis",
-      "Performance analytics",
-      "Integration with CRM systems",
-      "24/7 availability"
-    ],
-    benefits: [
-      "Reduce response time by 90%",
-      "Lower support costs by 60%",
-      "Improve customer satisfaction",
-      "Handle multiple inquiries simultaneously",
-      "Scalable support operations"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
-      "Natural language processing",
-      "Multi-channel support (chat, email, phone)",
-      "Automated ticket routing",
-      "Knowledge base integration",
-      "Sentiment analysis",
-      "24/7 availability",
-      "Multi-language support",
-      "Analytics dashboard"
-    ],
-    benefits: [
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      "Reduce response time to under 30 seconds",
-      "Handle 80% of inquiries automatically",
-      "Reduce support costs by 60%",
-      "Improve customer satisfaction scores",
-      "Scale support without adding staff"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    ],
-    useCases: [
-      "E-commerce platforms",
-      "SaaS companies",
-<<<<<<< HEAD
       "Financial services",
       "Healthcare providers",
       "Educational institutions"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       "Online services",
       "Customer support teams",
       "Businesses with high support volume"
-=======
-      "Online marketplaces",
-      "Service businesses",
-      "Customer support teams"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    ],
-    targetAudience: [
-      "Customer service managers",
-      "Business owners",
-<<<<<<< HEAD
-      "Operations teams",
-<<<<<<< HEAD
-      "Support team leaders"
-    ],
-    tags: ["AI", "Customer Support", "Automation", "Chatbot", "NLP"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "standard",
-    marketPrice: "$199 - $799/month",
-=======
-      "E-commerce managers",
-      "Service providers"
-=======
-      "E-commerce operators",
-      "Service providers",
-      "Support teams"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-    ],
-    tags: ["AI", "Customer Support", "Automation", "Chatbot", "24/7 Support"],
-    estimatedDelivery: "1-2 weeks",
-    supportLevel: "standard",
-    marketPrice: "$199 - $599/month",
-=======
-      "Financial services",
-      "Healthcare providers",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Customer service managers",
-      "Business owners",
       "Operations teams",
       "Support team leaders"
     ],
@@ -227,28 +36,12 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "standard",
     marketPrice: "$199 - $799/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 92,
-    rating: 4.8,
-<<<<<<< HEAD
     reviewCount: 189,
-=======
-<<<<<<< HEAD
     reviewCount: 156,
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     featured: true,
     location: "Global",
     availability: "24/7"
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   // NEW INNOVATIVE SERVICES STARTING HERE
   {
     id: "ai-powered-video-editing-suite",
@@ -352,36 +145,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,499/month",
-=======
-  // New Innovative AI Services
-  {
-    id: "ai-video-production",
-    title: "AI Video Production Studio",
-    description: "Revolutionary AI-powered video creation platform that generates professional videos from text, images, and audio with advanced editing capabilities.",
-    category: "AI Services",
-    subcategory: "Video Production",
-=======
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "24/7"
-  },
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  {
-    id: "predictive-insights-pro",
-    title: "Predictive Insights Pro",
-    description: "Advanced predictive analytics platform that uses machine learning to forecast business trends, customer behavior, and market opportunities.",
-    category: "AI Services",
-    subcategory: "Analytics",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    price: 499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-<<<<<<< HEAD
       "Predictive modeling algorithms",
       "Real-time data processing",
       "Custom dashboard creation",
@@ -395,8 +158,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       "Improve decision-making accuracy by 85%",
       "Identify market opportunities early",
       "Reduce operational risks",
-=======
-<<<<<<< HEAD
       "Text-to-video generation",
       "AI voice synthesis",
       "Automatic scene creation",
@@ -431,7 +192,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "Immediate access",
     supportLevel: "premium",
     marketPrice: "$499 - $1,500/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -439,7 +199,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     },
     aiScore: 96,
     rating: 4.9,
-<<<<<<< HEAD
     reviewCount: 156,
     featured: true,
     location: "Global",
@@ -760,34 +519,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       "Improve decision making by 60%",
       "Reduce risks through prediction",
       "Identify new opportunities",
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      "Optimize resource allocation",
-      "Increase revenue through data-driven insights"
-    ],
-    useCases: [
-      "Financial services",
-<<<<<<< HEAD
-      "Retail and e-commerce",
-      "Manufacturing",
-      "Healthcare",
-=======
-      "Retail businesses",
-      "Manufacturing companies",
-      "Healthcare organizations",
-=======
-      "Predictive modeling algorithms",
-      "Real-time data processing",
-      "Custom dashboard creation",
-      "Automated reporting",
-      "Data visualization tools",
-      "API integrations",
-      "Machine learning models",
-      "Forecasting accuracy metrics"
-    ],
-    benefits: [
-      "Improve decision-making accuracy by 85%",
-      "Identify market opportunities early",
-      "Reduce operational risks",
       "Optimize resource allocation",
       "Increase revenue through data-driven insights"
     ],
@@ -796,21 +527,8 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       "Retail and e-commerce",
       "Manufacturing",
       "Healthcare",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      "Supply chain management"
-    ],
-    targetAudience: [
-      "Data scientists",
-      "Business analysts",
-      "Executives",
-      "Operations managers",
-<<<<<<< HEAD
       "Marketing teams"
-=======
-<<<<<<< HEAD
       "Risk managers"
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     tags: ["AI", "Analytics", "Predictive Modeling", "Machine Learning", "Business Intelligence"],
     estimatedDelivery: "3-4 weeks",
@@ -871,81 +589,9 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     tags: ["AI", "Automation", "Workflow", "Process Optimization", "Productivity"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "standard",
-<<<<<<< HEAD
-=======
-    marketPrice: "$350 - $1,199/month",
-=======
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-video-studio",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-video-studio"
-  },
-  {
-    id: "ai-code-assistant",
-    title: "AI Code Assistant Pro",
-    description: "Advanced AI-powered coding assistant that provides intelligent code completion, debugging, optimization, and documentation generation.",
-    category: "AI Services",
-    subcategory: "Software Development",
-    price: 149,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Intelligent code completion",
-      "Bug detection and fixes",
-      "Code optimization suggestions",
-      "Documentation generation",
-      "Multi-language support",
-      "Git integration",
-      "Code review assistance",
-      "Performance analysis"
-    ],
-    benefits: [
-      "Increase coding speed by 50%",
-      "Reduce bugs by 70%",
-      "Improve code quality",
-      "Faster development cycles",
-      "Learning and skill development"
-    ],
-    useCases: [
-      "Software development",
-      "Web development",
-      "Mobile app development",
-      "Data science",
-      "DevOps automation"
-    ],
-    targetAudience: [
-      "Software developers",
-      "Web developers",
-      "Data scientists",
-      "DevOps engineers",
-      "Programming students"
-    ],
-    tags: ["AI", "Code Assistant", "Software Development", "Automation", "Productivity"],
-    estimatedDelivery: "Immediate access",
-    supportLevel: "standard",
-    marketPrice: "$149 - $399/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
-      "Marketing teams"
-    ],
-    tags: ["AI", "Analytics", "Predictive Modeling", "Machine Learning", "Business Intelligence"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$499 - $1,999/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 94,
-<<<<<<< HEAD
     rating: 4.8,
     reviewCount: 234,
     featured: true,
-<<<<<<< HEAD
     location: "Global",
     availability: "24/7",
     demoUrl: "https://ziontechgroup.com/demo/ai-workflow-automation",
@@ -957,174 +603,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     description: "Intelligent knowledge management system that uses AI to organize, search, and retrieve information across your organization with natural language queries.",
     category: "AI Services",
     subcategory: "Knowledge Management",
-=======
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-code-assistant",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-code-assistant"
-  },
-  // New Innovative Micro SAAS Services
-  {
-    id: "ai-design-studio",
-    title: "AI Design Studio",
-    description: "Revolutionary AI-powered design platform that creates logos, graphics, websites, and marketing materials with professional quality and unlimited customization.",
-    category: "Micro SAAS",
-    subcategory: "Design & Creative",
-    price: 79,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI logo generation",
-      "Graphic design creation",
-      "Website design templates",
-      "Brand identity packages",
-      "Social media graphics",
-      "Print-ready materials",
-      "Collaborative design tools",
-      "Asset library access"
-    ],
-    benefits: [
-      "Create designs in minutes",
-      "Professional quality output",
-      "Unlimited design variations",
-      "No design skills required",
-      "Cost-effective branding"
-    ],
-    useCases: [
-      "Startup branding",
-      "Marketing campaigns",
-      "Social media content",
-      "Website design",
-      "Print materials"
-    ],
-    targetAudience: [
-      "Startup founders",
-      "Small business owners",
-      "Marketing professionals",
-      "Entrepreneurs",
-      "Content creators"
-    ],
-    tags: ["AI", "Design", "Branding", "Graphics", "Creative Tools"],
-    estimatedDelivery: "Immediate access",
-    supportLevel: "standard",
-    marketPrice: "$79 - $299/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 93,
-    rating: 4.7,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-design-studio",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-design-studio"
-  },
-  {
-    id: "smart-email-marketing",
-    title: "Smart Email Marketing Platform",
-    description: "AI-powered email marketing platform that personalizes campaigns, optimizes send times, and maximizes engagement through intelligent automation.",
-    category: "Micro SAAS",
-    subcategory: "Email Marketing",
-    price: 59,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered personalization",
-      "Optimal send time optimization",
-      "Subject line optimization",
-      "A/B testing automation",
-      "Behavioral targeting",
-      "Advanced analytics",
-      "Template library",
-      "Integration capabilities"
-    ],
-    benefits: [
-      "Increase open rates by 45%",
-      "Improve click-through rates by 60%",
-      "Reduce unsubscribe rates",
-      "Automated optimization",
-      "Better ROI tracking"
-    ],
-    useCases: [
-      "E-commerce businesses",
-      "Newsletter publishers",
-      "Marketing agencies",
-      "B2B companies",
-      "Online courses"
-    ],
-    targetAudience: [
-      "Email marketers",
-      "Business owners",
-      "Marketing professionals",
-      "E-commerce operators",
-      "Content creators"
-    ],
-    tags: ["Email Marketing", "AI", "Personalization", "Automation", "Analytics"],
-    estimatedDelivery: "Immediate access",
-    supportLevel: "standard",
-    marketPrice: "$59 - $199/month",
-=======
-    rating: 4.9,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "24/7"
-  },
-  {
-    id: "workflow-genius",
-    title: "Workflow Genius",
-    description: "Intelligent workflow automation platform that streamlines business processes, reduces manual tasks, and increases operational efficiency through AI-powered automation.",
-    category: "AI Services",
-    subcategory: "Process Automation",
-    price: 399,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Visual workflow builder",
-      "AI-powered process optimization",
-      "Integration with 100+ tools",
-      "Real-time monitoring",
-      "Performance analytics",
-      "Custom automation rules",
-      "Mobile app access",
-      "Team collaboration features"
-    ],
-    benefits: [
-      "Reduce manual tasks by 70%",
-      "Improve process efficiency by 50%",
-      "Reduce errors by 90%",
-      "Accelerate workflow completion",
-      "Increase team productivity"
-    ],
-    useCases: [
-      "HR processes",
-      "Finance and accounting",
-      "Marketing automation",
-      "Sales processes",
-      "Customer onboarding"
-    ],
-    targetAudience: [
-      "Operations managers",
-      "Process improvement specialists",
-      "Business analysts",
-      "Team leaders",
-      "Business owners"
-    ],
-    tags: ["AI", "Automation", "Workflow", "Process Optimization", "Productivity"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "standard",
-    marketPrice: "$399 - $1,299/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 91,
-<<<<<<< HEAD
     rating: 4.6,
     reviewCount: 98,
     featured: false,
@@ -1257,25 +735,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     description: "Comprehensive business intelligence platform that transforms data into actionable insights using advanced AI and machine learning algorithms.",
     category: "AI Services",
     subcategory: "Business Intelligence",
-=======
-    rating: 4.7,
-    reviewCount: 203,
-    featured: false,
-    location: "Global",
-    availability: "24/7"
-  },
-  {
-    id: "sales-intelligence-ai",
-    title: "Sales Intelligence AI",
-    description: "Advanced sales intelligence platform that uses AI to identify prospects, predict buying behavior, and optimize sales strategies for maximum conversion rates.",
-    category: "AI Services",
-    subcategory: "Sales Intelligence",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-<<<<<<< HEAD
       "Predictive analytics",
       "Natural language queries",
       "Automated reporting",
@@ -1310,48 +769,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$599 - $1,800/month",
-=======
-      "Lead scoring and prioritization",
-      "Buying intent prediction",
-      "Competitor analysis",
-      "Sales forecasting",
-      "Pipeline optimization",
-      "CRM integration",
-      "Real-time alerts",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Increase sales conversion by 45%",
-      "Reduce sales cycle time by 30%",
-      "Improve lead quality by 60%",
-      "Boost revenue per sales rep",
-      "Optimize sales strategies"
-    ],
-    useCases: [
-      "B2B sales teams",
-      "Enterprise sales",
-      "SaaS companies",
-      "Financial services",
-      "Consulting firms"
-    ],
-    targetAudience: [
-      "Sales managers",
-      "Sales representatives",
-      "Business development teams",
-      "Sales operations",
-      "Marketing teams"
-    ],
-    tags: ["AI", "Sales", "Lead Generation", "Predictive Analytics", "CRM"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $2,499/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
     aiScore: 94,
     rating: 4.8,
     reviewCount: 123,
@@ -1405,123 +822,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $8,000/month",
-=======
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 178,
-    featured: true,
-    location: "Global",
-    availability: "24/7"
-  },
-  {
-    id: "data-master-ai",
-    title: "Data Master AI",
-    description: "Comprehensive data management and analytics platform that helps businesses collect, clean, analyze, and visualize data for actionable insights.",
-    category: "AI Services",
-    subcategory: "Data Management",
-    price: 449,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Data collection and integration",
-      "Data cleaning and validation",
-      "Advanced analytics tools",
-      "Custom dashboards",
-      "Data visualization",
-      "API access",
-      "Real-time processing",
-      "Data security compliance"
-    ],
-    benefits: [
-      "Improve data quality by 80%",
-      "Reduce data processing time by 60%",
-      "Enable data-driven decision making",
-      "Ensure data compliance",
-      "Increase operational efficiency"
-    ],
-    useCases: [
-      "Data analytics teams",
-      "Business intelligence",
-      "Research and development",
-      "Marketing analytics",
-      "Financial reporting"
-    ],
-    targetAudience: [
-      "Data analysts",
-      "Business intelligence teams",
-      "IT managers",
-      "Business analysts",
-      "Executives"
-    ],
-    tags: ["AI", "Data Analytics", "Business Intelligence", "Data Visualization", "Data Management"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "standard",
-    marketPrice: "$449 - $1,799/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 90,
-    rating: 4.7,
-    reviewCount: 134,
-    featured: false,
-    location: "Global",
-    availability: "24/7"
-  },
-  {
-    id: "security-ops-ai",
-    title: "Security Ops AI",
-    description: "Intelligent cybersecurity platform that uses AI to detect threats, monitor security events, and provide automated incident response capabilities.",
-    category: "AI Services",
-    subcategory: "Cybersecurity",
-    price: 799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Threat detection and prevention",
-      "Real-time monitoring",
-      "Automated incident response",
-      "Vulnerability assessment",
-      "Compliance reporting",
-      "Security analytics",
-      "24/7 monitoring",
-      "Expert security team support"
-    ],
-    benefits: [
-      "Detect threats 10x faster",
-      "Reduce false positives by 80%",
-      "Improve incident response time",
-      "Ensure compliance requirements",
-      "Protect against advanced threats"
-    ],
-    useCases: [
-      "Enterprise security",
-      "Financial services",
-      "Healthcare organizations",
-      "Government agencies",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Security professionals",
-      "IT managers",
-      "Compliance officers",
-      "Risk managers",
-      "Business executives"
-    ],
-    tags: ["AI", "Cybersecurity", "Threat Detection", "Incident Response", "Compliance"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$799 - $3,999/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 96,
-    rating: 4.9,
-<<<<<<< HEAD
     reviewCount: 67,
     featured: true,
     location: "Global",
@@ -1594,12 +894,10 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     description: "AI-powered smart contract auditing platform that detects vulnerabilities, optimizes code, and ensures security for blockchain applications.",
     category: "Micro SAAS",
     subcategory: "Blockchain Security",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
     price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
       "AI-powered search",
       "Natural language queries",
       "Knowledge organization",
@@ -1632,48 +930,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     ],
     tags: ["AI", "Knowledge Management", "Search", "Information Retrieval", "Collaboration"],
     estimatedDelivery: "2-3 weeks",
-=======
-      "Automated vulnerability detection",
-      "Code optimization suggestions",
-      "Security best practices",
-      "Gas optimization",
-      "Multi-blockchain support",
-      "Audit reports",
-      "Integration tools",
-      "Expert consultation"
-    ],
-    benefits: [
-      "Prevent security breaches",
-      "Optimize contract performance",
-      "Reduce gas costs",
-      "Ensure compliance",
-      "Professional audit reports"
-    ],
-    useCases: [
-      "DeFi platforms",
-      "NFT marketplaces",
-      "DEX exchanges",
-      "Gaming platforms",
-      "Supply chain solutions"
-    ],
-    targetAudience: [
-      "Blockchain developers",
-      "Smart contract developers",
-      "DeFi projects",
-      "NFT creators",
-      "Blockchain companies"
-    ],
-    tags: ["Smart Contracts", "Blockchain", "Security", "Auditing", "AI"],
-    estimatedDelivery: "1-2 weeks",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-    supportLevel: "premium",
-    marketPrice: "$299 - $999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
     aiScore: 91,
     rating: 4.7,
     reviewCount: 167,
@@ -1727,63 +983,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$450 - $1,499/month",
-=======
-    reviewCount: 267,
-    featured: true,
-    location: "Global",
-    availability: "24/7"
-  },
-  {
-    id: "supply-chain-ai",
-    title: "Supply Chain AI",
-    description: "Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations.",
-    category: "AI Services",
-    subcategory: "Supply Chain",
-    price: 699,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Route optimization",
-      "Supplier management",
-      "Risk assessment",
-      "Performance analytics",
-      "Real-time tracking",
-      "Integration capabilities"
-    ],
-    benefits: [
-      "Reduce inventory costs by 25%",
-      "Improve delivery times by 40%",
-      "Optimize supplier relationships",
-      "Reduce supply chain risks",
-      "Increase operational efficiency"
-    ],
-    useCases: [
-      "Manufacturing",
-      "Retail and e-commerce",
-      "Logistics companies",
-      "Distribution centers",
-      "Import/export businesses"
-    ],
-    targetAudience: [
-      "Supply chain managers",
-      "Operations directors",
-      "Logistics coordinators",
-      "Inventory managers",
-      "Business owners"
-    ],
-    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$699 - $2,999/month",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
     aiScore: 94,
     rating: 4.9,
     reviewCount: 289,
@@ -1836,14 +1035,12 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
     tags: ["AI", "Recruitment", "Talent Acquisition", "Hiring", "HR Technology"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     marketPrice: "$399 - $1,299/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
     aiScore: 91,
     rating: 4.7,
     reviewCount: 203,
@@ -1900,14 +1097,6 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 178,
-    featured: true,
-    location: "Global",
-<<<<<<< HEAD
     availability: "24/7"
   },
   {
@@ -2071,57 +1260,3 @@ export const INNOVATIVE_SERVICES: InnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/ai-recruitment",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-recruitment"
-=======
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "24/7",
-    demoUrl: "https://ziontechgroup.com/demo/smart-contract-auditor",
-    documentationUrl: "https://ziontechgroup.com/docs/smart-contract-auditor"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    aiScore: 92,
-    rating: 4.8,
-    reviewCount: 145,
-    featured: false,
-    location: "Global",
-    availability: "24/7"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  }
-];
-
-export const INNOVATIVE_SERVICE_CATEGORIES = [
-  "AI Services",
-  "IT Services",
-  "SAAS Solutions",
-  "Cybersecurity",
-  "Data Analytics",
-  "Process Automation",
-  "Cloud Services",
-  "Digital Transformation"
-];
-
-export const INNOVATIVE_SERVICE_SUBCATEGORIES = [
-  "Content Creation",
-  "Customer Support",
-  "Analytics",
-  "Process Automation",
-  "Sales Intelligence",
-  "Data Management",
-  "Cybersecurity",
-  "Supply Chain",
-  "Machine Learning",
-  "Natural Language Processing",
-  "Computer Vision",
-  "Predictive Modeling"
-];

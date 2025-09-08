@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
@@ -18,6 +19,8 @@ export function middleware(request: NextRequest) {;
     'Content-Security-Policy',
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
+=======
+>>>>>>> main
 
 
 }
@@ -25,6 +28,7 @@ export function middleware(request: NextRequest) {;
   
 export function middleware(request: NextRequest) {
 
+<<<<<<< HEAD
 =======
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
@@ -129,13 +133,15 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   return response;
     return response;
 }
+=======
+
+
+>>>>>>> main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
 
   return response;
     return response;
@@ -182,13 +188,6 @@ origin/automation-improvements-final
   return response;
     return response;
 
-=======
-  return response;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-
-<<<<<<< HEAD
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
@@ -200,9 +199,12 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
 =======
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
 }
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
+=======
+>>>>>>> main

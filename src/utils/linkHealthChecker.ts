@@ -1,67 +1,16 @@
 export interface LinkHealthResult {
   url: string;
-<<<<<<< HEAD
   status: 'healthy' | 'broken' | 'external' | 'unknown';
-=======
-<<<<<<< HEAD
   status: 'healthy' | 'broken' | 'redirect' | 'timeout';
-=======
-  status: 'healthy' | 'broken' | 'external' | 'unknown';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  httpStatus?: number;
-  error?: string;
-  lastChecked: Date;
-}
-
-export interface LinkHealthReport {
-  totalLinks: number;
-  healthyLinks: number;
-  brokenLinks: number;
-<<<<<<< HEAD
   externalLinks: number;
   unknownLinks: number;
   details: LinkHealthStatus[];
-=======
-<<<<<<< HEAD
   redirects: number;
   timeouts: number;
   brokenLinksList: LinkHealthStatus[];
-=======
-  externalLinks: number;
-  unknownLinks: number;
-  details: LinkHealthStatus[];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  recommendations: string[];
-}
-
-export class LinkHealthChecker {
-  private static instance: LinkHealthChecker;
-<<<<<<< HEAD
   private checkedLinks: Map<string, LinkHealthStatus> = new Map();
-=======
-<<<<<<< HEAD
   private linkCache: Map<string, LinkHealthStatus> = new Map();
   private readonly timeoutMs = 10000;
-=======
-  private checkedLinks: Map<string, LinkHealthStatus> = new Map();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-
-  constructor(config: LinkHealthConfig = {}) {
-    this.config = {
-      timeout: config.timeout || 10000,
-      retries: config.retries || 3,
-      userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
-      followRedirects: config.followRedirects !== false
-    };
-  }
-
-  async checkLink(url: string, parentPage?: string): Promise<LinkHealthStatus> {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     // Check cache first
     const cached = this.linkCache.get(url);
     if (cached && Date.now() - cached.lastChecked.getTime() < 24 * 60 * 60 * 1000) {
@@ -146,136 +95,12 @@ export class LinkHealthChecker {
     if (healthyLinks / totalLinks < 0.9) {
       recommendations.push('Overall link health is below 90% - implement regular link monitoring');
     }
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    // Check if we already checked this link recently
-    const existing = this.checkedLinks.get(url);
-    if (existing && this.isRecentCheck(existing.lastChecked)) {
-      return existing;
-    }
-
-    const status: LinkHealthStatus = {
-      url,
-      status: 'unknown',
-      lastChecked: new Date(),
-      parentPage
-    };
-
-    try {
-      if (this.isExternalLink(url)) {
-        status.status = 'external';
-        // For external links, we'll mark them as healthy for now
-        // In production, you might want to actually check them
-      } else if (this.isInternalLink(url)) {
-        // For internal links, check if the route exists
-        if (this.isValidInternalRoute(url)) {
-          status.status = 'healthy';
-        } else {
-          status.status = 'broken';
-          status.error = 'Route not found in application';
-        }
-      } else if (this.isSpecialProtocol(url)) {
-        // Handle tel:, mailto:, etc.
-        status.status = 'healthy';
-      } else {
-        return {
-          url,
-          status: 'unhealthy',
-          statusCode: response.status,
-          responseTime,
-          error: `HTTP ${response.status}: ${response.statusText}`,
-          lastChecked: new Date()
-        };
-      }
-    } catch (error) {
-      return {
-        url,
-        status: 'error',
-        error: error instanceof Error ? error.message : 'Unknown error',
-        lastChecked: new Date()
-      };
-    }
-  }
-
-  async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
-    const results: LinkHealthResult[] = [];
-    
-    for (const url of urls) {
-      try {
-        const result = await this.checkLink(url);
-        results.push(result);
-      } catch (error) {
-        results.push({
-          url,
-          status: 'error',
-          error: error instanceof Error ? error.message : 'Unknown error',
-          lastChecked: new Date()
-        });
-      }
-    }
-    
-    return results;
-  }
-
-  async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
-    let lastError: string | undefined;
-    
-    for (let attempt = 1; attempt <= this.config.retries; attempt++) {
-      try {
-        const result = await this.checkLink(url);
-        if (result.status === 'healthy') {
-          return result;
-        }
-        lastError = result.error;
-      } catch (error) {
-        lastError = error instanceof Error ? error.message : 'Unknown error';
-      }
-      
-      if (attempt < this.config.retries) {
-        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-      }
-    }
-    
-    return {
-      url,
-      status: 'error',
-      error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-      lastChecked: new Date()
-    };
-  }
-
-    const recommendations = this.generateRecommendations(details);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-
-    return {
-      totalLinks,
-      healthyLinks,
-      brokenLinks,
-<<<<<<< HEAD
       externalLinks,
       unknownLinks,
       details,
-=======
-<<<<<<< HEAD
       redirects,
       timeouts,
       brokenLinksList: links.filter(l => l.status !== 'healthy'),
-=======
-      externalLinks,
-      unknownLinks,
-      details,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      recommendations
-    };
-  }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   getCommonBrokenLinkPatterns(): string[] {
     return [
       'tel:+1 302 464 0950',
@@ -315,48 +140,4 @@ export class LinkHealthChecker {
 }
 
 export const linkHealthChecker = LinkHealthChecker.getInstance();
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  private generateRecommendations(details: LinkHealthStatus[]): string[] {
-    const recommendations: string[] = [];
-
-    const brokenLinks = details.filter(d => d.status === 'broken');
-    if (brokenLinks.length > 0) {
-      recommendations.push(`Fix ${brokenLinks.length} broken internal links`);
-    }
-
-    const externalLinks = details.filter(d => d.status === 'external');
-    if (externalLinks.length > 0) {
-      recommendations.push(`Verify ${externalLinks.length} external links are working`);
-    }
-
-    if (brokenLinks.length > 0) {
-      recommendations.push('Implement proper error handling for broken links');
-      recommendations.push('Add redirects for moved or renamed pages');
-    }
-
-    recommendations.push('Set up automated link health monitoring');
-    recommendations.push('Implement proper 404 pages for broken routes');
-
-    return recommendations;
-  }
-
-  getBrokenLinks(): LinkHealthStatus[] {
-    return Array.from(this.checkedLinks.values()).filter(d => d.status === 'broken');
-  }
-
-  getHealthyLinks(): LinkHealthStatus[] {
-    return Array.from(this.checkedLinks.values()).filter(d => d.status === 'healthy');
-  }
-
-  clearCache(): void {
-    this.checkedLinks.clear();
-  }
-}
-
-<<<<<<< HEAD
 export default LinkHealthChecker;
-=======
-export default LinkHealthChecker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

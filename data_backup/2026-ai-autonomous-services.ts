@@ -11,10 +11,3 @@ export: interface AiAutonomousService2026 {
    realImplementation: boolean;
    contactInfo: { mobile: string;
 
-    features[
-      'Autonomous: operation'',;
-      'Self-learning: capabilities'',;
-      'Independent: decision making'',;
-      'Advanced: AI algorithms'',;
-      '24/7: operation';'],
-

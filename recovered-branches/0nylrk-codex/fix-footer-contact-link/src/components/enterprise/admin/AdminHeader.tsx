@@ -1,7 +1,3 @@
-
-
-export function AdminHeader() {
-
 export function AdminHeader() {;
 
   const { user } = useAuth();
@@ -29,18 +25,6 @@ export function AdminHeader() { return null; }
         <div className="flex items-center gap-2">;"
           <Button variant="outline" size="sm" className="gap-2">;"
             <Settings className="h-4 w-4" />;
-<<<<<<< HEAD
-            Settings;
-
-          </Button>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Download className="h-4 w-4" />;            Export Data;
-          </Button>;
-        </div>;
-      </div>;
-}}
-;
-
 }
       ;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;

@@ -1,34 +1,4 @@
-export: interface ComprehensiveService {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period?: string;
-   description: string;
-   features: string[];
-   category: string;
-   subcategory: string;
-   realImplementation: boolean;
-   contactInfo: { mobile: string;
-
   link: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  popular?: boolean;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
 
     tagline:,
   Predictive: customer health scoring with automated interventions'',;

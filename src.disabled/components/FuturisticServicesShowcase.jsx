@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,13 +24,3 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FuturisticServicesShowcaseProps {
   // Add props here as needed
-=======
-import React from 'react';
-interface FuturisticServicesShowcaseProps {
-  // Add props here as needed
-
->>>>>>> origin/main
-
-
-
-

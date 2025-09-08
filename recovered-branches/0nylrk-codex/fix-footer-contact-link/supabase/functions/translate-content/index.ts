@@ -1,4 +1,3 @@
-
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
@@ -137,18 +136,8 @@ if ( {) {
 ;
               Only provide the translated text, no explanations or additional comments.`}],;
           temperature: 0.3})}),;
-      if (!response.ok) {;
-        const errorData = await response.json(),;
-        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-      }
-;
-      const data = await response.json(),;
-      translations[targetLang] = data.choices[0].message.content.trim();
-    }
-
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
-<<<<<<< HEAD

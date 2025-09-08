@@ -444,10 +444,6 @@ function App() {
         
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
@@ -595,7 +591,3 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
-  );
-}
-
-export default App;

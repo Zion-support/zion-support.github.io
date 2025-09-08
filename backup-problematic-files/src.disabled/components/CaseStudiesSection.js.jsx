@@ -1,13 +1,8 @@
-const CaseStudiesSection.js = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>CaseStudiesSection.js</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
   );
 };
 
+<<<<<<< HEAD
 export default CaseStudiesSection.js;
+=======
+
+>>>>>>> main

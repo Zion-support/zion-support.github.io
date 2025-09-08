@@ -1,8 +1,28 @@
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> main
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -76,3 +96,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
 
 export default NeonGlow;
+=======
+>>>>>>> main

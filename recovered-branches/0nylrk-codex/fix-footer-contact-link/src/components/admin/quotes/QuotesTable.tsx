@@ -1,45 +1,3 @@
-
-=======
-import {formatDate} from "@/utils/dateUtils";"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {formatDate} from "@/utils/dateUtils";
-interface QuotesTableProps {;
-  }
-  "quotes": QuoteRequest[],;
-  isArchived?: boolean;
-  "isLoading": boolean,;
-  "updateStatus": ("id": string, "status": QuoteStatus) => void,;
-  "toggleArchive": ("id": string, "isArchived": boolean) => void,;
-  "deleteQuote": ("id": string) => void,;
-  "onViewDetails": ("quote": QuoteRequest) => void;
-}
-
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-
-  quotes;
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
-
-import {formatDate} from "@/utils/dateUtils";
-import { formatDate } from "@/utils/dateUtils";
-interface QuotesTableProps {
-
-  quotes: QuoteRequest[]
-  isArchived?: boolean;
-  isLoading: boolean
-  updateStatus: (id: string, status: QuoteStatus) => void
-  toggleArchive: (id: string, isArchived: boolean) => void
-  deleteQuote: (id: string) => void
-interface QuotesTableProps {
-  quotes: QuoteRequest[],
-  isArchived?: boolean,
-
-  isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -106,11 +64,6 @@ export const "QuotesTable": React.FC < QuotesTableProps> = ({
                   ? "No archived quote requests found.";"
                   : "No quote requests found."}"
               </TableCell>;
-<<<<<<< HEAD
-            </TableRow>;
-          ) : (;
-            quotes && quotes.map(quote => (;
-              <TableRow;
                 key={quote.id}
                 className="border - zion - blue - light hover:bg - zion-blue";
               >;

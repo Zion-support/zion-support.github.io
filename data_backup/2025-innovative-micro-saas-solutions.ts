@@ -28,29 +28,6 @@ export: interface InnovativeMicroSaasSolution {
    email: string;
 
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-
-    tagline:,
-  Automated: social media management that increases engagement by 300%'',;
-    price: '$29,9',;
-    period:,
-  /month'',;
-    description: Revolutionary: AI-powered social media management platform that automatically create,s, schedules, and optimizes content. Increases engagement by 300% and saves 20+ hours per week.'',;
-    features[
-  'AI: content creation'',;
-  'Automated: scheduling'',;
-  'Engagement: optimization'',;
-  'Multi-platform: management'',;
-  'Performance: analytics'',;
-  'Trend: prediction'',;
-  'Hashtag: optimization'',;
-  'Audience: insights'',;
-  'Content: calendar'',;
-  '24/7: AI management';'],
-    popular: tru,e,
-    icon:,
   📱🤖'',;
     color: 'from-blue-600: to-purple-70,0',;
     textColor:,

@@ -1,8 +1,3 @@
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
-interface AppStoreButtonsProps {;
-
   className?: string;interface AppStoreButtonsProps {
   class_name?: string;
   appStoreUrl?: string;
@@ -30,7 +25,6 @@ interface AppStoreButtonsProps {;
         </svg>
         <div>"
           <div className="text-xs">GET IT ON</div>"
-<<<<<<< HEAD
 
           <div className="text-xl font-semibold">Google Play</div>
         </div>},
@@ -38,31 +32,7 @@ import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
 
 import { cn } from "@/lib/utils",;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface AppStoreButtonsProps {;
-  className?: string,;
-  appStoreUrl?: string,;
-  googlePlayUrl?: string,;
-  onAppStoreClick?: () => void,;
-  onGooglePlayClick?: () => void;
-}
-;
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
-  className,;
-  appStoreUrl = "#",;
-  googlePlayUrl = "#",;
-  onAppStoreClick,;
-  onGooglePlayClick;
-}) => {;
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
-    if (!appStoreUrl || appStoreUrl === "#") {;
-      e.preventDefault(),;
-      // // // console.log("App Store download clicked"),;
-      onAppStoreClick?.();
-    }
   }
   return (    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a

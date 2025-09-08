@@ -2,6 +2,7 @@
 const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
 
+<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
@@ -107,13 +108,28 @@ export function usePerformanceMetrics() {;
   return { metrics, isSupported }
 :hooks/usePerformanceMetrics.ts
 }
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> main
 
   return { metrics, isSupported }
 
 
+<<<<<<< HEAD
   return { metrics, isSupported };
 }
 main:hooks/usePerformanceMetrics.ts
 }
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+>>>>>>> main

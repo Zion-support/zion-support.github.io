@@ -74,6 +74,43 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
   console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`)}
 
 
+<<<<<<< HEAD
+=======
+
+
+
+  for (const item of, items) {};
+    const fullPath = path.join(dir, item),
+    try {};
+
+        // Skip node_modules, .git, and other common directories};'
+
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+
+          files = files.concat(findFiles(fullPath, extensions))
+        };
+      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        files.push(fullPath)
+
+
+
+
+      };
+
+for (const item of, items) {}; const fullPath = path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }} catch (error) {; // Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
+for (const item of, items) {}; const fullPath = path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }} catch (error) {; // Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
+function fixParsingErrors(content) {}};
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+for (const item of, items) {}; const fullPath = path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }} catch (error) {// Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
+function fixParsingErrors(content) {}}
+origin/main
+function fixParsingErrors(content) {}};
+for (const item of, items) {}; const fullPath = path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }} catch (error) {// Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
+function fixParsingErrors(content) {}}
+
+    };
+>>>>>>> main
   };
 };
         fixedCount++};
@@ -217,6 +254,7 @@ function main() {},;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")},;
 
 
+<<<<<<< HEAD
 // Function to fix specific parsing errors,/**
  * fixParsingErrors - Function description
  */
@@ -351,3 +389,9 @@ function fixRemainingLintErrors() { let fixed = content; fixed = fixed.replace (
 } console.log (``Fixed: ${file}``); fixed_count++, } } catch (error) { console.error (`Error processing ${file}:`, error.message); error_count++, } } console.log (``\n_completed: ${fixed_count} files fixed, ${error_count} errors``)} main ().catch (console.error);
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+=======
+
+
+
+
+>>>>>>> main

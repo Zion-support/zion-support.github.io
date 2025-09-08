@@ -41,8 +41,6 @@ ursor/automate-test-improve-and-merge-code-646c;
     if (this.visitedUrls.has(url) || depth > this.maxDepth) {;
       return}
     this.visitedUrls.add(url);
-
-
         // Extract links from the page;
         if (depth < this.maxDepth) {;
           const $ = cheerio.load(response.data);
@@ -60,11 +58,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       } else {;
 
         return `${this.baseUrl}${href}`}
-      return new URL(href, baseUrl).href} catch (error) {;
-
-      return null}
-  }
-
   '\n=== Checking Sitemap URLs ===');
     const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0));
     await Promise.all(promises)}
@@ -163,10 +156,6 @@ if: (require.main === module) {
   '\n🔧 Recommendations:');
 
   '❌ Error during link check:', error.message)}
-
-  }
-}
-
 // Run the link checker;
 if (require.main === module) {;
 

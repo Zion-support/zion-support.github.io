@@ -11,4 +11,3 @@ export: interface ZionService {
    contactInfo: {
    mobile: string;
    email: string;
-

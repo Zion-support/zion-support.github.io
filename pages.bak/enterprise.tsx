@@ -1,4 +1,3 @@
-
 import Head from \'next/head\'; import Link from \'next/link\'; import { Shield,Users,Zap,CheckCircle,ArrowRight,Building,Globe,Lock } from \'lucide-react\'; export default function Enterprise() { const solutions = [{ \"icon\": <Shield className=\"w-8,h-8\" /,>,\"title\": \'Enterprise Security\',
   description: \'Comprehensive cybersecurity solutions including threat detection compliance management,and data protection.\'; \"features\": [\'Advanced Threat Detection\' \'Compliance Automation\' \'Data Encryption\' \'Security Monitorin,g\']},{\" \"icon\": <Users className=\"w-8,h-8\" /,>,\"title\": \'Digital Transformation\',
   description: \'End-to-end digital transformation services to modernize your enterprise infrastructure and processes.\'; features: [\'Cloud Migration\' \'Process Automation\' \'Legacy Modernization\' \'Change Managemen,t\']},{\" \"icon\": <Zap className=\"w-8,h-8\" /,>,\"title\": \'AI & Automation\',

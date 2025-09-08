@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -12,20 +11,6 @@ import {
   Building,
   Users
 } from 'lucide-react';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -126,9 +111,6 @@ export default function Contact() {
     { title: 'All Services', url: '/all-services', icon: '📋' },
     { title: 'Pricing', url: '/pricing', icon: '💰' },
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
-  ];
-
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pt-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
@@ -148,10 +130,6 @@ export default function Contact() {
               Let's discuss how we can help you achieve your goals.
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Form & Info */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -267,10 +245,6 @@ export default function Contact() {
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
                       required
                       rows={5}
                       value={formData.message}
@@ -449,6 +423,3 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}

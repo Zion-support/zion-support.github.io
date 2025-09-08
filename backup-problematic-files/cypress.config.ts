@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 import { define_config } from 'cypress;
 
 
+=======
+>>>>>>> main
 ;
 export default define_config ({,
   e2e: {,
@@ -27,19 +30,6 @@ origin/automation-improvements-final
 supportFile: cypress/support/e2e.ts',;
 import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
 import { defineConfig } from 'cypress';
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export default defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:5000',
-    supportFile: false,
-import { defineConfig } from 'cypress;
-;
-export default defineConfig({,";
-  e2e: {,'
-  baseUrl: 'http://localhost:3000',
-    supportFile: cypress/support/e2e.ts',
-<<<<<<< HEAD
 
 
 
@@ -49,17 +39,11 @@ export default defineConfig({,";
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-<<<<<<< HEAD
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
 ursor/fix-lint-push-and-merge-to-main-ae4e
     viewportWidth: 1280,
     viewportHeight: 720,
+<<<<<<< HEAD
   base_url: 'http://localhost:3000',
 support_file: cypress / support / e2e.ts',')
 import { define_config } from 'cypress'; export default define_config ({ e2e: { base_url: 'http: support_file: 'cypress / support / e2e.ts', spec_pattern: 'cypress / e2e*.cy.{js, jsx, ts, tsx}', viewport_width: 1280, viewport_height: 720, video: false, screenshotOnRunFailure: true, defaultCommandTimeout: 10000, request_timeout: 10000, response_timeout: 10000, setupNodeEvents () { }, }, component: { dev_server: { framework: 'react', bundler: 'vite', }, }, });
@@ -88,12 +72,20 @@ import { defineConfig } from 'cypress';
       // implement node event listeners here
     }
   }
+=======
+
+
+
+
+
+>>>>>>> main
 
 <
 
 >
 
 
+<<<<<<< HEAD
 import { defineConfig } from 'cypress;
 }),
 
@@ -139,11 +131,15 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     setupNodeEvents(on, config) {
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
       // implement node event listeners here
     }
   }
 })
 
+<<<<<<< HEAD
     setupNodeEvents (on, config) {,
       // implement node event listeners here;
     }
@@ -152,3 +148,7 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 
 
 origin/main
+=======
+
+
+>>>>>>> main

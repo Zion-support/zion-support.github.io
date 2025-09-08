@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 
@@ -53,6 +54,9 @@ export function IntegrationsSyncLog() {;
       default:;
 
         return <Badge variant="outline">Unknown</Badge>;
+=======
+
+>>>>>>> main
     }
   },;
   ;
@@ -105,5 +109,3 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 }</TableBody> </Table> </div> </Card>) 
 }
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

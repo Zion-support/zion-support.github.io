@@ -6,20 +6,6 @@ const benefits = [
   'Lower insurance costs and liability',
   'Peace of mind with 24/7 monitoring'
 ];
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export default function CybersecurityServices() {
-  return (
-    <Layout
-      title="Cybersecurity Services - Zion Tech Group"
-      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
-      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit"
-    >
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
         <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">

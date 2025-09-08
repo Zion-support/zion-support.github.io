@@ -1,5 +1,4 @@
 
-
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -62,14 +61,6 @@ export function TalentResults({}
 }
 
 export function TalentResults(): any ({;      />;
-    </div>;
-  );
-}
-;;
-        is_authenticated={is_authenticated}
-        clear_filters={activeFiltersProps.clear_filters}
-      />;
-    </div>);
 }
 ;
 

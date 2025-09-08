@@ -1,18 +1,6 @@
-<<<<<<< HEAD
 </p>'</p>'
-=======
-const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
-
-
-
-</p>'
-
-
-</p>'
-
 </p>'
 </p>'
->>>>>>> origin/main
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'

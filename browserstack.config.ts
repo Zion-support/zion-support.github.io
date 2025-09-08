@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
+<<<<<<< HEAD
 export default defineConfig({
   testDir: 'tests/e2e',
   use: {
@@ -39,11 +40,15 @@ export default defineConfig({
         browserName: 'webkit',
         ...devices['iPhone 12'],
       }
+=======
+        ...devices['Pixel 5']}
+>>>>>>> main
     }
     {name:'Desktop Firefox';
       use:{;
         browserName:'firefox'}
     }
+<<<<<<< HEAD
     {name:'Desktop Safari';
       use:{;
         browserName:'webkit'}
@@ -91,3 +96,11 @@ export default defineConfig({
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+  ];
+  reporter:[;
+
+
+
+
+>>>>>>> main

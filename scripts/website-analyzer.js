@@ -1,9 +1,3 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
 // Configuration
 const BASE_URL = 'https://ziontechgroup.com';
 const OUTPUT_DIR = './link-reports';

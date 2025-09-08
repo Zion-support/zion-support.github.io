@@ -339,17 +339,6 @@ function EnhancedNavigation() {
                     </div>
                   ) : (
                     <Link
-                      href={item.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white py-3 px-4 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.icon}
-                      <span className="font-medium">{item.name}</span>
-                    </Link>
-                  )}
-                </div>
-              ))}
-
               <div className="pt-4 border-t border-gray-800/50">
                 <Link
                   href="/contact"

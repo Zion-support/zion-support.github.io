@@ -1,13 +1,8 @@
-const ChatAssistant = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>ChatAssistant</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
   );
 };
 
+<<<<<<< HEAD
 export default ChatAssistant;
+=======
+
+>>>>>>> main

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { formatDate } from '../formatters';
-export function addWorkExperienceSection(';
-import {jsPDF} from 'jspdf';'
-import {WorkExperience} from '@/types / resume';'
-import {PdfThemeColors} from '../theme_config';'
-import {format_date} from '../formatters';
-export function addWorkExperienceSection (
-
-import {jsPDF} from 'jspdf';
-import {WorkExperience} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-<<<<<<< HEAD
-
-import {formatDate} from '../formatters';
-export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
-    // Check if we need to add a new page
-    if (yPos > 260) {
       doc && doc.addPage();
       yPos = 20
     }
@@ -45,11 +24,6 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
-      
-      yPos += (descriptionLines && descriptionLines.length * 5) + 20
-
-    } else {
-      yPos += 20
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;

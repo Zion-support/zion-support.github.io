@@ -257,18 +257,6 @@ const ContentCategorizer: React.FC = () => {
     setSelectedDateRange ('all'),
     setSelectedRelevance ('all');
   },
-
-  return (
-    <div className=&quot;space - y-6 & quot;>;
-      {/* Search and Advanced Filters */}
-      <div className=&quot;space - y-4 & quot;>;
-        {/* Search Bar */}
-        <div className=&quot;relative & quot;>;
-          <Search className=&quot;absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5&quot; />;
-          <input;
-            type=&quot;text & quot;
-            placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-
             value={search_term}
             on_change={(e) => setSearchTerm (e.target.value)}
             className=&quot;w - full pl - 10 pr - 4 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;

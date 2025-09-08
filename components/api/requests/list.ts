@@ -1,5 +1,3 @@
-
-
   try {
     const raw = null;
 
@@ -52,44 +50,3 @@ function handler() {
 });
   }
   try {
-<<<<<<< HEAD
-
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
-    res.status (200).json ({ items });
-  } catch {
-    res.status (200).json ({ items: [] });
-
-=======
-    }
-    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");"
-
-const items = JSON.parse (raw);
-    res.status (200).json ({ items });
-  } catch {}
-    res.status (200).json ({ items: [] });
-    res.status(200).json({ items: [] });
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch {
-
-    }
-
-    res.status(200).json({ "items": []
-});
-  }
-
-"
-
-
-    const raw = null;
-
-}
-    res.status(200).json({ items })
->>>>>>> origin/cursor/delete-old-data-records-6bba

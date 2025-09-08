@@ -38,18 +38,7 @@ export function TalentPlaceholder() {;
   return (<div className="p-8 text-center" > <h3 className="text-2xl font-bold text-white mb-4" >Talent Directory Coming Soon</h3> <p className="text-zion-slate-light mb-6 max-w-md mx-auto" > 
   );
 
-<<<<<<< HEAD
 
 
 
 
-=======
-
-}
-}
-;
-
-}
-
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

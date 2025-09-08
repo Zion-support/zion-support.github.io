@@ -1,5 +1,3 @@
-
-
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -59,10 +57,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;                      Explore Green IT Solutions;
-                    </Button>;
-                  </div>;
-                </div>;
-
                 <div className="rounded - lg overflow-hidden">;
                   <img;
                     src="https://images.unsplash.com / photo - 1473876637954 - 4b493d59fd97?auto = format & fit = crop & w=800 & h=600";

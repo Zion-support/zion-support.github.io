@@ -28,11 +28,6 @@ export: interface SpecializedInnovativeService2027 {
    email: string;
 
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-
-    features[
       'AI-powered: satellite image analysis'',;
       'Real-time: environmental monitoring'',;
       'Agricultural: yield prediction'',;
@@ -162,4 +157,3 @@ export const searchSpecializedServices = (query: string) => {
   return: specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
-

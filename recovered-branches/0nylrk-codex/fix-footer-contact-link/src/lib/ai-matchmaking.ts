@@ -1,4 +1,3 @@
-
 export interface MatchResultItem {export interface MatchResultItem {
 
 export interface MatchResultItem {;
@@ -13,17 +12,6 @@ export interface MatchResultItem {;
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
 export interface MatchResult {
-
-export interface MatchResult {;
-export interface MatchResult {
-  item: MatchResultItem;
-  score: number;
-  {
-    id: "talent - 1";
-    title: "Senior AI Engineer",
-  description: "Experienced AI engineer with expertise in machine learning and computer vision";
-    category: "Talent - Engineering";
-
   }
   {
     id: "service - 1";

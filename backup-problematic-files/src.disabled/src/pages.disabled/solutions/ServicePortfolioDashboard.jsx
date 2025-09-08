@@ -1,13 +1,8 @@
-const ServicePortfolioDashboard = ({ className }) => {
-  return ('
-    <div className={className || ''}>'
-</div>
-      <h1>ServicePortfolioDashboard</h1>
-      <p>This component is under development.</p>
-    </div>
-
-<<<<<<< HEAD
   );
 };
 
+<<<<<<< HEAD
 export default ServicePortfolioDashboard;
+=======
+
+>>>>>>> main

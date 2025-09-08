@@ -1,4 +1,3 @@
-
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -19,15 +18,6 @@ import { Footer  } from '@/components/Footer';
 import { SEO  } from '@/components/SEO';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
-<<<<<<< HEAD
-
-
-export default function AccountSettings() {;
-
-
-=======
-
-
 import { Input  } from '@/components/ui/input';
 import { Wallet, Database, Save } from "lucide-react";'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';'
@@ -131,24 +121,12 @@ export default function AccountSettings() {;
     }
   const handleSave = () => {
     setIsSubmitting(true);
-  }, []),
-  }, []),  }, []),
-  }, []),
-
   const handleSave = () => {
     setIsSubmitting(true),
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
         console && console.log('Saved settings', { displayWeb3, didHandle, enableBackup });'
-<<<<<<< HEAD
-        toast && toast.success('Account settings updated successfully');
-      } catch (e) {;'
-        console && console.error('Failed to save settings', e);'
-        toast && toast.error('Failed to save settings');
-      } finally {;
-        setIsSubmitting(false);
-      }
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;'
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');

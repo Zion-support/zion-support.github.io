@@ -44,24 +44,8 @@ function findBestBackup() { return null; }
     if (backupContent.includes()) {;
       const parts = backupContent.split();
       if (parts.length > 1) {;
-<<<<<<< HEAD
         // Take the content after the conflict resolution;      }
-=======
-        // Take the content after the conflict resolution;
-
-
-'),
-
-),
-
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-
-
-
-
       }
->>>>>>> origin/main
     }
     // Clean up the content
 
@@ -153,11 +137,9 @@ const backupPath = findBestBackup(pagePath);
     // Restore the page;
     fs.writeFileSync(pagePath, backupContent)
 
-<<<<<<< HEAD
 
       corruptedBackup: corruptedBackupPath
 '),
->>>>>>> origin/main
       // Check condition
   // TODO: Implement
       restored: true;,
@@ -204,28 +186,6 @@ if ( {) {
     if (!backupContent.includes('export default')) {return { restored: false, reason: 'Backup content is also corrupted' }
    ,
 }// Create a backup of the current corrupted file;
-
-const timestamp = Date.now(;
-  const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent)// Restore the page;
-    fs.writeFileSync(pagePath, backupContent)return {restored: true;
-      backupUsed: backupPath;
-      corruptedBackup: corruptedBackupPath;
-'),// Check condition;}
-if ( {) {$2;}
-}
-        // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('      }
-    }
-    // Clean up the content;
-    backup_content = backup_content.trim (),// Ensure it has proper structure;
-    if () {) {$2;}
-}
-      return { restored: false, reason: 'Backup content is also corrupted' }
-   ,
-}
-    // Create a backup of the current corrupted file;
-
 const timestamp = Date.now ();
   const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,fs.writeFileSync (corruptedBackupPath, current_content),// Restore the page;
     // Create a backup of the current corrupted file;
@@ -249,28 +209,6 @@ function fixSpecificPages() {
     restored: 0
     failed: 0
     details: []
-
-
-  },
-
-
-  },
-  
-  console.log('🚀 Starting targeted page restoration...'),
-  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
-  
-  // // // console.log('🚀 Starting targeted page restoration...'),
-  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
-
-=======
-
-  },
-
-
-  for (const pagePath of corruptedPages) {
-
-=======
-
   }
   console.log('🚀 Starting targeted page restoration...')
   console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
@@ -297,7 +235,6 @@ function fixSpecificPages() {
   // // // console.log('🚀 Starting targeted page restoration...'),'
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),`  for (const pagePath of corruptedPages) {
     }
->>>>>>> origin/cursor/delete-old-data-records-6bba
     if (!fs.existsSync(pagePath)) {`;
       console.log(`⚠️  Page not found: ${pagePath}`)
       results.failed++
@@ -334,41 +271,12 @@ function fixSpecificPages() {
     const result = restorePage(pagePath),
 
 
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-    
-    console.log(`\n🔍 Checking: ${pagePath}`),
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-
-
-    const result = restorePage(pagePath),
-
-`
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-    `
-    console.log(`\n🔍 Checking: ${pagePath}`),`
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-
-    const result = restorePage(pagePath),
     if (result.restored) {
       results.restored++,
       console.log($2);
       console.log($2);
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
-
-      console.log(`   Reason: ${result.reason}`)
-    }
-    results.details.push({
-      file: pagePath
-      ...result
-    })
-  }
-  // Generate summary
-
-      results.failed++,
-
-
-
   return results
       results.failed++,
       // // // console.log(`❌ Failed: ${pagePath}`),
@@ -625,7 +533,6 @@ module.exports = {
 main
 
 module.exports = {
->>>>>>> origin/cursor/delete-old-data-records-6bba
   restorePage,
   fixSpecificPages,
   findBestBackup;

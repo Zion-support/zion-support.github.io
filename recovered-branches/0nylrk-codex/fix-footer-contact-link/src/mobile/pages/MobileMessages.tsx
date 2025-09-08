@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -7,42 +5,6 @@ import { MobileConversationList } from "../components/messaging/MobileConversati
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
-  {;
-    id: "1",;
-    name: "Sarah Johnson",;
-    lastMessage: "Looking forward to discussing the project tomorrow!",;
-    timestamp: "10:45 AM",;
-    unreadCount: 2},;
-  {;
-    id: "2",;
-    name: "TechCorp Inc.",;
-    lastMessage: "We'd like to schedule an interview for the React Developer position",;
-    timestamp: "Yesterday",;
-    unreadCount: 0},;
-  {;
-    id: "3",;
-    name: "David Wilson",;
-    lastMessage: "Can you share your portfolio link again?",;
-    timestamp: "Wed",;
-    unreadCount: 0,;
-    isTyping: true},;
-  {;
-    id: "4",;
-    name: "Creative Studios",;
-    lastMessage: "Your application has been received. We'll review it shortly.",;
-    timestamp: "Mon",;
-    unreadCount: 0}],;
-
-
-
-// Define the Message type to resolve the type error;
-interface Message {;
-  id: string,;
-  content: string,;
-  timestamp: string,;
-  isMe: boolean,;
-  status: "read" | "sent" | "delivered";
-}
 ;;
 const mockMessages: Message[] = [;
   {;"
@@ -63,7 +25,6 @@ const mockMessages: Message[] = [;
     timestamp: "10:35 AM",;
     isMe: false,;"
     status: "read"},;
-<<<<<<< HEAD
   {;
     id: "4",;  return (
     <div className="min-h-screen flex flex-col">;
@@ -239,13 +200,6 @@ export function MobileMessages() {}
 
             status: "Online"
 
-              onSelectConversation={handleSelectConversation}
-            />;
-          </main>;
-          <BottomNavigation />;
-        </>;
-      )}
-    </div>;
   );
 }
         />) : (

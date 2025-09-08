@@ -1,5 +1,4 @@
 
-
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -263,43 +262,10 @@ function RoleManagement() {}
                       handlePermissionChange(member.id, "viewBilling", checked)"
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
-import React from "react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
   TableHeader,;"
   TableRow} from "@/components/ui/table",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Switch } from "@/components/ui/switch",;"
 import { toast } from "@/hooks/use-toast",;"
 
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Switch } from "@/components/ui/switch",;
-import { toast } from "@/hooks/use-toast",;
-import { InfoIcon } from "lucide-react",;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
   TooltipTrigger} from "@/components/ui/tooltip",;                    }
-                  />;
-                </TableCell>;
-              </TableRow>;
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            ))}
-
-            ))}
-
-        </Table>;
-      </div>;
-    </div>;
-  );
-}

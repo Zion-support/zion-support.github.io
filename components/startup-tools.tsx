@@ -1,12 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-import {
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -88,7 +79,6 @@ import {
   Globe;
 
   Shield;Globe;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   ArrowRight;
   Star;
   Check;
@@ -97,7 +87,6 @@ import {
   Zap;
   Target;
 
-<<<<<<< HEAD
   Lightbulb;
 
 
@@ -136,22 +125,10 @@ import {
         'Email templates'
         'Automation workflows'
         'A/B testing'
->>>>>>> origin/cursor/delete-old-data-records-6bba
         'Analytics & reporting'
         'Marketing automation'
         'Free tier available'
       ]
-<<<<<<< HEAD
-
-      website: 'https://mailchimp.com'
-      useCase:
-        'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.'
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive']
-      bestFor: 'E-commerce, content creators, small businesses'
-    }
-    {
-
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
   BookOpen;
@@ -177,7 +154,6 @@ function StartupToolsPage() {
         'Marketing automation',
         'Free tier available',
       ],
->>>>>>> origin/cursor/delete-old-data-records-6bba
       website: 'https://hubspot.com',
   useCase:
         'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.'
@@ -222,15 +198,6 @@ function StartupToolsPage() {
     {
 
       name: 'Calendly',
-<<<<<<< HEAD
-
-      description:;
-        'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',      category: 'Productivity',
-      pricing: 'Free - $12 / month',
-      rating: 4.8,
-      users: '10M+',
-      icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,      description: 'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',
-
       category: 'Productivity',
   pricing: 'Free - $12/month',
       rating: 4.8,
@@ -240,7 +207,6 @@ function StartupToolsPage() {
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,
       features: [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         'Automated scheduling',
         'Calendar integration',
         'Custom booking pages',
@@ -266,15 +232,6 @@ function StartupToolsPage() {
     },
     {
       name: 'Canva',
-<<<<<<< HEAD
-
-      description:;
-        'Graphic design platform that makes it easy to create professional designs without design skills.',      category: 'Design',
-      pricing: 'Free - $12.99 / month',
-      rating: 4.6,
-      users: '100M+',
-      icon: <Lightbulb className='w - 8 h - 8 text - blue - 400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
-
       category: 'Design',
   pricing: 'Free - $12.99/month',
       rating: 4.6,
@@ -338,7 +295,6 @@ function StartupToolsPage() {
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
       icon: <Lightbulb className='w - 8 h - 8 text - blue - 400' />,
       features: [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         'Design templates',
         'Stock photos & icons',
         'Brand kit',
@@ -422,7 +378,6 @@ users: '100M+',
       icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       color: 'bg - gradient - to - br from - blue - 500 to - indigo - 600',
       features: [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         'Global payment methods',
         'Subscription billing',
         'Fraud protection',
@@ -448,15 +403,6 @@ users: '100M+',
     },
     {
       name: 'Intercom',
-<<<<<<< HEAD
-
-      description:;
-        'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',      category: 'Customer Support',
-      pricing: '$39 - $999 / month',
-      rating: 4.6,
-      users: '25K+',
-      icon: <Users className='w - 8 h - 8 text - green - 400' />,      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
-
       category: 'Customer Support',
   pricing: '$39 - $999/month',
       rating: 4.6,
@@ -465,7 +411,6 @@ users: '100M+',
       icon: <Users className='w - 8 h - 8 text - green - 400' />,
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       features: [;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         'Live chat',
         'Customer messaging',
         'Help desk',
@@ -487,23 +432,6 @@ users: '100M+',
     },
     {
       name: 'Mixpanel',
-<<<<<<< HEAD
-
-      description:;
-        'Product analytics platform that helps you understand how users interact with your product and make data - driven decisions.',      category: 'Analytics',
-      pricing: 'Free - $25 / month',
-      rating: 4.5,
-      users: '26K+',
-      icon: <BarChart3 className='w - 8 h - 8 text - purple - 400' />,      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      features: [;
-        'Live chat_customer messaging_help desk_user onboarding_analytics & reporting_integration ecosystem';
-      ];
-      website: 'https://intercom.com',
-      use_case: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UXPowerful features_good integrations_mobile apps'],
-      cons: ['ExpensiveComplex pricing_can be overwhelming'],
-      best_for: 'SaaS companies, online businesses, customer support teams';
-
     }
     {
 
@@ -555,60 +483,6 @@ users: '100M+',
           </div>
         </div>
       </section>
-
-
-          {/* Stats */}
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
-                {startupTools && startupTools.length}+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Essential Tools</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                10;
-              </div>;
-              <div className='text-gray-400 text-sm'>Categories</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
-                4 && 4.6+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Avg Rating</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
-                130M+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {startupTools && startupTools.length}+;
-              </div>;
-              <div className="text-gray-400 text-sm">Essential Tools</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
-                10;
-              </div>;
-              <div className="text-gray-400 text-sm">Categories</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
-                4 && 4.6+;
-              </div>;
-              <div className="text-gray-400 text-sm">Avg Rating</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
-                130M+;
-              </div>;
-              <div className="text-gray-400 text-sm">Total Users</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -623,73 +497,6 @@ users: '100M+',
                 }`}
               >;
                 {category}
-              </button>;
-            ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* Tools Grid */}
-
-
-              Beyond tools, here are additional resources to help your startup;
-              succeed.;
-            </p>;
-          </div>;
-
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Additional Startup Resources
-
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Beyond tools, here are additional resources to help your startup succeed.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Startup Communities</h3>
-              <p className="text-gray-400 mb-4">
-                Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.
-              </p>
-              <Button href="https://www.startupschool.org" variant="outline" size="sm">
-                Explore Communities
-              </Button>
-            </Card>
-
-                size='sm'>                Explore Communities;
-              </Button>;
-            </Card>;
-
-            <Card className='text-center'>;
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
-                <BookOpen className='w-8 h-8 text-white' />              Additional Startup Resources;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Beyond tools, here are additional resources to help your startup succeed.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <Card className="text-center">;
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">;
-                <Users className="w-8 h-8 text-white" />;
-              </div>;
-              <h3 className="text-xl font-bold mb-4 text-white">Startup Communities</h3>;
-              <p className="text-gray-400 mb-4">;
-                Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.;
-              </p>;
-              <Button href="https://www.startupschool.org" variant="outline" size="sm">;
-                Explore Communities;
-              </Button>;
-            </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
                 <BookOpen className='w-8 h-8 text-white' />;
@@ -783,10 +590,6 @@ variant='outline';'
                 Growth Strategies;
               </h3>;
               <p className='text-gray-400 mb-4'>;
-                Learn proven growth strategies from successful entrepreneurs and;
-                growth hackers.;
-              </p>;
-              <Button href='/resources' variant='outline' size='sm'>                View Resources              </div>;
 
               <h3 className="text - xl font - bold mb - 4 text - white">Growth Strategies</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -808,7 +611,6 @@ variant='outline';'
         </div>;
       </section>;
 
-<<<<<<< HEAD
 
     </>);
 }
@@ -934,6 +736,3 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 }
 
 
-<<<<<<< HEAD
-=======
-}

@@ -1,5 +1,5 @@
-import React from 'react';
 
+<<<<<<< HEAD
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="main-layout">
@@ -8,3 +8,5 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
   );
 }
+=======
+>>>>>>> main

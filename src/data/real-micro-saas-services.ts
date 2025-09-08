@@ -5830,5 +5830,3 @@ export const service_categories = [;
   }
 }
 ;
-
-

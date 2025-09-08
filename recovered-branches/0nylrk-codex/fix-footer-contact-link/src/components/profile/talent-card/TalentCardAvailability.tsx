@@ -1,5 +1,3 @@
-
-
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
@@ -18,11 +16,6 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       case 'full-time':;        return 'Full-time';
       case 'part-time':;
         return 'Part-time';
-      case 'project-based':;
-        return 'Project',;
-      default:;
-        return status;
-
     }
   },
   return (
@@ -33,7 +26,3 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
   )
 }
   }
-
-  return (
-
-}

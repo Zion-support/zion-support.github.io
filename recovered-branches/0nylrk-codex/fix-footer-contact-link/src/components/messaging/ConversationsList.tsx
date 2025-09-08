@@ -64,7 +64,6 @@ export function ConversationsList({ ;
         </div>;
       )}
 
-<<<<<<< HEAD
     </div>;
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -415,10 +416,13 @@ export default function DigitalTransformationPage() {
       </div>;
     </Layout>;
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
 export default Digital-transformation;
 
 
+<<<<<<< HEAD
 =======
   );
 }
@@ -808,3 +812,5 @@ export default function DigitalTransformationPage() {;
 };
 
 export default Digital-transformation;
+=======
+>>>>>>> main

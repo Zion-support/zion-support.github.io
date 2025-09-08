@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,10 +48,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {  useEffect(() => {;
-    // For demo purposes, we're using the loaded translations from i18next;
-    const currentTranslations: Record<string, any> = {};
-              acc[`${pre}${key}`] = obj[key]
-
             }
             return acc
           }, {} as Record<string, string>)
@@ -76,47 +71,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
       Object.values(translations).forEach(langTranslations => {
         Object.keys(langTranslations).forEach(key => allKeys.add(key))
       });
-      setFilteredKeys(Array.from(allKeys));
-      return
-    }
-    const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = []
-    // Search in keys and values
-    Object.values(translations).forEach(langTranslations => {
-      Object.entries(langTranslations).forEach(([key, value]) => {
-        if (
-          key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
-        ) {
-          filtered.push(key)
-        }
-      })
-    });
-    setFilteredKeys([...new Set(filtered)])
-  }, [searchQuery, translations]);
-  const handleEdit = (key: string) => {
-    setEditingKey(key)
-    // Initialize edited translations for this key
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] |''
-    });
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: initialEdits
-    })
-  }
-  const handleSave = (key: string) => {
-    setIsSaving(true)
-    // In a real application, you would save these to your backend
-    setTimeout(() => {
-      // Update translations with edited values
-      const updatedTranslations = { ...translations }
-      supportedLanguages.forEach(lang => {
-        if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
-    Object && Object.values(currentTranslations).forEach(langTranslations => {;
-      Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
-    });
     setFilteredKeys(Array && Array.from(allKeys));
   }, [selectedNamespace, i18n]);
   // Filter keys based on search query;
@@ -127,7 +81,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
->>>>>>> origin/cursor/delete-old-data-records-6bba
       });
       setFilteredKeys(Array && Array.from(allKeys));
       return;
@@ -151,46 +104,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
   useEffect(() => {;
     if (!searchQuery.trim()) {;
       // Get all unique keys across all languages;
-<<<<<<< HEAD
-
-      const allKeys = new Set<string>(),;
-      Object.values(translations).forEach(langTranslations => {;
-        Object.keys(langTranslations).forEach(key => allKeys.add(key));
-
-=======
-      }
-      Object.values(translations).forEach((langTranslations) => {;
-        }
-        Object.keys(langTranslations).forEach(key => { return allKeys.add(key)); }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      }),;
-      setFilteredKeys(Array.from(allKeys)),;
-      return;
-    }
-;
-    const query = searchQuery.toLowerCase().trim(),;
-    const filtered: string[] = [],;
-    // Search in keys and values;
-    Object.values(translations).forEach(langTranslations => {;
-      Object.entries(langTranslations).forEach(([key, value]) => {;
-        if (;
-          key.toLowerCase().includes(query) ||;'
-          (typeof value === 'string' && value.toLowerCase().includes(query));
-        ) {;
-          filtered.push(key);      toast({
-        title: t("translation.saved")
-
-        description: t("translation.changes_saved")})
-    }, 1000)          title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
-        return
-      }
-      // Update edited translations with auto-translated content
-      setEditedTranslations({
-
-      }),
-
       <SEO
         title={t('translation.manager_title')}
       <SEO 
@@ -274,12 +187,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
                                   )}
                                 </div>;
                               ))}
-
-                            </div>;
-                            <div className="flex gap-2 mt-4">;
-                              <Button
-                                size="sm" 
-
                               <Button 
                                 size="sm"                                 disabled={isTranslating}
                               >;
@@ -287,33 +194,6 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
-                                )}
-                              </Button>;
-
-                            </div>;
-                          </div>;
-                        ) : (;
-                          <div className="p-3">;
-                            <div className="space-y-2">;
-                              {supportedLanguages && supportedLanguages.slice(0, 2).map((lang) => (;
-                                <div key={lang && lang.code} className="flex items-start gap-2">;
-                                  <span className="mt-0 && 0.5 flex-shrink-0">{lang && lang.flag}</span>;
-                                  <span
-                                    className={`${!translations[lang && lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
-                                    dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}>;
-                                    {translations[lang && lang.code]?.[key] || t('translation && translation.missing')}
-                                  </span>;
-                                </div>;
-                              ))}
-                              {getMissingLanguages(key).length > 0 && (;
-                                <div className="flex items-center gap-2 text-sm text-zion-purple">;
-                                  <AlertTriangle className="h-4 w-4" />;
-                                  {t('translation && translation.missing_languages', { count: getMissingLanguages(key).length })}
-                                </div>;
-                              )}                            </div>;
-                          </div>;
-                        )}
-                        <div className="p-3 flex items-center justify-end">;
                           {editingKey === key ? null : (;                                ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}

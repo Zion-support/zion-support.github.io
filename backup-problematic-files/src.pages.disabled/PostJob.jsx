@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +22,7 @@ const PostJob = ({ className }) => {
   return (
     <div className={className || ''}>
 
+<<<<<<< HEAD
 =======
 return (
     <div>
@@ -36,3 +35,5 @@ return (
 }
 }
 }
+=======
+>>>>>>> main

@@ -31,35 +31,6 @@ import {
     res && res.status(500).json({ error: e && e.message })
   };
 }
-
-    else if (setVendorApproval (String (vendor_id), false)) {
-  $2
-}
-    else if (suspend_vendor (String (vendor_id), true)) {
-  $2
-}
-    else if (suspend_vendor (String (vendor_id), false)) {
-  $2
-}
-    else if (
-      setVendorCommission (String (vendor_id), Number (value))) {
-  $2
-}
-    else return res.status (400).json ({ error: 'Unknown action' });
-    res.status (200).json ({ ok: true });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-  }    else return res.status (400).json ({ error: 'Unknown action' });
-    res.status (200).json ({ ok: true });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-}
-  }
-
-}
-
-
-
   setVendorApproval,
   setVendorCommission,;
   suspendVendor,;
@@ -72,7 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}

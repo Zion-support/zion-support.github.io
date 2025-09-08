@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,4 @@ import ContactFormEnhanced from '../components/ContactFormEnhanced';
   test('applies correct styling', () => {
     render(<ContactFormEnhanced />);
     // Add styling tests if needed;
-
 

@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { toast } from "@/hooks/use-toast";
@@ -99,21 +98,6 @@ function ProfileContact() {
             <Input;
               placeholder="Subject";
               value={subject}
-              required;
-            />;
-          </div>;
-          <div>;
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled={isSending}>;
-            <Send className="mr-2 h-4 w-4" />;
-            {isSending ? "Sending..." : "Send Message"}            <Textarea;
-              placeholder={`Message to ${profile_name}...`}
-              value={message}
-              on_change={(e) => set_message (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white min-h-[120px]";
-              required;
-            />;
-          </div>;
           <Button;
             type="submit";
             className="w - full bg - zion - cyan hover:bg - zion-cyan / 90";
@@ -152,4 +136,3 @@ setIsSending (true);
 });
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

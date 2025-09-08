@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/automation-guardian.js
 :backup-problematic-files/netlify/functions/automation-guardian.js
 const path = require('path'),;
@@ -32,6 +33,12 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
     stdio: 'pipe,
   encoding: 'utf8)
@@ -44,43 +51,12 @@ function runNode(relPath, args = []) {
     stderr: res.stderr |
 exports.config = { schedule: '*/10 * * * *' }
 
-=======
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
-exports.config = { schedule: '*/10 * * * *' }
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-<<<<<<< HEAD
 
     if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
 
     return status;
 
-=======
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-
-    return status;
-  }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  step('automation-guardian', () =>
-    runNode('automation/automation-guardian-10min.cjs')
-  );
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-<<<<<<< HEAD
 
   // TODO: Implement
     statusCode: 200;,
@@ -90,6 +66,7 @@ exports.handler = async () => {
 
 
 
+<<<<<<< HEAD
 =======
   return {
     statusCode: 200
@@ -150,3 +127,5 @@ main:netlify/functions/automation-guardian.js
 }
 main:netlify/functions/automation-guardian.js
 :backup-problematic-files/netlify/functions/automation-guardian.js
+=======
+>>>>>>> main

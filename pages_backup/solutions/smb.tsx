@@ -41,43 +41,6 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-export default function SMBSolutionsPage() {;
-  const smbServices = [;
-    {}
-      title: "Cost-Effective IT",",
-  description: "Affordable technology solutions for small and medium businesses",";
-      icon: DollarSign,;
-      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
-    },;
-    {}
-      title: "Quick Setup",",
-  description: "Rapid deployment of essential business systems",";
-      icon: Zap,;
-      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
-    },;
-    {}
-      title: "Team Collaboration",",
-  description: "Tools and systems to enhance team productivity",";
-      icon: Users,;
-      features: ["Communication Tools", "Project Management", "File Sharing"]";
-    },;
-    {}
-      title: "Business Growth",",
-  description: "Technology solutions that grow with your business",";
-      icon: Building2,;
-      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
-    }
-;  ];
-  return (
-    <Layout)
-      title="SMB Solutions - Zion Tech Group""
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
-      <div className="min-h-screen bg-gray-50">";
-  ];
     >      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"

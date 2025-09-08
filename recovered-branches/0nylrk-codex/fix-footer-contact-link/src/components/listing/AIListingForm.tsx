@@ -1,5 +1,3 @@
-
-
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -70,10 +68,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
   const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-          disabled={isLoading}
-        />;
-      </div>;
-      <div className="space-y-2">;
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
           id="targetAudience"
           value={targetAudience}
@@ -118,7 +112,6 @@ import { Textarea } from '@/components / ui / textarea';
       </Button>;
     </div>;
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Sparkles } from './lucide-react';
 interface AIListingFormProps {}
   on_submit: (form_data: {}

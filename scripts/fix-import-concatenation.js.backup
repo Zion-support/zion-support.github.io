@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+
+console.log('🔧 Fixing import statement concatenation issues...');
+;
+async function main() {;
+// Function to fix concatenated import statements;
+
+  return fixed}
+// Function to process a single file;
+function: processFile(filePath) {
+  try {
+
+  // Fix patterns like: 'interface SomeProps {prop: string;';
+  fixed = fixed.replace(;
+    /'interface\s+([^{]+)\s*{\s*([^}]*);'/g,;
+    (match, interfaceName, props) => {;
+      return `interface ${interfaceName.trim()}, {\n  ${props.trim()}`});
+  // Fix patterns like: 'const someVariants = cva(;
+  fixed = fixed.replace(;
+    /'const\s+([^=]+)=\s*cva\(/g,;
+    (match, varName) => {;
+      return `const ${varName.trim()} = cva(`});
+  // Fix patterns with multiple concatenated strings;
+  fixed = fixed.replace(;
+    /'([^']+)',\s*'([^']+)',\s*'([^']+)'/g,;
+    (match, str1, str2, str3) => {;
+      return `'${str1}${str2}${str3}'`});
+  // Fix patterns with semicolons in strings;
+  fixed = fixed.replace(;
+    /'([^']*);([^']*)'/g,;
+    (match, before, after) => {;
+      return `'${before}${after}'`});
+  return fixed}
+// Function to process a single file;
+function processFile(filePath) {;
+  try {;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixImportConcatenation(content);
+    if (content !== fixed) {;
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {;
+
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false}
+}
+// Find all TypeScript and JavaScript files;
+
+  '*.{ts,tsx,js,jsx}'];
+let totalFixed = 0;
+for (const pattern of patterns) {;
+  const files = await glob(pattern { ignore: ['node_modules/**', 'dist/**', '.next/**'] });
+  for (const file of files) {;
+    if (processFile(file)) {;
+
+  for (const file of files) {
+
+    if (processFile(file)) {
+
+      totalFixed++}
+  }
+}
+
+
+
+  totalProcessed += files.length}
+const report = {;
+  timestamp: new Date().toISOString(),;
+  totalFilesProcessed: totalProcessed,;
+  totalFilesFixed: totalFixed,;
+  patterns: patterns}
+fs.writeFileSync('import-concatenation-fix-report.json', JSON.stringify(report, null, 2));
+console.log('📄 Report saved to: import-concatenation-fix-report.json')}
+main().catch(console.error);
+=======
+#!/usr/bin/"env": node {
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
+#!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
+>>>>>>> main
+
+

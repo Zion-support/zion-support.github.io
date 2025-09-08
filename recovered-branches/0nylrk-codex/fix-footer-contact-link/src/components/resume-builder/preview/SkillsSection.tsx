@@ -1,8 +1,3 @@
-import { Skill } from "@/types/resume";
-interface SkillsSectionProps {
-  skills: Skill[];
-}
-
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -39,10 +34,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">            </p>;
-          </div>;
-        ))}
-      </div>;
-    </div>;
   );
 }  return (
     <div className="mb-6">;
@@ -59,9 +50,3 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
     </div>);
 
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba

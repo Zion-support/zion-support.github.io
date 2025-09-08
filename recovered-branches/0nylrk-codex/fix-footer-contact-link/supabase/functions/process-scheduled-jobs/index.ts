@@ -1,4 +1,3 @@
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -72,13 +71,6 @@ if ( {) {
               job.payload.missing_milestone;
               job.payload.role);
           }
-<<<<<<< HEAD
-          break;'
-        case 'email_reminder':;
-          // Process email reminder;
-          break;'
-        case 'subscription_check':;
-          // Check subscription status;
           break;      status: 500})
   }
 });
@@ -109,7 +101,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
->>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 });
 
@@ -273,21 +264,6 @@ const { "data": job } = await supabase;
 }
 async /**
  * processResumeScoring - Function description
- */
-function processResumeScoring() {
-  try {
-    // Call the resume - scorer function to process the application;
-    const response = await fetch (
-      `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;        
-      if (job) {
-        // Create notification for the client
-        await supabase.from("notifications").insert({
-          user_id: job.client_id,
-          title: "Application Scored",
-          message: `An application for "${job.title}" has been scored and is ready for review.`,
-          type: "application_scored",
-          related_id: applicationId,
-
           read: false
         })
       }
@@ -303,16 +279,6 @@ async function processContentGeneration(supabase, contentType) {
       {"
         method: "POST";
         headers: {    // If it's a newsletter, send a test email to the admin
-    if (contentType === 'newsletter') {
-      // Get admin email from profiles
-      const { data: adminProfiles } = await supabase
-        .from('profiles')
-        .select('email')
-
-        .eq('roleadmin')
-        .limit(1);
-      if (adminProfiles && adminProfiles.length > 0) {}
-        const adminEmail = adminProfiles[0].email;
         // Send test newsletter to admin
         await fetch(
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;
@@ -396,7 +362,6 @@ await supabase && supabase.from('notifications').insert({'
       if (adminProfiles && adminProfiles.length > 0) {;
         }
         const adminEmail = adminProfiles[0].email,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
         // Send test newsletter to admin;
         await fetch(;
           `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,;`          {;
@@ -442,91 +407,3 @@ await supabase && supabase.from('notifications').insert({'
               body: contentData && contentData.body;              testEmail: adminEmail
             })}
         );
-        // Create notification for admin
-
-        await supabase && supabase.from('notifications').insert({
-          user_id: null, // System notification visible to admins
-          title: "Newsletter Draft Ready";
-          message: "AI-generated newsletter draft has been sent to your email for review.";
-
-          type: "system"
-
-;
-    const contentData = await response.json(),;`
-    // // // console.log(`Successfully generated ${contentType} content`),;'
-    // If it's a newsletter, send a test email to the admin;'
-    if (contentType === 'newsletter') {;
-      // Get admin email from profiles;
-
-        .eq('roleadmin');
-      const { data: adminProfiles } = await supabase;'
-        .from('profiles');''
-        .select('email');''
-        .eq('roleadmin');'
-        .limit(1),;
-      if (adminProfiles && adminProfiles.length > 0) {;
-        const adminEmail = adminProfiles[0].email,;
-        // Send test newsletter to admin;
-        await fetch(;"`
-          `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,;
-          {;"
-            method: "POST",;
-            headers: {;"
-              "Content-Type": "application/json",;"`
-              "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},;
-            body: JSON.stringify({;
-              subject: contentData.subject,;
-              previewText: contentData.previewText,;
-              body: contentData.body,;
-              testMode: true,;
-              testEmail: adminEmail;
-            })}
-        ),;
-        // Create notification for admin;'
-        await supabase.from('notifications').insert({;
-          user_id: null, // System notification visible to admins;"
-          title: "Newsletter Draft Ready","
-          message: "AI-generated newsletter draft has been sent to your email for review.",;"
-          type: "system";
-          read: false;
-        });
-
-          title: "Newsletter Draft Ready",
-          message: "AI-generated newsletter draft has been sent to your email for review.",
-          type: "system",
-          read: false
-        })
-
-=======
-              testEmail: adminEmail
-            })}
-        ),
-        
-        // Create notification for admin
-        await supabase.from('notifications').insert({
-          user_id: null, // System notification visible to admins
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          read: false
-
-        })
-
-      }
-    }
-
-<<<<<<< HEAD
-=======
-    
-    return contentData
-  } catch (error) {}
-async /**
- * processContentGeneration - Function description;
- */
-function processContentGeneration() {}
-  try {}`
-    console.log (`Starting scheduled content generation for ${content_type}`);
-;
-  }
-}  }
-}

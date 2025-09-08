@@ -1,5 +1,3 @@
-
-
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";export const NavigationButtons = ({;
@@ -73,7 +71,6 @@ import { NavigationButtonsProps } from "./types",
       {onNext && (
 
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>

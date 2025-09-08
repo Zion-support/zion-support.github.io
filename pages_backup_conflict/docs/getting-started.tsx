@@ -1,14 +1,3 @@
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { ArrowLeft, CheckCircle, ExternalLink, Book } from 'lucide-react';
-export default function GettingStarted() {
-  const contact = {
-    "phone": '+1 302 464 0950',
-    "email": 'kleber@ziontechgroup.com',
-    "address": '364 E Main St STE 1008 Middletown DE 19709',
-    "site": 'https://ziontechgroup.com'
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,20 +33,6 @@ export default function GettingStarted() {;
           <div className="bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help?</h2>
             <p className="text-gray-600 mb-6">
-<<<<<<< HEAD
-
-
-
-=======
-          <div className=bg-blue-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4>Need Help?</h2>
-            <p className=text-gray-600 mb-6">
-              Our team is here to help you get started. Contact us for personalized assistance.
-            </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
-              <a href={`"tel":${contact.phone}`} className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors">"                Call {contact.phone}
-              </a>
-
               Our team is here to help you get started. Contact us for personalized assistance.
             </p>
             <div className="flex flex-col "sm": flex-row gap-4 justify-center">

@@ -1,5 +1,3 @@
-
-
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';

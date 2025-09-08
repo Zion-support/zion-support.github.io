@@ -1,5 +1,4 @@
 
-
 import {cn} from '@/lib/utils';
 import {toggleVariants} from '@/components/ui/toggle';
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
@@ -52,77 +51,4 @@ const ToggleGroup = React.forward_ref<;
     VariantProps < typeof toggle_variants>;
 ></typeof>(({ class_name, variant, size, children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root;
-<<<<<<< HEAD
-    ref={ref}'
-    className={cn ('flex items - center justify - center gap - 1', class_name)}
 
-=======
-    ref={ref}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    {...props}
-  >
-    <ToggleGroupContext.Provider value={{ variant, size }}>
-      {children}
-<<<<<<< HEAD
-
-    ref={ref})'
-=======
-    </ToggleGroupContext.Provider>
-  </ToggleGroupPrimitive.Root>
-))
-
-ToggleGroup.displayName = $2;
-  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &
-    VariantProps<typeof toggleVa</typeof>riants>
->(({ className, children, variant, size, ...props }, ref) => {
-  const context = React.useContext(
-    ToggleGroupContext
-  ) as ToggleGroupContextProps
-
-  return($2);
-        className
-      )}
-      {...props}
-    >;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    className={cn ('flex items - center justify - center gap - 1', class_name)}'
-    {...props}
-  >;
-    <ToggleGroupContext.Provider value={ variant, size }>;
-      {children}
-</ToggleGroupContext>
-
-    </ToggleGroupContext.Provider>;
-  </ToggleGroupPrimitive.Root>));
-;
-ToggleGroup.display_name = ToggleGroupPrimitive.Root.display_name;
-;
-const ToggleGroupItem = React.forward_ref<;
-  React.ElementRef < typeof ToggleGroupPrimitive.Item>,
-  React.ComponentPropsWithoutRef < typeof ToggleGroupPrimitive.Item> &;
-    VariantProps < typeof toggle_va</typeof > riants>;
->(({ class_name, children, variant, size, ...props }, ref) => {
-}
-const context = React.useContext (;
-    ToggleGroupContext) as ToggleGroupContextProps;
-<<<<<<< HEAD
-;}
-    >;}
-
-=======
-;
-    >;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      {children}
-    </ToggleGroupPrimitive.Item>);
-});
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
-;
-export { ToggleGroup, ToggleGroupItem }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

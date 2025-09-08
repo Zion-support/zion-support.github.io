@@ -1,36 +1,6 @@
-/**;
- * Environment Polyfill for Browser;
- * ;
- * This polyfill ensures that process.env is always available in the browser environment.;
- * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
- */;
-;
-// Define safe defaults for environment variables;
-const defaultEnv = {;
-  NODE_ENV:'production', // Default to production for safety;
-<<<<<<< HEAD
 
 
 
-=======
-  NEXT_PUBLIC_APP_URL:'',;
-  NEXT_PUBLIC_SUPABASE_URL:'',;
-  NEXT_PUBLIC_SUPABASE_ANON_KEY:''},;
-;
-// Create a safe process object;
-const createProcessObject = () => ({;
-  env:{ ...defaultEnv },;
-  versions:{},;
-  platform:'browser',;
-  arch:'x64',;
-  version:'18.0.0',;
-  browser:true}),;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-;
-// Ensure process is available on globalThis;
-if (typeof globalThis !== 'undefined') {;
-  if (typeof (globalThis as any).process === 'undefined') {;
-<<<<<<< HEAD
 
 
   }
@@ -101,6 +71,7 @@ browser: true ;
 
 }//Ensure process is available on window ;
 
+<<<<<<< HEAD
 =======
     (globalThis as any).process = createProcessObject(),;
   } else if (typeof (globalThis as any).process.env === 'undefined') {;
@@ -176,3 +147,5 @@ browser: true ;
 }
 }// Ensure process is available globally '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
+=======
+>>>>>>> main

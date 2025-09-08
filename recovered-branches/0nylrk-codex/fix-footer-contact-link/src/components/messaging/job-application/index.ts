@@ -1,14 +1,3 @@
 
 
-<<<<<<< HEAD
-
-=======
-pr-12325
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export * from './ApplyToJobModal',;
-export * from './ApplyForm',;
-export * from './ResumeTab',;
-export * from './MessageTab',;
-
-export * from './types';
 

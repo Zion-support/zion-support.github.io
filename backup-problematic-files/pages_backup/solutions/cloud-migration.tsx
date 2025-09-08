@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -13,6 +12,7 @@ import { Cloud,
   Zap,
 
 
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';'
 import Link from 'next/link';'
@@ -41,22 +41,12 @@ import Layout from "../../components/Layout";";
 const phases = [;
   {}
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
     title: 'Assessment & Planning,',;
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
 
-=======
-
-    title: 'Assessment & Planning,',,
-  description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    icon: BarChart3,;
-    steps: [,;
-      'Infrastructure audit,',;
-      'Workload analysis',',;
-      'Migration strategy',',;
-<<<<<<< HEAD
 
       'Risk assessment'';
     ];
@@ -66,43 +56,12 @@ const phases = [;
     description: 'Cloud-native architecture design and security framework implementation.,',;
     icon: Settings,;
     steps: [,;
-=======
-
-      'Risk assessment;']
-    ];
-  },;
-  {}
-
-    icon: Settings,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      'Cloud architecture design,',;
-      'Security framework',',;
-      'Scalability planning',',;
-      'Cost optimization'';
-    ];
-  },;
-  {}
-<<<<<<< HEAD
 
     title: 'Migration Execution,',;
     description: 'Phased migration with minimal downtime and comprehensive testing.,',;
     icon: Cloud,;
     steps: [,;
 
-=======
-
-
-    icon: Cloud,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      'Data migration,',;
-      'Application migration',',;
-      'Testing & validation',',;
-      'Go-live support'';
-    ];
-  },;
-  {}
-<<<<<<< HEAD
 
     title: 'Optimization,',;
     description: 'Continuous monitoring and optimization for peak performance.,',;
@@ -113,82 +72,22 @@ const phases = [;
       'Security updates',',;
       'Continuous improvement'';
     ];
-=======
-
-
-    icon: Zap,;
-      'Performance monitoring,',;
-      'Cost optimization',',;
-      'Security updates',',;
-      'Continuous improvement;']
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  }
-;];
-
-const services = [;
-  {}
-<<<<<<< HEAD
 
     title: 'AWS Migration,',;
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
     icon: Cloud,;
-=======
-
-
-    icon: Cloud,;
-    title: 'AWS Migration,',;
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
-pr-12325
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    features: [,;
-      'EC2 instance migration,',;
-      'RDS database migration',',;
-      'S3 storage migration',',;
-      'Lambda serverless functions'';
-    ];
-  },;
-  {}
-<<<<<<< HEAD
 
     title: 'Azure Migration,',;
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
     icon: Shield,;
     features: [,;
 
-=======
-
-
-    icon: Shield,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      'Azure Virtual Machines,',;
-      'Azure SQL Database',',;
-      'Azure Storage migration',',;
-      'Azure Functions deployment'';
-    ];
-  },;
-  {}
-<<<<<<< HEAD
 
     title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
     icon: Brain,;
     features: [,;
 
-=======
-
-
-    icon: Brain,;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      'Compute Engine migration,',;
-      'Cloud SQL migration',',;
-      'Cloud Storage migration',',;
-      'Cloud Functions deployment'';
-    ];
-  },;
-  {}
-<<<<<<< HEAD
 
     title: 'Multi-Cloud Strategy,',;
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
@@ -225,6 +124,7 @@ const benefits = [;
   }
 ;];
 
+<<<<<<< HEAD
 export default function CloudMigrationPage() {
   return (;
     <Layout );
@@ -243,6 +143,8 @@ export default function CloudMigrationPage() {
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -300,12 +202,16 @@ export default function CloudMigrationPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
                   
+<<<<<<< HEAD
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                         {step}
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
 
                       </li>,;
                     ))}
@@ -332,6 +238,7 @@ export default function CloudMigrationPage() {
               </p>;
             </motion.div>;
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
@@ -351,6 +258,8 @@ export default function CloudMigrationPage() {
                   
                   <div>;
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;
                       {service && service.features.map((feature, featureIndex) => (,;
@@ -409,6 +318,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -454,3 +364,6 @@ export default function CloudMigrationPage() {
     </Layout>
 
 export default Cloud-migration;
+=======
+
+>>>>>>> main

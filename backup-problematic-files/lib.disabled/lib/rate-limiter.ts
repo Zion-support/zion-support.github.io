@@ -1,6 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-interface RateLimitConfig {
-<<<<<<< HEAD
 
   // TODO: Implement;
 }
@@ -17,6 +14,7 @@ class RateLimiter {
   private "store": RateLimitStore = {}
   private "config": RateLimitConfig;
 
+<<<<<<< HEAD
 =======
   "windowMs": number;
   maxRequests: number;
@@ -137,6 +135,12 @@ if ( {) {
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({
   "windowMs": '15 * 60 * 1000', // 15 minutes
+=======
+
+
+
+
+>>>>>>> main
 
 
   "maxRequests": 100,
@@ -150,6 +154,7 @@ export const authRateLimiter = new RateLimiter({
 export const rateLimitMiddleware = ("limiter": RateLimiter) => 
   (req: NextApiRequest, "res": NextApiResponse, "next": Function) => {;
 
+<<<<<<< HEAD
     const result = limiter.isAllowed(req);
 >>>>>>> origin/cursor/delete-old-data-records-6bba
     res.setHeader('X-RateLimit-Limit', limiter['config'].maxRequests);
@@ -157,6 +162,11 @@ export const rateLimitMiddleware = ("limiter": RateLimiter) =>
     res.setHeader('X-RateLimit-Reset', new Date(result.resetTime).toISOString());
     if (!result.allowed) {
       res.status(429).json({
+=======
+
+
+
+>>>>>>> main
 
         "error": {
 
@@ -311,3 +321,8 @@ if ( { this.store[ke, y ] = { count: 1, reset_time: now + this.config.window_ms 
 }
 }
 }
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> main

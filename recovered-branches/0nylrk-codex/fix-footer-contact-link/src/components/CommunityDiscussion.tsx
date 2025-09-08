@@ -17,39 +17,7 @@ interface DiscussionPost {
 interface DiscussionPost {
 interface DiscussionPost {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  id: number,
-  author: string,
-  avatar?: string,
-  time: string,
-  title: string,
-  body: string
-}  body: string
-}
-
-  body: string
-}
-const initial_posts: DiscussionPost[] = [;
-  {}
-    id: 1,"
-    author: "Anna Zhou","
-    time: "2h ago","
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
-  },
-  body: string
-}
-  {
-    id: 2
-    author: "David Kim"
-    time: "50m ago"
-    title: "Quick tip: How to rank your Zion listing higher"
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
-  }
-];
 export const CommunityDiscussion: React.FC = () => {const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;"
@@ -84,92 +52,5 @@ export const CommunityDiscussion: React.FC = () => {const initialPosts: Discussi
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
         <MessageCircle size={28} className="text-zion-cyan" />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-        <span className="font-bold text-2xl text-white tracking-tight">
-          Community Discussion;
-        </span>"
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
-          {posts.length} posts;
-        </span>
-      </div>"
-      <Separator className="mb-6" />"
-      <div className="mb-4 flex justify-end">
-        <Button"
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale""
-          size="sm"
-          onClick={() => setShowNew((v) => !v)}
-        >"
-          {showNew ? "Cancel" : "New Post"}
-        </Button>
-      </div>
-      {showNew && ("
-        <Card className="mb-6 animate-scale-in">"
-          <CardContent className="py-5">
-            <Input"
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)""
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
-              value={newTitle}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
-              maxLength={80}
-            />
-            <Textarea
-              placeholder="What's on your mind?"
-              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
-            <div className="flex gap - 3 justify-end">;
-              <Button;
-                variant="secondary";
-                size="sm";
-                className="bg - zion - blue text - white hover:bg - zion - blue-dark";
-                on_click={() => setShowNew (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                size="sm";
-                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
-                on_click={handleAddPost}
-                disabled={!new_title.trim () || !new_body.trim ()}                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
-                on_click={handleAddPost}
-                disabled={!new_title.trim () || !new_body.trim ()}
-              >;
-              }
-              max_length={400}
-              rows={3}
-            />;
-                Post;
-              </Button>;
-            </div>;
-          </CardContent>;
-
-);
-                </AvatarFallback>;
-              </Avatar>;
-              <div>;
-                <div className="flex gap-2 items-center">;
-                  <span className="font-semibold text-white">{post.author}</span>;
-                  <span className="text-xs text-zion-slate-light">{post.time}</span>;
-                </div>;
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        ))}
-      </div>;
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
-      </div>;
-    </div>;
-  );
-  )
-};}
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

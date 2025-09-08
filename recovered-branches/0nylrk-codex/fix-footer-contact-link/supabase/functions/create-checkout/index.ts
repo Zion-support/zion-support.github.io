@@ -1,4 +1,3 @@
-
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
@@ -17,41 +16,10 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serv
     Deno && Deno.env.get("SUPABASE_URL") ?? "";"
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
-
-    const requestData = await req && req.json();
-    const { 
-      amount, 
-
-      providerId = null;
   try {
     // Retrieve the request body
 
     const requestData = await req.json(),
-<<<<<<< HEAD
-
-    const {}
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      amount, 
-      serviceId = null,
-      providerId = null,
-      escrow = false,"
-      productType = "service","
-      currency = "usd",
-
-<<<<<<< HEAD
-      successUrl,
-      cancelUrl
-    } = requestData,
-    
-
-    // Verify the amount is valid
-
-    if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
-      throw new Error("Invalid payment amount")
-    }
-    // Authenticate the user
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
@@ -66,7 +34,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serv
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
             unit_amount: amount * 100, // Convert to cents;
->>>>>>> origin/cursor/delete-old-data-records-6bba
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
           quantity: 1}];"
@@ -108,14 +75,5 @@ if ( {) {}
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 
-<<<<<<< HEAD
 
 
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
-
-  }
-});

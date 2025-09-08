@@ -1,5 +1,3 @@
-
-
   return (
 
     <main className='mx-auto max-w-5xl px-4 py-12'>;
@@ -72,7 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>"
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <p className="mt-2 text-sm text-gray-600">
             Optionally uses AI to produce small, useful artifacts (e.g., growth experiments), committed into the repository.
           </p>"
@@ -129,16 +126,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
-<<<<<<< HEAD
 
 
-=======
-        </div>
-      </div>
-    </main>
-  );
-}
-}
-  );
-}
-}

@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -12,6 +13,9 @@
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);
+=======
+
+>>>>>>> main
 
 
     if (matches) {
@@ -51,10 +55,14 @@ if (.ends_with (") {}
           const fixed_match = match.trim () + ";";
 
           content = content.replace (match, fixed_match);
+<<<<<<< HEAD
           modified = true;
         }
       });
     }
+=======
+
+>>>>>>> main
 
 
       (match, varName) => {
@@ -129,3 +137,8 @@ if ( {) {}
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main

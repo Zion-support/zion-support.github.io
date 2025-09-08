@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 
 
@@ -31,11 +30,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
-}
-import React from 'react';
-import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
-
 
   title: string;
   description: string;
@@ -79,11 +73,6 @@ const Features: React.FC<FeaturesProps> = ({;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 
 interface Feature {
-  icon: React.ReactNode,
-  title: string,
-  description: string,
-  color: string,
-  gradient: string,
   delay?: number
 }
 
@@ -122,25 +111,6 @@ const Features: React.FC<FeaturesProps> = ({
 
           </p>;
         </div>;
-
-
-
-
-
-            {subtitle}
-          </p>;
-        </div>;
-            {subtitle}
-          </p>;
-        </div>;
-
-
-        {/* Features Grid */}
-        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
-          {features && features.map((feature, index) => (;
-            <Card
-              key={index}
-
 export default Features;  )
 };
 

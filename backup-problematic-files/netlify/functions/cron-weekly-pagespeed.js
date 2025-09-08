@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 const { upsertFile } = require('./_lib/github'),;
@@ -56,6 +57,12 @@ async function psi(url, strategy = 'mobile', key) {
 exports.handler = async function () {
   try {
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
 
   // TODO: Implement
 }
@@ -66,33 +73,8 @@ exports.handler = async function () {
     ${p}`;
   // TODO: Implement
 
-=======
-    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
-    const key = process.env.PSI_API_KEY |'';
-    const pages = ['/', '/learn', '/dao', '/certifications'];
-    const results = [];
-    ${p}`;
-      try {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-        const mobile = await psi(url, 'mobile', key);
-        const desktop = await psi(url, 'desktop', key);
-        results.push({ url, mobile, desktop });
-      } catch (e) {
-        results.push({ url, error: e.message |String(e) });
-<<<<<<< HEAD
 
 
-=======
-      }
-    }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-    const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2);
-    if (owner && repo && token) {
-      await upsertFile({
-<<<<<<< HEAD
 
         owner;
         repo;
@@ -101,6 +83,7 @@ exports.handler = async function () {
         message: 'chore(automation): weekly PageSpeed report
         token;
 
+<<<<<<< HEAD
 =======
         owner
         repo
@@ -160,6 +143,8 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+=======
+>>>>>>> main
 
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -208,8 +193,12 @@ exports.handler = async function() {
 },
 
 
+<<<<<<< HEAD
 main:netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 :netlify/functions/cron-weekly-pagespeed.js
 main:netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
+=======
+
+>>>>>>> main

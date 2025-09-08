@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -25,5 +24,3 @@ import ImageOptimizer from '../components/ImageOptimizer';
   test('applies correct styling', () => {
     render(<ImageOptimizer />);
     // Add styling tests if needed;
-
-

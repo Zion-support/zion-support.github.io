@@ -46,24 +46,3 @@ interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
 
-<<<<<<< HEAD
-=======
-;
-export function StatusBadge() { return null; }
-      return <Badge variant="outline">{status}</Badge>;
-  }
-}
-;
-      return <Badge variant="secondary">Submitted</Badge>;
-    case "viewed":;
-      return <Badge variant="outline">Viewed</Badge>;
-    case "shortlisted":;
-
-import { ApplicationStatus } from "@/types/jobs",
-import { Badge } from "@/components/ui/badge",
-interface StatusBadgeProps {
-  status: ApplicationStatus
-}
-
-export function StatusBadge({ status }: StatusBadgeProps) {
-  switch (status) {

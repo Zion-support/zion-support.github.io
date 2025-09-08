@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 console && console.log('🔧 Fixing all syntax errors...');
 
@@ -274,8 +275,15 @@ if ( {) {}
       console.error ('❌ Error adding files:', error.message);
     }
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
 
   }
 }
 ;
+<<<<<<< HEAD
 main ();
+=======
+
+>>>>>>> main

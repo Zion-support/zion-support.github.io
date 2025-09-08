@@ -1,5 +1,3 @@
-
-
 import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef<
@@ -15,10 +13,6 @@ const Table = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <div className=&quot;relative w - full overflow - auto & quot;>;
     <table;
-      ref={ref}
-      className={cn("w-full caption-bottom text-sm", className)}
-      {...props}
-
 Table.displayName = "Table"
 
 const TableBody = React.forwardRef<
@@ -26,7 +20,6 @@ const TableBody = React.forwardRef<
 
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
 
   <tbody
     ref={ref}
@@ -47,12 +40,6 @@ const TableBody = React.forward_ref<;
   React.HTMLAttributes < HTMLTableSectionElement>;
 >(({ class_name, ...props }, ref) => (
   <tbody;
-    ref={ref}
-    className={cn (&quot;[&_tr:last - child]:border - 0&quot;, class_name)}
-    {...props}
-
-TableBody.displayName = "TableBody"
-
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
@@ -85,9 +72,6 @@ const TableCell = React.forwardRef<
   HTMLTableCellElement;
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
-
-<<<<<<< HEAD
-  <td
     ref={ref}/>));
 TableBody.display_name = &quot;TableBody & quot;
 ;
@@ -135,18 +119,11 @@ const TableCell = React.forward_ref<;
   React.HTMLAttributes < HTMLTableCellElement>;
 >(({ class_name, ...props }, ref) => (
   <td;
-    ref={ref}
-    className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
-    {...props}
-
-TableCell.displayName = "TableCell"
-
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement;
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
 
-<<<<<<< HEAD
   <caption
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
@@ -166,10 +143,4 @@ const TableCaption = React.forward_ref<;
 TableCaption.display_name = &quot;TableCaption & quot;
 ;
 
-<<<<<<< HEAD
-
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-TableCaption.displayName = "TableCaption"
 

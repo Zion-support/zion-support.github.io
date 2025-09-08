@@ -1,13 +1,5 @@
-
   '❌ PM2 is not installed. Please install it first: npm install -g pm2);
 #!/usr/bin/env node,"}),"}) const { execSync } = require(,,"}),"}) child_process'),"}),"}) const fs = require(,"}),"}) 'fs'),"}),"}) const path = require(,"}),"}) 'path'),"}),"}) ,"}),"}) ,"}) '🚀 Starting PM2 automation processes...'),"}),"}) ,"}),"}) try {,"}),"}) execSync(,"}),"}) 'pm2 --version',{ stdio: 'pipe }),"}),"}) ,"}) ✅ PM2 is installed'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2),"}),"}) process.exit(1),"}),"}) }"}),"}) ,"}),"}) async function startAutomation() {,"}),"}) try {,"}),"}) ,"}) 📱 Starting main application...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }),"}),"}) ,"}),"}) await new Promise(resolve => setTimeout(resolve,2000)),"}),"}) ,"}),"}) ,"}) 🤖 Starting automation processes...'),"}),"}) execSync(,"}),"}) 'pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit }),"}),"}) ,"}),"}) ,"}) 💾 Saving PM2 configuration...'),"}),"}) execSync(,"}),"}) 'pm2 save',{ stdio: 'inherit }),"}),"}) ,"}),"}) ,"}) 📊 PM2 Status: '),"}),"}) execSync(,"}),"}) 'pm2 list,{ stdio:,"}),"}) 'inherit' }),"}),"}) ,"}),"}) ,"}) '✅ All PM2 processes started successfully!'),"}),"}) ,"}) '📝 Use "pm2 logs" to view logs'),"}),"}) ,"}) '📊 Use "pm2 monit" to monitor processes'),"}),"}) ,"}) '🛑 Use "pm2 stop all" to stop all processes'),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Failed to start PM2 processes:',error.message),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) ,"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) ,"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) ,"}),"}) startAutomation().catch(error => {,"}),"}) console.error(,"}),"}) '❌ Failed to start automation:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) ,"}),"}) '❌ PM2 is not installed. Please install it first: npm install -g pm2); process.exit(1)} async function startAutomation() {; try {;  execSync(','pm2 start ecosystem.config.cjs --only apps',{ stdio: 'inherit }); await new Promise(resolve => setTimeout(resolve,2000));  execSync(','pm2 start ecosystem.config.cjs --only automation',{ stdio: 'inherit });  execSync(','pm2 save',{ stdio: 'inherit });  execSync(','pm2 list,{ stdio:';inherit' });    } catch (error) { console.error(','❌ Failed to start PM2 processes: ',error.message); process.exit(1)} } process.on(','SIGINT',() => {  process.exit(0)}) process.on(' 'SIGTERM',() => {  process.exit(0)}); startAutomation().catch(error => { console.error(' '❌ Failed to start automation:',error); process.exit(1)})
-
-<<<<<<< HEAD
-=======
-
-
-
-
 
 
 
@@ -18,7 +10,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/main
 #!/usr/bin/env node,"}),"})
 const { execSync } = require(,,"}),"})
   child_process'),"}),"})
@@ -135,13 +126,6 @@ async function startAutomation() {;
 
   'pm2 save' { stdio: 'inherit });
     // Show status;
-<<<<<<< HEAD
-=======
-
-
-
-
-
     console.log(,;
   📊 PM2 Status: ');
 

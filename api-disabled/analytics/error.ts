@@ -1,22 +1,4 @@
 export {};
-
-interface ErrorData {
-  error: {
-    message: string;
-    stack?: string;
-    name: string};
-  errorInfo: {
-    componentStack: string};
-  url: string;
-  timestamp: number;
-  userAgent: string}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
-
-module.exports = {};
-module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
@@ -39,13 +21,6 @@ module.exports = {};
       stack: data.error.stack,
       componentStack: data.errorInfo.componentStack
     });
-
-    // Here you could send the error to:
-    // - A monitoring service (Sentry, LogRocket, Bugsnag, etc.)
-    // - A logging service (LogDNA, Papertrail, etc.)
-    // - A database for analysis
-    // - An alerting system (PagerDuty, Slack, etc.)
-
     // For now, we'll just acknowledge receipt
     res.status(200).json({ 
       success: true, 

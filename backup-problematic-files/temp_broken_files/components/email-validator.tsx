@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
@@ -7,6 +8,8 @@ import Button from '../components/ui/Button',;
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
 
 <<<<<<< HEAD
+=======
+>>>>>>> main
 export default function EmailValidatorPage() {;
   const [emails, setEmails] = useState(''),;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
@@ -14,54 +17,14 @@ export default function EmailValidatorPage() {;
   const [bulkMode, setBulkMode] = useState(false),;
 
 
-  const validateEmails = async () => {;
-    if (!emails.trim()) return;
-    setIsValidating(true);
-    setValidationResults([]);
-    const emailList = emails.split('\n').filter(email => email.trim());
-    const results = [];
-    // Simulate email validation with realistic results;
-
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200));
-      const email = emailList[i].trim();
-      const result = validateSingleEmail(email);
-      results.push(result);
-    }
-    setValidationResults(results);
-    setIsValidating(false);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const validateSingleEmail = (email: string) => {// Basic email regex;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // Check for common disposable email domains;
-    const disposableDomains = [;
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.com';
-<<<<<<< HEAD
 
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com';']
 
-=======
-      'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com';']
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    ];
-    // Check for common typos;
-    const commonTypos = {;
-      'gmail.com': ['gmial.comgamil.comgmai.com'];
-      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'];
-      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'];
-      'outlook.com': ['outlok.comoutloook.comoutlok.com'];
+
+
 <<<<<<< HEAD
-
-
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
     const domain = email.split('@')[1];
@@ -81,12 +44,15 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
+=======
+>>>>>>> main
 
 export default function EmailValidatorPage() {
 
   const [emails, setEmails] = useState(),
   const [validationResults, setValidationResults] = useState<any[]>([]),
 
+<<<<<<< HEAD
     }
 ;
     // Additional checks;
@@ -128,11 +94,14 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     
     // Check for common disposable email domains,
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
 const disposableDomains = [
       'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com]
 
+<<<<<<< HEAD
 =======
       'tempmail.orgguerrillamail.commailinator.com10minutemail.com','
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com''
@@ -171,6 +140,8 @@ const commonTypos = {
     // Additional checks,
 if (email.length > 254) {
       issues.push('Email too long')
+=======
+>>>>>>> main
 
 
 
@@ -181,6 +152,7 @@ if (email.length > 254) {
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
 
+<<<<<<< HEAD
 =======
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -259,24 +231,14 @@ if (email.length > 254) {
           <div className=&quot;text-center mb-16&quot;>
 
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> main
             <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-            </h2>
-
-            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
-          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-
-              <div className=&quot;flex items-center justify-between mb-6&quot;>
-                <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-
-<<<<<<< HEAD
                   <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />                  Email Input
                 </h3>
                 <div className=&quot;flex items-center space-x-2&quot;>
@@ -532,6 +494,7 @@ if (return null, ) {
 
                     <Button;
 
+<<<<<<< HEAD
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
                       className=&quot;w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none&quot;
                     />
@@ -649,21 +612,20 @@ variant=&quot;outline & quot;
                     <Copy className=&quot;w - 4 h - 4 mr - 2&quot; />;
 
 <<<<<<< HEAD
+=======
+
+
+
+                      className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
+                    >
+
+
+>>>>>>> main
                     Copy Results;
                   </Button>)}
               </div>;
               {stats && (
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                      <div className=&quot;flex items - center justify - between mb - 2&quot;>;
-                        <div className=&quot;flex items - center space - x-3 & quot;>;
-</div>`;
-                          <span className={`font - medium ${getStatusColor (result.status)}`}>;
-</span>
-                          </span>;
-<<<<<<< HEAD
 
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
@@ -693,6 +655,7 @@ variant=&quot;outline & quot;
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
 
+<<<<<<< HEAD
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
@@ -754,6 +717,8 @@ key={index}`;
                             {result.issues.map((issue: string, issueIndex: number) => (
                               <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
+=======
+>>>>>>> main
 
 
                                 {issue}                              </li>
@@ -768,6 +733,7 @@ key={index}`;
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
 
 
+<<<<<<< HEAD
                         </div>;
                       )}
 :components/email-validator.tsx
@@ -799,10 +765,16 @@ key={index}`;
                   <p className=&quot;text-gray-400&quot;>
 
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
                     Validation results will appear here. Enter an email address and click validate to get started.
                   </p>
                 </div>
               )}
+<<<<<<< HEAD
                         </div>)}
                         <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
                         <div className=&quot;mt - 2 p - 2 bg - yellow - 500 / 20 border border - yellow - 500 / 30 rounded text - sm text - yellow - 300 & quot;>;
@@ -813,6 +785,8 @@ key={index}`;
                   <p className=&quot;text - gray - 400 & quot;>;
 
 <<<<<<< HEAD
+=======
+>>>>>>> main
                     Validation results will appear here. Enter an email address and click validate to get started.;
                   </p>;
                 </div>)}
@@ -820,6 +794,7 @@ key={index}`;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 ;
@@ -1008,6 +983,9 @@ href=&quot;/contact&quot;
 href=&quot;/pricing&quot;
               className=&quot;border-white text-white hover:bg-white hover:text-blue-600&quot;
 <<<<<<< HEAD
+=======
+
+>>>>>>> main
 
             >
               View Pricing
@@ -1019,5 +997,9 @@ href=&quot;/pricing&quot;
   )}
 
 
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
+
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const Analytics = () => {
   // Implementation here
   return null
@@ -5,3 +6,8 @@ export const Analytics = () => {
   return null;
 
 export default Analytics;
+=======
+};
+
+
+>>>>>>> main

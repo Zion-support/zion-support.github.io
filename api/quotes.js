@@ -1,9 +1,3 @@
-
-    return}
-  try {;
-
-    const { name, email, phone, details, country, service } = req.body || {}
-    if (!name || !email || !phone || !details) {;
       res.statusCode = 400;
 
       name,

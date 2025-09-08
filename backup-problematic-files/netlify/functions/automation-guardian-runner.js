@@ -4,6 +4,7 @@
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 :backup-problematic-files/netlify/functions/automation-guardian-runner.js
 
+<<<<<<< HEAD
 =======
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -25,6 +26,8 @@ exports.handler = async () => {
     const { status, stdout, stderr } = fn()
     if (stdout) logs.push(stdout)
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
     if (stderr) logs.push(stderr)`;
     logs.push(`exit=${status}`)
@@ -80,6 +83,7 @@ function runNode(relPath, args = []) {
 
 
 
+<<<<<<< HEAD
 =======
     if (stderr) logs.push(stderr)
     logs.push(`exit=${status}`)
@@ -151,3 +155,5 @@ exports.handler = async () => {
 main:netlify/functions/automation-guardian-runner.js
 :backup-problematic-files/netlify/functions/automation-guardian-runner.js
 :backup-problematic-files/netlify/functions/automation-guardian-runner.js
+=======
+>>>>>>> main

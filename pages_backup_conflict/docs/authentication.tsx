@@ -1,73 +1,8 @@
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
-export default function Authentication() {
-  const contact = {
-    "phone": '+1 302 464 0950',
-    "email": 'kleber@ziontechgroup.com',
-    "address": '364 E Main St STE 1008 Middletown DE 19709',
-    "site": 'https://ziontechgroup.com'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-<<<<<<< HEAD
 
 
 
-=======
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-import Head from 'next/head;
-import Link from next/link';
-import { ArrowLeft, Key, Shield, Lock, User  } from 'lucide-react;
-export default function Authentication() {const contact = {"phone: +1 302 464 0950',email": 'kleber@ziontechgroup.com,"address: 364 E Main St STE 1008 Middletown DE 19709',site": 'https://ziontechgroup.com;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-import React from 'react';'
-import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';'
-
-import React from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';'
-export default function Authentication() {
-  }
-  const contact = {
-
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {ArrowLeft,, Key,, Shield,, Lock,, User} from 'lucide-react';
-export default function Authentication() {;
-  const contact = {;
-    "phone": '+1 302 464 0950',;
-    "email": 'kleber@ziontechgroup && ziontechgroup.com',;
-    "address": '364 E Main St STE 1008 Middletown DE 19709',;
-    "site": 'https://ziontechgroup && ziontechgroup.com';

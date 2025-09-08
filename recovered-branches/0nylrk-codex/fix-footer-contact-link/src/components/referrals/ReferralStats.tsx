@@ -1,4 +1,3 @@
-
   isLoading: boolean;
 }
 
@@ -101,7 +100,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {}
                 </p>
               </>
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
@@ -128,80 +126,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
-=======  ];
-;
-  return (
-    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols-4">;
-      {stat_cards.map ((card, i) => (
-        <Card key={i}>;
-          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb-2">;
-            <CardTitle className="text - sm font-medium">{card.title}</CardTitle>;
-            {card.icon}
-          </CardHeader>;
-          <CardContent>;
-            {is_loading ? (
-              <div className="h - 6 w - 20 bg - muted animate-pulse rounded" />) : (
-              <>;
-                <div className="text - 2xl font-bold">{card.value}</div>;
-                <p className="text - xs text - muted-foreground">;
-                  {card.description}
-
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
-import { Award, Share, Star, TrendingUp } from "lucide-react",;
-
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-interface ReferralStatsProps {;
-  stats: ReferralStatsType,;
-  isLoading: boolean;
-}
-export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
-  const statCards = [;
-    {;
-      title: "Total Referrals",;
-      value: stats && stats.totalReferrals,;
-      icon: <Share className="h-5 w-5 text-muted-foreground" />,;
-      description: "People you've invited"},;
-    {;
-      title: "Completed",;
-      value: stats && stats.completedReferrals,;
-      icon: <Star className="h-5 w-5 text-muted-foreground" />,;
-      description: "Signed up & completed onboarding"},;
-    {;
-      title: "Pending",;
-      value: stats && stats.pendingReferrals,;
-      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />,;
-      description: "Not yet completed onboarding"},;
-    {;
-      title: "Total Rewards",;
-      value: stats && stats.totalRewards > 0 ? `$${stats && stats.totalRewards.toFixed(2)}` : "-",;
-      icon: <Award className="h-5 w-5 text-muted-foreground" />,;
-      description: "Credits earned from referrals"}],;
-  return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
-      {statCards && statCards.map((card, i) => (;
-        <Card key={i}>;
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
-            <CardTitle className="text-sm font-medium">{card && card.title}</CardTitle>;
-            {card && card.icon}
-          </CardHeader>;
-          <CardContent>;
-            {isLoading ? (;
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />;
-            ) : (;
-              <>;
-                <div className="text-2xl font-bold">{card && card.value}</div>;
-                <p className="text-xs text-muted-foreground">{card && card.description}</p>;
-              </>;
-<<<<<<< HEAD
 
                 </p>;
               </>)}

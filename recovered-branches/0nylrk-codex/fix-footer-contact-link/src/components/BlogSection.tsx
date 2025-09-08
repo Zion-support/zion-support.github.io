@@ -1,4 +1,3 @@
-
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );

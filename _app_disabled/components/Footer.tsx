@@ -59,21 +59,6 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/ai-services" className="text-gray-300 hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/micro-saas" className="text-gray-300 hover:text-white transition-colors">
-                  Micro SaaS
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/blockchain" className="text-gray-300 hover:text-white transition-colors">
-                  Blockchain
-                </Link>
-              </li>
-              <li>
                 <Link href="/services/ai-powered-tools" className="text-gray-300 hover:text-white transition-colors">
                   AI Tools
                 </Link>
@@ -85,38 +70,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/solutions" className="text-gray-300 hover:text-white transition-colors">
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/research" className="text-gray-300 hover:text-white transition-colors">
-                  Research
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -15,6 +14,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';';
 import { Heart, 
 
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';'
 import Link from 'next/link';'
@@ -75,6 +75,13 @@ const industries = [
     href: '/industries/finance',
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
     color: 'from-green-500 to-emerald-500'
+=======
+
+} from 'lucide-react';
+  Brain;
+} from 'lucide-react';
+
+>>>>>>> main
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
@@ -133,161 +140,10 @@ import Layout from '../../components/Layout';';
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
-=======
-} from 'lucide-react';'
-  Brain;
-} from 'lucide-react';'
-const industries = [;
-  {"name": 'Healthcare',,"description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',"icon": Heart,"href": '/industries/healthcare',"features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],"color": 'from-red-500 to-pink-500';'
-    }
-    "href": '/industries/healthcare,',"features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',"color": 'from-red-500 to-pink-500''},{"name": 'Finance',,"description": 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',"icon": DollarSign,"href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    }
-    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    "href": '/industries/finance,',"features": ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',"color": 'from-green-500 to-emerald-500''},{"name": 'Manufacturing',,"description": 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',"icon": Settings,"href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    }
-    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    "href": '/industries/manufacturing,',"features": ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',"color": 'from-blue-500 to-cyan-500''},{"name": 'Retail',,"description": 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',"icon": ShoppingCart,"href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    }
-    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    "href": '/industries/retail,',"features": ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',"color": 'from-purple-500 to-violet-500''},{"name": 'Education',,"description": 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',"icon": BookOpen,"href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    }
-    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    "href": '/industries/education,',"features": ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',"color": 'from-orange-500 to-yellow-500''},{"name": 'Government',,"description": 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',"icon": Building,"href": '/industries/government',"features": ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],"color": 'from-gray-500 to-slate-500';'
-  {;
-    }
-    "name": 'Healthcare',,'
-  "description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;'
-    "icon": Heart,;
-    "href": '/industries/healthcare',;'
-    "features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;'
-    "color": 'from-red-500 to-pink-500';'
-    "href": '/industries/healthcare,',;'
-    "features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;'
-    "color": 'from-red-500 to-pink-500'',;'
-
-    icon: Heart,;
-    href: '/industries/healthcare',;
-    features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
-    color: 'from-red-500 to-pink-500';
-    href: '/industries/healthcare,',;
-    features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;
-    color: 'from-red-500 to-pink-500'',;
-
-  },;
-  {;
-
-
-    icon: DollarSign,;
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance,',;
-    features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',;
-    color: 'from-green-500 to-emerald-500'',;
-  },;
-  {;
-
-
-    icon: Settings,;
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing,',;
-    features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',;
-    color: 'from-blue-500 to-cyan-500'',;
-  },;
-  {;
-
-
-    icon: ShoppingCart,;
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail,',;
-    features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',;
-    color: 'from-purple-500 to-violet-500'',;
-  },;
-  {;
-
-
-    icon: BookOpen,;
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education,',;
-    features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',;
-    color: 'from-orange-500 to-yellow-500'',;
-  },;
-  {;
-
-
-    icon: Building,;
-    href: '/industries/government',;
-    features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],;
-    color: 'from-gray-500 to-slate-500';
-
-
-  }
-];
-const stats = [;
-  { number: '500+', label: 'Industry Projects' },;
-  { number: '50+', label: 'Fortune 500 Clients' },;
-  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
-  { number: '24/7', label: 'Industry Support' }
-];
-
-    href: '/industries/government,',
-    features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
-    color: 'from-gray-500 to-slate-500'';
-  }
-;];
-  { "number": '500+, "label": 'Industry Projects' },',;'
-  { "number": '50+, "label": 'Fortune 500 Clients' },',;'
-  { "number": '99 && 99.9%, "label": 'Uptime Guarantee' },',;'
-  { "number": '24/7, "label": 'Industry Support' }',;'
-  { number: '500+, label: 'Industry Projects' },',
-  { number: '50+, label: 'Fortune 500 Clients' },',
-  { number: '99.9%, label: 'Uptime Guarantee' },',
-  { number: '24/7, label: 'Industry Support' }',
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-;];
-
-export default function IndustriesPage() {
-  return (;
-    <Layout);
-<<<<<<< HEAD
 
       title="Industry Solutions - Zion Tech Group"";
 
+<<<<<<< HEAD
 =======
       title="Industry Solutions - Zion Tech Group"";"
 export default function IndustriesPage() {;
@@ -554,12 +410,16 @@ export default function Industries() {
             </div>,
           </div>;
         </section>;
+=======
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">,;
+>>>>>>> main
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
 
+<<<<<<< HEAD
         <section className="py-20 bg-white">"
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
@@ -714,6 +574,8 @@ export default function Industries() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -727,6 +589,7 @@ export default function Industries() {
             </div>,;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 
 
@@ -813,3 +676,11 @@ export default function Industries() {
 };
 
 export default Index;
+=======
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let our industry experts help you leverage technology to solve your sector-specific challenges.
+
+};
+
+
+>>>>>>> main

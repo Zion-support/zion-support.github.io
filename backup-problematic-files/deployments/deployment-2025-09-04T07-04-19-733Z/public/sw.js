@@ -91,6 +91,7 @@ const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','
 
 
 
+<<<<<<< HEAD
   '/ai - services',
   '/it - services',
   '/micro - saas',
@@ -187,3 +188,5 @@ const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/serv
 
 
 origin/main
+=======
+>>>>>>> main

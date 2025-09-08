@@ -1,10 +1,3 @@
-
-
-import {
-  PrismaClient,
-  ProductReview,
-  User as PrismaUser,
-
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 // Mock Prisma Client;
@@ -133,12 +126,6 @@ interface ErrorResponse {
         )
       )
 
-      const { req, res } = createMocks({
-        method: 'POST' as RequestMethod
-        body: {
-
-
-
       await reviewsHandler(
         req as NextApiRequest
 
@@ -149,8 +136,6 @@ interface ErrorResponse {
   ', async () => {
       const { req, res } = createMocks({'
         method: 'POST as RequestMethod,
-
-
 
       await reviewsHandler(
         req as NextApiRequest
@@ -243,23 +228,6 @@ interface ErrorResponse {
 
     it('should successfully fetch reviews for a product (200);
   , async () => {
-      const mockReviewsList: ProductReview[] = [
-        {'
-          i,
-    d: 'rev1,
-          productId: 'prod123;
-  ,
-
-        req as NextApiRequest,
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
-
-      );
-
-      const { req, res } = createMocks({
-        method: 'GET' as RequestMethod,
-        query: { productId: 'prod123' } });
-
-
       await productReviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -282,7 +250,3 @@ interface ErrorResponse {
       await productReviewsHandler(
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
-
-
-
-

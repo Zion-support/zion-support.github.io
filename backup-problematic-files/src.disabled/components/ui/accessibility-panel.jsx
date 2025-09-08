@@ -1,8 +1,5 @@
-"use client"; ","; "react";"; "framer-motion'''
-"use client\"; \",\"; \"react\";\"; \"framer-motion\'
-"use client"; ","; "react";"; "framer-motion""""
-"use client"; ","; "react";"; "framer-motion'''
 
+<<<<<<< HEAD
 
 "use client\"; \",\"; \"react\";\"; \"framer-motion\'
 "use client"; ","; "react";"; "framer-motion""""
@@ -35,3 +32,5 @@ const Accessibility-panel = ({ className }) => {
 };
 
 export default Accessibility-panel;
+=======
+>>>>>>> main

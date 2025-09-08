@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 
 
 >>>>>>> origin/main
@@ -75,4 +78,13 @@ process.on ('SIGINT', () => {
   process.exit (0);
 
 }),
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+
+
+
+
+
+
+>>>>>>> main

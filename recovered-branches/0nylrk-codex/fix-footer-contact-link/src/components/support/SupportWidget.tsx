@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import React, { useState } from "react";"
-import {Button} from "@/components/ui/button";"
-import {ChatBotPanel} from "./ChatBotPanel";"
-import {MessageSquare, Info, X} from "lucide-react";"
-import {cn} from "@/lib/utils";"
-import {useTheme} from "@/hooks/useTheme";"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {ChatBotPanel} from "./ChatBotPanel";
-import {MessageSquare, Info, X} from "lucide-react";
-import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-
-=======
-
-
 import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() { return null; }
   const { theme } = useTheme();
@@ -37,7 +17,6 @@ export function SupportWidget() {
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
-<<<<<<< HEAD
 
         <Button
 

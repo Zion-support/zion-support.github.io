@@ -1,4 +1,3 @@
-
     const date = new Date('2024-01-01');
     const formatted = date.toISOString().split('T')[0];
 

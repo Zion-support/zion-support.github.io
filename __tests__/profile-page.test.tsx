@@ -1,4 +1,3 @@
-
 import Profile from '@/pages/Profile';
 import { vi, expect, test, beforeEach, afterEach } from vitest' // Added beforeEach, afterEach;
 // Define the UserProfile structure based on usage;
@@ -68,5 +67,3 @@ const mockFetchImplementation = (
     expect(global.fetch).toHaveBeenCalledTimes(2)
     // Verify the input field is updated (optimistic update or re-fetch might occur)
     // If the component re-fetches or updates state from PUT response: await screen.findByDisplayValue('New Name)})});
-
-

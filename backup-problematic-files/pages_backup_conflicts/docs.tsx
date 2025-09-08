@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> main
 interface DocsProps {
   className?: string;
 }

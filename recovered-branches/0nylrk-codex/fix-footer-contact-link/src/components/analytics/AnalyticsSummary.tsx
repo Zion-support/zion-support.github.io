@@ -1,5 +1,4 @@
 
-
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -15,24 +14,10 @@ import { formatDistanceToNow } from "date-fns",      // Get unique visitors (by 
         .from('analytics_events')
         .select('count')
         .eq('event_typeconversion')      return {
-        totalPageViews: pageViewsData?.count |0
-        uniqueVisitors: uniqueUserIds.size |0
-        conversions: conversionsData?.count |0
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
     },
     refetchInterval: 300000, // Refetch every 5 minutes;
   }),
   
-
-  
-
-=======
-
-
-  // Calculate conversion rate
-  const conversionRate = stats && stats.totalPageViews > 0
-    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-
     : '0.00',
 }
 interface StatCardProps {

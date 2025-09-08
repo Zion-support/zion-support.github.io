@@ -15,11 +15,6 @@ function fixImportSyntax(filePath) {
     });
 
 
->>>>>>> origin/main
-
-    // Fix missing commas in import statements;
-
-
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
@@ -96,28 +91,6 @@ function fixImportSyntax() {
     }
     return modified;
   } catch (error) {
-
-    const items = fs && fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-
-      if (stat && stat.isDirectory()) {
-        // Skip certain directories
-        if (
-          [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -130,47 +103,5 @@ function fixImportSyntax() {
           continue;
         }
         traverse(fullPath);
-<<<<<<< HEAD
 
 
-=======
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files && files.push(fullPath);
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-
-
-
-for (const file of files) {
-  if (fixImportSyntax(file)) {
-    fixedCount++;
-    console.log(`Fixed syntax in: ${file}`);
-  }
-}
-
-
-
-  traverse (dir);
-  return files;
-}
-// Main execution;
-const files = findFilesWithSyntaxErrors (".");
-let fixed_count = 0;
-;
-console.log (`Found ${files.length} files to check for syntax errors...`);
-;
-for (const file of files) {
-  if () {) {
-  $2
-}
-    fixed_count++;
-    console.log (`Fixed syntax in: ${file}`);
-  }
-}
-console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
-;

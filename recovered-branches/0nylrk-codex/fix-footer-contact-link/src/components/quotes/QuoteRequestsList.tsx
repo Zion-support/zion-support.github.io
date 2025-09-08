@@ -1,4 +1,3 @@
-
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
@@ -21,22 +20,6 @@ import type { QuoteRequest } from "@/types/quotes",}) => {
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
-
-  if (quotes && quotes.length === 0) {;
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
-  }
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
-      {quotes && quotes.map(quote => (;
-        <QuoteRequestCard
-          key={quote && quote.id}
-  onMarkAsResponded,
-  onToggleArchive;
-}) => {
-  // Check condition
-if ( {) {
-  $2
-}
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -61,7 +44,6 @@ if ( {) {
     return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
   }
 
-<<<<<<< HEAD
   return (
     <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-5">;
       {quotes.map (quote => (
@@ -79,4 +61,3 @@ if ( {) {
     </div>;
 
   );
-

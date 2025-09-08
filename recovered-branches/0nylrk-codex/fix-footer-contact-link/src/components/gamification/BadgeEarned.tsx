@@ -1,28 +1,4 @@
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from './react';
-import { getBadgeMeta, BadgeKey } from './badge_config';
-
-interface BadgeEarnedProps {
-  badge: BadgeKey
-import {getBadgeMeta, BadgeKey} from "./badgeConfig";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-import React from "react",
-
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
-
-  show_name?: boolean;
-  show_desc?: boolean;
-  earned_date?: string;
-}
-
-export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
-  badge;
-  size = 44;
-
   badge: BadgeKey
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
@@ -32,7 +8,6 @@ interface BadgeEarnedProps {
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
-<<<<<<< HEAD
 
   earnedDate?: string
 }
