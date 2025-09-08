@@ -6,84 +6,33 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact — Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for inquiries about our autonomous technology solutions." />
+        <title>Contact Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="Contact Zion Tech Group for inquiries about our autonomous technology solutions and AI-powered innovations." />
+        <meta property="og:title" content="Contact Zion Tech Group | Get in Touch" />
+        <meta property="og:description" content="Contact Zion Tech Group for inquiries about our autonomous technology solutions and AI-powered innovations." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
+          <div className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </Link>
+          </div>
+          
           <div className="max-w-4xl mx-auto">
-            <section className="text-center mb-16">
+            <header className="text-center mb-16">
               <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Get in Touch
+                Contact Us
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to explore the future of autonomous technology? We'd love to hear from you.
+              <p className="text-xl text-white/80 max-w-2xl mx-auto">
+                Ready to explore the future of autonomous technology? Get in touch with our team.
               </p>
-            </section>
+            </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-bold mb-8 text-cyan-400">Contact Information</h2>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="text-2xl">📍</div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Location</h3>
-                      <p className="text-white/70">Global Operations</p>
-                      <p className="text-white/70">Cloud-Native Infrastructure</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="text-2xl">🌐</div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Website</h3>
-                      <a href="https://github.com/Zion-Holdings/zion.app" className="text-cyan-400 hover:text-cyan-300">
-                        github.com/Zion-Holdings/zion.app
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="text-2xl">📧</div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Email</h3>
-                      <p className="text-white/70">info@zion.tech</p>
-                      <p className="text-sm text-white/50">(General inquiries)</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="text-2xl">🔧</div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Technical Support</h3>
-                      <p className="text-white/70">support@zion.tech</p>
-                      <p className="text-sm text-white/50">(Technical issues)</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-6 bg-white/10 rounded-2xl border border-white/20">
-                  <h3 className="text-xl font-bold mb-4 text-fuchsia-400">Response Time</h3>
-                  <p className="text-white/80 mb-4">
-                    Our autonomous systems ensure rapid response times:
-                  </p>
-                  <ul className="space-y-2 text-white/70">
-                    <li>• General inquiries: Within 24 hours</li>
-                    <li>• Technical support: Within 4 hours</li>
-                    <li>• Emergency issues: Within 1 hour</li>
-                    <li>• Automated responses: Instant</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Contact Form */}
-              <div>
-                <h2 className="text-3xl font-bold mb-8 text-fuchsia-400">Send a Message</h2>
-                
+                <h2 className="text-2xl font-bold mb-6 text-cyan-300">Get in Touch</h2>
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
@@ -112,6 +61,19 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  
+                  <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-white/80 mb-2">
                       Subject
                     </label>
@@ -121,10 +83,10 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     >
                       <option value="">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="technical">Technical Support</option>
-                      <option value="partnership">Partnership Opportunity</option>
-                      <option value="feedback">Feedback</option>
+                      <option value="partnership">Partnership Inquiry</option>
+                      <option value="technology">Technology Questions</option>
+                      <option value="demo">Request Demo</option>
+                      <option value="support">Technical Support</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -136,72 +98,89 @@ export default function ContactPage() {
                     <textarea
                       id="message"
                       name="message"
-                      rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Tell us how we can help..."
-                    ></textarea>
+                      rows={6}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
+                      placeholder="Tell us about your project or inquiry..."
+                    />
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
                   >
                     Send Message
                   </button>
                 </form>
-
-                <div className="mt-6 text-center">
-                  <p className="text-sm text-white/60">
-                    By submitting this form, you agree to our{' '}
-                    <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                      Privacy Policy
-                    </Link>
-                  </p>
-                </div>
               </div>
-            </div>
-
-            {/* Additional Contact Methods */}
-            <section className="mt-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Other Ways to Connect</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-4xl mb-4">📱</div>
-                  <h3 className="text-xl font-bold mb-3">Social Media</h3>
-                  <p className="text-white/70 mb-4">
-                    Follow us for the latest updates and insights
-                  </p>
-                  <div className="space-y-2">
-                    <a href="#" className="block text-cyan-400 hover:text-cyan-300">LinkedIn</a>
-                    <a href="#" className="block text-cyan-400 hover:text-cyan-300">Twitter</a>
-                    <a href="#" className="block text-cyan-400 hover:text-cyan-300">GitHub</a>
+              <div>
+                <h2 className="text-2xl font-bold mb-6 text-cyan-300">Contact Information</h2>
+                
+                <div className="space-y-6">
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <h3 className="text-lg font-semibold mb-3 text-green-400">General Inquiries</h3>
+                    <p className="text-white/80 mb-2">info@ziontechgroup.com</p>
+                    <p className="text-white/80">+1 (555) 123-4567</p>
+                  </div>
+                  
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <h3 className="text-lg font-semibold mb-3 text-blue-400">Technical Support</h3>
+                    <p className="text-white/80 mb-2">support@ziontechgroup.com</p>
+                    <p className="text-white/80">Available 24/7</p>
+                  </div>
+                  
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <h3 className="text-lg font-semibold mb-3 text-purple-400">Partnership</h3>
+                    <p className="text-white/80 mb-2">partnerships@ziontechgroup.com</p>
+                    <p className="text-white/80">Let's build the future together</p>
                   </div>
                 </div>
                 
-                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-4xl mb-4">📚</div>
-                  <h3 className="text-xl font-bold mb-3">Documentation</h3>
-                  <p className="text-white/70 mb-4">
-                    Explore our comprehensive guides and APIs
-                  </p>
-                  <Link href="/api-documentation" className="text-cyan-400 hover:text-cyan-300">
-                    View Documentation
-                  </Link>
+                <div className="mt-8">
+                  <h3 className="text-lg font-semibold mb-4 text-cyan-300">Office Location</h3>
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <p className="text-white/80 mb-2">Zion Tech Group</p>
+                    <p className="text-white/80 mb-2">123 Innovation Drive</p>
+                    <p className="text-white/80 mb-2">Tech Valley, CA 94000</p>
+                    <p className="text-white/80">United States</p>
+                  </div>
                 </div>
                 
-                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-                  <div className="text-4xl mb-4">🤝</div>
-                  <h3 className="text-xl font-bold mb-3">Community</h3>
-                  <p className="text-white/70 mb-4">
-                    Join our developer community
-                  </p>
-                  <Link href="/contributing" className="text-cyan-400 hover:text-cyan-300">
-                    Contribute
-                  </Link>
+                <div className="mt-8">
+                  <h3 className="text-lg font-semibold mb-4 text-cyan-300">Business Hours</h3>
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <p className="text-white/80 mb-2">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                    <p className="text-white/80 mb-2">Saturday: 10:00 AM - 4:00 PM PST</p>
+                    <p className="text-white/80">Sunday: Closed</p>
+                    <p className="text-white/60 text-sm mt-2">* Technical support available 24/7</p>
+                  </div>
                 </div>
               </div>
-            </section>
+            </div>
+            
+            <div className="mt-16 text-center">
+              <h2 className="text-2xl font-bold mb-6 text-cyan-300">Connect With Us</h2>
+              <div className="flex justify-center space-x-6">
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <span className="sr-only">LinkedIn</span>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20 hover:border-cyan-400 transition-colors">
+                    <span className="text-xl">💼</span>
+                  </div>
+                </a>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <span className="sr-only">Twitter</span>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20 hover:border-cyan-400 transition-colors">
+                    <span className="text-xl">🐦</span>
+                  </div>
+                </a>
+                <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <span className="sr-only">GitHub</span>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20 hover:border-cyan-400 transition-colors">
+                    <span className="text-xl">📚</span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </main>
       </div>
