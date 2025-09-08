@@ -138,25 +138,10 @@ const TestimonialCarousel: React.FC = () => {
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+                          <img
                             src={testimonial.avatar}
                             alt={testimonial.author}
-                            width={80}
-                            height={80}
-                            loading='lazy'
-                        </Avatar>
-                        <div className='text-center md:text-left'>
-                          <p className='font-bold text-zion-cyan'>
-                            {testimonial.author}
-                          </p>
-                          <p className='text-zion-slate-light text-sm'>
-                            {testimonial.role}
-                          </p>
-                        </div>
-                      </div>
-                      <div className='flex-1'>
-                        <div className='flex items-center gap-3 mb-4'>                          <Image
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-4">
+                            loading="lazy"
                           />
                         </Avatar>
                         <div className="text-center md:text-left">

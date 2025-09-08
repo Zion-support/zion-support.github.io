@@ -266,7 +266,17 @@ export function ApplicationsTable({
           <TableBody>
 
                   <div className="flex items-center gap-3">
-                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+                    <Avatar className="h-8 w-8">
+                      {application.talent_profile?.profile_picture_url ? (
+                        <img
+                          src={application.talent_profile.profile_picture_url}
+                          alt={application.talent_profile.full_name || "Candidate"}
+                          loading="lazy"
+                        />
+                      ) : (
+                        <User className="h-4 w-4" />
+                      )}
+                    </Avatar>
                     <div>
 
                       <div className="font-medium">

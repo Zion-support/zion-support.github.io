@@ -701,11 +701,20 @@ export function ServiceProviderRegistrationForm() {;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
                   <div className="flex items-center gap-6">
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">
-                      {uploadedAvatar ? (<AspectRatio ratio={1 / 1}>
-                          <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"/>
-                        </AspectRatio>) : (<div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"/>
-                        </div>)}
+                      {uploadedAvatar ? (
+                        <AspectRatio ratio={1/1}>
+                          <img
+                            src={uploadedAvatar}
+                            alt="Avatar preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </AspectRatio>
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
+                        </div>
+                      )}
                     </div>
 
 ;

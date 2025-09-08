@@ -45,7 +45,12 @@ export const AppTestimonials = () => {
               <CardFooter className="border-t border-zion-purple/20 pt-4">
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img loading="lazy" src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover"/>
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>

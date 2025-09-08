@@ -251,12 +251,6 @@ export function InterviewRequestForm(): any ({;
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
-
-              src={talent.profile_picture_url || '/placeholder.svg'}
-
-              alt={talent.full_name}
-              className='h-full w-full object-cover'
-              loading='lazy'            />
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"

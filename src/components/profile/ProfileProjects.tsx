@@ -44,7 +44,11 @@ export function ProfileProjects({ projects }) {
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
-
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
