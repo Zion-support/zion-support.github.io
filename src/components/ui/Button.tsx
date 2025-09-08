@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
-import { LoadingSpinner } from '../LoadingSpinner';
+import LoadingSpinner from '../LoadingSpinner';
 import { cn } from '../../utils/cn';
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps & { asChild?: boolean }>(
