@@ -1,10 +1,13 @@
-version: '3.8'
-
+version: '3.9'
 services:
-  zion-app:
+  devnet:
     build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
-      - NODE_ENV=production
-    restart: unless-stopped
+      - DEVNET=1
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules

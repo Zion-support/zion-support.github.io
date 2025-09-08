@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const NotFound: NextPage = () => {
+const NotFoundPage: NextPage = () => {
   return (
     <div>
       <Head>
@@ -17,4 +17,4 @@ const NotFound: NextPage = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

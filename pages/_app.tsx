@@ -3,10 +3,11 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+  const AnyComponent = Component as any;
   return (
     <EnhancedLayout>
-      <Component {...pageProps} />
+      <AnyComponent {...pageProps} />
     </EnhancedLayout>
   );
 }
