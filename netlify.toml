@@ -245,25 +245,13 @@
   schedule = "30 */12 * * *"
 
 [[scheduled.functions]]
-  name = "security-audit"
-  schedule = "0 2 * * *"
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "todo-scanner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "7 */12 * * *"
-
-[[scheduled.functions]]
-  name = "unused-assets-scanner-runner"
+  name = "repo-velocity-runner"
   schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "external-link-rel-auditor-runner"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "og-meta-audit-runner"
+  name = "redirects-synthesizer"
   schedule = "*/15 * * * *"
