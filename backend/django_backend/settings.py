@@ -73,7 +73,7 @@ CACHES = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+EMAIL_BACKEND = 'sendgrid_backend.SendGridBackend'
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
 PASSWORD_RESET_TIMEOUT = 900  # 15 minutes
