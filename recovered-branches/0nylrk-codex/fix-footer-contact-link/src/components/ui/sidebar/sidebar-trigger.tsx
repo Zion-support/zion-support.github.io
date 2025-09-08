@@ -10,10 +10,10 @@ export const SidebarTrigger = React.forwardRef<
   const { toggleSidebar } = useSidebar()  return (
     <Button;
       ref={ref}
-      data - sidebar=&quot;trigger & quot;
-      variant=&quot;ghost & quot;
-      size=&quot;icon & quot;
-      className={cn (&quot;h - 7 w - 7&quot;, props.class_name)}
+      data - sidebar="trigger & quot;
+      variant="ghost & quot;
+      size="icon & quot;
+      className={cn ("h - 7 w - 7", props.class_name)}
       on_click={(event) => {}
         props.on_click?.(event);
         toggle_sidebar ();
@@ -31,10 +31,10 @@ export const SidebarTrigger = React.forwardRef<
 
     >;
       <PanelLeft />;
-      <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
+      <span className="sr - only & quot;>Toggle Sidebar</span>;
     </Button>);
 });
-SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
+SidebarTrigger.display_name = "SidebarTrigger & quot;
 ;      }}
       {...props}
     >
@@ -43,5 +43,5 @@ SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
     </Button>
   )
 })
-SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
+SidebarTrigger.displayName = "SidebarTrigger"
 SidebarTrigger.displayName = "SidebarTrigger"

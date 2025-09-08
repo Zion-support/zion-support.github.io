@@ -1,28 +1,28 @@
 
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-const fs = require(fs');
-
-console.log('🚀 Starting PR Resolution and Merge Process...\n);
-
-// Function to run git commands safely
-=======
 const fs = require('fs');
 console.log('🚀 Starting PR Resolution and Merge Process...\n');
 // Function to run git commands safely;
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 function runGitCommand(command, description) {
   try {
   // TODO: Implement
 }
     console.log(`📝 ${description}...`);
 <<<<<<< HEAD
+
+=======
+
     const result = execSync(command, { 
       encoding: utf8', 
       stdio: 'pipe,
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       cwd: process.cwd()
     });`;
     console.log(`✅ ${description} completed successfully`);
@@ -33,16 +33,22 @@ function runGitCommand(command, description) {
 // Function to check if we can merge a PR;
 function canMergePR(prNumber) {
 <<<<<<< HEAD
+=======
+
   try {
     const result = runGitCommand(
       `curl -s -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,
       `Checking PR #${prNumber} status`
-=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   // TODO: Implement
     const result = runGitCommand(`;
       `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,"`;
       `Checking PR #${prNumber} status`)
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     );
     if (result) {
       const pr = JSON.parse(result);
@@ -55,6 +61,8 @@ function canMergePR(prNumber) {
         head: pr.head.ref,
         base: pr.base.ref,
 <<<<<<< HEAD
+=======
+
         draft: pr.draft
       }
     }
@@ -84,7 +92,8 @@ function resolveMergeConflicts() {
         .split(\n)
         .filter(line => line.includes('UU') || line.includes(AA) || line.includes('DD'))
         .map(line => line.split( ).pop());
-=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         draft: pr.draft;
       };
 
@@ -99,8 +108,11 @@ function resolveMergeConflicts() {"
         .split('\n')
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
 <<<<<<< HEAD
+=======
+=======
+
         .map(line => line.split(' ').pop());
->>>>>>> origin/chore/fix-lint-and-merge
+
       
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
       
@@ -114,31 +126,32 @@ function resolveMergeConflicts() {"
             
             // Remove conflict markers and keep both versions where possible
             content = content
-<<<<<<< HEAD
 
-=======
+
+
               .replace(/\n/g, )
               .replace(/\n/g, '')
               .replace(/
               .replace(/
-=======
-<<<<<<< HEAD
+
+
               .replace(/[^\n]+\n/g, '')
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-              .replace(/=======\n/g, '')
-              .replace(/[^\n]+\n/g, '');
-=======
               .replace(/
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-<<<<<<< HEAD
               .replace(/\n/g, '')
->>>>>>> origin/chore/fix-lint-and-merge
+              .replace(/[^\n]+\n/g, '');
+
               .replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
               .replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+              .replace(/\n/g, '')
+
+              .replace(/
+
+
+              .replace(/
+
+
             
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);
@@ -156,8 +169,8 @@ function resolveMergeConflicts() {"
     }
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
       // Try to resolve conflicts automatically;
@@ -174,6 +187,8 @@ function resolveMergeConflicts() {"
   if (prInfo.draft) {`;
     console.log(`⚠️  PR #${prNumber} is a draft. Converting to ready for review...`);
 <<<<<<< HEAD
+=======
+
     // Convert draft to ready for review
     runGitCommand(
       `curl -X PATCH -H Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber} -d {draft":false}`,
@@ -182,17 +197,24 @@ function resolveMergeConflicts() {"
   }
   
   if (prInfo.mergeable === false) {
-=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     // Convert draft to ready for review;
 
       `Converting PR #${prNumber} to ready for review`)
   if (prInfo.mergeable === false) {`;
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     console.log(`⚠️  PR #${prNumber} has merge conflicts. Attempting to resolve...`);
     resolveMergeConflicts();
   // Try to merge the PR;`;
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+
   const mergeResult = runGitCommand(
     `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method:merge"}'`,
     `Merging PR #${prNumber}`
@@ -211,14 +233,17 @@ function resolveMergeConflicts() {"
   
   return false;
 }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
       return false;
 
 // Main execution;
 async function main() {
 <<<<<<< HEAD
+=======
+
   console.log(📋 Checking open PRs...\n);
   
   // Get list of open PRs
@@ -227,11 +252,11 @@ async function main() {
     Fetching open PRs
   );
   
-=======
+
   console.log('📋 Checking open PRs...\n');
   // Get list of open PRs;
 
->>>>>>> origin/chore/fix-lint-and-merge
+
   if (!prsResult) {
     console.log('❌ Failed to fetch PRs');
     return;
@@ -240,7 +265,7 @@ async function main() {
   // Process each PR;
   for (const pr of prs) {
     const prInfo = canMergePR(pr.number);
-<<<<<<< HEAD
+
     if (prInfo) {
       console.log(`\n📊 PR #${prInfo.number}: ${prInfo.title}`);
       console.log(`   Mergeable: ${prInfo.mergeable}`);
@@ -265,8 +290,9 @@ async function main() {
   
   console.log('\n✅ PR resolution and merge process completed!');
 }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
         const merged = mergePR(pr.number, prInfo);
         if (merged) {`;

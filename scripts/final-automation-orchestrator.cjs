@@ -1,15 +1,21 @@
 #!/usr/bin/env node;
+
+
+
+
+
+
+main
+
+
+
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
-=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
->>>>>>> merged-prs-20250907-203621
 // console.log(' Final Automation Orchestrator')
 
 console.log('=====')

@@ -3,12 +3,9 @@
 echo "🔧 Starting merge conflict resolution..."
 
 # Find and resolve merge conflicts
-find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" \) -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
-    echo "📝 Resolving conflicts in: $file"
-    
-    # Keep the incoming changes (after =======)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.sh" -o -name "*.cjs" \) -exec grep -l ")
+    sed -i '/
+    sed -i '/
     
     echo "✅ Resolved: $file"
 done

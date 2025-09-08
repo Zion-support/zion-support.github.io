@@ -85,7 +85,7 @@ exports.handler = async () => {
   writeFileEnsured(outJsonPath, JSON.stringify({ generatedAt: new Date().toISOString(), count: extracted.length, strings: extracted }, null, 2));
 
   // Simple HTML view
-  const htmlRows = extracted.map((s) => `<tr><td style="padding:6px;border-bottom:1px solid #eee">${s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</td></tr>`).join('\n');
+  const htmlRows = extracted.map((s) => `<tr><td style="padding:6px;border-bottom:1px solid #eee">${s.replace(/&/g,'&').replace(/</g,'<')}</td></tr>`).join('\n');
   const html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:24px} h1{font-size:20px;margin:0 0 12px} table{border-collapse:collapse;width:100%} thead td{font-weight:700;background:#fafafa;border-bottom:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generated: ${new Date().toISOString()}</div><div>Strings: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${htmlRows || '<tr><td style="padding:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n', 'index.html'), html);
 

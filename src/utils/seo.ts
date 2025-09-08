@@ -24,7 +24,7 @@ export interface SEOData {
 export interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 // Generate meta tags for SEO
@@ -378,7 +378,7 @@ export const trackSEOMetrics = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          console.log('FCP:', entry.startTime);
+          // console.log('FCP:', entry.startTime);
         }
       });
     }).observe({ entryTypes: ['paint'] });
@@ -387,19 +387,19 @@ export const trackSEOMetrics = () => {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      console.log('LCP:', lastEntry.startTime);
+      // console.log('LCP:', lastEntry.startTime);
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: unknown) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-      console.log('CLS:', clsValue);
+      // console.log('CLS:', clsValue);
     }).observe({ entryTypes: ['layout-shift'] });
   };
 

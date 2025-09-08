@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -171,3 +172,6 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = HealthChecker;
+  const checker = new HealthChecker();
+  checker.run().catch(console.error)};
+

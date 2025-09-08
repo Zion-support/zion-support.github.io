@@ -142,10 +142,10 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.open(); // Opens the modal
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error connecting wallet:', error);
+        // console.error('Error connecting wallet:', error);
       }
     } else {
-        console.error('AppKit not initialized');
+        // console.error('AppKit not initialized');
     }
   }, [appKit]);
 
@@ -155,7 +155,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.disconnect();
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error disconnecting wallet:', error);
+        // console.error('Error disconnecting wallet:', error);
       }
     }
   }, [appKit]);
