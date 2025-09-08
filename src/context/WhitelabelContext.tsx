@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, ReactNode } from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 const defaultConfig = {
 	companyName: 'Zion Tech Group',
@@ -40,75 +33,4 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
       {children}
     </WhitelabelContext.Provider>
   );
-<<<<<<< HEAD
 };
-=======
-};
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  primaryColor: string;
-  setPrimaryColor: (color: string) => void;
-  brandName: string;
-  setBrandName: (name: string) => void;
-  logo: string;
-  setLogo: (logo: string) => void;
-}
-
-const defaultContext: WhitelabelContextType = {
-  isWhitelabel: false,
-  primaryColor: '#9b87f5', // Default Zion purple
-  logoUrl: null,
-  brandName: 'Zion AI Marketplace',
-  themePreset: 'light',
-  landingPageCopy: {
-    headline: 'AI Talent Marketplace',
-    subtitle: 'Find the best AI talent for your projects',
-    cta: 'Get Started',
-  },
-  tenant: null,
-};
-
-const WhitelabelContext = createContext<WhitelabelContextType>(defaultContext);
-
-export const useWhitelabel = () =>
-  useContext<WhitelabelContextType>(WhitelabelContext);
-
-interface WhitelabelProviderProps {
-  children: ReactNode;
-}
-
-export function WhitelabelProvider({ children }: WhitelabelProviderProps) {
-  const [isWhitelabel] = useState(false); // Set to true for white-label instances
-  const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple
-  const [brandName, setBrandName] = useState('Zion Tech Group');
-  const [logo, setLogo] = useState('');
-
-  const value: WhitelabelContextType = {
-    isWhitelabel,
-    primaryColor,
-    setPrimaryColor,
-    brandName,
-    setBrandName,
-    logo,
-    setLogo,
-  };
-
-  return (
-    <WhitelabelContext.Provider value={value}>
-      {children}
-    </WhitelabelContext.Provider>
-  );
-}
-
-export function useWhitelabel(): WhitelabelContextType {
-  const context = useContext(WhitelabelContext);
-  if (context === undefined) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
