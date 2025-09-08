@@ -6,7 +6,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12.5"
+=======
   PYTHON_VERSION = "3.12.6"
+>>>>>>> origin/cursor/install-python-dependencies-with-mise-3603
   MISE_PYTHON_COMPILE = "false"
 
 [[plugins]]

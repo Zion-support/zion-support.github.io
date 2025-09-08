@@ -162,12 +162,7 @@ awk '
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
         echo "=========================================="
         
-        # Skip draft PRs
-        if [ "$is_draft" = "true" ]; then
-            log_message "⏭️  PR #$pr_number is a draft, skipping..."
-            SKIPPED_DRAFTS=$((SKIPPED_DRAFTS + 1))
-            continue
-        fi
+        # Proceed even if PR is a draft (merge branch directly into main)
         
         if merge_branch "$branch_name"; then
             log_message "✅ PR #$pr_number processed successfully"
