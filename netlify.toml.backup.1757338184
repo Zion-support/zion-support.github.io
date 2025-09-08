@@ -1,6 +1,11 @@
 [build]
+<<<<<<< HEAD
+  # Skip build and publish prebuilt static files in dist
+  command = "echo Skipping build; using prebuilt dist"
+=======
   # Do not run any build. Deploy the prebuilt static export from out/ as-is.
   command = "echo 'Skipping build; deploying prebuilt dist'"
+>>>>>>> origin/cursor/build-and-deploy-with-prebuilt-assets-19eb
   publish = "dist"
   command_timeout = "30m"
 
