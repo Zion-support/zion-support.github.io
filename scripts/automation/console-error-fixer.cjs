@@ -1,310 +1,60 @@
-#!/usr/bin/env node;
 #!/usr/bin/env node
-/**
- * Console Error Fixer Automation
- * Identifies and fixes console errors and warnings
- */
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class ConsoleErrorFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'console-error-fixer-report.json');
-    this.fixedFiles = [];
-    this.errors = [];
-  }
+console.log('🔧 Console Error Fixer Automation Started');
 
-  async start() {
-    console.log('🚀 Starting Console Error Fixer...');
+async function runConsoleErrorFixer() {
+  try {
+    console.log('📋 Running linting checks...');
     
+    // Run ESLint
     try {
-      await this.scanForConsoleErrors();
-      await this.fixConsoleStatements();
-      await this.fixConsoleRelatedErrors();
-      await this.generateReport();
-      
-      console.log('✅ Console Error Fixer completed successfully!');
+      execSync('npm run lint', { stdio: 'inherit' });
+      console.log('✅ Linting passed');
     } catch (error) {
-      console.error('❌ Error in Console Error Fixer:', error);
-      await this.generateReport();
+      console.log('⚠️ Linting issues found, attempting auto-fix...');
+      try {
+        execSync('npm run lint -- --fix', { stdio: 'inherit' });
+        console.log('✅ Auto-fix completed');
+      } catch (fixError) {
+        console.log('❌ Auto-fix failed, manual intervention required');
+      }
     }
-  }
 
-  async scanForConsoleErrors() {
-    console.log('🔍 Scanning for console errors...');
+    // Run type checking
+    console.log('📋 Running type checking...');
+    try {
+      execSync('npm run type-check', { stdio: 'inherit' });
+      console.log('✅ Type checking passed');
+    } catch (error) {
+      console.log('❌ Type checking failed');
+    }
+
+    // Run build to check for build errors
+    console.log('📋 Running build check...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build successful');
+    } catch (error) {
+      console.log('❌ Build failed');
+    }
+
+    console.log('🎯 Console Error Fixer completed');
     
-    try {
-      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
-      this.parseConsoleErrors(lintResult);
-    } catch (error) {
-      this.parseConsoleErrors(error.stdout || error.stderr || '');
-    }
+  } catch (error) {
+    console.error('❌ Console Error Fixer failed:', error.message);
   }
+}
 
-  parseConsoleErrors(output) {
-    const lines = output.split('\n');
-    lines.forEach(line => {
-      if (line.includes('console') || line.includes('Console')) {
-        const match = line.match(/(.+):(\d+):(\d+)\s+(error|warning)\s+(.+)/);
-        if (match) {
-          const [, filePath, lineNum, colNum, type, message] = match;
-          this.errors.push({
-            file: filePath.trim(),
-            line: parseInt(lineNum),
-            column: parseInt(colNum),
-            type: type === 'error' ? 'console_error' : 'console_warning',
-            message: message.trim()
-          });
-        }
-      }
-    });
-  }
+// Run immediately
+runConsoleErrorFixer();
 
-  async fixConsoleStatements() {
-    console.log('🔧 Fixing console statements...');
-    
-    const consoleFiles = this.errors.filter(e => 
-      e.message.includes('Unexpected console statement')
-    );
-
-    for (const error of consoleFiles) {
-      await this.fixConsoleStatement(error);
-    }
-  }
-
-  async fixConsoleStatement(error) {
-    try {
-      const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-
-      let content = fs.readFileSync(filePath, 'utf8');
-      let fixed = false;
-
-      // Remove console statements
-      if (content.includes('console.log')) {
-        content = content.replace(/console\.log\([^)]*\);?\s*\n?/g, '');
-        fixed = true;
-      }
-      
-      if (content.includes('console.error')) {
-        content = content.replace(/console\.error\([^)]*\);?\s*\n?/g, '');
-        fixed = true;
-      }
-      
-      if (content.includes('console.warn')) {
-        content = content.replace(/console\.warn\([^)]*\);?\s*\n?/g, '');
-        fixed = true;
-      }
-      
-      if (content.includes('console.info')) {
-        content = content.replace(/console\.info\([^)]*\);?\s*\n?/g, '');
-        fixed = true;
-      }
-
-      if (fixed) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push({
-          file: error.file,
-          type: 'console_statement_removed',
-          originalError: error.message
-        });
-        console.log(`✅ Fixed console statements in ${error.file}`);
-      }
-    } catch (fixError) {
-      console.error(`❌ Failed to fix console statements in ${error.file}:`, fixError.message);
-    }
-  }
-
-  async fixConsoleRelatedErrors() {
-    console.log('🔧 Fixing console-related errors...');
-    
-    const consoleRelatedErrors = this.errors.filter(e => 
-      e.message.includes('Console') ||
-      e.message.includes('console')
-    );
-
-    for (const error of consoleRelatedErrors) {
-      await this.fixConsoleRelatedError(error);
-    }
-  }
-
-  async fixConsoleRelatedError(error) {
-    try {
-      const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-
-      let content = fs.readFileSync(filePath, 'utf8');
-      let fixed = false;
-
-      // Fix console-related syntax issues
-      if (content.includes('Console') && !content.includes('console')) {
-        content = content.replace(/Console/g, 'console');
-        fixed = true;
-      }
-
-      if (fixed) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push({
-          file: error.file,
-          type: 'console_syntax_fix',
-          originalError: error.message
-        });
-        console.log(`✅ Fixed console-related error in ${error.file}`);
-      }
-    } catch (fixError) {
-      console.error(`❌ Failed to fix console-related error in ${error.file}:`, fixError.message);
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalConsoleErrors: this.errors.length,
-        fixedFiles: this.fixedFiles.length,
-        remainingErrors: this.errors.length - this.fixedFiles.length
-      },
-      fixedFiles: this.fixedFiles,
-      remainingErrors: this.errors.filter(error => 
-        !this.fixedFiles.some(fix => fix.file === error.file)
-      )
-    };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    console.log(`📊 Console Error Fixer report generated: ${this.reportFile}`);
-  }
-  {/* Removed stray closing brace */}
-
-function findConsoleStatements(dir) {
-  const consoleStatements = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            const lines = content.split('\n');
-            
-            lines.forEach((line, index) => {
-              if (line.includes('console.')) {
-                const match = line.match(/console\.\w+/);
-                if (match) {
-                  consoleStatements.push({
-                    file: path.relative(process.cwd(), fullPath),
-                    line: index + 1,
-                    statement: match[0]
-                  });
-                }
-              }
-            });
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  scanDirectory(dir);
-  return consoleStatements;
-  {/* Removed stray closing brace */}
-
-function findErrorPatterns(dir) {
-  const errorPatterns = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            const lines = content.split('\n');
-            
-            lines.forEach((line, index) => {
-              // Check for common error patterns
-              const patterns = [
-                'throw new Error',
-                'throw Error',
-                'console.error',
-                'console.warn',
-                'debugger',
-                'alert(',
-                'confirm(',
-                'prompt('
-              ];
-              
-              patterns.forEach(pattern => {
-                if (line.includes(pattern)) {
-                  errorPatterns.push({
-                    file: path.relative(process.cwd(), fullPath),
-                    line: index + 1,
-                    pattern: pattern
-                  });
-                }
-              });
-            });
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  scanDirectory(dir);
-  return errorPatterns;
-  {/* Removed stray closing brace */}
-
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial console error fixer
-  await runConsoleErrorFixer();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runConsoleErrorFixer();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the continuous console error fixer
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous console error fixer:', error);
-  process.exit(1);
-});
+// Set up interval if running in PM2
+if (process.env.AUTOMATION_INTERVAL) {
+  const interval = parseInt(process.env.AUTOMATION_INTERVAL);
+  setInterval(runConsoleErrorFixer, interval);
+  console.log(`⏰ Scheduled to run every ${interval / 1000} seconds`);
+}

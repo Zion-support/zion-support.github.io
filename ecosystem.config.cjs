@@ -54,53 +54,70 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
+        PORT: 3000
+      }
+    }
+  ],
+
+  // Core Automation Processes (GitHub Actions Replacements)
+  automation: [
+    // CI/CD replacement
+    {
+      name: 'ci-automation',
+      script: './scripts/automation/console-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     },
     
-    // Security automation (replaces GitHub Actions Security)
+    // Security scanning replacement
     {
       name: 'security-automation',
-      script: './scripts/automation/security-automation.cjs',
+      script: './scripts/automation/security-audit.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    // Test automation (replaces GitHub Actions Test)
-    {
-      name: 'test-automation',
-      script: './scripts/automation/test-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
     
-    // Link checker automation (replaces GitHub Actions Link Checker)
+    // Build and test replacement
     {
-      name: 'link-checker-automation',
-      script: './scripts/automation/link-checker-automation.cjs',
+      name: 'build-test-automation',
+      script: './scripts/automation/daily-build-test.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
-
-    // Enhanced automation processes (existing)
+    
+    // Link checking replacement
+    {
+      name: 'link-checker-automation',
+      script: './scripts/automation/link-checker.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+    
+    // Enhanced automation processes
     {
       name: 'enhanced-testing',
       script: './scripts/automation/enhanced-testing-automation.cjs',
@@ -124,19 +141,6 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'enhanced-link-checker',
-      script: './scripts/automation/enhanced-link-checker.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     },
     
