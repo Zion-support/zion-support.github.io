@@ -4,75 +4,183 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Console Error Fixer Automation Started');
+class ConsoleErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportPath = path.join(this.projectRoot, 'console-error-fixer-report.json');
+    this.errors = [];
+    this.fixes = [];
+  }
 
-async function fixConsoleErrors() {
-  try {
-    console.log('📋 Scanning for console errors...');
+  async run() {
+    console.log('🔧 Starting Console Error Fixer...');
     
-    // Scan for console.log, console.error, etc. in source files
-    const sourceDirs = ['src', 'pages', 'components', 'utils'];
-    let consoleErrors = [];
+    try {
+      await this.checkForConsoleErrors();
+      await this.fixConsoleErrors();
+      await this.generateReport();
+      await this.runQualityChecks();
+      
+      console.log('✅ Console Error Fixer completed successfully');
+    } catch (error) {
+      console.error('❌ Console Error Fixer failed:', error.message);
+      process.exit(1);
+    }
+  }
+
+  async checkForConsoleErrors() {
+    console.log('🔍 Checking for console errors...');
     
-    for (const dir of sourceDirs) {
-      if (fs.existsSync(dir)) {
-        const files = getAllFiles(dir);
-        for (const file of files) {
-          if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
-            const content = fs.readFileSync(file, 'utf8');
-            const consoleMatches = content.match(/console\.(log|error|warn|info|debug)/g);
-            if (consoleMatches) {
-              consoleErrors.push({
-                file,
-                matches: consoleMatches
-              });
-            }
-          }
-        }
+    try {
+      // Run linting to find console statements
+      const lintOutput = execSync('npm run lint --silent', { 
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      
+      // Parse lint output for console statements
+      const consoleMatches = lintOutput.match(/console\.(log|warn|error|info|debug)/g) || [];
+      
+      if (consoleMatches.length > 0) {
+        this.errors.push({
+          type: 'console_statement',
+          count: consoleMatches.length,
+          details: consoleMatches
+        });
+      }
+      
+      // Check for build errors
+      try {
+        execSync('npm run build --silent', { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+      } catch (buildError) {
+        this.errors.push({
+          type: 'build_error',
+          details: buildError.message
+        });
+      }
+      
+    } catch (error) {
+      // Linting failed, continue with other checks
+      console.log('⚠️  Linting check failed, continuing with other checks...');
+    }
+  }
+
+  async fixConsoleErrors() {
+    console.log('🔧 Fixing console errors...');
+    
+    if (this.errors.length === 0) {
+      console.log('✅ No console errors found to fix');
+      return;
+    }
+
+    try {
+      // Remove console statements from production code
+      const srcDir = path.join(this.projectRoot, 'src');
+      if (fs.existsSync(srcDir)) {
+        await this.removeConsoleStatements(srcDir);
+      }
+      
+      // Run auto-fix for linting issues
+      try {
+        execSync('npm run lint -- --fix', { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        this.fixes.push('lint_auto_fix');
+      } catch (error) {
+        console.log('⚠️  Lint auto-fix failed, continuing...');
+      }
+      
+    } catch (error) {
+      console.error('❌ Error during console error fixing:', error.message);
+    }
+  }
+
+  async removeConsoleStatements(dir) {
+    const files = fs.readdirSync(dir);
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        await this.removeConsoleStatements(filePath);
+      } else if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx')) {
+        await this.processFile(filePath);
       }
     }
-    
-    if (consoleErrors.length > 0) {
-      console.log(`🔍 Found ${consoleErrors.length} files with console statements`);
-      
-      // Generate report
-      const report = {
-        timestamp: new Date().toISOString(),
-        totalFiles: consoleErrors.length,
-        files: consoleErrors
-      };
-      
-      fs.writeFileSync('console-error-fixer-report.json', JSON.stringify(report, null, 2));
-      console.log('📊 Report generated: console-error-fixer-report.json');
-    } else {
-      console.log('✅ No console statements found');
-    }
-    
-  } catch (error) {
-    console.error('❌ Error in console error fixer:', error);
   }
-}
 
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const files = fs.readdirSync(dirPath);
-  
-  for (const file of files) {
-    const fullPath = path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
-    } else {
-      arrayOfFiles.push(fullPath);
+  async processFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      // Remove console statements
+      content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\);?\s*/g, '');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixes.push(`removed_console_from_${path.basename(filePath)}`);
+      }
+    } catch (error) {
+      console.log(`⚠️  Could not process file ${filePath}:`, error.message);
     }
   }
-  
-  return arrayOfFiles;
+
+  async runQualityChecks() {
+    console.log('🧪 Running quality checks...');
+    
+    try {
+      // Run type checking
+      execSync('npm run type-check --silent', { 
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      this.fixes.push('type_check_passed');
+    } catch (error) {
+      console.log('⚠️  Type checking failed');
+    }
+    
+    try {
+      // Run tests if available
+      execSync('npm test --silent', { 
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      this.fixes.push('tests_passed');
+    } catch (error) {
+      console.log('⚠️  Tests failed or not available');
+    }
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      errors_found: this.errors.length,
+      fixes_applied: this.fixes.length,
+      errors: this.errors,
+      fixes: this.fixes,
+      status: this.errors.length === 0 ? 'success' : 'partial_success'
+    };
+    
+    fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report generated: ${this.reportPath}`);
+  }
 }
 
 // Run the automation
-fixConsoleErrors().then(() => {
-  console.log('✅ Console Error Fixer Automation Completed');
-  process.exit(0);
-}).catch((error) => {
-  console.error('❌ Console Error Fixer Automation Failed:', error);
-  process.exit(1);
-});
+if (require.main === module) {
+  const fixer = new ConsoleErrorFixer();
+  fixer.run();
+}
+
+module.exports = ConsoleErrorFixer;

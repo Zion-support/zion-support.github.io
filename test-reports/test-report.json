@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T14:01:37.749Z",
+  "timestamp": "2025-08-29T15:50:22.015Z",
   "summary": {
     "total": 6,
     "passed": 5,
@@ -24,7 +24,7 @@
     },
     "accessibility": {
       "status": "success",
-      "results": "Lint check failed: Command failed: npm run lint\nsh: 1: eslint: not found\n"
+      "results": "Lint check failed: Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
     },
     "coverage": {
       "status": "success",
